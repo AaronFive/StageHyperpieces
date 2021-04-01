@@ -5,8 +5,11 @@ Created on Thu Mar 25 14:19:25 2021
 @author: aaron
 """
 
-import glob, os, re, sys, requests, math
+import glob, os, re, sys, requests, math, csv
 from xml.dom import minidom
+# Get the current folder
+folder = os.path.abspath(os.path.dirname(sys.argv[0]))
+corpusFolder = os.path.join(folder,"corpus")
 
 play = open("GILBERT_RODOGUNE.xml", 'rb')
 mydoc = minidom.parse(play)
@@ -110,3 +113,32 @@ def get_lines(doc, characters):
 total_lines, lines = get_lines(mydoc, characters)
 
 character_speech_frequencies=[x/total_lines for x in lines]
+
+with open('stats.csv', mode='w') as csv_file:
+    fieldnames = ['VALEUR']+ characters
+    writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+    writer.writeheader()
+    
+    scenedict= {name : setlist[characters.index(name)] for name in characters}
+    scenedict['VALEUR']= "Scènes"
+    writer.writerow(scenedict)
+   
+    freqdict ={ name : frequencies[characters.index(name)] for name in characters}
+    freqdict['VALEUR']= "Fréquences"
+    writer.writerow(freqdict)
+
+
+    
+    
+# def generate_csv(corpus, output):
+#     for c in corpus:
+#         play = open(c, 'rb')
+#         doc = minidom.parse(play)
+#         characters= get_characters(doc)
+#         A = get_matrix(doc, characters)
+#         setlist=get_scenes_sets(characters, A)
+#         occurences=character_occurences(characters, A)
+#         co_occurences = get_co_occurences(setlist, characters)
+#         frequencies=character_frequencies(characters, A)
+#         deviations=occurences_deviation(A,characters, co_occurences, frequencies)
+        
