@@ -47,17 +47,56 @@ def displayNodeText(node, avoidedTags):
             text += displayNodeText(child, avoidedTags)
       return text
 
-outputFile = open(os.path.join(folder, "characterDescriptions.txt"), "w", encoding="utf-8")
+#outputFile = open(os.path.join(folder, "characterDescriptions.txt"), "w", encoding="utf-8")
+outputFile = open(os.path.join(folder, "characterRelationships.txt"), "w", encoding="utf-8")
+
+
+def extractName(roleText):
+   roleWords = roleText.replace("l'","").replace("l’","").replace("[","").replace("]","").lower().split(" ")
+   stopList = ["d.", "le", "la", "les", "un", "une", "des", "deux", "trois", "st", "ste", "dom", "don", "dona", "et"]
+   if roleWords[0] in stopList:
+      roleText = roleWords[1]
+   else:
+      roleText = roleWords[0]
+   return roleText.replace(",","").replace(".","").lower()
 
 # Consider all Word files in the corpus folder
 for file in glob.glob(os.path.join(corpusFolder, "*.xml")):
       # Open the XML file and extract information
       print("Extracting information from " + file)
       mydoc = minidom.parse(file)
-
+      
+      roles = []
+      # Extract character names
+      roleNodes = mydoc.getElementsByTagName("role")
+      if len(roleNodes) > 0:
+         for role in roleNodes:
+            roleText = extractName(displayNodeText(role, []))
+            if len(roleText) > 0:
+               roles.append(roleText)
+      else:
+         print("No role found!")
+      #print(roles)
+      #print(str(len(roles)) + " roles found!")
+      
+      
       # Extract character information without character names
       if len(mydoc.getElementsByTagName("castList")) > 0:
          castList = displayNodeText(mydoc.getElementsByTagName("castList")[0], ["role"])
-         outputFile.writelines(castList + " a a a a a a a a a a a a a a a a a a a \n")
+         
+         castListLines = castList.split("\n")
+         for castItem in castListLines:
+            res = re.search("^[,. ]*(sa|son) ([^ ,.]+)", castItem.lower())
+            if res:
+               outputFile.writelines(res.group(2) + "\n")
+            for role in roles:
+               res = re.search("([^ ]*[ ]*)([^ ]+) d(e|'|’|es) .*(" + role + ")", castItem.lower())
+               if res:
+                  outputFile.writelines(res.group(1) + "\t" + res.group(2) + "\t" + res.group(4) + "\n")
+                  print(res.group(1) + "\t" + res.group(2) + "\t" + res.group(4))
+         
+      outputFile.writelines(" a a a a a a a a a a a a a a a a a a a \n")
+         #for line in castList.split("\n"):
+            #print(line)
 
 outputFile.close()
