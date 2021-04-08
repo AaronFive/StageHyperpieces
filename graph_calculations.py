@@ -15,15 +15,37 @@ play = open("GILBERT_RODOGUNE.xml", 'rb')
 mydoc = minidom.parse(play)
 tags = mydoc.getElementsByTagName('castItem')
 
-#Returns the list of identifiers of characters 
-def get_characters(doc):
+#Returns the list of identifiers of characters, when the list is declared at the start
+def get_characters_by_cast(doc):
     id_list=[]
-    char_list=doc.getElementsByTagName('castItem')
+    char_list=doc.getElementsByTagName('role')
     for c in (char_list):
-        id_list.append(c.firstChild.getAttribute("id"))
+        name_id= c.getAttribute("id")
+        if name_id=="":
+            name_id=c.getAttribute("xml:id")
+        if name_id=="":
+            print("Warning, role has no id nor xml:id attribute")
+        id_list.append(c.getAttribute("id"))
     return(id_list)
-characters=get_characters(mydoc)
+characters=get_characters_by_cast(mydoc)
 
+#Returns the list of identifiers of characters, by looking at each stance
+def get_characters_by_bruteforce(doc):
+    id_list=[]
+    repliques=doc.getElementsByTagName('sp')
+    for r in repliques:
+        speaker_id= r.getAttribute("who")
+        if speaker_id not in id_list:
+            id_list.append(speaker_id)
+    return(id_list)
+
+def get_characters(doc):
+    char_list=doc.getElementsByTagName('role')
+    print(char)
+    if char_list == []:
+        return(get_characters_by_bruteforce(doc))
+    else:
+        return(get_characters_by_cast(doc))
 ### HERE I COMPUTE THNGS BASED ONLY ON PRESENCE/ABSENCE FROM A SCENE ###
 
 #Returns a matrix A such that A[i][j]=1 iff character j SPEAKS in scene i
@@ -94,7 +116,6 @@ def occurences_deviation(A,characters, co_occurences, occurences):
     return(deviations)
 
 deviations=occurences_deviation(A,characters, co_occurences, frequencies)
-print(deviations)
 
 ###HERE I COMPUTE THINGS BASED ON THE NUMBER OF LINES SPOKEN ###
 
@@ -127,7 +148,18 @@ with open('stats.csv', mode='w') as csv_file:
     freqdict['VALEUR']= "Fréquences"
     writer.writerow(freqdict)
 
-
+folder = os.getcwd()
+corpusFolder = os.path.join(folder,"corpusTC")
+for c in os.listdir(corpusFolder):
+    print(c)
+    m,maxplay,charlist=0,"",[]
+    play = open(corpusFolder +'\\'+ c, 'rb')
+    mydoc = minidom.parse(play)
+    char=get_characters(mydoc)
+    if len(char)> m:
+        m=len(char)
+        maxplay=c
+        charlist=char
     
     
 # def generate_csv(corpus, output):
