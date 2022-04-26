@@ -1,6 +1,6 @@
 import requests, json
 
-response = requests.get("https://dracor.org/api/corpora", 'metrics')
+response = requests.get("https://dracor.org/api/corpora", ='metrics')
 #print(response.status_code)
 #print(response.json())
 
