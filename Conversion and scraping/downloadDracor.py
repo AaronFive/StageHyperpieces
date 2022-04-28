@@ -1,7 +1,8 @@
 import glob, os, re, sys, time, requests, json
 
-data_dic = json.loads(requests.get("https://dracor.org/api/corpora/fre", 'metrics').content)
+def load_datas(link):
+    return json.loads(requests.get(link, 'metrics').content)
 
-plays = data_dic.get('dramas')
-
-print(plays[0].keys())
+if __name__ == "__main__":
+    data_dic = load_datas("https://dracor.org/api/corpora/fre")
+    plays = data_dic.get('dramas')
