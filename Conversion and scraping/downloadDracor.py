@@ -65,7 +65,7 @@ def get_authors(content):
     # Antoine de la Motte (sort = 1)
     s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
     if type(s) is str:
-        return [s]
+        return s
     if type(s) is list:
         return list(map(concat_author, map(
             lambda d: d.get('persName') if type(d) is not str 
