@@ -35,18 +35,21 @@ def get_title(content):
     else:
         return list(s.values())[1]
 
+def contains_pen(d):
+    return 'pen' in d.values()
+
+def l_contains_pen(l):
+    return any(contains_pen(d) for d in filter(lambda d: isinstance(d, dict), l))
+
 def concat_authors_in_list(l):
     return ' '.join(list(map(
-        lambda d: 'None' if d is None 
+        lambda d: d if d is None or type(d) is str
         else concat_authors_in_list(d) if type(d) is list 
-        else d if type(d) is str
         else concat_author_in_dico(d)
         , l)))
 
 def concat_author_in_dico(s):
-    if s is None:
-        return None
-    if type(s) is str:
+    if s is None or type(s) is str:
         return s
     if type(s) is list:
         return concat_authors_in_list(s)
@@ -85,6 +88,9 @@ def extract_important_datas(contents):
     #     'year': get_year(content)} 
     #     for content in contents]
     for content in contents:
+        s = get_authors(content)
+        if s == 'pen Voltaire François-Marie Arouet':
+            print("########", content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author').get('persName'))
         print(get_authors(content))
         
 
