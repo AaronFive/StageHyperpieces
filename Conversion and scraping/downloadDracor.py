@@ -63,17 +63,14 @@ def get_authors(content):
     # None : cas key isno dans balise, pas de persName
     # cas complètement None ([] normalement ?)
     # Antoine de la Motte (sort = 1)
-    #  
     s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
-    # if type(s) is str:
-    #     return [s]
-    # if type(s) is list:
-    #     return list(map(concat_author, map(
-    #         lambda d: d.get('persName') if type(d) is not str 
-    #         else d, 
-    #         filter(lambda d: d is not None, s))))   
-    if type(s) in [str, list]:
-        return ''        
+    if type(s) is str:
+        return [s]
+    if type(s) is list:
+        return list(map(concat_author, map(
+            lambda d: d.get('persName') if type(d) is not str 
+            else d, 
+            filter(lambda d: d is not None, s))))           
     else:
         return concat_author(s.get('persName'))
 
@@ -88,9 +85,7 @@ def extract_important_datas(contents):
     #     'year': get_year(content)} 
     #     for content in contents]
     for content in contents:
-        s = get_authors(content)
-        if not s == '':
-            print(get_authors(content))
+        print(get_authors(content))
         
 
 
