@@ -35,26 +35,26 @@ def get_title(content):
     else:
         return list(s.values())[1]
 
-def concat_author_in_l(l):
+def concat_authors_in_list(l):
     return ' '.join(list(map(
         lambda d: 'None' if d is None 
-        else concat_author_in_l(d) if type(d) is list 
+        else concat_authors_in_list(d) if type(d) is list 
         else d if type(d) is str
-        else concat_author(d)
+        else concat_author_in_dico(d)
         , l)))
 
-def concat_author(s):
+def concat_author_in_dico(s):
     if s is None:
         return None
     if type(s) is str:
         return s
     if type(s) is list:
-        return concat_author_in_l(s)
+        return concat_authors_in_list(s)
     return ' '.join(list(map(
         lambda d: 'None' if d is None 
-        else concat_author_in_l(d) if type(d) is list 
+        else concat_authors_in_list(d) if type(d) is list 
         else d if type(d) is str
-        else concat_author(d), 
+        else concat_author_in_dico(d), 
         s.values())))
 
 def get_authors(content):
@@ -67,12 +67,12 @@ def get_authors(content):
     if type(s) is str:
         return s
     if type(s) is list:
-        return list(map(concat_author, map(
+        return list(map(concat_author_in_dico, map(
             lambda d: d.get('persName') if type(d) is not str 
             else d, 
             filter(lambda d: d is not None, s))))           
     else:
-        return concat_author(s.get('persName'))
+        return concat_author_in_dico(s.get('persName'))
 
 def get_year(content):
     #print("Content :", content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt'))
