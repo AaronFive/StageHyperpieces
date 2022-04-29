@@ -42,6 +42,8 @@ def l_contains_pen(l):
     return any(contains_pen(d) for d in filter(lambda d: isinstance(d, dict), l))
 
 def concat_authors_in_list(l):
+    if (l_contains_pen(l)):
+        return l[0].get('#text')
     return ' '.join(list(map(
         lambda d: d if d is None or type(d) is str
         else concat_authors_in_list(d) if type(d) is list 
