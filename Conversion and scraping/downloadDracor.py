@@ -90,9 +90,6 @@ def extract_important_datas(contents):
     #     'year': get_year(content)} 
     #     for content in contents]
     for content in contents:
-        s = get_authors(content)
-        if s == 'pen Voltaire François-Marie Arouet':
-            print("########", content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author').get('persName'))
         print(get_authors(content))
         
 
