@@ -41,9 +41,20 @@ def contains_pen(d):
 def l_contains_pen(l):
     return any(contains_pen(d) for d in filter(lambda d: isinstance(d, dict), l))
 
+def l_find_pen(l):
+    for i in range(len(l)):
+        if isinstance(l[i], dict) and 'pen' in l[i].values():
+            return i
+    return len(l)
+
 def concat_authors_in_list(l):
     if (l_contains_pen(l)):
-        return l[0].get('#text')
+        pen_dico = l_find_pen(l)
+        name = l[pen_dico].get('#text')
+        if name is not None:
+            return name
+        else:
+            return l[pen_dico].get('surname')
     return ' '.join(list(map(
         lambda d: d if d is None or type(d) is str
         else concat_authors_in_list(d) if type(d) is list 
@@ -77,7 +88,10 @@ def get_authors(content):
             else d, 
             filter(lambda d: d is not None, s))))           
     else:
-        return concat_author_in_dico(s.get('persName'))
+        persName = s.get('persName')
+        if persName is None:
+            return s.get('#text')
+        return concat_author_in_dico(persName)
 
 def get_year(content):
     #print("Content :", content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt'))
@@ -90,8 +104,9 @@ def extract_important_datas(contents):
     #     'year': get_year(content)} 
     #     for content in contents]
     for content in contents:
-        print(get_authors(content))
-        
+        s = get_authors(content)
+        if 'preserve' in s:
+            print(get_authors(content))        
 
 
 if __name__ == "__main__":
