@@ -56,6 +56,15 @@ def get_sort(persName):
                     return surname.get('#text')
     return None
 
+def get_preserve(persNames):
+    if type(persNames) is list and len(persNames) == 2:
+        persName, d = persNames
+        if(isinstance(d, dict)) and d.get('@xml:space') == 'preserve' and type(persName) is str:
+            return persName
+    elif(isinstance(persNames, dict)) and persNames.get('@xml:space') == 'preserve':
+        return persNames.get('surname')
+    return None
+
 def concat_authors_in_list(l):
     if (l_contains_pen(l)):
         pen_dico = l_find_pen(l)
@@ -73,6 +82,9 @@ def concat_authors_in_list(l):
 def concat_author_in_dico(s):
     if s is None or type(s) is str:
         return s
+    preserve = get_preserve(s)
+    if preserve is not None:
+        return preserve
     if type(s) is list:
         return concat_authors_in_list(s)
     sort = get_sort(s)
@@ -112,10 +124,7 @@ def extract_important_datas(contents):
     #     'year': get_year(content)} 
     #     for content in contents]
     for content in contents:
-        s = get_authors(content)
-        if 'preserve' in s or (type(s) is list and any(type(d) is str and 'preserve' in d for d in s)):
-            # print(s, content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author'))        
-            print(s)
+        print(get_authors(content))
 
 if __name__ == "__main__":
     data_dic = load_datas("https://dracor.org/api/corpora/fre")
