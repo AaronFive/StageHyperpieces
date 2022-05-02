@@ -47,6 +47,15 @@ def l_find_pen(l):
             return i
     return len(l)
 
+def get_sort(persName):
+    if isinstance(persName, dict):
+        surnames = persName.get('surname')
+        if type(surnames) is list:
+            for surname in surnames:
+                if(isinstance(surname, dict)) and surname.get('@sort') == '1':
+                    return surname.get('#text')
+    return None
+
 def concat_authors_in_list(l):
     if (l_contains_pen(l)):
         pen_dico = l_find_pen(l)
@@ -66,6 +75,9 @@ def concat_author_in_dico(s):
         return s
     if type(s) is list:
         return concat_authors_in_list(s)
+    sort = get_sort(s)
+    if not sort is None:
+        return sort
     return ' '.join(list(map(
         lambda d: 'None' if d is None 
         else concat_authors_in_list(d) if type(d) is list 
@@ -74,11 +86,7 @@ def concat_author_in_dico(s):
         s.values())))
 
 def get_authors(content):
-    # pen à gérer
     # preserve à gérer
-    # None : cas key isno dans balise, pas de persName
-    # cas complètement None ([] normalement ?)
-    # Antoine de la Motte (sort = 1)
     s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
     if type(s) is str:
         return s
@@ -105,11 +113,15 @@ def extract_important_datas(contents):
     #     for content in contents]
     for content in contents:
         s = get_authors(content)
-        if 'preserve' in s:
-            print(get_authors(content))        
-
+        if 'preserve' in s or (type(s) is list and any(type(d) is str and 'preserve' in d for d in s)):
+            # print(s, content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author'))        
+            print(s)
 
 if __name__ == "__main__":
     data_dic = load_datas("https://dracor.org/api/corpora/fre")
     plays = data_dic.get('dramas')
     print(extract_important_datas(get_actual_datas(dracor_folder)))
+
+#string dans persName <- surname <- 
+
+# sort 1 in surname
