@@ -114,23 +114,22 @@ def get_authors(content):
         return concat_author_in_dico(persName)
 
 def get_year(content):
-    #print("Content :", content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt'))
-    return None
+    dates = content.get('TEI').get('teiHeader').get('fileDesc').get('sourceDesc').get('bibl').get('bibl').get('date')
+    if type(dates) is list:
+        for date in dates:
+            if date.get('@type') == 'print':
+                return date.get('@when')
+    return dates.get('@when')
 
 def extract_important_datas(contents):
-    # return [{
-    #     'title': get_title(content),
-    #     'author': get_authors(content), 
-    #     'year': get_year(content)} 
-    #     for content in contents]
-    for content in contents:
-        print(get_authors(content))
+    return [{
+        'title': get_title(content),
+        'author': get_authors(content), 
+        'year': get_year(content)} 
+        for content in contents]
+        
 
 if __name__ == "__main__":
     data_dic = load_datas("https://dracor.org/api/corpora/fre")
     plays = data_dic.get('dramas')
     print(extract_important_datas(get_actual_datas(dracor_folder)))
-
-#string dans persName <- surname <- 
-
-# sort 1 in surname
