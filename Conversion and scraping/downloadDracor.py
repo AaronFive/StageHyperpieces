@@ -103,12 +103,13 @@ def concat_author_in_dico(s):
     sort = get_sort(s)
     if not sort is None:
         return sort
-    return ' '.join(list(map(
-        lambda d: 'None' if d is None 
-        else concat_authors_in_list(d) if type(d) is list 
-        else d if type(d) is str
-        else concat_author_in_dico(d), 
-        s.values())))
+    # return ' '.join(list(map(
+    #     lambda d: 'None' if d is None 
+    #     else concat_authors_in_list(d) if type(d) is list 
+    #     else d if type(d) is str
+    #     else concat_author_in_dico(d), 
+    #     s.values())))
+    return concat_authors_in_list(s.values())
 
 def get_authors(content):
     s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
@@ -116,9 +117,11 @@ def get_authors(content):
         return s
     if type(s) is list:
         return list(map(concat_author_in_dico, map(
-            lambda d: d.get('persName') if type(d) is not str 
-            else d, 
-            filter(lambda d: d is not None, s))))           
+            lambda d:
+                d if d is None
+                else d.get('persName') if type(d) is not str 
+                else d, 
+            s)))           
     else:
         persName = s.get('persName')
         if persName is None:
@@ -130,7 +133,10 @@ def get_year(content):
     if type(dates) is list:
         for date in dates:
             if date.get('@type') == 'print':
-                return date.get('@when')
+                res = date.get('@when')
+                if res is None:
+                    return '-'.join([date.get('@notBefore'), date.get('@notAfter')])
+                return res
     return dates.get('@when')
 
 def extract_important_datas(contents):
