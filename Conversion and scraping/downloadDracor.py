@@ -12,8 +12,6 @@ def load_datas(link):
     Returns:
         dict: Dictionnary with database from the URL.
     """
-
-    # verification réponse requête ?
     return json.loads(requests.get(link, 'metrics').content)
 
 def get_header(xml):
@@ -65,6 +63,18 @@ def get_preserve(persNames):
         return persNames.get('surname')
     return None
 
+def get_pseudonym(persNames):
+    if type(persNames) is list:
+        for persName in persNames:
+            if(isinstance(persName, dict)) and persName.get('@type') == 'pseudonym':
+                pseudo = persName.get('#text')
+                if pseudo is None:
+                    return persName.get('surname')
+                return pseudo
+    elif(isinstance(persNames, dict)) and persNames.get('@type') == 'pseudonym':
+        return persNames.get('surname')
+    return None
+
 def concat_authors_in_list(l):
     if (l_contains_pen(l)):
         pen_dico = l_find_pen(l)
@@ -82,6 +92,9 @@ def concat_authors_in_list(l):
 def concat_author_in_dico(s):
     if s is None or type(s) is str:
         return s
+    pseudo = get_pseudonym(s)
+    if pseudo is not None:
+        return pseudo    
     preserve = get_preserve(s)
     if preserve is not None:
         return preserve
@@ -98,7 +111,6 @@ def concat_author_in_dico(s):
         s.values())))
 
 def get_authors(content):
-    # preserve à gérer
     s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
     if type(s) is str:
         return s
@@ -124,12 +136,16 @@ def get_year(content):
 def extract_important_datas(contents):
     return [{
         'title': get_title(content),
-        'author': get_authors(content), 
+        'authors': get_authors(content), 
         'year': get_year(content)} 
-        for content in contents]
-        
+        for content in contents]  
+
+def display(datas):
+    for data in datas:
+        print(data)
 
 if __name__ == "__main__":
     data_dic = load_datas("https://dracor.org/api/corpora/fre")
     plays = data_dic.get('dramas')
-    print(extract_important_datas(get_actual_datas(dracor_folder)))
+    datas = extract_important_datas(get_actual_datas(dracor_folder))
+    display(datas)
