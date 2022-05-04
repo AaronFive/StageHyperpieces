@@ -173,22 +173,52 @@ def display(datas):
     for data in datas:
         print(data, "\n")
 
+def equals_authors(old, new):
+    if type(old) is str and type(new[0]) is str:
+        return old in new or new[0] in old
+    if type(old) is list and type(new[0]) is tuple and len(old) == len(new):
+        return all(map(lambda name, names: name in names or any(
+            names[0] in n or names[1] in n for n in old
+            ), old, new))
+    return False
+
 def extract_duplicates(datas, new_datas):
     for new_data in new_datas:
+        tuple_datas = []
         for data in datas:
-            # if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') == data.get('yearNormalized'):
-            #     print(data, '\n', new_data, '\n')
+            if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') == data.get('yearNormalized'):
+                tuple_datas.append((data, new_data))
+        for old, new in tuple_datas:
+            old_authors = old['authors']
+            new_authors = list(filter(lambda t: None not in t, map(lambda author: (author['fullname'], author['shortname']), new['authors'])))
+            if len(new_authors) == 1:
+                new_authors = new_authors[0]
+            if not equals_authors(old_authors, new_authors):
+                print("old :", old, '\nnew :', new, '\n')
+            # t = equals_authors(old_authors, new_authors)
 
-            if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') != data.get('yearNormalized'):
-                print("old :", data, '\nnew :', new_data, '\n')
+# alsoKnownAs (pen)
+# nobility
 
+#probleme sort
+"""
+old : {'title': 'Conversations de Madame la Marquise de Maintenon', 'authors': ['Aubigné', OrderedDict([('@sort', '1'), ('#text', 'Maintenon')])], 'yearNormalized': '1637'} 
+new : {'title': 'Conversations de Madame la Marquise de Maintenon', 'authors': [{'name': "Maintenon, Françoise d'Aubigné, marquise de", 'fullname': "Françoise d'Aubigné, marquise de Maintenon", 'shortname': 'Maintenon', 'refs': [{'ref': '0000000109273521', 'type': 'isni'}, {'ref': 'Q230670', 'type': 'wikidata'}]}], 'yearNormalized': '1637'} 
+"""
+
+#probleme de
+"""
+old : {'title': 'Endymion', 'authors': 'Fontenelle Bernard Le Bouvier Fontenelle de', 'yearNormalized': '1731'} 
+new : {'title': 'Endymion', 'authors': [{'name': 'Fontenelle, Bernard Le Bouyer de', 'fullname': 'Bernard Le Bouyer de Fontenelle', 'shortname': 'Fontenelle', 'alsoKnownAs': ['Bernard Le Bouvier de Fontenelle']}], 'yearNormalized': '1731'} 
+"""
+
+#etc
 
 if __name__ == "__main__":
     data_dic = load_datas("https://dracor.org/api/corpora/fre")
     plays = data_dic.get('dramas')
     datas = extract_important_datas(get_actual_datas(dracor_folder))
     new_datas = extract_datas_plays(plays)
-    print(plays[0])
     # display(datas)
     # display(new_datas)
     extract_duplicates(datas, new_datas)
