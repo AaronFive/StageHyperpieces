@@ -103,12 +103,6 @@ def concat_author_in_dico(persNames):
     sort = get_sort(persNames)
     if not sort is None:
         return sort
-    # return ' '.join(list(map(
-    #     lambda d: 'None' if d is None 
-    #     else concat_authors_in_list(d) if type(d) is list 
-    #     else d if type(d) is str
-    #     else concat_author_in_dico(d), 
-    #     s.values())))
     return concat_authors_in_list(persNames.values())
 
 def get_authors(content):
@@ -131,30 +125,72 @@ def get_authors(content):
             return s.get('#text')
         return concat_author_in_dico(persName)
 
+def choose_year(writtenYear, printYear, premiereYear):
+    res = None
+    if printYear is None:
+        res = int(premiereYear)
+    elif premiereYear is None:
+        res = int(printYear)
+    else:
+        res = min(int(premiereYear), int(printYear))
+    if writtenYear is not None and res - int(writtenYear) > 10:
+        return writtenYear
+    return str(res)
+
+
 def get_year(content):
     dates = content.get('TEI').get('teiHeader').get('fileDesc').get('sourceDesc').get('bibl').get('bibl').get('date')
+    all_dates = {'written': None, 'print': None, 'premiere': None}
     if type(dates) is list:
         for date in dates:
-            if date.get('@type') == 'print':
-                res = date.get('@when')
-                if res is None:
-                    return '-'.join([date.get('@notBefore'), date.get('@notAfter')])
-                return res
-    return dates.get('@when')
+            typ = date.get('@type')
+            if typ in all_dates.keys():
+                year = date.get('@when')
+                if year is None:
+                    year = date.get('@notAfter')
+            all_dates[typ] = year.split('-')[0]
+        return choose_year(all_dates['written'], all_dates['print'], all_dates['premiere'])
+    res = dates.get('@when')
+    if res is None:
+        res = dates.get('@notAfter')
+    return res
 
 def extract_important_datas(contents):
     return [{
         'title': get_title(content),
         'authors': get_authors(content), 
-        'year': get_year(content)} 
+        'yearNormalized': get_year(content)} 
         for content in contents]  
+
+def extract_datas_plays(plays):
+    return [{
+        'title': play.get('title'),
+        'authors': play.get('authors'), 
+        'yearNormalized': play.get('yearNormalized')} 
+        for play in plays]
 
 def display(datas):
     for data in datas:
-        print(data)
+        print(data, "\n")
+
+def extract_duplicates(datas, new_datas):
+    for new_data in new_datas:
+        for data in datas:
+            # if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') == data.get('yearNormalized'):
+            #     print(data, '\n', new_data, '\n')
+
+            if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') != data.get('yearNormalized'):
+                print("old :", data, '\nnew :', new_data, '\n')
+
 
 if __name__ == "__main__":
     data_dic = load_datas("https://dracor.org/api/corpora/fre")
     plays = data_dic.get('dramas')
     datas = extract_important_datas(get_actual_datas(dracor_folder))
-    display(datas)
+    new_datas = extract_datas_plays(plays)
+    print(plays[0])
+    # display(datas)
+    # display(new_datas)
+    extract_duplicates(datas, new_datas)
+    
+
