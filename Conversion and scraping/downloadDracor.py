@@ -89,18 +89,18 @@ def concat_authors_in_list(l):
         else concat_author_in_dico(d)
         , l)))
 
-def concat_author_in_dico(s):
-    if s is None or type(s) is str:
-        return s
-    pseudo = get_pseudonym(s)
+def concat_author_in_dico(persNames):
+    if persNames is None or type(persNames) is str:
+        return persNames
+    pseudo = get_pseudonym(persNames)
     if pseudo is not None:
         return pseudo    
-    preserve = get_preserve(s)
+    preserve = get_preserve(persNames)
     if preserve is not None:
         return preserve
-    if type(s) is list:
-        return concat_authors_in_list(s)
-    sort = get_sort(s)
+    if type(persNames) is list:
+        return concat_authors_in_list(persNames)
+    sort = get_sort(persNames)
     if not sort is None:
         return sort
     # return ' '.join(list(map(
@@ -109,19 +109,22 @@ def concat_author_in_dico(s):
     #     else d if type(d) is str
     #     else concat_author_in_dico(d), 
     #     s.values())))
-    return concat_authors_in_list(s.values())
+    return concat_authors_in_list(persNames.values())
 
 def get_authors(content):
     s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
     if type(s) is str:
         return s
     if type(s) is list:
-        return list(map(concat_author_in_dico, map(
+        res = list(filter(lambda author: author is not None, map(concat_author_in_dico, map(
             lambda d:
                 d if d is None
                 else d.get('persName') if type(d) is not str 
                 else d, 
-            s)))           
+            s))))   
+        if len(res) == 1:
+            res = res[0]
+        return res        
     else:
         persName = s.get('persName')
         if persName is None:
