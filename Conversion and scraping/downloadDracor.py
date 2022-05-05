@@ -107,22 +107,22 @@ def concat_author_in_dico(persNames):
     return concat_authors_in_list(list(filter(lambda value: value != 'nobility', persNames.values())))
 
 def get_authors(content):
-    s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
-    if type(s) is str:
-        return s
-    if type(s) is list:
+    authors = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
+    if type(authors) is str:
+        return authors
+    if type(authors) is list:
         res = list(filter(lambda author: author is not None, map(concat_author_in_dico, map(
             lambda d:
-                d if d is None
-                else d.get('persName') if type(d) is not str 
-                else d, 
-            s))))   
+                d if d is None or type(d) is str
+                else d.get('persName') if d.get('persName') is not None
+                else d.get('#text'),
+            authors))))   
         if len(res) == 1:
             res = res[0]
         return res        
-    persName = s.get('persName')
+    persName = authors.get('persName')
     if persName is None:
-        return s.get('#text')
+        return authors.get('#text')
     return concat_author_in_dico(persName)
 
 def choose_year(writtenYear, printYear, premiereYear):
@@ -155,12 +155,29 @@ def get_year(content):
         res = dates.get('@notAfter')
     return res
 
+def replace_de(name):
+    if ' de' in name:
+        l = name.split(' ')
+        if l[-1] == 'de':
+            l[-1], l[-2] = l[-2], l[-1]
+        for i in range(len(l) - 1):
+            if l[i] == 'de' and l[i + 1] == 'de':
+                l[i + 1], l[i + 2] = l[i + 2], l[i + 1]
+                i += 2
+        name = ' '.join(l)
+    return name
+
 def extract_important_datas(contents):
-    return [{
+    res = [{
         'title': get_title(content),
         'authors': get_authors(content), 
         'yearNormalized': get_year(content)} 
         for content in contents]  
+    for data in res:
+        if type(data['authors']) is str and 'Fontenelle' in data['authors']:
+            data['authors'] = 'Fontenelle'
+        data['authors'] = replace_de(data['authors'])
+    return res
 
 def extract_datas_plays(plays):
     return [{
