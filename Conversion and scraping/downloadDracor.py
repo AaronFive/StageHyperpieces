@@ -60,7 +60,10 @@ def get_preserve(persNames):
         if(isinstance(d, dict)) and d.get('@xml:space') == 'preserve' and type(persName) is str:
             return persName
     elif(isinstance(persNames, dict)) and persNames.get('@xml:space') == 'preserve':
-        return persNames.get('surname')
+        surname = persNames.get('surname')
+        if type(surname) is str:
+            return surname
+        return get_sort(surname)
     return None
 
 def get_pseudonym(persNames):
@@ -103,7 +106,6 @@ def concat_author_in_dico(persNames):
     sort = get_sort(persNames)
     if not sort is None:
         return sort
-
     return concat_authors_in_list(list(filter(lambda value: value != 'nobility', persNames.values())))
 
 def get_authors(content):
