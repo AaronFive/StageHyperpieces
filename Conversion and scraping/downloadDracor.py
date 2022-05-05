@@ -84,10 +84,10 @@ def concat_authors_in_list(l):
         else:
             return l[pen_dico].get('surname')
     return ' '.join(list(map(
-        lambda d: d if d is None or type(d) is str
-        else concat_authors_in_list(d) if type(d) is list 
-        else concat_author_in_dico(d)
-        , l)))
+        lambda d: 
+            concat_authors_in_list(d) if type(d) is list 
+            else concat_author_in_dico(d), 
+            l)))
 
 def concat_author_in_dico(persNames):
     if persNames is None or type(persNames) is str:
@@ -103,7 +103,8 @@ def concat_author_in_dico(persNames):
     sort = get_sort(persNames)
     if not sort is None:
         return sort
-    return concat_authors_in_list(persNames.values())
+
+    return concat_authors_in_list(list(filter(lambda value: value != 'nobility', persNames.values())))
 
 def get_authors(content):
     s = content.get('TEI').get('teiHeader').get('fileDesc').get('titleStmt').get('author')
@@ -119,11 +120,10 @@ def get_authors(content):
         if len(res) == 1:
             res = res[0]
         return res        
-    else:
-        persName = s.get('persName')
-        if persName is None:
-            return s.get('#text')
-        return concat_author_in_dico(persName)
+    persName = s.get('persName')
+    if persName is None:
+        return s.get('#text')
+    return concat_author_in_dico(persName)
 
 def choose_year(writtenYear, printYear, premiereYear):
     res = None
@@ -183,6 +183,7 @@ def equals_authors(old, new):
     return False
 
 def extract_duplicates(datas, new_datas):
+    fd = 0
     for new_data in new_datas:
         tuple_datas = []
         for data in datas:
@@ -195,7 +196,8 @@ def extract_duplicates(datas, new_datas):
                 new_authors = new_authors[0]
             if not equals_authors(old_authors, new_authors):
                 print("old :", old, '\nnew :', new, '\n')
-            # t = equals_authors(old_authors, new_authors)
+                fd += 1
+    print("{fd} false duplicates".format(fd = fd))
 
 # alsoKnownAs (pen)
 # nobility
@@ -222,5 +224,6 @@ if __name__ == "__main__":
     # display(datas)
     # display(new_datas)
     extract_duplicates(datas, new_datas)
+    print("Actuellement : {datas} pièces\nTrouvé en ligne : {new_datas} pièces".format(datas = str(len(datas)), new_datas = str(len(new_datas))))
     
 
