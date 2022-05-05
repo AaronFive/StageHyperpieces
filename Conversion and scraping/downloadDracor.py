@@ -173,10 +173,22 @@ def display(datas):
     for data in datas:
         print(data, "\n")
 
+def extend_nickname(t):
+    if t[2] is not None:
+        tmp = t[:2]
+        tmp.extend(t[2])
+        t = tmp
+    else:
+        t.pop(2)
+    return t
+
 def equals_authors(old, new):
+    # print(new, "\n")
     if type(old) is str and type(new[0]) is str:
+        new = extend_nickname(new)
         return old in new or new[0] in old
-    if type(old) is list and type(new[0]) is tuple and len(old) == len(new):
+    if type(old) is list and type(new[0]) is list and len(old) == len(new):
+        new = list(map(extend_nickname, new))
         return all(map(lambda name, names: name in names or any(
             names[0] in n or names[1] in n for n in old
             ), old, new))
@@ -191,16 +203,15 @@ def extract_duplicates(datas, new_datas):
                 tuple_datas.append((data, new_data))
         for old, new in tuple_datas:
             old_authors = old['authors']
-            new_authors = list(filter(lambda t: None not in t, map(lambda author: (author['fullname'], author['shortname']), new['authors'])))
+            new_authors = list(filter(lambda t: None not in t[:2], map(lambda author: [author['fullname'], author['shortname'], author.get('alsoKnownAs')], new['authors'])))
             if len(new_authors) == 1:
                 new_authors = new_authors[0]
             if not equals_authors(old_authors, new_authors):
                 print("old :", old, '\nnew :', new, '\n')
                 fd += 1
-    print("{fd} false duplicates".format(fd = fd))
+    print("{fd} duplicates".format(fd = fd))
 
 # alsoKnownAs (pen)
-# nobility
 
 #probleme sort
 """
