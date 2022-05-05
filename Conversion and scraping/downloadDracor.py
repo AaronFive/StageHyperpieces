@@ -202,49 +202,43 @@ def extend_nickname(t):
     return t
 
 def equals_authors(old, new):
-    # print(new, "\n")
     if type(old) is str and type(new[0]) is str:
-        new = extend_nickname(new)
-        return old in new or new[0] in old
+        new_tmp = extend_nickname(new.copy())
+        return old in new_tmp or new_tmp[0] in old
     if type(old) is list and type(new[0]) is list and len(old) == len(new):
-        new = list(map(extend_nickname, new))
+        new_tmp = list(map(extend_nickname, new.copy()))
         return all(map(lambda name, names: name in names or any(
             names[0] in n or names[1] in n for n in old
-            ), old, new))
+            ), old, new_tmp))
     return False
 
-def extract_duplicates(datas, new_datas):
-    fd = 0
-    for new_data in new_datas:
-        tuple_datas = []
-        for data in datas:
-            if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') == data.get('yearNormalized'):
-                tuple_datas.append((data, new_data))
-        for old, new in tuple_datas:
-            old_authors = old['authors']
-            new_authors = list(filter(lambda t: None not in t[:2], map(lambda author: [author['fullname'], author['shortname'], author.get('alsoKnownAs')], new['authors'])))
-            if len(new_authors) == 1:
-                new_authors = new_authors[0]
-            if not equals_authors(old_authors, new_authors):
-                print("old :", old, '\nnew :', new, '\n')
-                fd += 1
-    print("{fd} duplicates".format(fd = fd))
+# def extract_duplicates(datas, new_datas):
+#     for new_data in new_datas:
+#         tuple_datas = []
+#         for data in datas:
+#             if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') == data.get('yearNormalized'):
+#                 tuple_datas.append((data, new_data))
+#         for old, new in tuple_datas:
+#             old_authors = old['authors']
+#             new_authors = list(filter(lambda t: None not in t[:2], map(lambda author: [author['fullname'], author['shortname'], author.get('alsoKnownAs')], new['authors'])))
+#             if len(new_authors) == 1:
+#                 new_authors = new_authors[0]
+#             if not equals_authors(old_authors, new_authors):
+#                 print("old :", old, '\nnew :', new, '\n')
 
-# alsoKnownAs (pen)
+def is_duplicate(old, new):
+    return old.get('title') == new.get('title') and old.get('yearNormalized') == new.get('yearNormalized') and equals_authors(old.get('authors'), new.get('authors'))
 
-#probleme sort
-"""
-old : {'title': 'Conversations de Madame la Marquise de Maintenon', 'authors': ['Aubigné', OrderedDict([('@sort', '1'), ('#text', 'Maintenon')])], 'yearNormalized': '1637'} 
-new : {'title': 'Conversations de Madame la Marquise de Maintenon', 'authors': [{'name': "Maintenon, Françoise d'Aubigné, marquise de", 'fullname': "Françoise d'Aubigné, marquise de Maintenon", 'shortname': 'Maintenon', 'refs': [{'ref': '0000000109273521', 'type': 'isni'}, {'ref': 'Q230670', 'type': 'wikidata'}]}], 'yearNormalized': '1637'} 
-"""
+def have_duplicate(plays, new):
+    new['authors'] = list(filter(lambda t: None not in t[:2], map(lambda author: [author['fullname'], author['shortname'], author.get('alsoKnownAs')], new['authors'])))
+    if len(new['authors']) == 1:
+        new['authors'] = new['authors'][0]
+    return any(is_duplicate(play, new) for play in plays)
 
-#probleme de
-"""
-old : {'title': 'Endymion', 'authors': 'Fontenelle Bernard Le Bouvier Fontenelle de', 'yearNormalized': '1731'} 
-new : {'title': 'Endymion', 'authors': [{'name': 'Fontenelle, Bernard Le Bouyer de', 'fullname': 'Bernard Le Bouyer de Fontenelle', 'shortname': 'Fontenelle', 'alsoKnownAs': ['Bernard Le Bouvier de Fontenelle']}], 'yearNormalized': '1731'} 
-"""
-
-#etc
+def extract_news(old, news):
+    for new in news:
+        if not have_duplicate(old, new):
+            print(new)
 
 if __name__ == "__main__":
     data_dic = load_datas("https://dracor.org/api/corpora/fre")
@@ -253,7 +247,8 @@ if __name__ == "__main__":
     new_datas = extract_datas_plays(plays)
     # display(datas)
     # display(new_datas)
-    extract_duplicates(datas, new_datas)
+    # extract_duplicates(datas, new_datas)
+    extract_news(datas, new_datas)
     print("Actuellement : {datas} pièces\nTrouvé en ligne : {new_datas} pièces".format(datas = str(len(datas)), new_datas = str(len(new_datas))))
     
 
