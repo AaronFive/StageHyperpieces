@@ -1,8 +1,10 @@
 import glob, os, re, sys, time, requests, json, xmltodict
+from os.path import abspath, dirname, join
+from tei_reader import TeiReader
 
 
-folder = os.path.abspath(os.path.dirname(sys.argv[0]))
-dracor_folder = os.path.abspath(os.path.join(os.path.join(folder, os.pardir), "corpusDracor"))
+folder = abspath(dirname(sys.argv[0]))
+dracor_folder = abspath(join(join(folder, os.pardir), "corpusDracor"))
 dracor_link = "https://dracor.org/api/corpora/fre"
 plays_link = '/'.join([dracor_link, 'play'])
 
@@ -39,7 +41,7 @@ def get_actual_datas(path):
     """
     from os import walk
     contents = []
-    files = list(map(lambda f: os.path.join(dracor_folder, f), next(walk(path), (None, None, []))[2]))
+    files = list(map(lambda f: join(dracor_folder, f), next(walk(path), (None, None, []))[2]))
     for file in files:
         with open(file) as f:
             contents.append(xmltodict.parse(get_header(f.read())))
@@ -433,9 +435,16 @@ def display(datas):
         print(data, "\n")
 
 def load_tei(plays):
+    # reader = TeiReader()
     for play in plays:
         link = '/'.join([plays_link, play['name'], 'tei'])
-        print(link, "\n")
+        # corpora = reader.read_file(link)
+        # print(corpora.text, "\n")
+        r = requests.get(link, 'metrics')
+        file = abspath((join(dracor_folder, play['name'] + '.xml')))
+        with open(file, 'w') as f:
+            f.write(r.text)
+        f.close()
 
 if __name__ == "__main__":
     data_dic = load_datas(dracor_link)
