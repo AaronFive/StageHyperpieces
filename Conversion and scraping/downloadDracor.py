@@ -1,7 +1,5 @@
 import glob, os, re, sys, time, requests, json, xmltodict
 from os.path import abspath, dirname, join
-from tei_reader import TeiReader
-
 
 folder = abspath(dirname(sys.argv[0]))
 dracor_folder = abspath(join(join(folder, os.pardir), "corpusDracor"))
@@ -435,11 +433,8 @@ def display(datas):
         print(data, "\n")
 
 def load_tei(plays):
-    # reader = TeiReader()
     for play in plays:
         link = '/'.join([plays_link, play['name'], 'tei'])
-        # corpora = reader.read_file(link)
-        # print(corpora.text, "\n")
         r = requests.get(link, 'metrics')
         file = abspath((join(dracor_folder, play['name'] + '.xml')))
         with open(file, 'w') as f:
