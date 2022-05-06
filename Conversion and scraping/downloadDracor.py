@@ -3,6 +3,8 @@ import glob, os, re, sys, time, requests, json, xmltodict
 
 folder = os.path.abspath(os.path.dirname(sys.argv[0]))
 dracor_folder = os.path.abspath(os.path.join(os.path.join(folder, os.pardir), "corpusDracor"))
+dracor_link = "https://dracor.org/api/corpora/fre"
+plays_link = '/'.join([dracor_link, 'play'])
 
 def load_datas(link):
     """load datas from the chosen link.
@@ -334,10 +336,6 @@ def extract_datas_plays(plays):
         'yearNormalized': play.get('yearNormalized')} 
         for play in plays]
 
-# def display(datas):
-#     for data in datas:
-#         print(data, "\n")
-
 def extend_nickname(names):
     """private function to put in a list the nickname of an author at the same level as the fullname and the  shortname.
 
@@ -416,7 +414,7 @@ def have_duplicate(plays, new):
         new['authors'] = new['authors'][0]
     return any(is_duplicate(play, new) for play in plays)
 
-def extract_news(old, news):
+def print_news(old, news):
     """display all the new plays from Dracor not yet in the repository.
 
     Args:
@@ -425,17 +423,30 @@ def extract_news(old, news):
     """
     for new in news:
         if not have_duplicate(old, new):
-            print(new)
+            print(new, "\n")
+
+def detect_news(old, news):
+    return list(filter(lambda new: not have_duplicate(old, new), news))
+    
+def display(datas):
+    for data in datas:
+        print(data, "\n")
+
+def load_tei(plays):
+    for play in plays:
+        link = '/'.join([plays_link, play['name'], 'tei'])
+        print(link, "\n")
 
 if __name__ == "__main__":
-    data_dic = load_datas("https://dracor.org/api/corpora/fre")
+    data_dic = load_datas(dracor_link)
     plays = data_dic.get('dramas')
     datas = extract_important_datas(get_actual_datas(dracor_folder))
     new_datas = extract_datas_plays(plays)
-    # display(datas)
-    # display(new_datas)
-    # extract_duplicates(datas, new_datas)
-    extract_news(datas, new_datas)
+
+    # display(plays)
+
+    # print_news(datas, plays)
+    load_tei(detect_news(datas, plays))
     print("Actuellement : {datas} pièces\nTrouvé en ligne : {new_datas} pièces".format(datas = str(len(datas)), new_datas = str(len(new_datas))))
     
 
