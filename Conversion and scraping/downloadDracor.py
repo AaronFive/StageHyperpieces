@@ -39,7 +39,7 @@ def get_actual_datas(path):
     """
     from os import walk
     contents = []
-    files = list(map(lambda f: join(dracor_folder, f), next(walk(path), (None, None, []))[2]))
+    files = list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2]))
     for file in files:
         with open(file) as f:
             contents.append(xmltodict.parse(get_header(f.read())))

@@ -2,6 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import glob, os, re, sys, time, requests, subprocess
+from os import walk
+from os.path import abspath, dirname, join, basename
+
 
 """
     theatredocToBibdramatique, a script to automatically convert 
@@ -27,8 +30,9 @@ import glob, os, re, sys, time, requests, subprocess
 # containing plays downloaded from théâtre-documentation.com
 
 # Get the current folder
-folder = os.path.abspath(os.path.dirname(sys.argv[0]))
-print(folder)
+folder = abspath(dirname(sys.argv[0]))
+root_folder = abspath(join(folder, os.pardir))
+TD_folder = abspath(join(root_folder, "corpusTD"))
 
 documentNb = 0
 saveBegin = False
@@ -45,13 +49,12 @@ for playLine in allPlays:
       
 
 # Generate an XML-TEI file for every HTML file of the corpus
-print(os.path.join(os.path.join(folder, "corpusTD"),"*.html"))
-for file in glob.glob(os.path.join(os.path.join(folder, "corpusTD"),"*.html")):
+for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, None, []))[2])):
    print("Converting file " + file)
    
    # Find source
    source = ""
-   fileName = os.path.basename(file)
+   fileName = basename(file)
    
    if fileName in fileSources:
       source = fileSources[fileName]
