@@ -28,6 +28,7 @@ import glob, os, re, sys, time, requests, subprocess
 
 # Get the current folder
 folder = os.path.abspath(os.path.dirname(sys.argv[0]))
+print(folder)
 
 documentNb = 0
 saveBegin = False
@@ -44,6 +45,7 @@ for playLine in allPlays:
       
 
 # Generate an XML-TEI file for every HTML file of the corpus
+print(os.path.join(os.path.join(folder, "corpusTD"),"*.html"))
 for file in glob.glob(os.path.join(os.path.join(folder, "corpusTD"),"*.html")):
    print("Converting file " + file)
    
