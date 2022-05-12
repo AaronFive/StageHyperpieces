@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import glob, os, re, sys, time, requests, subprocess
-from os import walk
+from os import walk, pardir
 from os.path import abspath, dirname, join, basename
 
 
@@ -31,7 +31,7 @@ from os.path import abspath, dirname, join, basename
 
 # Get the current folder
 folder = abspath(dirname(sys.argv[0]))
-root_folder = abspath(join(folder, os.pardir))
+root_folder = abspath(join(folder, pardir))
 TD_folder = abspath(join(root_folder, "corpusTD"))
 
 documentNb = 0
@@ -49,7 +49,7 @@ for playLine in allPlays:
       
 
 # Generate an XML-TEI file for every HTML file of the corpus
-for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, None, []))[2])):
+for file in list(filter(lambda f: ".html" in f, map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, None, []))[2]))):
    print("Converting file " + file)
    
    # Find source
@@ -61,7 +61,7 @@ for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, 
       
    
    playText = open(file, "r", encoding="utf-8")
-   outputFile = open(file+".xml", "w", encoding="utf-8")
+   outputFile = open(file.replace("html", "xml"), "w", encoding="utf-8")
 
    # reset parameters
    charactersInScene = 0
@@ -75,7 +75,6 @@ for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, 
    sceneNb = ""
 
    for line in playText:
-      # detect title and author
       title = ""
       author = ""
       
@@ -144,11 +143,9 @@ for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, 
           <head>PERSONNAGES</head>
           <castList>
 """)
-
-
-      
+  
       # starting saving lines
-      if not(saveBegin):
+      if not saveBegin:
          res = re.search("<p>(.*)</p>", line)
          if res:
             saveBegin = True
@@ -161,26 +158,33 @@ for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, 
          
          # ending character block
          if characterBlock:
-            res = re.search("<h1", line)
+            res = re.search("<h[1,2]", line)
             if res:
                characterBlock = False
+               print("Character list : " + str(characterList))
             else:
                res = re.search("<p>(.*)</p>", line)
                if res:
+                  name = res.group(1)
+                  if len(name) == 1:
+                     if characterList:
+                        characterBlock = False
+                        print("Character list: " + str(characterList))
+                     continue   
                   character = res.group(1)
                   role = ""
                   res = re.search("([^,]+)(,.*)", character)
                   if res:
                      character = res.group(1)
                      role = res.group(2)
-                  if len(character)>2 and character != "&nbsp;":
+                  if len(character) > 2 and character != "&nbsp;":
                      characterList.append(character.lower().replace("*","").replace(" ","-"))
                      outputFile.writelines("""
             <castItem>
               <role rend="male/female" xml:id=\"""" + character.lower().replace(" ","-") + """\">""" + character + """</role>
               <roleDesc>""" + role + """</roleDesc>
             </castItem>
-""")
+""")  
       
       # Find the beginning of an act
       res = re.search("<h1[^>]*>(.*ACTE.*)</h1>", line)
@@ -241,14 +245,15 @@ for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, 
 
       # Find the list of characters on stage
       res = re.search("<p>(.*)</p>", line)
-      if res and not(characterBlock):
+      r = res
+      if res and not characterBlock:
          playLine = res.group(1).replace("&nbsp;"," ")
          if playLine != " ":
-            if len(characterLines)>1:
+            if len(characterLines) > 1:
                character = characterLines.pop(0)
                outputFile.writelines("""
           <stage>""" + character + """</stage>""")
-            if len(characterLines)>0:
+            if len(characterLines) > 0:
                if charactersInScene > 0:
                   outputFile.writelines("""
           </sp>""")
@@ -257,7 +262,10 @@ for file in list(map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, 
                # find the character name among all characters
                characterId = ""
                for c in characterList:
-                  res = re.search(c, character.lower())
+                  try:
+                     res = re.search(c, character.lower())
+                  except re.error:
+                     raise ValueError(f"Character : {c}\nList : {characterList}\nLigne courante : {r.group(1)}")
                   if res:
                      characterId = c
                if characterId == "":
