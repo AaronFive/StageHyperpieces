@@ -161,7 +161,6 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(TD_folder, f)
             res = re.search("<h[1,2]", line)
             if res:
                characterBlock = False
-               print("Character list : " + str(characterList))
             else:
                res = re.search("<p>(.*)</p>", line)
                if res:

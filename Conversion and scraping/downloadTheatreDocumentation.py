@@ -150,27 +150,22 @@ outputFile.close()
 characters = []
 # Save each play
 allPlays = open("PlaysFromTheatreDocumentation.csv", "r", encoding="utf-8")
-maxFileNameLength = 0
+
 for playLine in allPlays:
     res = re.search("([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\n", playLine)
     if res:
         fileName = res.group(1)
-        # Update maximum title length
-        if len(fileName) > maxFileNameLength:
-            maxFileNameLength = len(fileName)
-        # Add title characters to the list of observed characters
-        for char in fileName:
-            if char not in characters:
-                characters.append(char)
-        print("Downloading " + res.group(4) + " by " + res.group(3))
+        if not exists(join(TD_folder, fileName)):
+            # Add title characters to the list of observed characters
+            for char in fileName:
+                if char not in characters:
+                    characters.append(char)
+            print("Downloading " + res.group(4) + " by " + res.group(3))
 
-        response = requests.get(res.group(2))
-        open(join(TD_folder, fileName), 'wb').write(response.content)
-        print("File " + fileName + " written!")
-        time.sleep(2)
-
-print(maxFileNameLength)
-
+            response = requests.get(res.group(2))
+            open(join(TD_folder, fileName), 'wb').write(response.content)
+            print("File " + fileName + " written!")
+            time.sleep(2)
 
 """
 # Check if titles contain no special characters
