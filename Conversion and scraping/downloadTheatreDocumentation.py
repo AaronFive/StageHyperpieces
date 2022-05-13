@@ -28,10 +28,10 @@ from os.path import abspath, dirname, join, exists
 # Get the current folder
 folder = abspath(dirname(sys.argv[0]))
 root_folder = abspath(join(folder, os.pardir))
-TD_folder = abspath(join(root_folder, "corpusTD"))
+html_folder = abspath(join(root_folder, "notConvertTD"))
 
-if not exists(TD_folder):
-    os.makedirs(TD_folder)
+if not exists(html_folder):
+    os.makedirs(html_folder)
 
 
 # Get the list of pages listing plays from http://xn--thtre-documentation-cvb0m.com/content/oeuvres
@@ -155,7 +155,7 @@ for playLine in allPlays:
     res = re.search("([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\n", playLine)
     if res:
         fileName = res.group(1)
-        if not exists(join(TD_folder, fileName)):
+        if not exists(join(html_folder, fileName)):
             # Add title characters to the list of observed characters
             for char in fileName:
                 if char not in characters:
@@ -163,7 +163,7 @@ for playLine in allPlays:
             print("Downloading " + res.group(4) + " by " + res.group(3))
 
             response = requests.get(res.group(2))
-            open(join(TD_folder, fileName), 'wb').write(response.content)
+            open(join(html_folder, fileName), 'wb').write(response.content)
             print("File " + fileName + " written!")
             time.sleep(2)
 

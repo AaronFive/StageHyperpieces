@@ -33,6 +33,7 @@ from os.path import abspath, dirname, join, basename
 # Get the current folder
 folder = abspath(dirname(sys.argv[0]))
 root_folder = abspath(join(folder, pardir))
+html_folder = abspath(join(root_folder, "notConvertRD"))
 TD_folder = abspath(join(root_folder, "corpusTD"))
 
 documentNb = 0
@@ -50,7 +51,7 @@ for playLine in allPlays:
       
 
 # Generate an XML-TEI file for every HTML file of the corpus
-for file in list(filter(lambda f: ".html" in f, map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, None, []))[2]))):
+for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, f), next(walk(html_folder), (None, None, []))[2]))):
    if exists(join(TD_folder, file.replace("html", "xml"))):
       continue
    print("Converting file " + file)
