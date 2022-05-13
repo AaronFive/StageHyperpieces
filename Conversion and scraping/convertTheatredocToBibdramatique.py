@@ -1,6 +1,7 @@
 #!/usr/sfw/bin/python
 # -*- coding: utf-8 -*-
 
+from genericpath import exists
 import glob, os, re, sys, time, requests, subprocess
 from os import walk, pardir
 from os.path import abspath, dirname, join, basename
@@ -50,6 +51,8 @@ for playLine in allPlays:
 
 # Generate an XML-TEI file for every HTML file of the corpus
 for file in list(filter(lambda f: ".html" in f, map(lambda f: join(TD_folder, f), next(walk(TD_folder), (None, None, []))[2]))):
+   if exists(join(TD_folder, file.replace("html", "xml"))):
+      continue
    print("Converting file " + file)
    
    # Find source
