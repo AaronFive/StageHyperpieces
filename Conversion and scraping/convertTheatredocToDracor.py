@@ -3,6 +3,7 @@
 
 from genericpath import exists
 import glob, os, re, sys, time, requests, subprocess
+from operator import is_
 from os import walk, pardir
 from os.path import abspath, dirname, join, basename
 
@@ -36,6 +37,26 @@ root_folder = abspath(join(folder, pardir))
 html_folder = abspath(join(root_folder, "notConvertTD"))
 Dracor_Folder = abspath(join(root_folder, "corpusDracor"))
 
+### temporaire
+date_file = open('datesTD.txt', 'w')
+count_date = 0
+###temporaire
+
+mois = {
+   'janvier': '01',
+   'fevrier': '02',
+   'mars': '03',
+   'avril': '04',
+   'mai': '05',
+   'juin': '06',
+   'juillet': '07',
+   'aout': '08',
+   'septembre': '09',
+   'octobre': '10',
+   'novembre': '11',
+   'decembre': '12',
+}
+
 documentNb = 0
 saveBegin = False
 characterBlock = False
@@ -52,9 +73,10 @@ for playLine in allPlays:
 
 # Generate an XML-TEI file for every HTML file of the corpus
 for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, f), next(walk(html_folder), (None, None, []))[2]))):
-   if exists(join(Dracor_Folder, file.replace("html", "xml"))):
-      continue
+   # if exists(join(Dracor_Folder, file.replace("html", "xml"))):
+   #    continue
    print("Converting file " + file)
+   date_file.writelines(file + "\n")
    
    # Find source
    source = ""
@@ -65,7 +87,7 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
       
    
    playText = open(file, "r", encoding="utf-8")
-   outputFile = open(file.replace("html", "xml"), "w", encoding="utf-8")
+   outputFile = open(join(Dracor_Folder, file.replace("html", "xml")), "w", encoding="utf-8")
 
    # reset parameters
    charactersInScene = 0
@@ -89,37 +111,136 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
          res2 = re.search(r"^(.*) \((.*)$", title)
          if res2:
             title = res2.group(1)
-            author = res2.group(2)
+            author = res2.group(2).strip('| ')
+
+            persNames = author.split(' ')
+            forename = list(filter(lambda s: not s.isupper(), persNames))
+            surname = list(filter(lambda s: s.isupper(), persNames))
+
          
          outputFile.writelines("""<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fre">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title type="main">""" + title + """</title>
-        <author key=\"""" + author +""" (naissance-mort)\">""" + author +"""</author>
-      </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
+        <title type="main">""" + title + """</title>""")
+
+         outputFile.writelines("""
+        <author>
+         <persName>""")
+
+         for name in forename:
+            if name in ['de', "d'"]:
+               outputFile.writelines("""
+               <linkname>""" + name + """</linkname>""")
+            elif name in ['Abbé']: # identifier les rolename
+               outputFile.writelines("""
+               <rolename>""" + name + """</rolename>""")
+            else:
+               outputFile.writelines("""
+               <forename>""" + name + """</forename>""")
+         
+         for name in surname:
+            if name in ['DE', "D'"]:
+               outputFile.writelines("""
+               <linkname>""" + name.lower() + """</linkname>""")
+            else:
+               outputFile.writelines("""
+               <surname>""" + ''.join([name[0], name[1:].lower()]) + """</surname>""")
+
+         outputFile.writelines("""
+          </persName>
+         </author>
+            <editor>Adrien Roumégous, dans le cadre d'un stage de M1 Informatique encadré par Aaron Boussidan et Philippe Gambette.</editor>
+         </titleStmt>""")
+
+         outputFile.writelines("""
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+                <idno type="dracor" xml:base="https://dracor.org/id/">fre000383</idno>
         </availability>
         <idno>""" + source + """</idno>
       </publicationStmt>
-      <sourceDesc>
-        <bibl><author>""" + author + """</author>. <title>""" + title + """</title>. </bibl>
-      </sourceDesc>
+      <sourceDesc>""")
+
+         outputFile.writelines("""
+            <bibl type="digitalSource">
+                    <name>Théâtre Documentation</name>
+                    <idno type="URL">""" + source + """</idno>
+                    <availability>
+                        <licence>
+                            <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+                            <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+                        </licence>
+                    </availability>
+                    <bibl type="originalSource">
+                    """)
+
+         date_written = "[date]"
+         date_print = "[date]"
+         date_premiere = "[date]"
+         is_written = False
+         is_print = False
+         is_premiere = False
+
+         for l in playText:
+            date_line = re.search("<p>(Représentée.*)</p>", l)
+            if date_line:
+               date_line = date_line.group(1)
+               res = re.search(".*le ([0-9]+|1<sup>er</sup>) ([^ ]+) ([0-9]+).*", date_line)
+               print(date_line)
+               date_file.writelines(date_line + "\n")
+               if res and res.group(1) and res.group(2) and res.group(3):
+                  day = res.group(1).strip('<sup>er</sup>')
+                  if len(day) == 1:
+                     day = '0' + day
+                  date_premiere = '-'.join(
+                     [res.group(3),
+                     mois[res.group(2).lower().replace('é', 'e').replace('août', 'aout').replace('levrier', 'fevrier')], 
+                     day
+                  ])
+                  is_premiere = True
+               break
+            else:
+               date_line = ""
+               if not is_print:
+                  res = re.search("<p>([0-9]+).</p>", l)
+                  if res:
+                     date_print = res.group(1)
+                     date_file.writelines(date_print + ".\n")
+                     is_print = True
+                     break
+
+
+
+         print(date_premiere)
+         if not (is_written or is_print or is_premiere):
+            count_date+=1
+            outputFile.writelines("[date]...\n\n")
+         
+
+         if is_print:
+            date_file.writelines(date_print + "\n\n")
+            outputFile.writelines("""
+            <date type="print" when=\"""" + date_print + """\">""")
+
+         if is_premiere:
+            date_file.writelines(date_premiere + "\n\n")
+            outputFile.writelines("""
+                        <date type="premiere" when=\"""" + date_premiere + """\">""" + date_line + """</date>""")
+         
+         outputFile.writelines("""
+                        <idno type="URL"/>
+                    </bibl>
+                </bibl>
+         """)
+
+
+
+
+
+         outputFile.writelines("""
+         </sourceDesc>
     </fileDesc>
     <profileDesc>
       <creation>
@@ -143,7 +264,7 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
           <head>PERSONNAGES</head>
           <castList>
 """)
-  
+
       # starting saving lines
       if not saveBegin:
          res = re.search("<p>(.*)</p>", line)
@@ -153,7 +274,8 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
       else:
          # starting character block
          res = re.search("<strong><em>Personnages</em></strong>", line)
-         if res: 
+         res2 = re.search('"<p align="center" style="text-align:center"><b><i><span style="letter-spacing:-.3pt">Personnages</span></i></b></p>"', line)
+         if res or res2: 
             characterBlock = True
          
          # ending character block
@@ -161,6 +283,7 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
             res = re.search("<h[1,2]", line)
             if res:
                characterBlock = False
+               print("Character list: " + str(characterList))
             else:
                res = re.search("<p>(.*)</p>", line)
                if res:
@@ -190,7 +313,6 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
       if res:
          # Found a new act!
          if actsInPlay == 0:
-            print("Character list: " + str(characterList))
             outputFile.writelines("""
           </castList>
         </div>""")
@@ -300,4 +422,8 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
   </text>
 </TEI>""")
    outputFile.close()
-   
+
+
+date_file.close()
+
+print(count_date)
