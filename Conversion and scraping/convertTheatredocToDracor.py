@@ -40,6 +40,7 @@ Dracor_Folder = abspath(join(root_folder, "corpusDracor"))
 ### temporaire
 date_file = open('datesTD.txt', 'w')
 count_date = 0
+count_not_rep = 0
 ###temporaire
 
 mois = {
@@ -60,6 +61,22 @@ mois = {
 documentNb = 0
 saveBegin = False
 characterBlock = False
+
+def format_date_AAAAMMJJ(res):
+   day = res[0].strip('<sup>er</sup>')
+   if len(day) == 1:
+      day = '0' + day
+   return '-'.join(
+      [res[2],
+      mois[res[1].lower().replace('é', 'e').replace('août', 'aout').replace('levrier', 'fevrier').replace('fevier', 'fevrier')], 
+      day
+   ])
+
+def format_date_AAAAMM(res):
+   return '-'.join(
+      [res[1],
+      mois[res[0].lower().replace('é', 'e').replace('août', 'aout').replace('levrier', 'fevrier').replace('fevier', 'fevrier')]
+   ])
 
 # prepare the list of file sources
 fileSources = {}
@@ -183,49 +200,98 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
          is_print = False
          is_premiere = False
 
-         for l in playText:
-            date_line = re.search("<p>(Représentée.*)</p>", l)
-            if date_line:
+         for l in list(map(lambda l: l.replace("<span style=\"letter-spacing:-.3pt\">", "").replace("\xa0", ' '), playText)):
+            
+            res = re.search(".*<strong><em>Personnages</em></strong>.*", l)
+            res2 = re.search('<p align="center" style="text-align:center"><b><i>Personnages</span></i></b></p>', l)
+            if res or res2:
+               break  
+
+            if re.search("<p>Non représenté[^0-9]*</p>", l):
+               count_not_rep += 1
+               date_file.writelines(l.strip("<p>").strip("</p>") + "\n\n")
+               break
+
+            if not is_premiere and not is_print:
+               res = re.search("<p>Publié.* ([0-9]+) et représenté.* ([0-9]+|1<sup>er</sup>) ([^ ]+) ([0-9]+).*</p>", l)
+               res2 = re.search("<p>Publié.* ([0-9]+) et représenté.* ([0-9]+).*</p>", l)
+               if res or res2:
+                  is_print, is_premiere = True, True
+                  if res:
+                     date_print, date_premiere = res.group(1), format_date_AAAAMMJJ(res.groups()[1:])
+
+                  elif res2:
+                     date_print, date_premiere = res2.group(1), res2.group(2)
+                  is_print, is_premiere = True, True
+                  date_file.writelines(l.strip("<p>").strip("</p>") + "\n") 
+
+            date_line = re.search("<p>.*([Rr]eprésenté.*)</p>", l)
+            date_line2 = re.search("<p>.*(fut joué.*)</p>", l)
+            if (date_line or date_line2) and not is_premiere:
+               if date_line2:
+                  date_line = date_line2
                date_line = date_line.group(1)
-               res = re.search(".*le ([0-9]+|1<sup>er</sup>) ([^ ]+) ([0-9]+).*", date_line)
+               res = re.search(".* ([0-9]+|1<sup>er</sup>)[ ]+([^ ]+) ([0-9]+).*", date_line)
+               res2 = re.search(".* ([0-9]+|1<sup>er</sup>)[ ]+([^ ]+) ([0-9]+).*" * 2, date_line)
                print(date_line)
                date_file.writelines(date_line + "\n")
-               if res and res.group(1) and res.group(2) and res.group(3):
-                  day = res.group(1).strip('<sup>er</sup>')
-                  if len(day) == 1:
-                     day = '0' + day
-                  date_premiere = '-'.join(
-                     [res.group(3),
-                     mois[res.group(2).lower().replace('é', 'e').replace('août', 'aout').replace('levrier', 'fevrier')], 
-                     day
-                  ])
+               if res:
+                  if res2:
+                     date_premiere = format_date_AAAAMMJJ(res2.groups())
+                  else:
+                     date_premiere = format_date_AAAAMMJJ(res.groups())
                   is_premiere = True
-               break
-            else:
-               date_line = ""
-               if not is_print:
-                  res = re.search("<p>([0-9]+).</p>", l)
+               else:
+                  res = re.search(".* en ([0-9]+).*", date_line)
+                  res2 = re.search(".* en ([0-9]+).*" * 2, date_line)
+                  res3 = re.search(".* en ([0-9]+).*" * 3, date_line)
                   if res:
+                     if res2 is not None:
+                        res = res2
+                        if res3 is not None:
+                           res = res3
+                     date_premiere = res.group(1)
+                     is_premiere = True
+                  else:
+                     res = re.search(".* (en|le|de) ([^ ]+) ([0-9]+).*", date_line)
+                     if res:
+                        res2 = re.search("([0-9]+)(.*)", res.group(2))
+                        if res2:
+                           date_premiere = format_date_AAAAMMJJ(res2.groups() + res.groups()[2:])
+                        else:
+                           date_premiere = format_date_AAAAMM(res.groups()[1:])
+                           is_premiere = True
+
+            if not is_print:
+               res = re.search("<p>([0-9]+).*</p>", l)
+               res2 = re.search("<p>Imprimée en ([0-9]+).*</p>", l)
+               res3 = re.search("<p>Non représentée, ([0-9]+).*</p>", l)
+
+               if res or res2 or res3:
+                  if res is None:
+                     res = res2
+                     if res2 is None:
+                        res = res3
+                  if len(res.group(1)) == 4:
                      date_print = res.group(1)
-                     date_file.writelines(date_print + ".\n")
-                     is_print = True
-                     break
+                     date_file.writelines(date_print + "\n")
+                     is_print = True 
+            
+            if date_line is None:
+               date_line = ""
 
-
-
-         print(date_premiere)
          if not (is_written or is_print or is_premiere):
-            count_date+=1
-            outputFile.writelines("[date]...\n\n")
+            count_date += 1
+            date_file.writelines("[date]...\n\n")
          
 
          if is_print:
-            date_file.writelines(date_print + "\n\n")
+            date_file.writelines("Date Print : " + date_print + "\n\n")
             outputFile.writelines("""
             <date type="print" when=\"""" + date_print + """\">""")
 
          if is_premiere:
-            date_file.writelines(date_premiere + "\n\n")
+            date_file.writelines("Date Première : " + date_premiere + "\n\n")
             outputFile.writelines("""
                         <date type="premiere" when=\"""" + date_premiere + """\">""" + date_line + """</date>""")
          
@@ -234,10 +300,6 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
                     </bibl>
                 </bibl>
          """)
-
-
-
-
 
          outputFile.writelines("""
          </sourceDesc>
@@ -274,7 +336,7 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
       else:
          # starting character block
          res = re.search("<strong><em>Personnages</em></strong>", line)
-         res2 = re.search('"<p align="center" style="text-align:center"><b><i><span style="letter-spacing:-.3pt">Personnages</span></i></b></p>"', line)
+         res2 = re.search('<p align="center" style="text-align:center"><b><i><span style="letter-spacing:-.3pt">Personnages</span></i></b></p>', line)
          if res or res2: 
             characterBlock = True
          
@@ -299,7 +361,7 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
                   if res:
                      character = res.group(1)
                      role = res.group(2)
-                  if len(character) > 2 and character != "&nbsp;":
+                  if len(character) > 2 and character != "\xa0":
                      characterList.append(character.lower().replace("*","").replace(" ","-"))
                      outputFile.writelines("""
             <castItem>
@@ -361,14 +423,14 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
 
       # Find the list of characters on stage
       res = re.search("<p align=.center.>(.*)</p>", line)
-      if res and res.group(1) != "&nbsp;":
+      if res and res.group(1) != "\xa0":
          characterLines.append(res.group(1))
 
       # Find the list of characters on stage
       res = re.search("<p>(.*)</p>", line)
       r = res
       if res and not characterBlock:
-         playLine = res.group(1).replace("&nbsp;"," ")
+         playLine = res.group(1).replace("\xa0"," ")
          if playLine != " ":
             if len(characterLines) > 1:
                character = characterLines.pop(0)
@@ -427,3 +489,4 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
 date_file.close()
 
 print(count_date)
+print(count_not_rep)
