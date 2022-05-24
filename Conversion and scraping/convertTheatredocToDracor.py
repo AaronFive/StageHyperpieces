@@ -3,7 +3,6 @@
 
 from genericpath import exists
 import glob, os, re, sys, time, requests, subprocess
-from operator import is_
 from os import walk, pardir
 from os.path import abspath, dirname, join, basename
 
