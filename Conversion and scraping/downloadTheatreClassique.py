@@ -54,4 +54,4 @@ for url in plays:
          open(join(TC_folder, fileName), 'wb').write(response.content)
          time.sleep(5)
 
-print(len(plays))
+print("Number of plays :", len(plays))
