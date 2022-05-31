@@ -110,9 +110,29 @@ Représentée, pour la première fois, à Paris, sur le Théâtre de la Comédie
 ```
 
 
+Nous retrouvons facilement dans la balise <premiere> à l'attribut date la date de la première représentation. 
 
+Retrouver la date d'impression est en revanche un peu plus subtil. Il faut chercher dans <docImprint><approbation> aux paragraphes <p>. On retrouve dans le texte des dates exactes correspondant à l'approbation ou au début de l'impression de l'oeuvre. Comme l'année nous suffit, l'information est moins dure à sélectionner.
 
+Cependant, dans des cas comme celui-ci :
 
+```xml
+<docImprint>
+			<privilege id='1674-01-04'><head>EXTRAIT DU PRIVILEGE DU ROI.</head>
+				<p>Par Grâce et Privilège du Roi, donné à Saint Germain en Laye le 4. Jour de Janvier 1674. Signé par le Roi en son Conseil, LENORMANT : il est permis à Claude Barbin Marchand Libraire à Paris, d'imprimer ou faire imprimer, vendre et distribuer une Tragédie intitulée ARGÉLIE, de la composition du Sieur Abeille, et ce durant le temps et espace de six années entières et accomplies, à compter du jour que la dite Tragédie sera achevée d'imprimer pour la première fois : et défenses sont faites à tous autres Libraires et Imprimeurs, de l'imprimer, ou faire imprimer, vendre et débiter, sans le consentement de l'Exposant, ou de ceux qui auront droit de lui, à peine aux contrevenants de quinze cents livres d'amende, confiscation des Exemplaires contrefaits, Et de tous dépens, dommages et intérêts, ainsi qu'il est porté plus au long par ledit Privilège.</p>
+				<p>Registré sur le Livre de la communauté, suivant l'Arrêt de la Cour de Parlement. </p>
+				<p>Signé, THIERRY, syndic. </p>
+			</privilege>
+			<acheveImprime id='1674-01-09'>Achevé d'imprimer pour la première fois le 9. Janvier 1674.</acheveImprime>
+			<printer id='BARBIN'>À PARIS, Chez CLAUDE BARBIN, au Palais, sur le second Perron de la S. Chapelle.</printer>
+		</docImprint>
+```
+
+Nous avons une date privilege (qui ne nous intéresse pas) correspondant à la date de l'attestation du roi permettant d'imprimer la pièce en question.
+
+C'est surtout la date de la balise <acheveImprime> à l'attribut id qui contient ce que l'on recherche.
+
+<docDate value='1681'>M. DC LXXXI.</docDate> (à compléter)
 
 ## Théâtre Documentation
 
@@ -146,6 +166,9 @@ Année d'impression.
 Publié(e) en AAAA et représenté(e) ... le JJ [mois] AAAA.
 Publié(e) en AAAA et représenté(e) en AAAA.
 
+- Dans le cas du premier du mois, on a le plus souvent :
+1<sup>er<sup> MM AAAA, mais il peut également être écrit en toute lettre .
+
 - Non représenté.
 
 - MM AAAA.
@@ -163,7 +186,13 @@ Cas particulier :
 
 févier au lieu de février pour Les Amants magnifiques de Molière
 lévrier au lieu de février pour : le peintre exigeant de Tristan BERNARD.
-Oubli d'espace (25avril au lieu de 25 avril) pour "Adieux des officiers ou venus justiifée" de Charles Dufresny.
+Oubli d'espace (25avril au lieu de 25 avril) pour "Adieux des officiers ou venus justifée" de Charles Dufresny. Nous avons parfois l'équivalent dan l'autre sens (des 13février).
+
+Attention également aux 1 qui deviennent par magie des l ou des | sur les années ou les jours.
+
+
+
+
 Un espace de trop
 
 Des exemple des comme Thomas Sauvage utilisent parfois des années dans leur texte, il faut donc vérifier que l'on a bien des années qui correspondent à celles de la création au sens large de la pièce.
@@ -171,6 +200,26 @@ Des exemple des comme Thomas Sauvage utilisent parfois des années dans leur tex
 - Deux centenaires de Corneille qui propose plusieurs dates, attention de bien prendre la bonne (1629) :
 
 "fut jouée en 1629 ; la Mort de Mustapha en 1630, et le Cid, comme chacun fait, ne parût qu’en 1636. S’il est donc vrai que la première Pièce régulière mérite à son Auteur le titre de Créateur du Théâtre Français ; c’est à Mairet que ce titre appartient, et c’est sans fondement qu’on le donne au Grand-Corneille."
+
+
+Autres cas particuliers : 
+Jean-Francois Regnard - Vendanges ou le bailli d Asniere.	
+Non représentée<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>, 1701.
+
+Eugène Labiche, Eugène Moreau - Clou aux maris 
+Représentée pour la première fois, à Paris, sur le Théâtre du Palais-Royal, le 1<sup>er</sup> avril  septembre 1858.
+
+Victor Hugo - Torquemada
+Écrit en 1869 et oublié en 1882, jamais représenté du vivant de l’auteur.
+
+Pierre Corneille - Clitandre ou l'innocence délivrée	
+Représentée pour la première fois pendant l'hiver 1631-1632 au Théâtre de l'Hôtel de Bourgogne.
+
+Alphonse François Dercy - Molière :
+Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 15 de janvier 1828.
+
+Montfleury - Thrasibule :
+Représentée pour la première fois, à Paris, au Château du Louvre, le 10 décembre en 1663.
 
 ### Problème standardisation TD :
 
