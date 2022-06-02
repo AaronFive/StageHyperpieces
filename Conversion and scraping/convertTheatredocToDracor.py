@@ -192,25 +192,52 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
                     <bibl type="originalSource">
                     """)
 
+         line_written = "[phrase]"
          line_print = "[phrase]"
          line_premiere = "[phrase]"
+         date_written = "[date]"
          date_print = "[date]"
          date_premiere = "[date]"
+         is_written = False
          is_print = False
          is_premiere = False
 
-         for l in list(map(lambda l: l.replace("<span style=\"letter-spacing:-.3pt\">", "").replace("\xa0", ' ').strip('\n'), playText)):
+         for l in list(map(lambda l: l.replace("<span style=\"letter-spacing:-.3pt\">", "").replace("\xa0", ' ').replace('<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>', '').strip('\n'), playText)):
 
-            res = re.search(".*<strong><em>Personnages</em></strong>.*", l)
-            res2 = re.search('<p align="center" style="text-align:center"><b><i>Personnages</span></i></b></p>', l)
-            if res or res2:
+            if re.search(".*<strong><em>Personnages.*</em></strong>.*", l) or re.search('<p align="center" style="text-align:center"><b><i>Personnages.*</span></i></b></p>', l) or (True in (is_written, is_print, is_premiere) and l == '<p> </p>'):
                break  
 
             if re.search("<p>Non représenté[^0-9]*</p>", l):
                count_not_rep += 1
                line_premiere = l.replace("<p>", "").replace("</p>", "")
-               # date_file.writelines(l.replace("<p>", "").replace("</p>", ""))
                break
+            
+            if not is_written and not is_print:
+               res = re.search("<p>.*[ÉéEe]crit en ([0-9]+).* et [op]ublié.* en ([0-9]+).*</p>", l)
+               if res:
+                  line_written = l.replace('<p>', '').replace('</p>', '')
+                  line_print = l.replace('<p>', '').replace('</p>', '')
+                  date_written, date_print = res.groups()
+                  is_written, is_print = True, True
+         
+            if not is_written:
+               res = re.search("<p>.*[ÉéEe]crit[e]? (.*)</p>", l)
+               if res:
+                  line_written = l.replace('<p>', '').replace('</p>', '')
+                  res2 = re.search(".*le ([0-9]+) ([^ ]+) ([0-9]+).*", res.group(1))
+                  if res2:
+                     date_written = format_date_AAAAMMJJ(res2.groups())
+                     is_written = True
+                  else:
+                     res2 = re.search(".*en ([0-9]+).*", res.group(1))
+                     res3 = re.search(".*en ([^0-9 ]+) ([0-9]+).*", res.group(1))
+                     if res2:
+                        date_written = res2.group(1)
+                        is_written = True
+                     elif res3:
+                        date_written = format_date_AAAAMM(res3.groups())
+                        is_written = True
+                     
 
             if not is_premiere and not is_print:
                res = re.search("<p>Publié.* ([0-9]+) et représenté.* ([0-9]+|1<sup>er</sup>|premier) ([^ ]+) ([0-9]+).*</p>", l)
@@ -224,7 +251,6 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
                      date_print, date_premiere = res2.group(1), res2.group(2)
                   is_print, is_premiere = True, True
                   line_print, line_premiere = l.replace("<p>", "").replace("</p>", ""), l.replace("<p>", "").replace("</p>", "")
-                  # date_file.writelines(l.replace("<p>", "").replace("</p>", "")) 
 
             date_line = re.search("<p>.*([Rr]eprésenté.*)</p>", l)
             date_line2 = re.search("<p>.*(fut joué.*)</p>", l)
@@ -236,7 +262,6 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
                res2 = re.search(".* ([0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+) ([0-9]+).*" * 2, date_line)
                double_words_res = re.search(".* ([l\|]?[0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+)[ ]+([^ ]+) ([l\|]?[0-9]+).*", date_line)
                between_years_res = re.search(".* ([0-9]+)-([0-9]+).*", date_line)
-               # date_file.writelines(date_line)
                line_premiere = date_line
                if res:
                   if res2:
@@ -293,7 +318,6 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
                         res = res3
                   if len(res.group(1)) == 4:
                      date_print = res.group(1)
-                     # date_file.writelines(date_print)
                      line_print = l.replace("<p>", "").replace("<p>", "")
                      is_print = True 
             
@@ -302,13 +326,21 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
 
          if not (is_print or is_premiere):
             count_date += 1
-            # date_file.writelines("[date]\t[date]")
+
+         if not is_written:
+            line_written = "[phrase]"
                   
-         date_file.writelines(line_print + '\t' + line_premiere + '\t')
+         date_file.writelines(line_written + '\t' + line_print + '\t' + line_premiere + '\t')
+
+         date_file.writelines(date_written + '\t')
          
          date_file.writelines(date_print + '\t')
          
          date_file.writelines(str(date_premiere) + "\n")
+      
+         if is_written:
+            outputFile.writelines("""
+            <date type="written" when=\"""" + date_written + """\">""")
          
          if is_print:
             
@@ -318,10 +350,10 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
          if is_premiere:
             if type(date_premiere) is str:
                outputFile.writelines("""
-                           <date type="premiere" when=\"""" + date_premiere + """\">""" + date_line + """</date>""")
+                           <date type="premiere" when=\"""" + date_premiere + """\">""" + line_premiere + """</date>""")
             else:
                outputFile.writelines("""
-                           <date type="premiere" notBefore=\"""" + date_premiere[0] + """\" notAfter=\"""" + date_premiere[1] + """\" >""" + date_line + """</date>""")
+                           <date type="premiere" notBefore=\"""" + date_premiere[0] + """\" notAfter=\"""" + date_premiere[1] + """\" >""" + line_premiere + """</date>""")
          
          outputFile.writelines("""
                         <idno type="URL"/>
