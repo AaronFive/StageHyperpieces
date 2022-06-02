@@ -221,6 +221,9 @@ Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 1
 Montfleury - Thrasibule :
 Représentée pour la première fois, à Paris, au Château du Louvre, le 10 décembre en 1663.
 
+Brecoutr - Ombre de Molière :
+Représentée pour la première fois, à Paris, quelques jours après la mort de Molière, sur le théâtre de l’Hôtel de Bourgognes et immédiatement interdite à la demande d’Armande, veuve de Molière.
+
 ### Problème standardisation TD :
 
 2 standard émergent dans TD. Si certains fichiers mettent leurs corps de texte avec des lignes <p>, d'autres rajoutent en plus de celà ce genre de balisage :
