@@ -1,4 +1,4 @@
-import glob, os, re, sys, time, requests, json, xmltodict
+import os, sys, requests, json, xmltodict
 from os.path import abspath, dirname, join
 
 folder = abspath(dirname(sys.argv[0]))
@@ -24,12 +24,12 @@ def get_header(xml):
         xml (string): The XML file.
 
     Returns:
-        string: The header of the xml file.
+        string: The header of the XML file.
     """
     return ''.join([xml.partition('<text>')[0], '</TEI>'])
 
-def get_actual_datas(path):
-    """Get all the datas in the folder of Dracor corpus'. Return it as a dictionnary
+def get_actual_meta_datas(path):
+    """Get all the meta-datas of the header of each plays in the folder of Dracor corpus'.
 
     Args:
         path (string): The folder that contains all the files we want.
@@ -39,7 +39,7 @@ def get_actual_datas(path):
     """
     from os import walk
     contents = []
-    files = list(map(lambda f: join(dracor_folder, f), next(walk(path), (None, None, []))[2]))
+    files = list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2]))
     for file in files:
         with open(file) as f:
             contents.append(xmltodict.parse(get_header(f.read())))
@@ -444,7 +444,7 @@ def load_tei(plays):
 if __name__ == "__main__":
     data_dic = load_datas(dracor_link)
     plays = data_dic.get('dramas')
-    datas = extract_important_datas(get_actual_datas(dracor_folder))
+    datas = extract_important_datas(get_actual_meta_datas(dracor_folder))
     new_datas = extract_datas_plays(plays)
 
     # display(plays)
