@@ -69,23 +69,25 @@ def export_svg(path):
         os.system(f"dot -Tsvg {file} -o {file.replace('.dot', '.svg')}")
         break
 
-def parse_same_nodes(node):
+def parse_same_nodes(node, path_buffer=''):
     name = node.nodeName
     res = []
     if name[0] != '#':
-        res.append(node.nodeName)
-    for child in node.childNodes:
-        res.extend(parse_same_nodes(child))
+        name = '/'.join([path_buffer, name])
+        res.append(name)
+        for child in node.childNodes:
+            res.extend(parse_same_nodes(child, name))
     return res
 
-def parse_same_links(node):
+def parse_same_links(node, path_buffer=''):
     name = node.nodeName
     res = []
     if name[0] != '#':
+        name = '/'.join([path_buffer, name])
         for child in node.childNodes:
             if child.nodeName[0] != '#':
-                res.append((node.nodeName, child.nodeName))
-                res.extend(parse_same_links(child))
+                res.append((name, '/'.join([name, child.nodeName])))
+                res.extend(parse_same_links(child, name))
     return res
 
 def find_same_nodes(path):
@@ -110,24 +112,27 @@ def find_same_nodes(path):
 def create_common_tree(nodes, links):
     with open(join(folder, 'common_tree.dot'), 'w') as output:
         writeStart(output)
-        for i in range(len(nodes)):
-            output.write("\t\"t{0}\" [label = \"{1}\"];\n".format(i, nodes[i]))
+        for node in nodes:
+            output.write("\t\"{0}\" [label = \"{1}\"];\n".format(node, node.split('/')[-1]))
         for father, son in links:
-            output.write("\t\"t{0}\" -> \"t{1}\";\n".format(nodes.index(father), nodes.index(son)))
+            output.write("\t\"{0}\" -> \"{1}\";\n".format(father, son))
         writeEnd(output)
 
-# def parse_paths(node, path_buffer=''):
-#     name = node.nodeName
-#     if name[0] != '#':
-#         print(name)
-#     for child in node.childNodes:
-#         parse_paths(child, '/'.join([path_buffer, name]))   
+def parse_paths_from_file(node, path_buffer=''):
+    nodes = []
+    name = node.nodeName
+    if name[0] != '#':
+        name = '/'.join([path_buffer, name])
+        print(name)
+        for child in node.childNodes:
+            parse_paths_from_file(child, name)   
 
-# def parse_plays(path):
-#     for file in list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])):
-#         name = file.split('/')[-1].replace('xml', 'txt')
-#         print(f"Converting {file}")
-#         parse_paths(f, minidom.parse(file))         
+def parse_paths(path):
+    for file in list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])):
+        name = file.split('/')[-1].replace('xml', 'txt')
+        print(f"Look path from {file}")
+        parse_paths_from_file(minidom.parse(file).childNodes[0])  
+        break       
 
 if __name__ == "__main__":
     # parse_plays(dracor_folder)
@@ -135,4 +140,5 @@ if __name__ == "__main__":
     # export_svg(outputs_folder)
     nodes, links = find_same_nodes(dracor_folder)
     create_common_tree(nodes, links)
+    # parse_paths(dracor_folder)
 
