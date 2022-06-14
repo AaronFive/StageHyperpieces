@@ -18,8 +18,6 @@ def get_actual_meta_datas(path):
                 writer = csv.writer(csvfile)
 
                 writer.writerow(['title', 'author', 'year'])
-
-                for 
     return contents
 
 if __name__ == "__main__":

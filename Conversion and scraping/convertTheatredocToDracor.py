@@ -39,7 +39,6 @@ Dracor_Folder = abspath(join(root_folder, "corpusDracor"))
 ### temporaire
 date_file = open('datesTD.txt', 'w')
 count_date = 0
-count_not_rep = 0
 ###temporaire
 
 mois = {
@@ -208,7 +207,6 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
                break  
 
             if re.search("<p>Non représenté[^0-9]*</p>", l):
-               count_not_rep += 1
                line_premiere = l.replace("<p>", "").replace("</p>", "")
                break
             
@@ -324,7 +322,7 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
             if date_line is None:
                date_line = ""
 
-         if not (is_print or is_premiere):
+         if not (is_print or is_premiere or is_written):
             count_date += 1
 
          if not is_written:
@@ -548,5 +546,4 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
 
 date_file.close()
 
-print(count_date)
-print(count_not_rep)
+print("Number of plays without date :", count_date)
