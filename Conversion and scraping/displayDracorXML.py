@@ -127,8 +127,11 @@ def create_common_tree(nodes, links, file):
         writeEnd(output)
 
 def clean_outputs_directory(path):
-    os.system('rm ' + path + '/*')
-    print('Delete files from', path)
+    if 'trees' in path:
+        os.system('rm ' + path + '/*')
+        print('Delete files from', path)
+    else:
+        print("You can only clean an output folder (begin with tree).")
 
 # def parse_paths_from_file(node, path_buffer=''):
 #     nodes = []
@@ -208,7 +211,7 @@ if __name__ == "__main__":
     
     if args.intersection:
         nodes, links = find_same_nodes(inputs_folder)
-        common_file = join(common_trees_folder, get_file_name(inputs_folder).replace('corpus', 'common').replace('Corpus', 'common'))
+        common_file = join(common_trees_folder, get_file_name(inputs_folder).replace('corpus', 'common').replace('Corpus', 'common') + '.dot')
         create_common_tree(nodes, links, common_file)
 
 
