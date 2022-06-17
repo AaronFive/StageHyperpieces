@@ -46,11 +46,10 @@ for url in plays:
    res = re.search("\/([^\/]+.xml)", url)
    if res:
       fileName = res.group(1)
-      if not exists(join(TC_folder, fileName)):
+      response = requests.get(url)
+      if not exists(join(TC_folder, fileName)) and response.status_code < 300:
          print("Downloading file " + fileName)
          # Download and save the file
-         response = requests.get(url)
-
          open(join(TC_folder, fileName), 'wb').write(response.content)
          time.sleep(5)
 
