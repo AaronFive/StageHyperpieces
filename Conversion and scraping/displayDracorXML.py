@@ -14,8 +14,17 @@ common_trees_folder = abspath(join(root, "commonTrees"))
 if not exists(outputs_folder):
     os.makedirs(outputs_folder)
 
-def get_file_name(folder):
-    return folder.split('/')[-1]
+def get_file_name(file):
+    return file.split('/')[-1]
+
+def safe_root(play):
+    for child in play.childNodes:
+        if child.nodeName in ["TEI", "TEI.2"]:
+            return child
+    raise ValueError("Not TEI Root")
+
+def parse_files(path):
+    return list(filter(lambda file: get_file_name(file) not in ['sitemap.xml', 'index.html'], map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])))
 
 def writeStart(output):
     output.write("digraph Tree {\n")
@@ -50,12 +59,11 @@ def parse_dot(output, node, height):
 
 def generate_graph(path, height=-1):
     from os import walk
-    files = list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2]))
-    for file in files:
+    for file in parse_files(path):
         name = get_file_name(file).replace('xml', 'dot')
         print(f"Generate graph : {name}")
         with open(join(outputs_folder, name), 'w') as f:
-            parse_dot(f, minidom.parse(file).childNodes[0], height)
+            parse_dot(f, safe_root(minidom.parse(file)), height)
 
 def parse_xml(output, node, indent=-1):
     name = node.nodeName
@@ -65,17 +73,11 @@ def parse_xml(output, node, indent=-1):
         parse_xml(output, child, indent + 1)
 
 def parse_plays(path):
-    for file in list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])):
+    for file in parse_files(path):
         name = file.split('/')[-1].replace('xml', 'txt')
         print(f"Converting {file}")
         with open(join(outputs_folder, name), 'w') as f:
-            parse_xml(f, minidom.parse(file))
-
-# def export_svg(path):
-#     for file in list(filter(lambda f: '.dot' in f, map(lambda f: join(path, f), next(walk(path), (None, None, []))[2]))):
-#         print(f"Exporting {file}")
-#         os.system(f"dot -Tsvg {file} -o {file.replace('.dot', '.svg')}")
-#         break
+            parse_xml(f, safe_root(minidom.parse(file)))
 
 def parse_same_nodes(node, path_buffer=''):
     name = node.nodeName
@@ -101,10 +103,10 @@ def parse_same_links(node, path_buffer=''):
 def find_same_nodes(path):
     nodes = []
     links = []
-    for file in list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])):
+    for file in parse_files(path):
         name = get_file_name(file).replace('xml', 'txt')
         print(f"Check nodes of {file}")
-        root = minidom.parse(file).childNodes[0]
+        root = safe_root(minidom.parse(file))
         res = parse_same_nodes(root)
         if not nodes:
             nodes = list(set(res.copy()))
@@ -131,23 +133,7 @@ def clean_outputs_directory(path):
         os.system('rm ' + path + '/*')
         print('Delete files from', path)
     else:
-        print("You can only clean an output folder (begin with tree).")
-
-# def parse_paths_from_file(node, path_buffer=''):
-#     nodes = []
-#     name = node.nodeName
-#     if name[0] != '#':
-#         name = '/'.join([path_buffer, name])
-#         print(name)
-#         for child in node.childNodes:
-#             parse_paths_from_file(child, name)   
-
-# def parse_paths(path):
-#     for file in list(map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])):
-#         name = file.split('/')[-1].replace('xml', 'txt')
-#         print(f"Look path from {file}")
-#         parse_paths_from_file(minidom.parse(file).childNodes[0])  
-#         break       
+        print("You can only clean an output folder (begin with tree).")   
 
 if __name__ == "__main__":
 
