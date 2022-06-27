@@ -1,0 +1,17 @@
+digraph Tree {
+	"/TEI/teiHeader/fileDesc/titleStmt/author" [label = "author"];
+	"/TEI/teiHeader/fileDesc/publicationStmt" [label = "publicationStmt"];
+	"/TEI/teiHeader/fileDesc/titleStmt" [label = "titleStmt"];
+	"/TEI" [label = "TEI"];
+	"/TEI/teiHeader/fileDesc/titleStmt/title" [label = "title"];
+	"/TEI/teiHeader/fileDesc" [label = "fileDesc"];
+	"/TEI/teiHeader" [label = "teiHeader"];
+	"/TEI/text" [label = "text"];
+	"/TEI/teiHeader/fileDesc/titleStmt" -> "/TEI/teiHeader/fileDesc/titleStmt/author";
+	"/TEI/teiHeader/fileDesc" -> "/TEI/teiHeader/fileDesc/titleStmt";
+	"/TEI" -> "/TEI/teiHeader";
+	"/TEI/teiHeader/fileDesc/titleStmt" -> "/TEI/teiHeader/fileDesc/titleStmt/title";
+	"/TEI/teiHeader/fileDesc" -> "/TEI/teiHeader/fileDesc/publicationStmt";
+	"/TEI/teiHeader" -> "/TEI/teiHeader/fileDesc";
+	"/TEI" -> "/TEI/text";
+}
