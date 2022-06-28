@@ -24,6 +24,8 @@ def safe_root(play):
     raise ValueError("Not TEI Root")
 
 def parse_files(path):
+    if get_file_name(path) == 'XMLnotTEI_TD':
+        return list(filter(lambda file: 'xml' not in get_file_name(file), map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])))
     return list(filter(lambda file: get_file_name(file) not in ['sitemap.xml', 'index.html'], map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])))
 
 def writeStart(output):
