@@ -1,4 +1,4 @@
-from xml.dom import minidom
+from bs4 import BeautifulSoup
 from os.path import abspath, dirname, join, exists
 import os, sys
 import argparse
@@ -7,8 +7,8 @@ from os import walk
 
 folder = abspath(dirname(sys.argv[0]))
 root = join(folder, os.pardir)
-inputs_folder = abspath(join(root, "corpusDracor"))
-outputs_folder = abspath(join(root, "treesDracor"))
+inputs_folder = abspath(join(root, "cleanHTML_TD"))
+outputs_folder = abspath(join(root, "treesTD"))
 common_trees_folder = abspath(join(root, "commonTrees"))
 
 if not exists(outputs_folder):
@@ -17,35 +17,29 @@ if not exists(outputs_folder):
 def get_file_name(file):
     return file.split('/')[-1]
 
-def safe_root(play):
-    for child in play.childNodes:
-        if child.nodeName in ["TEI", "TEI.2"]:
-            return child
-    raise ValueError("Not TEI Root")
+def safe_children(node):
+    return list(filter(lambda child: child != node.text, node.children))
 
 def parse_files(path):
-    return list(filter(lambda file: get_file_name(file) not in ['sitemap.xml', 'index.html'], map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])))
+    return list(filter(lambda file: get_file_name(file) not in ['sitemap.html', 'index.html'], map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])))
 
 def writeStart(output):
     output.write("digraph Tree {\n")
 
 def writeNodes(output, node, height, n=0):
-    if not '#' in node.nodeName:
-        output.write("\t\"t{0}\" [label = \"{1}\"];\n".format(n, node.nodeName))
-        if height != 0:
-            for child in node.childNodes:
-                n = writeNodes(output, child, height - 1, n + 1)
-        return n
-    return n - 1
+    output.write("\t\"t{0}\" [label = \"{1}\"];\n".format(n, node.name))
+    if height != 0:
+        for child in safe_children(node):
+            n = writeNodes(output, child, height - 1, n + 1)
+    return n
 
 def writeLinks(output, node, height, n=0):
     m = n
     if height != 0:
-        for child in node.childNodes:
-            if not '#' in child.nodeName:
-                m += 1
-                output.write("\t\"t{0}\" -> \"t{1}\";\n".format(n, m))
-                m = writeLinks(output, child, height - 1, m)
+        for child in safe_children(node):
+            m += 1
+            output.write("\t\"t{0}\" -> \"t{1}\";\n".format(n, m))
+            m = writeLinks(output, child, height - 1, m)
     return m
 
 def writeEnd(output):
@@ -60,53 +54,51 @@ def parse_dot(output, node, height):
 def generate_graph(path, height=-1):
     from os import walk
     for file in parse_files(path):
-        name = get_file_name(file).replace('xml', 'dot')
+        name = get_file_name(file).replace('html', 'dot')
         print(f"Generate graph : {name}")
-        with open(join(outputs_folder, name), 'w') as f:
-            parse_dot(f, safe_root(minidom.parse(file)), height)
+        with open(join(outputs_folder, name), 'w') as output, open(file, 'r') as input:
+            parse_html(output, BeautifulSoup(input, 'html.parser'))
 
-def parse_xml(output, node, indent=-1):
-    name = node.nodeName
-    if name[0] != '#':
+def parse_html(output, node, indent=0):
+    name = node.name
+    if name is not None:
         output.write(indent * '\t' + '<' + name + '>\n')
-    for child in node.childNodes:
-        parse_xml(output, child, indent + 1)
+        for child in safe_children(node):
+            parse_html(output, child, indent + 1)
 
 def parse_plays(path):
     for file in parse_files(path):
-        name = file.split('/')[-1].replace('xml', 'txt')
+        name = file.split('/')[-1].replace('html', 'txt')
         print(f"Converting {file}")
-        with open(join(outputs_folder, name), 'w') as f:
-            parse_xml(f, safe_root(minidom.parse(file)))
+        with open(join(outputs_folder, name), 'w') as output, open(file, 'r') as input:
+            parse_html(output, BeautifulSoup(input, 'html.parser'))
 
 def parse_same_nodes(node, path_buffer=''):
     name = node.nodeName
     res = []
-    if name[0] != '#':
-        name = '/'.join([path_buffer, name])
-        res.append(name)
-        for child in node.childNodes:
-            res.extend(parse_same_nodes(child, name))
+    name = '/'.join([path_buffer, name])
+    res.append(name)
+    for child in safe_children(node):
+        res.extend(parse_same_nodes(child, name))
     return res
 
 def parse_same_links(node, path_buffer=''):
     name = node.nodeName
     res = []
-    if name[0] != '#':
-        name = '/'.join([path_buffer, name])
-        for child in node.childNodes:
-            if child.nodeName[0] != '#':
-                res.append((name, '/'.join([name, child.nodeName])))
-                res.extend(parse_same_links(child, name))
+    name = '/'.join([path_buffer, name])
+    for child in safe_children(node):
+        res.append((name, '/'.join([name, child.nodeName])))
+        res.extend(parse_same_links(child, name))
     return res
 
 def find_same_nodes(path):
     nodes = []
     links = []
     for file in parse_files(path):
-        name = get_file_name(file).replace('xml', 'txt')
+        name = get_file_name(file).replace('html', 'txt')
         print(f"Check nodes of {file}")
-        root = safe_root(minidom.parse(file))
+        with open(file, 'r') as output:
+            root = BeautifulSoup(output, 'html.parser')
         res = parse_same_nodes(root)
         if not nodes:
             nodes = list(set(res.copy()))
@@ -149,11 +141,11 @@ if __name__ == "__main__":
         nargs='?')
     parser.add_argument(
         '-d', '--directory',
-        help="Selects a folder to run the program (by default, Dracor).",
+        help="Selects a folder to run the program (by default, TD).",
         nargs='?')
     parser.add_argument(
         '-i', '--intersection',
-        help="Generates the intersection of the structure of each XML file as a dot file.",
+        help="Generates the intersection of the structure of each html file as a dot file.",
         action="store_true")
     parser.add_argument(
         '-p', '--precision',
@@ -161,12 +153,12 @@ if __name__ == "__main__":
         action="store_true")
     parser.add_argument(
         '-t', '--tree',
-        help="Generates for each selected XML file its structure in a dot file, in the form of a tree.",
+        help="Generates for each selected html file its structure in a dot file, in the form of a tree.",
         type=int, default=False,
         nargs='?')
     parser.add_argument(
         '-v', '--verbose', 
-        help="Generates for each selected XML file its structure in a text file", 
+        help="Generates for each selected html file its structure in a text file", 
         action="store_true")
     
     args = parser.parse_args()

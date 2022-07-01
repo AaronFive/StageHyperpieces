@@ -6,7 +6,7 @@ from os.path import abspath, join, dirname, exists
 folder = abspath(dirname(sys.argv[0]))
 root = join(folder, pardir)
 input = join(root, 'notConvertTD')
-output = join(root, 'XMLnotTEI_TD')
+output = join(root, 'cleanHTML_TD')
 
 def get_file_name(file):
     return file.split('/')[-1]
