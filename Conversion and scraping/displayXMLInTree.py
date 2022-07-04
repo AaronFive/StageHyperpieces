@@ -1,5 +1,6 @@
 from xml.dom import minidom
 from os.path import abspath, dirname, join, exists
+from random import shuffle
 import os, sys
 import argparse
 
@@ -100,10 +101,14 @@ def parse_same_links(node, path_buffer=''):
                 res.extend(parse_same_links(child, name))
     return res
 
-def find_same_nodes(path):
+def find_same_nodes(path, limit=-1):
     nodes = []
     links = []
-    for file in parse_files(path):
+    files = parse_files(path)
+    if limit != -1:
+        shuffle(files)
+        files = files[:limit]
+    for file in files:
         name = get_file_name(file).replace('xml', 'txt')
         print(f"Check nodes of {file}")
         root = safe_root(minidom.parse(file))
@@ -154,7 +159,8 @@ if __name__ == "__main__":
     parser.add_argument(
         '-i', '--intersection',
         help="Generates the intersection of the structure of each XML file as a dot file.",
-        action="store_true")
+        metavar='N', type=int, default=False,
+        nargs='?')
     parser.add_argument(
         '-p', '--precision',
         help="Explains act, scene, and line numbers, as well as characters.",
@@ -195,8 +201,14 @@ if __name__ == "__main__":
         else:
             generate_graph(inputs_folder)
     
-    if args.intersection:
-        nodes, links = find_same_nodes(inputs_folder)
+
+    if args.intersection is not False:
+        if args.intersection is not None:
+            if args.intersection <= 0:
+                raise ValueError("argument -i/--intersection : int height value must be strictly positive.")
+            nodes, links = find_same_nodes(inputs_folder, args.intersection)
+        else:
+            nodes, links = find_same_nodes(inputs_folder)
         common_file = join(common_trees_folder, get_file_name(inputs_folder).replace('corpus', 'common').replace('Corpus', 'common') + '.dot')
         create_common_tree(nodes, links, common_file)
 
