@@ -1,5 +1,7 @@
+from termios import NOFLSH
 from bs4 import BeautifulSoup
 from os.path import abspath, dirname, join, exists
+
 import os, sys
 import argparse
 
@@ -27,19 +29,22 @@ def writeStart(output):
     output.write("digraph Tree {\n")
 
 def writeNodes(output, node, height, n=0):
-    output.write("\t\"t{0}\" [label = \"{1}\"];\n".format(n, node.name))
-    if height != 0:
-        for child in safe_children(node):
-            n = writeNodes(output, child, height - 1, n + 1)
+    name = node.name
+    if name is not None:
+        output.write("\t\"t{0}\" [label = \"{1}\"];\n".format(n, name))
+        if height != 0:
+            for child in safe_children(node):
+                n = writeNodes(output, child, height - 1, n + 1)
     return n
 
 def writeLinks(output, node, height, n=0):
     m = n
-    if height != 0:
-        for child in safe_children(node):
-            m += 1
-            output.write("\t\"t{0}\" -> \"t{1}\";\n".format(n, m))
-            m = writeLinks(output, child, height - 1, m)
+    if node.name is not None:
+        if height != 0:
+            for child in safe_children(node):
+                m += 1
+                output.write("\t\"t{0}\" -> \"t{1}\";\n".format(n, m))
+                m = writeLinks(output, child, height - 1, m)
     return m
 
 def writeEnd(output):
@@ -52,12 +57,11 @@ def parse_dot(output, node, height):
     writeEnd(output)
 
 def generate_graph(path, height=-1):
-    from os import walk
     for file in parse_files(path):
         name = get_file_name(file).replace('html', 'dot')
         print(f"Generate graph : {name}")
         with open(join(outputs_folder, name), 'w') as output, open(file, 'r') as input:
-            parse_html(output, BeautifulSoup(input, 'html.parser'))
+            parse_dot(output, BeautifulSoup(input, 'html.parser'), height)
 
 def parse_html(output, node, indent=0):
     name = node.name
@@ -68,13 +72,13 @@ def parse_html(output, node, indent=0):
 
 def parse_plays(path):
     for file in parse_files(path):
-        name = file.split('/')[-1].replace('html', 'txt')
+        name = get_file_name(file).replace('html', 'txt')
         print(f"Converting {file}")
         with open(join(outputs_folder, name), 'w') as output, open(file, 'r') as input:
             parse_html(output, BeautifulSoup(input, 'html.parser'))
 
 def parse_same_nodes(node, path_buffer=''):
-    name = node.nodeName
+    name = node.name
     res = []
     name = '/'.join([path_buffer, name])
     res.append(name)
@@ -83,11 +87,11 @@ def parse_same_nodes(node, path_buffer=''):
     return res
 
 def parse_same_links(node, path_buffer=''):
-    name = node.nodeName
+    name = node.name
     res = []
     name = '/'.join([path_buffer, name])
     for child in safe_children(node):
-        res.append((name, '/'.join([name, child.nodeName])))
+        res.append((name, '/'.join([name, child.name])))
         res.extend(parse_same_links(child, name))
     return res
 
