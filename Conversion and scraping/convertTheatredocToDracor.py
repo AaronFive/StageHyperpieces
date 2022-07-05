@@ -33,8 +33,11 @@ from os.path import abspath, dirname, join, basename
 # Get the current folder
 folder = abspath(dirname(sys.argv[0]))
 root_folder = abspath(join(folder, pardir))
-html_folder = abspath(join(root_folder, "notConvertTD"))
-Dracor_Folder = abspath(join(root_folder, "corpusDracor"))
+html_folder = abspath(join(root_folder, "cleanHTML_TD"))
+Dracor_Folder = abspath(join(root_folder, "corpusTD_v2"))
+
+if not exists(Dracor_Folder):
+   os.system("mkdir {0}".format(Dracor_Folder))
 
 ### temporaire
 date_file = open('datesTD.txt', 'w')
@@ -102,7 +105,9 @@ for file in list(filter(lambda f: ".html" in f, map(lambda f: join(html_folder, 
       
    
    playText = open(file, "r", encoding="utf-8")
-   outputFile = open(join(Dracor_Folder, file.replace("html", "xml")), "w", encoding="utf-8")
+   outputFile = open(join(Dracor_Folder, fileName.replace("html", "xml")), "w", encoding="utf-8")
+   print(join(Dracor_Folder, fileName.replace("html", "xml")))
+   print(Dracor_Folder)
 
    # reset parameters
    charactersInScene = 0
