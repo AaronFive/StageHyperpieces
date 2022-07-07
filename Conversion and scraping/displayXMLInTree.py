@@ -1,5 +1,5 @@
 from xml.dom import minidom
-from os.path import abspath, dirname, join, exists
+from os.path import abspath, dirname, join, exists, basename
 from random import shuffle
 import os, sys
 import argparse
@@ -15,9 +15,6 @@ common_trees_folder = abspath(join(root, "commonTrees"))
 if not exists(outputs_folder):
     os.makedirs(outputs_folder)
 
-def get_file_name(file):
-    return file.split('/')[-1]
-
 def safe_root(play):
     for child in play.childNodes:
         if child.nodeName in ["TEI", "TEI.2"]:
@@ -25,7 +22,7 @@ def safe_root(play):
     raise ValueError("Not TEI Root")
 
 def parse_files(path):
-    return list(filter(lambda file: get_file_name(file) not in ['sitemap.xml', 'index.html'], map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])))
+    return list(filter(lambda file: basename(file) not in ['sitemap.xml', 'index.html'], map(lambda f: join(path, f), next(walk(path), (None, None, []))[2])))
 
 def writeStart(output):
     output.write("digraph Tree {\n")
@@ -61,7 +58,7 @@ def parse_dot(output, node, height):
 def generate_graph(path, height=-1):
     from os import walk
     for file in parse_files(path):
-        name = get_file_name(file).replace('xml', 'dot')
+        name = basename(file).replace('xml', 'dot')
         print(f"Generate graph : {name}")
         with open(join(outputs_folder, name), 'w') as f:
             parse_dot(f, safe_root(minidom.parse(file)), height)
@@ -109,7 +106,7 @@ def find_same_nodes(path, limit=-1):
         shuffle(files)
         files = files[:limit]
     for file in files:
-        name = get_file_name(file).replace('xml', 'txt')
+        name = basename(file).replace('xml', 'txt')
         print(f"Check nodes of {file}")
         root = safe_root(minidom.parse(file))
         res = parse_same_nodes(root)
@@ -209,7 +206,7 @@ if __name__ == "__main__":
             nodes, links = find_same_nodes(inputs_folder, args.intersection)
         else:
             nodes, links = find_same_nodes(inputs_folder)
-        common_file = join(common_trees_folder, get_file_name(inputs_folder).replace('corpus', 'common').replace('Corpus', 'common') + '.dot')
+        common_file = join(common_trees_folder, basename(inputs_folder).replace('corpus', 'common').replace('Corpus', 'common') + '.dot')
         create_common_tree(nodes, links, common_file)
 
 
