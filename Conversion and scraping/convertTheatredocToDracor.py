@@ -113,7 +113,6 @@ def get_title_and_author(line):
          persNames = author.split(' ')
          forename = list(filter(lambda s: not s.isupper(), persNames))
          surname = list(filter(lambda s: s.isupper(), persNames))
-
    return title, forename, surname
 
 def write_title(outputFile, title):
@@ -387,8 +386,9 @@ def write_start_text(outputFile):
 def try_saving_lines(outputFile):
    res = re.search("<p>(.*)</p>", line)
    if res:
+      print('BEGIN SAVING LINES')
       outputFile.writelines("<p>" + res.group(1) + "</p>\n")
-   return res
+   return bool(res)
 
 def start_character_block(line, characterBlock):
    return characterBlock or re.search("<strong><em>Personnages</em></strong>", line) or re.search('<p align="center" style="text-align:center"><b><i><span style="letter-spacing:-.3pt">Personnages</span></i></b></p>', line)
@@ -478,14 +478,14 @@ def find_begin_scene(outputFile, line, counters):
       # counters["sceneNb"] += 1
    return line, counters
 
-def find_character(line):
+def find_character(line, counters):
    res = re.search("<p align=.center.>(.*)</p>", line)
    if res and res.group(1) != "\xa0":
       counters["characterLines"].append(res.group(1))
+   return counters
 
-def write_characters(outputFile, line, counters):
+def write_text(outputFile, line, counters):
    res = re.search("<p>(.*)</p>", line)
-   r = res
    if res and not characterBlock:
       playLine = res.group(1).replace("\xa0"," ")
       if playLine != " ":
@@ -502,12 +502,7 @@ def write_characters(outputFile, line, counters):
             # find the character name among all characters
             characterId = ""
             for c in counters["characterList"]:
-               try:
-                  res = re.search(c, character.lower())
-               except re.error:
-                  l = counters["characterList"]
-                  raise ValueError(f"Character : {c}\nList : {l}\nLigne courante : {r.group(1)}")
-               if res:
+               if re.search(c, character.lower()):
                   characterId = c
             if characterId == "":
                #print("Character not found: " + character)                  
@@ -576,7 +571,7 @@ if __name__ == "__main__":
          "characterList" : [],
          "actNb" : "",
          "sceneNb" : "",
-      }      
+      } 
 
       for line in playText:
          # get and write title
@@ -589,7 +584,8 @@ if __name__ == "__main__":
             write_source(outputFile, source)
 
             # get and write date
-            date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates(playText)
+            copy_playtext = open(file, "r", encoding="utf-8")
+            date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates(copy_playtext)
 
             write_dates(outputFile, date_written, date_print, date_premiere, line_premiere)
 
@@ -615,10 +611,10 @@ if __name__ == "__main__":
          line, counters = find_begin_scene(outputFile, line, counters)
 
          # Find the list of characters on stage
-         find_character(line)
+         counters = find_character(line, counters)
 
          # Write the list of characters on stage
-         counters = write_characters(outputFile, line, counters)
+         counters = write_text(outputFile, line, counters)
 
       write_end(outputFile)  
 
