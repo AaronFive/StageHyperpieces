@@ -191,8 +191,6 @@ Oubli d'espace (25avril au lieu de 25 avril) pour "Adieux des officiers ou venus
 Attention également aux 1 qui deviennent par magie des l ou des | sur les années ou les jours.
 
 
-
-
 Un espace de trop
 
 Des exemple des comme Thomas Sauvage utilisent parfois des années dans leur texte, il faut donc vérifier que l'on a bien des années qui correspondent à celles de la création au sens large de la pièce.
