@@ -12,10 +12,11 @@ inputs_folder = abspath(join(root, "corpusDracor"))
 outputs_folder = abspath(join(root, "treesDracor"))
 common_trees_folder = abspath(join(root, "commonTrees"))
 
-if not exists(outputs_folder):
-    os.makedirs(outputs_folder)
+# if not exists(outputs_folder):
+#     os.makedirs(outputs_folder)
 
 def safe_root(play):
+
     for child in play.childNodes:
         if child.nodeName in ["TEI", "TEI.2"]:
             return child
@@ -56,6 +57,12 @@ def parse_dot(output, node, height):
     writeEnd(output)
 
 def generate_graph(path, height=-1):
+    """Generate a tree from a XML file.
+
+    Args:
+        path (str): The path of the XML file.
+        height (int, optional): _description_. Defaults to -1.
+    """
     from os import walk
     for file in parse_files(path):
         name = basename(file).replace('xml', 'dot')
@@ -71,6 +78,11 @@ def parse_xml(output, node, indent=-1):
         parse_xml(output, child, indent + 1)
 
 def parse_plays(path):
+    """Parse the structure from all the plays from a path in text form.
+
+    Args:
+        path (str): The path of the XML file.
+    """
     for file in parse_files(path):
         name = file.split('/')[-1].replace('xml', 'txt')
         print(f"Converting {file}")
@@ -99,6 +111,15 @@ def parse_same_links(node, path_buffer=''):
     return res
 
 def find_same_nodes(path, limit=-1):
+    """Create the intersection from a set of trees
+
+    Args:
+        path (str): Path of the folder of XML files.
+        limit (int, optional): optional truncation level of the tree.
+
+    Returns:
+        tuple: tuple of list of nodes and list of links of the XML tree.
+    """
     nodes = []
     links = []
     files = parse_files(path)
@@ -122,6 +143,13 @@ def find_same_nodes(path, limit=-1):
     return nodes, links
 
 def create_common_tree(nodes, links, file):
+    """Create a dot file from a XML file
+
+    Args:
+        nodes (list): list of nodes of the tree
+        links (list): list of links between nodes of the tree.
+        file (str): The name of the dot file to create.
+    """
     with open(join(common_trees_folder, file), 'w') as output:
         writeStart(output)
         for node in nodes:
@@ -131,6 +159,11 @@ def create_common_tree(nodes, links, file):
         writeEnd(output)
 
 def clean_outputs_directory(path):
+    """Clean the targeted directory 
+
+    Args:
+        path (str): The path of the folder to clean.
+    """
     if 'trees' in path:
         os.system('rm ' + path + '/*')
         print('Delete files from', path)
