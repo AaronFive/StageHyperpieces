@@ -373,20 +373,6 @@ def equals_authors(old, new):
             ), old, new_tmp))
     return False
 
-# def extract_duplicates(datas, new_datas):
-#     for new_data in new_datas:
-#         tuple_datas = []
-#         for data in datas:
-#             if new_data.get('title') == data.get('title') and new_data.get('yearNormalized') == data.get('yearNormalized'):
-#                 tuple_datas.append((data, new_data))
-#         for old, new in tuple_datas:
-#             old_authors = old['authors']
-#             new_authors = list(filter(lambda t: None not in t[:2], map(lambda author: [author['fullname'], author['shortname'], author.get('alsoKnownAs')], new['authors'])))
-#             if len(new_authors) == 1:
-#                 new_authors = new_authors[0]
-#             if not equals_authors(old_authors, new_authors):
-#                 print("old :", old, '\nnew :', new, '\n')
-
 def is_duplicate(old, new):
     """look if two plays are duplicates
 
@@ -415,7 +401,7 @@ def have_duplicate(plays, new):
     return any(is_duplicate(play, new) for play in plays)
 
 def print_news(old, news):
-    """display all the new plays from Dracor not yet in the repository.
+    """Display all the new plays from Dracor not yet in the repository.
 
     Args:
         old (list): contents from the local repository
@@ -426,13 +412,26 @@ def print_news(old, news):
             print(new, "\n")
 
 def detect_news(old, news):
+    """Return a list of plays not yet in our DraCor's folder.
+
+    Args:
+        old (list): List of all the datas in the DraCor's folder.
+        news (list):  List of all the datas in DraCor.
+
+    Returns:
+        _list_: List of the plays not yet in the Dracor's folder.
+    """
     return list(filter(lambda new: not have_duplicate(old, new), news))
     
-def display(datas):
+def display(datas):  # just to display the datas
     for data in datas:
         print(data, "\n")
 
 def load_tei(plays):
+    """Write the content from the selected plays in XML-TEI and put it in the DraCor's folder.
+    Args:
+        plays (_type_): Plays to generate in the folder.
+    """
     for play in plays:
         link = '/'.join([plays_link, play['name'], 'tei'])
         r = requests.get(link, 'metrics')
@@ -447,9 +446,6 @@ if __name__ == "__main__":
     datas = extract_important_datas(get_actual_meta_datas(dracor_folder))
     new_datas = extract_datas_plays(plays)
 
-    # display(plays)
-
-    # print_news(datas, plays)
     load_tei(detect_news(datas, plays))
     print("Actuellement : {datas} pièces\nTrouvé en ligne : {new_datas} pièces".format(datas = str(len(datas)), new_datas = str(len(new_datas))))
     
