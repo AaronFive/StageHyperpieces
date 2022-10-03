@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module convertTheatredocToDracor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>convertTheatredocToDracor</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/riads/StageHyperpieces/Conversion%20and%20scraping/convertTheatredocToDracor.py">/home/riads/StageHyperpieces/Conversion and scraping/convertTheatredocToDracor.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-end_character_block"><strong>end_character_block</strong></a>(characterBlock, line)</dt><dd><tt>Detect&nbsp;if&nbsp;all&nbsp;the&nbsp;characters&nbsp;of&nbsp;a&nbsp;play&nbsp;were&nbsp;saved.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;characterBlock&nbsp;(bool):&nbsp;Flag&nbsp;to&nbsp;know&nbsp;if&nbsp;lines&nbsp;are&nbsp;still&nbsp;composed&nbsp;by&nbsp;characters.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;line&nbsp;to&nbsp;read.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;the&nbsp;boolean&nbsp;of&nbsp;all&nbsp;the&nbsp;characters,&nbsp;but&nbsp;also&nbsp;the&nbsp;actual&nbsp;line.</tt></dd></dl>
+ <dl><dt><a name="-extract_from_summary"><strong>extract_from_summary</strong></a>(line, ul)</dt><dd><tt>Extract&nbsp;the&nbsp;datas&nbsp;from&nbsp;summary&nbsp;to&nbsp;count&nbsp;the&nbsp;number&nbsp;of&nbsp;acts&nbsp;and&nbsp;find&nbsp;an&nbsp;eventual&nbsp;dedicace&nbsp;in&nbsp;the&nbsp;play.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str)&nbsp;:&nbsp;The&nbsp;line&nbsp;where&nbsp;we&nbsp;try&nbsp;to&nbsp;detect&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;summary.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ul&nbsp;(int)&nbsp;:&nbsp;The&nbsp;number&nbsp;of&nbsp;ul&nbsp;tags&nbsp;found&nbsp;in&nbsp;the&nbsp;entire&nbsp;file.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Match[str]:&nbsp;Return&nbsp;the&nbsp;datas&nbsp;extracted&nbsp;by&nbsp;the&nbsp;regex&nbsp;search&nbsp;function,&nbsp;None&nbsp;if&nbsp;it&nbsp;found&nbsp;nothing.</tt></dd></dl>
+ <dl><dt><a name="-extract_sources"><strong>extract_sources</strong></a>(allPlays, fileSources)</dt><dd><tt>Extract&nbsp;sources&nbsp;from&nbsp;each&nbsp;play<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;allPlays&nbsp;(TextIOWrapper):&nbsp;File&nbsp;with&nbsp;all&nbsp;the&nbsp;plays.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fileSources&nbsp;(set):&nbsp;Empty&nbsp;set&nbsp;to&nbsp;fill&nbsp;with&nbsp;all&nbsp;sources.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;TextIOWrapper:&nbsp;Return&nbsp;allPlays.</tt></dd></dl>
+ <dl><dt><a name="-find_begin_act"><strong>find_begin_act</strong></a>(outputFile, line, counters)</dt><dd><tt>Try&nbsp;to&nbsp;find&nbsp;the&nbsp;begin&nbsp;of&nbsp;an&nbsp;act&nbsp;in&nbsp;a&nbsp;play&nbsp;and&nbsp;convert&nbsp;it&nbsp;in&nbsp;the&nbsp;XML&nbsp;file&nbsp;associated&nbsp;if&nbsp;it&nbsp;find&nbsp;it.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;line&nbsp;to&nbsp;read.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;counters&nbsp;(dict):&nbsp;Dictionnary&nbsp;with&nbsp;all&nbsp;the&nbsp;counters&nbsp;of&nbsp;the&nbsp;script.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;the&nbsp;line&nbsp;(str)&nbsp;and&nbsp;the&nbsp;refreshed&nbsp;counter&nbsp;(dict).</tt></dd></dl>
+ <dl><dt><a name="-find_begin_scene"><strong>find_begin_scene</strong></a>(outputFile, line, counters)</dt><dd><tt>Try&nbsp;to&nbsp;find&nbsp;the&nbsp;begin&nbsp;of&nbsp;a&nbsp;scene&nbsp;in&nbsp;a&nbsp;play&nbsp;and&nbsp;convert&nbsp;it&nbsp;in&nbsp;the&nbsp;XML&nbsp;file&nbsp;associated&nbsp;if&nbsp;it&nbsp;find&nbsp;it.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;line&nbsp;to&nbsp;read.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;counters&nbsp;(dict):&nbsp;Dictionnary&nbsp;with&nbsp;all&nbsp;the&nbsp;counters&nbsp;of&nbsp;the&nbsp;script.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;the&nbsp;line&nbsp;(str)&nbsp;and&nbsp;the&nbsp;refreshed&nbsp;counter&nbsp;(dict).</tt></dd></dl>
+ <dl><dt><a name="-find_character"><strong>find_character</strong></a>(line, counters)</dt><dd><tt>Find&nbsp;a&nbsp;character&nbsp;name&nbsp;in&nbsp;a&nbsp;line&nbsp;from&nbsp;a&nbsp;play&nbsp;text&nbsp;and&nbsp;stock&nbsp;it&nbsp;in&nbsp;the&nbsp;counters&nbsp;dict.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;line&nbsp;to&nbsp;read&nbsp;in&nbsp;the&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;counters&nbsp;(dict):&nbsp;Dictionnary&nbsp;with&nbsp;all&nbsp;the&nbsp;counters&nbsp;of&nbsp;the&nbsp;script.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;The&nbsp;refreshed&nbsp;counter</tt></dd></dl>
+ <dl><dt><a name="-find_dedicace"><strong>find_dedicace</strong></a>(line)</dt><dd><tt>Extract&nbsp;the&nbsp;content&nbsp;of&nbsp;a&nbsp;dedicace&nbsp;in&nbsp;a&nbsp;play&nbsp;from&nbsp;a&nbsp;line&nbsp;if&nbsp;it&nbsp;has&nbsp;it.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;The&nbsp;line&nbsp;where&nbsp;we're&nbsp;looking&nbsp;for&nbsp;a&nbsp;dedicace.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;content&nbsp;of&nbsp;the&nbsp;dedicace&nbsp;if&nbsp;it&nbsp;exists&nbsp;in&nbsp;the&nbsp;line,&nbsp;None&nbsp;then.</tt></dd></dl>
+ <dl><dt><a name="-find_summary"><strong>find_summary</strong></a>(line, ul)</dt><dd><tt>Detect&nbsp;if&nbsp;a&nbsp;line&nbsp;of&nbsp;the&nbsp;file&nbsp;is&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;summary,&nbsp;with&nbsp;the&nbsp;tag&nbsp;&lt;ul&gt;&nbsp;of&nbsp;a&nbsp;HTML&nbsp;file,&nbsp;if&nbsp;it&nbsp;exists.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str)&nbsp;:&nbsp;The&nbsp;line&nbsp;where&nbsp;we&nbsp;try&nbsp;to&nbsp;detect&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;summary.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ul&nbsp;(int)&nbsp;:&nbsp;The&nbsp;number&nbsp;of&nbsp;ul&nbsp;tags&nbsp;found&nbsp;in&nbsp;the&nbsp;entire&nbsp;file.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;only&nbsp;if&nbsp;the&nbsp;line&nbsp;is&nbsp;the&nbsp;tag&nbsp;"&lt;ul&gt;".</tt></dd></dl>
+ <dl><dt><a name="-format_date_AAAAMM"><strong>format_date_AAAAMM</strong></a>(res)</dt></dl>
+ <dl><dt><a name="-format_date_AAAAMMJJ"><strong>format_date_AAAAMMJJ</strong></a>(res)</dt></dl>
+ <dl><dt><a name="-get_dates"><strong>get_dates</strong></a>(playText)</dt><dd><tt>Get&nbsp;the&nbsp;date&nbsp;of&nbsp;writing,&nbsp;the&nbsp;date&nbsp;of&nbsp;printing&nbsp;and&nbsp;the&nbsp;date&nbsp;of&nbsp;first&nbsp;performance&nbsp;of&nbsp;the&nbsp;play,&nbsp;and&nbsp;the&nbsp;line&nbsp;of&nbsp;context&nbsp;for&nbsp;each&nbsp;of&nbsp;them.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;playText&nbsp;(TextIOWrapper):&nbsp;Text&nbsp;Contents&nbsp;of&nbsp;a&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;Return&nbsp;a&nbsp;tuple&nbsp;of&nbsp;6&nbsp;strings&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Date&nbsp;of&nbsp;writing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Date&nbsp;of&nbsp;printing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Date&nbsp;of&nbsp;first&nbsp;performance<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Line&nbsp;of&nbsp;date&nbsp;of&nbsp;writing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Line&nbsp;of&nbsp;date&nbsp;of&nbsp;printing<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;Line&nbsp;of&nbsp;date&nbsp;of&nbsp;first&nbsp;performance</tt></dd></dl>
+ <dl><dt><a name="-get_source"><strong>get_source</strong></a>(fileSources, fileName)</dt><dd><tt>Get&nbsp;the&nbsp;source&nbsp;from&nbsp;a&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fileSources&nbsp;(dict):&nbsp;Dictionnary&nbsp;with&nbsp;files'&nbsp;name&nbsp;in&nbsp;key&nbsp;and&nbsp;their&nbsp;sources&nbsp;in&nbsp;values.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;fileName&nbsp;(str):&nbsp;Name&nbsp;of&nbsp;the&nbsp;file&nbsp;we&nbsp;want&nbsp;the&nbsp;source.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str&nbsp;:&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;source&nbsp;of&nbsp;the&nbsp;input&nbsp;file.</tt></dd></dl>
+ <dl><dt><a name="-get_title_and_author"><strong>get_title_and_author</strong></a>(line)</dt><dd><tt>Extract&nbsp;the&nbsp;title&nbsp;and&nbsp;the&nbsp;author&nbsp;from&nbsp;a&nbsp;play<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;Line&nbsp;of&nbsp;the&nbsp;play&nbsp;with&nbsp;the&nbsp;title&nbsp;and&nbsp;the&nbsp;author's&nbsp;name.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tuple:&nbsp;Tuple&nbsp;of&nbsp;strings&nbsp;with&nbsp;the&nbsp;title,&nbsp;the&nbsp;forename&nbsp;and&nbsp;the&nbsp;surname&nbsp;of&nbsp;the&nbsp;author.</tt></dd></dl>
+ <dl><dt><a name="-get_type"><strong>get_type</strong></a>(playText)</dt><dd><tt>Get&nbsp;the&nbsp;type&nbsp;of&nbsp;the&nbsp;play,&nbsp;and&nbsp;if&nbsp;it's&nbsp;in&nbsp;prose&nbsp;or&nbsp;in&nbsp;verses.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;playText&nbsp;(TextIOWrapper):&nbsp;Text&nbsp;Contents&nbsp;of&nbsp;a&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_tuple_:&nbsp;Tuple&nbsp;of&nbsp;strings.&nbsp;The&nbsp;genre&nbsp;of&nbsp;the&nbsp;play,&nbsp;and&nbsp;the&nbsp;type&nbsp;of&nbsp;writing&nbsp;(verses&nbsp;or&nbsp;prose).&nbsp;Return&nbsp;[indéfini]&nbsp;if&nbsp;it's&nbsp;undefined.</tt></dd></dl>
+ <dl><dt><a name="-good_genre"><strong>good_genre</strong></a>(genre)</dt></dl>
+ <dl><dt><a name="-notify_file"><strong>notify_file</strong></a>(file)</dt><dd><tt>Notify&nbsp;the&nbsp;user&nbsp;with&nbsp;the&nbsp;conversion&nbsp;of&nbsp;the&nbsp;input&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;(str):&nbsp;Name&nbsp;of&nbsp;the&nbsp;file&nbsp;to&nbsp;convert.</tt></dd></dl>
+ <dl><dt><a name="-standard_line"><strong>standard_line</strong></a>(playText)</dt></dl>
+ <dl><dt><a name="-start_character_block"><strong>start_character_block</strong></a>(line, characterBlock)</dt><dd><tt>Check&nbsp;if&nbsp;we&nbsp;have&nbsp;to&nbsp;save&nbsp;the&nbsp;next&nbsp;lines&nbsp;as&nbsp;characters&nbsp;names&nbsp;of&nbsp;a&nbsp;play.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;line&nbsp;to&nbsp;read<br>
+&nbsp;&nbsp;&nbsp;&nbsp;characterBlock&nbsp;(bool):&nbsp;Actual&nbsp;situation&nbsp;of&nbsp;saving&nbsp;of&nbsp;characters.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;a&nbsp;line&nbsp;with&nbsp;"Personnage"&nbsp;is&nbsp;write&nbsp;in&nbsp;the&nbsp;line,&nbsp;or&nbsp;written&nbsp;before.</tt></dd></dl>
+ <dl><dt><a name="-try_saving_lines"><strong>try_saving_lines</strong></a>(outputFile, line)</dt><dd><tt>Look&nbsp;if&nbsp;the&nbsp;read&nbsp;line&nbsp;is&nbsp;in&nbsp;&lt;p&gt;&lt;/p&gt;&nbsp;tags.&nbsp;If&nbsp;yes,&nbsp;authorize&nbsp;the&nbsp;copy&nbsp;of&nbsp;the&nbsp;lines&nbsp;contents&nbsp;of&nbsp;the&nbsp;HTML&nbsp;file&nbsp;in&nbsp;the&nbsp;XML&nbsp;output&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;Line&nbsp;to&nbsp;read.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;the&nbsp;line&nbsp;is&nbsp;in&nbsp;&lt;p&gt;&lt;/p&gt;&nbsp;tags.</tt></dd></dl>
+ <dl><dt><a name="-write_author"><strong>write_author</strong></a>(outputFile, author)</dt><dd><tt>Write&nbsp;the&nbsp;author's&nbsp;name&nbsp;in&nbsp;the&nbsp;output&nbsp;file&nbsp;in&nbsp;XML.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;(str):&nbsp;Author&nbsp;of&nbsp;the&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;the&nbsp;author's&nbsp;name&nbsp;have&nbsp;at&nbsp;least&nbsp;a&nbsp;forename&nbsp;or&nbsp;a&nbsp;surname,&nbsp;False&nbsp;then.</tt></dd></dl>
+ <dl><dt><a name="-write_character"><strong>write_character</strong></a>(outputFile)</dt><dd><tt>Write&nbsp;the&nbsp;saved&nbsp;characters&nbsp;of&nbsp;a&nbsp;play&nbsp;in&nbsp;the&nbsp;associated&nbsp;XML&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.</tt></dd></dl>
+ <dl><dt><a name="-write_dates"><strong>write_dates</strong></a>(outputFile, date_written, date_print, date_premiere, line_premiere)</dt><dd><tt>Write&nbsp;the&nbsp;date&nbsp;of&nbsp;writing,&nbsp;the&nbsp;date&nbsp;of&nbsp;printing&nbsp;and&nbsp;the&nbsp;date&nbsp;of&nbsp;first&nbsp;performance&nbsp;of&nbsp;the&nbsp;play,&nbsp;and&nbsp;the&nbsp;line&nbsp;of&nbsp;context&nbsp;for&nbsp;each&nbsp;of&nbsp;them&nbsp;in&nbsp;an&nbsp;output&nbsp;file&nbsp;in&nbsp;XML.<br>
+&nbsp;<br>
+Args:&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;date_written&nbsp;(str):&nbsp;Date&nbsp;of&nbsp;writing&nbsp;of&nbsp;the&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;date_print&nbsp;(str):&nbsp;Date&nbsp;of&nbsp;printing&nbsp;of&nbsp;the&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;date_premiere&nbsp;(str):&nbsp;Date&nbsp;of&nbsp;first&nbsp;performance&nbsp;of&nbsp;the&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line_premiere&nbsp;(str):&nbsp;Line&nbsp;where&nbsp;the&nbsp;date&nbsp;of&nbsp;the&nbsp;first&nbsp;performance&nbsp;is&nbsp;written.</tt></dd></dl>
+ <dl><dt><a name="-write_dedicace"><strong>write_dedicace</strong></a>(outputFile, copy_playtext, author)</dt><dd><tt>Write&nbsp;the&nbsp;dedicace&nbsp;sentence&nbsp;of&nbsp;a&nbsp;play&nbsp;in&nbsp;its&nbsp;XML&nbsp;version.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;copy_playtext&nbsp;(TextIOWrapper)&nbsp;:&nbsp;Content&nbsp;of&nbsp;the&nbsp;input&nbsp;file&nbsp;in&nbsp;HTML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;(tuple)&nbsp;:&nbsp;The&nbsp;author's&nbsp;name&nbsp;(tuple&nbsp;of&nbsp;string).</tt></dd></dl>
+ <dl><dt><a name="-write_end"><strong>write_end</strong></a>(outputFile)</dt><dd><tt>Write&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;XML&nbsp;output&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.</tt></dd></dl>
+ <dl><dt><a name="-write_end_header"><strong>write_end_header</strong></a>(outputFile, genre, vers_prose)</dt><dd><tt>Write&nbsp;the&nbsp;end&nbsp;of&nbsp;the&nbsp;header&nbsp;of&nbsp;a&nbsp;XML&nbsp;file<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;genre&nbsp;(str)&nbsp;:&nbsp;The&nbsp;genre&nbsp;of&nbsp;the&nbsp;converted&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;vers_prose&nbsp;(str)&nbsp;:&nbsp;The&nbsp;type&nbsp;of&nbsp;the&nbsp;converted&nbsp;play,&nbsp;in&nbsp;verses&nbsp;or&nbsp;in&nbsp;prose.</tt></dd></dl>
+ <dl><dt><a name="-write_performance"><strong>write_performance</strong></a>(outputFile, line_premiere, date_premiere)</dt><dd><tt>Write&nbsp;the&nbsp;performance&nbsp;tag&nbsp;of&nbsp;the&nbsp;chosen&nbsp;XML&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line_premiere&nbsp;(str)&nbsp;:&nbsp;line&nbsp;of&nbsp;the&nbsp;play&nbsp;where&nbsp;the&nbsp;date&nbsp;of&nbsp;the&nbsp;first&nbsp;performance&nbsp;is&nbsp;written.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;date_premiere&nbsp;(str)&nbsp;:&nbsp;The&nbsp;date&nbsp;of&nbsp;the&nbsp;first&nbsp;performance&nbsp;of&nbsp;the&nbsp;converted&nbsp;play.</tt></dd></dl>
+ <dl><dt><a name="-write_source"><strong>write_source</strong></a>(outputFile, source)</dt><dd><tt>Write&nbsp;the&nbsp;source&nbsp;of&nbsp;the&nbsp;play&nbsp;in&nbsp;the&nbsp;output&nbsp;file&nbsp;in&nbsp;XML.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;source&nbsp;(str):&nbsp;Source&nbsp;of&nbsp;the&nbsp;play.</tt></dd></dl>
+ <dl><dt><a name="-write_start_text"><strong>write_start_text</strong></a>(outputFile, title, genre, date_print)</dt><dd><tt>Write&nbsp;the&nbsp;start&nbsp;of&nbsp;the&nbsp;text&nbsp;body&nbsp;of&nbsp;a&nbsp;XML&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str)&nbsp;:&nbsp;The&nbsp;title&nbsp;of&nbsp;the&nbsp;converted&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;genre&nbsp;(str)&nbsp;:&nbsp;The&nbsp;genre&nbsp;of&nbsp;the&nbsp;converted&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;date_print&nbsp;(str)&nbsp;:&nbsp;The&nbsp;date&nbsp;of&nbsp;printing&nbsp;of&nbsp;the&nbsp;converted&nbsp;play.</tt></dd></dl>
+ <dl><dt><a name="-write_text"><strong>write_text</strong></a>(outputFile, line, counters)</dt><dd><tt>Write&nbsp;the&nbsp;text&nbsp;from&nbsp;a&nbsp;HTML&nbsp;file's&nbsp;line&nbsp;in&nbsp;the&nbsp;XML&nbsp;associated&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;(str):&nbsp;line&nbsp;to&nbsp;read&nbsp;in&nbsp;the&nbsp;play.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;counters&nbsp;(dict):&nbsp;Dictionnary&nbsp;with&nbsp;all&nbsp;the&nbsp;counters&nbsp;of&nbsp;the&nbsp;script.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;The&nbsp;refreshed&nbsp;counter</tt></dd></dl>
+ <dl><dt><a name="-write_title"><strong>write_title</strong></a>(outputFile, title)</dt><dd><tt>Write&nbsp;the&nbsp;extracted&nbsp;title&nbsp;in&nbsp;the&nbsp;output&nbsp;file&nbsp;in&nbsp;XML.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str):&nbsp;Title&nbsp;of&nbsp;a&nbsp;file.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;same&nbsp;title.</tt></dd></dl>
+ <dl><dt><a name="-write_type"><strong>write_type</strong></a>(outputFile, genre)</dt><dd><tt>Write&nbsp;the&nbsp;extracted&nbsp;genre&nbsp;in&nbsp;the&nbsp;output&nbsp;file&nbsp;in&nbsp;XML.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;outputFile&nbsp;(TextIOWrapper):&nbsp;Output&nbsp;file&nbsp;to&nbsp;generate&nbsp;in&nbsp;XML.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;genre&nbsp;(str):&nbsp;Genre&nbsp;of&nbsp;a&nbsp;play.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>Dracor_Folder</strong> = '/usr/corpusTD_v2'<br>
+<strong>clean_genre</strong> = ['Tragédie', 'Comédie', 'Tragicomédie', 'Tragi-comédie']<br>
+<strong>folder</strong> = '/usr/bin'<br>
+<strong>genres</strong> = ['tragedie', 'comedie', 'tragicomedie', 'tragi-comedie']<br>
+<strong>html_folder</strong> = '/usr/cleanHTML_TD'<br>
+<strong>mois</strong> = {'aout': '08', 'avril': '04', 'decembre': '12', 'fevrier': '02', 'janvier': '01', 'juillet': '07', 'juin': '06', 'mai': '05', 'mars': '03', 'novembre': '11', ...}<br>
+<strong>pardir</strong> = '..'<br>
+<strong>root_folder</strong> = '/usr'</td></tr></table>
+</body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module downloadDracor</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>downloadDracor</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/riads/StageHyperpieces/Conversion%20and%20scraping/downloadDracor.py">/home/riads/StageHyperpieces/Conversion and scraping/downloadDracor.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+<a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top><a href="xmltodict.html">xmltodict</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-choose_year"><strong>choose_year</strong></a>(writtenYear, printYear, premiereYear)</dt><dd><tt>Follow&nbsp;the&nbsp;DraCor&nbsp;Algorithm&nbsp;to&nbsp;choose&nbsp;a&nbsp;normalized&nbsp;year&nbsp;to&nbsp;date&nbsp;a&nbsp;play.<br>
+click&nbsp;on&nbsp;https://dracor.org/doc/faq/#normalized-year&nbsp;to&nbsp;look&nbsp;how&nbsp;works&nbsp;the&nbsp;algorithm.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;writtenYear&nbsp;(str):&nbsp;The&nbsp;year&nbsp;when&nbsp;the&nbsp;play&nbsp;was&nbsp;written<br>
+&nbsp;&nbsp;&nbsp;&nbsp;printYear&nbsp;(str):&nbsp;The&nbsp;year&nbsp;when&nbsp;the&nbsp;play&nbsp;was&nbsp;printed<br>
+&nbsp;&nbsp;&nbsp;&nbsp;premiereYear&nbsp;(str):&nbsp;The&nbsp;year&nbsp;of&nbsp;the&nbsp;first&nbsp;performance&nbsp;of&nbsp;the&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;normalized&nbsp;year.</tt></dd></dl>
+ <dl><dt><a name="-concat_author_in_dico"><strong>concat_author_in_dico</strong></a>(persNames)</dt><dd><tt>Recursive&nbsp;function&nbsp;working&nbsp;with&nbsp;concat_author_in_list.&nbsp;Join&nbsp;the&nbsp;names&nbsp;in&nbsp;the&nbsp;dict&nbsp;of&nbsp;some&nbsp;persNames.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;persName&nbsp;(list):&nbsp;Some&nbsp;personal&nbsp;names&nbsp;of&nbsp;the&nbsp;authors&nbsp;in&nbsp;a&nbsp;list.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string:&nbsp;The&nbsp;name&nbsp;(or&nbsp;a&nbsp;part&nbsp;of&nbsp;it)&nbsp;of&nbsp;the&nbsp;author.</tt></dd></dl>
+ <dl><dt><a name="-concat_authors_in_list"><strong>concat_authors_in_list</strong></a>(persNames)</dt><dd><tt>Recursive&nbsp;function&nbsp;working&nbsp;with&nbsp;concat_author_in_dico.&nbsp;Join&nbsp;the&nbsp;names&nbsp;in&nbsp;the&nbsp;list&nbsp;of&nbsp;some&nbsp;persNames&nbsp;(dict).<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;persName&nbsp;(list):&nbsp;Some&nbsp;personal&nbsp;names&nbsp;of&nbsp;the&nbsp;authors&nbsp;in&nbsp;a&nbsp;list.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string:&nbsp;The&nbsp;name&nbsp;(or&nbsp;a&nbsp;part&nbsp;of&nbsp;it)&nbsp;of&nbsp;the&nbsp;author.</tt></dd></dl>
+ <dl><dt><a name="-contains_pen"><strong>contains_pen</strong></a>(d)</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;name&nbsp;of&nbsp;an&nbsp;author&nbsp;have&nbsp;a&nbsp;nickname&nbsp;('pen')<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;(dict):&nbsp;All&nbsp;the&nbsp;elements&nbsp;of&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;author.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;'pen'&nbsp;is&nbsp;in&nbsp;the&nbsp;values&nbsp;of&nbsp;the&nbsp;dictionnary,&nbsp;False&nbsp;then.</tt></dd></dl>
+ <dl><dt><a name="-detect_news"><strong>detect_news</strong></a>(old, news)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;plays&nbsp;not&nbsp;yet&nbsp;in&nbsp;our&nbsp;DraCor's&nbsp;folder.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;old&nbsp;(list):&nbsp;List&nbsp;of&nbsp;all&nbsp;the&nbsp;datas&nbsp;in&nbsp;the&nbsp;DraCor's&nbsp;folder.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;news&nbsp;(list):&nbsp;&nbsp;List&nbsp;of&nbsp;all&nbsp;the&nbsp;datas&nbsp;in&nbsp;DraCor.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_list_:&nbsp;List&nbsp;of&nbsp;the&nbsp;plays&nbsp;not&nbsp;yet&nbsp;in&nbsp;the&nbsp;Dracor's&nbsp;folder.</tt></dd></dl>
+ <dl><dt><a name="-display"><strong>display</strong></a>(datas)</dt></dl>
+ <dl><dt><a name="-equals_authors"><strong>equals_authors</strong></a>(old, new)</dt><dd><tt>Check&nbsp;if&nbsp;two&nbsp;plays&nbsp;have&nbsp;the&nbsp;same&nbsp;authors.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;old&nbsp;(any):&nbsp;The&nbsp;author(s)&nbsp;of&nbsp;a&nbsp;play&nbsp;from&nbsp;the&nbsp;local&nbsp;folder.&nbsp;str&nbsp;-&gt;&nbsp;one&nbsp;author,&nbsp;list&nbsp;-&gt;&nbsp;many&nbsp;authors.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;(any):&nbsp;The&nbsp;author&nbsp;of&nbsp;a&nbsp;play&nbsp;from&nbsp;Dracor.&nbsp;str&nbsp;-&gt;&nbsp;one&nbsp;author,&nbsp;list&nbsp;-&gt;&nbsp;many&nbsp;authors.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;The&nbsp;answer&nbsp;about&nbsp;the&nbsp;unicity&nbsp;of&nbsp;the&nbsp;authors&nbsp;from&nbsp;the&nbsp;two&nbsp;plays.</tt></dd></dl>
+ <dl><dt><a name="-extend_nickname"><strong>extend_nickname</strong></a>(names)</dt><dd><tt>private&nbsp;function&nbsp;to&nbsp;put&nbsp;in&nbsp;a&nbsp;list&nbsp;the&nbsp;nickname&nbsp;of&nbsp;an&nbsp;author&nbsp;at&nbsp;the&nbsp;same&nbsp;level&nbsp;as&nbsp;the&nbsp;fullname&nbsp;and&nbsp;the&nbsp;&nbsp;shortname.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;names&nbsp;(list):&nbsp;Some&nbsp;different&nbsp;names&nbsp;of&nbsp;an&nbsp;author&nbsp;:&nbsp;[fullname,&nbsp;shortname,&nbsp;[pseudonyms]].&nbsp;The&nbsp;pseudonym&nbsp;can&nbsp;be&nbsp;None.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;The&nbsp;same&nbsp;list&nbsp;with&nbsp;this&nbsp;new&nbsp;syntax&nbsp;:&nbsp;[fullname,&nbsp;shortname,&nbsp;pseudonym1,&nbsp;pseudonym2]&nbsp;etc.&nbsp;If&nbsp;The&nbsp;author&nbsp;has&nbsp;not&nbsp;pseudonym,&nbsp;then&nbsp;it's&nbsp;[fullname,&nbsp;shortname].</tt></dd></dl>
+ <dl><dt><a name="-extract_datas_plays"><strong>extract_datas_plays</strong></a>(plays)</dt><dd><tt>Extract&nbsp;all&nbsp;the&nbsp;important&nbsp;datas&nbsp;from&nbsp;the&nbsp;plays&nbsp;found&nbsp;in&nbsp;the&nbsp;Dracor&nbsp;website.&nbsp;Thr&nbsp;title,&nbsp;the&nbsp;author(s)&nbsp;and&nbsp;the&nbsp;year.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;plays&nbsp;(OrderedDict):&nbsp;The&nbsp;dictionnary&nbsp;with&nbsp;all&nbsp;the&nbsp;datas&nbsp;of&nbsp;the&nbsp;plays&nbsp;from&nbsp;Dracor.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;The&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;importants&nbsp;datas&nbsp;from&nbsp;each&nbsp;play.</tt></dd></dl>
+ <dl><dt><a name="-extract_important_datas"><strong>extract_important_datas</strong></a>(contents)</dt><dd><tt>Extract&nbsp;all&nbsp;the&nbsp;important&nbsp;datas&nbsp;from&nbsp;the&nbsp;header&nbsp;of&nbsp;all&nbsp;plays.&nbsp;The&nbsp;titles,&nbsp;the&nbsp;authors&nbsp;and&nbsp;the&nbsp;years.<br>
+&nbsp;<br>
+particular&nbsp;case&nbsp;because&nbsp;this&nbsp;one&nbsp;have&nbsp;two&nbsp;names,&nbsp;very&nbsp;difficult&nbsp;to&nbsp;generalize&nbsp;this&nbsp;case.&nbsp;Bernard&nbsp;Le&nbsp;Bouyer&nbsp;de&nbsp;Fontenelle&nbsp;or&nbsp;Bernard&nbsp;Le&nbsp;Bouvier&nbsp;de&nbsp;Fontenelle.<br>
+&nbsp;<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;contents&nbsp;(OrderedDict):&nbsp;The&nbsp;contents&nbsp;of&nbsp;all&nbsp;plays&nbsp;we&nbsp;already&nbsp;have&nbsp;in&nbsp;the&nbsp;folder.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;The&nbsp;list&nbsp;of&nbsp;all&nbsp;the&nbsp;importants&nbsp;datas&nbsp;from&nbsp;each&nbsp;play.</tt></dd></dl>
+ <dl><dt><a name="-get_actual_meta_datas"><strong>get_actual_meta_datas</strong></a>(path)</dt><dd><tt>Get&nbsp;all&nbsp;the&nbsp;meta-datas&nbsp;of&nbsp;the&nbsp;header&nbsp;of&nbsp;each&nbsp;plays&nbsp;in&nbsp;the&nbsp;folder&nbsp;of&nbsp;Dracor&nbsp;corpus'.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;path&nbsp;(string):&nbsp;The&nbsp;folder&nbsp;that&nbsp;contains&nbsp;all&nbsp;the&nbsp;files&nbsp;we&nbsp;want.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list:&nbsp;A&nbsp;list&nbsp;of&nbsp;dictionnaries&nbsp;form&nbsp;of&nbsp;all&nbsp;the&nbsp;XML&nbsp;files.</tt></dd></dl>
+ <dl><dt><a name="-get_authors"><strong>get_authors</strong></a>(content)</dt><dd><tt>Extract&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;author&nbsp;of&nbsp;a&nbsp;play.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content&nbsp;(OrderedDict):&nbsp;Content&nbsp;of&nbsp;all&nbsp;the&nbsp;datas&nbsp;from&nbsp;a&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any:&nbsp;A&nbsp;string&nbsp;of&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;author,&nbsp;or&nbsp;a&nbsp;list&nbsp;if&nbsp;they&nbsp;are&nbsp;many.</tt></dd></dl>
+ <dl><dt><a name="-get_header"><strong>get_header</strong></a>(xml)</dt><dd><tt>Extract&nbsp;the&nbsp;header&nbsp;from&nbsp;a&nbsp;XML.&nbsp;file.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;xml&nbsp;(string):&nbsp;The&nbsp;XML&nbsp;file.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string:&nbsp;The&nbsp;header&nbsp;of&nbsp;the&nbsp;XML&nbsp;file.</tt></dd></dl>
+ <dl><dt><a name="-get_preserve"><strong>get_preserve</strong></a>(persNames)</dt><dd><tt>Find&nbsp;the&nbsp;name&nbsp;used&nbsp;with&nbsp;the&nbsp;attribute&nbsp;'@xml:space'='preserve'&nbsp;and&nbsp;give&nbsp;it&nbsp;a&nbsp;priority.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;persName&nbsp;(any):&nbsp;All&nbsp;the&nbsp;personal&nbsp;names&nbsp;of&nbsp;the&nbsp;authors.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any:&nbsp;The&nbsp;name&nbsp;linked&nbsp;with&nbsp;the&nbsp;attribute,&nbsp;None&nbsp;if&nbsp;it's&nbsp;not&nbsp;exists.</tt></dd></dl>
+ <dl><dt><a name="-get_pseudonym"><strong>get_pseudonym</strong></a>(persNames)</dt><dd><tt>Find&nbsp;the&nbsp;name&nbsp;used&nbsp;with&nbsp;the&nbsp;attribute&nbsp;'@type'='pseudonym'&nbsp;and&nbsp;give&nbsp;it&nbsp;a&nbsp;priority.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;persName&nbsp;(any):&nbsp;All&nbsp;the&nbsp;personal&nbsp;names&nbsp;of&nbsp;the&nbsp;authors.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any:&nbsp;The&nbsp;name&nbsp;linked&nbsp;with&nbsp;the&nbsp;attribute,&nbsp;None&nbsp;if&nbsp;it's&nbsp;not&nbsp;exists.</tt></dd></dl>
+ <dl><dt><a name="-get_sort"><strong>get_sort</strong></a>(persName)</dt><dd><tt>Find&nbsp;the&nbsp;name&nbsp;used&nbsp;with&nbsp;the&nbsp;attribute&nbsp;'@sort'=1&nbsp;and&nbsp;give&nbsp;it&nbsp;a&nbsp;priority.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;persName&nbsp;(any):&nbsp;All&nbsp;the&nbsp;personal&nbsp;names&nbsp;of&nbsp;the&nbsp;authors.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;any:&nbsp;The&nbsp;name&nbsp;linked&nbsp;with&nbsp;the&nbsp;attribute,&nbsp;None&nbsp;if&nbsp;it's&nbsp;not&nbsp;exists.</tt></dd></dl>
+ <dl><dt><a name="-get_title"><strong>get_title</strong></a>(content)</dt><dd><tt>Get&nbsp;the&nbsp;title&nbsp;from&nbsp;a&nbsp;play<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content&nbsp;(dict):&nbsp;All&nbsp;the&nbsp;contents&nbsp;of&nbsp;a&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;string:&nbsp;The&nbsp;title&nbsp;of&nbsp;the&nbsp;play.</tt></dd></dl>
+ <dl><dt><a name="-get_year"><strong>get_year</strong></a>(content)</dt><dd><tt>Extract&nbsp;the&nbsp;normalized&nbsp;year&nbsp;from&nbsp;a&nbsp;play.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;content&nbsp;(OrderedDict):&nbsp;The&nbsp;contents&nbsp;from&nbsp;the&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;normalized&nbsp;year&nbsp;from&nbsp;the&nbsp;play.</tt></dd></dl>
+ <dl><dt><a name="-have_duplicate"><strong>have_duplicate</strong></a>(plays, new)</dt><dd><tt>Check&nbsp;if&nbsp;a&nbsp;new&nbsp;play&nbsp;have&nbsp;duplicates&nbsp;in&nbsp;the&nbsp;local&nbsp;repository.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;plays&nbsp;(list):&nbsp;The&nbsp;contents&nbsp;plays&nbsp;from&nbsp;the&nbsp;local&nbsp;repository.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;(dict):&nbsp;The&nbsp;content&nbsp;of&nbsp;the&nbsp;new&nbsp;play.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_type_:&nbsp;answer&nbsp;of&nbsp;the&nbsp;existence&nbsp;of&nbsp;duplicates&nbsp;of&nbsp;new&nbsp;in&nbsp;plays.</tt></dd></dl>
+ <dl><dt><a name="-is_duplicate"><strong>is_duplicate</strong></a>(old, new)</dt><dd><tt>look&nbsp;if&nbsp;two&nbsp;plays&nbsp;are&nbsp;duplicates<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;old&nbsp;(dict):&nbsp;play&nbsp;from&nbsp;folder.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;new&nbsp;(dict):&nbsp;play&nbsp;from&nbsp;DraCor.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;answer&nbsp;if&nbsp;a&nbsp;play&nbsp;is&nbsp;the&nbsp;duplicate&nbsp;of&nbsp;the&nbsp;other.</tt></dd></dl>
+ <dl><dt><a name="-l_contains_pen"><strong>l_contains_pen</strong></a>(l)</dt><dd><tt>Check&nbsp;if&nbsp;the&nbsp;name&nbsp;of&nbsp;an&nbsp;author&nbsp;have&nbsp;a&nbsp;nickname&nbsp;('pen'),&nbsp;when&nbsp;he&nbsp;has&nbsp;many&nbsp;persNames&nbsp;tags.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;l&nbsp;(list):&nbsp;All&nbsp;the&nbsp;elements&nbsp;of&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;author,&nbsp;with&nbsp;many&nbsp;persNames&nbsp;tags.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;'pen'&nbsp;is&nbsp;in&nbsp;the&nbsp;values&nbsp;of&nbsp;one&nbsp;of&nbsp;the&nbsp;dictionnaries,&nbsp;False&nbsp;then.</tt></dd></dl>
+ <dl><dt><a name="-l_find_pen"><strong>l_find_pen</strong></a>(l)</dt><dd><tt>Find&nbsp;the&nbsp;nickname&nbsp;of&nbsp;an&nbsp;author&nbsp;who&nbsp;has&nbsp;one<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;l&nbsp;(list):&nbsp;All&nbsp;the&nbsp;elements&nbsp;of&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;author.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;int:&nbsp;The&nbsp;index&nbsp;of&nbsp;the&nbsp;nickname&nbsp;in&nbsp;the&nbsp;list.</tt></dd></dl>
+ <dl><dt><a name="-load_datas"><strong>load_datas</strong></a>(link)</dt><dd><tt>load&nbsp;datas&nbsp;from&nbsp;the&nbsp;chosen&nbsp;link.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;link&nbsp;(string):&nbsp;chosen<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;dict:&nbsp;Dictionnary&nbsp;with&nbsp;database&nbsp;from&nbsp;the&nbsp;URL.</tt></dd></dl>
+ <dl><dt><a name="-load_tei"><strong>load_tei</strong></a>(plays)</dt><dd><tt>Write&nbsp;the&nbsp;content&nbsp;from&nbsp;the&nbsp;selected&nbsp;plays&nbsp;in&nbsp;XML-TEI&nbsp;and&nbsp;put&nbsp;it&nbsp;in&nbsp;the&nbsp;DraCor's&nbsp;folder.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;plays&nbsp;(_type_):&nbsp;Plays&nbsp;to&nbsp;generate&nbsp;in&nbsp;the&nbsp;folder.</tt></dd></dl>
+ <dl><dt><a name="-print_news"><strong>print_news</strong></a>(old, news)</dt><dd><tt>Display&nbsp;all&nbsp;the&nbsp;new&nbsp;plays&nbsp;from&nbsp;Dracor&nbsp;not&nbsp;yet&nbsp;in&nbsp;the&nbsp;repository.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;old&nbsp;(list):&nbsp;contents&nbsp;from&nbsp;the&nbsp;local&nbsp;repository<br>
+&nbsp;&nbsp;&nbsp;&nbsp;news&nbsp;(list):&nbsp;contents&nbsp;from&nbsp;the&nbsp;DraCor&nbsp;Website.</tt></dd></dl>
+ <dl><dt><a name="-replace_de"><strong>replace_de</strong></a>(name)</dt><dd><tt>fix&nbsp;the&nbsp;problem&nbsp;of&nbsp;xmltodict&nbsp;problem&nbsp;and&nbsp;replace&nbsp;the&nbsp;linkname&nbsp;'de'&nbsp;at&nbsp;the&nbsp;good&nbsp;place<br>
+Exemple&nbsp;:&nbsp;Savinien&nbsp;de&nbsp;Cyrano&nbsp;de&nbsp;Bergerac&nbsp;was&nbsp;returned&nbsp;as&nbsp;Savinien&nbsp;de&nbsp;de&nbsp;Cyrano&nbsp;Bergerac&nbsp;(because&nbsp;the&nbsp;two&nbsp;'de'&nbsp;were&nbsp;at&nbsp;the&nbsp;same&nbsp;list&nbsp;in&nbsp;the&nbsp;contents&nbsp;of&nbsp;the&nbsp;play.)<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name&nbsp;(str):&nbsp;The&nbsp;name&nbsp;of&nbsp;the&nbsp;author.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;The&nbsp;name&nbsp;fixed&nbsp;if&nbsp;we&nbsp;had&nbsp;the&nbsp;'de'&nbsp;problem.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>dracor_folder</strong> = '/usr/corpusDracor'<br>
+<strong>dracor_link</strong> = 'https://dracor.org/api/corpora/fre'<br>
+<strong>folder</strong> = '/usr/bin'<br>
+<strong>plays_link</strong> = 'https://dracor.org/api/corpora/fre/play'</td></tr></table>
+</body></html>
