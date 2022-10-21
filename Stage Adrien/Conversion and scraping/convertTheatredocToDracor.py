@@ -807,13 +807,13 @@ def find_begin_act(outputFile, line, counters):
    </div>
    <div type="act" xml:id=\"""" + counters["actNb"] + """\">
    <head>""" + act + """</head>""")
-    else:
-        # No acts/only one but not declared
-        write_character(outputFile)
-        outputFile.writelines("""
-                </castList>
-            </front>
-            <body>""")
+    # else:
+    #     # No acts/only one but not declared
+    #     write_character(outputFile)
+    #     outputFile.writelines("""
+    #             </castList>
+    #         </front>
+    #         <body>""")
 
     return line, counters
 
