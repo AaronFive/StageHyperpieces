@@ -18,12 +18,12 @@ outputDir = 'Output'
 corpusFolder = os.path.join(folder, corpus)
 outputFolder = os.path.join(folder, outputDir)
 
-playname1 = os.path.join(corpusFolder, "Couple 1 - la-dama-duende.xml")
-playname2 = os.path.join(corpusFolder, "Couple 1 - ouville_espritfolet.xml")
-play1 = open(playname1, 'rb')
-play2 = open(playname2, 'rb')
-mydoc = minidom.parse(play1)
-mydoc2 = minidom.parse(play2)
+# playname1 = os.path.join(corpusFolder, "Couple 1 - la-dama-duende.xml")
+# playname2 = os.path.join(corpusFolder, "Couple 1 - ouville_espritfolet.xml")
+# play1 = open(playname1, 'rb')
+# play2 = open(playname2, 'rb')
+# mydoc = minidom.parse(play1)
+# mydoc2 = minidom.parse(play2)
 
 
 ##### Computations on plays####
