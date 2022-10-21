@@ -12,8 +12,8 @@ import pickle
 from queue import Queue
 
 
-def normalize_scene(scene):
-    """Given a list of characters, transforms it in a paraeterized word of the form ABABC"""
+def normalize_scene(scene, return_dict = False):
+    """Given a list of characters, transforms it in a parameterized word of the form ABABC"""
     character_normalizing = dict()
     order = 65
     normalized_scene = []
@@ -22,7 +22,10 @@ def normalize_scene(scene):
             character_normalizing[x] = chr(order)
             order += 1
         normalized_scene.append(character_normalizing[x])
-    return "".join(normalized_scene)
+    if return_dict:
+        return "".join(normalized_scene), character_normalizing
+    else:
+        return "".join(normalized_scene)
 
 
 def get_normalized_scenes(doc):
