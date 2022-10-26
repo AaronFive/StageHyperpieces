@@ -1,6 +1,9 @@
+import random
+
 import play_parsing
 import parameterized_matching
-from scene_speech_repartition import normalize_scene
+import re
+from scene_speech_repartition import normalize_scene, scene_2_marianne
 
 def get_alphabet_size(s_1, s_2):
     return max(max(ord(x) for x in s_1), max(ord(x) for x in s_2)) -64
@@ -21,31 +24,31 @@ def make_corresp_dictionnaries(string_1, string_2):
     x_dict, y_dict = dict(), dict()
     for i in range(n):
         for j in range(m):
-            x_dict[i, j] = n * i + j
+            x_dict[i, j] = n * i + j + 1
     for a in pi:
         for b in pi:
-            y_dict[a, b] = n * m + pi_size * (ord(a)-65) + ord(b) - 65
+            y_dict[a, b] = n * m + pi_size * (ord(a)-65) + ord(b) - 65 + 1
     return x_dict, y_dict
 
 
 def no_double_i_clause(x_dict, i, j1, j2):
-    return " ".join([str(-x_dict[i, j1]), str(-x_dict[i, j2])])
+    return " ".join([str(-x_dict[i, j1]), str(-x_dict[i, j2]), "0"])
 
 
 def no_double_j_clause(x_dict, i1, i2, j):
-    return " ".join([str(-x_dict[i1, j]), str(-x_dict[i2, j])])
+    return " ".join([str(-x_dict[i1, j]), str(-x_dict[i2, j]), "0"])
 
 
 def no_crossing_clause(x_dict, i1, i2, j1, j2):
-    return " ".join([str(-x_dict[i1, j1]), str(-x_dict[i2, j2])])
+    return " ".join([str(-x_dict[i1, j1]), str(-x_dict[i2, j2]), "0"])
 
 
 def function_clause(y_dict, a, b1, b2):
-    return " ".join([str(-y_dict[a, b1]), str(-y_dict[a, b2])])
+    return " ".join([str(-y_dict[a, b1]), str(-y_dict[a, b2]), "0"])
 
 
 def match_clause(x_dict, y_dict, i, j, u, v):
-    return " ".join([str(-x_dict[i, j]), str(y_dict[u[i], v[j]])])
+    return " ".join([str(-x_dict[i, j]), str(y_dict[u[i], v[j]]), "0"])
 
 
 def make_sat_instance(comments, string_1, string_2):
@@ -111,35 +114,55 @@ def make_sat_instance(comments, string_1, string_2):
     clauses_max = []
     for i in range(n):
         for j in range(m):
-            clauses_max.append(" ".join(["1", str(x_dict[i, j])]))
+            clauses_max.append(" ".join(["1", str(x_dict[i, j]), "0"]))
     clauses_max_string = "\n".join(clauses_max)
-
-    final_string = "\n".join([comment_string, header, clauses_i_string, clauses_j_string, clauses_crossings_string, clauses_function_string, clauses_match_string, clauses_max_string])
+    all_clauses = [comment_string, header, clauses_i_string, clauses_j_string, clauses_crossings_string, clauses_function_string, clauses_match_string, clauses_max_string]
+    all_clauses = [x for x in all_clauses if x != ""]# Some clauses may not appear on very small inputs
+    final_string = "\n".join(all_clauses)
 
     return final_string
 
+def invert_dic(d,v):
+    for x in d:
+        if d[x] == v:
+            return x
 
-def encode_scenes(scene1, scene2):
-    u, d1 = normalize_scene(scene1)
-    v, d2 = normalize_scene(scene2)
-    s = make_sat_instance([str(d1), str(d2)],u,v)
-    print(s)
-    answer = input("Donnez la réponse de maxHS (lignes avec v uniquement")
-    positives = answer.split(" ")[1:]
+def encode_scenes(scene1, scene2, name = 'test'):
+    u, d1 = normalize_scene(scene1, True)
+    v, d2 = normalize_scene(scene2, True)
+    output_for_maxhs = open(name + 'input_maxhs', 'w')
+    s = make_sat_instance([str(d1), str(d2)], u, v)
+    output_for_maxhs.write(s)
+    output_for_maxhs.close()
+    answer = input("Donnez la réponse de maxHS (lignes avec v uniquement)")
+    output_human = open(name + 'output_humain', 'w')
+    positives = answer.split('\n')
+    positives = [re.sub('[^0,1]','',x) for x in positives]
+    positives = "".join(positives)
     positives = [int(x) for x in positives]
-    x_dict, y_dict = make_corresp_dictionnaries(u,v)
-    print("Littéraux vrais :")
+    x_dict, y_dict = make_corresp_dictionnaries(u, v)
+    output_human.write("Littéraux vrais :")
     for x in x_dict:
-        if x_dict[x] in positives:
-            print(f"x_{x}")
+        if positives[x_dict[x]] == 1:
+            output_human.write(f"x_{x}")
     for y in y_dict:
-        if y_dict[y] in positives:
-            a,b = y
-            print(f"y_{y} ({d1[a]} renommé en {d2[b]}")
+        if positives[y_dict[y]] == 1:
+            a, b = y
+            output_human.write(f"y_{y} ({invert_dic(d1,a)} renommé en {invert_dic(d2,b)}")
 
+
+# def change_slightly(scene,k):
+#         for i in range(k):
+#             indice = random.randint(len(scene))
+#             scene.pop
+
+u= 'TMTMTMTMTMMAUAUAUAUOUOJUJUJMJMJMJMJ'
+v ='TMTMUMUMUMUMUMKUKUOUOKUUMUMUJUJUJJUJMJMJMJM'
 
 if __name__ == "__main__":
-    u = "ABC"
-    v = "A"
+    u = "AB"
+    v = "AB"
     s = make_sat_instance(["Test"], u,v)
     print(s)
+    # encode_scenes(scene_2_marianne, scene_2_marianne, 'marianne_entrees_identiques')
+
