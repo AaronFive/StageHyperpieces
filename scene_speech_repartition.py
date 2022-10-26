@@ -2,7 +2,7 @@ import math
 import random
 
 import play_parsing
-from play_parsing import corpus, get_all_scenes_dialogues,
+from play_parsing import corpus, get_all_scenes_dialogues, marianne_doc,marianne_tristan_doc
 import os, sys
 from xml.dom import minidom
 import matplotlib.pyplot as plt
@@ -272,14 +272,13 @@ def regularity(word):
         score += get_deviation_from_main_value(succesions[letter])
     return score
 
-
+marianne_pwords = get_normalized_scenes(marianne_doc)
+marianne_tristan_pwords = get_normalized_scenes(marianne_tristan_doc)
+scene_2_marianne = get_all_scenes_dialogues(marianne_doc)[1]
 if __name__ == "__main__":
-    # marianne_pwords = get_normalized_scenes(marianne_doc)
-    # print(marianne_pwords)
-    # marianne_tristan_pwords = get_normalized_scenes(marianne_tristan_doc)
-    # print(marianne_tristan_pwords)
-    d = count_scenes(corpus,1550, 1750, ["Comédie"])
-    make_fixed_size_graph(d,5,3,True)
+    print(scene_2_marianne)
+    # d = count_scenes(corpus,1550, 1750, ["Comédie"])
+    # make_fixed_size_graph(d,5,3,True)
 
     # d = count_subscenes(corpus,6, 1800)
     # d = {k: v for k, v in sorted(d.items(), key=lambda item: - item[1])}

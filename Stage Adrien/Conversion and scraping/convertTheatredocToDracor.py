@@ -4,7 +4,10 @@
 import os, re, sys
 from os import walk, pardir
 from os.path import abspath, dirname, join, basename, exists
+from datetime import date
 
+import enchant.utils
+from enchant import utils
 """
     theatredocToBibdramatique, a script to automatically convert 
     HTML theater plays from théâtre-documentation.com
@@ -33,6 +36,7 @@ folder = abspath(dirname(sys.argv[0]))
 root_folder = abspath(join(folder, pardir))
 html_folder = abspath(join(root_folder, "cleanHTML_TD"))
 Dracor_Folder = abspath(join(root_folder, "corpusTD_v2"))
+clean_Dracor_Folder = abspath(join(root_folder, "corpusTD_cast_ok"))
 
 if not exists(Dracor_Folder):
     os.system("mkdir {0}".format(Dracor_Folder))
@@ -85,9 +89,24 @@ def format_date_AAAAMM(res):
          ])
 
 
-def remove_html_tags(s):
+def remove_html_tags_and_content(s):
     s = s.replace(u'\xa0', u' ')
     return re.sub('<[^>]+>', '', s)
+
+def min_dict(d):
+    """Returns (key_min, val_min) such that val_min is minimal among values of the dictionnary"""
+    val_min = 100
+    key_min = None
+    for x in d:
+        if d[x] < val_min:
+            val_min = d[x]
+            key_min = x
+    return key_min, val_min
+
+def normalize_character_name(s):
+    clean_character_name = s.lower().replace("*", "")
+    clean_character_name = re.sub("[\[\]\)\(]", "", clean_character_name)
+    return re.sub(" +", "-", clean_character_name)
 
 
 def standard_line(playText):
@@ -182,7 +201,7 @@ def write_title(outputFile, title):
     <teiHeader>
         <fileDesc>
             <titleStmt>
-            <title type="main">""" + title + """</title>""")
+                <title type="main">""" + title + """</title>""")
     return title
 
 
@@ -222,7 +241,7 @@ def write_type(outputFile, genre):
     """
     if genre != '[indéfini]':
         outputFile.writelines("""
-            <title type="sub">""" + genre + """</title>""")
+                <title type="sub">""" + genre + """</title>""")
 
 
 def write_author(outputFile, author):
@@ -246,11 +265,11 @@ def write_author(outputFile, author):
                     outputFile.writelines("""
                     <linkname>""" + name + """</linkname>""")
                 elif name in ['Abbé']:  # TODO identifier d'autres rolename
-                    outputFile.writelines("""
-                    <rolename>""" + name + """</rolename>""")
+                    outputFile.writelines(f"""
+                    <rolename>{name}</rolename>""")
                 else:
-                    outputFile.writelines("""
-                    <forename>""" + name + """</forename>""")
+                    outputFile.writelines(f"""
+                    <forename>{name}</forename>""")
         if surname:
             for name in surname:
                 if name in ['DE', "D'"]:
@@ -516,14 +535,16 @@ def write_end_header(outputFile, genre, vers_prose):
         </fileDesc>
         <profileDesc>
             <particDesc>
-                <listPerson>
-                    <person xml:id="id" sex="SEX">
-                        <persName>Name</persName>
-                    </person>
-                    <person xml:id="..." sex="...">
-                        <persName>...</persName>
-                    </person>
-                 </listPerson>
+                <listPerson>""")
+
+    for charaid, charaname in zip(counters["characterIDList"], counters["characterFullNameList"]):
+        outputFile.writelines(f"""
+                        <person xml:id="{charaid}" sex="SEX">
+                            <persName>{charaname}</persName>
+                        </person>""")
+
+    outputFile.writelines(f"""
+                </listPerson>
             </particDesc>
             <textClass>
             <keywords scheme="http://theatre-documentation.fr"> <!--extracted from "genre" and "type" elements-->
@@ -535,7 +556,7 @@ def write_end_header(outputFile, genre, vers_prose):
         </profileDesc>
         <revisionDesc>
             <listChange>
-                <change when="2022-07-12">(mg) file conversion from source</change>
+                <change when="{date.today()}">(mg) file conversion from source</change>
             </listChange>
         </revisionDesc>
    </teiHeader>""")
@@ -561,7 +582,8 @@ def write_start_text(outputFile, title, genre, date_print):
         </docTitle>""")
     if date_print:
         outputFile.writelines("""
-        <docDate when=\"""" + date_print + """\">[Date Print Line]</docDate>""")
+        <docDate when=\"""" + date_print + """\">[Date Print Line]</docDate>
+        """)
 
 
 def write_performance(outputFile, line_premiere, date_premiere):
@@ -724,29 +746,28 @@ def end_character_block(characterBlock, line):
         res = re.search("<h[1,2]", line)
         if res:
             characterBlock = False
-            print("Character list: " + str(counters["characterList"]))
+            print("Character list: " + str(counters["characterIDList"]))
         else:
             res = re.search("<p>(.*)</p>", line)
             if res:
                 name = res.group(1)
                 if len(name) == 1:
-                    if counters["characterList"]:
+                    if counters["characterIDList"]:
                         characterBlock = False
-                        print("Character list: " + str(counters["characterList"]))
+                        print("Character list: " + str(counters["characterIDList"]))
                     return characterBlock, None
                 character = name
-                role = ""
                 res = re.search("([^,]+)(,.*)", character)
                 if res:
-                    character = remove_html_tags(res.group(1))
-                    role = remove_html_tags(res.group(2))
+                    character = remove_html_tags_and_content(res.group(1))
+                    role = remove_html_tags_and_content(res.group(2))
                 else:
-                    character = remove_html_tags(character)
+                    character = remove_html_tags_and_content(character)
                     role = ""
                 if len(character) > 2 and character != "\xa0":
-                    clean_character_name = character.lower().replace("*", "")
-                    clean_character_name = re.sub(" +", "-", clean_character_name)
-                    counters["characterList"].append(clean_character_name)
+                    counters["characterFullNameList"].append(character)
+                    clean_character_name = normalize_character_name(character)
+                    counters["characterIDList"].append(clean_character_name)
                     counters["roleList"].append(role)
     return characterBlock, line
 
@@ -757,15 +778,16 @@ def write_character(outputFile):
     Args:
         outputFile (TextIOWrapper): Output file to generate in XML.
     """
-    outputFile.writelines("""<castList>
+    outputFile.writelines("""
+        <castList>
                     <head> ACTEURS </head>""")
-    for i, character in enumerate(counters["characterList"]):
-        outputFile.writelines("""
+    for i, character in enumerate(counters["characterIDList"]):
+        outputFile.writelines(f"""
             <castItem>
-                    <role rend="male/female" xml:id=\"""" + character.lower().replace(" ",
-                                                                                      "-") + """\">""" + character + """</role>
-                    <roleDesc>""" + counters["roleList"][i] + """</roleDesc>
-            </castItem>""")
+                    <role corresp="#{character}">{counters["characterFullNameList"][i]} </role>{counters["roleList"][i]}</castItem>"""
+                              )
+    outputFile.writelines("""
+        </castList>""")
 
 
 def find_begin_act(outputFile, line, counters):
@@ -783,10 +805,9 @@ def find_begin_act(outputFile, line, counters):
     if res:
         # Found a new act!
         if counters["actsInPlay"] == 0:
-
             write_character(outputFile)
+            counters["castWritten"] = True
             outputFile.writelines("""
-        </castList>
     </front>
     <body>""")
         else:
@@ -807,13 +828,6 @@ def find_begin_act(outputFile, line, counters):
    </div>
    <div type="act" xml:id=\"""" + counters["actNb"] + """\">
    <head>""" + act + """</head>""")
-    # else:
-    #     # No acts/only one but not declared
-    #     write_character(outputFile)
-    #     outputFile.writelines("""
-    #             </castList>
-    #         </front>
-    #         <body>""")
 
     return line, counters
 
@@ -831,6 +845,9 @@ def find_begin_scene(outputFile, line, counters):
     """
     res = re.search("<h2 .*<strong>(.*)</strong></h2>", line)
     if res:
+        if not counters["castWritten"]:
+            write_character(outputFile)
+            counters["castWritten"] = True
         counters["characterLines"] = []
         counters["charactersInScene"] = 0
         scene = res.group(1)
@@ -895,38 +912,88 @@ def write_text(outputFile, line, counters):
       </sp>""")
                 character = counters["characterLines"].pop(0)
                 counters["charactersInScene"] += 1
-                # find the character name among all characters
-                characterId = ""
-                for c in counters["characterList"]:
-                    if re.search(c, character.lower()):
-                        characterId = c
-                if characterId == "":
-                    # print("Character not found: " + character)
-                    res = re.search("([^,.<]+)([.,<].*)", character)
-                    if res:
-                        characterId = res.group(1).lower()
-                        # remove spaces in last position
-                        res = re.search("^(.*[^ ])[ ]+$", characterId)
-                        if res:
-                            characterId = res.group(1)
-                        characterId = characterId.replace(" ", "-")
-                        # print("Chose characterId " + characterId)
-                    outputFile.writelines("""
-        <sp who=\"""" + characterId + """\" xml:id=\"""" + counters["actNb"] + str(counters["scenesInAct"]) + "-" + str(
-                        counters["charactersInScene"]) + """\">
-            <speaker>""" + character + """</speaker>""")
-            counters["linesInPlay"] += 1
+
+                # character is the actual character name, from which we strip html tags.
+                # clean_character will be used to get the corresponding id
+                character = remove_html_tags_and_content(character)
+                clean_character = character
+                # Checking if the character name is preceded by a comma, indicating an action on stage Dracor
+                # convention seems to be to include it as a content of the speaker tag and not in <stage>,
+                # so we follow this rule
+                has_stage_direction = re.search("([^,]+),.*", clean_character)
+                if has_stage_direction:
+                    clean_character = has_stage_direction.group(1)
+                # Removing ending dot if it exists
+                if clean_character[-1] == ".":
+                    clean_character = clean_character[:-1]
+                characterId = normalize_character_name(clean_character)
+
+                # even when normalizing character names, we often find ids that are not declared
+                # this part aims at correcting that by checking if the name is part of a known id,
+                # or if a known id is part of it
+                # If everything fails, (which happen often), we use edit distance to find the closest one
+                old_characterId = characterId
+                if characterId not in counters['characterIDList']:
+                    if characterId not in counters["undeclaredCharacterIDs"]:
+                        print(f"Warning : unknown character id {characterId}")
+                        edit_distances = dict()
+                        for true_id in counters["characterIDList"]:
+                            if re.search(true_id, characterId) or re.search(characterId, true_id):
+                                counters["undeclaredCharacterIDs"][characterId] = true_id
+                                characterId = true_id
+                                print(f"Guessed {true_id}")
+                                break
+                            else:
+                                distance = enchant.utils.levenshtein(characterId, true_id)
+                                edit_distances[true_id] = distance
+                        # characterID has not been guessed with subchains
+                        if old_characterId not in counters["undeclaredCharacterIDs"]:
+                            closest_id, closest_distance = min_dict(edit_distances)
+                            if closest_distance <= 15:
+                                print(f"Guessed {closest_id}, distance {closest_distance} ")
+                                counters["undeclaredCharacterIDs"][characterId] = closest_id
+                            else:
+                                print(f"Could not guess {characterId} (best guess {closest_id}")
+                                counters["undeclaredCharacterIDs"][characterId] = characterId
+                                counters["unguessed_id"] = True
+                    else:
+                        characterId = counters["undeclaredCharacterIDs"][characterId]
+                # if clean_character in [counters["characterFullNameList"]]:
+                #     characterIdindex = [counters["characterFullNameList"].index(clean_character)]
+                #     characterId = counters["characterIDList"][characterIdindex]
+                # for c in counters["characterFullNameList"]:
+                #     if re.search(c, clean_character):
+                #         characterId = c
+                # if characterId == "":
+                #     print(line)
+                #     print("entering characterId if")
+                #     # print("Character not found: " + character)
+                #     res = re.search("([^,.<]+)([.,<].*)", character)
+                #     if res:
+                #         characterId = res.group(1).lower()
+                #         # remove spaces in last position
+                #         res = re.search("^(.*[^ ])[ ]+$", characterId)
+                #         if res:
+                #             characterId = res.group(1)
+                #         characterId = characterId.replace(" ", "-")
+                #         # print("Chose characterId " + characterId)
+                outputFile.writelines(f"""
+            <sp who=\"#{characterId}\" xml:id=\"{counters["actNb"] + str(counters["scenesInAct"]) + "-" + str(
+                    counters["charactersInScene"])}\">
+                <speaker> {character} </speaker>""")
 
             # Checking whether this line is dialogue or stage directions (Aaron)
             res = re.search("<em>(.*)</em>", playLine)
             if res:
                 outputFile.writelines(f"""
-            <stage>{remove_html_tags(playLine)} </stage>""")
+            <stage>{remove_html_tags_and_content(playLine)} </stage>""")
             else:
                 outputFile.writelines("""
             <l n=\"""" + str(counters["linesInPlay"]) + """\" xml:id=\"l""" + str(
-                    counters["linesInPlay"]) + """\">""" + remove_html_tags(playLine) + """</l>""")
-            counters["linesInScene"] += 1
+                    counters["linesInPlay"]) + """\">""" + remove_html_tags_and_content(playLine) + """</l>""")
+                counters["linesInPlay"] += 1
+                counters["linesInScene"] += 1
+
     return counters
 
 
@@ -946,19 +1013,25 @@ def write_end(outputFile):
 </TEI>""")
 
 
-
 if __name__ == "__main__":
-    #print('a',remove_html_tags('<hi rend="italic"><em>Il la baise au front.</em></hi>'))
+
+    #stats temporary
+    castnotWritten = 0
+    noact = 0
+    undeclared_character = 0
+    unguessed_character = 0
+    totalplays = 0
+    stats = open('stats_characters.txt', 'w+')
     # Declaration of flags and counters.
     documentNb = 0
     findSummary = False
     saveBegin = False
     characterBlock = False
     ul = 0
+
     # prepare the list of file sources
     fileSources = {}
     allPlays = extract_sources(open("PlaysFromTheatreDocumentation.csv", "r", encoding="utf-8"), fileSources)
-
     # Generate an XML-TEI file for every HTML file of the corpus
     for file in list(map(lambda f: join(html_folder, f), next(walk(html_folder), (None, None, []))[2])):
         notify_file(file)
@@ -979,14 +1052,28 @@ if __name__ == "__main__":
             "scenesInAct": 0,
             "actsInPlay": 0,
             "characterLines": [],
-            "characterList": [],
+            "characterIDList": [],
+            "characterFullNameList": [],
             "roleList": [],
             "actNb": "",
             "sceneNb": "",
-            "dedicace": False
+            "dedicace": False,
+            "castWritten": False,
+            "undeclaredCharacterIDs": dict(),
+            "unguessed_id" : False #temporary, delete later
         }
+        # Reading the file a first time to find the characters
 
+        for line in playText:  # TODO: add a break when all characters are found
+            # starting character block
+            characterBlock = start_character_block(line, characterBlock)
+
+            # ending character block
+            characterBlock, line = end_character_block(characterBlock, line)
+        playText.close()
+        playText = open(file, "r", encoding="utf-8")
         for line in playText:
+
             # get and write title
             title, forename, surname = get_title_and_author(line)
             if write_title(outputFile, title):
@@ -1029,15 +1116,8 @@ if __name__ == "__main__":
                         copy_playtext.close()
                         copy_playtext = open(file, "r", encoding="utf-8")
                         write_dedicace(outputFile, copy_playtext, author)
-                # starting character block
-                characterBlock = start_character_block(line, characterBlock)
 
-                # ending character block
-                characterBlock, line = end_character_block(characterBlock, line)
-                if not line:
-                    continue
-
-            # Find the beginning of an act
+            # Find the beginning of an act and write cast list (characters) TODO: split in 2 functions
             line, counters = find_begin_act(outputFile, line, counters)
 
             # Find the beginning of a scene
@@ -1054,6 +1134,26 @@ if __name__ == "__main__":
         outputFile.close()
         copy_playtext.close()
 
+        if len(counters["undeclaredCharacterIDs"]) == 0:
+            os.replace(join(Dracor_Folder, fileName.replace("html", "xml")), join(clean_Dracor_Folder, fileName.replace("html", "xml")))
+
+        if len(counters["characterIDList"]) == 0:
+            castnotWritten += 1
+        if counters["actsInPlay"] == 0:
+            noact += 1
+        if len(counters["undeclaredCharacterIDs"]) > 0:
+            undeclared_character += 1
+        if counters["unguessed_id"]:
+            unguessed_character += 1
+        totalplays += 1
+
+
     # date_file.close()
 
     #  print("Number of plays without date :", count_date)
+    stats.writelines(f"""Total number of plays : {totalplays}
+    Plays with no acts found : {noact}
+    Plays with no cast of character found : {castnotWritten}
+    Plays with unknow character ids found : {undeclared_character}
+    Among those, plays where at least one character could not be guessed : {unguessed_character}""")
+    print(f"Casts not written: {castnotWritten} sur {totalplays}")

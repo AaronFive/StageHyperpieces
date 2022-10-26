@@ -23,14 +23,13 @@ corpuscsv = 'Dracor_parameterized_plays.csv'
 corpus_plays = 'Pickled Dracor/full_plays_dracor.pkl'
 corpus_acts_merged = 'Pickled Dracor/merged_acts_dracor.pkl'
 corpus_acts_separed = 'Pickled Dracor/separed_acts_dracor.pkl'
-corpus_docs = 'Pickled Dracor/Dracor_parsed_plays.pkl'
 
 
 #Temp : Marianne
-# marianne_file = os.path.join(os.getcwd(), 'Marianne', 'EMOTHE0544_Mariamne.xml')
-# marianne_doc = minidom.parse(open(marianne_file, 'rb'))
-# marianne_tristan_file = os.path.join(corpusFolder, 'tristan-mariane.xml')
-# marianne_tristan_doc = minidom.parse(open(marianne_tristan_file, 'rb'))
+marianne_file = os.path.join(folder,'Corpus', 'Marianne', 'EMOTHE0544_Mariamne.xml')
+marianne_doc = minidom.parse(open(marianne_file, 'rb'))
+marianne_tristan_file = os.path.join(corpusFolder, 'tristan-mariane.xml')
+marianne_tristan_doc = minidom.parse(open(marianne_tristan_file, 'rb'))
 
 
 
@@ -505,7 +504,7 @@ def check_character_rule(c, genre):
     output_char_rule.write(f"{nb_wrong} {genre} brisent les règles sur {nb_genre}\n")
 
 
-def test ( siecle_1, siecle_2, corpus):
+def test( siecle_1, siecle_2, corpus):
     compteur_siecle_1, compteur_siecle_2 = 0,0
     for piece in corpus:
         date = get_date(piece)
@@ -520,12 +519,12 @@ def test ( siecle_1, siecle_2, corpus):
 
 
 if __name__ == "__main__":
-    print("Loading")
-    docs = pickle.load(open(corpus_docs, 'rb'))
-    print('Done')
-    print (get_genre(docs['Mariamne']))
-    # marianne_play = get_fixed_parameterized_play(marianne_doc)
-    # print(marianne_play)
+    # print("Loading")
+    # docs = pickle.load(open(corpus_docs, 'rb'))
+    # print('Done')
+    # print (get_genre(docs['Mariamne']))
+    marianne_play = get_fixed_parameterized_play(marianne_doc)
+    print(marianne_play)
 
     # c_a = open(corpus_acts_merged,'rb')
     # plays = pickle.load(c_a)

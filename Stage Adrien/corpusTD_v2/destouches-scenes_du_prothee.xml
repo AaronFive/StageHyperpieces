@@ -2,7 +2,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-            <title type="main">Scènes du Prothée</title>
+                <title type="main">Scènes du Prothée</title>
             <author>
                 <persName>
                     <surname>Destouches</surname>
@@ -41,13 +41,19 @@
         <profileDesc>
             <particDesc>
                 <listPerson>
-                    <person xml:id="id" sex="SEX">
-                        <persName>Name</persName>
-                    </person>
-                    <person xml:id="..." sex="...">
-                        <persName>...</persName>
-                    </person>
-                 </listPerson>
+                        <person xml:id="ariste" sex="SEX">
+                            <persName>ARISTE</persName>
+                        </person>
+                        <person xml:id="bélise" sex="SEX">
+                            <persName>BÉLISE</persName>
+                        </person>
+                        <person xml:id="léandre-ou-le-prothée" sex="SEX">
+                            <persName>LÉANDRE ou LE PROTHÉE</persName>
+                        </person>
+                        <person xml:id="la-fleur" sex="SEX">
+                            <persName>LA FLEUR</persName>
+                        </person>
+                </listPerson>
             </particDesc>
             <textClass>
             <keywords scheme="http://theatre-documentation.fr"> <!--extracted from "genre" and "type" elements-->
@@ -59,7 +65,7 @@
         </profileDesc>
         <revisionDesc>
             <listChange>
-                <change when="2022-07-12">(mg) file conversion from source</change>
+                <change when="2022-10-26">(mg) file conversion from source</change>
             </listChange>
         </revisionDesc>
    </teiHeader>
@@ -70,27 +76,25 @@
             <titlePart type="sub">[INDÉFINI]</titlePart>
         </docTitle>
         <docDate when="[vide]">[Date Print Line]</docDate>
-        <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
+        
+            <sp who="#personnages" xml:id="0-1">
+                <speaker> Personnages </speaker>
+            <l n="0" xml:id="l0">ARISTE</l>
+            <l n="1" xml:id="l1">BÉLISE</l>
+            <stage>LÉANDRE ou LE PROTHÉE </stage>
+            <stage>LA FLEUR, laquais </stage>
             <stage>La scène est à Paris. </stage>
-            <stage>Non, le Complaisant n’est pas mon ouvrage ; et je m’étonne, Monsieur, que vous puissiez me l’attribuer. Ce n’est pas que je méprise cette pièce ; au contraire, je la trouve bien écrite : mais elle n’imite point mon style, et il me semble que vous auriez dû le sentir d’abord. Ce qu’il y a de certain, c’est que j’avais dessein de traiter le même sujet, non pas sous le titre du Complaisant. Ma comédie aurait été intitulée LE PROTHÉE, ou l’Homme de tout caractère : ce devait être un fourbe, ou, si vous voulez, une espèce de caméléon, qui, pour gagner tous les cœurs d’une nombreuse famille, affectait de ressembler à toutes les personnes dont elle était composée. J’avais déjà fait plusieurs scènes de cette pièce ; je vais vous les transcrire : mais je ne sais par quel fâcheux hasard l’auteur du Complaisant a tellement effleuré mon sujet, que je suis obligé de l’abandonner. Voici mes scènes. </stage><castList>
+            <stage>Non, le Complaisant n’est pas mon ouvrage ; et je m’étonne, Monsieur, que vous puissiez me l’attribuer. Ce n’est pas que je méprise cette pièce ; au contraire, je la trouve bien écrite : mais elle n’imite point mon style, et il me semble que vous auriez dû le sentir d’abord. Ce qu’il y a de certain, c’est que j’avais dessein de traiter le même sujet, non pas sous le titre du Complaisant. Ma comédie aurait été intitulée LE PROTHÉE, ou l’Homme de tout caractère : ce devait être un fourbe, ou, si vous voulez, une espèce de caméléon, qui, pour gagner tous les cœurs d’une nombreuse famille, affectait de ressembler à toutes les personnes dont elle était composée. J’avais déjà fait plusieurs scènes de cette pièce ; je vais vous les transcrire : mais je ne sais par quel fâcheux hasard l’auteur du Complaisant a tellement effleuré mon sujet, que je suis obligé de l’abandonner. Voici mes scènes. </stage>
+        <castList>
                     <head> ACTEURS </head>
             <castItem>
-                    <role rend="male/female" xml:id="ariste">ariste</role>
-                    <roleDesc></roleDesc>
-            </castItem>
+                    <role corresp="#ariste"> ARISTE </role> </castItem>
             <castItem>
-                    <role rend="male/female" xml:id="bélise">bélise</role>
-                    <roleDesc></roleDesc>
-            </castItem>
+                    <role corresp="#bélise"> BÉLISE </role> </castItem>
             <castItem>
-                    <role rend="male/female" xml:id="léandre-ou-le-prothée">léandre-ou-le-prothée</role>
-                    <roleDesc></roleDesc>
-            </castItem>
+                    <role corresp="#léandre-ou-le-prothée"> LÉANDRE ou LE PROTHÉE </role> </castItem>
             <castItem>
-                    <role rend="male/female" xml:id="la-fleur">la-fleur</role>
-                    <roleDesc>, laquais</roleDesc>
-            </castItem>
+                    <role corresp="#la-fleur"> LA FLEUR </role> , laquais</castItem>
         </castList>
     </front>
     <body>
@@ -100,474 +104,616 @@
     <div type="scene" xml:id="I1">
         <head>Scène première</head>
         <stage>ARISTE, BÉLISE</stage>
-            <l n="3" xml:id="l3">Oui, je me marierai, j’en donne ma parole.</l>
+            <sp who="#bélise" xml:id="I1-1">
+                <speaker> BÉLISE. </speaker>
+            <l n="2" xml:id="l2">Oui, je me marierai, j’en donne ma parole.</l>
       </sp>
-            <l n="4" xml:id="l4">Vous rêvez, à coup sûr.</l>
+            <sp who="#ariste" xml:id="I1-2">
+                <speaker> ARISTE. </speaker>
+            <l n="3" xml:id="l3">Vous rêvez, à coup sûr.</l>
       </sp>
-            <l n="5" xml:id="l5">Non.</l>
+            <sp who="#bélise" xml:id="I1-3">
+                <speaker> BÉLISE. </speaker>
+            <l n="4" xml:id="l4">Non.</l>
       </sp>
-            <l n="6" xml:id="l6">Vous êtes donc folle ?</l>
+            <sp who="#ariste" xml:id="I1-4">
+                <speaker> ARISTE. </speaker>
+            <l n="5" xml:id="l5">Vous êtes donc folle ?</l>
       </sp>
-            <l n="7" xml:id="l7">Moi, mon frère ?</l>
+            <sp who="#bélise" xml:id="I1-5">
+                <speaker> BÉLISE. </speaker>
+            <l n="6" xml:id="l6">Moi, mon frère ?</l>
       </sp>
-            <l n="8" xml:id="l8">Eh ! oui, vous. Je dis folle à lier.</l>
+            <sp who="#ariste" xml:id="I1-6">
+                <speaker> ARISTE. </speaker>
+            <l n="7" xml:id="l7">Eh ! oui, vous. Je dis folle à lier.</l>
       </sp>
-            <l n="9" xml:id="l9">En quoi donc, s’il vous plaît ?</l>
+            <sp who="#bélise" xml:id="I1-7">
+                <speaker> BÉLISE. </speaker>
+            <l n="8" xml:id="l8">En quoi donc, s’il vous plaît ?</l>
       </sp>
-            <l n="10" xml:id="l10">Pouvez-vous oublier</l>
-            <l n="11" xml:id="l11">Que vous avez fait vœu ?...</l>
+            <sp who="#ariste" xml:id="I1-8">
+                <speaker> ARISTE. </speaker>
+            <l n="9" xml:id="l9">Pouvez-vous oublier</l>
+            <l n="10" xml:id="l10">Que vous avez fait vœu ?...</l>
       </sp>
-            <l n="12" xml:id="l12">J’ai perdu la mémoire.</l>
-            <l n="13" xml:id="l13">Je suis fille, après tout.</l>
+            <sp who="#bélise" xml:id="I1-9">
+                <speaker> BÉLISE. </speaker>
+            <l n="11" xml:id="l11">J’ai perdu la mémoire.</l>
+            <l n="12" xml:id="l12">Je suis fille, après tout.</l>
       </sp>
-            <l n="14" xml:id="l14">On a lieu de le croire ;</l>
-            <l n="15" xml:id="l15">Car vous l’êtes depuis cinquante ans tout au moins.</l>
+            <sp who="#ariste" xml:id="I1-10">
+                <speaker> ARISTE. </speaker>
+            <l n="13" xml:id="l13">On a lieu de le croire ;</l>
+            <l n="14" xml:id="l14">Car vous l’êtes depuis cinquante ans tout au moins.</l>
       </sp>
-            <l n="16" xml:id="l16">Ah ! quelle calomnie !</l>
+            <sp who="#bélise" xml:id="I1-11">
+                <speaker> BÉLISE. </speaker>
+            <l n="15" xml:id="l15">Ah ! quelle calomnie !</l>
       </sp>
-            <l n="17" xml:id="l17">Au besoin, les témoins</l>
-            <l n="18" xml:id="l18">Ne me manqueront pas. Vous êtes mon aînée ;</l>
-            <l n="19" xml:id="l19">Et j’aurai, l’an prochain, ma cinquantième année</l>
-            <l n="20" xml:id="l20">Bien complète. De plus, mon frère Polidor,</l>
-            <l n="21" xml:id="l21">Pour vous prouver le fait, est bien vivant encor.</l>
-            <l n="22" xml:id="l22">Mais pour vous mieux convaincre et pour vous faire honte,</l>
-            <l n="23" xml:id="l23">De votre âge, ma sœur, voici le juste compte,</l>
-            <l n="24" xml:id="l24">Sur beau papier timbré, bien signé, paraphé,</l>
-            <l n="25" xml:id="l25">Par votre directeur le bon monsieur Coëffé :</l>
-            <l n="26" xml:id="l26">Voici de tous vos ans le vrai dépositaire,</l>
-            <l n="27" xml:id="l27">Qu’on nomme en bon français un extrait baptistaire :</l>
-            <l n="28" xml:id="l28">Il vous dira le fait sans ambiguïté,</l>
-            <l n="29" xml:id="l29">Et d’un style touchant par l’ingénuité.</l>
-            <l n="30" xml:id="l30">Tenez, lisez ma sœur, et mettez vos lunettes.</l>
+            <sp who="#ariste" xml:id="I1-12">
+                <speaker> ARISTE. </speaker>
+            <l n="16" xml:id="l16">Au besoin, les témoins</l>
+            <l n="17" xml:id="l17">Ne me manqueront pas. Vous êtes mon aînée ;</l>
+            <l n="18" xml:id="l18">Et j’aurai, l’an prochain, ma cinquantième année</l>
+            <l n="19" xml:id="l19">Bien complète. De plus, mon frère Polidor,</l>
+            <l n="20" xml:id="l20">Pour vous prouver le fait, est bien vivant encor.</l>
+            <l n="21" xml:id="l21">Mais pour vous mieux convaincre et pour vous faire honte,</l>
+            <l n="22" xml:id="l22">De votre âge, ma sœur, voici le juste compte,</l>
+            <l n="23" xml:id="l23">Sur beau papier timbré, bien signé, paraphé,</l>
+            <l n="24" xml:id="l24">Par votre directeur le bon monsieur Coëffé :</l>
+            <l n="25" xml:id="l25">Voici de tous vos ans le vrai dépositaire,</l>
+            <l n="26" xml:id="l26">Qu’on nomme en bon français un extrait baptistaire :</l>
+            <l n="27" xml:id="l27">Il vous dira le fait sans ambiguïté,</l>
+            <l n="28" xml:id="l28">Et d’un style touchant par l’ingénuité.</l>
+            <l n="29" xml:id="l29">Tenez, lisez ma sœur, et mettez vos lunettes.</l>
       </sp>
-            <l n="31" xml:id="l31">Faites trêve, de grâce, à toutes vos sornettes ;</l>
-            <l n="32" xml:id="l32">Je sais, et je sens mieux que vous l’âge que j’ai.</l>
+            <sp who="#bélise" xml:id="I1-13">
+                <speaker> BÉLISE. </speaker>
+            <l n="30" xml:id="l30">Faites trêve, de grâce, à toutes vos sornettes ;</l>
+            <l n="31" xml:id="l31">Je sais, et je sens mieux que vous l’âge que j’ai.</l>
       </sp>
-            <l n="33" xml:id="l33">Mais lisez un instant ce sincère abrégé ;</l>
-            <l n="34" xml:id="l34">La date seulement : elle n’est pas moderne.</l>
+            <sp who="#ariste" xml:id="I1-14">
+                <speaker> ARISTE, lui présentant l’extrait. </speaker>
+            <l n="32" xml:id="l32">Mais lisez un instant ce sincère abrégé ;</l>
+            <l n="33" xml:id="l33">La date seulement : elle n’est pas moderne.</l>
       </sp>
-            <l n="35" xml:id="l35">Qu’importe ? Ce n’est pas l’âge qui me gouverne.</l>
+            <sp who="#bélise" xml:id="I1-15">
+                <speaker> BÉLISE. </speaker>
+            <l n="34" xml:id="l34">Qu’importe ? Ce n’est pas l’âge qui me gouverne.</l>
       </sp>
-            <l n="36" xml:id="l36">Eh ! quoi donc ?</l>
+            <sp who="#ariste" xml:id="I1-16">
+                <speaker> ARISTE. </speaker>
+            <l n="35" xml:id="l35">Eh ! quoi donc ?</l>
       </sp>
-            <l n="37" xml:id="l37">Je le sais.</l>
+            <sp who="#bélise" xml:id="I1-17">
+                <speaker> BÉLISE. </speaker>
+            <l n="36" xml:id="l36">Je le sais.</l>
       </sp>
-            <l n="38" xml:id="l38">Dites-le-moi, du moins.</l>
+            <sp who="#ariste" xml:id="I1-18">
+                <speaker> ARISTE. </speaker>
+            <l n="37" xml:id="l37">Dites-le-moi, du moins.</l>
       </sp>
-            <l n="39" xml:id="l39">Mon humeur, ma raison, mon goût et mes besoins.</l>
+            <sp who="#bélise" xml:id="I1-19">
+                <speaker> BÉLISE. </speaker>
+            <l n="38" xml:id="l38">Mon humeur, ma raison, mon goût et mes besoins.</l>
       </sp>
-            <l n="40" xml:id="l40">Votre goût ! vos besoins ! Ah ! ma sœur, à votre âge,</l>
-            <l n="41" xml:id="l41">Osez-vous me tenir un semblable langage ?</l>
+            <sp who="#ariste" xml:id="I1-20">
+                <speaker> ARISTE. </speaker>
+            <l n="39" xml:id="l39">Votre goût ! vos besoins ! Ah ! ma sœur, à votre âge,</l>
+            <l n="40" xml:id="l40">Osez-vous me tenir un semblable langage ?</l>
       </sp>
-            <l n="42" xml:id="l42">J’ai besoin d’un époux qui, par de courts chemins,</l>
-            <l n="43" xml:id="l43">Sache tirer mon bien de vos pieuses mains,</l>
-            <l n="44" xml:id="l44">Et qui m’en fasse rendre un compte très fidèle.</l>
-            <l n="45" xml:id="l45">Vous prétendez toujours me tenir en tutelle ;</l>
-            <l n="46" xml:id="l46">Mais je me lasse enfin de me laisser duper ;</l>
-            <l n="47" xml:id="l47">Et veux par un mari me faire émanciper.</l>
+            <sp who="#bélise" xml:id="I1-21">
+                <speaker> BÉLISE. </speaker>
+            <l n="41" xml:id="l41">J’ai besoin d’un époux qui, par de courts chemins,</l>
+            <l n="42" xml:id="l42">Sache tirer mon bien de vos pieuses mains,</l>
+            <l n="43" xml:id="l43">Et qui m’en fasse rendre un compte très fidèle.</l>
+            <l n="44" xml:id="l44">Vous prétendez toujours me tenir en tutelle ;</l>
+            <l n="45" xml:id="l45">Mais je me lasse enfin de me laisser duper ;</l>
+            <l n="46" xml:id="l46">Et veux par un mari me faire émanciper.</l>
       </sp>
-            <l n="48" xml:id="l48">Il faut la radoucir ; ce n’est pas-là mon compte.</l>
+            <sp who="#ariste" xml:id="I1-22">
+                <speaker> ARISTE, à part. </speaker>
+            <l n="47" xml:id="l47">Il faut la radoucir ; ce n’est pas-là mon compte.</l>
             <stage>Haut.  </stage>
-            <l n="50" xml:id="l50">La colère, ma sœur, bien souvent nous surmonte ;</l>
-            <l n="51" xml:id="l51">Heureusement pour nous elle ne dure pas.</l>
+            <l n="48" xml:id="l48">La colère, ma sœur, bien souvent nous surmonte ;</l>
+            <l n="49" xml:id="l49">Heureusement pour nous elle ne dure pas.</l>
       </sp>
-            <l n="52" xml:id="l52">Cinquante ans !</l>
+            <sp who="#bélise" xml:id="I1-23">
+                <speaker> BÉLISE. </speaker>
+            <l n="50" xml:id="l50">Cinquante ans !</l>
       </sp>
-            <l n="53" xml:id="l53">Après tout, vous avez des appas,</l>
-            <l n="54" xml:id="l54">Un teint, des agréments, certain air de jeunesse,</l>
-            <l n="55" xml:id="l55">Qui peuvent hardiment démentir cette pièce.</l>
+            <sp who="#ariste" xml:id="I1-24">
+                <speaker> ARISTE. </speaker>
+            <l n="51" xml:id="l51">Après tout, vous avez des appas,</l>
+            <l n="52" xml:id="l52">Un teint, des agréments, certain air de jeunesse,</l>
+            <l n="53" xml:id="l53">Qui peuvent hardiment démentir cette pièce.</l>
       </sp>
-            <l n="56" xml:id="l56">Et la démentiront encor plus de vingt ans.</l>
+            <sp who="#bélise" xml:id="I1-25">
+                <speaker> BÉLISE. </speaker>
+            <l n="54" xml:id="l54">Et la démentiront encor plus de vingt ans.</l>
       </sp>
-            <l n="57" xml:id="l57">On voit dans tous vos traits un reste de printemps.</l>
+            <sp who="#ariste" xml:id="I1-26">
+                <speaker> ARISTE. </speaker>
+            <l n="55" xml:id="l55">On voit dans tous vos traits un reste de printemps.</l>
       </sp>
-            <l n="58" xml:id="l58">Donnez-moi ce papier.</l>
+            <sp who="#bélise" xml:id="I1-27">
+                <speaker> BÉLISE. </speaker>
+            <l n="56" xml:id="l56">Donnez-moi ce papier.</l>
       </sp>
-            <l n="59" xml:id="l59">Eh ! qu’en voulez-vous faire ?</l>
+            <sp who="#ariste" xml:id="I1-28">
+                <speaker> ARISTE. </speaker>
+            <l n="57" xml:id="l57">Eh ! qu’en voulez-vous faire ?</l>
       </sp>
-            <l n="60" xml:id="l60">Tu sors, indigne écrit, de la main d’un faussaire ;</l>
-            <l n="61" xml:id="l61">Je m’en vais te traiter comme un franc imposteur ;</l>
+            <sp who="#bélise" xml:id="I1-29">
+                <speaker> BÉLISE, après avoir lu l’extrait. </speaker>
+            <l n="58" xml:id="l58">Tu sors, indigne écrit, de la main d’un faussaire ;</l>
+            <l n="59" xml:id="l59">Je m’en vais te traiter comme un franc imposteur ;</l>
             <stage>En le déchirant. </stage>
-            <l n="63" xml:id="l63">Et j’en voudrais pouvoir faire autant à l’auteur.</l>
+            <l n="60" xml:id="l60">Et j’en voudrais pouvoir faire autant à l’auteur.</l>
       </sp>
-            <l n="64" xml:id="l64">Bon Dieu ! que faites-vous, ma sœur ?</l>
+            <sp who="#ariste" xml:id="I1-30">
+                <speaker> ARISTE. </speaker>
+            <l n="61" xml:id="l61">Bon Dieu ! que faites-vous, ma sœur ?</l>
       </sp>
-            <l n="65" xml:id="l65">Je fais justice</l>
-            <l n="66" xml:id="l66">De votre médisance et de votre malice.</l>
-            <l n="67" xml:id="l67">Vous ne m’offrirez plus cet extrait odieux :</l>
-            <l n="68" xml:id="l68">Et je suis jeune encor malgré les envieux.</l>
+            <sp who="#bélise" xml:id="I1-31">
+                <speaker> BÉLISE. </speaker>
+            <l n="62" xml:id="l62">Je fais justice</l>
+            <l n="63" xml:id="l63">De votre médisance et de votre malice.</l>
+            <l n="64" xml:id="l64">Vous ne m’offrirez plus cet extrait odieux :</l>
+            <l n="65" xml:id="l65">Et je suis jeune encor malgré les envieux.</l>
       </sp>
-            <l n="69" xml:id="l69">Mais, ma sœur, un instant discourons sans colère.</l>
-            <l n="70" xml:id="l70">Lorsque vous étiez jeune, on ne pouvait vous plaire :</l>
-            <l n="71" xml:id="l71">Et comme vous vouliez un amant sans défaut,</l>
-            <l n="72" xml:id="l72">Tous les meilleurs partis disparurent bientôt ;</l>
-            <l n="73" xml:id="l73">Tant et si bien enfin, que, par délicatesse,</l>
-            <l n="74" xml:id="l74">Vous avez follement perdu votre jeunesse.</l>
-            <l n="75" xml:id="l75">On courait après vous, vous fuyiez à grands pas ;</l>
-            <l n="76" xml:id="l76">Vous courez à présent qu’on ne vous cherche pas :</l>
-            <l n="77" xml:id="l77">C’est se donner, ma sœur, un si grand ridicule,</l>
-            <l n="78" xml:id="l78">Que l’amitié défend qu’on vous le dissimule.</l>
+            <sp who="#ariste" xml:id="I1-32">
+                <speaker> ARISTE. </speaker>
+            <l n="66" xml:id="l66">Mais, ma sœur, un instant discourons sans colère.</l>
+            <l n="67" xml:id="l67">Lorsque vous étiez jeune, on ne pouvait vous plaire :</l>
+            <l n="68" xml:id="l68">Et comme vous vouliez un amant sans défaut,</l>
+            <l n="69" xml:id="l69">Tous les meilleurs partis disparurent bientôt ;</l>
+            <l n="70" xml:id="l70">Tant et si bien enfin, que, par délicatesse,</l>
+            <l n="71" xml:id="l71">Vous avez follement perdu votre jeunesse.</l>
+            <l n="72" xml:id="l72">On courait après vous, vous fuyiez à grands pas ;</l>
+            <l n="73" xml:id="l73">Vous courez à présent qu’on ne vous cherche pas :</l>
+            <l n="74" xml:id="l74">C’est se donner, ma sœur, un si grand ridicule,</l>
+            <l n="75" xml:id="l75">Que l’amitié défend qu’on vous le dissimule.</l>
       </sp>
-            <l n="79" xml:id="l79">Ne vous alarmez point de ce que l’on dira.</l>
-            <l n="80" xml:id="l80">J’ai de bonnes raisons que le public saura ;</l>
-            <l n="81" xml:id="l81">Il ne manquera point d’approuver ma conduite,</l>
-            <l n="82" xml:id="l82">Quand il saura l’état où vous m’avez réduite.</l>
-            <l n="83" xml:id="l83">Riche comme je suis, maîtresse de mon bien,</l>
-            <l n="84" xml:id="l84">Je vis comme un enfant, sans disposer de rien.</l>
-            <l n="85" xml:id="l85">Sous la dévotion cachant votre avarice,</l>
-            <l n="86" xml:id="l86">Vous refusez surtout de me rendre justice.</l>
-            <l n="87" xml:id="l87">À mes moindres désirs vous opposez toujours</l>
-            <l n="88" xml:id="l88">Les écueils de ce siècle, et cent pieux discours,</l>
-            <l n="89" xml:id="l89">Pour prouver qu’à mon âge il faut fuir la dépense,</l>
-            <l n="90" xml:id="l90">Et même se piquer d’une honnête indigence ;</l>
-            <l n="91" xml:id="l91">Tandis que sans scrupule, et par mille moyens,</l>
-            <l n="92" xml:id="l92">Vous faites profiter et vos biens et les miens,</l>
-            <l n="93" xml:id="l93">Et que, sans séparer votre part de la mienne,</l>
-            <l n="94" xml:id="l94">Vous retenez le tout par charité chrétienne.</l>
+            <sp who="#bélise" xml:id="I1-33">
+                <speaker> BÉLISE. </speaker>
+            <l n="76" xml:id="l76">Ne vous alarmez point de ce que l’on dira.</l>
+            <l n="77" xml:id="l77">J’ai de bonnes raisons que le public saura ;</l>
+            <l n="78" xml:id="l78">Il ne manquera point d’approuver ma conduite,</l>
+            <l n="79" xml:id="l79">Quand il saura l’état où vous m’avez réduite.</l>
+            <l n="80" xml:id="l80">Riche comme je suis, maîtresse de mon bien,</l>
+            <l n="81" xml:id="l81">Je vis comme un enfant, sans disposer de rien.</l>
+            <l n="82" xml:id="l82">Sous la dévotion cachant votre avarice,</l>
+            <l n="83" xml:id="l83">Vous refusez surtout de me rendre justice.</l>
+            <l n="84" xml:id="l84">À mes moindres désirs vous opposez toujours</l>
+            <l n="85" xml:id="l85">Les écueils de ce siècle, et cent pieux discours,</l>
+            <l n="86" xml:id="l86">Pour prouver qu’à mon âge il faut fuir la dépense,</l>
+            <l n="87" xml:id="l87">Et même se piquer d’une honnête indigence ;</l>
+            <l n="88" xml:id="l88">Tandis que sans scrupule, et par mille moyens,</l>
+            <l n="89" xml:id="l89">Vous faites profiter et vos biens et les miens,</l>
+            <l n="90" xml:id="l90">Et que, sans séparer votre part de la mienne,</l>
+            <l n="91" xml:id="l91">Vous retenez le tout par charité chrétienne.</l>
       </sp>
-            <l n="95" xml:id="l95">Par charité, sans doute, afin de prévenir</l>
-            <l n="96" xml:id="l96">Les inconvénients qui pourraient survenir.</l>
-            <l n="97" xml:id="l97">Vous aimez trop le luxe et la magnificence ;</l>
-            <l n="98" xml:id="l98">C’est ce que je ne puis souffrir en conscience.</l>
+            <sp who="#ariste" xml:id="I1-34">
+                <speaker> ARISTE. </speaker>
+            <l n="92" xml:id="l92">Par charité, sans doute, afin de prévenir</l>
+            <l n="93" xml:id="l93">Les inconvénients qui pourraient survenir.</l>
+            <l n="94" xml:id="l94">Vous aimez trop le luxe et la magnificence ;</l>
+            <l n="95" xml:id="l95">C’est ce que je ne puis souffrir en conscience.</l>
       </sp>
-            <l n="99" xml:id="l99">En conscience ! Oh bien ! je vais prendre un époux</l>
-            <l n="100" xml:id="l100">Qui me dirigera tout aussi bien que vous ;</l>
-            <l n="101" xml:id="l101">Un jeune homme bien fait, de l’esprit comme un ange.</l>
-            <l n="102" xml:id="l102">De tous vos procédés je prétends qu’il me venge.</l>
+            <sp who="#bélise" xml:id="I1-35">
+                <speaker> BÉLISE. </speaker>
+            <l n="96" xml:id="l96">En conscience ! Oh bien ! je vais prendre un époux</l>
+            <l n="97" xml:id="l97">Qui me dirigera tout aussi bien que vous ;</l>
+            <l n="98" xml:id="l98">Un jeune homme bien fait, de l’esprit comme un ange.</l>
+            <l n="99" xml:id="l99">De tous vos procédés je prétends qu’il me venge.</l>
       </sp>
-            <l n="103" xml:id="l103">S’il est jeune, à coup sûr il vous méprisera ;</l>
-            <l n="104" xml:id="l104">Et, qui pis est encore, il vous ruinera.</l>
-            <l n="105" xml:id="l105">Cette réflexion me paraît effrayante.</l>
-            <l n="106" xml:id="l106">Soyez moins sensuelle, et soyez plus prudente.</l>
+            <sp who="#ariste" xml:id="I1-36">
+                <speaker> ARISTE. </speaker>
+            <l n="100" xml:id="l100">S’il est jeune, à coup sûr il vous méprisera ;</l>
+            <l n="101" xml:id="l101">Et, qui pis est encore, il vous ruinera.</l>
+            <l n="102" xml:id="l102">Cette réflexion me paraît effrayante.</l>
+            <l n="103" xml:id="l103">Soyez moins sensuelle, et soyez plus prudente.</l>
       </sp>
-            <l n="107" xml:id="l107">Et vous, en consentant que chacun ait son lot,</l>
-            <l n="108" xml:id="l108">Soyez plus honnête homme, et soyez moins dévot ;</l>
-            <l n="109" xml:id="l109">Car tout résolument je veux changer de vie.</l>
+            <sp who="#bélise" xml:id="I1-37">
+                <speaker> BÉLISE. </speaker>
+            <l n="104" xml:id="l104">Et vous, en consentant que chacun ait son lot,</l>
+            <l n="105" xml:id="l105">Soyez plus honnête homme, et soyez moins dévot ;</l>
+            <l n="106" xml:id="l106">Car tout résolument je veux changer de vie.</l>
       </sp>
-            <l n="110" xml:id="l110">Eh bien ! ma sœur, il faut en passer votre envie.</l>
-            <l n="111" xml:id="l111">Quel est donc cet époux que vous vous mitonnez ?</l>
+            <sp who="#ariste" xml:id="I1-38">
+                <speaker> ARISTE. </speaker>
+            <l n="107" xml:id="l107">Eh bien ! ma sœur, il faut en passer votre envie.</l>
+            <l n="108" xml:id="l108">Quel est donc cet époux que vous vous mitonnez ?</l>
       </sp>
-            <l n="112" xml:id="l112">C’est Léandre. Je vois que vous vous étonnez.</l>
-            <l n="113" xml:id="l113">Oui, Léandre, mon frère ; il m’adore, je l’aime,</l>
-            <l n="114" xml:id="l114">Et je vais le traiter comme un autre moi-même,</l>
-            <l n="115" xml:id="l115">En faisant de mon bien le partage avec lui.</l>
-            <l n="116" xml:id="l116">Et quand cela ? Demain, si ce n’est aujourd’hui.</l>
-            <l n="117" xml:id="l117">En termes assez clairs je crois que je m’explique.</l>
-            <l n="118" xml:id="l118">Dispensez-vous du soin d’y faire une réplique :</l>
-            <l n="119" xml:id="l119">Et moi, pour m’épargner l’ennui de l’écouter,</l>
-            <l n="120" xml:id="l120">Je prends congé de vous, et je vais contracter.</l>
+            <sp who="#bélise" xml:id="I1-39">
+                <speaker> BÉLISE. </speaker>
+            <l n="109" xml:id="l109">C’est Léandre. Je vois que vous vous étonnez.</l>
+            <l n="110" xml:id="l110">Oui, Léandre, mon frère ; il m’adore, je l’aime,</l>
+            <l n="111" xml:id="l111">Et je vais le traiter comme un autre moi-même,</l>
+            <l n="112" xml:id="l112">En faisant de mon bien le partage avec lui.</l>
+            <l n="113" xml:id="l113">Et quand cela ? Demain, si ce n’est aujourd’hui.</l>
+            <l n="114" xml:id="l114">En termes assez clairs je crois que je m’explique.</l>
+            <l n="115" xml:id="l115">Dispensez-vous du soin d’y faire une réplique :</l>
+            <l n="116" xml:id="l116">Et moi, pour m’épargner l’ennui de l’écouter,</l>
+            <l n="117" xml:id="l117">Je prends congé de vous, et je vais contracter.</l>
       </sp>
    </div>
    <div type="scene" xml:id="I2">
       <head>Scène II</head>
-            <l n="121" xml:id="l121">Je suis au désespoir. Ce maudit mariage</l>
-            <l n="122" xml:id="l122">Fait perdre à mes enfants un fort gros héritage.</l>
-            <l n="123" xml:id="l123">J’ai fait ce que j’ai pu pour le leur conserver ;</l>
-            <l n="124" xml:id="l124">Faut-il qu’un étourdi vienne me l’enlever !</l>
-            <l n="125" xml:id="l125">Ma sœur, je le vois bien, va faire une folie :</l>
-            <l n="126" xml:id="l126">Comment l’en préserver ? Il faut que je m’allie</l>
-            <l n="127" xml:id="l127">Avec son prétendu ; c’est le plus sûr moyen</l>
-            <l n="128" xml:id="l128">De la déconcerter, et de garder son bien.</l>
-            <l n="129" xml:id="l129">En travaillant pour moi j’empêche sa ruine,</l>
-            <l n="130" xml:id="l130">Et c’est double bonne œuvre à ce que j’imagine.</l>
-            <l n="131" xml:id="l131">Oui, oui, ma conscience en prononce l’arrêt,</l>
-            <l n="132" xml:id="l132">Et je la sens d’accord avec mon intérêt.</l>
-            <l n="133" xml:id="l133">Ma sœur restera fille, et je crois que Léandre</l>
-            <l n="134" xml:id="l134">La quittera d’abord pour devenir mon gendre.</l>
-            <l n="135" xml:id="l135">Mais, d’un autre côté, mes filles toutes deux</l>
-            <l n="136" xml:id="l136">Sont promises. Comment rompre de pareils nœuds ?</l>
-            <l n="137" xml:id="l137">Le puis-je sans pécher ? Hum ! l’affaire est douteuse.</l>
-            <l n="138" xml:id="l138">Mais pourquoi ? Je rendrai ma sœur très malheureuse</l>
-            <l n="139" xml:id="l139">En souffrant qu’à son âge elle engage sa foi ;</l>
-            <l n="140" xml:id="l140">Et sa faute, après tout, retombera sur moi.</l>
-            <l n="141" xml:id="l141">C’est donc un moindre mal de manquer de parole,</l>
-            <l n="142" xml:id="l142">Que de lui laisser faire une action si folle ;</l>
-            <l n="143" xml:id="l143">Et l’on peut, ce me semble (et j’en serais garant),</l>
-            <l n="144" xml:id="l144">Commettre un petit mal pour en fuir un plus grand.</l>
-            <l n="145" xml:id="l145">Voilà ma conscience en repos. Le mystère</l>
-            <l n="146" xml:id="l146">Est de voir si Léandre est d’un bon caractère,</l>
-            <l n="147" xml:id="l147">S’il n’est point libertin, s’il peut se conformer</l>
-            <l n="148" xml:id="l148">À ma façon de vivre, et si je puis l’aimer ;</l>
-            <l n="149" xml:id="l149">Surtout s’il a l’esprit complaisant et docile.</l>
-            <l n="150" xml:id="l150">Démêler tout cela n’est pas chose facile :</l>
-            <l n="151" xml:id="l151">Il y faut employer et l’adresse et le temps.</l>
-            <l n="152" xml:id="l152">Mais l’affaire est pressante ; et les moindres instants...</l>
-            <l n="153" xml:id="l153">Allons chercher Léandre. Ah ! le voici, je pense.</l>
-            <l n="154" xml:id="l154">Il ne m’aperçoit pas. Il est de ma prudence</l>
-            <l n="155" xml:id="l155">De me ranger ici pour l’entendre parler.</l>
+            <sp who="#ariste" xml:id="I2-1">
+                <speaker> ARISTE, seul </speaker>
+            <l n="118" xml:id="l118">Je suis au désespoir. Ce maudit mariage</l>
+            <l n="119" xml:id="l119">Fait perdre à mes enfants un fort gros héritage.</l>
+            <l n="120" xml:id="l120">J’ai fait ce que j’ai pu pour le leur conserver ;</l>
+            <l n="121" xml:id="l121">Faut-il qu’un étourdi vienne me l’enlever !</l>
+            <l n="122" xml:id="l122">Ma sœur, je le vois bien, va faire une folie :</l>
+            <l n="123" xml:id="l123">Comment l’en préserver ? Il faut que je m’allie</l>
+            <l n="124" xml:id="l124">Avec son prétendu ; c’est le plus sûr moyen</l>
+            <l n="125" xml:id="l125">De la déconcerter, et de garder son bien.</l>
+            <l n="126" xml:id="l126">En travaillant pour moi j’empêche sa ruine,</l>
+            <l n="127" xml:id="l127">Et c’est double bonne œuvre à ce que j’imagine.</l>
+            <l n="128" xml:id="l128">Oui, oui, ma conscience en prononce l’arrêt,</l>
+            <l n="129" xml:id="l129">Et je la sens d’accord avec mon intérêt.</l>
+            <l n="130" xml:id="l130">Ma sœur restera fille, et je crois que Léandre</l>
+            <l n="131" xml:id="l131">La quittera d’abord pour devenir mon gendre.</l>
+            <l n="132" xml:id="l132">Mais, d’un autre côté, mes filles toutes deux</l>
+            <l n="133" xml:id="l133">Sont promises. Comment rompre de pareils nœuds ?</l>
+            <l n="134" xml:id="l134">Le puis-je sans pécher ? Hum ! l’affaire est douteuse.</l>
+            <l n="135" xml:id="l135">Mais pourquoi ? Je rendrai ma sœur très malheureuse</l>
+            <l n="136" xml:id="l136">En souffrant qu’à son âge elle engage sa foi ;</l>
+            <l n="137" xml:id="l137">Et sa faute, après tout, retombera sur moi.</l>
+            <l n="138" xml:id="l138">C’est donc un moindre mal de manquer de parole,</l>
+            <l n="139" xml:id="l139">Que de lui laisser faire une action si folle ;</l>
+            <l n="140" xml:id="l140">Et l’on peut, ce me semble (et j’en serais garant),</l>
+            <l n="141" xml:id="l141">Commettre un petit mal pour en fuir un plus grand.</l>
+            <l n="142" xml:id="l142">Voilà ma conscience en repos. Le mystère</l>
+            <l n="143" xml:id="l143">Est de voir si Léandre est d’un bon caractère,</l>
+            <l n="144" xml:id="l144">S’il n’est point libertin, s’il peut se conformer</l>
+            <l n="145" xml:id="l145">À ma façon de vivre, et si je puis l’aimer ;</l>
+            <l n="146" xml:id="l146">Surtout s’il a l’esprit complaisant et docile.</l>
+            <l n="147" xml:id="l147">Démêler tout cela n’est pas chose facile :</l>
+            <l n="148" xml:id="l148">Il y faut employer et l’adresse et le temps.</l>
+            <l n="149" xml:id="l149">Mais l’affaire est pressante ; et les moindres instants...</l>
+            <l n="150" xml:id="l150">Allons chercher Léandre. Ah ! le voici, je pense.</l>
+            <l n="151" xml:id="l151">Il ne m’aperçoit pas. Il est de ma prudence</l>
+            <l n="152" xml:id="l152">De me ranger ici pour l’entendre parler.</l>
       </sp>
    </div>
    <div type="scene" xml:id="I3">
       <head>Scène III</head>
         <stage>ARISTE, LÉANDRE</stage>
-        <sp who="léandre" xml:id="I3-1">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="156" xml:id="l156">Ariste m’examine ; il faut dissimuler,</l>
-            <l n="157" xml:id="l157">Et tenir des discours propres à le séduire,</l>
-            <l n="158" xml:id="l158">Afin qu’en son esprit je puisse m’introduire.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-1">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="153" xml:id="l153">Ariste m’examine ; il faut dissimuler,</l>
+            <l n="154" xml:id="l154">Et tenir des discours propres à le séduire,</l>
+            <l n="155" xml:id="l155">Afin qu’en son esprit je puisse m’introduire.</l>
       </sp>
-            <l n="159" xml:id="l159">Il se parle à lui-même, et je ne l’entends pas.</l>
-            <l n="160" xml:id="l160">Approchons doucement.</l>
+            <sp who="#ariste" xml:id="I3-2">
+                <speaker> ARISTE. </speaker>
+            <l n="156" xml:id="l156">Il se parle à lui-même, et je ne l’entends pas.</l>
+            <l n="157" xml:id="l157">Approchons doucement.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-3">
-            <speaker>LÉANDRE, <em>haut, feignant de réfléchir.</em></speaker>
-            <l n="161" xml:id="l161">Le bien a des appas ;</l>
-            <l n="162" xml:id="l162">Mais doivent-ils tenter le cœur d’un honnête homme ?</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-3">
+                <speaker> LÉANDRE, haut, feignant de réfléchir. </speaker>
+            <l n="158" xml:id="l158">Le bien a des appas ;</l>
+            <l n="159" xml:id="l159">Mais doivent-ils tenter le cœur d’un honnête homme ?</l>
       </sp>
-            <l n="163" xml:id="l163">Bon.</l>
+            <sp who="#ariste" xml:id="I3-4">
+                <speaker> ARISTE, à part, d’un air joyeux. </speaker>
+            <l n="160" xml:id="l160">Bon.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-5">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="164" xml:id="l164">Elle a de gros biens.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-5">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="161" xml:id="l161">Elle a de gros biens.</l>
       </sp>
-            <l n="165" xml:id="l165">Hélas ! oui.</l>
+            <sp who="#ariste" xml:id="I3-6">
+                <speaker> ARISTE, à part, d’un ton pleureur. </speaker>
+            <l n="162" xml:id="l162">Hélas ! oui.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-7">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="166" xml:id="l166">Une somme</l>
-            <l n="167" xml:id="l167">De cent bons mille écus en deniers bien comptants,</l>
-            <l n="168" xml:id="l168">Me convient ; mais Bélise a du moins cinquante ans.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-7">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="163" xml:id="l163">Une somme</l>
+            <l n="164" xml:id="l164">De cent bons mille écus en deniers bien comptants,</l>
+            <l n="165" xml:id="l165">Me convient ; mais Bélise a du moins cinquante ans.</l>
       </sp>
-            <l n="169" xml:id="l169">Tout au moins.</l>
+            <sp who="#ariste" xml:id="I3-8">
+                <speaker> ARISTE, à part. </speaker>
+            <l n="166" xml:id="l166">Tout au moins.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-9">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="170" xml:id="l170">À cet âge une femme est jalouse ;</l>
-            <l n="171" xml:id="l171">Et l’argent est bien cher quand il faut qu’on l’épouse.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-9">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="167" xml:id="l167">À cet âge une femme est jalouse ;</l>
+            <l n="168" xml:id="l168">Et l’argent est bien cher quand il faut qu’on l’épouse.</l>
       </sp>
-            <l n="172" xml:id="l172">Trop cher.</l>
+            <sp who="#ariste" xml:id="I3-10">
+                <speaker> ARISTE, à part. </speaker>
+            <l n="169" xml:id="l169">Trop cher.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-11">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="173" xml:id="l173">Prendre son bien, et puis la mépriser !</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-11">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="170" xml:id="l170">Prendre son bien, et puis la mépriser !</l>
       </sp>
-            <l n="174" xml:id="l174">Fi donc ! Si, sans me voir, il peut encor jaser,</l>
-            <l n="175" xml:id="l175">Je vais lire sans peine au fond de sa pensée.</l>
+            <sp who="#ariste" xml:id="I3-12">
+                <speaker> ARISTE, à part. </speaker>
+            <l n="171" xml:id="l171">Fi donc ! Si, sans me voir, il peut encor jaser,</l>
+            <l n="172" xml:id="l172">Je vais lire sans peine au fond de sa pensée.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-13">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="176" xml:id="l176">Non, non ; ma conscience en serait trop blessée.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-13">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="173" xml:id="l173">Non, non ; ma conscience en serait trop blessée.</l>
       </sp>
-            <l n="177" xml:id="l177">Sa conscience ! Oh, oh ! ce terme-là me plaît.</l>
+            <sp who="#ariste" xml:id="I3-14">
+                <speaker> ARISTE, à part. </speaker>
+            <l n="174" xml:id="l174">Sa conscience ! Oh, oh ! ce terme-là me plaît.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-15">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="178" xml:id="l178">Oser se marier par un vil intérêt,</l>
-            <l n="179" xml:id="l179">C’est s’exposer à faire un bien mauvais ménage.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-15">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="175" xml:id="l175">Oser se marier par un vil intérêt,</l>
+            <l n="176" xml:id="l176">C’est s’exposer à faire un bien mauvais ménage.</l>
       </sp>
-            <l n="180" xml:id="l180">Bien dit.</l>
+            <sp who="#ariste" xml:id="I3-16">
+                <speaker> ARISTE, à part, d’an air d’admiration. </speaker>
+            <l n="177" xml:id="l177">Bien dit.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-17">
-            <speaker>LÉANDRE, <em>à part.</em></speaker>
-            <l n="181" xml:id="l181">C’est profaner les nœuds du mariage ;</l>
-            <l n="182" xml:id="l182">Nœuds si saints, si sacrés, qu’on doit les respecter.</l>
-            <l n="183" xml:id="l183">S’imposer des devoirs, ne s’en pas acquitter,</l>
-            <l n="184" xml:id="l184">C’est commettre, à mon sens, un crime impardonnable.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-17">
+                <speaker> LÉANDRE, à part. </speaker>
+            <l n="178" xml:id="l178">C’est profaner les nœuds du mariage ;</l>
+            <l n="179" xml:id="l179">Nœuds si saints, si sacrés, qu’on doit les respecter.</l>
+            <l n="180" xml:id="l180">S’imposer des devoirs, ne s’en pas acquitter,</l>
+            <l n="181" xml:id="l181">C’est commettre, à mon sens, un crime impardonnable.</l>
       </sp>
-            <l n="185" xml:id="l185">Cet homme me paraît d’un caractère aimable,</l>
-            <l n="186" xml:id="l186">Et chaque mot qu’il dit peut servir de leçon.</l>
-            <l n="187" xml:id="l187">C’est justement mon fait.</l>
+            <sp who="#ariste" xml:id="I3-18">
+                <speaker> ARISTE, à part. </speaker>
+            <l n="182" xml:id="l182">Cet homme me paraît d’un caractère aimable,</l>
+            <l n="183" xml:id="l183">Et chaque mot qu’il dit peut servir de leçon.</l>
+            <l n="184" xml:id="l184">C’est justement mon fait.</l>
       </sp>
-            <l n="188" xml:id="l188">Il mord à l’hameçon,</l>
-            <l n="189" xml:id="l189">Et je puis maintenant l’aborder sans rien craindre.</l>
-            <l n="190" xml:id="l190">Ah ! Monsieur, vous voilà !</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-19">
+                <speaker> LÉANDRE, après s’être éloigné d’Ariste. </speaker>
+            <l n="185" xml:id="l185">Il mord à l’hameçon,</l>
+            <l n="186" xml:id="l186">Et je puis maintenant l’aborder sans rien craindre.</l>
+            <l n="187" xml:id="l187">Ah ! Monsieur, vous voilà !</l>
       </sp>
-            <l n="191" xml:id="l191">Parlez sans vous contraindre ;</l>
-            <l n="192" xml:id="l192">Vous ne m’ennuierez point.</l>
+            <sp who="#ariste" xml:id="I3-20">
+                <speaker> ARISTE. </speaker>
+            <l n="188" xml:id="l188">Parlez sans vous contraindre ;</l>
+            <l n="189" xml:id="l189">Vous ne m’ennuierez point.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-21">
-            <speaker>LÉANDRE, <em>d’un air surpris.</em></speaker>
-            <l n="193" xml:id="l193">Eh quoi ! vous m’écoutiez ?</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-21">
+                <speaker> LÉANDRE, d’un air surpris. </speaker>
+            <l n="190" xml:id="l190">Eh quoi ! vous m’écoutiez ?</l>
       </sp>
-            <l n="194" xml:id="l194">Oui ; charmé, pénétré de ce que vous disiez.</l>
+            <sp who="#ariste" xml:id="I3-22">
+                <speaker> ARISTE. </speaker>
+            <l n="191" xml:id="l191">Oui ; charmé, pénétré de ce que vous disiez.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-23">
-            <speaker>LÉANDRE.</speaker>
-            <l n="195" xml:id="l195">Parler haut en rêvant, c’est ma folle coutume.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-23">
+                <speaker> LÉANDRE. </speaker>
+            <l n="192" xml:id="l192">Parler haut en rêvant, c’est ma folle coutume.</l>
       </sp>
-            <l n="196" xml:id="l196">Recueillir vos discours, en faire un gros volume,</l>
-            <l n="197" xml:id="l197">Ce serait un travail agréable pour moi,</l>
-            <l n="198" xml:id="l198">Et plus utile encor.</l>
+            <sp who="#ariste" xml:id="I3-24">
+                <speaker> ARISTE. </speaker>
+            <l n="193" xml:id="l193">Recueillir vos discours, en faire un gros volume,</l>
+            <l n="194" xml:id="l194">Ce serait un travail agréable pour moi,</l>
+            <l n="195" xml:id="l195">Et plus utile encor.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-25">
-            <speaker>LÉANDRE.</speaker>
-            <l n="199" xml:id="l199">Vous raillez ?</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-25">
+                <speaker> LÉANDRE. </speaker>
+            <l n="196" xml:id="l196">Vous raillez ?</l>
       </sp>
-            <l n="200" xml:id="l200">Non, ma foi.</l>
+            <sp who="#ariste" xml:id="I3-26">
+                <speaker> ARISTE. </speaker>
+            <l n="197" xml:id="l197">Non, ma foi.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-27">
-            <speaker>LÉANDRE.</speaker>
-            <l n="201" xml:id="l201">Ces louanges, Monsieur...</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-27">
+                <speaker> LÉANDRE. </speaker>
+            <l n="198" xml:id="l198">Ces louanges, Monsieur...</l>
       </sp>
-            <l n="202" xml:id="l202">Elles sont légitimes.</l>
-            <l n="203" xml:id="l203">Vous venez de rêver d’excellentes maximes :</l>
-            <l n="204" xml:id="l204">Et rêver à votre âge aussi solidement,</l>
-            <l n="205" xml:id="l205">C’est l’effet d’un bon cœur et d’un sain jugement.</l>
-            <l n="206" xml:id="l206">La sagesse en tout temps doit être révérée ;</l>
-            <l n="207" xml:id="l207">Mais surtout quand on voit qu’elle est prématurée.</l>
+            <sp who="#ariste" xml:id="I3-28">
+                <speaker> ARISTE. </speaker>
+            <l n="199" xml:id="l199">Elles sont légitimes.</l>
+            <l n="200" xml:id="l200">Vous venez de rêver d’excellentes maximes :</l>
+            <l n="201" xml:id="l201">Et rêver à votre âge aussi solidement,</l>
+            <l n="202" xml:id="l202">C’est l’effet d’un bon cœur et d’un sain jugement.</l>
+            <l n="203" xml:id="l203">La sagesse en tout temps doit être révérée ;</l>
+            <l n="204" xml:id="l204">Mais surtout quand on voit qu’elle est prématurée.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-29">
-            <speaker>LÉANDRE.</speaker>
-            <l n="208" xml:id="l208">Vous me faites rougir.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-29">
+                <speaker> LÉANDRE. </speaker>
+            <l n="205" xml:id="l205">Vous me faites rougir.</l>
       </sp>
-            <l n="209" xml:id="l209">Tant mieux ; j’en suis charmé.</l>
-            <l n="210" xml:id="l210">Dans mon penchant pour vous me voilà confirmé ;</l>
-            <l n="211" xml:id="l211">Et jamais la vertu n’est si bien assortie,</l>
-            <l n="212" xml:id="l212">Que lorsqu’elle s’allie avec la modestie.</l>
+            <sp who="#ariste" xml:id="I3-30">
+                <speaker> ARISTE. </speaker>
+            <l n="206" xml:id="l206">Tant mieux ; j’en suis charmé.</l>
+            <l n="207" xml:id="l207">Dans mon penchant pour vous me voilà confirmé ;</l>
+            <l n="208" xml:id="l208">Et jamais la vertu n’est si bien assortie,</l>
+            <l n="209" xml:id="l209">Que lorsqu’elle s’allie avec la modestie.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-31">
-            <speaker>LÉANDRE.</speaker>
-            <l n="213" xml:id="l213">C’est en vous qu’on les voit se montrer à l’envi.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-31">
+                <speaker> LÉANDRE. </speaker>
+            <l n="210" xml:id="l210">C’est en vous qu’on les voit se montrer à l’envi.</l>
       </sp>
-            <l n="214" xml:id="l214">Ah ! si vous disiez vrai, que je serais ravi !</l>
-            <l n="215" xml:id="l215">De vertueux désirs me pressent et m’exhortent,</l>
-            <l n="216" xml:id="l216">Mais malheureusement mes passions m’emportent.</l>
+            <sp who="#ariste" xml:id="I3-32">
+                <speaker> ARISTE. </speaker>
+            <l n="211" xml:id="l211">Ah ! si vous disiez vrai, que je serais ravi !</l>
+            <l n="212" xml:id="l212">De vertueux désirs me pressent et m’exhortent,</l>
+            <l n="213" xml:id="l213">Mais malheureusement mes passions m’emportent.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-33">
-            <speaker>LÉANDRE.</speaker>
-            <l n="217" xml:id="l217">Vos passions, Monsieur ! eh ! vous n’en avez point.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-33">
+                <speaker> LÉANDRE. </speaker>
+            <l n="214" xml:id="l214">Vos passions, Monsieur ! eh ! vous n’en avez point.</l>
       </sp>
-            <l n="218" xml:id="l218">Par exemple, je suis colère au dernier point.</l>
-            <l n="219" xml:id="l219">J’ai fait mille serments de surmonter ce vice ;</l>
-            <l n="220" xml:id="l220">La moindre occasion m’entraîne au précipice.</l>
+            <sp who="#ariste" xml:id="I3-34">
+                <speaker> ARISTE. </speaker>
+            <l n="215" xml:id="l215">Par exemple, je suis colère au dernier point.</l>
+            <l n="216" xml:id="l216">J’ai fait mille serments de surmonter ce vice ;</l>
+            <l n="217" xml:id="l217">La moindre occasion m’entraîne au précipice.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-35">
-            <speaker>LÉANDRE.</speaker>
-            <l n="221" xml:id="l221">La plus âpre vertu combat incessamment,</l>
-            <l n="222" xml:id="l222">Sans pouvoir étouffer notre tempérament.</l>
-            <l n="223" xml:id="l223">Non, jamais de soi-même on n’est tout-à-fait maître !</l>
-            <l n="224" xml:id="l224">C’est être vertueux que souhaiter de l’être.</l>
-            <l n="225" xml:id="l225">On trouve en ce désir mille charmes touchants :</l>
-            <l n="226" xml:id="l226">Mais qu’il est malaisé de vaincre ses penchants !</l>
-            <l n="227" xml:id="l227">Le naturel enclin aux actions perverses,</l>
-            <l n="228" xml:id="l228">Trouve pour s’échapper mille routes diverses.</l>
-            <l n="229" xml:id="l229">Il surprend la sagesse, il ose la braver ;</l>
-            <l n="230" xml:id="l230">Bien souvent elle plie, et sait se relever.</l>
-            <l n="231" xml:id="l231">Le pilote prudent parfois cède à l’orage,</l>
-            <l n="232" xml:id="l232">Et par un long détour se sauve du naufrage.</l>
-            <l n="233" xml:id="l233">Tâchons toujours de vaincre, en combattant toujours,</l>
-            <l n="234" xml:id="l234">Et le ciel tôt ou tard vient à notre secours.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-35">
+                <speaker> LÉANDRE. </speaker>
+            <l n="218" xml:id="l218">La plus âpre vertu combat incessamment,</l>
+            <l n="219" xml:id="l219">Sans pouvoir étouffer notre tempérament.</l>
+            <l n="220" xml:id="l220">Non, jamais de soi-même on n’est tout-à-fait maître !</l>
+            <l n="221" xml:id="l221">C’est être vertueux que souhaiter de l’être.</l>
+            <l n="222" xml:id="l222">On trouve en ce désir mille charmes touchants :</l>
+            <l n="223" xml:id="l223">Mais qu’il est malaisé de vaincre ses penchants !</l>
+            <l n="224" xml:id="l224">Le naturel enclin aux actions perverses,</l>
+            <l n="225" xml:id="l225">Trouve pour s’échapper mille routes diverses.</l>
+            <l n="226" xml:id="l226">Il surprend la sagesse, il ose la braver ;</l>
+            <l n="227" xml:id="l227">Bien souvent elle plie, et sait se relever.</l>
+            <l n="228" xml:id="l228">Le pilote prudent parfois cède à l’orage,</l>
+            <l n="229" xml:id="l229">Et par un long détour se sauve du naufrage.</l>
+            <l n="230" xml:id="l230">Tâchons toujours de vaincre, en combattant toujours,</l>
+            <l n="231" xml:id="l231">Et le ciel tôt ou tard vient à notre secours.</l>
       </sp>
-            <l n="235" xml:id="l235">Ainsi donc contre vous vous combattez sans cesse ?</l>
+            <sp who="#ariste" xml:id="I3-36">
+                <speaker> ARISTE. </speaker>
+            <l n="232" xml:id="l232">Ainsi donc contre vous vous combattez sans cesse ?</l>
       </sp>
-        <sp who="léandre" xml:id="I3-37">
-            <speaker>LÉANDRE.</speaker>
-            <l n="236" xml:id="l236">Oui, je fais guerre ouverte à la moindre faiblesse :</l>
-            <l n="237" xml:id="l237">Quelquefois je triomphe, et succombe souvent.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-37">
+                <speaker> LÉANDRE. </speaker>
+            <l n="233" xml:id="l233">Oui, je fais guerre ouverte à la moindre faiblesse :</l>
+            <l n="234" xml:id="l234">Quelquefois je triomphe, et succombe souvent.</l>
       </sp>
-            <l n="238" xml:id="l238">Embrassez-moi, mon cher. Je veux dorénavant,</l>
-            <l n="239" xml:id="l239">Qu’en athlètes ligués, nous combattions les vices,</l>
-            <l n="240" xml:id="l240">Et que nous nous rendions de mutuels services.</l>
-            <l n="241" xml:id="l241">Toujours de la vertu nous suivrons l’étendard,</l>
-            <l n="242" xml:id="l242">Nous ne nous passerons jamais le moindre écart ;</l>
-            <l n="243" xml:id="l243">À toute heure occupés à veiller l’un sur l’autre,</l>
-            <l n="244" xml:id="l244">Vous deviendrez mon guide, et je serai le vôtre.</l>
+            <sp who="#ariste" xml:id="I3-38">
+                <speaker> ARISTE, avec transport. </speaker>
+            <l n="235" xml:id="l235">Embrassez-moi, mon cher. Je veux dorénavant,</l>
+            <l n="236" xml:id="l236">Qu’en athlètes ligués, nous combattions les vices,</l>
+            <l n="237" xml:id="l237">Et que nous nous rendions de mutuels services.</l>
+            <l n="238" xml:id="l238">Toujours de la vertu nous suivrons l’étendard,</l>
+            <l n="239" xml:id="l239">Nous ne nous passerons jamais le moindre écart ;</l>
+            <l n="240" xml:id="l240">À toute heure occupés à veiller l’un sur l’autre,</l>
+            <l n="241" xml:id="l241">Vous deviendrez mon guide, et je serai le vôtre.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-39">
-            <speaker>LÉANDRE.</speaker>
-            <l n="245" xml:id="l245">Vous me verrez docile à suivre vos avis,</l>
-            <l n="246" xml:id="l246">Sans prétendre jamais que les miens soient suivis.</l>
-            <l n="247" xml:id="l247">Le désir de bien faire est toute ma science,</l>
-            <l n="248" xml:id="l248">Et je révère en vous l’âge et l’expérience.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-39">
+                <speaker> LÉANDRE. </speaker>
+            <l n="242" xml:id="l242">Vous me verrez docile à suivre vos avis,</l>
+            <l n="243" xml:id="l243">Sans prétendre jamais que les miens soient suivis.</l>
+            <l n="244" xml:id="l244">Le désir de bien faire est toute ma science,</l>
+            <l n="245" xml:id="l245">Et je révère en vous l’âge et l’expérience.</l>
       </sp>
-            <l n="249" xml:id="l249">Moi, je révère en vous un mérite parfait</l>
-            <l n="250" xml:id="l250">Au-dessus de votre âge, et dont le prompt effet</l>
-            <l n="251" xml:id="l251">Est de me pénétrer d’une estime si pure,</l>
-            <l n="252" xml:id="l252">Qu’elle ne finira qu’avec moi, je vous jure.</l>
+            <sp who="#ariste" xml:id="I3-40">
+                <speaker> ARISTE. </speaker>
+            <l n="246" xml:id="l246">Moi, je révère en vous un mérite parfait</l>
+            <l n="247" xml:id="l247">Au-dessus de votre âge, et dont le prompt effet</l>
+            <l n="248" xml:id="l248">Est de me pénétrer d’une estime si pure,</l>
+            <l n="249" xml:id="l249">Qu’elle ne finira qu’avec moi, je vous jure.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-41">
-            <speaker>LÉANDRE.</speaker>
-            <l n="253" xml:id="l253">Vous me comblez de joie, et dès ce même instant</l>
-            <l n="254" xml:id="l254">Me voilà tout à vous.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-41">
+                <speaker> LÉANDRE. </speaker>
+            <l n="250" xml:id="l250">Vous me comblez de joie, et dès ce même instant</l>
+            <l n="251" xml:id="l251">Me voilà tout à vous.</l>
       </sp>
-            <l n="255" xml:id="l255">Je vous en livre autant.</l>
+            <sp who="#ariste" xml:id="I3-42">
+                <speaker> ARISTE. </speaker>
+            <l n="252" xml:id="l252">Je vous en livre autant.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-43">
-            <speaker>LÉANDRE.</speaker>
-            <l n="256" xml:id="l256">Je serai votre fils, et vous serez mon père.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-43">
+                <speaker> LÉANDRE. </speaker>
+            <l n="253" xml:id="l253">Je serai votre fils, et vous serez mon père.</l>
       </sp>
-            <l n="257" xml:id="l257">Pour que tout soit égal, je serai votre frère,</l>
-            <l n="258" xml:id="l258">Et vous serez le mien.</l>
+            <sp who="#ariste" xml:id="I3-44">
+                <speaker> ARISTE. </speaker>
+            <l n="254" xml:id="l254">Pour que tout soit égal, je serai votre frère,</l>
+            <l n="255" xml:id="l255">Et vous serez le mien.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-45">
-            <speaker>LÉANDRE.</speaker>
-            <l n="259" xml:id="l259">C’est me combler d’honneur.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-45">
+                <speaker> LÉANDRE. </speaker>
+            <l n="256" xml:id="l256">C’est me combler d’honneur.</l>
       </sp>
-            <l n="260" xml:id="l260">Il s’agit maintenant de m’ouvrir votre cœur.</l>
+            <sp who="#ariste" xml:id="I3-46">
+                <speaker> ARISTE. </speaker>
+            <l n="257" xml:id="l257">Il s’agit maintenant de m’ouvrir votre cœur.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-47">
-            <speaker>LÉANDRE.</speaker>
-            <l n="261" xml:id="l261">Vous allez voir en moi la simplicité même.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-47">
+                <speaker> LÉANDRE. </speaker>
+            <l n="258" xml:id="l258">Vous allez voir en moi la simplicité même.</l>
       </sp>
-            <l n="262" xml:id="l262">Oh ! je n’en doute point. Oh çà ! ma sœur vous aime ;</l>
-            <l n="263" xml:id="l263">Mais l’aimez-vous aussi ? Parlez-moi franchement.</l>
+            <sp who="#ariste" xml:id="I3-48">
+                <speaker> ARISTE. </speaker>
+            <l n="259" xml:id="l259">Oh ! je n’en doute point. Oh çà ! ma sœur vous aime ;</l>
+            <l n="260" xml:id="l260">Mais l’aimez-vous aussi ? Parlez-moi franchement.</l>
       </sp>
-        <sp who="léandre" xml:id="I3-49">
-            <speaker>LÉANDRE.</speaker>
-            <l n="264" xml:id="l264">Mon frère, à vous parler tout naturellement...</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I3-49">
+                <speaker> LÉANDRE. </speaker>
+            <l n="261" xml:id="l261">Mon frère, à vous parler tout naturellement...</l>
       </sp>
    </div>
    <div type="scene" xml:id="I4">
       <head>Scène IV</head>
         <stage>ARISTE, LÉANDRE, LA FLEUR</stage>
-        <sp who="la-fleur" xml:id="I4-1">
-            <speaker>LA FLEUR, <em>entrant brusquement.</em></speaker>
-            <l n="265" xml:id="l265">Monsieur, le grand laquais de votre nièce Hortense...</l>
+            <sp who="#la-fleur" xml:id="I4-1">
+                <speaker> LA FLEUR, entrant brusquement. </speaker>
+            <l n="262" xml:id="l262">Monsieur, le grand laquais de votre nièce Hortense...</l>
       </sp>
-            <l n="266" xml:id="l266">Eh bien ! peut-on plus loin pousser l’impertinence ?</l>
-            <l n="267" xml:id="l267">Dis-moi, traître, bourreau ! qui te rend si hardi</l>
-            <l n="268" xml:id="l268">De venir nous troubler comme un franc étourdi ?</l>
+            <sp who="#ariste" xml:id="I4-2">
+                <speaker> ARISTE. </speaker>
+            <l n="263" xml:id="l263">Eh bien ! peut-on plus loin pousser l’impertinence ?</l>
+            <l n="264" xml:id="l264">Dis-moi, traître, bourreau ! qui te rend si hardi</l>
+            <l n="265" xml:id="l265">De venir nous troubler comme un franc étourdi ?</l>
       </sp>
-        <sp who="la-fleur" xml:id="I4-3">
-            <speaker>LA FLEUR.</speaker>
-            <l n="269" xml:id="l269">Moi ! mais j’ai cru bien faire.</l>
+            <sp who="#la-fleur" xml:id="I4-3">
+                <speaker> LA FLEUR. </speaker>
+            <l n="266" xml:id="l266">Moi ! mais j’ai cru bien faire.</l>
       </sp>
-            <l n="270" xml:id="l270">Et moi, je vais t’apprendre</l>
-            <l n="271" xml:id="l271">Que tu fais mal.</l>
+            <sp who="#ariste" xml:id="I4-4">
+                <speaker> ARISTE, se jetant sur lui. </speaker>
+            <l n="267" xml:id="l267">Et moi, je vais t’apprendre</l>
+            <l n="268" xml:id="l268">Que tu fais mal.</l>
       </sp>
-        <sp who="léandre" xml:id="I4-5">
-            <speaker>LÉANDRE, <em>défendant la Fleur.</em></speaker>
-            <l n="272" xml:id="l272">Mon frère !</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I4-5">
+                <speaker> LÉANDRE, défendant la Fleur. </speaker>
+            <l n="269" xml:id="l269">Mon frère !</l>
       </sp>
-            <l n="273" xml:id="l273">À quoi bon le défendre ?</l>
-            <l n="274" xml:id="l274">Vous ne connaissez pas, mon frère, ce fripon.</l>
-            <l n="275" xml:id="l275">Je veux le faire un jour mourir sous le bâton.</l>
-            <l n="276" xml:id="l276">C’est un franc espion, qui, toujours aux écoutes,</l>
-            <l n="277" xml:id="l277">Pour tout voir, tout entendre, invente mille routes.</l>
-            <l n="278" xml:id="l278">Sous des prétextes faux il se fourre partout ;</l>
-            <l n="279" xml:id="l279">Je veux l’en corriger, et n’en viens point à bout.</l>
-            <l n="280" xml:id="l280">Laissez-moi le rosser autant qu’il le mérite.</l>
+            <sp who="#ariste" xml:id="I4-6">
+                <speaker> ARISTE. </speaker>
+            <l n="270" xml:id="l270">À quoi bon le défendre ?</l>
+            <l n="271" xml:id="l271">Vous ne connaissez pas, mon frère, ce fripon.</l>
+            <l n="272" xml:id="l272">Je veux le faire un jour mourir sous le bâton.</l>
+            <l n="273" xml:id="l273">C’est un franc espion, qui, toujours aux écoutes,</l>
+            <l n="274" xml:id="l274">Pour tout voir, tout entendre, invente mille routes.</l>
+            <l n="275" xml:id="l275">Sous des prétextes faux il se fourre partout ;</l>
+            <l n="276" xml:id="l276">Je veux l’en corriger, et n’en viens point à bout.</l>
+            <l n="277" xml:id="l277">Laissez-moi le rosser autant qu’il le mérite.</l>
       </sp>
-        <sp who="léandre" xml:id="I4-7">
-            <speaker>LÉANDRE.</speaker>
-            <l n="281" xml:id="l281">Mon frère, avec raison son défaut vous irrite ;</l>
-            <l n="282" xml:id="l282">Mais, pour l’en corriger plus1 efficacement,</l>
-            <l n="283" xml:id="l283">Employez la raison, et non l’emportement.</l>
-            <l n="284" xml:id="l284">Toute correction que l’on veut rendre utile,</l>
-            <l n="285" xml:id="l285">Doit être charitable, onctueuse et tranquille.</l>
+            <sp who="#léandre-ou-le-prothée" xml:id="I4-7">
+                <speaker> LÉANDRE. </speaker>
+            <l n="278" xml:id="l278">Mon frère, avec raison son défaut vous irrite ;</l>
+            <l n="279" xml:id="l279">Mais, pour l’en corriger plus1 efficacement,</l>
+            <l n="280" xml:id="l280">Employez la raison, et non l’emportement.</l>
+            <l n="281" xml:id="l281">Toute correction que l’on veut rendre utile,</l>
+            <l n="282" xml:id="l282">Doit être charitable, onctueuse et tranquille.</l>
       </sp>
-            <l n="286" xml:id="l286">Cet homme est un oracle, et me rendra parfait.</l>
+            <sp who="#ariste" xml:id="I4-8">
+                <speaker> ARISTE, à part. </speaker>
+            <l n="283" xml:id="l283">Cet homme est un oracle, et me rendra parfait.</l>
             <stage>À Léandre.  </stage>
-            <l n="288" xml:id="l288">De vos sages avis vous allez voir l’effet.</l>
+            <l n="284" xml:id="l284">De vos sages avis vous allez voir l’effet.</l>
             <stage>À la Fleur. </stage>
-            <l n="290" xml:id="l290">Dis-moi, mon cher enfant, ce que me veut ma nièce.</l>
+            <l n="285" xml:id="l285">Dis-moi, mon cher enfant, ce que me veut ma nièce.</l>
       </sp>
-        <sp who="la-fleur" xml:id="I4-9">
-            <speaker>LA FLEUR.</speaker>
-            <l n="291" xml:id="l291">Elle vous redemande une certaine pièce</l>
-            <l n="292" xml:id="l292">Dont elle a grand besoin pour pousser son procès,</l>
-            <l n="293" xml:id="l293">Et dont son avocat espère un grand succès.</l>
+            <sp who="#la-fleur" xml:id="I4-9">
+                <speaker> LA FLEUR. </speaker>
+            <l n="286" xml:id="l286">Elle vous redemande une certaine pièce</l>
+            <l n="287" xml:id="l287">Dont elle a grand besoin pour pousser son procès,</l>
+            <l n="288" xml:id="l288">Et dont son avocat espère un grand succès.</l>
       </sp>
-            <l n="294" xml:id="l294">Dites à son laquais que je vais la lui rendre</l>
-            <l n="295" xml:id="l295">Dans un petit instant, et qu’il n’a qu’à m’attendre.</l>
+            <sp who="#ariste" xml:id="I4-10">
+                <speaker> ARISTE, d’un ton doucereux. </speaker>
+            <l n="289" xml:id="l289">Dites à son laquais que je vais la lui rendre</l>
+            <l n="290" xml:id="l290">Dans un petit instant, et qu’il n’a qu’à m’attendre.</l>
       </sp>
-        <sp who="la-fleur" xml:id="I4-11">
-            <speaker>LA FLEUR.</speaker>
-            <l n="296" xml:id="l296">Vous voyez bien, Monsieur...</l>
+            <sp who="#la-fleur" xml:id="I4-11">
+                <speaker> LA FLEUR. </speaker>
+            <l n="291" xml:id="l291">Vous voyez bien, Monsieur...</l>
       </sp>
-            <l n="297" xml:id="l297">Oui, je vois que j’ai tort.</l>
+            <sp who="#ariste" xml:id="I4-12">
+                <speaker> ARISTE. </speaker>
+            <l n="292" xml:id="l292">Oui, je vois que j’ai tort.</l>
             <stage>Il lui donne de l’argent. </stage>
-            <l n="299" xml:id="l299">Tenez, consolez-vous.</l>
+            <l n="293" xml:id="l293">Tenez, consolez-vous.</l>
          </sp>
          <p>FIN</p>
       </div>
