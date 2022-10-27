@@ -276,7 +276,7 @@ marianne_pwords = get_normalized_scenes(marianne_doc)
 marianne_tristan_pwords = get_normalized_scenes(marianne_tristan_doc)
 scene_2_marianne = get_all_scenes_dialogues(marianne_doc)[1]
 if __name__ == "__main__":
-    print(scene_2_marianne)
+    pass
     # d = count_scenes(corpus,1550, 1750, ["Comédie"])
     # make_fixed_size_graph(d,5,3,True)
 
