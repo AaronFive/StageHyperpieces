@@ -8,6 +8,7 @@ from datetime import date
 
 import enchant.utils
 from enchant import utils
+
 """
     theatredocToBibdramatique, a script to automatically convert 
     HTML theater plays from théâtre-documentation.com
@@ -93,6 +94,7 @@ def remove_html_tags_and_content(s):
     s = s.replace(u'\xa0', u' ')
     return re.sub('<[^>]+>', '', s)
 
+
 def min_dict(d):
     """Returns (key_min, val_min) such that val_min is minimal among values of the dictionnary"""
     val_min = 100
@@ -102,6 +104,7 @@ def min_dict(d):
             val_min = d[x]
             key_min = x
     return key_min, val_min
+
 
 def normalize_character_name(s):
     clean_character_name = s.lower().replace("*", "")
@@ -849,7 +852,8 @@ def find_begin_scene(outputFile, line, counters):
             write_character(outputFile)
             counters["castWritten"] = True
         counters["characterLines"] = []
-        counters["charactersInScene"] = 0
+        counters["repliquesinScene"] = 0
+        counters["charactersinScene"] = ""
         scene = res.group(1)
 
         res = re.search("Scène (.*)", scene)
@@ -861,7 +865,7 @@ def find_begin_scene(outputFile, line, counters):
         if counters["scenesInAct"] == 1:
             outputFile.writelines("""
     <div type="scene" xml:id=\"""" + counters["actNb"] + str(counters["scenesInAct"]) + """\">
-        <head>""" + scene + """</head>""")
+        <head>""" + scene + counters["charactersinScene"] + """</head>""")
         else:
             outputFile.writelines("""
       </sp>
@@ -881,9 +885,19 @@ def find_character(line, counters):
     Returns:
         dict: The refreshed counter
     """
-    res = re.search("<p align=.center.>(.*)</p>", line)
+    # In theatre doc, character declarations can be of the form  :
+    # <p align="center" style="text-align:center"><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">ROBERT.</span></span></p>
+    # This regex captures this and simpler version (without spans)
+    #res = re.search("<p align=.center[^>]+>(?:<[^>]*>)*([^<>]*)(?:<[^>]*>)*</p>", line)
+    res = re.search("<p align=.center[^>]>(.*)</p>", line)
     if res and res.group(1) != "\xa0":
-        counters["characterLines"].append(res.group(1))
+        characters = res.group(1)
+        number_of_characters = len(characters.split(","))  # Checking to see whether this is multiple characters
+        if number_of_characters == 1:  # This is a line from one character only
+            counters["characterLines"].append(res.group(1))
+        else:  # This is a declaration of characters occuring in the scene (TODO: or multiple characters speaking)
+            if counters["charactersinScene"] == "":
+                counters["charactersinScene"] = characters
     return counters
 
 
@@ -907,18 +921,18 @@ def write_text(outputFile, line, counters):
                 outputFile.writelines("""
         <stage>""" + character + """</stage>""")
             if len(counters["characterLines"]) > 0:
-                if counters["charactersInScene"] > 0:
+                if counters["repliquesinScene"] > 0:
                     outputFile.writelines("""
       </sp>""")
                 character = counters["characterLines"].pop(0)
-                counters["charactersInScene"] += 1
+                counters["repliquesinScene"] += 1
 
                 # character is the actual character name, from which we strip html tags.
                 # clean_character will be used to get the corresponding id
                 character = remove_html_tags_and_content(character)
                 clean_character = character
-                # Checking if the character name is preceded by a comma, indicating an action on stage Dracor
-                # convention seems to be to include it as a content of the speaker tag and not in <stage>,
+                # Checking if the character name is preceded by a comma, indicating an action on stage.
+                # Dracor convention seems to be to include it as a content of the speaker tag and not in <stage>,
                 # so we follow this rule
                 has_stage_direction = re.search("([^,]+),.*", clean_character)
                 if has_stage_direction:
@@ -931,7 +945,7 @@ def write_text(outputFile, line, counters):
                 # even when normalizing character names, we often find ids that are not declared
                 # this part aims at correcting that by checking if the name is part of a known id,
                 # or if a known id is part of it
-                # If everything fails, (which happen often), we use edit distance to find the closest one
+                # If everything fails, (which happens often), we use edit distance to find the closest one
                 old_characterId = characterId
                 if characterId not in counters['characterIDList']:
                     if characterId not in counters["undeclaredCharacterIDs"]:
@@ -949,7 +963,8 @@ def write_text(outputFile, line, counters):
                         # characterID has not been guessed with subchains
                         if old_characterId not in counters["undeclaredCharacterIDs"]:
                             closest_id, closest_distance = min_dict(edit_distances)
-                            if closest_distance <= 15:
+                            if closest_distance <= \
+                                    5:
                                 print(f"Guessed {closest_id}, distance {closest_distance} ")
                                 counters["undeclaredCharacterIDs"][characterId] = closest_id
                             else:
@@ -958,12 +973,7 @@ def write_text(outputFile, line, counters):
                                 counters["unguessed_id"] = True
                     else:
                         characterId = counters["undeclaredCharacterIDs"][characterId]
-                # if clean_character in [counters["characterFullNameList"]]:
-                #     characterIdindex = [counters["characterFullNameList"].index(clean_character)]
-                #     characterId = counters["characterIDList"][characterIdindex]
-                # for c in counters["characterFullNameList"]:
-                #     if re.search(c, clean_character):
-                #         characterId = c
+
                 # if characterId == "":
                 #     print(line)
                 #     print("entering characterId if")
@@ -979,10 +989,10 @@ def write_text(outputFile, line, counters):
                 #         # print("Chose characterId " + characterId)
                 outputFile.writelines(f"""
             <sp who=\"#{characterId}\" xml:id=\"{counters["actNb"] + str(counters["scenesInAct"]) + "-" + str(
-                    counters["charactersInScene"])}\">
+                    counters["repliquesinScene"])}\">
                 <speaker> {character} </speaker>""")
 
-            # Checking whether this line is dialogue or stage directions (Aaron)
+            # Checking whether this line is dialogue or stage directions
             res = re.search("<em>(.*)</em>", playLine)
             if res:
                 outputFile.writelines(f"""
@@ -1015,13 +1025,14 @@ def write_end(outputFile):
 
 if __name__ == "__main__":
 
-    #stats temporary
+    # stats temporary
     castnotWritten = 0
     noact = 0
     undeclared_character = 0
     unguessed_character = 0
     totalplays = 0
     stats = open('stats_characters.txt', 'w+')
+
     # Declaration of flags and counters.
     documentNb = 0
     findSummary = False
@@ -1046,7 +1057,8 @@ if __name__ == "__main__":
         # reset parameters
 
         counters = {
-            "charactersInScene": 0,
+            "charactersinScene": "",
+            "repliquesinScene": 0,
             "linesInPlay": 0,
             "linesInScene": 0,
             "scenesInAct": 0,
@@ -1060,7 +1072,7 @@ if __name__ == "__main__":
             "dedicace": False,
             "castWritten": False,
             "undeclaredCharacterIDs": dict(),
-            "unguessed_id" : False #temporary, delete later
+            "unguessed_id": False  # temporary, delete later
         }
         # Reading the file a first time to find the characters
 
@@ -1123,11 +1135,13 @@ if __name__ == "__main__":
             # Find the beginning of a scene
             line, counters = find_begin_scene(outputFile, line, counters)
 
-            # Find the list of characters on stage
-            counters = find_character(line, counters)
+            if counters["actsInPlay"] >= 1 or counters["scenesInAct"] >=1:
 
-            # Write the list of characters on stage
-            counters = write_text(outputFile, line, counters)
+                # Find the list of characters on stage
+                counters = find_character(line, counters)
+
+                # Write the list of characters on stage
+                counters = write_text(outputFile, line, counters)
 
         write_end(outputFile)
 
@@ -1135,7 +1149,8 @@ if __name__ == "__main__":
         copy_playtext.close()
 
         if len(counters["undeclaredCharacterIDs"]) == 0:
-            os.replace(join(Dracor_Folder, fileName.replace("html", "xml")), join(clean_Dracor_Folder, fileName.replace("html", "xml")))
+            os.replace(join(Dracor_Folder, fileName.replace("html", "xml")),
+                       join(clean_Dracor_Folder, fileName.replace("html", "xml")))
 
         if len(counters["characterIDList"]) == 0:
             castnotWritten += 1
@@ -1146,7 +1161,6 @@ if __name__ == "__main__":
         if counters["unguessed_id"]:
             unguessed_character += 1
         totalplays += 1
-
 
     # date_file.close()
 

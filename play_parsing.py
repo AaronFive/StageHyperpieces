@@ -3,8 +3,9 @@
 @author: aaron
 Collection of functions used to parse XML-TEI plays
 """
-import glob, os, re, sys, requests, math, csv, enchant, warnings
+import glob, os, re, sys, requests, math, csv,warnings
 import ast
+#import enchant
 from xml.dom import minidom
 
 import pickle
