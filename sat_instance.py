@@ -1,10 +1,13 @@
+import os
 import random
+import time
 
 import play_parsing
 import parameterized_matching
 import re
 from scene_speech_repartition import normalize_scene, scene_2_marianne
 import doctest
+from xml.dom import minidom
 
 
 # This file implements the max-sat reduction
@@ -184,11 +187,11 @@ def encode_scenes(scene1, scene2, name = 'test'):
     s = make_sat_instance([str(d1), str(d2)], u, v)
     output_for_maxhs.write(s)
     output_for_maxhs.close()
-
+    return name + 'input_maxhs', d1, d2
 
 #Given a maxhs output file, translate it
-def decode_max_hs_output(d1, d2, u, v, name='test'):
-    answer = input("Donnez la réponse de maxHS (lignes avec v uniquement)")
+def decode_max_hs_output(d1, d2, u, v, maxhs_answer, name='test'):
+    answer = open(maxhs_answer, 'r')
     output_human = open(name + 'output_humain', 'w')
     positives = answer.split('\n')
     positives = [re.sub('[^0,1]', '', x) for x in positives]
@@ -211,6 +214,26 @@ def decode_max_hs_output(d1, d2, u, v, name='test'):
                     output_human.write(f"y_{a, b} ({invert_dic(d1,a)} renommé en {invert_dic(d2,b)})\n")
                 else:
                     print('warning : too many variables')
+
+
+def compare_pieces(f1, f2):
+    piece1 = minidom.parse(open(f1, 'rb'))
+    piece2 = minidom.parse(open(f2, 'rb'))
+    title1,title2 = play_parsing.get_title(piece1),play_parsing.get_title(piece2)
+    acts1, acts2 = play_parsing.get_all_acts_dialogues(piece1), play_parsing.get_all_acts_dialogues(piece2)
+    if len(acts1) != len(acts2):
+        raise ValueError(f"{title1} and {title2} do not have the same number of acts ({len(acts1)} and {len(acts2)}")
+    for a1, a2 in zip(acts1, acts2):
+        input_name, d1, d2 = encode_scenes(a1, a2, f'{title1} et {title2}')
+        output_name = f"{input_name}_output"
+        os.system(f"/usr/local/MaxHS-2021_eval/build/release/bin/maxhs -printSoln {input_name} > {output_name}")
+        while not os.path.exists(f"{output_name}"):
+            time.sleep(1)
+        if os.path.isfile(f"{output_name}"):
+            decode_max_hs_output(d1, d2, a1, a2, output_name,f'comparaison {title1} et {title2}')
+        else:
+            raise ValueError(f"{output_name} isn't a file!")
+
 
 
 
@@ -247,5 +270,8 @@ if __name__ == "__main__":
     # f.write(s)
     # f.close()
     #decode_max_hs_output(dico_medee1,dico_medee1,Medee_v1,Medee_v2, "MedeeV")
-    doctest.testmod()
-    print('ok')
+    # doctest.testmod()
+    # print('ok')
+    didon1 = os.path.join('corpustestdidon', '108_JODELLE_DIDON.xml')
+    didon2 = os.path.join('corpustestdidon', '218_Théâtre complet. Tome I - Didon se sacrifiant.xml')
+    compare_pieces(didon1, didon2)

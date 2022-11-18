@@ -161,6 +161,14 @@ def get_all_scenes_dialogues(doc):
     return [get_stances_succession(s) for s in scene_list]
 
 
+def get_all_acts_dialogues(doc):
+    """Returns the succession of characters talking, in all acts"""
+    scene_list = doc.getElementsByTagName('div2')
+    scene_list = scene_list + doc.getElementsByTagName('div')
+    scene_list = [s for s in scene_list if s.getAttribute("type") == "act"]
+    return [get_stances_succession(s) for s in scene_list]
+
+
 def get_fixed_parameterized_play(play):
     """Returns a paramterized play after correction of character names """
     sc = get_scenes(play)
