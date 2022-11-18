@@ -27,10 +27,10 @@ corpus_acts_separed = 'Pickled Dracor/separed_acts_dracor.pkl'
 
 
 #Temp : Marianne
-marianne_file = os.path.join(folder,'Corpus', 'Marianne', 'EMOTHE0544_Mariamne.xml')
-marianne_doc = minidom.parse(open(marianne_file, 'rb'))
-marianne_tristan_file = os.path.join(corpusFolder, 'tristan-mariane.xml')
-marianne_tristan_doc = minidom.parse(open(marianne_tristan_file, 'rb'))
+# marianne_file = os.path.join(folder,'Corpus', 'Marianne', 'EMOTHE0544_Mariamne.xml')
+# marianne_doc = minidom.parse(open(marianne_file, 'rb'))
+# marianne_tristan_file = os.path.join(corpusFolder, 'tristan-mariane.xml')
+# marianne_tristan_doc = minidom.parse(open(marianne_tristan_file, 'rb'))
 
 
 
