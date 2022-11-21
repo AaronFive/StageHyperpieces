@@ -5,10 +5,10 @@ import time
 import play_parsing
 import parameterized_matching
 import re
-from scene_speech_repartition import normalize_scene, scene_2_marianne
+from scene_speech_repartition import normalize_scene
 import doctest
 from xml.dom import minidom
-
+from unidecode import unidecode
 
 # This file implements the max-sat reduction
 
@@ -109,7 +109,8 @@ def make_sat_instance(comments, string_1, string_2):
 
     # Comments in the output have to be prefixed by c
     # comments is a list of strings
-    comments_list = [" ".join(["c", x]) for x in comments]
+    # unidecode suppress weird characters that may trip up maxhs parsing (?)
+    comments_list = [" ".join(["c", unidecode(x)]) for x in comments]
     comment_string = "\n".join(comments_list)
 
     # top is the weight we use to specify a clause is hard in max sat.
@@ -187,21 +188,20 @@ def encode_scenes(scene1, scene2, name = 'test'):
     s = make_sat_instance([str(d1), str(d2)], u, v)
     output_for_maxhs.write(s)
     output_for_maxhs.close()
-    return name + 'input_maxhs', d1, d2
+    return name + 'input_maxhs', d1, d2, u,v
+
 
 #Given a maxhs output file, translate it
 def decode_max_hs_output(d1, d2, u, v, maxhs_answer, name='test'):
     answer = open(maxhs_answer, 'r')
     output_human = open(name + 'output_humain', 'w')
-    positives = answer.split('\n')
-    positives = [re.sub('[^0,1]', '', x) for x in positives]
-    positives = "".join(positives)
-    positives = [int(x) for x in positives]
+    positives = answer.readlines()
+    # positives = [re.sub('[^0,1]', '', x) for x in positives]
+    # positives = "".join(positives)
+    good_line = [x for x in positives if x[0] == 'v'][0]
+    positives = [int(x) for x in good_line if x in ['0', '1']]
     x_dict, y_dict = make_corresp_dictionnaries(u, v)
     output_human.write("Littéraux vrais :")
-    print(f"x_dic : {x_dict}")
-    print(f"y_dic :{y_dict}")
-    print(positives)
     for (i, truth_value) in enumerate(positives):
         if truth_value == 1:
             pos = invert_dic(x_dict, i + 1)
@@ -216,23 +216,30 @@ def decode_max_hs_output(d1, d2, u, v, maxhs_answer, name='test'):
                     print('warning : too many variables')
 
 
-def compare_pieces(f1, f2):
+def compare_pieces(f1, f2, final_output_name, final_output_dir = 'corpus11paires'):
     piece1 = minidom.parse(open(f1, 'rb'))
     piece2 = minidom.parse(open(f2, 'rb'))
-    title1,title2 = play_parsing.get_title(piece1),play_parsing.get_title(piece2)
+    title1,title2 = unidecode(play_parsing.get_title(piece1)), unidecode(play_parsing.get_title(piece2))
     acts1, acts2 = play_parsing.get_all_acts_dialogues(piece1), play_parsing.get_all_acts_dialogues(piece2)
     if len(acts1) != len(acts2):
-        raise ValueError(f"{title1} and {title2} do not have the same number of acts ({len(acts1)} and {len(acts2)}")
-    for a1, a2 in zip(acts1, acts2):
-        input_name, d1, d2 = encode_scenes(a1, a2, f'{title1} et {title2}')
-        output_name = f"{input_name}_output"
-        os.system(f"/usr/local/MaxHS-2021_eval/build/release/bin/maxhs -printSoln {input_name} > {output_name}")
-        while not os.path.exists(f"{output_name}"):
-            time.sleep(1)
-        if os.path.isfile(f"{output_name}"):
-            decode_max_hs_output(d1, d2, a1, a2, output_name,f'comparaison {title1} et {title2}')
-        else:
-            raise ValueError(f"{output_name} isn't a file!")
+        raise ValueError(f"{title1} and {title2} do not have the same number of acts ({len(acts1)} and {len(acts2)})")
+    for (act_number,(a1, a2)) in enumerate(zip(acts1, acts2)):
+        input_name, d1, d2, normalized_a1, normalized_a2 = encode_scenes(a1, a2, f'{title1} et {title2}_acte{act_number}')
+        output_name = f"{input_name}_acte{act_number}_output"
+        os.system(f"/usr/local/MaxHS-2021_eval/build/release/bin/maxhs -printSoln '{input_name}' > '{output_name}'")
+        time.sleep(7)
+        decode_max_hs_output(d1, d2, normalized_a1, normalized_a2, output_name, os.path.join(f'{final_output_dir}', f'Comparaison {final_output_name}  actes {act_number}'))
+        print(f'done for act {act_number}')
+
+
+def compare_pieces_corpus(folder):
+    """folder must contain folders with a pair of plays to compare """
+    folders = os.listdir(folder)
+    for f in folders:
+        pair_name = f
+        plays = os.listdir(f)
+        play1, play2 = plays[0], plays[1]
+        compare_pieces(play1, play2, pair_name)
 
 
 
