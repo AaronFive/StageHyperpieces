@@ -163,9 +163,8 @@ def get_all_scenes_dialogues(doc):
 
 def get_all_acts_dialogues(doc):
     """Returns the succession of characters talking, in all acts"""
-    scene_list = doc.getElementsByTagName('div2')
-    scene_list = scene_list + doc.getElementsByTagName('div')
-    scene_list = [s for s in scene_list if s.getAttribute("type") == "act"]
+    scene_list = doc.getElementsByTagName('div') + doc.getElementsByTagName('div1') + doc.getElementsByTagName('div2')
+    scene_list = [s for s in scene_list if s.getAttribute("type") in ["act", "acte"]]
     return [get_stances_succession(s) for s in scene_list]
 
 
