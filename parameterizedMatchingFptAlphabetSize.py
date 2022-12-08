@@ -1,6 +1,25 @@
 import io, itertools
 from Levenshtein import distance
 
+"""
+    parameterizedMatchingFptAlphabetSize v1.0, 2022-12-05
+    Solving the parameterized matching problem between two strings,
+    with Levenshtein distance and injective variable renaming functions
+    Copyright (C) 2022 - Philippe Gambette
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    
+"""
+
 def allPermutationsAfterElement(list,i):
    result = []
    if i==len(list)-1:
@@ -58,6 +77,10 @@ def buildString(integerList, characterIntegerList):
    return string
 
 # Return the Levenshtein parameterized distance between `a` and `b` if the variables are linked by an injection
+# FPT algorithm in the size of the alphabets of the two input strings
+# Complexity if s1 is the size of the smallest alphabet of the two input strings
+# and s2 is the size of the alphabet of the other input strings: 
+# O(s1! * A(s2, s1) * poly(size of input strings)) where A(n,k) is the number of arrangements of k elements among n
 def parameterizedAlignment(a, b):
    
    # Put the smallest string in a
@@ -109,11 +132,11 @@ def parameterizedAlignment(a, b):
    bestTransformedB = ""
    bestPerm = []
    bestSubset = []
-   # Complexity: 0(s1 ! * A(s2, s1)) where A(n,k) is the number of arrangements of k elements among n
    for perm in permutations:
       transformedA = buildString(aIntegerList, perm)
       for sub in allSubs:
          transformedB = buildString(bIntegerList, sub)
+         # below, weights=(1,1,1) for classical Levenshtein distance, weights=(1,1,10) for deletion/insertion distance
          dist = distance(transformedA, transformedB, weights=(1,1,10))
          if dist < smallestDistance:
             smallestDistance = dist
@@ -178,25 +201,16 @@ parameterizedAlignment("AABABABABABABCDCDEDCFBGBGBGBGGCGCGCGCGCGCGCGCGCGCFCFCFEF
 parameterizedAlignment("ABABABACACDCDCACBEBFGFGFBFEFFCFAF","ABABABABABABABABABABACACACACACACACACACACACACACACACACACACACACDCDCDCDCDECECECECECECECFECEDECEGHCHECE")
 """
 parameterizedAlignment("ABABABCDEDEDEDEFEFEFEGEGEGEHCDCHIHCGJHIBHCICHCDGBEIGBECHEGBHC","ABABABABABABABABABABABBABABABABABABABABABCACACACACACACACACACACACACACACACACACACACACACACACACACACDACADADACABEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEBEB")
-
-
 parameterizedAlignment("ABABABABAABABACBABCBCAACACACACACACACACACACACACACBABABABABABABABABABCDCDCDCEBAEBAFDFDABEDCACACACABABDCDFCABCACACACBACACDACAGBADADACDCDBDCD","ABCBCBCBCBCBCACACACACACACACDEFGAGHIAJCDGKFCDACACGAGACDACACACDAGCIDCIHG")
-
 parameterizedAlignment("ABABABABABCBCBCBCBCBCBCDEFDEDEDFDCECDCDCDCDCDCDCDCDCDCDBCBDBDBDBDCBCBCDBGAGAGAGAGAGAGAGADHDGBGBCDGDGDHBGBGDAGAHDCHIACIDH","ABCABADEFGHEHEHFDGFGFDIABDJDADADICDIDIDIDIDIDIDIDIDIJI")
-
 parameterizedAlignment("ABABABABCDCECEFCDEDEC","AABABABACACBCBABABADEFGABABABABABABABAHABABABAAIAIAIAIAIAIAHAAJA")
-
 parameterizedAlignment("ABACDCDCDCDEFAGAHABABABABGHCICEFEFEJFJEFE","ABACACACACACAADEAEAEABABABA")
-
 parameterizedAlignment("ABCBDADADBABABABABABABDCADABABABEBCBADADADADADADADADADADADADADADADADADADADADADA","ABABCABACBABDEDEDEDEDFGFGFGFGFGHDADHDIHJAJAJAJAJAJAJ")
-
-
 parameterizedAlignment("ABACACACACACACACACACACACACACAC","ABABABACBABABABCBABABCBDEFEFEFGEGEGEGEGEGEGEGEGEGEGEFGEGEGFGHIHIBHIBICHBIGJGCBCIBCGJIGCGHJGIGIBGIGBIGBGBHIHHKHKHKHKHKHKHKHKHKHKHKHKHKHKHK")
 parameterizedAlignment("ABCBCBABABABDADBDCDCDCEFEABEADAEFEFGAGAEGEGAFBDAEGACHDHAHEHEHAFDBEHAD","ABABABABACDCDEFEFEFEFGEADAFHABDADADFCBCBAGIJIJIJIJIJIJIJIJIJIJIJIJIJIJIJIJIJIJIJIJIJKDFDBFBJGDADA")
 parameterizedAlignment("ABABACADAEAFAGHIGJKHJGHIGJIHJGHIGJIHJAFAFADABAF","ABABABABAACDCACACACACACACACDCDCDCDEDEDEDEDEDEDEDEDECBDBDBCBDCDCDCDCDCDCDCDCDCDBCBDCBDFCDADAGHGH")
 parameterizedAlignment("ABCBDEFGHIAICAJKJKAJAJAJAJAJAJA","ABACDCDCDCDCDCDCDCDCDCDCDCDCDCEFEFEFEFEFEFEFEFDFDFDFDFDCDFDGDGDGDCFCDFCFCFCFCFCFECECECECECECEHEHEHEHEHEHEHEHEHEHEHABABA")
 parameterizedAlignment("AABABBCBCBCBCDADADADDEDEDEDEEFDFDGAHGHGFDHGGHEHFHECIFEAJHKEKHGKGDEFEBIBBCGHAFADJIHIHA","ABABACACABADEDEDEDEDEDEFGHIDFEFEFDEFEFEFEFEFEFEFEFEDGHIDEAFIGDEFADADEICEFIEGDGBDEFAEDHAIBGBG")
-
 parameterizedAlignment("ABCDAAEFAGHIJGKLKLK","ABABABAACACACDCDCCECEC")
 """
 
