@@ -3,9 +3,9 @@
 @author: aaron
 Collection of functions used to parse XML-TEI plays
 """
-import glob, os, re, sys, requests, math, csv,warnings
+import glob, os, re, sys, requests, math, csv, warnings
 import ast
-#import enchant
+# import enchant
 from xml.dom import minidom
 
 import pickle
@@ -25,13 +25,13 @@ corpus_plays = 'Pickled Dracor/full_plays_dracor.pkl'
 corpus_acts_merged = 'Pickled Dracor/merged_acts_dracor.pkl'
 corpus_acts_separed = 'Pickled Dracor/separed_acts_dracor.pkl'
 
+# Temp : Marianne
+marianne_file = os.path.join(folder, 'Corpus', 'Marianne', 'EMOTHE0544_Mariamne.xml')
+marianne_doc = minidom.parse(open(marianne_file, 'rb'))
 
-#Temp : Marianne
-# marianne_file = os.path.join(folder,'Corpus', 'Marianne', 'EMOTHE0544_Mariamne.xml')
-# marianne_doc = minidom.parse(open(marianne_file, 'rb'))
+
 # marianne_tristan_file = os.path.join(corpusFolder, 'tristan-mariane.xml')
 # marianne_tristan_doc = minidom.parse(open(marianne_tristan_file, 'rb'))
-
 
 
 # Fetching data from a play. Inputs are XML-TEI files parsed by minidom
@@ -151,6 +151,32 @@ def get_scenes(doc):
     scene_list = scene_list + doc.getElementsByTagName('div')
     scene_list = [s for s in scene_list if s.getAttribute("type") == "scene"]
     return [get_characters_in_scene(s) for s in scene_list]
+
+
+def get_scene_text(scene):
+    """"Given a scene, returns a list of the form [(locutor, text said by locutor)]"""
+    speaker_list = scene.getElementsByTagName('sp')
+    full_text = []
+    for speaker_nodes in speaker_list:
+        sentences = speaker_nodes.getElementsByTagName('l')
+        sentences = sentences + speaker_nodes.getElementsByTagName('s')
+        text = ' '.join([s.firstChild.nodeValue for s in sentences if s.childNodes])
+        locutor_node = speaker_nodes.getElementsByTagName('speaker')
+        if locutor_node and locutor_node[0].childNodes:
+            locutor_name = locutor_node[0].firstChild.nodeValue
+        else:
+            locutor_name = None
+        full_text.append((locutor_name, text))
+    return full_text
+
+
+def get_full_text(doc):
+    scene_list = doc.getElementsByTagName('div2')
+    scene_list = scene_list + doc.getElementsByTagName('div')
+    scene_list = [s for s in scene_list if s.getAttribute("type") == "scene"]
+    full_text_list = [get_scene_text(s) for s in scene_list]
+    flattened_list = [t for f in full_text_list for t in f]
+    return flattened_list
 
 
 def get_all_scenes_dialogues(doc):
@@ -512,17 +538,17 @@ def check_character_rule(c, genre):
     output_char_rule.write(f"{nb_wrong} {genre} brisent les règles sur {nb_genre}\n")
 
 
-def test( siecle_1, siecle_2, corpus):
-    compteur_siecle_1, compteur_siecle_2 = 0,0
+def test(siecle_1, siecle_2, corpus):
+    compteur_siecle_1, compteur_siecle_2 = 0, 0
     for piece in corpus:
         date = get_date(piece)
         for scene in piece:
             persos = get_characters_in_scene(scene)
-            if all () : #vérifie si chacun des personnages est une femme
-               if date >= siecle_1 and date<= siecle_1:
-                   compteur_siecle_1 += 1
-               if date >= siecle_2 and date <= siecle_2:
-                   compteur_siecle_2 += 1
+            if all():  # vérifie si chacun des personnages est une femme
+                if date >= siecle_1 >= date:
+                    compteur_siecle_1 += 1
+                if date >= siecle_2 >= date:
+                    compteur_siecle_2 += 1
     return compteur_siecle_1, compteur_siecle_2
 
 
@@ -531,8 +557,9 @@ if __name__ == "__main__":
     # docs = pickle.load(open(corpus_docs, 'rb'))
     # print('Done')
     # print (get_genre(docs['Mariamne']))
-    marianne_play = get_fixed_parameterized_play(marianne_doc)
-    print(marianne_play)
+    marianne_text = get_full_text(marianne_doc)
+    for (speaker,text) in marianne_text:
+        print(f'{speaker} : {text}')
 
     # c_a = open(corpus_acts_merged,'rb')
     # plays = pickle.load(c_a)
@@ -550,4 +577,3 @@ if __name__ == "__main__":
     # print(r)
     # create_csv_output(corpus, "Dracor_parameterized_plays")
     # generic_corpus_traversal_1(corpus, [check_rule_1_play, check_rule_2_play, check_rule_4_play, check_rule_5_play ],'rules_douguet', True)
-
