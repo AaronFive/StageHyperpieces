@@ -5,7 +5,7 @@ Collection of functions used to parse XML-TEI plays
 """
 import glob, os, re, sys, requests, math, csv, warnings
 import ast
-# import enchant
+import enchant
 from xml.dom import minidom
 
 import pickle
@@ -25,13 +25,6 @@ corpus_plays = 'Pickled Dracor/full_plays_dracor.pkl'
 corpus_acts_merged = 'Pickled Dracor/merged_acts_dracor.pkl'
 corpus_acts_separed = 'Pickled Dracor/separed_acts_dracor.pkl'
 
-# Temp : Marianne
-marianne_file = os.path.join(folder, 'Corpus', 'Marianne', 'EMOTHE0544_Mariamne.xml')
-marianne_doc = minidom.parse(open(marianne_file, 'rb'))
-
-
-# marianne_tristan_file = os.path.join(corpusFolder, 'tristan-mariane.xml')
-# marianne_tristan_doc = minidom.parse(open(marianne_tristan_file, 'rb'))
 
 
 # Fetching data from a play. Inputs are XML-TEI files parsed by minidom
@@ -160,6 +153,7 @@ def get_scene_text(scene):
     for speaker_nodes in speaker_list:
         sentences = speaker_nodes.getElementsByTagName('l')
         sentences = sentences + speaker_nodes.getElementsByTagName('s')
+        sentences = sentences + speaker_nodes.getElementsByTagName('stage')
         text = ' '.join([s.firstChild.nodeValue for s in sentences if s.childNodes])
         locutor_node = speaker_nodes.getElementsByTagName('speaker')
         if locutor_node and locutor_node[0].childNodes:
@@ -551,15 +545,27 @@ def test(siecle_1, siecle_2, corpus):
                     compteur_siecle_2 += 1
     return compteur_siecle_1, compteur_siecle_2
 
+# Temp : Marianne
+argenson_file = os.path.join(folder, 'Corpus', 'corpusDracor', 'anonyme-reception-argenson.xml')
+argenson_doc = minidom.parse(open(argenson_file, 'rb'))
+
+# nostradamus_file = os.path.join(corpusFolder, 'taconet-nostradamus.xml')
+# nostradamus_doc = minidom.parse(open(nostradamus_file, 'rb'))
+
+# zoro_pp = get_all_acts_dialogues(zoroastre_doc)
+# nostra_pp = get_all_acts_dialogues(nostradamus_doc)
+
 
 if __name__ == "__main__":
+    print(get_full_text(argenson_doc))
+    print('done')
     # print("Loading")
     # docs = pickle.load(open(corpus_docs, 'rb'))
     # print('Done')
     # print (get_genre(docs['Mariamne']))
-    marianne_text = get_full_text(marianne_doc)
-    for (speaker,text) in marianne_text:
-        print(f'{speaker} : {text}')
+    # marianne_text = get_full_text(marianne_doc)
+    # for (speaker,text) in marianne_text:
+    #     print(f'{speaker} : {text}')
 
     # c_a = open(corpus_acts_merged,'rb')
     # plays = pickle.load(c_a)
