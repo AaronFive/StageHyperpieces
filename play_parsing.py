@@ -6,12 +6,14 @@ Collection of functions used to parse XML-TEI plays
 import glob, os, re, sys, requests, math, csv, warnings
 import ast
 import enchant
+import pydracor
 from xml.dom import minidom
-
+import networkx as nx
 import pickle
 import parameterized_matching
 from rules_checker import *
 from parameterized_matching import spm, spm_hamming, annotate_characters
+from Levenshtein import distance
 
 # Get the current folder
 folder = os.path.abspath(os.path.dirname(sys.argv[0]))
@@ -25,6 +27,12 @@ corpus_plays = 'Pickled Dracor/full_plays_dracor.pkl'
 corpus_acts_merged = 'Pickled Dracor/merged_acts_dracor.pkl'
 corpus_acts_separed = 'Pickled Dracor/separed_acts_dracor.pkl'
 
+
+def get_play_from_file(file):
+    """Returns a document object from a file"""
+    f = open(file, 'rb')
+    play = minidom.parse(f)
+    return play
 
 
 # Fetching data from a play. Inputs are XML-TEI files parsed by minidom
@@ -71,6 +79,8 @@ def get_genre(doc):
     return genre
 
 
+# Many pays have multiple <titles> tags. This functions returns the content of the first one, because it usually contains the actual title
+# Additional title nodes usually contain information such as subtitle, genre, versification, if the play is in multiple parts, etc
 def get_title(doc):
     """Returns the title of a play"""
     title_nodes = doc.getElementsByTagName('title')
@@ -78,6 +88,22 @@ def get_title(doc):
         return title_nodes[0].firstChild.nodeValue
     else:
         warnings.warn("No title found")
+
+
+def get_dracor_id(doc):
+    id_nodes = doc.getElementsByTagName('idno')
+    id = None
+    for n in id_nodes:
+        if n.getAttribute('type') == "dracor":
+            if id is None:
+                id = n.firstChild.nodeValue
+            else:
+                title = get_title(doc)
+                warnings.warn(f'Play {title} has multiple ids')
+    if id is None:
+        title = get_title(doc)
+        warnings.warn(f'Play {title} has no id')
+    return id
 
 
 def get_date(doc):
@@ -165,6 +191,9 @@ def get_scene_text(scene):
 
 
 def get_full_text(doc):
+    """ Given a play, returns the list of the whole text in the form [(locutor, text said by locutor)].
+    This removes the separation by acts and scenes.
+    #TODO: Adapt to make it work on plays with no scenes. How many are there ?"""
     scene_list = doc.getElementsByTagName('div2')
     scene_list = scene_list + doc.getElementsByTagName('div')
     scene_list = [s for s in scene_list if s.getAttribute("type") == "scene"]
@@ -181,11 +210,14 @@ def get_all_scenes_dialogues(doc):
     return [get_stances_succession(s) for s in scene_list]
 
 
-def get_all_acts_dialogues(doc):
+def get_all_acts_dialogues(doc, split_by_act=False):
     """Returns the succession of characters talking, in all acts"""
-    scene_list = doc.getElementsByTagName('div') + doc.getElementsByTagName('div1') + doc.getElementsByTagName('div2')
-    scene_list = [s for s in scene_list if s.getAttribute("type") in ["act", "acte"]]
-    return [get_stances_succession(s) for s in scene_list]
+    act_list = doc.getElementsByTagName('div') + doc.getElementsByTagName('div1') + doc.getElementsByTagName('div2')
+    act_list = [s for s in act_list if s.getAttribute("type") in ["act", "acte"]]
+    if not split_by_act:
+        return [get_stances_succession(s) for s in act_list]  # The scenes in an act are merged
+    else:
+        return [get_all_scenes_dialogues(s) for s in act_list]  # The scenes in an act are not merged
 
 
 def get_fixed_parameterized_play(play):
@@ -261,6 +293,7 @@ def get_characters_in_scene(s):
 
 
 def get_stances_succession(s):
+    """Given a scene s, returns the list of name of characters talking"""
     repliques = s.getElementsByTagName('sp')
     scene = [r.getAttribute("who") for r in repliques]
     return scene
@@ -320,7 +353,7 @@ def get_corpus_parameterized_plays(corpus):
     """Returns a dictionnary whose keys are play names and values are paramaterized plays"""
     res = dict()
     for c in os.listdir(corpus):
-        play = minidom.parse(open(os.path.join(corpus, c), 'rb'))
+        play = get_play_from_file(os.path.join(corpus, c))
         play_name = get_title(play)
         res[play_name] = get_parameterized_play(play)
         print('Parsing ' + play_name)
@@ -332,7 +365,7 @@ def get_corpus_parameterized_acts(corpus, act_types="separate"):
         If act_types is "merged", keys are play_name and values are list of acts """
     res = dict()
     for c in os.listdir(corpus):
-        play = minidom.parse(open(os.path.join(corpus, c), 'rb'))
+        play = get_play_from_file(os.path.join(corpus, c))
         play_name = get_title(play)
         print('Parsing ' + play_name)
         acts = get_acts(play)
@@ -401,7 +434,7 @@ def create_csv_output(corpus, output_name):
     gwriter = csv.DictWriter(output, fieldnames=fieldnames)
     gwriter.writeheader()
     for c in os.listdir(corpus):
-        play = minidom.parse(open(os.path.join(corpus, c), 'rb'))
+        play = get_play_from_file(os.path.join(corpus, c))
         d = get_rich_dictionnary_play(play)
         for f in fieldnames:
             if f not in d:
@@ -461,7 +494,7 @@ def check_corpus(corpus):
     size = 0
     for c in os.listdir(corpus):
         size += 1
-        doc = minidom.parse(open(os.path.join(corpus, c), 'rb'))
+        doc = get_play_from_file(os.path.join(corpus, c))
         if differences_cast_declaration(doc):
             mismatches += 1
     print("size : ", size, "mismatches : ", mismatches)
@@ -473,7 +506,7 @@ def create_outputs_structure(corpus):
     output_acts = open(os.path.join(outputFolder, "Outputactes") + corpus + ".txt", 'w+')
     all_acts = []
     for c in os.listdir(corpus):
-        play = minidom.parse(open(os.path.join(corpus, c), 'rb'))
+        play = get_play_from_file(os.path.join(corpus, c))
         play_name = get_title(play)
         print(play_name)
         acts = get_acts(play)
@@ -490,7 +523,7 @@ def create_outputs_structure(corpus):
 def create_output_pathwidth(corpus):
     output_pathwidth = open(os.path.join(outputFolder, "Outputpathwidth") + corpus + ".txt", 'w+')
     for c in os.listdir(corpus):
-        play = minidom.parse(open(os.path.join(corpus, c), 'rb'))
+        play = get_play_from_file(os.path.join(corpus, c))
         play_name = get_title(play)
         print(play_name)
         scenes = get_scene(play)
@@ -532,33 +565,144 @@ def check_character_rule(c, genre):
     output_char_rule.write(f"{nb_wrong} {genre} brisent les règles sur {nb_genre}\n")
 
 
-def test(siecle_1, siecle_2, corpus):
-    compteur_siecle_1, compteur_siecle_2 = 0, 0
-    for piece in corpus:
-        date = get_date(piece)
-        for scene in piece:
-            persos = get_characters_in_scene(scene)
-            if all():  # vérifie si chacun des personnages est une femme
-                if date >= siecle_1 >= date:
-                    compteur_siecle_1 += 1
-                if date >= siecle_2 >= date:
-                    compteur_siecle_2 += 1
-    return compteur_siecle_1, compteur_siecle_2
+def normalized_levenshtein(char1, char2):
+    d = distance(char1[:-1], char2[:-1])
+    s1, s2 = len(char1), len(char2)
+    alignment = (s1 + s2 - d) / 2
+    res = alignment / max(s1, s2)
+    if res < 0.9:
+        res = 0
+    return res
 
-# Temp : Marianne
-argenson_file = os.path.join(folder, 'Corpus', 'corpusDracor', 'anonyme-reception-argenson.xml')
-argenson_doc = minidom.parse(open(argenson_file, 'rb'))
 
-# nostradamus_file = os.path.join(corpusFolder, 'taconet-nostradamus.xml')
-# nostradamus_doc = minidom.parse(open(nostradamus_file, 'rb'))
+def annotate_cast(c, number):
+    if c[0] == '#':
+        new_c = c[1:]
+    return f'{new_c}{number}'
+
+
+def cast_distance(cast1, cast2, distance_function):
+    # Graph construction
+    G = nx.Graph()
+    cast1, cast2 = [annotate_cast(c, 1) for c in cast1], [annotate_cast(c, 2) for c in cast2]
+    nodes_1, nodes_2 = cast1, cast2
+    G.add_nodes_from(nodes_1, bipartite=0)
+    G.add_nodes_from(nodes_2, bipartite=1)
+    weights = {char1: {char2: distance_function(char1, char2) for char2 in cast2} for char1 in cast1}
+    for char1 in cast1:
+        for char2 in cast2:
+            G.add_edge(char1, char2, weight=weights[char1][char2])
+    # Getting maximal matching
+    matching = nx.algorithms.matching.max_weight_matching(G, nodes_1)
+    normalized_matching = dict()
+    total_weight = 0
+    for (c1, c2) in matching:
+        if c1 not in cast1:
+            c1, c2 = c2, c1
+        wc1c2 = weights[c1][c2]
+        normalized_matching[c1] = (c2, wc1c2)
+        total_weight += wc1c2
+    return total_weight, normalized_matching
+
+
+def get_close_plays_by_cast(corpus, cast_file="dracor_casts.pkl", distances_file=None):
+    if cast_file is None:
+        casts = dict()
+        for f in os.listdir(corpus):
+            play = get_play_from_file(os.path.join(corpus, f))
+            cast = get_characters(
+                play)  # Getting characters. We don't fix the character names for efficiency purpose, but maybe that would be better ?
+            title = get_title(play)
+            print(title)
+            casts[title] = cast
+            pickle.dump(casts, open("casts.pkl", 'wb'))
+    else:
+        casts = pickle.load(open(cast_file, 'rb'))
+    if distances_file is None:
+        distances = dict()
+    else:
+        distances = pickle.load(open(distances_file, 'rb'))
+    nb_play_added = 0
+    nb_total_plays = len(casts)
+    # tmp_play_timeout = 50
+    # tmp_play_done = 0
+    for play1 in casts:
+        # if tmp_play_done > tmp_play_timeout:
+        #     break
+        print(play1)
+        if len(distances.get(play1, [])) < len(casts) - 1:
+            if play1 not in distances:
+                distances[play1] = dict()
+            # Checking to see if all couples with play1 have been already computed
+            for play2 in casts:
+                if play2 not in distances.get(play1, dict()) and play1 not in distances.get(play1,
+                                                                                            dict()) and play1 != play2:
+                    weight, matching = cast_distance(casts[play1], casts[play2], normalized_levenshtein)
+                    distances[play1][play2] = weight, matching
+                    if play2 not in distances:
+                        distances[play2] = dict()
+                    distances[play2][play1] = weight, matching
+                nb_play_added += 1
+                percent_done = round(nb_play_added / (nb_total_plays ** 2) * 100, 2)
+                if nb_play_added % 25000 == 0:
+                    pickle.dump(distances, open('distances_cast.pkl', 'wb'))
+                    print(f'saved at {percent_done}%')
+        # tmp_play_done += 1
+        # print(f'done:{tmp_play_done}')
+    pickle.dump(distances, open('distances_cast.pkl', 'wb'))
+    return distances
+
+
+# First we generate a list of cast of plays
 
 # zoro_pp = get_all_acts_dialogues(zoroastre_doc)
 # nostra_pp = get_all_acts_dialogues(nostradamus_doc)
 
+def sort_dict(d):
+    l = [(x, d[x]) for x in d]
+    return sorted(l, key=lambda x: -x[1][1])
+
+
+# make a dict
+# keys are speaker of the plays
+# values are list of repliques said by each speaker
+# Then get a vector representation of every replique, average them
+
+# For every pair of plays :
+# Get the vector of each character
+# Score character similiraty with cosine distance between chars
+# Do a max matching
+def get_speech_of_characters(play):
+    pass
+
 
 if __name__ == "__main__":
-    print(get_full_text(argenson_doc))
-    print('done')
+    distances = pickle.load(open('distances_cast.pkl', 'rb'))
+    output = open('close_plays_by_cast.csv', 'w', newline='', encoding='utf8')
+    fieldnames = ["Play Name", "First closest", "Average distance", "First distance", "Cast Matching 1",
+                  "Second closest", "Cast Matching 2"]
+    gwriter = csv.DictWriter(output, fieldnames=fieldnames)
+    gwriter.writeheader()
+    for play1 in distances:
+        for play2 in distances[play1]:
+            normalized_distance = distances[play1][play2][0]
+            distances[play1][play2] = (normalized_distance, sort_dict(distances[play1][play2][1]))
+    for play1 in distances:
+        print(play1)
+        play1_list = sorted([(x, distances[play1][x]) for x in distances[play1]], key=lambda x: -x[1][0])
+        average_dist1 = sum([distances[play1][x][0] for x in distances[play1]]) / len(distances[play1])
+        top_3_closest = play1_list[:2]
+        csv_row = dict()
+        csv_row["Play Name"] = play1
+        csv_row["Average distance"] = average_dist1
+        csv_row["First distance"] = top_3_closest[0][1][0]
+        csv_row["First closest"] = top_3_closest[0][0]
+        csv_row["Cast Matching 1"] = top_3_closest[0][1][1]
+        csv_row["Second closest"] = top_3_closest[1][0]
+        csv_row["Cast Matching 2"] = top_3_closest[1][1]
+        gwriter.writerow(csv_row)
+
+    # get_close_plays_by_cast(corpusFolder)
     # print("Loading")
     # docs = pickle.load(open(corpus_docs, 'rb'))
     # print('Done')

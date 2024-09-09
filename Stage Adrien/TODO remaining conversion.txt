@@ -1,10 +1,45 @@
-Balises idno for <author>
-In publisher, id in <idno type = author> and in <idno type = wikidata
-<classCode> wikidata id
+Here is a list of the things remaining to do for the conversion : 
+
+==================== HEADER ===============================
+- In <publicationStmt>, :
+	- Balises idno for <author>
+	- In publisher, id in <idno type = author> and in <idno type = wikidata>
+
+-wikidata information :
+	- get the Qid for the genre (tragedy, comedy, ...) in <classCode> wikidata id -> DONE, check for unknown genres if indentation is correct
+	- get the Qid for the author -> gather author names, and use wikidata multisearch
+	- get the Qid for the play, if it exists -> should I create it if it doesn't ?
+
  <docDate when="[vide]">[Date Print Line]</docDate>
 <div type="docImprint">
-SEX characters
 
+- Get the SEX characters from their name -> train small nlp network
+
+- Acts : how to handle plays with no acts declared ? Add an act 1
+	- Plays with no act either have :
+		- Journées/Tableaux/Parties : DONE
+		- Just a PDF (ex : feydeau, billet de mille)
+		- Nothing (ex : )
+- Some plays have no act but scenes DONE
+- Some plays have no scenes (ex: musset sans-dire, chant du cygne, soubrette, all monologues of feydeau, courteline, tristan-bernard)
+	- DIalogues and monologues are cases of this
+	-Idea to solve : check if there are no scenes found after first read, and then read again while checking for dialogue ?
+- Some plays are only plans of plays (diderot) -> keep ? ignore for now ? 
+- 
+
+==================== BODY OF THE PLAY ===============================
+ 
+- present characters in a <stage> (Adrien) balise or in the head (Dracor)
+- xmlid for lines are useless ? Are they just n + 1000 ? 
+- Handle footnotes (<a href="#_ftn25" name="_ftnref25" title="" id="_ftnref25"> type balises) -> <note>
+( I and F parts of repliques)
+- Speakers:
+	- First speaker of a scene is not correctly written
+	- Find correct identifier (as well as possible)
+	- Add special case for choeur
+	- Correct long speaker names with didascalies
+
+- Reference of introduction with all balises :
 <docDate when="1677">M. DC. LXXVII.</docDate>
 		<docAuthor>par Monsieur Thomas Corneille</docAuthor><!--@bio="corneillet"-->
 		<div type="docImprint">
@@ -25,10 +60,3 @@ SEX characters
 		<performance>
 			<ab type="premiere">Représenté pour la première fois le 1é février 1677 au Théâtre Guénégaud.</ab><!--@date="1677-02-12"--><!--@location="Hôtel Guénégaud"-->
 		</performance>
-
-Body of the play : 
-present characters in a <stage> (Adrien) balise or in the head (Dracor)
-xmlid for lines are useless ? Are they just n + 1000 ? 
-Handle footnotes (<a href="#_ftn25" name="_ftnref25" title="" id="_ftnref25"> type balises) -> <note>
-( I and F parts of repliques)
-speakers !

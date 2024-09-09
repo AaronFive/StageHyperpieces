@@ -1,4 +1,7 @@
-from sklearn.feature_extraction.text import CountVectorizer
+"""Functions for the simple NLP comparisons.
+Raw text extraction, vectorization of plays into a single word, and comparisons"""
+
+#from sklearn.feature_extraction.text import CountVectorizer
 import spacy
 from xml.dom import minidom
 import os
@@ -15,7 +18,6 @@ from nltk.corpus import PlaintextCorpusReader
 
 
 nlp_fr = spacy.load("fr_core_news_lg")
-
 corpus = 'corpusDracor'
 corpusraw = 'Texte bruts Dracor'
 stopwords_file = 'StoplistFrench.txt'
@@ -41,7 +43,9 @@ def remove_point(s):
 
 
 def extract_texts_corpus(corpus):
-    """Parse the xml files and produce a raw txt version of the plays, only keeping the spoken text"""
+    """Parse the xml files and produce a raw txt version of the plays, only keeping the spoken text.
+    Resulting text file is of the form LOCUTOR1 : text_said_by_locutor1 LOCUTOR2 : text_said_by_locutor2
+    LOCUTOR1 : text_said_by_locutor1, etc."""
     failed = open('failed_encodings.txt', 'w')
     cp = os.path.join(play_parsing.folder, 'Corpus', corpus)
     for d in os.listdir(cp):
@@ -63,6 +67,35 @@ def extract_texts_corpus(corpus):
             print('Fail')
         saved_d_file.close()
 
+def extract_text_per_speaker(corpus):
+    failed = open('failed_encodings.txt', 'w')
+    translation_dict = {'\x81': None, '\x84': None, '\x85': '...', '\x91': '\'', '\x93': '\"', '\x95': '•', '\x96': '-',
+                        '\uff0c': ',', '\u0144': 'ń', '\u0173': 'ų',
+                        '\u2015': '―'}
+    cp = os.path.join(play_parsing.folder, 'Corpus', corpus)
+    for d in os.listdir(cp):
+        d_file = os.path.join(cp, d)
+        d_doc = minidom.parse(open(d_file, 'rb'))
+        title = play_parsing.get_title(d_doc)
+        print(title)
+        d_text = play_parsing.get_full_text(d_doc)
+        text_by_speaker = dict()
+        for (speaker, speaker_text) in d_text:
+            speaker_text = speaker_text.translate(str.maketrans(translation_dict))
+            if speaker not in text_by_speaker:
+                text_by_speaker[speaker] = [speaker_text]
+            else:
+                text_by_speaker[speaker].append(speaker_text)
+        pickle_filename = d.replace('.xml', '.pkl')
+        saved_d_file = open(os.path.join('Textes par locuteur Dracor', f'{pickle_filename}'), 'wb')
+        try:
+            pickle.dump(text_by_speaker,saved_d_file)
+        except UnicodeEncodeError as e:
+            failed.write(f'{title} : {e} \n')
+            print('Fail')
+        saved_d_file.close()
+
+
 
 # def compute_doc_value(cp):
 #     """Convert txt plays into vector embeddings"""
@@ -78,6 +111,9 @@ def extract_texts_corpus(corpus):
 
 
 def not_stop(tok, stopword_list=None):
+    """Checks if a token is a stopword
+    If stopword_list is provided, it is used as a reference for stopwords.
+    Otherwise, uses spacy predefined list"""
     if stopword_list is None:
         is_stopword = tok.is_stop
     else:
@@ -118,10 +154,10 @@ def generate_two_words_resumes(d):
     for x in d:
         i+=1
         vect_x = d[x]['Spacy']
-        word = nlp_fr.vocab.vectors.most_similar(vect_x.reshape(1,-1), n=3)
-        three_words = 
-        word = nlp_fr.vocab[word[0][0]].text
-        print(x, word)
+        words = nlp_fr.vocab.vectors.most_similar(vect_x.reshape(1,-1), n=3)
+        print(words)
+        three_words = [nlp_fr.vocab[word[0][0]] for word in words]
+        print(x, three_words)
 
 def compute_distances(d):
     distance_dict = dict()
@@ -150,10 +186,19 @@ def denoise_title(s):
     return t1, t2
 
 
-if __name__ == "__main__":
-    d = pickle.load(open('vectorized_texts.pkl','rb'))
-    generate_two_words_resumes(d)
 
+
+if __name__ == "__main__":
+    # cp = 'Textes par locuteur Dracor'
+    # f = os.listdir(cp)[1]
+    # file = os.path.join(cp,f)
+    # pk = open(file,'rb')
+    # print(pk)
+    # txt = pickle.load(pk)
+    # print(txt)
+    extract_text_per_speaker(corpus)
+    # d = pickle.load(open('vectorized_texts.pkl','rb'))
+    # generate_two_words_resumes(d)
     #extract_texts_corpus(corpus)
     # vectorize_without_stopwords(corpusraw, stopwords)
     # d = pickle.load(open('vectorized_texts.pkl', 'rb'))

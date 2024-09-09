@@ -118,7 +118,7 @@ def cleanTitle(str):
     return str.replace(' ','_')
 
 # Get the list of all plays by visiting those pages
-#"""
+"""
 outputFile = open("PlaysFromTheatreDocumentation.csv", "w", encoding="utf-8")
 for url in playListPages:
     print("Extracting the plays from page " + url)
@@ -145,11 +145,11 @@ for url in playListPages:
                 + cleanString(res.group(2)) + "\n")
     time.sleep(1)
 outputFile.close()
-#"""
+"""
 
 characters = []
 # Save each play
-allPlays = open("PlaysFromTheatreDocumentation.csv", "r", encoding="utf-8")
+allPlays = open("PlaysFromTheatreDocumentation_without27first.csv", "r", encoding="utf-8")
 
 for playLine in allPlays:
     res = re.search("([^\t]+)\t([^\t]+)\t([^\t]+)\t([^\t]+)\n", playLine)
