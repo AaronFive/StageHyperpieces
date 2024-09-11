@@ -13,9 +13,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from transformers import BertTokenizer, BertModel
 
 from basic_utilities import pickle_file, OUTPUT_DIR
-from pickled_data import get_tokenized_corpus
+from pickled_data import get_tokenized_corpus, get_title_dict, get_full_text_corpus
 from play_parsing import get_play_from_file, get_dracor_id, get_title, get_full_text
-
+from sentence_transformers import SentenceTransformer
 # import nltk
 # nltk.download('stopwords')
 # from nltk.corpus import stopwords
@@ -24,8 +24,13 @@ from play_parsing import get_play_from_file, get_dracor_id, get_title, get_full_
 # camembert = camembert.cuda()
 # tokenizer = AutoTokenizer.from_pretrained('camembert-base')
 
-tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-model = BertModel.from_pretrained('bert-base-uncased')
+
+print('Loading tokenizer')
+tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
+print('Loading model')
+#model = BertModel.from_pretrained('bert-base-multilingual-cased')
+sentence_model = SentenceTransformer("dangvantuan/sentence-camembert-large")
+
 
 
 # TODO:
@@ -45,21 +50,21 @@ def average_embeddings(embeddings, attention_mask):
     return (attention_mask[..., None] * embeddings).mean(1)
 
 
-# def similarity_score_sentences(sentence1, sentence2):
-#     batch_sentences = [sentence1, sentence2]
-#     tokenizer_output = tokenizer(
-#         batch_sentences,
-#         padding="max_length",
-#         truncation=True,
-#         return_tensors="pt"
-#     )
-#     inputs_ids, attention_masks = tokenizer_output.input_ids, tokenizer_output.attention_mask
-#     with torch.no_grad():
-#         model_output = camembert(inputs_ids, attention_masks, output_hidden_states=True)
-#     token_embeddings = model_output.hidden_states[-1]
-#     avg_sentence_representations = average_embeddings(token_embeddings, tokenizer_output.attention_mask)
-#     avg_similarity_score = F.cosine_similarity(avg_sentence_representations[0], avg_sentence_representations[1], dim=-1)
-#     return avg_similarity_score
+def similarity_score_sentences(sentence1, sentence2):
+    batch_sentences = [sentence1, sentence2]
+    tokenizer_output = tokenizer(
+        batch_sentences,
+        padding="max_length",
+        truncation=True,
+        return_tensors="pt"
+    )
+    inputs_ids, attention_masks = tokenizer_output.input_ids, tokenizer_output.attention_mask
+    with torch.no_grad():
+        model_output = camembert(inputs_ids, attention_masks, output_hidden_states=True)
+    token_embeddings = model_output.hidden_states[-1]
+    avg_sentence_representations = average_embeddings(token_embeddings, tokenizer_output.attention_mask)
+    avg_similarity_score = F.cosine_similarity(avg_sentence_representations[0], avg_sentence_representations[1], dim=-1)
+    return avg_similarity_score
 
 
 # def split_into_parts(sentence, max_token_length):
@@ -207,6 +212,18 @@ def remove_pads(token_list_list):
     return res
 
 
+def get_chunk_embedding(chunk, model):
+    input_ids = torch.tensor(tokenizer.convert_tokens_to_ids(chunk)).unsqueeze(0)
+    # Obtain the BERT embeddings
+    with torch.no_grad():
+        outputs = model(input_ids)
+        embedding = outputs.last_hidden_state[:, 0, :]  # [CLS] token
+    return embedding
+
+def vectorize_sentence(sentence):
+    embedding = sentence_model.encode(sentence)
+    return embedding.item()
+
 def vectorize_tokenized_play(tokenized_play):
     """ Computes embeddings for every line of an already tokenized play.
     If there are too many tokens, cut them into chunks, compute embeddings, and average them.
@@ -220,11 +237,7 @@ def vectorize_tokenized_play(tokenized_play):
         chunks = chunk_tokens(tokens)
         embeddings = []
         for chunk in chunks:
-            input_ids = torch.tensor(tokenizer.convert_tokens_to_ids(chunk)).unsqueeze(0)
-            # Obtain the BERT embeddings
-            with torch.no_grad():
-                outputs = model(input_ids)
-                embedding = outputs.last_hidden_state[:, 0, :]  # [CLS] token
+            embedding = get_chunk_embedding(chunk)
             embeddings.append(embedding)
         line_embedding = sum(embeddings) / len(embeddings)  # TODO : check if the average of all embeddings is correct
         vectorized_full_text.append((locutor, line_embedding))
@@ -265,7 +278,7 @@ def tokenize_corpus(corpusFolder, name='tokenized_plays_dracor'):
         title = get_title(play)
         print(title)
         identifier = get_dracor_id(play)
-        full_text = get_full_text(play)
+        full_text = get_full_text(play, remove_punctuation=True)
         tokenized_text = [(locutor, tokenizer.tokenize(text)) for (locutor, text) in full_text]
         tokenized_plays[identifier] = tokenized_text
         print("tokenizing done")
@@ -361,6 +374,9 @@ def compare_vectorized_corpus(vectorized_corpus):
                 alignments[dracor_id1][dracor_id2] = alignment
     return distances, alignments
 
+def compare_sentence_embeddings(embedding1, embedding2):
+    sim = sentence_model.similarity(embedding1, embedding2)
+    return sim.item()
 
 def compare_embeddings(embeddings1, embeddings2):
     """Computes the semantic similarity between two vectors, using a cosine similarity
@@ -443,9 +459,12 @@ def similarity_to_levenshtein_cost(similarity, max_cutoff, min_cutoff):
                 max_cutoff - min_cutoff)  # Linear interpolation between min and max cutoff
 
 
-def substitution_cost_levenshtein(embedding1, embedding2, max_cutoff=0.99, min_cutoff=0):
+def substitution_cost_levenshtein(embedding1, embedding2, max_cutoff=0.96, min_cutoff=0.7, sentence=False):
     """ Given two embeddings, compute the substitution cost to transform one into the other"""
-    similarity = compare_embeddings(embedding1, embedding2)
+    if sentence:
+        similarity = sentence_model.similarity(embedding1, embedding2)
+    else:
+        similarity = compare_embeddings(embedding1, embedding2)
     cost = similarity_to_levenshtein_cost(similarity, max_cutoff, min_cutoff)
     return cost
 
@@ -474,7 +493,7 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, inserti
     for i in range(1, len1 + 1):
         dist[i][0] = dist[i - 1][
                          0] + 1  # deletion_cost(seq1[i - 1]) TODO: put back parametrization, done to try speeding the process up
-    for j in range(len2 + 1):
+    for j in range(1, len2 + 1):
         dist[0][j] = dist[0][j - 1] + 1  # insertion_cost(seq2[j - 1])
 
     print('computing distance...')
@@ -512,7 +531,6 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, inserti
 
     return dist[len1][len2], alignment
 
-
 def visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1_title='Play_1', play_2_title='Play_2'):
     rows = []
     for (play_1_element, play_2_element, cost) in alignment:
@@ -523,6 +541,7 @@ def visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1
         else:
             line_number = play_1_element
             line_1 = play_1_text[line_number]
+
         if play_2_element == '-':
             operation_type = "Insertion"
             line_2 = ""
@@ -541,11 +560,49 @@ def visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1
         rows.append({'Play 1': line_1, 'Play2': line_2, 'Op symbol1': play_1_element, 'Op symbol2': play_2_element,
                      'Cost': round(cost, 2), 'Operation Type': operation_type})
     visualization = pd.DataFrame(rows)
-    visualization.to_csv(f'alignement_{play_1_title}_{play_2_title}.csv')
+    visualization.to_csv(f'Outputs/Alignements/alignement_{play_1_title}_{play_2_title}.csv')
 
+
+def compare_play_from_files(file1, file2):
+    play1,play2 = get_play_from_file(file1), get_play_from_file(file2)
+    title1,title2 = get_title(play1), get_title(play2)
+    full_text_1, full_text_2 = get_full_text(play1, True), get_full_text(play2, True)
+    tok1, tok2 = [(locutor, tokenizer.tokenize(text)) for (locutor, text) in full_text_1], [(locutor, tokenizer.tokenize(text)) for (locutor, text) in full_text_2]
+    vec_1, vec_2 = vectorize_tokenized_play(tok1), vectorize_tokenized_play(tok2)
+    dist, alignement = compare_vectorized_plays(vec_1, vec_2)
+    print(f'Distance: {dist}')
+    visualize_levenshtein_alignement(alignement, full_text_1, full_text_2, title1, title2)
 
 if __name__ == "__main__":
-    # Testing the code on the close plays corpus
+
+    # # Generate alignment from 2 plays
+    # file_1 = 'Corpus/Corpus pieces tres proches/8 - Didon se sacrifiant.xml'
+    # file_2 = 'Corpus/Corpus pieces tres proches/8-JODELLE-DIDON.xml'
+    # compare_play_from_files(file_1, file_2)
+
+
+    # Test on punctuation
+    # test_text_1 =  "Écoutez, et vous saurez comment Son trépas seul m'oblige à cet éloignement. Après six ans passés, depuis notre voyage, Dans les plus grands plaisirs qu'on goûte au mariage, Mon père, tout caduc, émouvant ma pitié, Je conjurai Médée, au nom de l'amitié..."
+    # test_text_1_punct = "Écoutez, et vous saurez comment Son trépas seul m'oblige à cet éloignement. Après six ans passés, depuis notre voyage, Dans les plus grands plaisirs qu'on goûte au mariage, Mon père, tout caduc, émouvant ma pitié, Je conjurai Médée, au nom de l'amitié."
+    # test_text_2 = "Écoutez, et vous saurez comment Son trépas seul me force à cet éloignement. Après six ans passés, depuis notre voyage, Dans les plus grands plaisirs qu'on goûte au mariage, Mon père tout caduc émouvant ma pitié, Je conjurai Médée, au nom de l'amitié."
+    test_text_1 = 'Ma constance éprouvée en choses plus ardues   Choses qui font trembler les plus forts  entendues   Me purge du soupçon de telle lâcheté   La gloire au plus haut prix j’ai toujours acheté  Ennemi du repos  ennemi des délices   Mais quand nous nous sentons de cruautés complices  Quand il est question de rompre une amitié  Envers nos bienfaiteurs plus dignes de pitié  Ha   Cieux   ha   justes Cieux  alors la conscience Jette un trouble dans l’âme affreux d’impatience  Nous portons contre nous de terribles témoins  Et les plus généreux  alors le sont le moins '
+    test_text_2 =  'Encor oublions nous  qu outre l ailé Mercure   Plus sûrs encor nous doit rendre un céleste augure   Alors qu au sac piteux notre Troie était pleine  Du feu  de pleurs  de meurtre  une flamme soudaine  Vint embraser mon chef  qui comme notre Anchise  L expliqua  nous chassait hors de la Troie prise   Je jure par l honneur de cette même tête   Par celle de mon père  et par la neuve fête  Que le tombeau d Anchise ajoute à notre année   Qu un même embrasement m a cette matinée  Donné le même signe   et qu on nous tient promesse  De revenger bientôt la Troie de la Grèce  '
+
+    # test_text_1 =  'La crainte du futur  du futur  que les Dieux  Sous l’ombre d’un repos dérobent à nos yeux '
+    # test_text_2 = 'La peur du futur  de l\'avenir  que les Hommes  Sous l’ombre d’un repos dérobent à nos yeux '
+    tok1 = [('_',tokenizer.tokenize(test_text_1))]
+    tok2 = [('_',tokenizer.tokenize(test_text_2))]
+    ch1 = chunk_tokens(tok1[0][1])
+    ch2 = chunk_tokens(tok2[0][1])
+    print(ch1)
+    print(ch2)
+    v1 = vectorize_tokenized_play(tok1)
+    v2 = vectorize_tokenized_play(tok2)
+    sim = compare_embeddings(v1[0][1], v2[0][1])
+    print(sim)
+    print(similarity_to_levenshtein_cost(sim, 0.96, 0.7))
+
+    # # Testing the code on the close plays corpus
     # closePlaysFolder = os.path.join(os.getcwd(), 'Corpus', 'Corpus pieces tres proches')
     # tokenized_close_plays = tokenize_corpus(closePlaysFolder, 'tokenized_close_plays')
     # close_vectorized_plays = vectorize_corpus(tokenized_close_plays, 'vectorized_close_plays.pkl')
@@ -560,27 +617,16 @@ if __name__ == "__main__":
     # df.rename(columns=new_column_names, index=new_column_names, inplace=True)
     # df.to_csv('close_plays_alignments.csv')
 
-    # Temp code to generate alignment between two particular plays (use id)
-    # with open('vectorized_close_plays.pkl', 'rb') as close_plays:
-    #     close_vectorized_plays = pickle.load(close_plays)
-    # full_text_dict = get_full_text_corpus()
-    # id1, id2 = 'fre000334', 'fre000335'
-    # play_1, play_2 = close_vectorized_plays[id1], close_vectorized_plays[id2]
-    # title1, title2 = 'Medee', 'Medee 33'
-    # text1, text2 = full_text_dict[id1], full_text_dict[id2]
-    # dist, alignement = compare_vectorized_plays(play_1, play_2)
-    # visualize_levenshtein_alignement(alignement, text1, text2, title1, title2)
-
-    # Opening vectorized_corpus
-    vec_corpus_path = 'vectorized_corpus.pkl'
-    print('Opening...')
-    file = open(vec_corpus_path, 'rb')
-    print('Loading ...')
-    vectorized_corpus = pickle.load(file)
-    print('Loaded.')
-    vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
-    print(len(vectorized_corpus_cleaned))
-    get_average_distance(vectorized_corpus_cleaned, 1000000)
+    # # Code to generate average_distance
+    # vec_corpus_path = 'vectorized_corpus.pkl'
+    # print('Opening...')
+    # file = open(vec_corpus_path, 'rb')
+    # print('Loading ...')
+    # vectorized_corpus = pickle.load(file)
+    # print('Loaded.')
+    # vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
+    # print(len(vectorized_corpus_cleaned))
+    # get_average_distance(vectorized_corpus_cleaned, 1000000)
 
     ''''# Running Levensthein corpus comparison
     distances, alignments = compare_vectorized_corpus(vectorized_corpus)
