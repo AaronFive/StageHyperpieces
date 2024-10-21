@@ -6,7 +6,6 @@ Collection of functions used to parse XML-TEI plays
 import glob, os, re, sys, requests, math, csv, warnings
 import ast
 import enchant
-import pydracor
 from xml.dom import minidom
 import networkx as nx
 import pickle

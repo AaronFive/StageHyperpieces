@@ -1,11 +1,14 @@
 #!/usr/sfw/bin/python
 # -*- coding: utf-8 -*-
 import csv
-import os, re, sys
+import os
 import pickle
+import re
+import sys
+from datetime import date
 from os import walk, pardir
 from os.path import abspath, dirname, join, basename, exists
-from datetime import date
+import datetime
 
 import editdistance as editdistance
 
@@ -272,171 +275,162 @@ def get_genre_versification_acts_number(playText):
     return res_genre, vers_prose, act_number
 
 
-def get_dates(playText):
-    """Get the date of writing, the date of printing and the date of first performance of the play, and the line of context for each of them.
+# Predefined regex patterns for reuse
+WRITING_DATE_REGEX = re.compile("<p>.*[ÉéEe]crit en ([0-9]+).* et [op]ublié.* en ([0-9]+).*</p>")
+WRITING_DATE_ALT_REGEX = re.compile("<p>.*[ÉéEe]crit[e]? (.*)</p>")
+PRINTING_DATE_REGEX = re.compile("<p>([0-9]+).*</p>")
+PRINTING_ALT_DATE_REGEX = re.compile("<p>Imprimée en ([0-9]+).*</p>")
+PREMIERE_DATE_REGEX = re.compile(r"([0-9]{1,2}|1<sup>er</sup>|premier)\s+([^ ]+)\s+([0-9]{2,4})")
+PREMIERE_ALT_DATE_REGEX = re.compile(r"en\s+([0-9]{4})")
 
-    Args:
-        playText (TextIOWrapper): Text Contents of a play.
 
-    Returns:
-        tuple: Return a tuple of 6 strings :
-            - Date of writing
-            - Date of printing
-            - Date of first performance
-            - Line of date of writing
-            - Line of date of printing
-            - Line of date of first performance
-    """
-    # global count_date
-    line_written = "[vide]"
-    line_print = "[vide]"
-    line_premiere = "[vide]"
-    date_written = "[vide]"
-    date_print = "[vide]"
-    date_premiere = "[vide]"
-    is_written = False
-    is_print = False
-    is_premiere = False
+def format_date_to_comparable(groups):
+    """Convert a tuple of (day, month, year) to a comparable format YYYYMMDD or just year."""
+    months = {
+        'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04', 'mai': '05', 'juin': '06',
+        'juillet': '07', 'août': '08', 'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
+    }
 
-    for l in standard_line(playText):
+    # Handle full dates with day, month, year
+    if len(groups) == 3:
+        day = groups[0].replace("1<sup>er</sup>", "01").replace("premier", "01").zfill(
+            2)  # Replace "1er"/"premier" with "01"
+        month = months.get(groups[1].lower(), '00')  # Convert month name to number
+        year = groups[2]
+        return f"{year}{month}{day}"  # Format as YYYYMMDD
 
-        if re.search(".*<strong><em>Personnages.*</em></strong>.*", l) or re.search(
-                '<p align="center" style="text-align:center"><b><i>Personnages.*</span></i></b></p>', l) or (
-                True in (is_written, is_print, is_premiere) and l == '<p> </p>'):
+    # Handle year-only dates
+    elif len(groups) == 1:
+        return groups[0]  # Return the year as it is
+
+    return None
+
+
+def get_oldest_date(dates):
+    """Return the oldest date from a list of datetime objects."""
+    return min(dates) if dates else None
+
+
+def format_date_from_matches(matches):
+    """Formats a date from a tuple of (day, month, year) or just (year)."""
+    if len(matches) == 3:
+        return format_date_AAAAMMJJ(matches)
+    elif len(matches) == 1:
+        return matches[0]
+    return "[vide]"
+
+
+def extract_written_date(line):
+    """Extract writing date from a line."""
+    match = WRITING_DATE_REGEX.search(line)
+    if match:
+        return match.groups(), line.replace("<p>", "").replace("</p>", "")
+
+    match = WRITING_DATE_ALT_REGEX.search(line)
+    if match:
+        date_info = match.group(1)
+        specific_date_match = re.search(".*le ([0-9]+) ([^ ]+) ([0-9]+).*", date_info)
+        year_match = re.search(".*en ([0-9]+).*", date_info)
+        if specific_date_match:
+            return (format_date_AAAAMMJJ(specific_date_match.groups()),), line
+        elif year_match:
+            return (year_match.group(1),), line
+    return None, None
+
+
+def extract_printing_date(line):
+    """Extract printing date from a line."""
+    match = PRINTING_DATE_REGEX.search(line)
+    if match:
+        return match.group(1), line.replace("<p>", "").replace("</p>", "")
+
+    match = PRINTING_ALT_DATE_REGEX.search(line)
+    if match:
+        return match.group(1), line.replace("<p>", "").replace("</p>", "")
+
+    return None, None
+
+
+def extract_premiere_date(line):
+    """Extract premiere date from a line, returning the oldest date if more than one is found."""
+
+    found_dates = []
+
+    # Look for full premiere dates (day, month, year)
+    for match in PREMIERE_DATE_REGEX.finditer(line):
+        comparable_date = format_date_to_comparable(match.groups())
+        if comparable_date:
+            found_dates.append((comparable_date, line.replace("<p>", "").replace("</p>", "")))
+
+    # Look for alternative year-only premiere dates
+    for match in PREMIERE_ALT_DATE_REGEX.finditer(line):
+        comparable_date = format_date_to_comparable((match.group(1),))
+        if comparable_date:
+            found_dates.append((comparable_date, line.replace("<p>", "").replace("</p>", "")))
+
+    # Return the oldest date (if found) along with its context line
+    if found_dates:
+        # Sort dates and select the oldest (lexicographically, 'YYYYMMDD' will sort correctly)
+        oldest_date, context_line = min(found_dates)
+        # Format the date back to the correct output format (YYYY-MM-DD or just year)
+        formatted_date = (
+            f"{oldest_date[:4]}-{oldest_date[4:6]}-{oldest_date[6:]}"
+            if len(oldest_date) == 8
+            else oldest_date
+        )
+        return formatted_date, context_line
+
+    return None, None
+
+
+def get_dates_gpt(playText):
+    """Extract the dates of writing, printing, and first performance from the play, along with their context lines."""
+
+    # Initialize result variables with default values
+    date_written, line_written = "[vide]", "[vide]"
+    date_print, line_print = "[vide]", "[vide]"
+    date_premiere, line_premiere = "[vide]", "[vide]"
+
+    is_written, is_print, is_premiere = False, False, False
+
+    # Iterate through each line of the play
+    for line in standard_line(playText):
+
+        # Stop searching if characters section is reached
+        if re.search(".*<strong><em>Personnages.*</em></strong>.*", line) or re.search(
+                '<p align="center" style="text-align:center"><b><i>Personnages.*</span></i></b></p>', line):
             break
 
-        if re.search("<p>Non représenté[^0-9]*</p>", l):
-            line_premiere = l.replace("<p>", "").replace("</p>", "")
-            break
-
-        if not is_written and not is_print:
-            res = re.search("<p>.*[ÉéEe]crit en ([0-9]+).* et [op]ublié.* en ([0-9]+).*</p>", l)
-            if res:
-                line_written = l.replace('<p>', '').replace('</p>', '')
-                line_print = l.replace('<p>', '').replace('</p>', '')
-                date_written, date_print = res.groups()
-                is_written, is_print = True, True
-
+        # Extract writing date
         if not is_written:
-            res = re.search("<p>.*[ÉéEe]crit[e]? (.*)</p>", l)
-            if res:
-                line_written = l.replace('<p>', '').replace('</p>', '')
-                res2 = re.search(".*le ([0-9]+) ([^ ]+) ([0-9]+).*", res.group(1))
-                if res2:
-                    date_written = format_date_AAAAMMJJ(res2.groups())
-                    is_written = True
-                else:
-                    res2 = re.search(".*en ([0-9]+).*", res.group(1))
-                    res3 = re.search(".*en ([^0-9 ]+) ([0-9]+).*", res.group(1))
-                    if res2:
-                        date_written = res2.group(1)
-                        is_written = True
-                    elif res3:
-                        date_written = format_date_AAAAMM(res3.groups())
-                        is_written = True
+            date_result, line_result = extract_written_date(line)
+            if date_result:
+                date_written, line_written = date_result[0], line_result
+                is_written = True
 
-        if not is_premiere and not is_print:
-            res = re.search(
-                "<p>Publié.* ([0-9]+) et représenté.* ([0-9]+|1<sup>er</sup>|premier) ([^ ]+) ([0-9]+).*</p>", l)
-            res2 = re.search("<p>Publié.* ([0-9]+) et représenté.* ([0-9]+).*</p>", l)
-            if res or res2:
-                is_print, is_premiere = True, True
-                if res:
-                    date_print, date_premiere = res.group(1), format_date_AAAAMMJJ(res.groups()[1:])
-
-                elif res2:
-                    date_print, date_premiere = res2.group(1), res2.group(2)
-                is_print, is_premiere = True, True
-                line_print, line_premiere = l.replace("<p>", "").replace("</p>", ""), l.replace("<p>", "").replace(
-                    "</p>", "")
-
-        date_line = re.search("<p>.*([Rr]eprésenté.*)</p>", l)
-        date_line2 = re.search("<p>.*(fut joué.*)</p>", l)
-        if (date_line or date_line2) and not is_premiere:
-            if date_line2:
-                date_line = date_line2
-            date_line = date_line.group(1)
-            res = re.search(".* ([l\|]?[0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+) ([l\|]?[0-9]+).*", date_line)
-            res2 = re.search(".* ([0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+) ([0-9]+).*" * 2, date_line)
-            double_words_res = re.search(
-                ".* ([l\|]?[0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+)[ ]+([^ ]+) ([l\|]?[0-9]+).*", date_line)
-            between_years_res = re.search(".* ([0-9]+)-([0-9]+).*", date_line)
-            line_premiere = date_line
-            if res:
-                if res2:
-                    date_premiere = format_date_AAAAMMJJ(res2.groups())
-                else:
-                    date_premiere = format_date_AAAAMMJJ(res.groups())
-                is_premiere = True
-            elif double_words_res:
-                if double_words_res.group(2).replace('é', 'e') in mois:
-                    groups = (double_words_res.group(1), double_words_res.group(2), double_words_res.group(4))
-                else:
-                    groups = (double_words_res.group(1), double_words_res.group(3), double_words_res.group(4))
-                date_premiere = format_date_AAAAMMJJ(groups)
-                is_premiere = True
-            elif between_years_res:
-                date_premiere = between_years_res.groups()
-                is_premiere = True
-            else:
-                res = re.search(".* en ([0-9]+).*", date_line)
-                res2 = re.search(".* en ([0-9]+).*" * 2, date_line)
-                res3 = re.search(".* en ([0-9]+).*" * 3, date_line)
-                if res:
-                    if res2 is not None:
-                        res = res2
-                        if res3 is not None:
-                            res = res3
-                    date_premiere = res.group(1)
-                    is_premiere = True
-                else:
-                    res = re.search(".* (en|le|de) ([^ ]+) ([0-9]+).*", date_line)
-                    weird_res = re.search(".* (en|le|de)([0-9]+) ([^ ]+) ([0-9]+).*", date_line)
-                    if res:
-                        res2 = re.search("([0-9]+)(.*)", res.group(2))
-                        if res2:
-                            date_premiere = format_date_AAAAMMJJ(res2.groups() + res.groups()[2:])
-                        elif res:
-                            date_premiere = format_date_AAAAMM(res.groups()[1:])
-                        is_premiere = True
-                    elif weird_res:
-                        date_premiere = format_date_AAAAMMJJ(weird_res.groups()[1:])
-                        is_premiere = True
-
+        # Extract printing date
         if not is_print:
-            res = re.search("<p>([0-9]+).*</p>", l)
-            res2 = re.search("<p>Imprimée en ([0-9]+).*</p>", l)
-            res3 = re.search("<p>Non représentée[,\.] ([0-9]+).*</p>",
-                             l.replace('<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>', ''))
+            date_result, line_result = extract_printing_date(line)
+            if date_result:
+                date_print, line_print = date_result, line_result
+                is_print = True
 
-            if res or res2 or res3:
-                if res is None:
-                    res = res2
-                    if res2 is None:
-                        res = res3
-                if len(res.group(1)) == 4:
-                    date_print = res.group(1)
-                    line_print = l.replace("<p>", "").replace("<p>", "")
-                    is_print = True
+        # Extract premiere date
+        if not is_premiere:
+            date_result, line_result = extract_premiere_date(line)
+            if date_result:
+                date_premiere, line_premiere = date_result, line_result
+                is_premiere = True
 
-        if date_line is None:
-            date_line = ""
+        # Stop if all dates are found
+        if is_written and is_print and is_premiere:
+            break
 
-    # if not (is_print or is_premiere or is_written):
-    #     count_date += 1
+    # Clean the dates from HTML tags and content
+    all_dates = [date_written, date_print, date_premiere, line_written, line_print, line_premiere]
+    all_dates = [remove_html_tags_and_content(date) for date in all_dates]
 
-    if not is_written:
-        line_written = "[vide]"
-
-    # date_file.writelines(line_written + '\t' + line_print + '\t' + line_premiere + '\t')
-
-    # date_file.writelines(date_written + '\t')
-
-    # date_file.writelines(date_print + '\t')
-
-    # date_file.writelines(str(date_premiere) + "\n")
-
-    return date_written, date_print, date_premiere, line_written, line_print, line_premiere
+    return tuple(all_dates)
 
 
 def find_summary(line, ul):
@@ -778,7 +772,7 @@ def write_dedicace(dedicace, dedicaceHeader, file):
             <opener>
                 <salute> {dedicaceHeader}</salute>
             </opener>""")
-    for index,line in enumerate(dedicace):
+    for index, line in enumerate(dedicace):
         # if index == len(dedicace)-1 and
         file.writelines(f"""
         <p> {line} </p>""")
@@ -840,7 +834,7 @@ def end_character_block(characterBlock, line):
                 if len(name) == 1:
                     if counters["characterIDList"]:
                         characterBlock = False
-                        print("Character list: " + str(counters["characterIDList"]))
+                        #print("Character list: " + str(counters["characterIDList"]))
                     return characterBlock, None
                 character = name
                 res = re.search("([^,]+)(,.*)", character)
@@ -1160,7 +1154,7 @@ def correct_character_id(characterId, counters, characters_in_scene, max_distanc
                 if re.search(true_id, characterId) or re.search(characterId, true_id):
                     counters["undeclaredCharacterIDs"][characterId] = true_id
                     characterId = true_id
-                    print(f"Guessed {true_id} for {old_characterId}")
+                    #print(f"Guessed {true_id} for {old_characterId}")
                     break
                 else:
                     distance = editdistance.eval(characterId, true_id)
@@ -1169,7 +1163,7 @@ def correct_character_id(characterId, counters, characters_in_scene, max_distanc
             if old_characterId not in counters["undeclaredCharacterIDs"]:
                 closest_id, closest_distance = min_dict(edit_distances)
                 if (closest_id in characters_in_scene and closest_distance <= 5) or closest_distance <= max_distance:
-                    print(f"{old_characterId} : Guessed {closest_id}, distance {closest_distance} ")
+                    #print(f"{old_characterId} : Guessed {closest_id}, distance {closest_distance} ")
                     counters["undeclaredCharacterIDs"][characterId] = closest_id
                 else:
                     # print(f"Could not guess {characterId} (best guess {closest_id})")
@@ -1233,7 +1227,8 @@ def write_character(outputFile):
                     <role corresp="#{character}">{counters["characterFullNameList"][i]} </role>{counters["roleList"][i]}</castItem>"""
                               )
     outputFile.writelines("""
-        </castList>""")
+        </castList>
+        </front>""")
 
 
 # TODO: Add writing of "actStageIndication"
@@ -1255,24 +1250,20 @@ def write_scene_beginning(scene_number, scene_header, file):
 
 def write_scene(scene, replique_number, file):
     """Writes all dialogue, speakers, and stage direction to the output file. Also returns the current number of repliques"""
-    scene_started = False
+    sp_opened = False
     for replique in scene["repliques"]:
         if replique["type"] == "Speaker":
             # Checking for first replique
-            if scene_started:
+            if sp_opened:
                 file.writelines("""
                 </sp>""")
-            else:
-                scene_started = True
+
             character = remove_html_tags(replique["content"])
             characterId = replique["characterId"]
             file.writelines(f"""
         <sp who=\"#{characterId}\">
             <speaker> {character} </speaker>""")
-            # Checking for last replique
-            if scene["repliques"][-1] == replique:
-                file.writelines("""
-                </sp>""")
+            sp_opened = True
         # TODO : Add xml id ? xml:id=\"{counters["actNb"] + str(counters["scenesInAct"]) + "-" + str(counters["repliquesinScene"])}
         if replique["type"] == "Dialogue":
             replique_number += 1
@@ -1283,11 +1274,15 @@ def write_scene(scene, replique_number, file):
             direction = replique["content"]
             outputFile.writelines(f"""
             <stage>{direction}</stage>""")
+    if sp_opened:
+        file.writelines("""
+         </sp>""")
     return replique_number
 
 
 def write_scene_end(outputFile):
-    outputFile.writelines("""</div>""")
+    outputFile.writelines("""
+    </div>""")
 
 
 def write_play(outputFile, playContent, counters):
@@ -1336,14 +1331,17 @@ def write_end(outputFile):
 </text>
 </TEI>""")
 
-#TMP
-def update_csv(row,key, value):
-    if key not in row or not row[key] or row[key].strip()=='':
+
+# TMP
+def update_csv(row, key, value):
+    if key not in row or not row[key] or row[key].strip() == '':
         row[key] = value
+
+
 def get_and_write_metadata(counters, outputFile, findSummary, saveBegin, csv_row):
     # get and write title
     title, forename, surname = get_title_and_author(line)
-    update_csv(csv_row,"Title", title)
+    update_csv(csv_row, "Title", title)
     update_csv(csv_row, "Author", f'{" ".join(forename)} {" ".join(surname)}')
     if write_title(outputFile, title):
         # get and write type of play:
@@ -1366,7 +1364,9 @@ def get_and_write_metadata(counters, outputFile, findSummary, saveBegin, csv_row
         # get and write date
         copy_playtext.close()
         copy_playtext = open(file, "r", encoding="utf-8")
-        date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates(
+        # date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates(
+        #     copy_playtext)
+        date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates_gpt(
             copy_playtext)
         update_csv(csv_row, "Date ecriture", date_written)
         update_csv(csv_row, "Date impression", date_print)
@@ -1422,8 +1422,11 @@ def find_dedicace_or_preface_content(line, counters, type):
     return not newActOrScene
 
 
+def rework_writing():
+
+
 if __name__ == "__main__":
-    output_csv = open("metadata theatredoc.csv", 'w', encoding = 'utf8', newline='')
+    output_csv = open("metadata theatredoc.csv", 'w', encoding='utf8', newline='')
     fieldnames = ["Raw Name", "Title", "Author", "Date impression", "Date premiere", "Date ecriture", "Genre", "Type"]
     gwriter = csv.DictWriter(output_csv, fieldnames=fieldnames)
     gwriter.writeheader()
@@ -1464,7 +1467,7 @@ if __name__ == "__main__":
 
         # reset parameters
         csv_row = dict()
-        csv_row["Raw Name"] = fileName.replace(".html"," ")
+        csv_row["Raw Name"] = fileName.replace(".html", " ")
 
         counters = {
             "charactersinScene": "",
@@ -1534,7 +1537,8 @@ if __name__ == "__main__":
             if index == characterBlockLastLine:
                 characterBlockFinished = True
             # Getting all metadata :
-            counters, findSummary, saveBegin = get_and_write_metadata(counters, outputFile, findSummary, saveBegin,csv_row)
+            counters, findSummary, saveBegin = get_and_write_metadata(counters, outputFile, findSummary, saveBegin,
+                                                                      csv_row)
 
             # Some text can be before the beginning of the play : a dedicace, or a preface.
             # Dedicace
@@ -1592,7 +1596,7 @@ if __name__ == "__main__":
 
         # Since characters names often have typos or are not exactly as described, we now correct those names
         # We also establish the list of characters speaking per scene
-        print("correcting characters")
+        #print("correcting characters")
         if counters["noActPlay"]:
             for scene in playContent:
                 identify_character_ids(scene, counters)
@@ -1600,7 +1604,7 @@ if __name__ == "__main__":
             for act in playContent:
                 for scene in act["Scenes"]:
                     identify_character_ids(scene, counters)
-        print("finished correcting characters")
+        #print("finished correcting characters")
 
         # Writing dedicace
         if counters["dedicaceFound"]:
@@ -1642,7 +1646,7 @@ if __name__ == "__main__":
 
     # date_file.close()
 
-    #  print("Number of plays without date :", count_date)
+    # print("Number of plays without date :", count_date)
     stats.writelines(f"""Total number of plays : {totalplays}
     Plays with no acts found : {noact}
     Plays with no cast of character found : {castnotWritten}
@@ -1856,3 +1860,160 @@ if __name__ == "__main__":
 #                 counters["linesInScene"] += 1
 #
 #     return counters
+# Old date detection fuction (rewrited by chatGPT)
+# def get_dates(playText):
+#     """Get the date of writing, the date of printing and the date of first performance of the play, and the line of context for each of them.
+#
+#     Args:
+#         playText (TextIOWrapper): Text Contents of a play.
+#
+#     Returns:
+#         tuple: Return a tuple of 6 strings :
+#             - Date of writing
+#             - Date of printing
+#             - Date of first performance
+#             - Line of date of writing
+#             - Line of date of printing
+#             - Line of date of first performance
+#     """
+#     # global count_date
+#     line_written = "[vide]"
+#     line_print = "[vide]"
+#     line_premiere = "[vide]"
+#     date_written = "[vide]"
+#     date_print = "[vide]"
+#     date_premiere = "[vide]"
+#     is_written = False
+#     is_print = False
+#     is_premiere = False
+#
+#     for l in standard_line(playText):
+#
+#         if re.search(".*<strong><em>Personnages.*</em></strong>.*", l) or re.search(
+#                 '<p align="center" style="text-align:center"><b><i>Personnages.*</span></i></b></p>', l) or (
+#                 True in (is_written, is_print, is_premiere) and l == '<p> </p>'):
+#             break
+#
+#         if re.search("<p>Non représenté[^0-9]*</p>", l):
+#             line_premiere = l.replace("<p>", "").replace("</p>", "")
+#             break
+#
+#         if not is_written and not is_print:
+#             res = re.search("<p>.*[ÉéEe]crit en ([0-9]+).* et [op]ublié.* en ([0-9]+).*</p>", l)
+#             if res:
+#                 line_written = l.replace('<p>', '').replace('</p>', '')
+#                 line_print = l.replace('<p>', '').replace('</p>', '')
+#                 date_written, date_print = res.groups()
+#                 is_written, is_print = True, True
+#
+#         if not is_written:
+#             res = re.search("<p>.*[ÉéEe]crit[e]? (.*)</p>", l)
+#             if res:
+#                 line_written = l.replace('<p>', '').replace('</p>', '')
+#                 res2 = re.search(".*le ([0-9]+) ([^ ]+) ([0-9]+).*", res.group(1))
+#                 if res2:
+#                     date_written = format_date_AAAAMMJJ(res2.groups())
+#                     is_written = True
+#                 else:
+#                     res2 = re.search(".*en ([0-9]+).*", res.group(1))
+#                     res3 = re.search(".*en ([^0-9 ]+) ([0-9]+).*", res.group(1))
+#                     if res2:
+#                         date_written = res2.group(1)
+#                         is_written = True
+#                     elif res3:
+#                         date_written = format_date_AAAAMM(res3.groups())
+#                         is_written = True
+#
+#         if not is_premiere and not is_print:
+#             res = re.search(
+#                 "<p>Publié.* ([0-9]+) et représenté.* ([0-9]+|1<sup>er</sup>|premier) ([^ ]+) ([0-9]+).*</p>", l)
+#             res2 = re.search("<p>Publié.* ([0-9]+) et représenté.* ([0-9]+).*</p>", l)
+#             if res or res2:
+#                 is_print, is_premiere = True, True
+#                 if res:
+#                     date_print, date_premiere = res.group(1), format_date_AAAAMMJJ(res.groups()[1:])
+#
+#                 elif res2:
+#                     date_print, date_premiere = res2.group(1), res2.group(2)
+#                 is_print, is_premiere = True, True
+#                 line_print, line_premiere = l.replace("<p>", "").replace("</p>", ""), l.replace("<p>", "").replace(
+#                     "</p>", "")
+#
+#         date_line = re.search("<p>.*([Rr]eprésenté.*)</p>", l)
+#         date_line2 = re.search("<p>.*(fut joué.*)</p>", l)
+#         if (date_line or date_line2) and not is_premiere:
+#             if date_line2:
+#                 date_line = date_line2
+#             date_line = date_line.group(1)
+#             res = re.search(".* ([l\|]?[0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+) ([l\|]?[0-9]+).*", date_line)
+#             res2 = re.search(".* ([0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+) ([0-9]+).*" * 2, date_line)
+#             double_words_res = re.search(
+#                 ".* ([l\|]?[0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+)[ ]+([^ ]+) ([l\|]?[0-9]+).*", date_line)
+#             between_years_res = re.search(".* ([0-9]+)-([0-9]+).*", date_line)
+#             line_premiere = date_line
+#             if res:
+#                 if res2:
+#                     date_premiere = format_date_AAAAMMJJ(res2.groups())
+#                 else:
+#                     date_premiere = format_date_AAAAMMJJ(res.groups())
+#                 is_premiere = True
+#             elif double_words_res:
+#                 if double_words_res.group(2).replace('é', 'e') in mois:
+#                     groups = (double_words_res.group(1), double_words_res.group(2), double_words_res.group(4))
+#                 else:
+#                     groups = (double_words_res.group(1), double_words_res.group(3), double_words_res.group(4))
+#                 date_premiere = format_date_AAAAMMJJ(groups)
+#                 is_premiere = True
+#             elif between_years_res:
+#                 date_premiere = between_years_res.groups()
+#                 is_premiere = True
+#             else:
+#                 res = re.search(".* en ([0-9]+).*", date_line)
+#                 res2 = re.search(".* en ([0-9]+).*" * 2, date_line)
+#                 res3 = re.search(".* en ([0-9]+).*" * 3, date_line)
+#                 if res:
+#                     if res2 is not None:
+#                         res = res2
+#                         if res3 is not None:
+#                             res = res3
+#                     date_premiere = res.group(1)
+#                     is_premiere = True
+#                 else:
+#                     res = re.search(".* (en|le|de) ([^ ]+) ([0-9]+).*", date_line)
+#                     weird_res = re.search(".* (en|le|de)([0-9]+) ([^ ]+) ([0-9]+).*", date_line)
+#                     if res:
+#                         res2 = re.search("([0-9]+)(.*)", res.group(2))
+#                         if res2:
+#                             date_premiere = format_date_AAAAMMJJ(res2.groups() + res.groups()[2:])
+#                         elif res:
+#                             date_premiere = format_date_AAAAMM(res.groups()[1:])
+#                         is_premiere = True
+#                     elif weird_res:
+#                         date_premiere = format_date_AAAAMMJJ(weird_res.groups()[1:])
+#                         is_premiere = True
+#
+#         if not is_print:
+#             res = re.search("<p>([0-9]+).*</p>", l)
+#             res2 = re.search("<p>Imprimée en ([0-9]+).*</p>", l)
+#             res3 = re.search("<p>Non représentée[,\.] ([0-9]+).*</p>",
+#                              l.replace('<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>', ''))
+#
+#             if res or res2 or res3:
+#                 if res is None:
+#                     res = res2
+#                     if res2 is None:
+#                         res = res3
+#                 if len(res.group(1)) == 4:
+#                     date_print = res.group(1)
+#                     line_print = l.replace("<p>", "").replace("<p>", "")
+#                     is_print = True
+#
+#         if date_line is None:
+#             date_line = ""
+#     if not is_written:
+#         line_written = "[vide]"
+#     all_dates = [date_written, date_print, date_premiere, line_written, line_print, line_premiere]
+#     #print(all_dates)
+#     all_dates = [remove_html_tags_and_content(date) for date in all_dates]
+#     return tuple(all_dates)
+
