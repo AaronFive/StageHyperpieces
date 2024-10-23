@@ -421,7 +421,7 @@ def compare_embeddings(embeddings1, embeddings2):
 
 
 # Result is 0.8335
-def get_average_distance(vectorized_corpus, n, bins_number=50):
+def get_average_distance(vectorized_corpus, n, bins_number=20):
     """Approximate the average distances between two random lines in the corpus and makes a graph of the distribution of distances.
 
     Computation is done with n iterations.
@@ -440,18 +440,22 @@ def get_average_distance(vectorized_corpus, n, bins_number=50):
         p1, p2 = vectorized_corpus[i1], vectorized_corpus[i2]
         index1, index2 = random.randint(0, len(p1) - 1), random.randint(0, len(p2) - 1)
         random_line1, random_line2 = p1[index1][1], p2[index2][1]
-        sim = compare_sentence_embeddings(random_line1, random_line2)
-        if sim > 0.9:
-            print('Ces deux répliques sont similaires :')
-            print(full_text_dict[i1][index1])
-            print(full_text_dict[i2][index2])
-        slot = int((bins_number - 0.001) * sim)  # The 0.001 is
-        values[slot] += 1
-        avg_similarity += sim
+        #TMP : filtre pour garder uniquement des phrases un peu longues
+        sentence_1, sentence_2 = full_text_dict[i1][index1][1], full_text_dict[i2][index2][1]
+        if len(sentence_1) > 5 and len(sentence_2) > 5:
+            sim = compare_sentence_embeddings(random_line1, random_line2)
+            sim = max(0,sim)
+            if sim > 0.9:
+                print('Ces deux répliques sont similaires :')
+                print(full_text_dict[i1][index1])
+                print(full_text_dict[i2][index2])
+            slot = int((bins_number - 0.001) * sim)
+            values[slot] += 1
+            avg_similarity += sim
     print(f"Average similarity {avg_similarity / n}")
     plt.xlim(0, 1.1)
-    values = [v for v in values]
-    plt.bar(bins, values, width=0.9 / bins_number, align='edge')
+    values_to_plot = values
+    plt.bar(bins, values_to_plot, width=0.9 / bins_number, align='edge')
     plt.xlabel('Similarity Score')
     plt.ylabel('Number of line pairs')
     plt.xticks(np.arange(0, 1, step=2 / bins_number))
@@ -609,7 +613,7 @@ def compare_play_from_files(file1, file2):
 
 if __name__ == "__main__":
     title_dict = get_title_dict()
-    print(title_dict['fre000144  '])
+    # print(title_dict['fre000144  '])
     # Testing the code on the close plays corpus
     # closePlaysFolder = os.path.join(os.getcwd(), 'Corpus', 'Corpus pieces tres proches')
     # corpus = dict()
@@ -633,16 +637,16 @@ if __name__ == "__main__":
     # df.to_csv('close_plays_alignments.csv')
 
     # Code to generate average_distance
-    # vec_corpus_path = 'sentence_vectorized_corpus.pkl'
-    # print('Opening...')
-    # file = open(vec_corpus_path, 'rb')
-    # print('Loading ...')
-    # vectorized_corpus = pickle.load(file)
-    # print('Loaded.')
-    # vectorized_corpus = remove_empty_plays_from_corpus(vectorized_corpus)
-    # # vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
-    # # print(len(vectorized_corpus_cleaned))
-    # # get_average_distance(vectorized_corpus_cleaned, 1000000)
+    vec_corpus_path = 'sentence_vectorized_corpus.pkl'
+    print('Opening...')
+    file = open(vec_corpus_path, 'rb')
+    print('Loading ...')
+    vectorized_corpus = pickle.load(file)
+    print('Loaded.')
+    vectorized_corpus = remove_empty_plays_from_corpus(vectorized_corpus)
+    vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
+    print(len(vectorized_corpus_cleaned))
+    get_average_distance(vectorized_corpus_cleaned, 100000)
     #
     # # Running Levensthein corpus comparison
     # cutoff = 100

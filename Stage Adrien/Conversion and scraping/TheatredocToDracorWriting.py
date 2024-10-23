@@ -3,8 +3,6 @@ import xml.etree.ElementTree as ET
 from convertTheatredocToDracor import *
 
 counters = dict()
-counters["characterIDList"] = ["id1"]
-counters["characterFullNameList"] = ["Personnage1"]
 
 
 def initialize_xml():
@@ -157,7 +155,7 @@ def write_dates(bibl, date_written, date_print, date_premiere, line_premiere):
                                                 "notAfter": date_premiere[1]}).text = line_premiere
 
 
-def write_profile_and_revision(profileDesc, revisionDesc, genre, vers_prose):
+def write_profile_and_revision(profileDesc, revisionDesc, genre, vers_prose, counters):
     """Write the end of the TEI header, including character information and class code.
 
     Args:
@@ -189,29 +187,28 @@ def write_profile_and_revision(profileDesc, revisionDesc, genre, vers_prose):
     ET.SubElement(listChange, 'change', attrib={"when": f"{date.today()}"}).text = "(mg) file conversion from source"
 
 
-def write_tei_header(root):
+def write_tei_header(root, metadata, counters):
     # Call the first function to write the teiHeader
     header = write_header(root)
     fileDesc, profileDesc, revisionDesc = write_file_profile_and_revisionDesc(header)
     titleStmt, publicationStmt, sourceDesc = write_fileDesc(fileDesc)
 
-    # Placeholder values for testing
-    title = "Sample Play Title"
-    genre = "Comédie"
-    author = (["Jean", "de"], ["Molière"])
-    source = "http://théâtre-documentation.com/sample-play"
-    date_written = "1664"
-    date_print = "1671"
-    date_premiere = "1664"
-    line_premiere = "Premiered at the Théâtre du Palais-Royal, Paris."
-    vers_prose = "prose"
+    title = metadata['main_title']
+    genre = metadata['genre']
+    author = (metadata['author_forename'], metadata['author_surname'])
+    source = metadata['source']
+    date_written = metadata['date_written']
+    date_print = metadata['date_print']
+    date_premiere = metadata['date_premiere']
+    line_premiere = metadata['premiere_text']
+    vers_prose = metadata['vers_prose']
 
     # Call each function to build up the header
     write_title_and_type(titleStmt, title, genre)
     write_author(titleStmt, author)
     bibl = write_source(publicationStmt, sourceDesc, source)  # TODO : handle different bibl
     write_dates(bibl, date_written, date_print, date_premiere, line_premiere)
-    write_profile_and_revision(profileDesc, revisionDesc, genre, vers_prose)
+    write_profile_and_revision(profileDesc, revisionDesc, genre, vers_prose, counters)
     return root
 
 
@@ -234,10 +231,11 @@ def write_title_parts(doc_title_node, main_title, sub_title=None):
         title_part_sub = ET.SubElement(doc_title_node, 'titlePart', attrib={'type': 'sub'})
         title_part_sub.text = sub_title
 
-
-def write_doc_date(front_node, date_text, date_when):
+#TODO: Handle Date print line, acheve imprime, privilege, printer
+# For now I don't find date_text
+def write_doc_date(front_node, date_text, date_print):
     """Adds the <docDate> node."""
-    doc_date = ET.SubElement(front_node, 'docDate', attrib={'when': date_when})
+    doc_date = ET.SubElement(front_node, 'docDate', attrib={'when': date_print})
     doc_date.text = date_text
 
 
@@ -274,7 +272,7 @@ def write_performance(front_node, premiere_text, premiere_date, premiere_locatio
     ab.set("date", premiere_date)
     ab.set("location", premiere_location)
 
-
+#Found in counters[dedicace] and counters[dedicace_head]
 def write_dedicace(front_node, salute_text, head_text, paragraphs, signed_text):
     """Adds the dedication section (<div type="dedicace">)."""
     dedicace = ET.SubElement(front_node, 'div', attrib={'type': 'dedicace'})
@@ -311,7 +309,7 @@ def write_cast_list(front_node):
 
 # TODO: add if X is not None pour tous les élements
 # TODO : Restructure the content part into referring counters ?
-def write_front_content(front_node, content):
+def write_front_content(front_node, metadata, counters):
     """
     Adds the required structure as children nodes of the given <front> node.
 
@@ -321,36 +319,42 @@ def write_front_content(front_node, content):
     """
     # Add docTitle
     doc_title = ET.SubElement(front_node, 'docTitle')
-    add_title_parts(doc_title, content['main_title'], content['sub_title'])
+    write_title_parts(doc_title, metadata['main_title'], metadata.get('sub_title',None))
 
     # Add docDate
-    add_doc_date(front_node, content['doc_date_text'], content['doc_date_when'])
+    write_doc_date(front_node, metadata['doc_date_text'], metadata['date_print'])
 
     # Add docImprint and its children
     doc_imprint = ET.SubElement(front_node, 'div', attrib={'type': 'docImprint'})
 
-    add_privilege(doc_imprint, content['privilege_head'], content['privilege_paragraphs'])
-    add_acheve_imprime(doc_imprint, content['acheve_imprime_text'])
-    add_printer(doc_imprint, content['printer_text'])
+    if 'privilege_head' in metadata and 'privilege_text' in metadata:
+        write_privilege(doc_imprint, metadata['privilege_head'], metadata['privilege_text'])
+    if 'acheve_imprime_text' in metadata:
+        write_acheve_imprime(doc_imprint, metadata['acheve_imprime_text'])
+    if 'printer_text' in metadata:
+        write_printer(doc_imprint, metadata['printer_text'])
 
     # Add performance
-    add_performance(front_node, content['premiere_text'], content['premiere_date'], content['premiere_location'])
+    write_performance(front_node, metadata['premiere_text'], metadata['date_premiere'], metadata['premiere_location'])
 
     # Add dedication (dedicace)
-    add_dedicace(front_node, content['salute_text'], content['head_text'], content['dedicace_paragraphs'],
-                 content['signed_text'])
+    if counters['dedicaceFound']:
+        metadata['signed_text'] = metadata['author_forename'] + ' ' + metadata['author_surname'] #TODO: CHANGE THIS ONCE SIGNED DETECTION WORKS PROPERLY
+        write_dedicace(front_node, metadata['dedicaceSalute'], metadata['dedicaceHeader'], metadata['dedicace'],
+                     metadata['signed_text'])
 
     # Add preface
-    add_preface(front_node, content['preface_head'], content['preface_paragraphs'])
+    if counters['prefaceFound']:
+        write_preface(front_node, metadata['prefaceHeader'], metadata['preface'])
 
     # Add castList
-    add_cast_list(front_node)
+    write_cast_list(front_node)
 
 
 # WRITE CONTENT OF THE PLAY
 
 def write_scene_beginning(act_node, scene_number, scene_header):
-    scene_node = ET.SubElement(act_node, 'div', attrib={'type': "scene", "xml:id": scene_number})
+    scene_node = ET.SubElement(act_node, 'div', attrib={'type': "scene", "xml:id": str(scene_number)})
     head = ET.SubElement(scene_node, 'head')
     head.text = scene_header
     return scene_node
@@ -370,7 +374,7 @@ def write_scene(scene_node, scene, replique_number):
         # TODO : Add xml id ? xml:id=\"{counters["actNb"] + str(counters["scenesInAct"]) + "-" + str(counters["repliquesinScene"])}
         if replique["type"] == "Dialogue":
             replique_number += 1
-            replique_node = ET.SubElement(current_node, 'l', attrib={'n': replique_number})
+            replique_node = ET.SubElement(current_node, 'l', attrib={'n': str(replique_number)})
             replique_node.text = remove_html_tags(replique["content"])
         # TODO : add xml id ? xml:id=\"l""" + str(counters["linesInPlay"])
         if replique["type"] == "Stage":
@@ -426,22 +430,25 @@ def write_body(body_node, playContent, counters):
 # MAIN FUNCTIONS
 def write_full_tei_file(content, playContent, counters):
     root = initialize_xml()
-    write_tei_header(root)
+    write_tei_header(root, content, counters)
     front, body = write_text(root)
-    write_front_content(front, content)
-    write_body(body_node, playContent, counters)
+    write_front_content(front, content, counters)
+    write_body(body, playContent, counters)
     return root
 
 
-def output_tei_file(root):
+def output_tei_file(root, output_file):
     # Generate and print the XML for inspection
     tree = ET.ElementTree(root)
     ET.indent(tree, space="  ")  # Pretty print (requires Python 3.9+)
-    tree.write('test.xml', encoding="utf-8", xml_declaration=True)
+    try:
+        tree.write(output_file, encoding="utf-8", xml_declaration=True)
+    except:
+        ET.dump(root)
 
     # Print the XML to console for quick view
-    # ET.dump(root)
+
 
 
 if __name__ == "__main__":
-    write_full_tei_file(conet)
+    pass

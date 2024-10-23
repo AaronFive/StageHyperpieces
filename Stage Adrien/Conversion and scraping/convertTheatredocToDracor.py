@@ -1,6 +1,7 @@
 #!/usr/sfw/bin/python
 # -*- coding: utf-8 -*-
 import csv
+import datetime
 import os
 import pickle
 import re
@@ -8,8 +9,8 @@ import sys
 from datetime import date
 from os import walk, pardir
 from os.path import abspath, dirname, join, basename, exists
-import datetime
 
+import TheatredocToDracorWriting as writing
 import editdistance as editdistance
 
 """
@@ -35,6 +36,9 @@ import editdistance as editdistance
 # The folder containing this script must contain a subfolder named corpusTD
 # containing plays downloaded from théâtre-documentation.com
 
+# TODO : detection of privilege, acheve_imprime, printer_text, performance, signed. For now these are never done
+# TODO : Add <signed>
+# TODO: Add writing of "actStageIndication"
 # Get the current folder
 folder = abspath(dirname(sys.argv[0]))
 root_folder = abspath(join(folder, pardir))
@@ -44,11 +48,6 @@ clean_Dracor_Folder = abspath(join(root_folder, "corpusTD_cast_ok"))
 
 if not exists(Dracor_Folder):
     os.system("mkdir {0}".format(Dracor_Folder))
-
-### temporaire
-# date_file = open(join(root_folder, 'datesTD.txt'), 'w')
-# count_date = 0
-###temporaire
 
 mois = {
     'janvier': '01',
@@ -64,7 +63,6 @@ mois = {
     'novembre': '11',
     'decembre': '12',
 }
-
 genres = ["tragedie", "comedie", "tragicomedie", "tragi-comedie", "farce", "vaudeville", "proverbe", "pastorale",
           "comedie musicale", "dialogue", "monologue"]
 good_genre = {"tragedie": "Tragédie", "comedie": "Comédie", "tragicomedie": "Tragi-Comédie", "farce": "Farce",
@@ -106,6 +104,42 @@ def format_date_AAAAMM(res):
          mois[res[0].lower().replace('é', 'e').replace('août', 'aout').replace('levrier', 'fevrier').replace('fevier',
                                                                                                              'fevrier')]
          ])
+
+
+def format_date_to_comparable(groups):
+    """Convert a tuple of (day, month, year) to a comparable format YYYYMMDD or just year."""
+    months = {
+        'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04', 'mai': '05', 'juin': '06',
+        'juillet': '07', 'août': '08', 'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
+    }
+
+    # Handle full dates with day, month, year
+    if len(groups) == 3:
+        day = groups[0].replace("1<sup>er</sup>", "01").replace("premier", "01").zfill(
+            2)  # Replace "1er"/"premier" with "01"
+        month = months.get(groups[1].lower(), '00')  # Convert month name to number
+        year = groups[2]
+        return f"{year}{month}{day}"  # Format as YYYYMMDD
+
+    # Handle year-only dates
+    elif len(groups) == 1:
+        return groups[0]  # Return the year as it is
+
+    return None
+
+
+def get_oldest_date(dates):
+    """Return the oldest date from a list of datetime objects."""
+    return min(dates) if dates else None
+
+
+def format_date_from_matches(matches):
+    """Formats a date from a tuple of (day, month, year) or just (year)."""
+    if len(matches) == 3:
+        return format_date_AAAAMMJJ(matches)
+    elif len(matches) == 1:
+        return matches[0]
+    return "[vide]"
 
 
 def remove_html_tags_and_content(s):
@@ -284,42 +318,6 @@ PREMIERE_DATE_REGEX = re.compile(r"([0-9]{1,2}|1<sup>er</sup>|premier)\s+([^ ]+)
 PREMIERE_ALT_DATE_REGEX = re.compile(r"en\s+([0-9]{4})")
 
 
-def format_date_to_comparable(groups):
-    """Convert a tuple of (day, month, year) to a comparable format YYYYMMDD or just year."""
-    months = {
-        'janvier': '01', 'février': '02', 'mars': '03', 'avril': '04', 'mai': '05', 'juin': '06',
-        'juillet': '07', 'août': '08', 'septembre': '09', 'octobre': '10', 'novembre': '11', 'décembre': '12'
-    }
-
-    # Handle full dates with day, month, year
-    if len(groups) == 3:
-        day = groups[0].replace("1<sup>er</sup>", "01").replace("premier", "01").zfill(
-            2)  # Replace "1er"/"premier" with "01"
-        month = months.get(groups[1].lower(), '00')  # Convert month name to number
-        year = groups[2]
-        return f"{year}{month}{day}"  # Format as YYYYMMDD
-
-    # Handle year-only dates
-    elif len(groups) == 1:
-        return groups[0]  # Return the year as it is
-
-    return None
-
-
-def get_oldest_date(dates):
-    """Return the oldest date from a list of datetime objects."""
-    return min(dates) if dates else None
-
-
-def format_date_from_matches(matches):
-    """Formats a date from a tuple of (day, month, year) or just (year)."""
-    if len(matches) == 3:
-        return format_date_AAAAMMJJ(matches)
-    elif len(matches) == 1:
-        return matches[0]
-    return "[vide]"
-
-
 def extract_written_date(line):
     """Extract writing date from a line."""
     match = WRITING_DATE_REGEX.search(line)
@@ -383,7 +381,7 @@ def extract_premiere_date(line):
     return None, None
 
 
-def get_dates_gpt(playText):
+def get_dates(playText):
     """Extract the dates of writing, printing, and first performance from the play, along with their context lines."""
 
     # Initialize result variables with default values
@@ -493,292 +491,6 @@ def find_dedicace(line):
 
 
 # METADATA WRITING
-def write_title(outputFile, title):
-    """Write the extracted title in the output file in XML.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        title (str): Title of a file.
-
-    Returns:
-        str: The same title.
-    """
-    if title:
-        outputFile.writelines("""<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fre">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title type="main">""" + title + """</title>""")
-    return title
-
-
-def write_type(outputFile, genre):
-    """Write the extracted genre in the output file in XML.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        genre (str): Genre of a play.
-    """
-    if genre != '[indéfini]':
-        outputFile.writelines("""
-                <title type="sub">""" + genre + """</title>""")
-
-
-def write_author(outputFile, author):
-    """Write the author's name in the output file in XML.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        author (str): Author of the play.
-    
-    Returns:
-        bool: True if the author's name have at least a forename or a surname, False then.
-    """
-    forename, surname = author
-    if forename or surname:
-        outputFile.writelines("""
-            <author>
-                <persName>""")
-        if forename:
-            for name in forename:
-                if name in ['de', "d'"]:
-                    outputFile.writelines("""
-                    <linkname>""" + name + """</linkname>""")
-                elif name in ['Abbé']:  # TODO identifier d'autres rolename
-                    outputFile.writelines(f"""
-                    <rolename>{name}</rolename>""")
-                else:
-                    outputFile.writelines(f"""
-                    <forename>{name}</forename>""")
-        if surname:
-            for name in surname:
-                if name in ['DE', "D'"]:
-                    outputFile.writelines("""
-                    <linkname>""" + name.lower() + """</linkname>""")
-                else:
-                    outputFile.writelines("""
-                    <surname>""" + ''.join([name[0], name[1:].lower()]) + """</surname>""")
-
-        outputFile.writelines("""
-                </persName>
-            </author>
-                        <editor>Adrien Roumégous, dans le cadre d'un stage de M1 Informatique encadré par Aaron Boussidan et Philippe Gambette.</editor>
-            </titleStmt>""")
-        return True
-    return False
-
-
-def write_source(outputFile, source):
-    """Write the source of the play in the output file in XML.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        source (str): Source of the play.
-    """
-    outputFile.writelines(f"""
-            <publicationStmt>
-                <publisher xml:id="dracor">DraCor</publisher>
-                <idno type="URL">https://dracor.org</idno>
-                <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
-                <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
-                <availability>
-                    <licence>
-                        <ab>CC BY-NC-SA 4.0</ab>
-                        <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
-                    </licence>
-                </availability> 
-            </publicationStmt>
-            <sourceDesc>
-                <bibl type="digitalSource">
-                    <name>Théâtre Documentation</name>
-                    <idno type="URL"> {source} </idno>
-                    <availability>
-                        <licence>
-                            <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
-                            <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
-                        </licence>
-                    </availability>
-                    <bibl type="originalSource">""")
-
-
-def write_dates(outputFile, date_written, date_print, date_premiere, line_premiere):
-    """Write the date of writing, the date of printing and the date of first performance of the play, and the line of context for each of them in an output file in XML.
-
-    Args: 
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        date_written (str): Date of writing of the play.
-        date_print (str): Date of printing of the play.
-        date_premiere (str): Date of first performance of the play.
-        line_premiere (str): Line where the date of the first performance is written.
-    """
-    if date_written != "[vide]":
-        outputFile.writelines("""
-                        <date type="written" when=\"""" + date_written + """\">""")
-
-    if date_print != "[vide]":
-        outputFile.writelines("""
-                        <date type="print" when=\"""" + date_print + """\">""")
-
-    if date_premiere != "[vide]":
-        if type(date_premiere) is str:
-            outputFile.writelines("""
-                        <date type="premiere" when=\"""" + date_premiere + """\">""" + line_premiere + """</date>""")
-        else:
-            outputFile.writelines("""
-                        <date type="premiere" notBefore=\"""" + date_premiere[0] + """\" notAfter=\"""" + date_premiere[
-                1] + """\" >""" + line_premiere + """</date>""")
-
-    outputFile.writelines("""
-                        <idno type="URL"/>
-                    </bibl>
-                </bibl>""")
-
-
-def write_end_header(outputFile, genre, vers_prose):
-    # TODO : Generate a better listPerson
-    """Write the end of the header of a XML file
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        genre (str) : The genre of the converted play.
-        vers_prose (str) : The type of the converted play, in verses or in prose.
-    """
-    outputFile.writelines(f"""
-            </sourceDesc>
-        </fileDesc>
-        <profileDesc>
-            <particDesc>
-                <listPerson>""")
-
-    for charaid, charaname in zip(counters["characterIDList"], counters["characterFullNameList"]):
-        outputFile.writelines(f"""
-                        <person xml:id="{charaid}" sex="SEX">
-                            <persName>{charaname}</persName>
-                        </person>""")
-    # TODO : Get character sex from character name
-    # TODO : Add Pastorale,Dialogue code and more genres ?
-    wikidata_codes = {'Tragi-Comédie': 192881,
-                      'Farce': 193979, 'Tragédie': 80930, 'Comédie': 40831,
-                      'Vaudeville': 186286, 'Farce': 193979, "Proverbe": 2406762, 'Pastorale': 0000, "Dialogue": 00000}
-    if genre in wikidata_codes:
-        wikicode = wikidata_codes[genre]
-    else:
-        if genre != '[indéfini]':
-            print(f"UNKNOW GENRE : {genre}")
-        wikicode = None
-    wikicode_part = ["", f"""
-                <classCode scheme="http://www.wikidata.org/entity/">[Q{wikicode}]</classCode>"""]
-    outputFile.writelines(f"""
-                </listPerson>
-            </particDesc>
-            <textClass>
-            <keywords scheme="http://theatre-documentation.fr"> <!--extracted from "genre" and "type" elements-->
-                    <term> {genre}</term>
-                    <term> {vers_prose} </term>
-                </keywords>{wikicode_part[wikicode is not None]}
-            </textClass>
-        </profileDesc>
-        <revisionDesc>
-            <listChange>
-                <change when="{date.today()}">(mg) file conversion from source</change>
-            </listChange>
-        </revisionDesc>
-   </teiHeader>""")
-
-
-def write_start_text(outputFile, title, genre, date_print):
-    """Write the start of the text body of a XML file.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        title (str) : The title of the converted play.
-        genre (str) : The genre of the converted play.
-        date_print (str) : The date of printing of the converted play.
-    """
-    outputFile.writelines("""
-    <text>
-    <front>
-        <docTitle>
-            <titlePart type="main">""" + title.upper() + """</titlePart>""")
-    if genre:
-        outputFile.writelines("""
-            <titlePart type="sub">""" + genre.upper() + """</titlePart>
-        </docTitle>""")
-    if date_print:
-        outputFile.writelines("""
-        <docDate when=\"""" + date_print + """\">[Date Print Line]</docDate>
-        """)
-
-
-def write_performance(outputFile, line_premiere, date_premiere):
-    """Write the performance tag of the chosen XML file.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-        line_premiere (str) : line of the play where the date of the first performance is written.
-        date_premiere (str) : The date of the first performance of the converted play.
-    """
-    if date_premiere != '[vide]':
-        if type(date_premiere) is tuple:
-            date_premiere = '-'.join(date_premiere)
-        outputFile.writelines("""
-        <performance>
-            <ab type="premiere">""" + line_premiere + """</ab><!--@date=\"""" + date_premiere + """\"-->
-        </performance>""")
-
-
-# def write_dedicace(outputFile, copy_playtext, author):
-#     """Write the dedicace sentence of a play in its XML version.
-#
-#     Args:
-#         outputFile (TextIOWrapper): Output file to generate in XML.
-#         copy_playtext (TextIOWrapper) : Content of the input file in HTML.
-#         author (tuple) : The author's name (tuple of string).
-#     """
-#     d = False
-#     header = True
-#     authorList = [i for i in author[0].extend(author[1]) if i not in ["de", "d'"]]
-#     for line in copy_playtext:
-#         dedicace = find_dedicace(line)
-#         if dedicace:
-#             outputFile.writelines("""
-#         <div type="dedicace">
-#                 <opener>
-#                     <salute>""" + dedicace + """</salute>
-#                 </opener>""")
-#             d = True
-#         if d:
-#             res = re.search('<p>(.*)</p>')
-#             if res:
-#                 l = res.group(1)
-#                 if l != ' ':
-#                     if header:
-#                         outputFile.writelines("""
-#         <head>""" + l + """</head>""")
-#                         header = False
-#                     elif any([i in l for i in authorList]):
-#                         outputFile.writelines("""
-#         <signed>""" + l + """</signed>
-# 	</div>""")
-#                         return
-#                     else:
-#                         outputFile.writelines("""
-#         <p>""" + l + """</p>""")
-
-# TODO : Add <signed>
-def write_dedicace(dedicace, dedicaceHeader, file):
-    file.writelines(f"""
-    <div type="dedicace">
-            <opener>
-                <salute> {dedicaceHeader}</salute>
-            </opener>""")
-    for index, line in enumerate(dedicace):
-        # if index == len(dedicace)-1 and
-        file.writelines(f"""
-        <p> {line} </p>""")
-    file.writelines(f"""
-    </div>""")
-
 
 ## Collecting body of play
 def try_saving_lines(outputFile, line):
@@ -823,24 +535,23 @@ def end_character_block(characterBlock, line):
         tuple: the boolean of all the characters, but also the actual line.
     """
     if characterBlock:
-        res = re.search("<h[1,2]", line)
-        if res:
+        end_block = re.search("<h[1,2]", line)
+        if end_block:
             characterBlock = False
-            # print("Character list: " + str(counters["characterIDList"]))
         else:
-            res = re.search("<p>(.*)</p>", line)
-            if res:
-                name = res.group(1)
+            character_declaration = re.search("<p>(.*)</p>", line)
+            if character_declaration:
+                name = character_declaration.group(1)
                 if len(name) == 1:
                     if counters["characterIDList"]:
                         characterBlock = False
-                        #print("Character list: " + str(counters["characterIDList"]))
+                        # print("Character list: " + str(counters["characterIDList"]))
                     return characterBlock, None
                 character = name
-                res = re.search("([^,]+)(,.*)", character)
-                if res:
-                    character = remove_html_tags_and_content(res.group(1))
-                    role = remove_html_tags_and_content(res.group(2))
+                name_and_role = re.search("([^,]+)(,.*)", character)
+                if name_and_role:
+                    character = remove_html_tags_and_content(name_and_role.group(1))
+                    role = remove_html_tags_and_content(name_and_role.group(2))
                 else:
                     character = remove_html_tags_and_content(character)
                     role = ""
@@ -877,18 +588,20 @@ def find_scene_list(line, sceneList, inSceneList):
                   "href=.*>(.*Scène.*)</a>"
     regex_scene_type = "[Jj]ournée|[Ss]cène|[Tt]ableau|[Ee]ntrée"
     regex_preface = "Préface|PREFACE|PRÉFACE"
-    regex_dedicace = r"\A *À|\A *AU|.* À M\. .*"
+    regex_dedicace = r"\A *À|\A *AU|.* À M\. (.*)"
     act_line = re.search(regex_act, line)
     scene_line = re.search(regex_scene, line)
     if act_line and act_line.group('actename') and inSceneList and "Scène" not in act_line.group(1):
         act_line = act_line.group('actename')
         act_line = clean_scene_name(act_line)
-        if re.search(regex_dedicace, act_line):
+        dedicace_found = re.search(regex_dedicace, act_line)
+        if dedicace_found:
             counters["dedicaceFound"] = True
-            counters["dedicaceHeader"] = act_line
+            metadata["dedicaceHeader"] = act_line
+            metadata["dedicaceSalute"] = dedicace_found.group(1)
         elif re.search(regex_preface, act_line):
             counters["prefaceFound"] = True
-            counters["prefaceHeader"] = act_line
+            metadata["prefaceHeader"] = act_line
         elif act_line:
             if not counters["noActPlay"]:
                 sceneList.append([act_line, []])
@@ -919,11 +632,11 @@ def find_scene_list(line, sceneList, inSceneList):
             scene_line = clean_scene_name(scene_line.group(2))
         if re.search(regex_dedicace, scene_line):
             counters["dedicaceFound"] = True
-            counters["dedicaceHeader"] = scene_line
+            metadata["dedicaceHeader"] = scene_line
             return sceneList, True
         elif re.search(regex_preface, scene_line):
             counters["prefaceFound"] = True
-            counters["prefaceHeader"] = scene_line
+            metadata["prefaceHeader"] = scene_line
             return sceneList, True
         if sceneList:
             if scene_line:
@@ -1089,11 +802,25 @@ def find_character(line, counters, playContent):
                         current_scene["repliques"].append(
                             {"type": "Stage", "content": remove_html_tags(character_name)})
                     else:
+                        # Sometimes, there is a problem in Theatre Doc. In this case, the previous line was centered, but the line of the previous character and the name of the next speaker are on the sme line.
+                        # This is a dirty workaround to fix it : check if the last part of the last replique is an uppercase word followed by a dot
+                        last_replique = current_scene["repliques"][-1]["content"]
+                        words = last_replique.split(" ")
+                        potential_last_character = words[-1].strip()
+                        potential_last_line = words[:-1]
+                        if potential_last_line and not(all([x.isupper() for x in potential_last_line])) and potential_last_character.isupper() and potential_last_character[-1] == '.':
+                            current_scene["repliques"].pop()
+                            fixed_last_replique = " ".join(words[:-1])
+                            current_scene["repliques"].append({"type": "Dialogue", "content":fixed_last_replique})
+                            current_scene["repliques"].append({"type": "Speaker", "content": potential_last_character})
+                            added_character = True
+                            print(f'split {last_replique} into {fixed_last_replique} and {potential_last_character}')
+                        else:
                         # If all else fails, we still write it down
-                        print(
-                            f'Warning : Two consecutive char names ? {character_name} and {current_scene["repliques"][-1]["content"]}')
-                        current_scene["repliques"].append({"type": "Speaker", "content": character_name})
-                        added_character = True
+                            print(
+                                f'Warning : Two consecutive char names ? {character_name} and {current_scene["repliques"][-1]["content"]}')
+                            current_scene["repliques"].append({"type": "Speaker", "content": character_name})
+                            added_character = True
     return counters, playContent, added_character
 
 
@@ -1154,7 +881,7 @@ def correct_character_id(characterId, counters, characters_in_scene, max_distanc
                 if re.search(true_id, characterId) or re.search(characterId, true_id):
                     counters["undeclaredCharacterIDs"][characterId] = true_id
                     characterId = true_id
-                    #print(f"Guessed {true_id} for {old_characterId}")
+                    # print(f"Guessed {true_id} for {old_characterId}")
                     break
                 else:
                     distance = editdistance.eval(characterId, true_id)
@@ -1163,7 +890,7 @@ def correct_character_id(characterId, counters, characters_in_scene, max_distanc
             if old_characterId not in counters["undeclaredCharacterIDs"]:
                 closest_id, closest_distance = min_dict(edit_distances)
                 if (closest_id in characters_in_scene and closest_distance <= 5) or closest_distance <= max_distance:
-                    #print(f"{old_characterId} : Guessed {closest_id}, distance {closest_distance} ")
+                    # print(f"{old_characterId} : Guessed {closest_id}, distance {closest_distance} ")
                     counters["undeclaredCharacterIDs"][characterId] = closest_id
                 else:
                     # print(f"Could not guess {characterId} (best guess {closest_id})")
@@ -1211,142 +938,26 @@ def identify_character_ids(scene, counters):
             replique["characterId"] = guessed_charactedId
 
 
-### Writing body of play
-def write_character(outputFile):
-    """Write the saved characters of a play in the associated XML file.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-    """
-    outputFile.writelines("""
-        <castList>
-                    <head> ACTEURS </head>""")
-    for i, character in enumerate(counters["characterIDList"]):
-        outputFile.writelines(f"""
-            <castItem>
-                    <role corresp="#{character}">{counters["characterFullNameList"][i]} </role>{counters["roleList"][i]}</castItem>"""
-                              )
-    outputFile.writelines("""
-        </castList>
-        </front>""")
-
-
-# TODO: Add writing of "actStageIndication"
-def write_act_beginning(act_number, act_header, file):
-    file.writelines(f"""
-           <div type="act" xml:id=\"{act_number}\">
-           <head> {act_header} </head>""")
-
-
-def write_act_end(file):
-    file.writelines("""</div>""")
-
-
-def write_scene_beginning(scene_number, scene_header, file):
-    file.writelines(f"""
-        <div type="scene" xml:id=\" {scene_number} \">
-            <head> {scene_header} </head>""")
-
-
-def write_scene(scene, replique_number, file):
-    """Writes all dialogue, speakers, and stage direction to the output file. Also returns the current number of repliques"""
-    sp_opened = False
-    for replique in scene["repliques"]:
-        if replique["type"] == "Speaker":
-            # Checking for first replique
-            if sp_opened:
-                file.writelines("""
-                </sp>""")
-
-            character = remove_html_tags(replique["content"])
-            characterId = replique["characterId"]
-            file.writelines(f"""
-        <sp who=\"#{characterId}\">
-            <speaker> {character} </speaker>""")
-            sp_opened = True
-        # TODO : Add xml id ? xml:id=\"{counters["actNb"] + str(counters["scenesInAct"]) + "-" + str(counters["repliquesinScene"])}
-        if replique["type"] == "Dialogue":
-            replique_number += 1
-            outputFile.writelines(f"""
-                        <l n=\"{replique_number}\"> {remove_html_tags(replique["content"])}</l>""")
-        # TODO : add xml id ? xml:id=\"l""" + str(counters["linesInPlay"])
-        if replique["type"] == "Stage":
-            direction = replique["content"]
-            outputFile.writelines(f"""
-            <stage>{direction}</stage>""")
-    if sp_opened:
-        file.writelines("""
-         </sp>""")
-    return replique_number
-
-
-def write_scene_end(outputFile):
-    outputFile.writelines("""
-    </div>""")
-
-
-def write_play(outputFile, playContent, counters):
-    act_number = 0
-    replique_number = 0
-    if counters["noActPlay"]:
-        for scene in playContent:
-            scene_number = scene["sceneNumber"]
-            scene_header = scene["sceneName"]
-            write_scene_beginning(scene_number, scene_header, outputFile)
-            replique_number = write_scene(scene, replique_number, outputFile)
-            write_scene_end(outputFile)
-    else:
-        for act in playContent:
-            act_number += 1
-            # Collecting things to write
-            if not act["actNumber"]:
-                act_number_string = str(act_number)
-            else:
-                act_number_string = act["actNumber"]
-            if not act["actName"]:
-                act_name = f"ACTE {act_number_string}"
-            else:
-                act_name = remove_html_tags_and_content(act["actName"])
-            write_act_beginning(act_number_string, act_name, outputFile)
-            for scene in act["Scenes"]:
-                scene_number = scene["sceneNumber"]
-                scene_header = scene["sceneName"]
-                write_scene_beginning(scene_number, scene_header, outputFile)
-                replique_number = write_scene(scene, replique_number, outputFile)
-                write_scene_end(outputFile)
-            write_act_end(outputFile)
-
-
-def write_end(outputFile):
-    """Write the end of the XML output file.
-
-    Args:
-        outputFile (TextIOWrapper): Output file to generate in XML.
-    """
-    outputFile.writelines("""
-         <p>FIN</p>
-      </div>
-      </div>
-   </body>
-</text>
-</TEI>""")
-
-
 # TMP
 def update_csv(row, key, value):
     if key not in row or not row[key] or row[key].strip() == '':
         row[key] = value
 
 
-def get_and_write_metadata(counters, outputFile, findSummary, saveBegin, csv_row):
+def get_metadata(counters, csv_row, metadata, line):
     # get and write title
     title, forename, surname = get_title_and_author(line)
+    metadata['main_title'] = title
+    metadata['author_forename'] = forename
+    metadata['author_surname'] = surname
     update_csv(csv_row, "Title", title)
     update_csv(csv_row, "Author", f'{" ".join(forename)} {" ".join(surname)}')
-    if write_title(outputFile, title):
-        # get and write type of play:
+    if title:
+        # get type of play:
         copy_playtext = open(file, "r", encoding="utf-8")
         genre, vers_prose, act_number = get_genre_versification_acts_number(copy_playtext)
+        metadata['vers_prose'] = vers_prose
+        metadata["genre"] = genre
         update_csv(csv_row, "Genre", genre)
         update_csv(csv_row, "Type", vers_prose)
         if act_number == 1:
@@ -1354,66 +965,46 @@ def get_and_write_metadata(counters, outputFile, findSummary, saveBegin, csv_row
             counters["actsInPlay"] = 1
         if act_number != -1:
             counters["actsDeclaredNumber"] = act_number
-        write_type(outputFile, genre)
-        # get and write author
-        author = forename, surname
-        if write_author(outputFile, author):
-            # get and write source
-            write_source(outputFile, source)
-
-        # get and write date
+        # get date
         copy_playtext.close()
         copy_playtext = open(file, "r", encoding="utf-8")
-        # date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates(
-        #     copy_playtext)
-        date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates_gpt(
+        date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates(
             copy_playtext)
         update_csv(csv_row, "Date ecriture", date_written)
         update_csv(csv_row, "Date impression", date_print)
         update_csv(csv_row, "Date premiere", date_premiere)
-
-        write_dates(outputFile, date_written, date_print, date_premiere, line_premiere)
-        write_end_header(outputFile, genre, vers_prose)
-        write_start_text(outputFile, title, genre, date_print)
-        write_performance(outputFile, line_premiere, date_premiere)
+        metadata["date_written"] = date_written
+        metadata["date_print"] = date_print
+        metadata["date_premiere"] = date_premiere
+        metadata['doc_date_text'] = 'unknown'  # TODO: Find it
+        metadata['premiere_text'] = line_premiere
+        metadata['print_text'] = line_print
+        metadata['written_text'] = line_written
+        metadata['premiere_location'] = 'unknown'  # TODO : Find it (should be easy)
         copy_playtext.close()
 
-    # TODO : delete this part when dedicace detection works properly
-    # try find dedicace in play
-    # if not findSummary:
-    #     findSummary = find_summary(line, ul)
-    # else:
-    #     findSummary = extract_from_summary(line, ul)
-    # # starting saving lines
-    # if not saveBegin:
-    #     saveBegin = try_saving_lines(outputFile, line)
-    # else:
-    #     # find and print dedicace
-    #     if counters['dedicace']:
-    #         if find_dedicace(line):
-    #             copy_playtext.close()
-    #             copy_playtext = open(file, "r", encoding="utf-8")
-    #             write_dedicace(outputFile, copy_playtext, author)
-    return counters, findSummary, saveBegin
 
-
-def find_dedicace_or_preface_start(line, counters, inBlock, headerType):
+def find_dedicace_or_preface_start(line, inBlock, headerType):
+    """Returns True if and only if the given line is the start of the dedicace or preface"""
     if inBlock:
         return True
     dedicace_header = re.search(".*<h1[^>]*>(.*)</h1>", line)
     if dedicace_header:
         header_text = clean_scene_name(dedicace_header.group(1))
-        if header_text == counters[headerType]:
+        if header_text == metadata[headerType]:
             inBlock = True
     return inBlock
 
 
-def find_dedicace_or_preface_content(line, counters, type):
+def find_dedicace_or_preface_content(line, type):
     res = re.search("<p[^>]*>(.*)</p>", line)
     if res:
         contentLine = res.group(1).replace("\xa0", " ")
         if contentLine != " ":
-            counters[type].append(contentLine)
+            if type not in metadata:
+                metadata[type] = [contentLine]
+            else:
+                metadata[type].append(contentLine)
     regex_act = ".*<h1[^>]*>(.*)</h1>"
     regex_scene = "|".join(
         [".*<h2 .*<strong>(?P<h2strong>.*)</strong>.*</h2>", ".*<h2.*>(?P<h2normal>Scène.*)</h2>",
@@ -1422,7 +1013,10 @@ def find_dedicace_or_preface_content(line, counters, type):
     return not newActOrScene
 
 
-def rework_writing():
+def write_play(metadata, playContent, counters, outputFile):
+    output = writing.write_full_tei_file(metadata, playContent, counters)
+    writing.output_tei_file(output, outputFile)
+    return output
 
 
 if __name__ == "__main__":
@@ -1445,7 +1039,6 @@ if __name__ == "__main__":
     # Declaration of flags and counters.
     documentNb = 0
     findSummary = False
-    saveBegin = False
     characterBlock = False
     ul = 0
     characterBlockLastLine = None
@@ -1460,15 +1053,13 @@ if __name__ == "__main__":
 
         # Find source
         fileName = basename(file)
-        source = get_source(fileSources, fileName)
-
         playText = open(file, "r", encoding="utf-8")
-        outputFile = open(join(Dracor_Folder, fileName.replace("html", "xml")), "w", encoding="utf-8")
-
+        outputFile = os.path.join(Dracor_Folder, fileName.replace("html", "xml"))
         # reset parameters
         csv_row = dict()
         csv_row["Raw Name"] = fileName.replace(".html", " ")
-
+        metadata = dict()
+        metadata['source'] = get_source(fileSources, fileName)
         counters = {
             "charactersinScene": "",
             "repliquesinScene": 0,
@@ -1486,13 +1077,10 @@ if __name__ == "__main__":
             "roleList": [],
             "actNb": "",
             "sceneNb": "",
-            "dedicace": [],
             "dedicaceFound": False,
-            "dedicaceHeader": False,
             "dedicaceFinished": False,
             "preface": [],
             "prefaceFound": False,
-            "prefaceHeader": False,
             "prefaceFinished": False,
             "undeclaredCharacterIDs": dict(),
             "sceneList": [],
@@ -1537,25 +1125,25 @@ if __name__ == "__main__":
             if index == characterBlockLastLine:
                 characterBlockFinished = True
             # Getting all metadata :
-            counters, findSummary, saveBegin = get_and_write_metadata(counters, outputFile, findSummary, saveBegin,
-                                                                      csv_row)
+            get_metadata(counters, csv_row, metadata, line)
 
             # Some text can be before the beginning of the play : a dedicace, or a preface.
             # Dedicace
             if counters["dedicaceFound"] and not counters["dedicaceFinished"]:
                 if inDedicace:
-                    inDedicace = find_dedicace_or_preface_content(line, counters, "dedicace")
+                    inDedicace = find_dedicace_or_preface_content(line, "dedicace")
                     if not inDedicace:  # If we have finished reading the dedicace
                         counters["dedicaceFinished"] = True
-                inDedicace = find_dedicace_or_preface_start(line, counters, inDedicace, "dedicaceHeader")
+                else:
+                    inDedicace = find_dedicace_or_preface_start(line, inDedicace, "dedicaceHeader")
 
             # Preface
             if counters["prefaceFound"] and not counters["prefaceFinished"]:
                 if inPreface:
-                    inPreface = find_dedicace_or_preface_content(line, counters, "preface")
+                    inPreface = find_dedicace_or_preface_content(line, "preface")
                     if not inPreface:  # If we have finished reading the preface
                         counters["prefaceFinished"] = True
-                inPreface = find_dedicace_or_preface_start(line, counters, inPreface, "prefaceHeader")
+                inPreface = find_dedicace_or_preface_start(line, inPreface, "prefaceHeader")
 
             # Now we read the whole text to find the body of the play. We are constructing a list called playContent
             # containing the whole play. It is structured as follows: playContent is either a list of acts or a list
@@ -1596,29 +1184,17 @@ if __name__ == "__main__":
 
         # Since characters names often have typos or are not exactly as described, we now correct those names
         # We also establish the list of characters speaking per scene
-        #print("correcting characters")
-        if counters["noActPlay"]:
-            for scene in playContent:
-                identify_character_ids(scene, counters)
-        else:
-            for act in playContent:
-                for scene in act["Scenes"]:
-                    identify_character_ids(scene, counters)
-        #print("finished correcting characters")
 
-        # Writing dedicace
-        if counters["dedicaceFound"]:
-            if not counters["dedicaceFinished"]:
-                raise ValueError("Dedicace detected at the beginning but not collected")
-            else:
-                write_dedicace(counters["dedicace"], counters["dedicaceHeader"], outputFile)
-        # Writing preface
-        # TODO : do the same for preface writing
+        # If there's no act, treat the entire playContent as a list of scenes
+        scenes = playContent if counters["noActPlay"] else [scene for act in playContent for scene in act["Scenes"]]
+
+        # Process each scene and identify character ids
+        for scene in scenes:
+            identify_character_ids(scene, counters)
 
         # Writing play
         gwriter.writerow(csv_row)
-        write_play(outputFile, playContent, counters)
-        write_end(outputFile)
+        write_play(metadata, playContent, counters, outputFile)
 
         # Stats collection, temporary
         if counters["sceneList"]:
@@ -1644,9 +1220,6 @@ if __name__ == "__main__":
             number_of_acts_correctly_declared += 1
         totalplays += 1
 
-    # date_file.close()
-
-    # print("Number of plays without date :", count_date)
     stats.writelines(f"""Total number of plays : {totalplays}
     Plays with no acts found : {noact}
     Plays with no cast of character found : {castnotWritten}
@@ -1860,160 +1433,3 @@ if __name__ == "__main__":
 #                 counters["linesInScene"] += 1
 #
 #     return counters
-# Old date detection fuction (rewrited by chatGPT)
-# def get_dates(playText):
-#     """Get the date of writing, the date of printing and the date of first performance of the play, and the line of context for each of them.
-#
-#     Args:
-#         playText (TextIOWrapper): Text Contents of a play.
-#
-#     Returns:
-#         tuple: Return a tuple of 6 strings :
-#             - Date of writing
-#             - Date of printing
-#             - Date of first performance
-#             - Line of date of writing
-#             - Line of date of printing
-#             - Line of date of first performance
-#     """
-#     # global count_date
-#     line_written = "[vide]"
-#     line_print = "[vide]"
-#     line_premiere = "[vide]"
-#     date_written = "[vide]"
-#     date_print = "[vide]"
-#     date_premiere = "[vide]"
-#     is_written = False
-#     is_print = False
-#     is_premiere = False
-#
-#     for l in standard_line(playText):
-#
-#         if re.search(".*<strong><em>Personnages.*</em></strong>.*", l) or re.search(
-#                 '<p align="center" style="text-align:center"><b><i>Personnages.*</span></i></b></p>', l) or (
-#                 True in (is_written, is_print, is_premiere) and l == '<p> </p>'):
-#             break
-#
-#         if re.search("<p>Non représenté[^0-9]*</p>", l):
-#             line_premiere = l.replace("<p>", "").replace("</p>", "")
-#             break
-#
-#         if not is_written and not is_print:
-#             res = re.search("<p>.*[ÉéEe]crit en ([0-9]+).* et [op]ublié.* en ([0-9]+).*</p>", l)
-#             if res:
-#                 line_written = l.replace('<p>', '').replace('</p>', '')
-#                 line_print = l.replace('<p>', '').replace('</p>', '')
-#                 date_written, date_print = res.groups()
-#                 is_written, is_print = True, True
-#
-#         if not is_written:
-#             res = re.search("<p>.*[ÉéEe]crit[e]? (.*)</p>", l)
-#             if res:
-#                 line_written = l.replace('<p>', '').replace('</p>', '')
-#                 res2 = re.search(".*le ([0-9]+) ([^ ]+) ([0-9]+).*", res.group(1))
-#                 if res2:
-#                     date_written = format_date_AAAAMMJJ(res2.groups())
-#                     is_written = True
-#                 else:
-#                     res2 = re.search(".*en ([0-9]+).*", res.group(1))
-#                     res3 = re.search(".*en ([^0-9 ]+) ([0-9]+).*", res.group(1))
-#                     if res2:
-#                         date_written = res2.group(1)
-#                         is_written = True
-#                     elif res3:
-#                         date_written = format_date_AAAAMM(res3.groups())
-#                         is_written = True
-#
-#         if not is_premiere and not is_print:
-#             res = re.search(
-#                 "<p>Publié.* ([0-9]+) et représenté.* ([0-9]+|1<sup>er</sup>|premier) ([^ ]+) ([0-9]+).*</p>", l)
-#             res2 = re.search("<p>Publié.* ([0-9]+) et représenté.* ([0-9]+).*</p>", l)
-#             if res or res2:
-#                 is_print, is_premiere = True, True
-#                 if res:
-#                     date_print, date_premiere = res.group(1), format_date_AAAAMMJJ(res.groups()[1:])
-#
-#                 elif res2:
-#                     date_print, date_premiere = res2.group(1), res2.group(2)
-#                 is_print, is_premiere = True, True
-#                 line_print, line_premiere = l.replace("<p>", "").replace("</p>", ""), l.replace("<p>", "").replace(
-#                     "</p>", "")
-#
-#         date_line = re.search("<p>.*([Rr]eprésenté.*)</p>", l)
-#         date_line2 = re.search("<p>.*(fut joué.*)</p>", l)
-#         if (date_line or date_line2) and not is_premiere:
-#             if date_line2:
-#                 date_line = date_line2
-#             date_line = date_line.group(1)
-#             res = re.search(".* ([l\|]?[0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+) ([l\|]?[0-9]+).*", date_line)
-#             res2 = re.search(".* ([0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+) ([0-9]+).*" * 2, date_line)
-#             double_words_res = re.search(
-#                 ".* ([l\|]?[0-9]+|1<sup>er</sup>|premier)[ ]+([^ ]+)[ ]+([^ ]+) ([l\|]?[0-9]+).*", date_line)
-#             between_years_res = re.search(".* ([0-9]+)-([0-9]+).*", date_line)
-#             line_premiere = date_line
-#             if res:
-#                 if res2:
-#                     date_premiere = format_date_AAAAMMJJ(res2.groups())
-#                 else:
-#                     date_premiere = format_date_AAAAMMJJ(res.groups())
-#                 is_premiere = True
-#             elif double_words_res:
-#                 if double_words_res.group(2).replace('é', 'e') in mois:
-#                     groups = (double_words_res.group(1), double_words_res.group(2), double_words_res.group(4))
-#                 else:
-#                     groups = (double_words_res.group(1), double_words_res.group(3), double_words_res.group(4))
-#                 date_premiere = format_date_AAAAMMJJ(groups)
-#                 is_premiere = True
-#             elif between_years_res:
-#                 date_premiere = between_years_res.groups()
-#                 is_premiere = True
-#             else:
-#                 res = re.search(".* en ([0-9]+).*", date_line)
-#                 res2 = re.search(".* en ([0-9]+).*" * 2, date_line)
-#                 res3 = re.search(".* en ([0-9]+).*" * 3, date_line)
-#                 if res:
-#                     if res2 is not None:
-#                         res = res2
-#                         if res3 is not None:
-#                             res = res3
-#                     date_premiere = res.group(1)
-#                     is_premiere = True
-#                 else:
-#                     res = re.search(".* (en|le|de) ([^ ]+) ([0-9]+).*", date_line)
-#                     weird_res = re.search(".* (en|le|de)([0-9]+) ([^ ]+) ([0-9]+).*", date_line)
-#                     if res:
-#                         res2 = re.search("([0-9]+)(.*)", res.group(2))
-#                         if res2:
-#                             date_premiere = format_date_AAAAMMJJ(res2.groups() + res.groups()[2:])
-#                         elif res:
-#                             date_premiere = format_date_AAAAMM(res.groups()[1:])
-#                         is_premiere = True
-#                     elif weird_res:
-#                         date_premiere = format_date_AAAAMMJJ(weird_res.groups()[1:])
-#                         is_premiere = True
-#
-#         if not is_print:
-#             res = re.search("<p>([0-9]+).*</p>", l)
-#             res2 = re.search("<p>Imprimée en ([0-9]+).*</p>", l)
-#             res3 = re.search("<p>Non représentée[,\.] ([0-9]+).*</p>",
-#                              l.replace('<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>', ''))
-#
-#             if res or res2 or res3:
-#                 if res is None:
-#                     res = res2
-#                     if res2 is None:
-#                         res = res3
-#                 if len(res.group(1)) == 4:
-#                     date_print = res.group(1)
-#                     line_print = l.replace("<p>", "").replace("<p>", "")
-#                     is_print = True
-#
-#         if date_line is None:
-#             date_line = ""
-#     if not is_written:
-#         line_written = "[vide]"
-#     all_dates = [date_written, date_print, date_premiere, line_written, line_print, line_premiere]
-#     #print(all_dates)
-#     all_dates = [remove_html_tags_and_content(date) for date in all_dates]
-#     return tuple(all_dates)
-
