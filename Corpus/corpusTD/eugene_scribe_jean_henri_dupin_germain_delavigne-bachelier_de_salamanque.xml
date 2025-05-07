@@ -1,1350 +1,1430 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Bachelier de Salamanque</title>
-        <author key="Eugène SCRIBE - Jean-Henri DUPIN - Germain DELAVIGNE | (naissance-mort)">Eugène SCRIBE - Jean-Henri DUPIN - Germain DELAVIGNE |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/955</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène SCRIBE - Jean-Henri DUPIN - Germain DELAVIGNE |</author>. <title>Le Bachelier de Salamanque</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/955</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1815-01-18">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 18 janvier 1815.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="gonzalès" sex="SEX">
+            <persName>GONZALÈS</persName>
+          </person>
+          <person xml:id="carambola" sex="SEX">
+            <persName>CARAMBOLA</persName>
+          </person>
+          <person xml:id="torribio" sex="SEX">
+            <persName>TORRIBIO</persName>
+          </person>
+          <person xml:id="scipion" sex="SEX">
+            <persName>SCIPION</persName>
+          </person>
+          <person xml:id="l’alguazil-pachéo" sex="SEX">
+            <persName>L’ALGUAZIL PACHÉO</persName>
+          </person>
+          <person xml:id="madame-gonzalès" sex="SEX">
+            <persName>MADAME GONZALÈS</persName>
+          </person>
+          <person xml:id="christina" sex="SEX">
+            <persName>CHRISTINA</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1815-01-18" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 18 janvier 1815.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le Bachelier de Salamanque</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie-Vaudeville en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 18 janvier 1815.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="gonzalès">GONZALÈS</role>
-              <roleDesc>, <em>barbier chirurgien</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="carambola">CARAMBOLA</role>
-              <roleDesc>, <em>bachelier</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="torribio">TORRIBIO</role>
-              <roleDesc>,<em> alcade</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="scipion">SCIPION</role>
-              <roleDesc>, <em>son fils</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="l’alguazil-pachéo">L’ALGUAZIL PACHÉO</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-gonzalès">MADAME GONZALÈS</role>
-              <roleDesc>, <em>femme de Gonzalès</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="christina">CHRISTINA</role>
-              <roleDesc>, <em>fille de Gonzalès</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>En Espagne, à quelques lieues de Salamanque.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Un appartement meublé dans le goût espagnol. Une porte au fond ; deux portes latérales ; un cabinet à gauche ; une croisée et un balcon saillant à droite. Il est sept heures du soir ; il fait nuit.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="christina" xml:id="1-1">
-            <speaker>CHRISTINA, SCIPION</speaker>
-            <l n="10" xml:id="l10"> </l>
-          </sp>
-          <sp who="scipion" xml:id="1-2">
-            <speaker>SCIPION, <em>en dehors.</em></speaker>
-            <l n="11" xml:id="l11">Christina, est-ce toi ?</l>
-          </sp>
-          <sp who="christina" xml:id="1-3">
-            <speaker>CHRISTINA, <em>à la croisée.</em></speaker>
-            <l n="12" xml:id="l12">Scipion !... oui, c’est moi... mais prends bien garde... attends, je tiens l’échelle.</l>
-          </sp>
-          <sp who="scipion" xml:id="1-4">
-            <speaker>SCIPION, <em>paraissant.</em></speaker>
-            <l n="13" xml:id="l13">Tiens bien au moins !... je suis si maladroit !</l>
-          </sp>
-          <sp who="christina" xml:id="1-5">
-            <speaker>CHRISTINA.</speaker>
-            <l n="14" xml:id="l14">Ce pauvre petit cousin !... Il y a donc bien longtemps que tu es sous le balcon ?</l>
-          </sp>
-          <sp who="scipion" xml:id="1-6">
-            <speaker>SCIPION, <em>d’un ton pleureur.</em></speaker>
-            <l n="15" xml:id="l15">Je le crois bien. Ce matin, je me suis échappé de l’Université, et j’ai quitté Salamanque au point du jour, comme tu me l’avais indiqué par ta lettre.</l>
-            <stage><hi rend="italic"><em>Air : Ermite, bon Ermite. (L’Ermite de Sainte-Avèle.)</em></hi></stage>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="scipion" xml:id="1-7">
-            <speaker>SCIPION.</speaker>
-            <l n="17" xml:id="l17">Dis-moi, ce n’est pas que j’aie peur... mais sommes-nous bien en sûreté ?</l>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="scipion" xml:id="1-8">
-            <speaker>SCIPION.</speaker>
-            <l n="18" xml:id="l18">Et qui peut nous surprendre ? Le seigneur Gonzalès, mon père, l’unique et sans contredit le plus habile barbier de ce village, va partir pour Cuença, où il faut qu’il soit demain matin, ma mère doit l’accompagner, nous serons seuls... J’ai fait une petite galette, et nous la mangerons ensemble.</l>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="scipion" xml:id="1-9">
-            <speaker>SCIPION.</speaker>
-            <l n="19" xml:id="l19">Ce sera charmant ! avec ça, moi qui aime tant la galette !</l>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="scipion" xml:id="1-10">
-            <speaker>SCIPION.</speaker>
-            <stage><hi rend="italic"><em>Air : On se chagrine trop vite. (Le Mameluck.)</em></hi></stage>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="scipion" xml:id="1-11">
-            <speaker>SCIPION.</speaker>
-            <l n="21" xml:id="l21">Mais sais-tu que ça ouvre aussi l’esprit !</l>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="scipion" xml:id="1-12">
-            <speaker>SCIPION.</speaker>
-            <l n="22" xml:id="l22">Ils se sont tant moqués de moi !</l>
-          </sp>
-          <sp who="christina" xml:id="1-13">
-            <speaker>CHRISTINA.</speaker>
-            <l n="23" xml:id="l23">Comment, ils ont osé... pauvre Scipion ! conte-moi donc ça ; il est vrai qu’en partant tu étais sage, comme une jeune fille.</l>
-          </sp>
-          <sp who="scipion" xml:id="1-14">
-            <speaker>SCIPION.</speaker>
-            <l n="24" xml:id="l24">Voilà pourquoi on me traitait d’hypocrite... Heureusement j’ai fait connaissance avec un nommé Carambola, un bachelier de Salamanque, qui va bientôt commencer son tour d’Espagne, et qui même passera peut-être par ce village ; c’est un drôle de corps qui rit sans cesse, et qui m’a pris en amitié parce que je pleurais toujours ; mais cette amitié-là ne me consolait pas d’être séparé de toi... aussi, c’est ton père !...</l>
-          </sp>
-          <sp who="christina" xml:id="1-15">
-            <speaker>CHRISTINA.</speaker>
-            <l n="25" xml:id="l25">Eh ! non, ce n’est pas lui ; ton père et le mien avaient formé le projet de nous marier un jour ; c’est ma belle-mère seule qui s’y est opposée.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Irons-nous à Paris.</em></hi></stage>
-            <l n="27" xml:id="l27">Et puis, je crains qu’elle ne me destine au vieux corrégidor.</l>
-          </sp>
-          <sp who="scipion" xml:id="1-16">
-            <speaker>SCIPION.</speaker>
-            <l n="28" xml:id="l28">Et quand la femme a dit : je ne veux pas, le mari doit donc se taire ?</l>
-          </sp>
-          <sp who="christina" xml:id="1-17">
-            <speaker>CHRISTINA.</speaker>
-            <l n="29" xml:id="l29">C’est toujours comme cela dans les ménages bien organisés ; mais je n’ai pas perdu l’espérance, et je me flatte...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="1-18">
-            <speaker>MADAME GONZALÈS, <em>en dehors.</em></speaker>
-            <l n="30" xml:id="l30">Christina ?</l>
-          </sp>
-          <sp who="scipion" xml:id="1-19">
-            <speaker>SCIPION.</speaker>
-            <l n="31" xml:id="l31">Ô ciel ! voilà madame Gonzalès !</l>
-          </sp>
-          <sp who="christina" xml:id="1-20">
-            <speaker>CHRISTINA.</speaker>
-            <l n="32" xml:id="l32">Où te cacher ?... tiens, dans ce cabinet ; ce ne sera pas pour longtemps.</l>
-            <stage><hi rend="italic"><em>Scipion entre dans le cabinet, à gauche.</em></hi></stage>
-            <l n="34" xml:id="l34"> </l>
-            <l n="35" xml:id="l35"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="36" xml:id="l36"> </l>
-          <sp who="christina" xml:id="2-1">
-            <speaker>MADAME GONZALÈS, CHRISTINA</speaker>
-            <l n="37" xml:id="l37"> </l>
-          </sp>
-          <sp who="gonzalès" xml:id="2-2">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="38" xml:id="l38">Voyez si cette petite fille me répondra !... Allez aider votre père à faire sa valise.</l>
-          </sp>
-          <sp who="christina" xml:id="2-3">
-            <speaker>CHRISTINA.</speaker>
-            <l n="39" xml:id="l39">Comment ? vous allez donc partir !... Qu’est-ce que je vais faire ici, toute seule à la maison ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="2-4">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="40" xml:id="l40">Mon départ te fait donc bien de la peine ? Eh bien, console-toi, je reste; j’ai changé d’idée, je n’accompagnerai pas mon mari.</l>
-          </sp>
-          <sp who="christina" xml:id="2-5">
-            <speaker>CHRISTINA, <em>stupéfaite.</em></speaker>
-            <l n="41" xml:id="l41">Comment ? vous restez ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="2-6">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="42" xml:id="l42">Sans doute, on dirait que vous en êtes fâchée.</l>
-          </sp>
-          <sp who="christina" xml:id="2-7">
-            <speaker>CHRISTINA.</speaker>
-            <l n="43" xml:id="l43">Moi ? au contraire. Ah ! que je suis contente !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="45" xml:id="l45">Ah ! mon Dieu ! quel contretemps ! quel contretemps !</l>
-            <stage><hi rend="italic"><em>Elle sort.</em></hi></stage>
-            <l n="47" xml:id="l47"> </l>
-            <l n="48" xml:id="l48"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="49" xml:id="l49"> </l>
-          <sp who="gonzalès" xml:id="3-1">
-            <speaker>MADAME GONZALÈS, GONZALÈS</speaker>
-            <l n="50" xml:id="l50"> </l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-2">
-            <speaker>GONZALÈS.</speaker>
-            <l n="51" xml:id="l51">Eh bien ! madame Gonzalès, tout est prêt pour mon voyage ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-3">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="52" xml:id="l52">Encore voyager !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-4">
-            <speaker>GONZALÈS.</speaker>
-            <l n="53" xml:id="l53">Ma femme, il y a trois choses nécessaires en ménage : de l’argent, de l’argent, et encore de l’argent.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-5">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="54" xml:id="l54">Ce procès-là ne t’en rapportera pas, puisqu’il ne finit pas.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-6">
-            <speaker>GONZALÈS.</speaker>
-            <l n="55" xml:id="l55">Dame, tu crois qu’on expédie un procès comme un malade ; c’en est un qui ne veut pas payer, cependant il en est revenu ; une autre fois ça sera une leçon. À propos, j’ai vu ce matin le compère Torribio, qui m’a encore parlé du mariage de son fils Scipion avec ma fille.</l>
-            <stage><hi rend="italic"><em>Madame Gonzalès fait un mouvement d’impatience.</em></hi></stage>
-            <l n="57" xml:id="l57">Je l’aime mieux que ton corrégidor Inigo Riolès della Plata, qui a bien des noms, mais qui n’a pas un maravédis.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-7">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="58" xml:id="l58">Ne me parle pas de cela dans ce moment-ci, ton départ me fait trop de peine.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-8">
-            <speaker>GONZALÈS.</speaker>
-            <l n="59" xml:id="l59">Dis-moi pourquoi tu pleures comme ça quand je m’en vais, et pourquoi, quand je reste, tu n’as pas l’air de t’amuser.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="3-9">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="60" xml:id="l60">C’est bien facile à expliquer.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Partie carrée.</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="3-10">
-            <speaker>GONZALÈS.</speaker>
-            <l n="62" xml:id="l62">C’est là aimer !</l>
-            <l n="63" xml:id="l63"> </l>
-            <l n="64" xml:id="l64"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="65" xml:id="l65"> </l>
-          <sp who="christina" xml:id="4-1">
-            <speaker>MADAME GONZALÈS, GONZALÈS, CHRISTINA</speaker>
-            <l n="66" xml:id="l66"> </l>
-          </sp>
-          <sp who="christina" xml:id="4-2">
-            <speaker>CHRISTINA, <em>apportant un manteau et une canne.</em></speaker>
-            <l n="67" xml:id="l67">Mon père, voilà tout ce qu’il vous faut.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="4-3">
-            <speaker>GONZALÈS.</speaker>
-            <l n="68" xml:id="l68">Adieu, ma femme, adieu, ma fille.</l>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Fragment du Tableau parlant.</em></hi></stage>
-          <stage>GONZALÈS.</stage>
-          </sp>
-          <sp who="gonzalès" xml:id="4-4">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <stage><hi rend="italic"><em>Gonzalès et Christina sortent.</em></hi></stage>
-          </sp>
-          <sp who="christina" xml:id="4-5">
-            <speaker>CHRISTINA.</speaker>
-            <l n="72" xml:id="l72"> </l>
-            <l n="73" xml:id="l73"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="74" xml:id="l74"> </l>
-          <sp who="gonzalès" xml:id="5-1">
-            <speaker>MADAME GONZALÈS, <em>seule</em></speaker>
-            <l n="75" xml:id="l75"> </l>
-            <l n="76" xml:id="l76">Ce bon Gonzalès est bien le meilleur des maris !... Il a mille qualités, et n’a qu’un seul défaut ; c’est de trop aimer son état, et parce qu’il aime son état, il aime l’argent, et parce qu’il aime l’argent, il est avare, et parce qu’il est avare, il est quinteux, bizarre, et ne se permet aucun plaisir ; enfin, c’est aujourd’hui ma fête, il n’y a seulement pas pensé ; aussi je crois que je n’ai pas mal fait d’accepter la proposition de notre voisin Pachéco, l’alguazil, et du compère Torribio, qui doivent, ce soir, venir souper ici.</l>
-            <stage><hi rend="italic"><em>Air : Je n’aimais pas le tabac beaucoup. (Le Diable à quatre.)</em></hi></stage>
-            <l n="78" xml:id="l78"> </l>
-            <l n="79" xml:id="l79"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="80" xml:id="l80"> </l>
-          <sp who="christina" xml:id="6-1">
-            <speaker>MADAME GONZALÈS, CHRISTINA</speaker>
-            <l n="81" xml:id="l81"> </l>
-          </sp>
-          <sp who="christina" xml:id="6-2">
-            <speaker>CHRISTINA.</speaker>
-            <l n="82" xml:id="l82">Mon père est parti.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="84" xml:id="l84">Comment éloigner ma belle-mère ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="6-3">
-            <speaker>MADAME GONZALÈS, <em>à part.</em></speaker>
-            <l n="85" xml:id="l85">Il faut renvoyer cette petite fille, elle nous gênerait.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="87" xml:id="l87">Allons, mademoiselle, il se fait tard, prenez une lumière, et rentrez dans votre chambre.</l>
-          </sp>
-          <sp who="christina" xml:id="6-4">
-            <speaker>CHRISTINA.</speaker>
-            <l n="88" xml:id="l88">Mais, maman...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="6-5">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="89" xml:id="l89">Eh bien ! m’avez-vous entendue ?</l>
-          </sp>
-          <sp who="christina" xml:id="6-6">
-            <speaker>CHRISTINA, <em>prend un bougeoir et s’en va bien lentement.</em></speaker>
-            <l n="90" xml:id="l90">J’y cours, vous le voyez.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="92" xml:id="l92">Ah ! mon Dieu ! ce pauvre Scipion mourra de faim !</l>
-            <stage><hi rend="italic"><em>Christina va pour entrer dans sa chambre, lorsqu’on entend Carambola qui chante.</em></hi></stage>
-          </sp>
-          <sp who="carambola" xml:id="6-7">
-            <speaker>CARAMBOLA, <em>en dehors.</em></speaker>
-            <stage><hi rend="italic"><em>Air de Toberne.</em></hi></stage>
-          </sp>
-          <sp who="christina" xml:id="6-8">
-            <speaker>CHRISTINA, <em>revenant.</em></speaker>
-            <l n="95" xml:id="l95">Ah ! maman, on chante dans la rue.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="6-9">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="96" xml:id="l96">Vous voilà, toujours curieuse !... Vois donc un peu quel est ce musicien ?</l>
-            <stage><hi rend="italic"><em>Christina sort.</em></hi></stage>
-            <l n="98" xml:id="l98">Il a une fort jolie voix... C’est peut-être une sérénade, une galanterie de mes convives.</l>
-            <l n="99" xml:id="l99"> </l>
-            <l n="100" xml:id="l100"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="101" xml:id="l101"> </l>
-          <sp who="christina" xml:id="7-1">
-            <speaker>MADAME GONZALÈS, CHRISTINA, CARAMBOLA</speaker>
-            <l n="102" xml:id="l102"> </l>
-          </sp>
-          <sp who="christina" xml:id="7-2">
-            <speaker>CHRISTINA.</speaker>
-            <l n="103" xml:id="l103">Par ici, monsieur, par ici.</l>
-          </sp>
-          <sp who="carambola" xml:id="7-3">
-            <speaker>CARAMBOLA.</speaker>
-            <stage><hi rend="italic"><em>Même air.</em></hi></stage>
-            <l n="105" xml:id="l105">Recevez les remerciements du bachelier Carambola.</l>
-          </sp>
-          <sp who="christina" xml:id="7-4">
-            <speaker>CHRISTINA, <em>à part.</em></speaker>
-            <l n="106" xml:id="l106">Si c’était l’ami de Scipion ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="7-5">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="107" xml:id="l107">Trêve de chansons ! Ne peut-on savoir qui vous êtes et ce que vous désirez ?</l>
-          </sp>
-          <sp who="carambola" xml:id="7-6">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="108" xml:id="l108">Qui je suis, Madame ? je viens de vous le dire, bachelier par état, voyageur par goût, gai par caractère, et désirant, sur toutes choses, obtenir un asile ici pour cette nuit.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="7-7">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="109" xml:id="l109">On ne reçoit pas ainsi des gens qu’on ne connaît pas.</l>
-          </sp>
-          <sp who="carambola" xml:id="7-8">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="110" xml:id="l110">Oh ! vous allez me connaître, mon histoire n’est pas longue.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Une heure de folie.</em></hi></stage>
-            <l n="112" xml:id="l112">Aussi, depuis que je suis parti de Salamanque...</l>
-          </sp>
-          <sp who="christina" xml:id="7-9">
-            <speaker>CHRISTINA, <em>à part.</em></speaker>
-            <l n="113" xml:id="l113">De Salamanque... C’est lui !</l>
-          </sp>
-          <sp who="carambola" xml:id="7-10">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="114" xml:id="l114">J’ai vécu avec ma guitare et mes chansons, et j’espère bien qu’elles me procureront encore un gîte pour cette nuit.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="7-11">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="115" xml:id="l115">Je ne le crois pas.</l>
-          </sp>
-          <sp who="carambola" xml:id="7-12">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="116" xml:id="l116">Et moi j’en suis sûr ; une jolie femme a toujours un bon cœur, et vous devez avoir le meilleur cœur du monde.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="7-13">
-            <speaker>MADAME GONZALÈS, <em>à part.</em></speaker>
-            <l n="117" xml:id="l117">Il est galant...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="119" xml:id="l119">Je suis fâchée de ne pouvoir justifier vos conjectures... mais, mon mari étant absent, je ne puis vous recevoir.</l>
-          </sp>
-          <sp who="christina" xml:id="7-14">
-            <speaker>CHRISTINA.</speaker>
-            <l n="120" xml:id="l120">Allons, maman, laissez-vous attendrir !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="7-15">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="121" xml:id="l121">Je vous prie de ne pas m’en vouloir...</l>
-          </sp>
-          <sp who="carambola" xml:id="7-16">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="122" xml:id="l122">Fi donc ! je n’ai pas de rancune, et la preuve, c’est que je veux boire à votre santé ; faites-moi seulement donner à souper, et le vin me fera tout oublier, excepté vos charmes.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="7-17">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="123" xml:id="l123">Jour le souper, encore passe, mais pour le logis...</l>
-          </sp>
-          <sp who="carambola" xml:id="7-18">
-            <speaker>CARAMBOLA, <em>prenant sa guitare.</em></speaker>
-            <l n="124" xml:id="l124">Allons, il faut avoir recours aux grands moyens.</l>
-            <stage><hi rend="italic"><em>Récitatif.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air du boléro de Ponce de Léon.</em></hi></stage>
-            <stage><hi rend="italic"><em>Premier couplet.</em></hi></stage>
-            <stage><hi rend="italic"><em>Deuxième couplet.</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="7-19">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="129" xml:id="l129">Ma foi, seigneur bachelier, vous vous installez si gaiment chez les gens, qu’on n’a pas la force de vous chasser, j’accepte vos services.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="131" xml:id="l131">Il a l’air d’un galant homme, quel risque de lui découvrir ?... il est gai, aimable ; d’ailleurs, il part demain.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="133" xml:id="l133">Vous commenceriez bien par boire un coup, n’est-ce pas ?...</l>
-          </sp>
-          <sp who="carambola" xml:id="7-20">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="134" xml:id="l134">Deux, quatre, six, huit.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="7-21">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="135" xml:id="l135">Christina...</l>
-          </sp>
-          <sp who="christina" xml:id="7-22">
-            <speaker>CHRISTINA.</speaker>
-            <l n="136" xml:id="l136">J’y vais, maman.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="138" xml:id="l138">Bon ! il reste.</l>
-            <l n="139" xml:id="l139"> </l>
-            <l n="140" xml:id="l140"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="141" xml:id="l141"> </l>
-          <sp who="carambola" xml:id="8-1">
-            <speaker>CARAMBOLA, MADAME GONZALÈS</speaker>
-            <l n="142" xml:id="l142"> </l>
-          </sp>
-          <sp who="gonzalès" xml:id="8-2">
-            <speaker>MADAME GONZALÈS, <em>mystérieusement.</em></speaker>
-            <l n="143" xml:id="l143">Vous vous attendez peut-être à passer une soirée bien triste... mais si vous voulez promettre d’être discret, on pourra vous procurer des instants plus agréables.</l>
-          </sp>
-          <sp who="carambola" xml:id="8-3">
-            <speaker>CARAMBOLA, <em>à part.</em></speaker>
-            <l n="144" xml:id="l144">Oh ! oh ! mon mérite aurait-il déjà fait son effet ordinaire ?</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="146" xml:id="l146">Vous pouvez vous fier à moi, je sais garder un secret.</l>
-            <stage><hi rend="italic"><em>Air : L’Amour est de tout âge. (La Belle au bois donnant.)</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="8-4">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="148" xml:id="l148">Motus, au moins, sur ce que vous verrez... Apprenez que ce soir... Mais on vient, c’est Christina, silence !</l>
-            <l n="149" xml:id="l149"> </l>
-            <l n="150" xml:id="l150"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="151" xml:id="l151"> </l>
-          <sp who="christina" xml:id="9-1">
-            <speaker>CARAMBOLA, MADAME GONZALÈS, CHRISTINA, <em>avec une bouteille, dont elle verse à Carambola</em></speaker>
-            <l n="152" xml:id="l152"> </l>
-          </sp>
-          <sp who="carambola" xml:id="9-2">
-            <speaker>CARAMBOLA, <em>buvant.</em></speaker>
-            <l n="153" xml:id="l153">À la santé de mes aimables hôtesses !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="9-3">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="154" xml:id="l154">Allons, petite fille, rentrez. Vous, seigneur bachelier, je vais voir où l’on pourra vous loger.</l>
-          </sp>
-          <sp who="carambola" xml:id="9-4">
-            <speaker>CARAMBOLA, <em>à part.</em></speaker>
-            <l n="155" xml:id="l155">Très prudent d’éloigner la petite fille !</l>
-          </sp>
-          <sp who="christina" xml:id="9-5">
-            <speaker>CHRISTINA, <em>s’approchant de Carambola, au moment où sa mère tourne la tête pour s’en aller.</em></speaker>
-            <l n="156" xml:id="l156">Pourrait-on vous dire deux mots en particulier ?</l>
-          </sp>
-          <sp who="carambola" xml:id="9-6">
-            <speaker>CARAMBOLA, <em>étonné.</em></speaker>
-            <l n="157" xml:id="l157">Hein ! la petite aussi !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="9-7">
-            <speaker>MADAME GONZALÈS, <em>se retournant.</em></speaker>
-            <l n="158" xml:id="l158">Eh bien ! Christina, m’avez-vous entendue ?</l>
-            <stage><hi rend="italic"><em>Christina rentre lentement dans sa chambre, en lançant à Carambola un coup d’œil expressif.</em></hi></stage>
-          </sp>
-          <sp who="carambola" xml:id="9-8">
-            <speaker>CARAMBOLA, <em>à part.</em></speaker>
-            <l n="160" xml:id="l160">Qui m’eût dit en entrant, que j’allais être le héros de deux, aventures galantes ?</l>
-            <stage><hi rend="italic"><em>À madame Gonzalès.</em></hi></stage>
-            <l n="162" xml:id="l162">Ah ! madame, comment vous exprimer le bonheur que... Vous disiez donc?...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="9-9">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="163" xml:id="l163">Que mon mari était absent.</l>
-          </sp>
-          <sp who="carambola" xml:id="9-10">
-            <speaker>CARAMBOLA, <em>à part.</em></speaker>
-            <l n="164" xml:id="l164">C’est délicieux ! en l’absence du mari... Ces bonnes fortunes-là n’arrivent qu’à moi.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="9-11">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="165" xml:id="l165">Que c’est aujourd’hui ma fête, et que nous avons le projet de faire un souper charmant.</l>
-          </sp>
-          <sp who="carambola" xml:id="9-12">
-            <speaker>CARAMBOLA, <em>déconcerté.</em></speaker>
-            <l n="166" xml:id="l166">Ah !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="9-13">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="167" xml:id="l167">Nous allons avoir bon vin, bonne compagnie ; il ne tient qu’à vous d’être des nôtres... Mais voici l’instant du rendez-vous, nos convives sont sans doute à la petite porte du jardin, et je vais leur ouvrir.</l>
-            <stage><hi rend="italic"><em>Elle sort par la porte du fond.</em></hi></stage>
-            <l n="169" xml:id="l169"> </l>
-            <l n="170" xml:id="l170"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="171" xml:id="l171"> </l>
-          <sp who="christina" xml:id="10-1">
-            <speaker>CARAMBOLA, CHRISTINA, <em>marchant sur la pointe des pieds</em></speaker>
-            <l n="172" xml:id="l172"> </l>
-          </sp>
-          <sp who="carambola" xml:id="10-2">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="173" xml:id="l173">Ah ! rien qu’un souper ! c’est dommage. Mais, ma foi, la petite est charmante, et vaut bien...</l>
-            <stage><hi rend="italic"><em>L’apercevant.</em></hi></stage>
-            <l n="175" xml:id="l175">Ah !</l>
-          </sp>
-          <sp who="christina" xml:id="10-3">
-            <speaker>CHRISTINA.</speaker>
-            <l n="176" xml:id="l176">Vous venez de Salamanque... Connaissez-vous mon cousin Scipion ?</l>
-          </sp>
-          <sp who="carambola" xml:id="10-4">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="177" xml:id="l177">Un garçon d’une sensibilité... Il pleure toujours.</l>
-          </sp>
-          <sp who="christina" xml:id="10-5">
-            <speaker>CHRISTINA.</speaker>
-            <l n="178" xml:id="l178">Eh bien !... pardon si je vous dis ces choses-là... Nous nous aimons tous deux.</l>
-            <stage><hi rend="italic"><em>Duo de l’Arbre de Vincennes.</em></hi></stage>
-          </sp>
-          <sp who="carambola" xml:id="10-6">
-            <speaker>CARAMBOLA, <em>à part.</em></speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="carambola" xml:id="10-7">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="181" xml:id="l181">Oui, seigneur bachelier, et Scipion est ici.</l>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="carambola" xml:id="10-8">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="182" xml:id="l182">Il est ici... Parbleu ! je partage bien votre joie, et, dans mon ravissement, il faut que je vous embrasse.</l>
-            <stage><hi rend="italic"><em>Christina s’enfuit près de la porte du cabinet où est Scipion ; Carambola l’embrasse, et dans ce moment Scipion passe sa tête par la lucarne.</em></hi></stage>
-          </sp>
-          <sp who="scipion" xml:id="10-9">
-            <speaker>SCIPION.</speaker>
-            <l n="184" xml:id="l184">Eh bien, à votre aise... faites comme si je n’y étais pas.</l>
-            <stage><hi rend="italic"><em>Air : Quand Dieu, pour peupler la terre. (Haine aux femmes.)</em></hi></stage>
-          <stage>CHRISTINA.</stage>
-          </sp>
-          <sp who="scipion" xml:id="10-10">
-            <speaker>SCIPION.</speaker>
-            <l n="186" xml:id="l186">Je possède le secret de madame Gonzalès, et demain je veux que vous soyez mariés.</l>
-          <stage>CARAMBOLA.</stage>
-          </sp>
-          <sp who="christina" xml:id="10-11">
-            <speaker>CHRISTINA.</speaker>
-            <l n="187" xml:id="l187">Vraiment, mariés ?</l>
-          </sp>
-          <sp who="carambola" xml:id="10-12">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="188" xml:id="l188">Oui mariés... dans toute la force du terme.</l>
-          </sp>
-          <sp who="scipion" xml:id="10-13">
-            <speaker>SCIPION.</speaker>
-            <l n="189" xml:id="l189">Si vous pouviez aussi me faire souper ?</l>
-          </sp>
-          <sp who="carambola" xml:id="10-14">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="190" xml:id="l190">On vient... Prends patience.</l>
-          </sp>
-          <sp who="scipion" xml:id="10-15">
-            <speaker>SCIPION.</speaker>
-            <l n="191" xml:id="l191">C’est que je n’ai encore pris que cela d’aujourd’hui.</l>
-            <stage><hi rend="italic"><em>Christina rentre et Scipion referme le rideau de la lucarne.</em></hi></stage>
-            <l n="193" xml:id="l193"> </l>
-            <l n="194" xml:id="l194"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="195" xml:id="l195"> </l>
-          <sp who="torribio" xml:id="11-1">
-            <speaker>CARAMBOLA, MADAME GONZALÈS, TORRIBIO, L’ALGUAZIL, <em>entrant par le fond</em></speaker>
-            <l n="196" xml:id="l196"> </l>
-            <stage><hi rend="italic"><em>Carambola est sur le devant, et les autres ne l’aperçoivent pas d’abord. Torribio et l’alguazil portent un grand panier dans lequel il y a un pâté et divers autres plats.</em></hi></stage>
-          </sp>
-          <sp who="torribio" xml:id="11-2">
-            <speaker>TORRIBIO <em>et</em> L’ALGUAZIL.</speaker>
-            <stage><hi rend="italic"><em>Air du vaudeville de Comme ça vient, comma ça passe.</em></hi></stage>
-          <stage>TORRIBIO.</stage>
-          </sp>
-          <sp who="torribio" xml:id="11-3">
-            <speaker>TORRIBIO <em>et</em> L’ALGUAZIL.</speaker>
-            <l n="199" xml:id="l199">Ah ! ma voisine, il vient de nous arriver la plus plaisante aventure ! Ah ! ah ! nous allons vous la raconter.</l>
-          <stage>TORRIBIO, <em>riant.</em></stage>
-          </sp>
-          <sp who="l’alguazil" xml:id="11-4">
-            <speaker>L’ALGUAZIL, <em>froidement.</em></speaker>
-            <l n="200" xml:id="l200">Dansons et réjouissons-nous, car le temps passe et ne revient plus.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="11-5">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="201" xml:id="l201">Dites-moi donc enfin ce qui vous fait tant rire.</l>
-          </sp>
-          <sp who="torribio" xml:id="11-6">
-            <speaker>TORRIBIO.</speaker>
-            <stage><hi rend="italic">Ah ! ah ! un <em>bandoléro</em> que nous avons bâtonné en chemin...</hi></stage>
-            <stage><hi rend="italic"><em>Apercevant Carambola.</em></hi></stage>
-            <l n="204" xml:id="l204">Mais quel est cet homme-là ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="11-7">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="205" xml:id="l205">Un pauvre bachelier de Salamanque, qui a demandé l’hospitalité pour cette nuit.</l>
-          </sp>
-          <sp who="torribio" xml:id="11-8">
-            <speaker>TORRIBIO.</speaker>
-            <l n="206" xml:id="l206">De Salamanque !... Ce doit être un camarade de mon fils Scipion... Mais ce drôle-là m’a l’air d’avoir une mauvaise physionomie...</l>
-          </sp>
-          <sp who="l’alguazil" xml:id="11-9">
-            <speaker>L’ALGUAZIL.</speaker>
-            <l n="207" xml:id="l207">Ne peut-on pas lui donner deux ou trois réaux... et qu’il poursuive son chemin ?</l>
-          </sp>
-          <sp who="torribio" xml:id="11-10">
-            <speaker>TORRIBIO.</speaker>
-            <l n="208" xml:id="l208">En effet, il ne me convient pas.</l>
-          </sp>
-          <sp who="carambola" xml:id="11-11">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="209" xml:id="l209">Laissez donc ! nous nous convenons à ravir. Vous avez faim, j’ai bon appétit ; vous avez de l’esprit, je n’en manque pas ; vous aimez la joie, je ne demande qu’à rire. Vous voyez donc que nous sommes faits l’un pour l’autre.</l>
-            <stage><hi rend="italic"><em>Montrant l’alguazil.</em></hi></stage>
-            <l n="211" xml:id="l211">Je m’en rapporte à ce gros réjoui.</l>
-          </sp>
-          <sp who="l’alguazil" xml:id="11-12">
-            <speaker>L’ALGUAZIL, <em>froidement.</em></speaker>
-            <l n="212" xml:id="l212">Ah ! il me trouve gros réjoui ? Cet homme-là est badin ; nous serons bien ensemble.</l>
-          </sp>
-          <sp who="carambola" xml:id="11-13">
-            <speaker>CARAMBOLA.</speaker>
-            <stage><hi rend="italic">D’ailleurs je chante, je bois, je danse, j’accommode une <em>olla podrida</em> à miracle, et je la mange encore mieux ; laissez faire.</hi></stage>
-          </sp>
-          <sp who="torribio" xml:id="11-14">
-            <speaker>TORRIBIO, <em>riant.</em></speaker>
-            <l n="214" xml:id="l214">Ah ! il a le mot pour rire ? tu seras des nôtres.</l>
-          </sp>
-          <sp who="l’alguazil" xml:id="11-15">
-            <speaker>L’ALGUAZIL.</speaker>
-            <l n="215" xml:id="l215">Il sera des nôtres ; c’est dit... Dansons et réjouissons-nous.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="11-16">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="216" xml:id="l216">Mais que disiez-vous donc en entrant ?</l>
-          </sp>
-          <sp who="torribio" xml:id="11-17">
-            <speaker>TORRIBIO.</speaker>
-            <l n="217" xml:id="l217">Vous allez le savoir. En allant chez le rôtisseur, qui demeure à l’autre bout du village, nous avons rencontré dans le chemin creux qui longe le petit bois, une espèce d’homme qu’à sa tournure nous avons pris pour un bandoléro. En nous voyant deux, le coquin a voulu tourner bride et nous éviter ; mais sans lui donner le temps de se reconnaître, nous sommes tombés sur lui. Ah ! ah ! lui de crier... et son cheval de s’enfuir... Ah ! ah ! il fallait voir !</l>
-          </sp>
-          <sp who="l’alguazil" xml:id="11-18">
-            <speaker>L’ALGUAZIL, <em>froidement.</em></speaker>
-            <l n="218" xml:id="l218">C’était en effet très plaisant, et je ris encore rien que d’y penser, eh ! eh ! eh !</l>
-          </sp>
-          <sp who="torribio" xml:id="11-19">
-            <speaker>TORRIBIO.</speaker>
-            <l n="219" xml:id="l219">Vous voyez que nous nous en sommes bravement tirés, nous et nos provisions.</l>
-            <stage><hi rend="italic"><em>Il montre le panier où sont les provisions, les bouquets, les verres, etc.</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="11-20">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="221" xml:id="l221">Que vois-je ? Ah ! quelle aimable galanterie !</l>
-          </sp>
-          <sp who="torribio" xml:id="11-21">
-            <speaker>TORRIBIO, <em>lui offrant un bouquet.</em></speaker>
-            <l n="222" xml:id="l222">N’est-ce pas aujourd’hui votre fête ?</l>
-            <stage><hi rend="italic"><em>Air : Traitant l’Amour sans pitié. (Voltaire chez Ninon.)</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="11-22">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="224" xml:id="l224">Ah ! que c’est délicat !</l>
-          </sp>
-          <sp who="carambola" xml:id="11-23">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="225" xml:id="l225">Allons, seigneur...</l>
-            <stage><hi rend="italic"><em>Il verse à boire à l’alguazil.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air de Six mois d’absence.</em></hi></stage>
-          <stage>L’ALGUAZIL, <em>plaçant une chaise.</em></stage>
-          </sp>
-          <sp who="torribio" xml:id="11-24">
-            <speaker>TORRIBIO.</speaker>
-            <l n="228" xml:id="l228">Ce petit doigt de vin m’a tout émoustillé... Si je m’y mets une fois, comme nous allons rire ! Allons, ma voisine, un petit air de fandango... je me sens en gaité.</l>
-          <stage>TOUS.</stage>
-          </sp>
-          <sp who="l’alguazil" xml:id="11-25">
-            <speaker>L’ALGUAZIL.</speaker>
-            <l n="229" xml:id="l229">Seigneur bachelier, jouez-nous un boléro ou une danse française ?</l>
-          <stage>MADAME GONZALÈS.</stage>
-          </sp>
-          <sp who="carambola" xml:id="11-26">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="230" xml:id="l230">Volontiers. Voulez-vous un rigodon ? j’en ai un de ma composition que j’ai arrangé...</l>
-          </sp>
-          <sp who="l’alguazil" xml:id="11-27">
-            <speaker>L’ALGUAZIL.</speaker>
-            <l n="231" xml:id="l231">Va pour un rigodon !</l>
-          </sp>
-          <sp who="carambola" xml:id="11-28">
-            <speaker>CARAMBOLA, <em>chante eu s’accompagnant de la guitare.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Lon, lan, la derirette.</em></hi></stage>
-            <stage><hi rend="italic"><em>Premier couplet.</em></hi></stage>
-            <stage><hi rend="italic"><em>Deuxième couplet.</em></hi></stage>
-            <stage><hi rend="italic"><em>Ils dansent.</em></hi></stage>
-            <stage><hi rend="italic"><em>Troisième couplet.</em></hi></stage>
-            <stage><hi rend="italic"><em>Au milieu de la danse, on entend frapper rudement. Grand silence.</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="11-29">
-            <speaker>GONZALÈS, <em>en dehors.</em></speaker>
-            <l n="238" xml:id="l238">Holà ! ho ! ma femme, c’est moi.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="11-30">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="239" xml:id="l239">Ah ! malheureuse que je suis... c’est mon mari !</l>
-            <stage><hi rend="italic"><em>Air : Au clair de la lune.</em></hi></stage>
-          <stage>TORRIBIO.</stage>
-          </sp>
-          <sp who="carambola" xml:id="11-31">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="241" xml:id="l241">Est-ce que vous n’entendez pas ? On frappe ; ça m’a réveillée en sursaut.</l>
-          <stage>GONZALÈS.</stage>
-          </sp>
-          <sp who="christina" xml:id="11-32">
-            <speaker>CHRISTINA, <em>en dehors.</em></speaker>
-            <l n="242" xml:id="l242">À l’autre, maintenant ! Eh ! c’est bon.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="11-33">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <stage><hi rend="italic"><em>Se mettant au balcon.</em></hi></stage>
-            <l n="244" xml:id="l244">Qui est-ce qui est là ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="11-34">
-            <speaker>GONZALÈS, <em>en dehors.</em></speaker>
-            <l n="245" xml:id="l245">Le seigneur Gonzalès.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="11-35">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="246" xml:id="l246">Ah ! c’est toi, mon ami !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="248" xml:id="l248">Quel contretemps !</l>
-            <stage><hi rend="italic"><em>Pendant ce colloque, Torribio et l’alguazil ont porté la table dans la pièce du fond, et y restent cachés. Carambola, après avoir quelque temps cherché, se cache dans le cabinet où est déjà Scipion.</em></hi></stage>
-            <l n="250" xml:id="l250"> </l>
-            <l n="251" xml:id="l251"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="252" xml:id="l252"> </l>
-          <sp who="christina" xml:id="12-1">
-            <speaker>MADAME GONZALÈS, CHRISTINA, GONZALÈS</speaker>
-            <l n="253" xml:id="l253"> </l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-2">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <stage><hi rend="italic"><em>Air : Voyage, voyage désormais qui voudra. (Azémia.)</em></hi></stage>
-          <stage>GONZALÈS, <em>se jetant dans un fauteuil.</em></stage>
-          </sp>
-          <sp who="christina" xml:id="12-3">
-            <speaker>CHRISTINA.</speaker>
-            <l n="255" xml:id="l255">Que suis-je ? des bandoléros, des bâtons... C’est décidé, je ne quitte plus mes foyers.</l>
-          <stage>MADAME GONZALÈS.</stage>
-          </sp>
-          <sp who="gonzalès" xml:id="12-4">
-            <speaker>GONZALÈS.</speaker>
-            <l n="256" xml:id="l256">Voyage, voyage désormais qui voudra.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-5">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="257" xml:id="l257">Ah ! mon Dieu ! comme te voilà fait !</l>
-            <stage><hi rend="italic"><em>Gonzalès est dans le plus grand désordre, crotte, poudreux, etc.</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="12-6">
-            <speaker>GONZALÈS.</speaker>
-            <l n="259" xml:id="l259">Fait ! dis donc plutôt défait... Ne suis-je pas ben pâle, dis-moi ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-7">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="260" xml:id="l260">Mais, enfin, que t’est-il arrivé ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-8">
-            <speaker>GONZALÈS.</speaker>
-            <l n="261" xml:id="l261">Je passais tranquillement dans le chemin creux, lorsque je vis venir à moi deux hommes, qu’à leur physionomie je pris pour des bandoléros : je voulais les éviter ; ma bête ne le voulut pas, et alla droit à eux.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-9">
-            <speaker>MADAME GONZALÈS, <em>à part.</em></speaker>
-            <l n="262" xml:id="l262">Ô ciel ! mais c’est l’aventure de Torribio !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-10">
-            <speaker>GONZALÈS.</speaker>
-            <l n="263" xml:id="l263">Alors, sans aucune conversation préliminaire, ils tombent sur mon cheval.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-11">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="264" xml:id="l264">Que sur le cheval ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-12">
-            <speaker>GONZALÈS.</speaker>
-            <l n="265" xml:id="l265">Et sur moi, puisque j’étais sur lui.</l>
-            <stage><hi rend="italic"><em>Air : L’hymen est un lien charmant. (Léonce.)</em></hi></stage>
-          </sp>
-          <sp who="christina" xml:id="12-13">
-            <speaker>MADAME GONZALÈS <em>et</em> CHRISTINA.</speaker>
-            <l n="267" xml:id="l267">Ah ! Dieu !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-14">
-            <speaker>GONZALÈS.</speaker>
-            <l n="268" xml:id="l268">Voilà mon aventure en gros.</l>
-            <stage><hi rend="italic"><em>Remuant les épaules.</em></hi></stage>
-            <l n="270" xml:id="l270">Je te passe les détails. Mais toi, qu’as-tu fait en mon absence ? Personne n’est-il venu te voir ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-15">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="271" xml:id="l271">Oh ! personne, depuis ton départ.</l>
-          </sp>
-          <sp who="christina" xml:id="12-16">
-            <speaker>CHRISTINA, <em>bas à sa mère.</em></speaker>
-            <l n="272" xml:id="l272">Ah ! cependant, ce bach...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-17">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="273" xml:id="l273">Taisez-vous, péronnelle !</l>
-            <stage><hi rend="italic"><em>On entend tomber un meuble dans le cabinet où sont Carambola et Scipion.</em></hi></stage>
-          </sp>
-          <sp who="christina" xml:id="12-18">
-            <speaker>MADAME GONZALÈS <em>et</em> CHRISTINA, <em>à part.</em></speaker>
-            <l n="275" xml:id="l275">L’imprudent !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-19">
-            <speaker>GONZALÈS.</speaker>
-            <l n="276" xml:id="l276">Quel est ce bruit ?... Quelqu’un est dans le cabinet... N’as-tu pas entendu comme moi ?...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-20">
-            <speaker>MADAME GONZALÈS, <em>tremblante.</em></speaker>
-            <l n="277" xml:id="l277">Moi ?... non ; et toi, Christina ?</l>
-          </sp>
-          <sp who="christina" xml:id="12-21">
-            <speaker>CHRISTINA.</speaker>
-            <l n="278" xml:id="l278">Ni moi.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-22">
-            <speaker>GONZALÈS.</speaker>
-            <l n="279" xml:id="l279">Cependant je suis bien sûr...</l>
-          </sp>
-          <sp who="christina" xml:id="12-23">
-            <speaker>CHRISTINA.</speaker>
-            <l n="280" xml:id="l280">Peut-être la fenêtre est-elle ouverte, et le vent aura renversé...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-24">
-            <speaker>GONZALÈS.</speaker>
-            <l n="281" xml:id="l281">Il est vrai qu’il fait un vent affreux.</l>
-            <stage><hi rend="italic"><em>On entend Carambola qui s’embarrasse dans une chaise, et qui dit.</em></hi></stage>
-          </sp>
-          <sp who="carambola" xml:id="12-25">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="283" xml:id="l283">Maudite chambre ! on n’y voit goutte.</l>
-          </sp>
-          <sp who="christina" xml:id="12-26">
-            <speaker>CHRISTINA, <em>à part.</em></speaker>
-            <l n="284" xml:id="l284">C’est Scipion !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-27">
-            <speaker>MADAME GONZALÈS, <em>à part.</em></speaker>
-            <l n="285" xml:id="l285">C’est Carambola !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-28">
-            <speaker>GONZALÈS, <em>tremblant et s’efforçant de paraître en colère.</em></speaker>
-            <l n="286" xml:id="l286">Cette fois, ce n’est point le vent... c’est bien la voix d’un homme.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-29">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="287" xml:id="l287">Mon ami, je puis l’assurer que j’ignore...</l>
-          </sp>
-          <sp who="christina" xml:id="12-30">
-            <speaker>GONZALÈS, <em>à Christina.</em></speaker>
-            <l n="288" xml:id="l288">Et vous, mademoiselle, parlerez-vous ?</l>
-          </sp>
-          <sp who="christina" xml:id="12-31">
-            <speaker>CHRISTINA, <em>tremblante.</em></speaker>
-            <l n="289" xml:id="l289">Allons, puisqu’il faut tout avouer, c’est moi qui, ce soir, ai reçu, malgré votre défense... Oh ! je vous en prie, ne me grondez pas.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-32">
-            <speaker>MADAME GONZALÈS, <em>vivement et avec un coup d’œil expressif.</em></speaker>
-            <l n="290" xml:id="l290">Comment ! ce bachelier auquel j’avais refusé un asile ?</l>
-          </sp>
-          <sp who="christina" xml:id="12-33">
-            <speaker>CHRISTINA, <em>saisissant promptement son idée.</em></speaker>
-            <l n="291" xml:id="l291">Oui... oui, maman, ce bachelier ; c’est lui-même. Comme il me faisait pitié, je l’ai fait entrer là sans vous en prévenir.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-34">
-            <speaker>MADAME GONZALÈS, <em>bas.</em></speaker>
-            <l n="292" xml:id="l292">Charmante enfant !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="294" xml:id="l294">Voyez la petite sotte ! Mais où est-il, ce bachelier ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="12-35">
-            <speaker>GONZALÈS.</speaker>
-            <l n="295" xml:id="l295">Oui, où est-il ? J’aime à exercer l’hospitalité, et si... C’est qu’il m’a fait presque peur !</l>
-          </sp>
-          <sp who="christina" xml:id="12-36">
-            <speaker>CHRISTINA, <em>allant vers les cabinet.</em></speaker>
-            <l n="296" xml:id="l296">Venez, seigneur Carambola ; on ne m’en veut pas de ce que je vous ai fait entrer sans permission.</l>
-            <stage><hi rend="italic"><em>Bas.</em></hi></stage>
-            <l n="298" xml:id="l298">Vous m’entendez ?</l>
-          </sp>
-          <sp who="carambola" xml:id="12-37">
-            <speaker>CARAMBOLA, <em>paraissant.</em></speaker>
-            <l n="299" xml:id="l299">J’entends.</l>
-            <l n="300" xml:id="l300"> </l>
-            <l n="301" xml:id="l301"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="302" xml:id="l302"> </l>
-          <sp who="christina" xml:id="13-1">
-            <speaker>MADAME GONZALÈS, CHRISTINA, GONZALÈS, CARAMBOLA</speaker>
-            <l n="303" xml:id="l303"> </l>
-          </sp>
-          <sp who="carambola" xml:id="13-2">
-            <speaker>CARAMBOLA, <em>à part.</em></speaker>
-            <l n="304" xml:id="l304">Le maudit homme ! Il avait bien besoin de venir pour nous empêcher de souper.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="306" xml:id="l306">Si j’avais su, seigneur, que le maître de cette maison fût céans, je me serais empressé...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="308" xml:id="l308">Oh ! j’en tâterai à quelque prix que ce soit !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-3">
-            <speaker>GONZALÈS.</speaker>
-            <l n="309" xml:id="l309">Mais, il a bonne tournure.</l>
-          </sp>
-          <sp who="carambola" xml:id="13-4">
-            <speaker>CARAMBOLA, <em>regardant Gonzalès.</em></speaker>
-            <l n="310" xml:id="l310">Eh ! mais, ne me trompé-je point ? je vous ai vu à Salamanque.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-5">
-            <speaker>GONZALÈS.</speaker>
-            <l n="311" xml:id="l311">Il est vrai que j’y ai été deux fois.</l>
-          </sp>
-          <sp who="carambola" xml:id="13-6">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="312" xml:id="l312">Eh ! oui... cet air distingué... cette physionomie savante... J’y suis ! vous êtes sans doute un des docteurs de la Faculté de médecine.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-7">
-            <speaker>GONZALÈS.</speaker>
-            <l n="313" xml:id="l313">Ah ! c’est trop d’honneur... je suis Gonzalès, barbier chirurgien, tout simplement.</l>
-          </sp>
-          <sp who="carambola" xml:id="13-8">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="314" xml:id="l314">C’est ce que je voulais dire. Quoi ! vous seriez ce fameux Gonzalès dont tout Salamanque vante les cures merveilleuses... l’esprit... l’érudition...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-9">
-            <speaker>GONZALÈS.</speaker>
-            <l n="315" xml:id="l315">Eh ! eh ! eh ! la ville de Salamanque est mille fois trop honnête... Du reste, je suis ce Gonzalès dont vous parlez...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="317" xml:id="l317">Ce jeune homme-là a une manière de s’exprimer qui prévient en sa faveur.</l>
-          </sp>
-          <sp who="carambola" xml:id="13-10">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="318" xml:id="l318">Parbleu ! monsieur, je serais charmé de posséder votre amitié.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-11">
-            <speaker>GONZALÈS.</speaker>
-            <l n="319" xml:id="l319">Et moi, ravi... Mais si vous voulez, nous allons, faire plus ample connaissance le verre à la main... Je me sens là un appétit...</l>
-          </sp>
-          <sp who="carambola" xml:id="13-12">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="320" xml:id="l320">Monsieur a fait de l’exercice ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-13">
-            <speaker>GONZALÈS.</speaker>
-            <l n="321" xml:id="l321">Mais on m’en a fait faire pas mal.</l>
-            <stage><hi rend="italic"><em>À sa femme.</em></hi></stage>
-            <l n="323" xml:id="l323">Ma femme, donne-nous donc quelque chose à manger ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-14">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="324" xml:id="l324">Mon ami, tu sais bien que je n’attendais pas... et je n’ai rien.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-15">
-            <speaker>GONZALÈS.</speaker>
-            <l n="325" xml:id="l325">Voilà qui est fâcheux... À l’heure qu’il est tout est fermé.</l>
-          </sp>
-          <sp who="carambola" xml:id="13-16">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="326" xml:id="l326">Ma foi, mon cher hôte, puisque vous n’avez rien à me donner, il faut que ce soit moi qui vous régale : apprenez qu’il ne tient qu’à moi d’avoir en ce moment un repas complet et un vin délicieux.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-17">
-            <speaker>MADAME GONZALÈS, <em>à part.</em></speaker>
-            <l n="327" xml:id="l327">Ô ciel ! que veut-il dire ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-18">
-            <speaker>GONZALÈS.</speaker>
-            <l n="328" xml:id="l328">Et qui vous donnera tout cela ?</l>
-          </sp>
-          <sp who="carambola" xml:id="13-19">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="329" xml:id="l329">Qui ? Mon art ; mais la crainte de la justice me lie les mains.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-20">
-            <speaker>GONZALÈS, <em>effrayé.</em></speaker>
-            <l n="330" xml:id="l330">La justice !... Serait-ce encore un bandoléro ?</l>
-          </sp>
-          <sp who="carambola" xml:id="13-21">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="331" xml:id="l331">Eh ! non, apprenez que je suis un fameux nécromancien, et si vous voulez, je vais me faire apporter ici par deux diables une table garnie de provisions.</l>
-          </sp>
-          <sp who="christina" xml:id="13-22">
-            <speaker>CHRISTINA.</speaker>
-            <l n="332" xml:id="l332">Des diables ici ! Jésus Maria ! quelle horreur !</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-23">
-            <speaker>MADAME GONZALÈS, <em>à part.</em></speaker>
-            <l n="333" xml:id="l333">J’ai le sang tout glacé en pensant à ce qu’il veut faire.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-24">
-            <speaker>GONZALÈS.</speaker>
-            <l n="334" xml:id="l334">Oh ! pour moi, je n’oserai jamais...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-25">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="335" xml:id="l335">Sans doute, seigneur bachelier... il doit y avoir trop de danger...</l>
-          </sp>
-          <sp who="carambola" xml:id="13-26">
-            <speaker>CARAMBOLA, <em>bas.</em></speaker>
-            <l n="336" xml:id="l336">Aucun, si vous êtes discrète.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-27">
-            <speaker>GONZALÈS, <em>indécis.</em></speaker>
-            <l n="337" xml:id="l337">Cependant, s’il n’y a pas de danger, je serais curieux de voir quelle figure ont les dîners de ces messieurs... Vous m’assurez que les mets sont copieux et délicats ?</l>
-          </sp>
-          <sp who="carambola" xml:id="13-28">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="338" xml:id="l338">Nous pouvons demander la carte... ou plutôt, c’est aujourd’hui la fête de madame, voulez-vous un pâté superbe, garni de fleurs ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-29">
-            <speaker>GONZALÈS.</speaker>
-            <l n="339" xml:id="l339">Me voilà presque déterminé... mais pourvu que vos diables n’aient rien d’affreux clans la physionomie...</l>
-          </sp>
-          <sp who="carambola" xml:id="13-30">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="340" xml:id="l340">Voulez-vous que je les fasse paraître sous la figure de l’alcade de ce village et de l’alguazil son ami ?</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-31">
-            <speaker>MADAME GONZALÈS, <em>à part.</em></speaker>
-            <l n="341" xml:id="l341">Je suis morte ! il va tout découvrir...</l>
-            <stage><hi rend="italic"><em>Bas à Carambola.</em></hi></stage>
-            <l n="343" xml:id="l343">Monsieur, vous avez donc juré de...</l>
-          </sp>
-          <sp who="carambola" xml:id="13-32">
-            <speaker>CARAMBOLA, <em>à part.</em></speaker>
-            <l n="344" xml:id="l344">Eh ! non, je veux vous sauver.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="13-33">
-            <speaker>GONZALÈS.</speaker>
-            <l n="345" xml:id="l345">Les pauvres gens ! Quoi ! il serait permis à des diables d’emprunter leur figure ?</l>
-          </sp>
-          <sp who="carambola" xml:id="13-34">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="346" xml:id="l346">Sans doute. Une autre forme leur serait peut-être plus difficile à prendre, mais de diable à alguazil il n’y a que la main ; et cela va se faire presque sans métamorphose. Silence ! je commence.</l>
-            <stage><hi rend="italic"><em>Air : Noirs habitants de la nuit éternelle. (Le Sorcier. Philidor.)</em></hi></stage>
-            <l n="348" xml:id="l348"> </l>
-            <l n="349" xml:id="l349"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="350" xml:id="l350"> </l>
-          <sp who="christina" xml:id="14-1">
-            <speaker>MADAME GONZALÈS, CHRISTINA, GONZALÈS, CARAMBOLA, TORRIBIO, L’ALGUAZIL</speaker>
-            <l n="351" xml:id="l351"> </l>
-            <stage><hi rend="italic"><em>Ils ouvrent tout à coup la porte du fond, et apportent la table servie et éclairée.</em></hi></stage>
-          </sp>
-          <sp who="carambola" xml:id="14-2">
-            <speaker>CARAMBOLA.</speaker>
-            <stage><hi rend="italic"><em>Air des Sauvages. (Les Indes galantes.)</em></hi></stage>
-          <stage>GONZALÈS, <em>regardant à travers ses doigts.</em></stage>
-          </sp>
-          <sp who="torribio" xml:id="14-3">
-            <speaker>TORRIBIO <em>et</em> L’ALGUAZIL, <em>dansant devant la table, en diables d’Opéra.</em></speaker>
-            <l n="354" xml:id="l354">C’est assez, c’est assez !</l>
-          <stage>CARAMBOLA.</stage>
-          </sp>
-          <sp who="gonzalès" xml:id="14-4">
-            <speaker>GONZALÈS.</speaker>
-            <l n="355" xml:id="l355">Comme ils ressemblent à l’alcade et à l’alguazil !</l>
-          </sp>
-          <sp who="christina" xml:id="14-5">
-            <speaker>CHRISTINA.</speaker>
-            <l n="356" xml:id="l356">Mais ils ne sont pas trop laids.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-6">
-            <speaker>GONZALÈS.</speaker>
-            <l n="357" xml:id="l357">Oui, pas mal... la beauté du diable ! Voilà qui est vraiment admirable.</l>
-          </sp>
-          <sp who="carambola" xml:id="14-7">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="358" xml:id="l358">À boire !</l>
-            <stage><hi rend="italic"><em>L’alcade et l’alguazil versent à boire à Gonzalès, qui fait divers lazzis avant d’accepter.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Dans la paix et l’innocence. (Le Club des bonnes gens.)</em></hi></stage>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-          <stage>GONZALÈS, <em>après avoir bu.</em></stage>
-          </sp>
-          <sp who="carambola" xml:id="14-8">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="362" xml:id="l362">Allons, mettons-nous à table.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-9">
-            <speaker>GONZALÈS.</speaker>
-            <l n="363" xml:id="l363">Est-ce qu’ils vont souper avec nous ? Ce n’est pas que je sois fier...</l>
-          </sp>
-          <sp who="christina" xml:id="14-10">
-            <speaker>CHRISTINA.</speaker>
-            <l n="364" xml:id="l364">Est-ce que les diables mangent ?</l>
-          </sp>
-          <sp who="torribio" xml:id="14-11">
-            <speaker>TORRIBIO.</speaker>
-            <l n="365" xml:id="l365">Oui, vraiment, il y en a qui mangent ; et nous sommes de ceux-là.</l>
-          </sp>
-          <sp who="l’alguazil" xml:id="14-12">
-            <speaker>L’ALGUAZIL.</speaker>
-            <l n="366" xml:id="l366">Pour moi, j’ai une faim d’enfer.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-13">
-            <speaker>GONZALÈS.</speaker>
-            <l n="367" xml:id="l367">Je le crois bien.</l>
-            <stage><hi rend="italic"><em>Ils vont pour s’asseoir.</em></hi></stage>
-          </sp>
-          <sp who="carambola" xml:id="14-14">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="369" xml:id="l369">Un instant ! il me vient une idée. Ce n’est là qu’un simple souper ; si nous en faisions un repas de noces ?</l>
-          </sp>
-          <sp who="tous" xml:id="14-15">
-            <speaker>TOUS.</speaker>
-            <l n="370" xml:id="l370">Comment ça ?</l>
-          </sp>
-          <sp who="carambola" xml:id="14-16">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="371" xml:id="l371">En mariant votre fille ; car je m’intéresse à elle, ainsi qu’à toute la famille, et je veux terminer cette affaire avant mon départ.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-17">
-            <speaker>GONZALÈS.</speaker>
-            <l n="372" xml:id="l372">Quelle bonté !</l>
-          </sp>
-          <sp who="carambola" xml:id="14-18">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="373" xml:id="l373">Mon art m’apprend qu’elle aime Scipion Torribio... Je les unis ensemble.</l>
-            <stage><hi rend="italic"><em>À madame Gonzalès.</em></hi></stage>
-            <l n="375" xml:id="l375">Je sais ce que vous allez dire : Scipion est trop jeune, il n’a pas d’état ; mais je promets de faire quelque chose pour eux, et vous sentez qu’avec ma protection...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-19">
-            <speaker>GONZALÈS.</speaker>
-            <l n="376" xml:id="l376">Il n’y a pas de doute : avec une protection comme celle-là, on peut aller à tout...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-20">
-            <speaker>MADAME GONZALÈS, <em>bas.</em></speaker>
-            <l n="377" xml:id="l377">Mais, monsieur, quel motif peut vous engager ?...</l>
-          </sp>
-          <sp who="carambola" xml:id="14-21">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="378" xml:id="l378">Silence ! ou je vais parler... et si je prononce certaines paroles...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-22">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="379" xml:id="l379">Mais on ne traite pas ainsi ces sortes d’affaires. Certainement je ne refuse pas, mais encore faut-il que le fils soit ici...</l>
-            <stage><hi rend="italic"><em>Avec intention.</em></hi></stage>
-            <l n="381" xml:id="l381">que le père y soit, qu’on puisse avoir son consentement.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-23">
-            <speaker>GONZALÈS.</speaker>
-            <l n="382" xml:id="l382">Elle a raison... il faut la vraie signature, et monsieur ne peut pas avec sa griffe...</l>
-          </sp>
-          <sp who="carambola" xml:id="14-24">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="383" xml:id="l383">Si ce n’est que le consentement du père, la présence du fils ; tout cela n’est qu’un jeu pour moi, et d’un coup de baguette...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-25">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="384" xml:id="l384">Je vous prends au mot ; et puisque rien ne vous est impossible, si vous pouvez, à l’instant, mais je dis à l’instant même, remplir ces deux conditions, je donne mon consentement.</l>
-          </sp>
-          <sp who="torribio" xml:id="14-26">
-            <speaker>TORRIBIO, <em>à part.</em></speaker>
-            <l n="385" xml:id="l385">Voilà le sorcier un peu embarrassé.</l>
-          </sp>
-          <sp who="carambola" xml:id="14-27">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="386" xml:id="l386">J’accepte.</l>
-          </sp>
-          <sp who="l’alguazil" xml:id="14-28">
-            <speaker>L’ALGUAZIL, <em>à part.</em></speaker>
-            <l n="387" xml:id="l387">Comment va-t-il faire ?</l>
-          </sp>
-          <sp who="torribio" xml:id="14-29">
-            <speaker>CARAMBOLA, <em>à Torribio.</em></speaker>
-            <l n="388" xml:id="l388">Alla Boraka Astaroth, mon génie familier, je vous ordonne de vous rendre à l’instant chez Torribio, et d’en rapporter le contrat tout dressé et tout signé : allez !...</l>
-            <stage><hi rend="italic"><em>Musique. Torribio entre dans le cabinet.</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="14-30">
-            <speaker>GONZALÈS.</speaker>
-            <l n="390" xml:id="l390">J’aurais bien voulu le voir sortir par le trou de la serrure.</l>
-          </sp>
-          <sp who="carambola" xml:id="14-31">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="391" xml:id="l391">Il fallait donc le dire ; ça ne me coûtait pas plus.</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-32">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="392" xml:id="l392">À la bonne heure ! mais il nous faut Scipion, et il est à Salamanque.</l>
-          </sp>
-          <sp who="carambola" xml:id="14-33">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="393" xml:id="l393">Dix lieues ! c’est une bagatelle.</l>
-            <stage><hi rend="italic"><em>Air : Lise épouse l’ beau Gernance. (Fanchon la Vielleuse.)</em></hi></stage>
-            <stage><hi rend="italic"><em>Haussant la voix.</em></hi></stage>
-            <stage><hi rend="italic"><em>Musique. Torribio sort du cabinet, le contrat à la main.</em></hi></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="14-34">
-            <speaker>GONZALÈS.</speaker>
-            <l n="397" xml:id="l397">Ma foi ! c’est l’écriture du compère !</l>
-          </sp>
-          <sp who="carambola" xml:id="14-35">
-            <speaker>CARAMBOLA.</speaker>
-            <l n="398" xml:id="l398">Maintenant...</l>
-          </sp>
-          <sp who="gonzalès" xml:id="14-36">
-            <speaker>MADAME GONZALÈS.</speaker>
-            <l n="399" xml:id="l399">Son assurance m’effraie.</l>
-          </sp>
-          <sp who="carambola" xml:id="14-37">
-            <speaker>CARAMBOLA.</speaker>
-            <stage><hi rend="italic"><em>Air du Port Mahon.</em></hi></stage>
-            <l n="401" xml:id="l401"> </l>
-            <l n="402" xml:id="l402"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="403" xml:id="l403"> </l>
-          <sp who="christina" xml:id="15-1">
-            <speaker>MADAME GONZALÈS, CHRISTINA, GONZALÈS, CARAMBOLA, TORRIBIO, L’ALGUAZIL, SCIPION</speaker>
-            <l n="404" xml:id="l404"> </l>
-          <stage>SCIPION.</stage>
-          </sp>
-          <sp who="tous" xml:id="15-2">
-            <speaker>TOUS, <em>dans le plus grand étonnement.</em></speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Ô ciel ! la plaisante aventure ! (La Belle au bois dormant.)</em></hi></stage>
-          <stage>MADAME GONZALÈS, TORRIBIO, l’ALGUAZIL, GONZALÈS.</stage>
-          </sp>
-          <sp who="christina" xml:id="15-3">
-            <speaker>SCIPION <em>et</em> CHRISTINA, <em>à part.</em></speaker>
-            <stage><hi rend="italic"><em>Unissant Scipion et Christina.</em></hi></stage>
-          <stage>CARAMBOLA, <em>gravement.</em></stage>
-          </sp>
-          <sp who="gonzalès" xml:id="15-4">
-            <speaker>MADAME GONZALÈS, <em>réfléchissant.</em></speaker>
-            <l n="408" xml:id="l408">Je vous demande le plus profond secret sur tout ce qui vient de se passer.</l>
-          <stage>GONZALÈS.</stage>
-          </sp>
-          <sp who="torribio" xml:id="15-5">
-            <speaker>TORRIBIO, <em>à part.</em></speaker>
-            <l n="409" xml:id="l409">Je vous le promets.</l>
-          <stage>L’ALGUAZIL, <em>à part.</em></stage>
-          </sp>
-          <sp who="tous" xml:id="15-6">
-            <speaker>TOUS.</speaker>
-            <stage><hi rend="italic"><em>Vaudeville.</em></hi></stage>
-          <stage>CHRISTINA <em>et</em> SCIPION, <em>à part.</em></stage>
-          </sp>
-          <sp who="carambola" xml:id="15-7">
-            <speaker>CARAMBOLA, <em>à madame Gonzalès.</em></speaker>
-            <stage><hi rend="italic"><em>Air du vaudeville des Baladines.</em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#scipion">
+          <speaker>SCIPION, en dehors.</speaker>
+          <l n="1">Christina, est-ce toi ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, à la croisée.</speaker>
+          <l n="2">Scipion !... oui, c’est moi... mais prends bien garde... attends, je tiens l’échelle.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION, paraissant.</speaker>
+          <l n="3">Tiens bien au moins !... je suis si maladroit !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="4">Ce pauvre petit cousin !... Il y a donc bien longtemps que tu es sous le balcon ?</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION, d’un ton pleureur.</speaker>
+          <l n="5">Je le crois bien. Ce matin, je me suis échappé de l’Université, et j’ai quitté Salamanque au point du jour, comme tu me l’avais indiqué par ta lettre.</l>
+          <stage>&lt;em&gt;Air : Ermite, bon Ermite. (L’Ermite de Sainte-Avèle.)&lt;/em&gt;</stage>
+          <l n="6">Depuis une heure entière,</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="7">Tais-toi, parle plus bas.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="8">Mes peines sont finies.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="9">Mais, vraiment, tu l’oublies.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="10">Mon Dieu ! les jolis bras !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="11">De semblables folies</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="12">C’est la nuit, au contraire,</l>
+          <l n="13">Dis-moi, ce n’est pas que j’aie peur... mais sommes-nous bien en sûreté ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="14">Et qui peut nous surprendre ? Le seigneur Gonzalès, mon père, l’unique et sans contredit le plus habile barbier de ce village, va partir pour Cuença, où il faut qu’il soit demain matin, ma mère doit l’accompagner, nous serons seuls... J’ai fait une petite galette, et nous la mangerons ensemble.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="15">Ce sera charmant ! avec ça, moi qui aime tant la galette !</l>
+          <stage>&lt;em&gt;Air : On se chagrine trop vite. (Le Mameluck.)&lt;/em&gt;</stage>
+          <l n="16">La galette a ma tendresse.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="17">À peine te reconnais-je,</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="18">C’est que trois mois de collège</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="19">Mais sais-tu que ça ouvre aussi l’esprit !</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="20">Ils se sont tant moqués de moi !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="21">Comment, ils ont osé... pauvre Scipion ! conte-moi donc ça ; il est vrai qu’en partant tu étais sage, comme une jeune fille.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="22">Voilà pourquoi on me traitait d’hypocrite... Heureusement j’ai fait connaissance avec un nommé Carambola, un bachelier de Salamanque, qui va bientôt commencer son tour d’Espagne, et qui même passera peut-être par ce village ; c’est un drôle de corps qui rit sans cesse, et qui m’a pris en amitié parce que je pleurais toujours ; mais cette amitié-là ne me consolait pas d’être séparé de toi... aussi, c’est ton père !...</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="23">Eh ! non, ce n’est pas lui ; ton père et le mien avaient formé le projet de nous marier un jour ; c’est ma belle-mère seule qui s’y est opposée.</l>
+          <stage>&lt;em&gt;Air du vaudeville de Irons-nous à Paris.&lt;/em&gt;</stage>
+          <l n="24">Elle aime à faire des conquêtes :</l>
+          <l n="25">Et puis, je crains qu’elle ne me destine au vieux corrégidor.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="26">Et quand la femme a dit : je ne veux pas, le mari doit donc se taire ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="27">C’est toujours comme cela dans les ménages bien organisés ; mais je n’ai pas perdu l’espérance, et je me flatte...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, en dehors.</speaker>
+          <l n="28">Christina ?</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="29">Ô ciel ! voilà madame Gonzalès !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="30">Où te cacher ?... tiens, dans ce cabinet ; ce ne sera pas pour longtemps.</l>
+          <stage>&lt;em&gt;Scipion entre dans le cabinet, à gauche.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="31">Voyez si cette petite fille me répondra !... Allez aider votre père à faire sa valise.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="32">Comment ? vous allez donc partir !... Qu’est-ce que je vais faire ici, toute seule à la maison ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="33">Mon départ te fait donc bien de la peine ? Eh bien, console-toi, je reste; j’ai changé d’idée, je n’accompagnerai pas mon mari.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, stupéfaite.</speaker>
+          <l n="34">Comment ? vous restez ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="35">Sans doute, on dirait que vous en êtes fâchée.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="36">Moi ? au contraire. Ah ! que je suis contente !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="37">Ah ! mon Dieu ! quel contretemps ! quel contretemps !</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="38">Eh bien ! madame Gonzalès, tout est prêt pour mon voyage ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="39">Encore voyager !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="40">Ma femme, il y a trois choses nécessaires en ménage : de l’argent, de l’argent, et encore de l’argent.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="41">Ce procès-là ne t’en rapportera pas, puisqu’il ne finit pas.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="42">Dame, tu crois qu’on expédie un procès comme un malade ; c’en est un qui ne veut pas payer, cependant il en est revenu ; une autre fois ça sera une leçon. À propos, j’ai vu ce matin le compère Torribio, qui m’a encore parlé du mariage de son fils Scipion avec ma fille.</l>
+          <stage>&lt;em&gt;Madame Gonzalès fait un mouvement d’impatience.&lt;/em&gt;</stage>
+          <l n="43">Je l’aime mieux que ton corrégidor Inigo Riolès della Plata, qui a bien des noms, mais qui n’a pas un maravédis.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="44">Ne me parle pas de cela dans ce moment-ci, ton départ me fait trop de peine.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="45">Dis-moi pourquoi tu pleures comme ça quand je m’en vais, et pourquoi, quand je reste, tu n’as pas l’air de t’amuser.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="46">C’est bien facile à expliquer.</l>
+          <stage>&lt;em&gt;Air du vaudeville de Partie carrée.&lt;/em&gt;</stage>
+          <l n="47">Lorsqu’ici je le vois sans cesse,</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="48">C’est là aimer !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#christina">
+          <speaker>CHRISTINA, apportant un manteau et une canne.</speaker>
+          <l n="49">Mon père, voilà tout ce qu’il vous faut.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="50">Adieu, ma femme, adieu, ma fille.</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Fragment du Tableau parlant.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="51">Il faut, hélas ! que je te quitte,</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="52">Eh ! pourquoi donc partir si vite ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="53">Pauvre Scipion ! tâchons bien vite,</l>
+          <stage>&lt;em&gt;Gonzalès et Christina sortent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, seule</speaker>
+          <l n="54">Ce bon Gonzalès est bien le meilleur des maris !... Il a mille qualités, et n’a qu’un seul défaut ; c’est de trop aimer son état, et parce qu’il aime son état, il aime l’argent, et parce qu’il aime l’argent, il est avare, et parce qu’il est avare, il est quinteux, bizarre, et ne se permet aucun plaisir ; enfin, c’est aujourd’hui ma fête, il n’y a seulement pas pensé ; aussi je crois que je n’ai pas mal fait d’accepter la proposition de notre voisin Pachéco, l’alguazil, et du compère Torribio, qui doivent, ce soir, venir souper ici.</l>
+          <stage>&lt;em&gt;Air : Je n’aimais pas le tabac beaucoup. (Le Diable à quatre.)&lt;/em&gt;</stage>
+          <l n="55">On peut accepter un tel régal</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="56">Mon père est parti.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="57">Comment éloigner ma belle-mère ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="58">Il faut renvoyer cette petite fille, elle nous gênerait.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="59">Allons, mademoiselle, il se fait tard, prenez une lumière, et rentrez dans votre chambre.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="60">Mais, maman...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="61">Eh bien ! m’avez-vous entendue ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, prend un bougeoir et s’en va bien lentement.</speaker>
+          <l n="62">J’y cours, vous le voyez.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="63">Ah ! mon Dieu ! ce pauvre Scipion mourra de faim !</l>
+          <stage>&lt;em&gt;Christina va pour entrer dans sa chambre, lorsqu’on entend Carambola qui chante.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, en dehors.</speaker>
+          <stage>&lt;em&gt;Air de Toberne.&lt;/em&gt;</stage>
+          <l n="64">Écoutez la prière</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, revenant.</speaker>
+          <l n="65">Ah ! maman, on chante dans la rue.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="66">Vous voilà, toujours curieuse !... Vois donc un peu quel est ce musicien ?</l>
+          <stage>&lt;em&gt;Christina sort.&lt;/em&gt;</stage>
+          <l n="67">Il a une fort jolie voix... C’est peut-être une sérénade, une galanterie de mes convives.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="68">Par ici, monsieur, par ici.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <stage>&lt;em&gt;Même air.&lt;/em&gt;</stage>
+          <l n="69">Je fais, dans mon voyage,</l>
+          <l n="70">Recevez les remerciements du bachelier Carambola.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, à part.</speaker>
+          <l n="71">Si c’était l’ami de Scipion ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="72">Trêve de chansons ! Ne peut-on savoir qui vous êtes et ce que vous désirez ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="73">Qui je suis, Madame ? je viens de vous le dire, bachelier par état, voyageur par goût, gai par caractère, et désirant, sur toutes choses, obtenir un asile ici pour cette nuit.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="74">On ne reçoit pas ainsi des gens qu’on ne connaît pas.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="75">Oh ! vous allez me connaître, mon histoire n’est pas longue.</l>
+          <stage>&lt;em&gt;Air du vaudeville de Une heure de folie.&lt;/em&gt;</stage>
+          <l n="76">Dès ma jeunesse, j’ai vécu</l>
+          <l n="77">Aussi, depuis que je suis parti de Salamanque...</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, à part.</speaker>
+          <l n="78">De Salamanque... C’est lui !</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="79">J’ai vécu avec ma guitare et mes chansons, et j’espère bien qu’elles me procureront encore un gîte pour cette nuit.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="80">Je ne le crois pas.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="81">Et moi j’en suis sûr ; une jolie femme a toujours un bon cœur, et vous devez avoir le meilleur cœur du monde.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="82">Il est galant...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="83">Je suis fâchée de ne pouvoir justifier vos conjectures... mais, mon mari étant absent, je ne puis vous recevoir.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="84">Allons, maman, laissez-vous attendrir !</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="85">Je vous prie de ne pas m’en vouloir...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="86">Fi donc ! je n’ai pas de rancune, et la preuve, c’est que je veux boire à votre santé ; faites-moi seulement donner à souper, et le vin me fera tout oublier, excepté vos charmes.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="87">Jour le souper, encore passe, mais pour le logis...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, prenant sa guitare.</speaker>
+          <l n="88">Allons, il faut avoir recours aux grands moyens.</l>
+          <stage>&lt;em&gt;Récitatif.&lt;/em&gt;</stage>
+          <l n="89">Fille des cieux, céleste Polymnie !</l>
+          <stage>&lt;em&gt;Air du boléro de Ponce de Léon.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Premier couplet.&lt;/em&gt;</stage>
+          <l n="90">Hélas ! pour fléchir votre cœur,</l>
+          <stage>&lt;em&gt;Deuxième couplet.&lt;/em&gt;</stage>
+          <l n="91">Je sens déjà qu’il est si doux</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="92">Ma foi, seigneur bachelier, vous vous installez si gaiment chez les gens, qu’on n’a pas la force de vous chasser, j’accepte vos services.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="93">Il a l’air d’un galant homme, quel risque de lui découvrir ?... il est gai, aimable ; d’ailleurs, il part demain.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="94">Vous commenceriez bien par boire un coup, n’est-ce pas ?...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="95">Deux, quatre, six, huit.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="96">Christina...</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="97">J’y vais, maman.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="98">Bon ! il reste.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, mystérieusement.</speaker>
+          <l n="99">Vous vous attendez peut-être à passer une soirée bien triste... mais si vous voulez promettre d’être discret, on pourra vous procurer des instants plus agréables.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à part.</speaker>
+          <l n="100">Oh ! oh ! mon mérite aurait-il déjà fait son effet ordinaire ?</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="101">Vous pouvez vous fier à moi, je sais garder un secret.</l>
+          <stage>&lt;em&gt;Air : L’Amour est de tout âge. (La Belle au bois donnant.)&lt;/em&gt;</stage>
+          <l n="102">Il faut de la discrétion,</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="103">Motus, au moins, sur ce que vous verrez... Apprenez que ce soir... Mais on vient, c’est Christina, silence !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, buvant.</speaker>
+          <l n="104">À la santé de mes aimables hôtesses !</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="105">Allons, petite fille, rentrez. Vous, seigneur bachelier, je vais voir où l’on pourra vous loger.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à part.</speaker>
+          <l n="106">Très prudent d’éloigner la petite fille !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, s’approchant de Carambola, au moment où sa mère tourne la tête pour s’en aller.</speaker>
+          <l n="107">Pourrait-on vous dire deux mots en particulier ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, étonné.</speaker>
+          <l n="108">Hein ! la petite aussi !</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, se retournant.</speaker>
+          <l n="109">Eh bien ! Christina, m’avez-vous entendue ?</l>
+          <stage>&lt;em&gt;Christina rentre lentement dans sa chambre, en lançant à Carambola un coup d’œil expressif.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à part.</speaker>
+          <l n="110">Qui m’eût dit en entrant, que j’allais être le héros de deux, aventures galantes ?</l>
+          <stage>&lt;em&gt;À madame Gonzalès.&lt;/em&gt;</stage>
+          <l n="111">Ah ! madame, comment vous exprimer le bonheur que... Vous disiez donc?...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="112">Que mon mari était absent.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à part.</speaker>
+          <l n="113">C’est délicieux ! en l’absence du mari... Ces bonnes fortunes-là n’arrivent qu’à moi.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="114">Que c’est aujourd’hui ma fête, et que nous avons le projet de faire un souper charmant.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, déconcerté.</speaker>
+          <l n="115">Ah !</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="116">Nous allons avoir bon vin, bonne compagnie ; il ne tient qu’à vous d’être des nôtres... Mais voici l’instant du rendez-vous, nos convives sont sans doute à la petite porte du jardin, et je vais leur ouvrir.</l>
+          <stage>&lt;em&gt;Elle sort par la porte du fond.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="117">Ah ! rien qu’un souper ! c’est dommage. Mais, ma foi, la petite est charmante, et vaut bien...</l>
+          <stage>&lt;em&gt;L’apercevant.&lt;/em&gt;</stage>
+          <l n="118">Ah !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="119">Vous venez de Salamanque... Connaissez-vous mon cousin Scipion ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="120">Un garçon d’une sensibilité... Il pleure toujours.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="121">Eh bien !... pardon si je vous dis ces choses-là... Nous nous aimons tous deux.</l>
+          <stage>&lt;em&gt;Duo de l’Arbre de Vincennes.&lt;/em&gt;</stage>
+          <l n="122">Ma mère, hélas ! blâme notre tendresse ;</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à part.</speaker>
+          <l n="123">Parbleu ! la fille et la mère,</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <stage>Ma mère, hélas ! blâme notre tendresse, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <stage>Parbleu ! la fille et la mère, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="124">Oui, seigneur bachelier, et Scipion est ici.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="125">Il est ici... Parbleu ! je partage bien votre joie, et, dans mon ravissement, il faut que je vous embrasse.</l>
+          <stage>&lt;em&gt;Christina s’enfuit près de la porte du cabinet où est Scipion ; Carambola l’embrasse, et dans ce moment Scipion passe sa tête par la lucarne.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="126">Eh bien, à votre aise... faites comme si je n’y étais pas.</l>
+          <stage>&lt;em&gt;Air : Quand Dieu, pour peupler la terre. (Haine aux femmes.)&lt;/em&gt;</stage>
+          <l n="127">C’est indigne, la traîtresse !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="128">Mais je ne l’ai point trahi ;</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="129">Quoi ! c’est pour nos intérêts...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="130">Oui, comptez sur mes bienfaits.</l>
+          <l n="131">Je possède le secret de madame Gonzalès, et demain je veux que vous soyez mariés.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="132">Vraiment, mariés ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="133">Oui mariés... dans toute la force du terme.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="134">Si vous pouviez aussi me faire souper ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="135">On vient... Prends patience.</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="136">C’est que je n’ai encore pris que cela d’aujourd’hui.</l>
+          <stage>&lt;em&gt;Christina rentre et Scipion referme le rideau de la lucarne.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, MADAME GONZALÈS, TORRIBIO, L’ALGUAZIL, entrant par le fond</speaker>
+          <stage>&lt;em&gt;Carambola est sur le devant, et les autres ne l’aperçoivent pas d’abord. Torribio et l’alguazil portent un grand panier dans lequel il y a un pâté et divers autres plats.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO et L’ALGUAZIL.</speaker>
+          <stage>&lt;em&gt;Air du vaudeville de Comme ça vient, comma ça passe.&lt;/em&gt;</stage>
+          <l n="137">Vive la bonne chère,</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="138">Certaine frayeur m’arrête</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO et L’ALGUAZIL.</speaker>
+          <stage>Vive la bonne chère, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO, riant.</speaker>
+          <l n="139">Ah ! ma voisine, il vient de nous arriver la plus plaisante aventure ! Ah ! ah ! nous allons vous la raconter.</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL, froidement.</speaker>
+          <l n="140">Dansons et réjouissons-nous, car le temps passe et ne revient plus.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="141">Dites-moi donc enfin ce qui vous fait tant rire.</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <stage>Ah ! ah ! un &lt;em&gt;bandoléro&lt;/em&gt; que nous avons bâtonné en chemin...</stage>
+          <stage>&lt;em&gt;Apercevant Carambola.&lt;/em&gt;</stage>
+          <l n="142">Mais quel est cet homme-là ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="143">Un pauvre bachelier de Salamanque, qui a demandé l’hospitalité pour cette nuit.</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="144">De Salamanque !... Ce doit être un camarade de mon fils Scipion... Mais ce drôle-là m’a l’air d’avoir une mauvaise physionomie...</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL.</speaker>
+          <l n="145">Ne peut-on pas lui donner deux ou trois réaux... et qu’il poursuive son chemin ?</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="146">En effet, il ne me convient pas.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="147">Laissez donc ! nous nous convenons à ravir. Vous avez faim, j’ai bon appétit ; vous avez de l’esprit, je n’en manque pas ; vous aimez la joie, je ne demande qu’à rire. Vous voyez donc que nous sommes faits l’un pour l’autre.</l>
+          <stage>&lt;em&gt;Montrant l’alguazil.&lt;/em&gt;</stage>
+          <l n="148">Je m’en rapporte à ce gros réjoui.</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL, froidement.</speaker>
+          <l n="149">Ah ! il me trouve gros réjoui ? Cet homme-là est badin ; nous serons bien ensemble.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <stage>D’ailleurs je chante, je bois, je danse, j’accommode une &lt;em&gt;olla podrida&lt;/em&gt; à miracle, et je la mange encore mieux ; laissez faire.</stage>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO, riant.</speaker>
+          <l n="150">Ah ! il a le mot pour rire ? tu seras des nôtres.</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL.</speaker>
+          <l n="151">Il sera des nôtres ; c’est dit... Dansons et réjouissons-nous.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="152">Mais que disiez-vous donc en entrant ?</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="153">Vous allez le savoir. En allant chez le rôtisseur, qui demeure à l’autre bout du village, nous avons rencontré dans le chemin creux qui longe le petit bois, une espèce d’homme qu’à sa tournure nous avons pris pour un bandoléro. En nous voyant deux, le coquin a voulu tourner bride et nous éviter ; mais sans lui donner le temps de se reconnaître, nous sommes tombés sur lui. Ah ! ah ! lui de crier... et son cheval de s’enfuir... Ah ! ah ! il fallait voir !</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL, froidement.</speaker>
+          <l n="154">C’était en effet très plaisant, et je ris encore rien que d’y penser, eh ! eh ! eh !</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="155">Vous voyez que nous nous en sommes bravement tirés, nous et nos provisions.</l>
+          <stage>&lt;em&gt;Il montre le panier où sont les provisions, les bouquets, les verres, etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="156">Que vois-je ? Ah ! quelle aimable galanterie !</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO, lui offrant un bouquet.</speaker>
+          <l n="157">N’est-ce pas aujourd’hui votre fête ?</l>
+          <stage>&lt;em&gt;Air : Traitant l’Amour sans pitié. (Voltaire chez Ninon.)&lt;/em&gt;</stage>
+          <l n="158">Trois fleurs forment ce bouquet,</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="159">Ah ! que c’est délicat !</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="160">Allons, seigneur...</l>
+          <stage>&lt;em&gt;Il verse à boire à l’alguazil.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air de Six mois d’absence.&lt;/em&gt;</stage>
+          <l n="161">La folie est de tous les âges ;</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL, plaçant une chaise.</speaker>
+          <l n="162">Ici je vais être à merveille.</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="163">Je veux m’enivrer en ce jour</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <stage>La folie est de tous les âges, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL.</speaker>
+          <l n="164">Ce petit doigt de vin m’a tout émoustillé... Si je m’y mets une fois, comme nous allons rire ! Allons, ma voisine, un petit air de fandango... je me sens en gaité.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="165">Seigneur bachelier, jouez-nous un boléro ou une danse française ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="166">Volontiers. Voulez-vous un rigodon ? j’en ai un de ma composition que j’ai arrangé...</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL.</speaker>
+          <l n="167">Va pour un rigodon !</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, chante eu s’accompagnant de la guitare.</speaker>
+          <stage>&lt;em&gt;Air : Lon, lan, la derirette.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Premier couplet.&lt;/em&gt;</stage>
+          <l n="168">Pour fléchir la plus cruelle,</l>
+          <stage>&lt;em&gt;Deuxième couplet.&lt;/em&gt;</stage>
+          <l n="169">Dame que l’plaisir enflamme.</l>
+          <stage>&lt;em&gt;Ils dansent.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Troisième couplet.&lt;/em&gt;</stage>
+          <l n="170">Sur la fin de sa carrière,</l>
+          <stage>&lt;em&gt;Au milieu de la danse, on entend frapper rudement. Grand silence.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, en dehors.</speaker>
+          <l n="171">Holà ! ho ! ma femme, c’est moi.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="172">Ah ! malheureuse que je suis... c’est mon mari !</l>
+          <stage>&lt;em&gt;Air : Au clair de la lune.&lt;/em&gt;</stage>
+          <l n="173">Quel retour funeste !</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="174">Le diable l’emporte !</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="175">J’avais si beau jeu !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="176">Ouvre donc la porte,</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, en dehors.</speaker>
+          <l n="177">Est-ce que vous n’entendez pas ? On frappe ; ça m’a réveillée en sursaut.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="178">À l’autre, maintenant ! Eh ! c’est bon.</l>
+          <stage>&lt;em&gt;Se mettant au balcon.&lt;/em&gt;</stage>
+          <l n="179">Qui est-ce qui est là ?</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, en dehors.</speaker>
+          <l n="180">Le seigneur Gonzalès.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="181">Ah ! c’est toi, mon ami !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="182">Quel contretemps !</l>
+          <stage>&lt;em&gt;Pendant ce colloque, Torribio et l’alguazil ont porté la table dans la pièce du fond, et y restent cachés. Carambola, après avoir quelque temps cherché, se cache dans le cabinet où est déjà Scipion.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <stage>&lt;em&gt;Air : Voyage, voyage désormais qui voudra. (Azémia.)&lt;/em&gt;</stage>
+          <l n="183">Ah ! que j’avais d’impatience,</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, se jetant dans un fauteuil.</speaker>
+          <l n="184">Je n’en puis plus !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="185">Qu’est-ce donc cela ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="186">Paix là ! paix là !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="187">Que suis-je ? des bandoléros, des bâtons... C’est décidé, je ne quitte plus mes foyers.</l>
+          <l n="188">Voyage, voyage désormais qui voudra.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="189">Ah ! mon Dieu ! comme te voilà fait !</l>
+          <stage>&lt;em&gt;Gonzalès est dans le plus grand désordre, crotte, poudreux, etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="190">Fait ! dis donc plutôt défait... Ne suis-je pas ben pâle, dis-moi ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="191">Mais, enfin, que t’est-il arrivé ?</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="192">Je passais tranquillement dans le chemin creux, lorsque je vis venir à moi deux hommes, qu’à leur physionomie je pris pour des bandoléros : je voulais les éviter ; ma bête ne le voulut pas, et alla droit à eux.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="193">Ô ciel ! mais c’est l’aventure de Torribio !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="194">Alors, sans aucune conversation préliminaire, ils tombent sur mon cheval.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="195">Que sur le cheval ?</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="196">Et sur moi, puisque j’étais sur lui.</l>
+          <stage>&lt;em&gt;Air : L’hymen est un lien charmant. (Léonce.)&lt;/em&gt;</stage>
+          <l n="197">Sur le maître et sur le cheval.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS et CHRISTINA.</speaker>
+          <l n="198">Ah ! Dieu !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="199">Voilà mon aventure en gros.</l>
+          <stage>&lt;em&gt;Remuant les épaules.&lt;/em&gt;</stage>
+          <l n="200">Je te passe les détails. Mais toi, qu’as-tu fait en mon absence ? Personne n’est-il venu te voir ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="201">Oh ! personne, depuis ton départ.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, bas à sa mère.</speaker>
+          <l n="202">Ah ! cependant, ce bach...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="203">Taisez-vous, péronnelle !</l>
+          <stage>&lt;em&gt;On entend tomber un meuble dans le cabinet où sont Carambola et Scipion.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS et CHRISTINA, à part.</speaker>
+          <l n="204">L’imprudent !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="205">Quel est ce bruit ?... Quelqu’un est dans le cabinet... N’as-tu pas entendu comme moi ?...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, tremblante.</speaker>
+          <l n="206">Moi ?... non ; et toi, Christina ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="207">Ni moi.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="208">Cependant je suis bien sûr...</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="209">Peut-être la fenêtre est-elle ouverte, et le vent aura renversé...</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="210">Il est vrai qu’il fait un vent affreux.</l>
+          <stage>&lt;em&gt;On entend Carambola qui s’embarrasse dans une chaise, et qui dit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="211">Maudite chambre ! on n’y voit goutte.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, à part.</speaker>
+          <l n="212">C’est Scipion !</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="213">C’est Carambola !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, tremblant et s’efforçant de paraître en colère.</speaker>
+          <l n="214">Cette fois, ce n’est point le vent... c’est bien la voix d’un homme.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="215">Mon ami, je puis l’assurer que j’ignore...</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, à Christina.</speaker>
+          <l n="216">Et vous, mademoiselle, parlerez-vous ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, tremblante.</speaker>
+          <l n="217">Allons, puisqu’il faut tout avouer, c’est moi qui, ce soir, ai reçu, malgré votre défense... Oh ! je vous en prie, ne me grondez pas.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, vivement et avec un coup d’œil expressif.</speaker>
+          <l n="218">Comment ! ce bachelier auquel j’avais refusé un asile ?</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, saisissant promptement son idée.</speaker>
+          <l n="219">Oui... oui, maman, ce bachelier ; c’est lui-même. Comme il me faisait pitié, je l’ai fait entrer là sans vous en prévenir.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, bas.</speaker>
+          <l n="220">Charmante enfant !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="221">Voyez la petite sotte ! Mais où est-il, ce bachelier ?</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="222">Oui, où est-il ? J’aime à exercer l’hospitalité, et si... C’est qu’il m’a fait presque peur !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA, allant vers les cabinet.</speaker>
+          <l n="223">Venez, seigneur Carambola ; on ne m’en veut pas de ce que je vous ai fait entrer sans permission.</l>
+          <stage>&lt;em&gt;Bas.&lt;/em&gt;</stage>
+          <l n="224">Vous m’entendez ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, paraissant.</speaker>
+          <l n="225">J’entends.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à part.</speaker>
+          <l n="226">Le maudit homme ! Il avait bien besoin de venir pour nous empêcher de souper.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="227">Si j’avais su, seigneur, que le maître de cette maison fût céans, je me serais empressé...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="228">Oh ! j’en tâterai à quelque prix que ce soit !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="229">Mais, il a bonne tournure.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, regardant Gonzalès.</speaker>
+          <l n="230">Eh ! mais, ne me trompé-je point ? je vous ai vu à Salamanque.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="231">Il est vrai que j’y ai été deux fois.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="232">Eh ! oui... cet air distingué... cette physionomie savante... J’y suis ! vous êtes sans doute un des docteurs de la Faculté de médecine.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="233">Ah ! c’est trop d’honneur... je suis Gonzalès, barbier chirurgien, tout simplement.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="234">C’est ce que je voulais dire. Quoi ! vous seriez ce fameux Gonzalès dont tout Salamanque vante les cures merveilleuses... l’esprit... l’érudition...</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="235">Eh ! eh ! eh ! la ville de Salamanque est mille fois trop honnête... Du reste, je suis ce Gonzalès dont vous parlez...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="236">Ce jeune homme-là a une manière de s’exprimer qui prévient en sa faveur.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="237">Parbleu ! monsieur, je serais charmé de posséder votre amitié.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="238">Et moi, ravi... Mais si vous voulez, nous allons, faire plus ample connaissance le verre à la main... Je me sens là un appétit...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="239">Monsieur a fait de l’exercice ?</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="240">Mais on m’en a fait faire pas mal.</l>
+          <stage>&lt;em&gt;À sa femme.&lt;/em&gt;</stage>
+          <l n="241">Ma femme, donne-nous donc quelque chose à manger ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="242">Mon ami, tu sais bien que je n’attendais pas... et je n’ai rien.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="243">Voilà qui est fâcheux... À l’heure qu’il est tout est fermé.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="244">Ma foi, mon cher hôte, puisque vous n’avez rien à me donner, il faut que ce soit moi qui vous régale : apprenez qu’il ne tient qu’à moi d’avoir en ce moment un repas complet et un vin délicieux.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="245">Ô ciel ! que veut-il dire ?</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="246">Et qui vous donnera tout cela ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="247">Qui ? Mon art ; mais la crainte de la justice me lie les mains.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, effrayé.</speaker>
+          <l n="248">La justice !... Serait-ce encore un bandoléro ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="249">Eh ! non, apprenez que je suis un fameux nécromancien, et si vous voulez, je vais me faire apporter ici par deux diables une table garnie de provisions.</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="250">Des diables ici ! Jésus Maria ! quelle horreur !</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="251">J’ai le sang tout glacé en pensant à ce qu’il veut faire.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="252">Oh ! pour moi, je n’oserai jamais...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="253">Sans doute, seigneur bachelier... il doit y avoir trop de danger...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, bas.</speaker>
+          <l n="254">Aucun, si vous êtes discrète.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, indécis.</speaker>
+          <l n="255">Cependant, s’il n’y a pas de danger, je serais curieux de voir quelle figure ont les dîners de ces messieurs... Vous m’assurez que les mets sont copieux et délicats ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="256">Nous pouvons demander la carte... ou plutôt, c’est aujourd’hui la fête de madame, voulez-vous un pâté superbe, garni de fleurs ?</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="257">Me voilà presque déterminé... mais pourvu que vos diables n’aient rien d’affreux clans la physionomie...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="258">Voulez-vous que je les fasse paraître sous la figure de l’alcade de ce village et de l’alguazil son ami ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="259">Je suis morte ! il va tout découvrir...</l>
+          <stage>&lt;em&gt;Bas à Carambola.&lt;/em&gt;</stage>
+          <l n="260">Monsieur, vous avez donc juré de...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à part.</speaker>
+          <l n="261">Eh ! non, je veux vous sauver.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="262">Les pauvres gens ! Quoi ! il serait permis à des diables d’emprunter leur figure ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="263">Sans doute. Une autre forme leur serait peut-être plus difficile à prendre, mais de diable à alguazil il n’y a que la main ; et cela va se faire presque sans métamorphose. Silence ! je commence.</l>
+          <stage>&lt;em&gt;Air : Noirs habitants de la nuit éternelle. (Le Sorcier. Philidor.)&lt;/em&gt;</stage>
+          <l n="264">Noirs habitants de la nuit infernale,</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, CHRISTINA, GONZALÈS, CARAMBOLA, TORRIBIO, L’ALGUAZIL</speaker>
+          <stage>&lt;em&gt;Ils ouvrent tout à coup la porte du fond, et apportent la table servie et éclairée.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <stage>&lt;em&gt;Air des Sauvages. (Les Indes galantes.)&lt;/em&gt;</stage>
+          <l n="265">Bon !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, regardant à travers ses doigts.</speaker>
+          <l n="266">Mais ce régal</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO et L’ALGUAZIL, dansant devant la table, en diables d’Opéra.</speaker>
+          <l n="267">Gniac !</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="268">C’est assez, c’est assez !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="269">Comme ils ressemblent à l’alcade et à l’alguazil !</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="270">Mais ils ne sont pas trop laids.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="271">Oui, pas mal... la beauté du diable ! Voilà qui est vraiment admirable.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="272">À boire !</l>
+          <stage>&lt;em&gt;L’alcade et l’alguazil versent à boire à Gonzalès, qui fait divers lazzis avant d’accepter.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Dans la paix et l’innocence. (Le Club des bonnes gens.)&lt;/em&gt;</stage>
+          <l n="273">Notre vin est loin, sans doute,</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="274">Il est dupe de la fraude...</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS, après avoir bu.</speaker>
+          <l n="275">Ce qu’on ne croira jamais,</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="276">Allons, mettons-nous à table.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="277">Est-ce qu’ils vont souper avec nous ? Ce n’est pas que je sois fier...</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="278">Est-ce que les diables mangent ?</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO.</speaker>
+          <l n="279">Oui, vraiment, il y en a qui mangent ; et nous sommes de ceux-là.</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL.</speaker>
+          <l n="280">Pour moi, j’ai une faim d’enfer.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="281">Je le crois bien.</l>
+          <stage>&lt;em&gt;Ils vont pour s’asseoir.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="282">Un instant ! il me vient une idée. Ce n’est là qu’un simple souper ; si nous en faisions un repas de noces ?</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="283">Comment ça ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="284">En mariant votre fille ; car je m’intéresse à elle, ainsi qu’à toute la famille, et je veux terminer cette affaire avant mon départ.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="285">Quelle bonté !</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="286">Mon art m’apprend qu’elle aime Scipion Torribio... Je les unis ensemble.</l>
+          <stage>&lt;em&gt;À madame Gonzalès.&lt;/em&gt;</stage>
+          <l n="287">Je sais ce que vous allez dire : Scipion est trop jeune, il n’a pas d’état ; mais je promets de faire quelque chose pour eux, et vous sentez qu’avec ma protection...</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="288">Il n’y a pas de doute : avec une protection comme celle-là, on peut aller à tout...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, bas.</speaker>
+          <l n="289">Mais, monsieur, quel motif peut vous engager ?...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="290">Silence ! ou je vais parler... et si je prononce certaines paroles...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="291">Mais on ne traite pas ainsi ces sortes d’affaires. Certainement je ne refuse pas, mais encore faut-il que le fils soit ici...</l>
+          <stage>&lt;em&gt;Avec intention.&lt;/em&gt;</stage>
+          <l n="292">que le père y soit, qu’on puisse avoir son consentement.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="293">Elle a raison... il faut la vraie signature, et monsieur ne peut pas avec sa griffe...</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="294">Si ce n’est que le consentement du père, la présence du fils ; tout cela n’est qu’un jeu pour moi, et d’un coup de baguette...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="295">Je vous prends au mot ; et puisque rien ne vous est impossible, si vous pouvez, à l’instant, mais je dis à l’instant même, remplir ces deux conditions, je donne mon consentement.</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO, à part.</speaker>
+          <l n="296">Voilà le sorcier un peu embarrassé.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="297">J’accepte.</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL, à part.</speaker>
+          <l n="298">Comment va-t-il faire ?</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à Torribio.</speaker>
+          <l n="299">Alla Boraka Astaroth, mon génie familier, je vous ordonne de vous rendre à l’instant chez Torribio, et d’en rapporter le contrat tout dressé et tout signé : allez !...</l>
+          <stage>&lt;em&gt;Musique. Torribio entre dans le cabinet.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="300">J’aurais bien voulu le voir sortir par le trou de la serrure.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="301">Il fallait donc le dire ; ça ne me coûtait pas plus.</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="302">À la bonne heure ! mais il nous faut Scipion, et il est à Salamanque.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="303">Dix lieues ! c’est une bagatelle.</l>
+          <stage>&lt;em&gt;Air : Lise épouse l’ beau Gernance. (Fanchon la Vielleuse.)&lt;/em&gt;</stage>
+          <l n="304">Il est amoureux et tendre</l>
+          <stage>&lt;em&gt;Haussant la voix.&lt;/em&gt;</stage>
+          <l n="305">Et sans peine il doit m’entendre.</l>
+          <stage>&lt;em&gt;Musique. Torribio sort du cabinet, le contrat à la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="306">Ma foi ! c’est l’écriture du compère !</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="307">Maintenant...</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS.</speaker>
+          <l n="308">Son assurance m’effraie.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <stage>&lt;em&gt;Air du Port Mahon.&lt;/em&gt;</stage>
+          <l n="309">Toi dont l’obéissance</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="310">Me voilà !</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS, dans le plus grand étonnement.</speaker>
+          <l n="311">Le voilà !</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Ô ciel ! la plaisante aventure ! (La Belle au bois dormant.)&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, TORRIBIO, l’ALGUAZIL, GONZALÈS.</speaker>
+          <l n="312">Ô ciel ! quel est donc ce mystère</l>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION et CHRISTINA, à part.</speaker>
+          <l n="313">Je comprends fort bien ce mystère ;</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, gravement.</speaker>
+          <l n="314">Un tel prodige est un mystère</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, réfléchissant.</speaker>
+          <l n="315">Oui, l’aventure est incroyable.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="316">De Scipion c’est bien le portrait.</l>
+        </sp>
+        <sp who="#torribio">
+          <speaker>TORRIBIO, à part.</speaker>
+          <l n="317">Serait-ce un sorcier véritable ?</l>
+        </sp>
+        <sp who="#l’alguazil-pachéo">
+          <speaker>L’ALGUAZIL, à part.</speaker>
+          <l n="318">Et serais-je un diable en effet ?</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="319">Ô ciel ! quel est donc ce mystère</l>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA et SCIPION, à part.</speaker>
+          <l n="320">Grands Dieux ! protégez son audace.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à madame Gonzalès.</speaker>
+          <l n="321">Hésiteriez-vous, à présent ?</l>
+        </sp>
+        <sp who="#madame-gonzalès">
+          <speaker>MADAME GONZALÈS, à part.</speaker>
+          <l n="322">Il faut céder de bonne grâce,</l>
+          <stage>&lt;em&gt;Unissant Scipion et Christina.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="323">Formez donc cet hymen prospère ;</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="324">Je vous demande le plus profond secret sur tout ce qui vient de se passer.</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="325">Je vous le promets.</l>
+          <stage>&lt;em&gt;Vaudeville.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air du vaudeville des Baladines.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="326">Malgré l’envie</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <stage>Malgré l’envie, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#scipion">
+          <speaker>SCIPION.</speaker>
+          <l n="327">Grâces à votre art tutélaire,</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="328">De peur d’accidents fâcheux,</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="329">Honneur à ce grand sorcier !</l>
+        </sp>
+        <sp who="#gonzalès">
+          <speaker>GONZALÈS.</speaker>
+          <l n="330">Mais cependant, daignez m’entendre.</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA.</speaker>
+          <l n="331">Il faut prendre, mon ami,</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <stage>Honneur à ce grand sorcier ! &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#christina">
+          <speaker>CHRISTINA.</speaker>
+          <l n="332">Vous dont le rare savoir-faire</l>
+        </sp>
+        <sp who="#carambola">
+          <speaker>CARAMBOLA, à Christina.</speaker>
+          <l n="333">Le plus grand magicien,</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <stage>Honneur à ce grand sorcier ! &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <l n="334" />
+        </sp>
       </div>
     </body>
   </text>

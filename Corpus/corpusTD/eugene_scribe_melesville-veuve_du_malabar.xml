@@ -1,1361 +1,1437 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La Veuve du Malabar</title>
-        <author key="Eugène SCRIBE - MÉLESVILLE | (naissance-mort)">Eugène SCRIBE - MÉLESVILLE |</author>
+        <title type="main" />
+        <title type="sub">Vaudeville</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/la-veuve-du-malabar-eugène-scribe-mélesville</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène SCRIBE - MÉLESVILLE |</author>. <title>La Veuve du Malabar</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/la-veuve-du-malabar-eugène-scribe-mélesville</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1822-08-19">Représenté pour la première fois, à Paris, sur le Théâtre du Gymnase, le 19 août 1822.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="dupré" sex="SEX">
+            <persName>DUPRÉ</persName>
+          </person>
+          <person xml:id="surville" sex="SEX">
+            <persName>SURVILLE</persName>
+          </person>
+          <person xml:id="ali-brull-pha-gos" sex="SEX">
+            <persName>ALI-BRULL-PHA-GOS</persName>
+          </person>
+          <person xml:id="madame-dupré" sex="SEX">
+            <persName>MADAME DUPRÉ</persName>
+          </person>
+          <person xml:id="zeïla" sex="SEX">
+            <persName>ZEÏLA</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Vaudeville</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q186286</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1822-08-19" location="unknown">Représenté pour la première fois, à Paris, sur le Théâtre du Gymnase, le 19 août 1822.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>La Veuve du Malabar</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Vaudeville en un acte.</l>
-            <l n="2" xml:id="l2">Représenté pour la première fois, à Paris, sur le Théâtre du Gymnase, le 19 août 1822.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="dupré">DUPRÉ</role>
-              <roleDesc>, <em>négociant, établi au Malabar</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="surville">SURVILLE</role>
-              <roleDesc>, <em>jeune Français attaché à la compagnie des Indes</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="ali-brull-pha-gos">ALI-BRULL-PHA-GOS</role>
-              <roleDesc>, <em>courtier de commerce</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-dupré">MADAME DUPRÉ</role>
-              <roleDesc>, <em>femme de Dupré</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="zeïla">ZEÏLA</role>
-              <roleDesc>, <em>jeune veuve Indienne</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>Dans une ville, sur la côte du Malabar.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Une salle de l’appartement de Dupré ; on voit çà et là quelques ballots de marchandises. À droite, un cabinet qui conduit au magasin. À gauche, d’autres appartements. Au fond, des croisées qui donnent sur la ville.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="dupré" xml:id="1-1">
-            <speaker>DUPRÉ, <em>parlant au fond à la cantonade, sur le devant de la scène</em> UNE FEMME <em>tenant une lettre à la main</em></speaker>
-            <l n="10" xml:id="l10"> </l>
-          </sp>
-          <sp who="dupré" xml:id="1-2">
-            <speaker>DUPRÉ.</speaker>
-            <l n="11" xml:id="l11">Serrez ces ballots de marchandises, et prenez garde de rien gâter... Ces domestiques indiens sont d’une maladresse !... En France, quelle différence ! Je me rappelle que quand j’étais laquais j’avais toujours plus d’esprit que mes maîtres.</l>
-          </sp>
-          <sp who="la-femme" xml:id="1-3">
-            <speaker>LA FEMME, <em>s’avancent.</em></speaker>
-            <l n="12" xml:id="l12">Monsieur...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-4">
-            <speaker>DUPRÉ.</speaker>
-            <l n="13" xml:id="l13">C’est juste ; on m’avait dit que quelqu’un m’attendait dans mes magasins...</l>
-            <stage><hi rend="italic"><em>D’un ton imposant.</em></hi></stage>
-            <l n="15" xml:id="l15">Qu’est-ce que c’est ?</l>
-          </sp>
-          <sp who="la-femme" xml:id="1-5">
-            <speaker>LA FEMME.</speaker>
-            <l n="16" xml:id="l16">De la part de milady, ma maîtresse.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-6">
-            <speaker>DUPRÉ, <em>prenant la lettre.</em></speaker>
-            <l n="17" xml:id="l17">Voilà une soubrette qui a une fort jolie tournure... une charmante petite femme !</l>
-            <stage><hi rend="italic"><em>La regardant.</em></hi></stage>
-            <l n="19" xml:id="l19">Ah ! mon Dieu ! quel souvenir !...</l>
-          </sp>
-          <sp who="la-femme" xml:id="1-7">
-            <speaker>LA FEMME.</speaker>
-            <l n="20" xml:id="l20">Quel son de voix !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-8">
-            <speaker>DUPRÉ.</speaker>
-            <l n="21" xml:id="l21">À la sueur froide qui me saisit...</l>
-          </sp>
-          <sp who="la-femme" xml:id="1-9">
-            <speaker>LA FEMME.</speaker>
-            <l n="22" xml:id="l22">À la terreur que j’éprouve...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-10">
-            <speaker>DUPRÉ.</speaker>
-            <l n="23" xml:id="l23">Je ne peux pas m’abuser...</l>
-          </sp>
-          <sp who="la-femme" xml:id="1-11">
-            <speaker>LA FEMME.</speaker>
-            <l n="24" xml:id="l24">Je ne me trompe pas... c’est ce fripon de Dupré !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-12">
-            <speaker>DUPRÉ.</speaker>
-            <l n="25" xml:id="l25">C’est ma femme !</l>
-          </sp>
-          <sp who="la-femme" xml:id="1-13">
-            <speaker>LA FEMME.</speaker>
-            <l n="26" xml:id="l26">C’est mon mari !... Comment ! après cinq ans d’absence, je te revois enfin !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-14">
-            <speaker>DUPRÉ.</speaker>
-            <l n="27" xml:id="l27">Comment ! malgré l’océan qui nous séparait, je te retrouve encore !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-15">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="28" xml:id="l28">C’en est fait, je crois à la sympathie.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-16">
-            <speaker>DUPRÉ.</speaker>
-            <l n="29" xml:id="l29">Et moi à la fatalité.</l>
-            <stage><hi rend="italic"><em>Montrant sa femme.</em></hi></stage>
-            <l n="31" xml:id="l31">Je la laisse en Europe et m’embarque pour les Indes... seul moyen, avec elle, pour faire bon ménage... Eh bien ! il faut que le hasard, plus puissant que nos cœurs, nous réunisse... Où ? Au Malabar ! Un pays qui, jusqu’à présent, m’avait porté bonheur ! C’était bien la peine de faire le voyage !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-17">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="32" xml:id="l32">Plains-toi donc !</l>
-            <stage><hi rend="italic"><em>Air : À soixante ans, on ne doit pas remettre. (Le Dîner de Madelon.)</em></hi></stage>
-            <l n="34" xml:id="l34">Et quel mari ? Un mauvais sujet, un brutal, un jaloux, un dissipateur, un...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-18">
-            <speaker>DUPRÉ, <em>la regardant avec tendresse.</em></speaker>
-            <l n="35" xml:id="l35">Cette chère Angélique !... Elle n’est point changée. Eh bien donc, ma douce compagne, puisque les vents contraires vous ramènent près de moi, donnez-moi des nouvelles de mon ménage d’outre-mer : voyons... qu’as-tu fait pendant les cinq ans de mon absence ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-19">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="36" xml:id="l36">Ce que j’ai fait ?... J’en ai profité pour être heureuse.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-20">
-            <speaker>DUPRÉ.</speaker>
-            <l n="37" xml:id="l37">Et moi, pour faire fortune.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-21">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="38" xml:id="l38">Comment ! il serait possible ! Ce riche négociant, chez lequel je venais...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-22">
-            <speaker>DUPRÉ.</speaker>
-            <l n="39" xml:id="l39">C’est moi-même... et tout ce que tu vois m’appartient. Cette maison...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-23">
-            <speaker>MADAME DUPRÉ, <em>avec tendresse.</em></speaker>
-            <l n="40" xml:id="l40">Dupré !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-24">
-            <speaker>DUPRÉ.</speaker>
-            <l n="41" xml:id="l41">Ces esclaves, ces marchandises...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-25">
-            <speaker>MADAME DUPRÉ, <em>de même.</em></speaker>
-            <l n="42" xml:id="l42">Mon cher Dupré !...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-26">
-            <speaker>DUPRÉ.</speaker>
-            <l n="43" xml:id="l43">Et dans ma caisse ; cinquante mille piastres.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-27">
-            <speaker>MADAME DUPRÉ, <em>de même.</em></speaker>
-            <l n="44" xml:id="l44">Mon ami ! et j’osais t’accuser, soupçonner ta conduite...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-28">
-            <speaker>DUPRÉ.</speaker>
-            <l n="45" xml:id="l45">Tu me pardonnes donc mon départ ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-29">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="46" xml:id="l46">T’en ai-je jamais gardé rancune ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-30">
-            <speaker>DUPRÉ.</speaker>
-            <stage><hi rend="italic"><em>Air du vaudeville de La Somnambule.</em></hi></stage>
-          <stage>MADAME DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="1-31">
-            <speaker>DUPRÉ, <em>la regardant avec surprise.</em></speaker>
-            <l n="48" xml:id="l48">Mon ami !...</l>
-          <stage>MADAME DUPRÉ, <em>de même.</em></stage>
-          </sp>
-          <sp who="dupré" xml:id="1-32">
-            <speaker>DUPRÉ.</speaker>
-            <l n="49" xml:id="l49">Mon Angélique !</l>
-            <stage><hi rend="italic"><em>Ils s’embrassent.</em></hi></stage>
-            <l n="51" xml:id="l51">Quel bonheur de se retrouver !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-33">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="52" xml:id="l52">De s’aimer plus que jamais...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-34">
-            <speaker>DUPRÉ.</speaker>
-            <l n="53" xml:id="l53">De ne plus parler du passé...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-35">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="54" xml:id="l54">Ou plutôt de le faire oublier par les soins, les égards, les prévenances... Tu dis donc, mon ami, que tu as gagné cinquante mille piastres ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-36">
-            <speaker>DUPRÉ.</speaker>
-            <l n="55" xml:id="l55">Oui, ma femme.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-37">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="56" xml:id="l56">Et que cette maison, ces esclaves, ces marchandises nous appartiennent ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-38">
-            <speaker>DUPRÉ.</speaker>
-            <l n="57" xml:id="l57">Oui, madame Dupré. De plus je jouis d’une certaine considération dans le pays ; d’abord je m’y suis fait naturaliser, ce qui augmente encore la confiance ; et à la première occasion favorable, je me retire des affaires, je réalise mes fonds et vais m’établir en France, où je n’aurai plus rien à faire qu’à vivre en honnête homme.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-39">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="58" xml:id="l58">Et moi, en grande dame ! Quel bonheur ! Je vais le dire à lady Anthony, ma maîtresse, avec qui j’étais venue en ce pays.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-40">
-            <speaker>DUPRÉ.</speaker>
-            <l n="59" xml:id="l59">C’est inutile... Je sors... et je me chargerai de ta commission... Si on venait me demander, je reviendrai dans une heure.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-41">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="60" xml:id="l60">Tu me quittes déjà !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-42">
-            <speaker>DUPRÉ.</speaker>
-            <l n="61" xml:id="l61">Il le faut pour une affaire importante qui regarde un de mes compatriotes, M. de Surville, un jeune Français très riche.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-43">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="62" xml:id="l62">Et quelle est cette affaire ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-44">
-            <speaker>DUPRÉ.</speaker>
-            <l n="63" xml:id="l63">Oh ! ce n’est pas une affaire de commerce, proprement dite... parce qu’il s’agit, vois-tu bien... Mais dans ce moment, je ne peux pas t’en dire davantage.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-45">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="64" xml:id="l64">Et pour quelle raison ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-46">
-            <speaker>DUPRÉ.</speaker>
-            <l n="65" xml:id="l65">Parce que c’est un secret.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-47">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="66" xml:id="l66">Vous en avez donc pour moi ?</l>
-          </sp>
-          <sp who="dupré" xml:id="1-48">
-            <speaker>DUPRÉ.</speaker>
-            <l n="67" xml:id="l67">Sans contredit.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-49">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="68" xml:id="l68">Après l’amour que j’ai pour vous !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-50">
-            <speaker>DUPRÉ.</speaker>
-            <l n="69" xml:id="l69">Entendons-nous. Je suis sûr de son amour, mais non pas de ta discrétion.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-51">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="70" xml:id="l70">Tu auras beau faire, cependant ! il faudra bien que je le sache...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-52">
-            <speaker>DUPRÉ.</speaker>
-            <l n="71" xml:id="l71">Tu ne le sauras pas.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-53">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="72" xml:id="l72">Je le saurai.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-54">
-            <speaker>DUPRÉ.</speaker>
-            <l n="73" xml:id="l73">C’est ce que nous verrons.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-55">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="74" xml:id="l74">Ah ! tu espères me cacher ta conduite, mais j’y mettrai bon ordre.</l>
-          </sp>
-          <sp who="dupré" xml:id="1-56">
-            <speaker>DUPRÉ.</speaker>
-            <l n="75" xml:id="l75">Ah ! tu crois que je me laisserai mener !</l>
-          </sp>
-          <sp who="dupré" xml:id="1-57">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="76" xml:id="l76">Et moi que je me laisserai tyranniser !... Non... j’ai été trop douce jusqu’à présent ; mais je veux être maîtresse chez moi. Je veux être obéie ! et si tu ne me dis à l’instant...</l>
-          </sp>
-          <sp who="dupré" xml:id="1-58">
-            <speaker>DUPRÉ.</speaker>
-            <l n="77" xml:id="l77">Là !... Voilà nos querelles européennes qui recommencent.</l>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Cœur infidèle, cœur volage, (Blaise et Babet.)</em></hi></stage>
-          <stage>MADAME DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="1-59">
-            <speaker>DUPRÉ.</speaker>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-          <stage>MADAME DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="1-60">
-            <speaker>DUPRÉ.</speaker>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-          <stage>MADAME DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="1-61">
-            <speaker>DUPRÉ.</speaker>
-            <stage><hi rend="italic"><em>Dupré prend son chapeau et sort.</em></hi></stage>
-          </sp>
-          <sp who="dupré" xml:id="1-62">
-            <speaker>DUPRÉ <em>et</em> MADAME DUPRÉ.</speaker>
-            <l n="83" xml:id="l83"> </l>
-            <l n="84" xml:id="l84"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="85" xml:id="l85"> </l>
-          <sp who="dupré" xml:id="2-1">
-            <speaker>MADAME DUPRÉ, <em>seule</em></speaker>
-            <l n="86" xml:id="l86"> </l>
-            <l n="87" xml:id="l87">Les maris sont partout les mêmes. Le pays n’y fait rien... En France, en Angleterre, ainsi qu’au Malabar, ce sont toujours des... des maris, et puisque me voilà de nouveau enchaînée auprès du mien, puisqu’il faut absolument que je fasse bon ménage, je n’ai plus qu’un moyen pour vivre avec lui, c’est de le faire mourir de chagrin. Hein ! qui vient là ?... Quelle est cette grotesque figure ? C’est sans doute quelque marabout du pays.</l>
-            <l n="88" xml:id="l88"> </l>
-            <l n="89" xml:id="l89"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="90" xml:id="l90"> </l>
-          <sp who="dupré" xml:id="3-1">
-            <speaker>MADAME DUPRÉ, BRULL-PHA-GOS</speaker>
-            <l n="91" xml:id="l91"> </l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-2">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="92" xml:id="l92">Le seigneur Dupré est-il chez lui ?</l>
-          </sp>
-          <sp who="dupré" xml:id="3-3">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="93" xml:id="l93">Non, monsieur, il vient de sortir.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-4">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="94" xml:id="l94">Ah ! ah ! moi qui venais lui parler pour affaire importante !</l>
-            <stage><hi rend="italic"><em>Regardant madame Dupré.</em></hi></stage>
-            <l n="96" xml:id="l96">Serait-ce là une de ses esclaves ?</l>
-          </sp>
-          <sp who="dupré" xml:id="3-5">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="97" xml:id="l97">C’est tout comme : je suis sa femme.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-6">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="98" xml:id="l98">Eh ! mais, je ne le croyais pas marié.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-7">
-            <speaker>MADAME DUPRÉ, <em>à part.</em></speaker>
-            <l n="99" xml:id="l99">Plût au ciel !...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="101" xml:id="l101">Je suis venue le retrouver.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-8">
-            <speaker>BRULL-PHA-GOS, <em>la regardant.</em></speaker>
-            <l n="102" xml:id="l102">Ah ! ah ! vous êtes sa femme, et vous habitez désormais ce pays ? C’est fort heureux... pour nous.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-9">
-            <speaker>MADAME DUPRÉ, <em>sèchement.</em></speaker>
-            <l n="103" xml:id="l103">Et pourquoi ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-10">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="104" xml:id="l104">Pourquoi ? Parce qu’on ne sait pas ce qui peut arriver... non pas que je le désire : ce cher Dupré ! mais enfin, j’espère, en cas d’événement, que vous vous adresserez à moi.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-11">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="105" xml:id="l105">Qui êtes-vous donc ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-12">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="106" xml:id="l106">Ah Brull-Pha-Gos, courtier de commerce, commis feutier, employé aux bûchers du Malabar.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-13">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="107" xml:id="l107">Quelle est cette place-là ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-14">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="108" xml:id="l108">C’en est une fort bonne dans ce pays, quand on a une certaine clientèle, et je puis me flatter d’être un des plus occupés. À propos de cela, oserais-je vous offrir des billets pour la cérémonie d’aujourd’hui ? Elle sera superbe !... Il y a longtemps, je m’en vante, qu’on n’aura vu un spectacle aussi magnifique.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-15">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="109" xml:id="l109">Qu’est-ce donc ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-16">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="110" xml:id="l110">Comment !... vous n’en avez pas entendu parler ?</l>
-          </sp>
-          <sp who="dupré" xml:id="3-17">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="111" xml:id="l111">Eh ! mon Dieu non ; j’arrive.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-18">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="112" xml:id="l112">Vous ne pouviez pas mieux tomber : c’est la veuve du vieil Amrou, la jeune Zeïla, qui doit se brûler.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-19">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="113" xml:id="l113">Comment, se brûler ! et pour quelle raison ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-20">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="114" xml:id="l114">Je vous l’ai dit, parce que son mari est mort.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-21">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="115" xml:id="l115">Elle l’aimait donc bien !</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-22">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="116" xml:id="l116">Elle ne pouvait pas le souffrir ; mais c’est égal ! c’est l’usage du pays... Dès qu’un homme marié vient à mourir, il n’y a pas de milieu, il faut que sa femme soit brûlée vive !</l>
-          </sp>
-          <sp who="dupré" xml:id="3-23">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="117" xml:id="l117">Mais voilà une coutume qui n’a pas le sens commun !</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-24">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="118" xml:id="l118">Je ne dis pas non, mais elle est très productive, pour nous autres courtiers. Écoutez donc, il faut que tout le monde vive... Aujourd’hui, par exemple, c’est une fort belle affaire... Ce n’est pas que nous n’ayons des frais... Douze voies de bois de sandal, six fagots d’aloès... ce qui est énorme.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Voltaire chez Ninon.</em></hi></stage>
-          </sp>
-          <sp who="dupré" xml:id="3-25">
-            <speaker>MADAME DUPRÉ, <em>à part.</em></speaker>
-            <stage><hi rend="italic"><em>À Brull-Pha-Gos.</em></hi></stage>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-26">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="121" xml:id="l121">Il n’y a pas encore de compagnie d’assurance.</l>
-          </sp>
-          <sp who="dupré" xml:id="3-27">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="122" xml:id="l122">Mais, monsieur, lorsque les gens ne sont pas du pays, leurs femmes sont-elles obligées ?...</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-28">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="123" xml:id="l123">Non, certainement... à moins que les maris ne se soient fait naturaliser, auquel cas, il est juste qu’ils jouissent des prérogatives et des avantages...</l>
-          </sp>
-          <sp who="dupré" xml:id="3-29">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="124" xml:id="l124">Ah ! mon Dieu !</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-30">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="125" xml:id="l125">Qu’avez-vous donc ?</l>
-          </sp>
-          <sp who="dupré" xml:id="3-31">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="126" xml:id="l126">Rien... Vous appelez cela un avantage ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="3-32">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="127" xml:id="l127">C’en est un réel.</l>
-            <stage><hi rend="italic"><em>Air du Ménage de garçon.</em></hi></stage>
-            <l n="129" xml:id="l129">Allons, je reviendrai voir ce cher Dupré... Ah ! il est marié...</l>
-            <stage><hi rend="italic"><em>À part, en sortant.</em></hi></stage>
-            <l n="131" xml:id="l131">Encore une pratique de plus...</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="133" xml:id="l133"> </l>
-            <l n="134" xml:id="l134"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="135" xml:id="l135"> </l>
-          <sp who="dupré" xml:id="4-1">
-            <speaker>MADAME DUPRÉ, <em>seule</em></speaker>
-            <l n="136" xml:id="l136"> </l>
-            <l n="137" xml:id="l137">Voilà un abominable homme, et si jamais il remet les pieds chez moi... Mais en effet, je crois me rappeler maintenant que j’ai entendu dire autrefois qu’au Malabar... On n’a jamais vu une coutume pareille ! C’est un pays où l’on ne peut pas vivre... Comment ! si mon brutal de mari venait à mourir, je serais obligée... Cette idée-là serait capable de vous dégoûter du veuvage.</l>
-            <l n="138" xml:id="l138"> </l>
-            <l n="139" xml:id="l139"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="140" xml:id="l140"> </l>
-          <sp who="dupré" xml:id="5-1">
-            <speaker>MADAME DUPRÉ, DUPRÉ</speaker>
-            <l n="141" xml:id="l141"> </l>
-          </sp>
-          <sp who="dupré" xml:id="5-2">
-            <speaker>DUPRÉ <em>entre précipitamment et jette son chapeau sur la table.</em></speaker>
-            <l n="142" xml:id="l142">Ouf ! ce n’est pas sans peine ; mais enfin...</l>
-            <stage><hi rend="italic"><em>Apercevant madame Dupré.</em></hi></stage>
-            <l n="144" xml:id="l144">Ah ! te voilà encore là !</l>
-          </sp>
-          <sp who="dupré" xml:id="5-3">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="145" xml:id="l145">Pendant ton absence, il est venu une visite.</l>
-            <stage><hi rend="italic"><em>Se reprenant.</em></hi></stage>
-            <l n="147" xml:id="l147">Ah ! mon Dieu ! comme tu as chaud... S’il est possible de courir ainsi... Voilà comme on attrape une maladie.</l>
-          </sp>
-          <sp who="dupré" xml:id="5-4">
-            <speaker>DUPRÉ.</speaker>
-            <l n="148" xml:id="l148">Tais-toi donc... J’ai bien d’autres choses qui m’occupent.</l>
-          </sp>
-          <sp who="dupré" xml:id="5-5">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="149" xml:id="l149">C’est pour cela que ce soin-là doit me regarder.</l>
-            <stage><hi rend="italic"><em>Lui essuyant le front avec son mouchoir.</em></hi></stage>
-            <l n="151" xml:id="l151">Vrai, mon ami, tu devrais changer...</l>
-          </sp>
-          <sp who="dupré" xml:id="5-6">
-            <speaker>DUPRÉ.</speaker>
-            <l n="152" xml:id="l152">Je te répète que je n’ai pas le temps.</l>
-          </sp>
-          <sp who="dupré" xml:id="5-7">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="153" xml:id="l153">Je t’en supplie... Si ce n’est pas pour toi, que ce soit pour moi... Il n’y a rien de plus dangereux.</l>
-          </sp>
-          <sp who="dupré" xml:id="5-8">
-            <speaker>DUPRÉ.</speaker>
-            <l n="154" xml:id="l154">Eh mais, je n’en reviens pas ! Comme te voilà radoucie ! Quels égards... quelles attentions !</l>
-          </sp>
-          <sp who="dupré" xml:id="5-9">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="155" xml:id="l155">C’est que depuis un instant, j’ai fait des réflexions... J’ai eu ce matin un mouvement de vivacité que je me suis bien reproché : cette scène m’a fait un mal !...</l>
-          </sp>
-          <sp who="dupré" xml:id="5-10">
-            <speaker>DUPRÉ.</speaker>
-            <l n="156" xml:id="l156">Et à moi donc ! elle m’a tourné le sang.</l>
-          </sp>
-          <sp who="dupré" xml:id="5-11">
-            <speaker>MADAME DUPRÉ, <em>vivement.</em></speaker>
-            <l n="157" xml:id="l157">Il serait possible !... Je ne t’en ferai plus, mon ami, je te le promets.</l>
-          </sp>
-          <sp who="dupré" xml:id="5-12">
-            <speaker>DUPRÉ, <em>à part.</em></speaker>
-            <l n="158" xml:id="l158">Allons, ma femme vaut mieux que je ne croyais ; et je commence à penser que son caractère...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="160" xml:id="l160">C’est bien, ma chère amie ; mais laisse-moi, j’ai des affaires à terminer. Toujours des affaires ! Tu travailles trop, tu te fatigues... Tu ne te soignes pas assez !</l>
-          </sp>
-          <sp who="dupré" xml:id="5-13">
-            <speaker>DUPRÉ.</speaker>
-            <l n="161" xml:id="l161">Encore !... Ah çà ! je t’en prie, modère ton affection, et rentre dans ton appartement.</l>
-          </sp>
-          <sp who="dupré" xml:id="5-14">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <stage><hi rend="italic"><em>Air : Berce, berce, bonne grand’mère. (La Berceuse.)</em></hi></stage>
-            <stage><hi rend="italic"><em>À son mari.</em></hi></stage>
-          <stage>DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="5-15">
-            <speaker>MADAME DUPRÉ, <em>revenant.</em></speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="5-16">
-            <speaker>MADAME DUPRÉ, <em>s’éloignant vivement.</em></speaker>
-            <stage><hi rend="italic"><em>Madame Dupré sort.</em></hi></stage>
-          <stage>MADAME DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="5-17">
-            <speaker>DUPRÉ.</speaker>
-            <l n="166" xml:id="l166"> </l>
-            <l n="167" xml:id="l167"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="168" xml:id="l168"> </l>
-          <sp who="dupré" xml:id="6-1">
-            <speaker>DUPRÉ, <em>seul</em></speaker>
-            <l n="169" xml:id="l169"> </l>
-            <l n="170" xml:id="l170">Les femmes sont extrêmes en tout... si la mienne se met une fois à m’adorer, il n’y aura pas moyen d’y tenir, moi surtout qui n’en ai pas l’habitude. Enfin elle est partie... Ouvrons à M. de Surville. Je ne sais à quoi je m’expose en secondant ses projets, en lui indiquant ce passage souterrain qui donne dans les caveaux du temple ; mais je ne pouvais pas faire autrement... un Français... un compatriote... d’un autre côté, cette pauvre Zeïla... la pitié... l’humanité... et les vingt mille piastres qu’on m’a promises... le moyen de résister à des motifs aussi prépondérants !</l>
-            <stage><hi rend="italic"><em>Pendant ce temps, il cherche parmi un trousseau de clefs, et va ouvrir une petite porte secrète qui est à gauche.</em></hi></stage>
-            <l n="172" xml:id="l172">Entrez, et ne craignez rien, vous êtes en sûreté.</l>
-            <l n="173" xml:id="l173"> </l>
-            <l n="174" xml:id="l174"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="175" xml:id="l175"> </l>
-          <sp who="zeïla" xml:id="7-1">
-            <speaker>DUPRÉ, SURVILLE, ZEÏLA</speaker>
-            <l n="176" xml:id="l176"> </l>
-            <stage><hi rend="italic"><em>Air de Rossini.</em></hi></stage>
-          <stage>ZEÏLA.</stage>
-          </sp>
-          <sp who="surville" xml:id="7-2">
-            <speaker>SURVILLE.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>ZEÏLA.</stage>
-          </sp>
-          <sp who="surville" xml:id="7-3">
-            <speaker>SURVILLE.</speaker>
-            <l n="179" xml:id="l179">Oui, madame, monsieur vous aime, vous épouse et vous emmène.</l>
-          <stage>ZEÏLA.</stage>
-          </sp>
-          <sp who="zeïla" xml:id="7-4">
-            <speaker>ZEÏLA.</speaker>
-            <l n="180" xml:id="l180">Hélas !... je le voudrais !... mais un autre sort m’attend ; mes amis, mes parents le disent tous.</l>
-          <stage>SURVILLE.</stage>
-          </sp>
-          <sp who="dupré" xml:id="7-5">
-            <speaker>DUPRÉ.</speaker>
-            <l n="181" xml:id="l181">Je crois bien ! si vous consultez vos héritiers...</l>
-          <stage>ZEÏLA.</stage>
-          </sp>
-          <sp who="dupré" xml:id="7-6">
-            <speaker>DUPRÉ.</speaker>
-            <l n="182" xml:id="l182">Non, ils prétendent que Brahmâ me punirait si je désobéissais à mon époux.</l>
-          </sp>
-          <sp who="zeïla" xml:id="7-7">
-            <speaker>ZEÏLA.</speaker>
-            <stage><hi rend="italic"><em>Air du vaudeville de L’Homme vert.</em></hi></stage>
-          <stage>DUPRÉ.</stage>
-          </sp>
-          <sp who="zeïla" xml:id="7-8">
-            <speaker>ZEÏLA.</speaker>
-            <l n="184" xml:id="l184">Sans compter qu’on est très méchant dans cette ville. Si je ne meurs pas, toutes les dames de ma connaissance vont dire du mal de moi, et me voilà déshonorée dans le pays.</l>
-          </sp>
-          <sp who="dupré" xml:id="7-9">
-            <speaker>DUPRÉ.</speaker>
-            <l n="185" xml:id="l185">Quoi ! c’est là le vrai motif ?</l>
-          </sp>
-          <sp who="zeïla" xml:id="7-10">
-            <speaker>ZEÏLA.</speaker>
-            <l n="186" xml:id="l186">Oui, monsieur, il n’y en a pas d’autre ; sans cela, je n’ai pas plus envie que vous d’être brûlée.</l>
-            <stage><hi rend="italic"><em>Trio.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Dire à moi sans mystère. (Élisca.)</em></hi></stage>
-          <stage>SURVILLE.</stage>
-          </sp>
-          <sp who="zeïla" xml:id="7-11">
-            <speaker>ZEÏLA.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>DUPRÉ.</stage>
-          </sp>
-          <sp who="zeïla" xml:id="7-12">
-            <speaker>ZEÏLA.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>SURVILLE.</stage>
-          </sp>
-          <sp who="surville" xml:id="7-13">
-            <speaker>DUPRÉ <em>et</em> SURVILLE.</speaker>
-            <stage><hi rend="italic"><em>Dupré conduit Zeïla dans la chambre à droite.</em></hi></stage>
-          <stage>ZEÏLA.</stage>
-          </sp>
-          <sp who="surville" xml:id="7-14">
-            <speaker>SURVILLE <em>et</em> DUPRÉ.</speaker>
-            <l n="192" xml:id="l192"> </l>
-          <stage>DUPRÉ.</stage>
-          </sp>
-          <sp who="zeïla" xml:id="7-15">
-            <speaker>ZEÏLA.</speaker>
-            <l n="193" xml:id="l193"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="194" xml:id="l194"> </l>
-          <sp who="surville" xml:id="8-1">
-            <speaker>DUPRÉ, SURVILLE</speaker>
-            <l n="195" xml:id="l195"> </l>
-          </sp>
-          <sp who="zeïla" xml:id="8-2">
-            <speaker>SURVILLE, <em>suivant des yeux Zeïla qui entre dans la chambre.</em></speaker>
-            <l n="196" xml:id="l196">Pauvre femme ! quelle horrible coutume !</l>
-            <stage><hi rend="italic"><em>À Dupré.</em></hi></stage>
-            <l n="198" xml:id="l198">Mais, dis-moi, comment espères-tu la sauver, et quel est ton moyen ?</l>
-          </sp>
-          <sp who="dupré" xml:id="8-3">
-            <speaker>DUPRÉ.</speaker>
-            <l n="199" xml:id="l199">Le moyen le plus simple, et qui, plus d’une fois sans doute, a déjà dû être employé ; apprenez donc, monsieur, que toutes celles qui montent sur le bûcher n’en meurent pas ! J’ai connu, sur la côte de Coromandel, une brave femme qui avait déjà été brûlée en premières et en secondes noces, et qui convolait en troisièmes.</l>
-          </sp>
-          <sp who="surville" xml:id="8-4">
-            <speaker>SURVILLE.</speaker>
-            <l n="200" xml:id="l200">Il serait possible !</l>
-          </sp>
-          <sp who="dupré" xml:id="8-5">
-            <speaker>DUPRÉ.</speaker>
-            <l n="201" xml:id="l201">Vous sentez bien que cela n’est pas naturel, et qu’il y a là-dessous quelque tour de gibecière ou d’escamotage ; eh bien ! monsieur, partout où il y a des escamoteurs, il faut des compères et des dupes. Les dupes seront les spectateurs, qui sont déjà placés et qui attendent la cérémonie, le compère ce sera vous, si vous voulez bien le permettre.</l>
-          </sp>
-          <sp who="surville" xml:id="8-6">
-            <speaker>SURVILLE.</speaker>
-            <l n="202" xml:id="l202">Moi ! et que pourrais-je faire ?</l>
-          </sp>
-          <sp who="dupré" xml:id="8-7">
-            <speaker>DUPRÉ.</speaker>
-            <l n="203" xml:id="l203">Aller trouver un certain Ali Brull-Pha-Gos, une espèce de courtier, qui est chargé des détails de la cérémonie, de l’ordonnance du bûcher, et surtout du soin de conduire la veuve, dont les traits sont presque toujours cachés par un grand voile ; notez bien cette dernière circonstance ! Comme l’individu auquel je vous adresse est un coquin, et que je le connais, c’est un de mes amis, vous pouvez hardiment aborder la question... Offrez-lui jusqu’à la concurrence de trente à quarante mille piastres, vous pouvez marchander, mais c’est un prix fait, vous ne l’aurez pas à moins ; et, moyennant cette somme, il se chargera du reste.</l>
-          </sp>
-          <sp who="surville" xml:id="8-8">
-            <speaker>SURVILLE.</speaker>
-            <l n="204" xml:id="l204">Comment ! Zeïla...</l>
-          </sp>
-          <sp who="dupré" xml:id="8-9">
-            <speaker>DUPRÉ.</speaker>
-            <l n="205" xml:id="l205">Sera brûlée par procuration ; c’est à lui de trouver quelqu’un, de découvrir un remplaçant.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Partie carrée.</em></hi></stage>
-          <stage>SURVILLE.</stage>
-          </sp>
-          <sp who="dupré" xml:id="8-10">
-            <speaker>DUPRÉ.</speaker>
-            <l n="207" xml:id="l207">Pendant ce temps nous nous embarquons, vous et votre veuve ; moi, ma femme, mes richesses et le peu de marchandises qui me restent.</l>
-          </sp>
-          <sp who="surville" xml:id="8-11">
-            <speaker>SURVILLE.</speaker>
-            <l n="208" xml:id="l208">Comment ! tu veux aussi !...</l>
-          </sp>
-          <sp who="dupré" xml:id="8-12">
-            <speaker>DUPRÉ.</speaker>
-            <l n="209" xml:id="l209">Je n’irai pas rester dans le pays après notre expédition ; depuis longtemps je veux retourner en France, et je ne puis trouver une plus belle occasion.</l>
-          </sp>
-          <sp who="surville" xml:id="8-13">
-            <speaker>SURVILLE.</speaker>
-            <l n="210" xml:id="l210">Oui ; mais songe donc que de te voir partir ainsi avec armes et bagages, cela peut exciter des soupçons.</l>
-          </sp>
-          <sp who="dupré" xml:id="8-14">
-            <speaker>DUPRÉ.</speaker>
-            <l n="211" xml:id="l211">Vous avez raison ; il faudrait d’ailleurs trouver un moyen pour fermer ma maison, renvoyer mes domestiques, et procéder tranquillement au déménagement. J’ai une idée... Silence !... c’est ma femme, il faut qu’elle ne sache rien ; faites seulement semblant de me chercher dispute.</l>
-          </sp>
-          <sp who="surville" xml:id="8-15">
-            <speaker>SURVILLE.</speaker>
-            <l n="212" xml:id="l212">Pour quelle raison ?</l>
-          </sp>
-          <sp who="dupré" xml:id="8-16">
-            <speaker>DUPRÉ, <em>bas.</em></speaker>
-            <l n="213" xml:id="l213">Je vous le dirai.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="215" xml:id="l215">Monsieur ! vous prenez chez moi un singulier ton.</l>
-            <stage><hi rend="italic"><em>Bas.</em></hi></stage>
-            <l n="217" xml:id="l217">Allons</l>
-            <l n="218" xml:id="l218"> </l>
-            <l n="219" xml:id="l219"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="220" xml:id="l220"> </l>
-          <sp who="surville" xml:id="9-1">
-            <speaker>DUPRÉ, SURVILLE, MADAME DUPRÉ</speaker>
-            <l n="221" xml:id="l221"> </l>
-          </sp>
-          <sp who="surville" xml:id="9-2">
-            <speaker>SURVILLE.</speaker>
-            <l n="222" xml:id="l222">Monsieur... je trouve le vôtre encore plus singulier.</l>
-          </sp>
-          <sp who="dupré" xml:id="9-3">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="223" xml:id="l223">Eh ! mon Dieu ! qu’y a-t-il donc ?</l>
-          </sp>
-          <sp who="dupré" xml:id="9-4">
-            <speaker>DUPRÉ, <em>très haut.</em></speaker>
-            <l n="224" xml:id="l224">C’est-à-dire, monsieur, que vous me prenez pour un sot ?</l>
-            <stage><hi rend="italic"><em>Bas.</em></hi></stage>
-            <l n="226" xml:id="l226">Dites que oui.</l>
-          </sp>
-          <sp who="surville" xml:id="9-5">
-            <speaker>SURVILLE, <em>très haut.</em></speaker>
-            <l n="227" xml:id="l227">Monsieur... je vous prends pour ce que vous êtes.</l>
-          </sp>
-          <sp who="dupré" xml:id="9-6">
-            <speaker>DUPRÉ.</speaker>
-            <l n="228" xml:id="l228">Cela me suffit, monsieur... vous m’insultez... et si vous m’avez compris...</l>
-          </sp>
-          <sp who="surville" xml:id="9-7">
-            <speaker>SURVILLE.</speaker>
-            <l n="229" xml:id="l229">Pas encore, monsieur, et c’est moi qui vous demande une explication.</l>
-          </sp>
-          <sp who="dupré" xml:id="9-8">
-            <speaker>DUPRÉ.</speaker>
-            <l n="230" xml:id="l230">Je ne demande pas mieux.</l>
-            <stage><hi rend="italic"><em>Bas.</em></hi></stage>
-            <l n="232" xml:id="l232">Descendez avec moi, je vous dirai ce qu’il faut faire.</l>
-          </sp>
-          <sp who="dupré" xml:id="9-9">
-            <speaker>MADAME DUPRÉ, <em>à part.</em></speaker>
-            <l n="233" xml:id="l233">Ah ! mon Dieu ! ils se parlent bas...</l>
-          </sp>
-          <sp who="surville" xml:id="9-10">
-            <speaker>DUPRÉ, <em>bas à Surville.</em></speaker>
-            <l n="234" xml:id="l234">Je reste ici avec un esclave qui m’est dévoué ; et, grâce à la ruse que je médite, nous serons depuis longtemps en mer, qu’on ne se sera pas aperçu de ma disparition.</l>
-          </sp>
-          <sp who="surville" xml:id="9-11">
-            <speaker>SURVILLE, <em>haut.</em></speaker>
-            <l n="235" xml:id="l235">Cela suffit... sortons.</l>
-          </sp>
-          <sp who="dupré" xml:id="9-12">
-            <speaker>DUPRÉ.</speaker>
-            <l n="236" xml:id="l236">Oui, sortons !</l>
-          </sp>
-          <sp who="dupré" xml:id="9-13">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="237" xml:id="l237">Mais, mon ami... où vas-tu ?... et songe donc !... s’il t’arrivait malheur...</l>
-          </sp>
-          <sp who="dupré" xml:id="9-14">
-            <speaker>DUPRÉ.</speaker>
-            <l n="238" xml:id="l238">Cela ne te regarde pas.</l>
-            <stage><hi rend="italic"><em>Il sort avec Surville.</em></hi></stage>
-            <l n="240" xml:id="l240"> </l>
-            <l n="241" xml:id="l241"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="242" xml:id="l242"> </l>
-          <sp who="dupré" xml:id="10-1">
-            <speaker>MADAME DUPRÉ, <em>seule</em></speaker>
-            <l n="243" xml:id="l243"> </l>
-            <l n="244" xml:id="l244">Comment ! cela ne me regarde pas ?... en France, à la bonne heure... mais dans ce vilain pays... avec leurs maudites coutumes... on est bien obligée malgré soi de se mêler des affaires du ménage... Mais je ne reconnais plus mon mari, lui qui était si poltron et si maladroit... il ne sait pas qu’il défend ses jours et les miens ; et il est capable de se laisser tuer comme un simple célibataire... Hein ! qui vient là ?... sont-ce des nouvelles que l’on m’apporte ?</l>
-            <l n="245" xml:id="l245"> </l>
-            <l n="246" xml:id="l246"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="247" xml:id="l247"> </l>
-          <sp who="dupré" xml:id="11-1">
-            <speaker>MADAME DUPRÉ, BRULL-PHA-GOS</speaker>
-            <l n="248" xml:id="l248"> </l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="11-2">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="249" xml:id="l249">Par exemple ! voilà un événement ! je ne m’y serais jamais attendu.</l>
-          </sp>
-          <sp who="dupré" xml:id="11-3">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="250" xml:id="l250">Il est arrivé un malheur ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="11-4">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="251" xml:id="l251">Le plus grand de tous... Vous savez bien Zeïla, cette jeune veuve dont je vous ai parlé ce matin... et qui paraissait si bien disposée... Je viens de descendre dans le caveau où elle était... disparue avec les diamants !</l>
-          </sp>
-          <sp who="dupré" xml:id="11-5">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="252" xml:id="l252">Comment ! ce n’est que cela ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="11-6">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="253" xml:id="l253">Ce n’est que cela !... mais c’est inouï, sans nous prévenir encore... nous qui y comptions... Songez donc que tout est prêt pour la cérémonie, et je venais consulter ce cher Dupré, qui a quelquefois des idées... Est-il rentré ?</l>
-          </sp>
-          <sp who="dupré" xml:id="11-7">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="254" xml:id="l254">Ah ! bien oui, rentré... bien mieux que cela... il est ressorti... Où croyez-vous qu’il soit dans ce moment... à se battre, monsieur !</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="11-8">
-            <speaker>BRULL-PHA-GOS, <em>se frottant les mains en signe de satisfaction.</em></speaker>
-            <l n="255" xml:id="l255">Comment ! à se battre ?... il serait possible.</l>
-          </sp>
-          <sp who="dupré" xml:id="11-9">
-            <speaker>MADAME DUPRÉ, <em>à part.</em></speaker>
-            <l n="256" xml:id="l256">Ah ! mon Dieu, qu’est-ce que j’ai dit là !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="258" xml:id="l258">Non, monsieur, non... c’est une simple explication...</l>
-            <stage><hi rend="italic"><em>On entend un coup de pistolet.</em></hi></stage>
-            <l n="260" xml:id="l260">un raccommodement... une explication... avec un ami... et vous, qui devez le connaître... vous devinez que dans un moment... cela finit par un déjeuner... Tenez, c’est lui qui revient...</l>
-            <stage><hi rend="italic"><em>Apercevant Surville.</em></hi></stage>
-            <l n="262" xml:id="l262">C’est l’autre... ah ! mon Dieu !... mes genoux fléchissent.</l>
-            <l n="263" xml:id="l263"> </l>
-            <l n="264" xml:id="l264"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="265" xml:id="l265"> </l>
-          <sp who="surville" xml:id="12-1">
-            <speaker>MADAME DUPRÉ, BRULL-PHA-GOS, SURVILLE</speaker>
-            <l n="266" xml:id="l266"> </l>
-          </sp>
-          <sp who="surville" xml:id="12-2">
-            <speaker>SURVILLE, <em>à part.</em></speaker>
-            <l n="267" xml:id="l267">Allons, faisons ce que Dupré m’a dit, puisqu’il a ses raisons.</l>
-          </sp>
-          <sp who="dupré" xml:id="12-3">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="268" xml:id="l268">Eh bien, monsieur, parlerez-vous ? Qu’avez-vous à m’annoncer ?</l>
-          </sp>
-          <sp who="surville" xml:id="12-4">
-            <speaker>SURVILLE.</speaker>
-            <l n="269" xml:id="l269">Madame... mon silence et mon trouble vous en disent assez... Vous êtes témoin que c’est lui qui m’a provoqué ; mais l’événement n’en est pas moins affreux... ce pauvre Dupré...</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="12-5">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="270" xml:id="l270">Il est défunt ?</l>
-          </sp>
-          <sp who="surville" xml:id="12-6">
-            <speaker>SURVILLE.</speaker>
-            <l n="271" xml:id="l271">C’est vous qui l’avez dit.</l>
-          </sp>
-          <sp who="dupré" xml:id="12-7">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="272" xml:id="l272">Dieux !... je suis veuve.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="12-8">
-            <speaker>BRULL-PHA-GOS, <em>tirant son calepin et écrivant.</em></speaker>
-            <l n="273" xml:id="l273">Ce que c’est que de nous... comme les accidents arrivent !</l>
-          </sp>
-          <sp who="surville" xml:id="12-9">
-            <speaker>SURVILLE.</speaker>
-            <l n="274" xml:id="l274">On vient déjà de renvoyer les acheteurs qui étaient en bas dans les magasins, on a fermé les portes, les fenêtres...</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="12-10">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="275" xml:id="l275">Conformément à l’usage.</l>
-          </sp>
-          <sp who="surville" xml:id="12-11">
-            <speaker>SURVILLE.</speaker>
-            <l n="276" xml:id="l276">Je n’ose moi-même rester en ces lieux, et vais porter ailleurs mes regrets.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="278" xml:id="l278">Pendant que Dupré dispose tout pour notre départ, courons chez le courtier de commerce dont il m’a parlé, Ali Brull-Pha-Gos, près la grande pagode, il faudra bien que je le trouve.</l>
-            <stage><hi rend="italic"><em> Il sort.</em></hi></stage>
-            <l n="280" xml:id="l280"> </l>
-            <l n="281" xml:id="l281"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="282" xml:id="l282"> </l>
-          <sp who="dupré" xml:id="13-1">
-            <speaker>MADAME DUPRÉ, BRULL-PHA-GOS</speaker>
-            <l n="283" xml:id="l283"> </l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-2">
-            <speaker>BRULL-PHA-GOS, <em>à part.</em></speaker>
-            <l n="284" xml:id="l284">Dieux ! comme cela se rencontre ! moi qui venais demander à Dupré quelque moyen pour sortir d’embarras.</l>
-          </sp>
-          <sp who="dupré" xml:id="13-3">
-            <speaker>MADAME DUPRÉ, <em>qui, pendant tout ce temps, est restée sur sa chaise.</em></speaker>
-            <l n="285" xml:id="l285">On n’a jamais vu de femme plus malheureuse.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-4">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="286" xml:id="l286">Je conçois combien votre douleur est légitime : ce cher Dupré était si bon !</l>
-          </sp>
-          <sp who="dupré" xml:id="13-5">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="287" xml:id="l287">Lui, il était brutal, colère, ah !</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-6">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="288" xml:id="l288">Je ne dis pas non... mais l’amour qu’il avait pour vous...</l>
-          </sp>
-          <sp who="dupré" xml:id="13-7">
-            <speaker>MADAME DUPRÉ, <em>de même.</em></speaker>
-            <l n="289" xml:id="l289">Depuis cinq ans, il m’avait abandonnée.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-8">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="290" xml:id="l290">Je ne dis pas non... mais la concorde qui, auparavant, régnait entre vous...</l>
-          </sp>
-          <sp who="dupré" xml:id="13-9">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="291" xml:id="l291">Nous nous disputions sans cesse... Ah ! quelle perte ! je suis bien malheureuse !</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-10">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="292" xml:id="l292">Je vous en prie, madame Dupré, calmez votre douleur, votre désespoir est si grand, que ce sera pour vous une consolation de remplir votre devoir.</l>
-            <stage><hi rend="italic"><em>Il lui présente l’agenda sur lequel il a écrit.</em></hi></stage>
-          </sp>
-          <sp who="dupré" xml:id="13-11">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="294" xml:id="l294">Qu’est-ce que c’est ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-12">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="295" xml:id="l295">Une simple formalité ; il s’agit, comme veuve, d’écrire là votre nom.</l>
-          </sp>
-          <sp who="dupré" xml:id="13-13">
-            <speaker>MADAME DUPRÉ, <em>essuyant ses yeux.</em></speaker>
-            <l n="296" xml:id="l296">Comment ! voilà tout ce que vous exigez de moi ?</l>
-            <stage><hi rend="italic"><em>Elle écrit.</em></hi></stage>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-14">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="298" xml:id="l298">Pas autre chose.</l>
-          </sp>
-          <sp who="dupré" xml:id="13-15">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="299" xml:id="l299">Et bien alors ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-16">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="300" xml:id="l300">C’est tout uniment pour prendre date... parce que souvent il y a foule... mais maintenant que vous êtes enregistrée, vous voilà certaine.</l>
-          </sp>
-          <sp who="dupré" xml:id="13-17">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="301" xml:id="l301">De quoi ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-18">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="302" xml:id="l302">De ce que je vous disais ce matin... de paraître à cette auguste cérémonie qu’ont établie en ces lieux nos lois et nos usages.</l>
-          </sp>
-          <sp who="dupré" xml:id="13-19">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="303" xml:id="l303">Comment ! monsieur, je serais obligée de mourir pour un mari qui ne sait pas vivre ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-20">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="304" xml:id="l304">On ne force personne... mais dès qu’on a signé, il n’y a pas moyen de s’en dédire.</l>
-          </sp>
-          <sp who="dupré" xml:id="13-21">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="305" xml:id="l305">Mais c’est donc une fournaise, un enfer, que ce pays-ci ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-22">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="306" xml:id="l306">Vous avez au moins l’avantage de ne pas attendre, et de profiter d’une belle occasion... un bûcher magnifique... bûcher de première classe.</l>
-          </sp>
-          <sp who="dupré" xml:id="13-23">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="307" xml:id="l307">Ah ! mon Dieu ! que faire ? personne n’arrivera-t-il à mon secours ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="13-24">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <stage><hi rend="italic"><em>Air : Valse de Rossini.</em></hi></stage>
-            <l n="309" xml:id="l309"> </l>
-            <l n="310" xml:id="l310"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="311" xml:id="l311"> </l>
-          <sp who="zeïla" xml:id="14-1">
-            <speaker>MADAME DUPRÉ, BRULL-PHA-GOS, ZEÏLA, <em>sortant da cabinet à droite</em></speaker>
-            <l n="312" xml:id="l312"> </l>
-            <stage><hi rend="italic"><em>Même air.</em></hi></stage>
-          <stage>ZEÏLA.</stage>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="14-2">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <stage><hi rend="italic"><em>À madame Dupré.</em></hi></stage>
-          <stage>ZEÏLA <em>et</em> MADAME DUPRÉ.</stage>
-          </sp>
-          <sp who="dupré" xml:id="14-3">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>BRULL-PHA-GOS, <em>à Zeïla.</em></stage>
-          </sp>
-          <sp who="zeïla" xml:id="14-4">
-            <speaker>ZEÏLA.</speaker>
-            <stage><hi rend="italic"><em>À madame Dupré.</em></hi></stage>
-          <stage>BRULL-PHA-GOS, <em>à part.</em></stage>
-          </sp>
-          <sp who="zeïla" xml:id="14-5">
-            <speaker>ZEÏLA.</speaker>
-            <stage><hi rend="italic"><em>Il sort et emmène Zeïla.</em></hi></stage>
-          <stage>MADAME DUPRÉ.</stage>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="14-6">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="318" xml:id="l318"> </l>
-            <l n="319" xml:id="l319"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="320" xml:id="l320"> </l>
-          <sp who="dupré" xml:id="15-1">
-            <speaker>MADAME DUPRÉ, <em>seule</em></speaker>
-            <l n="321" xml:id="l321"> </l>
-            <l n="322" xml:id="l322">Pauvre femme !... elle y va ; et voilà comme je serai demain... ce n’est que diffère... et tout cela, c’est de la faute de Dupré.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Turenne.</em></hi></stage>
-            <stage><hi rend="italic"><em>S’essuyant les yeux.</em></hi></stage>
-            <l n="325" xml:id="l325">Mais je suis bien bonne d’être là à me désespérer et à attendre le danger... Arrivera ce qu’il pourra ! puisqu’il doit revenir ce soir, je pars à l’instant même, quand je devrais aller au bout du monde !</l>
-            <stage><hi rend="italic"><em>Elle va pour sortir, et, rencontrant Dupré, elle pousse un grand cri.</em></hi></stage>
-            <l n="327" xml:id="l327">Ah !</l>
-            <l n="328" xml:id="l328"> </l>
-            <l n="329" xml:id="l329"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="330" xml:id="l330"> </l>
-          <sp who="dupré" xml:id="16-1">
-            <speaker>DUPRÉ, MADAME DUPRÉ</speaker>
-            <l n="331" xml:id="l331"> </l>
-          </sp>
-          <sp who="dupré" xml:id="16-2">
-            <speaker>DUPRÉ.</speaker>
-            <l n="332" xml:id="l332">Ma femme... ma femme... qu’as-tu donc ?</l>
-          </sp>
-          <sp who="dupré" xml:id="16-3">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="333" xml:id="l333">Cette fois, je ne me trompe pas, c’est bien lui ; tu existes, n’est-ce pas ?... tu en es bien sur ?</l>
-          </sp>
-          <sp who="dupré" xml:id="16-4">
-            <speaker>DUPRÉ.</speaker>
-            <l n="334" xml:id="l334">Je t’en donne ma parole d’honneur,</l>
-            <stage><hi rend="italic"><em>Air : Du partage de la richesse. (Fanchon ta vielleuse.)</em></hi></stage>
-          </sp>
-          <sp who="dupré" xml:id="16-5">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="336" xml:id="l336">Si tu savais l’effet que cela a produit sur moi !... la joie, la crainte...</l>
-          </sp>
-          <sp who="dupré" xml:id="16-6">
-            <speaker>DUPRÉ, <em>à part.</em></speaker>
-            <l n="337" xml:id="l337">Mais effectivement... sa physionomie est toute renversée. Je n’aurais jamais cru que ma femme m’aimât à ce point-là.</l>
-          </sp>
-          <sp who="dupré" xml:id="16-7">
-            <speaker>MADAME DUPRÉ, <em>le retenant par la main.</em></speaker>
-            <l n="338" xml:id="l338">Reste là... ne t’éloigne pas... que je te regarde encore !... Dieu ! qui m’aurait jamais dit que la vue de mon mari me ferait tant de plaisir !</l>
-          </sp>
-          <sp who="dupré" xml:id="16-8">
-            <speaker>DUPRÉ.</speaker>
-            <l n="339" xml:id="l339">Ma femme ! ma chère Angélique... ai-je été injuste à ton égard !... être adoré à ce point-là et sans s’en douter...</l>
-          </sp>
-          <sp who="dupré" xml:id="16-9">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="340" xml:id="l340">Quand j’ai cru t’avoir perdu... si tu savais quel a été mon désespoir !... j’ai manqué ne pas te survivre.</l>
-          </sp>
-          <sp who="dupré" xml:id="16-10">
-            <speaker>DUPRÉ.</speaker>
-            <l n="341" xml:id="l341">On n’a pas d’idée d’un dévouement comme celui-là !... Va... je reconnaîtrai cet excès de tendresse... Toutes nos affaires sont en ordre... tout est disposé... nous n’attendons plus que M. de Surville et notre jeune veuve... Où est-elle donc ?</l>
-          </sp>
-          <sp who="dupré" xml:id="16-11">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="342" xml:id="l342">Qui ? Zeïla ?... Ah ! mon Dieu ! elle était là tout à l’heure, lorsqu’il est venu un courtier qui voulait te parler , un nommé Brull-Pha-Gos.</l>
-          </sp>
-          <sp who="dupré" xml:id="16-12">
-            <speaker>DUPRÉ.</speaker>
-            <l n="343" xml:id="l343">Ô ciel !... Eh bien ?</l>
-          </sp>
-          <sp who="dupré" xml:id="16-13">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="344" xml:id="l344">Eh bien... Zeïla a voulu partir avec lui, et il l’a emmenée.</l>
-          </sp>
-          <sp who="dupré" xml:id="16-14">
-            <speaker>DUPRÉ.</speaker>
-            <l n="345" xml:id="l345">Et tu l’as laissé faire... tu les as laissés partir... malheureuse ! c’est fait de nous, de notre fortune... Que dire maintenant à M. de Surville ?... Je n’ai plus qu’à me brûler la cervelle.</l>
-          </sp>
-          <sp who="dupré" xml:id="16-15">
-            <speaker>MADAME DUPRÉ, <em>tombant dans un fauteuil.</em></speaker>
-            <l n="346" xml:id="l346">Dieux ! impossible qu’aujourd’hui j’en réchappe !</l>
-          </sp>
-          <sp who="dupré" xml:id="16-16">
-            <speaker>DUPRÉ, <em>regardant par la fenêtre.</em></speaker>
-            <l n="347" xml:id="l347">De cette fenêtre, qui donne sur la grande place, on aperçoit déjà tout le peuple rassemblé... et ce grand bûcher qui s’élève au centre... les feux sont allumés... mais personne encore n’y paraît...</l>
-            <stage><hi rend="italic"><em>Regardant par la porte.</em></hi></stage>
-            <l n="349" xml:id="l349">Eh ! mais... je ne me trompe pas... quel bonheur !... M. de Surville et Zeïla qui viennent de ce côté... Brull-Pha-Gos les accompagne... n’oublions pas que pour lui je suis mort... Ma femme, reste là ; je reviens dans l’instant.</l>
-          </sp>
-          <sp who="dupré" xml:id="16-17">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="350" xml:id="l350">Comment ! mon ami, tu t’en vas ?</l>
-          </sp>
-          <sp who="dupré" xml:id="16-18">
-            <speaker>DUPRÉ.</speaker>
-            <l n="351" xml:id="l351">Je te dis que je suis là.</l>
-          </sp>
-          <sp who="dupré" xml:id="16-19">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="352" xml:id="l352">N’importe... ce n’est pas la même chose... j’ai besoin de ta présence.</l>
-            <stage><hi rend="italic"><em>Dupré entre dans le cabinet, madame Dupré reste dans le fond.</em></hi></stage>
-            <l n="354" xml:id="l354"> </l>
-            <l n="355" xml:id="l355"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="356" xml:id="l356"> </l>
-          <sp who="zeïla" xml:id="17-1">
-            <speaker>MADAME DUPRÉ, SURVILLE, BRULL-PHA-GOS, ZEÏLA, <em>puis</em> DUPRÉ</speaker>
-            <l n="357" xml:id="l357"> </l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-2">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="358" xml:id="l358">Venez donc vite !... au moins ici on peut parler en sûreté.</l>
-          </sp>
-          <sp who="surville" xml:id="17-3">
-            <speaker>SURVILLE.</speaker>
-            <l n="359" xml:id="l359">Zeïla, quelle a été ma surprise en vous voyant traverser les jardins de la pagode où, depuis une demi-heure, j’attendais monsieur !</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-4">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="360" xml:id="l360">Mais il n’est pas question de cela, parlons de nos affaires, entendons-nous. Nous avons dit quarante mille piastres...</l>
-          </sp>
-          <sp who="surville" xml:id="17-5">
-            <speaker>SURVILLE.</speaker>
-            <l n="361" xml:id="l361">Les voici dans ce portefeuille en bons sur la compagnie des Indes.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-6">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="362" xml:id="l362">Cela suffit, et comme un honnête homme n’a que sa parole, je me charge Je tout. Le nom de Zeïla sera à jamais en honneur dans le pays ; chacun porte aux nues cette nouvelle Arthémise. Ainsi, madame peut se regarder comme authentiquement brûlée.</l>
-          </sp>
-          <sp who="dupré" xml:id="17-7">
-            <speaker>MADAME DUPRÉ, <em>à part.</em></speaker>
-            <l n="363" xml:id="l363">Ah ! le fripon !... si je l’avais su...</l>
-          </sp>
-          <sp who="zeïla" xml:id="17-8">
-            <speaker>BRULL-PHA-GOS, <em>à Zeïla.</em></speaker>
-            <l n="364" xml:id="l364">Voici même le procès-verbal que j’avais rédige d’avance, et avec lequel vous pouvez attester à qui de droit...</l>
-          </sp>
-          <sp who="zeïla" xml:id="17-9">
-            <speaker>ZEÏLA.</speaker>
-            <l n="365" xml:id="l365">Je n’en ferai pas usage ; envoyez-le à ma famille, c’est tout ce que je demande. Mais comment espérez-vous faire ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-10">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="366" xml:id="l366">Cela me regarde... j’ai ici quelqu’un de disponible et sur lequel je compte pour vous remplacer...</l>
-          </sp>
-          <sp who="dupré" xml:id="17-11">
-            <speaker>MADAME DUPRÉ, <em>à part et s’avançant.</em></speaker>
-            <l n="367" xml:id="l367">C’est ce que nous allons voir.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-12">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="368" xml:id="l368">Sans cela, vous sentez bien que je ne me serais pas avisé au moment même... Ah ! vous voilà, madame Dupré, je suis enchanté de vous trouver... Eh bien ! ma chère amie, voilà un événement qui vous avance... vous m’avez dit que vous étiez prête... voici le moment...</l>
-          </sp>
-          <sp who="surville" xml:id="17-13">
-            <speaker>SURVILLE.</speaker>
-            <l n="369" xml:id="l369">Comment ! ce serait madame ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-14">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="370" xml:id="l370">J’espère que vous n’avez pas à vous plaindre ! une petite femme fort gentille, fort convenable... allons, partons.</l>
-          </sp>
-          <sp who="dupré" xml:id="17-15">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="371" xml:id="l371">Avec grand plaisir, mon honnête monsieur ; mais il n’y a qu’une petite difficulté.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-16">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="372" xml:id="l372">Et quelle est-elle, s’il vous plaît ?</l>
-          </sp>
-          <sp who="dupré" xml:id="17-17">
-            <speaker>MADAME DUPRÉ, <em>ouvrant la porte.</em></speaker>
-            <l n="373" xml:id="l373">Tenez, la voici.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-18">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="374" xml:id="l374">C’est Dupré !</l>
-          </sp>
-          <sp who="surville" xml:id="17-19">
-            <speaker>SURVILLE.</speaker>
-            <l n="375" xml:id="l375">Ah ! mon ami, viens donc ; combien je te remercie ! j’ai suivi tes conseils, et tout est arrangé.</l>
-            <stage><hi rend="italic"><em>Montrant Brull-Pha-Gos.</em></hi></stage>
-            <l n="377" xml:id="l377">N’est-il pas vrai ?</l>
-          </sp>
-          <sp who="broll-pha-gos" xml:id="17-20">
-            <speaker>BROLL-PHA-GOS.</speaker>
-            <l n="378" xml:id="l378">C’est-à-dire ! tout est arrangé... dans ce sens que je suis dans un furieux embarras, et que je ne sais trop comment faire.</l>
-          </sp>
-          <sp who="surville" xml:id="17-21">
-            <speaker>SURVILLE.</speaker>
-            <l n="379" xml:id="l379">Comment, morbleu ! voudriez-vous vous dédire ?</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-22">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="380" xml:id="l380">Du tout, du tout, vous avez ma parole...</l>
-            <stage><hi rend="italic"><em>Regardant madame Dupré.</em></hi></stage>
-            <l n="382" xml:id="l382">Mais c’est que je comptais...</l>
-            <stage><hi rend="italic"><em>Regardant Dupré.</em></hi></stage>
-            <l n="384" xml:id="l384">Il se porte bien.</l>
-          </sp>
-          <sp who="dupré" xml:id="17-23">
-            <speaker>DUPRÉ.</speaker>
-            <l n="385" xml:id="l385">Je vous préviens du reste que tout le peuple s’impatiente, et qu’il y a déjà quelques minutes que la cérémonie devrait être commencée.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-24">
-            <speaker>BRULL-PHA-GOS, <em>à part.</em></speaker>
-            <l n="386" xml:id="l386">Allons, il faut sortir de là... Ce beau mannequin que j’ai en réserve pour les bonnes occasions il n’y a pas d’autre moyen... Ah çà ! quoi qu’il arrive, vous me promettez le secret ?</l>
-          </sp>
-          <sp who="surville" xml:id="17-25">
-            <speaker>SURVILLE.</speaker>
-            <l n="387" xml:id="l387">Vous pouvez être tranquille, nous nous embarquons.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-26">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="388" xml:id="l388">C’est encore mieux ; mais’ ne tardez pas... Au moment où vous verrez la flamme briller, sortez alors, c’est le moment le plus favorable, parce que tout le monde sera dans la grande place à je nr du spectacle.</l>
-          </sp>
-          <sp who="dupré" xml:id="17-27">
-            <speaker>DUPRÉ.</speaker>
-            <l n="389" xml:id="l389">Nous profiterons de vos avis.</l>
-          </sp>
-          <sp who="tous" xml:id="17-28">
-            <speaker>TOUS.</speaker>
-            <l n="390" xml:id="l390">Adieu, monsieur Brull-Pha-Gos !</l>
-          </sp>
-          <sp who="dupré" xml:id="17-29">
-            <speaker>MADAME DUPRÉ.</speaker>
-            <l n="391" xml:id="l391">Adieu, honnête courtier.</l>
-          </sp>
-          <sp who="brull-pha-gos" xml:id="17-30">
-            <speaker>BRULL-PHA-GOS.</speaker>
-            <l n="392" xml:id="l392">Adieu, mes amis, bon voyage. Allons, je n’ai pas perdu mon temps ; mais voilà, je puis le dire, une journée fièrement chaude.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="394" xml:id="l394"> </l>
-            <l n="395" xml:id="l395"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="396" xml:id="l396"> </l>
-          <sp who="zeïla" xml:id="18-1">
-            <speaker>MADAME DUPRÉ, SURVILLE, ZEÏLA, DUPRÉ</speaker>
-            <l n="397" xml:id="l397"> </l>
-          </sp>
-          <sp who="dupré" xml:id="18-2">
-            <speaker>DUPRÉ, <em>à son épouse.</em></speaker>
-            <l n="398" xml:id="l398">Ma chère femme, après toutes les marques d’amour que tu m’as données...</l>
-          </sp>
-          <sp who="madame-dcpré" xml:id="18-3">
-            <speaker>MADAME DCPRÉ.</speaker>
-            <l n="399" xml:id="l399">Ne parlons pas de cela ici ; en France, ce sera autre chose.</l>
-            <stage><hi rend="italic"><em>Finale.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air du ballet de L’Enfant prodigue.</em></hi></stage>
-          <stage>SURVILLE.</stage>
-          </sp>
-          <sp who="tous" xml:id="18-4">
-            <speaker>TOUS.</speaker>
-            <stage><hi rend="italic"><em>Ils regardent par la fenêtre du fond.</em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="1">Serrez ces ballots de marchandises, et prenez garde de rien gâter... Ces domestiques indiens sont d’une maladresse !... En France, quelle différence ! Je me rappelle que quand j’étais laquais j’avais toujours plus d’esprit que mes maîtres.</l>
+        </sp>
+        <sp who="#la-femme">
+          <speaker>LA FEMME, s’avancent.</speaker>
+          <l n="2">Monsieur...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="3">C’est juste ; on m’avait dit que quelqu’un m’attendait dans mes magasins...</l>
+          <stage>&lt;em&gt;D’un ton imposant.&lt;/em&gt;</stage>
+          <l n="4">Qu’est-ce que c’est ?</l>
+        </sp>
+        <sp who="#la-femme">
+          <speaker>LA FEMME.</speaker>
+          <l n="5">De la part de milady, ma maîtresse.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, prenant la lettre.</speaker>
+          <l n="6">Voilà une soubrette qui a une fort jolie tournure... une charmante petite femme !</l>
+          <stage>&lt;em&gt;La regardant.&lt;/em&gt;</stage>
+          <l n="7">Ah ! mon Dieu ! quel souvenir !...</l>
+        </sp>
+        <sp who="#la-femme">
+          <speaker>LA FEMME.</speaker>
+          <l n="8">Quel son de voix !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="9">À la sueur froide qui me saisit...</l>
+        </sp>
+        <sp who="#la-femme">
+          <speaker>LA FEMME.</speaker>
+          <l n="10">À la terreur que j’éprouve...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="11">Je ne peux pas m’abuser...</l>
+        </sp>
+        <sp who="#la-femme">
+          <speaker>LA FEMME.</speaker>
+          <l n="12">Je ne me trompe pas... c’est ce fripon de Dupré !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="13">C’est ma femme !</l>
+        </sp>
+        <sp who="#la-femme">
+          <speaker>LA FEMME.</speaker>
+          <l n="14">C’est mon mari !... Comment ! après cinq ans d’absence, je te revois enfin !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="15">Comment ! malgré l’océan qui nous séparait, je te retrouve encore !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="16">C’en est fait, je crois à la sympathie.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="17">Et moi à la fatalité.</l>
+          <stage>&lt;em&gt;Montrant sa femme.&lt;/em&gt;</stage>
+          <l n="18">Je la laisse en Europe et m’embarque pour les Indes... seul moyen, avec elle, pour faire bon ménage... Eh bien ! il faut que le hasard, plus puissant que nos cœurs, nous réunisse... Où ? Au Malabar ! Un pays qui, jusqu’à présent, m’avait porté bonheur ! C’était bien la peine de faire le voyage !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="19">Plains-toi donc !</l>
+          <stage>&lt;em&gt;Air : À soixante ans, on ne doit pas remettre. (Le Dîner de Madelon.)&lt;/em&gt;</stage>
+          <l n="20">J’ai, comme toi, vu le cap des tempêtes ;</l>
+          <l n="21">Et quel mari ? Un mauvais sujet, un brutal, un jaloux, un dissipateur, un...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, la regardant avec tendresse.</speaker>
+          <l n="22">Cette chère Angélique !... Elle n’est point changée. Eh bien donc, ma douce compagne, puisque les vents contraires vous ramènent près de moi, donnez-moi des nouvelles de mon ménage d’outre-mer : voyons... qu’as-tu fait pendant les cinq ans de mon absence ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="23">Ce que j’ai fait ?... J’en ai profité pour être heureuse.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="24">Et moi, pour faire fortune.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="25">Comment ! il serait possible ! Ce riche négociant, chez lequel je venais...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="26">C’est moi-même... et tout ce que tu vois m’appartient. Cette maison...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, avec tendresse.</speaker>
+          <l n="27">Dupré !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="28">Ces esclaves, ces marchandises...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, de même.</speaker>
+          <l n="29">Mon cher Dupré !...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="30">Et dans ma caisse ; cinquante mille piastres.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, de même.</speaker>
+          <l n="31">Mon ami ! et j’osais t’accuser, soupçonner ta conduite...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="32">Tu me pardonnes donc mon départ ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="33">T’en ai-je jamais gardé rancune ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <stage>&lt;em&gt;Air du vaudeville de La Somnambule.&lt;/em&gt;</stage>
+          <l n="34">Après cinq ans de discorde et d’absence.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="35">Ainsi que toi, mon bon ami, je pense.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, la regardant avec surprise.</speaker>
+          <l n="36">Fortune, quel est ton pouvoir !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, de même.</speaker>
+          <l n="37">Mon ami !...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="38">Mon Angélique !</l>
+          <stage>&lt;em&gt;Ils s’embrassent.&lt;/em&gt;</stage>
+          <l n="39">Quel bonheur de se retrouver !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="40">De s’aimer plus que jamais...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="41">De ne plus parler du passé...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="42">Ou plutôt de le faire oublier par les soins, les égards, les prévenances... Tu dis donc, mon ami, que tu as gagné cinquante mille piastres ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="43">Oui, ma femme.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="44">Et que cette maison, ces esclaves, ces marchandises nous appartiennent ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="45">Oui, madame Dupré. De plus je jouis d’une certaine considération dans le pays ; d’abord je m’y suis fait naturaliser, ce qui augmente encore la confiance ; et à la première occasion favorable, je me retire des affaires, je réalise mes fonds et vais m’établir en France, où je n’aurai plus rien à faire qu’à vivre en honnête homme.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="46">Et moi, en grande dame ! Quel bonheur ! Je vais le dire à lady Anthony, ma maîtresse, avec qui j’étais venue en ce pays.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="47">C’est inutile... Je sors... et je me chargerai de ta commission... Si on venait me demander, je reviendrai dans une heure.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="48">Tu me quittes déjà !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="49">Il le faut pour une affaire importante qui regarde un de mes compatriotes, M. de Surville, un jeune Français très riche.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="50">Et quelle est cette affaire ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="51">Oh ! ce n’est pas une affaire de commerce, proprement dite... parce qu’il s’agit, vois-tu bien... Mais dans ce moment, je ne peux pas t’en dire davantage.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="52">Et pour quelle raison ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="53">Parce que c’est un secret.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="54">Vous en avez donc pour moi ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="55">Sans contredit.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="56">Après l’amour que j’ai pour vous !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="57">Entendons-nous. Je suis sûr de son amour, mais non pas de ta discrétion.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="58">Tu auras beau faire, cependant ! il faudra bien que je le sache...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="59">Tu ne le sauras pas.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="60">Je le saurai.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="61">C’est ce que nous verrons.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="62">Ah ! tu espères me cacher ta conduite, mais j’y mettrai bon ordre.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="63">Ah ! tu crois que je me laisserai mener !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="64">Et moi que je me laisserai tyranniser !... Non... j’ai été trop douce jusqu’à présent ; mais je veux être maîtresse chez moi. Je veux être obéie ! et si tu ne me dis à l’instant...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="65">Là !... Voilà nos querelles européennes qui recommencent.</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Cœur infidèle, cœur volage, (Blaise et Babet.)&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="66">Crois-moi, redoute ma colère ;</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="67">Crois-moi, redoute ma colère ;</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="68">Dieux ! pourquoi donc suis-je venue !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="69">Plus que toi je suis mécontent !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="70">Je ne puis supporter ta vue...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="71">Tu peux t’embarquer à l’instant.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ et MADAME DUPRÉ.</speaker>
+          <l n="72">Oui, redoute ici ma colère !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="73">Dieu ! quel aimable caractère !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="74">Oui, redoute ici ma colère !</l>
+          <stage>&lt;em&gt;Dupré prend son chapeau et sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, seule</speaker>
+          <l n="75">Les maris sont partout les mêmes. Le pays n’y fait rien... En France, en Angleterre, ainsi qu’au Malabar, ce sont toujours des... des maris, et puisque me voilà de nouveau enchaînée auprès du mien, puisqu’il faut absolument que je fasse bon ménage, je n’ai plus qu’un moyen pour vivre avec lui, c’est de le faire mourir de chagrin. Hein ! qui vient là ?... Quelle est cette grotesque figure ? C’est sans doute quelque marabout du pays.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="76">Le seigneur Dupré est-il chez lui ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="77">Non, monsieur, il vient de sortir.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="78">Ah ! ah ! moi qui venais lui parler pour affaire importante !</l>
+          <stage>&lt;em&gt;Regardant madame Dupré.&lt;/em&gt;</stage>
+          <l n="79">Serait-ce là une de ses esclaves ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="80">C’est tout comme : je suis sa femme.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="81">Eh ! mais, je ne le croyais pas marié.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, à part.</speaker>
+          <l n="82">Plût au ciel !...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="83">Je suis venue le retrouver.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, la regardant.</speaker>
+          <l n="84">Ah ! ah ! vous êtes sa femme, et vous habitez désormais ce pays ? C’est fort heureux... pour nous.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, sèchement.</speaker>
+          <l n="85">Et pourquoi ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="86">Pourquoi ? Parce qu’on ne sait pas ce qui peut arriver... non pas que je le désire : ce cher Dupré ! mais enfin, j’espère, en cas d’événement, que vous vous adresserez à moi.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="87">Qui êtes-vous donc ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="88">Ah Brull-Pha-Gos, courtier de commerce, commis feutier, employé aux bûchers du Malabar.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="89">Quelle est cette place-là ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="90">C’en est une fort bonne dans ce pays, quand on a une certaine clientèle, et je puis me flatter d’être un des plus occupés. À propos de cela, oserais-je vous offrir des billets pour la cérémonie d’aujourd’hui ? Elle sera superbe !... Il y a longtemps, je m’en vante, qu’on n’aura vu un spectacle aussi magnifique.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="91">Qu’est-ce donc ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="92">Comment !... vous n’en avez pas entendu parler ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="93">Eh ! mon Dieu non ; j’arrive.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="94">Vous ne pouviez pas mieux tomber : c’est la veuve du vieil Amrou, la jeune Zeïla, qui doit se brûler.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="95">Comment, se brûler ! et pour quelle raison ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="96">Je vous l’ai dit, parce que son mari est mort.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="97">Elle l’aimait donc bien !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="98">Elle ne pouvait pas le souffrir ; mais c’est égal ! c’est l’usage du pays... Dès qu’un homme marié vient à mourir, il n’y a pas de milieu, il faut que sa femme soit brûlée vive !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="99">Mais voilà une coutume qui n’a pas le sens commun !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="100">Je ne dis pas non, mais elle est très productive, pour nous autres courtiers. Écoutez donc, il faut que tout le monde vive... Aujourd’hui, par exemple, c’est une fort belle affaire... Ce n’est pas que nous n’ayons des frais... Douze voies de bois de sandal, six fagots d’aloès... ce qui est énorme.</l>
+          <stage>&lt;em&gt;Air du vaudeville de Voltaire chez Ninon.&lt;/em&gt;</stage>
+          <l n="101">Quelquefois pourtant, j’en conviens,</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, à part.</speaker>
+          <l n="102">Je n’en reviens pas, c’est affreux !</l>
+          <stage>&lt;em&gt;À Brull-Pha-Gos.&lt;/em&gt;</stage>
+          <l n="103">Au moins, dites-moi, je vous prie,</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="104">Il n’y a pas encore de compagnie d’assurance.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="105">Mais, monsieur, lorsque les gens ne sont pas du pays, leurs femmes sont-elles obligées ?...</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="106">Non, certainement... à moins que les maris ne se soient fait naturaliser, auquel cas, il est juste qu’ils jouissent des prérogatives et des avantages...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="107">Ah ! mon Dieu !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="108">Qu’avez-vous donc ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="109">Rien... Vous appelez cela un avantage ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="110">C’en est un réel.</l>
+          <stage>&lt;em&gt;Air du Ménage de garçon.&lt;/em&gt;</stage>
+          <l n="111">Chez nous, souvent glacé par l’âge,</l>
+          <l n="112">Allons, je reviendrai voir ce cher Dupré... Ah ! il est marié...</l>
+          <stage>&lt;em&gt;À part, en sortant.&lt;/em&gt;</stage>
+          <l n="113">Encore une pratique de plus...</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, seule</speaker>
+          <l n="114">Voilà un abominable homme, et si jamais il remet les pieds chez moi... Mais en effet, je crois me rappeler maintenant que j’ai entendu dire autrefois qu’au Malabar... On n’a jamais vu une coutume pareille ! C’est un pays où l’on ne peut pas vivre... Comment ! si mon brutal de mari venait à mourir, je serais obligée... Cette idée-là serait capable de vous dégoûter du veuvage.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#dupré">
+          <speaker>DUPRÉ entre précipitamment et jette son chapeau sur la table.</speaker>
+          <l n="115">Ouf ! ce n’est pas sans peine ; mais enfin...</l>
+          <stage>&lt;em&gt;Apercevant madame Dupré.&lt;/em&gt;</stage>
+          <l n="116">Ah ! te voilà encore là !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="117">Pendant ton absence, il est venu une visite.</l>
+          <stage>&lt;em&gt;Se reprenant.&lt;/em&gt;</stage>
+          <l n="118">Ah ! mon Dieu ! comme tu as chaud... S’il est possible de courir ainsi... Voilà comme on attrape une maladie.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="119">Tais-toi donc... J’ai bien d’autres choses qui m’occupent.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="120">C’est pour cela que ce soin-là doit me regarder.</l>
+          <stage>&lt;em&gt;Lui essuyant le front avec son mouchoir.&lt;/em&gt;</stage>
+          <l n="121">Vrai, mon ami, tu devrais changer...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="122">Je te répète que je n’ai pas le temps.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="123">Je t’en supplie... Si ce n’est pas pour toi, que ce soit pour moi... Il n’y a rien de plus dangereux.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="124">Eh mais, je n’en reviens pas ! Comme te voilà radoucie ! Quels égards... quelles attentions !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="125">C’est que depuis un instant, j’ai fait des réflexions... J’ai eu ce matin un mouvement de vivacité que je me suis bien reproché : cette scène m’a fait un mal !...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="126">Et à moi donc ! elle m’a tourné le sang.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, vivement.</speaker>
+          <l n="127">Il serait possible !... Je ne t’en ferai plus, mon ami, je te le promets.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, à part.</speaker>
+          <l n="128">Allons, ma femme vaut mieux que je ne croyais ; et je commence à penser que son caractère...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="129">C’est bien, ma chère amie ; mais laisse-moi, j’ai des affaires à terminer. Toujours des affaires ! Tu travailles trop, tu te fatigues... Tu ne te soignes pas assez !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="130">Encore !... Ah çà ! je t’en prie, modère ton affection, et rentre dans ton appartement.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <stage>&lt;em&gt;Air : Berce, berce, bonne grand’mère. (La Berceuse.)&lt;/em&gt;</stage>
+          <l n="131">Veille, veille, ô Dieu tutélaire !</l>
+          <stage>&lt;em&gt;À son mari.&lt;/em&gt;</stage>
+          <l n="132">Car c’est d’une santé si chère</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="133">T’en iras-tu ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, revenant.</speaker>
+          <l n="134">Surtout pas d’imprudence !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="135">Tu veux donc, je le vois,</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, s’éloignant vivement.</speaker>
+          <l n="136">Non, ce seul mot me fait mourir d’effroi.</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="137">Veille, veille, ô Dieu tutélaire !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="138">Enfin, tu partiras, j’espère,</l>
+          <stage>&lt;em&gt;Madame Dupré sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, seul</speaker>
+          <l n="139">Les femmes sont extrêmes en tout... si la mienne se met une fois à m’adorer, il n’y aura pas moyen d’y tenir, moi surtout qui n’en ai pas l’habitude. Enfin elle est partie... Ouvrons à M. de Surville. Je ne sais à quoi je m’expose en secondant ses projets, en lui indiquant ce passage souterrain qui donne dans les caveaux du temple ; mais je ne pouvais pas faire autrement... un Français... un compatriote... d’un autre côté, cette pauvre Zeïla... la pitié... l’humanité... et les vingt mille piastres qu’on m’a promises... le moyen de résister à des motifs aussi prépondérants !</l>
+          <stage>&lt;em&gt;Pendant ce temps, il cherche parmi un trousseau de clefs, et va ouvrir une petite porte secrète qui est à gauche.&lt;/em&gt;</stage>
+          <l n="140">Entrez, et ne craignez rien, vous êtes en sûreté.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, SURVILLE, ZEÏLA</speaker>
+          <stage>&lt;em&gt;Air de Rossini.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="141">À travers ces voûtes souterraines,</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="142">C’est l’amour qui vient briser tes chaînes,</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="143">Ah ! grand Dieu ! c’est Henri que je vois !</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="144">Oui, vous êtes chez moi.</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="145">Vous revoir avant ma dernière heure,</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="146">De frayeur mon cœur palpite et tremble ;</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="147">C’est l’amour qui tous deux nous rassemble,</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="148">Oui, madame, monsieur vous aime, vous épouse et vous emmène.</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="149">Hélas !... je le voudrais !... mais un autre sort m’attend ; mes amis, mes parents le disent tous.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="150">Je crois bien ! si vous consultez vos héritiers...</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="151">Non, ils prétendent que Brahmâ me punirait si je désobéissais à mon époux.</l>
+          <stage>&lt;em&gt;Air du vaudeville de L’Homme vert.&lt;/em&gt;</stage>
+          <l n="152">En mourant, son ordre suprême</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="153">Après leur mort, être fidèle !</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="154">Sans compter qu’on est très méchant dans cette ville. Si je ne meurs pas, toutes les dames de ma connaissance vont dire du mal de moi, et me voilà déshonorée dans le pays.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="155">Quoi ! c’est là le vrai motif ?</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="156">Oui, monsieur, il n’y en a pas d’autre ; sans cela, je n’ai pas plus envie que vous d’être brûlée.</l>
+          <stage>&lt;em&gt;Trio.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Dire à moi sans mystère. (Élisca.)&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="157">Quoi ! l’honneur vous invite</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="158">Oui, oui.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="159">Ce mari qui vous quitte,</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="160">Non, non. Mais c’est là qu’est le mérite,</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="161">Dieu, quelle erreur profonde !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ et SURVILLE.</speaker>
+          <l n="162">S’il est en l’autre monde,</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="163">Je vais en l’autre monde</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE et DUPRÉ.</speaker>
+          <l n="164">S’il est dans l’autre monde,</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="165">Oui, calmez votre peur,</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="166">Et mon amour...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="167">Et votre honneur...</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="168">Et mon honneur.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="169">Tous deux ensemble ?</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="170">Tous deux ensemble ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="171">Sur moi que l’on se fonde,</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA et SURVILLE.</speaker>
+          <l n="172">Par quel moyen ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="173">Je ne dis rien.</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="174">Oui, sur ma foi.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="175">D’être tranquille</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="176">Oui, de ses soins, je le promets,</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="177">Oui, de ses soins, de ses bienfaits,</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="178">À vous je me confie,</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE et DUPRÉ.</speaker>
+          <l n="179">C’était une folie</l>
+          <stage>&lt;em&gt;Dupré conduit Zeïla dans la chambre à droite.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#surville">
+          <speaker>SURVILLE, suivant des yeux Zeïla qui entre dans la chambre.</speaker>
+          <l n="180">Pauvre femme ! quelle horrible coutume !</l>
+          <stage>&lt;em&gt;À Dupré.&lt;/em&gt;</stage>
+          <l n="181">Mais, dis-moi, comment espères-tu la sauver, et quel est ton moyen ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="182">Le moyen le plus simple, et qui, plus d’une fois sans doute, a déjà dû être employé ; apprenez donc, monsieur, que toutes celles qui montent sur le bûcher n’en meurent pas ! J’ai connu, sur la côte de Coromandel, une brave femme qui avait déjà été brûlée en premières et en secondes noces, et qui convolait en troisièmes.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="183">Il serait possible !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="184">Vous sentez bien que cela n’est pas naturel, et qu’il y a là-dessous quelque tour de gibecière ou d’escamotage ; eh bien ! monsieur, partout où il y a des escamoteurs, il faut des compères et des dupes. Les dupes seront les spectateurs, qui sont déjà placés et qui attendent la cérémonie, le compère ce sera vous, si vous voulez bien le permettre.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="185">Moi ! et que pourrais-je faire ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="186">Aller trouver un certain Ali Brull-Pha-Gos, une espèce de courtier, qui est chargé des détails de la cérémonie, de l’ordonnance du bûcher, et surtout du soin de conduire la veuve, dont les traits sont presque toujours cachés par un grand voile ; notez bien cette dernière circonstance ! Comme l’individu auquel je vous adresse est un coquin, et que je le connais, c’est un de mes amis, vous pouvez hardiment aborder la question... Offrez-lui jusqu’à la concurrence de trente à quarante mille piastres, vous pouvez marchander, mais c’est un prix fait, vous ne l’aurez pas à moins ; et, moyennant cette somme, il se chargera du reste.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="187">Comment ! Zeïla...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="188">Sera brûlée par procuration ; c’est à lui de trouver quelqu’un, de découvrir un remplaçant.</l>
+          <stage>&lt;em&gt;Air du vaudeville de Partie carrée.&lt;/em&gt;</stage>
+          <l n="189">On fournit tout, et de ce sacrifice</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="190">Y penses-tu ? comment veux-tu qu’il puisse</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="191">Pourquoi donc pas ? en ces lieux comme en France,</l>
+          <l n="192">Pendant ce temps nous nous embarquons, vous et votre veuve ; moi, ma femme, mes richesses et le peu de marchandises qui me restent.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="193">Comment ! tu veux aussi !...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="194">Je n’irai pas rester dans le pays après notre expédition ; depuis longtemps je veux retourner en France, et je ne puis trouver une plus belle occasion.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="195">Oui ; mais songe donc que de te voir partir ainsi avec armes et bagages, cela peut exciter des soupçons.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="196">Vous avez raison ; il faudrait d’ailleurs trouver un moyen pour fermer ma maison, renvoyer mes domestiques, et procéder tranquillement au déménagement. J’ai une idée... Silence !... c’est ma femme, il faut qu’elle ne sache rien ; faites seulement semblant de me chercher dispute.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="197">Pour quelle raison ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, bas.</speaker>
+          <l n="198">Je vous le dirai.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="199">Monsieur ! vous prenez chez moi un singulier ton.</l>
+          <stage>&lt;em&gt;Bas.&lt;/em&gt;</stage>
+          <l n="200">Allons</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="201">Monsieur... je trouve le vôtre encore plus singulier.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="202">Eh ! mon Dieu ! qu’y a-t-il donc ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, très haut.</speaker>
+          <l n="203">C’est-à-dire, monsieur, que vous me prenez pour un sot ?</l>
+          <stage>&lt;em&gt;Bas.&lt;/em&gt;</stage>
+          <l n="204">Dites que oui.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE, très haut.</speaker>
+          <l n="205">Monsieur... je vous prends pour ce que vous êtes.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="206">Cela me suffit, monsieur... vous m’insultez... et si vous m’avez compris...</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="207">Pas encore, monsieur, et c’est moi qui vous demande une explication.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="208">Je ne demande pas mieux.</l>
+          <stage>&lt;em&gt;Bas.&lt;/em&gt;</stage>
+          <l n="209">Descendez avec moi, je vous dirai ce qu’il faut faire.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, à part.</speaker>
+          <l n="210">Ah ! mon Dieu ! ils se parlent bas...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, bas à Surville.</speaker>
+          <l n="211">Je reste ici avec un esclave qui m’est dévoué ; et, grâce à la ruse que je médite, nous serons depuis longtemps en mer, qu’on ne se sera pas aperçu de ma disparition.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE, haut.</speaker>
+          <l n="212">Cela suffit... sortons.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="213">Oui, sortons !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="214">Mais, mon ami... où vas-tu ?... et songe donc !... s’il t’arrivait malheur...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="215">Cela ne te regarde pas.</l>
+          <stage>&lt;em&gt;Il sort avec Surville.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, seule</speaker>
+          <l n="216">Comment ! cela ne me regarde pas ?... en France, à la bonne heure... mais dans ce vilain pays... avec leurs maudites coutumes... on est bien obligée malgré soi de se mêler des affaires du ménage... Mais je ne reconnais plus mon mari, lui qui était si poltron et si maladroit... il ne sait pas qu’il défend ses jours et les miens ; et il est capable de se laisser tuer comme un simple célibataire... Hein ! qui vient là ?... sont-ce des nouvelles que l’on m’apporte ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="217">Par exemple ! voilà un événement ! je ne m’y serais jamais attendu.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="218">Il est arrivé un malheur ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="219">Le plus grand de tous... Vous savez bien Zeïla, cette jeune veuve dont je vous ai parlé ce matin... et qui paraissait si bien disposée... Je viens de descendre dans le caveau où elle était... disparue avec les diamants !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="220">Comment ! ce n’est que cela ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="221">Ce n’est que cela !... mais c’est inouï, sans nous prévenir encore... nous qui y comptions... Songez donc que tout est prêt pour la cérémonie, et je venais consulter ce cher Dupré, qui a quelquefois des idées... Est-il rentré ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="222">Ah ! bien oui, rentré... bien mieux que cela... il est ressorti... Où croyez-vous qu’il soit dans ce moment... à se battre, monsieur !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, se frottant les mains en signe de satisfaction.</speaker>
+          <l n="223">Comment ! à se battre ?... il serait possible.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, à part.</speaker>
+          <l n="224">Ah ! mon Dieu, qu’est-ce que j’ai dit là !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="225">Non, monsieur, non... c’est une simple explication...</l>
+          <stage>&lt;em&gt;On entend un coup de pistolet.&lt;/em&gt;</stage>
+          <l n="226">un raccommodement... une explication... avec un ami... et vous, qui devez le connaître... vous devinez que dans un moment... cela finit par un déjeuner... Tenez, c’est lui qui revient...</l>
+          <stage>&lt;em&gt;Apercevant Surville.&lt;/em&gt;</stage>
+          <l n="227">C’est l’autre... ah ! mon Dieu !... mes genoux fléchissent.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#surville">
+          <speaker>SURVILLE, à part.</speaker>
+          <l n="228">Allons, faisons ce que Dupré m’a dit, puisqu’il a ses raisons.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="229">Eh bien, monsieur, parlerez-vous ? Qu’avez-vous à m’annoncer ?</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="230">Madame... mon silence et mon trouble vous en disent assez... Vous êtes témoin que c’est lui qui m’a provoqué ; mais l’événement n’en est pas moins affreux... ce pauvre Dupré...</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="231">Il est défunt ?</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="232">C’est vous qui l’avez dit.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="233">Dieux !... je suis veuve.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, tirant son calepin et écrivant.</speaker>
+          <l n="234">Ce que c’est que de nous... comme les accidents arrivent !</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="235">On vient déjà de renvoyer les acheteurs qui étaient en bas dans les magasins, on a fermé les portes, les fenêtres...</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="236">Conformément à l’usage.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="237">Je n’ose moi-même rester en ces lieux, et vais porter ailleurs mes regrets.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="238">Pendant que Dupré dispose tout pour notre départ, courons chez le courtier de commerce dont il m’a parlé, Ali Brull-Pha-Gos, près la grande pagode, il faudra bien que je le trouve.</l>
+          <stage>&lt;em&gt; Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, à part.</speaker>
+          <l n="239">Dieux ! comme cela se rencontre ! moi qui venais demander à Dupré quelque moyen pour sortir d’embarras.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, qui, pendant tout ce temps, est restée sur sa chaise.</speaker>
+          <l n="240">On n’a jamais vu de femme plus malheureuse.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="241">Je conçois combien votre douleur est légitime : ce cher Dupré était si bon !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="242">Lui, il était brutal, colère, ah !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="243">Je ne dis pas non... mais l’amour qu’il avait pour vous...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, de même.</speaker>
+          <l n="244">Depuis cinq ans, il m’avait abandonnée.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="245">Je ne dis pas non... mais la concorde qui, auparavant, régnait entre vous...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="246">Nous nous disputions sans cesse... Ah ! quelle perte ! je suis bien malheureuse !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="247">Je vous en prie, madame Dupré, calmez votre douleur, votre désespoir est si grand, que ce sera pour vous une consolation de remplir votre devoir.</l>
+          <stage>&lt;em&gt;Il lui présente l’agenda sur lequel il a écrit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="248">Qu’est-ce que c’est ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="249">Une simple formalité ; il s’agit, comme veuve, d’écrire là votre nom.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, essuyant ses yeux.</speaker>
+          <l n="250">Comment ! voilà tout ce que vous exigez de moi ?</l>
+          <stage>&lt;em&gt;Elle écrit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="251">Pas autre chose.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="252">Et bien alors ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="253">C’est tout uniment pour prendre date... parce que souvent il y a foule... mais maintenant que vous êtes enregistrée, vous voilà certaine.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="254">De quoi ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="255">De ce que je vous disais ce matin... de paraître à cette auguste cérémonie qu’ont établie en ces lieux nos lois et nos usages.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="256">Comment ! monsieur, je serais obligée de mourir pour un mari qui ne sait pas vivre ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="257">On ne force personne... mais dès qu’on a signé, il n’y a pas moyen de s’en dédire.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="258">Mais c’est donc une fournaise, un enfer, que ce pays-ci ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="259">Vous avez au moins l’avantage de ne pas attendre, et de profiter d’une belle occasion... un bûcher magnifique... bûcher de première classe.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="260">Ah ! mon Dieu ! que faire ? personne n’arrivera-t-il à mon secours ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <stage>&lt;em&gt;Air : Valse de Rossini.&lt;/em&gt;</stage>
+          <l n="261">Oui, partons à l’instant,</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, BRULL-PHA-GOS, ZEÏLA, sortant da cabinet à droite</speaker>
+          <stage>&lt;em&gt;Même air.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="262">Est-ce lui ?... Je croyais reconnaître ses pas !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="263">Que vois-je ! Zeïla...</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA et MADAME DUPRÉ.</speaker>
+          <l n="264">Dieux ! Rencontre cruelle !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="265">Que dites-vous ! c’est elle ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, à Zeïla.</speaker>
+          <l n="266">Et l’on osait pourtant accuser votre zèle !</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="267">Que vais-je devenir ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, à part.</speaker>
+          <l n="268">Deux pour une !...</l>
+          <stage>&lt;em&gt;À madame Dupré.&lt;/em&gt;</stage>
+          <l n="269">Ce soir je compte revenir.</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="270">Oui, partons à l’instant,</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="271">J’échappe en cet instant</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="272">Oui, partons à l’instant,</l>
+          <stage>&lt;em&gt;À madame Dupré.&lt;/em&gt;</stage>
+          <l n="273">Mais, selon votre gré,</l>
+          <l n="274">Mais qu’ici votre cœur ne soit pas trop jaloux ;</l>
+          <stage>&lt;em&gt;Il sort et emmène Zeïla.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, seule</speaker>
+          <l n="275">Pauvre femme !... elle y va ; et voilà comme je serai demain... ce n’est que diffère... et tout cela, c’est de la faute de Dupré.</l>
+          <stage>&lt;em&gt;Air du vaudeville de Turenne.&lt;/em&gt;</stage>
+          <l n="276">Oui, de sa part, c’est une perfidie,</l>
+          <stage>&lt;em&gt;S’essuyant les yeux.&lt;/em&gt;</stage>
+          <l n="277">Mais je suis bien bonne d’être là à me désespérer et à attendre le danger... Arrivera ce qu’il pourra ! puisqu’il doit revenir ce soir, je pars à l’instant même, quand je devrais aller au bout du monde !</l>
+          <stage>&lt;em&gt;Elle va pour sortir, et, rencontrant Dupré, elle pousse un grand cri.&lt;/em&gt;</stage>
+          <l n="278">Ah !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="279">Ma femme... ma femme... qu’as-tu donc ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="280">Cette fois, je ne me trompe pas, c’est bien lui ; tu existes, n’est-ce pas ?... tu en es bien sur ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="281">Je t’en donne ma parole d’honneur,</l>
+          <stage>&lt;em&gt;Air : Du partage de la richesse. (Fanchon ta vielleuse.)&lt;/em&gt;</stage>
+          <l n="282">Dès aujourd’hui nous quittons ce rivage,</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="283">Si tu savais l’effet que cela a produit sur moi !... la joie, la crainte...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, à part.</speaker>
+          <l n="284">Mais effectivement... sa physionomie est toute renversée. Je n’aurais jamais cru que ma femme m’aimât à ce point-là.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, le retenant par la main.</speaker>
+          <l n="285">Reste là... ne t’éloigne pas... que je te regarde encore !... Dieu ! qui m’aurait jamais dit que la vue de mon mari me ferait tant de plaisir !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="286">Ma femme ! ma chère Angélique... ai-je été injuste à ton égard !... être adoré à ce point-là et sans s’en douter...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="287">Quand j’ai cru t’avoir perdu... si tu savais quel a été mon désespoir !... j’ai manqué ne pas te survivre.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="288">On n’a pas d’idée d’un dévouement comme celui-là !... Va... je reconnaîtrai cet excès de tendresse... Toutes nos affaires sont en ordre... tout est disposé... nous n’attendons plus que M. de Surville et notre jeune veuve... Où est-elle donc ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="289">Qui ? Zeïla ?... Ah ! mon Dieu ! elle était là tout à l’heure, lorsqu’il est venu un courtier qui voulait te parler , un nommé Brull-Pha-Gos.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="290">Ô ciel !... Eh bien ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="291">Eh bien... Zeïla a voulu partir avec lui, et il l’a emmenée.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="292">Et tu l’as laissé faire... tu les as laissés partir... malheureuse ! c’est fait de nous, de notre fortune... Que dire maintenant à M. de Surville ?... Je n’ai plus qu’à me brûler la cervelle.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, tombant dans un fauteuil.</speaker>
+          <l n="293">Dieux ! impossible qu’aujourd’hui j’en réchappe !</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, regardant par la fenêtre.</speaker>
+          <l n="294">De cette fenêtre, qui donne sur la grande place, on aperçoit déjà tout le peuple rassemblé... et ce grand bûcher qui s’élève au centre... les feux sont allumés... mais personne encore n’y paraît...</l>
+          <stage>&lt;em&gt;Regardant par la porte.&lt;/em&gt;</stage>
+          <l n="295">Eh ! mais... je ne me trompe pas... quel bonheur !... M. de Surville et Zeïla qui viennent de ce côté... Brull-Pha-Gos les accompagne... n’oublions pas que pour lui je suis mort... Ma femme, reste là ; je reviens dans l’instant.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="296">Comment ! mon ami, tu t’en vas ?</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="297">Je te dis que je suis là.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="298">N’importe... ce n’est pas la même chose... j’ai besoin de ta présence.</l>
+          <stage>&lt;em&gt;Dupré entre dans le cabinet, madame Dupré reste dans le fond.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="299">Venez donc vite !... au moins ici on peut parler en sûreté.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="300">Zeïla, quelle a été ma surprise en vous voyant traverser les jardins de la pagode où, depuis une demi-heure, j’attendais monsieur !</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="301">Mais il n’est pas question de cela, parlons de nos affaires, entendons-nous. Nous avons dit quarante mille piastres...</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="302">Les voici dans ce portefeuille en bons sur la compagnie des Indes.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="303">Cela suffit, et comme un honnête homme n’a que sa parole, je me charge Je tout. Le nom de Zeïla sera à jamais en honneur dans le pays ; chacun porte aux nues cette nouvelle Arthémise. Ainsi, madame peut se regarder comme authentiquement brûlée.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, à part.</speaker>
+          <l n="304">Ah ! le fripon !... si je l’avais su...</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, à Zeïla.</speaker>
+          <l n="305">Voici même le procès-verbal que j’avais rédige d’avance, et avec lequel vous pouvez attester à qui de droit...</l>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA.</speaker>
+          <l n="306">Je n’en ferai pas usage ; envoyez-le à ma famille, c’est tout ce que je demande. Mais comment espérez-vous faire ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="307">Cela me regarde... j’ai ici quelqu’un de disponible et sur lequel je compte pour vous remplacer...</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, à part et s’avançant.</speaker>
+          <l n="308">C’est ce que nous allons voir.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="309">Sans cela, vous sentez bien que je ne me serais pas avisé au moment même... Ah ! vous voilà, madame Dupré, je suis enchanté de vous trouver... Eh bien ! ma chère amie, voilà un événement qui vous avance... vous m’avez dit que vous étiez prête... voici le moment...</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="310">Comment ! ce serait madame ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="311">J’espère que vous n’avez pas à vous plaindre ! une petite femme fort gentille, fort convenable... allons, partons.</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="312">Avec grand plaisir, mon honnête monsieur ; mais il n’y a qu’une petite difficulté.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="313">Et quelle est-elle, s’il vous plaît ?</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ, ouvrant la porte.</speaker>
+          <l n="314">Tenez, la voici.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="315">C’est Dupré !</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="316">Ah ! mon ami, viens donc ; combien je te remercie ! j’ai suivi tes conseils, et tout est arrangé.</l>
+          <stage>&lt;em&gt;Montrant Brull-Pha-Gos.&lt;/em&gt;</stage>
+          <l n="317">N’est-il pas vrai ?</l>
+        </sp>
+        <sp who="#broll-pha-gos">
+          <speaker>BROLL-PHA-GOS.</speaker>
+          <l n="318">C’est-à-dire ! tout est arrangé... dans ce sens que je suis dans un furieux embarras, et que je ne sais trop comment faire.</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="319">Comment, morbleu ! voudriez-vous vous dédire ?</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="320">Du tout, du tout, vous avez ma parole...</l>
+          <stage>&lt;em&gt;Regardant madame Dupré.&lt;/em&gt;</stage>
+          <l n="321">Mais c’est que je comptais...</l>
+          <stage>&lt;em&gt;Regardant Dupré.&lt;/em&gt;</stage>
+          <l n="322">Il se porte bien.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="323">Je vous préviens du reste que tout le peuple s’impatiente, et qu’il y a déjà quelques minutes que la cérémonie devrait être commencée.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS, à part.</speaker>
+          <l n="324">Allons, il faut sortir de là... Ce beau mannequin que j’ai en réserve pour les bonnes occasions il n’y a pas d’autre moyen... Ah çà ! quoi qu’il arrive, vous me promettez le secret ?</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="325">Vous pouvez être tranquille, nous nous embarquons.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="326">C’est encore mieux ; mais’ ne tardez pas... Au moment où vous verrez la flamme briller, sortez alors, c’est le moment le plus favorable, parce que tout le monde sera dans la grande place à je nr du spectacle.</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>DUPRÉ.</speaker>
+          <l n="327">Nous profiterons de vos avis.</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="328">Adieu, monsieur Brull-Pha-Gos !</l>
+        </sp>
+        <sp who="#madame-dupré">
+          <speaker>MADAME DUPRÉ.</speaker>
+          <l n="329">Adieu, honnête courtier.</l>
+        </sp>
+        <sp who="#ali-brull-pha-gos">
+          <speaker>BRULL-PHA-GOS.</speaker>
+          <l n="330">Adieu, mes amis, bon voyage. Allons, je n’ai pas perdu mon temps ; mais voilà, je puis le dire, une journée fièrement chaude.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#dupré">
+          <speaker>DUPRÉ, à son épouse.</speaker>
+          <l n="331">Ma chère femme, après toutes les marques d’amour que tu m’as données...</l>
+        </sp>
+        <sp who="#madame-dcpré">
+          <speaker>MADAME DCPRÉ.</speaker>
+          <l n="332">Ne parlons pas de cela ici ; en France, ce sera autre chose.</l>
+          <stage>&lt;em&gt;Finale.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air du ballet de L’Enfant prodigue.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="333">Guidés par l’espérance,</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>TOUS.</speaker>
+          <stage>Guidés par l’espérance, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Ils regardent par la fenêtre du fond.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="334">Près du bûcher comme on s’empresse !</l>
+        </sp>
+        <sp who="#chœur">
+          <speaker>CHŒUR en dehors, accompagné d’instruments militaires.</speaker>
+          <l n="335">Honneur, honneur à Zeïla !</l>
+        </sp>
+        <sp who="#surville">
+          <speaker>SURVILLE.</speaker>
+          <l n="336">Et nous, pendant ce temps-là...</l>
+        </sp>
+        <sp who="#dupré">
+          <speaker>TOUS, à demi-voix.</speaker>
+          <stage>Guidés par l’espérance, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#zeïla">
+          <speaker>ZEÏLA, au public.</speaker>
+          <l n="337">Échappée à l’incendie,</l>
+          <stage>Guidés par l’espérance, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <l n="338" />
+        </sp>
       </div>
     </body>
   </text>

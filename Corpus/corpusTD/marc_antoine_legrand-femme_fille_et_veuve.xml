@@ -1,2125 +1,1977 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La Femme  fille et veuve</title>
-        <author key="Marc-Antoine LEGRAND | (naissance-mort)">Marc-Antoine LEGRAND |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/475</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Marc-Antoine LEGRAND |</author>. <title>La Femme  fille et veuve</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/475</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1707-05-26">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 26 mai 1707.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="oronte" sex="SEX">
+            <persName>ORONTE</persName>
+          </person>
+          <person xml:id="élise" sex="SEX">
+            <persName>ÉLISE</persName>
+          </person>
+          <person xml:id="angélique" sex="SEX">
+            <persName>ANGÉLIQUE</persName>
+          </person>
+          <person xml:id="lisimon" sex="SEX">
+            <persName>LISIMON</persName>
+          </person>
+          <person xml:id="hortense" sex="SEX">
+            <persName>HORTENSE</persName>
+          </person>
+          <person xml:id="philidor" sex="SEX">
+            <persName>PHILIDOR</persName>
+          </person>
+          <person xml:id="dorante" sex="SEX">
+            <persName>DORANTE</persName>
+          </person>
+          <person xml:id="dardibras" sex="SEX">
+            <persName>DARDIBRAS</persName>
+          </person>
+          <person xml:id="tatignac" sex="SEX">
+            <persName>TATIGNAC</persName>
+          </person>
+          <person xml:id="lisette" sex="SEX">
+            <persName>LISETTE</persName>
+          </person>
+          <person xml:id="valentin" sex="SEX">
+            <persName>VALENTIN</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1707-05-26" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 26 mai 1707.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>La Femme  fille et veuve</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte et en vers.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 26 mai 1707.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="oronte">ORONTE</role>
-              <roleDesc>, <em>Père d’Élise et d’Angélique</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="élise">ÉLISE</role>
-              <roleDesc>, <em>Fille d’Oronte</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="angélique">ANGÉLIQUE</role>
-              <roleDesc>, <em>Fille d’Oronte</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lisimon">LISIMON</role>
-              <roleDesc>, <em>Ami de Philidor et d’Oronte</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="hortense">HORTENSE</role>
-              <roleDesc>, <em>Femme de Lisimon, Cousine d’Élise et d’Angélique</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="philidor">PHILIDOR</role>
-              <roleDesc>, <em>Amant d’Élise</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="dorante">DORANTE</role>
-              <roleDesc>, <em>Amant d’Angélique</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="dardibras">DARDIBRAS</role>
-              <roleDesc>, <em>Gascon</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="tatignac">TATIGNAC</role>
-              <roleDesc>, <em>Limosin</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lisette">LISETTE</role>
-              <roleDesc>, <em>Suivante d’Hortense</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="valentin">VALENTIN</role>
-              <roleDesc>, <em>Valet d’Oronte</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène est à Paris, dans une maison occupée par Oronte et par Lisimon. </em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="7" xml:id="l7"> </l>
-          <sp who="lisette" xml:id="1-1">
-            <speaker>HORTENSE, LISETTE</speaker>
-            <l n="8" xml:id="l8"> </l>
-          </sp>
-          <sp who="hortense" xml:id="1-2">
-            <speaker>HORTENSE, <em>en deuil.</em></speaker>
-            <l n="9" xml:id="l9">Pourquoi me regarder, Lisette, et que veux dire...</l>
-            <l n="10" xml:id="l10">Tu ris ?</l>
-          </sp>
-          <sp who="lisette" xml:id="1-3">
-            <speaker>LISETTE.</speaker>
-            <l n="11" xml:id="l11">Et le moyen de s’empêcher de rire ?</l>
-            <l n="12" xml:id="l12">De pleurer avec vous, fut-il jamais saison ?</l>
-            <l n="13" xml:id="l13">Et quoique le grand deuil soit dans votre maison,</l>
-            <l n="14" xml:id="l14">Loin d’y paraître triste ou faire la pleureuse,</l>
-            <l n="15" xml:id="l15">Peut-on y demeurer seulement sérieuse ?</l>
-            <l n="16" xml:id="l16">Vous inspirez la joie aux gens les plus chagrins ;</l>
-            <l n="17" xml:id="l17">Nous ne voyons céans que bals et que festins ;</l>
-            <l n="18" xml:id="l18">Cependant cet habit...</l>
-          </sp>
-          <sp who="hortense" xml:id="1-4">
-            <speaker>HORTENSE.</speaker>
-            <l n="19" xml:id="l19">Ce n’est qu’un deuil de tante</l>
-            <l n="20" xml:id="l20">Qui nous laisse en mourant deux mille écus de rente,</l>
-            <l n="21" xml:id="l21">Tante de mon Époux encore, et dont les biens...</l>
-          </sp>
-          <sp who="lisette" xml:id="1-5">
-            <speaker>LISETTE.</speaker>
-            <l n="22" xml:id="l22">Si vous pleurez ainsi vos parents et les siens,</l>
-            <l n="23" xml:id="l23">Et s’il pleure de même et les liens et les vôtres,</l>
-            <l n="24" xml:id="l24">Quand l’un de vous mourra, nous en verrons bien d’autres.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-6">
-            <speaker>HORTENSE.</speaker>
-            <l n="25" xml:id="l25">La différence est grande, et j’aime mon Époux.</l>
-            <l n="26" xml:id="l26">Comment ne pas l’aimer ? il est affable et doux</l>
-            <l n="27" xml:id="l27">Ni trop vieux ni trop jeune, enfin dans le bon âge.</l>
-            <l n="28" xml:id="l28">Depuis un mois entier que je suis en ménage,</l>
-            <l n="29" xml:id="l29">Avec lui m’as-tu vu le moindre différend ?</l>
-          </sp>
-          <sp who="lisette" xml:id="1-7">
-            <speaker>LISETTE.</speaker>
-            <l n="30" xml:id="l30">Aucun, et c’est encor ce qui plus me surprend.</l>
-            <l n="31" xml:id="l31">Car de quelques vertus dont elles soient douées,</l>
-            <l n="32" xml:id="l32">Les maris n’aiment point ces femmes enjouées,</l>
-            <l n="33" xml:id="l33">Donc les yeux semblent tout promettre d’un regard,</l>
-            <l n="34" xml:id="l34">Quoique souvent le cœur ni prenne aucune part,</l>
-            <l n="35" xml:id="l35">Dont le souris flatteur, la paupière assassine,</l>
-            <l n="36" xml:id="l36">Donne à tous de l’espoir, et fait qu’on s’imagine</l>
-            <l n="37" xml:id="l37">Que sais-je. Moi, ma foi, si j’étais votre Époux...</l>
-          </sp>
-          <sp who="hortense" xml:id="1-8">
-            <speaker>HORTENSE.</speaker>
-            <l n="38" xml:id="l38">Jusqu’ici Lisimon n’a point paru jaloux,</l>
-            <l n="39" xml:id="l39">Il le serait à tort, en tout je le contente.</l>
-            <l n="40" xml:id="l40">Ses intimes amis, Philidor et Dorante,</l>
-            <l n="41" xml:id="l41">Des pays étrangers depuis peu revenus,</l>
-            <l n="42" xml:id="l42">Sont ceux dans mes plaisirs qui se trouvent le plus.</l>
-            <l n="43" xml:id="l43">Mais ils vont épouser mes charmantes cousines,</l>
-            <l n="44" xml:id="l44">Les deux filles d’Oronte.</l>
-          </sp>
-          <sp who="lisette" xml:id="1-9">
-            <speaker>LISETTE.</speaker>
-            <l n="45" xml:id="l45">Ah ! ah ! nos deux voisines.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-10">
-            <speaker>HORTENSE.</speaker>
-            <l n="46" xml:id="l46">Oui. L’Hymen va dans peu couronner leur amour,</l>
-            <l n="47" xml:id="l47">Puisqu’enfin de Bordeaux Oronte est de retour ;</l>
-            <l n="48" xml:id="l48">Ces deux filles et moi, nous avions fait partie,</l>
-            <l n="49" xml:id="l49">Quand chacune à son gré se verrait assortie,</l>
-            <l n="50" xml:id="l50">De nous faire épouser toutes trois même jour ;</l>
-            <l n="51" xml:id="l51">Mais comme on ne peut pas répondre de l’amour,</l>
-            <l n="52" xml:id="l52">J’ai devancé d’un mois.</l>
-          </sp>
-          <sp who="lisette" xml:id="1-11">
-            <speaker>LISETTE.</speaker>
-            <l n="53" xml:id="l53">On se lasse d’attendre.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-12">
-            <speaker>HORTENSE.</speaker>
-            <l n="54" xml:id="l54">Lisimon me plaisait.</l>
-          </sp>
-          <sp who="lisette" xml:id="1-13">
-            <speaker>LISETTE.</speaker>
-            <l n="55" xml:id="l55">Faut-il pas toujours prendre.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-14">
-            <speaker>HORTENSE.</speaker>
-            <l n="56" xml:id="l56">Mais je vais travailler pour elles maintenant ;</l>
-            <l n="57" xml:id="l57">À chacune donner pour époux son amant.</l>
-            <l n="58" xml:id="l58">Philidor aime Élise, et Dorante Angélique,</l>
-            <l n="59" xml:id="l59">Oronte donnera son aveu sans réplique</l>
-            <l n="60" xml:id="l60">Dès qu’il saura...</l>
-          </sp>
-          <sp who="lisette" xml:id="1-15">
-            <speaker>LISETTE.</speaker>
-            <l n="61" xml:id="l61">Comment ! il n’a donc pas appris ?</l>
-          </sp>
-          <sp who="hortense" xml:id="1-16">
-            <speaker>HORTENSE.</speaker>
-            <l n="62" xml:id="l62">Non, ce n’est que d’hier qu’Oronte est à Paris.</l>
-            <l n="63" xml:id="l63">Depuis trois mois entiers qu’il est à son voyage,</l>
-            <l n="64" xml:id="l64">À disputer d’un oncle un ancien héritage,</l>
-            <l n="65" xml:id="l65">Nous n’avions point reçu de nouvelles de lui,</l>
-            <l n="66" xml:id="l66">Nous n’avions point écrit non plus ; mais aujourd’hui</l>
-            <l n="67" xml:id="l67">Lisimon s’est chargé de faire la demande,</l>
-            <l n="68" xml:id="l68">Et je ne pense pas qu’Oronte s’en défende,</l>
-            <l n="69" xml:id="l69">Étant de nos amis, étant de nos parents,</l>
-            <l n="70" xml:id="l70">Chérissant mon mari dès ses plus jeunes ans,</l>
-            <l n="71" xml:id="l71">Il ne nous faudra point tant de cérémonies ;</l>
-            <l n="72" xml:id="l72">Et ce n’est pas d’ailleurs un de ces grands génies.</l>
-            <l n="73" xml:id="l73">Il fait tout ce qu’on veut, il croit tout ce qu’on dit.</l>
-            <l n="74" xml:id="l74">Il dit tout ce qu’il sait.</l>
-          </sp>
-          <sp who="lisette" xml:id="1-17">
-            <speaker>LISETTE.</speaker>
-            <l n="75" xml:id="l75">Peste le rare esprit !</l>
-            <l n="76" xml:id="l76">Ah ! puisqu’il est si bon, nous obtiendrons ses Filles,</l>
-            <l n="77" xml:id="l77">De ces Messieurs sans douce il connaît les familles ?</l>
-            <l n="78" xml:id="l78">Mais les voici tous deux, et votre époux aussi.</l>
-            <l n="79" xml:id="l79">Que nous allons danser !</l>
-            <l n="80" xml:id="l80"> </l>
-            <l n="81" xml:id="l81"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="82" xml:id="l82"> </l>
-          <sp who="lisette" xml:id="2-1">
-            <speaker>LISIMON, PHILIDOR, DORANTE, HORTENSE, LISETTE</speaker>
-            <l n="83" xml:id="l83"> </l>
-          </sp>
-          <sp who="hortense" xml:id="2-2">
-            <speaker>HORTENSE.</speaker>
-            <l n="84" xml:id="l84">Ah ! Messieurs, vous voici.</l>
-            <l n="85" xml:id="l85">Bonjour beau Philidor, bonjour charmant Dorante,</l>
-            <l n="86" xml:id="l86">Bonjour mon cher mari.</l>
-          </sp>
-          <sp who="lisimon" xml:id="2-3">
-            <speaker>LISIMON.</speaker>
-            <l n="87" xml:id="l87">Ton âme est bien contenté,</l>
-            <l n="88" xml:id="l88">Mais ma foi, voici bien des affaires.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-4">
-            <speaker>HORTENSE.</speaker>
-            <l n="89" xml:id="l89">Comment ?</l>
-          </sp>
-          <sp who="lisimon" xml:id="2-5">
-            <speaker>LISIMON.</speaker>
-            <l n="90" xml:id="l90">Tu n’as qu’à regarder et l’un et l’autre amant,</l>
-            <l n="91" xml:id="l91">Et tu devineras...</l>
-          </sp>
-          <sp who="hortense" xml:id="2-6">
-            <speaker>HORTENSE.</speaker>
-            <l n="92" xml:id="l92">Quoi le cousin Oronte...</l>
-          </sp>
-          <sp who="lisimon" xml:id="2-7">
-            <speaker>LISIMON.</speaker>
-            <l n="93" xml:id="l93">Tu m’en vois de retour avec ma courte honte,</l>
-            <l n="94" xml:id="l94">Ce vieux rêveur amène avec lui deux Barons,</l>
-            <l n="95" xml:id="l95">L’un Baron de Gascogne, et des plus fanfarons ;</l>
-            <l n="96" xml:id="l96">Et l’autre Limosin, des plus sots de son âge.</l>
-            <l n="97" xml:id="l97">Il les a rencontrés en faisant son voyage.</l>
-            <l n="98" xml:id="l98">Le Gascon, m’a-t-on dit, est un mince Égrefin,</l>
-            <l n="99" xml:id="l99">Appelle Dardibras, et pour le Limosin</l>
-            <l n="100" xml:id="l100">Il a nom Fatignac : il n a jamais, je pense,</l>
-            <l n="101" xml:id="l101">Vu que l’arrière-ban.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-8">
-            <speaker>HORTENSE.</speaker>
-            <l n="102" xml:id="l102">Oronte est en enfance ?</l>
-            <l n="103" xml:id="l103">Que veut-il faire, dis, de ces deux malotrus ?</l>
-          </sp>
-          <sp who="lisimon" xml:id="2-9">
-            <speaker>LISIMON.</speaker>
-            <l n="104" xml:id="l104">Ses Gendres.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-10">
-            <speaker>HORTENSE.</speaker>
-            <l n="105" xml:id="l105">Bon, tu ris ?</l>
-          </sp>
-          <sp who="lisimon" xml:id="2-11">
-            <speaker>LISIMON.</speaker>
-            <l n="106" xml:id="l106">Je te dirai bien plus,</l>
-            <l n="107" xml:id="l107">Il a fait deux dédits d’une somme très forte.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-12">
-            <speaker>HORTENSE.</speaker>
-            <l n="108" xml:id="l108">Peste soit du vieux fou, que le Diable l’emporte.</l>
-            <l n="109" xml:id="l109">Mes cousines sans doute en sont au désespoir ?</l>
-          </sp>
-          <sp who="dorante" xml:id="2-13">
-            <speaker>DORANTE.</speaker>
-            <l n="110" xml:id="l110">Leur recours est en vous.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-14">
-            <speaker>HORTENSE.</speaker>
-            <l n="111" xml:id="l111">Hé bien, il faudrait voir.</l>
-          </sp>
-          <sp who="philidor" xml:id="2-15">
-            <speaker>PHILIDOR.</speaker>
-            <l n="112" xml:id="l112">Employez votre esprit, employez votre adresse,</l>
-            <l n="113" xml:id="l113">Au nom de votre époux, au nom de sa tendresse,</l>
-            <l n="114" xml:id="l114">Rompez ce coup fatal, tâchez...</l>
-          </sp>
-          <sp who="hortense" xml:id="2-16">
-            <speaker>HORTENSE.</speaker>
-            <l n="115" xml:id="l115">C’est assez dit,</l>
-            <l n="116" xml:id="l116">Il ne faut que tirer l’un et l’autre dédit</l>
-            <l n="117" xml:id="l117">Des mains de vos rivaux ; j’entreprends votre affaire,</l>
-            <l n="118" xml:id="l118">Je jouerai bien mon rôle, allez, laissez-moi faire,</l>
-            <l n="119" xml:id="l119">Sait-on point à peu près quelle est leur passion ?</l>
-          </sp>
-          <sp who="dorante" xml:id="2-17">
-            <speaker>DORANTE.</speaker>
-            <l n="120" xml:id="l120">On dit qu’ils sont tous deux pleins de présomption.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-18">
-            <speaker>HORTENSE.</speaker>
-            <l n="121" xml:id="l121">C’est ce que je demande. Il faut que mes cousines</l>
-            <l n="122" xml:id="l122">Paraissent devant eux mécontentes et chagrines,</l>
-            <l n="123" xml:id="l123">Qu’elles ne daignent pas même les regarder.</l>
-          </sp>
-          <sp who="lisimon" xml:id="2-19">
-            <speaker>LISIMON.</speaker>
-            <l n="124" xml:id="l124">On n’aura pas besoin de leur recommander.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-20">
-            <speaker>HORTENSE.</speaker>
-            <l n="125" xml:id="l125">Comptez donc sur mes soins, je sais par où m’y prendre.</l>
-            <l n="126" xml:id="l126">Mais à propos, avant que de rien entreprendre,</l>
-            <l n="127" xml:id="l127">Mon mari, suis-je libre, et tout m’est-il permis ?</l>
-          </sp>
-          <sp who="lisimon" xml:id="2-21">
-            <speaker>LISIMON.</speaker>
-            <l n="128" xml:id="l128">Tout ce que tu feras pour servir nos Amis,</l>
-            <l n="129" xml:id="l129">Quelque détour hardi, quelqu’effort que tu tentes,</l>
-            <l n="130" xml:id="l130">Pour leur faire épouser tes aimables Parentes,</l>
-            <l n="131" xml:id="l131">J’approuve tout.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-22">
-            <speaker>HORTENSE.</speaker>
-            <l n="132" xml:id="l132">Suffit, je vais aller bon train,</l>
-            <l n="133" xml:id="l133">Lisette, il faut ici seconder mon dessein.</l>
-          </sp>
-          <sp who="philidor" xml:id="2-23">
-            <speaker>PHILIDOR.</speaker>
-            <l n="134" xml:id="l134">Ne l’abandonne pas, Lisette, je te prie.</l>
-          </sp>
-          <sp who="lisette" xml:id="2-24">
-            <speaker>LISETTE.</speaker>
-            <l n="135" xml:id="l135">L’abandonner ? Monsieur, il irait de la vie,</l>
-            <l n="136" xml:id="l136">Que je ne voudrais pas la quitter un moment.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-25">
-            <speaker>HORTENSE.</speaker>
-            <l n="137" xml:id="l137">Oronte vient, je rentre en mon appartement.</l>
-            <l n="138" xml:id="l138">Son aspect ne ferait que me mettre en colère.</l>
-            <l n="139" xml:id="l139">Tâchez de le gagner, et qu’il nous laisse faire.</l>
-            <l n="140" xml:id="l140">Toi, Lisette, suis-moi, nous allons concerter</l>
-            <l n="141" xml:id="l141">Comment dans mon projet il faut nous comporter.</l>
-            <l n="142" xml:id="l142"> </l>
-            <l n="143" xml:id="l143"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="144" xml:id="l144"> </l>
-          <sp who="dorante" xml:id="3-1">
-            <speaker>ORONTE, LISIMON, DORANTE, PHILIDOR, ÉLISE, ANGÉLIQUE</speaker>
-            <l n="145" xml:id="l145"> </l>
-          </sp>
-          <sp who="élise" xml:id="3-2">
-            <speaker>ÉLISE.</speaker>
-            <l n="146" xml:id="l146">Hé ! de grâce mon Père.</l>
-          </sp>
-          <sp who="angélique" xml:id="3-3">
-            <speaker>ANGÉLIQUE.</speaker>
-            <l n="147" xml:id="l147">Hé ! je vous en conjure,</l>
-            <l n="148" xml:id="l148">N’usez point envers nous des droits de la nature.</l>
-            <l n="149" xml:id="l149">Ne nous contraignez point.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-4">
-            <speaker>ORONTE.</speaker>
-            <l n="150" xml:id="l150">Écoutez, mes enfants,</l>
-            <l n="151" xml:id="l151">Les dédits sont chacun de douze mille francs ;</l>
-            <l n="152" xml:id="l152">Je ne saurais payer une somme si forte.</l>
-            <l n="153" xml:id="l153">Épousez ces gens-ci toujours, que vous importe ?</l>
-            <l n="154" xml:id="l154">Allez, une autre fois, je vous choisirai mieux.</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-5">
-            <speaker>LISIMON.</speaker>
-            <l n="155" xml:id="l155">Le beau raisonnement !</l>
-          </sp>
-          <sp who="oronte" xml:id="3-6">
-            <speaker>ORONTE.</speaker>
-            <l n="156" xml:id="l156">L’âge ouvre bien les yeux</l>
-            <l n="157" xml:id="l157">Je saurai désormais...</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-7">
-            <speaker>LISIMON.</speaker>
-            <l n="158" xml:id="l158">Il en fera de belles.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-8">
-            <speaker>ORONTE.</speaker>
-            <l n="159" xml:id="l159">Ah, tais-roi, Lisimon !</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-9">
-            <speaker>LISIMON.</speaker>
-            <l n="160" xml:id="l160">Allez, Mesdemoiselles,</l>
-            <l n="161" xml:id="l161">Laissez faire, Monsieur, il saura tout gâter.</l>
-            <l n="162" xml:id="l162">Qu’il a fait un beau coup ! il doit bien s’en vanter.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-10">
-            <speaker>ORONTE.</speaker>
-            <l n="163" xml:id="l163">Cousin, je te promets...</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-11">
-            <speaker>LISIMON.</speaker>
-            <l n="164" xml:id="l164">Laissez-moi là, de grâce,</l>
-            <l n="165" xml:id="l165">Je ne veux point vous voir.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-12">
-            <speaker>ORONTE.</speaker>
-            <l n="166" xml:id="l166">Que veux-tu que je fasse ?</l>
-            <l n="167" xml:id="l167">Ces dédits...</l>
-          </sp>
-          <sp who="philidor" xml:id="3-13">
-            <speaker>PHILIDOR.</speaker>
-            <l n="168" xml:id="l168">S’il le faut, Monsieur, nous les payerons.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-14">
-            <speaker>ORONTE.</speaker>
-            <l n="169" xml:id="l169">Vous les payerez, oh ! oh !</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-15">
-            <speaker>LISIMON.</speaker>
-            <l n="170" xml:id="l170">Non, non, vos deux Barons</l>
-            <l n="171" xml:id="l171">Valent bien ces Messieurs, gardez-les.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-16">
-            <speaker>ORONTE.</speaker>
-            <l n="172" xml:id="l172">Je vous jure</l>
-            <l n="173" xml:id="l173">Que j’en suis fort fâché. Messieurs, je vous assure,</l>
-            <l n="174" xml:id="l174">Par rapport au cousin Lisimon votre ami.</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-17">
-            <speaker>LISIMON.</speaker>
-            <l n="175" xml:id="l175">Autre beau compliment.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-18">
-            <speaker>ORONTE.</speaker>
-            <l n="176" xml:id="l176">Oh ! j’étais endormi,</l>
-            <l n="177" xml:id="l177">Quand je...</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-19">
-            <speaker>LISIMON.</speaker>
-            <l n="178" xml:id="l178">Mais à présent voyant votre sottise,</l>
-            <l n="179" xml:id="l179">La réparerez-vous ?</l>
-          </sp>
-          <sp who="oronte" xml:id="3-20">
-            <speaker>ORONTE.</speaker>
-            <l n="180" xml:id="l180">Que faut-il que je dise ?</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-21">
-            <speaker>LISIMON.</speaker>
-            <l n="181" xml:id="l181">Rien, laissez-nous agir.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-22">
-            <speaker>ORONTE.</speaker>
-            <l n="182" xml:id="l182">Mais quoi ! ne dire rien ?</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-23">
-            <speaker>LISIMON.</speaker>
-            <l n="183" xml:id="l183">Non rien, soyez tranquille.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-24">
-            <speaker>ORONTE.</speaker>
-            <l n="184" xml:id="l184">Allons, je le veux bien.</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-25">
-            <speaker>LISIMON.</speaker>
-            <l n="185" xml:id="l185">Sans payer les dédits vous sortirez d’affaire.</l>
-          </sp>
-          <sp who="oronte" xml:id="3-26">
-            <speaker>ORONTE.</speaker>
-            <l n="186" xml:id="l186">Faites donc, je m’en vais passer chez mon Notaire.</l>
-          </sp>
-          <sp who="lisimon" xml:id="3-27">
-            <speaker>LISIMON.</speaker>
-            <l n="187" xml:id="l187">N’allez pas lui parler...</l>
-          </sp>
-          <sp who="oronte" xml:id="3-28">
-            <speaker>ORONTE.</speaker>
-            <l n="188" xml:id="l188">Oh ! je n’ai garde, adieu.</l>
-            <l n="189" xml:id="l189"> </l>
-            <l n="190" xml:id="l190"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="191" xml:id="l191"> </l>
-          <sp who="dorante" xml:id="4-1">
-            <speaker>LISIMON, DORANTE, PHILIDOR, ÉLISE, ANGÉLIQUE</speaker>
-            <l n="192" xml:id="l192"> </l>
-          </sp>
-          <sp who="élise" xml:id="4-2">
-            <speaker>ÉLISE.</speaker>
-            <l n="193" xml:id="l193">Enfin, cher Philidor...</l>
-          </sp>
-          <sp who="lisimon" xml:id="4-3">
-            <speaker>LISIMON.</speaker>
-            <l n="194" xml:id="l194">Bon, voici bien le lieu</l>
-            <l n="195" xml:id="l195">De pouffer des soupirs.</l>
-          </sp>
-          <sp who="dorante" xml:id="4-4">
-            <speaker>DORANTE.</speaker>
-            <l n="196" xml:id="l196">Adorable Angélique...</l>
-          </sp>
-          <sp who="lisimon" xml:id="4-5">
-            <speaker>LISIMON.</speaker>
-            <l n="197" xml:id="l197">À l’autre, détalez.</l>
-          </sp>
-          <sp who="angélique" xml:id="4-6">
-            <speaker>ANGÉLIQUE.</speaker>
-            <l n="198" xml:id="l198">S’il faut que je m’explique.</l>
-          </sp>
-          <sp who="lisimon" xml:id="4-7">
-            <speaker>LISIMON.</speaker>
-            <l n="199" xml:id="l199">Vous vous expliquerez... Mais quelqu’un vient à nous.</l>
-            <l n="200" xml:id="l200">Rentrez.</l>
-            <l n="201" xml:id="l201"> </l>
-            <l n="202" xml:id="l202"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="203" xml:id="l203"> </l>
-          <sp who="valentin" xml:id="5-1">
-            <speaker>LISIMON, DORANTE, PHILIDOR, ÉLISE, ANGÉLIQUE, VALENTIN</speaker>
-            <l n="204" xml:id="l204"> </l>
-          </sp>
-          <sp who="angélique" xml:id="5-2">
-            <speaker>ANGÉLIQUE.</speaker>
-            <l n="205" xml:id="l205">C’est le valet de mon père.</l>
-          </sp>
-          <sp who="valentin" xml:id="5-3">
-            <speaker>VALENTIN.</speaker>
-            <l n="206" xml:id="l206">Et de vous.</l>
-          </sp>
-          <sp who="élise" xml:id="5-4">
-            <speaker>ÉLISE.</speaker>
-            <l n="207" xml:id="l207">Que veux-tu, Valentin ?</l>
-          </sp>
-          <sp who="valentin" xml:id="5-5">
-            <speaker>VALENTIN.</speaker>
-            <l n="208" xml:id="l208">Ces Messieurs vous demandent...</l>
-            <l n="209" xml:id="l209">Ils sont dans votre chambre, attendant.</l>
-          </sp>
-          <sp who="angélique" xml:id="5-6">
-            <speaker>ANGÉLIQUE.</speaker>
-            <l n="210" xml:id="l210">Qu’ils attendent.</l>
-          </sp>
-          <sp who="lisimon" xml:id="5-7">
-            <speaker>LISIMON.</speaker>
-            <l n="211" xml:id="l211">Non, Cousine, au contraire, il faut les recevoir ;</l>
-            <l n="212" xml:id="l212">Mais si mal, que jamais ils ne veuillent vous voir.</l>
-          </sp>
-          <sp who="angélique" xml:id="5-8">
-            <speaker>ANGÉLIQUE.</speaker>
-            <l n="213" xml:id="l213">Nous vous obéirons, Cousin, je vous assure.</l>
-            <l n="214" xml:id="l214">Sans adieu.</l>
-            <l n="215" xml:id="l215"> </l>
-            <l n="216" xml:id="l216"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="217" xml:id="l217"> </l>
-          <sp who="valentin" xml:id="6-1">
-            <speaker>LISIMON, DORANTE, PHILIDOR, VALENTIN</speaker>
-            <l n="218" xml:id="l218"> </l>
-          </sp>
-          <sp who="valentin" xml:id="6-2">
-            <speaker>LISIMON, <em>arrêtant Valentin.</em></speaker>
-            <l n="219" xml:id="l219">Valentin, dis-moi, par aventure</l>
-            <l n="220" xml:id="l220">L’argent te tente-t-il quelquefois ?</l>
-          </sp>
-          <sp who="valentin" xml:id="6-3">
-            <speaker>VALENTIN.</speaker>
-            <l n="221" xml:id="l221">Grandement.</l>
-            <l n="222" xml:id="l222">Faut-il le demander ? Monsieur, je suis Normand.</l>
-            <l n="223" xml:id="l223">Et d’hier seulement j’arrivai de Gascogne.</l>
-          </sp>
-          <sp who="dorante" xml:id="6-4">
-            <speaker>DORANTE.</speaker>
-            <l n="224" xml:id="l224">Est-ce qu’en ce pays ?...</l>
-          </sp>
-          <sp who="valentin" xml:id="6-5">
-            <speaker>VALENTIN.</speaker>
-            <l n="225" xml:id="l225">Sur un denier l’on rogne.</l>
-            <l n="226" xml:id="l226">Notre Gascon partout, l’un de ces prétendus</l>
-            <l n="227" xml:id="l227">Qui viennent de mon Maître épouser les écus.</l>
-          </sp>
-          <sp who="philidor" xml:id="6-6">
-            <speaker>PHILIDOR.</speaker>
-            <l n="228" xml:id="l228">Il aime donc l’argent ?</l>
-          </sp>
-          <sp who="valentin" xml:id="6-7">
-            <speaker>VALENTIN.</speaker>
-            <l n="229" xml:id="l229">Vraiment dans le voyage</l>
-            <l n="230" xml:id="l230">Il n’a pas dépensé quarante sols, je gage.</l>
-            <l n="231" xml:id="l231">Il vivait aux dépens du sot de Limosin</l>
-            <l n="232" xml:id="l232">Avant de nous avoir rencontré ; mais enfin</l>
-            <l n="233" xml:id="l233">Depuis ce temps tous deux, sans demander le compte,</l>
-            <l n="234" xml:id="l234">Dans chaque hôtellerie ont laissé faire Oronte.</l>
-            <l n="235" xml:id="l235">Il a payé par tout, de Poitiers à Bordeaux,</l>
-            <l n="236" xml:id="l236">Et de Bordeaux ici. Ces maudits Hobereaux...</l>
-          </sp>
-          <sp who="lisimon" xml:id="6-8">
-            <speaker>LISIMON.</speaker>
-            <l n="237" xml:id="l237">Puisque tu les hais tant, et que l’argent te tente,</l>
-            <l n="238" xml:id="l238">Tiens, fers leurs deux rivaux qu’ici je te présente,</l>
-            <l n="239" xml:id="l239">Tu t’en trouveras bien.</l>
-          </sp>
-          <sp who="dorante" xml:id="6-9">
-            <speaker>DORANTE, <em>lui donnant de l’argent.</em></speaker>
-            <l n="240" xml:id="l240">Voilà pour commencer.</l>
-          </sp>
-          <sp who="philidor" xml:id="6-10">
-            <speaker>PHILIDOR, <em>lui donnant de l’argent.</em></speaker>
-            <l n="241" xml:id="l241">Accepte encore cela.</l>
-          </sp>
-          <sp who="valentin" xml:id="6-11">
-            <speaker>VALENTIN.</speaker>
-            <l n="242" xml:id="l242">Je prends sans balancer,</l>
-            <l n="243" xml:id="l243">Et je vous veux servir du meilleur de mon âme.</l>
-          </sp>
-          <sp who="lisimon" xml:id="6-12">
-            <speaker>LISIMON.</speaker>
-            <l n="244" xml:id="l244">Tu n’auras seulement qu’à seconder ma femme.</l>
-            <l n="245" xml:id="l245">Elle entreprend...</l>
-          </sp>
-          <sp who="valentin" xml:id="6-13">
-            <speaker>VALENTIN.</speaker>
-            <l n="246" xml:id="l246">Monsieur, quelque dessein qu’elle ait,</l>
-            <l n="247" xml:id="l247">Je suis persuadé qu’il aura son effet.</l>
-            <l n="248" xml:id="l248">J’ai connu votre femme étant petite fille.</l>
-            <l n="249" xml:id="l249">Qu’elle était éveillée, et qu’elle était gentille ?</l>
-            <l n="250" xml:id="l250">Malicieuse ! allez, je sais l’esprit qu’elle a,</l>
-            <l n="251" xml:id="l251">Nous nous sommes connus pas plus grands que cela.</l>
-          </sp>
-          <sp who="lisimon" xml:id="6-14">
-            <speaker>LISIMON.</speaker>
-            <l n="252" xml:id="l252">Bon ! tu serais son père.</l>
-          </sp>
-          <sp who="valentin" xml:id="6-15">
-            <speaker>VALENTIN.</speaker>
-            <l n="253" xml:id="l253">Oui, cela pourrait être.</l>
-            <l n="254" xml:id="l254">Quand en partant...</l>
-          </sp>
-          <sp who="dorante" xml:id="6-16">
-            <speaker>DORANTE.</speaker>
-            <l n="255" xml:id="l255">Laissons d’inutiles discours</l>
-            <l n="256" xml:id="l256">Qui pour le temps présent ne sont d’aucun secours,</l>
-            <l n="257" xml:id="l257">Et fais nous seulement récit de ce voyage,</l>
-            <l n="258" xml:id="l258">Peut-être en pourrons-nous tirer quelque avantage.</l>
-          </sp>
-          <sp who="valentin" xml:id="6-17">
-            <speaker>VALENTIN.</speaker>
-            <l n="259" xml:id="l259">Au sortir de Paris... nous couchâmes à Meaux.</l>
-          </sp>
-          <sp who="philidor" xml:id="6-18">
-            <speaker>PHILIDOR.</speaker>
-            <l n="260" xml:id="l260">Bon ! en Brie. Est-ce là le chemin de Bordeaux ?</l>
-          </sp>
-          <sp who="valentin" xml:id="6-19">
-            <speaker>VALENTIN.</speaker>
-            <l n="261" xml:id="l261">Hé ! doucement ! Monsieur, tous chemins vont à Rome.</l>
-            <l n="262" xml:id="l262">Commençons par Poitiers. Dans un logis qu’est nomme...</l>
-            <l n="263" xml:id="l263">N’importe. Le Gascon avec le Limosin,</l>
-            <l n="264" xml:id="l264">Qui s’étaient accostés dès longtemps en chemin,</l>
-            <l n="265" xml:id="l265">Se trouvant à l’auberge avec Monsieur Oronte,</l>
-            <l n="266" xml:id="l266">Nous soupons... le Gascon nous fait conte sur conte ;</l>
-            <l n="267" xml:id="l267">Le Commandeur mon oncle, et le Duc mon cousin,</l>
-            <l n="268" xml:id="l268">On fait ceci, cela. Que vous dirai-je. Enfin ;</l>
-            <l n="269" xml:id="l269">La conversation sur les femmes et filles</l>
-            <l n="270" xml:id="l270">Vient à tomber. Vraiment j’en ai deux fort gentilles.</l>
-            <l n="271" xml:id="l271">Dit mon benêt de Maître, elles valent beaucoup.</l>
-            <l n="272" xml:id="l272">En parlant il buvait toujours le petit coup,</l>
-            <l n="273" xml:id="l273">Ah ! que je voudrais bien qu’elles fussent pourvues,</l>
-            <l n="274" xml:id="l274">Elles auront du bien. Si vous les aviez vues,</l>
-            <l n="275" xml:id="l275">Vous en seriez charmés. Elles sont belles... Bon,</l>
-            <l n="276" xml:id="l276">Il ne faut que vous voir, interrompt le Gascon.</l>
-            <l n="277" xml:id="l277">Pour juger quelles sont d’une beauté parfaite.</l>
-            <l n="278" xml:id="l278">Si vous voulez, Monsieur, c’est une affaire faite,</l>
-            <l n="279" xml:id="l279">J’en épouse une. Et moi, dit notre autre hébété,</l>
-            <l n="280" xml:id="l280">Qui jusques là n’avait encore qu’écouté,</l>
-            <l n="281" xml:id="l281">J’épouse l’autre. Allons, à leur santé, beau-père,</l>
-            <l n="282" xml:id="l282">Tope, masse. Voilà comme ils ont fait l’affaire.</l>
-          </sp>
-          <sp who="philidor" xml:id="6-20">
-            <speaker>PHILIDOR.</speaker>
-            <l n="283" xml:id="l283">Mais ces dédits...</l>
-          </sp>
-          <sp who="valentin" xml:id="6-21">
-            <speaker>VALENTIN.</speaker>
-            <l n="284" xml:id="l284">Sur l’heure il leur vient du papier.</l>
-            <l n="285" xml:id="l285">Mon Maître signe tout, et se laisse lier</l>
-            <l n="286" xml:id="l286">Comme un vrai sot qu’il est ; il s’en repent, je pense,</l>
-            <l n="287" xml:id="l287">Car ses gendres tous deux remplis d’impertinences</l>
-            <l n="288" xml:id="l288">Mais voici le Gascon ; rentrez, et promptement</l>
-            <l n="289" xml:id="l289">J’irai vous retrouver dans le même moment.</l>
-            <l n="290" xml:id="l290"> </l>
-            <l n="291" xml:id="l291"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="292" xml:id="l292"> </l>
-          <sp who="valentin" xml:id="7-1">
-            <speaker>DARDIBRAS, VALENTIN</speaker>
-            <l n="293" xml:id="l293"> </l>
-          </sp>
-          <sp who="valentin" xml:id="7-2">
-            <speaker>VALENTIN.</speaker>
-            <l n="294" xml:id="l294">Monsieur, votre valet.</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-3">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="295" xml:id="l295">Tu me vois en colère.</l>
-          </sp>
-          <sp who="valentin" xml:id="7-4">
-            <speaker>VALENTIN.</speaker>
-            <l n="296" xml:id="l296">Comment donc, et pourquoi ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-5">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="297" xml:id="l297">Cadédis, ce beau père</l>
-            <l n="298" xml:id="l298">À qui j’ai cru d’abord qu’était cette maison,</l>
-            <l n="299" xml:id="l299">N’en tient au plus qu’un quart : gens de toute façon</l>
-            <l n="300" xml:id="l300">Descendent, montent, vont, viennent, veillent, reposent,</l>
-            <l n="301" xml:id="l301">Et tout ainsi qu’Oronte en maîtres en disposent.</l>
-            <l n="302" xml:id="l302">Dans son Arche Noé n’eut pas tant d’animaux.</l>
-            <l n="303" xml:id="l303">Aux bords de la Garonne à moi sont vingt Châteaux,</l>
-            <l n="304" xml:id="l304">Qui de tout le pays sont les rares merveilles ;</l>
-            <l n="305" xml:id="l305">Je les occupe seul.</l>
-          </sp>
-          <sp who="valentin" xml:id="7-6">
-            <speaker>VALENTIN, <em>bas.</em></speaker>
-            <l n="306" xml:id="l306">Avec quelques Corneilles.</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-7">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="307" xml:id="l307">Que dis-tu ?</l>
-          </sp>
-          <sp who="valentin" xml:id="7-8">
-            <speaker>VALENTIN.</speaker>
-            <l n="308" xml:id="l308">Rien, Monsieur.</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-9">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="309" xml:id="l309">Ce qui m’a plus surpris,</l>
-            <l n="310" xml:id="l310">C’est le farouche abord de tes belles Iris,</l>
-            <l n="311" xml:id="l311">De ces deux Pimbrenons à qui l’on nous destine,</l>
-            <l n="312" xml:id="l312">L’une la larme à l’œil, l’autre faisant la mine,</l>
-            <l n="313" xml:id="l313">Celle-ci parlant peu, celle-là point du tout,</l>
-            <l n="314" xml:id="l314">J’ai beau m’examiner de l’un à l’autre bout,</l>
-            <l n="315" xml:id="l315">Je ne reconnais plus, sandis, le goût des femmes,</l>
-            <l n="316" xml:id="l316">Moi dont l’aspect toujours alluma mille flammes.</l>
-          </sp>
-          <sp who="valentin" xml:id="7-10">
-            <speaker>VALENTIN.</speaker>
-            <l n="317" xml:id="l317">Cela vous fâche donc ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-11">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="318" xml:id="l318">Après tout j’étais las</l>
-            <l n="319" xml:id="l319">De rencontrer par tout de faciles appas,</l>
-            <l n="320" xml:id="l320">J’ignorais la douceur que chacun dit immense</l>
-            <l n="321" xml:id="l321">De trouver en amour un peu de résistance.</l>
-          </sp>
-          <sp who="valentin" xml:id="7-12">
-            <speaker>VALENTIN.</speaker>
-            <l n="322" xml:id="l322">Et vous en trouverez plus que vous ne pensez,</l>
-            <l n="323" xml:id="l323">J’ai vu tantôt des gens amoureux, empressez,</l>
-            <l n="324" xml:id="l324">Que les filles d’Oronte, (au moins en apparence,)</l>
-            <l n="325" xml:id="l325">Ne traitaient point du tout avec indifférence.</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-13">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="326" xml:id="l326">Ah ! qu’entends-je, où sont-ils ?</l>
-          </sp>
-          <sp who="valentin" xml:id="7-14">
-            <speaker>VALENTIN.</speaker>
-            <l n="327" xml:id="l327">À quatre pas d’ici.</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-15">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="328" xml:id="l328">Il faut s’instruire à fond de cette affaire-ci.</l>
-            <l n="329" xml:id="l329">Mais toi qui sert Oronte, avant votre voyage</l>
-            <l n="330" xml:id="l330">Quelle conduite avaient ses filles ?</l>
-          </sp>
-          <sp who="valentin" xml:id="7-16">
-            <speaker>VALENTIN.</speaker>
-            <l n="331" xml:id="l331">Mais... très sage ;</l>
-            <l n="332" xml:id="l332">J’en puis répondre, au moins tant que j’en ai pris soin.</l>
-            <l n="333" xml:id="l333">Mais je ne dirai pas depuis que j’en suis loin,</l>
-            <l n="334" xml:id="l334">Que quelques suborneurs... ces gens là, par exemple.</l>
-          </sp>
-          <sp who="dardibras" xml:id="7-17">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="335" xml:id="l335">Rentre dans la maison, examine, contemple,</l>
-            <l n="336" xml:id="l336">Sois sincère surtout, et compte après sur moi,</l>
-            <l n="337" xml:id="l337">Je ferai ta fortune, et j’en jure ma foi.</l>
-            <l n="338" xml:id="l338">Je te l’ai déjà dit.</l>
-          </sp>
-          <sp who="valentin" xml:id="7-18">
-            <speaker>VALENTIN.</speaker>
-            <l n="339" xml:id="l339">Monsieur laissez-moi faire.</l>
-            <stage><hi rend="italic"><em>Bas. </em></hi></stage>
-            <l n="341" xml:id="l341">Entrons chez Lisimon pour mettre en train l’affaire,</l>
-            <l n="342" xml:id="l342">Et sachons les projets de sa femme.</l>
-            <l n="343" xml:id="l343"> </l>
-            <l n="344" xml:id="l344"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="345" xml:id="l345"> </l>
-          <sp who="dardibras" xml:id="8-1">
-            <speaker>DARDIBRAS, <em>seul</em></speaker>
-            <l n="346" xml:id="l346"> </l>
-            <l n="347" xml:id="l347">Après tout,</l>
-            <l n="348" xml:id="l348">Il faut examiner ceci de bout en bout.</l>
-            <l n="349" xml:id="l349">Si Valentin dit vrai, sandis, quelle vergogne</l>
-            <l n="350" xml:id="l350">Va tomber désormais sur toute la Gascogne !</l>
-            <l n="351" xml:id="l351">Si l’un des nourrissons qu’elle estime le plus,</l>
-            <l n="352" xml:id="l352">Si Dardibras se trouve au nombre des cocus !</l>
-            <l n="353" xml:id="l353">Maris à qui j’ai tant donné de jalousie,</l>
-            <l n="354" xml:id="l354">Triomphez, à mon tour j’en ai l’âme saisie.</l>
-            <l n="355" xml:id="l355">Maudit dédit par qui j’ai su trop m’engager...</l>
-            <l n="356" xml:id="l356">Mardi je suis bien fou, je n’ai qu’à déloger.</l>
-            <l n="357" xml:id="l357">Mais je n’ai pas le sol, et ce crédule père,</l>
-            <l n="358" xml:id="l358">Ne laisse pas toujours de m’être nécessaire,</l>
-            <l n="359" xml:id="l359">Il fournit aux dépens. Mais que vois-je en ces lieux ?</l>
-            <l n="360" xml:id="l360">Une divinité qui me descend des Cieux,</l>
-            <l n="361" xml:id="l361">Sans doute, je n’ai vu jamais telle merveille.</l>
-            <l n="362" xml:id="l362">Pour savoir qu’elle elle est, prêtons un peu l’oreille.</l>
-            <l n="363" xml:id="l363"> </l>
-            <l n="364" xml:id="l364"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="365" xml:id="l365"> </l>
-          <sp who="lisette" xml:id="9-1">
-            <speaker>HORTENSE, <em>faisant la petite fille innocente</em>, LISETTE, DARDIBRAS</speaker>
-            <l n="366" xml:id="l366"> </l>
-          </sp>
-          <sp who="hortense" xml:id="9-2">
-            <speaker>HORTENSE, <em>en niaise.</em></speaker>
-            <l n="367" xml:id="l367">Oui, je veux retourner tout à l’heure au Couvent.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-3">
-            <speaker>LISETTE.</speaker>
-            <l n="368" xml:id="l368">Du moins goûtez un peu du monde auparavant.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-4">
-            <speaker>HORTENSE.</speaker>
-            <l n="369" xml:id="l369">Moi, rester dans le monde ? hélas qu’y puis-je faire,</l>
-            <l n="370" xml:id="l370">Après avoir perdu dans un an père et mère ?</l>
-          </sp>
-          <sp who="lisette" xml:id="9-5">
-            <speaker>LISETTE.</speaker>
-            <l n="371" xml:id="l371">Sans père ni sans mère on y reste fort bien,</l>
-            <l n="372" xml:id="l372">Quand on a comme vous cent mille écus de bien.</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-6">
-            <speaker>DARDIBRAS, <em>à part.</em></speaker>
-            <l n="373" xml:id="l373">Peste, quel héritage ?</l>
-          </sp>
-          <sp who="lisette" xml:id="9-7">
-            <speaker>LISETTE.</speaker>
-            <l n="374" xml:id="l374">Et votre tuteur même,</l>
-            <l n="375" xml:id="l375">Votre oncle qui vous montre une tendresse extrême,</l>
-            <l n="376" xml:id="l376">Doit-il pas vous résoudre à relier parmi nous.</l>
-            <l n="377" xml:id="l377">Ma nièce, vous dit-il, choisissez un Époux,</l>
-            <l n="378" xml:id="l378">Quand il serait sans bien, qu’il soit noble et vous plaise,</l>
-            <l n="379" xml:id="l379">Du choix que vous ferez je serais toujours aise.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-8">
-            <speaker>HORTENSE.</speaker>
-            <l n="380" xml:id="l380">Pour les hommes j’ai pris trop grande aversion.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-9">
-            <speaker>LISETTE.</speaker>
-            <l n="381" xml:id="l381">Comment avoir pour eux la moindre passion ?</l>
-            <l n="382" xml:id="l382">Vous n’en vîtes jamais. Dès votre tendre enfance</l>
-            <l n="383" xml:id="l383">Vous êtes au Couvent. Depuis huit jours je pense,</l>
-            <l n="384" xml:id="l384">On vous a fait sortir pour venir en ces lieux</l>
-            <l n="385" xml:id="l385">D’un père trépassant recevoir les adieux.</l>
-            <l n="386" xml:id="l386">Quels hommes !...</l>
-          </sp>
-          <sp who="hortense" xml:id="9-10">
-            <speaker>HORTENSE.</speaker>
-            <l n="387" xml:id="l387">J’ai vu ceux qui venaient voir mon Père.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-11">
-            <speaker>LISETTE.</speaker>
-            <l n="388" xml:id="l388">Et qui, ses Médecins et son Apothicaire ?</l>
-            <l n="389" xml:id="l389">Pour donner de l’amour voilà de belles gens,</l>
-            <l n="390" xml:id="l390">Ils sont faits pour les morts et non pour les vivants.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-12">
-            <speaker>HORTENSE.</speaker>
-            <l n="391" xml:id="l391">Les hommes sont-ils pas tous faits de même sorte ?</l>
-          </sp>
-          <sp who="lisette" xml:id="9-13">
-            <speaker>LISETTE.</speaker>
-            <l n="392" xml:id="l392">La peste que nenni, la différence est forte.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-14">
-            <speaker>HORTENSE.</speaker>
-            <l n="393" xml:id="l393">Quelle est la bonne espèce ?</l>
-          </sp>
-          <sp who="lisette" xml:id="9-15">
-            <speaker>LISETTE.</speaker>
-            <l n="394" xml:id="l394">En voici le portrait.</l>
-            <l n="395" xml:id="l395">Le sourcil bien marqué, l’œil vif, le nez bien fait,</l>
-            <l n="396" xml:id="l396">Le corps droit, toutefois tant soit peu sur la hanche,</l>
-            <l n="397" xml:id="l397">Et que la tête aussi sur l’épaule un peu penche,</l>
-            <l n="398" xml:id="l398">C’est le bon air, la jambe et les pieds bien tournés,</l>
-            <l n="399" xml:id="l399">Le chapeau sur l’oreille et tantôt sur le nez,</l>
-            <l n="400" xml:id="l400">L’Estomac débraillé, la main dans la ceinture,</l>
-            <l n="401" xml:id="l401">Et l’esprit enjoué.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-16">
-            <speaker>HORTENSE.</speaker>
-            <l n="402" xml:id="l402">L’agréable peinture.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-17">
-            <speaker>LISETTE.</speaker>
-            <l n="403" xml:id="l403">Si vous voyiez un homme approchant de cela.</l>
-            <l n="404" xml:id="l404">Hem ?</l>
-          </sp>
-          <sp who="hortense" xml:id="9-18">
-            <speaker>HORTENSE.</speaker>
-            <l n="405" xml:id="l405">Que je l’aimerais, Lisette ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-19">
-            <speaker>DARDIBRAS <em>se présentant.</em></speaker>
-            <l n="406" xml:id="l406">Me voilà.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-20">
-            <speaker>HORTENSE.</speaker>
-            <l n="407" xml:id="l407">Ah ! fuyons.</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-21">
-            <speaker>DARDIBRAS, <em>courant après.</em></speaker>
-            <l n="408" xml:id="l408">Arrêtez, adorable Orpheline.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-22">
-            <speaker>HORTENSE.</speaker>
-            <l n="409" xml:id="l409">Non, Lisette, rentrons... Mais il a bonne mine,</l>
-            <l n="410" xml:id="l410">Demeurons un moment pour le considérer.</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-23">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="411" xml:id="l411">Je ressemble au portrait, et veux vous adorer,</l>
-            <l n="412" xml:id="l412">Belle Enfant... je suis tel que votre oncle souhaite,</l>
-            <l n="413" xml:id="l413">Noble...</l>
-          </sp>
-          <sp who="hortense" xml:id="9-24">
-            <speaker>HORTENSE.</speaker>
-            <l n="414" xml:id="l414">Il nous écoutait, que dirons-nous, Lisette ?</l>
-          </sp>
-          <sp who="lisette" xml:id="9-25">
-            <speaker>LISETTE.</speaker>
-            <l n="415" xml:id="l415">Je dirai qu’en Monsieur vous trouvez un trésor,</l>
-            <l n="416" xml:id="l416">Noble...</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-26">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="417" xml:id="l417">Quand vous auriez trouvé mon pesant d’or,</l>
-            <l n="418" xml:id="l418">Vous auriez moins trouvé.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-27">
-            <speaker>HORTENSE.</speaker>
-            <l n="419" xml:id="l419">Je sens un trouble extrême...</l>
-            <l n="420" xml:id="l420">Je voudrais bien savoir comme on dit que l’on aime.</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-28">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="421" xml:id="l421">Trop aimable innocente.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-29">
-            <speaker>LISETTE.</speaker>
-            <l n="422" xml:id="l422">On ne dit point cela :</l>
-            <l n="423" xml:id="l423">Une fille avouer la tendresse qu’elle a !</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-30">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="424" xml:id="l424">Pourquoi ? laissez-la dire.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-31">
-            <speaker>LISETTE.</speaker>
-            <l n="425" xml:id="l425">Un semblable langage</l>
-            <l n="426" xml:id="l426">Ne se doit point tenir avant le mariage.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-32">
-            <speaker>HORTENSE.</speaker>
-            <l n="427" xml:id="l427">Mariée ? on dit donc que l’on aime.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-33">
-            <speaker>LISETTE.</speaker>
-            <l n="428" xml:id="l428">Fort bien,</l>
-            <l n="429" xml:id="l429">Une femme le dit quand il n’en est plus rien.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-34">
-            <speaker>HORTENSE.</speaker>
-            <l n="430" xml:id="l430">Ah ! que je le dirai.</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-35">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="431" xml:id="l431">Son air naïf m’enchante,</l>
-            <l n="432" xml:id="l432">Je n’ai jamais senti d’ardeur plus violente.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-36">
-            <speaker>HORTENSE.</speaker>
-            <l n="433" xml:id="l433">Et moi je n’ai jamais senti ce que je sens,</l>
-            <l n="434" xml:id="l434">Certain je ne sais quoi me trouble tous les sens,</l>
-            <l n="435" xml:id="l435">Vous en êtes la cause.</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-37">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="436" xml:id="l436">Ah ! Ciel, je m’extasie,</l>
-            <l n="437" xml:id="l437">Je goûte le Nectar ensemble et l’Ambroisie,</l>
-            <l n="438" xml:id="l438">Contemplant ses appas, entendant ses discours.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-38">
-            <speaker>LISETTE.</speaker>
-            <l n="439" xml:id="l439">Couronnons promptement de si promptes amours.</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-39">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="440" xml:id="l440">Comment faut-il s’y prendre ?</l>
-          </sp>
-          <sp who="hortense" xml:id="9-40">
-            <speaker>HORTENSE.</speaker>
-            <l n="441" xml:id="l441">Instruis nous-en, Lisette.</l>
-          </sp>
-          <sp who="lisette" xml:id="9-41">
-            <speaker>LISETTE.</speaker>
-            <l n="442" xml:id="l442">Il faut parler à l’Oncle, et votre affaire est faite,</l>
-            <l n="443" xml:id="l443">Le bon homme sera charmé de votre choix :</l>
-            <l n="444" xml:id="l444">Allons-y de ce pas, et parlons lui tous trois.</l>
-            <l n="445" xml:id="l445">Mais que lui dirons-nous quel nom est le vôtre ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="9-42">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="446" xml:id="l446">Il est l’amour d’un sexe et la terreur de l’autre,</l>
-            <l n="447" xml:id="l447">Me nommant je suis sur de son consentement,</l>
-            <l n="448" xml:id="l448">De tout notre pays mon nom est l’ornement,</l>
-            <l n="449" xml:id="l449">Dardibras ! Sur la terre on ne trouve point d’homme</l>
-            <l n="450" xml:id="l450">Que ce nom n’intimide ; alors que je me nomme,</l>
-            <l n="451" xml:id="l451">Il m’étonne moi-même.</l>
-          </sp>
-          <sp who="hortense" xml:id="9-43">
-            <speaker>HORTENSE.</speaker>
-            <l n="452" xml:id="l452">Il ne me fait point peur,</l>
-            <l n="453" xml:id="l453">Au contraire, ce nom redouble mon ardeur.</l>
-            <l n="454" xml:id="l454"> </l>
-            <l n="455" xml:id="l455"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="456" xml:id="l456"> </l>
-          <sp who="valentin" xml:id="10-1">
-            <speaker>DARDIBRAS, HORTENSE, LISETTE, VALENTIN</speaker>
-            <l n="457" xml:id="l457"> </l>
-          </sp>
-          <sp who="valentin" xml:id="10-2">
-            <speaker>VALENTIN.</speaker>
-            <l n="458" xml:id="l458">Je viens vous avertir que la Fille d’Oronte,</l>
-            <l n="459" xml:id="l459">Votre Maîtresse...</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-3">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="460" xml:id="l460">Ô Ciel !</l>
-          </sp>
-          <sp who="lisette" xml:id="10-4">
-            <speaker>LISETTE.</speaker>
-            <l n="461" xml:id="l461">Que dit-il ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-5">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="462" xml:id="l462">C’est, un conte</l>
-            <l n="463" xml:id="l463">Qu’il vient...</l>
-          </sp>
-          <sp who="valentin" xml:id="10-6">
-            <speaker>VALENTIN.</speaker>
-            <l n="464" xml:id="l464">Non par ma foi c’est une vérité,</l>
-            <l n="465" xml:id="l465">Votre femme future...</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-7">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="466" xml:id="l466">Ah ! me voilà gâté.</l>
-          </sp>
-          <sp who="valentin" xml:id="10-8">
-            <speaker>VALENTIN.</speaker>
-            <l n="467" xml:id="l467">Un homme à ses genoux...</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-9">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="468" xml:id="l468">Maraud, veux-tu te taire.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-10">
-            <speaker>LISETTE.</speaker>
-            <l n="469" xml:id="l469">Quoi ! vous aimez ailleurs ? bon Dieu, qu’allais-je faire ?</l>
-            <l n="470" xml:id="l470">Rentrons vite, Monsieur n’est pas ce qu’il nous faut.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-11">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="471" xml:id="l471">Écoutez-moi.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-12">
-            <speaker>LISETTE.</speaker>
-            <l n="472" xml:id="l472">Non, non.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-13">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="473" xml:id="l473">Que je sois un maraud...</l>
-          </sp>
-          <sp who="lisette" xml:id="10-14">
-            <speaker>LISETTE, <em>à Hortense.</em></speaker>
-            <l n="474" xml:id="l474">Rentrez dans le Couvent pour toute votre vie,</l>
-            <l n="475" xml:id="l475">Plutôt que de souffrir...</l>
-          </sp>
-          <sp who="hortense" xml:id="10-15">
-            <speaker>HORTENSE.</speaker>
-            <l n="476" xml:id="l476">Je n’en ai plus d’envie,</l>
-            <l n="477" xml:id="l477">Je ne veux point quitter ce Monsieur-là.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-16">
-            <speaker>LISETTE.</speaker>
-            <l n="478" xml:id="l478">Comment ?</l>
-          </sp>
-          <sp who="hortense" xml:id="10-17">
-            <speaker>HORTENSE.</speaker>
-            <l n="479" xml:id="l479">Je ne veux point sans lui rentrer dans le Couvent.</l>
-            <l n="480" xml:id="l480">Qu’il s’y mette avec moi.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-18">
-            <speaker>LISETTE.</speaker>
-            <l n="481" xml:id="l481">Mais vous rêvez, je pense.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-19">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="482" xml:id="l482">Hé ! ne la grondez point.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-20">
-            <speaker>LISETTE.</speaker>
-            <l n="483" xml:id="l483">Oh, quelle extravagance !</l>
-            <l n="484" xml:id="l484">Au Couvent avec vous !</l>
-          </sp>
-          <sp who="valentin" xml:id="10-21">
-            <speaker>VALENTIN.</speaker>
-            <l n="485" xml:id="l485">Il est bon là, ma foi.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-22">
-            <speaker>LISETTE.</speaker>
-            <l n="486" xml:id="l486">Un homme !</l>
-          </sp>
-          <sp who="valentin" xml:id="10-23">
-            <speaker>VALENTIN, <em>chantant.</em></speaker>
-            <stage><hi rend="italic"><em>Ce serait pour tout le Convent. </em></hi></stage>
-          </sp>
-          <sp who="dardibras" xml:id="10-24">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="488" xml:id="l488">Quoi ?</l>
-            <l n="489" xml:id="l489">Tu chante malheureux !</l>
-          </sp>
-          <sp who="valentin" xml:id="10-25">
-            <speaker>VALENTIN.</speaker>
-            <l n="490" xml:id="l490">C’est une chansonnette,</l>
-            <l n="491" xml:id="l491">Monsieur, que l’on m’apprit quand je fus en retraite.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-26">
-            <speaker>LISETTE.</speaker>
-            <l n="492" xml:id="l492">Ça Monsieur, en deux mots il faut nous parler net.</l>
-            <l n="493" xml:id="l493">Vous êtes engagé.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-27">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="494" xml:id="l494">Rien n’est encore fait.</l>
-          </sp>
-          <sp who="valentin" xml:id="10-28">
-            <speaker>VALENTIN.</speaker>
-            <l n="495" xml:id="l495">Monsieur n’a qu’un dédit.</l>
-          </sp>
-          <sp who="valentin" xml:id="10-29">
-            <speaker>DARDIBRAS, <em>à Valentin bas.</em></speaker>
-            <l n="496" xml:id="l496">De quoi vas-tu l’instruire,</l>
-            <l n="497" xml:id="l497">Tais-toi ; ton zèle ici ne fait rien que me nuire.</l>
-            <stage><hi rend="italic"><em>À Hortense.</em></hi></stage>
-            <l n="499" xml:id="l499">J’ai fait avec Oronte, ainsi qu’il vous le dit,</l>
-            <l n="500" xml:id="l500">Un papier griffonné manière de dédit.</l>
-          </sp>
-          <sp who="valentin" xml:id="10-30">
-            <speaker>VALENTIN.</speaker>
-            <l n="501" xml:id="l501">De quatre mille écus !</l>
-          </sp>
-          <sp who="valentin" xml:id="10-31">
-            <speaker>DARDIBRAS, <em>à Valentin bas.</em></speaker>
-            <l n="502" xml:id="l502">C’est donc pour me déplaire</l>
-            <l n="503" xml:id="l503">Que tu...</l>
-          </sp>
-          <sp who="valentin" xml:id="10-32">
-            <speaker>VALENTIN.</speaker>
-            <l n="504" xml:id="l504">Vous oubliez la moitié de l’affaire,</l>
-            <l n="505" xml:id="l505">Je vous fais souvenir autant que je le puis.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-33">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="506" xml:id="l506">Je m’en souviens sans toi. Je ne sais où j’en suis.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-34">
-            <speaker>LISETTE.</speaker>
-            <l n="507" xml:id="l507">Monsieur, si vous pouvez r’avoir votre promesse,</l>
-            <l n="508" xml:id="l508">Vous pourrez obtenir la main de ma Maîtresse,</l>
-            <l n="509" xml:id="l509">Aussi facilement que vous avez son cœur.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-35">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="510" xml:id="l510">Ah ! c’est en quoi je mets mon souverain bonheur.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-36">
-            <speaker>LISETTE.</speaker>
-            <l n="511" xml:id="l511">Ne paraissez donc plus que dégagé d’Oronte.</l>
-            <l n="512" xml:id="l512">Ma Maîtresse n’a pas mérité qu’on l’affronte,</l>
-            <l n="513" xml:id="l513">Elle est jeune.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-37">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="514" xml:id="l514">Je vais contenter vos souhaits.</l>
-            <l n="515" xml:id="l515">Adieu.</l>
-          </sp>
-          <sp who="hortense" xml:id="10-38">
-            <speaker>HORTENSE.</speaker>
-            <l n="516" xml:id="l516">Je ne veux plus vous quitter désormais.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-39">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="517" xml:id="l517">Je vais trouver Oronte ; et quoiqu’il en advienne,</l>
-            <l n="518" xml:id="l518">Retirer ma parole et lui rendre la sienne.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-40">
-            <speaker>LISETTE.</speaker>
-            <l n="519" xml:id="l519">Mais sur tout le secret.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-41">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="520" xml:id="l520">Comment ? vous moquez-vous ?</l>
-            <l n="521" xml:id="l521">Demander du secret aux Gascons, Cadebious,</l>
-            <l n="522" xml:id="l522">Si nous n’en avions pas nous troublerions les Villes,</l>
-            <l n="523" xml:id="l523">On n’y verrait jamais de ménages tranquilles.</l>
-          </sp>
-          <sp who="hortense" xml:id="10-42">
-            <speaker>HORTENSE.</speaker>
-            <l n="524" xml:id="l524">Vous me quittez sitôt ?</l>
-          </sp>
-          <sp who="valentin" xml:id="10-43">
-            <speaker>DARDIBRAS, <em>à Valentin.</em></speaker>
-            <l n="525" xml:id="l525">Elle va bien pleurer.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-44">
-            <speaker>LISETTE.</speaker>
-            <l n="526" xml:id="l526">Non, non.</l>
-          </sp>
-          <sp who="lisette" xml:id="10-45">
-            <speaker>DARDIBRAS, <em>à Lisette.</em></speaker>
-            <l n="527" xml:id="l527">Si mon départ va la désespérer ?</l>
-          </sp>
-          <sp who="lisette" xml:id="10-46">
-            <speaker>LISETTE.</speaker>
-            <l n="528" xml:id="l528">Ne craignez rien.</l>
-          </sp>
-          <sp who="hortense" xml:id="10-47">
-            <speaker>HORTENSE.</speaker>
-            <l n="529" xml:id="l529">Restez.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-48">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="530" xml:id="l530">À regret je vous quitte,</l>
-            <l n="531" xml:id="l531">Mais enfin, belle Enfant, j’en reviendrai plus vite.</l>
-          </sp>
-          <sp who="hortense" xml:id="10-49">
-            <speaker>HORTENSE.</speaker>
-            <l n="532" xml:id="l532">Ne tardez pas.</l>
-          </sp>
-          <sp who="dardibras" xml:id="10-50">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="533" xml:id="l533">Je vole...</l>
-            <stage><hi rend="italic"><em>À part. </em></hi></stage>
-            <l n="535" xml:id="l535">Informons-nous pourtant,</l>
-            <l n="536" xml:id="l536">Si les cent mille écus sont en argent comptant.</l>
-            <l n="537" xml:id="l537"> </l>
-            <l n="538" xml:id="l538"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="539" xml:id="l539"> </l>
-          <sp who="valentin" xml:id="11-1">
-            <speaker>HORTENSE, LISETTE, VALENTIN</speaker>
-            <l n="540" xml:id="l540"> </l>
-          </sp>
-          <sp who="hortense" xml:id="11-2">
-            <speaker>HORTENSE.</speaker>
-            <l n="541" xml:id="l541">Voilà le plus fort fait. Il est encore à craindre</l>
-            <l n="542" xml:id="l542">Qu’il ne demande... Mais nos voisins sauront feindre,</l>
-            <l n="543" xml:id="l543">Ils sont tous prévenus, j’ai fait prendre ce soin.</l>
-            <l n="544" xml:id="l544">Mon mari doit passer pour mon oncle au besoin.</l>
-            <l n="545" xml:id="l545">Enfin j’ai su prévoir jusques au moindre obstacle,</l>
-            <l n="546" xml:id="l546">Car duper un Gascon au moins c’est un miracle.</l>
-            <l n="547" xml:id="l547">Il ne peut faire un pas, il ne peut dire un mot,</l>
-            <l n="548" xml:id="l548">Que nous ne le sachions, on le fuit. L’autre sot...</l>
-          </sp>
-          <sp who="valentin" xml:id="11-3">
-            <speaker>VALENTIN.</speaker>
-            <l n="549" xml:id="l549">Sorti de l’arrière-ban la campagne passée,</l>
-            <l n="550" xml:id="l550">Il en fut, m’a-t-on dit, la fable et la risée.</l>
-            <l n="551" xml:id="l551">Sans esprit, toutefois il se croit beau garçon.</l>
-            <l n="552" xml:id="l552">Il a de l’amour propre autant que le Gascon.</l>
-          </sp>
-          <sp who="hortense" xml:id="11-4">
-            <speaker>HORTENSE.</speaker>
-            <l n="553" xml:id="l553">Tant mieux nous le tenons.</l>
-          </sp>
-          <sp who="valentin" xml:id="11-5">
-            <speaker>VALENTIN.</speaker>
-            <l n="554" xml:id="l554">Ça rendez moi justice,</l>
-            <l n="555" xml:id="l555">N’ai-je pas comme il faut seconder l’artifice,</l>
-            <l n="556" xml:id="l556">Comme vous le vouliez aider votre dessein ?</l>
-          </sp>
-          <sp who="hortense" xml:id="11-6">
-            <speaker>HORTENSE.</speaker>
-            <l n="557" xml:id="l557">Fort bien, mais concertons pour notre Limosin</l>
-            <l n="558" xml:id="l558">Quel piège nous tendrons.</l>
-          </sp>
-          <sp who="valentin" xml:id="11-7">
-            <speaker>VALENTIN.</speaker>
-            <l n="559" xml:id="l559">Ah ! le voilà, je pense,</l>
-            <l n="560" xml:id="l560">L’autre de son bonheur aura fait confidence</l>
-            <l n="561" xml:id="l561">S’ils se sont rencontrés. Que Diable dirons-nous !</l>
-          </sp>
-          <sp who="hortense" xml:id="11-8">
-            <speaker>HORTENSE.</speaker>
-            <l n="562" xml:id="l562">Changeons de batterie.</l>
-          </sp>
-          <sp who="valentin" xml:id="11-9">
-            <speaker>VALENTIN.</speaker>
-            <l n="563" xml:id="l563">Il vient, éloignez-vous.</l>
-            <l n="564" xml:id="l564"> </l>
-            <l n="565" xml:id="l565"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="566" xml:id="l566"> </l>
-          <sp who="valentin" xml:id="12-1">
-            <speaker>FATIGNAC, VALENTIN, HORTENSE <em>et</em> LISETTE, <em>au fond du théâtre</em></speaker>
-            <l n="567" xml:id="l567"> </l>
-          </sp>
-          <sp who="valentin" xml:id="12-2">
-            <speaker>VALENTIN, <em>à part.</em></speaker>
-            <l n="568" xml:id="l568">Il me paraît chagrin.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-3">
-            <speaker>FATIGNAC.</speaker>
-            <l n="569" xml:id="l569">Peste soit du beau-père.</l>
-            <l n="570" xml:id="l570">Je voudrais pour beaucoup que ce fût à refaire.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-4">
-            <speaker>VALENTIN.</speaker>
-            <l n="571" xml:id="l571">Qu’avez-vous, Monsieur ?</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-5">
-            <speaker>FATIGNAC.</speaker>
-            <l n="572" xml:id="l572">J’ai que je suis fâché.</l>
-            <l n="573" xml:id="l573">J’ai fait avec Oronte un fort mauvais marché.</l>
-            <l n="574" xml:id="l574">Sa larmoyeuse Élise, et sa sombre Angélique,</l>
-            <l n="575" xml:id="l575">Quoique jeunes, n’ont rien cependant qui me pique,</l>
-            <l n="576" xml:id="l576">Je ne les aime point, elles pleurent toujours,</l>
-            <l n="577" xml:id="l577">Et je n’ai jamais vu de si tristes amours.</l>
-            <l n="578" xml:id="l578">On disait à Paris les filles si joyeuses.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-6">
-            <speaker>HORTENSE,  <em>pleurant et contrefaisant la veuve.</em></speaker>
-            <l n="579" xml:id="l579">Ah !</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-7">
-            <speaker>FATIGNAC.</speaker>
-            <l n="580" xml:id="l580">Qu’est-ce que j’entends ? encore des pleureuses ?</l>
-            <l n="581" xml:id="l581">Je pense qu’il en pleut.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-8">
-            <speaker>HORTENSE.</speaker>
-            <l n="582" xml:id="l582">Perdre un époux chéri.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-9">
-            <speaker>VALENTIN.</speaker>
-            <l n="583" xml:id="l583">C’est une Veuve qui...</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-10">
-            <speaker>FATIGNAC.</speaker>
-            <l n="584" xml:id="l584">Qui n’a plus de mari ?</l>
-          </sp>
-          <sp who="valentin" xml:id="12-11">
-            <speaker>VALENTIN.</speaker>
-            <l n="585" xml:id="l585">À peu près : on la voit se lamenter sans cesse.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-12">
-            <speaker>FATIGNAC.</speaker>
-            <l n="586" xml:id="l586">Elle est ma foi jolie avec cette tristesse.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-13">
-            <speaker>VALENTIN.</speaker>
-            <l n="587" xml:id="l587">Monsieur, je n’aime point à voir pleurer les gens ;</l>
-            <l n="588" xml:id="l588">Éloignons nous.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-14">
-            <speaker>FATIGNAC.</speaker>
-            <l n="589" xml:id="l589">Dis-moi, loge-t-elle céans ?</l>
-          </sp>
-          <sp who="valentin" xml:id="12-15">
-            <speaker>VALENTIN.</speaker>
-            <l n="590" xml:id="l590">Vraiment cette maison, et si grande et si belle,</l>
-            <l n="591" xml:id="l591">Est un de ses effets.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-16">
-            <speaker>FATIGNAC.</speaker>
-            <l n="592" xml:id="l592">Mais Oronte ?...</l>
-          </sp>
-          <sp who="valentin" xml:id="12-17">
-            <speaker>VALENTIN.</speaker>
-            <l n="593" xml:id="l593">Tient d’elle</l>
-            <l n="594" xml:id="l594">Un simple appartement.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-18">
-            <speaker>FATIGNAC.</speaker>
-            <l n="595" xml:id="l595">Hé ! le crasseux.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-19">
-            <speaker>HORTENSE, <em>sanglotant.</em></speaker>
-            <l n="596" xml:id="l596">Hélas !</l>
-            <l n="597" xml:id="l597">Je ne te verrai plus.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-20">
-            <speaker>FATIGNAC, <em>pleurant.</em></speaker>
-            <l n="598" xml:id="l598">Ses pleurs ont tant d’appas,</l>
-            <l n="599" xml:id="l599">Que je crois que j’en pleure.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-21">
-            <speaker>VALENTIN, <em>feignant de pleurer.</em></speaker>
-            <l n="600" xml:id="l600">Et moi je fonds en larmes.</l>
-            <l n="601" xml:id="l601">Que ce sexe sur nous a de puissantes armes !</l>
-            <l n="602" xml:id="l602">Ma foi, sortons d’ici, pourquoi nous chagriner.</l>
-            <l n="603" xml:id="l603">Elle n’a que des pleurs, Monsieur, à nous donner,</l>
-            <l n="604" xml:id="l604">Car les vingt mille francs qu’elle a de bonne rente,</l>
-            <l n="605" xml:id="l605">Elle les garde bien.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-22">
-            <speaker>FATIGNAC.</speaker>
-            <l n="606" xml:id="l606">Vingt mille ?</l>
-          </sp>
-          <sp who="valentin" xml:id="12-23">
-            <speaker>VALENTIN.</speaker>
-            <l n="607" xml:id="l607">Près de trente,</l>
-            <l n="608" xml:id="l608">Que ne les donne-t-elle à vous ou bien à moi,</l>
-            <l n="609" xml:id="l609">On la consolerait de bon cœur.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-24">
-            <speaker>FATIGNAC.</speaker>
-            <l n="610" xml:id="l610">Oui ma foi,</l>
-            <l n="611" xml:id="l611">Moi sur tout. Ah ! jarni, si je pouvais lui plaire !</l>
-            <l n="612" xml:id="l612">J’ai charmé vingt guenons, sans dessein de le faire ;</l>
-            <l n="613" xml:id="l613">Ah ! qu’il vaudrait bien mieux à présent...</l>
-          </sp>
-          <sp who="hortense" xml:id="12-25">
-            <speaker>HORTENSE.</speaker>
-            <l n="614" xml:id="l614">Cette nuit</l>
-            <l n="615" xml:id="l615">J’ai vu ce cher époux qui sans cesse me suit.</l>
-            <l n="616" xml:id="l616">Mais dans trop de plaisir ce souvenir me plonge,</l>
-            <l n="617" xml:id="l617">Je veux être affligée.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-26">
-            <speaker>VALENTIN.</speaker>
-            <l n="618" xml:id="l618">Elle allait dire un songe,</l>
-            <l n="619" xml:id="l619">Aussi beau que celui de Thyeste<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-27">
-            <speaker>FATIGNAC.</speaker>
-            <l n="620" xml:id="l620">Comment ?</l>
-          </sp>
-          <sp who="hortense" xml:id="12-28">
-            <speaker>HORTENSE, <em>regardant Fatignac.</em></speaker>
-            <l n="621" xml:id="l621">Mais ne revois-je pas cet époux si charmant ?</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-29">
-            <speaker>FATIGNAC.</speaker>
-            <l n="622" xml:id="l622">Elle me prend pour lui.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-30">
-            <speaker>HORTENSE.</speaker>
-            <l n="623" xml:id="l623">Voilà son air, sa grâce,</l>
-            <l n="624" xml:id="l624">C’est lui-même. C’est toi, cher époux, que j’embrasse.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-31">
-            <speaker>FATIGNAC.</speaker>
-            <l n="625" xml:id="l625">Tout coup vaille, voyons jusqu’où va sa douleur,</l>
-            <l n="626" xml:id="l626">Je veux me laisser faire. Hé n’ayez point de peur.</l>
-            <stage><hi rend="italic"><em>Hortense feint de s’évanouir, et se penche sur Lisette.</em></hi></stage>
-            <l n="628" xml:id="l628">Je vous aime... À ce mot je pense qu’elle pâme !</l>
-          </sp>
-          <sp who="valentin" xml:id="12-32">
-            <speaker>VALENTIN.</speaker>
-            <l n="629" xml:id="l629">Monsieur, c est le défunt qui trouble encor son âme.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-33">
-            <speaker>FATIGNAC.</speaker>
-            <l n="630" xml:id="l630">Dans cette pamoison on dirait qu’elle dort.</l>
-            <l n="631" xml:id="l631">Que diantre votre Veuve aimait donc bien ce mort ?</l>
-          </sp>
-          <sp who="lisette" xml:id="12-34">
-            <speaker>LISETTE.</speaker>
-            <l n="632" xml:id="l632">Vous le voyez, Monsieur.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-35">
-            <speaker>HORTENSE, <em>le tirant rudement.</em></speaker>
-            <l n="633" xml:id="l633">Cher ombre reste encore,</l>
-            <l n="634" xml:id="l634">N’échappe pas sitôt à celle qui t’adore.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-36">
-            <speaker>FATIGNAC.</speaker>
-            <l n="635" xml:id="l635">Et je ne bouge pas, je suis trop attendri.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-37">
-            <speaker>HORTENSE, <em>comme en sursaut.</em></speaker>
-            <l n="636" xml:id="l636">Ah ! je reviens à moi, ce n’est point mon mari.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-38">
-            <speaker>FATIGNAC.</speaker>
-            <l n="637" xml:id="l637">Qu’est-ce que cela fait ?</l>
-          </sp>
-          <sp who="hortense" xml:id="12-39">
-            <speaker>HORTENSE.</speaker>
-            <l n="638" xml:id="l638">Mais quelle ressemblance.</l>
-            <l n="639" xml:id="l639">T’en souvient-il, Lisette ?</l>
-          </sp>
-          <sp who="lisette" xml:id="12-40">
-            <speaker>LISETTE.</speaker>
-            <l n="640" xml:id="l640">Oui, j’en ai souvenance.</l>
-            <l n="641" xml:id="l641">Mais Monsieur est mieux fait que n’était votre Époux.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-41">
-            <speaker>FATIGNAC.</speaker>
-            <l n="642" xml:id="l642">Et plus beau.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-42">
-            <speaker>HORTENSE.</speaker>
-            <l n="643" xml:id="l643">Je me meurs.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-43">
-            <speaker>VALENTIN, <em>bas, à Fatignac.</em></speaker>
-            <l n="644" xml:id="l644">Cela va bien pour nous.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-44">
-            <speaker>HORTENSE.</speaker>
-            <l n="645" xml:id="l645">Lisette, je ma trouve en un désordre étrange.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-45">
-            <speaker>VALENTIN, <em>à Fatignac, bas.</em></speaker>
-            <l n="646" xml:id="l646">Si la Veuve, Monsieur, pouvait prendre le change,</l>
-            <l n="647" xml:id="l647">Souvenez-vous de moi.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-46">
-            <speaker>FATIGNAC, <em>à Hortense.</em></speaker>
-            <l n="648" xml:id="l648">Vous avez des appas...</l>
-            <l n="649" xml:id="l649">Hé bien... le mort est mort... et je ne le suis pas.</l>
-            <l n="650" xml:id="l650">Laissez là le défunt, puisqu’il n’est plus en vie,</l>
-            <l n="651" xml:id="l651">Il ne reviendra pas, il n’en a pas d’envie,</l>
-            <l n="652" xml:id="l652">Prenez-moi, je suis vif, alerte, gai, fringant,</l>
-            <l n="653" xml:id="l653">Mais un trépassé laid...</l>
-          </sp>
-          <sp who="hortense" xml:id="12-47">
-            <speaker>HORTENSE.</speaker>
-            <l n="654" xml:id="l654">Vous lui ressemblez tant,</l>
-            <l n="655" xml:id="l655">Que sans aller plus loin, qui que vous puissiez être.</l>
-            <l n="656" xml:id="l656">Je fais votre fortune.</l>
-          </sp>
-          <sp who="lisette" xml:id="12-48">
-            <speaker>LISETTE.</speaker>
-            <l n="657" xml:id="l657">Eh quoi ! sans le connaître ?</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-49">
-            <speaker>FATIGNAC.</speaker>
-            <l n="658" xml:id="l658">De quoi vous mêlez-vous ? je suis Baron, d’abord.</l>
-            <l n="659" xml:id="l659">Quand on plaît à Madame, et qu’on ressemble au mort,</l>
-            <l n="660" xml:id="l660">En faut-il davantage ? et si de ma fortune</l>
-            <l n="661" xml:id="l661">Elle veut prendre soin.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-50">
-            <speaker>HORTENSE.</speaker>
-            <l n="662" xml:id="l662">Vous êtes importune.</l>
-            <l n="663" xml:id="l663">Quand Monsieur n’aurait pas la qualité qu’il a,</l>
-            <l n="664" xml:id="l664">Il suffit que je l’aime.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-51">
-            <speaker>FATIGNAC.</speaker>
-            <l n="665" xml:id="l665">Il ne faut que cela.</l>
-            <l n="666" xml:id="l666">Mais pour vous contenter et faire mon éloge,</l>
-            <l n="667" xml:id="l667">Mon nom est Fatignac, et mon pays Limoge.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-52">
-            <speaker>HORTENSE.</speaker>
-            <l n="668" xml:id="l668">Qu’entends-je ?</l>
-          </sp>
-          <sp who="lisette" xml:id="12-53">
-            <speaker>LISETTE.</speaker>
-            <l n="669" xml:id="l669">Fatignac ! quoi Monsieur, c’est donc vous,</l>
-            <l n="670" xml:id="l670">Qui d’Angélique ici venez être l’Époux ?</l>
-            <l n="671" xml:id="l671">Vous vouliez nous tromper avec votre air si sage,</l>
-            <l n="672" xml:id="l672">Avez-vous ce cœur-là, petit cruel ?</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-54">
-            <speaker>FATIGNAC.</speaker>
-            <l n="673" xml:id="l673">J’enrage.</l>
-          </sp>
-          <sp who="lisette" xml:id="12-55">
-            <speaker>LISETTE.</speaker>
-            <l n="674" xml:id="l674">Vous avez un dédit !</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-56">
-            <speaker>FATIGNAC.</speaker>
-            <l n="675" xml:id="l675">Hé bien : je le payerai,</l>
-            <l n="676" xml:id="l676">Et devant vous tantôt je le déchirerai.</l>
-            <stage><hi rend="italic"><em>Il tire le dédit de sa poche. </em></hi></stage>
-            <l n="678" xml:id="l678">Voilà toujours celui d’Oronte, chère Veuve.</l>
-            <l n="679" xml:id="l679">De ma sincérité il faut une autre preuve,</l>
-            <l n="680" xml:id="l680">Faites de ce papier tout ce qu’il vous plaira.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-57">
-            <speaker>HORTENSE, <em>dédaignant de prendre le dédit.</em></speaker>
-            <l n="681" xml:id="l681">Cela suffit.</l>
-          </sp>
-          <sp who="lisette" xml:id="12-58">
-            <speaker>LISETTE, <em>l’arrachant.</em></speaker>
-            <l n="682" xml:id="l682">Donnez, on l’examinera.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-59">
-            <speaker>FATIGNAC.</speaker>
-            <l n="683" xml:id="l683">Oh ! ça donc, c’est donc fait ?</l>
-          </sp>
-          <sp who="hortense" xml:id="12-60">
-            <speaker>HORTENSE.</speaker>
-            <l n="684" xml:id="l684">Hé ! oui, je vous épouse,</l>
-            <l n="685" xml:id="l685">Dût la fille d’Oronte en devenir jalouse,</l>
-            <l n="686" xml:id="l686">Dussent mes héritiers cent fois en enrager,</l>
-            <l n="687" xml:id="l687">Je vous donne mon bien.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-61">
-            <speaker>VALENTIN, <em>bas, à Fatignac.</em></speaker>
-            <l n="688" xml:id="l688">Il faudra partager,</l>
-            <l n="689" xml:id="l689">Au moins.</l>
-          </sp>
-          <sp who="valentin" xml:id="12-62">
-            <speaker>FATIGNAC, <em>à Valentin, bas.</em></speaker>
-            <l n="690" xml:id="l690">Ah ! nous verrons.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-63">
-            <speaker>HORTENSE.</speaker>
-            <l n="691" xml:id="l691">Que tout ceci se passe</l>
-            <l n="692" xml:id="l692">Sans qu’on en sache rien épargnez-moi de grâce,</l>
-            <l n="693" xml:id="l693">Épargnez ma faiblesse.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-64">
-            <speaker>FATIGNAC.</speaker>
-            <l n="694" xml:id="l694">Allez, je suis discret,</l>
-            <l n="695" xml:id="l695">Tenez, je dis toujours ce que je n’ai pas fait ;</l>
-            <l n="696" xml:id="l696">Ce que j’ai fait jamais, car j’en ai fait de belle :</l>
-            <l n="697" xml:id="l697">Au moins, et dans Limoge avec des Demoiselles,</l>
-            <l n="698" xml:id="l698">Tout le monde la su, mais je n’en ai dit rien,</l>
-            <l n="699" xml:id="l699">Je suis des plus secrets.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-65">
-            <speaker>HORTENSE.</speaker>
-            <l n="700" xml:id="l700">Hé ! vous faites fort bien.</l>
-          </sp>
-          <sp who="fatignac" xml:id="12-66">
-            <speaker>FATIGNAC.</speaker>
-            <l n="701" xml:id="l701">À quoi bon divulguer les faveurs que l’on donne,</l>
-            <l n="702" xml:id="l702">J’aimerais mieux jamais n’en donner à personne.</l>
-          </sp>
-          <sp who="hortense" xml:id="12-67">
-            <speaker>HORTENSE.</speaker>
-            <l n="703" xml:id="l703">J’entends quelqu’un. Je rentre en mon appartement,</l>
-            <l n="704" xml:id="l704">Vous viendrez m’y trouver dans le même moment,</l>
-            <l n="705" xml:id="l705">J’enverrais Valentin qui saura vous conduire.</l>
-            <l n="706" xml:id="l706"> </l>
-            <l n="707" xml:id="l707"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="708" xml:id="l708"> </l>
-          <sp who="dardibras" xml:id="13-1">
-            <speaker>FATIGNAC, DARDIBRAS</speaker>
-            <l n="709" xml:id="l709"> </l>
-          </sp>
-          <sp who="fatignac" xml:id="13-2">
-            <speaker>FATIGNAC.</speaker>
-            <l n="710" xml:id="l710">C’est le Gascon, je vais de tout ceci l’instruire ;</l>
-            <l n="711" xml:id="l711">J’ai promis cependant de garder le secret,</l>
-            <l n="712" xml:id="l712">Mais il est mon ami, de plus homme discret.</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-3">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="713" xml:id="l713">Ah fortuné mortel ! ah douceur sans seconde !</l>
-            <l n="714" xml:id="l714">Cher Fatignac, tu vois le plus content du monde.</l>
-          </sp>
-          <sp who="fatignac" xml:id="13-4">
-            <speaker>FATIGNAC.</speaker>
-            <l n="715" xml:id="l715">Votre contentement n’égale pas le mien ;</l>
-            <l n="716" xml:id="l716">Les Rois auprès de moi maintenant ne sont rien.</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-5">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="717" xml:id="l717">Les Dieux portent envie à mon bonheur suprême ;</l>
-            <l n="718" xml:id="l718">En un mot, cher ami, l’on m’aime autant que j’aime.</l>
-          </sp>
-          <sp who="fatignac" xml:id="13-6">
-            <speaker>FATIGNAC.</speaker>
-            <l n="719" xml:id="l719">Et moi, l’on m’aime plus que je n’aime, et pourtant</l>
-            <l n="720" xml:id="l720">J’aime beaucoup. Enfin je suis plus que content,</l>
-            <l n="721" xml:id="l721">Consoler l’affligée !...</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-7">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="722" xml:id="l722">Enseigner l’ignorante !</l>
-          </sp>
-          <sp who="fatignac" xml:id="13-8">
-            <speaker>FATIGNAC.</speaker>
-            <l n="723" xml:id="l723">Que j’aurai de plaisir !</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-9">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="724" xml:id="l724">Félicité charmante !</l>
-            <l n="725" xml:id="l725">Une jeune Orpheline avec cent mille appas,</l>
-            <l n="726" xml:id="l726">Avec cent mille écus se jette entre mes bras.</l>
-          </sp>
-          <sp who="fatignac" xml:id="13-10">
-            <speaker>FATIGNAC.</speaker>
-            <l n="727" xml:id="l727">Une Veuve très belle en m’épousant m’apporte,</l>
-            <l n="728" xml:id="l728">Avec autant d’appas une somme aussi forte.</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-11">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="729" xml:id="l729">Que les filles d’Oronte ont de minces attraits,</l>
-            <l n="730" xml:id="l730">Près de la mienne ?</l>
-          </sp>
-          <sp who="fatignac" xml:id="13-12">
-            <speaker>FATIGNAC.</speaker>
-            <l n="731" xml:id="l731">Hé ! si les attraits... les plus laids...</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-13">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="732" xml:id="l732">À cet aimable Enfant je vais rendre visite.</l>
-          </sp>
-          <sp who="fatignac" xml:id="13-14">
-            <speaker>FATIGNAC.</speaker>
-            <l n="733" xml:id="l733">Moi de même à ma Veuve.</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-15">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="734" xml:id="l734">Adieu donc je te quitte.</l>
-          </sp>
-          <sp who="fatignac" xml:id="13-16">
-            <speaker>FATIGNAC, <em>à part.</em></speaker>
-            <l n="735" xml:id="l735">Ne nous éloignons pas.</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-17">
-            <speaker>DARDIBRAS, <em>à part.</em></speaker>
-            <l n="736" xml:id="l736">Bon ! demeurons ici.</l>
-          </sp>
-          <sp who="hortense" xml:id="13-18">
-            <speaker>FATIGNAC, <em>à part, apercevant Hortense.</em></speaker>
-            <l n="737" xml:id="l737">Ah ! jarni, la voilà.</l>
-          </sp>
-          <sp who="dardibras" xml:id="13-19">
-            <speaker>DARDIBRAS, <em>à part, l’apercevant aussi.</em></speaker>
-            <l n="738" xml:id="l738">Cadédis, la voici.</l>
-            <l n="739" xml:id="l739"> </l>
-            <l n="740" xml:id="l740"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="741" xml:id="l741"> </l>
-          <sp who="valentin" xml:id="14-1">
-            <speaker>DARDIBRAS, FATIGNAC, HORTENSE <em>au fond du théâtre, </em>VALENTIN</speaker>
-            <l n="742" xml:id="l742"> </l>
-          </sp>
-          <sp who="valentin" xml:id="14-2">
-            <speaker>VALENTIN, <em>bas, à Fatignac.</em></speaker>
-            <l n="743" xml:id="l743">Par l’escalier à gauche il vous faut monter vite</l>
-            <l n="744" xml:id="l744">Tout en haut, et dans peu l’on vous y rend visite ;</l>
-            <l n="745" xml:id="l745">Votre Veuve...</l>
-          </sp>
-          <sp who="fatignac" xml:id="14-3">
-            <speaker>FATIGNAC.</speaker>
-            <l n="746" xml:id="l746">J’entends, j’y monte promptement.</l>
-            <l n="747" xml:id="l747"> </l>
-            <l n="748" xml:id="l748"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="749" xml:id="l749"> </l>
-          <sp who="valentin" xml:id="15-1">
-            <speaker>DARDIBRAS, HORTENSE, VALENTIN</speaker>
-            <l n="750" xml:id="l750"> </l>
-          </sp>
-          <sp who="valentin" xml:id="15-2">
-            <speaker>VALENTIN, <em>à Dardibras.</em></speaker>
-            <l n="751" xml:id="l751">Je vous en ai défait assez adroitement.</l>
-            <l n="752" xml:id="l752">L’Orpheline venait, j’ai crû...</l>
-          </sp>
-          <sp who="dardibras" xml:id="15-3">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="753" xml:id="l753">Je t’en rends grâce.</l>
-            <l n="754" xml:id="l754">Laisse-nous.</l>
-            <l n="755" xml:id="l755"> </l>
-            <l n="756" xml:id="l756"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="757" xml:id="l757"> </l>
-          <sp who="dardibras" xml:id="16-1">
-            <speaker>DARDIBRAS, HORTENSE, <em>en niaise</em></speaker>
-            <l n="758" xml:id="l758"> </l>
-          </sp>
-          <sp who="dardibras" xml:id="16-2">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="759" xml:id="l759">Maintenant que faut-il que je fasse,</l>
-            <l n="760" xml:id="l760">Belle Enfant ? j’ai rompu cet important dédit,</l>
-            <l n="761" xml:id="l761">Oronte de la somme un an me fait crédit,</l>
-            <l n="762" xml:id="l762">J’ai donné mon billet qu’il a bien voulu prendre.</l>
-            <l n="763" xml:id="l763">Il voulait cependant me retenir pour gendre,</l>
-            <l n="764" xml:id="l764">Mais enfin c’en est fait. J’ai vu votre Oncle aussi.</l>
-          </sp>
-          <sp who="hortense" xml:id="16-3">
-            <speaker>HORTENSE.</speaker>
-            <l n="765" xml:id="l765">Hé ! que vous a-t-il dit ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="16-4">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="766" xml:id="l766">Bon, mon neveu par-ci</l>
-            <l n="767" xml:id="l767">Et mon neveu par-là, sa joie est sans pareille.</l>
-            <l n="768" xml:id="l768">Ma figure et mon nom ont fait d’abord merveille.</l>
-          </sp>
-          <sp who="hortense" xml:id="16-5">
-            <speaker>HORTENSE.</speaker>
-            <l n="769" xml:id="l769">Et comment l’avez-vous rencontré ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="16-6">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="770" xml:id="l770">Par hasard.</l>
-            <l n="771" xml:id="l771">Des gens me l’ont montré. Peste c’est un gaillard...</l>
-            <l n="772" xml:id="l772">Il est tout jeune encor. Cependant de sa vie</l>
-            <l n="773" xml:id="l773">Il ne veut prendre femme, il n’en a point d’envie,</l>
-            <l n="774" xml:id="l774">Il nous laisse son bien jusqu’au dernier denier.</l>
-            <l n="775" xml:id="l775"> </l>
-            <l n="776" xml:id="l776"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="777" xml:id="l777"> </l>
-          <sp who="dardibras" xml:id="17-1">
-            <speaker>DARDIBRAS, FATIGNAC, HORTENSE</speaker>
-            <l n="778" xml:id="l778"> </l>
-          </sp>
-          <sp who="fatignac" xml:id="17-2">
-            <speaker>FATIGNAC, <em>essoufflé.</em></speaker>
-            <l n="779" xml:id="l779">Valentin est plaisant, il m’envoie au grenier.</l>
-            <stage><hi rend="italic"><em>Apercevant Hortense et Dardibras.</em></hi></stage>
-            <l n="781" xml:id="l781">Mais que vois-je ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-3">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="782" xml:id="l782">Tu vois l’agréable Orpheline,</l>
-            <l n="783" xml:id="l783">Ami, que mon bonheur aujourd’hui me destine.</l>
-          </sp>
-          <sp who="fatignac" xml:id="17-4">
-            <speaker>FATIGNAC.</speaker>
-            <l n="784" xml:id="l784">C’est ma Veuve.</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-5">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="785" xml:id="l785">Ta Veuve.</l>
-          </sp>
-          <sp who="fatignac" xml:id="17-6">
-            <speaker>FATIGNAC.</speaker>
-            <l n="786" xml:id="l786">Hé ! oui vraiment ce l’est.</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-7">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="787" xml:id="l787">Parce qu’elle est en deuil ? peste soit du benêt.</l>
-          </sp>
-          <sp who="fatignac" xml:id="17-8">
-            <speaker>FATIGNAC.</speaker>
-            <l n="788" xml:id="l788">Je ne suis point benêt, c’est ma Veuve elle-même...</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-9">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="789" xml:id="l789">Serait-il donc possible, et que par stratagème...</l>
-            <l n="790" xml:id="l790">Pour rompre les dédits... Ah, quelle trahison !</l>
-            <l n="791" xml:id="l791">Vous osez à votre âge attraper un Gascon !</l>
-          </sp>
-          <sp who="fatignac" xml:id="17-10">
-            <speaker>FATIGNAC.</speaker>
-            <l n="792" xml:id="l792">Bien plus un Limousin !</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-11">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="793" xml:id="l793">Ah ! quelle perfidie !</l>
-          </sp>
-          <sp who="hortense" xml:id="17-12">
-            <speaker>HORTENSE, <em>riant.</em></speaker>
-            <l n="794" xml:id="l794">Ah ! ah ! ah !</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-13">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="795" xml:id="l795">Vous riez, animal amphibie,</l>
-            <l n="796" xml:id="l796">Êtes-vous fille ?</l>
-          </sp>
-          <sp who="hortense" xml:id="17-14">
-            <speaker>HORTENSE, <em>riant.</em></speaker>
-            <l n="797" xml:id="l797">Point.</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-15">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="798" xml:id="l798">Êtes-vous veuve ?</l>
-          </sp>
-          <sp who="hortense" xml:id="17-16">
-            <speaker>HORTENSE, <em>riant.</em></speaker>
-            <l n="799" xml:id="l799">Non.</l>
-          </sp>
-          <sp who="fatignac" xml:id="17-17">
-            <speaker>FATIGNAC.</speaker>
-            <l n="800" xml:id="l800">Ni l’un ni l’autre ?</l>
-          </sp>
-          <sp who="hortense" xml:id="17-18">
-            <speaker>HORTENSE, <em>le contrefaisant.</em></speaker>
-            <l n="801" xml:id="l801">Hé ! non.</l>
-          </sp>
-          <sp who="dardibras" xml:id="17-19">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="802" xml:id="l802">Qui donc êtes vous donc ?</l>
-            <l n="803" xml:id="l803">De Monsieur ou de moi vous trahissez la flamme.</l>
-          </sp>
-          <sp who="hortense" xml:id="17-20">
-            <speaker>HORTENSE.</speaker>
-            <l n="804" xml:id="l804">Peut être de tous deux.</l>
-          </sp>
-          <sp who="fatignac" xml:id="17-21">
-            <speaker>FATIGNAC.</speaker>
-            <l n="805" xml:id="l805">Comment ?</l>
-            <l n="806" xml:id="l806"> </l>
-            <l n="807" xml:id="l807"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="808" xml:id="l808"> </l>
-          <sp who="dardibras" xml:id="18-1">
-            <speaker>DARDIBRAS, FATIGNAC, HORTENSE, LISIMON</speaker>
-            <l n="809" xml:id="l809"> </l>
-          </sp>
-          <sp who="lisimon" xml:id="18-2">
-            <speaker>LISIMON.</speaker>
-            <l n="810" xml:id="l810">Bonjour ma femme.</l>
-          </sp>
-          <sp who="dardibras" xml:id="18-3">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="811" xml:id="l811">En voici bien d’un autre !</l>
-          </sp>
-          <sp who="hortense" xml:id="18-4">
-            <speaker>HORTENSE.</speaker>
-            <l n="812" xml:id="l812">Ah ! mon mari c’est vous ?</l>
-          </sp>
-          <sp who="dardibras" xml:id="18-5">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="813" xml:id="l813">Il était tantôt l’oncle, à présent c’est l’époux.</l>
-            <l n="814" xml:id="l814">Et fille, et veuve, et femme, et Diable qui t’en porte,</l>
-            <l n="815" xml:id="l815">Visage a-t-il jamais changé de cette sorte !</l>
-            <l n="816" xml:id="l816">Innocente, affligée, enjouée, est-ce assez ?</l>
-            <l n="817" xml:id="l817"> </l>
-            <l n="818" xml:id="l818"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="819" xml:id="l819"> </l>
-          <sp who="valentin" xml:id="19-1">
-            <speaker>ORONTE, LISIMON, DORANTE, PHILIDOR, HORTENSE, LISETTE, DARDIBRAS, FATIGNAC, VALENTIN, ÉLISE, ANGÉLIQUE</speaker>
-            <l n="820" xml:id="l820"> </l>
-          </sp>
-          <sp who="dardibras" xml:id="19-2">
-            <speaker>DARDIBRAS, <em>à Oronte.</em></speaker>
-            <l n="821" xml:id="l821">Ah ! beau-père futur.</l>
-          </sp>
-          <sp who="oronte" xml:id="19-3">
-            <speaker>ORONTE.</speaker>
-            <l n="822" xml:id="l822">Ah ! mes gendres passés.</l>
-          </sp>
-          <sp who="oronte" xml:id="19-4">
-            <speaker>FATIGNAC, <em>à Oronte.</em></speaker>
-            <l n="823" xml:id="l823">Vous étiez donc aussi de cette manigance.</l>
-          </sp>
-          <sp who="dardibras" xml:id="19-5">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="824" xml:id="l824">Dans peu nous en saurons marquer notre vengeance.</l>
-          </sp>
-          <sp who="dardibras" xml:id="19-6">
-            <speaker>HORTENSE, <em>à Dardibras et à Fatignac.</em></speaker>
-            <l n="825" xml:id="l825">Ne vous fâchez point tant, Messieurs ; il est permis</l>
-            <l n="826" xml:id="l826">Contre tous en tout temps de servir ses amis.</l>
-            <stage><hi rend="italic"><em>Montrant Philidor et Dorante. </em></hi></stage>
-            <l n="828" xml:id="l828">Ces Messieurs sont les miens, ils aiment mes Cousines.</l>
-          </sp>
-          <sp who="dardibras" xml:id="19-7">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="829" xml:id="l829">Fort bien, beau-père, époux, amis, voisins, voisines,</l>
-            <l n="830" xml:id="l830">Nous trompaient, qui payera ?...</l>
-          </sp>
-          <sp who="oronte" xml:id="19-8">
-            <speaker>ORONTE.</speaker>
-            <l n="831" xml:id="l831">Je vous rends vos écrits.</l>
-            <l n="832" xml:id="l832">Et vous fais reconduire où je vous avais pris</l>
-            <l n="833" xml:id="l833">À mes frais et dépens.</l>
-          </sp>
-          <sp who="dardibras" xml:id="19-9">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="834" xml:id="l834">J’y consens avec joie,</l>
-            <l n="835" xml:id="l835">Et ne crois pas qu’ici de longtemps on me voie.</l>
-            <l n="836" xml:id="l836">Je retourne au pays.</l>
-          </sp>
-          <sp who="valentin" xml:id="19-10">
-            <speaker>VALENTIN.</speaker>
-            <l n="837" xml:id="l837">Je vous y conduirai</l>
-            <l n="838" xml:id="l838">Monseigneur Dardibras.</l>
-          </sp>
-          <sp who="dardibras" xml:id="19-11">
-            <speaker>DARDIBRAS.</speaker>
-            <l n="839" xml:id="l839">Je te retrouverai</l>
-            <l n="840" xml:id="l840">Quelque part.</l>
-          </sp>
-          <sp who="fatignac" xml:id="19-12">
-            <speaker>FATIGNAC.</speaker>
-            <l n="841" xml:id="l841">Ah coquin ! si tu viens à Limoge.</l>
-          </sp>
-          <sp who="valentin" xml:id="19-13">
-            <speaker>VALENTIN.</speaker>
-            <l n="842" xml:id="l842">Monsieur, en arrivant c’est chez vous que je loge.</l>
-          </sp>
-          <sp who="dardibras" xml:id="19-14">
-            <speaker>DARDIBRAS, <em>à Philidor et à Dorante.</em></speaker>
-            <l n="843" xml:id="l843">Adoucias, Messieurs les fortunés époux,</l>
-            <l n="844" xml:id="l844">Les femmes de Paris en savent trop pour nous.</l>
-          </sp>
-          <sp who="fatignac" xml:id="19-15">
-            <speaker>FATIGNAC.</speaker>
-            <l n="845" xml:id="l845">C’est bien dit. Moi je vais dans l’un de nos villages</l>
-            <l n="846" xml:id="l846">Planter des choux, Adieu la femme aux trois visages.</l>
-          </sp>
-          <sp who="dorante" xml:id="19-16">
-            <speaker>ORONTE, <em>à Philidor et à Dorante.</em></speaker>
-            <l n="847" xml:id="l847">Messieurs, sans compliment, mes Filles sont à vous,</l>
-            <l n="848" xml:id="l848">Je vous les donne, entrons et réjouissons-nous.</l>
-            <stage><hi rend="italic"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> L’un des plus beaux endroits de la Tragédie d’<em>Atrée et Thyeste</em>. (note de l’auteur.)</hi></stage>
-            <l n="850" xml:id="l850"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#hortense">
+          <speaker>HORTENSE, en deuil.</speaker>
+          <l n="1">Pourquoi me regarder, Lisette, et que veux dire...</l>
+          <l n="2">Tu ris ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="3">Et le moyen de s’empêcher de rire ?</l>
+          <l n="4">De pleurer avec vous, fut-il jamais saison ?</l>
+          <l n="5">Et quoique le grand deuil soit dans votre maison,</l>
+          <l n="6">Loin d’y paraître triste ou faire la pleureuse,</l>
+          <l n="7">Peut-on y demeurer seulement sérieuse ?</l>
+          <l n="8">Vous inspirez la joie aux gens les plus chagrins ;</l>
+          <l n="9">Nous ne voyons céans que bals et que festins ;</l>
+          <l n="10">Cependant cet habit...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="11">Ce n’est qu’un deuil de tante</l>
+          <l n="12">Qui nous laisse en mourant deux mille écus de rente,</l>
+          <l n="13">Tante de mon Époux encore, et dont les biens...</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="14">Si vous pleurez ainsi vos parents et les siens,</l>
+          <l n="15">Et s’il pleure de même et les liens et les vôtres,</l>
+          <l n="16">Quand l’un de vous mourra, nous en verrons bien d’autres.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="17">La différence est grande, et j’aime mon Époux.</l>
+          <l n="18">Comment ne pas l’aimer ? il est affable et doux</l>
+          <l n="19">Ni trop vieux ni trop jeune, enfin dans le bon âge.</l>
+          <l n="20">Depuis un mois entier que je suis en ménage,</l>
+          <l n="21">Avec lui m’as-tu vu le moindre différend ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="22">Aucun, et c’est encor ce qui plus me surprend.</l>
+          <l n="23">Car de quelques vertus dont elles soient douées,</l>
+          <l n="24">Les maris n’aiment point ces femmes enjouées,</l>
+          <l n="25">Donc les yeux semblent tout promettre d’un regard,</l>
+          <l n="26">Quoique souvent le cœur ni prenne aucune part,</l>
+          <l n="27">Dont le souris flatteur, la paupière assassine,</l>
+          <l n="28">Donne à tous de l’espoir, et fait qu’on s’imagine</l>
+          <l n="29">Que sais-je. Moi, ma foi, si j’étais votre Époux...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="30">Jusqu’ici Lisimon n’a point paru jaloux,</l>
+          <l n="31">Il le serait à tort, en tout je le contente.</l>
+          <l n="32">Ses intimes amis, Philidor et Dorante,</l>
+          <l n="33">Des pays étrangers depuis peu revenus,</l>
+          <l n="34">Sont ceux dans mes plaisirs qui se trouvent le plus.</l>
+          <l n="35">Mais ils vont épouser mes charmantes cousines,</l>
+          <l n="36">Les deux filles d’Oronte.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="37">Ah ! ah ! nos deux voisines.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="38">Oui. L’Hymen va dans peu couronner leur amour,</l>
+          <l n="39">Puisqu’enfin de Bordeaux Oronte est de retour ;</l>
+          <l n="40">Ces deux filles et moi, nous avions fait partie,</l>
+          <l n="41">Quand chacune à son gré se verrait assortie,</l>
+          <l n="42">De nous faire épouser toutes trois même jour ;</l>
+          <l n="43">Mais comme on ne peut pas répondre de l’amour,</l>
+          <l n="44">J’ai devancé d’un mois.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="45">On se lasse d’attendre.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="46">Lisimon me plaisait.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="47">Faut-il pas toujours prendre.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="48">Mais je vais travailler pour elles maintenant ;</l>
+          <l n="49">À chacune donner pour époux son amant.</l>
+          <l n="50">Philidor aime Élise, et Dorante Angélique,</l>
+          <l n="51">Oronte donnera son aveu sans réplique</l>
+          <l n="52">Dès qu’il saura...</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="53">Comment ! il n’a donc pas appris ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="54">Non, ce n’est que d’hier qu’Oronte est à Paris.</l>
+          <l n="55">Depuis trois mois entiers qu’il est à son voyage,</l>
+          <l n="56">À disputer d’un oncle un ancien héritage,</l>
+          <l n="57">Nous n’avions point reçu de nouvelles de lui,</l>
+          <l n="58">Nous n’avions point écrit non plus ; mais aujourd’hui</l>
+          <l n="59">Lisimon s’est chargé de faire la demande,</l>
+          <l n="60">Et je ne pense pas qu’Oronte s’en défende,</l>
+          <l n="61">Étant de nos amis, étant de nos parents,</l>
+          <l n="62">Chérissant mon mari dès ses plus jeunes ans,</l>
+          <l n="63">Il ne nous faudra point tant de cérémonies ;</l>
+          <l n="64">Et ce n’est pas d’ailleurs un de ces grands génies.</l>
+          <l n="65">Il fait tout ce qu’on veut, il croit tout ce qu’on dit.</l>
+          <l n="66">Il dit tout ce qu’il sait.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="67">Peste le rare esprit !</l>
+          <l n="68">Ah ! puisqu’il est si bon, nous obtiendrons ses Filles,</l>
+          <l n="69">De ces Messieurs sans douce il connaît les familles ?</l>
+          <l n="70">Mais les voici tous deux, et votre époux aussi.</l>
+          <l n="71">Que nous allons danser !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="72">Ah ! Messieurs, vous voici.</l>
+          <l n="73">Bonjour beau Philidor, bonjour charmant Dorante,</l>
+          <l n="74">Bonjour mon cher mari.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="75">Ton âme est bien contenté,</l>
+          <l n="76">Mais ma foi, voici bien des affaires.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="77">Comment ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="78">Tu n’as qu’à regarder et l’un et l’autre amant,</l>
+          <l n="79">Et tu devineras...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="80">Quoi le cousin Oronte...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="81">Tu m’en vois de retour avec ma courte honte,</l>
+          <l n="82">Ce vieux rêveur amène avec lui deux Barons,</l>
+          <l n="83">L’un Baron de Gascogne, et des plus fanfarons ;</l>
+          <l n="84">Et l’autre Limosin, des plus sots de son âge.</l>
+          <l n="85">Il les a rencontrés en faisant son voyage.</l>
+          <l n="86">Le Gascon, m’a-t-on dit, est un mince Égrefin,</l>
+          <l n="87">Appelle Dardibras, et pour le Limosin</l>
+          <l n="88">Il a nom Fatignac : il n a jamais, je pense,</l>
+          <l n="89">Vu que l’arrière-ban.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="90">Oronte est en enfance ?</l>
+          <l n="91">Que veut-il faire, dis, de ces deux malotrus ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="92">Ses Gendres.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="93">Bon, tu ris ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="94">Je te dirai bien plus,</l>
+          <l n="95">Il a fait deux dédits d’une somme très forte.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="96">Peste soit du vieux fou, que le Diable l’emporte.</l>
+          <l n="97">Mes cousines sans doute en sont au désespoir ?</l>
+        </sp>
+        <sp who="#dorante">
+          <speaker>DORANTE.</speaker>
+          <l n="98">Leur recours est en vous.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="99">Hé bien, il faudrait voir.</l>
+        </sp>
+        <sp who="#philidor">
+          <speaker>PHILIDOR.</speaker>
+          <l n="100">Employez votre esprit, employez votre adresse,</l>
+          <l n="101">Au nom de votre époux, au nom de sa tendresse,</l>
+          <l n="102">Rompez ce coup fatal, tâchez...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="103">C’est assez dit,</l>
+          <l n="104">Il ne faut que tirer l’un et l’autre dédit</l>
+          <l n="105">Des mains de vos rivaux ; j’entreprends votre affaire,</l>
+          <l n="106">Je jouerai bien mon rôle, allez, laissez-moi faire,</l>
+          <l n="107">Sait-on point à peu près quelle est leur passion ?</l>
+        </sp>
+        <sp who="#dorante">
+          <speaker>DORANTE.</speaker>
+          <l n="108">On dit qu’ils sont tous deux pleins de présomption.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="109">C’est ce que je demande. Il faut que mes cousines</l>
+          <l n="110">Paraissent devant eux mécontentes et chagrines,</l>
+          <l n="111">Qu’elles ne daignent pas même les regarder.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="112">On n’aura pas besoin de leur recommander.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="113">Comptez donc sur mes soins, je sais par où m’y prendre.</l>
+          <l n="114">Mais à propos, avant que de rien entreprendre,</l>
+          <l n="115">Mon mari, suis-je libre, et tout m’est-il permis ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="116">Tout ce que tu feras pour servir nos Amis,</l>
+          <l n="117">Quelque détour hardi, quelqu’effort que tu tentes,</l>
+          <l n="118">Pour leur faire épouser tes aimables Parentes,</l>
+          <l n="119">J’approuve tout.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="120">Suffit, je vais aller bon train,</l>
+          <l n="121">Lisette, il faut ici seconder mon dessein.</l>
+        </sp>
+        <sp who="#philidor">
+          <speaker>PHILIDOR.</speaker>
+          <l n="122">Ne l’abandonne pas, Lisette, je te prie.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="123">L’abandonner ? Monsieur, il irait de la vie,</l>
+          <l n="124">Que je ne voudrais pas la quitter un moment.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="125">Oronte vient, je rentre en mon appartement.</l>
+          <l n="126">Son aspect ne ferait que me mettre en colère.</l>
+          <l n="127">Tâchez de le gagner, et qu’il nous laisse faire.</l>
+          <l n="128">Toi, Lisette, suis-moi, nous allons concerter</l>
+          <l n="129">Comment dans mon projet il faut nous comporter.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#élise">
+          <speaker>ÉLISE.</speaker>
+          <l n="130">Hé ! de grâce mon Père.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="131">Hé ! je vous en conjure,</l>
+          <l n="132">N’usez point envers nous des droits de la nature.</l>
+          <l n="133">Ne nous contraignez point.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="134">Écoutez, mes enfants,</l>
+          <l n="135">Les dédits sont chacun de douze mille francs ;</l>
+          <l n="136">Je ne saurais payer une somme si forte.</l>
+          <l n="137">Épousez ces gens-ci toujours, que vous importe ?</l>
+          <l n="138">Allez, une autre fois, je vous choisirai mieux.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="139">Le beau raisonnement !</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="140">L’âge ouvre bien les yeux</l>
+          <l n="141">Je saurai désormais...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="142">Il en fera de belles.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="143">Ah, tais-roi, Lisimon !</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="144">Allez, Mesdemoiselles,</l>
+          <l n="145">Laissez faire, Monsieur, il saura tout gâter.</l>
+          <l n="146">Qu’il a fait un beau coup ! il doit bien s’en vanter.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="147">Cousin, je te promets...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="148">Laissez-moi là, de grâce,</l>
+          <l n="149">Je ne veux point vous voir.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="150">Que veux-tu que je fasse ?</l>
+          <l n="151">Ces dédits...</l>
+        </sp>
+        <sp who="#philidor">
+          <speaker>PHILIDOR.</speaker>
+          <l n="152">S’il le faut, Monsieur, nous les payerons.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="153">Vous les payerez, oh ! oh !</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="154">Non, non, vos deux Barons</l>
+          <l n="155">Valent bien ces Messieurs, gardez-les.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="156">Je vous jure</l>
+          <l n="157">Que j’en suis fort fâché. Messieurs, je vous assure,</l>
+          <l n="158">Par rapport au cousin Lisimon votre ami.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="159">Autre beau compliment.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="160">Oh ! j’étais endormi,</l>
+          <l n="161">Quand je...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="162">Mais à présent voyant votre sottise,</l>
+          <l n="163">La réparerez-vous ?</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="164">Que faut-il que je dise ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="165">Rien, laissez-nous agir.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="166">Mais quoi ! ne dire rien ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="167">Non rien, soyez tranquille.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="168">Allons, je le veux bien.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="169">Sans payer les dédits vous sortirez d’affaire.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="170">Faites donc, je m’en vais passer chez mon Notaire.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="171">N’allez pas lui parler...</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="172">Oh ! je n’ai garde, adieu.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#élise">
+          <speaker>ÉLISE.</speaker>
+          <l n="173">Enfin, cher Philidor...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="174">Bon, voici bien le lieu</l>
+          <l n="175">De pouffer des soupirs.</l>
+        </sp>
+        <sp who="#dorante">
+          <speaker>DORANTE.</speaker>
+          <l n="176">Adorable Angélique...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="177">À l’autre, détalez.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="178">S’il faut que je m’explique.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="179">Vous vous expliquerez... Mais quelqu’un vient à nous.</l>
+          <l n="180">Rentrez.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="181">C’est le valet de mon père.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="182">Et de vous.</l>
+        </sp>
+        <sp who="#élise">
+          <speaker>ÉLISE.</speaker>
+          <l n="183">Que veux-tu, Valentin ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="184">Ces Messieurs vous demandent...</l>
+          <l n="185">Ils sont dans votre chambre, attendant.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="186">Qu’ils attendent.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="187">Non, Cousine, au contraire, il faut les recevoir ;</l>
+          <l n="188">Mais si mal, que jamais ils ne veuillent vous voir.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="189">Nous vous obéirons, Cousin, je vous assure.</l>
+          <l n="190">Sans adieu.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#lisimon">
+          <speaker>LISIMON, arrêtant Valentin.</speaker>
+          <l n="191">Valentin, dis-moi, par aventure</l>
+          <l n="192">L’argent te tente-t-il quelquefois ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="193">Grandement.</l>
+          <l n="194">Faut-il le demander ? Monsieur, je suis Normand.</l>
+          <l n="195">Et d’hier seulement j’arrivai de Gascogne.</l>
+        </sp>
+        <sp who="#dorante">
+          <speaker>DORANTE.</speaker>
+          <l n="196">Est-ce qu’en ce pays ?...</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="197">Sur un denier l’on rogne.</l>
+          <l n="198">Notre Gascon partout, l’un de ces prétendus</l>
+          <l n="199">Qui viennent de mon Maître épouser les écus.</l>
+        </sp>
+        <sp who="#philidor">
+          <speaker>PHILIDOR.</speaker>
+          <l n="200">Il aime donc l’argent ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="201">Vraiment dans le voyage</l>
+          <l n="202">Il n’a pas dépensé quarante sols, je gage.</l>
+          <l n="203">Il vivait aux dépens du sot de Limosin</l>
+          <l n="204">Avant de nous avoir rencontré ; mais enfin</l>
+          <l n="205">Depuis ce temps tous deux, sans demander le compte,</l>
+          <l n="206">Dans chaque hôtellerie ont laissé faire Oronte.</l>
+          <l n="207">Il a payé par tout, de Poitiers à Bordeaux,</l>
+          <l n="208">Et de Bordeaux ici. Ces maudits Hobereaux...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="209">Puisque tu les hais tant, et que l’argent te tente,</l>
+          <l n="210">Tiens, fers leurs deux rivaux qu’ici je te présente,</l>
+          <l n="211">Tu t’en trouveras bien.</l>
+        </sp>
+        <sp who="#dorante">
+          <speaker>DORANTE, lui donnant de l’argent.</speaker>
+          <l n="212">Voilà pour commencer.</l>
+        </sp>
+        <sp who="#philidor">
+          <speaker>PHILIDOR, lui donnant de l’argent.</speaker>
+          <l n="213">Accepte encore cela.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="214">Je prends sans balancer,</l>
+          <l n="215">Et je vous veux servir du meilleur de mon âme.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="216">Tu n’auras seulement qu’à seconder ma femme.</l>
+          <l n="217">Elle entreprend...</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="218">Monsieur, quelque dessein qu’elle ait,</l>
+          <l n="219">Je suis persuadé qu’il aura son effet.</l>
+          <l n="220">J’ai connu votre femme étant petite fille.</l>
+          <l n="221">Qu’elle était éveillée, et qu’elle était gentille ?</l>
+          <l n="222">Malicieuse ! allez, je sais l’esprit qu’elle a,</l>
+          <l n="223">Nous nous sommes connus pas plus grands que cela.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="224">Bon ! tu serais son père.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="225">Oui, cela pourrait être.</l>
+          <l n="226">Sa mère m’aimait fort, je l’ai bien su connaître.</l>
+          <l n="227">Quand en partant...</l>
+        </sp>
+        <sp who="#dorante">
+          <speaker>DORANTE.</speaker>
+          <l n="228">Laissons d’inutiles discours</l>
+          <l n="229">Qui pour le temps présent ne sont d’aucun secours,</l>
+          <l n="230">Et fais nous seulement récit de ce voyage,</l>
+          <l n="231">Peut-être en pourrons-nous tirer quelque avantage.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="232">Au sortir de Paris... nous couchâmes à Meaux.</l>
+        </sp>
+        <sp who="#philidor">
+          <speaker>PHILIDOR.</speaker>
+          <l n="233">Bon ! en Brie. Est-ce là le chemin de Bordeaux ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="234">Hé ! doucement ! Monsieur, tous chemins vont à Rome.</l>
+          <l n="235">Commençons par Poitiers. Dans un logis qu’est nomme...</l>
+          <l n="236">N’importe. Le Gascon avec le Limosin,</l>
+          <l n="237">Qui s’étaient accostés dès longtemps en chemin,</l>
+          <l n="238">Se trouvant à l’auberge avec Monsieur Oronte,</l>
+          <l n="239">Nous soupons... le Gascon nous fait conte sur conte ;</l>
+          <l n="240">Le Commandeur mon oncle, et le Duc mon cousin,</l>
+          <l n="241">On fait ceci, cela. Que vous dirai-je. Enfin ;</l>
+          <l n="242">La conversation sur les femmes et filles</l>
+          <l n="243">Vient à tomber. Vraiment j’en ai deux fort gentilles.</l>
+          <l n="244">Dit mon benêt de Maître, elles valent beaucoup.</l>
+          <l n="245">En parlant il buvait toujours le petit coup,</l>
+          <l n="246">Ah ! que je voudrais bien qu’elles fussent pourvues,</l>
+          <l n="247">Elles auront du bien. Si vous les aviez vues,</l>
+          <l n="248">Vous en seriez charmés. Elles sont belles... Bon,</l>
+          <l n="249">Il ne faut que vous voir, interrompt le Gascon.</l>
+          <l n="250">Pour juger quelles sont d’une beauté parfaite.</l>
+          <l n="251">Si vous voulez, Monsieur, c’est une affaire faite,</l>
+          <l n="252">J’en épouse une. Et moi, dit notre autre hébété,</l>
+          <l n="253">Qui jusques là n’avait encore qu’écouté,</l>
+          <l n="254">J’épouse l’autre. Allons, à leur santé, beau-père,</l>
+          <l n="255">Tope, masse. Voilà comme ils ont fait l’affaire.</l>
+        </sp>
+        <sp who="#philidor">
+          <speaker>PHILIDOR.</speaker>
+          <l n="256">Mais ces dédits...</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="257">Sur l’heure il leur vient du papier.</l>
+          <l n="258">Mon Maître signe tout, et se laisse lier</l>
+          <l n="259">Comme un vrai sot qu’il est ; il s’en repent, je pense,</l>
+          <l n="260">Car ses gendres tous deux remplis d’impertinences</l>
+          <l n="261">Mais voici le Gascon ; rentrez, et promptement</l>
+          <l n="262">J’irai vous retrouver dans le même moment.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="263">Monsieur, votre valet.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="264">Tu me vois en colère.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="265">Comment donc, et pourquoi ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="266">Cadédis, ce beau père</l>
+          <l n="267">À qui j’ai cru d’abord qu’était cette maison,</l>
+          <l n="268">N’en tient au plus qu’un quart : gens de toute façon</l>
+          <l n="269">Descendent, montent, vont, viennent, veillent, reposent,</l>
+          <l n="270">Et tout ainsi qu’Oronte en maîtres en disposent.</l>
+          <l n="271">Dans son Arche Noé n’eut pas tant d’animaux.</l>
+          <l n="272">Aux bords de la Garonne à moi sont vingt Châteaux,</l>
+          <l n="273">Qui de tout le pays sont les rares merveilles ;</l>
+          <l n="274">Je les occupe seul.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN, bas.</speaker>
+          <l n="275">Avec quelques Corneilles.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="276">Que dis-tu ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="277">Rien, Monsieur.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="278">Ce qui m’a plus surpris,</l>
+          <l n="279">C’est le farouche abord de tes belles Iris,</l>
+          <l n="280">De ces deux Pimbrenons à qui l’on nous destine,</l>
+          <l n="281">L’une la larme à l’œil, l’autre faisant la mine,</l>
+          <l n="282">Celle-ci parlant peu, celle-là point du tout,</l>
+          <l n="283">J’ai beau m’examiner de l’un à l’autre bout,</l>
+          <l n="284">Je ne reconnais plus, sandis, le goût des femmes,</l>
+          <l n="285">Moi dont l’aspect toujours alluma mille flammes.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="286">Cela vous fâche donc ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="287">Après tout j’étais las</l>
+          <l n="288">De rencontrer par tout de faciles appas,</l>
+          <l n="289">J’ignorais la douceur que chacun dit immense</l>
+          <l n="290">De trouver en amour un peu de résistance.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="291">Et vous en trouverez plus que vous ne pensez,</l>
+          <l n="292">J’ai vu tantôt des gens amoureux, empressez,</l>
+          <l n="293">Que les filles d’Oronte, (au moins en apparence,)</l>
+          <l n="294">Ne traitaient point du tout avec indifférence.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="295">Ah ! qu’entends-je, où sont-ils ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="296">À quatre pas d’ici.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="297">Il faut s’instruire à fond de cette affaire-ci.</l>
+          <l n="298">Mais toi qui sert Oronte, avant votre voyage</l>
+          <l n="299">Quelle conduite avaient ses filles ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="300">Mais... très sage ;</l>
+          <l n="301">J’en puis répondre, au moins tant que j’en ai pris soin.</l>
+          <l n="302">Mais je ne dirai pas depuis que j’en suis loin,</l>
+          <l n="303">Que quelques suborneurs... ces gens là, par exemple.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="304">Rentre dans la maison, examine, contemple,</l>
+          <l n="305">Sois sincère surtout, et compte après sur moi,</l>
+          <l n="306">Je ferai ta fortune, et j’en jure ma foi.</l>
+          <l n="307">Je te l’ai déjà dit.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="308">Monsieur laissez-moi faire.</l>
+          <stage>&lt;em&gt;Bas. &lt;/em&gt;</stage>
+          <l n="309">Entrons chez Lisimon pour mettre en train l’affaire,</l>
+          <l n="310">Et sachons les projets de sa femme.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, seul</speaker>
+          <l n="311">Après tout,</l>
+          <l n="312">Il faut examiner ceci de bout en bout.</l>
+          <l n="313">Si Valentin dit vrai, sandis, quelle vergogne</l>
+          <l n="314">Va tomber désormais sur toute la Gascogne !</l>
+          <l n="315">Si l’un des nourrissons qu’elle estime le plus,</l>
+          <l n="316">Si Dardibras se trouve au nombre des cocus !</l>
+          <l n="317">Maris à qui j’ai tant donné de jalousie,</l>
+          <l n="318">Triomphez, à mon tour j’en ai l’âme saisie.</l>
+          <l n="319">Maudit dédit par qui j’ai su trop m’engager...</l>
+          <l n="320">Mardi je suis bien fou, je n’ai qu’à déloger.</l>
+          <l n="321">Mais je n’ai pas le sol, et ce crédule père,</l>
+          <l n="322">Ne laisse pas toujours de m’être nécessaire,</l>
+          <l n="323">Il fournit aux dépens. Mais que vois-je en ces lieux ?</l>
+          <l n="324">Une divinité qui me descend des Cieux,</l>
+          <l n="325">Sans doute, je n’ai vu jamais telle merveille.</l>
+          <l n="326">Pour savoir qu’elle elle est, prêtons un peu l’oreille.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#hortense">
+          <speaker>HORTENSE, en niaise.</speaker>
+          <l n="327">Oui, je veux retourner tout à l’heure au Couvent.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="328">Du moins goûtez un peu du monde auparavant.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="329">Moi, rester dans le monde ? hélas qu’y puis-je faire,</l>
+          <l n="330">Après avoir perdu dans un an père et mère ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="331">Sans père ni sans mère on y reste fort bien,</l>
+          <l n="332">Quand on a comme vous cent mille écus de bien.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à part.</speaker>
+          <l n="333">Peste, quel héritage ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="334">Et votre tuteur même,</l>
+          <l n="335">Votre oncle qui vous montre une tendresse extrême,</l>
+          <l n="336">Doit-il pas vous résoudre à relier parmi nous.</l>
+          <l n="337">Ma nièce, vous dit-il, choisissez un Époux,</l>
+          <l n="338">Quand il serait sans bien, qu’il soit noble et vous plaise,</l>
+          <l n="339">Du choix que vous ferez je serais toujours aise.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="340">Pour les hommes j’ai pris trop grande aversion.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="341">Comment avoir pour eux la moindre passion ?</l>
+          <l n="342">Vous n’en vîtes jamais. Dès votre tendre enfance</l>
+          <l n="343">Vous êtes au Couvent. Depuis huit jours je pense,</l>
+          <l n="344">On vous a fait sortir pour venir en ces lieux</l>
+          <l n="345">D’un père trépassant recevoir les adieux.</l>
+          <l n="346">Quels hommes !...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="347">J’ai vu ceux qui venaient voir mon Père.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="348">Et qui, ses Médecins et son Apothicaire ?</l>
+          <l n="349">Pour donner de l’amour voilà de belles gens,</l>
+          <l n="350">Ils sont faits pour les morts et non pour les vivants.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="351">Les hommes sont-ils pas tous faits de même sorte ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="352">La peste que nenni, la différence est forte.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="353">Quelle est la bonne espèce ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="354">En voici le portrait.</l>
+          <l n="355">Le sourcil bien marqué, l’œil vif, le nez bien fait,</l>
+          <l n="356">Le corps droit, toutefois tant soit peu sur la hanche,</l>
+          <l n="357">Et que la tête aussi sur l’épaule un peu penche,</l>
+          <l n="358">C’est le bon air, la jambe et les pieds bien tournés,</l>
+          <l n="359">Le chapeau sur l’oreille et tantôt sur le nez,</l>
+          <l n="360">L’Estomac débraillé, la main dans la ceinture,</l>
+          <l n="361">Et l’esprit enjoué.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="362">L’agréable peinture.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="363">Si vous voyiez un homme approchant de cela.</l>
+          <l n="364">Hem ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="365">Que je l’aimerais, Lisette ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS se présentant.</speaker>
+          <l n="366">Me voilà.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="367">Ah ! fuyons.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, courant après.</speaker>
+          <l n="368">Arrêtez, adorable Orpheline.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="369">Non, Lisette, rentrons... Mais il a bonne mine,</l>
+          <l n="370">Demeurons un moment pour le considérer.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="371">Je ressemble au portrait, et veux vous adorer,</l>
+          <l n="372">Belle Enfant... je suis tel que votre oncle souhaite,</l>
+          <l n="373">Noble...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="374">Il nous écoutait, que dirons-nous, Lisette ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="375">Je dirai qu’en Monsieur vous trouvez un trésor,</l>
+          <l n="376">Noble...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="377">Quand vous auriez trouvé mon pesant d’or,</l>
+          <l n="378">Vous auriez moins trouvé.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="379">Je sens un trouble extrême...</l>
+          <l n="380">Je voudrais bien savoir comme on dit que l’on aime.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="381">Trop aimable innocente.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="382">On ne dit point cela :</l>
+          <l n="383">Une fille avouer la tendresse qu’elle a !</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="384">Pourquoi ? laissez-la dire.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="385">Un semblable langage</l>
+          <l n="386">Ne se doit point tenir avant le mariage.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="387">Mariée ? on dit donc que l’on aime.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="388">Fort bien,</l>
+          <l n="389">Une femme le dit quand il n’en est plus rien.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="390">Ah ! que je le dirai.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="391">Son air naïf m’enchante,</l>
+          <l n="392">Je n’ai jamais senti d’ardeur plus violente.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="393">Et moi je n’ai jamais senti ce que je sens,</l>
+          <l n="394">Certain je ne sais quoi me trouble tous les sens,</l>
+          <l n="395">Vous en êtes la cause.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="396">Ah ! Ciel, je m’extasie,</l>
+          <l n="397">Je goûte le Nectar ensemble et l’Ambroisie,</l>
+          <l n="398">Contemplant ses appas, entendant ses discours.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="399">Couronnons promptement de si promptes amours.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="400">Comment faut-il s’y prendre ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="401">Instruis nous-en, Lisette.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="402">Il faut parler à l’Oncle, et votre affaire est faite,</l>
+          <l n="403">Le bon homme sera charmé de votre choix :</l>
+          <l n="404">Allons-y de ce pas, et parlons lui tous trois.</l>
+          <l n="405">Mais que lui dirons-nous quel nom est le vôtre ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="406">Il est l’amour d’un sexe et la terreur de l’autre,</l>
+          <l n="407">Me nommant je suis sur de son consentement,</l>
+          <l n="408">De tout notre pays mon nom est l’ornement,</l>
+          <l n="409">Dardibras ! Sur la terre on ne trouve point d’homme</l>
+          <l n="410">Que ce nom n’intimide ; alors que je me nomme,</l>
+          <l n="411">Il m’étonne moi-même.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="412">Il ne me fait point peur,</l>
+          <l n="413">Au contraire, ce nom redouble mon ardeur.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="414">Je viens vous avertir que la Fille d’Oronte,</l>
+          <l n="415">Votre Maîtresse...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="416">Ô Ciel !</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="417">Que dit-il ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="418">C’est, un conte</l>
+          <l n="419">Qu’il vient...</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="420">Non par ma foi c’est une vérité,</l>
+          <l n="421">Votre femme future...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="422">Ah ! me voilà gâté.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="423">Un homme à ses genoux...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="424">Maraud, veux-tu te taire.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="425">Quoi ! vous aimez ailleurs ? bon Dieu, qu’allais-je faire ?</l>
+          <l n="426">Rentrons vite, Monsieur n’est pas ce qu’il nous faut.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="427">Écoutez-moi.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="428">Non, non.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="429">Que je sois un maraud...</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE, à Hortense.</speaker>
+          <l n="430">Rentrez dans le Couvent pour toute votre vie,</l>
+          <l n="431">Plutôt que de souffrir...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="432">Je n’en ai plus d’envie,</l>
+          <l n="433">Je ne veux point quitter ce Monsieur-là.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="434">Comment ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="435">Je ne veux point sans lui rentrer dans le Couvent.</l>
+          <l n="436">Qu’il s’y mette avec moi.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="437">Mais vous rêvez, je pense.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="438">Hé ! ne la grondez point.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="439">Oh, quelle extravagance !</l>
+          <l n="440">Au Couvent avec vous !</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="441">Il est bon là, ma foi.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="442">Un homme !</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN, chantant.</speaker>
+          <stage>&lt;em&gt;Ce serait pour tout le Convent. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="443">Quoi ?</l>
+          <l n="444">Tu chante malheureux !</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="445">C’est une chansonnette,</l>
+          <l n="446">Monsieur, que l’on m’apprit quand je fus en retraite.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="447">Ça Monsieur, en deux mots il faut nous parler net.</l>
+          <l n="448">Vous êtes engagé.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="449">Rien n’est encore fait.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="450">Monsieur n’a qu’un dédit.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à Valentin bas.</speaker>
+          <l n="451">De quoi vas-tu l’instruire,</l>
+          <l n="452">Tais-toi ; ton zèle ici ne fait rien que me nuire.</l>
+          <stage>&lt;em&gt;À Hortense.&lt;/em&gt;</stage>
+          <l n="453">J’ai fait avec Oronte, ainsi qu’il vous le dit,</l>
+          <l n="454">Un papier griffonné manière de dédit.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="455">De quatre mille écus !</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à Valentin bas.</speaker>
+          <l n="456">C’est donc pour me déplaire</l>
+          <l n="457">Que tu...</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="458">Vous oubliez la moitié de l’affaire,</l>
+          <l n="459">Je vous fais souvenir autant que je le puis.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="460">Je m’en souviens sans toi. Je ne sais où j’en suis.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="461">Monsieur, si vous pouvez r’avoir votre promesse,</l>
+          <l n="462">Vous pourrez obtenir la main de ma Maîtresse,</l>
+          <l n="463">Aussi facilement que vous avez son cœur.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="464">Ah ! c’est en quoi je mets mon souverain bonheur.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="465">Ne paraissez donc plus que dégagé d’Oronte.</l>
+          <l n="466">Ma Maîtresse n’a pas mérité qu’on l’affronte,</l>
+          <l n="467">Elle est jeune.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="468">Je vais contenter vos souhaits.</l>
+          <l n="469">Adieu.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="470">Je ne veux plus vous quitter désormais.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="471">Je vais trouver Oronte ; et quoiqu’il en advienne,</l>
+          <l n="472">Retirer ma parole et lui rendre la sienne.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="473">Mais sur tout le secret.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="474">Comment ? vous moquez-vous ?</l>
+          <l n="475">Demander du secret aux Gascons, Cadebious,</l>
+          <l n="476">Si nous n’en avions pas nous troublerions les Villes,</l>
+          <l n="477">On n’y verrait jamais de ménages tranquilles.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="478">Vous me quittez sitôt ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à Valentin.</speaker>
+          <l n="479">Elle va bien pleurer.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="480">Non, non.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à Lisette.</speaker>
+          <l n="481">Si mon départ va la désespérer ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="482">Ne craignez rien.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="483">Restez.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="484">À regret je vous quitte,</l>
+          <l n="485">Mais enfin, belle Enfant, j’en reviendrai plus vite.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="486">Ne tardez pas.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="487">Je vole...</l>
+          <stage>&lt;em&gt;À part. &lt;/em&gt;</stage>
+          <l n="488">Informons-nous pourtant,</l>
+          <l n="489">Si les cent mille écus sont en argent comptant.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="490">Voilà le plus fort fait. Il est encore à craindre</l>
+          <l n="491">Qu’il ne demande... Mais nos voisins sauront feindre,</l>
+          <l n="492">Ils sont tous prévenus, j’ai fait prendre ce soin.</l>
+          <l n="493">Mon mari doit passer pour mon oncle au besoin.</l>
+          <l n="494">Enfin j’ai su prévoir jusques au moindre obstacle,</l>
+          <l n="495">Car duper un Gascon au moins c’est un miracle.</l>
+          <l n="496">Il ne peut faire un pas, il ne peut dire un mot,</l>
+          <l n="497">Que nous ne le sachions, on le fuit. L’autre sot...</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="498">Sorti de l’arrière-ban la campagne passée,</l>
+          <l n="499">Il en fut, m’a-t-on dit, la fable et la risée.</l>
+          <l n="500">Sans esprit, toutefois il se croit beau garçon.</l>
+          <l n="501">Il a de l’amour propre autant que le Gascon.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="502">Tant mieux nous le tenons.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="503">Ça rendez moi justice,</l>
+          <l n="504">N’ai-je pas comme il faut seconder l’artifice,</l>
+          <l n="505">Comme vous le vouliez aider votre dessein ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="506">Fort bien, mais concertons pour notre Limosin</l>
+          <l n="507">Quel piège nous tendrons.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="508">Ah ! le voilà, je pense,</l>
+          <l n="509">L’autre de son bonheur aura fait confidence</l>
+          <l n="510">S’ils se sont rencontrés. Que Diable dirons-nous !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="511">Changeons de batterie.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="512">Il vient, éloignez-vous.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#valentin">
+          <speaker>VALENTIN, à part.</speaker>
+          <l n="513">Il me paraît chagrin.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="514">Peste soit du beau-père.</l>
+          <l n="515">Je voudrais pour beaucoup que ce fût à refaire.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="516">Qu’avez-vous, Monsieur ?</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="517">J’ai que je suis fâché.</l>
+          <l n="518">J’ai fait avec Oronte un fort mauvais marché.</l>
+          <l n="519">Sa larmoyeuse Élise, et sa sombre Angélique,</l>
+          <l n="520">Quoique jeunes, n’ont rien cependant qui me pique,</l>
+          <l n="521">Je ne les aime point, elles pleurent toujours,</l>
+          <l n="522">Et je n’ai jamais vu de si tristes amours.</l>
+          <l n="523">On disait à Paris les filles si joyeuses.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE,  pleurant et contrefaisant la veuve.</speaker>
+          <l n="524">Ah !</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="525">Qu’est-ce que j’entends ? encore des pleureuses ?</l>
+          <l n="526">Je pense qu’il en pleut.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="527">Perdre un époux chéri.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="528">C’est une Veuve qui...</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="529">Qui n’a plus de mari ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="530">À peu près : on la voit se lamenter sans cesse.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="531">Elle est ma foi jolie avec cette tristesse.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="532">Monsieur, je n’aime point à voir pleurer les gens ;</l>
+          <l n="533">Éloignons nous.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="534">Dis-moi, loge-t-elle céans ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="535">Vraiment cette maison, et si grande et si belle,</l>
+          <l n="536">Est un de ses effets.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="537">Mais Oronte ?...</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="538">Tient d’elle</l>
+          <l n="539">Un simple appartement.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="540">Hé ! le crasseux.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, sanglotant.</speaker>
+          <l n="541">Hélas !</l>
+          <l n="542">Je ne te verrai plus.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC, pleurant.</speaker>
+          <l n="543">Ses pleurs ont tant d’appas,</l>
+          <l n="544">Que je crois que j’en pleure.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN, feignant de pleurer.</speaker>
+          <l n="545">Et moi je fonds en larmes.</l>
+          <l n="546">Que ce sexe sur nous a de puissantes armes !</l>
+          <l n="547">Ma foi, sortons d’ici, pourquoi nous chagriner.</l>
+          <l n="548">Elle n’a que des pleurs, Monsieur, à nous donner,</l>
+          <l n="549">Car les vingt mille francs qu’elle a de bonne rente,</l>
+          <l n="550">Elle les garde bien.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="551">Vingt mille ?</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="552">Près de trente,</l>
+          <l n="553">Que ne les donne-t-elle à vous ou bien à moi,</l>
+          <l n="554">On la consolerait de bon cœur.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="555">Oui ma foi,</l>
+          <l n="556">Moi sur tout. Ah ! jarni, si je pouvais lui plaire !</l>
+          <l n="557">J’ai charmé vingt guenons, sans dessein de le faire ;</l>
+          <l n="558">Ah ! qu’il vaudrait bien mieux à présent...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="559">Cette nuit</l>
+          <l n="560">J’ai vu ce cher époux qui sans cesse me suit.</l>
+          <l n="561">Mais dans trop de plaisir ce souvenir me plonge,</l>
+          <l n="562">Je veux être affligée.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="563">Elle allait dire un songe,</l>
+          <l n="564">Aussi beau que celui de Thyeste[1].</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="565">Comment ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, regardant Fatignac.</speaker>
+          <l n="566">Mais ne revois-je pas cet époux si charmant ?</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="567">Elle me prend pour lui.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="568">Voilà son air, sa grâce,</l>
+          <l n="569">C’est lui-même. C’est toi, cher époux, que j’embrasse.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="570">Tout coup vaille, voyons jusqu’où va sa douleur,</l>
+          <l n="571">Je veux me laisser faire. Hé n’ayez point de peur.</l>
+          <stage>&lt;em&gt;Hortense feint de s’évanouir, et se penche sur Lisette.&lt;/em&gt;</stage>
+          <l n="572">Je vous aime... À ce mot je pense qu’elle pâme !</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="573">Monsieur, c est le défunt qui trouble encor son âme.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="574">Dans cette pamoison on dirait qu’elle dort.</l>
+          <l n="575">Que diantre votre Veuve aimait donc bien ce mort ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="576">Vous le voyez, Monsieur.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, le tirant rudement.</speaker>
+          <l n="577">Cher ombre reste encore,</l>
+          <l n="578">N’échappe pas sitôt à celle qui t’adore.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="579">Et je ne bouge pas, je suis trop attendri.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, comme en sursaut.</speaker>
+          <l n="580">Ah ! je reviens à moi, ce n’est point mon mari.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="581">Qu’est-ce que cela fait ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="582">Mais quelle ressemblance.</l>
+          <l n="583">T’en souvient-il, Lisette ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="584">Oui, j’en ai souvenance.</l>
+          <l n="585">Mais Monsieur est mieux fait que n’était votre Époux.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="586">Et plus beau.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="587">Je me meurs.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN, bas, à Fatignac.</speaker>
+          <l n="588">Cela va bien pour nous.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="589">Lisette, je ma trouve en un désordre étrange.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN, à Fatignac, bas.</speaker>
+          <l n="590">Si la Veuve, Monsieur, pouvait prendre le change,</l>
+          <l n="591">Souvenez-vous de moi.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC, à Hortense.</speaker>
+          <l n="592">Vous avez des appas...</l>
+          <l n="593">Hé bien... le mort est mort... et je ne le suis pas.</l>
+          <l n="594">Laissez là le défunt, puisqu’il n’est plus en vie,</l>
+          <l n="595">Il ne reviendra pas, il n’en a pas d’envie,</l>
+          <l n="596">Prenez-moi, je suis vif, alerte, gai, fringant,</l>
+          <l n="597">Mais un trépassé laid...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="598">Vous lui ressemblez tant,</l>
+          <l n="599">Que sans aller plus loin, qui que vous puissiez être.</l>
+          <l n="600">Je fais votre fortune.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="601">Eh quoi ! sans le connaître ?</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="602">De quoi vous mêlez-vous ? je suis Baron, d’abord.</l>
+          <l n="603">Quand on plaît à Madame, et qu’on ressemble au mort,</l>
+          <l n="604">En faut-il davantage ? et si de ma fortune</l>
+          <l n="605">Elle veut prendre soin.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="606">Vous êtes importune.</l>
+          <l n="607">Quand Monsieur n’aurait pas la qualité qu’il a,</l>
+          <l n="608">Il suffit que je l’aime.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="609">Il ne faut que cela.</l>
+          <l n="610">Mais pour vous contenter et faire mon éloge,</l>
+          <l n="611">Mon nom est Fatignac, et mon pays Limoge.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="612">Qu’entends-je ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="613">Fatignac ! quoi Monsieur, c’est donc vous,</l>
+          <l n="614">Qui d’Angélique ici venez être l’Époux ?</l>
+          <l n="615">Vous vouliez nous tromper avec votre air si sage,</l>
+          <l n="616">Avez-vous ce cœur-là, petit cruel ?</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="617">J’enrage.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="618">Vous avez un dédit !</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="619">Hé bien : je le payerai,</l>
+          <l n="620">Et devant vous tantôt je le déchirerai.</l>
+          <stage>&lt;em&gt;Il tire le dédit de sa poche. &lt;/em&gt;</stage>
+          <l n="621">Voilà toujours celui d’Oronte, chère Veuve.</l>
+          <l n="622">De ma sincérité il faut une autre preuve,</l>
+          <l n="623">Faites de ce papier tout ce qu’il vous plaira.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, dédaignant de prendre le dédit.</speaker>
+          <l n="624">Cela suffit.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE, l’arrachant.</speaker>
+          <l n="625">Donnez, on l’examinera.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="626">Oh ! ça donc, c’est donc fait ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="627">Hé ! oui, je vous épouse,</l>
+          <l n="628">Dût la fille d’Oronte en devenir jalouse,</l>
+          <l n="629">Dussent mes héritiers cent fois en enrager,</l>
+          <l n="630">Je vous donne mon bien.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN, bas, à Fatignac.</speaker>
+          <l n="631">Il faudra partager,</l>
+          <l n="632">Au moins.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC, à Valentin, bas.</speaker>
+          <l n="633">Ah ! nous verrons.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="634">Que tout ceci se passe</l>
+          <l n="635">Sans qu’on en sache rien épargnez-moi de grâce,</l>
+          <l n="636">Épargnez ma faiblesse.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="637">Allez, je suis discret,</l>
+          <l n="638">Tenez, je dis toujours ce que je n’ai pas fait ;</l>
+          <l n="639">Ce que j’ai fait jamais, car j’en ai fait de belle :</l>
+          <l n="640">Au moins, et dans Limoge avec des Demoiselles,</l>
+          <l n="641">Tout le monde la su, mais je n’en ai dit rien,</l>
+          <l n="642">Je suis des plus secrets.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="643">Hé ! vous faites fort bien.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="644">À quoi bon divulguer les faveurs que l’on donne,</l>
+          <l n="645">J’aimerais mieux jamais n’en donner à personne.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="646">J’entends quelqu’un. Je rentre en mon appartement,</l>
+          <l n="647">Vous viendrez m’y trouver dans le même moment,</l>
+          <l n="648">J’enverrais Valentin qui saura vous conduire.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="649">C’est le Gascon, je vais de tout ceci l’instruire ;</l>
+          <l n="650">J’ai promis cependant de garder le secret,</l>
+          <l n="651">Mais il est mon ami, de plus homme discret.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="652">Ah fortuné mortel ! ah douceur sans seconde !</l>
+          <l n="653">Cher Fatignac, tu vois le plus content du monde.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="654">Votre contentement n’égale pas le mien ;</l>
+          <l n="655">Les Rois auprès de moi maintenant ne sont rien.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="656">Les Dieux portent envie à mon bonheur suprême ;</l>
+          <l n="657">En un mot, cher ami, l’on m’aime autant que j’aime.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="658">Et moi, l’on m’aime plus que je n’aime, et pourtant</l>
+          <l n="659">J’aime beaucoup. Enfin je suis plus que content,</l>
+          <l n="660">Consoler l’affligée !...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="661">Enseigner l’ignorante !</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="662">Que j’aurai de plaisir !</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="663">Félicité charmante !</l>
+          <l n="664">Une jeune Orpheline avec cent mille appas,</l>
+          <l n="665">Avec cent mille écus se jette entre mes bras.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="666">Une Veuve très belle en m’épousant m’apporte,</l>
+          <l n="667">Avec autant d’appas une somme aussi forte.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="668">Que les filles d’Oronte ont de minces attraits,</l>
+          <l n="669">Près de la mienne ?</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="670">Hé ! si les attraits... les plus laids...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="671">À cet aimable Enfant je vais rendre visite.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="672">Moi de même à ma Veuve.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="673">Adieu donc je te quitte.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC, à part.</speaker>
+          <l n="674">Ne nous éloignons pas.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à part.</speaker>
+          <l n="675">Bon ! demeurons ici.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC, à part, apercevant Hortense.</speaker>
+          <l n="676">Ah ! jarni, la voilà.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à part, l’apercevant aussi.</speaker>
+          <l n="677">Cadédis, la voici.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#valentin">
+          <speaker>VALENTIN, bas, à Fatignac.</speaker>
+          <l n="678">Par l’escalier à gauche il vous faut monter vite</l>
+          <l n="679">Tout en haut, et dans peu l’on vous y rend visite ;</l>
+          <l n="680">Votre Veuve...</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="681">J’entends, j’y monte promptement.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#valentin">
+          <speaker>VALENTIN, à Dardibras.</speaker>
+          <l n="682">Je vous en ai défait assez adroitement.</l>
+          <l n="683">L’Orpheline venait, j’ai crû...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="684">Je t’en rends grâce.</l>
+          <l n="685">Laisse-nous.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="686">Maintenant que faut-il que je fasse,</l>
+          <l n="687">Belle Enfant ? j’ai rompu cet important dédit,</l>
+          <l n="688">Oronte de la somme un an me fait crédit,</l>
+          <l n="689">J’ai donné mon billet qu’il a bien voulu prendre.</l>
+          <l n="690">Il voulait cependant me retenir pour gendre,</l>
+          <l n="691">Mais enfin c’en est fait. J’ai vu votre Oncle aussi.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="692">Hé ! que vous a-t-il dit ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="693">Bon, mon neveu par-ci</l>
+          <l n="694">Et mon neveu par-là, sa joie est sans pareille.</l>
+          <l n="695">Ma figure et mon nom ont fait d’abord merveille.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="696">Et comment l’avez-vous rencontré ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="697">Par hasard.</l>
+          <l n="698">Des gens me l’ont montré. Peste c’est un gaillard...</l>
+          <l n="699">Il est tout jeune encor. Cependant de sa vie</l>
+          <l n="700">Il ne veut prendre femme, il n’en a point d’envie,</l>
+          <l n="701">Il nous laisse son bien jusqu’au dernier denier.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC, essoufflé.</speaker>
+          <l n="702">Valentin est plaisant, il m’envoie au grenier.</l>
+          <stage>&lt;em&gt;Apercevant Hortense et Dardibras.&lt;/em&gt;</stage>
+          <l n="703">Mais que vois-je ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="704">Tu vois l’agréable Orpheline,</l>
+          <l n="705">Ami, que mon bonheur aujourd’hui me destine.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="706">C’est ma Veuve.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="707">Ta Veuve.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="708">Hé ! oui vraiment ce l’est.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="709">Parce qu’elle est en deuil ? peste soit du benêt.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="710">Je ne suis point benêt, c’est ma Veuve elle-même...</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="711">Serait-il donc possible, et que par stratagème...</l>
+          <l n="712">Pour rompre les dédits... Ah, quelle trahison !</l>
+          <l n="713">Vous osez à votre âge attraper un Gascon !</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="714">Bien plus un Limousin !</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="715">Ah ! quelle perfidie !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, riant.</speaker>
+          <l n="716">Ah ! ah ! ah !</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="717">Vous riez, animal amphibie,</l>
+          <l n="718">Êtes-vous fille ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, riant.</speaker>
+          <l n="719">Point.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="720">Êtes-vous veuve ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, riant.</speaker>
+          <l n="721">Non.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="722">Ni l’un ni l’autre ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, le contrefaisant.</speaker>
+          <l n="723">Hé ! non.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="724">Qui donc êtes vous donc ?</l>
+          <l n="725">De Monsieur ou de moi vous trahissez la flamme.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="726">Peut être de tous deux.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="727">Comment ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="728">Bonjour ma femme.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="729">En voici bien d’un autre !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="730">Ah ! mon mari c’est vous ?</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="731">Il était tantôt l’oncle, à présent c’est l’époux.</l>
+          <l n="732">Et fille, et veuve, et femme, et Diable qui t’en porte,</l>
+          <l n="733">Visage a-t-il jamais changé de cette sorte !</l>
+          <l n="734">Innocente, affligée, enjouée, est-ce assez ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à Oronte.</speaker>
+          <l n="735">Ah ! beau-père futur.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="736">Ah ! mes gendres passés.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC, à Oronte.</speaker>
+          <l n="737">Vous étiez donc aussi de cette manigance.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="738">Dans peu nous en saurons marquer notre vengeance.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, à Dardibras et à Fatignac.</speaker>
+          <l n="739">Ne vous fâchez point tant, Messieurs ; il est permis</l>
+          <l n="740">Contre tous en tout temps de servir ses amis.</l>
+          <stage>&lt;em&gt;Montrant Philidor et Dorante. &lt;/em&gt;</stage>
+          <l n="741">Ces Messieurs sont les miens, ils aiment mes Cousines.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="742">Fort bien, beau-père, époux, amis, voisins, voisines,</l>
+          <l n="743">Nous trompaient, qui payera ?...</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE.</speaker>
+          <l n="744">Je vous rends vos écrits.</l>
+          <l n="745">Et vous fais reconduire où je vous avais pris</l>
+          <l n="746">À mes frais et dépens.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="747">J’y consens avec joie,</l>
+          <l n="748">Et ne crois pas qu’ici de longtemps on me voie.</l>
+          <l n="749">Je retourne au pays.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="750">Je vous y conduirai</l>
+          <l n="751">Monseigneur Dardibras.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS.</speaker>
+          <l n="752">Je te retrouverai</l>
+          <l n="753">Quelque part.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="754">Ah coquin ! si tu viens à Limoge.</l>
+        </sp>
+        <sp who="#valentin">
+          <speaker>VALENTIN.</speaker>
+          <l n="755">Monsieur, en arrivant c’est chez vous que je loge.</l>
+        </sp>
+        <sp who="#dardibras">
+          <speaker>DARDIBRAS, à Philidor et à Dorante.</speaker>
+          <l n="756">Adoucias, Messieurs les fortunés époux,</l>
+          <l n="757">Les femmes de Paris en savent trop pour nous.</l>
+        </sp>
+        <sp who="#tatignac">
+          <speaker>FATIGNAC.</speaker>
+          <l n="758">C’est bien dit. Moi je vais dans l’un de nos villages</l>
+          <l n="759">Planter des choux, Adieu la femme aux trois visages.</l>
+        </sp>
+        <sp who="#oronte">
+          <speaker>ORONTE, à Philidor et à Dorante.</speaker>
+          <l n="760">Messieurs, sans compliment, mes Filles sont à vous,</l>
+          <l n="761">Je vous les donne, entrons et réjouissons-nous.</l>
+          <stage>&lt;a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"&gt;[1]&lt;/a&gt; L’un des plus beaux endroits de la Tragédie d’&lt;em&gt;Atrée et Thyeste&lt;/em&gt;. (note de l’auteur.)</stage>
+          <l n="762" />
+          <l n="763" />
+        </sp>
       </div>
     </body>
   </text>

@@ -1,1490 +1,1403 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>L’École du piston</title>
-        <author key="Tristan BERNARD | (naissance-mort)">Tristan BERNARD |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/l’école-du-piston-tristan-bernard</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Tristan BERNARD |</author>. <title>L’École du piston</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/l’école-du-piston-tristan-bernard</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1916-06-11">Représentée pour la première fois, à Paris, sur le Théâtre Antoine, le 11 juin 1916.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="robert-santeuil" sex="SEX">
+            <persName>ROBERT SANTEUIL</persName>
+          </person>
+          <person xml:id="barruchon" sex="SEX">
+            <persName>BARRUCHON</persName>
+          </person>
+          <person xml:id="le-général-varbeuf" sex="SEX">
+            <persName>LE GÉNÉRAL VARBEUF</persName>
+          </person>
+          <person xml:id="henri-bassou" sex="SEX">
+            <persName>HENRI BASSOU</persName>
+          </person>
+          <person xml:id="eugène" sex="SEX">
+            <persName>EUGÈNE</persName>
+          </person>
+          <person xml:id="un-adjudant" sex="SEX">
+            <persName>UN ADJUDANT</persName>
+          </person>
+          <person xml:id="un-capitaine" sex="SEX">
+            <persName>UN CAPITAINE</persName>
+          </person>
+          <person xml:id="madame-pruneau" sex="SEX">
+            <persName>MADAME PRUNEAU</persName>
+          </person>
+          <person xml:id="lucie-rumelle" sex="SEX">
+            <persName>LUCIE RUMELLE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1916-06-11" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre Antoine, le 11 juin 1916.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>L’École du piston</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre Antoine, le 11 juin 1916.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="robert-santeuil">ROBERT SANTEUIL</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="barruchon">BARRUCHON</role>
-              <roleDesc>, <em>sous-secrétaire aux Tabacs</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-général-varbeuf">LE GÉNÉRAL VARBEUF</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="henri-bassou">HENRI BASSOU</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="eugène">EUGÈNE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-adjudant">UN ADJUDANT</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-capitaine">UN CAPITAINE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-pruneau">MADAME PRUNEAU</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lucie-rumelle">LUCIE RUMELLE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène est à Bordeaux, en septembre-octobre 1914, dans le vestibule d’un hôtel confortable. </em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Au lever du rideau, Mme Pruneau, la patronne de l’hôtel (léger accent bordelais) est en conversation avec un adjudant du 184<sup>e</sup> de ligne.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="l’adjudant" xml:id="1-1">
-            <speaker>L’ADJUDANT, MADAME PRUNEAU, ADRIEN</speaker>
-            <l n="10" xml:id="l10"> </l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-2">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="11" xml:id="l11">Madame Pruneau, on m’a dit que vous aviez à me parler. Vous voyez que je n’ai pas été long. Seulement, il faut que j’aille chez le commandant ; il m’attend. Le patron est donc mobilisé que je ne l’aperçois pas ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-3">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="12" xml:id="l12">Je vous crois ! Et dès le premier jour encore ! Il est près de Dax. Il garde une voie de chemin de fer.</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-4">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="13" xml:id="l13">Quel grade ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-5">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="14" xml:id="l14">Deuxième classe.</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-6">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="15" xml:id="l15">Mais il n’est pas trop malheureux ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-7">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="16" xml:id="l16">Oh ! il s’arrange.</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-8">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="17" xml:id="l17">Je suis tranquille sur son compte ; je me doute qu’il s’arrange.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-9">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="18" xml:id="l18">Et puis, il est tombé sur un bon sous-officier de sa connaissance : le cocher de notre omnibus.</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-10">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="19" xml:id="l19">Ah ! c’est qu’il est parti aussi ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-11">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="20" xml:id="l20">Et l’omnibus est parti d’un autre côté et les chevaux encore d’un autre.</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-12">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="21" xml:id="l21">Tous vos garçons à droite et à gauche ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-13">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="22" xml:id="l22">Mais oui, Achille, zouave, Frédéric, chasseur, et Justinien dans l’intendance. C’est même rapport à ça que je vous ai fait venir. J’attends un autre garçon, un petit Espagnol ; avec mes trois bonnes, il fera l’affaire. Seulement, il n’est pas encore arrivé, et, en attendant, j’emploie le neveu de Justinien qui est bleu justement dans votre régiment. C’est un petit gars qui vient des environs de Mont-de-Marsan, de la campagne. Il n’est pas débrouillard encore.</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-14">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="23" xml:id="l23">Et qu’est-ce qu’il y a pour votre service ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-15">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="24" xml:id="l24">Ils viennent tout juste, ceux de sa classe, d’arriver au quartier. Pendant qu’on les habille, lui, comme il est tout habillé déjà – je l’ai équipé – je voudrais que vous me le laissiez deux, trois jours, jusqu’à l’arrivée d’un remplaçant.</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-16">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="25" xml:id="l25">C’est qu’on en a besoin pour la théorie, la première théorie qu’on fait aux bleus : les marques extérieures de respect.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-17">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="26" xml:id="l26">Oh ! mais je connais ça aussi bien que les instructeurs. Ce serait malheureux de n’avoir fréquenté que des militaires dans sa vie pour ne pas connaître les grades.</l>
-            <stage><hi rend="italic"><em>Arrive Adrien en costume de soldat. </em></hi></stage>
-            <l n="28" xml:id="l28">Adrien, amène-toi un peu par là. Eh bien, si tu prenais la position militaire, mon petit ? Tu as ton supérieur devant toi !</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-18">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="29" xml:id="l29">C’est vous le neveu de Justinien ?</l>
-          </sp>
-          <sp who="adrien" xml:id="1-19">
-            <speaker>ADRIEN.</speaker>
-            <l n="30" xml:id="l30">Oui... oui...</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-20">
-            <speaker>MADAME PRUNEAU, <em>le reprenant.</em></speaker>
-            <l n="31" xml:id="l31">Oui, mon adjudant ! Tu dois lui dire « mon adjudant ».</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-21">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="32" xml:id="l32">Oui, il pourrait me dire « adjudant », ça suffirait. Le règlement c’est « adjudant ». L’usage est « mon adjudant ».</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-22">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="33" xml:id="l33">Je veux qu’il ait de l’usage. Eh bien, c’est entendu, vous me le laissez trois, quatre jours ?</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-23">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="34" xml:id="l34">Je vous le laisserai le plus longtemps que je pourrai. Trop heureux de vous être agréable.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-24">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="35" xml:id="l35">Au dîner aussi, bien entendu !</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-25">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="36" xml:id="l36">Oui, madame Pruneau.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="1-26">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="37" xml:id="l37">Et quand ça vous fait plaisir de venir déjeuner, vous savez, le couvert est toujours mis à ma table...</l>
-          </sp>
-          <sp who="l’adjudant" xml:id="1-27">
-            <speaker>L’ADJUDANT.</speaker>
-            <l n="38" xml:id="l38">Merci, madame Pruneau.</l>
-            <l n="39" xml:id="l39"> </l>
-            <l n="40" xml:id="l40"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="41" xml:id="l41"> </l>
-          <sp who="madame-pruneau" xml:id="2-1">
-            <speaker>MADAME PRUNEAU, ADRIEN, <em>puis</em> ROBERT SANTEUIL, <em>suivi de</em> LUCIE RUMELLE</speaker>
-            <l n="42" xml:id="l42"> </l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="2-2">
-            <speaker>MADAME PRUNEAU, <em>à Adrien.</em></speaker>
-            <l n="43" xml:id="l43">Es-tu lavé au moins, Adrien ?</l>
-          </sp>
-          <sp who="adrien" xml:id="2-3">
-            <speaker>ADRIEN.</speaker>
-            <l n="44" xml:id="l44">Si je suis lavé, patronne ? Il y a longtemps de ça.</l>
-            <stage><hi rend="italic"><em>À lui-même, à mi-voix.</em></hi></stage>
-            <l n="46" xml:id="l46">Il y a au moins trois jours !</l>
-            <stage><hi rend="italic"><em>Robert et Lucie entrent.</em></hi></stage>
-          </sp>
-          <sp who="robert" xml:id="2-4">
-            <speaker>ROBERT.</speaker>
-            <l n="48" xml:id="l48">Pardon, Madame, est-ce que M. Henri Bassou, du Grand Courrier, est à l’hôtel ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="2-5">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="49" xml:id="l49">Oui, Monsieur. Il est à l’hôtel depuis le commencement de septembre. C’est lui qui s’occupe de l’édition de Bordeaux.</l>
-          </sp>
-          <sp who="robert" xml:id="2-6">
-            <speaker>ROBERT.</speaker>
-            <l n="50" xml:id="l50">Voudriez-vous le faire prévenir que son ami, monsieur Robert Santeuil, veut lui parler ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="2-7">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="51" xml:id="l51">Ah ! c’est qu’il n’est pas à l’hôtel du moment, M. Bassou...</l>
-          </sp>
-          <sp who="robert" xml:id="2-8">
-            <speaker>ROBERT, <em>impatienté, à Lucie.</em></speaker>
-            <l n="52" xml:id="l52">Il n’est pas à l’hôtel pour le moment.</l>
-          </sp>
-          <sp who="lucie" xml:id="2-9">
-            <speaker>LUCIE.</speaker>
-            <l n="53" xml:id="l53">Oh ! c’est ennuyeux ! c’est ennuyeux !</l>
-          </sp>
-          <sp who="robert" xml:id="2-10">
-            <speaker>ROBERT.</speaker>
-            <l n="54" xml:id="l54">Est-ce qu’il sera longtemps absent, Madame ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="2-11">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="55" xml:id="l55">Je ne crois pas, monsieur. Il est parti se faire raser, ici, tout à côté. Il doit revenir chercher son courrier vers onze heures.</l>
-          </sp>
-          <sp who="lucie" xml:id="2-12">
-            <speaker>LUCIE.</speaker>
-            <l n="56" xml:id="l56">Il n’est pas loin de onze heures.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="2-13">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="57" xml:id="l57">Il les est.</l>
-          </sp>
-          <sp who="robert" xml:id="2-14">
-            <speaker>ROBERT.</speaker>
-            <l n="58" xml:id="l58">Alors nous allons faire une petite course dans le quartier et nous revenons.</l>
-          </sp>
-          <sp who="lucie" xml:id="2-15">
-            <speaker>LUCIE, <em>à Robert.</em></speaker>
-            <l n="59" xml:id="l59">Donnez votre nom, en tout cas.</l>
-          </sp>
-          <sp who="robert" xml:id="2-16">
-            <speaker>ROBERT.</speaker>
-            <l n="60" xml:id="l60">Voulez-vous lui dire que son ami, Robert Santeuil, homme de lettres, va venir le voir.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="2-17">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="61" xml:id="l61">Oh ! monsieur, je vous connais bien, je vous connais parfaitement.</l>
-          </sp>
-          <sp who="lucie" xml:id="2-18">
-            <speaker>LUCIE.</speaker>
-            <l n="62" xml:id="l62">Elle vous connaît ?</l>
-          </sp>
-          <sp who="robert" xml:id="2-19">
-            <speaker>ROBERT, <em>d’un ton vague et satisfait.</em></speaker>
-            <l n="63" xml:id="l63">Oui, oui.</l>
-            <stage><hi rend="italic"><em>À Mme Pruneau.</em></hi></stage>
-            <l n="65" xml:id="l65">Écrivez alors, s’il vous plaît.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="2-20">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="66" xml:id="l66">Oh ! je m’en rappellerai bien : M. Albert Danteuil.</l>
-          </sp>
-          <sp who="robert" xml:id="2-21">
-            <speaker>ROBERT.</speaker>
-            <l n="67" xml:id="l67">Non, Robert Santeuil. Écrivez, je vous prie, ce sera plus sûr.</l>
-            <stage><hi rend="italic"><em>Ils sortent. Adrien entre.</em></hi></stage>
-            <l n="69" xml:id="l69"> </l>
-            <l n="70" xml:id="l70"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="71" xml:id="l71"> </l>
-          <sp who="madame-pruneau" xml:id="3-1">
-            <speaker>MADAME PRUNEAU, ADRIEN</speaker>
-            <l n="72" xml:id="l72"> </l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="3-2">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="73" xml:id="l73">Adrien, tiens, voilà deux francs de pourboire qu’on a laissés pour toi ce matin.</l>
-          </sp>
-          <sp who="adrien" xml:id="3-3">
-            <speaker>ADRIEN.</speaker>
-            <l n="74" xml:id="l74">Merci, merci.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="3-4">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="75" xml:id="l75">Merci qui ?</l>
-          </sp>
-          <sp who="adrien" xml:id="3-5">
-            <speaker>ADRIEN.</speaker>
-            <l n="76" xml:id="l76">Merci, Madame.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="3-6">
-            <speaker>MADAME PRUNEAU, <em>lui montrant sa manche.</em></speaker>
-            <l n="77" xml:id="l77">Il y a trois galons là-dessus.</l>
-          </sp>
-          <sp who="adrien" xml:id="3-7">
-            <speaker>ADRIEN.</speaker>
-            <l n="78" xml:id="l78">Merci, capitaine.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="3-8">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="79" xml:id="l79">Mon !</l>
-          </sp>
-          <sp who="adrien" xml:id="3-9">
-            <speaker>ADRIEN.</speaker>
-            <l n="80" xml:id="l80">Mon ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="3-10">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="81" xml:id="l81">Mon capitaine.</l>
-          </sp>
-          <sp who="adrien" xml:id="3-11">
-            <speaker>ADRIEN.</speaker>
-            <l n="82" xml:id="l82">Mon capitaine.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="3-12">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="83" xml:id="l83">À la bonne heure !</l>
-            <stage><hi rend="italic"><em>Entre Henri Bassou.</em></hi></stage>
-            <l n="85" xml:id="l85"> </l>
-            <l n="86" xml:id="l86"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="87" xml:id="l87"> </l>
-          <sp who="madame-pruneau" xml:id="4-1">
-            <speaker>MADAME PRUNEAU, HENRI BASSOU, <em>puis</em> ADRIEN</speaker>
-            <l n="88" xml:id="l88"> </l>
-          </sp>
-          <sp who="henri" xml:id="4-2">
-            <speaker>HENRI.</speaker>
-            <l n="89" xml:id="l89">Bonjour, Madame. Il y a des lettres pour moi ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-3">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="90" xml:id="l90">Oui, monsieur Bassou. Voici également une carte, ou plutôt un morceau de papier où j’ai écrit le nom d’un monsieur qui va venir vous voir : Robert Santeuil.</l>
-          </sp>
-          <sp who="henri" xml:id="4-4">
-            <speaker>HENRI.</speaker>
-            <l n="91" xml:id="l91">Ah ! Robert Santeuil est à Bordeaux ? Eh bien, ça vous fait une illustration de plus dans vos murs, où l’on en compte déjà un certain nombre.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-5">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="92" xml:id="l92">Ce monsieur paraissait bien ennuyé. Il était avec une jeune demoiselle.</l>
-          </sp>
-          <sp who="henri" xml:id="4-6">
-            <speaker>HENRI.</speaker>
-            <l n="93" xml:id="l93">Vous ne savez pas qui c’est ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-7">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="94" xml:id="l94">Non, je ne la connais pas. Pourtant, je crois que ses parents sont de Bordeaux. C’est une demoiselle très bien.</l>
-          </sp>
-          <sp who="henri" xml:id="4-8">
-            <speaker>HENRI.</speaker>
-            <l n="95" xml:id="l95">Tenez, madame Pruneau, voici une dépêche à porter. Il y a environ vingt-trois mots. Tenez ! Le reste sera pour le garçon.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-9">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="96" xml:id="l96">Adrien !</l>
-          </sp>
-          <sp who="henri" xml:id="4-10">
-            <speaker>HENRI.</speaker>
-            <l n="97" xml:id="l97">Attendez un peu pour faire porter cette dépêche que j’aie dépouillé mon courrier ; j’en aurai peut-être une autre à envoyer.</l>
-            <stage><hi rend="italic"><em>Entre Adrien.</em></hi></stage>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-11">
-            <speaker>MADAME PRUNEAU, <em>à Adrien.</em></speaker>
-            <l n="99" xml:id="l99">Tiens, Adrien, voilà de l’argent pour cette dépêche ; c’est plus que ça coûtera ; le reste est pour toi.</l>
-          </sp>
-          <sp who="adrien" xml:id="4-12">
-            <speaker>ADRIEN.</speaker>
-            <l n="100" xml:id="l100">Merci, Madame.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-13">
-            <speaker>MADAME PRUNEAU, <em>lui montrant sa manche.</em></speaker>
-            <l n="101" xml:id="l101">J’ai là-dessus un large galon en biais.</l>
-          </sp>
-          <sp who="adrien" xml:id="4-14">
-            <speaker>ADRIEN.</speaker>
-            <l n="102" xml:id="l102">Merci, mon sergent.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-15">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="103" xml:id="l103">Pas mon.</l>
-          </sp>
-          <sp who="adrien" xml:id="4-16">
-            <speaker>ADRIEN, <em>sans comprendre.</em></speaker>
-            <l n="104" xml:id="l104">Pas mon ?</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-17">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="105" xml:id="l105">Au sergent, pas « mon ». C’est un sous-officier. Au lieutenant, au capitaine, « mon ». C’est des officiers.</l>
-            <stage><hi rend="italic"><em>Tendant son autre manche.</em></hi></stage>
-            <l n="107" xml:id="l107">Et maintenant, j’ai sur cette manche cinq galons dont deux d’argent et trois galons d’or. Qu’est-ce que je suis ?</l>
-          </sp>
-          <sp who="adrien" xml:id="4-18">
-            <speaker>ADRIEN.</speaker>
-            <l n="108" xml:id="l108">Trois galons d’or... Voyons, vous m avez dit ça hier matin... Trois galons d’or, c’est capitaine d’infanterie ; deux d’argent, lieutenant de cavalerie... Vous êtes capitaine d’infanterie et lieutenant de cavalerie.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-19">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="109" xml:id="l109">Mais non. Je les ai tous les cinq là. Lieutenant-colonel ! Je suis lieutenant-colonel. Tu me dis : « Mon colonel ». Cinq galons d’or, je serai colonel... Pas de galons et deux étoiles, qu’est-ce que je serais ? Général de brigade, tu entends ? deux étoiles. Et si j’avais trois étoiles ? Général de division !</l>
-          </sp>
-          <sp who="henri" xml:id="4-20">
-            <speaker>HENRI.</speaker>
-            <l n="110" xml:id="l110">Vous pouvez envoyer la dépêche.</l>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-21">
-            <speaker>MADAME PRUNEAU.</speaker>
-            <l n="111" xml:id="l111">Va porter la dépêche.</l>
-            <stage><hi rend="italic"><em>En sortant, Adrien se croise dans la porte tournante avec Robert Santeuil et Lucie Rumelle qui entrent.</em></hi></stage>
-          </sp>
-          <sp who="madame-pruneau" xml:id="4-22">
-            <speaker>MADAME PRUNEAU, <em>à Henri Bassou.</em></speaker>
-            <l n="113" xml:id="l113">Tenez, voilà justement les amis qui vous cherchent.</l>
-            <stage><hi rend="italic"><em>Elle sort.</em></hi></stage>
-            <l n="115" xml:id="l115"> </l>
-            <l n="116" xml:id="l116"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="117" xml:id="l117"> </l>
-          <sp who="robert-santeuil" xml:id="5-1">
-            <speaker>ROBERT SANTEUIL, LUCIE RUMELLE, HENRI BASSOU</speaker>
-            <l n="118" xml:id="l118"> </l>
-          </sp>
-          <sp who="henri" xml:id="5-2">
-            <speaker>HENRI.</speaker>
-            <l n="119" xml:id="l119">Santeuil ! Comment vas-tu ?</l>
-          </sp>
-          <sp who="robert" xml:id="5-3">
-            <speaker>ROBERT.</speaker>
-            <l n="120" xml:id="l120">Bonjour, mon cher ami. Je suis content de te voir !</l>
-            <stage><hi rend="italic"><em>Présentant.</em></hi></stage>
-            <l n="122" xml:id="l122">Mlle Lucie Rumelle.</l>
-            <stage><hi rend="italic"><em>À mi-voix.</em></hi></stage>
-            <l n="124" xml:id="l124">Mademoiselle est ma fiancée. Je ne le dis pas encore très haut parce que ce n’est pas arrangé avec ses parents... C’est pour ça que nous sommes très, très ennuyés.</l>
-          </sp>
-          <sp who="lucie" xml:id="5-4">
-            <speaker>LUCIE.</speaker>
-            <l n="125" xml:id="l125">Très, très ennuyés.</l>
-            <stage><hi rend="italic"><em>Hardiment.</em></hi></stage>
-            <l n="127" xml:id="l127">Et c’est pour ça que nous comptons sur vous.</l>
-          </sp>
-          <sp who="henri" xml:id="5-5">
-            <speaker>HENRI.</speaker>
-            <l n="128" xml:id="l128">Vous comptez sur moi ?</l>
-          </sp>
-          <sp who="robert" xml:id="5-6">
-            <speaker>ROBERT.</speaker>
-            <l n="129" xml:id="l129">Eh bien, oui ! nous comptons sur toi. Je vais t’expliquer ça...</l>
-            <stage><hi rend="italic"><em>Ils s’assoient tous les trois.</em></hi></stage>
-            <l n="131" xml:id="l131">Voici : je suis de la classe 1903. J’ai trente-deux ans.</l>
-          </sp>
-          <sp who="henri" xml:id="5-7">
-            <speaker>HENRI, <em>qui tient aussi à expliquer, comme tout le monde, sa situation militaire.</em></speaker>
-            <l n="132" xml:id="l132">Moi, je suis de la classe 97. Je suis en sursis d’appel.</l>
-          </sp>
-          <sp who="robert" xml:id="5-8">
-            <speaker>ROBERT.</speaker>
-            <l n="133" xml:id="l133">Moi, j’étais réformé. Je me suis engagé tout de suite. Je vais être incorporé d’ici très peu de jours et l’on m’instruira, car je n’ai jamais été militaire... Or, il se trouve qu’au mois de juin dernier, j’ai fait la connaissance de Mlle Lucie Rumelle...</l>
-          </sp>
-          <sp who="lucie" xml:id="5-9">
-            <speaker>LUCIE.</speaker>
-            <l n="134" xml:id="l134">Qui habitait chez une de ses tantes, à Deauville.</l>
-          </sp>
-          <sp who="robert" xml:id="5-10">
-            <speaker>ROBERT.</speaker>
-            <l n="135" xml:id="l135">Nous avons décidé que nous nous épouserions.</l>
-          </sp>
-          <sp who="lucie" xml:id="5-11">
-            <speaker>LUCIE.</speaker>
-            <l n="136" xml:id="l136">Seulement, Mlle Rumelle est mineure ; elle a besoin du consentement de ses parents.</l>
-          </sp>
-          <sp who="robert" xml:id="5-12">
-            <speaker>ROBERT.</speaker>
-            <l n="137" xml:id="l137">Or, je connais à peine ses parents. Pour faire connaissance, pour être agréé...</l>
-          </sp>
-          <sp who="lucie" xml:id="5-13">
-            <speaker>LUCIE.</speaker>
-            <l n="138" xml:id="l138">Robert aurait besoin de séjourner quelque temps à Bordeaux, où habitent mes parents.</l>
-          </sp>
-          <sp who="robert" xml:id="5-14">
-            <speaker>ROBERT.</speaker>
-            <l n="139" xml:id="l139">La bonne combinaison, c’était de s’engager dans un régiment de Bordeaux, soit au 184<sup>e</sup>, soit au 192<sup>e</sup>. Malheureusement, dans ces deux régiments, on ne reçoit plus d’engagements, au 184<sup>e</sup> depuis longtemps déjà et au 192<sup>e</sup> depuis huit jours. Alors je voudrais, bien que le régiment soit plein, qu’on me mette au 192<sup>e</sup>.</l>
-          </sp>
-          <sp who="henri" xml:id="5-15">
-            <speaker>HENRI.</speaker>
-            <l n="140" xml:id="l140">Il ne me semble pas que ça présente de grandes difficultés...</l>
-          </sp>
-          <sp who="robert" xml:id="5-16">
-            <speaker>ROBERT, <em>hochant la tête.</em></speaker>
-            <l n="141" xml:id="l141">Ce n’est pas commode.</l>
-          </sp>
-          <sp who="lucie" xml:id="5-17">
-            <speaker>LUCIE, <em>même mouvement.</em></speaker>
-            <l n="142" xml:id="l142">Ce n’est pas facile du tout.</l>
-          </sp>
-          <sp who="robert" xml:id="5-18">
-            <speaker>ROBERT.</speaker>
-            <l n="143" xml:id="l143">À entendre les gens du recrutement, c’est impossible.</l>
-          </sp>
-          <sp who="lucie" xml:id="5-19">
-            <speaker>LUCIE.</speaker>
-            <l n="144" xml:id="l144">Alors, mon ami Robert a pensé...</l>
-          </sp>
-          <sp who="robert" xml:id="5-20">
-            <speaker>ROBERT.</speaker>
-            <l n="145" xml:id="l145">Que, comme tu étais tout-puissant...</l>
-          </sp>
-          <sp who="henri" xml:id="5-21">
-            <speaker>HENRI.</speaker>
-            <l n="146" xml:id="l146">Oh ! tout-puissant, tout-puissant !</l>
-          </sp>
-          <sp who="robert" xml:id="5-22">
-            <speaker>ROBERT.</speaker>
-            <l n="147" xml:id="l147">Enfin, quoi ? tu ne veux pas me rendre service ?</l>
-          </sp>
-          <sp who="henri" xml:id="5-23">
-            <speaker>HENRI.</speaker>
-            <l n="148" xml:id="l148">Il n’est pas question de ça ; je ferai tout, tout, pour t’être agréable, tu le sais bien, voyons. D’abord à cause de l’ami que tu es, puis à cause de l’écrivain de théâtre pour qui j’ai... plus que de l’estime.</l>
-          </sp>
-          <sp who="lucie" xml:id="5-24">
-            <speaker>LUCIE.</speaker>
-            <l n="149" xml:id="l149">Merci, Monsieur.</l>
-          </sp>
-          <sp who="henri" xml:id="5-25">
-            <speaker>HENRI.</speaker>
-            <stage><hi rend="italic">C’est vrai, j’aimais déjà beaucoup Robert, et depuis que j’ai vu sa pièce, la saison dernière : « <em>Les Injustices de l’amour</em> »... Elle a fait près de cent représentations, ta pièce ?</hi></stage>
-          </sp>
-          <sp who="robert" xml:id="5-26">
-            <speaker>ROBERT.</speaker>
-            <l n="151" xml:id="l151">Cent vingt !</l>
-          </sp>
-          <sp who="henri" xml:id="5-27">
-            <speaker>HENRI, <em>admiratif.</em></speaker>
-            <l n="152" xml:id="l152">Cent vingt !</l>
-          </sp>
-          <sp who="robert" xml:id="5-28">
-            <speaker>ROBERT.</speaker>
-            <l n="153" xml:id="l153">Ça s’est arrêté à l’été.</l>
-          </sp>
-          <sp who="henri" xml:id="5-29">
-            <speaker>HENRI.</speaker>
-            <l n="154" xml:id="l154">C’est une pièce délicieuse... Enfin, je vais travailler pour toi, va !</l>
-          </sp>
-          <sp who="lucie" xml:id="5-30">
-            <speaker>LUCIE.</speaker>
-            <l n="155" xml:id="l155">Oh ! merci, Monsieur !</l>
-          </sp>
-          <sp who="henri" xml:id="5-31">
-            <speaker>HENRI, <em>après réflexion.</em></speaker>
-            <l n="156" xml:id="l156">Moi personnellement, je ne peux pas du tout agir auprès du ministère de la Guerre... Non...</l>
-          </sp>
-          <sp who="robert" xml:id="5-32">
-            <speaker>ROBERT, <em>déçu.</em></speaker>
-            <l n="157" xml:id="l157">Oh ! pourquoi ?</l>
-          </sp>
-          <sp who="henri" xml:id="5-33">
-            <speaker>HENRI.</speaker>
-            <l n="158" xml:id="l158">C’est parce qu’au journal nous sommes un peu en délicatesse avec les gens du ministère. Alors... le patron de mon journal a décidé que personne ne demanderait rien au ministère. Et si je demandais quelque chose, je pourrais risquer ma situation au journal.</l>
-          </sp>
-          <sp who="robert" xml:id="5-34">
-            <speaker>ROBERT, <em>arrangeant.</em></speaker>
-            <l n="159" xml:id="l159">Tu en trouverais facilement une autre ailleurs.</l>
-          </sp>
-          <sp who="henri" xml:id="5-35">
-            <speaker>HENRI.</speaker>
-            <l n="160" xml:id="l160">Oui, mais, tout de même, ne me demande pas de risquer ma situation.</l>
-            <stage><hi rend="italic"><em>Songeur.</em></hi></stage>
-            <l n="162" xml:id="l162">Seulement, ce que je ne peux pas faire, moi, je peux le faire faire par d’autres... et par d’autres qui ne sont pas loin d’ici.</l>
-          </sp>
-          <sp who="robert" xml:id="5-36">
-            <speaker>ROBERT.</speaker>
-            <l n="163" xml:id="l163">Par qui ?</l>
-          </sp>
-          <sp who="henri" xml:id="5-37">
-            <speaker>HENRI.</speaker>
-            <l n="164" xml:id="l164">Je vais te présenter à mon ami Bagonet.</l>
-          </sp>
-          <sp who="robert" xml:id="5-38">
-            <speaker>ROBERT.</speaker>
-            <l n="165" xml:id="l165">Bagonet ?</l>
-          </sp>
-          <sp who="henri" xml:id="5-39">
-            <speaker>HENRI.</speaker>
-            <l n="166" xml:id="l166">Oui, Bagonet habite l’hôtel depuis le commencement de septembre. Il est chef de cabinet de Barruchon, le sous-secrétaire d’État aux Tabacs. Son patron, Barruchon, qui habite également l’hôtel, est au mieux avec le ministre de la Guerre. Ils ont lié partie : ils sont entrés dans le cabinet ensemble, ils en sortiront ensemble, ils y rentreront ensemble. Tu vas me remettre une petite note. Tu m’inscriras là-dessus ton âge, la date de ton engagement, enfin tous les renseignements utiles. Tiens, ça ne va pas être long ! Voilà Bagonet qui vient là-bas. Tu as de la veinée ! Tout va bien s’arranger.</l>
-            <stage><hi rend="italic"><em>À Bagonet qui entre.</em></hi></stage>
-            <l n="168" xml:id="l168">Bonjour, cher ami, permettez-moi de vous présenter Robert Santeuil. Son nom seul me dispense...</l>
-            <l n="169" xml:id="l169"> </l>
-            <l n="170" xml:id="l170"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="171" xml:id="l171"> </l>
-          <sp who="robert-santeuil" xml:id="6-1">
-            <speaker>ROBERT SANTEUIL, LUCIE RUMELLE, HENRI BASSOU, BAGONET, <em>puis</em> ADRIEN, UN CAPITAINE</speaker>
-            <l n="172" xml:id="l172"> </l>
-          </sp>
-          <sp who="bagonet" xml:id="6-2">
-            <speaker>BAGONET.</speaker>
-            <l n="173" xml:id="l173">Oui, j’ai souvent applaudi Monsieur. Nous lui devons des soirées charmantes.</l>
-          </sp>
-          <sp who="henri" xml:id="6-3">
-            <speaker>HENRI.</speaker>
-            <l n="174" xml:id="l174">Vous avez vu sa dernière pièce ?</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-4">
-            <speaker>BAGONET.</speaker>
-            <stage><hi rend="italic">Je vous crois ! Je n’en manque jamais une... <em>Les Caprices de l’amour</em> ? C’est une pièce délicieuse.</hi></stage>
-          </sp>
-          <sp who="henri" xml:id="6-5">
-            <speaker>HENRI.</speaker>
-            <l n="176" xml:id="l176">Voici Mlle Lucie Rumelle.</l>
-            <stage><hi rend="italic"><em>À Robert.</em></hi></stage>
-            <l n="178" xml:id="l178">On peut lui dire ?...</l>
-          </sp>
-          <sp who="robert" xml:id="6-6">
-            <speaker>ROBERT.</speaker>
-            <l n="179" xml:id="l179">Il le faut.</l>
-          </sp>
-          <sp who="henri" xml:id="6-7">
-            <speaker>HENRI.</speaker>
-            <l n="180" xml:id="l180">Mlle Lucie Rumelle, et mon ami Robert Santeuil vont se fiancer, et les parents de Mademoiselle habitent Bordeaux. Pour être agréé de la famille, il y a un intérêt primordial à ce que mon ami Robert soit à Bordeaux. Or, nous touchons au point délicat...</l>
-            <stage><hi rend="italic"><em>À Robert.</em></hi></stage>
-            <l n="182" xml:id="l182">Explique !</l>
-          </sp>
-          <sp who="robert" xml:id="6-8">
-            <speaker>ROBERT.</speaker>
-            <l n="183" xml:id="l183">Je suis de la classe 1903 !...</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-9">
-            <speaker>BAGONET.</speaker>
-            <l n="184" xml:id="l184">Ah ! vous êtes un enfant ! Moi, je suis de la classe 96, une des dernières classes territoriales... Je suis encore ici pour quelque temps, mais</l>
-            <stage><hi rend="italic"><em>Avec un air grave.</em></hi></stage>
-            <l n="186" xml:id="l186">je ne serai pas long à partir. Le Ministre tient absolument à me garder... Je finirai bien par obtenir qu’il me laisse m’en aller comme les autres... Mais de quoi s’agit-il ?</l>
-          </sp>
-          <sp who="robert" xml:id="6-10">
-            <speaker>ROBERT.</speaker>
-            <l n="187" xml:id="l187">J’ai été réformé et je me suis engagé.</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-11">
-            <speaker>BAGONET.</speaker>
-            <l n="188" xml:id="l188">C’est bien cela, c’est très bien !</l>
-          </sp>
-          <sp who="robert" xml:id="6-12">
-            <speaker>ROBERT.</speaker>
-            <l n="189" xml:id="l189">Il me semble que pour reconnaître ce geste, on devrait avoir pour les engagés quelques égards. Or, je ne peux pas arriver à me faire incorporer au 192<sup>e</sup>, à Bordeaux.</l>
-          </sp>
-          <sp who="lucie" xml:id="6-13">
-            <speaker>LUCIE.</speaker>
-            <l n="190" xml:id="l190">Oui, M. Santeuil voudrait être à Bordeaux pour faire plus ample connaissance avec ma famille.</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-14">
-            <speaker>BAGONET.</speaker>
-            <l n="191" xml:id="l191">Je vois, je vois !... Et de quelle utilité puis-je être pour vous en la circonstance ?</l>
-          </sp>
-          <sp who="robert" xml:id="6-15">
-            <speaker>ROBERT.</speaker>
-            <l n="192" xml:id="l192">Je voudrais être recommandé au ministère de la Guerre.</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-16">
-            <speaker>BAGONET.</speaker>
-            <l n="193" xml:id="l193">Bien ! Bien !</l>
-            <stage><hi rend="italic"><em>Après une hésitation.</em></hi></stage>
-            <l n="195" xml:id="l195">Je vous dirai que ça n’est pas très, très commode. Je puis vous citer un précédent qui est assez impressionnant : le fils du frère de lait d’un très haut personnage était dans les chasseurs à cheval... Il a voulu aller dans l’artillerie. Ç’a été très, très dur.</l>
-          </sp>
-          <sp who="robert" xml:id="6-17">
-            <speaker>ROBERT.</speaker>
-            <l n="196" xml:id="l196">Oui, je vois. Mais le cas que vous me citez est peut-être plus spécial, parce que le monsieur en question voulait passer d une arme dans une autre. Mais moi, je suis désigné pour l’infanterie. Je demande à entrer au 192<sup>e</sup> d’infanterie, à Bordeaux.</l>
-            <stage><hi rend="italic"><em>Insistant.</em></hi></stage>
-            <l n="198" xml:id="l198">Je ne demande pas à changer d’arme. Je voudrais seulement être à Bordeaux.</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-18">
-            <speaker>BAGONET.</speaker>
-            <l n="199" xml:id="l199">Nous allons tâcher d’arranger ça... Voulez-vous me préparer une petite note ?</l>
-          </sp>
-          <sp who="henri" xml:id="6-19">
-            <speaker>HENRI.</speaker>
-            <l n="200" xml:id="l200">C’est ce que j’avais dit à Santeuil. Je lui avais demandé une petite note ; il va vous la préparer pour vous.</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-20">
-            <speaker>BAGONET.</speaker>
-            <l n="201" xml:id="l201">Préparez-la-moi, et vous la remettrez à Henri Bassou, qui me la donnera. Je la donnerai au Ministre... Il y aurait peut-être encore quelque chose de mieux...</l>
-          </sp>
-          <sp who="robert" xml:id="6-21">
-            <speaker>ROBERT.</speaker>
-            <l n="202" xml:id="l202">De mieux ?</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-22">
-            <speaker>BAGONET.</speaker>
-            <l n="203" xml:id="l203">Oui. Je pourrais vous présenter au Ministre lui-même. Il aime beaucoup les hommes de lettres.</l>
-          </sp>
-          <sp who="lucie" xml:id="6-23">
-            <speaker>LUCIE.</speaker>
-            <l n="204" xml:id="l204">Oh ! Monsieur, vous seriez gentil !</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-24">
-            <speaker>BAGONET.</speaker>
-            <l n="205" xml:id="l205">Écoutez !... Ce n’est pas la peine d’aller au ministère. Le ministre va venir ici tout à l’heure. Je vous présenterai à lui.</l>
-          </sp>
-          <sp who="lucie" xml:id="6-25">
-            <speaker>LUCIE.</speaker>
-            <l n="206" xml:id="l206">Oh ! monsieur, vous êtes notre sauveur !</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-26">
-            <speaker>BAGONET.</speaker>
-            <l n="207" xml:id="l207">Seulement, une fois en présence du ministre, je vais vous dire... Il faudrait qu’il vous donnât un mot pour la Guerre, un mot sur sa carte... parce qu’il vous promettra bien de s’en occuper...</l>
-          </sp>
-          <sp who="robert" xml:id="6-27">
-            <speaker>ROBERT.</speaker>
-            <l n="208" xml:id="l208">Mais il ne tient pas toujours ses promesses...</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-28">
-            <speaker>BAGONET.</speaker>
-            <l n="209" xml:id="l209">Ne me faites pas dire cela... Il tient toujours ses promesses... Mais il en fait beaucoup... Alors, j’aimerais mieux qu’il vous remît un mot. Vous allez me préparer cette petite note.</l>
-            <stage><hi rend="italic"><em>À Adrien qui entre.</em></hi></stage>
-            <l n="211" xml:id="l211">Vous avez du papier à lettres ?</l>
-          </sp>
-          <sp who="adrien" xml:id="6-29">
-            <speaker>ADRIEN.</speaker>
-            <l n="212" xml:id="l212">Il y en a par là.</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-30">
-            <speaker>BAGONET, <em>à Robert.</em></speaker>
-            <l n="213" xml:id="l213">Eh bien, venez donc m’écrire ça dans le salon de lecture.</l>
-            <stage><hi rend="italic"><em>Entre un capitaine.</em></hi></stage>
-          </sp>
-          <sp who="le-capitaine" xml:id="6-31">
-            <speaker>LE CAPITAINE, <em>à Adrien.</em></speaker>
-            <l n="215" xml:id="l215">Est-ce qu’on a reçu une dépêche du général Varbeuf ?</l>
-          </sp>
-          <sp who="adrien" xml:id="6-32">
-            <speaker>ADRIEN, <em>prenant la position militaire.</em></speaker>
-            <l n="216" xml:id="l216">Oui, mon...</l>
-            <stage><hi rend="italic"><em>Il compte les galons sur la manche en inclinant la tête à chaque galon. Triomphalement. </em></hi></stage>
-            <l n="218" xml:id="l218">Capitaine !</l>
-          </sp>
-          <sp who="le-capitaine" xml:id="6-33">
-            <speaker>LE CAPITAINE.</speaker>
-            <l n="219" xml:id="l219">Alors, on a préparé la chambre du général... Et une chambre pour moi ?</l>
-          </sp>
-          <sp who="adrien" xml:id="6-34">
-            <speaker>ADRIEN.</speaker>
-            <l n="220" xml:id="l220">Je crois que oui, monsieur...</l>
-            <stage><hi rend="italic"><em>Se reprenant.</em></hi></stage>
-            <l n="222" xml:id="l222">mon capitaine.</l>
-          </sp>
-          <sp who="le-capitaine" xml:id="6-35">
-            <speaker>LE CAPITAINE.</speaker>
-            <l n="223" xml:id="l223">Alors, je vais chercher le général.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="bagonet" xml:id="6-36">
-            <speaker>BAGONET, <em>à Adrien.</em></speaker>
-            <l n="225" xml:id="l225">C’est le général Varbeuf qui va descendre ici ?</l>
-          </sp>
-          <sp who="adrien" xml:id="6-37">
-            <speaker>ADRIEN.</speaker>
-            <l n="226" xml:id="l226">Oui, le général Varbeuf. C’est le nom qu’il y avait sur la dépêche.</l>
-          </sp>
-          <sp who="bagonet" xml:id="6-38">
-            <speaker>BAGONET, <em>à Robert.</em></speaker>
-            <l n="227" xml:id="l227">Eh bien, nous avons de la chance ! C’est précisément le général Varbeuf qui prend le commandement de la subdivision. Il va avoir sous sa coupe le régiment où vous voulez entrer, il pourra vous y faire inscrire. Je vais au-devant de lui, et lui dirai qui vous êtes.</l>
-            <stage><hi rend="italic"><em>Il sort pendant qu’Henri entre au salon de lecture.</em></hi></stage>
-          </sp>
-          <sp who="lucie" xml:id="6-39">
-            <speaker>LUCIE, <em>regardant à la cantonade, à Robert.</em></speaker>
-            <l n="229" xml:id="l229">Regardez-le. Il est en train de parler au général. Il est bien gentil, ce M. Bagonet. Et le général l’écoute bien aimablement. Il est gentil aussi, ce général...</l>
-          </sp>
-          <sp who="henri" xml:id="6-40">
-            <speaker>HENRI.</speaker>
-            <l n="230" xml:id="l230">Il paraît qu’il n’est pas commode.</l>
-          </sp>
-          <sp who="lucie" xml:id="6-41">
-            <speaker>LUCIE.</speaker>
-            <l n="231" xml:id="l231">J’espère que vous allez lui parler énergiquement...</l>
-          </sp>
-          <sp who="henri" xml:id="6-42">
-            <speaker>HENRI.</speaker>
-            <l n="232" xml:id="l232">Soyez tranquille...</l>
-          </sp>
-          <sp who="lucie" xml:id="6-43">
-            <speaker>LUCIE.</speaker>
-            <l n="233" xml:id="l233">Je vous laisse avec lui. De l’énergie !</l>
-          </sp>
-          <sp who="henri" xml:id="6-44">
-            <speaker>HENRI, <em>pendant qu’elle entre au salon de lecture.</em></speaker>
-            <l n="234" xml:id="l234">Vous pouvez y compter.</l>
-            <stage><hi rend="italic"><em>Entrent le général, puis Adrien par un autre côté.</em></hi></stage>
-            <l n="236" xml:id="l236"> </l>
-            <l n="237" xml:id="l237"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="238" xml:id="l238"> </l>
-          <sp who="le-général" xml:id="7-1">
-            <speaker>LE GÉNÉRAL, ADRIEN <em>sort l’instant d’après</em>, ROBERT SANTEUIL</speaker>
-            <l n="239" xml:id="l239"> </l>
-          </sp>
-          <sp who="le-général" xml:id="7-2">
-            <speaker>LE GÉNÉRAL, <em>à Adrien.</em></speaker>
-            <l n="240" xml:id="l240">C’est par ici, ma chambre ?</l>
-            <stage><hi rend="italic"><em>Adrien ne répond rien, occupé a compter les étoiles sur la manche du général.</em></hi></stage>
-            <l n="242" xml:id="l242">C’est par ici, ma chambre ?</l>
-          </sp>
-          <sp who="adrien" xml:id="7-3">
-            <speaker>ADRIEN.</speaker>
-            <l n="243" xml:id="l243">Oui, mon général... de brigade.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="le-général" xml:id="7-4">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="245" xml:id="l245">Qu’est-ce que c’est que cet empoté ?</l>
-            <stage><hi rend="italic"><em>Il regarde autour de lui et aperçoit Robert.</em></hi></stage>
-            <l n="247" xml:id="l247">C’est monsieur, sans doute, monsieur... enfin, l’auteur dramatique... l’ami de monsieur... de monsieur là-bas qui m’a parlé de vous... Alors vous êtes écrivain ?</l>
-          </sp>
-          <sp who="robert" xml:id="7-5">
-            <speaker>ROBERT.</speaker>
-            <l n="248" xml:id="l248">Oui, mon général...</l>
-          </sp>
-          <sp who="le-général" xml:id="7-6">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="249" xml:id="l249">Je sais, je sais... Vous avez beaucoup de talent... Comment déjà votre nom ?</l>
-          </sp>
-          <sp who="robert" xml:id="7-7">
-            <speaker>ROBERT.</speaker>
-            <l n="250" xml:id="l250">Robert Santeuil.</l>
-          </sp>
-          <sp who="le-général" xml:id="7-8">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="251" xml:id="l251">Je connais, je connais... Qu’est-ce qu’il a dit, votre ami ? Que vous vouliez aller...</l>
-          </sp>
-          <sp who="robert" xml:id="7-9">
-            <speaker>ROBERT.</speaker>
-            <l n="252" xml:id="l252">Au 192<sup>e</sup>, mon général.</l>
-          </sp>
-          <sp who="le-général" xml:id="7-10">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="253" xml:id="l253">Vous avez été au recrutement ?</l>
-          </sp>
-          <sp who="robert" xml:id="7-11">
-            <speaker>ROBERT.</speaker>
-            <l n="254" xml:id="l254">Oui, mon général.</l>
-          </sp>
-          <sp who="le-général" xml:id="7-12">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="255" xml:id="l255">On vous a donné une affectation ?</l>
-          </sp>
-          <sp who="robert" xml:id="7-13">
-            <speaker>ROBERT.</speaker>
-            <l n="256" xml:id="l256">Non, mon général.</l>
-          </sp>
-          <sp who="le-général" xml:id="7-14">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="257" xml:id="l257">Qu’est-ce qu’on vous a dit ?</l>
-          </sp>
-          <sp who="robert" xml:id="7-15">
-            <speaker>ROBERT.</speaker>
-            <l n="258" xml:id="l258">Que j’irais probablement au 23<sup>e</sup> à Rochefort, parce qu’il n’y avait plus de place au 192<sup>e</sup>.</l>
-          </sp>
-          <sp who="le-général" xml:id="7-16">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="259" xml:id="l259">Eh bien, vous y serez très bien au 23<sup>e</sup>.</l>
-          </sp>
-          <sp who="robert" xml:id="7-17">
-            <speaker>ROBERT.</speaker>
-            <l n="260" xml:id="l260">Oui, mon général !... Oh ! oui, mon général !</l>
-            <stage><hi rend="italic"><em>Après une hésitation.</em></hi></stage>
-            <l n="262" xml:id="l262">Si j avais demandé Bordeaux, c’est que les parents de ma fiancée y habitent...</l>
-          </sp>
-          <sp who="le-général" xml:id="7-18">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="263" xml:id="l263">Ils viendront vous voir à Rochefort.</l>
-          </sp>
-          <sp who="robert" xml:id="7-19">
-            <speaker>ROBERT.</speaker>
-            <l n="264" xml:id="l264">Oui, mon général. C’est-à-dire... mon général... s’ils me connaissaient mieux, ils viendraient me voir... mais ils ne me connaissent pas beaucoup...</l>
-          </sp>
-          <sp who="le-général" xml:id="7-20">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="265" xml:id="l265">Alors ils viendront vous voir pour faire connaissance.</l>
-          </sp>
-          <sp who="robert" xml:id="7-21">
-            <speaker>ROBERT.</speaker>
-            <l n="266" xml:id="l266">Certainement, mon général.</l>
-          </sp>
-          <sp who="le-général" xml:id="7-22">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="267" xml:id="l267">Il faut aller au 23<sup>e</sup>, mon ami.</l>
-          </sp>
-          <sp who="robert" xml:id="7-23">
-            <speaker>ROBERT.</speaker>
-            <l n="268" xml:id="l268">Oui, mon général... Seulement, je me permets d’ajouter que je suis engagé volontaire...</l>
-          </sp>
-          <sp who="le-général" xml:id="7-24">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="269" xml:id="l269">C’est très bien !</l>
-          </sp>
-          <sp who="robert" xml:id="7-25">
-            <speaker>ROBERT.</speaker>
-            <l n="270" xml:id="l270">Merci, mon général... Comme engagé volontaire, on m’avait dit... je croyais... enfin, c’était un renseignement que l’on m’avait donné... Il paraîtrait que l’on peut choisir son régiment...</l>
-          </sp>
-          <sp who="le-général" xml:id="7-26">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="271" xml:id="l271">Alors, choisissez le 23<sup>e</sup> et tout est dit.</l>
-          </sp>
-          <sp who="robert" xml:id="7-27">
-            <speaker>ROBERT.</speaker>
-            <l n="272" xml:id="l272">Oui, mon général.</l>
-          </sp>
-          <sp who="le-général" xml:id="7-28">
-            <speaker>LE GÉNÉRAL.</speaker>
-            <l n="273" xml:id="l273">Au revoir, mon ami. Je vous reverrai au 23<sup>e</sup>.</l>
-          </sp>
-          <sp who="robert" xml:id="7-29">
-            <speaker>ROBERT.</speaker>
-            <l n="274" xml:id="l274">Merci, mon général...</l>
-            <stage><hi rend="italic"><em>Sort le général. Lucie et Henri sortent du salon quelques instants après.</em></hi></stage>
-            <l n="276" xml:id="l276"> </l>
-            <l n="277" xml:id="l277"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="278" xml:id="l278"> </l>
-          <sp who="henri-bassou" xml:id="8-1">
-            <speaker>HENRI BASSOU, ROBERT SANTEUIL, LUCIE RUMELLE, <em>puis</em> BAGONET</speaker>
-            <l n="279" xml:id="l279"> </l>
-          </sp>
-          <sp who="lucie" xml:id="8-2">
-            <speaker>LUCIE.</speaker>
-            <l n="280" xml:id="l280">Eh bien ?</l>
-          </sp>
-          <sp who="robert" xml:id="8-3">
-            <speaker>ROBERT.</speaker>
-            <l n="281" xml:id="l281">Eh bien, il a été très gentil.</l>
-          </sp>
-          <sp who="lucie" xml:id="8-4">
-            <speaker>LUCIE.</speaker>
-            <l n="282" xml:id="l282">Et vous êtes au 192<sup>e</sup> ?</l>
-          </sp>
-          <sp who="robert" xml:id="8-5">
-            <speaker>ROBERT.</speaker>
-            <l n="283" xml:id="l283">...Pas encore.</l>
-          </sp>
-          <sp who="lucie" xml:id="8-6">
-            <speaker>LUCIE.</speaker>
-            <l n="284" xml:id="l284">Enfin, il va s’en occuper ?</l>
-          </sp>
-          <sp who="robert" xml:id="8-7">
-            <speaker>ROBERT.</speaker>
-            <l n="285" xml:id="l285">Il ne me l’a pas dit formellement.</l>
-          </sp>
-          <sp who="henri" xml:id="8-8">
-            <speaker>HENRI.</speaker>
-            <l n="286" xml:id="l286">Enfin, il te l’a dit ?</l>
-          </sp>
-          <sp who="robert" xml:id="8-9">
-            <speaker>ROBERT.</speaker>
-            <l n="287" xml:id="l287">Oui... C’est-à-dire...</l>
-          </sp>
-          <sp who="lucie" xml:id="8-10">
-            <speaker>LUCIE.</speaker>
-            <l n="288" xml:id="l288">Il ne vous l’a pas dit ?</l>
-          </sp>
-          <sp who="robert" xml:id="8-11">
-            <speaker>ROBERT.</speaker>
-            <l n="289" xml:id="l289">Si, si, mais je crois que je ferais bien de voir le ministre, selon le conseil de M. Bagonet.</l>
-          </sp>
-          <sp who="henri" xml:id="8-12">
-            <speaker>HENRI.</speaker>
-            <l n="290" xml:id="l290">Oh ! le général suffit !</l>
-          </sp>
-          <sp who="robert" xml:id="8-13">
-            <speaker>ROBERT.</speaker>
-            <l n="291" xml:id="l291">Ça ne fait rien, ça portera aussi.</l>
-          </sp>
-          <sp who="bagonet" xml:id="8-14">
-            <speaker>BAGONET, <em>entrant.</em></speaker>
-            <l n="292" xml:id="l292">Voici le ministre. Ça va très bien. Il n’est pas trop pressé de déjeuner, vous allez avoir un bon petit moment pour causer avec lui.</l>
-          </sp>
-          <sp who="lucie" xml:id="8-15">
-            <speaker>LUCIE.</speaker>
-            <l n="293" xml:id="l293">Oh ! comme vous êtes gentil, monsieur !</l>
-          </sp>
-          <sp who="robert" xml:id="8-16">
-            <speaker>ROBERT.</speaker>
-            <l n="294" xml:id="l294">Comme je vous remercie.</l>
-          </sp>
-          <sp who="henri" xml:id="8-17">
-            <speaker>HENRI.</speaker>
-            <l n="295" xml:id="l295">Moi, je m’en vais, il ne doit pas être content de moi. Je lui avais promis de faire passer un article qui n’a pas encore paru...</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="lucie" xml:id="8-18">
-            <speaker>LUCIE.</speaker>
-            <l n="297" xml:id="l297">Je suis émue, vous savez ! Je suis sûre que vous êtes ému.</l>
-          </sp>
-          <sp who="robert" xml:id="8-19">
-            <speaker>ROBERT.</speaker>
-            <l n="298" xml:id="l298">Mais non, mais non, j’ai déjà vu des ministres dans ma vie...</l>
-          </sp>
-          <sp who="lucie" xml:id="8-20">
-            <speaker>LUCIE.</speaker>
-            <l n="299" xml:id="l299">Je suis très émue...</l>
-            <stage><hi rend="italic"><em>Entre le ministre. C’est un homme de quarante-cinq ans environ, barbe grise, silhouette assez imposante.</em></hi></stage>
-            <l n="301" xml:id="l301"> </l>
-            <l n="302" xml:id="l302"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="303" xml:id="l303"> </l>
-          <sp who="henri-bassou" xml:id="9-1">
-            <speaker>HENRI BASSOU, ROBERT SANTEUIL, LUCIE RUMELLE, BAGONET, LE MINISTRE</speaker>
-            <l n="304" xml:id="l304"> </l>
-          </sp>
-          <sp who="bagonet" xml:id="9-2">
-            <speaker>BAGONET.</speaker>
-            <l n="305" xml:id="l305">Monsieur le Ministre, je tiens à vous présenter Robert Santeuil, que vous connaissez certainement.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-3">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="306" xml:id="l306">Si je connais ! L’auteur des Hasards de l’amour ?</l>
-          </sp>
-          <sp who="robert" xml:id="9-4">
-            <speaker>ROBERT, <em>ne voulant pas rectifier.</em></speaker>
-            <l n="307" xml:id="l307">Oui, oui, monsieur le Ministre. Voilà Mlle Lucie Rumelle, avec qui je suis fiancé... Mais ce n’est pas encore tout à fait officiel.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-5">
-            <speaker>LE MINISTRE, <em>s’inclinant.</em></speaker>
-            <l n="308" xml:id="l308">Mademoiselle...</l>
-          </sp>
-          <sp who="robert" xml:id="9-6">
-            <speaker>ROBERT.</speaker>
-            <l n="309" xml:id="l309">Monsieur le Ministre...</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-7">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="310" xml:id="l310">Monsieur Santeuil, nous vous devons des soirées fort agréables. Vous savez, il y a longtemps que je vous admire.</l>
-            <stage><hi rend="italic"><em>À Bagonet.</em></hi></stage>
-            <l n="312" xml:id="l312">Bagonet !</l>
-          </sp>
-          <sp who="bagonet" xml:id="9-8">
-            <speaker>BAGONET.</speaker>
-            <l n="313" xml:id="l313">Oui, monsieur le Ministre.</l>
-            <stage><hi rend="italic"><em>Ils parlent ensemble tout bas.</em></hi></stage>
-          </sp>
-          <sp who="lucie" xml:id="9-9">
-            <speaker>LUCIE, <em>à Robert.</em></speaker>
-            <l n="315" xml:id="l315">Il vous admire.</l>
-          </sp>
-          <sp who="robert" xml:id="9-10">
-            <speaker>ROBERT.</speaker>
-            <l n="316" xml:id="l316">Ça ne veut rien dire.</l>
-          </sp>
-          <sp who="lucie" xml:id="9-11">
-            <speaker>LUCIE.</speaker>
-            <l n="317" xml:id="l317">Comment ? ça ne veut rien dire ?</l>
-          </sp>
-          <sp who="robert" xml:id="9-12">
-            <speaker>ROBERT.</speaker>
-            <l n="318" xml:id="l318">C’est un homme bien élevé.</l>
-            <stage><hi rend="italic"><em>Le ministre revient de leur côté.</em></hi></stage>
-          </sp>
-          <sp who="le-ministre" xml:id="9-13">
-            <speaker>LE MINISTRE.</speaker>
-            <stage><hi rend="italic">Ah ! Monsieur Santeuil, vous avez fait de bien, bien jolies choses. Ma femme est une de vos admiratrices. Elle ne fait que parler de vous. Comment donc s’appelle-t-elle, cette pièce que nous avons vue ? Je ne parle pas de votre pièce <em>Les Hasards de l’amour</em>. Voyons, c’était il y a trois ou quatre ans ? Une pièce si charmante... que nous avons été voir un samedi soir... Je crois même que c’était à la première... Un nom de femme... Henriette. Oui, oui, j’avais remarqué le nom parce que c’est celui de ma femme.</hi></stage>
-          </sp>
-          <sp who="robert" xml:id="9-14">
-            <speaker>ROBERT, <em>gêné.</em></speaker>
-            <stage><hi rend="italic"><em>Henriette</em>, Monsieur le Ministre, ce n’est pas de moi ; c’est de mon confrère Aubin.</hi></stage>
-          </sp>
-          <sp who="le-ministre" xml:id="9-15">
-            <speaker>LE MINISTRE.</speaker>
-            <stage><hi rend="italic">Comment, ce n’est pas de vous, <em>Henriette</em> ? Ce n’est pas de vous ? Vous m’étonnez !</hi></stage>
-          </sp>
-          <sp who="robert" xml:id="9-16">
-            <speaker>ROBERT.</speaker>
-            <l n="323" xml:id="l323">Ce n’est pas de moi, monsieur le Ministre.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-17">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="324" xml:id="l324">Ce n’est pas de vous ? Ce n’était pas mal, vous savez... C’est égal, monsieur Santeuil, vous avez bien du talent. Et alors, vous disiez que mademoiselle est votre fiancée ?</l>
-          </sp>
-          <sp who="robert" xml:id="9-18">
-            <speaker>ROBERT.</speaker>
-            <l n="325" xml:id="l325">Oui, monsieur le Ministre. Et voilà le point délicat... J’étais réformé, mais je me suis engagé.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-19">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="326" xml:id="l326">C’est très bien.</l>
-          </sp>
-          <sp who="robert" xml:id="9-20">
-            <speaker>ROBERT.</speaker>
-            <l n="327" xml:id="l327">Oui. J’étais de la classe 1903, et alors je me suis engagé. Je voulais, comme les engagés, choisir mon régiment.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-21">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="328" xml:id="l328">C’est un droit, c’est un droit.</l>
-          </sp>
-          <sp who="robert" xml:id="9-22">
-            <speaker>ROBERT.</speaker>
-            <l n="329" xml:id="l329">Seulement, monsieur le Ministre, on m’a dit, ces jours-ci, qu’au 192<sup>e</sup>, qui est à Bordeaux, il n’y avait plus de place.</l>
-          </sp>
-          <sp who="lucie" xml:id="9-23">
-            <speaker>LUCIE.</speaker>
-            <l n="330" xml:id="l330">Et nous étions désolés, parce que mes parents habitent Bordeaux, et comme M. Santeuil voulait, pour être agréé de ma famille, faire plus ample connaissance...</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-24">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="331" xml:id="l331">Oui, oui, et qu’est-ce que vous désirez ?</l>
-          </sp>
-          <sp who="robert" xml:id="9-25">
-            <speaker>ROBERT.</speaker>
-            <l n="332" xml:id="l332">Je voudrais aller au 192<sup>e</sup> de ligne.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-26">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="333" xml:id="l333">Ah ! oui. Eh bien, c’est une affaire de recrutement, cela.</l>
-          </sp>
-          <sp who="robert" xml:id="9-27">
-            <speaker>ROBERT.</speaker>
-            <l n="334" xml:id="l334">Oui, monsieur le Ministre, je le sais. Seulement, le recrutement dit qu’il n’y a plus de place dans ce régiment. Alors, je crois que si j’avais une puissante recommandation pour le ministre de la Guerre...</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-28">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="335" xml:id="l335">Oui, oui. Il faudra voir ça. Il faudra voir ça... Vous travaillez beaucoup en ce moment, monsieur Santeuil ?</l>
-          </sp>
-          <sp who="robert" xml:id="9-29">
-            <speaker>ROBERT.</speaker>
-            <l n="336" xml:id="l336">Heu ! monsieur le Ministre. Pas beaucoup depuis la guerre.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-30">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="337" xml:id="l337">Et en temps ordinaire, vous travaillez beaucoup ? Comment travaillez-vous : le matin, le soir ?</l>
-          </sp>
-          <sp who="robert" xml:id="9-31">
-            <speaker>ROBERT.</speaker>
-            <l n="338" xml:id="l338">Le matin... et puis le soir aussi. Enfin, je n’ai pas d’heures fixes.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-32">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="339" xml:id="l339">Moi, je travaille surtout le matin. Ah ! j’aime beaucoup le théâtre, vous savez. Je n’en ai jamais fait, mais j’ai joué la comédie étant jeune. J’aimais beaucoup jouer, entre camarades. Ce n’était pas fameux, fameux, mais enfin on s’amusait. Alors, qu’est-ce que vous désirez ?</l>
-          </sp>
-          <sp who="robert" xml:id="9-33">
-            <speaker>ROBERT.</speaker>
-            <l n="340" xml:id="l340">Voici : si j’avais un petit mot pour le ministre de la Guerre...</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-34">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="341" xml:id="l341">Eh bien, voyons... je lui en parlerai à la prochaine occasion.</l>
-          </sp>
-          <sp who="lucie" xml:id="9-35">
-            <speaker>LUCIE, <em>courageusement.</em></speaker>
-            <l n="342" xml:id="l342">Monsieur le Ministre, je vais vous demander une grande faveur !</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-36">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="343" xml:id="l343">Dites toujours.</l>
-          </sp>
-          <sp who="lucie" xml:id="9-37">
-            <speaker>LUCIE.</speaker>
-            <l n="344" xml:id="l344">Un petit mot sur votre carte pour le ministre de la Guerre...</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-38">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="345" xml:id="l345">Ah ! Ah ! Un petit mot sur ma carte ? Vous y tenez beaucoup ?</l>
-          </sp>
-          <sp who="lucie" xml:id="9-39">
-            <speaker>LUCIE.</speaker>
-            <l n="346" xml:id="l346">Beaucoup, monsieur le Ministre !</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-40">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="347" xml:id="l347">On ne peut rien refuser à une aussi jolie jeune fille.</l>
-            <stage><hi rend="italic"><em>Il sort un portefeuille pour prendre une carte, puis, brusquement, le remet dans sa poche.</em></hi></stage>
-            <l n="349" xml:id="l349">Je ferai mieux : je dîne ce soir avec lui et je vais lui parler de votre affaire. Mais il me faut une petite note. Vous allez me faire une petite note.</l>
-          </sp>
-          <sp who="robert" xml:id="9-41">
-            <speaker>ROBERT, <em>déçu.</em></speaker>
-            <l n="350" xml:id="l350">Oui, monsieur le Ministre.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-42">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="351" xml:id="l351">Vous la remettrez à mon chef de cabinet, Bagonet.</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="353" xml:id="l353">Bagonet ?</l>
-          </sp>
-          <sp who="bagonet" xml:id="9-43">
-            <speaker>BAGONET.</speaker>
-            <l n="354" xml:id="l354">Monsieur le Ministre ?</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-44">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="355" xml:id="l355">Tenez, je vais vous présenter à Bagonet, mon chef de cabinet.</l>
-          </sp>
-          <sp who="robert" xml:id="9-45">
-            <speaker>ROBERT.</speaker>
-            <l n="356" xml:id="l356">Monsieur le Ministre, je le connais. C’est lui qui m’a présenté à vous tout à l’heure.</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-46">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="357" xml:id="l357">Ah ! bien, bien.</l>
-            <stage><hi rend="italic"><em>À Bagonet.</em></hi></stage>
-            <l n="359" xml:id="l359">Dites donc, Bagonet, venez un peu par ici. M. Robert Santeuil va vous remettre une petite note. Surtout ne manquez pas de me rappeler ça tout à l’heure, parce que je dois en parler au ministre de la Guerre.</l>
-            <stage><hi rend="italic"><em>À Robert.</em></hi></stage>
-            <l n="361" xml:id="l361">Ça sera fait dès ce soir, monsieur Santeuil.</l>
-          </sp>
-          <sp who="lucie" xml:id="9-47">
-            <speaker>LUCIE.</speaker>
-            <l n="362" xml:id="l362">Et vous pensez, monsieur le Ministre, qu’on lui donnera satisfaction ?</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-48">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="363" xml:id="l363">Je ferai tout ce qui sera en mon pouvoir.</l>
-          </sp>
-          <sp who="lucie" xml:id="9-49">
-            <speaker>LUCIE.</speaker>
-            <l n="364" xml:id="l364">Et votre pouvoir est grand, monsieur le Ministre !</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-50">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="365" xml:id="l365">Vous savez, il est possible que le ministre m’écoute, mais je puis vous citer un exemple...</l>
-          </sp>
-          <sp who="lucie" xml:id="9-51">
-            <speaker>LUCIE.</speaker>
-            <l n="366" xml:id="l366">Le fils du frère de lait d’un haut personnage ?</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-52">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="367" xml:id="l367">Qui est-ce ça ?</l>
-          </sp>
-          <sp who="lucie" xml:id="9-53">
-            <speaker>LUCIE.</speaker>
-            <l n="368" xml:id="l368">Vous ne savez pas ?</l>
-          </sp>
-          <sp who="le-ministre" xml:id="9-54">
-            <speaker>LE MINISTRE.</speaker>
-            <l n="369" xml:id="l369">Non. M ais le beau-frère d’un de nos ambassadeurs. Il était dans le train des équipages. Il voulait obtenir une mutation. Le président s’en est occupé lui-même, mais on n’a pas encore obtenu...</l>
-            <stage><hi rend="italic"><em>À Bagonet.</em></hi></stage>
-            <l n="371" xml:id="l371">Vous venez déjeuner, Bagonet ?</l>
-            <stage><hi rend="italic"><em>À Robert.</em></hi></stage>
-            <l n="373" xml:id="l373">Monsieur Santeuil, je suis très heureux d’avoir fait votre connaissance.</l>
-            <stage><hi rend="italic"><em>À Lucie.</em></hi></stage>
-            <l n="375" xml:id="l375">Mademoiselle, je suis charmé.</l>
-            <stage><hi rend="italic"><em>À Bagonet</em></hi></stage>
-            <l n="377" xml:id="l377">Venez déjeuner, Bagonet.</l>
-            <stage><hi rend="italic"><em>Ils sortent. Robert et Lucie sont accablés. Ils s’assoient tristement.</em></hi></stage>
-            <l n="379" xml:id="l379"> </l>
-            <l n="380" xml:id="l380"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="381" xml:id="l381"> </l>
-          <sp who="eugène" xml:id="10-1">
-            <speaker>LUCIE RUMELLE, ROBERT SANTEUIL, <em>puis</em> EUGÈNE <em>et</em> HENRI BASSOU</speaker>
-            <l n="382" xml:id="l382"> </l>
-          </sp>
-          <sp who="lucie" xml:id="10-2">
-            <speaker>LUCIE.</speaker>
-            <l n="383" xml:id="l383">C’est navrant !</l>
-          </sp>
-          <sp who="robert" xml:id="10-3">
-            <speaker>ROBERT.</speaker>
-            <l n="384" xml:id="l384">Je n’ai plus d’espoir.</l>
-          </sp>
-          <sp who="lucie" xml:id="10-4">
-            <speaker>LUCIE.</speaker>
-            <l n="385" xml:id="l385">Il n’a pas voulu donner sa carte. Il ne dira rien au ministre !</l>
-          </sp>
-          <sp who="robert" xml:id="10-5">
-            <speaker>ROBERT.</speaker>
-            <l n="386" xml:id="l386">Je n’y compte plus</l>
-          </sp>
-          <sp who="lucie" xml:id="10-6">
-            <speaker>LUCIE.</speaker>
-            <l n="387" xml:id="l387">Cette histoire du beau-frère de l’ambassadeur !</l>
-          </sp>
-          <sp who="robert" xml:id="10-7">
-            <speaker>ROBERT.</speaker>
-            <l n="388" xml:id="l388">Oui, ils ont toujours un petit exemple sous la main. Ah ! ma chérie ! ma chérie ! que je suis malheureux !</l>
-          </sp>
-          <sp who="lucie" xml:id="10-8">
-            <speaker>LUCIE.</speaker>
-            <l n="389" xml:id="l389">Ah ! je suis malheureuse !</l>
-            <stage><hi rend="italic"><em>À ce moment, entre un soldat de mise un peu négligée. Ce soldat tient un cahier sous le bras. Il aperçoit Robert.</em></hi></stage>
-          </sp>
-          <sp who="eugène" xml:id="10-9">
-            <speaker>EUGÈNE.</speaker>
-            <l n="391" xml:id="l391">Oh ! mais je ne me trompe pas ? Mais c’est monsieur Santeuil ?</l>
-          </sp>
-          <sp who="robert" xml:id="10-10">
-            <speaker>ROBERT, <em>le dévisageant.</em></speaker>
-            <l n="392" xml:id="l392">Je ne vous remets pas.</l>
-          </sp>
-          <sp who="eugène" xml:id="10-11">
-            <speaker>EUGÈNE.</speaker>
-            <l n="393" xml:id="l393">Mais je suis votre coiffeur, Monsieur. Je suis Eugène, votre coiffeur de Paris.</l>
-          </sp>
-          <sp who="robert" xml:id="10-12">
-            <speaker>ROBERT.</speaker>
-            <l n="394" xml:id="l394">Ah ! oui, c’est que vous avez coupé votre barbe. Et vous êtes mobilisé à Bordeaux ?</l>
-          </sp>
-          <sp who="eugène" xml:id="10-13">
-            <speaker>EUGÈNE.</speaker>
-            <l n="395" xml:id="l395">Oui, Monsieur. Je suis au bureau du capitaine-adjudant-major.</l>
-          </sp>
-          <sp who="robert" xml:id="10-14">
-            <speaker>ROBERT, <em>regardant les numéros de son collet.</em></speaker>
-            <l n="396" xml:id="l396">Et vous avez de la veine ! Vous êtes au 192<sup>e </sup>!</l>
-          </sp>
-          <sp who="eugène" xml:id="10-15">
-            <speaker>EUGÈNE.</speaker>
-            <l n="397" xml:id="l397">Pourquoi est-ce que j’ai de la veine ? Qu’est-ce qu’il a de plus que les autres, ce régiment ?</l>
-          </sp>
-          <sp who="robert" xml:id="10-16">
-            <speaker>ROBERT.</speaker>
-            <l n="398" xml:id="l398">C’est que moi je voudrais être au 192<sup>e</sup>. Je fais des pieds et des mains, je ne peux pas y parvenir. J’ai vu le ministre, le général...</l>
-          </sp>
-          <sp who="eugène" xml:id="10-17">
-            <speaker>EUGÈNE.</speaker>
-            <l n="399" xml:id="l399">Vous voulez être au 192<sup>e </sup>?</l>
-          </sp>
-          <sp who="robert" xml:id="10-18">
-            <speaker>ROBERT.</speaker>
-            <l n="400" xml:id="l400">Oui, c’est pour faire mon instruction à Bordeaux...</l>
-          </sp>
-          <sp who="eugène" xml:id="10-19">
-            <speaker>EUGÈNE, <em>ouvrant son livre, écrivant.</em></speaker>
-            <l n="401" xml:id="l401">Robert Santeuil...</l>
-            <stage><hi rend="italic"><em>Refermant son livre.</em></hi></stage>
-            <l n="403" xml:id="l403">Vous voilà au 192<sup>e</sup>.</l>
-          </sp>
-          <sp who="robert" xml:id="10-20">
-            <speaker>ROBERT, <em>stupéfait.</em></speaker>
-            <l n="404" xml:id="l404">Comment ?</l>
-          </sp>
-          <sp who="eugène" xml:id="10-21">
-            <speaker>EUGÈNE.</speaker>
-            <l n="405" xml:id="l405">Je suis scribe au bureau du capitaine-adjudant-major.</l>
-          </sp>
-          <sp who="robert" xml:id="10-22">
-            <speaker>ROBERT.</speaker>
-            <l n="406" xml:id="l406">Quel grade avez-vous ?</l>
-          </sp>
-          <sp who="eugène" xml:id="10-23">
-            <speaker>EUGÈNE.</speaker>
-            <l n="407" xml:id="l407">Pas de grade.</l>
-          </sp>
-          <sp who="robert" xml:id="10-24">
-            <speaker>ROBERT.</speaker>
-            <l n="408" xml:id="l408">Mais, dites donc, ça ne dépend pas de vous, ça dépend du recrutement ?</l>
-          </sp>
-          <sp who="eugène" xml:id="10-25">
-            <speaker>EUGÈNE.</speaker>
-            <l n="409" xml:id="l409">Vous en faites pas ! J’arrangerai ça avec le recrutement.</l>
-            <stage><hi rend="italic"><em>Henri Bassou entre.</em></hi></stage>
-            <l n="411" xml:id="l411">Si vous croyez que c’est la première fois !</l>
-          </sp>
-          <sp who="robert" xml:id="10-26">
-            <speaker>ROBERT.</speaker>
-            <l n="412" xml:id="l412">Il paraît qu’il y a déjà tant de monde au 192<sup>e</sup>...</l>
-          </sp>
-          <sp who="eugène" xml:id="10-27">
-            <speaker>EUGÈNE.</speaker>
-            <l n="413" xml:id="l413">Eh bien, ça fera un de plus, voilà tout. Ce n’est pas ça qui le fera déborder, le régiment.</l>
-          </sp>
-          <sp who="lucie" xml:id="10-28">
-            <speaker>LUCIE.</speaker>
-            <l n="414" xml:id="l414">Oh ! Monsieur, que je vous suis reconnaissante !</l>
-          </sp>
-          <sp who="eugène" xml:id="10-29">
-            <speaker>EUGÈNE.</speaker>
-            <l n="415" xml:id="l415">Mais de quoi, Mademoiselle ?</l>
-            <stage><hi rend="italic"><em>À Robert. </em></hi></stage>
-            <l n="417" xml:id="l417">monsieur Santeuil, je vous attends au bureau. Quand vous voudrez, près des allées de Toumy.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="henri" xml:id="10-30">
-            <speaker>HENRI, <em>qui a entendu la fin de la conversation.</em></speaker>
-            <l n="419" xml:id="l419">Eh bien, c’est arrangé ?</l>
-          </sp>
-          <sp who="lucie" xml:id="10-31">
-            <speaker>LUCIE.</speaker>
-            <l n="420" xml:id="l420">Oui, après un refus du ministre.</l>
-          </sp>
-          <sp who="robert" xml:id="10-32">
-            <speaker>ROBERT.</speaker>
-            <l n="421" xml:id="l421">Crois-tu ? Il faut que je le prévienne, le ministre, parce qu’il va en parler à son collègue de la Guerre ?</l>
-          </sp>
-          <sp who="henri" xml:id="10-33">
-            <speaker>HENRI.</speaker>
-            <l n="422" xml:id="l422">T’en fais pas... Il ne lui dira rien.</l>
-          </sp>
-          <sp who="robert" xml:id="10-34">
-            <speaker>ROBERT.</speaker>
-            <l n="423" xml:id="l423">Bagonet va lui remettre ma petite note.</l>
-          </sp>
-          <sp who="henri" xml:id="10-35">
-            <speaker>HENRI.</speaker>
-            <l n="424" xml:id="l424">Il ne la lui remettra pas. L’important, c’est que tu les remercies.</l>
-          </sp>
-          <sp who="lucie" xml:id="10-36">
-            <speaker>LUCIE.</speaker>
-            <l n="425" xml:id="l425">Comment, qu’il les remercie ?</l>
-          </sp>
-          <sp who="henri" xml:id="10-37">
-            <speaker>HENRI.</speaker>
-            <l n="426" xml:id="l426">Ah ! il faut les remercier tous : le ministre, son chef de cabinet, et même moi.</l>
-          </sp>
-          <sp who="robert" xml:id="10-38">
-            <speaker>ROBERT.</speaker>
-            <l n="427" xml:id="l427">Ils savent pourtant qu’ils n’ont rien fait.</l>
-          </sp>
-          <sp who="henri" xml:id="10-39">
-            <speaker>HENRI.</speaker>
-            <l n="428" xml:id="l428">Ils n’en sont pas sûrs.</l>
-          </sp>
-          <sp who="robert" xml:id="10-40">
-            <speaker>ROBERT.</speaker>
-            <l n="429" xml:id="l429">En tout cas, viens déjeuner !</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="1">Madame Pruneau, on m’a dit que vous aviez à me parler. Vous voyez que je n’ai pas été long. Seulement, il faut que j’aille chez le commandant ; il m’attend. Le patron est donc mobilisé que je ne l’aperçois pas ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="2">Je vous crois ! Et dès le premier jour encore ! Il est près de Dax. Il garde une voie de chemin de fer.</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="3">Quel grade ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="4">Deuxième classe.</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="5">Mais il n’est pas trop malheureux ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="6">Oh ! il s’arrange.</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="7">Je suis tranquille sur son compte ; je me doute qu’il s’arrange.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="8">Et puis, il est tombé sur un bon sous-officier de sa connaissance : le cocher de notre omnibus.</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="9">Ah ! c’est qu’il est parti aussi ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="10">Et l’omnibus est parti d’un autre côté et les chevaux encore d’un autre.</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="11">Tous vos garçons à droite et à gauche ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="12">Mais oui, Achille, zouave, Frédéric, chasseur, et Justinien dans l’intendance. C’est même rapport à ça que je vous ai fait venir. J’attends un autre garçon, un petit Espagnol ; avec mes trois bonnes, il fera l’affaire. Seulement, il n’est pas encore arrivé, et, en attendant, j’emploie le neveu de Justinien qui est bleu justement dans votre régiment. C’est un petit gars qui vient des environs de Mont-de-Marsan, de la campagne. Il n’est pas débrouillard encore.</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="13">Et qu’est-ce qu’il y a pour votre service ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="14">Ils viennent tout juste, ceux de sa classe, d’arriver au quartier. Pendant qu’on les habille, lui, comme il est tout habillé déjà – je l’ai équipé – je voudrais que vous me le laissiez deux, trois jours, jusqu’à l’arrivée d’un remplaçant.</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="15">C’est qu’on en a besoin pour la théorie, la première théorie qu’on fait aux bleus : les marques extérieures de respect.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="16">Oh ! mais je connais ça aussi bien que les instructeurs. Ce serait malheureux de n’avoir fréquenté que des militaires dans sa vie pour ne pas connaître les grades.</l>
+          <stage>&lt;em&gt;Arrive Adrien en costume de soldat. &lt;/em&gt;</stage>
+          <l n="17">Adrien, amène-toi un peu par là. Eh bien, si tu prenais la position militaire, mon petit ? Tu as ton supérieur devant toi !</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="18">C’est vous le neveu de Justinien ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="19">Oui... oui...</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU, le reprenant.</speaker>
+          <l n="20">Oui, mon adjudant ! Tu dois lui dire « mon adjudant ».</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="21">Oui, il pourrait me dire « adjudant », ça suffirait. Le règlement c’est « adjudant ». L’usage est « mon adjudant ».</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="22">Je veux qu’il ait de l’usage. Eh bien, c’est entendu, vous me le laissez trois, quatre jours ?</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="23">Je vous le laisserai le plus longtemps que je pourrai. Trop heureux de vous être agréable.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="24">Au dîner aussi, bien entendu !</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="25">Oui, madame Pruneau.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="26">Et quand ça vous fait plaisir de venir déjeuner, vous savez, le couvert est toujours mis à ma table...</l>
+        </sp>
+        <sp who="#un-adjudant">
+          <speaker>L’ADJUDANT.</speaker>
+          <l n="27">Merci, madame Pruneau.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU, à Adrien.</speaker>
+          <l n="28">Es-tu lavé au moins, Adrien ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="29">Si je suis lavé, patronne ? Il y a longtemps de ça.</l>
+          <stage>&lt;em&gt;À lui-même, à mi-voix.&lt;/em&gt;</stage>
+          <l n="30">Il y a au moins trois jours !</l>
+          <stage>&lt;em&gt;Robert et Lucie entrent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="31">Pardon, Madame, est-ce que M. Henri Bassou, du Grand Courrier, est à l’hôtel ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="32">Oui, Monsieur. Il est à l’hôtel depuis le commencement de septembre. C’est lui qui s’occupe de l’édition de Bordeaux.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="33">Voudriez-vous le faire prévenir que son ami, monsieur Robert Santeuil, veut lui parler ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="34">Ah ! c’est qu’il n’est pas à l’hôtel du moment, M. Bassou...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, impatienté, à Lucie.</speaker>
+          <l n="35">Il n’est pas à l’hôtel pour le moment.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="36">Oh ! c’est ennuyeux ! c’est ennuyeux !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="37">Est-ce qu’il sera longtemps absent, Madame ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="38">Je ne crois pas, monsieur. Il est parti se faire raser, ici, tout à côté. Il doit revenir chercher son courrier vers onze heures.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="39">Il n’est pas loin de onze heures.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="40">Il les est.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="41">Alors nous allons faire une petite course dans le quartier et nous revenons.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE, à Robert.</speaker>
+          <l n="42">Donnez votre nom, en tout cas.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="43">Voulez-vous lui dire que son ami, Robert Santeuil, homme de lettres, va venir le voir.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="44">Oh ! monsieur, je vous connais bien, je vous connais parfaitement.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="45">Elle vous connaît ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, d’un ton vague et satisfait.</speaker>
+          <l n="46">Oui, oui.</l>
+          <stage>&lt;em&gt;À Mme Pruneau.&lt;/em&gt;</stage>
+          <l n="47">Écrivez alors, s’il vous plaît.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="48">Oh ! je m’en rappellerai bien : M. Albert Danteuil.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="49">Non, Robert Santeuil. Écrivez, je vous prie, ce sera plus sûr.</l>
+          <stage>&lt;em&gt;Ils sortent. Adrien entre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="50">Adrien, tiens, voilà deux francs de pourboire qu’on a laissés pour toi ce matin.</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="51">Merci, merci.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="52">Merci qui ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="53">Merci, Madame.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU, lui montrant sa manche.</speaker>
+          <l n="54">Il y a trois galons là-dessus.</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="55">Merci, capitaine.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="56">Mon !</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="57">Mon ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="58">Mon capitaine.</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="59">Mon capitaine.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="60">À la bonne heure !</l>
+          <stage>&lt;em&gt;Entre Henri Bassou.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="61">Bonjour, Madame. Il y a des lettres pour moi ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="62">Oui, monsieur Bassou. Voici également une carte, ou plutôt un morceau de papier où j’ai écrit le nom d’un monsieur qui va venir vous voir : Robert Santeuil.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="63">Ah ! Robert Santeuil est à Bordeaux ? Eh bien, ça vous fait une illustration de plus dans vos murs, où l’on en compte déjà un certain nombre.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="64">Ce monsieur paraissait bien ennuyé. Il était avec une jeune demoiselle.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="65">Vous ne savez pas qui c’est ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="66">Non, je ne la connais pas. Pourtant, je crois que ses parents sont de Bordeaux. C’est une demoiselle très bien.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="67">Tenez, madame Pruneau, voici une dépêche à porter. Il y a environ vingt-trois mots. Tenez ! Le reste sera pour le garçon.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="68">Adrien !</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="69">Attendez un peu pour faire porter cette dépêche que j’aie dépouillé mon courrier ; j’en aurai peut-être une autre à envoyer.</l>
+          <stage>&lt;em&gt;Entre Adrien.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU, à Adrien.</speaker>
+          <l n="70">Tiens, Adrien, voilà de l’argent pour cette dépêche ; c’est plus que ça coûtera ; le reste est pour toi.</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="71">Merci, Madame.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU, lui montrant sa manche.</speaker>
+          <l n="72">J’ai là-dessus un large galon en biais.</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="73">Merci, mon sergent.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="74">Pas mon.</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN, sans comprendre.</speaker>
+          <l n="75">Pas mon ?</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="76">Au sergent, pas « mon ». C’est un sous-officier. Au lieutenant, au capitaine, « mon ». C’est des officiers.</l>
+          <stage>&lt;em&gt;Tendant son autre manche.&lt;/em&gt;</stage>
+          <l n="77">Et maintenant, j’ai sur cette manche cinq galons dont deux d’argent et trois galons d’or. Qu’est-ce que je suis ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="78">Trois galons d’or... Voyons, vous m avez dit ça hier matin... Trois galons d’or, c’est capitaine d’infanterie ; deux d’argent, lieutenant de cavalerie... Vous êtes capitaine d’infanterie et lieutenant de cavalerie.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="79">Mais non. Je les ai tous les cinq là. Lieutenant-colonel ! Je suis lieutenant-colonel. Tu me dis : « Mon colonel ». Cinq galons d’or, je serai colonel... Pas de galons et deux étoiles, qu’est-ce que je serais ? Général de brigade, tu entends ? deux étoiles. Et si j’avais trois étoiles ? Général de division !</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="80">Vous pouvez envoyer la dépêche.</l>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU.</speaker>
+          <l n="81">Va porter la dépêche.</l>
+          <stage>&lt;em&gt;En sortant, Adrien se croise dans la porte tournante avec Robert Santeuil et Lucie Rumelle qui entrent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-pruneau">
+          <speaker>MADAME PRUNEAU, à Henri Bassou.</speaker>
+          <l n="82">Tenez, voilà justement les amis qui vous cherchent.</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="83">Santeuil ! Comment vas-tu ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="84">Bonjour, mon cher ami. Je suis content de te voir !</l>
+          <stage>&lt;em&gt;Présentant.&lt;/em&gt;</stage>
+          <l n="85">Mlle Lucie Rumelle.</l>
+          <stage>&lt;em&gt;À mi-voix.&lt;/em&gt;</stage>
+          <l n="86">Mademoiselle est ma fiancée. Je ne le dis pas encore très haut parce que ce n’est pas arrangé avec ses parents... C’est pour ça que nous sommes très, très ennuyés.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="87">Très, très ennuyés.</l>
+          <stage>&lt;em&gt;Hardiment.&lt;/em&gt;</stage>
+          <l n="88">Et c’est pour ça que nous comptons sur vous.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="89">Vous comptez sur moi ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="90">Eh bien, oui ! nous comptons sur toi. Je vais t’expliquer ça...</l>
+          <stage>&lt;em&gt;Ils s’assoient tous les trois.&lt;/em&gt;</stage>
+          <l n="91">Voici : je suis de la classe 1903. J’ai trente-deux ans.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI, qui tient aussi à expliquer, comme tout le monde, sa situation militaire.</speaker>
+          <l n="92">Moi, je suis de la classe 97. Je suis en sursis d’appel.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="93">Moi, j’étais réformé. Je me suis engagé tout de suite. Je vais être incorporé d’ici très peu de jours et l’on m’instruira, car je n’ai jamais été militaire... Or, il se trouve qu’au mois de juin dernier, j’ai fait la connaissance de Mlle Lucie Rumelle...</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="94">Qui habitait chez une de ses tantes, à Deauville.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="95">Nous avons décidé que nous nous épouserions.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="96">Seulement, Mlle Rumelle est mineure ; elle a besoin du consentement de ses parents.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="97">Or, je connais à peine ses parents. Pour faire connaissance, pour être agréé...</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="98">Robert aurait besoin de séjourner quelque temps à Bordeaux, où habitent mes parents.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="99">La bonne combinaison, c’était de s’engager dans un régiment de Bordeaux, soit au 184e, soit au 192e. Malheureusement, dans ces deux régiments, on ne reçoit plus d’engagements, au 184e depuis longtemps déjà et au 192e depuis huit jours. Alors je voudrais, bien que le régiment soit plein, qu’on me mette au 192e.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="100">Il ne me semble pas que ça présente de grandes difficultés...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, hochant la tête.</speaker>
+          <l n="101">Ce n’est pas commode.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE, même mouvement.</speaker>
+          <l n="102">Ce n’est pas facile du tout.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="103">À entendre les gens du recrutement, c’est impossible.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="104">Alors, mon ami Robert a pensé...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="105">Que, comme tu étais tout-puissant...</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="106">Oh ! tout-puissant, tout-puissant !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="107">Enfin, quoi ? tu ne veux pas me rendre service ?</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="108">Il n’est pas question de ça ; je ferai tout, tout, pour t’être agréable, tu le sais bien, voyons. D’abord à cause de l’ami que tu es, puis à cause de l’écrivain de théâtre pour qui j’ai... plus que de l’estime.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="109">Merci, Monsieur.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <stage>C’est vrai, j’aimais déjà beaucoup Robert, et depuis que j’ai vu sa pièce, la saison dernière : « &lt;em&gt;Les Injustices de l’amour&lt;/em&gt; »... Elle a fait près de cent représentations, ta pièce ?</stage>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="110">Cent vingt !</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI, admiratif.</speaker>
+          <l n="111">Cent vingt !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="112">Ça s’est arrêté à l’été.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="113">C’est une pièce délicieuse... Enfin, je vais travailler pour toi, va !</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="114">Oh ! merci, Monsieur !</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI, après réflexion.</speaker>
+          <l n="115">Moi personnellement, je ne peux pas du tout agir auprès du ministère de la Guerre... Non...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, déçu.</speaker>
+          <l n="116">Oh ! pourquoi ?</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="117">C’est parce qu’au journal nous sommes un peu en délicatesse avec les gens du ministère. Alors... le patron de mon journal a décidé que personne ne demanderait rien au ministère. Et si je demandais quelque chose, je pourrais risquer ma situation au journal.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, arrangeant.</speaker>
+          <l n="118">Tu en trouverais facilement une autre ailleurs.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="119">Oui, mais, tout de même, ne me demande pas de risquer ma situation.</l>
+          <stage>&lt;em&gt;Songeur.&lt;/em&gt;</stage>
+          <l n="120">Seulement, ce que je ne peux pas faire, moi, je peux le faire faire par d’autres... et par d’autres qui ne sont pas loin d’ici.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="121">Par qui ?</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="122">Je vais te présenter à mon ami Bagonet.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="123">Bagonet ?</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="124">Oui, Bagonet habite l’hôtel depuis le commencement de septembre. Il est chef de cabinet de Barruchon, le sous-secrétaire d’État aux Tabacs. Son patron, Barruchon, qui habite également l’hôtel, est au mieux avec le ministre de la Guerre. Ils ont lié partie : ils sont entrés dans le cabinet ensemble, ils en sortiront ensemble, ils y rentreront ensemble. Tu vas me remettre une petite note. Tu m’inscriras là-dessus ton âge, la date de ton engagement, enfin tous les renseignements utiles. Tiens, ça ne va pas être long ! Voilà Bagonet qui vient là-bas. Tu as de la veinée ! Tout va bien s’arranger.</l>
+          <stage>&lt;em&gt;À Bagonet qui entre.&lt;/em&gt;</stage>
+          <l n="125">Bonjour, cher ami, permettez-moi de vous présenter Robert Santeuil. Son nom seul me dispense...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="126">Oui, j’ai souvent applaudi Monsieur. Nous lui devons des soirées charmantes.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="127">Vous avez vu sa dernière pièce ?</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <stage>Je vous crois ! Je n’en manque jamais une... &lt;em&gt;Les Caprices de l’amour&lt;/em&gt; ? C’est une pièce délicieuse.</stage>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="128">Voici Mlle Lucie Rumelle.</l>
+          <stage>&lt;em&gt;À Robert.&lt;/em&gt;</stage>
+          <l n="129">On peut lui dire ?...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="130">Il le faut.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="131">Mlle Lucie Rumelle, et mon ami Robert Santeuil vont se fiancer, et les parents de Mademoiselle habitent Bordeaux. Pour être agréé de la famille, il y a un intérêt primordial à ce que mon ami Robert soit à Bordeaux. Or, nous touchons au point délicat...</l>
+          <stage>&lt;em&gt;À Robert.&lt;/em&gt;</stage>
+          <l n="132">Explique !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="133">Je suis de la classe 1903 !...</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="134">Ah ! vous êtes un enfant ! Moi, je suis de la classe 96, une des dernières classes territoriales... Je suis encore ici pour quelque temps, mais</l>
+          <stage>&lt;em&gt;Avec un air grave.&lt;/em&gt;</stage>
+          <l n="135">je ne serai pas long à partir. Le Ministre tient absolument à me garder... Je finirai bien par obtenir qu’il me laisse m’en aller comme les autres... Mais de quoi s’agit-il ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="136">J’ai été réformé et je me suis engagé.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="137">C’est bien cela, c’est très bien !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="138">Il me semble que pour reconnaître ce geste, on devrait avoir pour les engagés quelques égards. Or, je ne peux pas arriver à me faire incorporer au 192e, à Bordeaux.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="139">Oui, M. Santeuil voudrait être à Bordeaux pour faire plus ample connaissance avec ma famille.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="140">Je vois, je vois !... Et de quelle utilité puis-je être pour vous en la circonstance ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="141">Je voudrais être recommandé au ministère de la Guerre.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="142">Bien ! Bien !</l>
+          <stage>&lt;em&gt;Après une hésitation.&lt;/em&gt;</stage>
+          <l n="143">Je vous dirai que ça n’est pas très, très commode. Je puis vous citer un précédent qui est assez impressionnant : le fils du frère de lait d’un très haut personnage était dans les chasseurs à cheval... Il a voulu aller dans l’artillerie. Ç’a été très, très dur.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="144">Oui, je vois. Mais le cas que vous me citez est peut-être plus spécial, parce que le monsieur en question voulait passer d une arme dans une autre. Mais moi, je suis désigné pour l’infanterie. Je demande à entrer au 192e d’infanterie, à Bordeaux.</l>
+          <stage>&lt;em&gt;Insistant.&lt;/em&gt;</stage>
+          <l n="145">Je ne demande pas à changer d’arme. Je voudrais seulement être à Bordeaux.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="146">Nous allons tâcher d’arranger ça... Voulez-vous me préparer une petite note ?</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="147">C’est ce que j’avais dit à Santeuil. Je lui avais demandé une petite note ; il va vous la préparer pour vous.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="148">Préparez-la-moi, et vous la remettrez à Henri Bassou, qui me la donnera. Je la donnerai au Ministre... Il y aurait peut-être encore quelque chose de mieux...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="149">De mieux ?</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="150">Oui. Je pourrais vous présenter au Ministre lui-même. Il aime beaucoup les hommes de lettres.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="151">Oh ! Monsieur, vous seriez gentil !</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="152">Écoutez !... Ce n’est pas la peine d’aller au ministère. Le ministre va venir ici tout à l’heure. Je vous présenterai à lui.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="153">Oh ! monsieur, vous êtes notre sauveur !</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="154">Seulement, une fois en présence du ministre, je vais vous dire... Il faudrait qu’il vous donnât un mot pour la Guerre, un mot sur sa carte... parce qu’il vous promettra bien de s’en occuper...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="155">Mais il ne tient pas toujours ses promesses...</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="156">Ne me faites pas dire cela... Il tient toujours ses promesses... Mais il en fait beaucoup... Alors, j’aimerais mieux qu’il vous remît un mot. Vous allez me préparer cette petite note.</l>
+          <stage>&lt;em&gt;À Adrien qui entre.&lt;/em&gt;</stage>
+          <l n="157">Vous avez du papier à lettres ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="158">Il y en a par là.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET, à Robert.</speaker>
+          <l n="159">Eh bien, venez donc m’écrire ça dans le salon de lecture.</l>
+          <stage>&lt;em&gt;Entre un capitaine.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-capitaine">
+          <speaker>LE CAPITAINE, à Adrien.</speaker>
+          <l n="160">Est-ce qu’on a reçu une dépêche du général Varbeuf ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN, prenant la position militaire.</speaker>
+          <l n="161">Oui, mon...</l>
+          <stage>&lt;em&gt;Il compte les galons sur la manche en inclinant la tête à chaque galon. Triomphalement. &lt;/em&gt;</stage>
+          <l n="162">Capitaine !</l>
+        </sp>
+        <sp who="#un-capitaine">
+          <speaker>LE CAPITAINE.</speaker>
+          <l n="163">Alors, on a préparé la chambre du général... Et une chambre pour moi ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="164">Je crois que oui, monsieur...</l>
+          <stage>&lt;em&gt;Se reprenant.&lt;/em&gt;</stage>
+          <l n="165">mon capitaine.</l>
+        </sp>
+        <sp who="#un-capitaine">
+          <speaker>LE CAPITAINE.</speaker>
+          <l n="166">Alors, je vais chercher le général.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET, à Adrien.</speaker>
+          <l n="167">C’est le général Varbeuf qui va descendre ici ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="168">Oui, le général Varbeuf. C’est le nom qu’il y avait sur la dépêche.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET, à Robert.</speaker>
+          <l n="169">Eh bien, nous avons de la chance ! C’est précisément le général Varbeuf qui prend le commandement de la subdivision. Il va avoir sous sa coupe le régiment où vous voulez entrer, il pourra vous y faire inscrire. Je vais au-devant de lui, et lui dirai qui vous êtes.</l>
+          <stage>&lt;em&gt;Il sort pendant qu’Henri entre au salon de lecture.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE, regardant à la cantonade, à Robert.</speaker>
+          <l n="170">Regardez-le. Il est en train de parler au général. Il est bien gentil, ce M. Bagonet. Et le général l’écoute bien aimablement. Il est gentil aussi, ce général...</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="171">Il paraît qu’il n’est pas commode.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="172">J’espère que vous allez lui parler énergiquement...</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="173">Soyez tranquille...</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="174">Je vous laisse avec lui. De l’énergie !</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI, pendant qu’elle entre au salon de lecture.</speaker>
+          <l n="175">Vous pouvez y compter.</l>
+          <stage>&lt;em&gt;Entrent le général, puis Adrien par un autre côté.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL, à Adrien.</speaker>
+          <l n="176">C’est par ici, ma chambre ?</l>
+          <stage>&lt;em&gt;Adrien ne répond rien, occupé a compter les étoiles sur la manche du général.&lt;/em&gt;</stage>
+          <l n="177">C’est par ici, ma chambre ?</l>
+        </sp>
+        <sp who="#adrien">
+          <speaker>ADRIEN.</speaker>
+          <l n="178">Oui, mon général... de brigade.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="179">Qu’est-ce que c’est que cet empoté ?</l>
+          <stage>&lt;em&gt;Il regarde autour de lui et aperçoit Robert.&lt;/em&gt;</stage>
+          <l n="180">C’est monsieur, sans doute, monsieur... enfin, l’auteur dramatique... l’ami de monsieur... de monsieur là-bas qui m’a parlé de vous... Alors vous êtes écrivain ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="181">Oui, mon général...</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="182">Je sais, je sais... Vous avez beaucoup de talent... Comment déjà votre nom ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="183">Robert Santeuil.</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="184">Je connais, je connais... Qu’est-ce qu’il a dit, votre ami ? Que vous vouliez aller...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="185">Au 192e, mon général.</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="186">Vous avez été au recrutement ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="187">Oui, mon général.</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="188">On vous a donné une affectation ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="189">Non, mon général.</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="190">Qu’est-ce qu’on vous a dit ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="191">Que j’irais probablement au 23e à Rochefort, parce qu’il n’y avait plus de place au 192e.</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="192">Eh bien, vous y serez très bien au 23e.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="193">Oui, mon général !... Oh ! oui, mon général !</l>
+          <stage>&lt;em&gt;Après une hésitation.&lt;/em&gt;</stage>
+          <l n="194">Si j avais demandé Bordeaux, c’est que les parents de ma fiancée y habitent...</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="195">Ils viendront vous voir à Rochefort.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="196">Oui, mon général. C’est-à-dire... mon général... s’ils me connaissaient mieux, ils viendraient me voir... mais ils ne me connaissent pas beaucoup...</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="197">Alors ils viendront vous voir pour faire connaissance.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="198">Certainement, mon général.</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="199">Il faut aller au 23e, mon ami.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="200">Oui, mon général... Seulement, je me permets d’ajouter que je suis engagé volontaire...</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="201">C’est très bien !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="202">Merci, mon général... Comme engagé volontaire, on m’avait dit... je croyais... enfin, c’était un renseignement que l’on m’avait donné... Il paraîtrait que l’on peut choisir son régiment...</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="203">Alors, choisissez le 23e et tout est dit.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="204">Oui, mon général.</l>
+        </sp>
+        <sp who="#le-général-varbeuf">
+          <speaker>LE GÉNÉRAL.</speaker>
+          <l n="205">Au revoir, mon ami. Je vous reverrai au 23e.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="206">Merci, mon général...</l>
+          <stage>&lt;em&gt;Sort le général. Lucie et Henri sortent du salon quelques instants après.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="207">Eh bien ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="208">Eh bien, il a été très gentil.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="209">Et vous êtes au 192e ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="210">...Pas encore.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="211">Enfin, il va s’en occuper ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="212">Il ne me l’a pas dit formellement.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="213">Enfin, il te l’a dit ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="214">Oui... C’est-à-dire...</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="215">Il ne vous l’a pas dit ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="216">Si, si, mais je crois que je ferais bien de voir le ministre, selon le conseil de M. Bagonet.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="217">Oh ! le général suffit !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="218">Ça ne fait rien, ça portera aussi.</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET, entrant.</speaker>
+          <l n="219">Voici le ministre. Ça va très bien. Il n’est pas trop pressé de déjeuner, vous allez avoir un bon petit moment pour causer avec lui.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="220">Oh ! comme vous êtes gentil, monsieur !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="221">Comme je vous remercie.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="222">Moi, je m’en vais, il ne doit pas être content de moi. Je lui avais promis de faire passer un article qui n’a pas encore paru...</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="223">Je suis émue, vous savez ! Je suis sûre que vous êtes ému.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="224">Mais non, mais non, j’ai déjà vu des ministres dans ma vie...</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="225">Je suis très émue...</l>
+          <stage>&lt;em&gt;Entre le ministre. C’est un homme de quarante-cinq ans environ, barbe grise, silhouette assez imposante.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="226">Monsieur le Ministre, je tiens à vous présenter Robert Santeuil, que vous connaissez certainement.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="227">Si je connais ! L’auteur des Hasards de l’amour ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, ne voulant pas rectifier.</speaker>
+          <l n="228">Oui, oui, monsieur le Ministre. Voilà Mlle Lucie Rumelle, avec qui je suis fiancé... Mais ce n’est pas encore tout à fait officiel.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE, s’inclinant.</speaker>
+          <l n="229">Mademoiselle...</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="230">Monsieur le Ministre...</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="231">Monsieur Santeuil, nous vous devons des soirées fort agréables. Vous savez, il y a longtemps que je vous admire.</l>
+          <stage>&lt;em&gt;À Bagonet.&lt;/em&gt;</stage>
+          <l n="232">Bagonet !</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="233">Oui, monsieur le Ministre.</l>
+          <stage>&lt;em&gt;Ils parlent ensemble tout bas.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE, à Robert.</speaker>
+          <l n="234">Il vous admire.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="235">Ça ne veut rien dire.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="236">Comment ? ça ne veut rien dire ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="237">C’est un homme bien élevé.</l>
+          <stage>&lt;em&gt;Le ministre revient de leur côté.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <stage>Ah ! Monsieur Santeuil, vous avez fait de bien, bien jolies choses. Ma femme est une de vos admiratrices. Elle ne fait que parler de vous. Comment donc s’appelle-t-elle, cette pièce que nous avons vue ? Je ne parle pas de votre pièce &lt;em&gt;Les Hasards de l’amour&lt;/em&gt;. Voyons, c’était il y a trois ou quatre ans ? Une pièce si charmante... que nous avons été voir un samedi soir... Je crois même que c’était à la première... Un nom de femme... Henriette. Oui, oui, j’avais remarqué le nom parce que c’est celui de ma femme.</stage>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, gêné.</speaker>
+          <stage>&lt;em&gt;Henriette&lt;/em&gt;, Monsieur le Ministre, ce n’est pas de moi ; c’est de mon confrère Aubin.</stage>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <stage>Comment, ce n’est pas de vous, &lt;em&gt;Henriette&lt;/em&gt; ? Ce n’est pas de vous ? Vous m’étonnez !</stage>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="238">Ce n’est pas de moi, monsieur le Ministre.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="239">Ce n’est pas de vous ? Ce n’était pas mal, vous savez... C’est égal, monsieur Santeuil, vous avez bien du talent. Et alors, vous disiez que mademoiselle est votre fiancée ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="240">Oui, monsieur le Ministre. Et voilà le point délicat... J’étais réformé, mais je me suis engagé.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="241">C’est très bien.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="242">Oui. J’étais de la classe 1903, et alors je me suis engagé. Je voulais, comme les engagés, choisir mon régiment.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="243">C’est un droit, c’est un droit.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="244">Seulement, monsieur le Ministre, on m’a dit, ces jours-ci, qu’au 192e, qui est à Bordeaux, il n’y avait plus de place.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="245">Et nous étions désolés, parce que mes parents habitent Bordeaux, et comme M. Santeuil voulait, pour être agréé de ma famille, faire plus ample connaissance...</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="246">Oui, oui, et qu’est-ce que vous désirez ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="247">Je voudrais aller au 192e de ligne.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="248">Ah ! oui. Eh bien, c’est une affaire de recrutement, cela.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="249">Oui, monsieur le Ministre, je le sais. Seulement, le recrutement dit qu’il n’y a plus de place dans ce régiment. Alors, je crois que si j’avais une puissante recommandation pour le ministre de la Guerre...</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="250">Oui, oui. Il faudra voir ça. Il faudra voir ça... Vous travaillez beaucoup en ce moment, monsieur Santeuil ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="251">Heu ! monsieur le Ministre. Pas beaucoup depuis la guerre.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="252">Et en temps ordinaire, vous travaillez beaucoup ? Comment travaillez-vous : le matin, le soir ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="253">Le matin... et puis le soir aussi. Enfin, je n’ai pas d’heures fixes.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="254">Moi, je travaille surtout le matin. Ah ! j’aime beaucoup le théâtre, vous savez. Je n’en ai jamais fait, mais j’ai joué la comédie étant jeune. J’aimais beaucoup jouer, entre camarades. Ce n’était pas fameux, fameux, mais enfin on s’amusait. Alors, qu’est-ce que vous désirez ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="255">Voici : si j’avais un petit mot pour le ministre de la Guerre...</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="256">Eh bien, voyons... je lui en parlerai à la prochaine occasion.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE, courageusement.</speaker>
+          <l n="257">Monsieur le Ministre, je vais vous demander une grande faveur !</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="258">Dites toujours.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="259">Un petit mot sur votre carte pour le ministre de la Guerre...</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="260">Ah ! Ah ! Un petit mot sur ma carte ? Vous y tenez beaucoup ?</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="261">Beaucoup, monsieur le Ministre !</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="262">On ne peut rien refuser à une aussi jolie jeune fille.</l>
+          <stage>&lt;em&gt;Il sort un portefeuille pour prendre une carte, puis, brusquement, le remet dans sa poche.&lt;/em&gt;</stage>
+          <l n="263">Je ferai mieux : je dîne ce soir avec lui et je vais lui parler de votre affaire. Mais il me faut une petite note. Vous allez me faire une petite note.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, déçu.</speaker>
+          <l n="264">Oui, monsieur le Ministre.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="265">Vous la remettrez à mon chef de cabinet, Bagonet.</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="266">Bagonet ?</l>
+        </sp>
+        <sp who="#bagonet">
+          <speaker>BAGONET.</speaker>
+          <l n="267">Monsieur le Ministre ?</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="268">Tenez, je vais vous présenter à Bagonet, mon chef de cabinet.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="269">Monsieur le Ministre, je le connais. C’est lui qui m’a présenté à vous tout à l’heure.</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="270">Ah ! bien, bien.</l>
+          <stage>&lt;em&gt;À Bagonet.&lt;/em&gt;</stage>
+          <l n="271">Dites donc, Bagonet, venez un peu par ici. M. Robert Santeuil va vous remettre une petite note. Surtout ne manquez pas de me rappeler ça tout à l’heure, parce que je dois en parler au ministre de la Guerre.</l>
+          <stage>&lt;em&gt;À Robert.&lt;/em&gt;</stage>
+          <l n="272">Ça sera fait dès ce soir, monsieur Santeuil.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="273">Et vous pensez, monsieur le Ministre, qu’on lui donnera satisfaction ?</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="274">Je ferai tout ce qui sera en mon pouvoir.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="275">Et votre pouvoir est grand, monsieur le Ministre !</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="276">Vous savez, il est possible que le ministre m’écoute, mais je puis vous citer un exemple...</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="277">Le fils du frère de lait d’un haut personnage ?</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="278">Qui est-ce ça ?</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="279">Vous ne savez pas ?</l>
+        </sp>
+        <sp who="#le-ministre">
+          <speaker>LE MINISTRE.</speaker>
+          <l n="280">Non. M ais le beau-frère d’un de nos ambassadeurs. Il était dans le train des équipages. Il voulait obtenir une mutation. Le président s’en est occupé lui-même, mais on n’a pas encore obtenu...</l>
+          <stage>&lt;em&gt;À Bagonet.&lt;/em&gt;</stage>
+          <l n="281">Vous venez déjeuner, Bagonet ?</l>
+          <stage>&lt;em&gt;À Robert.&lt;/em&gt;</stage>
+          <l n="282">Monsieur Santeuil, je suis très heureux d’avoir fait votre connaissance.</l>
+          <stage>&lt;em&gt;À Lucie.&lt;/em&gt;</stage>
+          <l n="283">Mademoiselle, je suis charmé.</l>
+          <stage>&lt;em&gt;À Bagonet&lt;/em&gt;</stage>
+          <l n="284">Venez déjeuner, Bagonet.</l>
+          <stage>&lt;em&gt;Ils sortent. Robert et Lucie sont accablés. Ils s’assoient tristement.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="285">C’est navrant !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="286">Je n’ai plus d’espoir.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="287">Il n’a pas voulu donner sa carte. Il ne dira rien au ministre !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="288">Je n’y compte plus</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="289">Cette histoire du beau-frère de l’ambassadeur !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="290">Oui, ils ont toujours un petit exemple sous la main. Ah ! ma chérie ! ma chérie ! que je suis malheureux !</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="291">Ah ! je suis malheureuse !</l>
+          <stage>&lt;em&gt;À ce moment, entre un soldat de mise un peu négligée. Ce soldat tient un cahier sous le bras. Il aperçoit Robert.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="292">Oh ! mais je ne me trompe pas ? Mais c’est monsieur Santeuil ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, le dévisageant.</speaker>
+          <l n="293">Je ne vous remets pas.</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="294">Mais je suis votre coiffeur, Monsieur. Je suis Eugène, votre coiffeur de Paris.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="295">Ah ! oui, c’est que vous avez coupé votre barbe. Et vous êtes mobilisé à Bordeaux ?</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="296">Oui, Monsieur. Je suis au bureau du capitaine-adjudant-major.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, regardant les numéros de son collet.</speaker>
+          <l n="297">Et vous avez de la veine ! Vous êtes au 192e !</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="298">Pourquoi est-ce que j’ai de la veine ? Qu’est-ce qu’il a de plus que les autres, ce régiment ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="299">C’est que moi je voudrais être au 192e. Je fais des pieds et des mains, je ne peux pas y parvenir. J’ai vu le ministre, le général...</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="300">Vous voulez être au 192e ?</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="301">Oui, c’est pour faire mon instruction à Bordeaux...</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE, ouvrant son livre, écrivant.</speaker>
+          <l n="302">Robert Santeuil...</l>
+          <stage>&lt;em&gt;Refermant son livre.&lt;/em&gt;</stage>
+          <l n="303">Vous voilà au 192e.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT, stupéfait.</speaker>
+          <l n="304">Comment ?</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="305">Je suis scribe au bureau du capitaine-adjudant-major.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="306">Quel grade avez-vous ?</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="307">Pas de grade.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="308">Mais, dites donc, ça ne dépend pas de vous, ça dépend du recrutement ?</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="309">Vous en faites pas ! J’arrangerai ça avec le recrutement.</l>
+          <stage>&lt;em&gt;Henri Bassou entre.&lt;/em&gt;</stage>
+          <l n="310">Si vous croyez que c’est la première fois !</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="311">Il paraît qu’il y a déjà tant de monde au 192e...</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="312">Eh bien, ça fera un de plus, voilà tout. Ce n’est pas ça qui le fera déborder, le régiment.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="313">Oh ! Monsieur, que je vous suis reconnaissante !</l>
+        </sp>
+        <sp who="#eugène">
+          <speaker>EUGÈNE.</speaker>
+          <l n="314">Mais de quoi, Mademoiselle ?</l>
+          <stage>&lt;em&gt;À Robert. &lt;/em&gt;</stage>
+          <l n="315">monsieur Santeuil, je vous attends au bureau. Quand vous voudrez, près des allées de Toumy.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI, qui a entendu la fin de la conversation.</speaker>
+          <l n="316">Eh bien, c’est arrangé ?</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="317">Oui, après un refus du ministre.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="318">Crois-tu ? Il faut que je le prévienne, le ministre, parce qu’il va en parler à son collègue de la Guerre ?</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="319">T’en fais pas... Il ne lui dira rien.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="320">Bagonet va lui remettre ma petite note.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="321">Il ne la lui remettra pas. L’important, c’est que tu les remercies.</l>
+        </sp>
+        <sp who="#lucie-rumelle">
+          <speaker>LUCIE.</speaker>
+          <l n="322">Comment, qu’il les remercie ?</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="323">Ah ! il faut les remercier tous : le ministre, son chef de cabinet, et même moi.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="324">Ils savent pourtant qu’ils n’ont rien fait.</l>
+        </sp>
+        <sp who="#henri-bassou">
+          <speaker>HENRI.</speaker>
+          <l n="325">Ils n’en sont pas sûrs.</l>
+        </sp>
+        <sp who="#robert-santeuil">
+          <speaker>ROBERT.</speaker>
+          <l n="326">En tout cas, viens déjeuner !</l>
+          <l n="327" />
+        </sp>
       </div>
     </body>
   </text>

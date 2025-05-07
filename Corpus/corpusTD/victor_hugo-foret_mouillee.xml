@@ -1,1205 +1,1187 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La Forêt mouillée</title>
-        <author key="Victor HUGO | (naissance-mort)">Victor HUGO |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/392</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Victor HUGO |</author>. <title>La Forêt mouillée</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/392</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1930-02-22">Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 22 février 1930.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="denarius" sex="SEX">
+            <persName>DENARIUS</persName>
+          </person>
+          <person xml:id="oscar" sex="SEX">
+            <persName>OSCAR</persName>
+          </person>
+          <person xml:id="balminette" sex="SEX">
+            <persName>BALMINETTE</persName>
+          </person>
+          <person xml:id="madame-antioche" sex="SEX">
+            <persName>MADAME ANTIOCHE</persName>
+          </person>
+          <person xml:id="la-forêt" sex="SEX">
+            <persName>LA FORÊT</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1930-02-22" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 22 février 1930.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>La Forêt mouillée</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en vers.</l>
-            <l n="2" xml:id="l2">Écrite en mai 1854.</l>
-            <l n="3" xml:id="l3">Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 22 février 1930.</l>
-            <l n="4" xml:id="l4"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="denarius">DENARIUS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="oscar">OSCAR</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="balminette">BALMINETTE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-antioche">MADAME ANTIOCHE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-forêt">LA FORÊT</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>Une forêt après la pluie. Foule de fleurs et de plantes. Au premier plan, lilas, acacias et faux ébéniers en fleur. Un ruisseau. Un étang. Un âne attaché à un arbre. Flaques d’eau dans l’herbe. Un rayon de soleil dans les feuilles. On voit écrit sur un poteau : IL Y A ICI DES PIÈGES À LOUP. </em></hi></stage>
-            <l n="6" xml:id="l6"> </l>
-            <l n="7" xml:id="l7"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="8" xml:id="l8"> </l>
-          <sp who="denarius" xml:id="1-1">
-            <speaker><em>Entre</em> DENARIUS, <em>rêvant</em></speaker>
-            <l n="9" xml:id="l9"> </l>
-            <stage><hi rend="italic"><em>Il tombe encore quelques gouttes de pluie. </em></hi></stage>
-          </sp>
-          <sp who="denarius" xml:id="1-2">
-            <speaker>DENARIUS.</speaker>
-            <l n="11" xml:id="l11">Je n’ai jamais aimé de femme. C’est ma force.</l>
-            <l n="12" xml:id="l12">Bois, je ne grave point de nom sur votre écorce.</l>
-            <stage><hi rend="italic"><em>Il fait quelques pas dans la forêt. </em></hi></stage>
-            <l n="14" xml:id="l14">Je sens que je deviens loup. Ce progrès me plaît.</l>
-            <l n="15" xml:id="l15">C’est bien. Quand il contient un loup, l’homme est complet</l>
-            <l n="16" xml:id="l16">– Il pleut encore un peu.</l>
-            <stage><hi rend="italic"><em>Regardant autour de lui. </em></hi></stage>
-            <l n="18" xml:id="l18">Le ciel qu’un souffre essuie</l>
-            <l n="19" xml:id="l19">A vidé dans les champs tout l’écrin de la pluie.</l>
-            <l n="20" xml:id="l20">L’orage, avec l’essaim des nuages pourprés,</l>
-            <l n="21" xml:id="l21">S’enfuit et laisse pleins d’émeraudes les prés ;</l>
-            <l n="22" xml:id="l22">La luzerne, fouillis où méditent les lièvres,</l>
-            <l n="23" xml:id="l23">Montre plus de joyaux que le quai des Orfèvres ;</l>
-            <l n="24" xml:id="l24">La mûre sur la ronce est un rubis vermeil ;</l>
-            <l n="25" xml:id="l25">Les brins de folle avoine, agités au soleil,</l>
-            <l n="26" xml:id="l26">Deviennent, sous le vent qui passe par bouffées,</l>
-            <l n="27" xml:id="l27">Grappes de diamants pour l’oreille des fées.</l>
-            <l n="28" xml:id="l28">C’est beau. – Mais que la vie est triste ! – Ô vert séjour,</l>
-            <l n="29" xml:id="l29">Bois, c’est dit, je m’envole, et je casse l’amour,</l>
-            <l n="30" xml:id="l30">Fil que la femme attache à la patte de l’âme.</l>
-            <l n="31" xml:id="l31">Je mets mon avenir en liberté. Je blâme</l>
-            <l n="32" xml:id="l32">Le bon Dieu d’avoir fait l’homme de deux morceaux</l>
-            <l n="33" xml:id="l33">Dont l’un est une femme.</l>
-            <stage><hi rend="italic"><em>Écoutant. </em></hi></stage>
-            <l n="35" xml:id="l35">Ah ! j’entends les oiseaux,</l>
-            <l n="36" xml:id="l36">La pluie a cessé. – Dieu ! que la vie est morose !</l>
-            <l n="37" xml:id="l37">Où trouver l’idéal ? Ô vide du cœur !</l>
-          </sp>
-          <sp who="un-papillon" xml:id="1-3">
-            <speaker>UN PAPILLON,  <em>à une violette.</em></speaker>
-            <l n="38" xml:id="l38">Rose !</l>
-          </sp>
-          <sp who="la-violette" xml:id="1-4">
-            <speaker>LA VIOLETTE.</speaker>
-            <l n="39" xml:id="l39">Flatteur !</l>
-          </sp>
-          <sp who="le-papillon" xml:id="1-5">
-            <speaker>LE PAPILLON.</speaker>
-            <l n="40" xml:id="l40">Un baiser.</l>
-          </sp>
-          <sp who="la-violette" xml:id="1-6">
-            <speaker>LA VIOLETTE.</speaker>
-            <l n="41" xml:id="l41">Prends.</l>
-          </sp>
-          <sp who="le-papillon" xml:id="1-7">
-            <speaker>LE PAPILLON, <em>au lys.</em></speaker>
-            <l n="42" xml:id="l42">Je t’aime, ô lys !</l>
-          </sp>
-          <sp who="le-lys" xml:id="1-8">
-            <speaker>LE LYS.</speaker>
-            <l n="43" xml:id="l43">Coureur !</l>
-          </sp>
-          <sp who="le-papillon" xml:id="1-9">
-            <speaker>LE PAPILLON.</speaker>
-            <l n="44" xml:id="l44">Un baiser.</l>
-          </sp>
-          <sp who="le-lys" xml:id="1-10">
-            <speaker>LE LYS.</speaker>
-            <l n="45" xml:id="l45">Prends.</l>
-          </sp>
-          <sp who="denarius" xml:id="1-11">
-            <speaker>DENARIUS.</speaker>
-            <l n="46" xml:id="l46">L’amour est une vieille erreur ;</l>
-            <l n="47" xml:id="l47">Le cœur est un viscère. Aimer ! sotte aventure.</l>
-            <l n="48" xml:id="l48">L’homme est fait pour rêver au fond de la nature ;</l>
-            <l n="49" xml:id="l49">Contempler l’infini dans les cieux transparents,</l>
-            <l n="50" xml:id="l50">Voilà tout le destin de l’homme.</l>
-          </sp>
-          <sp who="le-papillon" xml:id="1-12">
-            <speaker>LE PAPILLON, <em>à un liseron.</em></speaker>
-            <l n="51" xml:id="l51">Un baiser.</l>
-          </sp>
-          <sp who="le-liseron" xml:id="1-13">
-            <speaker>LE LISERON.</speaker>
-            <l n="52" xml:id="l52">Prends.</l>
-            <l n="53" xml:id="l53"> </l>
-            <l n="54" xml:id="l54"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="55" xml:id="l55"> </l>
-          <sp who="em>la-pluie-a-tout-à-fait-cessé" xml:id="2-1">
-            <speaker><em>La pluie a tout à fait cessé. Soleil partout. Toutes sortes d’êtres.</em></speaker>
-            <l n="56" xml:id="l56"> </l>
-          </sp>
-          <sp who="une-voix" xml:id="2-2">
-            <speaker>UNE VOIX, <em>dans l’air.</em></speaker>
-            <l n="57" xml:id="l57">C’est le printemps qui vient, ce frère de l’aurore ;</l>
-            <l n="58" xml:id="l58">C’est la saison qui rit, sœur de l’heure qui dore ;</l>
-            <l n="59" xml:id="l59">C’est l’instant où verdit le sillon nourricier,</l>
-            <l n="60" xml:id="l60">Où, sonore et gonflé des fontes du glacier,</l>
-            <l n="61" xml:id="l61">L’Arveyron bleu s’accouple au flot jaune de l’Arve,</l>
-            <l n="62" xml:id="l62">Où mai sort de l’hiver et le sphinx de sa larve ;</l>
-            <l n="63" xml:id="l63">Bonheur ! Soleil ! Les maux et les froids sont finis ;</l>
-            <l n="64" xml:id="l64">L’azur est dans le ciel, l’amour est dans les nids ;</l>
-            <l n="65" xml:id="l65">L’amour trouble les yeux de vierge des gazelles ;</l>
-            <l n="66" xml:id="l66">Oiseaux, mêlez vos chants ; âmes, mêlez vos ailes ;</l>
-            <l n="67" xml:id="l67">Gloire à Dieu !</l>
-          </sp>
-          <sp who="un-moineau-franc" xml:id="2-3">
-            <speaker>UN MOINEAU FRANC, <em>sortant de dessous les feuilles et secouant ses ailes.</em></speaker>
-            <l n="68" xml:id="l68">Dehors, tous !</l>
-            <stage><hi rend="italic"><em>Au signal donné par le moineau, un mouvement extraordinaire agite la forêt. Il semble que tout s’éveille et se mette à vivre. Les choses deviennent des êtres. Les fleurs prennent des airs de femmes. On dirait que les esprits des plantes sortent la tête de dessous les feuilles et se mettent à jaser. Tout parle, tout murmure, tout chuchote. Des querelles çà et là. Toutes les liges se penchent pêle-mêle les unes vers les autres. Le vent va et vient. Les oiseaux, les papillons, les mouches vont et viennent. Les vers de terre se dressent hors de leurs trous comme en proie à un rut mystérieux. Les parfums et les rayons se baisent. Le soleil fait dans les massifs d’arbres tous les verts possibles. Pendant toute la scène, les mousses, les plantes, les oiseaux, les mouches se mêlent en groupes qui se décomposent et se recomposent sans cesse. Dans des coins, des fleurs font leur toilette, les joyeuses s’ajustant des colliers de gouttes de rosée, les mélancoliques faisant briller au soleil leur larme de pluie. L’eau de l’étang imite les frémissements d’une gaze d’argent. Les nids font de petits cris. Pour le voyant, c’est un immense tumulte ; pour l’homme, c’est une paix immense. </em></hi></stage>
-          </sp>
-          <sp who="un-bouton-d’or" xml:id="2-4">
-            <speaker>UN BOUTON D’OR, <em>à une pâquerette.</em></speaker>
-            <l n="70" xml:id="l70">Vois, ma sœur du gazon,</l>
-            <l n="71" xml:id="l71">Le soleil éclater de rire à l’horizon.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-5">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="72" xml:id="l72">Beaux jours ! Chacun s’en va vers sa terre promise,</l>
-            <l n="73" xml:id="l73">Et part pour son éden. L’anglais fuit la Tamise,</l>
-            <l n="74" xml:id="l74">Le turc cherche la Mecque, et le grec lorgne Spa.</l>
-          </sp>
-          <sp who="un-hochequeue" xml:id="2-6">
-            <speaker>UN HOCHEQUEUE.</speaker>
-            <l n="75" xml:id="l75">Congé !</l>
-          </sp>
-          <sp who="une-abeille" xml:id="2-7">
-            <speaker>UNE ABEILLE.</speaker>
-            <l n="76" xml:id="l76">La clef des champs !</l>
-          </sp>
-          <sp who="un-moucheron" xml:id="2-8">
-            <speaker>UN MOUCHERON, <em>apercevant une rose et se tournant vers le soleil.</em></speaker>
-            <l n="77" xml:id="l77">Baiserai-je, papa ?</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-9">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="78" xml:id="l78">L’artificier Phœbus là-bas tire sa gerbe.</l>
-          </sp>
-          <sp who="un-myosotis" xml:id="2-10">
-            <speaker>UN MYOSOTIS.</speaker>
-            <l n="79" xml:id="l79">Un peu d’arc-en-ciel tremble au bout de tout brin d’herbe.</l>
-          </sp>
-          <sp who="une-branche-d’arbre" xml:id="2-11">
-            <speaker>UNE BRANCHE D’ARBRE.</speaker>
-            <l n="80" xml:id="l80">Ce bougon de nuage est parti. C’est charmant.</l>
-            <l n="81" xml:id="l81">Jouons.</l>
-          </sp>
-          <sp who="une-chouette" xml:id="2-12">
-            <speaker>UNE CHOUETTE, <em>du creux d’un saule.</em></speaker>
-            <l n="82" xml:id="l82">Arbres, fleurs, nids, profitez du moment,</l>
-            <l n="83" xml:id="l83">Vivez, chantez ! jasez comme un club de portières !</l>
-            <l n="84" xml:id="l84">Mais gare l’oiseleur ! Gare les bouquetières !</l>
-            <l n="85" xml:id="l85">Gare le bûcheron !</l>
-          </sp>
-          <sp who="les-fleurs" xml:id="2-13">
-            <speaker>LES FLEURS.</speaker>
-            <l n="86" xml:id="l86">Tout ça, c’est des ragots.</l>
-          </sp>
-          <sp who="les-oiseaux" xml:id="2-14">
-            <speaker>LES OISEAUX.</speaker>
-            <l n="87" xml:id="l87">Nous ne te croyons pas.</l>
-          </sp>
-          <sp who="la-chouette" xml:id="2-15">
-            <speaker>LA CHOUETTE.</speaker>
-            <l n="88" xml:id="l88">Prenez garde.</l>
-          </sp>
-          <sp who="les-branches-d’arbre" xml:id="2-16">
-            <speaker>LES BRANCHES D’ARBRE.</speaker>
-            <l n="89" xml:id="l89">Fagots !</l>
-          <stage>LE MOINEAU, <em>chantant.</em></stage>
-          </sp>
-          <sp who="le-hochequeue" xml:id="2-17">
-            <speaker>LE HOCHEQUEUE.</speaker>
-            <l n="90" xml:id="l90">Que chantes-tu là ?</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-18">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="91" xml:id="l91">J’ai cueilli cette morale</l>
-            <l n="92" xml:id="l92">Du temps où, ne rêvant qu’églogue et pastorale,</l>
-            <l n="93" xml:id="l93">Dans les bois de Meudon, j’avais pris pour palais</l>
-            <l n="94" xml:id="l94">La barbe d’un vieil antre, ami de Rabelais.</l>
-            <stage><hi rend="italic"><em>Aux oiseaux. </em></hi></stage>
-            <l n="96" xml:id="l96">Hé ! venez voir, pinsons, verdiers, les geais, les merles !</l>
-            <l n="97" xml:id="l97">La toile d’araignée est un sac plein de perles.</l>
-          </sp>
-          <sp who="un-nénuphar" xml:id="2-19">
-            <speaker>UN NÉNUPHAR, <em>se penchant.</em></speaker>
-            <l n="98" xml:id="l98">Charmant !</l>
-          </sp>
-          <sp who="l’araignée" xml:id="2-20">
-            <speaker>L’ARAIGNÉE.</speaker>
-            <l n="99" xml:id="l99">J’aimerais mieux des mouches.</l>
-          </sp>
-          <sp who="les-oiseaux" xml:id="2-21">
-            <speaker>LES OISEAUX.</speaker>
-            <l n="100" xml:id="l100">Nous aussi.</l>
-          </sp>
-          <sp who="une-ortie" xml:id="2-22">
-            <speaker>UNE ORTIE.</speaker>
-            <l n="101" xml:id="l101">L’oiseau vaut le chat.</l>
-          </sp>
-          <sp who="les-gouttes-de-pluie" xml:id="2-23">
-            <speaker>LES GOUTTES DE PLUIE, <em>tombant de feuille en feuille.</em></speaker>
-            <l n="102" xml:id="l102">Ut-Ré-Mi-Fa-Sol-La-Si-</l>
-            <l n="103" xml:id="l103">Ut.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-24">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="104" xml:id="l104">Çà, jouons.</l>
-          </sp>
-          <sp who="le-hochequeue" xml:id="2-25">
-            <speaker>LE HOCHEQUEUE.</speaker>
-            <l n="105" xml:id="l105">Faisons un horrible vacarme.</l>
-          </sp>
-          <sp who="denarius" xml:id="2-26">
-            <speaker>DENARIUS, <em>en contemplation.</em></speaker>
-            <l n="106" xml:id="l106">Frais silence !</l>
-          </sp>
-          <sp who="une-goutte-d’eau" xml:id="2-27">
-            <speaker>UNE GOUTTE D’EAU, <em>en tombant.</em></speaker>
-            <l n="107" xml:id="l107">J’étais diamant, je suis larme.</l>
-            <l n="108" xml:id="l108">Femmes, ne tombez pas.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-28">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="109" xml:id="l109">La femme, ô goutte d’eau,</l>
-            <l n="110" xml:id="l110">Ne tombe pas ! Va voir à Mabille, au Prado,</l>
-            <l n="111" xml:id="l111">Partout où l’amour mène à grands guides son coche,</l>
-            <l n="112" xml:id="l112">Au Wauxhall. L’homme tombe, et la femme...</l>
-          </sp>
-          <sp who="la-surface-de-l’étang" xml:id="2-29">
-            <speaker>LA SURFACE DE L’ÉTANG.</speaker>
-            <l n="113" xml:id="l113">Ricoche.</l>
-          </sp>
-          <sp who="la-lavande" xml:id="2-30">
-            <speaker>LA LAVANDE.</speaker>
-            <l n="114" xml:id="l114">La taille de la guêpe est charmante.</l>
-          </sp>
-          <sp who="l’ortie" xml:id="2-31">
-            <speaker>L’ORTIE.</speaker>
-            <l n="115" xml:id="l115">Corset.</l>
-          </sp>
-          <sp who="la-guêpe" xml:id="2-32">
-            <speaker>LA GUÊPE.</speaker>
-            <l n="116" xml:id="l116">Cette lavande en fleur sent bon.</l>
-          </sp>
-          <sp who="la-ronce" xml:id="2-33">
-            <speaker>LA RONCE.</speaker>
-            <l n="117" xml:id="l117">Water-closet.</l>
-          </sp>
-          <sp who="les-papillons" xml:id="2-34">
-            <speaker>LES PAPILLONS.</speaker>
-            <l n="118" xml:id="l118">Jouons !</l>
-          </sp>
-          <sp who="les-oiseaux" xml:id="2-35">
-            <speaker>LES OISEAUX.</speaker>
-            <l n="119" xml:id="l119">Courons !</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-36">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="120" xml:id="l120">Pillons ! L’ordre c’est le délire.</l>
-            <stage><hi rend="italic"><em>Entre un paon. </em></hi></stage>
-          </sp>
-          <sp who="le-paon" xml:id="2-37">
-            <speaker>LE PAON.</speaker>
-            <l n="122" xml:id="l122">Quel tumulte de chants et de cris ! Bruit de lyre</l>
-            <l n="123" xml:id="l123">Mêlé de grincements. Sous ces acacias</l>
-            <l n="124" xml:id="l124">On croirait qu’Apollon écorche Marsyas.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-38">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="125" xml:id="l125">À sac les fleurs ! Drinn ! Drinn !</l>
-          </sp>
-          <sp who="le-paon" xml:id="2-39">
-            <speaker>LE PAON.</speaker>
-            <l n="126" xml:id="l126">Toi qui fais ce tapage,</l>
-            <l n="127" xml:id="l127">Qu’es-tu ?</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-40">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="128" xml:id="l128">Je suis gamin ; autrefois j’étais page.</l>
-            <l n="129" xml:id="l129">Je m’ébats, cher seigneur. Si je n’étais voyou,</l>
-            <stage><hi rend="italic">Je voudrais être rose et dire : <em>I love you</em>.</hi></stage>
-            <l n="131" xml:id="l131">Je suis l’oiseau gaité, rapin de l’astre joie.</l>
-            <l n="132" xml:id="l132">À nous deux nous faisons le printemps. L’aigle et l’oie</l>
-            <l n="133" xml:id="l133">Sont nos deux ennemis, l’un en haut, l’autre en bas.</l>
-            <l n="134" xml:id="l134">Vous êtes entre eux deux. Bonsoir.</l>
-            <stage><hi rend="italic"><em>Il se jette au milieu da tumulte. </em></hi></stage>
-            <l n="136" xml:id="l136">Hé !</l>
-            <stage><hi rend="italic"><em>Les oiseaux l’accueillent avec de grands cris de joie. Les fleurs et les feuilles s’effarent. Il se tourne vers le paon qui se pavane. </em></hi></stage>
-            <l n="138" xml:id="l138">Je m’ébats.</l>
-            <stage><hi rend="italic"><em>Entre un essaim de frelons. </em></hi></stage>
-          <stage>LES FRELONS, <em>chantant.</em></stage>
-          </sp>
-          <sp who="le-moineau" xml:id="2-41">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="140" xml:id="l140">À bas les noirs frelons avec leurs voix d’eunuques !</l>
-            <stage><hi rend="italic"><em>Les oiseaux poursuivent et chassent les frelons avec de grands cris. </em></hi></stage>
-          </sp>
-          <sp who="les-vieux-arbres" xml:id="2-42">
-            <speaker>LES VIEUX ARBRES, <em>aux oiseaux.</em></speaker>
-            <l n="142" xml:id="l142">Vous faites trop de bruit ! Paix donc !</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-43">
-            <speaker>LE MOINEAU, <em>aux arbres.</em></speaker>
-            <l n="143" xml:id="l143">Salut, perruques !</l>
-          </sp>
-          <sp who="le-hochequeue" xml:id="2-44">
-            <speaker>LE HOCHEQUEUE.</speaker>
-            <l n="144" xml:id="l144">Académiciens, fichez-nous donc la paix.</l>
-            <l n="145" xml:id="l145">Je sais, vous êtes sourds et vous êtes épais,</l>
-            <l n="146" xml:id="l146">Soit. Contentez-vous-en. Foin de vos vieux branchages</l>
-            <l n="147" xml:id="l147">Où l’antique Zéphyr redit ses rabâchages !</l>
-          </sp>
-          <sp who="un-piquebois" xml:id="2-45">
-            <speaker>UN PIQUEBOIS.</speaker>
-            <l n="148" xml:id="l148">À bas, vieux grognons !</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-46">
-            <speaker>LE MOINEAU, <em>regardant autour de lui.</em></speaker>
-            <l n="149" xml:id="l149">Mais, palsambleu ! c’est la cour</l>
-            <l n="150" xml:id="l150">Que ce bois ! C’est Versailles et l’Œil-de-bœuf...</l>
-            <stage><hi rend="italic"><em>À une touffe de bruyère. </em></hi></stage>
-            <l n="152" xml:id="l152">Bonjour.</l>
-            <l n="153" xml:id="l153">La Bruyère.</l>
-            <stage><hi rend="italic"><em>À une branche d’arbre. </em></hi></stage>
-            <l n="155" xml:id="l155">Bonjour, Rameau.</l>
-            <stage><hi rend="italic"><em>À une corneille sur le rocher. </em></hi></stage>
-            <l n="157" xml:id="l157">Bonjour, Corneille.</l>
-            <stage><hi rend="italic"><em>Au nénuphar. </em></hi></stage>
-            <l n="159" xml:id="l159">Bonjour, Boileau.</l>
-            <stage><hi rend="italic"><em>À un papillon blanc qui tourne autour d’une rose épanouie. </em></hi></stage>
-            <l n="161" xml:id="l161">L’enfant, laisse là cette vieille,</l>
-            <l n="162" xml:id="l162">Elle est d’hier matin.</l>
-            <stage><hi rend="italic"><em>Le papillon s’en va. </em></hi></stage>
-          </sp>
-          <sp who="la-rose" xml:id="2-47">
-            <speaker>LA ROSE.</speaker>
-            <l n="164" xml:id="l164">Que cet âge est grossier !</l>
-          </sp>
-          <sp who="les-fleurs" xml:id="2-48">
-            <speaker>LES FLEURS, <em>à un limaçon qui passe.</em></speaker>
-            <l n="165" xml:id="l165">Fi ! le vilain !</l>
-          </sp>
-          <sp who="le-limaçon" xml:id="2-49">
-            <speaker>LE LIMAÇON.</speaker>
-            <l n="166" xml:id="l166">Tout beau ! je suis un financier,</l>
-            <l n="167" xml:id="l167">Je laisse de l’argent derrière moi, les belles.</l>
-          </sp>
-          <sp who="plantes" xml:id="2-50">
-            <speaker>PLANTES <em>et </em>FLEURS, <em>en foule, se penchant vers le papillon blanc.</em></speaker>
-            <l n="168" xml:id="l168">Viens ! viens ! beau papillon !</l>
-          </sp>
-          <sp who="le-papillon" xml:id="2-51">
-            <speaker>LE PAPILLON.</speaker>
-            <l n="169" xml:id="l169">Vos noms, mesdemoiselles ?</l>
-          </sp>
-          <sp who="le-souci" xml:id="2-52">
-            <speaker>LE SOUCI.</speaker>
-            <l n="170" xml:id="l170">Mariage.</l>
-          </sp>
-          <sp who="l’ortie" xml:id="2-53">
-            <speaker>L’ORTIE.</speaker>
-            <l n="171" xml:id="l171">Vertu.</l>
-          </sp>
-          <sp who="la-romaine" xml:id="2-54">
-            <speaker>LA ROMAINE.</speaker>
-            <l n="172" xml:id="l172">Porcia.</l>
-          </sp>
-          <sp who="le-lierre" xml:id="2-55">
-            <speaker>LE LIERRE.</speaker>
-            <l n="173" xml:id="l173">Bon Accord.</l>
-          </sp>
-          <sp who="la-salsepareille" xml:id="2-56">
-            <speaker>LA SALSEPAREILLE.</speaker>
-            <l n="174" xml:id="l174">Mon nom est force, amour, santé.</l>
-          </sp>
-          <sp who="l’ortie" xml:id="2-57">
-            <speaker>L’ORTIE.</speaker>
-            <l n="175" xml:id="l175">Signé Ricord.</l>
-          </sp>
-          <sp who="un-rosier-en-fleur" xml:id="2-58">
-            <speaker>UN ROSIER EN FLEUR, <em>au Papillon.</em></speaker>
-            <l n="176" xml:id="l176">Viens chez moi. Mes boutons sont des cachettes d’âmes.</l>
-            <stage><hi rend="italic"><em>Le papillon se précipite dans le rosier et y disparaît. </em></hi></stage>
-          </sp>
-          <sp who="le-moineau" xml:id="2-59">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="178" xml:id="l178">Le tonnerre devrait faire des mélodrames.</l>
-            <l n="179" xml:id="l179">A-t-il fait tout à l’heure assez de bruit pour rien !</l>
-            <stage><hi rend="italic"><em>Au hochequeue. </em></hi></stage>
-            <l n="181" xml:id="l181">Regarde. Le bois chante un hymne aérien.</l>
-            <l n="182" xml:id="l182">Parmi les Cupidons, marmaille vive et leste,</l>
-            <l n="183" xml:id="l183">Bambins ailés, Vénus, bonne d’enfants céleste,</l>
-            <l n="184" xml:id="l184">Sourit dans l’ombre à Mars, le divin tourlourou.</l>
-          </sp>
-          <sp who="un-nuage" xml:id="2-60">
-            <speaker>UN NUAGE.</speaker>
-            <l n="185" xml:id="l185">Le bonheur, c’est le ciel !</l>
-          </sp>
-          <sp who="un-ramier" xml:id="2-61">
-            <speaker>UN RAMIER.</speaker>
-            <l n="186" xml:id="l186">C’est le nid !</l>
-          </sp>
-          <sp who="la-chouette" xml:id="2-62">
-            <speaker>LA CHOUETTE.</speaker>
-            <l n="187" xml:id="l187">C’est un trou.</l>
-          <stage>LA RONCE, <em>chantant.</em></stage>
-          </sp>
-          <sp who="denarius" xml:id="2-63">
-            <speaker>DENARIUS.</speaker>
-            <l n="188" xml:id="l188">Ô nature farouche, âpre, chaste, superbe,</l>
-            <l n="189" xml:id="l189">Je vis en toi ! J’écoute avec amour ton verbe !</l>
-          </sp>
-          <sp who="une-giroflée" xml:id="2-64">
-            <speaker>UNE GIROFLÉE.</speaker>
-            <l n="190" xml:id="l190">Tiens, tiens ! Je n’avais pas encor vu ce grimaud.</l>
-            <l n="191" xml:id="l191">Quels ongles noirs !</l>
-          </sp>
-          <sp who="denarius" xml:id="2-65">
-            <speaker>DENARIUS.</speaker>
-            <l n="192" xml:id="l192">Tout est énigme et tout est mot.</l>
-            <l n="193" xml:id="l193">Oh ! je sens la forêt pleine de la chimère !</l>
-            <l n="194" xml:id="l194">La création, c’est une sombre grammaire.</l>
-            <l n="195" xml:id="l195">L’invisible, au réel mêlé, change un rayon</l>
-            <l n="196" xml:id="l196">En regard, et la fleur et l’arbre en vision.</l>
-            <l n="197" xml:id="l197">Les hommes sont en proie aux choses. Le mystère</l>
-            <l n="198" xml:id="l198">Leur parle, même après le rire de Voltaire.</l>
-            <l n="199" xml:id="l199">S’ils n’ont plus Zoroastre, ils ont Cagliostro.</l>
-          </sp>
-          <sp who="une-grue" xml:id="2-66">
-            <speaker>UNE GRUE, <em>au vent qui lui ébouriffe les plumes.</em></speaker>
-            <l n="200" xml:id="l200">Du respect ! je suis femme !</l>
-            <stage><hi rend="italic"><em>Elle donne des coups de bec et des coups de patte de tous les côtés avec colère. </em></hi></stage>
-          </sp>
-          <sp who="le-hochequeue" xml:id="2-67">
-            <speaker>LE HOCHEQUEUE.</speaker>
-            <stage><hi rend="italic"><em>Unguibus. </em></hi></stage>
-          </sp>
-          <sp who="le-moineau" xml:id="2-68">
-            <speaker>LE MOINEAU.</speaker>
-            <stage><hi rend="italic"><em>Et rostro. </em></hi></stage>
-          </sp>
-          <sp who="les-arbres" xml:id="2-69">
-            <speaker>LES ARBRES.</speaker>
-            <l n="204" xml:id="l204">Paix !</l>
-          </sp>
-          <sp who="denarius" xml:id="2-70">
-            <speaker>DENARIUS, <em>contemplant.</em></speaker>
-            <l n="205" xml:id="l205">Le mot de l’énigme est sépulcre.</l>
-          </sp>
-          <sp who="un-concombre" xml:id="2-71">
-            <speaker>UN CONCOMBRE.</speaker>
-            <l n="206" xml:id="l206">Vinaigre.</l>
-          </sp>
-          <sp who="le-papillon" xml:id="2-72">
-            <speaker>LE PAPILLON, <em>sortant du rosier.</em></speaker>
-            <l n="207" xml:id="l207">Oh ! les fleurs !</l>
-          </sp>
-          <sp who="une-sauterelle" xml:id="2-73">
-            <speaker>UNE SAUTERELLE.</speaker>
-            <l n="208" xml:id="l208">J’aime mieux les herbes.</l>
-          </sp>
-          <sp who="les-fleurs" xml:id="2-74">
-            <speaker>LES FLEURS.</speaker>
-            <l n="209" xml:id="l209">Grande maigre,</l>
-            <l n="210" xml:id="l210">Va te faire engager à l’Opéra.</l>
-            <stage><hi rend="italic"><em>Elles se penchent furieuses pour chasser la sauterelle. </em></hi></stage>
-          </sp>
-          <sp who="le-moineau" xml:id="2-75">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="212" xml:id="l212">Satan !</l>
-            <l n="213" xml:id="l213">Quel hourvari !</l>
-          </sp>
-          <sp who="les-fleurs" xml:id="2-76">
-            <speaker>LES FLEURS.</speaker>
-            <l n="214" xml:id="l214">Va-t’en, puce des blés !</l>
-          </sp>
-          <sp who="la-rose" xml:id="2-77">
-            <speaker>LA ROSE.</speaker>
-            <l n="215" xml:id="l215">Va-t’en !</l>
-          </sp>
-          <sp who="un-pied-d’alouette" xml:id="2-78">
-            <speaker>UN PIED-D’ALOUETTE.</speaker>
-            <l n="216" xml:id="l216">Prends garde à toi ! La fleur peut s’envoler.</l>
-          </sp>
-          <sp who="une-gueule-de-loup" xml:id="2-79">
-            <speaker>UNE GUEULE-DE-LOUP.</speaker>
-            <l n="217" xml:id="l217">Et mordre.</l>
-          </sp>
-          <sp who="les-arbres" xml:id="2-80">
-            <speaker>LES ARBRES.</speaker>
-            <l n="218" xml:id="l218">Paix là !</l>
-            <stage><hi rend="italic"><em>L’âne broute le pied-d’alouette, la sauterelle et la gueule-de-loup. </em></hi></stage>
-          </sp>
-          <sp who="le-moineau" xml:id="2-81">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="220" xml:id="l220">Hé ! que fais-tu, toi ?</l>
-          </sp>
-          <sp who="l’âne" xml:id="2-82">
-            <speaker>L’ÂNE.</speaker>
-            <l n="221" xml:id="l221">Je rétablis l’ordre.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="2-83">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="222" xml:id="l222">C’est un peu fort, monsieur de Montmorency.</l>
-            <l n="223" xml:id="l223"> </l>
-            <l n="224" xml:id="l224"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="225" xml:id="l225"> </l>
-          <sp who="denarius" xml:id="3-1">
-            <speaker>DENARIUS, <em>rêvant</em></speaker>
-            <l n="226" xml:id="l226"> </l>
-            <l n="227" xml:id="l227">Champs</l>
-            <l n="228" xml:id="l228">Que l’orgue de l’azur emplit de ses plains-chants,</l>
-            <l n="229" xml:id="l229">Cieux où le jardinier éternel se promène</l>
-            <l n="230" xml:id="l230">Versant les fleurs, la vie et la joie à la plaine,</l>
-            <l n="231" xml:id="l231">Des cribles du nuage, opulent arrosoir,</l>
-            <l n="232" xml:id="l232">Vénus, astre, esprit, flamme, œil du cyclope soir,</l>
-            <l n="233" xml:id="l233">Ô nature, c’est vous, c’est moi ! Je vous adore.</l>
-            <l n="234" xml:id="l234">Votre aile couve l’âme et je me sens éclore. –</l>
-            <l n="235" xml:id="l235">Tout se donne pour rien ici, tout est gratis,</l>
-            <l n="236" xml:id="l236">Et les petits sont grands, et les grands sont petits,</l>
-            <l n="237" xml:id="l237">Et la création s’offre à la créature.</l>
-            <l n="238" xml:id="l238">Ces grands arbres, seigneurs de toute la nature,</l>
-            <l n="239" xml:id="l239">À qui Dieu pour valets donne les mois changeants,</l>
-            <l n="240" xml:id="l240">Ne prêtent point sur gage et sont d’honnêtes gens.</l>
-            <l n="241" xml:id="l241">Champs ! on peut être pauvre et bien avec l’aurore.</l>
-            <l n="242" xml:id="l242">Bois, vous nous prodiguez votre souffle sonore,</l>
-            <l n="243" xml:id="l243">Tu nous donnes, soleil, ton rayon éclatant.</l>
-            <l n="244" xml:id="l244">Et vous ne dites pas au pauvre homme : C’est tant !</l>
-            <l n="245" xml:id="l245">On boit quand on a soif ; on n’entend pas la source</l>
-            <l n="246" xml:id="l246">Vous murmurer : Combien as-tu ? Voyons ta bourse.</l>
-            <l n="247" xml:id="l247">Salut, honnête bois. Vous n’êtes pas, ô loups,</l>
-            <l n="248" xml:id="l248">Des hommes ; les halliers ne sont point des filous.</l>
-            <l n="249" xml:id="l249">Vent, sève, azur, salut ! Vous n’êtes pas, nuées,</l>
-            <l n="250" xml:id="l250">Des coureuses de nuit et des prostituées.</l>
-            <l n="251" xml:id="l251">– Tout chante un opéra mystérieux ici.</l>
-            <l n="252" xml:id="l252">De partout, du rocher, des fleurs, du tronc noirci.</l>
-            <l n="253" xml:id="l253">De ce qui se contemple et de ce qui se cueille,</l>
-            <l n="254" xml:id="l254">Des prés, des gouttes d’eau tombant de feuille en feuille,</l>
-            <l n="255" xml:id="l255">Des branches saluant quelqu’un dans l’infini,</l>
-            <l n="256" xml:id="l256">De la mouche, du vent, du nid calme et béni,</l>
-            <l n="257" xml:id="l257">Une oreille invisible entend sortir des gammes.</l>
-            <l n="258" xml:id="l258">L’herbe sent tressaillir les monstres cryptogames,</l>
-            <l n="259" xml:id="l259">L’informe champignon chante un chant inconnu.</l>
-            <l n="260" xml:id="l260">Tout est doux dans cette ombre, et tout est ingénu.</l>
-            <l n="261" xml:id="l261">La femme y manque, bien qu’on y trouve la ronce.</l>
-            <l n="262" xml:id="l262">L’antre pensif, pareil au sourcil qui se fronce,</l>
-            <l n="263" xml:id="l263">Est un sage ; l’oiseau nous salue en buvant ;</l>
-            <l n="264" xml:id="l264">Les arbres pleins de pluie ont l’air d’aider le vent</l>
-            <l n="265" xml:id="l265">Et semblent essuyer le ciel avec leur cime.</l>
-            <l n="266" xml:id="l266">Oh ! je veux m’engloutir dans ce paisible abîme !</l>
-            <stage><hi rend="italic"><em>Rêvant.</em></hi></stage>
-            <l n="268" xml:id="l268">– Les arbres, dans leurs troncs et sous leur orteil noir,</l>
-            <l n="269" xml:id="l269">Ont des trous pleins de mousse et d’herbe, et l’on croit voir</l>
-            <l n="270" xml:id="l270">De petits dieux blottis dans tous ces petits antres.</l>
-            <l n="271" xml:id="l271">Des cupidons frisés montrent partout leurs ventres.</l>
-            <stage><hi rend="italic"><em>S’enfonçant dans sa rêverie. </em></hi></stage>
-            <l n="273" xml:id="l273">– Pourquoi pas ? Je serais un homme primitif.</l>
-            <l n="274" xml:id="l274">Ma grotte sombre aurait l’azur pour pendentif.</l>
-            <l n="275" xml:id="l275">J’aurais une cahute en branchages couverte,</l>
-            <l n="276" xml:id="l276">Et je savourerais, seul dans ma stalle verte,</l>
-            <l n="277" xml:id="l277">Force partitions que m’exécuterait</l>
-            <l n="278" xml:id="l278">Le vent musicien dans l’orchestre forêt.</l>
-            <l n="279" xml:id="l279">Tapi dans l’ombre où l’hymne universel commence,</l>
-            <l n="280" xml:id="l280">Je battrais la mesure à la nature immense.</l>
-            <l n="281" xml:id="l281">À l’heure où, réveillant le pâtre et le faucheur,</l>
-            <l n="282" xml:id="l282">L’aube sacrée emplit l’horizon de blancheur</l>
-            <l n="283" xml:id="l283">Et des trous du taillis fait de claires fenêtres,</l>
-            <l n="284" xml:id="l284">Marcher, vivre ! Être là quand chuchotent les êtres.</l>
-            <l n="285" xml:id="l285">Les oiseaux, ces enfants, le chêne, cet aïeul !</l>
-            <l n="286" xml:id="l286">Écouter, dans, le jonc, l’épine et le glaïeul.</l>
-            <l n="287" xml:id="l287">Les déesses jaser au fond des grottes noires,</l>
-            <l n="288" xml:id="l288">Et rire et se jeter de l’eau dans leurs baignoires !</l>
-            <l n="289" xml:id="l289">Être de ceux à qui les nymphes se font voir !</l>
-            <l n="290" xml:id="l290">Ciel ! rêver quand l’étang offre aux nuits son miroir,</l>
-            <l n="291" xml:id="l291">Quand le vent vient peigner les cheveux verts du saule,</l>
-            <l n="292" xml:id="l292">Et voir sortir de l’eau quelque ineffable épaule !</l>
-            <l n="293" xml:id="l293">Contempler dans la source, à l’ombre des buissons,</l>
-            <l n="294" xml:id="l294">De vagues nudités flottant sous les cressons !</l>
-            <l n="295" xml:id="l295">Vivre dans les frissons et dans les dithyrambes !</l>
-            <l n="296" xml:id="l296">Voir la naïade aux yeux d’astre laver ses jambes !</l>
-            <l n="297" xml:id="l297">– Je suis fou. Mon esprit patauge en plein Chompré.</l>
-            <l n="298" xml:id="l298">Non, restons dans le vrai, dans l’herbe, dans le pré.</l>
-            <l n="299" xml:id="l299">C’est assez d’être un loup, ne soyons pas un faune.</l>
-            <l n="300" xml:id="l300">Appeler un lys Flore et voir Pan dans un aulne,</l>
-            <l n="301" xml:id="l301">Croire entendre quelqu’un quand on parle à l’écho.</l>
-            <l n="302" xml:id="l302">Empoisonner de dieux les champs, c’est rococo.</l>
-            <l n="303" xml:id="l303">Le vrai suffit. Soyons un simple philosophe.</l>
-            <l n="304" xml:id="l304">Quand Cybèle disait à l’homme enfant : Dodophe,</l>
-            <l n="305" xml:id="l305">Lorsque l’humanité tétait son pouce, bon !</l>
-            <l n="306" xml:id="l306">La fable avait son prix. Mais l’homme est un barbon,</l>
-            <l n="307" xml:id="l307">Diable ! à présent, l’esprit humain porte perruque,</l>
-            <l n="308" xml:id="l308">Et notre raison branle une tête caduque.</l>
-            <l n="309" xml:id="l309">Croire aux nymphes est bête. Il faut être réel.</l>
-            <stage><hi rend="italic"><em>Rêvant.</em></hi></stage>
-            <l n="311" xml:id="l311">– Vivre comme l’ours, grave et seul, avec le ciel,</l>
-            <l n="312" xml:id="l312">À la bonne heure ! Au diable Anna, Toinon, Lisette,</l>
-            <l n="313" xml:id="l313">Madame la marquise et mam’zell’ la grisette,</l>
-            <l n="314" xml:id="l314">La femme en bloc ! les yeux noyés, les yeux fripons !</l>
-            <l n="315" xml:id="l315">Ouragan, ouragan, emporte les jupons !</l>
-            <l n="316" xml:id="l316">Délivre-nous ! – Je hais la femme en théorie.</l>
-            <l n="317" xml:id="l317">Sa fidélité fait rire ma rêverie.</l>
-            <l n="318" xml:id="l318">Son cœur compte dix, vingt, trente, cent : jamais un.</l>
-            <l n="319" xml:id="l319">Elle achète au coiffeur pour deux sous de parfum.</l>
-            <l n="320" xml:id="l320">Elle est blanche ? un accès de colère : elle est bleue.</l>
-            <l n="321" xml:id="l321">Dans ses cheveux se tord le serpent fausse queue.</l>
-            <l n="322" xml:id="l322">L’été vient : triste fleur, le soleil l’enlaidit,</l>
-            <l n="323" xml:id="l323">Les taches de rousseur la rouillent. Elle dit :</l>
-            <l n="324" xml:id="l324">Je sue. Elle est trop grasse ou trop maigre. Cet ange</l>
-            <l n="325" xml:id="l325">Crotte ses bas. C’est faux, c’est perfide. Ça mange.</l>
-            <l n="326" xml:id="l326">La portière le soir lui glisse des billets.</l>
-            <l n="327" xml:id="l327">Ô seules belles, fleurs, seules vierges ! œillets,</l>
-            <l n="328" xml:id="l328">Pervenches, lys, muguets, jonquilles, pâquerettes,</l>
-            <l n="329" xml:id="l329">Dont le seul papillon touche les collerettes,</l>
-            <l n="330" xml:id="l330">Dieux purs qui vous ouvrez dans l’ombre au bleu matin,</l>
-            <l n="331" xml:id="l331">Douces fleurs, je ne veux aimer que vous.</l>
-          </sp>
-          <sp who="chœur-des-fleurs" xml:id="3-2">
-            <speaker>CHŒUR DES FLEURS.</speaker>
-            <l n="332" xml:id="l332">Crétin !</l>
-          </sp>
-          <sp who="une-pierre" xml:id="3-3">
-            <speaker>UNE PIERRE.</speaker>
-            <l n="333" xml:id="l333">Fossile !</l>
-          </sp>
-          <sp who="l’âne" xml:id="3-4">
-            <speaker>L’ÂNE.</speaker>
-            <l n="334" xml:id="l334">Âne !</l>
-          </sp>
-          <sp who="une-grenouille" xml:id="3-5">
-            <speaker>UNE GRENOUILLE.</speaker>
-            <l n="335" xml:id="l335">Crapaud !</l>
-          </sp>
-          <sp who="les-fleurs" xml:id="3-6">
-            <speaker>LES FLEURS.</speaker>
-            <l n="336" xml:id="l336">Porte ailleurs tes semelles !</l>
-          </sp>
-          <sp who="denarius" xml:id="3-7">
-            <speaker>DENARIUS.</speaker>
-            <l n="337" xml:id="l337">Soyez mes femmes, fleurs.</l>
-          </sp>
-          <sp who="les-fleurs" xml:id="3-8">
-            <speaker>LES FLEURS.</speaker>
-            <l n="338" xml:id="l338">Ciel ! être les femelles</l>
-            <l n="339" xml:id="l339">D’un tel mâle !</l>
-          </sp>
-          <sp who="denarius" xml:id="3-9">
-            <speaker>DENARIUS.</speaker>
-            <l n="340" xml:id="l340">Je veux baigner mon front en feu</l>
-            <l n="341" xml:id="l341">Dans vos seins ! me rouler dans vos lits !</l>
-          </sp>
-          <sp who="la-violette" xml:id="3-10">
-            <speaker>LA VIOLETTE.</speaker>
-            <l n="342" xml:id="l342">Sacrebleu !</l>
-          </sp>
-          <sp who="denarius" xml:id="3-11">
-            <speaker>DENARIUS.</speaker>
-            <l n="343" xml:id="l343">Fleurs !</l>
-          </sp>
-          <sp who="la-pervenche" xml:id="3-12">
-            <speaker>LA PERVENCHE.</speaker>
-            <l n="344" xml:id="l344">Qui nous a flanqué cette brute splendide ?</l>
-          </sp>
-          <sp who="la-mandragore" xml:id="3-13">
-            <speaker>LA MANDRAGORE.</speaker>
-            <l n="345" xml:id="l345">C’est Bobèche effaré qui croit être Candide.</l>
-          </sp>
-          <sp who="denarius" xml:id="3-14">
-            <speaker>DENARIUS.</speaker>
-            <l n="346" xml:id="l346">Je vous aime ! Soyez mon sérail, liserons !</l>
-          </sp>
-          <sp who="les-liserons" xml:id="3-15">
-            <speaker>LES LISERONS.</speaker>
-            <l n="347" xml:id="l347">Viens-y !</l>
-          </sp>
-          <sp who="l’ortie" xml:id="3-16">
-            <speaker>L’ORTIE.</speaker>
-            <l n="348" xml:id="l348">Viens-t’y frotter !</l>
-          </sp>
-          <sp who="les-aubépines" xml:id="3-17">
-            <speaker>LES AUBÉPINES.</speaker>
-            <l n="349" xml:id="l349">Nous te caresserons</l>
-            <l n="350" xml:id="l350">Le visage, le front, le nez !...</l>
-          </sp>
-          <sp who="la-giroflée" xml:id="3-18">
-            <speaker>LA GIROFLÉE.</speaker>
-            <l n="351" xml:id="l351">J’aurai cinq feuilles.</l>
-          </sp>
-          <sp who="denarius" xml:id="3-19">
-            <speaker>DENARIUS.</speaker>
-            <l n="352" xml:id="l352">Forêt, caverne d’ombre et de paix qui m’accueilles,</l>
-            <l n="353" xml:id="l353">Merci. – Le désert seul résiste à l’examen.</l>
-            <l n="354" xml:id="l354">Paris est fou ; la femme est le revers humain ;</l>
-            <l n="355" xml:id="l355">La femme de la vie est le mauvais visage ;</l>
-            <l n="356" xml:id="l356">Penseur, sois veuf ; voilà ta vie, à sage !</l>
-          </sp>
-          <sp who="l’écho" xml:id="3-20">
-            <speaker>L’ÉCHO.</speaker>
-            <l n="357" xml:id="l357">Osage !</l>
-          </sp>
-          <sp who="denarius" xml:id="3-21">
-            <speaker>DENARIUS, <em>à la forêt.</em></speaker>
-            <l n="358" xml:id="l358">J’ai découvert ceci, bois, dans ta profondeur :</l>
-            <l n="359" xml:id="l359">La fleur est la beauté, la femme est la laideur.</l>
-          </sp>
-          <sp who="murmure-des-arbres" xml:id="3-22">
-            <speaker>MURMURE DES ARBRES.</speaker>
-            <l n="360" xml:id="l360">Amour ! amour ! amour !</l>
-          </sp>
-          <sp who="denarius" xml:id="3-23">
-            <speaker>DENARIUS, <em>apercevant une rose.</em></speaker>
-            <l n="361" xml:id="l361">Ô rose diaphane.</l>
-            <l n="362" xml:id="l362">Si chaste qu’on dirait que le regard te fane,</l>
-            <l n="363" xml:id="l363">Dieu prit, pour composer ton souffle gracieux,</l>
-            <l n="364" xml:id="l364">Toute la pureté qui flotte dans les cieux.</l>
-            <l n="365" xml:id="l365">Puisque tu brilles, fleur, l’étoile est superflue.</l>
-            <l n="366" xml:id="l366">Je t’aime !</l>
-          </sp>
-          <sp who="la-rose" xml:id="3-24">
-            <speaker>LA ROSE.</speaker>
-            <l n="367" xml:id="l367">Il faut aimer une fille joufflue,</l>
-            <l n="368" xml:id="l368">Mon cher.</l>
-          </sp>
-          <sp who="denarius" xml:id="3-25">
-            <speaker>DENARIUS, <em>avançant la main vers la rose.</em></speaker>
-            <l n="369" xml:id="l369">Sois à moi. – Viens !</l>
-          </sp>
-          <sp who="la-rose" xml:id="3-26">
-            <speaker>LA ROSE.</speaker>
-            <l n="370" xml:id="l370">Ne me tutoyez pas.</l>
-            <stage><hi rend="italic"><em>Elle lui pique les doigts. </em></hi></stage>
-          </sp>
-          <sp who="les-autres-fleurs" xml:id="3-27">
-            <speaker>LES AUTRES FLEURS.</speaker>
-            <l n="372" xml:id="l372">Elle a bien répondu, la duchesse !</l>
-          </sp>
-          <sp who="denarius" xml:id="3-28">
-            <speaker>DENARIUS, <em>égouttant le sang de son doigt.</em></speaker>
-            <l n="373" xml:id="l373">Aïe !</l>
-            <stage><hi rend="italic"><em>Il s’éloigne et retombe dans son extase. </em></hi></stage>
-            <l n="375" xml:id="l375">Appas</l>
-            <l n="376" xml:id="l376">Du désert !</l>
-            <l n="377" xml:id="l377">...</l>
-            <l n="378" xml:id="l378">...</l>
-            <l n="379" xml:id="l379">Dites, fleurs, champs, sentiers non foulés,</l>
-            <l n="380" xml:id="l380">Que faut-il faire, oiseaux, pour être heureux ? Parlez,</l>
-            <l n="381" xml:id="l381">Arbres qui caressez le penseur quand il entre.</l>
-          </sp>
-          <sp who="le-lierre" xml:id="3-29">
-            <speaker>LE LIERRE.</speaker>
-            <l n="382" xml:id="l382">Prends patience.</l>
-          </sp>
-          <sp who="une-hirondelle" xml:id="3-30">
-            <speaker>UNE HIRONDELLE.</speaker>
-            <l n="383" xml:id="l383">Prends la poste.</l>
-          </sp>
-          <sp who="une-citrouille" xml:id="3-31">
-            <speaker>UNE CITROUILLE.</speaker>
-            <l n="384" xml:id="l384">Prends du ventre.</l>
-          </sp>
-          <sp who="denarius" xml:id="3-32">
-            <speaker>DENARIUS.</speaker>
-            <l n="385" xml:id="l385">Où trouver la figure idéale du cœur ?</l>
-            <l n="386" xml:id="l386">L’homme va, poursuivi par un rire moqueur.</l>
-            <l n="387" xml:id="l387">L’ombre, derrière nous, rit.</l>
-          </sp>
-          <sp who="voix-dans-l’air" xml:id="3-33">
-            <speaker>VOIX DANS L’AIR.</speaker>
-            <l n="388" xml:id="l388">Lumière et pensée !</l>
-            <l n="389" xml:id="l389">Ô ciel époux, reçois la terre fiancée.</l>
-            <l n="390" xml:id="l390">Êtres, l’amour est flamme et l’amour est rayon ;</l>
-            <l n="391" xml:id="l391">Il tend d’en haut la lèvre à la création,</l>
-            <l n="392" xml:id="l392">Et la nature pose, en entr’ouvrant son aile,</l>
-            <l n="393" xml:id="l393">L’universel baiser sur la bouche éternelle !</l>
-          </sp>
-          <sp who="les-arbres" xml:id="3-34">
-            <speaker>LES ARBRES.</speaker>
-            <l n="394" xml:id="l394">Amour ! amour ! amour !</l>
-          </sp>
-          <sp who="denarius" xml:id="3-35">
-            <speaker>DENARIUS.</speaker>
-            <l n="395" xml:id="l395">De moment en moment</l>
-            <l n="396" xml:id="l396">La paix me gagne ; ô joie ! anéantissement !</l>
-            <l n="397" xml:id="l397">Pour la vie ! être seul dans les bois, c’est le rêve,</l>
-            <l n="398" xml:id="l398">C’est tout ! le paradis, c’est la solitude.</l>
-          </sp>
-          <sp who="une-pomme" xml:id="3-36">
-            <speaker>UNE POMME, <em>lui tombant sur la tête.</em></speaker>
-            <l n="399" xml:id="l399">Ève.</l>
-            <stage><hi rend="italic"><em>Entrent Balminette et madame Antioche. Au fond, dans le taillis, Oscar qu’on ne voit pas. </em></hi></stage>
-            <l n="401" xml:id="l401"> </l>
-            <l n="402" xml:id="l402"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="403" xml:id="l403"> </l>
-          <sp who="balminette" xml:id="4-1">
-            <speaker>DENARIUS, BALMINETTE, MADAME ANTIOCHE, OSCAR, <em>au fond</em>, LA FORÊT</speaker>
-            <l n="404" xml:id="l404"> </l>
-          </sp>
-          <sp who="balminette" xml:id="4-2">
-            <speaker>BALMINETTE.</speaker>
-            <l n="405" xml:id="l405">Oscar est jaloux comme...</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-3">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="406" xml:id="l406">Ah ! j’en ai plein le né,</l>
-            <l n="407" xml:id="l407">D’Oscar. – Beau temps ! Le ciel est rebadigeonné.</l>
-            <l n="408" xml:id="l408">C’est comme à l’Opéra dans les apothéoses.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-4">
-            <speaker>BALMINETTE.</speaker>
-            <l n="409" xml:id="l409">J’ai joliment dîné. J’ai mangé de huit choses.</l>
-          </sp>
-          <sp who="oscar" xml:id="4-5">
-            <speaker>OSCAR, <em>au fond, criant.</em></speaker>
-            <l n="410" xml:id="l410">Par ici.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-6">
-            <speaker>BALMINETTE.</speaker>
-            <l n="411" xml:id="l411">C’est joli. Regarde donc, l’étang</l>
-            <l n="412" xml:id="l412">Est comme une croisée.</l>
-            <stage><hi rend="italic"><em>Apercevant Denarius. </em></hi></stage>
-            <l n="414" xml:id="l414">Oh ! quel orang-outang !</l>
-          </sp>
-          <sp who="denarius" xml:id="4-7">
-            <speaker>DENARIUS.</speaker>
-            <l n="415" xml:id="l415">J’ai peur d’avoir trouvé cette femme jolie.</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-8">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="416" xml:id="l416">Mes souliers trop étroits font ma mélancolie ;</l>
-            <l n="417" xml:id="l417">J’ai trop marché, j’ai mal à mon cor, Balmina.</l>
-          </sp>
-          <sp who="le-caillou-de-sentier" xml:id="4-9">
-            <speaker>LE CAILLOU DE SENTIER.</speaker>
-            <l n="418" xml:id="l418">Le pied qu’on veut avoir gâte celui qu’on a.</l>
-            <stage><hi rend="italic"><em>Denarias contemple Balminette. </em></hi></stage>
-          </sp>
-          <sp who="denarius" xml:id="4-10">
-            <speaker>DENARIUS.</speaker>
-            <l n="420" xml:id="l420">Cette femme a dans l’œil la céleste étincelle.</l>
-            <l n="421" xml:id="l421">C’est Diane, ou Psyché !</l>
-          </sp>
-          <sp who="le-moineau" xml:id="4-11">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="422" xml:id="l422">Ça, c’est mademoiselle</l>
-            <l n="423" xml:id="l423">Balminette, lingère en chambre, rue aux Ours,</l>
-            <l n="424" xml:id="l424">Numéro trois.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-12">
-            <speaker>BALMINETTE.</speaker>
-            <l n="425" xml:id="l425">Oscar, attends-nous !</l>
-            <stage><hi rend="italic"><em>Elle fredonne. </em></hi></stage>
-            <l n="427" xml:id="l427">Nos amours</l>
-            <l n="428" xml:id="l428">Ont duré...</l>
-          </sp>
-          <sp who="oscar" xml:id="4-13">
-            <speaker>OSCAR, <em>au fond.</em></speaker>
-            <l n="429" xml:id="l429">Par ici ! viens !</l>
-          </sp>
-          <sp who="balminette" xml:id="4-14">
-            <speaker>BALMINETTE, <em>fredonnant.</em></speaker>
-            <l n="430" xml:id="l430">Toute une semaine...</l>
-          </sp>
-          <sp who="denarius" xml:id="4-15">
-            <speaker>DENARIUS.</speaker>
-            <l n="431" xml:id="l431">Si ce n’est pas Psyché, c’est au moins Célimène.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="4-16">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="432" xml:id="l432">Balminette, animal !</l>
-          </sp>
-          <sp who="l’ortie" xml:id="4-17">
-            <speaker>L’ORTIE.</speaker>
-            <l n="433" xml:id="l433">Et l’autre domino</l>
-            <l n="434" xml:id="l434">C’est madame Antioche, actrice à Bobino.</l>
-          </sp>
-          <sp who="denarius" xml:id="4-18">
-            <speaker>DENARIUS.</speaker>
-            <l n="435" xml:id="l435">Oui, c’est Agnès. Ses yeux sont tout bleus d’ignorance.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-19">
-            <speaker>BALMINETTE, <em>à madame Antioche.</em></speaker>
-            <l n="436" xml:id="l436">Des vieux que nous servons connais la différence.</l>
-            <l n="437" xml:id="l437">Le tien donne un chapeau, le mien donne un coupé.</l>
-            <l n="438" xml:id="l438">Je vais avoir salon, cocher et canapé.</l>
-            <l n="439" xml:id="l439">J’entre chez moi demain.</l>
-          </sp>
-          <sp who="denarius" xml:id="4-20">
-            <speaker>DENARIUS.</speaker>
-            <l n="440" xml:id="l440">Ce sont deux tourterelles.</l>
-            <l n="441" xml:id="l441">Deux fleurs, deux lys ! La blonde est divine.</l>
-          </sp>
-          <sp who="l’ortie" xml:id="4-21">
-            <speaker>L’ORTIE, <em>aux fleurs.</em></speaker>
-            <l n="442" xml:id="l442">Ces belles,</l>
-            <l n="443" xml:id="l443">Nos sœurs, ont pris racine et puisent leur gaîté,</l>
-            <l n="444" xml:id="l444">Leurs châles, leurs rubans et leurs robes d’été,</l>
-            <l n="445" xml:id="l445">L’une dans un banquier, et l’autre dans un juge.</l>
-          </sp>
-          <sp who="la-ronce" xml:id="4-22">
-            <speaker>LA RONCE.</speaker>
-            <l n="446" xml:id="l446">Tout coffre-fort recèle un ange qui le gruge.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="4-23">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="447" xml:id="l447">La nature dédie aux roses le fumier.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-24">
-            <speaker>BALMINETTE.</speaker>
-            <l n="448" xml:id="l448">Donc, foin de la mansarde et je vole au premier.</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-25">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="449" xml:id="l449">Tu lâches Oscar ?</l>
-          </sp>
-          <sp who="balminette" xml:id="4-26">
-            <speaker>BALMINETTE.</speaker>
-            <l n="450" xml:id="l450">Mais !</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-27">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="451" xml:id="l451">Oscar en mourra.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-28">
-            <speaker>BALMINETTE.</speaker>
-            <l n="452" xml:id="l452">Brute !</l>
-            <l n="453" xml:id="l453">– Sais-tu que c’est gentil, ce bois-ci ! – L’herbe jute,</l>
-            <l n="454" xml:id="l454">Par exemple ! – On pourrait cueillir sous ce rocher</l>
-            <l n="455" xml:id="l455">Une salade.</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-29">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="456" xml:id="l456">J’ai de la peine à marcher.</l>
-            <stage><hi rend="italic"><em>Apercevant l’âne. </em></hi></stage>
-            <l n="458" xml:id="l458">Si l’ânier était là, je me paierais bien l’âne.</l>
-          </sp>
-          <sp who="l’âne" xml:id="4-30">
-            <speaker>L’ÂNE.</speaker>
-            <l n="459" xml:id="l459">À l’heure. – Comme toi, Javotte !</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-31">
-            <speaker>MADAME ANTIOCHE, <em>appelant.</em></speaker>
-            <l n="460" xml:id="l460">Oscar !</l>
-          </sp>
-          <sp who="balminette" xml:id="4-32">
-            <speaker>BALMINETTE.</speaker>
-            <l n="461" xml:id="l461">Il flâne.</l>
-            <l n="462" xml:id="l462">Laisse-le.</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-33">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="463" xml:id="l463">Balmina, vraiment, c’est un Mahieu</l>
-            <l n="464" xml:id="l464">Que ton banquier.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-34">
-            <speaker>BALMINETTE.</speaker>
-            <l n="465" xml:id="l465">Divan, six fauteuils, clamas bleu.</l>
-            <l n="466" xml:id="l466">Un salon Louis quinze, un boudoir renaissance.</l>
-            <l n="467" xml:id="l467">Moi, je suis bonne et j’ai de la reconnaissance.</l>
-          </sp>
-          <sp who="l’ortie" xml:id="4-35">
-            <speaker>L’ORTIE.</speaker>
-            <l n="468" xml:id="l468">Au mont-de-piété.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-36">
-            <speaker>BALMINETTE.</speaker>
-            <l n="469" xml:id="l469">Ce vieux m’aime.</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-37">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="470" xml:id="l470">Un Mahieu !</l>
-          </sp>
-          <sp who="balminette" xml:id="4-38">
-            <speaker>BALMINETTE.</speaker>
-            <l n="471" xml:id="l471">Le plafond de ma chambre est peint en camaïeu,</l>
-            <l n="472" xml:id="l472">Genre ancien.</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-39">
-            <speaker>MADAME ANTIOCHE.</speaker>
-            <l n="473" xml:id="l473">Mais Oscar...</l>
-          </sp>
-          <sp who="balminette" xml:id="4-40">
-            <speaker>BALMINETTE.</speaker>
-            <l n="474" xml:id="l474">Oscar est jaloux comme...</l>
-            <l n="475" xml:id="l475">Et puis il est menteur, fourbe, ingrat, économe.</l>
-            <l n="476" xml:id="l476">C’est un serin.</l>
-          </sp>
-          <sp who="madame-antioche" xml:id="4-41">
-            <speaker>MADAME ANTIOCHE, <em>secouant sa robe.</em></speaker>
-            <l n="477" xml:id="l477">Vraiment, la pluie a tout trempé.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-42">
-            <speaker>BALMINETTE.</speaker>
-            <l n="478" xml:id="l478">Oscar, c’est l’omnibus ; Mahieu, c’est un coupé.</l>
-            <l n="479" xml:id="l479">Je préfère Mahieu.</l>
-          </sp>
-          <sp who="denarius" xml:id="4-43">
-            <speaker>DENARIUS, <em>les observant toujours sans être vu et de derrière un arbre.</em></speaker>
-            <l n="480" xml:id="l480">Je sens s’ouvrir mon âme</l>
-            <l n="481" xml:id="l481">Devant ce chapeau rose aux yeux bleus.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="4-44">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="482" xml:id="l482">Jusquiame,</l>
-            <l n="483" xml:id="l483">Quel est le vrai poison qui rend fou ?</l>
-          </sp>
-          <sp who="la-jusquiame" xml:id="4-45">
-            <speaker>LA JUSQUIAME.</speaker>
-            <l n="484" xml:id="l484">Le regard.</l>
-          </sp>
-          <sp who="le-moineau" xml:id="4-46">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="485" xml:id="l485">L’amour pince déjà ce bélître hagard.</l>
-            <l n="486" xml:id="l486">Achevons-le. Donnons ce cuistre à Balminette.</l>
-          </sp>
-          <sp who="le-caillou" xml:id="4-47">
-            <speaker>LE CAILLOU, <em>du sentier.</em></speaker>
-            <l n="487" xml:id="l487">Elle a le pied petit et la jambe bien faite.</l>
-          </sp>
-          <sp who="le-myosotis" xml:id="4-48">
-            <speaker>LE MYOSOTIS, <em>à un ruisseau.</em></speaker>
-            <l n="488" xml:id="l488">C’est dit. Incendions ce grand dadais transi.</l>
-          </sp>
-          <sp who="balminette" xml:id="4-49">
-            <speaker>LE RUISSEAU, <em>à Balminette qui est au bord et qui cherche à le traverser.</em></speaker>
-            <l n="489" xml:id="l489">Allons ! relève donc ta jupe.</l>
-          </sp>
-          <sp who="oscar" xml:id="4-50">
-            <speaker>OSCAR, <em>au fond.</em></speaker>
-            <l n="490" xml:id="l490">Par ici !</l>
-          </sp>
-          <sp who="balminette" xml:id="4-51">
-            <speaker>BALMINETTE, <em>traversant le ruisseau.</em></speaker>
-            <l n="491" xml:id="l491">Je disais donc qu’Oscar est jaloux comme un tigre.</l>
-          </sp>
-          <sp who="le-ruisseau" xml:id="4-52">
-            <speaker>LE RUISSEAU.</speaker>
-            <l n="492" xml:id="l492">Mais retrousse-toi donc, Margot !</l>
-          </sp>
-          <sp who="balminette" xml:id="4-53">
-            <speaker>BALMINETTE.</speaker>
-            <l n="493" xml:id="l493">Bigre de bigre !</l>
-            <l n="494" xml:id="l494">Je me mouille les pieds. Nous sommes embourbés.</l>
-            <l n="495" xml:id="l495">Mes brodequins tout neufs de dix francs sont flambés !</l>
-          </sp>
-          <sp who="denarius" xml:id="4-54">
-            <speaker>MADAME ANTIOCHE, <em>apercevant Denarius.</em></speaker>
-            <l n="496" xml:id="l496">Prends garde, Balminette, on voit ta jarretière !</l>
-          </sp>
-          <sp who="balminette" xml:id="4-55">
-            <speaker>BALMINETTE.</speaker>
-            <l n="497" xml:id="l497">Qu’est-ce que ça me fait ?</l>
-            <stage><hi rend="italic"><em>Elles s’en vont. </em></hi></stage>
-          </sp>
-          <sp who="denarius" xml:id="4-56">
-            <speaker>DENARIUS.</speaker>
-            <l n="499" xml:id="l499">C’est Vénus tout entière...</l>
-          </sp>
-          <sp who="le-moineau" xml:id="4-57">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="500" xml:id="l500">Non pas. Jusqu’au genou.</l>
-          </sp>
-          <sp who="denarius" xml:id="4-58">
-            <speaker>DENARIUS.</speaker>
-            <l n="501" xml:id="l501">Je ne sais ce que j’ai.</l>
-            <l n="502" xml:id="l502">Je suis fou. Cette femme en passant m’a changé.</l>
-            <l n="503" xml:id="l503">Oui, c’est l’idéal, c’est la figure rêvée !</l>
-            <l n="504" xml:id="l504">Oh ! cette robe blanche un instant soulevée !</l>
-            <l n="505" xml:id="l505">L’éclair du paradis ! Tout mon corps a frémi !</l>
-            <l n="506" xml:id="l506">C’est dit, je m’y ferai mener par quelque ami.</l>
-            <l n="507" xml:id="l507">Par qui ? Je ne sais pas son nom, je n’ai personne.</l>
-            <l n="508" xml:id="l508">Mon pouls est dans ma tempe une cloche qui sonne.</l>
-            <l n="509" xml:id="l509">La femme est tout ! Je suis pris, brûlé, dévoré.</l>
-            <l n="510" xml:id="l510">Oh ! je la reverrai, je la suivrai, j’irai,</l>
-            <l n="511" xml:id="l511">Je mettrai sous ses pieds mes rêves, mes idées,</l>
-            <l n="512" xml:id="l512">Tout ! Fallût-il franchir des murs de vingt coudées,</l>
-            <l n="513" xml:id="l513">Payer Vidocq, braver monsieur Oscar, l’enfer,</l>
-            <l n="514" xml:id="l514">La mort, et dans mes poings tordre des gonds de fer,</l>
-            <l n="515" xml:id="l515">Oui, j’irai !</l>
-          </sp>
-          <sp who="l’ortie" xml:id="4-59">
-            <speaker>L’ORTIE.</speaker>
-            <l n="516" xml:id="l516">Tu n’auras qu’à soulever le pêne.</l>
-          </sp>
-          <sp who="denarius" xml:id="4-60">
-            <speaker>DENARIUS.</speaker>
-            <l n="517" xml:id="l517">J’aime !</l>
-          </sp>
-          <sp who="le-moineau" xml:id="4-61">
-            <speaker>LE MOINEAU.</speaker>
-            <l n="518" xml:id="l518">Enfin ! c’est heureux ! Nous eûmes de la peine !</l>
-          </sp>
-          <sp who="le-caillou" xml:id="4-62">
-            <speaker>LE CAILLOU, <em>au ruisseau.</em></speaker>
-            <l n="519" xml:id="l519">Sans nous, si nous n’avions fait retrousser Goton,</l>
-            <l n="520" xml:id="l520">Ce Jocrisse risquait de devenir Platon.</l>
-            <l n="521" xml:id="l521"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#denarius">
+          <speaker>Entre DENARIUS, rêvant</speaker>
+          <stage>&lt;em&gt;Il tombe encore quelques gouttes de pluie. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="1">Je n’ai jamais aimé de femme. C’est ma force.</l>
+          <l n="2">Bois, je ne grave point de nom sur votre écorce.</l>
+          <stage>&lt;em&gt;Il fait quelques pas dans la forêt. &lt;/em&gt;</stage>
+          <l n="3">Je sens que je deviens loup. Ce progrès me plaît.</l>
+          <l n="4">C’est bien. Quand il contient un loup, l’homme est complet</l>
+          <l n="5">– Il pleut encore un peu.</l>
+          <stage>&lt;em&gt;Regardant autour de lui. &lt;/em&gt;</stage>
+          <l n="6">Le ciel qu’un souffre essuie</l>
+          <l n="7">A vidé dans les champs tout l’écrin de la pluie.</l>
+          <l n="8">L’orage, avec l’essaim des nuages pourprés,</l>
+          <l n="9">S’enfuit et laisse pleins d’émeraudes les prés ;</l>
+          <l n="10">La luzerne, fouillis où méditent les lièvres,</l>
+          <l n="11">Montre plus de joyaux que le quai des Orfèvres ;</l>
+          <l n="12">La mûre sur la ronce est un rubis vermeil ;</l>
+          <l n="13">Les brins de folle avoine, agités au soleil,</l>
+          <l n="14">Deviennent, sous le vent qui passe par bouffées,</l>
+          <l n="15">Grappes de diamants pour l’oreille des fées.</l>
+          <l n="16">C’est beau. – Mais que la vie est triste ! – Ô vert séjour,</l>
+          <l n="17">Bois, c’est dit, je m’envole, et je casse l’amour,</l>
+          <l n="18">Fil que la femme attache à la patte de l’âme.</l>
+          <l n="19">Je mets mon avenir en liberté. Je blâme</l>
+          <l n="20">Le bon Dieu d’avoir fait l’homme de deux morceaux</l>
+          <l n="21">Dont l’un est une femme.</l>
+          <stage>&lt;em&gt;Écoutant. &lt;/em&gt;</stage>
+          <l n="22">Ah ! j’entends les oiseaux,</l>
+          <l n="23">La pluie a cessé. – Dieu ! que la vie est morose !</l>
+          <l n="24">Où trouver l’idéal ? Ô vide du cœur !</l>
+        </sp>
+        <sp who="#un-papillon">
+          <speaker>UN PAPILLON,  à une violette.</speaker>
+          <l n="25">Rose !</l>
+        </sp>
+        <sp who="#la-violette">
+          <speaker>LA VIOLETTE.</speaker>
+          <l n="26">Flatteur !</l>
+        </sp>
+        <sp who="#le-papillon">
+          <speaker>LE PAPILLON.</speaker>
+          <l n="27">Un baiser.</l>
+        </sp>
+        <sp who="#la-violette">
+          <speaker>LA VIOLETTE.</speaker>
+          <l n="28">Prends.</l>
+        </sp>
+        <sp who="#le-papillon">
+          <speaker>LE PAPILLON, au lys.</speaker>
+          <l n="29">Je t’aime, ô lys !</l>
+        </sp>
+        <sp who="#le-lys">
+          <speaker>LE LYS.</speaker>
+          <l n="30">Coureur !</l>
+        </sp>
+        <sp who="#le-papillon">
+          <speaker>LE PAPILLON.</speaker>
+          <l n="31">Un baiser.</l>
+        </sp>
+        <sp who="#le-lys">
+          <speaker>LE LYS.</speaker>
+          <l n="32">Prends.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="33">L’amour est une vieille erreur ;</l>
+          <l n="34">Le cœur est un viscère. Aimer ! sotte aventure.</l>
+          <l n="35">L’homme est fait pour rêver au fond de la nature ;</l>
+          <l n="36">Contempler l’infini dans les cieux transparents,</l>
+          <l n="37">Voilà tout le destin de l’homme.</l>
+        </sp>
+        <sp who="#le-papillon">
+          <speaker>LE PAPILLON, à un liseron.</speaker>
+          <l n="38">Un baiser.</l>
+        </sp>
+        <sp who="#le-liseron">
+          <speaker>LE LISERON.</speaker>
+          <l n="39">Prends.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#une-voix">
+          <speaker>UNE VOIX, dans l’air.</speaker>
+          <l n="40">C’est le printemps qui vient, ce frère de l’aurore ;</l>
+          <l n="41">C’est la saison qui rit, sœur de l’heure qui dore ;</l>
+          <l n="42">C’est l’instant où verdit le sillon nourricier,</l>
+          <l n="43">Où, sonore et gonflé des fontes du glacier,</l>
+          <l n="44">L’Arveyron bleu s’accouple au flot jaune de l’Arve,</l>
+          <l n="45">Où mai sort de l’hiver et le sphinx de sa larve ;</l>
+          <l n="46">Bonheur ! Soleil ! Les maux et les froids sont finis ;</l>
+          <l n="47">L’azur est dans le ciel, l’amour est dans les nids ;</l>
+          <l n="48">L’amour trouble les yeux de vierge des gazelles ;</l>
+          <l n="49">Oiseaux, mêlez vos chants ; âmes, mêlez vos ailes ;</l>
+          <l n="50">Gloire à Dieu !</l>
+        </sp>
+        <sp who="#un-moineau-franc">
+          <speaker>UN MOINEAU FRANC, sortant de dessous les feuilles et secouant ses ailes.</speaker>
+          <l n="51">Dehors, tous !</l>
+          <stage>&lt;em&gt;Au signal donné par le moineau, un mouvement extraordinaire agite la forêt. Il semble que tout s’éveille et se mette à vivre. Les choses deviennent des êtres. Les fleurs prennent des airs de femmes. On dirait que les esprits des plantes sortent la tête de dessous les feuilles et se mettent à jaser. Tout parle, tout murmure, tout chuchote. Des querelles çà et là. Toutes les liges se penchent pêle-mêle les unes vers les autres. Le vent va et vient. Les oiseaux, les papillons, les mouches vont et viennent. Les vers de terre se dressent hors de leurs trous comme en proie à un rut mystérieux. Les parfums et les rayons se baisent. Le soleil fait dans les massifs d’arbres tous les verts possibles. Pendant toute la scène, les mousses, les plantes, les oiseaux, les mouches se mêlent en groupes qui se décomposent et se recomposent sans cesse. Dans des coins, des fleurs font leur toilette, les joyeuses s’ajustant des colliers de gouttes de rosée, les mélancoliques faisant briller au soleil leur larme de pluie. L’eau de l’étang imite les frémissements d’une gaze d’argent. Les nids font de petits cris. Pour le voyant, c’est un immense tumulte ; pour l’homme, c’est une paix immense. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#un-bouton-d’or">
+          <speaker>UN BOUTON D’OR, à une pâquerette.</speaker>
+          <l n="52">Vois, ma sœur du gazon,</l>
+          <l n="53">Le soleil éclater de rire à l’horizon.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="54">Beaux jours ! Chacun s’en va vers sa terre promise,</l>
+          <l n="55">Et part pour son éden. L’anglais fuit la Tamise,</l>
+          <l n="56">Le turc cherche la Mecque, et le grec lorgne Spa.</l>
+        </sp>
+        <sp who="#un-hochequeue">
+          <speaker>UN HOCHEQUEUE.</speaker>
+          <l n="57">Congé !</l>
+        </sp>
+        <sp who="#une-abeille">
+          <speaker>UNE ABEILLE.</speaker>
+          <l n="58">La clef des champs !</l>
+        </sp>
+        <sp who="#un-moucheron">
+          <speaker>UN MOUCHERON, apercevant une rose et se tournant vers le soleil.</speaker>
+          <l n="59">Baiserai-je, papa ?</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="60">L’artificier Phœbus là-bas tire sa gerbe.</l>
+        </sp>
+        <sp who="#un-myosotis">
+          <speaker>UN MYOSOTIS.</speaker>
+          <l n="61">Un peu d’arc-en-ciel tremble au bout de tout brin d’herbe.</l>
+        </sp>
+        <sp who="#une-branche-d’arbre">
+          <speaker>UNE BRANCHE D’ARBRE.</speaker>
+          <l n="62">Ce bougon de nuage est parti. C’est charmant.</l>
+          <l n="63">Jouons.</l>
+        </sp>
+        <sp who="#une-chouette">
+          <speaker>UNE CHOUETTE, du creux d’un saule.</speaker>
+          <l n="64">Arbres, fleurs, nids, profitez du moment,</l>
+          <l n="65">Vivez, chantez ! jasez comme un club de portières !</l>
+          <l n="66">Mais gare l’oiseleur ! Gare les bouquetières !</l>
+          <l n="67">Gare le bûcheron !</l>
+        </sp>
+        <sp who="#les-fleurs">
+          <speaker>LES FLEURS.</speaker>
+          <l n="68">Tout ça, c’est des ragots.</l>
+        </sp>
+        <sp who="#les-oiseaux">
+          <speaker>LES OISEAUX.</speaker>
+          <l n="69">Nous ne te croyons pas.</l>
+        </sp>
+        <sp who="#la-chouette">
+          <speaker>LA CHOUETTE.</speaker>
+          <l n="70">Prenez garde.</l>
+        </sp>
+        <sp who="#les-branches-d’arbre">
+          <speaker>LES BRANCHES D’ARBRE.</speaker>
+          <l n="71">Fagots !</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU, chantant.</speaker>
+          <l n="72">Comme j’allais entrer pour lorgner dans l’église</l>
+        </sp>
+        <sp who="#le-hochequeue">
+          <speaker>LE HOCHEQUEUE.</speaker>
+          <l n="73">Que chantes-tu là ?</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="74">J’ai cueilli cette morale</l>
+          <l n="75">Du temps où, ne rêvant qu’églogue et pastorale,</l>
+          <l n="76">Dans les bois de Meudon, j’avais pris pour palais</l>
+          <l n="77">La barbe d’un vieil antre, ami de Rabelais.</l>
+          <stage>&lt;em&gt;Aux oiseaux. &lt;/em&gt;</stage>
+          <l n="78">Hé ! venez voir, pinsons, verdiers, les geais, les merles !</l>
+          <l n="79">La toile d’araignée est un sac plein de perles.</l>
+        </sp>
+        <sp who="#un-nénuphar">
+          <speaker>UN NÉNUPHAR, se penchant.</speaker>
+          <l n="80">Charmant !</l>
+        </sp>
+        <sp who="#l’araignée">
+          <speaker>L’ARAIGNÉE.</speaker>
+          <l n="81">J’aimerais mieux des mouches.</l>
+        </sp>
+        <sp who="#les-oiseaux">
+          <speaker>LES OISEAUX.</speaker>
+          <l n="82">Nous aussi.</l>
+        </sp>
+        <sp who="#une-ortie">
+          <speaker>UNE ORTIE.</speaker>
+          <l n="83">L’oiseau vaut le chat.</l>
+        </sp>
+        <sp who="#les-gouttes-de-pluie">
+          <speaker>LES GOUTTES DE PLUIE, tombant de feuille en feuille.</speaker>
+          <l n="84">Ut-Ré-Mi-Fa-Sol-La-Si-</l>
+          <l n="85">Ut.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="86">Çà, jouons.</l>
+        </sp>
+        <sp who="#le-hochequeue">
+          <speaker>LE HOCHEQUEUE.</speaker>
+          <l n="87">Faisons un horrible vacarme.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS, en contemplation.</speaker>
+          <l n="88">Frais silence !</l>
+        </sp>
+        <sp who="#une-goutte-d’eau">
+          <speaker>UNE GOUTTE D’EAU, en tombant.</speaker>
+          <l n="89">J’étais diamant, je suis larme.</l>
+          <l n="90">Femmes, ne tombez pas.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="91">La femme, ô goutte d’eau,</l>
+          <l n="92">Ne tombe pas ! Va voir à Mabille, au Prado,</l>
+          <l n="93">Partout où l’amour mène à grands guides son coche,</l>
+          <l n="94">Au Wauxhall. L’homme tombe, et la femme...</l>
+        </sp>
+        <sp who="#la-surface-de-l’étang">
+          <speaker>LA SURFACE DE L’ÉTANG.</speaker>
+          <l n="95">Ricoche.</l>
+        </sp>
+        <sp who="#la-lavande">
+          <speaker>LA LAVANDE.</speaker>
+          <l n="96">La taille de la guêpe est charmante.</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE.</speaker>
+          <l n="97">Corset.</l>
+        </sp>
+        <sp who="#la-guêpe">
+          <speaker>LA GUÊPE.</speaker>
+          <l n="98">Cette lavande en fleur sent bon.</l>
+        </sp>
+        <sp who="#la-ronce">
+          <speaker>LA RONCE.</speaker>
+          <l n="99">Water-closet.</l>
+        </sp>
+        <sp who="#les-papillons">
+          <speaker>LES PAPILLONS.</speaker>
+          <l n="100">Jouons !</l>
+        </sp>
+        <sp who="#les-oiseaux">
+          <speaker>LES OISEAUX.</speaker>
+          <l n="101">Courons !</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="102">Pillons ! L’ordre c’est le délire.</l>
+          <stage>&lt;em&gt;Entre un paon. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-paon">
+          <speaker>LE PAON.</speaker>
+          <l n="103">Quel tumulte de chants et de cris ! Bruit de lyre</l>
+          <l n="104">Mêlé de grincements. Sous ces acacias</l>
+          <l n="105">On croirait qu’Apollon écorche Marsyas.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="106">À sac les fleurs ! Drinn ! Drinn !</l>
+        </sp>
+        <sp who="#le-paon">
+          <speaker>LE PAON.</speaker>
+          <l n="107">Toi qui fais ce tapage,</l>
+          <l n="108">Qu’es-tu ?</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="109">Je suis gamin ; autrefois j’étais page.</l>
+          <l n="110">Je m’ébats, cher seigneur. Si je n’étais voyou,</l>
+          <stage>Je voudrais être rose et dire : &lt;em&gt;I love you&lt;/em&gt;.</stage>
+          <l n="111">Je suis l’oiseau gaité, rapin de l’astre joie.</l>
+          <l n="112">À nous deux nous faisons le printemps. L’aigle et l’oie</l>
+          <l n="113">Sont nos deux ennemis, l’un en haut, l’autre en bas.</l>
+          <l n="114">Vous êtes entre eux deux. Bonsoir.</l>
+          <stage>&lt;em&gt;Il se jette au milieu da tumulte. &lt;/em&gt;</stage>
+          <l n="115">Hé !</l>
+          <stage>&lt;em&gt;Les oiseaux l’accueillent avec de grands cris de joie. Les fleurs et les feuilles s’effarent. Il se tourne vers le paon qui se pavane. &lt;/em&gt;</stage>
+          <l n="116">Je m’ébats.</l>
+          <stage>&lt;em&gt;Entre un essaim de frelons. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#les-frelons">
+          <speaker>LES FRELONS, chantant.</speaker>
+          <l n="117">À bas Socrate, Épicure,</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="118">À bas les noirs frelons avec leurs voix d’eunuques !</l>
+          <stage>&lt;em&gt;Les oiseaux poursuivent et chassent les frelons avec de grands cris. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#les-vieux-arbres">
+          <speaker>LES VIEUX ARBRES, aux oiseaux.</speaker>
+          <l n="119">Vous faites trop de bruit ! Paix donc !</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU, aux arbres.</speaker>
+          <l n="120">Salut, perruques !</l>
+        </sp>
+        <sp who="#le-hochequeue">
+          <speaker>LE HOCHEQUEUE.</speaker>
+          <l n="121">Académiciens, fichez-nous donc la paix.</l>
+          <l n="122">Je sais, vous êtes sourds et vous êtes épais,</l>
+          <l n="123">Soit. Contentez-vous-en. Foin de vos vieux branchages</l>
+          <l n="124">Où l’antique Zéphyr redit ses rabâchages !</l>
+        </sp>
+        <sp who="#un-piquebois">
+          <speaker>UN PIQUEBOIS.</speaker>
+          <l n="125">À bas, vieux grognons !</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU, regardant autour de lui.</speaker>
+          <l n="126">Mais, palsambleu ! c’est la cour</l>
+          <l n="127">Que ce bois ! C’est Versailles et l’Œil-de-bœuf...</l>
+          <stage>&lt;em&gt;À une touffe de bruyère. &lt;/em&gt;</stage>
+          <l n="128">Bonjour.</l>
+          <l n="129">La Bruyère.</l>
+          <stage>&lt;em&gt;À une branche d’arbre. &lt;/em&gt;</stage>
+          <l n="130">Bonjour, Rameau.</l>
+          <stage>&lt;em&gt;À une corneille sur le rocher. &lt;/em&gt;</stage>
+          <l n="131">Bonjour, Corneille.</l>
+          <stage>&lt;em&gt;Au nénuphar. &lt;/em&gt;</stage>
+          <l n="132">Bonjour, Boileau.</l>
+          <stage>&lt;em&gt;À un papillon blanc qui tourne autour d’une rose épanouie. &lt;/em&gt;</stage>
+          <l n="133">L’enfant, laisse là cette vieille,</l>
+          <l n="134">Elle est d’hier matin.</l>
+          <stage>&lt;em&gt;Le papillon s’en va. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-rose">
+          <speaker>LA ROSE.</speaker>
+          <l n="135">Que cet âge est grossier !</l>
+        </sp>
+        <sp who="#les-fleurs">
+          <speaker>LES FLEURS, à un limaçon qui passe.</speaker>
+          <l n="136">Fi ! le vilain !</l>
+        </sp>
+        <sp who="#le-limaçon">
+          <speaker>LE LIMAÇON.</speaker>
+          <l n="137">Tout beau ! je suis un financier,</l>
+          <l n="138">Je laisse de l’argent derrière moi, les belles.</l>
+        </sp>
+        <sp who="#plantes">
+          <speaker>PLANTES et FLEURS, en foule, se penchant vers le papillon blanc.</speaker>
+          <l n="139">Viens ! viens ! beau papillon !</l>
+        </sp>
+        <sp who="#le-papillon">
+          <speaker>LE PAPILLON.</speaker>
+          <l n="140">Vos noms, mesdemoiselles ?</l>
+        </sp>
+        <sp who="#le-souci">
+          <speaker>LE SOUCI.</speaker>
+          <l n="141">Mariage.</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE.</speaker>
+          <l n="142">Vertu.</l>
+        </sp>
+        <sp who="#la-romaine">
+          <speaker>LA ROMAINE.</speaker>
+          <l n="143">Porcia.</l>
+        </sp>
+        <sp who="#le-lierre">
+          <speaker>LE LIERRE.</speaker>
+          <l n="144">Bon Accord.</l>
+        </sp>
+        <sp who="#la-salsepareille">
+          <speaker>LA SALSEPAREILLE.</speaker>
+          <l n="145">Mon nom est force, amour, santé.</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE.</speaker>
+          <l n="146">Signé Ricord.</l>
+        </sp>
+        <sp who="#un-rosier-en-fleur">
+          <speaker>UN ROSIER EN FLEUR, au Papillon.</speaker>
+          <l n="147">Viens chez moi. Mes boutons sont des cachettes d’âmes.</l>
+          <stage>&lt;em&gt;Le papillon se précipite dans le rosier et y disparaît. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="148">Le tonnerre devrait faire des mélodrames.</l>
+          <l n="149">A-t-il fait tout à l’heure assez de bruit pour rien !</l>
+          <stage>&lt;em&gt;Au hochequeue. &lt;/em&gt;</stage>
+          <l n="150">Regarde. Le bois chante un hymne aérien.</l>
+          <l n="151">Parmi les Cupidons, marmaille vive et leste,</l>
+          <l n="152">Bambins ailés, Vénus, bonne d’enfants céleste,</l>
+          <l n="153">Sourit dans l’ombre à Mars, le divin tourlourou.</l>
+        </sp>
+        <sp who="#un-nuage">
+          <speaker>UN NUAGE.</speaker>
+          <l n="154">Le bonheur, c’est le ciel !</l>
+        </sp>
+        <sp who="#un-ramier">
+          <speaker>UN RAMIER.</speaker>
+          <l n="155">C’est le nid !</l>
+        </sp>
+        <sp who="#la-chouette">
+          <speaker>LA CHOUETTE.</speaker>
+          <l n="156">C’est un trou.</l>
+        </sp>
+        <sp who="#la-ronce">
+          <speaker>LA RONCE, chantant.</speaker>
+          <l n="157">Les moutons, promis aux fourchettes,</l>
+          <l n="158">Le beau Narcisse est en manchettes ;</l>
+          <l n="159">Les Jeannots avec les Fanchettes</l>
+          <l n="160">Les faunes, hors de leurs cachettes.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="161">Ô nature farouche, âpre, chaste, superbe,</l>
+          <l n="162">Je vis en toi ! J’écoute avec amour ton verbe !</l>
+        </sp>
+        <sp who="#une-giroflée">
+          <speaker>UNE GIROFLÉE.</speaker>
+          <l n="163">Tiens, tiens ! Je n’avais pas encor vu ce grimaud.</l>
+          <l n="164">Quels ongles noirs !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="165">Tout est énigme et tout est mot.</l>
+          <l n="166">Oh ! je sens la forêt pleine de la chimère !</l>
+          <l n="167">La création, c’est une sombre grammaire.</l>
+          <l n="168">L’invisible, au réel mêlé, change un rayon</l>
+          <l n="169">En regard, et la fleur et l’arbre en vision.</l>
+          <l n="170">Les hommes sont en proie aux choses. Le mystère</l>
+          <l n="171">Leur parle, même après le rire de Voltaire.</l>
+          <l n="172">S’ils n’ont plus Zoroastre, ils ont Cagliostro.</l>
+        </sp>
+        <sp who="#une-grue">
+          <speaker>UNE GRUE, au vent qui lui ébouriffe les plumes.</speaker>
+          <l n="173">Du respect ! je suis femme !</l>
+          <stage>&lt;em&gt;Elle donne des coups de bec et des coups de patte de tous les côtés avec colère. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-hochequeue">
+          <speaker>LE HOCHEQUEUE.</speaker>
+          <stage>&lt;em&gt;Unguibus. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <stage>&lt;em&gt;Et rostro. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#les-arbres">
+          <speaker>LES ARBRES.</speaker>
+          <l n="174">Paix !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS, contemplant.</speaker>
+          <l n="175">Le mot de l’énigme est sépulcre.</l>
+        </sp>
+        <sp who="#un-concombre">
+          <speaker>UN CONCOMBRE.</speaker>
+          <l n="176">Vinaigre.</l>
+        </sp>
+        <sp who="#le-papillon">
+          <speaker>LE PAPILLON, sortant du rosier.</speaker>
+          <l n="177">Oh ! les fleurs !</l>
+        </sp>
+        <sp who="#une-sauterelle">
+          <speaker>UNE SAUTERELLE.</speaker>
+          <l n="178">J’aime mieux les herbes.</l>
+        </sp>
+        <sp who="#les-fleurs">
+          <speaker>LES FLEURS.</speaker>
+          <l n="179">Grande maigre,</l>
+          <l n="180">Va te faire engager à l’Opéra.</l>
+          <stage>&lt;em&gt;Elles se penchent furieuses pour chasser la sauterelle. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="181">Satan !</l>
+          <l n="182">Quel hourvari !</l>
+        </sp>
+        <sp who="#les-fleurs">
+          <speaker>LES FLEURS.</speaker>
+          <l n="183">Va-t’en, puce des blés !</l>
+        </sp>
+        <sp who="#la-rose">
+          <speaker>LA ROSE.</speaker>
+          <l n="184">Va-t’en !</l>
+        </sp>
+        <sp who="#un-pied-d’alouette">
+          <speaker>UN PIED-D’ALOUETTE.</speaker>
+          <l n="185">Prends garde à toi ! La fleur peut s’envoler.</l>
+        </sp>
+        <sp who="#une-gueule-de-loup">
+          <speaker>UNE GUEULE-DE-LOUP.</speaker>
+          <l n="186">Et mordre.</l>
+        </sp>
+        <sp who="#les-arbres">
+          <speaker>LES ARBRES.</speaker>
+          <l n="187">Paix là !</l>
+          <stage>&lt;em&gt;L’âne broute le pied-d’alouette, la sauterelle et la gueule-de-loup. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="188">Hé ! que fais-tu, toi ?</l>
+        </sp>
+        <sp who="#l’âne">
+          <speaker>L’ÂNE.</speaker>
+          <l n="189">Je rétablis l’ordre.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="190">C’est un peu fort, monsieur de Montmorency.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#denarius">
+          <speaker>DENARIUS, rêvant</speaker>
+          <l n="191">Champs</l>
+          <l n="192">Que l’orgue de l’azur emplit de ses plains-chants,</l>
+          <l n="193">Cieux où le jardinier éternel se promène</l>
+          <l n="194">Versant les fleurs, la vie et la joie à la plaine,</l>
+          <l n="195">Des cribles du nuage, opulent arrosoir,</l>
+          <l n="196">Vénus, astre, esprit, flamme, œil du cyclope soir,</l>
+          <l n="197">Ô nature, c’est vous, c’est moi ! Je vous adore.</l>
+          <l n="198">Votre aile couve l’âme et je me sens éclore. –</l>
+          <l n="199">Tout se donne pour rien ici, tout est gratis,</l>
+          <l n="200">Et les petits sont grands, et les grands sont petits,</l>
+          <l n="201">Et la création s’offre à la créature.</l>
+          <l n="202">Ces grands arbres, seigneurs de toute la nature,</l>
+          <l n="203">À qui Dieu pour valets donne les mois changeants,</l>
+          <l n="204">Ne prêtent point sur gage et sont d’honnêtes gens.</l>
+          <l n="205">Champs ! on peut être pauvre et bien avec l’aurore.</l>
+          <l n="206">Bois, vous nous prodiguez votre souffle sonore,</l>
+          <l n="207">Tu nous donnes, soleil, ton rayon éclatant.</l>
+          <l n="208">Et vous ne dites pas au pauvre homme : C’est tant !</l>
+          <l n="209">On boit quand on a soif ; on n’entend pas la source</l>
+          <l n="210">Vous murmurer : Combien as-tu ? Voyons ta bourse.</l>
+          <l n="211">Salut, honnête bois. Vous n’êtes pas, ô loups,</l>
+          <l n="212">Des hommes ; les halliers ne sont point des filous.</l>
+          <l n="213">Vent, sève, azur, salut ! Vous n’êtes pas, nuées,</l>
+          <l n="214">Des coureuses de nuit et des prostituées.</l>
+          <l n="215">– Tout chante un opéra mystérieux ici.</l>
+          <l n="216">De partout, du rocher, des fleurs, du tronc noirci.</l>
+          <l n="217">De ce qui se contemple et de ce qui se cueille,</l>
+          <l n="218">Des prés, des gouttes d’eau tombant de feuille en feuille,</l>
+          <l n="219">Des branches saluant quelqu’un dans l’infini,</l>
+          <l n="220">De la mouche, du vent, du nid calme et béni,</l>
+          <l n="221">Une oreille invisible entend sortir des gammes.</l>
+          <l n="222">L’herbe sent tressaillir les monstres cryptogames,</l>
+          <l n="223">L’informe champignon chante un chant inconnu.</l>
+          <l n="224">Tout est doux dans cette ombre, et tout est ingénu.</l>
+          <l n="225">La femme y manque, bien qu’on y trouve la ronce.</l>
+          <l n="226">L’antre pensif, pareil au sourcil qui se fronce,</l>
+          <l n="227">Est un sage ; l’oiseau nous salue en buvant ;</l>
+          <l n="228">Les arbres pleins de pluie ont l’air d’aider le vent</l>
+          <l n="229">Et semblent essuyer le ciel avec leur cime.</l>
+          <l n="230">Oh ! je veux m’engloutir dans ce paisible abîme !</l>
+          <stage>&lt;em&gt;Rêvant.&lt;/em&gt;</stage>
+          <l n="231">– Les arbres, dans leurs troncs et sous leur orteil noir,</l>
+          <l n="232">Ont des trous pleins de mousse et d’herbe, et l’on croit voir</l>
+          <l n="233">De petits dieux blottis dans tous ces petits antres.</l>
+          <l n="234">Des cupidons frisés montrent partout leurs ventres.</l>
+          <stage>&lt;em&gt;S’enfonçant dans sa rêverie. &lt;/em&gt;</stage>
+          <l n="235">– Pourquoi pas ? Je serais un homme primitif.</l>
+          <l n="236">Ma grotte sombre aurait l’azur pour pendentif.</l>
+          <l n="237">J’aurais une cahute en branchages couverte,</l>
+          <l n="238">Et je savourerais, seul dans ma stalle verte,</l>
+          <l n="239">Force partitions que m’exécuterait</l>
+          <l n="240">Le vent musicien dans l’orchestre forêt.</l>
+          <l n="241">Tapi dans l’ombre où l’hymne universel commence,</l>
+          <l n="242">Je battrais la mesure à la nature immense.</l>
+          <l n="243">À l’heure où, réveillant le pâtre et le faucheur,</l>
+          <l n="244">L’aube sacrée emplit l’horizon de blancheur</l>
+          <l n="245">Et des trous du taillis fait de claires fenêtres,</l>
+          <l n="246">Marcher, vivre ! Être là quand chuchotent les êtres.</l>
+          <l n="247">Les oiseaux, ces enfants, le chêne, cet aïeul !</l>
+          <l n="248">Écouter, dans, le jonc, l’épine et le glaïeul.</l>
+          <l n="249">Les déesses jaser au fond des grottes noires,</l>
+          <l n="250">Et rire et se jeter de l’eau dans leurs baignoires !</l>
+          <l n="251">Être de ceux à qui les nymphes se font voir !</l>
+          <l n="252">Ciel ! rêver quand l’étang offre aux nuits son miroir,</l>
+          <l n="253">Quand le vent vient peigner les cheveux verts du saule,</l>
+          <l n="254">Et voir sortir de l’eau quelque ineffable épaule !</l>
+          <l n="255">Contempler dans la source, à l’ombre des buissons,</l>
+          <l n="256">De vagues nudités flottant sous les cressons !</l>
+          <l n="257">Vivre dans les frissons et dans les dithyrambes !</l>
+          <l n="258">Voir la naïade aux yeux d’astre laver ses jambes !</l>
+          <l n="259">– Je suis fou. Mon esprit patauge en plein Chompré.</l>
+          <l n="260">Non, restons dans le vrai, dans l’herbe, dans le pré.</l>
+          <l n="261">C’est assez d’être un loup, ne soyons pas un faune.</l>
+          <l n="262">Appeler un lys Flore et voir Pan dans un aulne,</l>
+          <l n="263">Croire entendre quelqu’un quand on parle à l’écho.</l>
+          <l n="264">Empoisonner de dieux les champs, c’est rococo.</l>
+          <l n="265">Le vrai suffit. Soyons un simple philosophe.</l>
+          <l n="266">Quand Cybèle disait à l’homme enfant : Dodophe,</l>
+          <l n="267">Lorsque l’humanité tétait son pouce, bon !</l>
+          <l n="268">La fable avait son prix. Mais l’homme est un barbon,</l>
+          <l n="269">Diable ! à présent, l’esprit humain porte perruque,</l>
+          <l n="270">Et notre raison branle une tête caduque.</l>
+          <l n="271">Croire aux nymphes est bête. Il faut être réel.</l>
+          <stage>&lt;em&gt;Rêvant.&lt;/em&gt;</stage>
+          <l n="272">– Vivre comme l’ours, grave et seul, avec le ciel,</l>
+          <l n="273">À la bonne heure ! Au diable Anna, Toinon, Lisette,</l>
+          <l n="274">Madame la marquise et mam’zell’ la grisette,</l>
+          <l n="275">La femme en bloc ! les yeux noyés, les yeux fripons !</l>
+          <l n="276">Ouragan, ouragan, emporte les jupons !</l>
+          <l n="277">Délivre-nous ! – Je hais la femme en théorie.</l>
+          <l n="278">Sa fidélité fait rire ma rêverie.</l>
+          <l n="279">Son cœur compte dix, vingt, trente, cent : jamais un.</l>
+          <l n="280">Elle achète au coiffeur pour deux sous de parfum.</l>
+          <l n="281">Elle est blanche ? un accès de colère : elle est bleue.</l>
+          <l n="282">Dans ses cheveux se tord le serpent fausse queue.</l>
+          <l n="283">L’été vient : triste fleur, le soleil l’enlaidit,</l>
+          <l n="284">Les taches de rousseur la rouillent. Elle dit :</l>
+          <l n="285">Je sue. Elle est trop grasse ou trop maigre. Cet ange</l>
+          <l n="286">Crotte ses bas. C’est faux, c’est perfide. Ça mange.</l>
+          <l n="287">La portière le soir lui glisse des billets.</l>
+          <l n="288">Ô seules belles, fleurs, seules vierges ! œillets,</l>
+          <l n="289">Pervenches, lys, muguets, jonquilles, pâquerettes,</l>
+          <l n="290">Dont le seul papillon touche les collerettes,</l>
+          <l n="291">Dieux purs qui vous ouvrez dans l’ombre au bleu matin,</l>
+          <l n="292">Douces fleurs, je ne veux aimer que vous.</l>
+        </sp>
+        <sp who="#chœur-des-fleurs">
+          <speaker>CHŒUR DES FLEURS.</speaker>
+          <l n="293">Crétin !</l>
+        </sp>
+        <sp who="#une-pierre">
+          <speaker>UNE PIERRE.</speaker>
+          <l n="294">Fossile !</l>
+        </sp>
+        <sp who="#l’âne">
+          <speaker>L’ÂNE.</speaker>
+          <l n="295">Âne !</l>
+        </sp>
+        <sp who="#une-grenouille">
+          <speaker>UNE GRENOUILLE.</speaker>
+          <l n="296">Crapaud !</l>
+        </sp>
+        <sp who="#les-fleurs">
+          <speaker>LES FLEURS.</speaker>
+          <l n="297">Porte ailleurs tes semelles !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="298">Soyez mes femmes, fleurs.</l>
+        </sp>
+        <sp who="#les-fleurs">
+          <speaker>LES FLEURS.</speaker>
+          <l n="299">Ciel ! être les femelles</l>
+          <l n="300">D’un tel mâle !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="301">Je veux baigner mon front en feu</l>
+          <l n="302">Dans vos seins ! me rouler dans vos lits !</l>
+        </sp>
+        <sp who="#la-violette">
+          <speaker>LA VIOLETTE.</speaker>
+          <l n="303">Sacrebleu !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="304">Fleurs !</l>
+        </sp>
+        <sp who="#la-pervenche">
+          <speaker>LA PERVENCHE.</speaker>
+          <l n="305">Qui nous a flanqué cette brute splendide ?</l>
+        </sp>
+        <sp who="#la-mandragore">
+          <speaker>LA MANDRAGORE.</speaker>
+          <l n="306">C’est Bobèche effaré qui croit être Candide.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="307">Je vous aime ! Soyez mon sérail, liserons !</l>
+        </sp>
+        <sp who="#les-liserons">
+          <speaker>LES LISERONS.</speaker>
+          <l n="308">Viens-y !</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE.</speaker>
+          <l n="309">Viens-t’y frotter !</l>
+        </sp>
+        <sp who="#les-aubépines">
+          <speaker>LES AUBÉPINES.</speaker>
+          <l n="310">Nous te caresserons</l>
+          <l n="311">Le visage, le front, le nez !...</l>
+        </sp>
+        <sp who="#la-giroflée">
+          <speaker>LA GIROFLÉE.</speaker>
+          <l n="312">J’aurai cinq feuilles.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="313">Forêt, caverne d’ombre et de paix qui m’accueilles,</l>
+          <l n="314">Merci. – Le désert seul résiste à l’examen.</l>
+          <l n="315">Paris est fou ; la femme est le revers humain ;</l>
+          <l n="316">La femme de la vie est le mauvais visage ;</l>
+          <l n="317">Penseur, sois veuf ; voilà ta vie, à sage !</l>
+        </sp>
+        <sp who="#l’écho">
+          <speaker>L’ÉCHO.</speaker>
+          <l n="318">Osage !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS, à la forêt.</speaker>
+          <l n="319">J’ai découvert ceci, bois, dans ta profondeur :</l>
+          <l n="320">La fleur est la beauté, la femme est la laideur.</l>
+        </sp>
+        <sp who="#murmure-des-arbres">
+          <speaker>MURMURE DES ARBRES.</speaker>
+          <l n="321">Amour ! amour ! amour !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS, apercevant une rose.</speaker>
+          <l n="322">Ô rose diaphane.</l>
+          <l n="323">Si chaste qu’on dirait que le regard te fane,</l>
+          <l n="324">Dieu prit, pour composer ton souffle gracieux,</l>
+          <l n="325">Toute la pureté qui flotte dans les cieux.</l>
+          <l n="326">Puisque tu brilles, fleur, l’étoile est superflue.</l>
+          <l n="327">Je t’aime !</l>
+        </sp>
+        <sp who="#la-rose">
+          <speaker>LA ROSE.</speaker>
+          <l n="328">Il faut aimer une fille joufflue,</l>
+          <l n="329">Mon cher.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS, avançant la main vers la rose.</speaker>
+          <l n="330">Sois à moi. – Viens !</l>
+        </sp>
+        <sp who="#la-rose">
+          <speaker>LA ROSE.</speaker>
+          <l n="331">Ne me tutoyez pas.</l>
+          <stage>&lt;em&gt;Elle lui pique les doigts. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#les-autres-fleurs">
+          <speaker>LES AUTRES FLEURS.</speaker>
+          <l n="332">Elle a bien répondu, la duchesse !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS, égouttant le sang de son doigt.</speaker>
+          <l n="333">Aïe !</l>
+          <stage>&lt;em&gt;Il s’éloigne et retombe dans son extase. &lt;/em&gt;</stage>
+          <l n="334">Appas</l>
+          <l n="335">Du désert !</l>
+          <l n="336">...</l>
+          <l n="337">...</l>
+          <l n="338">Dites, fleurs, champs, sentiers non foulés,</l>
+          <l n="339">Que faut-il faire, oiseaux, pour être heureux ? Parlez,</l>
+          <l n="340">Arbres qui caressez le penseur quand il entre.</l>
+        </sp>
+        <sp who="#le-lierre">
+          <speaker>LE LIERRE.</speaker>
+          <l n="341">Prends patience.</l>
+        </sp>
+        <sp who="#une-hirondelle">
+          <speaker>UNE HIRONDELLE.</speaker>
+          <l n="342">Prends la poste.</l>
+        </sp>
+        <sp who="#une-citrouille">
+          <speaker>UNE CITROUILLE.</speaker>
+          <l n="343">Prends du ventre.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="344">Où trouver la figure idéale du cœur ?</l>
+          <l n="345">L’homme va, poursuivi par un rire moqueur.</l>
+          <l n="346">L’ombre, derrière nous, rit.</l>
+        </sp>
+        <sp who="#voix-dans-l’air">
+          <speaker>VOIX DANS L’AIR.</speaker>
+          <l n="347">Lumière et pensée !</l>
+          <l n="348">Ô ciel époux, reçois la terre fiancée.</l>
+          <l n="349">Êtres, l’amour est flamme et l’amour est rayon ;</l>
+          <l n="350">Il tend d’en haut la lèvre à la création,</l>
+          <l n="351">Et la nature pose, en entr’ouvrant son aile,</l>
+          <l n="352">L’universel baiser sur la bouche éternelle !</l>
+        </sp>
+        <sp who="#les-arbres">
+          <speaker>LES ARBRES.</speaker>
+          <l n="353">Amour ! amour ! amour !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="354">De moment en moment</l>
+          <l n="355">La paix me gagne ; ô joie ! anéantissement !</l>
+          <l n="356">Pour la vie ! être seul dans les bois, c’est le rêve,</l>
+          <l n="357">C’est tout ! le paradis, c’est la solitude.</l>
+        </sp>
+        <sp who="#une-pomme">
+          <speaker>UNE POMME, lui tombant sur la tête.</speaker>
+          <l n="358">Ève.</l>
+          <stage>&lt;em&gt;Entrent Balminette et madame Antioche. Au fond, dans le taillis, Oscar qu’on ne voit pas. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="359">Oscar est jaloux comme...</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="360">Ah ! j’en ai plein le né,</l>
+          <l n="361">D’Oscar. – Beau temps ! Le ciel est rebadigeonné.</l>
+          <l n="362">C’est comme à l’Opéra dans les apothéoses.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="363">J’ai joliment dîné. J’ai mangé de huit choses.</l>
+        </sp>
+        <sp who="#oscar">
+          <speaker>OSCAR, au fond, criant.</speaker>
+          <l n="364">Par ici.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="365">C’est joli. Regarde donc, l’étang</l>
+          <l n="366">Est comme une croisée.</l>
+          <stage>&lt;em&gt;Apercevant Denarius. &lt;/em&gt;</stage>
+          <l n="367">Oh ! quel orang-outang !</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="368">J’ai peur d’avoir trouvé cette femme jolie.</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="369">Mes souliers trop étroits font ma mélancolie ;</l>
+          <l n="370">J’ai trop marché, j’ai mal à mon cor, Balmina.</l>
+        </sp>
+        <sp who="#le-caillou-de-sentier">
+          <speaker>LE CAILLOU DE SENTIER.</speaker>
+          <l n="371">Le pied qu’on veut avoir gâte celui qu’on a.</l>
+          <stage>&lt;em&gt;Denarias contemple Balminette. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="372">Cette femme a dans l’œil la céleste étincelle.</l>
+          <l n="373">C’est Diane, ou Psyché !</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="374">Ça, c’est mademoiselle</l>
+          <l n="375">Balminette, lingère en chambre, rue aux Ours,</l>
+          <l n="376">Numéro trois.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="377">Oscar, attends-nous !</l>
+          <stage>&lt;em&gt;Elle fredonne. &lt;/em&gt;</stage>
+          <l n="378">Nos amours</l>
+          <l n="379">Ont duré...</l>
+        </sp>
+        <sp who="#oscar">
+          <speaker>OSCAR, au fond.</speaker>
+          <l n="380">Par ici ! viens !</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE, fredonnant.</speaker>
+          <l n="381">Toute une semaine...</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="382">Si ce n’est pas Psyché, c’est au moins Célimène.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="383">Balminette, animal !</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE.</speaker>
+          <l n="384">Et l’autre domino</l>
+          <l n="385">C’est madame Antioche, actrice à Bobino.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="386">Oui, c’est Agnès. Ses yeux sont tout bleus d’ignorance.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE, à madame Antioche.</speaker>
+          <l n="387">Des vieux que nous servons connais la différence.</l>
+          <l n="388">Le tien donne un chapeau, le mien donne un coupé.</l>
+          <l n="389">Je vais avoir salon, cocher et canapé.</l>
+          <l n="390">J’entre chez moi demain.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="391">Ce sont deux tourterelles.</l>
+          <l n="392">Deux fleurs, deux lys ! La blonde est divine.</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE, aux fleurs.</speaker>
+          <l n="393">Ces belles,</l>
+          <l n="394">Nos sœurs, ont pris racine et puisent leur gaîté,</l>
+          <l n="395">Leurs châles, leurs rubans et leurs robes d’été,</l>
+          <l n="396">L’une dans un banquier, et l’autre dans un juge.</l>
+        </sp>
+        <sp who="#la-ronce">
+          <speaker>LA RONCE.</speaker>
+          <l n="397">Tout coffre-fort recèle un ange qui le gruge.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="398">La nature dédie aux roses le fumier.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="399">Donc, foin de la mansarde et je vole au premier.</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="400">Tu lâches Oscar ?</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="401">Mais !</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="402">Oscar en mourra.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="403">Brute !</l>
+          <l n="404">– Sais-tu que c’est gentil, ce bois-ci ! – L’herbe jute,</l>
+          <l n="405">Par exemple ! – On pourrait cueillir sous ce rocher</l>
+          <l n="406">Une salade.</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="407">J’ai de la peine à marcher.</l>
+          <stage>&lt;em&gt;Apercevant l’âne. &lt;/em&gt;</stage>
+          <l n="408">Si l’ânier était là, je me paierais bien l’âne.</l>
+        </sp>
+        <sp who="#l’âne">
+          <speaker>L’ÂNE.</speaker>
+          <l n="409">À l’heure. – Comme toi, Javotte !</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE, appelant.</speaker>
+          <l n="410">Oscar !</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="411">Il flâne.</l>
+          <l n="412">Laisse-le.</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="413">Balmina, vraiment, c’est un Mahieu</l>
+          <l n="414">Que ton banquier.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="415">Divan, six fauteuils, clamas bleu.</l>
+          <l n="416">Un salon Louis quinze, un boudoir renaissance.</l>
+          <l n="417">Moi, je suis bonne et j’ai de la reconnaissance.</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE.</speaker>
+          <l n="418">Au mont-de-piété.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="419">Ce vieux m’aime.</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="420">Un Mahieu !</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="421">Le plafond de ma chambre est peint en camaïeu,</l>
+          <l n="422">Genre ancien.</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE.</speaker>
+          <l n="423">Mais Oscar...</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="424">Oscar est jaloux comme...</l>
+          <l n="425">Et puis il est menteur, fourbe, ingrat, économe.</l>
+          <l n="426">C’est un serin.</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE, secouant sa robe.</speaker>
+          <l n="427">Vraiment, la pluie a tout trempé.</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="428">Oscar, c’est l’omnibus ; Mahieu, c’est un coupé.</l>
+          <l n="429">Je préfère Mahieu.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS, les observant toujours sans être vu et de derrière un arbre.</speaker>
+          <l n="430">Je sens s’ouvrir mon âme</l>
+          <l n="431">Devant ce chapeau rose aux yeux bleus.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="432">Jusquiame,</l>
+          <l n="433">Quel est le vrai poison qui rend fou ?</l>
+        </sp>
+        <sp who="#la-jusquiame">
+          <speaker>LA JUSQUIAME.</speaker>
+          <l n="434">Le regard.</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="435">L’amour pince déjà ce bélître hagard.</l>
+          <l n="436">Achevons-le. Donnons ce cuistre à Balminette.</l>
+        </sp>
+        <sp who="#le-caillou">
+          <speaker>LE CAILLOU, du sentier.</speaker>
+          <l n="437">Elle a le pied petit et la jambe bien faite.</l>
+        </sp>
+        <sp who="#le-myosotis">
+          <speaker>LE MYOSOTIS, à un ruisseau.</speaker>
+          <l n="438">C’est dit. Incendions ce grand dadais transi.</l>
+        </sp>
+        <sp who="#le-ruisseau">
+          <speaker>LE RUISSEAU, à Balminette qui est au bord et qui cherche à le traverser.</speaker>
+          <l n="439">Allons ! relève donc ta jupe.</l>
+        </sp>
+        <sp who="#oscar">
+          <speaker>OSCAR, au fond.</speaker>
+          <l n="440">Par ici !</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE, traversant le ruisseau.</speaker>
+          <l n="441">Je disais donc qu’Oscar est jaloux comme un tigre.</l>
+        </sp>
+        <sp who="#le-ruisseau">
+          <speaker>LE RUISSEAU.</speaker>
+          <l n="442">Mais retrousse-toi donc, Margot !</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="443">Bigre de bigre !</l>
+          <l n="444">Je me mouille les pieds. Nous sommes embourbés.</l>
+          <l n="445">Mes brodequins tout neufs de dix francs sont flambés !</l>
+        </sp>
+        <sp who="#madame-antioche">
+          <speaker>MADAME ANTIOCHE, apercevant Denarius.</speaker>
+          <l n="446">Prends garde, Balminette, on voit ta jarretière !</l>
+        </sp>
+        <sp who="#balminette">
+          <speaker>BALMINETTE.</speaker>
+          <l n="447">Qu’est-ce que ça me fait ?</l>
+          <stage>&lt;em&gt;Elles s’en vont. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="448">C’est Vénus tout entière...</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="449">Non pas. Jusqu’au genou.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="450">Je ne sais ce que j’ai.</l>
+          <l n="451">Je suis fou. Cette femme en passant m’a changé.</l>
+          <l n="452">Oui, c’est l’idéal, c’est la figure rêvée !</l>
+          <l n="453">Oh ! cette robe blanche un instant soulevée !</l>
+          <l n="454">L’éclair du paradis ! Tout mon corps a frémi !</l>
+          <l n="455">C’est dit, je m’y ferai mener par quelque ami.</l>
+          <l n="456">Par qui ? Je ne sais pas son nom, je n’ai personne.</l>
+          <l n="457">Mon pouls est dans ma tempe une cloche qui sonne.</l>
+          <l n="458">La femme est tout ! Je suis pris, brûlé, dévoré.</l>
+          <l n="459">Oh ! je la reverrai, je la suivrai, j’irai,</l>
+          <l n="460">Je mettrai sous ses pieds mes rêves, mes idées,</l>
+          <l n="461">Tout ! Fallût-il franchir des murs de vingt coudées,</l>
+          <l n="462">Payer Vidocq, braver monsieur Oscar, l’enfer,</l>
+          <l n="463">La mort, et dans mes poings tordre des gonds de fer,</l>
+          <l n="464">Oui, j’irai !</l>
+        </sp>
+        <sp who="#l’ortie">
+          <speaker>L’ORTIE.</speaker>
+          <l n="465">Tu n’auras qu’à soulever le pêne.</l>
+        </sp>
+        <sp who="#denarius">
+          <speaker>DENARIUS.</speaker>
+          <l n="466">J’aime !</l>
+        </sp>
+        <sp who="#le-moineau">
+          <speaker>LE MOINEAU.</speaker>
+          <l n="467">Enfin ! c’est heureux ! Nous eûmes de la peine !</l>
+        </sp>
+        <sp who="#le-caillou">
+          <speaker>LE CAILLOU, au ruisseau.</speaker>
+          <l n="468">Sans nous, si nous n’avions fait retrousser Goton,</l>
+          <l n="469">Ce Jocrisse risquait de devenir Platon.</l>
+          <l n="470" />
+          <l n="471" />
+        </sp>
       </div>
     </body>
   </text>

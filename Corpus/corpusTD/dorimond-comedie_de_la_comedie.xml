@@ -1,569 +1,531 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La Comédie de la comédie</title>
-        <author key="DORIMOND | (naissance-mort)">DORIMOND |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/la-comédie-de-la-comédie-dorimond</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>DORIMOND |</author>. <title>La Comédie de la comédie</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/la-comédie-de-la-comédie-dorimond</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="deux-bourgeois" sex="SEX">
+            <persName>DEUX BOURGEOIS</persName>
+          </person>
+          <person xml:id="deux-dames" sex="SEX">
+            <persName>DEUX DAMES</persName>
+          </person>
+          <person xml:id="deux-galants" sex="SEX">
+            <persName>DEUX GALANTS</persName>
+          </person>
+          <person xml:id="le-portier-des-comédiens" sex="SEX">
+            <persName>LE PORTIER DES COMÉDIENS</persName>
+          </person>
+          <person xml:id="une-comédienne" sex="SEX">
+            <persName>UNE COMÉDIENNE</persName>
+          </person>
+          <person xml:id="troupe-de-filous" sex="SEX">
+            <persName>TROUPE DE FILOUS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="[vide]" location="unknown">[vide]</ab>
+      </performance>
+      <div type="dedicace">
+        <opener>
+          <salute />
+        </opener>
+        <head>À MONSIEUR DE VAISSÉ</head>
+        <p>MONSIEUR,</p>
+        <p>Les belles qualités que vous possédez attirent l’admiration de tous ceux qui vous connaissent, et sont ordinairement le digne sujet d’une louange légitime. Mais, MONSIEUR, je viens vous confesser que je suis hors d’état de m’acquitter de ce que je vous dois, que les Muses m’ont refusé le présent qui pourrait être digne de vous et de l’honneur que vous m’avez fait tant de fois de souhaiter mes Ouvrages, et de les souffrir, m’a donné autant de sujet d’étonnement que de reconnaissance : Je vous prie donc de fermer les yeux sur le présent que je vous faits, qui n’est pas digne de vous, et qui pour un Gentilhomme, dont la valeur s’est signalée en milles belles occasions, et qui porte d’illustres cicatrices, qui sont les beaux témoignages du service que vous avez rendu à la France, il fallait un Ouvrage plus sublime ; mais l’ardeur que j’ai de vous donner quelques preuves de la vénération et de l’estime que j’ai conservée pour vous a précipité mon dessein, et m’a fait vous dédier cette Comédie, moins pour la vanité de la faire paraître au public, que pour celle de montrer à tout le monde que je suis,</p>
+        <p>MONSIEUR,</p>
+        <p>Votre très humble et très obéissant serviteur,</p>
+        <signed>DORIMOND.</signed>
+      </div>
+      <castList />
+    </front>
     <body>
-      <head>La Comédie de la comédie</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <stage><hi rend="italic">Comédie en un acte, prologue des <em>Amours de Trapolin</em> et en vers.</hi></stage>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre du Jeu de paume d’Orléans, en décembre 1660.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="deux-bourgeois">DEUX BOURGEOIS</role>
-              <roleDesc>,<em> allant à la Comédie</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="deux-dames">DEUX DAMES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="deux-galants">DEUX GALANTS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-portier-des-comédiens">LE PORTIER DES COMÉDIENS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="une-comédienne">UNE COMÉDIENNE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-filous">TROUPE DE FILOUS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <l n="4" xml:id="l4"> </l>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6">MONSIEUR,</l>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8">Les belles qualités que vous possédez attirent l’admiration de tous ceux qui vous connaissent, et sont ordinairement le digne sujet d’une louange légitime. Mais, MONSIEUR, je viens vous confesser que je suis hors d’état de m’acquitter de ce que je vous dois, que les Muses m’ont refusé le présent qui pourrait être digne de vous et de l’honneur que vous m’avez fait tant de fois de souhaiter mes Ouvrages, et de les souffrir, m’a donné autant de sujet d’étonnement que de reconnaissance : Je vous prie donc de fermer les yeux sur le présent que je vous faits, qui n’est pas digne de vous, et qui pour un Gentilhomme, dont la valeur s’est signalée en milles belles occasions, et qui porte d’illustres cicatrices, qui sont les beaux témoignages du service que vous avez rendu à la France, il fallait un Ouvrage plus sublime ; mais l’ardeur que j’ai de vous donner quelques preuves de la vénération et de l’estime que j’ai conservée pour vous a précipité mon dessein, et m’a fait vous dédier cette Comédie, moins pour la vanité de la faire paraître au public, que pour celle de montrer à tout le monde que je suis,</l>
-            <l n="9" xml:id="l9"> </l>
-            <l n="10" xml:id="l10">MONSIEUR,</l>
-            <l n="11" xml:id="l11"> </l>
-            <l n="12" xml:id="l12">Votre très humble et très obéissant serviteur,</l>
-            <l n="13" xml:id="l13"> </l>
-            <l n="14" xml:id="l14"> </l>
-            <l n="15" xml:id="l15"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="16" xml:id="l16"> </l>
-          <sp who="léandre" xml:id="1-1">
-            <speaker>LÉANDRE, LUCIDOR</speaker>
-            <l n="17" xml:id="l17"> </l>
-          </sp>
-          <sp who="léandre" xml:id="1-2">
-            <speaker>LÉANDRE.</speaker>
-            <l n="18" xml:id="l18">Puisque je vous rencontre, il faut faire partie,</l>
-            <l n="19" xml:id="l19">Allons nous divertir à voir la Comédie,</l>
-            <l n="20" xml:id="l20">Ce passe-temps est propre à charmer les ennuis,</l>
-            <l n="21" xml:id="l21">À peine il m’en souvient à l’instant que j’y suis.</l>
-          </sp>
-          <sp who="lucidor" xml:id="1-3">
-            <speaker>LUCIDOR.</speaker>
-            <l n="22" xml:id="l22">Allons-y, je le veux, au coin de cette rue,         </l>
-            <l n="23" xml:id="l23">Une affiche à propos se montre à notre vue.</l>
-          <stage>AFFICHE</stage>
-          </sp>
-          <sp who="" xml:id="1-4">
-            <speaker>Les Comédiens de Mademoiselle</speaker>
-            <stage><hi rend="italic"><em>La pièce que nous vous donnons,</em></hi></stage>
-            <stage><hi rend="italic"><em>Mérite vos attentions,</em></hi></stage>
-            <stage><hi rend="italic"><em>Ce sont les amours d’Ignorance,</em></hi></stage>
-            <stage><hi rend="italic"><em>Qu’on confond avec la science,</em></hi></stage>
-            <stage><hi rend="italic"><em>Et de son brave Trapolin,</em></hi></stage>
-            <stage><hi rend="italic"><em>Qui l’aime autant que le bon vin :</em></hi></stage>
-            <stage><hi rend="italic"><em>De cette Pièce on fait estime,</em></hi></stage>
-            <stage><hi rend="italic"><em>Tant pour la force de la rime,</em></hi></stage>
-            <stage><hi rend="italic"><em>Que pour la vigueur des bons mots,</em></hi></stage>
-            <stage><hi rend="italic"><em>Qui ne sont pas faits pour les sots ;</em></hi></stage>
-            <stage><hi rend="italic"><em>Mais pour la belle Connaissance,</em></hi></stage>
-            <stage><hi rend="italic"><em>Et les Auditeurs d’importance,</em></hi></stage>
-            <stage><hi rend="italic"><em>Qu’ici les uns dressent leurs pas,</em></hi></stage>
-            <stage><hi rend="italic"><em>Que les autres n’y viennent pas.</em></hi></stage>
-          </sp>
-          <sp who="lucidor" xml:id="1-5">
-            <speaker>LUCIDOR, <em>poursuit.</em></speaker>
-            <l n="38" xml:id="l38">Ho ! ho ! L’affiche en vers ? cette troupe est jolie :</l>
-            <l n="39" xml:id="l39">Peut-être y verrons-nous quelque galant Génie.</l>
-          </sp>
-          <sp who="léandre" xml:id="1-6">
-            <speaker>LÉANDRE.</speaker>
-            <l n="40" xml:id="l40">J’aime la Comédie, elle est mon élément.</l>
-          </sp>
-          <sp who="lucidor" xml:id="1-7">
-            <speaker>LUCIDOR.</speaker>
-            <l n="41" xml:id="l41">Tous deux nous nous trouvons d’un même sentiment,</l>
-            <l n="42" xml:id="l42">Il faut être privé de bon sens, de science,         </l>
-            <l n="43" xml:id="l43">Pour ne la suivre pas, allons en diligence ;</l>
-            <l n="44" xml:id="l44">Puis on la fait si bien, et si juste en ce temps,</l>
-            <l n="45" xml:id="l45">Qu’elle sert de modèle aux plus honnêtes gens ;</l>
-            <l n="46" xml:id="l46">On apprend la vertu voyant la Comédie,</l>
-            <l n="47" xml:id="l47">Ceux qui des sots cagots gagnent la maladie,</l>
-            <l n="48" xml:id="l48">Y peuvent répugner, y venir lentement ;</l>
-            <l n="49" xml:id="l49">Mais le sage, et le docte, y vont assidûment,</l>
-            <l n="50" xml:id="l50">J’y veux demain mener mes enfants et ma femme,</l>
-            <l n="51" xml:id="l51">Ils y profiteront s’ils ont une bonne âme ;</l>
-            <l n="52" xml:id="l52">Car on y voit toujours triompher les vertus,</l>
-            <l n="53" xml:id="l53">Là, le vice sur eux n’a jamais le dessus.</l>
-          </sp>
-          <sp who="léandre" xml:id="1-8">
-            <speaker>LÉANDRE.</speaker>
-            <l n="54" xml:id="l54">Mais les Italiens prennent plus de licence</l>
-            <l n="55" xml:id="l55">Que ne font les Français, et quelqu’un s’en offense.</l>
-          </sp>
-          <sp who="lucidor" xml:id="1-9">
-            <speaker>LUCIDOR.</speaker>
-            <l n="56" xml:id="l56">Le Théâtre Français est bien plus sérieux,</l>
-            <l n="57" xml:id="l57">J’en fais bien plus d’état, et l’estime bien mieux ;       </l>
-            <l n="58" xml:id="l58">Mais on peut sans pécher goûter les inepties,</l>
-            <l n="59" xml:id="l59">Qu’ils mêlent galamment avec leurs facéties ;</l>
-            <l n="60" xml:id="l60">On rencontre des gens qui tondraient sur un œuf,</l>
-            <l n="61" xml:id="l61">Et qui bien souvent ont l’esprit comme un bœuf.</l>
-            <l n="62" xml:id="l62"> </l>
-            <l n="63" xml:id="l63"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="64" xml:id="l64"> </l>
-          <sp who="" xml:id="2-1">
-            <speaker>LES DAMES</speaker>
-            <l n="65" xml:id="l65"> </l>
-          </sp>
-          <sp who="une-dame" xml:id="2-2">
-            <speaker>UNE DAME.</speaker>
-            <l n="66" xml:id="l66">Pour moi, je vous le dis, jamais la Comédie,</l>
-            <l n="67" xml:id="l67">N’eut tant d’attraits charmants, et tant de modestie,</l>
-            <l n="68" xml:id="l68">Le Théâtre n’a rien que d’honnête et de beau,</l>
-            <l n="69" xml:id="l69">Chaque jour il produit un prodige nouveau,</l>
-            <l n="70" xml:id="l70">Les Vestales pourraient avecque bienséance</l>
-            <l n="71" xml:id="l71">Ouïr la Comédie : elle n’est qu’innocence,       </l>
-            <l n="72" xml:id="l72">Produisant les douceurs d’un divertissement,</l>
-            <l n="73" xml:id="l73">Elle instruit les enfants à vivre sagement ;</l>
-            <l n="74" xml:id="l74">Ma fille est fort Coquette, et, comme j’appréhende</l>
-            <l n="75" xml:id="l75">Qu’une ville assiégée à la fin ne se rende,</l>
-            <l n="76" xml:id="l76">Je lui veux faire voir avec combien d’ardeur,</l>
-            <l n="77" xml:id="l77">Une fille bien sage a soin de son honneur ;</l>
-            <l n="78" xml:id="l78">Car le Théâtre enfin, l’amour des Rois, des Reines</l>
-            <l n="79" xml:id="l79">Est un crayon, parlant des actions humaines :</l>
-            <l n="80" xml:id="l80">Pour moi, j’eus toujours soin de garder mon honneur,</l>
-            <l n="81" xml:id="l81">Et je veux que ma fille ait la même pudeur.</l>
-          </sp>
-          <sp who="une-autre-dame" xml:id="2-3">
-            <speaker>UNE AUTRE DAME.</speaker>
-            <l n="82" xml:id="l82">Il le faut avouer, certainement Madame,</l>
-            <l n="83" xml:id="l83">La belle Comédie est le charme de l’âme ;</l>
-            <l n="84" xml:id="l84">Allons-y je vous prie.</l>
-          </sp>
-          <sp who="la-première" xml:id="2-4">
-            <speaker>LA PREMIÈRE.</speaker>
-            <l n="85" xml:id="l85">Allons, je le veux bien,</l>
-            <l n="86" xml:id="l86">Pour moi, je la préfère au plus bel entretien.</l>
-            <l n="87" xml:id="l87"> </l>
-            <l n="88" xml:id="l88"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="89" xml:id="l89"> </l>
-          <sp who="" xml:id="3-1">
-            <speaker>LE PORTIER</speaker>
-            <l n="90" xml:id="l90"> </l>
-            <l n="91" xml:id="l91">Ce téton est-il bon ? Cette piastre est légère,</l>
-            <l n="92" xml:id="l92">Ils sont sans conscience, ou bien ils n’en ont guère,</l>
-            <l n="93" xml:id="l93">Dès qu’ils ont des tétons qui ne sont pas de poids,</l>
-            <l n="94" xml:id="l94">C’est pour nous, que l’enfer les chauffe de son bois ;</l>
-            <l n="95" xml:id="l95">Pour faire avec ces gens le portier d’importance,</l>
-            <l n="96" xml:id="l96">Il faudrait dans mes mains toujours une balance,       </l>
-            <l n="97" xml:id="l97">Si mes Maîtres n’étaient gens d’honneur et sans fard,</l>
-            <l n="98" xml:id="l98">Je mettrais pour le moins deux écus à l’écart ;</l>
-            <l n="99" xml:id="l99">Je prendrai toutefois sans faire plus de mine,</l>
-            <l n="100" xml:id="l100">De quoi faire tirer la petite chopine ;</l>
-            <l n="101" xml:id="l101">Car de prendre beaucoup il ne m’est pas permis        ,</l>
-            <l n="102" xml:id="l102">À moins que de me faire un troupeau d’ennemis :</l>
-            <l n="103" xml:id="l103">Et puis le vol n’est pas un crime pardonnable,</l>
-            <l n="104" xml:id="l104">Et s’ils m’allaient chasser je serais misérable,</l>
-            <l n="105" xml:id="l105">J’ai bien plus de raison que tous ces grands escrocs,</l>
-            <l n="106" xml:id="l106">Qui viennent leur voler le fruit de leurs beaux mots,</l>
-            <l n="107" xml:id="l107">J’en veux prendre à témoin les personnes plus sages ;</l>
-            <l n="108" xml:id="l108">Ne leur coûte-t-il pas à faire des voyages,</l>
-            <l n="109" xml:id="l109">À nos Comédiens à faire des habits,</l>
-            <l n="110" xml:id="l110">À blanchir leurs collets, à payer leurs rubis ;</l>
-            <l n="111" xml:id="l111">Enfin la Comédie est une marchandise,</l>
-            <l n="112" xml:id="l112">Que l’on doit acheter et payer sans remise :</l>
-            <l n="113" xml:id="l113">Allons, je ne veux plus laisser entrer céans,</l>
-            <l n="114" xml:id="l114">Escrocs, passe-volants, filous ni pourvéans.</l>
-            <l n="115" xml:id="l115">Le premier qui viendra la main hors la pochette,</l>
-            <l n="116" xml:id="l116">Contre lui vaillamment je veux tirer la brette,</l>
-            <l n="117" xml:id="l117">Mon sang est échauffé, je suis las d’en souffrir,</l>
-            <l n="118" xml:id="l118">N’en laissons plus passer, c’est à faire mourir.</l>
-            <l n="119" xml:id="l119"> </l>
-            <l n="120" xml:id="l120"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="121" xml:id="l121"> </l>
-          <sp who="la-comédienne" xml:id="4-1">
-            <speaker>LA COMÉDIENNE, LE GALANT, L’ÉPINAY</speaker>
-            <l n="122" xml:id="l122"> </l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-2">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="123" xml:id="l123">Ah Dieu ! je vois passer un qui fait l’idolâtre,</l>
-            <l n="124" xml:id="l124">En venant m’aborder quand je suis au Théâtre ;</l>
-            <l n="125" xml:id="l125">J’en vois venir un autre,  ils viennent m’aborder ?</l>
-            <l n="126" xml:id="l126">Comment ferai-je, ils vont beaucoup m’incommoder,</l>
-            <l n="127" xml:id="l127">Ils s’en vont me parler de soupir et de flammes,</l>
-            <l n="128" xml:id="l128">Faire les patineurs, et les mourantes âmes.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-3">
-            <speaker>LE GALANT.</speaker>
-            <l n="129" xml:id="l129">Isabelle, bonjour, votre humble serviteur,</l>
-            <l n="130" xml:id="l130">Que votre habit est riche et de belle couleur,</l>
-            <l n="131" xml:id="l131">Ah Dieux ! la belle étoffe, et la belle dentelle,</l>
-            <l n="132" xml:id="l132">Qui vous en a fait don.</l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-4">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="133" xml:id="l133">Qui ? C’est Mademoiselle,</l>
-            <l n="134" xml:id="l134">Sa générosité m’en a fait un présent,</l>
-            <l n="135" xml:id="l135">Et je le faits briller sur la Scène à présent ;</l>
-            <l n="136" xml:id="l136">Ma cravate est défaite, et mon beau collier d’ambre.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-5">
-            <speaker>LE GALANT.</speaker>
-            <l n="137" xml:id="l137">Que je vous tienne ici lieu de valet de chambre ;</l>
-            <l n="138" xml:id="l138">Votre Cravate.</l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-6">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="139" xml:id="l139">Hé bien ! je l’accommoderai.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-7">
-            <speaker>LE GALANT.</speaker>
-            <l n="140" xml:id="l140">Vous allez au Théâtre où je vous conduirai.</l>
-            <l n="141" xml:id="l141">Ma sœur veut vous donner un fort beau point de Gênes,</l>
-            <l n="142" xml:id="l142">Et moi des citrons doux, et de la porcelaine.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-8">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="143" xml:id="l143">Et moi des gants d’Espagne.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-9">
-            <speaker>LE GALANT.</speaker>
-            <l n="144" xml:id="l144">Et moi de beaux rubans.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-10">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="145" xml:id="l145">Et moi de la pommade.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-11">
-            <speaker>LE GALANT.</speaker>
-            <l n="146" xml:id="l146">Et moi de beaux pendants.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-12">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="147" xml:id="l147">Et moi des Épagneuls qui viennent de Boulogne.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-13">
-            <speaker>LE GALANT.</speaker>
-            <l n="148" xml:id="l148">Et moi, ce que j’ai de pris de rare en Catalogne.</l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-14">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="149" xml:id="l149">Et de grâce, Messieurs ; ne vous échauffez pas,</l>
-            <l n="150" xml:id="l150">Pour prendre vos présents, j’ai trop peu de deux bras.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-15">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="151" xml:id="l151">Elle a le teint fort beau.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-16">
-            <speaker>LE GALANT.</speaker>
-            <l n="152" xml:id="l152">Et la taille gentille.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-17">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="153" xml:id="l153">Son œil me plaît assez.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-18">
-            <speaker>LE GALANT.</speaker>
-            <l n="154" xml:id="l154">Êtes-vous femme ou fille ?</l>
-            <l n="155" xml:id="l155">Aimez-moi je, vous prie, et m’appelez mon cœur,</l>
-            <l n="156" xml:id="l156">Et je vous nommerai ma mignonne et ma sœur.         </l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-19">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="157" xml:id="l157">Vous faites, par ma foi, fort bien la Comédie,</l>
-            <l n="158" xml:id="l158">Quand vous parlez d’amour, que vous estes jolie !</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-20">
-            <speaker>LE GALANT.</speaker>
-            <l n="159" xml:id="l159">Qu’elle fait bien la fière, et la cruelle aussi !</l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-21">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="160" xml:id="l160">Aussi mon métier est mon unique souci,</l>
-            <l n="161" xml:id="l161">Et de lui seul je suis ardemment amoureuse.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-22">
-            <speaker>LE GALANT.</speaker>
-            <l n="162" xml:id="l162">Voulez-vous sans cesser faire la dédaigneuse.</l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-23">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="163" xml:id="l163">Je m’en vais au théâtre avec des sentiments</l>
-            <l n="164" xml:id="l164">Qui sont trop relevés pour tous vos compliments,</l>
-            <l n="165" xml:id="l165">Je sens que la fierté s’empare de mon âme,</l>
-            <l n="166" xml:id="l166">Ce n’est que pour des Rois que mon cœur est de flamme.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-24">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="167" xml:id="l167">Vous allez bien jouer étant de cette humeur,</l>
-            <l n="168" xml:id="l168">Votre rôle est-il plain d’amour, ou de rigueur.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-25">
-            <speaker>LE GALANT.</speaker>
-            <l n="169" xml:id="l169">Je vis hier jouer une pièce nouvelle</l>
-            <l n="170" xml:id="l170">Au théâtre Français dont la prose est fort belle,</l>
-            <l n="171" xml:id="l171">C’est le pompeux Cinna, les traits en sont nouveaux.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-26">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="172" xml:id="l172">J’aime Thomas Morus, les vers en sont forts beaux.</l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-27">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="173" xml:id="l173">Plutôt que de parler, tenez la bouche close,</l>
-            <l n="174" xml:id="l174">Cinna c’est fait en vers, Thomas Morus en prose !</l>
-            <l n="175" xml:id="l175">Voyez quelle ignorance, et quels discours divers</l>
-            <l n="176" xml:id="l176">Il met les vers en prose et lui la prose en vers,</l>
-            <l n="177" xml:id="l177">Vos discours à l’instant font de grandes merveilles.</l>
-            <l n="178" xml:id="l178">Et vous parlez des vers comme font les corneilles.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-28">
-            <speaker>LE GALANT.</speaker>
-            <l n="179" xml:id="l179">On me vient de donner un Sonnet merveilleux.</l>
-          </sp>
-          <sp who="l’épinay" xml:id="4-29">
-            <speaker>L’ÉPINAY.</speaker>
-            <l n="180" xml:id="l180">Combien a-t-il de vers.</l>
-          </sp>
-          <sp who="le-galant" xml:id="4-30">
-            <speaker>LE GALANT.</speaker>
-            <l n="181" xml:id="l181">Au moins trente.</l>
-          </sp>
-          <sp who="la-comédienne" xml:id="4-31">
-            <speaker>LA COMÉDIENNE.</speaker>
-            <l n="182" xml:id="l182">Encor mieux.</l>
-            <l n="183" xml:id="l183">De grâce, informez-vous des règles poétiques,</l>
-            <l n="184" xml:id="l184">Les Épiques pour vous seraient les Dramatiques,</l>
-            <l n="185" xml:id="l185">Ah ! lisez les Auteurs qui composent des vers,</l>
-            <l n="186" xml:id="l186">Si vous voulez parler de leurs travaux divers ;</l>
-            <l n="187" xml:id="l187">Vraiment pour écouter de semblables merveilles</l>
-            <l n="188" xml:id="l188">Il faut que nous ayons d’admirables oreilles,</l>
-            <l n="189" xml:id="l189">Une Comédienne a beaucoup à souffrir</l>
-            <l n="190" xml:id="l190">Il lui faut tout entendre, il lui faut tout ouïr ;</l>
-            <l n="191" xml:id="l191">Souvent un franc benêt lui vient conter sornette,</l>
-            <l n="192" xml:id="l192">Et fera lui parlant le mignon de couchette ;</l>
-            <l n="193" xml:id="l193">Mais ce qui me console en un si grand dépit</l>
-            <l n="194" xml:id="l194">Est que j’entends parler aussi les gens d’esprit,</l>
-            <l n="195" xml:id="l195">Et que j’ai le bonheur de hanter la noblesse,</l>
-            <l n="196" xml:id="l196">Et d’en avoir souvent une honnête caresse ;</l>
-            <l n="197" xml:id="l197">De m’instruire avec eux d’une bonne action,</l>
-            <l n="198" xml:id="l198">Et d’être le témoin de leur profusion ;</l>
-            <l n="199" xml:id="l199">Quand je n’aurais au bien attachement ni pente,</l>
-            <l n="200" xml:id="l200">À force de les voir je m’y rendrais savante,</l>
-            <l n="201" xml:id="l201">Puis le théâtre a tant de beaux chemins battus,</l>
-            <l n="202" xml:id="l202">Nous sommes sans cesser avecque les vertus ;</l>
-            <l n="203" xml:id="l203">Si nous n’en avions pas en vivant avec elles,</l>
-            <l n="204" xml:id="l204">Nous serions en effet doublement criminelles :</l>
-            <l n="205" xml:id="l205">Enfin les grands Seigneurs, les sages, les savants,</l>
-            <l n="206" xml:id="l206">Pour les Comédiens ont de bons sentiments,</l>
-            <l n="207" xml:id="l207">Sans cela nous serions, ma foi, beaucoup à plaindre</l>
-            <l n="208" xml:id="l208">Il est des esprits forts qui sont encor à craindre,</l>
-            <l n="209" xml:id="l209">Qui s’imaginent tous avecque leur débit</l>
-            <l n="210" xml:id="l210">Avoir auprès de nous grand accès, grand crédit,</l>
-            <l n="211" xml:id="l211">Qui diront en voyant une Comédienne,</l>
-            <l n="212" xml:id="l212">Regarde cher ami cette Actrice elle est mienne,</l>
-            <l n="213" xml:id="l213">L’autre lui répondra faisant fort l’empêché,</l>
-            <l n="214" xml:id="l214">Elle vaut ma foi, bien la façon d’un péché ;</l>
-            <l n="215" xml:id="l215">Celui-ci vous faisant cent façons non communes,</l>
-            <l n="216" xml:id="l216">Vous fera le débit de ses bonnes fortunes,</l>
-            <l n="217" xml:id="l217">Et pour se faire croire il prendra de grands soins,</l>
-            <l n="218" xml:id="l218">Mais celui qui dit plus, en fait toujours le moins ;</l>
-            <l n="219" xml:id="l219">J’aime les bons esprits qui prennent de la peine,</l>
-            <l n="220" xml:id="l220">Afin de profiter des leçons de la Scène ;</l>
-            <l n="221" xml:id="l221">J’aime les esprits forts qui sont originaux,</l>
-            <l n="222" xml:id="l222">Non les imitateurs de ces mondains nouveaux,</l>
-            <l n="223" xml:id="l223">Qui souvent en voyant jouer la Comédie</l>
-            <l n="224" xml:id="l224">De critiques censeurs n’étant que la copie,</l>
-            <l n="225" xml:id="l225">Veulent gloser sur tout, reprendre les Acteurs,</l>
-            <l n="226" xml:id="l226">En jugeant comme fait l’aveugle des couleurs,</l>
-            <l n="227" xml:id="l227">Mais que leur jugement soit léger il n’importe,</l>
-            <l n="228" xml:id="l228">Pourvu que leur argent soit de poids à la porte ;</l>
-            <l n="229" xml:id="l229">Nous aimons toutes fois les doctes spectateurs</l>
-            <l n="230" xml:id="l230">Car leur sage audience anime les Acteurs ;</l>
-            <l n="231" xml:id="l231">Je vais avec plaisir jouer en cette ville</l>
-            <l n="232" xml:id="l232">Pleine d’honnêtes gens, et tout à fait civile,</l>
-            <l n="233" xml:id="l233">On dit aussi qu’amour triomphe dans les yeux          </l>
-            <l n="234" xml:id="l234">Des beautés que l’on voit en ces aimables lieux,</l>
-            <l n="235" xml:id="l235">Que les Dames y sont agréables et belles,</l>
-            <l n="236" xml:id="l236">Et qu’elles sont aussi toutes spirituelles :</l>
-            <l n="237" xml:id="l237">Allons les divertir par nos accents mignards</l>
-            <l n="238" xml:id="l238">Et recevoir l’honneur d’attirer leurs regards.</l>
-            <l n="239" xml:id="l239"> </l>
-            <l n="240" xml:id="l240"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="241" xml:id="l241"> </l>
-          <sp who="le-portier" xml:id="5-1">
-            <speaker>LE PORTIER, DEUX FILOUS</speaker>
-            <l n="242" xml:id="l242"> </l>
-          </sp>
-          <sp who="le-portier" xml:id="5-2">
-            <speaker>LE PORTIER.</speaker>
-            <l n="243" xml:id="l243">Voici deux grands filous de fort mauvais augure,</l>
-            <l n="244" xml:id="l244">Tiens mon mousqueton prêt, mettons-nous en posture.</l>
-          </sp>
-          <sp who="deux-filous" xml:id="5-3">
-            <speaker>DEUX FILOUS.</speaker>
-            <l n="245" xml:id="l245">Ouvre !</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-4">
-            <speaker>LE PORTIER.</speaker>
-            <l n="246" xml:id="l246">Il faut de l’argent.</l>
-          </sp>
-          <sp who="le-filou" xml:id="5-5">
-            <speaker>LE FILOU.</speaker>
-            <l n="247" xml:id="l247">Ah ventre.</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-6">
-            <speaker>LE PORTIER.</speaker>
-            <l n="248" xml:id="l248">Par la mort ?</l>
-          </sp>
-          <sp who="le-filou" xml:id="5-7">
-            <speaker>LE FILOU.</speaker>
-            <l n="249" xml:id="l249">Tu me refuse en vain.</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-8">
-            <speaker>LE PORTIER.</speaker>
-            <l n="250" xml:id="l250">Tu fais un vain effort.</l>
-          </sp>
-          <sp who="le-filou" xml:id="5-9">
-            <speaker>LE FILOU.</speaker>
-            <l n="251" xml:id="l251">Comment tu faits le brave, et la rude moustache.</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-10">
-            <speaker>LE PORTIER.</speaker>
-            <l n="252" xml:id="l252">Je fais ce que je suis, quand je veux je me fâche.</l>
-          </sp>
-          <sp who="le-filou" xml:id="5-11">
-            <speaker>LE FILOU.</speaker>
-            <l n="253" xml:id="l253">Je m’en vais te percer si j’entre en action.</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-12">
-            <speaker>LE PORTIER.</speaker>
-            <l n="254" xml:id="l254">On m’a déjà percé, j’ai vu l’occasion,</l>
-            <l n="255" xml:id="l255">Les canons, les fusils, et le fer et la flamme</l>
-            <l n="256" xml:id="l256">Ne me font point de peur, je me ris de ta lame.</l>
-          </sp>
-          <sp who="le-filou" xml:id="5-13">
-            <speaker>LE FILOU.</speaker>
-            <l n="257" xml:id="l257">Par la tête, jarni, redoute mon courroux.</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-14">
-            <speaker>LE PORTIER.</speaker>
-            <l n="258" xml:id="l258">S’il ne tient qu’à jurer, ah ! la vache est à nous,</l>
-            <l n="259" xml:id="l259">Il me faut de l’argent, quoique vous puissiez faire.</l>
-          </sp>
-          <sp who="le-filou" xml:id="5-15">
-            <speaker>LE FILOU.</speaker>
-            <l n="260" xml:id="l260">Je n’en ai point, ami, redoute ma colère.</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-16">
-            <speaker>LE PORTIER.</speaker>
-            <l n="261" xml:id="l261">Allez n’en ayant point, fanfaron sans pareil,</l>
-            <l n="262" xml:id="l262">Dormir le dos en terre, et le ventre au soleil ;</l>
-            <l n="263" xml:id="l263">Allez prendre la mouche, et chanter la guimbarde,</l>
-            <l n="264" xml:id="l264">Sous le fais d’un mousquet, ou d’une hallebarde.</l>
-          </sp>
-          <sp who="le-filou" xml:id="5-17">
-            <speaker>LE FILOU.</speaker>
-            <l n="265" xml:id="l265">Ah ! c’est trop endurer, Portier tu périras.</l>
-          </sp>
-          <sp who="le-portier" xml:id="5-18">
-            <speaker>LE PORTIER.</speaker>
-            <l n="266" xml:id="l266">Je vais parler à vous, messieurs les fiers à bras ;         </l>
-            <l n="267" xml:id="l267">Et d’estoc, et de taille, et de quarte et de tierce,</l>
-            <l n="268" xml:id="l268">Pour le dernier sommeil il faut que je te berce ;</l>
-            <l n="269" xml:id="l269">Ils ne se battraient pas, s’ils n’étaient dix contre un ;</l>
-            <l n="270" xml:id="l270">Mais je me bat d’un air qui n’est pas du commun,</l>
-            <l n="271" xml:id="l271">Ils s’en vont revenir peut-être avec main forte ;</l>
-            <l n="272" xml:id="l272">On s’en va commencer, rentrons, fermons la porte.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#léandre">
+          <speaker>LÉANDRE.</speaker>
+          <l n="1">Puisque je vous rencontre, il faut faire partie,</l>
+          <l n="2">Allons nous divertir à voir la Comédie,</l>
+          <l n="3">Ce passe-temps est propre à charmer les ennuis,</l>
+          <l n="4">À peine il m’en souvient à l’instant que j’y suis.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="5">Allons-y, je le veux, au coin de cette rue,         </l>
+          <l n="6">Une affiche à propos se montre à notre vue.</l>
+        </sp>
+        <sp who="#affiche">
+          <speaker>AFFICHE</speaker>
+        </sp>
+        <sp who="#les-comédiens-de-mademoiselle">
+          <speaker>Les Comédiens de Mademoiselle</speaker>
+          <stage>&lt;em&gt;La pièce que nous vous donnons,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Mérite vos attentions,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Ce sont les amours d’Ignorance,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Qu’on confond avec la science,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Et de son brave Trapolin,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Qui l’aime autant que le bon vin :&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;De cette Pièce on fait estime,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Tant pour la force de la rime,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Que pour la vigueur des bons mots,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Qui ne sont pas faits pour les sots ;&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Mais pour la belle Connaissance,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Et les Auditeurs d’importance,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Qu’ici les uns dressent leurs pas,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Que les autres n’y viennent pas.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, poursuit.</speaker>
+          <l n="7">Ho ! ho ! L’affiche en vers ? cette troupe est jolie :</l>
+          <l n="8">Peut-être y verrons-nous quelque galant Génie.</l>
+        </sp>
+        <sp who="#léandre">
+          <speaker>LÉANDRE.</speaker>
+          <l n="9">J’aime la Comédie, elle est mon élément.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="10">Tous deux nous nous trouvons d’un même sentiment,</l>
+          <l n="11">Il faut être privé de bon sens, de science,         </l>
+          <l n="12">Pour ne la suivre pas, allons en diligence ;</l>
+          <l n="13">Puis on la fait si bien, et si juste en ce temps,</l>
+          <l n="14">Qu’elle sert de modèle aux plus honnêtes gens ;</l>
+          <l n="15">On apprend la vertu voyant la Comédie,</l>
+          <l n="16">Ceux qui des sots cagots gagnent la maladie,</l>
+          <l n="17">Y peuvent répugner, y venir lentement ;</l>
+          <l n="18">Mais le sage, et le docte, y vont assidûment,</l>
+          <l n="19">J’y veux demain mener mes enfants et ma femme,</l>
+          <l n="20">Ils y profiteront s’ils ont une bonne âme ;</l>
+          <l n="21">Car on y voit toujours triompher les vertus,</l>
+          <l n="22">Là, le vice sur eux n’a jamais le dessus.</l>
+        </sp>
+        <sp who="#léandre">
+          <speaker>LÉANDRE.</speaker>
+          <l n="23">Mais les Italiens prennent plus de licence</l>
+          <l n="24">Que ne font les Français, et quelqu’un s’en offense.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="25">Le Théâtre Français est bien plus sérieux,</l>
+          <l n="26">J’en fais bien plus d’état, et l’estime bien mieux ;       </l>
+          <l n="27">Mais on peut sans pécher goûter les inepties,</l>
+          <l n="28">Qu’ils mêlent galamment avec leurs facéties ;</l>
+          <l n="29">On rencontre des gens qui tondraient sur un œuf,</l>
+          <l n="30">Et qui bien souvent ont l’esprit comme un bœuf.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#une-dame">
+          <speaker>UNE DAME.</speaker>
+          <l n="31">Pour moi, je vous le dis, jamais la Comédie,</l>
+          <l n="32">N’eut tant d’attraits charmants, et tant de modestie,</l>
+          <l n="33">Le Théâtre n’a rien que d’honnête et de beau,</l>
+          <l n="34">Chaque jour il produit un prodige nouveau,</l>
+          <l n="35">Les Vestales pourraient avecque bienséance</l>
+          <l n="36">Ouïr la Comédie : elle n’est qu’innocence,       </l>
+          <l n="37">Produisant les douceurs d’un divertissement,</l>
+          <l n="38">Elle instruit les enfants à vivre sagement ;</l>
+          <l n="39">Ma fille est fort Coquette, et, comme j’appréhende</l>
+          <l n="40">Qu’une ville assiégée à la fin ne se rende,</l>
+          <l n="41">Je lui veux faire voir avec combien d’ardeur,</l>
+          <l n="42">Une fille bien sage a soin de son honneur ;</l>
+          <l n="43">Car le Théâtre enfin, l’amour des Rois, des Reines</l>
+          <l n="44">Est un crayon, parlant des actions humaines :</l>
+          <l n="45">Pour moi, j’eus toujours soin de garder mon honneur,</l>
+          <l n="46">Et je veux que ma fille ait la même pudeur.</l>
+        </sp>
+        <sp who="#une-autre-dame">
+          <speaker>UNE AUTRE DAME.</speaker>
+          <l n="47">Il le faut avouer, certainement Madame,</l>
+          <l n="48">La belle Comédie est le charme de l’âme ;</l>
+          <l n="49">Allons-y je vous prie.</l>
+        </sp>
+        <sp who="#la-première">
+          <speaker>LA PREMIÈRE.</speaker>
+          <l n="50">Allons, je le veux bien,</l>
+          <l n="51">Pour moi, je la préfère au plus bel entretien.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER</speaker>
+          <l n="52">Ce téton est-il bon ? Cette piastre est légère,</l>
+          <l n="53">Ils sont sans conscience, ou bien ils n’en ont guère,</l>
+          <l n="54">Dès qu’ils ont des tétons qui ne sont pas de poids,</l>
+          <l n="55">C’est pour nous, que l’enfer les chauffe de son bois ;</l>
+          <l n="56">Pour faire avec ces gens le portier d’importance,</l>
+          <l n="57">Il faudrait dans mes mains toujours une balance,       </l>
+          <l n="58">Si mes Maîtres n’étaient gens d’honneur et sans fard,</l>
+          <l n="59">Je mettrais pour le moins deux écus à l’écart ;</l>
+          <l n="60">Je prendrai toutefois sans faire plus de mine,</l>
+          <l n="61">De quoi faire tirer la petite chopine ;</l>
+          <l n="62">Car de prendre beaucoup il ne m’est pas permis        ,</l>
+          <l n="63">À moins que de me faire un troupeau d’ennemis :</l>
+          <l n="64">Et puis le vol n’est pas un crime pardonnable,</l>
+          <l n="65">Et s’ils m’allaient chasser je serais misérable,</l>
+          <l n="66">J’ai bien plus de raison que tous ces grands escrocs,</l>
+          <l n="67">Qui viennent leur voler le fruit de leurs beaux mots,</l>
+          <l n="68">J’en veux prendre à témoin les personnes plus sages ;</l>
+          <l n="69">Ne leur coûte-t-il pas à faire des voyages,</l>
+          <l n="70">À nos Comédiens à faire des habits,</l>
+          <l n="71">À blanchir leurs collets, à payer leurs rubis ;</l>
+          <l n="72">Enfin la Comédie est une marchandise,</l>
+          <l n="73">Que l’on doit acheter et payer sans remise :</l>
+          <l n="74">Allons, je ne veux plus laisser entrer céans,</l>
+          <l n="75">Escrocs, passe-volants, filous ni pourvéans.</l>
+          <l n="76">Le premier qui viendra la main hors la pochette,</l>
+          <l n="77">Contre lui vaillamment je veux tirer la brette,</l>
+          <l n="78">Mon sang est échauffé, je suis las d’en souffrir,</l>
+          <l n="79">N’en laissons plus passer, c’est à faire mourir.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="80">Ah Dieu ! je vois passer un qui fait l’idolâtre,</l>
+          <l n="81">En venant m’aborder quand je suis au Théâtre ;</l>
+          <l n="82">J’en vois venir un autre,  ils viennent m’aborder ?</l>
+          <l n="83">Comment ferai-je, ils vont beaucoup m’incommoder,</l>
+          <l n="84">Ils s’en vont me parler de soupir et de flammes,</l>
+          <l n="85">Faire les patineurs, et les mourantes âmes.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="86">Isabelle, bonjour, votre humble serviteur,</l>
+          <l n="87">Que votre habit est riche et de belle couleur,</l>
+          <l n="88">Ah Dieux ! la belle étoffe, et la belle dentelle,</l>
+          <l n="89">Qui vous en a fait don.</l>
+        </sp>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="90">Qui ? C’est Mademoiselle,</l>
+          <l n="91">Sa générosité m’en a fait un présent,</l>
+          <l n="92">Et je le faits briller sur la Scène à présent ;</l>
+          <l n="93">Ma cravate est défaite, et mon beau collier d’ambre.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="94">Que je vous tienne ici lieu de valet de chambre ;</l>
+          <l n="95">Votre Cravate.</l>
+        </sp>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="96">Hé bien ! je l’accommoderai.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="97">Vous allez au Théâtre où je vous conduirai.</l>
+          <l n="98">Ma sœur veut vous donner un fort beau point de Gênes,</l>
+          <l n="99">Et moi des citrons doux, et de la porcelaine.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="100">Et moi des gants d’Espagne.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="101">Et moi de beaux rubans.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="102">Et moi de la pommade.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="103">Et moi de beaux pendants.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="104">Et moi des Épagneuls qui viennent de Boulogne.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="105">Et moi, ce que j’ai de pris de rare en Catalogne.</l>
+        </sp>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="106">Et de grâce, Messieurs ; ne vous échauffez pas,</l>
+          <l n="107">Pour prendre vos présents, j’ai trop peu de deux bras.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="108">Elle a le teint fort beau.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="109">Et la taille gentille.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="110">Son œil me plaît assez.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="111">Êtes-vous femme ou fille ?</l>
+          <l n="112">Aimez-moi je, vous prie, et m’appelez mon cœur,</l>
+          <l n="113">Et je vous nommerai ma mignonne et ma sœur.         </l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="114">Vous faites, par ma foi, fort bien la Comédie,</l>
+          <l n="115">Quand vous parlez d’amour, que vous estes jolie !</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="116">Qu’elle fait bien la fière, et la cruelle aussi !</l>
+        </sp>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="117">Aussi mon métier est mon unique souci,</l>
+          <l n="118">Et de lui seul je suis ardemment amoureuse.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="119">Voulez-vous sans cesser faire la dédaigneuse.</l>
+        </sp>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="120">Je m’en vais au théâtre avec des sentiments</l>
+          <l n="121">Qui sont trop relevés pour tous vos compliments,</l>
+          <l n="122">Je sens que la fierté s’empare de mon âme,</l>
+          <l n="123">Ce n’est que pour des Rois que mon cœur est de flamme.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="124">Vous allez bien jouer étant de cette humeur,</l>
+          <l n="125">Votre rôle est-il plain d’amour, ou de rigueur.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="126">Je vis hier jouer une pièce nouvelle</l>
+          <l n="127">Au théâtre Français dont la prose est fort belle,</l>
+          <l n="128">C’est le pompeux Cinna, les traits en sont nouveaux.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="129">J’aime Thomas Morus, les vers en sont forts beaux.</l>
+        </sp>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="130">Plutôt que de parler, tenez la bouche close,</l>
+          <l n="131">Cinna c’est fait en vers, Thomas Morus en prose !</l>
+          <l n="132">Voyez quelle ignorance, et quels discours divers</l>
+          <l n="133">Il met les vers en prose et lui la prose en vers,</l>
+          <l n="134">Vos discours à l’instant font de grandes merveilles.</l>
+          <l n="135">Et vous parlez des vers comme font les corneilles.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="136">On me vient de donner un Sonnet merveilleux.</l>
+        </sp>
+        <sp who="#l’épinay">
+          <speaker>L’ÉPINAY.</speaker>
+          <l n="137">Combien a-t-il de vers.</l>
+        </sp>
+        <sp who="#le-galant">
+          <speaker>LE GALANT.</speaker>
+          <l n="138">Au moins trente.</l>
+        </sp>
+        <sp who="#une-comédienne">
+          <speaker>LA COMÉDIENNE.</speaker>
+          <l n="139">Encor mieux.</l>
+          <l n="140">De grâce, informez-vous des règles poétiques,</l>
+          <l n="141">Les Épiques pour vous seraient les Dramatiques,</l>
+          <l n="142">Ah ! lisez les Auteurs qui composent des vers,</l>
+          <l n="143">Si vous voulez parler de leurs travaux divers ;</l>
+          <l n="144">Vraiment pour écouter de semblables merveilles</l>
+          <l n="145">Il faut que nous ayons d’admirables oreilles,</l>
+          <l n="146">Une Comédienne a beaucoup à souffrir</l>
+          <l n="147">Il lui faut tout entendre, il lui faut tout ouïr ;</l>
+          <l n="148">Souvent un franc benêt lui vient conter sornette,</l>
+          <l n="149">Et fera lui parlant le mignon de couchette ;</l>
+          <l n="150">Mais ce qui me console en un si grand dépit</l>
+          <l n="151">Est que j’entends parler aussi les gens d’esprit,</l>
+          <l n="152">Et que j’ai le bonheur de hanter la noblesse,</l>
+          <l n="153">Et d’en avoir souvent une honnête caresse ;</l>
+          <l n="154">De m’instruire avec eux d’une bonne action,</l>
+          <l n="155">Et d’être le témoin de leur profusion ;</l>
+          <l n="156">Quand je n’aurais au bien attachement ni pente,</l>
+          <l n="157">À force de les voir je m’y rendrais savante,</l>
+          <l n="158">Puis le théâtre a tant de beaux chemins battus,</l>
+          <l n="159">Nous sommes sans cesser avecque les vertus ;</l>
+          <l n="160">Si nous n’en avions pas en vivant avec elles,</l>
+          <l n="161">Nous serions en effet doublement criminelles :</l>
+          <l n="162">Enfin les grands Seigneurs, les sages, les savants,</l>
+          <l n="163">Pour les Comédiens ont de bons sentiments,</l>
+          <l n="164">Sans cela nous serions, ma foi, beaucoup à plaindre</l>
+          <l n="165">Il est des esprits forts qui sont encor à craindre,</l>
+          <l n="166">Qui s’imaginent tous avecque leur débit</l>
+          <l n="167">Avoir auprès de nous grand accès, grand crédit,</l>
+          <l n="168">Qui diront en voyant une Comédienne,</l>
+          <l n="169">Regarde cher ami cette Actrice elle est mienne,</l>
+          <l n="170">L’autre lui répondra faisant fort l’empêché,</l>
+          <l n="171">Elle vaut ma foi, bien la façon d’un péché ;</l>
+          <l n="172">Celui-ci vous faisant cent façons non communes,</l>
+          <l n="173">Vous fera le débit de ses bonnes fortunes,</l>
+          <l n="174">Et pour se faire croire il prendra de grands soins,</l>
+          <l n="175">Mais celui qui dit plus, en fait toujours le moins ;</l>
+          <l n="176">J’aime les bons esprits qui prennent de la peine,</l>
+          <l n="177">Afin de profiter des leçons de la Scène ;</l>
+          <l n="178">J’aime les esprits forts qui sont originaux,</l>
+          <l n="179">Non les imitateurs de ces mondains nouveaux,</l>
+          <l n="180">Qui souvent en voyant jouer la Comédie</l>
+          <l n="181">De critiques censeurs n’étant que la copie,</l>
+          <l n="182">Veulent gloser sur tout, reprendre les Acteurs,</l>
+          <l n="183">En jugeant comme fait l’aveugle des couleurs,</l>
+          <l n="184">Mais que leur jugement soit léger il n’importe,</l>
+          <l n="185">Pourvu que leur argent soit de poids à la porte ;</l>
+          <l n="186">Nous aimons toutes fois les doctes spectateurs</l>
+          <l n="187">Car leur sage audience anime les Acteurs ;</l>
+          <l n="188">Je vais avec plaisir jouer en cette ville</l>
+          <l n="189">Pleine d’honnêtes gens, et tout à fait civile,</l>
+          <l n="190">On dit aussi qu’amour triomphe dans les yeux          </l>
+          <l n="191">Des beautés que l’on voit en ces aimables lieux,</l>
+          <l n="192">Que les Dames y sont agréables et belles,</l>
+          <l n="193">Et qu’elles sont aussi toutes spirituelles :</l>
+          <l n="194">Allons les divertir par nos accents mignards</l>
+          <l n="195">Et recevoir l’honneur d’attirer leurs regards.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="196">Voici deux grands filous de fort mauvais augure,</l>
+          <l n="197">Tiens mon mousqueton prêt, mettons-nous en posture.</l>
+        </sp>
+        <sp who="#deux-filous">
+          <speaker>DEUX FILOUS.</speaker>
+          <l n="198">Ouvre !</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="199">Il faut de l’argent.</l>
+        </sp>
+        <sp who="#le-filou">
+          <speaker>LE FILOU.</speaker>
+          <l n="200">Ah ventre.</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="201">Par la mort ?</l>
+        </sp>
+        <sp who="#le-filou">
+          <speaker>LE FILOU.</speaker>
+          <l n="202">Tu me refuse en vain.</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="203">Tu fais un vain effort.</l>
+        </sp>
+        <sp who="#le-filou">
+          <speaker>LE FILOU.</speaker>
+          <l n="204">Comment tu faits le brave, et la rude moustache.</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="205">Je fais ce que je suis, quand je veux je me fâche.</l>
+        </sp>
+        <sp who="#le-filou">
+          <speaker>LE FILOU.</speaker>
+          <l n="206">Je m’en vais te percer si j’entre en action.</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="207">On m’a déjà percé, j’ai vu l’occasion,</l>
+          <l n="208">Les canons, les fusils, et le fer et la flamme</l>
+          <l n="209">Ne me font point de peur, je me ris de ta lame.</l>
+        </sp>
+        <sp who="#le-filou">
+          <speaker>LE FILOU.</speaker>
+          <l n="210">Par la tête, jarni, redoute mon courroux.</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="211">S’il ne tient qu’à jurer, ah ! la vache est à nous,</l>
+          <l n="212">Il me faut de l’argent, quoique vous puissiez faire.</l>
+        </sp>
+        <sp who="#le-filou">
+          <speaker>LE FILOU.</speaker>
+          <l n="213">Je n’en ai point, ami, redoute ma colère.</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="214">Allez n’en ayant point, fanfaron sans pareil,</l>
+          <l n="215">Dormir le dos en terre, et le ventre au soleil ;</l>
+          <l n="216">Allez prendre la mouche, et chanter la guimbarde,</l>
+          <l n="217">Sous le fais d’un mousquet, ou d’une hallebarde.</l>
+        </sp>
+        <sp who="#le-filou">
+          <speaker>LE FILOU.</speaker>
+          <l n="218">Ah ! c’est trop endurer, Portier tu périras.</l>
+        </sp>
+        <sp who="#le-portier-des-comédiens">
+          <speaker>LE PORTIER.</speaker>
+          <l n="219">Je vais parler à vous, messieurs les fiers à bras ;         </l>
+          <l n="220">Et d’estoc, et de taille, et de quarte et de tierce,</l>
+          <l n="221">Pour le dernier sommeil il faut que je te berce ;</l>
+          <l n="222">Ils ne se battraient pas, s’ils n’étaient dix contre un ;</l>
+          <l n="223">Mais je me bat d’un air qui n’est pas du commun,</l>
+          <l n="224">Ils s’en vont revenir peut-être avec main forte ;</l>
+          <l n="225">On s’en va commencer, rentrons, fermons la porte.</l>
+          <l n="226" />
+        </sp>
       </div>
     </body>
   </text>

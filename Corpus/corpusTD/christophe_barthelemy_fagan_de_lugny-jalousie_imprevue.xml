@@ -1,1594 +1,1429 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La Jalousie imprévue</title>
-        <author key="Christophe-Barthélémy FAGAN DE LUGNY | (naissance-mort)">Christophe-Barthélémy FAGAN DE LUGNY |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/la-jalousie-imprévue-christophe-barthélémy-fagan-de-lugny</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Christophe-Barthélémy FAGAN DE LUGNY |</author>. <title>La Jalousie imprévue</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/la-jalousie-imprévue-christophe-barthélémy-fagan-de-lugny</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1740-07-16">Représentée pour la première fois, à Paris, sur le Théâtre de l’Hôtel de Bourgogne, le 16 juillet 1740.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="monsieur-lisimon" sex="SEX">
+            <persName>MONSIEUR LISIMON</persName>
+          </person>
+          <person xml:id="madame-lisimon" sex="SEX">
+            <persName>MADAME LISIMON</persName>
+          </person>
+          <person xml:id="julie" sex="SEX">
+            <persName>JULIE</persName>
+          </person>
+          <person xml:id="lélio" sex="SEX">
+            <persName>LÉLIO</persName>
+          </person>
+          <person xml:id="rosette" sex="SEX">
+            <persName>ROSETTE</persName>
+          </person>
+          <person xml:id="la-fleur" sex="SEX">
+            <persName>LA FLEUR</persName>
+          </person>
+          <person xml:id="un-laquais" sex="SEX">
+            <persName>UN LAQUAIS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1740-07-16" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de l’Hôtel de Bourgogne, le 16 juillet 1740.</ab>
+      </performance>
+      <div type="dedicace">
+        <opener>
+          <salute />
+        </opener>
+        <head>À MONSEIGNEUR LE CHEVALIER D’ORLÉANS</head>
+        <p>&lt;strong&gt;GRAND D’ESPAGNE, GRAND PRIEUR DE FRANCE, GÉNÉRAL DES GALÈRES&lt;/strong&gt;</p>
+        <p>MONSEIGNEUR,</p>
+        <p>Je m’étais promis de ne vous rendre un hommage public, que quand je pourrais vous offrir quelqu’Ouvrage remarquable par son étendue et par sa diction, mais j’ai beau former tous les jours des désirs, ce chef-d’œuvre, que j’attends de moi-même, n’arrive point. Pardonnez-moi, MONSEIGNEUR, si, dans ses démarches, mon Cœur est plus prompt que mon Génie, et si le  zèle qui m’anime ne peut se contraindre plus longtemps.</p>
+        <p>Cependant ce zèle, qui voudrait parler, cède à un austère de voir. Si, de la part d’un Protecteur, l’excès de modestie, et dans un Auteur, l’incapacité de faire un digne Éloge, sont des motifs qui doivent empêcher de l’entreprendre, jamais personne n’a été plus obligé à garder le silence que je le suis ici.</p>
+        <p>Je me borne donc à l’honneur de vous dire que je suis avec un très profond respect, et l’attachement le plus fidele et le plus inviolable,</p>
+        <p>MONSEIGNEUR,</p>
+        <p>Votre très humble et très obéissant Serviteur,</p>
+        <signed>FAGAN.</signed>
+      </div>
+      <castList />
+    </front>
     <body>
-      <head>La Jalousie imprévue</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de l’Hôtel de Bourgogne, le 16 juillet 1740.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="monsieur-lisimon">MONSIEUR LISIMON</role>
-              <roleDesc>, <em>bon Bourgeois</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-lisimon">MADAME LISIMON</role>
-              <roleDesc>, <em>bonne Bourgeoise</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="julie">JULIE</role>
-              <roleDesc>, <em>fille de M. et de Madame Lisimon</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lélio">LÉLIO</role>
-              <roleDesc>, <em>amant de Julie</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="rosette">ROSETTE</role>
-              <roleDesc>, <em>servante de M. et de Madame Lisimon</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-fleur">LA FLEUR</role>
-              <roleDesc>, <em>laquais de Lélio</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-laquais">UN LAQUAIS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La Scène est à Paris dans la Maison de M. Lisimon.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-          </sp>
-          <sp who="strong>grand-d’espagne" xml:id="0-2">
-            <speaker><strong>GRAND D’ESPAGNE, GRAND PRIEUR DE FRANCE, GÉNÉRAL DES GALÈRES</strong></speaker>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9">MONSEIGNEUR,</l>
-            <l n="10" xml:id="l10"> </l>
-            <l n="11" xml:id="l11">Je m’étais promis de ne vous rendre un hommage public, que quand je pourrais vous offrir quelqu’Ouvrage remarquable par son étendue et par sa diction, mais j’ai beau former tous les jours des désirs, ce chef-d’œuvre, que j’attends de moi-même, n’arrive point. Pardonnez-moi, MONSEIGNEUR, si, dans ses démarches, mon Cœur est plus prompt que mon Génie, et si le  zèle qui m’anime ne peut se contraindre plus longtemps.</l>
-            <l n="12" xml:id="l12">Cependant ce zèle, qui voudrait parler, cède à un austère de voir. Si, de la part d’un Protecteur, l’excès de modestie, et dans un Auteur, l’incapacité de faire un digne Éloge, sont des motifs qui doivent empêcher de l’entreprendre, jamais personne n’a été plus obligé à garder le silence que je le suis ici.</l>
-            <l n="13" xml:id="l13">Je me borne donc à l’honneur de vous dire que je suis avec un très profond respect, et l’attachement le plus fidele et le plus inviolable,</l>
-            <l n="14" xml:id="l14"> </l>
-            <l n="15" xml:id="l15">MONSEIGNEUR,</l>
-            <l n="16" xml:id="l16"> </l>
-            <l n="17" xml:id="l17">Votre très humble et très obéissant Serviteur,</l>
-            <l n="18" xml:id="l18"> </l>
-            <l n="19" xml:id="l19"> </l>
-            <l n="20" xml:id="l20"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="21" xml:id="l21"> </l>
-          <sp who="rosette" xml:id="1-1">
-            <speaker>MONSIEUR LISIMON, MADAME LISIMON, ROSETTE</speaker>
-            <l n="22" xml:id="l22"> </l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="1-2">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="23" xml:id="l23">Oui, ma femme, je viens de dire fort civilement à Lélio que je le remerciais de ses visites, et que sur les belles nouvelles que j’ai apprises, il n’avait que faire de songer un moment à ma fille. Comment, diable ! Un homme qui court après quatre ou cinq femmes à la fois, qui mène une vie tout-à-fait déréglée et libertine ! Non, non, vous dis-je, il n’a que faire de songer un moment à ma fille.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="1-3">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="24" xml:id="l24">Peut-être les rapports que l’on vous a faits, sont-ils faux ; mais dans le doute, j’approuve très fort, mon mari, la résolution où vous êtes.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="1-4">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="25" xml:id="l25">Corbleu ! une pareille conduite ferait un bel effet dans un ménage ! Je prétends que ma fille soit aussi heureuse que vous l’êtes, Madame. Depuis vingt-deux ans que nous vivons ensemble, jamais je ne vous ai donné sujet de vous plaindre un moment de mes galanteries. Aussi, de votre côté, jamais la moindre alarme, pas le moindre soupçon. On ne m’a point vu courir après les Belles, on ne vous a point vu attirer les Galants : et si quelqu’un à Paris peut se vanter d’avoir une femme fidèle, c’est sans doute moi, Madame.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="1-5">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="26" xml:id="l26">Vous avez bien raison, et je ne crois pas devoir en tirer vanité.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="1-6">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="27" xml:id="l27">À la moindre infidélité, je pense que je fusse mort de chagrin. Ah ! çà, je sors un instant. Dites deux mots à votre fille à ce sujet, et donnez de si bons ordres ici, que Lélio n’y paraisse pas davantage.</l>
-          </sp>
-          <sp who="rosette" xml:id="1-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="28" xml:id="l28">Par ma foi, voilà d’étranges choses ! Quels sont donc ces beaux rapports que l’on vous a faits ? Il mène une vie libre et agréable ; faut-il donc qu’à son âge il se conduise comme un Caton ? Il court après quatre ou cinq femmes à la fois, eh ! bien, il ne les attrape pas toutes apparemment.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="1-8">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="29" xml:id="l29">Mais voyez un peu quel ton prend cette fille ; et de quoi diable elle se mêle !</l>
-          </sp>
-          <sp who="rosette" xml:id="1-9">
-            <speaker>MADAME LISIMON, <em>à Rosette.</em></speaker>
-            <l n="30" xml:id="l30">Taisez-vous ; allez, Monsieur, je prendrai de si bonnes mesures, qu’il ne sera plus question de lui ici. Je ne veux pas même que de sa part, on reçoive le moindre message, et si j’apprends... C’est à vous plus qu’à personne à qui je veux parler, Mademoiselle Rosette.</l>
-            <stage><hi rend="italic"><em>Monsieur Lisimon sort, et Madame Lisimon rentre chez elle.</em></hi></stage>
-            <l n="32" xml:id="l32"> </l>
-            <l n="33" xml:id="l33"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="34" xml:id="l34"> </l>
-          <sp who="rosette" xml:id="2-1">
-            <speaker>ROSETTE, <em>seule</em></speaker>
-            <l n="35" xml:id="l35"> </l>
-            <l n="36" xml:id="l36">Je vous entends ; mais je ne vous promets pas de vous obéir. N’est-ce pas une chose honteuse, que sur des rapports en l’air, on donne ainsi le congé à l’Amant le plus tendre ! Il faut que Lélio ait quelques ennemis secrets. Il ne paraît pourtant pas les mériter ; et je veux...</l>
-            <l n="37" xml:id="l37"> </l>
-            <l n="38" xml:id="l38"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="39" xml:id="l39"> </l>
-          <sp who="rosette" xml:id="3-1">
-            <speaker>JULIE, ROSETTE</speaker>
-            <l n="40" xml:id="l40"> </l>
-          </sp>
-          <sp who="julie" xml:id="3-2">
-            <speaker>JULIE.</speaker>
-            <l n="41" xml:id="l41">Ah ! Rosette, je m’échappe un moment pour te demander ce qui se passe ici. Assurément : il y a quelque chose.</l>
-          </sp>
-          <sp who="rosette" xml:id="3-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="42" xml:id="l42">Vous avez souvent ouï dire que, dans le monde, tout était sujet à des révolutions ; que de temps en temps on voyait sur la terre... on voyait mille choses étonnantes.</l>
-          </sp>
-          <sp who="julie" xml:id="3-4">
-            <speaker>JULIE.</speaker>
-            <l n="43" xml:id="l43">Eh ! bien, oui. Tu me fais frémir.</l>
-          </sp>
-          <sp who="rosette" xml:id="3-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="44" xml:id="l44">Imaginez-vous... ce qui pouvais arriver de plus terrible.</l>
-          </sp>
-          <sp who="julie" xml:id="3-6">
-            <speaker>JULIE.</speaker>
-            <l n="45" xml:id="l45">Ciel ! Je t’entends.</l>
-          </sp>
-          <sp who="rosette" xml:id="3-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="46" xml:id="l46">Qu’est-ce que c’est ? </l>
-          </sp>
-          <sp who="julie" xml:id="3-8">
-            <speaker>JULIE.</speaker>
-            <l n="47" xml:id="l47">Mon mariage est rompu.</l>
-          </sp>
-          <sp who="rosette" xml:id="3-9">
-            <speaker>ROSETTE.</speaker>
-            <l n="48" xml:id="l48">Vous l’avez deviné. On ne veut pas voir ici Lélio davantage.</l>
-          </sp>
-          <sp who="julie" xml:id="3-10">
-            <speaker>JULIE.</speaker>
-            <l n="49" xml:id="l49">Ah ! Que me dis-tu, Rosette ?</l>
-          </sp>
-          <sp who="rosette" xml:id="3-11">
-            <speaker>ROSETTE.</speaker>
-            <l n="50" xml:id="l50">Telle est la volonté de M. Lisimon. Cependant il ne faut pas perdre courage. Il est à propos que votre mère ne s’aperçoive point du chagrin que cette rupture vous cause. Je ferai de mon côté de mon mieux, pour adoucir vos malheurs.</l>
-          </sp>
-          <sp who="julie" xml:id="3-12">
-            <speaker>JULIE.</speaker>
-            <l n="51" xml:id="l51">Et pour quelle raison mon père...</l>
-          </sp>
-          <sp who="rosette" xml:id="3-13">
-            <speaker>ROSETTE.</speaker>
-            <l n="52" xml:id="l52">Sur un rapport qu’on lui a fait ; il juge que Lélio est un libertin.</l>
-          </sp>
-          <sp who="julie" xml:id="3-14">
-            <speaker>JULIE.</speaker>
-            <l n="53" xml:id="l53">Lélio libertin ! Ah ! Rosette, quelle injustice ! Il m’a toujours instruite de toutes ses démarches, de tous ses sentiments, de toutes ses pensées.</l>
-          </sp>
-          <sp who="rosette" xml:id="3-15">
-            <speaker>ROSETTE.</speaker>
-            <l n="54" xml:id="l54">Vous devez l’en croire. Sur le chapitre des bonnes fortunes, nos Amants n’ont pas le défaut d’être dissimulés.</l>
-          </sp>
-          <sp who="julie" xml:id="3-16">
-            <speaker>JULIE.</speaker>
-            <l n="55" xml:id="l55">J’entends quelqu’un. Ne m’abandonne pas, Rosette. Toute mon espérance est en toi... Est-il un cœur plus à plaindre que le mien ?</l>
-            <stage><hi rend="italic"><em>Elle rentre.</em></hi></stage>
-            <l n="57" xml:id="l57"> </l>
-            <l n="58" xml:id="l58"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="59" xml:id="l59"> </l>
-          <sp who="rosette" xml:id="4-1">
-            <speaker>ROSETTE, LA FLEUR</speaker>
-            <l n="60" xml:id="l60"> </l>
-          </sp>
-          <sp who="rosette" xml:id="4-2">
-            <speaker>ROSETTE.</speaker>
-            <l n="61" xml:id="l61">Ne vois-je pas la Fleur ?</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-3">
-            <speaker>LA FLEUR.</speaker>
-            <l n="62" xml:id="l62">C’est vous tout juste que je cherche, Mademoiselle Rosette.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-4">
-            <speaker>ROSETTE.</speaker>
-            <l n="63" xml:id="l63">Qu’a-t-il donc ? Eh ! à quoi penses-tu, de venir ici dans l’état où tu es ?</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-5">
-            <speaker>LA FLEUR.</speaker>
-            <l n="64" xml:id="l64">Dans quel état, s’il vous plaît ?</l>
-          </sp>
-          <sp who="rosette" xml:id="4-6">
-            <speaker>ROSETTE.</speaker>
-            <l n="65" xml:id="l65">Ivre, à ne pouvoir te soutenir.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-7">
-            <speaker>LA FLEUR.</speaker>
-            <l n="66" xml:id="l66">Cela n’est pas vrai.</l>
-            <stage><hi rend="italic"><em>Il fait un hoquet.</em></hi></stage>
-          </sp>
-          <sp who="rosette" xml:id="4-8">
-            <speaker>ROSETTE.</speaker>
-            <l n="68" xml:id="l68">Quoi ! Tu oses dire que tu n’as pas bu ?</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-9">
-            <speaker>LA FLEUR.</speaker>
-            <l n="69" xml:id="l69">Oui. J’ai bu, mais j’ai eu mes raisons pour cela.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-10">
-            <speaker>ROSETTE.</speaker>
-            <l n="70" xml:id="l70">Oh ! Ces raisons-là sont très bonnes... Lélio t’envoie sans doute. Pour quel sujet ?</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-11">
-            <speaker>LA FLEUR.</speaker>
-            <l n="71" xml:id="l71">Allons doucement, je vous en prie.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-12">
-            <speaker>ROSETTE.</speaker>
-            <l n="72" xml:id="l72">Il faut avouer qu’en toutes choses, Lélio est traité bien injustement ! Dans les circonstances où il se trouve, il charge d’une commission un misérable qui s’enivre en chemin !</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-13">
-            <speaker>LA FLEUR.</speaker>
-            <l n="73" xml:id="l73">Misérable ! Mademoiselle, je ne bois pas ordinairement : mais j’aime mon Maître. Et quand j’ai su toutes les vilainies... le traitement indigne et in... supportable qu’on lui faisait, le cœur me manquait, entendez-vous bien ?</l>
-          </sp>
-          <sp who="rosette" xml:id="4-14">
-            <speaker>ROSETTE.</speaker>
-            <l n="74" xml:id="l74">Allons, dis-moi de quoi il s’agit.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-15">
-            <speaker>LA FLEUR.</speaker>
-            <l n="75" xml:id="l75">Il s’agit d’un billet que mon Maître envoie à Julie.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-16">
-            <speaker>ROSETTE.</speaker>
-            <l n="76" xml:id="l76">Eh ! donne-le moi donc.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-17">
-            <speaker>LA FLEUR.</speaker>
-            <l n="77" xml:id="l77">Point du tout. Je l’avais mis dans ma poche. Je l’ai ensuite posé sur une table, et je me doute... et je me souviens fort bien que je ne l’ai pas remis dans ma poche.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-18">
-            <speaker>ROSETTE.</speaker>
-            <l n="78" xml:id="l78">Quelle patience il faut avoir !</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-19">
-            <speaker>LA FLEUR, <em>parlant très haut.</em></speaker>
-            <l n="79" xml:id="l79">Tiens...</l>
-          </sp>
-          <sp who="rosette" xml:id="4-20">
-            <speaker>ROSETTE.</speaker>
-            <l n="80" xml:id="l80">Mais veux-tu bien te taire. Si Madame sait que tu es venu ici, elle ne me le pardonnera pas, et elle aura raison de se plaindre.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-21">
-            <speaker>LA FLEUR, <em>riant en ivrogne.</em></speaker>
-            <l n="81" xml:id="l81">Les fautes des ivrognes sont toujours heureuses. Il y avait apparemment dans ce billet-là quelque chose qui aurait fait tort à mon Maître. Cela devait être dès le commencement des siècles.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-22">
-            <speaker>ROSETTE.</speaker>
-            <l n="82" xml:id="l82">Va-t’en, c’est tout ce que je te demande.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-23">
-            <speaker>LA FLEUR.</speaker>
-            <l n="83" xml:id="l83">Oh ! je veux pourtant rapporter le billet.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-24">
-            <speaker>ROSETTE.</speaker>
-            <l n="84" xml:id="l84">Il vaut encore mieux ne le point rapporter. Ne parais point.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-25">
-            <speaker>LA FLEUR.</speaker>
-            <l n="85" xml:id="l85">Non, non, il faut toujours faire son devoir.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-26">
-            <speaker>ROSETTE.</speaker>
-            <l n="86" xml:id="l86">Mon cher la Fleur, si tu es capable de quelque attention dans l’ivresse où tu es, retire-toi sans bruit, je t’en conjure.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="4-27">
-            <speaker>LA FLEUR.</speaker>
-            <l n="87" xml:id="l87">Adieu donc, Rosette.</l>
-          </sp>
-          <sp who="rosette" xml:id="4-28">
-            <speaker>ROSETTE, <em>le poussant.</em></speaker>
-            <l n="88" xml:id="l88">Oui. Adieu, mon ami... Je tremble qu’on ne l’aperçoive.</l>
-            <stage><hi rend="italic"><em>Madame Lisimon paraît.</em></hi></stage>
-          </sp>
-          <sp who="la-fleur" xml:id="4-29">
-            <speaker>LA FLEUR, <em>qui est prêt à sortir.</em></speaker>
-            <l n="90" xml:id="l90">Oh ! oh ! oh !Voilà qui est plaisant ! Je le retrouve heureusement dans ma poche, ce billet. Oh ! oh ! oh !</l>
-          </sp>
-          <sp who="rosette" xml:id="4-30">
-            <speaker>ROSETTE.</speaker>
-            <l n="91" xml:id="l91">Fort bien. Crie encore plus fort.</l>
-            <stage><hi rend="italic"><em>Lui arrachant le billet.</em></hi></stage>
-            <l n="93" xml:id="l93">Donne donc vite, mal heureux.</l>
-            <stage><hi rend="italic"><em>Apercevant Madame Lisimon. La Fleur sort.</em></hi></stage>
-            <l n="95" xml:id="l95">Eh ! bien, ne voilà-t-il pas ce que j’avais craint ? Elle nous surprend. Je suis perdue. Que lui dirai-je ?... En vérité, je ne sais.</l>
-            <l n="96" xml:id="l96"> </l>
-            <l n="97" xml:id="l97"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="98" xml:id="l98"> </l>
-          <sp who="rosette" xml:id="5-1">
-            <speaker>MADAME LISIMON, ROSETTE</speaker>
-            <l n="99" xml:id="l99"> </l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="5-2">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="100" xml:id="l100">Qu’est-ce donc Ce garçon est à Lélio, et vous recevez secrètement une Lettre ?</l>
-          </sp>
-          <sp who="rosette" xml:id="5-3">
-            <speaker>ROSETTE, <em>à part.</em></speaker>
-            <l n="101" xml:id="l101">Voyons. Payons d’effronterie. Plaît-il, Madame ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="5-4">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="102" xml:id="l102">Quoi ! voulez-vous soutenir le contraire ?</l>
-          </sp>
-          <sp who="rosette" xml:id="5-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="103" xml:id="l103">Moi ! soutenir le contraire ! Et pourquoi, Madame ? On m’a dit que c’était à vous à qui elle s’adressait.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="5-6">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="104" xml:id="l104">À moi ?</l>
-          </sp>
-          <sp who="rosette" xml:id="5-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="105" xml:id="l105">Assurément.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="5-8">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="106" xml:id="l106">Mais, si c’est à moi, pourquoi ne m’avoir pas fait parler ? Au surplus, dès que mon mari s’est expliqué, je me fais gloire d’obéir aveuglément, et je n’ai plus de justification à recevoir de la part de Lélio.</l>
-          </sp>
-          <sp who="rosette" xml:id="5-9">
-            <speaker>ROSETTE.</speaker>
-            <l n="107" xml:id="l107">Je ne sais que vous dire, Madame. Vous vous faites gloire d’obéir : cela est très vertueux... Mais aussi, tant se glorifier de sa vertu... Je m’en vais, car je sens que je dirais quelque chose de mal à-propos.</l>
-            <stage><hi rend="italic"><em>Elle rentre.</em></hi></stage>
-            <l n="109" xml:id="l109"> </l>
-            <l n="110" xml:id="l110"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="111" xml:id="l111"> </l>
-          <sp who="madame-lisimon" xml:id="6-1">
-            <speaker>MADAME LISIMON, <em>seule</em></speaker>
-            <l n="112" xml:id="l112"> </l>
-            <l n="113" xml:id="l113">Elle est toute déconcertée. Quoi ! après la défense que j’ai faite, il serait possible ?...</l>
-            <stage><hi rend="italic"><em>Elle ouvre le billet.</em></hi></stage>
-            <l n="115" xml:id="l115">Cela n’est pas douteux, c’est un billet à ma fille.</l>
-            <l n="116" xml:id="l116"> </l>
-            <l n="117" xml:id="l117"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="118" xml:id="l118"> </l>
-          <sp who="monsieur" xml:id="7-1">
-            <speaker>MONSIEUR <em>et</em> MADAME LISIMON</speaker>
-            <l n="119" xml:id="l119"> </l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-2">
-            <speaker>MONSIEUR LISIMON, <em>sans voir sa femme.</em></speaker>
-            <l n="120" xml:id="l120">Ce qu’on m’avait dit vient de m’être confirmé, et l’on a ajouté bien d’autres choses. Jusqu’où l’imagination d’un libertin porte-t-elle le dérèglement ! Cela est inconcevable. Mais ma parole est engagée à un autre. Songeons à présent à assurer, dans mon domestique, les ordres que j’ai déjà donnés. Ah ! ma chère femme.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-3">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="121" xml:id="l121">Si vous voulez mettre quelque nouvel ordre dans votre domestique, commencez, Monsieur Lisimon, par renvoyer une coquine de Servante qui reçoit un billet de Lélio pour ma fille, et qui croit en être quitte, en me disant grossièrement qu’on le lui a donné pour moi.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-4">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="122" xml:id="l122">Elle reçoit un billet pour ma fille, et elle dit qu’on le lui a donné pour vous ? Ah !  l’impertinente ! Voyons donc. Un billet amoureux, sans doute ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-5">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="123" xml:id="l123">Vous pouvez bien le croire.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-6">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="124" xml:id="l124">Mais voilà une grande audace ! La coquine !</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-7">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="125" xml:id="l125">Lisez. On n’a jamais vu désobéir et mentir avec plus de hardiesse.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-8">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="126" xml:id="l126">Voyons, voyons un peu le style de ce Monsieur.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-9">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="127" xml:id="l127">Lisez.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-10">
-            <speaker>MONSIEUR LISIMON, <em>lisant.</em></speaker>
-            <stage><hi rend="italic"><em>Seriez-vous complice du coup mortel que l’on me porte aujourd’hui, et croiriez-vous ce que l’on débite sur mon compte ? Non, à votre âge, et de l’heureux naturel dont vous êtes, on a un sentiment pur qui ne sait point juger faussement. Songez quelle doit être ma douleur ! Quel moyen emploierai-je à présent pour vous voir ? Celui de qui vous dépendez a eu longtemps de moi une opinion qui m’était bien favorable. Faut-il que de malheureux discours m’aient noirci ! Moi, aimer toutes les femmes ! Toutes me sont indifférentes. Une seule m’est chère, mais si chère... que je mourrai plutôt que de l’oublier, et que je mériterai sa tendresse en dépit des jaloux.</em></hi></stage>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-11">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="129" xml:id="l129">Il ne l’oubliera pas ! Je doute fort que cette grande résolution, qu’il fait paraître, lui réussisse.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-12">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="130" xml:id="l130">Mais...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-13">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="131" xml:id="l131">Quoi ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-14">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="132" xml:id="l132">Elle vous a dit que c’était à vous ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-15">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="133" xml:id="l133">Oui, vous dis-je : elle a eu cette effronterie.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-16">
-            <speaker>MONSIEUR LISIMON, <em>après avoir lu.</em></speaker>
-            <l n="134" xml:id="l134">De quel coup suis-je frappé !</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-17">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="135" xml:id="l135">Comment ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-18">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="136" xml:id="l136">Plus je relis...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-19">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="137" xml:id="l137">Que voulez vous dire ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-20">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="138" xml:id="l138">Comment, diable ! il faut s’attendre à tout de la part d’un libertin.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-21">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="139" xml:id="l139">Mais qu’est-ce donc ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-22">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <stage><hi rend="italic"><em>Jaloux : une seule m’est chère. Une femme. Une seule femme. Jaloux. En dépit des jaloux.</em></hi></stage>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-23">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="141" xml:id="l141">Mais je crois que vous extravaguez.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-24">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <stage><hi rend="italic"><em>Seriez-vous complice ? Jaloux. Celui de qui vous dépendez. Une femme. Je mériterai sa tendresse...</em> Je n’y vois plus de doute. Le sens est clair par tout, et c’est à vous, Madame.</hi></stage>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-25">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="143" xml:id="l143">Ô Ciel ! Mais vous extravaguez, vous dis-je.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-26">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="144" xml:id="l144">Eh ! doucement, Madame, je vous en prie.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-27">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="145" xml:id="l145">Mais l’on rirait, si l’on savait... Quoi ! moi ?...</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-28">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="146" xml:id="l146">Il n’y a point à rire. On vous dit que c’est un déterminé à l’égard des femmes.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-29">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="147" xml:id="l147">Mais, en bonne foi, se trouve-t-il là un seul mot qui puisse me convenir.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-30">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="148" xml:id="l148">Tout, Madame, tout. Tout... Ouf ! Tâchons de calmer nos sens.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-31">
-            <speaker>MADAME LISIMON.</speaker>
-            <stage><hi rend="italic">Quoi ! vous tomberiez dans une erreur pareille. Jaloux, c’est-à-dire, ceux qui m’ont noirci. <em>Une femme</em>, c’est un mot général.</hi></stage>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-32">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="150" xml:id="l150">Eh ! je suis votre serviteur. Le voulez vous défendre ? Cela serait fort, Madame. Encore une fois, je vois bien ce que je vois... Allons, c’est une chose décidée. Il n’y a point d’équivoque, Madame Lisimon.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-33">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="151" xml:id="l151">Mais, en vérité... D’équivoque ? et où serait-elle ? et non assurément il n’y en a point. D’un bout à l’autre cela se rapporte, cela va de suite, Monsieur Lisimon.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-34">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <stage><hi rend="italic">Cela va de suite ! Eh ! assurément. <em>Seriez-vous complice ?</em> Penseriez-vous comme votre mari ? <em>Du coup mortel</em>. Oui, de ce que votre mari m’a défendu de paraître. <em>Celui de qui vous dépendez</em>. Votre mari.<em> A eu longtemps de moi une opinion qui m’était bien favorable</em>. Sans doute. Je croyais bonnement que c’était à ma fille à qui il en voulait. <em>Quel moyen emploierai-je à présent pour vous voir ? </em>Le voilà embarrassé. Cela lui était commode. C’était un prétexte. Avec une femme mariée, on ne va pas comme cela sans précaution. <em>De malheureux discours</em>. Il les trouve malheureux. <em>Une seule m’est chère</em>. Une seule femme ; vous, Madame Lisimon. <em>Une seule m’est chère, en dépit des jaloux</em>. En dépit de Monsieur Lisimon votre mari. Je ne sais pas si je rêve, mais cela me paraît sans obscurité. Je ne suis pas assurément jaloux de ma fille.</hi></stage>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-35">
-            <speaker>MADAME LISIMON.</speaker>
-            <stage><hi rend="italic">Mais quel égarement ! Pourquoi cherchez-vous à vous aveugler vous-même ? Quand ces mots seraient douteux, je le suppose, n’y en a-t-il pas d’autres qui absolument ne peuvent pas me regarder ? <em>À votre âge</em>, par exemple.</hi></stage>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-36">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="154" xml:id="l154">Cessez. Ce serait trop, vous dis-je, de vouloir le défendre.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-37">
-            <speaker>MADAME LISIMON.</speaker>
-            <stage><hi rend="italic"><em>À votre âge, on a un sentiment pur.</em></hi></stage>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-38">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="156" xml:id="l156">Ah ! laissez-moi respirer.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-39">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="157" xml:id="l157">M’écrirait-il de la sorte !</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-40">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="158" xml:id="l158">Le fait est avéré.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-41">
-            <speaker>MADAME LISIMON, <em>s’emportant un peu.</em></speaker>
-            <stage><hi rend="italic"><em>À votre âge</em> : encore une fois. <em>À votre âge</em>.</hi></stage>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-42">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="160" xml:id="l160">Eh ! c’est une faute. C’est une faute qui s’est glissée.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-43">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="161" xml:id="l161">Quelle prévention !</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-44">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <stage><hi rend="italic">Mais que dis-je, une faute ? <em>À votre âge</em>. Eh ! vraiment non. Ce n’est point une faute.</hi></stage>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-45">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="163" xml:id="l163">Que voulez-vous dire ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-46">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <stage><hi rend="italic"><em>À votre âge, et de l’heureux naturel dont vous êtes, on a un sentiment pur qui ne sait point juger faussement</em>. Eh ! bien, oui, sans doute. À votre âge et du caractère dont vous êtes, on a assez d’expérience pour ne point juger faussement. Sans doute. Pensez-vous que l’on doive faire plus de cas du jugement de votre fille, que du vôtre ?</hi></stage>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-47">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="165" xml:id="l165">En vérité...</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-48">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="166" xml:id="l166">Eh ! comment donc, Madame ? Avec quelle confiance ?... Comment ! De la dissimulation ! De l’obstination à le défendre !</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-49">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="167" xml:id="l167">Mais, cessez donc...</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-50">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="168" xml:id="l168">Par conséquent, il y a eu de l’intelligence, et plusieurs mots le découvrent.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-51">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="169" xml:id="l169">Il n’est pas croyable que vous tombiez dans cette erreur. Cessez donc, je vous prie.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-52">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="170" xml:id="l170">Après vingt-deux ans de fidélité ! Qui l’aurait pu penser ! Ô ciel ! Dans l’état où je suis...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-53">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="171" xml:id="l171">Eh ! Arrêtez donc, Monsieur Lisimon. Vous allez vous faire mal.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-54">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="172" xml:id="l172">Eh ! morbleu, Madame, vous me faites bien plus de mal que je ne puis jamais m’en faire...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="7-55">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="173" xml:id="l173">Quelle imagination ! quelle fatalité ! Je n’en puis plus.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="7-56">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="174" xml:id="l174">Je ne sais que dire, ni que résoudre. Tâchons de rappeler nos sens. Retirons nous, et voyons quel parti nous aurons à prendre.</l>
-            <l n="175" xml:id="l175"> </l>
-            <l n="176" xml:id="l176"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="177" xml:id="l177"> </l>
-          <sp who="madame-lisimon" xml:id="8-1">
-            <speaker>MADAME LISIMON, <em>seule</em></speaker>
-            <l n="178" xml:id="l178"> </l>
-            <l n="179" xml:id="l179">Son esprit est frappé. Que vais-je devenir ? Que je suis malheureuse ! Comment le guérirai-je de cette frénésie ?</l>
-            <l n="180" xml:id="l180"> </l>
-            <l n="181" xml:id="l181"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="182" xml:id="l182"> </l>
-          <sp who="lélio" xml:id="9-1">
-            <speaker>LÉLIO, MADAME LISIMON</speaker>
-            <l n="183" xml:id="l183"> </l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="9-2">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="184" xml:id="l184">Mais que vois-je ?</l>
-          </sp>
-          <sp who="lélio" xml:id="9-3">
-            <speaker>LÉLIO.</speaker>
-            <l n="185" xml:id="l185">Pardonnez si je me suis introduit... </l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="9-4">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="186" xml:id="l186">Holà ! quelqu’un. Sortez. Sortez donc, Monsieur.</l>
-          </sp>
-          <sp who="lélio" xml:id="9-5">
-            <speaker>LÉLIO.</speaker>
-            <l n="187" xml:id="l187">J’attendais que vous fussiez seule...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="9-6">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="188" xml:id="l188">Ciel ! sortez donc, vous dis-je. Ne viendra-t-on point ?</l>
-          </sp>
-          <sp who="lélio" xml:id="9-7">
-            <speaker>LÉLIO.</speaker>
-            <l n="189" xml:id="l189">Madame...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="9-8">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="190" xml:id="l190">Il y a, vous dis-je, une conséquence infinie. Sortez donc...</l>
-          </sp>
-          <sp who="lélio" xml:id="9-9">
-            <speaker>LÉLIO, <em>se mettant à genoux.</em></speaker>
-            <l n="191" xml:id="l191">Eh ! Madame !...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="9-10">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="192" xml:id="l192">À mes genoux ! Miséricorde !</l>
-            <stage><hi rend="italic"><em>Elle s’enfuit.</em></hi></stage>
-            <l n="194" xml:id="l194"> </l>
-            <l n="195" xml:id="l195"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="196" xml:id="l196"> </l>
-          <sp who="lélio" xml:id="10-1">
-            <speaker>LÉLIO, <em>seul</em></speaker>
-            <l n="197" xml:id="l197"> </l>
-            <l n="198" xml:id="l198">Quelle est cette réception ! J’avais pris la résolution de venir me justifier. J’espérais que cette femme, en qui j’ai toujours reconnu de la raison, pourrait revenir des préjugés désavantageux qu’on lui a inspirés contre moi : elle fuit ; elle craint de m’envisager. Elle me reçoit avec un trouble dont il ne m’est pas possible de démêler la cause.</l>
-            <l n="199" xml:id="l199"> </l>
-            <l n="200" xml:id="l200"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="201" xml:id="l201"> </l>
-          <sp who="rosette" xml:id="11-1">
-            <speaker>ROSETTE, LÉLIO</speaker>
-            <l n="202" xml:id="l202"> </l>
-          </sp>
-          <sp who="rosette" xml:id="11-2">
-            <speaker>ROSETTE, <em>sans voir Lélio.</em></speaker>
-            <l n="203" xml:id="l203">Voilà Monsieur Lisimon terriblement intrigué ! Puisqu’il faut que je sorte, je ne suis pas fâchée d’une pareille aventure, et du moins, cela me satisfait.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-3">
-            <speaker>LÉLIO.</speaker>
-            <l n="204" xml:id="l204">Rosette : ne peux-tu me dire ?...</l>
-          </sp>
-          <sp who="rosette" xml:id="11-4">
-            <speaker>ROSETTE.</speaker>
-            <l n="205" xml:id="l205">Eh ! Monsieur, c’est vous ? Quels sont donc les beaux bruits que l’on se plaît à répandre sur votre compte ?</l>
-          </sp>
-          <sp who="lélio" xml:id="11-5">
-            <speaker>LÉLIO.</speaker>
-            <l n="206" xml:id="l206">Tu peux bien t’en douter. C’est une calomnie grossière, et il faut être d’une crédulité bien étrange, pour ajouter foi à de pareils discours.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-6">
-            <speaker>ROSETTE.</speaker>
-            <l n="207" xml:id="l207">Eh ! qui vous rend donc ces services dans le monde ?</l>
-          </sp>
-          <sp who="lélio" xml:id="11-7">
-            <speaker>LÉLIO.</speaker>
-            <l n="208" xml:id="l208">Une femme qui croit que l’on ne doit soupirer que pour elle. Quand ma passion pour Julie s’est déclarée, il n’est rien qu’elle n’ait inventé pour me décrier et pour me perdre. Mais, dis-moi, je t’en conjure, n’as-tu pas reçu un billet ?...</l>
-          </sp>
-          <sp who="rosette" xml:id="11-8">
-            <speaker>ROSETTE.</speaker>
-            <l n="209" xml:id="l209">Oui, Monsieur, je l’ai reçu. Je pense bien que votre Valet n’aura pas été en état de vous aller rendre compte de son Ambassade. L’ivresse l’a surpris. Il a paru ici en désordre. Le billet est tombé dans les mains de Madame Lisimon...</l>
-          </sp>
-          <sp who="lélio" xml:id="11-9">
-            <speaker>LÉLIO.</speaker>
-            <l n="210" xml:id="l210">Quoi ! c’est de la sorte ?...</l>
-          </sp>
-          <sp who="rosette" xml:id="11-10">
-            <speaker>ROSETTE.</speaker>
-            <l n="211" xml:id="l211">Enfin, vos affaires qui allaient déjà fort mal, par-là sont entièrement perdues.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-11">
-            <speaker>LÉLIO.</speaker>
-            <l n="212" xml:id="l212">Le malheureux ! Ah ! toute ma colère va s’épuiser sur lui !</l>
-          </sp>
-          <sp who="rosette" xml:id="11-12">
-            <speaker>ROSETTE.</speaker>
-            <l n="213" xml:id="l213">Tenez, Monsieur, il ne faut point se flatter, je vois que vous espérez encore ; mais en vérité cette espérance est bien inutile.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-13">
-            <speaker>LÉLIO.</speaker>
-            <l n="214" xml:id="l214">À quelle extrémité suis-je réduit !</l>
-          </sp>
-          <sp who="rosette" xml:id="11-14">
-            <speaker>ROSETTE.</speaker>
-            <l n="215" xml:id="l215">Écoutez. Je n’avais que faire à tout cela, moi : cependant je suis renvoyée par rapport à ce billet. Dans ma petite sphère, je me trouve tout aussi à plaindre que vous, puisque je vais perdre une condition qui est très bonne. L’indignation me fait naître une idée qui vous vengerait, si vous vouliez ; et que, par équité pour moi, vous devriez adopter, puisque cela me justifierait.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-15">
-            <speaker>LÉLIO.</speaker>
-            <l n="216" xml:id="l216">Comment ?</l>
-          </sp>
-          <sp who="rosette" xml:id="11-16">
-            <speaker>ROSETTE.</speaker>
-            <l n="217" xml:id="l217">D’abord, il faut vous défaire d’une sincérité trop scrupuleuse.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-17">
-            <speaker>LÉLIO.</speaker>
-            <l n="218" xml:id="l218">Moi !</l>
-          </sp>
-          <sp who="rosette" xml:id="11-18">
-            <speaker>ROSETTE.</speaker>
-            <l n="219" xml:id="l219">Sans doute. Tel que vous êtes ; rien ne vous réussit : devenez un peu fourbe, un peu traître, vous vous en trouverez mieux.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-19">
-            <speaker>LÉLIO.</speaker>
-            <l n="220" xml:id="l220">La ressource est fort bonne.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-20">
-            <speaker>ROSETTE.</speaker>
-            <l n="221" xml:id="l221">J’en essaierais.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-21">
-            <speaker>LÉLIO.</speaker>
-            <l n="222" xml:id="l222">Va. Laisse-moi. Je suis né plus malheureux que bien d’autres ; et je deviendrais le plus grand coquin du monde, que je n’en serais pas plus considéré.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-22">
-            <speaker>ROSETTE.</speaker>
-            <l n="223" xml:id="l223">Enfin, réduit comme vous l’êtes à ne plus voir Julie, ce que j’imagine pourrait... que sait-on ?... Vous pourriez embarrasser ceux qui vous font injustice d’une façon qui vous serait utile. Il faut chercher à les intimider, quand ce serait même par des raisons plus spécieuses que solides.</l>
-          </sp>
-          <sp who="lélio" xml:id="11-23">
-            <speaker>LÉLIO.</speaker>
-            <l n="224" xml:id="l224">Tu penses... Quelle est donc cette idée ?</l>
-          </sp>
-          <sp who="rosette" xml:id="11-24">
-            <speaker>ROSETTE.</speaker>
-            <l n="225" xml:id="l225">Sachez que Monsieur Lisimon s’est avisé de croire... Je l’entends. Sauvez-vous. Mettez-vous à l’écart. Dans un moment je m’en vais vous rejoindre.</l>
-            <l n="226" xml:id="l226"> </l>
-            <l n="227" xml:id="l227"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="228" xml:id="l228"> </l>
-          <sp who="rosette" xml:id="12-1">
-            <speaker>MONSIEUR LISIMON, ROSETTE</speaker>
-            <l n="229" xml:id="l229"> </l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="12-2">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="230" xml:id="l230">Il faut examiner ceci avec attention. Sûrement il y a de l’intelligence. Quel dérangement affreux ! Une femme que je croyais raisonnable, et qui devrait l’être. Approche, et parle.</l>
-          </sp>
-          <sp who="rosette" xml:id="12-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="231" xml:id="l231">J’ai reçu mon congé. Je ne parle plus.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="12-4">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="232" xml:id="l232">Il est bien certain que c’est pour ma femme, que tu as reçu ce billet ?</l>
-          </sp>
-          <sp who="rosette" xml:id="12-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="233" xml:id="l233">Je ne sais point faire de serments. Ce que j’ai dit, on peut le croire, si l’on veut.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="12-6">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="234" xml:id="l234">Mais je prétends...</l>
-          </sp>
-          <sp who="rosette" xml:id="12-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="235" xml:id="l235">Je n’ai rien à dire. Dès que l’on me renvoie, ce n’est plus mon plaisir de rendre aucun compte...</l>
-            <stage><hi rend="italic"><em>Elle sort.</em></hi></stage>
-            <l n="237" xml:id="l237"> </l>
-            <l n="238" xml:id="l238"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="239" xml:id="l239"> </l>
-          <sp who="monsieur-lisimon" xml:id="13-1">
-            <speaker>MONSIEUR LISIMON, <em>seul</em></speaker>
-            <l n="240" xml:id="l240"> </l>
-            <l n="241" xml:id="l241">Je l’entends assez sans qu’elle parle. Elle ne veut pas se rendre accusatrice de sa Maîtresse. Je vais faire un terrible éclat de cette affaire ; et la réputation dont Madame Lisimon jouissait tranquillement, va être suivie de tourments, de troubles et de mépris bien sanglants. Je lui ai dit de se rendre ici. La voilà. Je me sens tout saisi, en la voyant.</l>
-            <l n="242" xml:id="l242"> </l>
-            <l n="243" xml:id="l243"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="244" xml:id="l244"> </l>
-          <sp who="monsieur" xml:id="14-1">
-            <speaker>MONSIEUR <em>et</em> MADAME LISIMON, <em>qui approche en tremblant</em></speaker>
-            <l n="245" xml:id="l245"> </l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-2">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="246" xml:id="l246">Ah ! çà, Madame. Point de déguisement. Ceci est sérieux. Il faut voir quelles mesures nous aurons à prendre.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-3">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="247" xml:id="l247">Je ne m’affligerais point, Monsieur, et assurément je n’en aurais nul sujet, si je ne savais pas qu’une fantaisie pareille à la vôtre peut frapper l’esprit de l’homme le plus sage ; et si cette fantaisie n’était pas capable de troubler votre repos et le mien. Vous m’êtes cher, je croyais vous être chère aussi...</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-4">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="248" xml:id="l248">Discours séducteurs que tout cela. Il ne s’agit point dans ce moment, Madame, de chercher à nous attendrir.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-5">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="249" xml:id="l249">Quoi ! vous voulez me réduire à me justifier sur de pareilles choses : Est-il bienséant à vous de me soupçonner de la sorte ? Songez donc combien il y a de temps que je vous suis fidèle ; songez à ma tendresse, aux soins continuels que je vous ai rendus.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-6">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="250" xml:id="l250">Eh ! le passé ne fait rien au présent, Madame. Toutes ces belles apparences ne m’en imposent pas. Je ne fais point d’attention à ce que vous me dites. Tous les jours les pauvres maris se trouvent attrapés de la sorte, les uns plutôt, les autres plus tard. Enfin mon heure était venue !... Oh ! que cela est dur à supporter, Madame ! Plus j’ai compté sur votre fidélité, plus l’événement en question m’est sensible. Je vous déclare, oui, je vous déclare que je vais me séparer d’avec vous. En un mot, Madame, il est certain que l’on vous aime, et l’on n’a pas pu vous aimer sans que vous en soyez instruite. Parlez. Quand tout cela a-t-il commencé ? Quel effet cela fit-il sur vous, quand cela commença ? Comment s’y est-on pris pour vous le déclarer ? Où étais-je ce jour-là ? À quoi pensais-je ? Quelle physionomie avais-je ? Voilà, voilà sur quoi il s’agit de répondre.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-7">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="251" xml:id="l251">Si l’on m’aimait, si l’on me préférait à ma fille, cela me paraîtrait un caprice bien singulier ; mais en tout cas, Monsieur, ce que j’ai à répondre, c’est que je n’en ai jamais rien su, et que par conséquent je ne suis pas coupable.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-8">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="252" xml:id="l252">Eh ! c’est vous faire croire coupable autant que l’on peut l’être, que de persister dans cette dissimulation ; car il n’est pas possible... Le billet ne prouve-t-il pas de l’intelligence ?... Est-il vraisemblable ?... Oh ! qu’un pareil examen est mortifiant ! ma femme, ma chère femme, je veux croire que j’en ai eu tout le chagrin que j’en dois avoir, et que le traître n’osera jamais se présenter devant vous ; mais, ma mie, avouez-moi... la... avouez-moi ce qui en est.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-9">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="253" xml:id="l253">Quoi ! vous continuerez à me faire des questions aussi cruelles ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-10">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="254" xml:id="l254">Faut-il qu’un semblable libertin se soit introduit chez moi !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="256" xml:id="l256">Voyons, tâchons de l’aider à m’éclaircir la chose.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="258" xml:id="l258">Ah ! çà, ma femme. Quand il venait, par exemple, il vous faisait des politesses, et vous les receviez ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-11">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="259" xml:id="l259">Je les recevais, parce que je n’imaginais pas que je dusse faire autrement avec un homme destiné à ma fille. Depuis votre soupçon, j’ai agi différemment.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-12">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="260" xml:id="l260">Depuis ?...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-13">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="261" xml:id="l261">Oui, il est venu, et j’ai eu l’attention de ne pas demeurer un instant avec lui.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-14">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="262" xml:id="l262">Il est venu ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-15">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="263" xml:id="l263">Eh ! oui, vous dis-je !</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-16">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="264" xml:id="l264">Aujourd’hui ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-17">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="265" xml:id="l265">Il n’y a qu’un moment.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-18">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="266" xml:id="l266">Mais il faut que cet homme-là soit bien enragé, bien endiablé contre moi !</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-19">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="267" xml:id="l267">Et quel inconvénient ?... Il ignorait le tourment qui m’accable.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-20">
-            <speaker>MONSIEUR LISIMON, <em>se jetant dans un fauteuil.</em></speaker>
-            <l n="268" xml:id="l268">Il est venu !... Le traître à juré ma perte. L’imposteur ! le scélérat ! que je le hais ! que je hais son cœur corrompu !... Je sacrifierais plutôt ma vie que de lui accorder ma fille ; faudra-t-il que je le voie m’enlever ma femme ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-21">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="269" xml:id="l269">Je ne suis pas plus disposée en sa faveur que vous ; mais c’est de quoi il n’est pas aisé de vous convaincre.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-22">
-            <speaker>MONSIEUR LISIMON, <em>vivement.</em></speaker>
-            <l n="270" xml:id="l270">Il est venu ! Il fallait m’avertir sur le champ. Il fallait lui dire, que si jamais il était assez hardi... Mais non ; à quoi pensé-je ? Je me trompe. En lui défendant de paraître, il apprendra que je suis jaloux. Il se vantera des progrès qu’il a faits sur votre cœur. Il cherchera partout à vous voir. Ce sera une ombre attachée à vos pas. Sa fureur ne fera que s’irriter. Vous-même le trouverez à plaindre. Non, non, Madame, s’il vous plaît. Ce n’est pas cela. Le véritable expédient ne s’est pas d’abord présenté à mon esprit. Excusez, c’est faute d’usage ; je ne suis pas encore trop au fait de la conduite que doit avoir un mari maltraité. Écoutez-moi.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-23">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="271" xml:id="l271">Parlez, Monsieur.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-24">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="272" xml:id="l272">Je crois qu’il vaut mieux... Oui, sans doute, il vaut mieux le recevoir ; ne lui point dire que je sais ses poursuites ; et même lui faire entendre que, quand je les saurais, je ne m’en embarrasserais guères. Mais je vous ordonne de lui marquer tout le mépris que vous pourrez imaginer ; de lui déclarer hautement que vous le haïssez ; que vous le détestez ; que vous ne voyez rien en lui qui vous plaise ; que vous êtes bien éloignée d’être sensible pour un homme comme lui, et que si vous avez quelqu’un à aimer, c’est votre mari qui est un homme d’honneur.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="14-25">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="273" xml:id="l273">Je tâcherai de vous obéir, Monsieur.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="14-26">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="274" xml:id="l274">Je compte que cela sera exécuté. Vous ne devez point vous faire une peine de le maltraiter de la sorte, puisque vous prétendez être si peu coupable. Nous verrons par-là, si en effet vous ne l’êtes pas. Nous verrons ce que cela deviendra. Je ne vous en dis pas davantage. Hom. Hom.</l>
-            <stage><hi rend="italic"><em>Il rentre.</em></hi></stage>
-            <l n="276" xml:id="l276"> </l>
-            <l n="277" xml:id="l277"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="278" xml:id="l278"> </l>
-          <sp who="madame-lisimon" xml:id="15-1">
-            <speaker>MADAME LISIMON, <em>seule</em></speaker>
-            <l n="279" xml:id="l279"> </l>
-            <l n="280" xml:id="l280">Je consens à tout devant lui, pour tâcher de l’adoucir : mais comme je suis bien sûre que tout ceci est une chimère, je me garderai bien de rien faire connaître à personne d’une imagination aussi ridicule. Je n’ai nulle envie de recevoir Lélio, et je prendrai le parti de demeurer tranquille. Il y a apparence que l’inquiétude de Monsieur Lisimon ne sera que passagère. Au surplus, après avoir fait tout mon possible pour lui faire entendre raison, il se tourmentera de cette idée si longtemps qu’il le jugera à propos.</l>
-            <l n="281" xml:id="l281"> </l>
-            <l n="282" xml:id="l282"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="283" xml:id="l283"> </l>
-          <sp who="julie" xml:id="16-1">
-            <speaker>JULIE, MADAME LISIMON</speaker>
-            <l n="284" xml:id="l284"> </l>
-          </sp>
-          <sp who="julie" xml:id="16-2">
-            <speaker>JULIE, <em>avec vivacité.</em></speaker>
-            <l n="285" xml:id="l285">Rosette vient de me faire part d’une chose qui, je vous avoue, ma mère me cause une grande surprise.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="16-3">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="286" xml:id="l286">Rosette ! Est-ce qu’elle n’est point encore partie ?</l>
-          </sp>
-          <sp who="julie" xml:id="16-4">
-            <speaker>JULIE.</speaker>
-            <l n="287" xml:id="l287">Non. Et dans l’instant même, mon père vient de lui dire qu’il fallait qu’elle restât encore ici quelques jours.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="16-5">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="288" xml:id="l288">Je vois qu’il faut que je m’attende à bien des importunités !</l>
-          </sp>
-          <sp who="julie" xml:id="16-6">
-            <speaker>JULIE.</speaker>
-            <l n="289" xml:id="l289">Mais ma surprise est telle que je n’en puis revenir. Comment donc, ma mère ? On dit que ce n’a jamais été pour moi que Lélio est venu ici ; et que sensible à votre mérite et à votre estime, il n’y est jamais venu que pour vous voir !</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="16-7">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="290" xml:id="l290">Ma fille, quand on a eu le malheur d’écouter des impertinences, il ne faut pas, du moins, être assez sotte pour les venir rapporter.</l>
-          </sp>
-          <sp who="julie" xml:id="16-8">
-            <speaker>JULIE.</speaker>
-            <l n="291" xml:id="l291">Je vous prie de me le pardonner, ma mère ; mais la trahison est assez grande, pour que vous me permettiez de m’en plaindre. Rosette assure que c’est injustement qu’on la chasse ; que les sentiments secrets de Lélio lui étaient connus, et qu’elle avait toujours cru devoir, là-dessus, garder le silence.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="16-9">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="292" xml:id="l292">Mais, en vérité, je ne sais pas ce que tous ces gens-là veulent me dire.</l>
-          </sp>
-          <sp who="julie" xml:id="16-10">
-            <speaker>JULIE.</speaker>
-            <l n="293" xml:id="l293">Si tous les hommes sont d’un caractère aussi faux, ils sont bien méprisables. Qu’avais-je besoin qu’il me trompât ? qu’il parlât de m’épouser ? enfin... qu’il cherchât à me rendre sensible ? car, offensée comme je le suis, je ne puis m’empêcher de parler ingénument devant vous, ma mère. Le trait est si perfide de sa part, et si humiliant pour moi, que je ne crois pas que je le puisse supporter. Ce sont de ces injures qui ne se pardonnent pas. Mon cœur est blessé mortellement ; et cette fourberie, que je ne puis concevoir, m’inspire une indignation qui surpasse de beaucoup toute l’estime que j’avais auparavant pour lui.</l>
-            <l n="294" xml:id="l294"> </l>
-            <l n="295" xml:id="l295"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="296" xml:id="l296"> </l>
-          <sp who="julie" xml:id="17-1">
-            <speaker>MADAME LISIMON, JULIE, UN LAQUAIS</speaker>
-            <l n="297" xml:id="l297"> </l>
-          </sp>
-          <sp who="le-laquais" xml:id="17-2">
-            <speaker>LE LAQUAIS.</speaker>
-            <l n="298" xml:id="l298">Lélio est là-dedans, Madame, et demande si vous voulez lui permettre de paraître.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="17-3">
-            <speaker>MADAME LISIMON, <em>après un temps.</em></speaker>
-            <l n="299" xml:id="l299">Lui permettre de paraître ?... Hélas ! je ne sais... Que je suis malheureuse, et que l’embarras où je me trouve est désagréable ! Si je le refuse, on ne manquera pas de me le reprocher, et de trouver à cela du mystère. Que je le reçoive, je serai ensuite accablée de mille interrogations fatigantes...</l>
-          </sp>
-          <sp who="julie" xml:id="17-4">
-            <speaker>JULIE.</speaker>
-            <l n="300" xml:id="l300">Eh ! ma mère, pouvez-vous balancer ? Par pitié pour moi, ayez une explication avec lui, et voyons ce qu’il osera dire.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="17-5">
-            <speaker>MADAME LISIMON, <em>au Laquais, en haussant les épaules.</em></speaker>
-            <l n="301" xml:id="l301">Il est le maître.</l>
-            <l n="302" xml:id="l302"> </l>
-            <l n="303" xml:id="l303"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="304" xml:id="l304"> </l>
-          <sp who="lélio" xml:id="18-1">
-            <speaker>LÉLIO, MADAME LISIMON, JULIE</speaker>
-            <l n="305" xml:id="l305"> </l>
-          </sp>
-          <sp who="lélio" xml:id="18-2">
-            <speaker>LÉLIO.</speaker>
-            <l n="306" xml:id="l306">Quelle satisfaction, Madame, et quel soulagement pour moi dans mon malheur, que vous vouliez bien me permettre de me présenter encore devant vous ! Je ne crains point, même en présence de témoin, de vous en marquer ma reconnaissance.</l>
-          </sp>
-          <sp who="julie" xml:id="18-3">
-            <speaker>JULIE.</speaker>
-            <l n="307" xml:id="l307">Si ce témoin vous importune, Monsieur, il en est bien mortifié ; mais il se croit ici nécessaire.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="18-4">
-            <speaker>MADAME LISIMON, <em>fièrement.</em></speaker>
-            <l n="308" xml:id="l308">Je ne vous permets, en vérité, ni ne vous empêche de paraître. Mais après ce que mon mari vous avait dit, après les ordres que j’ai donnés ici, et la façon dont je vous ai déjà reçu, que voulez-vous ?</l>
-          </sp>
-          <sp who="lélio" xml:id="18-5">
-            <speaker>LÉLIO.</speaker>
-            <l n="309" xml:id="l309">Il est temps de vous avouer, Madame, ce que jusqu’à présent j’avais cru devoir vous taire, quoique j’eusse pu vous le déclarer sans vous offenser, et sans donner une mauvaise opinion de mes sentiments.</l>
-          </sp>
-          <sp who="julie" xml:id="18-6">
-            <speaker>JULIE, <em>à part.</em></speaker>
-            <l n="310" xml:id="l310">Que va-t-il dire ?</l>
-          </sp>
-          <sp who="lélio" xml:id="18-7">
-            <speaker>LÉLIO.</speaker>
-            <l n="311" xml:id="l311">Je ne sais si vous croirez que je parle avec sincérité ; mais je suis forcé de vous dire,</l>
-            <stage><hi rend="italic"><em>Affectant un air un peu petit Maître.</em></hi></stage>
-            <l n="313" xml:id="l313">qu’à l’égard de Mademoiselle votre fille... jamais je ne me suis flatté de l’obtenir.</l>
-          </sp>
-          <sp who="julie" xml:id="18-8">
-            <speaker>JULIE, <em>à part.</em></speaker>
-            <l n="314" xml:id="l314">Il est donc vrai ! le fourbe !</l>
-          </sp>
-          <sp who="lélio" xml:id="18-9">
-            <speaker>LÉLIO.</speaker>
-            <l n="315" xml:id="l315">Ce n’est pas que je ne rende toute la justice qui est due à ses charmes et à son éducation ; mais dans le fond de l’âme, je suis du nombre de ceux que le mariage effraye. Vous m’allez demander pourquoi je me suis présenté comme un homme qui demandait à l’épouser ? c’est une faute que j’ai faite par un excès de délicatesse, c’est une faute que j’aurais pu éviter ; car on ne devrait point avoir honte de déclarer ouvertement, à quelque personne que ce fût, un sentiment pur, et qui n’a rien que de respectueux. C’est une faute que l’ombrage et les injustes soupçons de la plupart des maris m’ont fait faire. Cependant, il ne serait pas juste que cette faute fût, en aucune façon, nuisible à Mademoiselle. Je serais au désespoir si cette conduite de ma part allait éclater dans le monde ; et même, je vous demande en grâce qu’il me soit permis de paraître lui rendre des devoirs encore quelque temps, pour ne rien donner à penser sur ce qui se passe aujourd’hui, et pour pouvoir insinuer, petit-à-petit, que des intérêts de famille sont les motifs qui empêchent ce mariage.</l>
-          </sp>
-          <sp who="julie" xml:id="18-10">
-            <speaker>JULIE, <em>à part.</em></speaker>
-            <l n="316" xml:id="l316">Fut-il jamais de perfidie semblable !</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="18-11">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="317" xml:id="l317">Je n’entends pas bien clairement, Monsieur, ce que signifie un sentiment pur et respectueux dont vous parlez.</l>
-          </sp>
-          <sp who="lélio" xml:id="18-12">
-            <speaker>LÉLIO.</speaker>
-            <l n="318" xml:id="l318">C’est ce sentiment que je ne devais pas vous cacher, Madame ; c’est cette satisfaction que l’on a de vivre tous les jours avec une personne d’une probité douce et aimable : ce sentiment qui naît de ces conversations sages et spirituelles, qui, en amusant, font aimer la vertu : ce sentiment que font naître un caractère respectable et mille bonnes qualités, que, sans en imposer, je puis dire que vous possédez plus que qui que ce soit au monde. Je sais combien une autre espèce d’attachement vous offenserait : mais un homme sur qui vous auriez fait une pareille impression, serait-il raisonnable d’en rougir plus longtemps, et de s’obstiner à ne vous en point faire l’aveu ?</l>
-          </sp>
-          <sp who="julie" xml:id="18-13">
-            <speaker>JULIE.</speaker>
-            <l n="319" xml:id="l319">J’ai peine à retenir le courroux...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="18-14">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="320" xml:id="l320">Mais, tout enveloppée qu’est cette déclaration ; est-ce bien à moi qu’elle s’adresse ?</l>
-          </sp>
-          <sp who="lélio" xml:id="18-15">
-            <speaker>LÉLIO.</speaker>
-            <l n="321" xml:id="l321">Je n’ai rien dit qu’il ne convienne, je crois, de vous faire entendre.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="18-16">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="322" xml:id="l322">Retirez-vous. Vous me surprenez beaucoup, je l’avouerai, Monsieur. Retirez-vous, vous dis-je. L’amitié d’un homme de votre âge ne saurait me convenir, et soyez sûr que M. Lisimon n’est point homme à l’approuver.</l>
-          </sp>
-          <sp who="lélio" xml:id="18-17">
-            <speaker>JULIE, <em>à Lélio.</em></speaker>
-            <l n="323" xml:id="l323">Est-il possible, ingrat ?...</l>
-          </sp>
-          <sp who="lélio" xml:id="18-18">
-            <speaker>LÉLIO, <em>à Madame Lisimon.</em></speaker>
-            <l n="324" xml:id="l324">Une femme doit être soumise sans être esclave. Une société honnête est partout recherchée, et un mari serait injuste...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="18-19">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="325" xml:id="l325">Eh ! Monsieur...</l>
-          </sp>
-          <sp who="lélio" xml:id="18-20">
-            <speaker>LÉLIO.</speaker>
-            <l n="326" xml:id="l326">Vous pouvez décider de mon sort : mais, faites réflexion à une chose, Madame. C’est que pour l’honneur de M. Lisimon, pour la gloire de Mademoiselle, et j’ose même dire pour la vôtre, tout ceci veut plus de ménagement que vous ne pensez.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="18-21">
-            <speaker>MADAME LISIMON, <em>à part.</em></speaker>
-            <l n="327" xml:id="l327">Peut-il se rencontrer des circonstances plus bizarres !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="329" xml:id="l329">Allez, Monsieur, toute la réflexion dont je suis capable dans ce moment, c’est que ce suroit un crime à moi de vous écouter.</l>
-          </sp>
-          <sp who="lélio" xml:id="18-22">
-            <speaker>LÉLIO, <em>vivement.</em></speaker>
-            <l n="330" xml:id="l330">Dites plutôt, Madame, que ce sera un crime de me condamner, de m’exiler sans examen, de rompre avec moi sans précaution, de conserver d’injustes opinions sur mon compte. Le Ciel est témoin de la vérité de ce que je vais dire : oui, Madame, mes sentiments pour toute votre famille sont tels qu’ils doivent être. Je vous rends, je rends à Mademoiselle ce qu’à chacune je vous dois. Je puis même assurer que mon estime pour M. Lisimon est sincère, et que son changement pour moi a été le coup le plus mortel que je puisse recevoir. Voilà quels sont mes sentiments : voilà comme pense un homme aussi tendre que malheureux, qui, sans être coupable, le</l>
-            <stage><hi rend="italic"><em>Il regarde Julie, mais elle ne s’en aperçoit point, parce qu’elle a les yeux baissés et un air consterné ainsi que Madame Lisimon.</em></hi></stage>
-            <l n="332" xml:id="l332">paraît dans ce moment, et qui se retire avec l’affreuse certitude de n’être point plaint de celle qu’il aime.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="334" xml:id="l334"> </l>
-            <l n="335" xml:id="l335"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="336" xml:id="l336"> </l>
-          <sp who="julie" xml:id="19-1">
-            <speaker>MADAME LISIMON, JULIE</speaker>
-            <l n="337" xml:id="l337"> </l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="19-2">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="338" xml:id="l338">Elle qu’il aime ! Quelle expression ! Que faut-il que je pense ? Je ne sais lequel est le plus raisonnable, ou de croire ce qu’il dit, ou d’en douter. Se peut-il ?... La Lettre aurait-elle réellement été envoyée pour moi ?</l>
-          </sp>
-          <sp who="julie" xml:id="19-3">
-            <speaker>JULIE.</speaker>
-            <l n="339" xml:id="l339">Je demeure interdite. Pourquoi cette trahison, dont j’étais déjà persuadée, quand il en fait l’aveu positif, me cause-t-elle un si grand étonnement ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="19-4">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="340" xml:id="l340">Allez avertir votre père.</l>
-          </sp>
-          <sp who="julie" xml:id="19-5">
-            <speaker>JULIE.</speaker>
-            <l n="341" xml:id="l341">Il paraît. Ô ciel ! que ce revers est douloureux pour moi ! Permettez-moi, ma mère, de vous cacher mon trouble.</l>
-            <stage><hi rend="italic"><em>Elle rentre.</em></hi></stage>
-            <l n="343" xml:id="l343"> </l>
-            <l n="344" xml:id="l344"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="20">
-          <head>Scène XX</head>
-            <l n="345" xml:id="l345"> </l>
-          <sp who="rosette" xml:id="20-1">
-            <speaker>MONSIEUR LISIMON, MADAME LISIMON, ROSETTE, <em>qui arrive un instant après et se tient au fond du Théâtre</em></speaker>
-            <l n="346" xml:id="l346"> </l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="20-2">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="347" xml:id="l347">Je n’étais pas loin. Eh ! bien, qu’est-ce que c’est ? Comment cela s’est il passé ? J’attendais qu’il fût sorti. Je m’impatientais, J’ai eu vingt fois envie d’entrer.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="20-3">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="348" xml:id="l348">Monsieur, je n’ai qu’un mot à vous dire, je me fais violence ; mais mon devoir l’emportera toujours sur tout.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="20-4">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="349" xml:id="l349">L’avez-vous bien maltraité ? Et...</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="20-5">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="350" xml:id="l350">Je ne l’aurais jamais cru. Il m’a fait une déclaration.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="20-6">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="351" xml:id="l351">Plaît-il ?... Une déclaration dans les formes ? Parlant à vous ? Une déclaration face à face ?</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="20-7">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="352" xml:id="l352">Cependant avec réserve, empruntant le voile de l’amitié, et se disant pour vous plein d’estime.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="20-8">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="353" xml:id="l353">Eh ! qu’il aille au Diable avec son estime. Enfin, un nouveau jour se répand donc sur cette affaire ! Voilà donc qui est bien déclaré ! Il ose le dire ouvertement. Il ose persister.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="20-9">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="354" xml:id="l354">Jamais, je vous avoue, je n’ai été si étonnée.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="20-10">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="355" xml:id="l355">Quel coup de foudre ! Parbleu, Madame, voilà une petite conduite fort honnête ! Cela suffit, et je crois qu’à présent vous n’oserez plus soutenir qu’un amour si obstiné ait pu naître sans que vous en soyez coupable en la moindre chose.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="20-11">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="356" xml:id="l356">Je me suis attendue à tout ce que cela m’allait attirer de votre part ; mais en avouant la chose, j’ai fait ce que j’ai dû. Au surplus, Monsieur, il m’a persuadée qu’il serait dangereux d’éclater dans cette aventure ; et j’espère à ce sujet vous faire faire quelques réflexions, quand le premier mouvement de votre colère sera passé.</l>
-            <stage><hi rend="italic"><em>Elle rentre.</em></hi></stage>
-            <l n="358" xml:id="l358"> </l>
-            <l n="359" xml:id="l359"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="21">
-          <head>Scène XXI</head>
-            <l n="360" xml:id="l360"> </l>
-          <sp who="rosette" xml:id="21-1">
-            <speaker>MONSIEUR LISIMON, ROSETTE</speaker>
-            <l n="361" xml:id="l361"> </l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="21-2">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="362" xml:id="l362">Eh ! ne comptez pas qu’elle se passe, ma colère. C’en est donc fait ! Qu’est devenu ce renom dont j’étais si glorieux ? Souffrirai-je que mon honneur soit outragé de la sorte ? Eh ! bien, que penses-tu de cela, Rosette ? Est-il un homme plus trahi, plus malheureux que je le suis ?</l>
-          </sp>
-          <sp who="rosette" xml:id="21-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="363" xml:id="l363">Moi ! je ne sais là-dessus que penser. Si vous êtes malheureux, nous le sommes tous ici. Et cela, je le dis, sans en excepter celui qui vous trahit.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="21-4">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="364" xml:id="l364">Mais s’il est malheureux, lui, il mérite de l’être. C’est me payer de plaisantes raisons ! Il est malheureux ! Oh ! je puis bien répondre que son malheur, que celui de tous ceux qui me trahissent, n’est pas au point où il doit aller ; et je vais... Mais quoi ! que vais-je faire ? A-t-on jamais pu trouver un vrai remède à cela ? Et que pourrai-je inventer qui satisfasse pleinement la rage et le dépit que j’ai au fond du cœur ?</l>
-            <stage><hi rend="italic"><em>Il rentre.</em></hi></stage>
-            <l n="366" xml:id="l366"> </l>
-            <l n="367" xml:id="l367"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="22">
-          <head>Scène XXII</head>
-            <l n="368" xml:id="l368"> </l>
-          <sp who="rosette" xml:id="22-1">
-            <speaker>ROSETTE, <em>seule</em></speaker>
-            <l n="369" xml:id="l369"> </l>
-            <l n="370" xml:id="l370">Le pauvre homme paye bien cher son injustice, et le mauvais procédé qu’il a eu avec Lélio. Je ne sais ce que cela produira. Je ne sais si Lélio aura pu tirer quelque avantage de l’idée que je lui ai donnée. À mon égard, dans tout ce trouble-ci, j’ai essayé, du moins, de me tirer d’affaire. Il y a apparence que ce que j’ai dit à Madame Lisimon passant à présent dans son esprit pour une vérité, elle n’insistera plus pour que je sois renvoyée.</l>
-            <l n="371" xml:id="l371"> </l>
-            <l n="372" xml:id="l372"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="23">
-          <head>Scène XXIII</head>
-            <l n="373" xml:id="l373"> </l>
-          <sp who="rosette" xml:id="23-1">
-            <speaker>LA FLEUR, ROSETTE</speaker>
-            <l n="374" xml:id="l374"> </l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-2">
-            <speaker>LA FLEUR, <em>en se frottant les yeux et ayant une voix enrouée, à part.</em></speaker>
-            <l n="375" xml:id="l375">Je suis bien en peine ; aurais-je fait quelque bévue !</l>
-            <stage><hi rend="italic"><em>Haut. </em></hi></stage>
-            <l n="377" xml:id="l377">Ah ! Rosette, mon Maître m’avait chargé d’un billet pour Julie. Ma foi, je t’avouerai qu’en chemin je suis entré dans un Cabaret ; j’ai bu et bu à outrance. J’ai dormi : j’ai rêvassé à mille choses différentes ; mais ce qu’il y a de fâcheux, c’est qu’en me réveillant je ne l’ai pas retrouvé, ce diable de billet.</l>
-          </sp>
-          <sp who="rosette" xml:id="23-3">
-            <speaker>ROSETTE, <em>après avoir regardé quelque temps la Fleur, qui ne sait ce que cela veut dire.</em></speaker>
-            <l n="378" xml:id="l378">Sais-tu ce qui est arrivé ici aujourd’hui ?</l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-4">
-            <speaker>LA FLEUR.</speaker>
-            <l n="379" xml:id="l379">Qu’est-ce que c’est ?</l>
-          </sp>
-          <sp who="rosette" xml:id="23-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="380" xml:id="l380">Premièrement, ton Maître, contre le quel on était déjà prévenu, est à présent sans nulle espérance de jamais épouser Julie.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-6">
-            <speaker>LA FLEUR.</speaker>
-            <l n="381" xml:id="l381">Que me dis-tu !</l>
-          </sp>
-          <sp who="rosette" xml:id="23-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="382" xml:id="l382">À mon égard, moi, j’ai reçu mon congé.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-8">
-            <speaker>LA FLEUR.</speaker>
-            <l n="383" xml:id="l383">Est-il possible !</l>
-          </sp>
-          <sp who="rosette" xml:id="23-9">
-            <speaker>ROSETTE.</speaker>
-            <l n="384" xml:id="l384">Pour Monsieur et Madame Lisimon, l’esprit de divorce s’est emparé d’eux, et ils sont sur le point de se séparer !</l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-10">
-            <speaker>LA FLEUR.</speaker>
-            <l n="385" xml:id="l385">Eh ! mais, voilà de terribles affaires.</l>
-          </sp>
-          <sp who="rosette" xml:id="23-11">
-            <speaker>ROSETTE.</speaker>
-            <l n="386" xml:id="l386">Cela est vrai, et si je te disais que c’est toi qui as fait tout cela ?</l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-12">
-            <speaker>LA FLEUR.</speaker>
-            <l n="387" xml:id="l387">Moi !</l>
-          </sp>
-          <sp who="rosette" xml:id="23-13">
-            <speaker>ROSETTE.</speaker>
-            <l n="388" xml:id="l388">Toi.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-14">
-            <speaker>LA FLEUR.</speaker>
-            <l n="389" xml:id="l389">Moi !</l>
-          </sp>
-          <sp who="rosette" xml:id="23-15">
-            <speaker>ROSETTE.</speaker>
-            <l n="390" xml:id="l390">Si tu veux, j’entrerai en détail là-dessus ; mais je t’avertis auparavant qu’il ne fait pas bon ici pour toi, et que de toutes les personnes qui peuvent paraître, il n’y en a pas une seule qui ne soit disposée de façon à t’assommer de coups de bâton sur la place.</l>
-          </sp>
-          <sp who="la-fleur" xml:id="23-16">
-            <speaker>LA FLEUR, <em>ayant un air de réflexion.</em></speaker>
-            <l n="391" xml:id="l391">J’aurais volontiers la curiosité d’entendre ces détails ; mais tu me parles d’un ton si énergique et si persuasif, qu’avec quelques idées confuses, il me prend envie de ne rien examiner.</l>
-            <stage><hi rend="italic"><em>Il sort avec précipitation.</em></hi></stage>
-            <l n="393" xml:id="l393"> </l>
-            <l n="394" xml:id="l394"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="24">
-          <head>Scène XXIV</head>
-            <l n="395" xml:id="l395"> </l>
-          <sp who="rosette" xml:id="24-1">
-            <speaker>MONSIEUR LISIMON, <em>ayant son chapeau enfoncé</em>, ROSETTE</speaker>
-            <l n="396" xml:id="l396"> </l>
-          </sp>
-          <sp who="rosette" xml:id="24-2">
-            <speaker>ROSETTE.</speaker>
-            <l n="397" xml:id="l397">Allons un peu... Mais voici Monsieur Lisimon qui revient. Que son âme paraît agitée !</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-3">
-            <speaker>MONSIEUR LISIMON, <em>à part.</em></speaker>
-            <l n="398" xml:id="l398">On dira, si l’on veut, que cela est extravagant ; ma haine et mon dépit n’ont pu se contraindre, et le mot est lâché... Quelle extravagance y aurait-il, après tout ? Quand l’honneur est blessé, n’est-ce pas de cette façon-là qu’on le venge dans le monde, et ne suis-je pas un homme comme un autre ? Allons, cela est décidé.</l>
-          </sp>
-          <sp who="rosette" xml:id="24-4">
-            <speaker>ROSETTE, <em>à part.</em></speaker>
-            <l n="399" xml:id="l399">Si toute cette aventure n’était pas aussi sérieuse pour nos Amants, et peut-être pour moi, je m’en divertirais volontiers.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="401" xml:id="l401">Que méditez-vous donc, Monsieur ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-5">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="402" xml:id="l402">Ce que je médite ! Ce que médite un homme de cœur.</l>
-          </sp>
-          <sp who="rosette" xml:id="24-6">
-            <speaker>ROSETTE.</speaker>
-            <l n="403" xml:id="l403">Eh ! mon Dieu ! vous dites cela avec un si grand sérieux, que vous me donneriez presque envie d’en rire. Il semble... mais je ne puis me l’imaginer ; il semble que vous allez vous battre.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-7">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="404" xml:id="l404">Croirais-tu que ces réflexions, que Madame Lisimon disait me vouloir communiquer, ont été des raisons pour établir ici les assiduités de Lélio, des prétextes pour se ménager le plaisir de le voir ? Croirais-tu qu’une femme comme elle serait devenue sensible ?... Mais sensible. Eh ! qui sait jusques à quel point ?... Tu te moques ?... Elle n’a pas dit un mot qui n’ait découvert sa folle passion.</l>
-          </sp>
-          <sp who="rosette" xml:id="24-8">
-            <speaker>ROSETTE, <em>riant.</em></speaker>
-            <l n="405" xml:id="l405">Franchement, pour cet article-là, je ne puis pas, en conscience, dire que je le crois.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-9">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="406" xml:id="l406">Enfin, puisque tu l’as deviné, il est vrai, j’ai chargé un vieil Officier de mes amis...</l>
-          </sp>
-          <sp who="rosette" xml:id="24-10">
-            <speaker>ROSETTE.</speaker>
-            <l n="407" xml:id="l407">De quoi ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-11">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="408" xml:id="l408">D’aller sommer Lélio de ma part de se trouver...</l>
-          </sp>
-          <sp who="rosette" xml:id="24-12">
-            <speaker>ROSETTE.</speaker>
-            <l n="409" xml:id="l409">Mais voilà qui est inouï ! Vous ? Eh ! juste Ciel ! le beau combat ! Et que feriez-vous ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-13">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="410" xml:id="l410">Je t’avoue que dans cet instant que mes sens sont un peu plus rassis, il me paraît assez désagréable d’aller me battre, parce que l’on me...</l>
-          </sp>
-          <sp who="rosette" xml:id="24-14">
-            <speaker>ROSETTE.</speaker>
-            <l n="411" xml:id="l411">Désagréable ! assurément, et très désagréable. D’un autre côté, comment sortir de-là ? Voilà votre imagination frappée de façon à vous faire passer des jours bien misérables ! Vous serez tourmenté sans cesse. Je pense à une chose bien simple, qui d’abord ne se présentait pas à mon esprit.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="413" xml:id="l413">Si ce moment était un moment heureux !</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-15">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="414" xml:id="l414">Qu’est-ce que c’est ?</l>
-          </sp>
-          <sp who="rosette" xml:id="24-16">
-            <speaker>ROSETTE.</speaker>
-            <l n="415" xml:id="l415">En vérité, la tête tourne dans de pareilles occasions, et à peine avons-nous eu le temps de nous reconnaître ! Que quelqu’un qui vous inquiéterait devînt votre gendre, apparemment vous cesseriez d’en être jaloux ? Lélio ayant paru rendre des devoirs à votre fille, malgré quelques soupçons que vous avez sur sa conduite, que ne le forcez-vous de l’épouser ?</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-17">
-            <speaker>MONSIEUR LISIMON, <em>vivement.</em></speaker>
-            <l n="416" xml:id="l416">Le forcer de l’épouser ! lui ! j’aimerais mieux... Mais tu n’y penses pas. Lui ! mon gendre ! Songe donc que j’ai conçu pour lui une haine, une antipathie si forte, qu’il n’est pas possible... non, qu’il n’est pas possible que jamais elles s’éteignent.</l>
-          </sp>
-          <sp who="rosette" xml:id="24-18">
-            <speaker>ROSETTE.</speaker>
-            <l n="417" xml:id="l417">Cependant ce serait le seul moyen de vous mettre en repos.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-19">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="418" xml:id="l418">D’ailleurs, il faudrait que je fusse un homme bien barbare ! Quoi ! moi ! j’irais donner ma fille à un homme qui a des mœurs... à un homme comme celui-là !</l>
-          </sp>
-          <sp who="rosette" xml:id="24-20">
-            <speaker>ROSETTE.</speaker>
-            <l n="419" xml:id="l419">Mais à l’égard de cela, si quelqu’un de votre famille doit souffrir de son libertinage, il vaudrait encore mieux que ce fût votre fille que vous. Rien ne vous est si cher que vous-même. Plus jeune, elle supportera mieux ces sortes de chagrins ; et dès-là elle sera peut-être moins embarrassée de la vengeance que vous l’êtes.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-21">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="420" xml:id="l420">Eh ! quand je voudrais l’y forcer, l’accepterait-il ? Vraiment tu ne sais pas comme pense cette espèce de gens-là. Ils ne veulent rien d’honnête, ni de légitime.</l>
-          </sp>
-          <sp who="rosette" xml:id="24-22">
-            <speaker>ROSETTE.</speaker>
-            <l n="421" xml:id="l421">Mais soyez vous-même bien déterminé.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-23">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="422" xml:id="l422">Il ne l’accepterait pas, te dis-je. Non ; s’en tient à ma femme.</l>
-          </sp>
-          <sp who="rosette" xml:id="24-24">
-            <speaker>ROSETTE.</speaker>
-            <l n="423" xml:id="l423">Faites-lui la proposition. Parlez-lui ferme. Intimidez-le ; il n’osera peut-être pas refuser ; et s’il accepte une fois, voilà votre tranquillité assurée.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="24-25">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="424" xml:id="l424">Eh ! non, te dis-je, il ne voudra pas.</l>
-            <l n="425" xml:id="l425"> </l>
-            <l n="426" xml:id="l426"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="25">
-          <head>Scène XXV</head>
-            <l n="427" xml:id="l427"> </l>
-          <sp who="rosette" xml:id="25-1">
-            <speaker>MONSIEUR <em>et</em> MADAME LISIMON, JULIE, LÉLIO, ROSETTE</speaker>
-            <l n="428" xml:id="l428"> </l>
-            <stage><hi rend="italic"><em>Lélio paraît dans le fond du Théâtre avec Madame Lisimon. Julie suit Madame Lisimon, mais en est un peu éloignée.</em></hi></stage>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-2">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="430" xml:id="l430">Qu’est ce ?... Voici... Est-ce une illusion ? Ne sont-ce point eux que je vois ensemble ?</l>
-          </sp>
-          <sp who="rosette" xml:id="25-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="431" xml:id="l431">Ce sont eux-mêmes, et ils semblent causer avec assez de familiarité.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-4">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="432" xml:id="l432">Il lui parle bas, Elle l’écoute. Dieux ! Elle lui serre la main !</l>
-          </sp>
-          <sp who="rosette" xml:id="25-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="433" xml:id="l433">Vous voyez que ce sera sous vos yeux, un supplice continuel, et vous aurez beau faire. L’occasion se présente ; faites-lui la proposition, croyez-moi.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-6">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="434" xml:id="l434">Mais...</l>
-          </sp>
-          <sp who="rosette" xml:id="25-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="435" xml:id="l435">Allez, n’hésitez point.</l>
-          </sp>
-          <sp who="lélio" xml:id="25-8">
-            <speaker>MADAME LISIMON, <em>haut à Lélio.</em></speaker>
-            <l n="436" xml:id="l436">Je vous en sais bien du gré, assurément.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-9">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="437" xml:id="l437">Elle lui en sait bien du gré ! Ciel ! il n’y a pas un moment à perdre, et je n’y puis plus tenir.</l>
-            <stage><hi rend="italic"><em>Allant à Lélio.</em></hi></stage>
-            <l n="439" xml:id="l439">Monsieur, voulez-vous accepter ?...</l>
-          </sp>
-          <sp who="lélio" xml:id="25-10">
-            <speaker>LÉLIO.</speaker>
-            <l n="440" xml:id="l440">Moi, Monsieur ?... Non assurément, vous êtes le maître de penser de moi ce qu’il vous plaira.</l>
-          </sp>
-          <sp who="rosette" xml:id="25-11">
-            <speaker>ROSETTE, <em>à M. Lisimon qui la regarde.</em></speaker>
-            <l n="441" xml:id="l441">Il ne vous entend pas.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-12">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="442" xml:id="l442">Monsieur, vous n’entendez peut-être pas ?...</l>
-          </sp>
-          <sp who="lélio" xml:id="25-13">
-            <speaker>LÉLIO.</speaker>
-            <l n="443" xml:id="l443">Pardonnez-moi, Monsieur, j’entends à merveille ce que vous voulez me dire, et j’ai là-dessus rendu compte à Madame de ma façon de penser.</l>
-          </sp>
-          <sp who="rosette" xml:id="25-14">
-            <speaker>ROSETTE, <em>à M. Lisimon qui la regarde.</em></speaker>
-            <l n="444" xml:id="l444">Tenez bon, Monsieur Lisimon.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-15">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="445" xml:id="l445">Mais, Monsieur !...</l>
-          </sp>
-          <sp who="lélio" xml:id="25-16">
-            <speaker>LÉLIO.</speaker>
-            <l n="446" xml:id="l446">Quand je le voudrais, vous jugez bien qu’à présent Madame s’y opposerait.</l>
-          </sp>
-          <sp who="rosette" xml:id="25-17">
-            <speaker>MONSIEUR LISIMON, <em>à Rosette d’un ton pleureur.</em></speaker>
-            <l n="447" xml:id="l447">Elle s’y opposerait !</l>
-          </sp>
-          <sp who="rosette" xml:id="25-18">
-            <speaker>ROSETTE.</speaker>
-            <l n="448" xml:id="l448">Faites-vous écouter. Parlez haut.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-19">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="449" xml:id="l449">Je vous prie, Monsieur, je vous prie de vouloir bien accepter ma fille en mariage.</l>
-          </sp>
-          <sp who="lélio" xml:id="25-20">
-            <speaker>LÉLIO, <em>demeurant surpris.</em></speaker>
-            <l n="450" xml:id="l450">Plaît-il ?</l>
-          </sp>
-          <sp who="rosette" xml:id="25-21">
-            <speaker>MONSIEUR LISIMON, <em>à Rosette.</em></speaker>
-            <l n="451" xml:id="l451">Hé ! bien ; tu vois bien qu’il ne veut pas.</l>
-          </sp>
-          <sp who="julie" xml:id="25-22">
-            <speaker>JULIE.</speaker>
-            <l n="452" xml:id="l452">M’accepter en mariage, hélas ! mon père pouvez-vous de la sorte m’exposer à un refus.</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="25-23">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="453" xml:id="l453">Malgré tous les différents reproches que Monsieur a malheureusement contre lui, ce serait un accommodement qui serait bien à désirer.</l>
-          </sp>
-          <sp who="lélio" xml:id="25-24">
-            <speaker>LÉLIO.</speaker>
-            <l n="454" xml:id="l454">Madame, je suis sûr de vous convaincre que les premiers reproches sur lesquels ma disgrâce est venue, sont faux. Les seconds, en ce qui regarde mon respect et mon attachement pour vous, sont vrais, mais les circonstances vous ont fait prendre pour une déclaration d’amour ce qui n’était qu’une protestation d’amitié, et dans mon infortune, je voulais tirer parti de l’erreur. À votre égard, Monsieur, je comptais recevoir un défi de votre part, et c’est Mademoiselle votre fille que vous me priez d’accepter ; franchement la proposition est différente. Enfin, Mademoiselle, vous qui craignez d’être exposée à un refus, quelle apparence que cette crainte soit fondée avec un homme qui vous adore, et qui n’adorera jamais que vous !</l>
-            <stage><hi rend="italic"><em>Il lui donne la main.</em></hi></stage>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-25">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="456" xml:id="l456">Est-il possible que j’en sois quitte !</l>
-          </sp>
-          <sp who="rosette" xml:id="25-26">
-            <speaker>ROSETTE.</speaker>
-            <l n="457" xml:id="l457">Ô ciel ! d’où revenons-nous !</l>
-          </sp>
-          <sp who="madame-lisimon" xml:id="25-27">
-            <speaker>MADAME LISIMON.</speaker>
-            <l n="458" xml:id="l458">Ma joie ne saurait s’exprimer.</l>
-          </sp>
-          <sp who="monsieur-lisimon" xml:id="25-28">
-            <speaker>MONSIEUR LISIMON.</speaker>
-            <l n="459" xml:id="l459">Votre joie ?... Embrassons-nous donc, ma chère femme, et soyez-moi rendue pour toujours.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="1">Oui, ma femme, je viens de dire fort civilement à Lélio que je le remerciais de ses visites, et que sur les belles nouvelles que j’ai apprises, il n’avait que faire de songer un moment à ma fille. Comment, diable ! Un homme qui court après quatre ou cinq femmes à la fois, qui mène une vie tout-à-fait déréglée et libertine ! Non, non, vous dis-je, il n’a que faire de songer un moment à ma fille.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="2">Peut-être les rapports que l’on vous a faits, sont-ils faux ; mais dans le doute, j’approuve très fort, mon mari, la résolution où vous êtes.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="3">Corbleu ! une pareille conduite ferait un bel effet dans un ménage ! Je prétends que ma fille soit aussi heureuse que vous l’êtes, Madame. Depuis vingt-deux ans que nous vivons ensemble, jamais je ne vous ai donné sujet de vous plaindre un moment de mes galanteries. Aussi, de votre côté, jamais la moindre alarme, pas le moindre soupçon. On ne m’a point vu courir après les Belles, on ne vous a point vu attirer les Galants : et si quelqu’un à Paris peut se vanter d’avoir une femme fidèle, c’est sans doute moi, Madame.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="4">Vous avez bien raison, et je ne crois pas devoir en tirer vanité.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="5">À la moindre infidélité, je pense que je fusse mort de chagrin. Ah ! çà, je sors un instant. Dites deux mots à votre fille à ce sujet, et donnez de si bons ordres ici, que Lélio n’y paraisse pas davantage.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="6">Par ma foi, voilà d’étranges choses ! Quels sont donc ces beaux rapports que l’on vous a faits ? Il mène une vie libre et agréable ; faut-il donc qu’à son âge il se conduise comme un Caton ? Il court après quatre ou cinq femmes à la fois, eh ! bien, il ne les attrape pas toutes apparemment.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="7">Mais voyez un peu quel ton prend cette fille ; et de quoi diable elle se mêle !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, à Rosette.</speaker>
+          <l n="8">Taisez-vous ; allez, Monsieur, je prendrai de si bonnes mesures, qu’il ne sera plus question de lui ici. Je ne veux pas même que de sa part, on reçoive le moindre message, et si j’apprends... C’est à vous plus qu’à personne à qui je veux parler, Mademoiselle Rosette.</l>
+          <stage>&lt;em&gt;Monsieur Lisimon sort, et Madame Lisimon rentre chez elle.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#rosette">
+          <speaker>ROSETTE, seule</speaker>
+          <l n="9">Je vous entends ; mais je ne vous promets pas de vous obéir. N’est-ce pas une chose honteuse, que sur des rapports en l’air, on donne ainsi le congé à l’Amant le plus tendre ! Il faut que Lélio ait quelques ennemis secrets. Il ne paraît pourtant pas les mériter ; et je veux...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="10">Ah ! Rosette, je m’échappe un moment pour te demander ce qui se passe ici. Assurément : il y a quelque chose.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="11">Vous avez souvent ouï dire que, dans le monde, tout était sujet à des révolutions ; que de temps en temps on voyait sur la terre... on voyait mille choses étonnantes.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="12">Eh ! bien, oui. Tu me fais frémir.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="13">Imaginez-vous... ce qui pouvais arriver de plus terrible.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="14">Ciel ! Je t’entends.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="15">Qu’est-ce que c’est ? </l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="16">Mon mariage est rompu.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="17">Vous l’avez deviné. On ne veut pas voir ici Lélio davantage.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="18">Ah ! Que me dis-tu, Rosette ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="19">Telle est la volonté de M. Lisimon. Cependant il ne faut pas perdre courage. Il est à propos que votre mère ne s’aperçoive point du chagrin que cette rupture vous cause. Je ferai de mon côté de mon mieux, pour adoucir vos malheurs.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="20">Et pour quelle raison mon père...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="21">Sur un rapport qu’on lui a fait ; il juge que Lélio est un libertin.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="22">Lélio libertin ! Ah ! Rosette, quelle injustice ! Il m’a toujours instruite de toutes ses démarches, de tous ses sentiments, de toutes ses pensées.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="23">Vous devez l’en croire. Sur le chapitre des bonnes fortunes, nos Amants n’ont pas le défaut d’être dissimulés.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="24">J’entends quelqu’un. Ne m’abandonne pas, Rosette. Toute mon espérance est en toi... Est-il un cœur plus à plaindre que le mien ?</l>
+          <stage>&lt;em&gt;Elle rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="25">Ne vois-je pas la Fleur ?</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="26">C’est vous tout juste que je cherche, Mademoiselle Rosette.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="27">Qu’a-t-il donc ? Eh ! à quoi penses-tu, de venir ici dans l’état où tu es ?</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="28">Dans quel état, s’il vous plaît ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="29">Ivre, à ne pouvoir te soutenir.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="30">Cela n’est pas vrai.</l>
+          <stage>&lt;em&gt;Il fait un hoquet.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="31">Quoi ! Tu oses dire que tu n’as pas bu ?</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="32">Oui. J’ai bu, mais j’ai eu mes raisons pour cela.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="33">Oh ! Ces raisons-là sont très bonnes... Lélio t’envoie sans doute. Pour quel sujet ?</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="34">Allons doucement, je vous en prie.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="35">Il faut avouer qu’en toutes choses, Lélio est traité bien injustement ! Dans les circonstances où il se trouve, il charge d’une commission un misérable qui s’enivre en chemin !</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="36">Misérable ! Mademoiselle, je ne bois pas ordinairement : mais j’aime mon Maître. Et quand j’ai su toutes les vilainies... le traitement indigne et in... supportable qu’on lui faisait, le cœur me manquait, entendez-vous bien ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="37">Allons, dis-moi de quoi il s’agit.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="38">Il s’agit d’un billet que mon Maître envoie à Julie.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="39">Eh ! donne-le moi donc.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="40">Point du tout. Je l’avais mis dans ma poche. Je l’ai ensuite posé sur une table, et je me doute... et je me souviens fort bien que je ne l’ai pas remis dans ma poche.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="41">Quelle patience il faut avoir !</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR, parlant très haut.</speaker>
+          <l n="42">Tiens...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="43">Mais veux-tu bien te taire. Si Madame sait que tu es venu ici, elle ne me le pardonnera pas, et elle aura raison de se plaindre.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR, riant en ivrogne.</speaker>
+          <l n="44">Les fautes des ivrognes sont toujours heureuses. Il y avait apparemment dans ce billet-là quelque chose qui aurait fait tort à mon Maître. Cela devait être dès le commencement des siècles.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="45">Va-t’en, c’est tout ce que je te demande.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="46">Oh ! je veux pourtant rapporter le billet.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="47">Il vaut encore mieux ne le point rapporter. Ne parais point.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="48">Non, non, il faut toujours faire son devoir.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="49">Mon cher la Fleur, si tu es capable de quelque attention dans l’ivresse où tu es, retire-toi sans bruit, je t’en conjure.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="50">Adieu donc, Rosette.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE, le poussant.</speaker>
+          <l n="51">Oui. Adieu, mon ami... Je tremble qu’on ne l’aperçoive.</l>
+          <stage>&lt;em&gt;Madame Lisimon paraît.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR, qui est prêt à sortir.</speaker>
+          <l n="52">Oh ! oh ! oh !Voilà qui est plaisant ! Je le retrouve heureusement dans ma poche, ce billet. Oh ! oh ! oh !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="53">Fort bien. Crie encore plus fort.</l>
+          <stage>&lt;em&gt;Lui arrachant le billet.&lt;/em&gt;</stage>
+          <l n="54">Donne donc vite, mal heureux.</l>
+          <stage>&lt;em&gt;Apercevant Madame Lisimon. La Fleur sort.&lt;/em&gt;</stage>
+          <l n="55">Eh ! bien, ne voilà-t-il pas ce que j’avais craint ? Elle nous surprend. Je suis perdue. Que lui dirai-je ?... En vérité, je ne sais.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="56">Qu’est-ce donc Ce garçon est à Lélio, et vous recevez secrètement une Lettre ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE, à part.</speaker>
+          <l n="57">Voyons. Payons d’effronterie. Plaît-il, Madame ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="58">Quoi ! voulez-vous soutenir le contraire ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="59">Moi ! soutenir le contraire ! Et pourquoi, Madame ? On m’a dit que c’était à vous à qui elle s’adressait.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="60">À moi ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="61">Assurément.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="62">Mais, si c’est à moi, pourquoi ne m’avoir pas fait parler ? Au surplus, dès que mon mari s’est expliqué, je me fais gloire d’obéir aveuglément, et je n’ai plus de justification à recevoir de la part de Lélio.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="63">Je ne sais que vous dire, Madame. Vous vous faites gloire d’obéir : cela est très vertueux... Mais aussi, tant se glorifier de sa vertu... Je m’en vais, car je sens que je dirais quelque chose de mal à-propos.</l>
+          <stage>&lt;em&gt;Elle rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, seule</speaker>
+          <l n="64">Elle est toute déconcertée. Quoi ! après la défense que j’ai faite, il serait possible ?...</l>
+          <stage>&lt;em&gt;Elle ouvre le billet.&lt;/em&gt;</stage>
+          <l n="65">Cela n’est pas douteux, c’est un billet à ma fille.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, sans voir sa femme.</speaker>
+          <l n="66">Ce qu’on m’avait dit vient de m’être confirmé, et l’on a ajouté bien d’autres choses. Jusqu’où l’imagination d’un libertin porte-t-elle le dérèglement ! Cela est inconcevable. Mais ma parole est engagée à un autre. Songeons à présent à assurer, dans mon domestique, les ordres que j’ai déjà donnés. Ah ! ma chère femme.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="67">Si vous voulez mettre quelque nouvel ordre dans votre domestique, commencez, Monsieur Lisimon, par renvoyer une coquine de Servante qui reçoit un billet de Lélio pour ma fille, et qui croit en être quitte, en me disant grossièrement qu’on le lui a donné pour moi.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="68">Elle reçoit un billet pour ma fille, et elle dit qu’on le lui a donné pour vous ? Ah !  l’impertinente ! Voyons donc. Un billet amoureux, sans doute ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="69">Vous pouvez bien le croire.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="70">Mais voilà une grande audace ! La coquine !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="71">Lisez. On n’a jamais vu désobéir et mentir avec plus de hardiesse.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="72">Voyons, voyons un peu le style de ce Monsieur.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="73">Lisez.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, lisant.</speaker>
+          <stage>&lt;em&gt;Seriez-vous complice du coup mortel que l’on me porte aujourd’hui, et croiriez-vous ce que l’on débite sur mon compte ? Non, à votre âge, et de l’heureux naturel dont vous êtes, on a un sentiment pur qui ne sait point juger faussement. Songez quelle doit être ma douleur ! Quel moyen emploierai-je à présent pour vous voir ? Celui de qui vous dépendez a eu longtemps de moi une opinion qui m’était bien favorable. Faut-il que de malheureux discours m’aient noirci ! Moi, aimer toutes les femmes ! Toutes me sont indifférentes. Une seule m’est chère, mais si chère... que je mourrai plutôt que de l’oublier, et que je mériterai sa tendresse en dépit des jaloux.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="74">Il ne l’oubliera pas ! Je doute fort que cette grande résolution, qu’il fait paraître, lui réussisse.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="75">Mais...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="76">Quoi ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="77">Elle vous a dit que c’était à vous ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="78">Oui, vous dis-je : elle a eu cette effronterie.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, après avoir lu.</speaker>
+          <l n="79">De quel coup suis-je frappé !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="80">Comment ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="81">Plus je relis...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="82">Que voulez vous dire ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="83">Comment, diable ! il faut s’attendre à tout de la part d’un libertin.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="84">Mais qu’est-ce donc ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <stage>&lt;em&gt;Jaloux : une seule m’est chère. Une femme. Une seule femme. Jaloux. En dépit des jaloux.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="85">Mais je crois que vous extravaguez.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <stage>&lt;em&gt;Seriez-vous complice ? Jaloux. Celui de qui vous dépendez. Une femme. Je mériterai sa tendresse...&lt;/em&gt; Je n’y vois plus de doute. Le sens est clair par tout, et c’est à vous, Madame.</stage>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="86">Ô Ciel ! Mais vous extravaguez, vous dis-je.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="87">Eh ! doucement, Madame, je vous en prie.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="88">Mais l’on rirait, si l’on savait... Quoi ! moi ?...</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="89">Il n’y a point à rire. On vous dit que c’est un déterminé à l’égard des femmes.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="90">Mais, en bonne foi, se trouve-t-il là un seul mot qui puisse me convenir.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="91">Tout, Madame, tout. Tout... Ouf ! Tâchons de calmer nos sens.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <stage>Quoi ! vous tomberiez dans une erreur pareille. Jaloux, c’est-à-dire, ceux qui m’ont noirci. &lt;em&gt;Une femme&lt;/em&gt;, c’est un mot général.</stage>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="92">Eh ! je suis votre serviteur. Le voulez vous défendre ? Cela serait fort, Madame. Encore une fois, je vois bien ce que je vois... Allons, c’est une chose décidée. Il n’y a point d’équivoque, Madame Lisimon.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="93">Mais, en vérité... D’équivoque ? et où serait-elle ? et non assurément il n’y en a point. D’un bout à l’autre cela se rapporte, cela va de suite, Monsieur Lisimon.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <stage>Cela va de suite ! Eh ! assurément. &lt;em&gt;Seriez-vous complice ?&lt;/em&gt; Penseriez-vous comme votre mari ? &lt;em&gt;Du coup mortel&lt;/em&gt;. Oui, de ce que votre mari m’a défendu de paraître. &lt;em&gt;Celui de qui vous dépendez&lt;/em&gt;. Votre mari.&lt;em&gt; A eu longtemps de moi une opinion qui m’était bien favorable&lt;/em&gt;. Sans doute. Je croyais bonnement que c’était à ma fille à qui il en voulait. &lt;em&gt;Quel moyen emploierai-je à présent pour vous voir ? &lt;/em&gt;Le voilà embarrassé. Cela lui était commode. C’était un prétexte. Avec une femme mariée, on ne va pas comme cela sans précaution. &lt;em&gt;De malheureux discours&lt;/em&gt;. Il les trouve malheureux. &lt;em&gt;Une seule m’est chère&lt;/em&gt;. Une seule femme ; vous, Madame Lisimon. &lt;em&gt;Une seule m’est chère, en dépit des jaloux&lt;/em&gt;. En dépit de Monsieur Lisimon votre mari. Je ne sais pas si je rêve, mais cela me paraît sans obscurité. Je ne suis pas assurément jaloux de ma fille.</stage>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <stage>Mais quel égarement ! Pourquoi cherchez-vous à vous aveugler vous-même ? Quand ces mots seraient douteux, je le suppose, n’y en a-t-il pas d’autres qui absolument ne peuvent pas me regarder ? &lt;em&gt;À votre âge&lt;/em&gt;, par exemple.</stage>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="94">Cessez. Ce serait trop, vous dis-je, de vouloir le défendre.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <stage>&lt;em&gt;À votre âge, on a un sentiment pur.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="95">Ah ! laissez-moi respirer.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="96">M’écrirait-il de la sorte !</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="97">Le fait est avéré.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, s’emportant un peu.</speaker>
+          <stage>&lt;em&gt;À votre âge&lt;/em&gt; : encore une fois. &lt;em&gt;À votre âge&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="98">Eh ! c’est une faute. C’est une faute qui s’est glissée.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="99">Quelle prévention !</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <stage>Mais que dis-je, une faute ? &lt;em&gt;À votre âge&lt;/em&gt;. Eh ! vraiment non. Ce n’est point une faute.</stage>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="100">Que voulez-vous dire ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <stage>&lt;em&gt;À votre âge, et de l’heureux naturel dont vous êtes, on a un sentiment pur qui ne sait point juger faussement&lt;/em&gt;. Eh ! bien, oui, sans doute. À votre âge et du caractère dont vous êtes, on a assez d’expérience pour ne point juger faussement. Sans doute. Pensez-vous que l’on doive faire plus de cas du jugement de votre fille, que du vôtre ?</stage>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="101">En vérité...</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="102">Eh ! comment donc, Madame ? Avec quelle confiance ?... Comment ! De la dissimulation ! De l’obstination à le défendre !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="103">Mais, cessez donc...</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="104">Par conséquent, il y a eu de l’intelligence, et plusieurs mots le découvrent.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="105">Il n’est pas croyable que vous tombiez dans cette erreur. Cessez donc, je vous prie.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="106">Après vingt-deux ans de fidélité ! Qui l’aurait pu penser ! Ô ciel ! Dans l’état où je suis...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="107">Eh ! Arrêtez donc, Monsieur Lisimon. Vous allez vous faire mal.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="108">Eh ! morbleu, Madame, vous me faites bien plus de mal que je ne puis jamais m’en faire...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="109">Quelle imagination ! quelle fatalité ! Je n’en puis plus.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="110">Je ne sais que dire, ni que résoudre. Tâchons de rappeler nos sens. Retirons nous, et voyons quel parti nous aurons à prendre.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, seule</speaker>
+          <l n="111">Son esprit est frappé. Que vais-je devenir ? Que je suis malheureuse ! Comment le guérirai-je de cette frénésie ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="112">Mais que vois-je ?</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="113">Pardonnez si je me suis introduit... </l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="114">Holà ! quelqu’un. Sortez. Sortez donc, Monsieur.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="115">J’attendais que vous fussiez seule...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="116">Ciel ! sortez donc, vous dis-je. Ne viendra-t-on point ?</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="117">Madame...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="118">Il y a, vous dis-je, une conséquence infinie. Sortez donc...</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO, se mettant à genoux.</speaker>
+          <l n="119">Eh ! Madame !...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="120">À mes genoux ! Miséricorde !</l>
+          <stage>&lt;em&gt;Elle s’enfuit.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#lélio">
+          <speaker>LÉLIO, seul</speaker>
+          <l n="121">Quelle est cette réception ! J’avais pris la résolution de venir me justifier. J’espérais que cette femme, en qui j’ai toujours reconnu de la raison, pourrait revenir des préjugés désavantageux qu’on lui a inspirés contre moi : elle fuit ; elle craint de m’envisager. Elle me reçoit avec un trouble dont il ne m’est pas possible de démêler la cause.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#rosette">
+          <speaker>ROSETTE, sans voir Lélio.</speaker>
+          <l n="122">Voilà Monsieur Lisimon terriblement intrigué ! Puisqu’il faut que je sorte, je ne suis pas fâchée d’une pareille aventure, et du moins, cela me satisfait.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="123">Rosette : ne peux-tu me dire ?...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="124">Eh ! Monsieur, c’est vous ? Quels sont donc les beaux bruits que l’on se plaît à répandre sur votre compte ?</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="125">Tu peux bien t’en douter. C’est une calomnie grossière, et il faut être d’une crédulité bien étrange, pour ajouter foi à de pareils discours.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="126">Eh ! qui vous rend donc ces services dans le monde ?</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="127">Une femme qui croit que l’on ne doit soupirer que pour elle. Quand ma passion pour Julie s’est déclarée, il n’est rien qu’elle n’ait inventé pour me décrier et pour me perdre. Mais, dis-moi, je t’en conjure, n’as-tu pas reçu un billet ?...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="128">Oui, Monsieur, je l’ai reçu. Je pense bien que votre Valet n’aura pas été en état de vous aller rendre compte de son Ambassade. L’ivresse l’a surpris. Il a paru ici en désordre. Le billet est tombé dans les mains de Madame Lisimon...</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="129">Quoi ! c’est de la sorte ?...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="130">Enfin, vos affaires qui allaient déjà fort mal, par-là sont entièrement perdues.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="131">Le malheureux ! Ah ! toute ma colère va s’épuiser sur lui !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="132">Tenez, Monsieur, il ne faut point se flatter, je vois que vous espérez encore ; mais en vérité cette espérance est bien inutile.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="133">À quelle extrémité suis-je réduit !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="134">Écoutez. Je n’avais que faire à tout cela, moi : cependant je suis renvoyée par rapport à ce billet. Dans ma petite sphère, je me trouve tout aussi à plaindre que vous, puisque je vais perdre une condition qui est très bonne. L’indignation me fait naître une idée qui vous vengerait, si vous vouliez ; et que, par équité pour moi, vous devriez adopter, puisque cela me justifierait.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="135">Comment ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="136">D’abord, il faut vous défaire d’une sincérité trop scrupuleuse.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="137">Moi !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="138">Sans doute. Tel que vous êtes ; rien ne vous réussit : devenez un peu fourbe, un peu traître, vous vous en trouverez mieux.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="139">La ressource est fort bonne.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="140">J’en essaierais.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="141">Va. Laisse-moi. Je suis né plus malheureux que bien d’autres ; et je deviendrais le plus grand coquin du monde, que je n’en serais pas plus considéré.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="142">Enfin, réduit comme vous l’êtes à ne plus voir Julie, ce que j’imagine pourrait... que sait-on ?... Vous pourriez embarrasser ceux qui vous font injustice d’une façon qui vous serait utile. Il faut chercher à les intimider, quand ce serait même par des raisons plus spécieuses que solides.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="143">Tu penses... Quelle est donc cette idée ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="144">Sachez que Monsieur Lisimon s’est avisé de croire... Je l’entends. Sauvez-vous. Mettez-vous à l’écart. Dans un moment je m’en vais vous rejoindre.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="145">Il faut examiner ceci avec attention. Sûrement il y a de l’intelligence. Quel dérangement affreux ! Une femme que je croyais raisonnable, et qui devrait l’être. Approche, et parle.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="146">J’ai reçu mon congé. Je ne parle plus.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="147">Il est bien certain que c’est pour ma femme, que tu as reçu ce billet ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="148">Je ne sais point faire de serments. Ce que j’ai dit, on peut le croire, si l’on veut.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="149">Mais je prétends...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="150">Je n’ai rien à dire. Dès que l’on me renvoie, ce n’est plus mon plaisir de rendre aucun compte...</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, seul</speaker>
+          <l n="151">Je l’entends assez sans qu’elle parle. Elle ne veut pas se rendre accusatrice de sa Maîtresse. Je vais faire un terrible éclat de cette affaire ; et la réputation dont Madame Lisimon jouissait tranquillement, va être suivie de tourments, de troubles et de mépris bien sanglants. Je lui ai dit de se rendre ici. La voilà. Je me sens tout saisi, en la voyant.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="152">Ah ! çà, Madame. Point de déguisement. Ceci est sérieux. Il faut voir quelles mesures nous aurons à prendre.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="153">Je ne m’affligerais point, Monsieur, et assurément je n’en aurais nul sujet, si je ne savais pas qu’une fantaisie pareille à la vôtre peut frapper l’esprit de l’homme le plus sage ; et si cette fantaisie n’était pas capable de troubler votre repos et le mien. Vous m’êtes cher, je croyais vous être chère aussi...</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="154">Discours séducteurs que tout cela. Il ne s’agit point dans ce moment, Madame, de chercher à nous attendrir.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="155">Quoi ! vous voulez me réduire à me justifier sur de pareilles choses : Est-il bienséant à vous de me soupçonner de la sorte ? Songez donc combien il y a de temps que je vous suis fidèle ; songez à ma tendresse, aux soins continuels que je vous ai rendus.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="156">Eh ! le passé ne fait rien au présent, Madame. Toutes ces belles apparences ne m’en imposent pas. Je ne fais point d’attention à ce que vous me dites. Tous les jours les pauvres maris se trouvent attrapés de la sorte, les uns plutôt, les autres plus tard. Enfin mon heure était venue !... Oh ! que cela est dur à supporter, Madame ! Plus j’ai compté sur votre fidélité, plus l’événement en question m’est sensible. Je vous déclare, oui, je vous déclare que je vais me séparer d’avec vous. En un mot, Madame, il est certain que l’on vous aime, et l’on n’a pas pu vous aimer sans que vous en soyez instruite. Parlez. Quand tout cela a-t-il commencé ? Quel effet cela fit-il sur vous, quand cela commença ? Comment s’y est-on pris pour vous le déclarer ? Où étais-je ce jour-là ? À quoi pensais-je ? Quelle physionomie avais-je ? Voilà, voilà sur quoi il s’agit de répondre.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="157">Si l’on m’aimait, si l’on me préférait à ma fille, cela me paraîtrait un caprice bien singulier ; mais en tout cas, Monsieur, ce que j’ai à répondre, c’est que je n’en ai jamais rien su, et que par conséquent je ne suis pas coupable.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="158">Eh ! c’est vous faire croire coupable autant que l’on peut l’être, que de persister dans cette dissimulation ; car il n’est pas possible... Le billet ne prouve-t-il pas de l’intelligence ?... Est-il vraisemblable ?... Oh ! qu’un pareil examen est mortifiant ! ma femme, ma chère femme, je veux croire que j’en ai eu tout le chagrin que j’en dois avoir, et que le traître n’osera jamais se présenter devant vous ; mais, ma mie, avouez-moi... la... avouez-moi ce qui en est.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="159">Quoi ! vous continuerez à me faire des questions aussi cruelles ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="160">Faut-il qu’un semblable libertin se soit introduit chez moi !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="161">Voyons, tâchons de l’aider à m’éclaircir la chose.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="162">Ah ! çà, ma femme. Quand il venait, par exemple, il vous faisait des politesses, et vous les receviez ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="163">Je les recevais, parce que je n’imaginais pas que je dusse faire autrement avec un homme destiné à ma fille. Depuis votre soupçon, j’ai agi différemment.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="164">Depuis ?...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="165">Oui, il est venu, et j’ai eu l’attention de ne pas demeurer un instant avec lui.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="166">Il est venu ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="167">Eh ! oui, vous dis-je !</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="168">Aujourd’hui ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="169">Il n’y a qu’un moment.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="170">Mais il faut que cet homme-là soit bien enragé, bien endiablé contre moi !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="171">Et quel inconvénient ?... Il ignorait le tourment qui m’accable.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, se jetant dans un fauteuil.</speaker>
+          <l n="172">Il est venu !... Le traître à juré ma perte. L’imposteur ! le scélérat ! que je le hais ! que je hais son cœur corrompu !... Je sacrifierais plutôt ma vie que de lui accorder ma fille ; faudra-t-il que je le voie m’enlever ma femme ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="173">Je ne suis pas plus disposée en sa faveur que vous ; mais c’est de quoi il n’est pas aisé de vous convaincre.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, vivement.</speaker>
+          <l n="174">Il est venu ! Il fallait m’avertir sur le champ. Il fallait lui dire, que si jamais il était assez hardi... Mais non ; à quoi pensé-je ? Je me trompe. En lui défendant de paraître, il apprendra que je suis jaloux. Il se vantera des progrès qu’il a faits sur votre cœur. Il cherchera partout à vous voir. Ce sera une ombre attachée à vos pas. Sa fureur ne fera que s’irriter. Vous-même le trouverez à plaindre. Non, non, Madame, s’il vous plaît. Ce n’est pas cela. Le véritable expédient ne s’est pas d’abord présenté à mon esprit. Excusez, c’est faute d’usage ; je ne suis pas encore trop au fait de la conduite que doit avoir un mari maltraité. Écoutez-moi.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="175">Parlez, Monsieur.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="176">Je crois qu’il vaut mieux... Oui, sans doute, il vaut mieux le recevoir ; ne lui point dire que je sais ses poursuites ; et même lui faire entendre que, quand je les saurais, je ne m’en embarrasserais guères. Mais je vous ordonne de lui marquer tout le mépris que vous pourrez imaginer ; de lui déclarer hautement que vous le haïssez ; que vous le détestez ; que vous ne voyez rien en lui qui vous plaise ; que vous êtes bien éloignée d’être sensible pour un homme comme lui, et que si vous avez quelqu’un à aimer, c’est votre mari qui est un homme d’honneur.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="177">Je tâcherai de vous obéir, Monsieur.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="178">Je compte que cela sera exécuté. Vous ne devez point vous faire une peine de le maltraiter de la sorte, puisque vous prétendez être si peu coupable. Nous verrons par-là, si en effet vous ne l’êtes pas. Nous verrons ce que cela deviendra. Je ne vous en dis pas davantage. Hom. Hom.</l>
+          <stage>&lt;em&gt;Il rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, seule</speaker>
+          <l n="179">Je consens à tout devant lui, pour tâcher de l’adoucir : mais comme je suis bien sûre que tout ceci est une chimère, je me garderai bien de rien faire connaître à personne d’une imagination aussi ridicule. Je n’ai nulle envie de recevoir Lélio, et je prendrai le parti de demeurer tranquille. Il y a apparence que l’inquiétude de Monsieur Lisimon ne sera que passagère. Au surplus, après avoir fait tout mon possible pour lui faire entendre raison, il se tourmentera de cette idée si longtemps qu’il le jugera à propos.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#julie">
+          <speaker>JULIE, avec vivacité.</speaker>
+          <l n="180">Rosette vient de me faire part d’une chose qui, je vous avoue, ma mère me cause une grande surprise.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="181">Rosette ! Est-ce qu’elle n’est point encore partie ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="182">Non. Et dans l’instant même, mon père vient de lui dire qu’il fallait qu’elle restât encore ici quelques jours.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="183">Je vois qu’il faut que je m’attende à bien des importunités !</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="184">Mais ma surprise est telle que je n’en puis revenir. Comment donc, ma mère ? On dit que ce n’a jamais été pour moi que Lélio est venu ici ; et que sensible à votre mérite et à votre estime, il n’y est jamais venu que pour vous voir !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="185">Ma fille, quand on a eu le malheur d’écouter des impertinences, il ne faut pas, du moins, être assez sotte pour les venir rapporter.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="186">Je vous prie de me le pardonner, ma mère ; mais la trahison est assez grande, pour que vous me permettiez de m’en plaindre. Rosette assure que c’est injustement qu’on la chasse ; que les sentiments secrets de Lélio lui étaient connus, et qu’elle avait toujours cru devoir, là-dessus, garder le silence.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="187">Mais, en vérité, je ne sais pas ce que tous ces gens-là veulent me dire.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="188">Si tous les hommes sont d’un caractère aussi faux, ils sont bien méprisables. Qu’avais-je besoin qu’il me trompât ? qu’il parlât de m’épouser ? enfin... qu’il cherchât à me rendre sensible ? car, offensée comme je le suis, je ne puis m’empêcher de parler ingénument devant vous, ma mère. Le trait est si perfide de sa part, et si humiliant pour moi, que je ne crois pas que je le puisse supporter. Ce sont de ces injures qui ne se pardonnent pas. Mon cœur est blessé mortellement ; et cette fourberie, que je ne puis concevoir, m’inspire une indignation qui surpasse de beaucoup toute l’estime que j’avais auparavant pour lui.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#le-laquais">
+          <speaker>LE LAQUAIS.</speaker>
+          <l n="189">Lélio est là-dedans, Madame, et demande si vous voulez lui permettre de paraître.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, après un temps.</speaker>
+          <l n="190">Lui permettre de paraître ?... Hélas ! je ne sais... Que je suis malheureuse, et que l’embarras où je me trouve est désagréable ! Si je le refuse, on ne manquera pas de me le reprocher, et de trouver à cela du mystère. Que je le reçoive, je serai ensuite accablée de mille interrogations fatigantes...</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="191">Eh ! ma mère, pouvez-vous balancer ? Par pitié pour moi, ayez une explication avec lui, et voyons ce qu’il osera dire.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, au Laquais, en haussant les épaules.</speaker>
+          <l n="192">Il est le maître.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="193">Quelle satisfaction, Madame, et quel soulagement pour moi dans mon malheur, que vous vouliez bien me permettre de me présenter encore devant vous ! Je ne crains point, même en présence de témoin, de vous en marquer ma reconnaissance.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="194">Si ce témoin vous importune, Monsieur, il en est bien mortifié ; mais il se croit ici nécessaire.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, fièrement.</speaker>
+          <l n="195">Je ne vous permets, en vérité, ni ne vous empêche de paraître. Mais après ce que mon mari vous avait dit, après les ordres que j’ai donnés ici, et la façon dont je vous ai déjà reçu, que voulez-vous ?</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="196">Il est temps de vous avouer, Madame, ce que jusqu’à présent j’avais cru devoir vous taire, quoique j’eusse pu vous le déclarer sans vous offenser, et sans donner une mauvaise opinion de mes sentiments.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE, à part.</speaker>
+          <l n="197">Que va-t-il dire ?</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="198">Je ne sais si vous croirez que je parle avec sincérité ; mais je suis forcé de vous dire,</l>
+          <stage>&lt;em&gt;Affectant un air un peu petit Maître.&lt;/em&gt;</stage>
+          <l n="199">qu’à l’égard de Mademoiselle votre fille... jamais je ne me suis flatté de l’obtenir.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE, à part.</speaker>
+          <l n="200">Il est donc vrai ! le fourbe !</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="201">Ce n’est pas que je ne rende toute la justice qui est due à ses charmes et à son éducation ; mais dans le fond de l’âme, je suis du nombre de ceux que le mariage effraye. Vous m’allez demander pourquoi je me suis présenté comme un homme qui demandait à l’épouser ? c’est une faute que j’ai faite par un excès de délicatesse, c’est une faute que j’aurais pu éviter ; car on ne devrait point avoir honte de déclarer ouvertement, à quelque personne que ce fût, un sentiment pur, et qui n’a rien que de respectueux. C’est une faute que l’ombrage et les injustes soupçons de la plupart des maris m’ont fait faire. Cependant, il ne serait pas juste que cette faute fût, en aucune façon, nuisible à Mademoiselle. Je serais au désespoir si cette conduite de ma part allait éclater dans le monde ; et même, je vous demande en grâce qu’il me soit permis de paraître lui rendre des devoirs encore quelque temps, pour ne rien donner à penser sur ce qui se passe aujourd’hui, et pour pouvoir insinuer, petit-à-petit, que des intérêts de famille sont les motifs qui empêchent ce mariage.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE, à part.</speaker>
+          <l n="202">Fut-il jamais de perfidie semblable !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="203">Je n’entends pas bien clairement, Monsieur, ce que signifie un sentiment pur et respectueux dont vous parlez.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="204">C’est ce sentiment que je ne devais pas vous cacher, Madame ; c’est cette satisfaction que l’on a de vivre tous les jours avec une personne d’une probité douce et aimable : ce sentiment qui naît de ces conversations sages et spirituelles, qui, en amusant, font aimer la vertu : ce sentiment que font naître un caractère respectable et mille bonnes qualités, que, sans en imposer, je puis dire que vous possédez plus que qui que ce soit au monde. Je sais combien une autre espèce d’attachement vous offenserait : mais un homme sur qui vous auriez fait une pareille impression, serait-il raisonnable d’en rougir plus longtemps, et de s’obstiner à ne vous en point faire l’aveu ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="205">J’ai peine à retenir le courroux...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="206">Mais, tout enveloppée qu’est cette déclaration ; est-ce bien à moi qu’elle s’adresse ?</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="207">Je n’ai rien dit qu’il ne convienne, je crois, de vous faire entendre.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="208">Retirez-vous. Vous me surprenez beaucoup, je l’avouerai, Monsieur. Retirez-vous, vous dis-je. L’amitié d’un homme de votre âge ne saurait me convenir, et soyez sûr que M. Lisimon n’est point homme à l’approuver.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE, à Lélio.</speaker>
+          <l n="209">Est-il possible, ingrat ?...</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO, à Madame Lisimon.</speaker>
+          <l n="210">Une femme doit être soumise sans être esclave. Une société honnête est partout recherchée, et un mari serait injuste...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="211">Eh ! Monsieur...</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="212">Vous pouvez décider de mon sort : mais, faites réflexion à une chose, Madame. C’est que pour l’honneur de M. Lisimon, pour la gloire de Mademoiselle, et j’ose même dire pour la vôtre, tout ceci veut plus de ménagement que vous ne pensez.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, à part.</speaker>
+          <l n="213">Peut-il se rencontrer des circonstances plus bizarres !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="214">Allez, Monsieur, toute la réflexion dont je suis capable dans ce moment, c’est que ce suroit un crime à moi de vous écouter.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO, vivement.</speaker>
+          <l n="215">Dites plutôt, Madame, que ce sera un crime de me condamner, de m’exiler sans examen, de rompre avec moi sans précaution, de conserver d’injustes opinions sur mon compte. Le Ciel est témoin de la vérité de ce que je vais dire : oui, Madame, mes sentiments pour toute votre famille sont tels qu’ils doivent être. Je vous rends, je rends à Mademoiselle ce qu’à chacune je vous dois. Je puis même assurer que mon estime pour M. Lisimon est sincère, et que son changement pour moi a été le coup le plus mortel que je puisse recevoir. Voilà quels sont mes sentiments : voilà comme pense un homme aussi tendre que malheureux, qui, sans être coupable, le</l>
+          <stage>&lt;em&gt;Il regarde Julie, mais elle ne s’en aperçoit point, parce qu’elle a les yeux baissés et un air consterné ainsi que Madame Lisimon.&lt;/em&gt;</stage>
+          <l n="216">paraît dans ce moment, et qui se retire avec l’affreuse certitude de n’être point plaint de celle qu’il aime.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="217">Elle qu’il aime ! Quelle expression ! Que faut-il que je pense ? Je ne sais lequel est le plus raisonnable, ou de croire ce qu’il dit, ou d’en douter. Se peut-il ?... La Lettre aurait-elle réellement été envoyée pour moi ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="218">Je demeure interdite. Pourquoi cette trahison, dont j’étais déjà persuadée, quand il en fait l’aveu positif, me cause-t-elle un si grand étonnement ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="219">Allez avertir votre père.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="220">Il paraît. Ô ciel ! que ce revers est douloureux pour moi ! Permettez-moi, ma mère, de vous cacher mon trouble.</l>
+          <stage>&lt;em&gt;Elle rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XX">
+        <head>Scène XX</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="221">Je n’étais pas loin. Eh ! bien, qu’est-ce que c’est ? Comment cela s’est il passé ? J’attendais qu’il fût sorti. Je m’impatientais, J’ai eu vingt fois envie d’entrer.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="222">Monsieur, je n’ai qu’un mot à vous dire, je me fais violence ; mais mon devoir l’emportera toujours sur tout.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="223">L’avez-vous bien maltraité ? Et...</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="224">Je ne l’aurais jamais cru. Il m’a fait une déclaration.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="225">Plaît-il ?... Une déclaration dans les formes ? Parlant à vous ? Une déclaration face à face ?</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="226">Cependant avec réserve, empruntant le voile de l’amitié, et se disant pour vous plein d’estime.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="227">Eh ! qu’il aille au Diable avec son estime. Enfin, un nouveau jour se répand donc sur cette affaire ! Voilà donc qui est bien déclaré ! Il ose le dire ouvertement. Il ose persister.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="228">Jamais, je vous avoue, je n’ai été si étonnée.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="229">Quel coup de foudre ! Parbleu, Madame, voilà une petite conduite fort honnête ! Cela suffit, et je crois qu’à présent vous n’oserez plus soutenir qu’un amour si obstiné ait pu naître sans que vous en soyez coupable en la moindre chose.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="230">Je me suis attendue à tout ce que cela m’allait attirer de votre part ; mais en avouant la chose, j’ai fait ce que j’ai dû. Au surplus, Monsieur, il m’a persuadée qu’il serait dangereux d’éclater dans cette aventure ; et j’espère à ce sujet vous faire faire quelques réflexions, quand le premier mouvement de votre colère sera passé.</l>
+          <stage>&lt;em&gt;Elle rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXI">
+        <head>Scène XXI</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="231">Eh ! ne comptez pas qu’elle se passe, ma colère. C’en est donc fait ! Qu’est devenu ce renom dont j’étais si glorieux ? Souffrirai-je que mon honneur soit outragé de la sorte ? Eh ! bien, que penses-tu de cela, Rosette ? Est-il un homme plus trahi, plus malheureux que je le suis ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="232">Moi ! je ne sais là-dessus que penser. Si vous êtes malheureux, nous le sommes tous ici. Et cela, je le dis, sans en excepter celui qui vous trahit.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="233">Mais s’il est malheureux, lui, il mérite de l’être. C’est me payer de plaisantes raisons ! Il est malheureux ! Oh ! je puis bien répondre que son malheur, que celui de tous ceux qui me trahissent, n’est pas au point où il doit aller ; et je vais... Mais quoi ! que vais-je faire ? A-t-on jamais pu trouver un vrai remède à cela ? Et que pourrai-je inventer qui satisfasse pleinement la rage et le dépit que j’ai au fond du cœur ?</l>
+          <stage>&lt;em&gt;Il rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXII">
+        <head>Scène XXII</head>
+        <sp who="#rosette">
+          <speaker>ROSETTE, seule</speaker>
+          <l n="234">Le pauvre homme paye bien cher son injustice, et le mauvais procédé qu’il a eu avec Lélio. Je ne sais ce que cela produira. Je ne sais si Lélio aura pu tirer quelque avantage de l’idée que je lui ai donnée. À mon égard, dans tout ce trouble-ci, j’ai essayé, du moins, de me tirer d’affaire. Il y a apparence que ce que j’ai dit à Madame Lisimon passant à présent dans son esprit pour une vérité, elle n’insistera plus pour que je sois renvoyée.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXIII">
+        <head>Scène XXIII</head>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR, en se frottant les yeux et ayant une voix enrouée, à part.</speaker>
+          <l n="235">Je suis bien en peine ; aurais-je fait quelque bévue !</l>
+          <stage>&lt;em&gt;Haut. &lt;/em&gt;</stage>
+          <l n="236">Ah ! Rosette, mon Maître m’avait chargé d’un billet pour Julie. Ma foi, je t’avouerai qu’en chemin je suis entré dans un Cabaret ; j’ai bu et bu à outrance. J’ai dormi : j’ai rêvassé à mille choses différentes ; mais ce qu’il y a de fâcheux, c’est qu’en me réveillant je ne l’ai pas retrouvé, ce diable de billet.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE, après avoir regardé quelque temps la Fleur, qui ne sait ce que cela veut dire.</speaker>
+          <l n="237">Sais-tu ce qui est arrivé ici aujourd’hui ?</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="238">Qu’est-ce que c’est ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="239">Premièrement, ton Maître, contre le quel on était déjà prévenu, est à présent sans nulle espérance de jamais épouser Julie.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="240">Que me dis-tu !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="241">À mon égard, moi, j’ai reçu mon congé.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="242">Est-il possible !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="243">Pour Monsieur et Madame Lisimon, l’esprit de divorce s’est emparé d’eux, et ils sont sur le point de se séparer !</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="244">Eh ! mais, voilà de terribles affaires.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="245">Cela est vrai, et si je te disais que c’est toi qui as fait tout cela ?</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="246">Moi !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="247">Toi.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR.</speaker>
+          <l n="248">Moi !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="249">Si tu veux, j’entrerai en détail là-dessus ; mais je t’avertis auparavant qu’il ne fait pas bon ici pour toi, et que de toutes les personnes qui peuvent paraître, il n’y en a pas une seule qui ne soit disposée de façon à t’assommer de coups de bâton sur la place.</l>
+        </sp>
+        <sp who="#la-fleur">
+          <speaker>LA FLEUR, ayant un air de réflexion.</speaker>
+          <l n="250">J’aurais volontiers la curiosité d’entendre ces détails ; mais tu me parles d’un ton si énergique et si persuasif, qu’avec quelques idées confuses, il me prend envie de ne rien examiner.</l>
+          <stage>&lt;em&gt;Il sort avec précipitation.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXIV">
+        <head>Scène XXIV</head>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="251">Allons un peu... Mais voici Monsieur Lisimon qui revient. Que son âme paraît agitée !</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, à part.</speaker>
+          <l n="252">On dira, si l’on veut, que cela est extravagant ; ma haine et mon dépit n’ont pu se contraindre, et le mot est lâché... Quelle extravagance y aurait-il, après tout ? Quand l’honneur est blessé, n’est-ce pas de cette façon-là qu’on le venge dans le monde, et ne suis-je pas un homme comme un autre ? Allons, cela est décidé.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE, à part.</speaker>
+          <l n="253">Si toute cette aventure n’était pas aussi sérieuse pour nos Amants, et peut-être pour moi, je m’en divertirais volontiers.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="254">Que méditez-vous donc, Monsieur ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="255">Ce que je médite ! Ce que médite un homme de cœur.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="256">Eh ! mon Dieu ! vous dites cela avec un si grand sérieux, que vous me donneriez presque envie d’en rire. Il semble... mais je ne puis me l’imaginer ; il semble que vous allez vous battre.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="257">Croirais-tu que ces réflexions, que Madame Lisimon disait me vouloir communiquer, ont été des raisons pour établir ici les assiduités de Lélio, des prétextes pour se ménager le plaisir de le voir ? Croirais-tu qu’une femme comme elle serait devenue sensible ?... Mais sensible. Eh ! qui sait jusques à quel point ?... Tu te moques ?... Elle n’a pas dit un mot qui n’ait découvert sa folle passion.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE, riant.</speaker>
+          <l n="258">Franchement, pour cet article-là, je ne puis pas, en conscience, dire que je le crois.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="259">Enfin, puisque tu l’as deviné, il est vrai, j’ai chargé un vieil Officier de mes amis...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="260">De quoi ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="261">D’aller sommer Lélio de ma part de se trouver...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="262">Mais voilà qui est inouï ! Vous ? Eh ! juste Ciel ! le beau combat ! Et que feriez-vous ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="263">Je t’avoue que dans cet instant que mes sens sont un peu plus rassis, il me paraît assez désagréable d’aller me battre, parce que l’on me...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="264">Désagréable ! assurément, et très désagréable. D’un autre côté, comment sortir de-là ? Voilà votre imagination frappée de façon à vous faire passer des jours bien misérables ! Vous serez tourmenté sans cesse. Je pense à une chose bien simple, qui d’abord ne se présentait pas à mon esprit.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="265">Si ce moment était un moment heureux !</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="266">Qu’est-ce que c’est ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="267">En vérité, la tête tourne dans de pareilles occasions, et à peine avons-nous eu le temps de nous reconnaître ! Que quelqu’un qui vous inquiéterait devînt votre gendre, apparemment vous cesseriez d’en être jaloux ? Lélio ayant paru rendre des devoirs à votre fille, malgré quelques soupçons que vous avez sur sa conduite, que ne le forcez-vous de l’épouser ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, vivement.</speaker>
+          <l n="268">Le forcer de l’épouser ! lui ! j’aimerais mieux... Mais tu n’y penses pas. Lui ! mon gendre ! Songe donc que j’ai conçu pour lui une haine, une antipathie si forte, qu’il n’est pas possible... non, qu’il n’est pas possible que jamais elles s’éteignent.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="269">Cependant ce serait le seul moyen de vous mettre en repos.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="270">D’ailleurs, il faudrait que je fusse un homme bien barbare ! Quoi ! moi ! j’irais donner ma fille à un homme qui a des mœurs... à un homme comme celui-là !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="271">Mais à l’égard de cela, si quelqu’un de votre famille doit souffrir de son libertinage, il vaudrait encore mieux que ce fût votre fille que vous. Rien ne vous est si cher que vous-même. Plus jeune, elle supportera mieux ces sortes de chagrins ; et dès-là elle sera peut-être moins embarrassée de la vengeance que vous l’êtes.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="272">Eh ! quand je voudrais l’y forcer, l’accepterait-il ? Vraiment tu ne sais pas comme pense cette espèce de gens-là. Ils ne veulent rien d’honnête, ni de légitime.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="273">Mais soyez vous-même bien déterminé.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="274">Il ne l’accepterait pas, te dis-je. Non ; s’en tient à ma femme.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="275">Faites-lui la proposition. Parlez-lui ferme. Intimidez-le ; il n’osera peut-être pas refuser ; et s’il accepte une fois, voilà votre tranquillité assurée.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="276">Eh ! non, te dis-je, il ne voudra pas.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXV">
+        <head>Scène XXV</head>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR et MADAME LISIMON, JULIE, LÉLIO, ROSETTE</speaker>
+          <stage>&lt;em&gt;Lélio paraît dans le fond du Théâtre avec Madame Lisimon. Julie suit Madame Lisimon, mais en est un peu éloignée.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="277">Qu’est ce ?... Voici... Est-ce une illusion ? Ne sont-ce point eux que je vois ensemble ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="278">Ce sont eux-mêmes, et ils semblent causer avec assez de familiarité.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="279">Il lui parle bas, Elle l’écoute. Dieux ! Elle lui serre la main !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="280">Vous voyez que ce sera sous vos yeux, un supplice continuel, et vous aurez beau faire. L’occasion se présente ; faites-lui la proposition, croyez-moi.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="281">Mais...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="282">Allez, n’hésitez point.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON, haut à Lélio.</speaker>
+          <l n="283">Je vous en sais bien du gré, assurément.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="284">Elle lui en sait bien du gré ! Ciel ! il n’y a pas un moment à perdre, et je n’y puis plus tenir.</l>
+          <stage>&lt;em&gt;Allant à Lélio.&lt;/em&gt;</stage>
+          <l n="285">Monsieur, voulez-vous accepter ?...</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="286">Moi, Monsieur ?... Non assurément, vous êtes le maître de penser de moi ce qu’il vous plaira.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE, à M. Lisimon qui la regarde.</speaker>
+          <l n="287">Il ne vous entend pas.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="288">Monsieur, vous n’entendez peut-être pas ?...</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="289">Pardonnez-moi, Monsieur, j’entends à merveille ce que vous voulez me dire, et j’ai là-dessus rendu compte à Madame de ma façon de penser.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE, à M. Lisimon qui la regarde.</speaker>
+          <l n="290">Tenez bon, Monsieur Lisimon.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="291">Mais, Monsieur !...</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="292">Quand je le voudrais, vous jugez bien qu’à présent Madame s’y opposerait.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, à Rosette d’un ton pleureur.</speaker>
+          <l n="293">Elle s’y opposerait !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="294">Faites-vous écouter. Parlez haut.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="295">Je vous prie, Monsieur, je vous prie de vouloir bien accepter ma fille en mariage.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO, demeurant surpris.</speaker>
+          <l n="296">Plaît-il ?</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON, à Rosette.</speaker>
+          <l n="297">Hé ! bien ; tu vois bien qu’il ne veut pas.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="298">M’accepter en mariage, hélas ! mon père pouvez-vous de la sorte m’exposer à un refus.</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="299">Malgré tous les différents reproches que Monsieur a malheureusement contre lui, ce serait un accommodement qui serait bien à désirer.</l>
+        </sp>
+        <sp who="#lélio">
+          <speaker>LÉLIO.</speaker>
+          <l n="300">Madame, je suis sûr de vous convaincre que les premiers reproches sur lesquels ma disgrâce est venue, sont faux. Les seconds, en ce qui regarde mon respect et mon attachement pour vous, sont vrais, mais les circonstances vous ont fait prendre pour une déclaration d’amour ce qui n’était qu’une protestation d’amitié, et dans mon infortune, je voulais tirer parti de l’erreur. À votre égard, Monsieur, je comptais recevoir un défi de votre part, et c’est Mademoiselle votre fille que vous me priez d’accepter ; franchement la proposition est différente. Enfin, Mademoiselle, vous qui craignez d’être exposée à un refus, quelle apparence que cette crainte soit fondée avec un homme qui vous adore, et qui n’adorera jamais que vous !</l>
+          <stage>&lt;em&gt;Il lui donne la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="301">Est-il possible que j’en sois quitte !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="302">Ô ciel ! d’où revenons-nous !</l>
+        </sp>
+        <sp who="#madame-lisimon">
+          <speaker>MADAME LISIMON.</speaker>
+          <l n="303">Ma joie ne saurait s’exprimer.</l>
+        </sp>
+        <sp who="#monsieur-lisimon">
+          <speaker>MONSIEUR LISIMON.</speaker>
+          <l n="304">Votre joie ?... Embrassons-nous donc, ma chère femme, et soyez-moi rendue pour toujours.</l>
+          <l n="305" />
+        </sp>
       </div>
     </body>
   </text>

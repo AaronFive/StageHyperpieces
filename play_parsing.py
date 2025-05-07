@@ -3,20 +3,24 @@
 @author: aaron
 Collection of functions used to parse XML-TEI plays
 """
-import glob, os, re, sys, requests, math, csv, warnings
 import ast
-import enchant
-from xml.dom import minidom
-import networkx as nx
+import csv
+import os
 import pickle
-import parameterized_matching
-from rules_checker import *
-from parameterized_matching import spm, spm_hamming, annotate_characters
+import sys
+import warnings
+from xml.dom import minidom
+
+import enchant
+import networkx as nx
 from Levenshtein import distance
+
+import parameterized_matching
+from parameterized_matching import annotate_characters
 
 # Get the current folder
 folder = os.path.abspath(os.path.dirname(sys.argv[0]))
-corpus = 'CorpusDracor'
+corpus = 'CorpusDracor - new'
 outputDir = 'Output'
 corpusFolder = os.path.join(folder, 'Corpus', corpus)
 outputFolder = os.path.join(folder, outputDir)
@@ -47,15 +51,18 @@ def get_genre(doc):
     if genre == "":
         term = doc.getElementsByTagName("term")
         for c in term:
-            typ = c.getAttribute("type")
-            possible_genre = c.firstChild.nodeValue
-            if typ == "genre":
-                genre = possible_genre
-            elif possible_genre in ["Tragédie", "Tragedie", "Comedie", "Comédie", "Tragicomédie", "Tragi-comédie",
-                                    "Pastorale"]:
-                genre = c.firstChild.nodeValue
-            if firstgenre == "" and possible_genre not in ["vers", "prose", "mixte"]:
-                firstgenre = possible_genre
+                typ = c.getAttribute("type")
+                try:
+                    possible_genre = c.firstChild.nodeValue
+                except AttributeError:
+                    possible_genre = None
+                if typ == "genre":
+                    genre = possible_genre
+                elif possible_genre in ["Tragédie", "Tragedie", "Comedie", "Comédie", "Tragicomédie", "Tragi-comédie",
+                                        "Pastorale"]:
+                    genre = c.firstChild.nodeValue
+                if firstgenre == "" and possible_genre not in ["vers", "prose", "mixte"]:
+                    firstgenre = possible_genre
 
     if genre == "":
         genre = firstgenre
@@ -86,10 +93,61 @@ def get_title(doc):
     if len(title_nodes) > 0:
         return title_nodes[0].firstChild.nodeValue
     else:
-        warnings.warn("No title found")
+        print("No title found")
+
+
+def get_author(doc):
+    """Returns the author of a play"""
+    title_nodes = doc.getElementsByTagName('author')
+    if len(title_nodes) > 0:
+        return title_nodes[0].firstChild.nodeValue
+    else:
+        print("No author found")
+
+
+def get_full_name_and_wikidata_id(doc):
+    """ Returns the full name of the authors of a play  in TitleCase, with their corresponding wikidata ID"""
+    names_and_id = dict()
+    author_nodes = doc.getElementsByTagName('author')
+    if not author_nodes:
+        return dict()
+    for a in author_nodes:
+
+        # Getting the Wikidata ID
+        wikidata_id = ''
+        idno_elements = a.getElementsByTagName("idno")
+        for idno in idno_elements:
+            if idno.getAttribute("type") == "wikidata":
+                # Get the text content of the idno element
+                wikidata_id = idno.firstChild.nodeValue.strip() if idno.firstChild else ""
+        if wikidata_id == '':
+            continue
+        # Getting the full name
+        persname_node = a.getElementsByTagName('persName')
+        if not persname_node:
+            raise ValueError("wikidata ID but no name")
+        name_parts = []
+        for node in persname_node[0].childNodes:
+            if node.nodeType == node.TEXT_NODE:  # Direct text inside <persName>
+                text = node.nodeValue.strip()
+                if text:
+                    name_parts.append(text)
+            elif node.nodeType == node.ELEMENT_NODE:  # Tags like <forename>, <surname>, etc.
+                if node.firstChild and node.firstChild.nodeType == node.TEXT_NODE:
+                    text = node.firstChild.nodeValue.strip()
+                    if text:
+                        name_parts.append(text)
+        complete_name = " ".join(name_parts).strip()
+        complete_name = complete_name.title()
+        names_and_id[complete_name] = wikidata_id
+    return names_and_id
 
 
 def get_dracor_id(doc):
+    tei = doc.getElementsByTagName('TEI')[0]
+    if tei.hasAttribute('xml:id'):
+        id = tei.getAttribute('xml:id')
+        return id
     id_nodes = doc.getElementsByTagName('idno')
     id = None
     for n in id_nodes:
@@ -103,6 +161,31 @@ def get_dracor_id(doc):
         title = get_title(doc)
         warnings.warn(f'Play {title} has no id')
     return id
+
+
+def get_wikidata_id_author(doc):
+    """Returns the Wikidata ID of the author in the TEI file.
+
+    Only works on Dracor files, that have this information in their header. Sometimes multiple authors are listed : for now, we only keep the first one."""
+    author_elements = doc.getElementsByTagName("author")
+    if len(author_elements) == 1:
+        author = author_elements[0]
+    elif len(author_elements) > 1:
+        print("Warning, multiple <authors> tags in doc, keeping the first")
+        author = author_elements[0]
+    else:
+        print("Warning, no <authors> tag in doc")
+        return None
+
+    idno_elements = author.getElementsByTagName("idno")
+    for idno in idno_elements:
+        if idno.getAttribute("type") == "wikidata":
+            # Get the text content of the idno element
+            wikidata_value = idno.firstChild.nodeValue.strip() if idno.firstChild else ""
+            if wikidata_value:
+                return wikidata_value
+    print("Warning, none found")
+    return None
 
 
 def get_date(doc):
@@ -129,7 +212,7 @@ def get_characters_by_cast(doc):
         char_list = listperson[0].getElementsByTagName('person')
         return ["".join(["#", c.getAttribute("xml:id")]) for c in char_list]  # prefixing every name by #
     else:
-        # if there is no listPerson we use the the castList
+        # if there is no listPerson we use the castList
         char_list = doc.getElementsByTagName('role')
         for c in char_list:
             name_id = c.getAttribute("corresp")
@@ -173,18 +256,29 @@ def get_scenes(doc):
 
 def get_scene_text(scene):
     """"Given a scene, returns a list of the form [(locutor, text said by locutor)]"""
+    translation_dict = {'\x81': None, '\x84': None, '\x85': '...', '\x91': '\'', '\x93': '\"', '\x95': '•',
+                        '\x96': '-', '\uff0c': ',', '\u0144': 'ń', '\u0173': 'ų',
+                        '\u2015': '―', '\xa0': ' '}
     speaker_list = scene.getElementsByTagName('sp')
     full_text = []
     for speaker_nodes in speaker_list:
         sentences = speaker_nodes.getElementsByTagName('l')
         sentences = sentences + speaker_nodes.getElementsByTagName('s')
         sentences = sentences + speaker_nodes.getElementsByTagName('stage')
-        text = ' '.join([s.firstChild.nodeValue for s in sentences if s.childNodes])
+        text = []
+        for s in sentences:
+            for child in s.childNodes:
+                if child.nodeValue is not None:
+                    text.append(child.nodeValue)
+                    break
+        text = ' '.join(text)
+        # text = ' '.join([s.firstChild.nodeValue for s in sentences if s.childNodes])
         locutor_node = speaker_nodes.getElementsByTagName('speaker')
         if locutor_node and locutor_node[0].childNodes:
             locutor_name = locutor_node[0].firstChild.nodeValue
         else:
             locutor_name = None
+        text = text.translate(str.maketrans(translation_dict))
         full_text.append((locutor_name, text))
     return full_text
 
@@ -196,6 +290,8 @@ def get_full_text(doc):
     scene_list = doc.getElementsByTagName('div2')
     scene_list = scene_list + doc.getElementsByTagName('div')
     scene_list = [s for s in scene_list if s.getAttribute("type") == "scene"]
+    if not scene_list:
+        print("Warning : no scene")
     full_text_list = [get_scene_text(s) for s in scene_list]
     flattened_list = [t for f in full_text_list for t in f]
     return flattened_list
@@ -220,7 +316,7 @@ def get_all_acts_dialogues(doc, split_by_act=False):
 
 
 def get_fixed_parameterized_play(play):
-    """Returns a paramterized play after correction of character names """
+    """Returns a parameterized play after correction of character names """
     sc = get_scenes(play)
     return fix_character_names(sc)
 
@@ -564,12 +660,12 @@ def check_character_rule(c, genre):
     output_char_rule.write(f"{nb_wrong} {genre} brisent les règles sur {nb_genre}\n")
 
 
-def normalized_levenshtein(char1, char2):
+def normalized_levenshtein(char1, char2, cutoff=0.9):
     d = distance(char1[:-1], char2[:-1])
     s1, s2 = len(char1), len(char2)
     alignment = (s1 + s2 - d) / 2
     res = alignment / max(s1, s2)
-    if res < 0.9:
+    if res < cutoff:
         res = 0
     return res
 
@@ -675,31 +771,89 @@ def get_speech_of_characters(play):
     pass
 
 
+# tmp, delete once done :
+# Get the full name of authors by looking at surname and forname tags
+# Align with fredracor id and put it in csv
+
+
 if __name__ == "__main__":
-    distances = pickle.load(open('distances_cast.pkl', 'rb'))
-    output = open('close_plays_by_cast.csv', 'w', newline='', encoding='utf8')
-    fieldnames = ["Play Name", "First closest", "Average distance", "First distance", "Cast Matching 1",
-                  "Second closest", "Cast Matching 2"]
-    gwriter = csv.DictWriter(output, fieldnames=fieldnames)
-    gwriter.writeheader()
-    for play1 in distances:
-        for play2 in distances[play1]:
-            normalized_distance = distances[play1][play2][0]
-            distances[play1][play2] = (normalized_distance, sort_dict(distances[play1][play2][1]))
-    for play1 in distances:
-        print(play1)
-        play1_list = sorted([(x, distances[play1][x]) for x in distances[play1]], key=lambda x: -x[1][0])
-        average_dist1 = sum([distances[play1][x][0] for x in distances[play1]]) / len(distances[play1])
-        top_3_closest = play1_list[:2]
-        csv_row = dict()
-        csv_row["Play Name"] = play1
-        csv_row["Average distance"] = average_dist1
-        csv_row["First distance"] = top_3_closest[0][1][0]
-        csv_row["First closest"] = top_3_closest[0][0]
-        csv_row["Cast Matching 1"] = top_3_closest[0][1][1]
-        csv_row["Second closest"] = top_3_closest[1][0]
-        csv_row["Cast Matching 2"] = top_3_closest[1][1]
-        gwriter.writerow(csv_row)
+
+    # Getting all the wikidata ID of authors in Dracor
+    # output_csv = "Dracor_full_author_name.csv"  # Output file name
+    # output_csv = os.path.join('Outputs', output_csv)
+
+    # # Define the CSV header
+    # csv_header = ["Dracor_ID", "Wikidata_ID"]
+    # not_found = 0
+    #
+    # # Open the CSV file for writing
+    # with open(output_csv, mode="w", newline="", encoding="utf-8") as file:
+    #     writer = csv.writer(file)
+    #     writer.writerow(csv_header)
+    #     for file in os.listdir(corpusFolder):
+    #         play_path = os.path.join(corpusFolder, file)
+    #         play = get_play_from_file(play_path)
+    #         title = get_title(play)
+    #         wikidata_ID = get_wikidata_id_author(play)
+    #         if wikidata_ID is None:
+    #             not_found += 1
+    #         dracor_id = get_dracor_id(play)
+    #         if dracor_id is None:
+    #             print("WARNING : NO DRACOR ID")
+    #         writer.writerow([dracor_id, wikidata_ID])
+    # print('Done')
+    # print(f'Not found : {not_found}')
+
+    # Doing the same thing for Full names
+    output_csv = "Dracor_full_author_name_wikidata_id.csv"  # Output file name
+    output_csv = os.path.join('Outputs', output_csv)
+
+    # Define the CSV header
+    csv_header = ["Full author name", "Wikidata_ID"]
+    not_found = 0
+
+    # Open the CSV file for writing
+    with open(output_csv, mode="w", newline="", encoding="utf-8") as file:
+        writer = csv.writer(file)
+        writer.writerow(csv_header)
+        seen = set()
+        for file in os.listdir(corpusFolder):
+            play_path = os.path.join(corpusFolder, file)
+            play = get_play_from_file(play_path)
+            title = get_title(play)
+            print(title)
+            wikidata_dict = get_full_name_and_wikidata_id(play)
+            for author in wikidata_dict:
+                if author not in seen:
+                    seen.add(author)
+                    writer.writerow([author, wikidata_dict[author]])
+    print('Done')
+    print(f'Not found : {not_found}')
+
+    # distances = pickle.load(open('distances_cast.pkl', 'rb'))
+    # output = open('close_plays_by_cast.csv', 'w', newline='', encoding='utf8')
+    # fieldnames = ["Play Name", "First closest", "Average distance", "First distance", "Cast Matching 1",
+    #               "Second closest", "Cast Matching 2"]
+    # gwriter = csv.DictWriter(output, fieldnames=fieldnames)
+    # gwriter.writeheader()
+    # for play1 in distances:
+    #     for play2 in distances[play1]:
+    #         normalized_distance = distances[play1][play2][0]
+    #         distances[play1][play2] = (normalized_distance, sort_dict(distances[play1][play2][1]))
+    # for play1 in distances:
+    #     print(play1)
+    #     play1_list = sorted([(x, distances[play1][x]) for x in distances[play1]], key=lambda x: -x[1][0])
+    #     average_dist1 = sum([distances[play1][x][0] for x in distances[play1]]) / len(distances[play1])
+    #     top_3_closest = play1_list[:2]
+    #     csv_row = dict()
+    #     csv_row["Play Name"] = play1
+    #     csv_row["Average distance"] = average_dist1
+    #     csv_row["First distance"] = top_3_closest[0][1][0]
+    #     csv_row["First closest"] = top_3_closest[0][0]
+    #     csv_row["Cast Matching 1"] = top_3_closest[0][1][1]
+    #     csv_row["Second closest"] = top_3_closest[1][0]
+    #     csv_row["Cast Matching 2"] = top_3_closest[1][1]
+    #     gwriter.writerow(csv_row)
 
     # get_close_plays_by_cast(corpusFolder)
     # print("Loading")

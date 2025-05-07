@@ -1,1376 +1,1372 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Horace et Lydie</title>
-        <author key="François PONSARD | (naissance-mort)">François PONSARD |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/horace-et-lydie-françois-ponsard</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>François PONSARD |</author>. <title>Horace et Lydie</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/horace-et-lydie-françois-ponsard</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1850-06-19">Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 19 juin 1850.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="lydie" sex="SEX">
+            <persName>LYDIE</persName>
+          </person>
+          <person xml:id="horace" sex="SEX">
+            <persName>HORACE</persName>
+          </person>
+          <person xml:id="beroé" sex="SEX">
+            <persName>BEROÉ</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1850-06-19" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 19 juin 1850.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Horace et Lydie</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte et en vers.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre-Français, le 19 juin 1850.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="lydie">LYDIE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="horace">HORACE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="beroé">BEROÉ</role>
-              <roleDesc>, <em>esclave de Lydie</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>Une chambre somptueuse, à Rome, chez Lydie. Au fond, des fenêtres à moitié cachées par des rideaux de pourpre. À gauche, la porte d’un cabinet de toilette.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="7" xml:id="l7"> </l>
-          <sp who="beroé" xml:id="1-1">
-            <speaker>LYDIE, BEROÉ, <em>esclave de Lydie</em></speaker>
-            <l n="8" xml:id="l8">          </l>
-            <stage><hi rend="italic"><em>Lydie est assise et occupée à sa toilette. Beroé est debout.</em></hi></stage>
-          </sp>
-          <sp who="lydie" xml:id="1-2">
-            <speaker>LYDIE.</speaker>
-            <l n="10" xml:id="l10">Approche le miroir, Beroé.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-3">
-            <speaker>BEROÉ.</speaker>
-            <l n="11" xml:id="l11">Le voici.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-4">
-            <speaker>LYDIE, <em>se regardant au miroir.</em></speaker>
-            <l n="12" xml:id="l12">Trouves-tu mes cheveux bien arrangés ainsi ?</l>
-          </sp>
-          <sp who="beroé" xml:id="1-5">
-            <speaker>BEROÉ.</speaker>
-            <l n="13" xml:id="l13">À merveille.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-6">
-            <speaker>LYDIE.</speaker>
-            <l n="14" xml:id="l14">Vraiment ? – Ne crois-tu pas qu’Horace</l>
-            <l n="15" xml:id="l15">Aimera ces frissons, ondulant non sans grâce ?</l>
-          </sp>
-          <sp who="beroé" xml:id="1-7">
-            <speaker>BEROÉ.</speaker>
-            <l n="16" xml:id="l16">S’il n’en est pas charmé, le poète romain</l>
-            <l n="17" xml:id="l17">A le goût plus grossier qu’un barbare germain.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-8">
-            <speaker>LYDIE.</speaker>
-            <l n="18" xml:id="l18">Pourtant si, délivrant les boucles vagabondes,</l>
-            <l n="19" xml:id="l19">Je laissais sur mon cou se dérouler leurs ondes ?</l>
-            <l n="20" xml:id="l20">– Telle apparut, dit-on, Vénus au mont Ida.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-9">
-            <speaker>BEROÉ, <em>montrant la coiffure de Lydie.</em></speaker>
-            <l n="21" xml:id="l21">Mais ainsi se coiffait la fille de Léda.</l>
-            <l n="22" xml:id="l22">Le double bandeau sied aux visages ovales,</l>
-            <l n="23" xml:id="l23">Et vous ferez mourir de dépit vos rivales.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-10">
-            <speaker>LYDIE.</speaker>
-            <l n="24" xml:id="l24">Tu crois ?</l>
-          </sp>
-          <sp who="beroé" xml:id="1-11">
-            <speaker>BEROÉ.</speaker>
-            <l n="25" xml:id="l25">Hier, Chloé vous a vue en chemin ;</l>
-            <l n="26" xml:id="l26">La jalouse a pâli sous son triple carmin.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-12">
-            <speaker>LYDIE.</speaker>
-            <l n="27" xml:id="l27">Eh bien, si ma coiffure irrite sa malice,</l>
-            <l n="28" xml:id="l28">Restons ainsi coiffée, afin qu’elle pâlisse.</l>
-            <stage><hi rend="italic"><em>Montrant la cassette qui est sur la table de toilette.</em></hi></stage>
-            <l n="30" xml:id="l30">Donne mes bracelets, – mes anneaux ; – donne encor</l>
-            <l n="31" xml:id="l31">Mon collier de corail et mes agrafes d’or.</l>
-            <stage><hi rend="italic"><em>Elle arrange les plis du péplum que Beroé vient d’agrafer.</em></hi></stage>
-            <l n="33" xml:id="l33">Ces plis tombent-ils bien ?</l>
-          </sp>
-          <sp who="beroé" xml:id="1-13">
-            <speaker>BEROÉ.</speaker>
-            <l n="34" xml:id="l34">Les divines statues,</l>
-            <l n="35" xml:id="l35">D’un voile aérien par Phidias vêtues,</l>
-            <l n="36" xml:id="l36">Moins purs et moins légers laissent tomber les plis</l>
-            <l n="37" xml:id="l37">Du marbre de Paros sur leurs corps assouplis.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-14">
-            <speaker>LYDIE.</speaker>
-            <l n="38" xml:id="l38">Et maintenant posons le lierre sur ma tête ;</l>
-            <l n="39" xml:id="l39">Le lierre est le feuillage aimé de mon poète.</l>
-            <stage><hi rend="italic"><em>Elle se redresse et se retourne vers Beroé.</em></hi></stage>
-            <l n="41" xml:id="l41">Suis-je belle ?</l>
-          </sp>
-          <sp who="beroé" xml:id="1-15">
-            <speaker>BEROÉ.</speaker>
-            <l n="42" xml:id="l42">Ô Vénus ! – Quel est le chevalier</l>
-            <l n="43" xml:id="l43">Qui ne vendrait pour vous sa bague et son collier ?</l>
-          </sp>
-          <sp who="lydie" xml:id="1-16">
-            <speaker>LYDIE.</speaker>
-            <l n="44" xml:id="l44">Ah ! Beroé ! l’amant à qui je voudrais plaire</l>
-            <l n="45" xml:id="l45">N’est pas un chevalier, n’est pas un consulaire ;</l>
-            <l n="46" xml:id="l46">C’est pour Horace, fils d’un esclave affranchi,</l>
-            <l n="47" xml:id="l47">Que brillent ces bijoux sur mon sein enrichi.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-17">
-            <speaker>BEROÉ.</speaker>
-            <l n="48" xml:id="l48">Pour que vous l’aimiez tant, il faut bien qu’il vous aime !</l>
-          </sp>
-          <sp who="lydie" xml:id="1-18">
-            <speaker>LYDIE.</speaker>
-            <l n="49" xml:id="l49">Le volage ! partout il soupire de même.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-19">
-            <speaker>BEROÉ.</speaker>
-            <l n="50" xml:id="l50">Alors, il est fort riche, et les écus romains</l>
-            <l n="51" xml:id="l51">Comme des gouttes d’eau glissent entre ses mains !</l>
-          </sp>
-          <sp who="lydie" xml:id="1-20">
-            <speaker>LYDIE.</speaker>
-            <l n="52" xml:id="l52">Il est pauvre. Il aurait les trésors du Pactole,</l>
-            <l n="53" xml:id="l53">Que je ne voudrais pas accepter une obole.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-21">
-            <speaker>BEROÉ.</speaker>
-            <l n="54" xml:id="l54">Pauvre ! fils d’affranchi ! volage dans ses goûts !</l>
-            <l n="55" xml:id="l55">Médiocrement beau ! – Pourquoi donc l’aimez-vous ?</l>
-          </sp>
-          <sp who="lydie" xml:id="1-22">
-            <speaker>LYDIE.</speaker>
-            <l n="56" xml:id="l56">Je ne sais pas. Je l’aime.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-23">
-            <speaker>BEROÉ.</speaker>
-            <l n="57" xml:id="l57">Ô l’étrange faiblesse !</l>
-            <l n="58" xml:id="l58">Eh quoi ! sourde aux soupirs de la jeune noblesse,</l>
-            <l n="59" xml:id="l59">Vous fermez votre seuil aux Drusus, aux Pisons,</l>
-            <l n="60" xml:id="l60">– Pour qui ? – Pour un poète, un faiseur de chansons !</l>
-          </sp>
-          <sp who="lydie" xml:id="1-24">
-            <speaker>LYDIE.</speaker>
-            <l n="61" xml:id="l61">Que veux-tu !</l>
-          </sp>
-          <sp who="beroé" xml:id="1-25">
-            <speaker>BEROÉ.</speaker>
-            <l n="62" xml:id="l62">Marcius descend des rois antiques ;</l>
-            <l n="63" xml:id="l63">Vingt images d’aïeux illustrent ses portiques ;</l>
-            <l n="64" xml:id="l64">– Qu’en dites-vous, madame ?</l>
-          </sp>
-          <sp who="lydie" xml:id="1-26">
-            <speaker>LYDIE.</speaker>
-            <l n="65" xml:id="l65">Eh ! que m’importe à moi</l>
-            <l n="66" xml:id="l66">Qu’ayant des goûts d’esclave, il descende d’un roi !</l>
-            <l n="67" xml:id="l67">Je refuse ma couche au petit-fils d’Énée,</l>
-            <l n="68" xml:id="l68">Dont le regard est trouble et l’haleine avinée.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-27">
-            <speaker>BEROÉ.</speaker>
-            <l n="69" xml:id="l69">Et Cérinthe ? il est beau !</l>
-          </sp>
-          <sp who="lydie" xml:id="1-28">
-            <speaker>LYDIE.</speaker>
-            <l n="70" xml:id="l70">C’est vrai ; mais il est sot.</l>
-            <l n="71" xml:id="l71">Sa bêtise orgueilleuse éclate à chaque mot.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-29">
-            <speaker>BEROÉ.</speaker>
-            <l n="72" xml:id="l72">Calaïs ?</l>
-          </sp>
-          <sp who="lydie" xml:id="1-30">
-            <speaker>LYDIE.</speaker>
-            <l n="73" xml:id="l73">Calaïs, dont le talent unique</l>
-            <l n="74" xml:id="l74">Consiste à bien draper les plis de sa tunique !</l>
-          </sp>
-          <sp who="beroé" xml:id="1-31">
-            <speaker>BEROÉ.</speaker>
-            <l n="75" xml:id="l75">Préférez-vous Rufus ?</l>
-          </sp>
-          <sp who="lydie" xml:id="1-32">
-            <speaker>LYDIE.</speaker>
-            <l n="76" xml:id="l76">Nul n’a le goût plus fin</l>
-            <l n="77" xml:id="l77">Pour discerner d’abord une huître du Lucrin.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-33">
-            <speaker>BEROÉ.</speaker>
-            <l n="78" xml:id="l78">Claude est un cavalier comme l’on n’en voit guère.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-34">
-            <speaker>LYDIE.</speaker>
-            <l n="79" xml:id="l79">Il perd tout son mérite en mettant pied à terre.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-35">
-            <speaker>BEROÉ.</speaker>
-            <l n="80" xml:id="l80">Prenez un sénateur grave dans ses propos.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-36">
-            <speaker>LYDIE.</speaker>
-            <l n="81" xml:id="l81">C’est ennuyeux.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-37">
-            <speaker>BEROÉ.</speaker>
-            <l n="82" xml:id="l82">Prenez un fermier des impôts.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-38">
-            <speaker>LYDIE.</speaker>
-            <l n="83" xml:id="l83">C’est trop laid.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-39">
-            <speaker>BEROÉ.</speaker>
-            <l n="84" xml:id="l84">C’est la source, ô belles courtisanes,</l>
-            <l n="85" xml:id="l85">Des bronzes de Corinthe et des urnes toscanes.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-40">
-            <speaker>LYDIE.</speaker>
-            <l n="86" xml:id="l86">Donnés par des gens laids, les cadeaux sont trop chers.</l>
-            <l n="87" xml:id="l87">Je ne mesure pas l’amour aux dons offerts.</l>
-            <l n="88" xml:id="l88">Que celle qui voudra l’or et la perle rare</l>
-            <l n="89" xml:id="l89">Au poète amoureux ferme sa porte avare ;</l>
-            <l n="90" xml:id="l90">Il ne vient pas chargé de la pourpre de Cos ;</l>
-            <l n="91" xml:id="l91">Il n’a que ses chansons et les donne aux échos ;</l>
-            <l n="92" xml:id="l92">Mais les Dieux sont pour lui ; la Muse délicate</l>
-            <l n="93" xml:id="l93">Lui conseille les mots dont la grâce nous flatte :</l>
-            <l n="94" xml:id="l94">La Muse, femme aussi, sait le cœur féminin,</l>
-            <l n="95" xml:id="l95">Et par quel art secret s’y glisse un doux venin.</l>
-            <l n="96" xml:id="l96">Va, je suis autrement que les femmes vénales ;</l>
-            <l n="97" xml:id="l97">Je hais l’esprit commun et les phrases banales ;</l>
-            <l n="98" xml:id="l98">Je veux, pour reconnaître et nommer mon vainqueur,</l>
-            <l n="99" xml:id="l99">Qu’il s’ouvre par mon âme un chemin à mon cœur.</l>
-            <l n="100" xml:id="l100">L’amour ne connaît pas d’éternelles ivresses ;</l>
-            <l n="101" xml:id="l101">Pour lui, la causerie a de calmes tendresses :</l>
-            <l n="102" xml:id="l102">Et quel plaisir alors d’écouter longuement</l>
-            <l n="103" xml:id="l103">La source qui murmure aux lèvres d’un amant,</l>
-            <l n="104" xml:id="l104">Ou bien d’accompagner sur sa tremblante lyre</l>
-            <l n="105" xml:id="l105">Les chants harmonieux que soi-même on inspire !</l>
-            <l n="106" xml:id="l106">Tel l’amour des oiseaux fait résonner les bois.</l>
-            <l n="107" xml:id="l107">Les chants et les amours ont dû naître à la fois.</l>
-            <l n="108" xml:id="l108">– Et puis, ô Beroé, n’est-ce pas quelque chose</l>
-            <l n="109" xml:id="l109">Que l’immortalité dont la Muse dispose ?</l>
-            <l n="110" xml:id="l110">La soie et les bijoux ne plaisent qu’un instant,</l>
-            <l n="111" xml:id="l111">Demain sera fané ce péplum éclatant ;</l>
-            <l n="112" xml:id="l112">Mais les vers du poète échappent aux outrages.</l>
-            <l n="113" xml:id="l113">Hélène aux beaux cheveux vivra dans tous les âges ;</l>
-            <l n="114" xml:id="l114">Tant qu’on reconnaîtra l’empire de Vénus,</l>
-            <l n="115" xml:id="l115">Lesbie et Lycoris auront des noms connus ;</l>
-            <l n="116" xml:id="l116">Et, partageant l’honneur de sa muse applaudie,</l>
-            <l n="117" xml:id="l117">Toujours avec Horace on nommera Lydie.</l>
-            <l n="118" xml:id="l118">– Ah ! Beroé ! j’entends des pas ; – c’est lui qui vient.</l>
-            <l n="119" xml:id="l119">Abaisse les rideaux ; leur ombre me convient ;</l>
-            <l n="120" xml:id="l120">Dans les plis de la pourpre une lumière éteinte</l>
-            <l n="121" xml:id="l121">Sur les traits adoucis jette sa demi-teinte.</l>
-            <stage><hi rend="italic"><em>Elle écoute.</em></hi></stage>
-            <l n="123" xml:id="l123">Ce n’est pas lui. – Déjà faire attendre ! Inconstant !</l>
-            <l n="124" xml:id="l124">Il m’attendait jadis, et c’est moi qui l’attend.</l>
-          </sp>
-          <sp who="beroé" xml:id="1-41">
-            <speaker>BEROÉ, <em>montrant la clepsydre.</em></speaker>
-            <l n="125" xml:id="l125">Mais, madame, voyez : l’heure est passée à peine.</l>
-          </sp>
-          <sp who="lydie" xml:id="1-42">
-            <speaker>LYDIE.</speaker>
-            <l n="126" xml:id="l126">Ah ! il la devançait jadis. Excuse vaine !</l>
-            <l n="127" xml:id="l127">L’excuse n’appartient qu’à des amours lassés.</l>
-            <l n="128" xml:id="l128">Quand on n’aime plus trop, on n’aime plus assez.</l>
-            <l n="129" xml:id="l129">– Il ne viendra jamais, te dis-je. – Et que m’importe !</l>
-            <l n="130" xml:id="l130">S’il venait à présent, je fermerais ma porte.</l>
-            <l n="131" xml:id="l131">Je ne veux plus le voir. – Tiens, brouille mes cheveux !</l>
-            <l n="132" xml:id="l132">Ces anneaux irritants blessent mes doigts nerveux ;</l>
-            <l n="133" xml:id="l133">Arrache-les ! – Arrache en même temps ces gazes !</l>
-            <l n="134" xml:id="l134">Déchire, brise tout, foule aux pieds ces topazes !</l>
-            <l n="135" xml:id="l135">Oh ! je voudrais qu’il vînt, pour fermer les verrous !</l>
-            <l n="136" xml:id="l136">– Attends ! c’est lui.</l>
-            <stage><hi rend="italic"><em>Avec  joie.</em></hi></stage>
-            <l n="138" xml:id="l138">C’est lui, fidèle au rendez-vous !</l>
-            <stage><hi rend="italic"><em>Entre Horace.</em></hi></stage>
-            <l n="140" xml:id="l140"> </l>
-            <l n="141" xml:id="l141"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="142" xml:id="l142"> </l>
-          <sp who="beroé" xml:id="2-1">
-            <speaker>LYDIE, BEROÉ, HORACE</speaker>
-            <l n="143" xml:id="l143"> </l>
-            <stage><hi rend="italic"><em>Lydie, assise  arrange sa couronne et remet ses bagues. Elle feint de ne pas voir Horace, qui s’approche doucement et lui dépose un baiser sur le cou.</em></hi></stage>
-          </sp>
-          <sp who="lydie" xml:id="2-2">
-            <speaker>LYDIE, <em>feignant la surprise.</em></speaker>
-            <l n="145" xml:id="l145">Ah !  – Quoi ! c’est vous, Horace !</l>
-          </sp>
-          <sp who="horace" xml:id="2-3">
-            <speaker>HORACE.</speaker>
-            <l n="146" xml:id="l146">Horace, votre esclave,</l>
-            <l n="147" xml:id="l147">Plus heureux d’être ici que d’être chez Octave.</l>
-            <stage><hi rend="italic"><em>Beroé se retire dans le cabinet de toilette, dont la porte reste entr’ouverte,</em></hi></stage>
-          </sp>
-          <sp who="lydie" xml:id="2-4">
-            <speaker>LYDIE.</speaker>
-            <l n="149" xml:id="l149">C’est d’un bon amoureux, mais d’un froid courtisan.</l>
-            <l n="150" xml:id="l150">Parleriez-vous ainsi, César étant présent ?</l>
-            <stage><hi rend="italic"><em>Horace lui prend la main et lui entoure la taille d’un bras.</em></hi></stage>
-            <l n="152" xml:id="l152">Laissez. Vous dérangez ma tunique.</l>
-          </sp>
-          <sp who="horace" xml:id="2-5">
-            <speaker>HORACE.</speaker>
-            <l n="153" xml:id="l153">Rebelle !</l>
-            <l n="154" xml:id="l154">Pourquoi donc aujourd’hui si farouche – et si belle ?</l>
-            <l n="155" xml:id="l155">– Pour qui cette parure ? Est-ce pour moi ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-6">
-            <speaker>LYDIE.</speaker>
-            <l n="156" xml:id="l156">Pour vous ?</l>
-            <l n="157" xml:id="l157">Pas tout à fait. Le ciel est pur, l’air est doux ;</l>
-            <l n="158" xml:id="l158">Tous les beaux sont déjà sur la voie Appienne ;</l>
-            <l n="159" xml:id="l159">J’allais montrer un peu ma robe assyrienne.</l>
-            <l n="160" xml:id="l160">– Que vous en semble ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-7">
-            <speaker>HORACE.</speaker>
-            <l n="161" xml:id="l161">Mais il me semblait à moi</l>
-            <l n="162" xml:id="l162">Que vous m’aviez donné rendez-vous.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-8">
-            <speaker>LYDIE, <em>ayant l’air de se souvenir.</em></speaker>
-            <l n="163" xml:id="l163">Oui, ma foi.</l>
-            <l n="164" xml:id="l164">– Eh bien, aimez-vous mieux, alors, que je demeure ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-9">
-            <speaker>HORACE.</speaker>
-            <l n="165" xml:id="l165">Eh ! sans doute !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-10">
-            <speaker>LYDIE.</speaker>
-            <l n="166" xml:id="l166">J’ai cru que vous oublieriez l’heure.</l>
-          </sp>
-          <sp who="horace" xml:id="2-11">
-            <speaker>HORACE.</speaker>
-            <l n="167" xml:id="l167">Ô Dieux ! je ne songeais qu’au rendez-vous.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-12">
-            <speaker>LYDIE.</speaker>
-            <l n="168" xml:id="l168">Menteur !</l>
-          </sp>
-          <sp who="horace" xml:id="2-13">
-            <speaker>HORACE.</speaker>
-            <l n="169" xml:id="l169">De l’heure qui tardait j’accusais la lenteur.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-14">
-            <speaker>LYDIE.</speaker>
-            <l n="170" xml:id="l170">Vrai ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-15">
-            <speaker>HORACE.</speaker>
-            <l n="171" xml:id="l171">Mécène m’attend ; que Mécène m’attende !</l>
-            <l n="172" xml:id="l172">J’accours chez ma Lydie, où l’amour me demande.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-16">
-            <speaker>LYDIE.</speaker>
-            <l n="173" xml:id="l173">Vous en repentez-vous ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-17">
-            <speaker>HORACE.</speaker>
-            <l n="174" xml:id="l174">Je me suis repenti</l>
-            <l n="175" xml:id="l175">De m’ennuyer, jamais de m’être diverti.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-18">
-            <speaker>LYDIE.</speaker>
-            <l n="176" xml:id="l176">Le falerne enivrant coule à flots chez Mécène.</l>
-          </sp>
-          <sp who="horace" xml:id="2-19">
-            <speaker>HORACE.</speaker>
-            <l n="177" xml:id="l177">J’aime mieux m’enivrer de ta plus douce haleine.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-20">
-            <speaker>LYDIE.</speaker>
-            <l n="178" xml:id="l178">Mécène vous eût dit les nouvelles du jour ;</l>
-            <l n="179" xml:id="l179">Et moi, je ne sais rien, sinon parler d’amour.</l>
-          </sp>
-          <sp who="horace" xml:id="2-21">
-            <speaker>HORACE.</speaker>
-            <l n="180" xml:id="l180">Et voilà justement la science suprême :</l>
-            <l n="181" xml:id="l181">Le bonheur est d’aimer et de dire qu’on aime.</l>
-            <l n="182" xml:id="l182">Les doux chuchotements qui s’éveillent la nuit,</l>
-            <l n="183" xml:id="l183">La main mal dérobée au baiser qui la suit,</l>
-            <l n="184" xml:id="l184">Voilà les jeux charmants, et la fête éternelle</l>
-            <l n="185" xml:id="l185">Qui ne lasse jamais, toujours vieille et nouvelle.</l>
-            <l n="186" xml:id="l186">Toi, Mécène, chargé du poids de nos destins,</l>
-            <l n="187" xml:id="l187">Tu veilles sur l’empire et les peuples lointains ;</l>
-            <l n="188" xml:id="l188">Tu prépares notre aigle aux guerres que projette</l>
-            <l n="189" xml:id="l189">Le Cantabre indocile ou l’errant Massagète.</l>
-            <l n="190" xml:id="l190">Mais quoi ! les Dieux prudents nous voilent l’avenir.</l>
-            <l n="191" xml:id="l191">Quel lendemain suivra le jour qui va finir ?</l>
-            <l n="192" xml:id="l192">Nul ne sait ; y songer est un souci frivole.</l>
-            <l n="193" xml:id="l193">Cependant le temps fuit ; la jeunesse s’envole,</l>
-            <l n="194" xml:id="l194">Emportant avec elle et les joyeux discours,</l>
-            <l n="195" xml:id="l195">Et le sommeil facile, et l’âge des amours.</l>
-            <l n="196" xml:id="l196">Donc puisque la jeunesse est chose si légère,</l>
-            <l n="197" xml:id="l197">Cueillons, quand il est temps, cette fleur passagère.</l>
-            <l n="198" xml:id="l198">Le sage, ô ma Lydie, obéissant aux Dieux,</l>
-            <l n="199" xml:id="l199">Jouit de leurs bienfaits, qu’on regrette étant vieux ;</l>
-            <l n="200" xml:id="l200">Il est content, s’il tient des Muses de la Grèce</l>
-            <l n="201" xml:id="l201">Un souffle, tout léger, pour chanter sa maîtresse ;</l>
-            <l n="202" xml:id="l202">Il ne dédaigne pas les mets exquis, non plus</l>
-            <l n="203" xml:id="l203">Qu’un vin mis au cellier sous le consul Tullus ;</l>
-            <l n="204" xml:id="l204">Mais c’est l’amour surtout, c’est l’amour qui l’enchante,</l>
-            <l n="205" xml:id="l205">– L’amour que je maudis, quand Lydie est méchante.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-22">
-            <speaker>LYDIE.</speaker>
-            <l n="206" xml:id="l206">Ah ! traître ! tes discours seraient mieux accueillis,</l>
-            <l n="207" xml:id="l207">Si tu n’en disais pas tout autant à Phyllis.</l>
-          </sp>
-          <sp who="horace" xml:id="2-23">
-            <speaker>HORACE.</speaker>
-            <l n="208" xml:id="l208">Moi ! c’est faux.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-24">
-            <speaker>LYDIE.</speaker>
-            <l n="209" xml:id="l209">Pour Lydie, on a quitté Mécène ;</l>
-            <l n="210" xml:id="l210">Mais à quitter Chloé l’on aurait plus de peine.</l>
-          </sp>
-          <sp who="horace" xml:id="2-25">
-            <speaker>HORACE.</speaker>
-            <l n="211" xml:id="l211">Chloé ? fi donc ! – Je prends tous les Dieux à témoin</l>
-            <l n="212" xml:id="l212">Que je n’ai jamais vu la Chloé – que de loin.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-26">
-            <speaker>LYDIE.</speaker>
-            <l n="213" xml:id="l213">Le serment est facile à vous autres parjures.</l>
-          </sp>
-          <sp who="horace" xml:id="2-27">
-            <speaker>HORACE.</speaker>
-            <l n="214" xml:id="l214">Ah ! j’ai peu mérité ces cruelles injures !</l>
-            <l n="215" xml:id="l215">À quoi sert l’innocence ! – Ô gardien des serments,</l>
-            <l n="216" xml:id="l216">Que je sois foudroyé, Jupiter, si je mens !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-28">
-            <speaker>LYDIE.</speaker>
-            <l n="217" xml:id="l217">Eh bien, oui, je te crois ; j’ai besoin de te croire,</l>
-            <l n="218" xml:id="l218">Horace, mon amant, mon poète, ma gloire !</l>
-            <l n="219" xml:id="l219">– Je t’aime.</l>
-            <stage><hi rend="italic"><em>Horace est à genoux devant elle ; elle lui passe un bras autour du cou.</em></hi></stage>
-            <l n="221" xml:id="l221">C’est l’effet de quelque enchantement ;</l>
-            <l n="222" xml:id="l222">Ce n’est pas naturel d’aimer si follement.</l>
-            <l n="223" xml:id="l223">Reste ainsi prisonnier dans mon bras qui t’enlace !</l>
-            <l n="224" xml:id="l224">Nous allons t’enchaîner, volage, à cette place.</l>
-            <l n="225" xml:id="l225">– Je t’aime. Mes regards, de toute leur longueur,</l>
-            <l n="226" xml:id="l226">S’enfoncent dans tes yeux et vont chercher ton cœur ;</l>
-            <l n="227" xml:id="l227">Je voudrais me changer en rayon de lumière,</l>
-            <l n="228" xml:id="l228">Afin d’y pénétrer, moi-même, tout entière.</l>
-            <l n="229" xml:id="l229">– Ne me regarde plus, j’en perdrais la raison.</l>
-            <stage><hi rend="italic"><em>Horace fait un mouvement pour se lever.</em></hi></stage>
-            <l n="231" xml:id="l231">Non, non ; ne bougez pas. Vous êtes en prison.</l>
-            <l n="232" xml:id="l232">– Tu n’aimes pas Chloé, n’est-ce pas ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-29">
-            <speaker>HORACE.</speaker>
-            <l n="233" xml:id="l233">Dieu m’en garde !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-30">
-            <speaker>LYDIE.</speaker>
-            <l n="234" xml:id="l234">Elle est laide.</l>
-          </sp>
-          <sp who="horace" xml:id="2-31">
-            <speaker>HORACE, <em>se relevant.</em></speaker>
-            <l n="235" xml:id="l235">Très laide. On dit qu’elle se farde.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-32">
-            <speaker>LYDIE.</speaker>
-            <l n="236" xml:id="l236">Elle a d’affreuses dents.</l>
-          </sp>
-          <sp who="horace" xml:id="2-33">
-            <speaker>HORACE.</speaker>
-            <l n="237" xml:id="l237">Elle louche, je crois.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-34">
-            <speaker>LYDIE.</speaker>
-            <l n="238" xml:id="l238">Tu n’aimeras jamais d’autre femme que moi ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-35">
-            <speaker>HORACE.</speaker>
-            <l n="239" xml:id="l239">Jamais.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-36">
-            <speaker>LYDIE.</speaker>
-            <l n="240" xml:id="l240">Répète-le ; redis-le-moi sans cesse.</l>
-          </sp>
-          <sp who="horace" xml:id="2-37">
-            <speaker>HORACE.</speaker>
-            <l n="241" xml:id="l241">Quand mon cœur brûlera pour une autre maîtresse,</l>
-            <l n="242" xml:id="l242">On verra le Bouvier, connu des matelots,</l>
-            <l n="243" xml:id="l243">Abandonner le pôle et plonger dans les flots.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-38">
-            <speaker>LYDIE.</speaker>
-            <l n="244" xml:id="l244">Le zéphyr soufflera du côté de la Thrace,</l>
-            <l n="245" xml:id="l245">Avant qu’un autre amant succède à mon Horace.</l>
-          </sp>
-          <sp who="horace" xml:id="2-39">
-            <speaker>HORACE.</speaker>
-            <l n="246" xml:id="l246">Mettez-moi sur les bords glacés du Pont-Euxin,</l>
-            <l n="247" xml:id="l247">Ou sous le char brûlant du soleil trop voisin,</l>
-            <l n="248" xml:id="l248">Partout je t’aimerai, toi pour qui je respire,</l>
-            <l n="249" xml:id="l249">Lydie au doux parler, Lydie au doux sourire.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-40">
-            <speaker>LYDIE.</speaker>
-            <l n="250" xml:id="l250">Oh ! les tendres discours !</l>
-          </sp>
-          <sp who="horace" xml:id="2-41">
-            <speaker>HORACE.</speaker>
-            <l n="251" xml:id="l251">Oh ! les aveux charmants !</l>
-          </sp>
-          <sp who="horace" xml:id="2-42">
-            <speaker>LYDIE, <em>portant la main sur tes tablettes d’Horace.</em></speaker>
-            <l n="252" xml:id="l252">Laisse-moi sur la cire écrire nos serments.</l>
-            <l n="253" xml:id="l253">– Donne.</l>
-          </sp>
-          <sp who="horace" xml:id="2-43">
-            <speaker>HORACE, <em>retenant ses tablettes.</em></speaker>
-            <l n="254" xml:id="l254">Mais... non.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-44">
-            <speaker>LYDIE.</speaker>
-            <l n="255" xml:id="l255">Pourquoi ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-45">
-            <speaker>HORACE.</speaker>
-            <l n="256" xml:id="l256">La cire est barbouillée.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-46">
-            <speaker>LYDIE.</speaker>
-            <l n="257" xml:id="l257">Voyons.</l>
-          </sp>
-          <sp who="horace" xml:id="2-47">
-            <speaker>HORACE.</speaker>
-            <l n="258" xml:id="l258">C’est une ébauche à peine débrouillée.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-48">
-            <speaker>LYDIE.</speaker>
-            <l n="259" xml:id="l259">C’est égal. Je veux voir. – Pour qui ces vers ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-49">
-            <speaker>HORACE.</speaker>
-            <l n="260" xml:id="l260">Pour toi.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-50">
-            <speaker>LYDIE.</speaker>
-            <l n="261" xml:id="l261">Bien sûr ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-51">
-            <speaker>HORACE.</speaker>
-            <l n="262" xml:id="l262">Eh ! pour quelle autre ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-52">
-            <speaker>LYDIE.</speaker>
-            <l n="263" xml:id="l263">Alors, montre-les-moi.</l>
-          </sp>
-          <sp who="horace" xml:id="2-53">
-            <speaker>HORACE, <em>à part.</em></speaker>
-            <l n="264" xml:id="l264">Ahi !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="266" xml:id="l266">Non ; j’aime mieux te les lire moi-même.</l>
-            <l n="267" xml:id="l267">Mes vers balbutiés me font un mal extrême.</l>
-            <stage><hi rend="italic"><em>Il lit. Lydie l’écoute, appuyée sur son épaule.</em></hi></stage>
-          </sp>
-          <sp who="lydie" xml:id="2-54">
-            <speaker>LYDIE.</speaker>
-            <l n="269" xml:id="l269">Ah ! que c’est donc joli ! – les derniers vers surtout.</l>
-            <l n="270" xml:id="l270">– Fais voir.</l>
-          </sp>
-          <sp who="horace" xml:id="2-55">
-            <speaker>HORACE.</speaker>
-            <l n="271" xml:id="l271">Mais non.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-56">
-            <speaker>LYDIE.</speaker>
-            <l n="272" xml:id="l272">Mais si. Je le veux.</l>
-          </sp>
-          <sp who="horace" xml:id="2-57">
-            <speaker>HORACE.</speaker>
-            <l n="273" xml:id="l273">Point du tout !</l>
-          </sp>
-          <sp who="horace" xml:id="2-58">
-            <speaker>LYDIE <em>arrache les tablettes à Horace.</em></speaker>
-            <l n="274" xml:id="l274">Si fait ! – Ah ! je les tiens.</l>
-          </sp>
-          <sp who="horace" xml:id="2-59">
-            <speaker>HORACE.</speaker>
-            <l n="275" xml:id="l275">Tu ne pourras pas lire.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-60">
-            <speaker>LYDIE.</speaker>
-            <l n="276" xml:id="l276">J’essaierai.</l>
-          </sp>
-          <sp who="horace" xml:id="2-61">
-            <speaker>HORACE, <em>à part.</em></speaker>
-            <l n="277" xml:id="l277">Je suis pris.</l>
-          </sp>
-          <sp who="beroé" xml:id="2-62">
-            <speaker>LYDIE, <em>appelant Beroé et lui montrant une lyre pendue à la muraille.</em></speaker>
-            <l n="278" xml:id="l278">Beroé, prends ta lyre.</l>
-            <stage><hi rend="italic"><em>Jeu muet d’Horace, qui vent reprendre les tablettes, et de Lydie qui les cache dans son sein. Beroé s’approche avec la lyre, et en tire quelques accords, pendant que Lydie récite les vers d’Horace.</em></hi></stage>
-          </sp>
-          <sp who="horace" xml:id="2-63">
-            <speaker>HORACE, <em>l’interrompant, et cherchant à reprendre les tablettes.</em></speaker>
-            <l n="280" xml:id="l280">C’est assez ; le surplus n’est pas encor poli ;</l>
-            <l n="281" xml:id="l281">Tu le liras demain.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-64">
-            <speaker>LYDIE, <em>retenant les tablettes.</em></speaker>
-            <l n="282" xml:id="l282">Non, non. C’est très joli.</l>
-          </sp>
-          <sp who="horace" xml:id="2-65">
-            <speaker>HORACE, <em>joignant les mains.</em></speaker>
-            <l n="283" xml:id="l283">De grâce !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-66">
-            <speaker>LYDIE.</speaker>
-            <l n="284" xml:id="l284">Eh bien ! passons à la dernière strophe ;</l>
-            <l n="285" xml:id="l285">Elle est la mienne.</l>
-          </sp>
-          <sp who="horace" xml:id="2-67">
-            <speaker>HORACE, <em>à part.</em></speaker>
-            <l n="286" xml:id="l286">Bon ! gare la catastrophe !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-68">
-            <speaker>LYDIE, <em>lisant.</em></speaker>
-            <stage><hi rend="italic"><em>Elle se retourne vers Horace, en lui montrant les tablettes.</em></hi></stage>
-            <l n="288" xml:id="l288">C’est Chloé !</l>
-          </sp>
-          <sp who="horace" xml:id="2-69">
-            <speaker>HORACE.</speaker>
-            <l n="289" xml:id="l289">Je...</l>
-          </sp>
-          <sp who="lydie" xml:id="2-70">
-            <speaker>LYDIE.</speaker>
-            <l n="290" xml:id="l290">Chloé !</l>
-          </sp>
-          <sp who="horace" xml:id="2-71">
-            <speaker>HORACE.</speaker>
-            <l n="291" xml:id="l291">Mais...</l>
-          </sp>
-          <sp who="lydie" xml:id="2-72">
-            <speaker>LYDIE.</speaker>
-            <l n="292" xml:id="l292">Parle ! réponds-moi !</l>
-            <l n="293" xml:id="l293">Traître ! que diras-tu ? – parle donc !</l>
-            <stage><hi rend="italic"><em>Beroé se retire dans le cabinet.</em></hi></stage>
-          </sp>
-          <sp who="horace" xml:id="2-73">
-            <speaker>HORACE.</speaker>
-            <l n="295" xml:id="l295">J’ai...</l>
-          </sp>
-          <sp who="lydie" xml:id="2-74">
-            <speaker>LYDIE.</speaker>
-            <l n="296" xml:id="l296">Tais-toi !</l>
-            <l n="297" xml:id="l297">Il ose encor parler après son imposture.</l>
-            <l n="298" xml:id="l298">Le fourbe ! – Prétends-tu nier ton écriture ?</l>
-            <l n="299" xml:id="l299">– Ai-je mal lu ?</l>
-            <stage><hi rend="italic"><em>Elle lui montre les tablettes.</em></hi></stage>
-            <l n="301" xml:id="l301">Tiens, lis : vois ton accusateur.</l>
-            <l n="302" xml:id="l302">– Chloé ! c’est bien Chloé ! – Diras-tu non, menteur ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-75">
-            <speaker>HORACE.</speaker>
-            <l n="303" xml:id="l303">Lydie ! au nom des Dieux ! écoute-moi, Lydie !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-76">
-            <speaker>LYDIE.</speaker>
-            <l n="304" xml:id="l304">Ah ! pouvais-je m’attendre à cette perfidie !</l>
-            <l n="305" xml:id="l305">Ah ! comme il se jouait de ma crédulité !</l>
-            <l n="306" xml:id="l306">Jamais coup plus cruel m’a-t-il été porté !</l>
-            <l n="307" xml:id="l307">Le parjure attestait les Dieux de sa tendresse !</l>
-            <l n="308" xml:id="l308">Il osait défier leur foudre vengeresse !</l>
-            <l n="309" xml:id="l309">Quoi d’étonnant, d’ailleurs, qu’il se moque des Dieux ?</l>
-            <l n="310" xml:id="l310">Un infidèle amant ne peut être pieux.</l>
-            <l n="311" xml:id="l311">– Et, dupe que j’étais, comme on l’est quand on aime,</l>
-            <l n="312" xml:id="l312">Je prenais ses serments pour la vérité même ;</l>
-            <l n="313" xml:id="l313">J’avais presque un remords de mes soupçons jaloux ;</l>
-            <l n="314" xml:id="l314">Il s’indignait si bien, que je l’avais absous.</l>
-            <l n="315" xml:id="l315">Je m’épanouissais devant ses fourberies</l>
-            <l n="316" xml:id="l316">Dont mon cœur altéré buvait les flatteries.</l>
-            <l n="317" xml:id="l317">Ah ! sottise ! – C’était un rôle bien joué.</l>
-            <l n="318" xml:id="l318">Il parlait à Lydie en pensant à Chloé.</l>
-            <l n="319" xml:id="l319">Ô Dieux ! – C’est très plaisant. Vous avez dû bien rire,</l>
-            <l n="320" xml:id="l320">N’est-il pas vrai ? pendant qu’on apportait la lyre.</l>
-            <l n="321" xml:id="l321">J’ai mis tant de bonheur et tant de bonne foi</l>
-            <l n="322" xml:id="l322">À réciter ces vers que je croyais pour moi !</l>
-            <l n="323" xml:id="l323">Comme j’en savourais la lente mélopée !</l>
-            <l n="324" xml:id="l324">Comme je jouissais de ma gloire usurpée !</l>
-            <l n="325" xml:id="l325">Folle ! sotte ! niaise ! – Oui, c’est risible ; eh bien !</l>
-            <l n="326" xml:id="l326">Toi, ris de ton côté ; moi, je pleure du mien.</l>
-            <stage><hi rend="italic"><em>Elle va tomber assise dans le fauteuil.</em></hi></stage>
-          </sp>
-          <sp who="horace" xml:id="2-77">
-            <speaker>HORACE.</speaker>
-            <l n="328" xml:id="l328">Lydie, écoute-moi !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-78">
-            <speaker>LYDIE.</speaker>
-            <l n="329" xml:id="l329">C’est affreux ! c’est indigne !</l>
-          </sp>
-          <sp who="horace" xml:id="2-79">
-            <speaker>HORACE.</speaker>
-            <l n="330" xml:id="l330">Je jure d’effacer cette maudite ligne.</l>
-            <stage><hi rend="italic"><em>Il lui prend la main.</em></hi></stage>
-            <l n="332" xml:id="l332">Lydie !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-80">
-            <speaker>LYDIE, <em>retirant sa main.</em></speaker>
-            <l n="333" xml:id="l333">Ah ! laissez-moi.</l>
-          </sp>
-          <sp who="horace" xml:id="2-81">
-            <speaker>HORACE.</speaker>
-            <l n="334" xml:id="l334">J’ai des défauts ; d’accord.</l>
-            <l n="335" xml:id="l335">J’aime trop les plaisirs, et l’excès est un tort.</l>
-            <l n="336" xml:id="l336">Hélas ! je veux en vain combattre ma nature ;</l>
-            <l n="337" xml:id="l337">Mes plus fermes desseins s’en vont à l’aventure.</l>
-            <l n="338" xml:id="l338">On m’entraîne au moment où je me corrigeais ;</l>
-            <l n="339" xml:id="l339">Un rayon de soleil fait fondre mes projets ;</l>
-            <l n="340" xml:id="l340">Je ne puis voir passer dans la rue une robe,</l>
-            <l n="341" xml:id="l341">Sans regarder un peu le pied qu’elle dérobe.</l>
-            <l n="342" xml:id="l342">– Mais, pour être léger, je ne suis pas méchant ;</l>
-            <l n="343" xml:id="l343">Je suis vraiment navré de ton chagrin touchant,</l>
-            <l n="344" xml:id="l344">Et me regarderais comme trois fois infâme,</l>
-            <l n="345" xml:id="l345">Si je riais des pleurs que répand une femme.</l>
-            <l n="346" xml:id="l346">– Voyons ! ma chère enfant !</l>
-          </sp>
-          <sp who="horace" xml:id="2-82">
-            <speaker>LYDIE, <em>se levant et s’éloignant d’Horace.</em></speaker>
-            <l n="347" xml:id="l347">Laissez-moi ! laissez-moi !</l>
-          </sp>
-          <sp who="horace" xml:id="2-83">
-            <speaker>HORACE, <em>la suivant.</em></speaker>
-            <l n="348" xml:id="l348">Je t’aime.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-84">
-            <speaker>LYDIE.</speaker>
-            <l n="349" xml:id="l349">Taisez-vous !</l>
-          </sp>
-          <sp who="horace" xml:id="2-85">
-            <speaker>HORACE.</speaker>
-            <l n="350" xml:id="l350">Et je n’aime que toi.</l>
-            <l n="351" xml:id="l351">Ces vers ne prouvent rien. Fiction poétique !</l>
-            <l n="352" xml:id="l352">Il fallait un ïambe à mon vers alcaïque,</l>
-            <l n="353" xml:id="l353">Lydie est un dactyle ; en mon vers fourvoyé,</l>
-            <l n="354" xml:id="l354">Le cœur disait : Lydie ; et le rythme : Chloé.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-86">
-            <speaker>LYDIE, <em>jetant par terre les tablettes qu’elle foule à ses pieds.</em></speaker>
-            <l n="355" xml:id="l355">Périssent donc les vers, l’ïambe et les poètes !</l>
-            <l n="356" xml:id="l356">Puissé-je les fouler, tous, comme ces tablettes !</l>
-          </sp>
-          <sp who="horace" xml:id="2-87">
-            <speaker>HORACE.</speaker>
-            <l n="357" xml:id="l357">Ivoire infortunée ! on te brise les os.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-88">
-            <speaker>LYDIE.</speaker>
-            <l n="358" xml:id="l358">À ta chère Chloé portes-en les morceaux.</l>
-          </sp>
-          <sp who="horace" xml:id="2-89">
-            <speaker>HORACE.</speaker>
-            <l n="359" xml:id="l359">Des vers perdus ! pas un dont je me ressouvienne !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-90">
-            <speaker>LYDIE.</speaker>
-            <l n="360" xml:id="l360">Tant mieux. Je les voudrais dans la mer Caspienne.</l>
-            <l n="361" xml:id="l361">Oh ! les poètes ! race égoïste et sans frein,</l>
-            <l n="362" xml:id="l362">Qui sacrifierait tout pour un méchant quatrain !</l>
-          </sp>
-          <sp who="horace" xml:id="2-91">
-            <speaker>HORACE, <em>entre ses dents.</em></speaker>
-            <l n="363" xml:id="l363">Méchant quatrain !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-92">
-            <speaker>LYDIE.</speaker>
-            <l n="364" xml:id="l364">C’est bien la pire espèce d’hommes</l>
-            <l n="365" xml:id="l365">Que nous puissions aimer, ô folles que nous sommes !</l>
-            <l n="366" xml:id="l366">On les croit généreux, tendres et délicats ;</l>
-            <l n="367" xml:id="l367">Ils ont un sens exquis que les autres n’ont pas ;</l>
-            <l n="368" xml:id="l368">Dans un monde inconnu leur amour nous fait vivre ;</l>
-            <l n="369" xml:id="l369">Bah ! ces enchantements ne sont que dans leur livre.</l>
-            <l n="370" xml:id="l370">Fiction poétique ! Au fond, vous les verrez</l>
-            <l n="371" xml:id="l371">Terrestres comme un autre, et pas plus éthérés.</l>
-            <l n="372" xml:id="l372">Ils ont tant dépensé de feux pour les Déesses,</l>
-            <l n="373" xml:id="l373">Qu’ils n’en ont plus du tout pour de simples maîtresses,</l>
-            <l n="374" xml:id="l374">Et, tant d’amour en vers épuisant leur vigueur,</l>
-            <l n="375" xml:id="l375">L’imagination a ruiné le cœur.</l>
-            <l n="376" xml:id="l376">C’est pour cela qu’ils ont l’humeur si vagabonde :</l>
-            <l n="377" xml:id="l377">Comme ils n’aiment personne, ils aiment tout le monde.</l>
-            <l n="378" xml:id="l378">Ah ! qu’il vaut mieux choisir un honnête garçon,</l>
-            <l n="379" xml:id="l379">Tout simple, et vous aimant de la bonne façon,</l>
-            <l n="380" xml:id="l380">– Comme Cérinthe, ou bien Calaïs fils d’Ornithe.</l>
-          </sp>
-          <sp who="horace" xml:id="2-93">
-            <speaker>HORACE.</speaker>
-            <l n="381" xml:id="l381">Une bête !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-94">
-            <speaker>LYDIE.</speaker>
-            <l n="382" xml:id="l382">Il m’adore, et c’est un grand mérite.</l>
-            <l n="383" xml:id="l383">– Il est jeune, il est beau.</l>
-          </sp>
-          <sp who="horace" xml:id="2-95">
-            <speaker>HORACE.</speaker>
-            <l n="384" xml:id="l384">Hum ! pas trop.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-96">
-            <speaker>LYDIE.</speaker>
-            <l n="385" xml:id="l385">Il me plaît ;</l>
-            <l n="386" xml:id="l386">Cela suffit.</l>
-            <stage><hi rend="italic"><em>Regardant Horace.</em></hi></stage>
-            <l n="388" xml:id="l388">D’ailleurs, on peut être plus laid.</l>
-          </sp>
-          <sp who="horace" xml:id="2-97">
-            <speaker>HORACE.</speaker>
-            <l n="389" xml:id="l389">En mille traits d’esprit sa causerie abonde ;</l>
-            <l n="390" xml:id="l390">Vous tiendrez les propos les plus jolis du monde.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-98">
-            <speaker>LYDIE.</speaker>
-            <l n="391" xml:id="l391">On dit toujours très bien ce qu’on sent. Les amours</l>
-            <l n="392" xml:id="l392">Vivent de sentiments et non de beaux discours.</l>
-          </sp>
-          <sp who="horace" xml:id="2-99">
-            <speaker>HORACE.</speaker>
-            <l n="393" xml:id="l393">S’ils vivent de sottise, ils ne feront pas diète.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-100">
-            <speaker>LYDIE.</speaker>
-            <l n="394" xml:id="l394">Oh ! Calaïs n’a pas tout l’esprit d’un poète ;</l>
-            <l n="395" xml:id="l395">Il ne sait pas sans cesse occupé de ses vers,</l>
-            <l n="396" xml:id="l396">À tout ce qu’on lui dit répondre de travers ;</l>
-            <l n="397" xml:id="l397">Il ne veut pas frapper du front les toits célestes,</l>
-            <l n="398" xml:id="l398">Pour avoir aligné deux ou trois anapestes ;</l>
-            <l n="399" xml:id="l399">Il ne se change pas en cygne un beau matin ;</l>
-            <l n="400" xml:id="l400">Mais il a du bon sens, – ce qui manque à certain.</l>
-          </sp>
-          <sp who="horace" xml:id="2-101">
-            <speaker>HORACE.</speaker>
-            <l n="401" xml:id="l401">Eh ! prenez-le donc vite !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-102">
-            <speaker>LYDIE.</speaker>
-            <l n="402" xml:id="l402">En vérité ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-103">
-            <speaker>HORACE.</speaker>
-            <l n="403" xml:id="l403">Sans doute.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-104">
-            <speaker>LYDIE.</speaker>
-            <l n="404" xml:id="l404">Fort bien. Votre conseil est bon, et je le goûte.</l>
-            <stage><hi rend="italic"><em>Appelant Beroé.</em></hi></stage>
-            <l n="406" xml:id="l406">Beroé ! tu sais bien ce jeune et beau garçon,</l>
-            <l n="407" xml:id="l407">Calaïs, qui toujours rôde sous ma maison ?</l>
-          </sp>
-          <sp who="beroé" xml:id="2-105">
-            <speaker>BEROÉ, <em>venant vers Lydie.</em></speaker>
-            <l n="408" xml:id="l408">Oui, oui.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-106">
-            <speaker>LYDIE.</speaker>
-            <l n="409" xml:id="l409">Va le chercher. Dis-lui que je l’invite</l>
-            <l n="410" xml:id="l410">À souper ; que je l’aime, et qu’il vienne au plus vite.</l>
-          </sp>
-          <sp who="beroé" xml:id="2-107">
-            <speaker>BEROÉ.</speaker>
-            <l n="411" xml:id="l411">J’y cours, madame.</l>
-          </sp>
-          <sp who="horace" xml:id="2-108">
-            <speaker>HORACE.</speaker>
-            <l n="412" xml:id="l412">Attends, ma bonne Beroé.</l>
-            <l n="413" xml:id="l413">Tu connais, n’est-ce pas, la charmante Chloé ?</l>
-          </sp>
-          <sp who="beroé" xml:id="2-109">
-            <speaker>BEROÉ.</speaker>
-            <l n="414" xml:id="l414">Chloé, notre voisine ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-110">
-            <speaker>HORACE.</speaker>
-            <l n="415" xml:id="l415">Oui. Passe chez la belle,</l>
-            <l n="416" xml:id="l416">Et dis-lui que j’irai, ce soir, souper chez elle.</l>
-          </sp>
-          <sp who="beroé" xml:id="2-111">
-            <speaker>LYDIE, <em>à Beroé, qui la consulte des yeux.</em></speaker>
-            <l n="417" xml:id="l417">Va. Fais ce qu’il te dit. Je l’approuve très fort.</l>
-            <stage><hi rend="italic"><em>Sort Beroé.</em></hi></stage>
-          </sp>
-          <sp who="horace" xml:id="2-112">
-            <speaker>HORACE.</speaker>
-            <l n="419" xml:id="l419">Comme c’est merveilleux d’être si bien d’accord !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-113">
-            <speaker>LYDIE.</speaker>
-            <l n="420" xml:id="l420">Enfin je vais avoir cette bonne fortune</l>
-            <l n="421" xml:id="l421">D’un amant pour moi seule et non pas pour chacune.</l>
-          </sp>
-          <sp who="horace" xml:id="2-114">
-            <speaker>HORACE.</speaker>
-            <l n="422" xml:id="l422">Enfin je connaîtrai des amours indulgents</l>
-            <l n="423" xml:id="l423">Qui pour l’ombre d’un tort ne battront pas les gens.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-115">
-            <speaker>LYDIE.</speaker>
-            <l n="424" xml:id="l424">Qu’est-ce que vaut un cœur dont on n’est pas la reine ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-116">
-            <speaker>HORACE.</speaker>
-            <l n="425" xml:id="l425">Et qu’est-ce qu’un plaisir dont on fait une peine ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-117">
-            <speaker>LYDIE.</speaker>
-            <l n="426" xml:id="l426">Pour moi, je suis fidèle, et j’entends qu’on le soit ;</l>
-            <l n="427" xml:id="l427">Je veux que l’on me donne autant que l’on reçoit,</l>
-            <l n="428" xml:id="l428">Et fais très peu de cas d’un encens que l’on brûle</l>
-            <l n="429" xml:id="l429">Tantôt à Lalagé, tantôt à Néobule.</l>
-          </sp>
-          <sp who="horace" xml:id="2-118">
-            <speaker>HORACE.</speaker>
-            <l n="430" xml:id="l430">Moi, j’ai l’humeur paisible, et j’ai grand’peur du bruit,</l>
-            <l n="431" xml:id="l431">Et d’un œil orageux où toujours l’éclair luit.</l>
-            <l n="432" xml:id="l432">L’Amour s’enfuit, chassé par un sourcil farouche,</l>
-            <l n="433" xml:id="l433">Et pleure le sourire exilé de la bouche.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-119">
-            <speaker>LYDIE.</speaker>
-            <l n="434" xml:id="l434">L’amour va revenir, et le rire perdu.</l>
-          </sp>
-          <sp who="horace" xml:id="2-120">
-            <speaker>HORACE.</speaker>
-            <l n="435" xml:id="l435">Aux amis négligés je vais être rendu ;</l>
-            <l n="436" xml:id="l436">Je pourrai respirer le frais sous ma tonnelle,</l>
-            <l n="437" xml:id="l437">Sans craindre qu’un retard m’attire une querelle.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-121">
-            <speaker>LYDIE, <em>d’un ton passionné.</em></speaker>
-            <l n="438" xml:id="l438">Oh ! viens, cher Calaïs ! Je compte les moments.</l>
-            <l n="439" xml:id="l439">Mon cœur bondit déjà vers tes embrassements.</l>
-            <l n="440" xml:id="l440">Vénus n’est plus à Chypre ; elle est toute en mes veines.</l>
-            <l n="441" xml:id="l441">Viens, ami ! C’est pour toi que fument les verveines,</l>
-            <l n="442" xml:id="l442">Pour toi que ces rideaux, mystérieux remparts,</l>
-            <l n="443" xml:id="l443">Du passant indiscret repoussent les regards.</l>
-            <l n="444" xml:id="l444">C’est pour toi que luira d’une clarté voilée,</l>
-            <l n="445" xml:id="l445">Pour toi que s’éteindra la lampe reculée.</l>
-            <stage><hi rend="italic"><em>Regardant Horace, à la dérobée.</em></hi></stage>
-            <l n="447" xml:id="l447">– Il s’émeut.</l>
-          </sp>
-          <sp who="horace" xml:id="2-122">
-            <speaker>HORACE, <em>se levant.</em></speaker>
-            <l n="448" xml:id="l448">Qu’elle est belle, en ce mol abandon !</l>
-            <l n="449" xml:id="l449">Livrer cette sirène à mon rival ! Fi donc !</l>
-            <stage><hi rend="italic"><em>Il s’approche de Lydie, qui, à moitié couchée, lui tourne le dos. À demi-voix et tendrement.</em></hi></stage>
-            <l n="451" xml:id="l451">Lydie !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-123">
-            <speaker>LYDIE, <em>sans se retourner.</em></speaker>
-            <l n="452" xml:id="l452">Ô Calaïs ! – Ô volupté divine ! –</l>
-            <l n="453" xml:id="l453"> C’est toi ! Sans t’avoir vu, tout mon cœur te devine.</l>
-            <stage><hi rend="italic"><em>Toujours sans se retourner,  pendant qu’Horace lui pose le bout des doigts sur les cheveux.</em></hi></stage>
-            <l n="455" xml:id="l455">Détache ces bandeaux qu’emprisonne un seul nœud.</l>
-          </sp>
-          <sp who="horace" xml:id="2-124">
-            <speaker>HORACE.</speaker>
-            <l n="456" xml:id="l456">Les beaux cheveux !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-125">
-            <speaker>LYDIE, <em>tendant la main, toujours sans se retourner.</em></speaker>
-            <l n="457" xml:id="l457">Ma main attend ta lèvre en feu.</l>
-          </sp>
-          <sp who="horace" xml:id="2-126">
-            <speaker>HORACE, <em>baisant la main de Lydie.</em></speaker>
-            <l n="458" xml:id="l458">La belle main !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-127">
-            <speaker>LYDIE, <em>se retournant.</em></speaker>
-            <l n="459" xml:id="l459">Eh quoi ! Vous encore !</l>
-          </sp>
-          <sp who="horace" xml:id="2-128">
-            <speaker>HORACE.</speaker>
-            <l n="460" xml:id="l460">Moi-même.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-129">
-            <speaker>LYDIE.</speaker>
-            <l n="461" xml:id="l461">Que faites-vous ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-130">
-            <speaker>HORACE, <em>lui baisant encore la main.</em></speaker>
-            <l n="462" xml:id="l462">Je dis à ta main que je t’aime.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-131">
-            <speaker>LYDIE.</speaker>
-            <l n="463" xml:id="l463">Hélas ! je vous prenais pour Calaïs.</l>
-          </sp>
-          <sp who="horace" xml:id="2-132">
-            <speaker>HORACE.</speaker>
-            <l n="464" xml:id="l464">Merci.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-133">
-            <speaker>LYDIE.</speaker>
-            <l n="465" xml:id="l465">J’ai cru que vous étiez déjà bien loin d’ici.</l>
-          </sp>
-          <sp who="horace" xml:id="2-134">
-            <speaker>HORACE, <em>montrant les mains de Lydie.</em></speaker>
-            <l n="466" xml:id="l466">Le moyen de partir, retenu par ces chaînes.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-135">
-            <speaker>LYDIE.</speaker>
-            <l n="467" xml:id="l467">Près des mains de Chloé les miennes sont vilaines.</l>
-          </sp>
-          <sp who="horace" xml:id="2-136">
-            <speaker>HORACE, <em>prenant les mains de Lydie.</em></speaker>
-            <l n="468" xml:id="l468">Non pas. Ces jolis doigts sont plus blancs que les siens,</l>
-            <l n="469" xml:id="l469">Et plus mignons. – Elle a de gros doigts plébéiens.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-137">
-            <speaker>LYDIE.</speaker>
-            <l n="470" xml:id="l470">Peut-être. – Mais sa taille est superbe.</l>
-          </sp>
-          <sp who="horace" xml:id="2-138">
-            <speaker>HORACE, <em>montrant la taille de Lydie.</em></speaker>
-            <l n="471" xml:id="l471">Ah ! déesse !</l>
-            <l n="472" xml:id="l472">Devant ce port divin quelle tournure épaisse !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-139">
-            <speaker>LYDIE.</speaker>
-            <l n="473" xml:id="l473">Un peu lourde, c’est vrai. – Mais quels cheveux !</l>
-          </sp>
-          <sp who="horace" xml:id="2-140">
-            <speaker>HORACE, <em>montrant les cheveux de Lydie.</em></speaker>
-            <l n="474" xml:id="l474">Moins beaux</l>
-            <l n="475" xml:id="l475">Que ceux-ci.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-141">
-            <speaker>LYDIE.</speaker>
-            <l n="476" xml:id="l476">Cependant ils viennent de Lesbos ;</l>
-            <l n="477" xml:id="l477">On les lui vend fort cher.</l>
-          </sp>
-          <sp who="horace" xml:id="2-142">
-            <speaker>HORACE, <em>riant.</em></speaker>
-            <l n="478" xml:id="l478">Mauvaise !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-143">
-            <speaker>LYDIE.</speaker>
-            <l n="479" xml:id="l479">Elle est, en somme,</l>
-            <l n="480" xml:id="l480">Bien mieux faite que moi pour captiver un homme.</l>
-            <l n="481" xml:id="l481">– Courez !</l>
-          </sp>
-          <sp who="horace" xml:id="2-144">
-            <speaker>HORACE.</speaker>
-            <l n="482" xml:id="l482">Non.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-145">
-            <speaker>LYDIE.</speaker>
-            <l n="483" xml:id="l483">Si. J’attends Calaïs, et je crois</l>
-            <l n="484" xml:id="l484">Qu’il serait peu décent qu’il vous trouvât chez moi.</l>
-          </sp>
-          <sp who="horace" xml:id="2-146">
-            <speaker>HORACE.</speaker>
-            <l n="485" xml:id="l485">C’est bien, je me retire.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-147">
-            <speaker>LYDIE.</speaker>
-            <l n="486" xml:id="l486">Oui.</l>
-          </sp>
-          <sp who="horace" xml:id="2-148">
-            <speaker>HORACE.</speaker>
-            <l n="487" xml:id="l487">Je cède la place.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-149">
-            <speaker>LYDIE.</speaker>
-            <l n="488" xml:id="l488">Bon.</l>
-          </sp>
-          <sp who="horace" xml:id="2-150">
-            <speaker>HORACE.</speaker>
-            <l n="489" xml:id="l489">Lutter contre lui, ce serait trop d’audace.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-151">
-            <speaker>LYDIE, <em>saluant.</em></speaker>
-            <l n="490" xml:id="l490">Adieu, seigneur.</l>
-          </sp>
-          <sp who="horace" xml:id="2-152">
-            <speaker>HORACE.</speaker>
-            <l n="491" xml:id="l491">Adieu. – Je ne désire pas</l>
-            <l n="492" xml:id="l492">Rester ici pour voir Calaïs dans vos bras.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-153">
-            <speaker>LYDIE.</speaker>
-            <l n="493" xml:id="l493">J’entends bien.</l>
-          </sp>
-          <sp who="horace" xml:id="2-154">
-            <speaker>HORACE.</speaker>
-            <l n="494" xml:id="l494">Je ferais une triste figure.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-155">
-            <speaker>LYDIE.</speaker>
-            <l n="495" xml:id="l495">Mais... oui.</l>
-          </sp>
-          <sp who="horace" xml:id="2-156">
-            <speaker>HORACE.</speaker>
-            <l n="496" xml:id="l496">Je m’en vais donc. – Adieu, fourbe ! parjure !</l>
-            <l n="497" xml:id="l497">Perfide !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-157">
-            <speaker>LYDIE.</speaker>
-            <l n="498" xml:id="l498">Eh ! doucement ! qu’avez-vous à crier ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-158">
-            <speaker>HORACE.</speaker>
-            <l n="499" xml:id="l499">Coquette !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-159">
-            <speaker>LYDIE.</speaker>
-            <l n="500" xml:id="l500">Quittons-nous sans nous injurier.</l>
-          </sp>
-          <sp who="horace" xml:id="2-160">
-            <speaker>HORACE.</speaker>
-            <l n="501" xml:id="l501">Faut-il vous savoir gré de me mettre à la porte ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-161">
-            <speaker>LYDIE.</speaker>
-            <l n="502" xml:id="l502">Vous avez bien voulu qu’il en fût de la sorte.</l>
-          </sp>
-          <sp who="horace" xml:id="2-162">
-            <speaker>HORACE.</speaker>
-            <l n="503" xml:id="l503">Moi ! le mot est charmant.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-163">
-            <speaker>LYDIE.</speaker>
-            <l n="504" xml:id="l504">Vous vouliez en finir.</l>
-          </sp>
-          <sp who="horace" xml:id="2-164">
-            <speaker>HORACE.</speaker>
-            <l n="505" xml:id="l505">C’est vous ; depuis longtemps, vous me vouliez bannir.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-165">
-            <speaker>LYDIE.</speaker>
-            <l n="506" xml:id="l506">Est-ce moi, par hasard, qui suis une infidèle ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-166">
-            <speaker>HORACE.</speaker>
-            <l n="507" xml:id="l507">Est-ce moi qui vous cherche une injuste querelle ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-167">
-            <speaker>LYDIE.</speaker>
-            <l n="508" xml:id="l508">Si nous nous séparons, pourquoi le faisons-nous ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-168">
-            <speaker>HORACE.</speaker>
-            <l n="509" xml:id="l509">À qui la faute ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-169">
-            <speaker>LYDIE.</speaker>
-            <l n="510" xml:id="l510">À vous.</l>
-          </sp>
-          <sp who="horace" xml:id="2-170">
-            <speaker>HORACE.</speaker>
-            <l n="511" xml:id="l511">Non. À vous.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-171">
-            <speaker>LYDIE, <em>mollement.</em></speaker>
-            <l n="512" xml:id="l512">Non. À vous.</l>
-          </sp>
-          <sp who="horace" xml:id="2-172">
-            <speaker>HORACE.</speaker>
-            <l n="513" xml:id="l513">Tant que tu m’as aimé, quand nul autre plus digne</l>
-            <l n="514" xml:id="l514">N’entourait de ses bras ton cou blanc comme un cygne,</l>
-            <l n="515" xml:id="l515">J’ai vécu plus heureux que Xercès, le grand roi.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-173">
-            <speaker>LYDIE.</speaker>
-            <l n="516" xml:id="l516">Tant que tu n’as aimé personne plus que moi,</l>
-            <l n="517" xml:id="l517">Quand Chloé n’était pas préférée à Lydie,</l>
-            <l n="518" xml:id="l518">J’ai vécu plus illustre et plus fière qu’Ilie.</l>
-          </sp>
-          <sp who="horace" xml:id="2-174">
-            <speaker>HORACE.</speaker>
-            <l n="519" xml:id="l519">J’appartiens maintenant à la blonde Chloé,</l>
-            <l n="520" xml:id="l520">Qui plaît par sa voix douce et son luth enjoué ;</l>
-            <l n="521" xml:id="l521">Je suis prêt à mourir pour prolonger sa vie.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-175">
-            <speaker>LYDIE.</speaker>
-            <l n="522" xml:id="l522">Calaïs maintenant tient mon âme asservie ;</l>
-            <l n="523" xml:id="l523">Nous brûlons tous les deux de mutuels amours,</l>
-            <l n="524" xml:id="l524">Et je mourrais deux fois pour prolonger ses jours.</l>
-          </sp>
-          <sp who="horace" xml:id="2-176">
-            <speaker>HORACE.</speaker>
-            <l n="525" xml:id="l525">Mais quoi ! si j’ai regret de ma première chaîne ?</l>
-            <l n="526" xml:id="l526">Si Vénus de retour sous son joug nous ramène ?</l>
-            <l n="527" xml:id="l527">Si, l’ôtant à Chloé, je te rends mon amour ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-177">
-            <speaker>LYDIE.</speaker>
-            <l n="528" xml:id="l528">Encor que Calaïs soit plus beau que le jour,</l>
-            <l n="529" xml:id="l529">Toi, plus traître que l’onde et plus léger que l’heure,</l>
-            <l n="530" xml:id="l530">Avec toi que je vive, avec toi que je meure !</l>
-          </sp>
-          <sp who="horace" xml:id="2-178">
-            <speaker>HORACE, <em>se jetant aux genoux de Lydie.</em></speaker>
-            <l n="531" xml:id="l531">Ah ! ma bonne Lydie !</l>
-          </sp>
-          <sp who="lydie" xml:id="2-179">
-            <speaker>LYDIE.</speaker>
-            <l n="532" xml:id="l532">Oui, bien trop bonne, ingrat !</l>
-          </sp>
-          <sp who="horace" xml:id="2-180">
-            <speaker>HORACE.</speaker>
-            <l n="533" xml:id="l533">Va, tu n’auras plus lieu de te plaindre.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-181">
-            <speaker>LYDIE.</speaker>
-            <l n="534" xml:id="l534">On verra.</l>
-          </sp>
-          <sp who="horace" xml:id="2-182">
-            <speaker>HORACE.</speaker>
-            <l n="535" xml:id="l535">Par les Dieux immortels ! par la voûte céleste !</l>
-            <l n="536" xml:id="l536">Par le fleuve infernal, aux parjures funeste !</l>
-            <l n="537" xml:id="l537">Par...</l>
-          </sp>
-          <sp who="lydie" xml:id="2-183">
-            <speaker>LYDIE.</speaker>
-            <l n="538" xml:id="l538">Non, plus de serments ; ils nous portent malheur.</l>
-            <l n="539" xml:id="l539">– Hélas ! de tes discours je connais la valeur,</l>
-            <l n="540" xml:id="l540">Et pourtant j’ai toujours plaisir à les entendre.</l>
-            <stage><hi rend="italic"><em>Avec tendresse.</em></hi></stage>
-            <l n="542" xml:id="l542">Ô trompeur !</l>
-          </sp>
-          <sp who="horace" xml:id="2-184">
-            <speaker>HORACE.</speaker>
-            <l n="543" xml:id="l543">Terre et mer ! sois-je réduit en cendre,</l>
-            <l n="544" xml:id="l544">Si...</l>
-            <stage><hi rend="italic"><em>Entre Beroé.</em></hi></stage>
-          </sp>
-          <sp who="beroé" xml:id="2-185">
-            <speaker>BEROÉ, <em>à Lydie.</em></speaker>
-            <l n="546" xml:id="l546">Calaïs, madame, est là, tout rayonnant.</l>
-            <l n="547" xml:id="l547">Il demande s’il peut entrer.</l>
-          </sp>
-          <sp who="horace" xml:id="2-186">
-            <speaker>HORACE.</speaker>
-            <l n="548" xml:id="l548">L’impertinent !</l>
-          </sp>
-          <sp who="horace" xml:id="2-187">
-            <speaker>LYDIE, <em>à Horace.</em></speaker>
-            <l n="549" xml:id="l549">Eh bien ! qu’est-ce qu’il faut répondre ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-188">
-            <speaker>HORACE.</speaker>
-            <l n="550" xml:id="l550">C’est facile.</l>
-            <stage><hi rend="italic"><em>À Beroé.</em></hi></stage>
-            <l n="552" xml:id="l552">Va dire à Calaïs qu’il est un imbécile.</l>
-          </sp>
-          <sp who="beroé" xml:id="2-189">
-            <speaker>BEROÉ.</speaker>
-            <l n="553" xml:id="l553">Et puis ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-190">
-            <speaker>HORACE.</speaker>
-            <l n="554" xml:id="l554">Qu’il peut porter son béotisme ailleurs.</l>
-          </sp>
-          <sp who="beroé" xml:id="2-191">
-            <speaker>BEROÉ, <em>à Lydie.</em></speaker>
-            <l n="555" xml:id="l555">Voilà ce qu’il faut dire ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-192">
-            <speaker>LYDIE.</speaker>
-            <l n="556" xml:id="l556">En des termes meilleurs.</l>
-          </sp>
-          <sp who="beroé" xml:id="2-193">
-            <speaker>BEROÉ</speaker>
-            <l n="557" xml:id="l557">Fort bien.</l>
-            <stage><hi rend="italic"><em>À Horace.</em></hi></stage>
-            <l n="559" xml:id="l559">Seigneur, Chloé vous attendra.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-194">
-            <speaker>LYDIE.</speaker>
-            <l n="560" xml:id="l560">La sotte !</l>
-            <stage><hi rend="italic"><em>À Horace.</em></hi></stage>
-            <l n="562" xml:id="l562">Irez-vous ?</l>
-          </sp>
-          <sp who="horace" xml:id="2-195">
-            <speaker>HORACE.</speaker>
-            <l n="563" xml:id="l563">Vous plaît-il que nous soyons votre hôte ?</l>
-          </sp>
-          <sp who="lydie" xml:id="2-196">
-            <speaker>LYDIE.</speaker>
-            <l n="564" xml:id="l564">Mais son pauvre souper restera sans emploi.</l>
-          </sp>
-          <sp who="horace" xml:id="2-197">
-            <speaker>HORACE.</speaker>
-            <l n="565" xml:id="l565">Eh ! non pas ; Calaïs le mangera pour moi.</l>
-          </sp>
-          <sp who="lydie" xml:id="2-198">
-            <speaker>LYDIE.</speaker>
-            <l n="566" xml:id="l566">Justement ; et la chose on ne peut mieux s’arrange.</l>
-            <stage><hi rend="italic"><em>À Beroé.</em></hi></stage>
-            <l n="568" xml:id="l568">Pour consolation, propose-lui l’échange.</l>
-          </sp>
-          <sp who="beroé" xml:id="2-199">
-            <speaker>HORACE, <em>à Beroé.</em></speaker>
-            <l n="569" xml:id="l569">Et pour enseignement, dis-lui que désormais</l>
-            <l n="570" xml:id="l570">Il vienne, en pareil cas, tout de suite ou jamais.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="1">Approche le miroir, Beroé.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="2">Le voici.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, se regardant au miroir.</speaker>
+          <l n="3">Trouves-tu mes cheveux bien arrangés ainsi ?</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="4">À merveille.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="5">Vraiment ? – Ne crois-tu pas qu’Horace</l>
+          <l n="6">Aimera ces frissons, ondulant non sans grâce ?</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="7">S’il n’en est pas charmé, le poète romain</l>
+          <l n="8">A le goût plus grossier qu’un barbare germain.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="9">Pourtant si, délivrant les boucles vagabondes,</l>
+          <l n="10">Je laissais sur mon cou se dérouler leurs ondes ?</l>
+          <l n="11">– Telle apparut, dit-on, Vénus au mont Ida.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ, montrant la coiffure de Lydie.</speaker>
+          <l n="12">Mais ainsi se coiffait la fille de Léda.</l>
+          <l n="13">Le double bandeau sied aux visages ovales,</l>
+          <l n="14">Et vous ferez mourir de dépit vos rivales.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="15">Tu crois ?</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="16">Hier, Chloé vous a vue en chemin ;</l>
+          <l n="17">La jalouse a pâli sous son triple carmin.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="18">Eh bien, si ma coiffure irrite sa malice,</l>
+          <l n="19">Restons ainsi coiffée, afin qu’elle pâlisse.</l>
+          <stage>&lt;em&gt;Montrant la cassette qui est sur la table de toilette.&lt;/em&gt;</stage>
+          <l n="20">Donne mes bracelets, – mes anneaux ; – donne encor</l>
+          <l n="21">Mon collier de corail et mes agrafes d’or.</l>
+          <stage>&lt;em&gt;Elle arrange les plis du péplum que Beroé vient d’agrafer.&lt;/em&gt;</stage>
+          <l n="22">Ces plis tombent-ils bien ?</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="23">Les divines statues,</l>
+          <l n="24">D’un voile aérien par Phidias vêtues,</l>
+          <l n="25">Moins purs et moins légers laissent tomber les plis</l>
+          <l n="26">Du marbre de Paros sur leurs corps assouplis.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="27">Et maintenant posons le lierre sur ma tête ;</l>
+          <l n="28">Le lierre est le feuillage aimé de mon poète.</l>
+          <stage>&lt;em&gt;Elle se redresse et se retourne vers Beroé.&lt;/em&gt;</stage>
+          <l n="29">Suis-je belle ?</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="30">Ô Vénus ! – Quel est le chevalier</l>
+          <l n="31">Qui ne vendrait pour vous sa bague et son collier ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="32">Ah ! Beroé ! l’amant à qui je voudrais plaire</l>
+          <l n="33">N’est pas un chevalier, n’est pas un consulaire ;</l>
+          <l n="34">C’est pour Horace, fils d’un esclave affranchi,</l>
+          <l n="35">Que brillent ces bijoux sur mon sein enrichi.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="36">Pour que vous l’aimiez tant, il faut bien qu’il vous aime !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="37">Le volage ! partout il soupire de même.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="38">Alors, il est fort riche, et les écus romains</l>
+          <l n="39">Comme des gouttes d’eau glissent entre ses mains !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="40">Il est pauvre. Il aurait les trésors du Pactole,</l>
+          <l n="41">Que je ne voudrais pas accepter une obole.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="42">Pauvre ! fils d’affranchi ! volage dans ses goûts !</l>
+          <l n="43">Médiocrement beau ! – Pourquoi donc l’aimez-vous ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="44">Je ne sais pas. Je l’aime.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="45">Ô l’étrange faiblesse !</l>
+          <l n="46">Eh quoi ! sourde aux soupirs de la jeune noblesse,</l>
+          <l n="47">Vous fermez votre seuil aux Drusus, aux Pisons,</l>
+          <l n="48">– Pour qui ? – Pour un poète, un faiseur de chansons !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="49">Que veux-tu !</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="50">Marcius descend des rois antiques ;</l>
+          <l n="51">Vingt images d’aïeux illustrent ses portiques ;</l>
+          <l n="52">– Qu’en dites-vous, madame ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="53">Eh ! que m’importe à moi</l>
+          <l n="54">Qu’ayant des goûts d’esclave, il descende d’un roi !</l>
+          <l n="55">Je refuse ma couche au petit-fils d’Énée,</l>
+          <l n="56">Dont le regard est trouble et l’haleine avinée.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="57">Et Cérinthe ? il est beau !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="58">C’est vrai ; mais il est sot.</l>
+          <l n="59">Sa bêtise orgueilleuse éclate à chaque mot.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="60">Calaïs ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="61">Calaïs, dont le talent unique</l>
+          <l n="62">Consiste à bien draper les plis de sa tunique !</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="63">Préférez-vous Rufus ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="64">Nul n’a le goût plus fin</l>
+          <l n="65">Pour discerner d’abord une huître du Lucrin.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="66">Claude est un cavalier comme l’on n’en voit guère.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="67">Il perd tout son mérite en mettant pied à terre.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="68">Prenez un sénateur grave dans ses propos.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="69">C’est ennuyeux.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="70">Prenez un fermier des impôts.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="71">C’est trop laid.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="72">C’est la source, ô belles courtisanes,</l>
+          <l n="73">Des bronzes de Corinthe et des urnes toscanes.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="74">Donnés par des gens laids, les cadeaux sont trop chers.</l>
+          <l n="75">Je ne mesure pas l’amour aux dons offerts.</l>
+          <l n="76">Que celle qui voudra l’or et la perle rare</l>
+          <l n="77">Au poète amoureux ferme sa porte avare ;</l>
+          <l n="78">Il ne vient pas chargé de la pourpre de Cos ;</l>
+          <l n="79">Il n’a que ses chansons et les donne aux échos ;</l>
+          <l n="80">Mais les Dieux sont pour lui ; la Muse délicate</l>
+          <l n="81">Lui conseille les mots dont la grâce nous flatte :</l>
+          <l n="82">La Muse, femme aussi, sait le cœur féminin,</l>
+          <l n="83">Et par quel art secret s’y glisse un doux venin.</l>
+          <l n="84">Va, je suis autrement que les femmes vénales ;</l>
+          <l n="85">Je hais l’esprit commun et les phrases banales ;</l>
+          <l n="86">Je veux, pour reconnaître et nommer mon vainqueur,</l>
+          <l n="87">Qu’il s’ouvre par mon âme un chemin à mon cœur.</l>
+          <l n="88">L’amour ne connaît pas d’éternelles ivresses ;</l>
+          <l n="89">Pour lui, la causerie a de calmes tendresses :</l>
+          <l n="90">Et quel plaisir alors d’écouter longuement</l>
+          <l n="91">La source qui murmure aux lèvres d’un amant,</l>
+          <l n="92">Ou bien d’accompagner sur sa tremblante lyre</l>
+          <l n="93">Les chants harmonieux que soi-même on inspire !</l>
+          <l n="94">Tel l’amour des oiseaux fait résonner les bois.</l>
+          <l n="95">Les chants et les amours ont dû naître à la fois.</l>
+          <l n="96">– Et puis, ô Beroé, n’est-ce pas quelque chose</l>
+          <l n="97">Que l’immortalité dont la Muse dispose ?</l>
+          <l n="98">La soie et les bijoux ne plaisent qu’un instant,</l>
+          <l n="99">Demain sera fané ce péplum éclatant ;</l>
+          <l n="100">Mais les vers du poète échappent aux outrages.</l>
+          <l n="101">Hélène aux beaux cheveux vivra dans tous les âges ;</l>
+          <l n="102">Tant qu’on reconnaîtra l’empire de Vénus,</l>
+          <l n="103">Lesbie et Lycoris auront des noms connus ;</l>
+          <l n="104">Et, partageant l’honneur de sa muse applaudie,</l>
+          <l n="105">Toujours avec Horace on nommera Lydie.</l>
+          <l n="106">– Ah ! Beroé ! j’entends des pas ; – c’est lui qui vient.</l>
+          <l n="107">Abaisse les rideaux ; leur ombre me convient ;</l>
+          <l n="108">Dans les plis de la pourpre une lumière éteinte</l>
+          <l n="109">Sur les traits adoucis jette sa demi-teinte.</l>
+          <stage>&lt;em&gt;Elle écoute.&lt;/em&gt;</stage>
+          <l n="110">Ce n’est pas lui. – Déjà faire attendre ! Inconstant !</l>
+          <l n="111">Il m’attendait jadis, et c’est moi qui l’attend.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ, montrant la clepsydre.</speaker>
+          <l n="112">Mais, madame, voyez : l’heure est passée à peine.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="113">Ah ! il la devançait jadis. Excuse vaine !</l>
+          <l n="114">L’excuse n’appartient qu’à des amours lassés.</l>
+          <l n="115">Quand on n’aime plus trop, on n’aime plus assez.</l>
+          <l n="116">– Il ne viendra jamais, te dis-je. – Et que m’importe !</l>
+          <l n="117">S’il venait à présent, je fermerais ma porte.</l>
+          <l n="118">Je ne veux plus le voir. – Tiens, brouille mes cheveux !</l>
+          <l n="119">Ces anneaux irritants blessent mes doigts nerveux ;</l>
+          <l n="120">Arrache-les ! – Arrache en même temps ces gazes !</l>
+          <l n="121">Déchire, brise tout, foule aux pieds ces topazes !</l>
+          <l n="122">Oh ! je voudrais qu’il vînt, pour fermer les verrous !</l>
+          <l n="123">– Attends ! c’est lui.</l>
+          <stage>&lt;em&gt;Avec  joie.&lt;/em&gt;</stage>
+          <l n="124">C’est lui, fidèle au rendez-vous !</l>
+          <stage>&lt;em&gt;Entre Horace.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#lydie">
+          <speaker>LYDIE, BEROÉ, HORACE</speaker>
+          <stage>&lt;em&gt;Lydie, assise  arrange sa couronne et remet ses bagues. Elle feint de ne pas voir Horace, qui s’approche doucement et lui dépose un baiser sur le cou.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, feignant la surprise.</speaker>
+          <l n="125">Ah !  – Quoi ! c’est vous, Horace !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="126">Horace, votre esclave,</l>
+          <l n="127">Plus heureux d’être ici que d’être chez Octave.</l>
+          <stage>&lt;em&gt;Beroé se retire dans le cabinet de toilette, dont la porte reste entr’ouverte,&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="128">C’est d’un bon amoureux, mais d’un froid courtisan.</l>
+          <l n="129">Parleriez-vous ainsi, César étant présent ?</l>
+          <stage>&lt;em&gt;Horace lui prend la main et lui entoure la taille d’un bras.&lt;/em&gt;</stage>
+          <l n="130">Laissez. Vous dérangez ma tunique.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="131">Rebelle !</l>
+          <l n="132">Pourquoi donc aujourd’hui si farouche – et si belle ?</l>
+          <l n="133">– Pour qui cette parure ? Est-ce pour moi ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="134">Pour vous ?</l>
+          <l n="135">Pas tout à fait. Le ciel est pur, l’air est doux ;</l>
+          <l n="136">Tous les beaux sont déjà sur la voie Appienne ;</l>
+          <l n="137">J’allais montrer un peu ma robe assyrienne.</l>
+          <l n="138">– Que vous en semble ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="139">Mais il me semblait à moi</l>
+          <l n="140">Que vous m’aviez donné rendez-vous.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, ayant l’air de se souvenir.</speaker>
+          <l n="141">Oui, ma foi.</l>
+          <l n="142">– Eh bien, aimez-vous mieux, alors, que je demeure ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="143">Eh ! sans doute !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="144">J’ai cru que vous oublieriez l’heure.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="145">Ô Dieux ! je ne songeais qu’au rendez-vous.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="146">Menteur !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="147">De l’heure qui tardait j’accusais la lenteur.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="148">Vrai ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="149">Mécène m’attend ; que Mécène m’attende !</l>
+          <l n="150">J’accours chez ma Lydie, où l’amour me demande.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="151">Vous en repentez-vous ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="152">Je me suis repenti</l>
+          <l n="153">De m’ennuyer, jamais de m’être diverti.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="154">Le falerne enivrant coule à flots chez Mécène.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="155">J’aime mieux m’enivrer de ta plus douce haleine.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="156">Mécène vous eût dit les nouvelles du jour ;</l>
+          <l n="157">Et moi, je ne sais rien, sinon parler d’amour.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="158">Et voilà justement la science suprême :</l>
+          <l n="159">Le bonheur est d’aimer et de dire qu’on aime.</l>
+          <l n="160">Les doux chuchotements qui s’éveillent la nuit,</l>
+          <l n="161">La main mal dérobée au baiser qui la suit,</l>
+          <l n="162">Voilà les jeux charmants, et la fête éternelle</l>
+          <l n="163">Qui ne lasse jamais, toujours vieille et nouvelle.</l>
+          <l n="164">Toi, Mécène, chargé du poids de nos destins,</l>
+          <l n="165">Tu veilles sur l’empire et les peuples lointains ;</l>
+          <l n="166">Tu prépares notre aigle aux guerres que projette</l>
+          <l n="167">Le Cantabre indocile ou l’errant Massagète.</l>
+          <l n="168">Mais quoi ! les Dieux prudents nous voilent l’avenir.</l>
+          <l n="169">Quel lendemain suivra le jour qui va finir ?</l>
+          <l n="170">Nul ne sait ; y songer est un souci frivole.</l>
+          <l n="171">Cependant le temps fuit ; la jeunesse s’envole,</l>
+          <l n="172">Emportant avec elle et les joyeux discours,</l>
+          <l n="173">Et le sommeil facile, et l’âge des amours.</l>
+          <l n="174">Donc puisque la jeunesse est chose si légère,</l>
+          <l n="175">Cueillons, quand il est temps, cette fleur passagère.</l>
+          <l n="176">Le sage, ô ma Lydie, obéissant aux Dieux,</l>
+          <l n="177">Jouit de leurs bienfaits, qu’on regrette étant vieux ;</l>
+          <l n="178">Il est content, s’il tient des Muses de la Grèce</l>
+          <l n="179">Un souffle, tout léger, pour chanter sa maîtresse ;</l>
+          <l n="180">Il ne dédaigne pas les mets exquis, non plus</l>
+          <l n="181">Qu’un vin mis au cellier sous le consul Tullus ;</l>
+          <l n="182">Mais c’est l’amour surtout, c’est l’amour qui l’enchante,</l>
+          <l n="183">– L’amour que je maudis, quand Lydie est méchante.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="184">Ah ! traître ! tes discours seraient mieux accueillis,</l>
+          <l n="185">Si tu n’en disais pas tout autant à Phyllis.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="186">Moi ! c’est faux.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="187">Pour Lydie, on a quitté Mécène ;</l>
+          <l n="188">Mais à quitter Chloé l’on aurait plus de peine.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="189">Chloé ? fi donc ! – Je prends tous les Dieux à témoin</l>
+          <l n="190">Que je n’ai jamais vu la Chloé – que de loin.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="191">Le serment est facile à vous autres parjures.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="192">Ah ! j’ai peu mérité ces cruelles injures !</l>
+          <l n="193">À quoi sert l’innocence ! – Ô gardien des serments,</l>
+          <l n="194">Que je sois foudroyé, Jupiter, si je mens !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="195">Eh bien, oui, je te crois ; j’ai besoin de te croire,</l>
+          <l n="196">Horace, mon amant, mon poète, ma gloire !</l>
+          <l n="197">– Je t’aime.</l>
+          <stage>&lt;em&gt;Horace est à genoux devant elle ; elle lui passe un bras autour du cou.&lt;/em&gt;</stage>
+          <l n="198">C’est l’effet de quelque enchantement ;</l>
+          <l n="199">Ce n’est pas naturel d’aimer si follement.</l>
+          <l n="200">Reste ainsi prisonnier dans mon bras qui t’enlace !</l>
+          <l n="201">Nous allons t’enchaîner, volage, à cette place.</l>
+          <l n="202">– Je t’aime. Mes regards, de toute leur longueur,</l>
+          <l n="203">S’enfoncent dans tes yeux et vont chercher ton cœur ;</l>
+          <l n="204">Je voudrais me changer en rayon de lumière,</l>
+          <l n="205">Afin d’y pénétrer, moi-même, tout entière.</l>
+          <l n="206">– Ne me regarde plus, j’en perdrais la raison.</l>
+          <stage>&lt;em&gt;Horace fait un mouvement pour se lever.&lt;/em&gt;</stage>
+          <l n="207">Non, non ; ne bougez pas. Vous êtes en prison.</l>
+          <l n="208">– Tu n’aimes pas Chloé, n’est-ce pas ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="209">Dieu m’en garde !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="210">Elle est laide.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, se relevant.</speaker>
+          <l n="211">Très laide. On dit qu’elle se farde.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="212">Elle a d’affreuses dents.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="213">Elle louche, je crois.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="214">Tu n’aimeras jamais d’autre femme que moi ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="215">Jamais.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="216">Répète-le ; redis-le-moi sans cesse.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="217">Quand mon cœur brûlera pour une autre maîtresse,</l>
+          <l n="218">On verra le Bouvier, connu des matelots,</l>
+          <l n="219">Abandonner le pôle et plonger dans les flots.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="220">Le zéphyr soufflera du côté de la Thrace,</l>
+          <l n="221">Avant qu’un autre amant succède à mon Horace.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="222">Mettez-moi sur les bords glacés du Pont-Euxin,</l>
+          <l n="223">Ou sous le char brûlant du soleil trop voisin,</l>
+          <l n="224">Partout je t’aimerai, toi pour qui je respire,</l>
+          <l n="225">Lydie au doux parler, Lydie au doux sourire.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="226">Oh ! les tendres discours !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="227">Oh ! les aveux charmants !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, portant la main sur tes tablettes d’Horace.</speaker>
+          <l n="228">Laisse-moi sur la cire écrire nos serments.</l>
+          <l n="229">– Donne.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, retenant ses tablettes.</speaker>
+          <l n="230">Mais... non.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="231">Pourquoi ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="232">La cire est barbouillée.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="233">Voyons.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="234">C’est une ébauche à peine débrouillée.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="235">C’est égal. Je veux voir. – Pour qui ces vers ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="236">Pour toi.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="237">Bien sûr ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="238">Eh ! pour quelle autre ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="239">Alors, montre-les-moi.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, à part.</speaker>
+          <l n="240">Ahi !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="241">Non ; j’aime mieux te les lire moi-même.</l>
+          <l n="242">Mes vers balbutiés me font un mal extrême.</l>
+          <stage>&lt;em&gt;Il lit. Lydie l’écoute, appuyée sur son épaule.&lt;/em&gt;</stage>
+          <l n="243">Compagnons du printemps, les zéphyrs ont soufflé</l>
+          <l n="244">Dans les prés amollis la nouvelle saison</l>
+          <l n="245">Déjà, d’un pied joyeux, Vénus conduit les chœurs </l>
+          <l n="246">Le soleil nous ramène avec les jours brûlants</l>
+          <l n="247">Esclave, rafraîchis le falerne échauffé,</l>
+          <l n="248">Toujours ne dure pas la gloire du printemps</l>
+          <l n="249">Bacchus verse l’oubli des chagrins. Évohé !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="250">Ah ! que c’est donc joli ! – les derniers vers surtout.</l>
+          <l n="251">– Fais voir.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="252">Mais non.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="253">Mais si. Je le veux.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="254">Point du tout !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE arrache les tablettes à Horace.</speaker>
+          <l n="255">Si fait ! – Ah ! je les tiens.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="256">Tu ne pourras pas lire.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="257">J’essaierai.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, à part.</speaker>
+          <l n="258">Je suis pris.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, appelant Beroé et lui montrant une lyre pendue à la muraille.</speaker>
+          <l n="259">Beroé, prends ta lyre.</l>
+          <stage>&lt;em&gt;Jeu muet d’Horace, qui vent reprendre les tablettes, et de Lydie qui les cache dans son sein. Beroé s’approche avec la lyre, et en tire quelques accords, pendant que Lydie récite les vers d’Horace.&lt;/em&gt;</stage>
+          <l n="260">Compagnons du printemps, les zéphyrs ont soufflé</l>
+          <l n="261">Dans les prés amollis la nouvelle saison</l>
+          <l n="262">Déjà d’un pied joyeux, Vénus conduit les chœurs</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, l’interrompant, et cherchant à reprendre les tablettes.</speaker>
+          <l n="263">C’est assez ; le surplus n’est pas encor poli ;</l>
+          <l n="264">Tu le liras demain.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, retenant les tablettes.</speaker>
+          <l n="265">Non, non. C’est très joli.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, joignant les mains.</speaker>
+          <l n="266">De grâce !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="267">Eh bien ! passons à la dernière strophe ;</l>
+          <l n="268">Elle est la mienne.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, à part.</speaker>
+          <l n="269">Bon ! gare la catastrophe !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, lisant.</speaker>
+          <l n="270">Bacchus verse l’oubli des chagrins. Évohé !</l>
+          <stage>&lt;em&gt;Elle se retourne vers Horace, en lui montrant les tablettes.&lt;/em&gt;</stage>
+          <l n="271">C’est Chloé !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="272">Je...</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="273">Chloé !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="274">Mais...</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="275">Parle ! réponds-moi !</l>
+          <l n="276">Traître ! que diras-tu ? – parle donc !</l>
+          <stage>&lt;em&gt;Beroé se retire dans le cabinet.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="277">J’ai...</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="278">Tais-toi !</l>
+          <l n="279">Il ose encor parler après son imposture.</l>
+          <l n="280">Le fourbe ! – Prétends-tu nier ton écriture ?</l>
+          <l n="281">– Ai-je mal lu ?</l>
+          <stage>&lt;em&gt;Elle lui montre les tablettes.&lt;/em&gt;</stage>
+          <l n="282">Tiens, lis : vois ton accusateur.</l>
+          <l n="283">– Chloé ! c’est bien Chloé ! – Diras-tu non, menteur ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="284">Lydie ! au nom des Dieux ! écoute-moi, Lydie !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="285">Ah ! pouvais-je m’attendre à cette perfidie !</l>
+          <l n="286">Ah ! comme il se jouait de ma crédulité !</l>
+          <l n="287">Jamais coup plus cruel m’a-t-il été porté !</l>
+          <l n="288">Le parjure attestait les Dieux de sa tendresse !</l>
+          <l n="289">Il osait défier leur foudre vengeresse !</l>
+          <l n="290">Quoi d’étonnant, d’ailleurs, qu’il se moque des Dieux ?</l>
+          <l n="291">Un infidèle amant ne peut être pieux.</l>
+          <l n="292">– Et, dupe que j’étais, comme on l’est quand on aime,</l>
+          <l n="293">Je prenais ses serments pour la vérité même ;</l>
+          <l n="294">J’avais presque un remords de mes soupçons jaloux ;</l>
+          <l n="295">Il s’indignait si bien, que je l’avais absous.</l>
+          <l n="296">Je m’épanouissais devant ses fourberies</l>
+          <l n="297">Dont mon cœur altéré buvait les flatteries.</l>
+          <l n="298">Ah ! sottise ! – C’était un rôle bien joué.</l>
+          <l n="299">Il parlait à Lydie en pensant à Chloé.</l>
+          <l n="300">Ô Dieux ! – C’est très plaisant. Vous avez dû bien rire,</l>
+          <l n="301">N’est-il pas vrai ? pendant qu’on apportait la lyre.</l>
+          <l n="302">J’ai mis tant de bonheur et tant de bonne foi</l>
+          <l n="303">À réciter ces vers que je croyais pour moi !</l>
+          <l n="304">Comme j’en savourais la lente mélopée !</l>
+          <l n="305">Comme je jouissais de ma gloire usurpée !</l>
+          <l n="306">Folle ! sotte ! niaise ! – Oui, c’est risible ; eh bien !</l>
+          <l n="307">Toi, ris de ton côté ; moi, je pleure du mien.</l>
+          <stage>&lt;em&gt;Elle va tomber assise dans le fauteuil.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="308">Lydie, écoute-moi !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="309">C’est affreux ! c’est indigne !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="310">Je jure d’effacer cette maudite ligne.</l>
+          <stage>&lt;em&gt;Il lui prend la main.&lt;/em&gt;</stage>
+          <l n="311">Lydie !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, retirant sa main.</speaker>
+          <l n="312">Ah ! laissez-moi.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="313">J’ai des défauts ; d’accord.</l>
+          <l n="314">J’aime trop les plaisirs, et l’excès est un tort.</l>
+          <l n="315">Hélas ! je veux en vain combattre ma nature ;</l>
+          <l n="316">Mes plus fermes desseins s’en vont à l’aventure.</l>
+          <l n="317">On m’entraîne au moment où je me corrigeais ;</l>
+          <l n="318">Un rayon de soleil fait fondre mes projets ;</l>
+          <l n="319">Je ne puis voir passer dans la rue une robe,</l>
+          <l n="320">Sans regarder un peu le pied qu’elle dérobe.</l>
+          <l n="321">– Mais, pour être léger, je ne suis pas méchant ;</l>
+          <l n="322">Je suis vraiment navré de ton chagrin touchant,</l>
+          <l n="323">Et me regarderais comme trois fois infâme,</l>
+          <l n="324">Si je riais des pleurs que répand une femme.</l>
+          <l n="325">– Voyons ! ma chère enfant !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, se levant et s’éloignant d’Horace.</speaker>
+          <l n="326">Laissez-moi ! laissez-moi !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, la suivant.</speaker>
+          <l n="327">Je t’aime.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="328">Taisez-vous !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="329">Et je n’aime que toi.</l>
+          <l n="330">Ces vers ne prouvent rien. Fiction poétique !</l>
+          <l n="331">Il fallait un ïambe à mon vers alcaïque,</l>
+          <l n="332">Lydie est un dactyle ; en mon vers fourvoyé,</l>
+          <l n="333">Le cœur disait : Lydie ; et le rythme : Chloé.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, jetant par terre les tablettes qu’elle foule à ses pieds.</speaker>
+          <l n="334">Périssent donc les vers, l’ïambe et les poètes !</l>
+          <l n="335">Puissé-je les fouler, tous, comme ces tablettes !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="336">Ivoire infortunée ! on te brise les os.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="337">À ta chère Chloé portes-en les morceaux.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="338">Des vers perdus ! pas un dont je me ressouvienne !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="339">Tant mieux. Je les voudrais dans la mer Caspienne.</l>
+          <l n="340">Oh ! les poètes ! race égoïste et sans frein,</l>
+          <l n="341">Qui sacrifierait tout pour un méchant quatrain !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, entre ses dents.</speaker>
+          <l n="342">Méchant quatrain !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="343">C’est bien la pire espèce d’hommes</l>
+          <l n="344">Que nous puissions aimer, ô folles que nous sommes !</l>
+          <l n="345">On les croit généreux, tendres et délicats ;</l>
+          <l n="346">Ils ont un sens exquis que les autres n’ont pas ;</l>
+          <l n="347">Dans un monde inconnu leur amour nous fait vivre ;</l>
+          <l n="348">Bah ! ces enchantements ne sont que dans leur livre.</l>
+          <l n="349">Fiction poétique ! Au fond, vous les verrez</l>
+          <l n="350">Terrestres comme un autre, et pas plus éthérés.</l>
+          <l n="351">Ils ont tant dépensé de feux pour les Déesses,</l>
+          <l n="352">Qu’ils n’en ont plus du tout pour de simples maîtresses,</l>
+          <l n="353">Et, tant d’amour en vers épuisant leur vigueur,</l>
+          <l n="354">L’imagination a ruiné le cœur.</l>
+          <l n="355">C’est pour cela qu’ils ont l’humeur si vagabonde :</l>
+          <l n="356">Comme ils n’aiment personne, ils aiment tout le monde.</l>
+          <l n="357">Ah ! qu’il vaut mieux choisir un honnête garçon,</l>
+          <l n="358">Tout simple, et vous aimant de la bonne façon,</l>
+          <l n="359">– Comme Cérinthe, ou bien Calaïs fils d’Ornithe.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="360">Une bête !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="361">Il m’adore, et c’est un grand mérite.</l>
+          <l n="362">– Il est jeune, il est beau.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="363">Hum ! pas trop.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="364">Il me plaît ;</l>
+          <l n="365">Cela suffit.</l>
+          <stage>&lt;em&gt;Regardant Horace.&lt;/em&gt;</stage>
+          <l n="366">D’ailleurs, on peut être plus laid.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="367">En mille traits d’esprit sa causerie abonde ;</l>
+          <l n="368">Vous tiendrez les propos les plus jolis du monde.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="369">On dit toujours très bien ce qu’on sent. Les amours</l>
+          <l n="370">Vivent de sentiments et non de beaux discours.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="371">S’ils vivent de sottise, ils ne feront pas diète.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="372">Oh ! Calaïs n’a pas tout l’esprit d’un poète ;</l>
+          <l n="373">Il ne sait pas sans cesse occupé de ses vers,</l>
+          <l n="374">À tout ce qu’on lui dit répondre de travers ;</l>
+          <l n="375">Il ne veut pas frapper du front les toits célestes,</l>
+          <l n="376">Pour avoir aligné deux ou trois anapestes ;</l>
+          <l n="377">Il ne se change pas en cygne un beau matin ;</l>
+          <l n="378">Mais il a du bon sens, – ce qui manque à certain.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="379">Eh ! prenez-le donc vite !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="380">En vérité ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="381">Sans doute.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="382">Fort bien. Votre conseil est bon, et je le goûte.</l>
+          <stage>&lt;em&gt;Appelant Beroé.&lt;/em&gt;</stage>
+          <l n="383">Beroé ! tu sais bien ce jeune et beau garçon,</l>
+          <l n="384">Calaïs, qui toujours rôde sous ma maison ?</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ, venant vers Lydie.</speaker>
+          <l n="385">Oui, oui.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="386">Va le chercher. Dis-lui que je l’invite</l>
+          <l n="387">À souper ; que je l’aime, et qu’il vienne au plus vite.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="388">J’y cours, madame.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="389">Attends, ma bonne Beroé.</l>
+          <l n="390">Tu connais, n’est-ce pas, la charmante Chloé ?</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="391">Chloé, notre voisine ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="392">Oui. Passe chez la belle,</l>
+          <l n="393">Et dis-lui que j’irai, ce soir, souper chez elle.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, à Beroé, qui la consulte des yeux.</speaker>
+          <l n="394">Va. Fais ce qu’il te dit. Je l’approuve très fort.</l>
+          <stage>&lt;em&gt;Sort Beroé.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="395">Comme c’est merveilleux d’être si bien d’accord !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="396">Enfin je vais avoir cette bonne fortune</l>
+          <l n="397">D’un amant pour moi seule et non pas pour chacune.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="398">Enfin je connaîtrai des amours indulgents</l>
+          <l n="399">Qui pour l’ombre d’un tort ne battront pas les gens.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="400">Qu’est-ce que vaut un cœur dont on n’est pas la reine ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="401">Et qu’est-ce qu’un plaisir dont on fait une peine ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="402">Pour moi, je suis fidèle, et j’entends qu’on le soit ;</l>
+          <l n="403">Je veux que l’on me donne autant que l’on reçoit,</l>
+          <l n="404">Et fais très peu de cas d’un encens que l’on brûle</l>
+          <l n="405">Tantôt à Lalagé, tantôt à Néobule.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="406">Moi, j’ai l’humeur paisible, et j’ai grand’peur du bruit,</l>
+          <l n="407">Et d’un œil orageux où toujours l’éclair luit.</l>
+          <l n="408">L’Amour s’enfuit, chassé par un sourcil farouche,</l>
+          <l n="409">Et pleure le sourire exilé de la bouche.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="410">L’amour va revenir, et le rire perdu.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="411">Aux amis négligés je vais être rendu ;</l>
+          <l n="412">Je pourrai respirer le frais sous ma tonnelle,</l>
+          <l n="413">Sans craindre qu’un retard m’attire une querelle.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, d’un ton passionné.</speaker>
+          <l n="414">Oh ! viens, cher Calaïs ! Je compte les moments.</l>
+          <l n="415">Mon cœur bondit déjà vers tes embrassements.</l>
+          <l n="416">Vénus n’est plus à Chypre ; elle est toute en mes veines.</l>
+          <l n="417">Viens, ami ! C’est pour toi que fument les verveines,</l>
+          <l n="418">Pour toi que ces rideaux, mystérieux remparts,</l>
+          <l n="419">Du passant indiscret repoussent les regards.</l>
+          <l n="420">C’est pour toi que luira d’une clarté voilée,</l>
+          <l n="421">Pour toi que s’éteindra la lampe reculée.</l>
+          <stage>&lt;em&gt;Regardant Horace, à la dérobée.&lt;/em&gt;</stage>
+          <l n="422">– Il s’émeut.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, se levant.</speaker>
+          <l n="423">Qu’elle est belle, en ce mol abandon !</l>
+          <l n="424">Livrer cette sirène à mon rival ! Fi donc !</l>
+          <stage>&lt;em&gt;Il s’approche de Lydie, qui, à moitié couchée, lui tourne le dos. À demi-voix et tendrement.&lt;/em&gt;</stage>
+          <l n="425">Lydie !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, sans se retourner.</speaker>
+          <l n="426">Ô Calaïs ! – Ô volupté divine ! –</l>
+          <l n="427"> C’est toi ! Sans t’avoir vu, tout mon cœur te devine.</l>
+          <stage>&lt;em&gt;Toujours sans se retourner,  pendant qu’Horace lui pose le bout des doigts sur les cheveux.&lt;/em&gt;</stage>
+          <l n="428">Détache ces bandeaux qu’emprisonne un seul nœud.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="429">Les beaux cheveux !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, tendant la main, toujours sans se retourner.</speaker>
+          <l n="430">Ma main attend ta lèvre en feu.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, baisant la main de Lydie.</speaker>
+          <l n="431">La belle main !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, se retournant.</speaker>
+          <l n="432">Eh quoi ! Vous encore !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="433">Moi-même.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="434">Que faites-vous ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, lui baisant encore la main.</speaker>
+          <l n="435">Je dis à ta main que je t’aime.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="436">Hélas ! je vous prenais pour Calaïs.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="437">Merci.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="438">J’ai cru que vous étiez déjà bien loin d’ici.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, montrant les mains de Lydie.</speaker>
+          <l n="439">Le moyen de partir, retenu par ces chaînes.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="440">Près des mains de Chloé les miennes sont vilaines.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, prenant les mains de Lydie.</speaker>
+          <l n="441">Non pas. Ces jolis doigts sont plus blancs que les siens,</l>
+          <l n="442">Et plus mignons. – Elle a de gros doigts plébéiens.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="443">Peut-être. – Mais sa taille est superbe.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, montrant la taille de Lydie.</speaker>
+          <l n="444">Ah ! déesse !</l>
+          <l n="445">Devant ce port divin quelle tournure épaisse !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="446">Un peu lourde, c’est vrai. – Mais quels cheveux !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, montrant les cheveux de Lydie.</speaker>
+          <l n="447">Moins beaux</l>
+          <l n="448">Que ceux-ci.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="449">Cependant ils viennent de Lesbos ;</l>
+          <l n="450">On les lui vend fort cher.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, riant.</speaker>
+          <l n="451">Mauvaise !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="452">Elle est, en somme,</l>
+          <l n="453">Bien mieux faite que moi pour captiver un homme.</l>
+          <l n="454">– Courez !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="455">Non.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="456">Si. J’attends Calaïs, et je crois</l>
+          <l n="457">Qu’il serait peu décent qu’il vous trouvât chez moi.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="458">C’est bien, je me retire.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="459">Oui.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="460">Je cède la place.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="461">Bon.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="462">Lutter contre lui, ce serait trop d’audace.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, saluant.</speaker>
+          <l n="463">Adieu, seigneur.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="464">Adieu. – Je ne désire pas</l>
+          <l n="465">Rester ici pour voir Calaïs dans vos bras.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="466">J’entends bien.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="467">Je ferais une triste figure.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="468">Mais... oui.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="469">Je m’en vais donc. – Adieu, fourbe ! parjure !</l>
+          <l n="470">Perfide !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="471">Eh ! doucement ! qu’avez-vous à crier ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="472">Coquette !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="473">Quittons-nous sans nous injurier.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="474">Faut-il vous savoir gré de me mettre à la porte ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="475">Vous avez bien voulu qu’il en fût de la sorte.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="476">Moi ! le mot est charmant.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="477">Vous vouliez en finir.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="478">C’est vous ; depuis longtemps, vous me vouliez bannir.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="479">Est-ce moi, par hasard, qui suis une infidèle ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="480">Est-ce moi qui vous cherche une injuste querelle ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="481">Si nous nous séparons, pourquoi le faisons-nous ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="482">À qui la faute ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="483">À vous.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="484">Non. À vous.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, mollement.</speaker>
+          <l n="485">Non. À vous.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="486">Tant que tu m’as aimé, quand nul autre plus digne</l>
+          <l n="487">N’entourait de ses bras ton cou blanc comme un cygne,</l>
+          <l n="488">J’ai vécu plus heureux que Xercès, le grand roi.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="489">Tant que tu n’as aimé personne plus que moi,</l>
+          <l n="490">Quand Chloé n’était pas préférée à Lydie,</l>
+          <l n="491">J’ai vécu plus illustre et plus fière qu’Ilie.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="492">J’appartiens maintenant à la blonde Chloé,</l>
+          <l n="493">Qui plaît par sa voix douce et son luth enjoué ;</l>
+          <l n="494">Je suis prêt à mourir pour prolonger sa vie.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="495">Calaïs maintenant tient mon âme asservie ;</l>
+          <l n="496">Nous brûlons tous les deux de mutuels amours,</l>
+          <l n="497">Et je mourrais deux fois pour prolonger ses jours.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="498">Mais quoi ! si j’ai regret de ma première chaîne ?</l>
+          <l n="499">Si Vénus de retour sous son joug nous ramène ?</l>
+          <l n="500">Si, l’ôtant à Chloé, je te rends mon amour ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="501">Encor que Calaïs soit plus beau que le jour,</l>
+          <l n="502">Toi, plus traître que l’onde et plus léger que l’heure,</l>
+          <l n="503">Avec toi que je vive, avec toi que je meure !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, se jetant aux genoux de Lydie.</speaker>
+          <l n="504">Ah ! ma bonne Lydie !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="505">Oui, bien trop bonne, ingrat !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="506">Va, tu n’auras plus lieu de te plaindre.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="507">On verra.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="508">Par les Dieux immortels ! par la voûte céleste !</l>
+          <l n="509">Par le fleuve infernal, aux parjures funeste !</l>
+          <l n="510">Par...</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="511">Non, plus de serments ; ils nous portent malheur.</l>
+          <l n="512">– Hélas ! de tes discours je connais la valeur,</l>
+          <l n="513">Et pourtant j’ai toujours plaisir à les entendre.</l>
+          <stage>&lt;em&gt;Avec tendresse.&lt;/em&gt;</stage>
+          <l n="514">Ô trompeur !</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="515">Terre et mer ! sois-je réduit en cendre,</l>
+          <l n="516">Si...</l>
+          <stage>&lt;em&gt;Entre Beroé.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ, à Lydie.</speaker>
+          <l n="517">Calaïs, madame, est là, tout rayonnant.</l>
+          <l n="518">Il demande s’il peut entrer.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="519">L’impertinent !</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE, à Horace.</speaker>
+          <l n="520">Eh bien ! qu’est-ce qu’il faut répondre ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="521">C’est facile.</l>
+          <stage>&lt;em&gt;À Beroé.&lt;/em&gt;</stage>
+          <l n="522">Va dire à Calaïs qu’il est un imbécile.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ.</speaker>
+          <l n="523">Et puis ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="524">Qu’il peut porter son béotisme ailleurs.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ, à Lydie.</speaker>
+          <l n="525">Voilà ce qu’il faut dire ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="526">En des termes meilleurs.</l>
+        </sp>
+        <sp who="#beroé">
+          <speaker>BEROÉ</speaker>
+          <l n="527">Fort bien.</l>
+          <stage>&lt;em&gt;À Horace.&lt;/em&gt;</stage>
+          <l n="528">Seigneur, Chloé vous attendra.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="529">La sotte !</l>
+          <stage>&lt;em&gt;À Horace.&lt;/em&gt;</stage>
+          <l n="530">Irez-vous ?</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="531">Vous plaît-il que nous soyons votre hôte ?</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="532">Mais son pauvre souper restera sans emploi.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE.</speaker>
+          <l n="533">Eh ! non pas ; Calaïs le mangera pour moi.</l>
+        </sp>
+        <sp who="#lydie">
+          <speaker>LYDIE.</speaker>
+          <l n="534">Justement ; et la chose on ne peut mieux s’arrange.</l>
+          <stage>&lt;em&gt;À Beroé.&lt;/em&gt;</stage>
+          <l n="535">Pour consolation, propose-lui l’échange.</l>
+        </sp>
+        <sp who="#horace">
+          <speaker>HORACE, à Beroé.</speaker>
+          <l n="536">Et pour enseignement, dis-lui que désormais</l>
+          <l n="537">Il vienne, en pareil cas, tout de suite ou jamais.</l>
+          <l n="538" />
+        </sp>
       </div>
     </body>
   </text>

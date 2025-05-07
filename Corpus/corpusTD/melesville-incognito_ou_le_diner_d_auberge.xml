@@ -1,2031 +1,1860 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>L’Incognito</title>
-        <author key="MÉLESVILLE | (naissance-mort)">MÉLESVILLE |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/l’incognito-mélesville</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>MÉLESVILLE |</author>. <title>L’Incognito</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/l’incognito-mélesville</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1816-01-18">Représentée pour la première fois, à Paris, sur le Théâtre de l’Ambigu-Comique, le 18 janvier 1816.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="saint-ernest" sex="SEX">
+            <persName>SAINT-ERNEST</persName>
+          </person>
+          <person xml:id="léon" sex="SEX">
+            <persName>LÉON</persName>
+          </person>
+          <person xml:id="bonneau" sex="SEX">
+            <persName>BONNEAU</persName>
+          </person>
+          <person xml:id="jolibois" sex="SEX">
+            <persName>JOLIBOIS</persName>
+          </person>
+          <person xml:id="fanchette" sex="SEX">
+            <persName>FANCHETTE</persName>
+          </person>
+          <person xml:id="alain" sex="SEX">
+            <persName>ALAIN</persName>
+          </person>
+          <person xml:id="plusieurs-paysans" sex="SEX">
+            <persName>PLUSIEURS PAYSANS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1816-01-18" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de l’Ambigu-Comique, le 18 janvier 1816.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>L’Incognito</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie-folie en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de l’Ambigu-Comique, le 18 janvier 1816.</l>
-            <l n="3" xml:id="l3"> </l>
-            <l n="4" xml:id="l4"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="saint-ernest">SAINT-ERNEST</role>
-              <roleDesc>, <em>jeune colonel</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="léon">LÉON</role>
-              <roleDesc>, <em>son ami</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="bonneau">BONNEAU</role>
-              <roleDesc>, <em>aubergiste de village</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="jolibois">JOLIBOIS</role>
-              <roleDesc>, <em>garçon d’auberge</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="fanchette">FANCHETTE</role>
-              <roleDesc>, <em>fille de Bonneau</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="alain">ALAIN</role>
-              <roleDesc>, <em>son amant</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="plusieurs-paysans">PLUSIEURS PAYSANS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène est dans un village.</em></hi></stage>
-            <l n="6" xml:id="l6"> </l>
-            <stage><hi rend="italic"><em>Le théâtre représente une campagne, à gauche des spectateurs, l’auberge de Bonneau, à l’enseigne du LION D’OR ; à droite, un berceau qui est censé conduire à un pavillon dépendant de l’auberge de Bonneau. Un banc de verdure environné de buissons, occupe un côté du berceau.</em></hi></stage>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="10" xml:id="l10"> </l>
-          <sp who="fanchette" xml:id="1-1">
-            <speaker>FANCHETTE, JOLIBOIS, <em>sortant de l’auberge</em></speaker>
-            <l n="11" xml:id="l11"> </l>
-          </sp>
-          <sp who="jolibois" xml:id="1-2">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="12" xml:id="l12">Non, mam’zelle, c’ n’est pas ainsi qu’on en agit au vis-à-vis d’un futur.</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-3">
-            <speaker>FANCHETTE.</speaker>
-            <l n="13" xml:id="l13">Tu m’impatientes !</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-4">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="14" xml:id="l14">C’est ça, j’ vous impatiente ! Croyez-vous donc que j’ sois aveugle, ou ben que j’ n’y voye pas clair ? Allez, vous d’vriez rougir. La fille unique d’ monsieur Bonneau, aubergiste distingué, d’un homme connu dans tout c’ canton, s’ laisser enjoler par un p’tit mauvais sujet.</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-5">
-            <speaker>FANCHETTE.</speaker>
-            <l n="15" xml:id="l15">Vas-tu recommencer tes disputes éternelles ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-6">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="16" xml:id="l16">Vous verrez qu’all’ soutiendra qu’all’ me l’aime pas.</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-7">
-            <speaker>FANCHETTE.</speaker>
-            <l n="17" xml:id="l17">Qui, Alain ? Et quand j’ l’aimerais, est-ce que cela te r’garde ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-8">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="18" xml:id="l18">Tiens ! si ça me r’garde ! nous sommes à la veille d’ nous marier !</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-9">
-            <speaker>FANCHETTE.</speaker>
-            <l n="19" xml:id="l19">Ça n’est pas encore fait.</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-10">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="20" xml:id="l20">C’est vrai ; mais vot’ père a promis...</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-11">
-            <speaker>FANCHETTE.</speaker>
-            <l n="21" xml:id="l21">Et moi, je n’ promets rien.</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-12">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="22" xml:id="l22">C’est plus facile à t’nir. J’ vois ben qu’ vot’ amour vous tourne la tête ; mais monsieur Bonneau a pris son parti là-dessus, et faudra qu’ vous preniez l’ vôtre. Il ne veut plus entendre parler de c’ vaurien d’Alain, qui n’a jamais eu ni père ni mère, qui n’ tient à personne dans le village, et qui n’peut pas vous offrir dans le monde cette considération qu’ vous trouverez avec un jeune homme comme moi.</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-13">
-            <speaker>FANCHETTE.</speaker>
-            <l n="23" xml:id="l23">Jolie considération ! Un garçon d’auberge !</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-14">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="24" xml:id="l24">Oui ; mais il n’y a que c’t’ auberge-là dans tout l’ village.</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-15">
-            <speaker>FANCHETTE.</speaker>
-            <l n="25" xml:id="l25">Cela n’empêche pas mon père de s’y ruiner. Pour un dîner ou deux qu’il donne aux voyageurs qui s’arrêtent ici par hasard ou par accident, notre maison reste vide des mois entiers.</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-16">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="26" xml:id="l26">Il est vrai que nos bonnes fortunes nous viennent toujours des diligences versées ou des chaises brisées ; mais l’ dîner d’aujourd’hui va payer les frais d’ toute l’année : c’est un grand seigneur, à c’ qu’on dit.</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-17">
-            <speaker>FANCHETTE.</speaker>
-            <l n="27" xml:id="l27">Bon ! ces gens-là paient encore plus mal que les autres.</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-18">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="28" xml:id="l28">Ah ben ! si vot’ père vous entendait !</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-19">
-            <speaker>FANCHETTE.</speaker>
-            <l n="29" xml:id="l29">Oh ! je connais sa manie, son respect pour tous les habits brodés. Parce qu’il a été cuisinier de l’ancien seigneur du lieu, et qu’il a vécu quelques mois au château, il se croit déplacé dans ce village, et ne soupire qu’après les cuisines de la cour.</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-20">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="30" xml:id="l30">Dam’ ! il a d’ l’ambition ; et moi aussi, mam’zelle.</l>
-            <stage><hi rend="italic"><em>Il veut l’embrasser.</em></hi></stage>
-          </sp>
-          <sp who="fanchette" xml:id="1-21">
-            <speaker>FANCHETTE <em>le repoussant.</em></speaker>
-            <l n="32" xml:id="l32">Finis donc, ou je vais crier.</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-22">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="33" xml:id="l33">C’est indigne, moi qui vous aime.</l>
-          </sp>
-          <sp who="fanchette" xml:id="1-23">
-            <speaker>FANCHETTE.</speaker>
-            <l n="34" xml:id="l34">Ce n’est pas ma faute.</l>
-          </sp>
-          <sp who="jolibois" xml:id="1-24">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="35" xml:id="l35">Nous verrons si vous parlerez comme ça en face d’ vot’ père ; nous verrons, mam’zelle. Le v’là, tenez.</l>
-            <l n="36" xml:id="l36"> </l>
-            <l n="37" xml:id="l37"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="38" xml:id="l38"> </l>
-          <sp who="fanchette" xml:id="2-1">
-            <speaker>FANCHETTE, JOLIBOIS, BONNEAU, <em>sortant de chez lui</em></speaker>
-            <l n="39" xml:id="l39"> </l>
-          </sp>
-          <sp who="bonneau" xml:id="2-2">
-            <speaker>BONNEAU.</speaker>
-            <l n="40" xml:id="l40">Eh bien ! avez-vous perdu la tête ? Vous vous amusez à faire les doux yeux, quand je suis dans mon coup de feu !</l>
-          </sp>
-          <sp who="jolibois" xml:id="2-3">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="41" xml:id="l41">Oui, les doux yeux d’une drôle d’ manière. Monsieur Bonneau, vot’ fille me f’ra mourir d’ chagrin. </l>
-          </sp>
-          <sp who="fanchette" xml:id="2-4">
-            <speaker>BONNEAU, <em>à Fanchette.</em></speaker>
-            <l n="42" xml:id="l42">Finissons, s’il vous plaît, Mademoiselle ; toutes vos façons commencent à me fatiguer. Je vous ai dit ce que je pensais de Jolibois : c’est un garçon de mérite ; il sera votre mari, et pas plus tard que ce soir.</l>
-          </sp>
-          <sp who="fanchette" xml:id="2-5">
-            <speaker>FANCHETTE.</speaker>
-            <l n="43" xml:id="l43">Ce soir !</l>
-          </sp>
-          <sp who="bonneau" xml:id="2-6">
-            <speaker>BONNEAU.</speaker>
-            <l n="44" xml:id="l44">Ce seigneur étranger qui doit s’arrêter ici pour dîner, me fera l’honneur de signer le contrat ; c’est la seule grâce que je solliciterai de lui. Si je l’obtiens, comme je n’en doute pas, je vous mène aussitôt chez le notaire, chez le curé, et demain il ne sera plus question de rien.</l>
-          </sp>
-          <sp who="fanchette" xml:id="2-7">
-            <speaker>FANCHETTE.</speaker>
-            <l n="45" xml:id="l45">Il faut que ce seigneur soit une fière protection. Depuis deux jours, vous ne cessez de parler des grâces que vous lui demanderez, et pourtant, s’il faut en croire son courrier, il ne s’arrêtera qu’une heure chez nous.</l>
-          </sp>
-          <sp who="bonneau" xml:id="2-8">
-            <speaker>BONNEAU.</speaker>
-            <l n="46" xml:id="l46">Cette heure-là, mes enfants, sera la plus glorieuse de ma vie ! Songez donc que si je puis m’illustrer aux yeux de ce noble étranger, il m’offrira sans doute quelque récompense, et j’ai pris mon parti : je le suis en qualité de maître-d’hôtel ; car, voyez-vous, les grands seigneurs et les grandes maisons, il n’y a que cela pour faire son chemin.</l>
-          </sp>
-          <sp who="jolibois" xml:id="2-9">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="47" xml:id="l47">Vous connaissez donc ce voyageur ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="2-10">
-            <speaker>BONNEAU.</speaker>
-            <l n="48" xml:id="l48">Pas du tout ; mais j’ai pris mes informations auprès du courrier, et par tout ce qu’il m’en a raconté, j’ai vu clairement que c’était un personnage de la plus haute importance.</l>
-          </sp>
-          <sp who="jolibois" xml:id="2-11">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="49" xml:id="l49">Tout de bon !</l>
-          </sp>
-          <sp who="bonneau" xml:id="2-12">
-            <speaker>BONNEAU.</speaker>
-            <stage><hi rend="italic">D’abord, il voyage <em>incognito</em>... Ce qui est un signe... <em>Incognito</em>, c’est tout dire.</hi></stage>
-          </sp>
-          <sp who="fanchette" xml:id="2-13">
-            <speaker>FANCHETTE.</speaker>
-            <stage><hi rend="italic"><em>Incognito</em> ! Qu’est-ce que cela signifie ?</hi></stage>
-          </sp>
-          <sp who="jolibois" xml:id="2-14">
-            <speaker>JOLIBOIS.</speaker>
-            <stage><hi rend="italic"><em>Incognito</em> !... <em>incognito</em> !... Diable ! il n’y a qu’ les gens de la cour qui voyagent de cette manière.</hi></stage>
-          </sp>
-          <sp who="bonneau" xml:id="2-15">
-            <speaker>BONNEAU.</speaker>
-            <l n="53" xml:id="l53">Aussi j’ai voulu faire les choses magnifiquement ; j’ai accaparé toutes les provisions du voisinage : je suis sûr qu’on ne trouverait pas une salade à deux lieues à la ronde... Que sait-on ? Je vais peut-être traiter une Altesse !</l>
-          </sp>
-          <sp who="jolibois" xml:id="2-16">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="54" xml:id="l54">Eh bien ! l’ village jeûnera pour aujourd’hui.</l>
-          </sp>
-          <sp who="fanchette" xml:id="2-17">
-            <speaker>FANCHETTE, <em>malignement.</em></speaker>
-            <l n="55" xml:id="l55">C’est un léger inconvénient, pourvu que son Altesse ne manque de rien.</l>
-          </sp>
-          <sp who="bonneau" xml:id="2-18">
-            <speaker>BONNEAU.</speaker>
-            <l n="56" xml:id="l56">C’est à quoi nous devons veiller. Surtout, mes amis, la plus grande réserve : n’allez pas me compromettre. Si vous pouvez tirer adroitement quelque chose des gens de la suite, venez sur-le-champ m’en instruire ; mais point d’indiscrétions, je ne les aime pas. Allons, Jolibois, nos fourneaux sont allumés ; à la cuisine, mon garçon. Toi, ma fille, cours au verger ; apporte les plus beaux fruits, toutes les fleurs du parterre... Le couvert est déjà mis dans le salon de verdure... Je descends à la cave ; de l’ordre, de l’activité ; je veux que l’on parle de mon dîner dans tout le canton.</l>
-            <stage><hi rend="italic"><em>Il rentre avec Jolibois.</em></hi></stage>
-            <l n="58" xml:id="l58"> </l>
-            <l n="59" xml:id="l59"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="60" xml:id="l60"> </l>
-          <sp who="fanchette" xml:id="3-1">
-            <speaker>FANCHETTE, <em>seule</em></speaker>
-            <l n="61" xml:id="l61"> </l>
-            <stage><hi rend="italic">Décidément, mon père en deviendra fou ! Il n’avait déjà la tête que trop remplie de ces idées de grande fortune, d’honneurs et de seigneuries ; mais le dîner de notre <em>incognito</em> l’achèvera. Il va demander sa signature ! Voyez un peu la belle consolation pour moi ! Ah ! quand un mari ne plaît pas, toutes les signatures du monde ne le rendent pas plus aimable.</hi></stage>
-            <l n="63" xml:id="l63"> </l>
-            <l n="64" xml:id="l64"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="65" xml:id="l65"> </l>
-          <sp who="alain" xml:id="4-1">
-            <speaker>FANCHETTE, ALAIN</speaker>
-            <l n="66" xml:id="l66"> </l>
-          </sp>
-          <sp who="alain" xml:id="4-2">
-            <speaker>ALAIN, <em>de loin.</em></speaker>
-            <l n="67" xml:id="l67">St ! st ! Fanchette ?... Es-tu seule ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-3">
-            <speaker>FANCHETTE.</speaker>
-            <l n="68" xml:id="l68">C’est Alain !... Oui, oui, tu peux approcher.</l>
-          </sp>
-          <sp who="alain" xml:id="4-4">
-            <speaker>ALAIN.</speaker>
-            <l n="69" xml:id="l69">Oh ! c’n’est pas que j’craigne d’ rencontrer ton père ; j’ viens justement lui parler ; mais j’étais bien aise de t’voir un instant tête-à-tête.</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-5">
-            <speaker>FANCHETTE.</speaker>
-            <l n="70" xml:id="l70">Tu viens parler à mon père ?</l>
-          </sp>
-          <sp who="alain" xml:id="4-6">
-            <speaker>ALAIN.</speaker>
-            <l n="71" xml:id="l71">Oui, pour deux jeunes gens qui se sont égarés à la chasse ; je les ai laissés chez mon oncle ; ils sont accablés de fatigue, et m’envoient commander un bon dîner.</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-7">
-            <speaker>FANCHETTE.</speaker>
-            <l n="72" xml:id="l72">À mon père ! Ah ! ils peuvent chercher fortune ailleurs. Toutes nos provisions sont retenues pour ce grand personnage.</l>
-          </sp>
-          <sp who="alain" xml:id="4-8">
-            <speaker>ALAIN.</speaker>
-            <l n="73" xml:id="l73">C’est bien ce que je leur ai dit ; mais ils ne voulaient pas croire qu’en payant...</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-9">
-            <speaker>FANCHETTE.</speaker>
-            <l n="74" xml:id="l74">Ils ne connaissent pas mon père. Quand ils lui offriraient des sacs d’or, ils n’obtiendraient rien de lui.</l>
-          </sp>
-          <sp who="alain" xml:id="4-10">
-            <speaker>ALAIN.</speaker>
-            <l n="75" xml:id="l75">C’est pourtant dommage ; car j’ gagerais que ce sont deux jeunes seigneurs.</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-11">
-            <speaker>FANCHETTE.</speaker>
-            <l n="76" xml:id="l76">À propos, tu ne sais pas c qui nous menace ?</l>
-          </sp>
-          <sp who="alain" xml:id="4-12">
-            <speaker>ALAIN.</speaker>
-            <l n="77" xml:id="l77">Est-ce qu’il y a du nouveau ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-13">
-            <speaker>FANCHETTE.</speaker>
-            <l n="78" xml:id="l78">Mon père n’attend plus, pour me marier avec Jolibois, que la signature de ce voyageur dont il prépare le dîner.</l>
-          </sp>
-          <sp who="alain" xml:id="4-14">
-            <speaker>ALAIN.</speaker>
-            <l n="79" xml:id="l79">Sa signature ! Tiens, les gens d’ la cour font des cadeaux d’ noces qui ne leur coûtent pas cher !</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-15">
-            <speaker>FANCHETTE.</speaker>
-            <l n="80" xml:id="l80">On dit que c’est l’usage. Je n’ai plus qu’un moyen : je tâcherai de voir cet étranger avant tout le monde ; je le prierai bien fort de refuser sa signature, et par ainsi, mon père ne sera plus si pressé de me faire épouser ce vilain Jolibois.</l>
-          </sp>
-          <sp who="alain" xml:id="4-16">
-            <speaker>ALAIN.</speaker>
-            <l n="81" xml:id="l81">Oh ! la bonne idée ! Mon Dieu, que tu as donc d’esprit !</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-17">
-            <speaker>FANCHETTE.</speaker>
-            <l n="82" xml:id="l82">Écoute, Alain, tu viendras ce soir, aussitôt que les voitures seront parties, et j’espère que j’aurai de bonnes nouvelles à te donner.</l>
-          </sp>
-          <sp who="bonneau" xml:id="4-18">
-            <speaker>BONNEAU <em>dans la maison.</em></speaker>
-            <l n="83" xml:id="l83">Fanchette ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="4-19">
-            <speaker>FANCHETTE.</speaker>
-            <l n="84" xml:id="l84">Mon père ! Je me sauve ; je vais être grondée.</l>
-            <stage><hi rend="italic"><em>Elle rentre.</em></hi></stage>
-            <l n="86" xml:id="l86"> </l>
-            <l n="87" xml:id="l87"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="88" xml:id="l88"> </l>
-          <sp who="alain" xml:id="5-1">
-            <speaker>ALAIN, <em>seul</em></speaker>
-            <l n="89" xml:id="l89"> </l>
-            <l n="90" xml:id="l90">Voyez un peu cette ambition du père Bonneau ; risquer le bonheur de sa fille pour une signature : faut être timbré tout-à-fait. Voilà ces deux jeunes gens. Ma foi ! j’ les avais oubliés.</l>
-            <l n="91" xml:id="l91"> </l>
-            <l n="92" xml:id="l92"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="93" xml:id="l93"> </l>
-          <sp who="alain" xml:id="6-1">
-            <speaker>SAINT-ERNEST, LÉON, ALAIN</speaker>
-            <l n="94" xml:id="l94"> </l>
-            <stage><hi rend="italic"><em>Saint-Ernest et Léon sont vêtus en chasseurs, mais avec une certaine élégance.</em></hi></stage>
-          </sp>
-          <sp who="alain" xml:id="6-2">
-            <speaker>ALAIN.</speaker>
-            <l n="96" xml:id="l96">Messieurs, j’ vous d’mande ben pardon ; mais j’allais vous r’joindre.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-3">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="97" xml:id="l97">Dis-moi, mon ami, quelle est cette jolie fille qui causait avec toi, et qui s’est enfuie à notre approche ?</l>
-          </sp>
-          <sp who="alain" xml:id="6-4">
-            <speaker>ALAIN.</speaker>
-            <l n="98" xml:id="l98">C’est la fille de l’aubergiste dont je vous ai parlé.</l>
-          </sp>
-          <sp who="léon" xml:id="6-5">
-            <speaker>LÉON, <em>à Saint-Ernest.</em></speaker>
-            <l n="99" xml:id="l99">Elle est charmante !</l>
-          </sp>
-          <sp who="alain" xml:id="6-6">
-            <speaker>ALAIN.</speaker>
-            <l n="100" xml:id="l100">Eh bien, Monsieur, son père va la sacrifier ; il refuse de me l’accorder...</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-7">
-            <speaker>SAINT-ERNEST, <em>souriant.</em></speaker>
-            <l n="101" xml:id="l101">Oui ; je sais, mon cher Alain ; tu m’as déjà raconté tes peines deux ou trois fois.</l>
-          </sp>
-          <sp who="alain" xml:id="6-8">
-            <speaker>ALAIN.</speaker>
-            <l n="102" xml:id="l102">Dam’ ! j’en parle à tout le monde.</l>
-          </sp>
-          <sp who="léon" xml:id="6-9">
-            <speaker>LÉON.</speaker>
-            <l n="103" xml:id="l103">Nous nous y intéressons beaucoup ; mais dans ce moment-ci le dîner demande tous nos soins. Est-on disposé à nous servir ?</l>
-          </sp>
-          <sp who="alain" xml:id="6-10">
-            <speaker>ALAIN.</speaker>
-            <l n="104" xml:id="l104">Impossible, Monsieur.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-11">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="105" xml:id="l105">Comment, impossible !</l>
-          </sp>
-          <sp who="léon" xml:id="6-12">
-            <speaker>LÉON.</speaker>
-            <l n="106" xml:id="l106">Tu me fais trembler !...</l>
-          </sp>
-          <sp who="alain" xml:id="6-13">
-            <speaker>ALAIN.</speaker>
-            <l n="107" xml:id="l107">Je vous en avais déjà prévenu, et Fanchette vient de confirmer mes craintes. Tout est retenu pour le dîner de ce seigneur étranger, et vous n’auriez pas, au poids de l’or, une seule bouteille de vin.</l>
-          </sp>
-          <sp who="léon" xml:id="6-14">
-            <speaker>LÉON.</speaker>
-            <l n="108" xml:id="l108">Nous voilà bien, avec un appétit de chasseurs.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-15">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="109" xml:id="l109">Quoi ! mon ami, tu crois qu’on nous refuserait ?</l>
-          </sp>
-          <sp who="léon" xml:id="6-16">
-            <speaker>LÉON.</speaker>
-            <l n="110" xml:id="l110">En lui disant que c’est pour le colonel Saint-Ernest et son ami le capitaine Léon...</l>
-          </sp>
-          <sp who="alain" xml:id="6-17">
-            <speaker>ALAIN.</speaker>
-            <l n="111" xml:id="l111">Quand ce serait pour un général !... Oh ! c’est un glorieux, l’ père Bonneau ; et pour avoir l’ plaisir de traiter une excellence, il se ruinerait jusqu’au dernier sou.</l>
-          </sp>
-          <sp who="léon" xml:id="6-18">
-            <speaker>LÉON.</speaker>
-            <l n="112" xml:id="l112">Au diable l’original ! Je n’ai plus la force de marcher.</l>
-          </sp>
-          <sp who="alain" xml:id="6-19">
-            <speaker>ALAIN.</speaker>
-            <l n="113" xml:id="l113">Je ne puis vous offrir que du pain bis et du vin de l’année.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-20">
-            <speaker>SAINT-ERNEST.</speaker>
-            <stage><hi rend="italic">Joli repas pour un gourmand comme Léon !... Eh ! mais, qui nous empêche... Oh ! la bonne idée ! Ce seigneur voyage, dit-on, <em>incognito</em>...</hi></stage>
-          </sp>
-          <sp who="léon" xml:id="6-21">
-            <speaker>LÉON.</speaker>
-            <l n="115" xml:id="l115">À quoi rêves-tu donc, Saint-Ernest ?</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-22">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="116" xml:id="l116">Je cherche ton dîner ; mais, avant tout, occupons nous des moyens de retourner ce soir au château.</l>
-            <stage><hi rend="italic"><em>À Alain.</em></hi></stage>
-            <l n="118" xml:id="l118">Sommes-nous loin de Bourgneuf ?</l>
-          </sp>
-          <sp who="alain" xml:id="6-23">
-            <speaker>ALAIN.</speaker>
-            <l n="119" xml:id="l119">À deux grandes lieues.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-24">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="120" xml:id="l120">Un louis pour toi, si tu y portes un billet sur-le-champ.</l>
-          </sp>
-          <sp who="alain" xml:id="6-25">
-            <speaker>ALAIN.</speaker>
-            <l n="121" xml:id="l121">Ordonnez, je suis prêt.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-26">
-            <speaker>SAINT-ERNEST, <em>écrivant sur ses tablettes.</em></speaker>
-            <l n="122" xml:id="l122">« Ma voiture dans deux heures... Nous nous sommes égarés à la chasse... Qu’on ne nous attende pas pour dîner. »</l>
-          </sp>
-          <sp who="léon" xml:id="6-27">
-            <speaker>LÉON, <em>vivement.</em></speaker>
-            <l n="123" xml:id="l123">Au contraire, mon cher colonel, qu’on nous attende ; cela est indispensable.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-28">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="124" xml:id="l124">Laisse donc.</l>
-            <stage><hi rend="italic"><em>À Alain.</em></hi></stage>
-            <l n="126" xml:id="l126">Alain, tu demanderas l’intendant du château... Je te promets de veiller ici sur tes intérêts ; je parlerai au père de Fanchette, et je serai ! bien malheureux si je ne contente pas tout le monde.</l>
-          </sp>
-          <sp who="alain" xml:id="6-29">
-            <speaker>ALAIN.</speaker>
-            <l n="127" xml:id="l127">Ah ! Monsieur, que de reconnaissance !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="6-30">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="128" xml:id="l128">Tu reviendras avec ma voiture.</l>
-          </sp>
-          <sp who="alain" xml:id="6-31">
-            <speaker>ALAIN.</speaker>
-            <l n="129" xml:id="l129">Pour ne pas perdre de temps, je vais prendre un cheval chez mon oncle.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="131" xml:id="l131"> </l>
-            <l n="132" xml:id="l132"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="133" xml:id="l133"> </l>
-          <sp who="léon" xml:id="7-1">
-            <speaker>SAINT-ERNEST, LÉON, <em>assis sur le banc</em></speaker>
-            <l n="134" xml:id="l134"> </l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-2">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="135" xml:id="l135">Eh bien, Léon, as-tu toujours de l’humeur ?</l>
-          </sp>
-          <sp who="léon" xml:id="7-3">
-            <speaker>LÉON, <em>avec humeur.</em></speaker>
-            <l n="136" xml:id="l136">J’ai tort, assurément. Monsieur veut se mêler de conduire la chasse, et il ne connaît pas les environs de son château ; il me fait faire dix lieues à jeun, pour m’amener enfin dans un village qu’un brutal prend par famine, et qui va devenir mon cercueil, s’il ne tombe un peu de manne.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-4">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="137" xml:id="l137">Je vais tout réparer.</l>
-          </sp>
-          <sp who="léon" xml:id="7-5">
-            <speaker>LÉON.</speaker>
-            <l n="138" xml:id="l138">Oui, en te jetant dans les amours de village. Pour Dieu, laisse ce monsieur Bonneau donner sa fille à qui bon lui semble, pourvu qu’il nous donne à dîner.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-6">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="139" xml:id="l139">Il ne tient qu’à toi de faire un excellent repas.</l>
-          </sp>
-          <sp who="léon" xml:id="7-7">
-            <speaker>LÉON.</speaker>
-            <l n="140" xml:id="l140">Qu’est-ce que tu dis donc ?</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-8">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="141" xml:id="l141">Écoute. On attend un grand personnage, dont on ne connaît ni le nom ni le pays... Eh bien, je suis ce grand personnage.</l>
-          </sp>
-          <sp who="léon" xml:id="7-9">
-            <speaker>LÉON.</speaker>
-            <l n="142" xml:id="l142">Toi !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-10">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="143" xml:id="l143">Moi-même. On m’accueille, on me fête, on me sert un dîner délicieux !... Je reçois les honneurs, j’accepte le dîner.</l>
-          </sp>
-          <sp who="léon" xml:id="7-11">
-            <speaker>LÉON.</speaker>
-            <l n="144" xml:id="l144">Quelle extravagance ! Mais le véritable voyageur arrivera ; tout s’expliquera...</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-12">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="145" xml:id="l145">Eh bien ! si c’est un galant homme, il rira le premier de notre comédie. S’il est assez sot pour s’en fâcher, je me charge de l’explication.</l>
-          </sp>
-          <sp who="léon" xml:id="7-13">
-            <speaker>LÉON.</speaker>
-            <l n="146" xml:id="l146">Ma foi, j’ai un appétit de tous les diables ; tu commences à me convaincre ; mais comment veux-tu que, sans aucune suite, sans équipages, nous puissions leur persuader...</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-14">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="147" xml:id="l147">Ah ! mon Dieu ! pour un officier de hussards, que tu as peu d’imagination ! D’abord, notre voiture s’est brisée à une lieue du village, tous nos gens sont occupés à la faire réparer.</l>
-          </sp>
-          <sp who="léon" xml:id="7-15">
-            <speaker>LÉON.</speaker>
-            <l n="148" xml:id="l148">Pas trop mal. Ces vestes de chasse...</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-16">
-            <speaker>SAINT-ERNEST.</speaker>
-            <stage><hi rend="italic">Servent au mieux notre <em>incognito</em>.</hi></stage>
-          </sp>
-          <sp who="léon" xml:id="7-17">
-            <speaker>LÉON.</speaker>
-            <l n="150" xml:id="l150">Ah ! ça, et de quel pays venons-nous ?</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-18">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="151" xml:id="l151">D’Allemagne, c’est plus commode ; il y pleut des gens de qualité.</l>
-          </sp>
-          <sp who="léon" xml:id="7-19">
-            <speaker>LÉON.</speaker>
-            <l n="152" xml:id="l152">Fort bien. Cachons nos fusils et nos carniers dans ces buissons, et hâtons-nous d’aborder le dîner : car je tremble que nous n’arrivions un peu tard.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-20">
-            <speaker>SAINT-ERNEST, <em>ôtant son carnier.</em></speaker>
-            <l n="153" xml:id="l153">Je m’attends d’avance aux bouquets, à la musique... Dis donc, Léon, je fais une réflexion.</l>
-          </sp>
-          <sp who="léon" xml:id="7-21">
-            <speaker>LÉON,</speaker>
-            <l n="154" xml:id="l154">Est-ce que tu veux de la musique pendant ton dîner ? Tu n’as qu’à parler.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-22">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="155" xml:id="l155">Pour mieux jouer nos rôles, il serait, je crois, convenable que je me misse seul à table.</l>
-          </sp>
-          <sp who="léon" xml:id="7-23">
-            <speaker>LÉON.</speaker>
-            <l n="156" xml:id="l156">Comment ? tu plaisantes, je crois ?</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-24">
-            <speaker>SAINT-ERNEST, <em>riant.</em></speaker>
-            <l n="157" xml:id="l157">Cela serait furieusement noble.</l>
-          </sp>
-          <sp who="léon" xml:id="7-25">
-            <speaker>LÉON.</speaker>
-            <l n="158" xml:id="l158">Non, je ne te quitte point : je serai ton capitaine des gardes, ton grand écuyer... ce que tu voudras, pourvu que je jouisse de la plus grande intimité... à table.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="7-26">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="159" xml:id="l159">On vient : c’est la petite Fanchette.</l>
-          </sp>
-          <sp who="léon" xml:id="7-27">
-            <speaker>LÉON.</speaker>
-            <l n="160" xml:id="l160">Allons, Monseigneur, de la dignité, de l’à-plomb, et montrez-nous un visage d’Excellence.</l>
-            <l n="161" xml:id="l161"> </l>
-            <l n="162" xml:id="l162"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="163" xml:id="l163"> </l>
-          <sp who="fanchette" xml:id="8-1">
-            <speaker>SAINT-ERNEST, LÉON, FANCHETTE</speaker>
-            <l n="164" xml:id="l164"> </l>
-          </sp>
-          <sp who="fanchette" xml:id="8-2">
-            <speaker>FANCHETTE, <em>à la cantonade.</em></speaker>
-            <l n="165" xml:id="l165">Oui, je viendrai vous avertir si on aperçoit les voitures.</l>
-          </sp>
-          <sp who="léon" xml:id="8-3">
-            <speaker>SAINT-ERNEST, <em>s’appuyant sur Léon.</em></speaker>
-            <l n="166" xml:id="l166">Tu vois qu’on nous attend.</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-4">
-            <speaker>FANCHETTE.</speaker>
-            <l n="167" xml:id="l167">Des. messieurs ! ce sont, peut-être, les valets de chambre.</l>
-          </sp>
-          <sp who="léon" xml:id="8-5">
-            <speaker>LÉON, <em>à Saint-Ernest.</em></speaker>
-            <l n="168" xml:id="l168">Monseigneur, je vais m’informer si vos ordres ont été exécutés.</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-6">
-            <speaker>FANCHETTE, <em>à part.</em></speaker>
-            <stage><hi rend="italic">Monseigneur ! Est-ce que ce serait ?... Comment à pied ! Ah ! c’est, peut-être, ce qu’ils appellent voyager <em>incognito</em>.</hi></stage>
-          </sp>
-          <sp who="saint-ernest" xml:id="8-7">
-            <speaker>SAINT-ERNEST, <em>s’asseyant sur le banc, et baragouinant.</em></speaker>
-            <l n="170" xml:id="l170">Major Ulric, faites dépêcher vitement l’auberge... j’affre un appétit considérablement forte.</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-8">
-            <speaker>LÉON, <em>à Fanchette.</em></speaker>
-            <l n="171" xml:id="l171">Êtes-vous de la maison, mon enfant ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-9">
-            <speaker>FANCHETTE.</speaker>
-            <l n="172" xml:id="l172">Oui, monsieur.</l>
-          </sp>
-          <sp who="léon" xml:id="8-10">
-            <speaker>LÉON.</speaker>
-            <l n="173" xml:id="l173">C’est bien à l’auberge du Lion d’Or que l’on a commandé le dîner de Monseigneur ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-11">
-            <speaker>FANCHETTE, <em>vivement.</em></speaker>
-            <l n="174" xml:id="l174">Oui, monsieur, un courrier avec un habit brodé, un chapeau galonné, pour deux heures précises... un dîner de douze couverts.</l>
-          </sp>
-          <sp who="léon" xml:id="8-12">
-            <speaker>LÉON, <em>à part.</em></speaker>
-            <l n="175" xml:id="l175">Ouf ! douze couverts !... nous n’en viendrons jamais à bout.</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-13">
-            <speaker>FANCHETTE.</speaker>
-            <l n="176" xml:id="l176">Mais vous n’êtes que deux ?</l>
-          </sp>
-          <sp who="léon" xml:id="8-14">
-            <speaker>LÉON.</speaker>
-            <l n="177" xml:id="l177">Monseigneur a laissé ses officiers derrière lui... Un accident les retient quelque temps.</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-15">
-            <speaker>FANCHETTE.</speaker>
-            <l n="178" xml:id="l178">Un accident !... Ah ! mon Dieu !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="8-16">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="179" xml:id="l179">Major, la dîner, je vous prie, pour la dîner.</l>
-          </sp>
-          <sp who="fanchette" xml:id="8-17">
-            <speaker>FANCHETTE.</speaker>
-            <l n="180" xml:id="l180">Tout de suite, Monseigneur...</l>
-            <stage><hi rend="italic"><em>Elle appelle. </em></hi></stage>
-            <l n="182" xml:id="l182">Mon père !... Jolibois ! venez donc.</l>
-            <l n="183" xml:id="l183"> </l>
-            <l n="184" xml:id="l184"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="185" xml:id="l185"> </l>
-          <sp who="fanchette" xml:id="9-1">
-            <speaker>SAINT-ERNEST, LÉON, FANCHETTE, JOLIBOIS</speaker>
-            <l n="186" xml:id="l186"> </l>
-          </sp>
-          <sp who="jolibois" xml:id="9-2">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="187" xml:id="l187">Eh bien ! mamz’elle, n’criez donc pas comme ça... vous m’avez fait une peur !</l>
-          </sp>
-          <sp who="fanchette" xml:id="9-3">
-            <speaker>FANCHETTE.</speaker>
-            <l n="188" xml:id="l188">Voilà ce seigneur...</l>
-          </sp>
-          <sp who="jolibois" xml:id="9-4">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="189" xml:id="l189">Il est arrivé !</l>
-            <stage><hi rend="italic"><em>Il appelle. </em></hi></stage>
-            <l n="191" xml:id="l191">Monsieur Bonneau !</l>
-          </sp>
-          <sp who="fanchette" xml:id="9-5">
-            <speaker>FANCHETTE.</speaker>
-            <l n="192" xml:id="l192">Il ne vient pas.</l>
-          </sp>
-          <sp who="jolibois" xml:id="9-6">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="193" xml:id="l193">Il y a au moins une heure qu’il est à la cave.</l>
-          </sp>
-          <sp who="léon" xml:id="9-7">
-            <speaker>LÉON, <em>à part.</em></speaker>
-            <l n="194" xml:id="l194">Miséricorde ! il fait son vin !</l>
-          </sp>
-          <sp who="jolibois" xml:id="9-8">
-            <speaker>JOLIBOIS, <em>appelant.</em></speaker>
-            <l n="195" xml:id="l195">Monsieur Bonneau !</l>
-          </sp>
-          <sp who="fanchette" xml:id="9-9">
-            <speaker>FANCHETTE, <em>appelant.</em></speaker>
-            <l n="196" xml:id="l196">Mon père !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="9-10">
-            <speaker>SAINT-ERNEST, <em>riant.</em></speaker>
-            <l n="197" xml:id="l197">Voilà déjà toute l’auberge en désordre ! Allons, mon seigneur fait effet.</l>
-            <l n="198" xml:id="l198"> </l>
-            <l n="199" xml:id="l199"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="200" xml:id="l200"> </l>
-          <sp who="fanchette" xml:id="10-1">
-            <speaker>SAINT-ERNEST, LÉON, FANCHETTE, JOLIBOIS, BONNEAU</speaker>
-            <l n="201" xml:id="l201"> </l>
-          </sp>
-          <sp who="bonneau" xml:id="10-2">
-            <speaker>BONNEAU.</speaker>
-            <l n="202" xml:id="l202">On y va... On y va... Vous êtes bien pressés.</l>
-          </sp>
-          <sp who="jolibois" xml:id="10-3">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="203" xml:id="l203">Chût !</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-4">
-            <speaker>BONNEAU.</speaker>
-            <l n="204" xml:id="l204">Comment ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="10-5">
-            <speaker>FANCHETTE.</speaker>
-            <l n="205" xml:id="l205">Vous ne voyez pas ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-6">
-            <speaker>BONNEAU.</speaker>
-            <l n="206" xml:id="l206">Qui donc ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="10-7">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="207" xml:id="l207">Monseigneur qui est arrivé !</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-8">
-            <speaker>BONNEAU, <em>avec joie.</em></speaker>
-            <l n="208" xml:id="l208">Il est arrivé !</l>
-          </sp>
-          <sp who="fanchette" xml:id="10-9">
-            <speaker>FANCHETTE, <em>montrant Saint-Ernest.</em></speaker>
-            <l n="209" xml:id="l209">Le voilà.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-10">
-            <speaker>BONNEAU, <em>à Saint-Ernest.</em></speaker>
-            <l n="210" xml:id="l210">Ah ! Monseigneur, permettez que je vous témoigne le bonheur, l’ivresse...Votre Excellence n’est-elle point trop fatiguée.</l>
-          </sp>
-          <sp who="fanchette" xml:id="10-11">
-            <speaker>FANCHETTE.</speaker>
-            <l n="211" xml:id="l211">Après un accident comme celui-là !</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-12">
-            <speaker>BONNEAU.</speaker>
-            <l n="212" xml:id="l212">Un accident, dites-vous ?</l>
-          </sp>
-          <sp who="léon" xml:id="10-13">
-            <speaker>LÉON.</speaker>
-            <l n="213" xml:id="l213">Une des voitures s’est brisée au bas de la montagne.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-14">
-            <speaker>BONNEAU.</speaker>
-            <l n="214" xml:id="l214">Et Monseigneur était dedans ?</l>
-          </sp>
-          <sp who="léon" xml:id="10-15">
-            <speaker>LÉON.</speaker>
-            <l n="215" xml:id="l215">Je l’ai cru perdu ! Il a roulé pendant un quart de lieue.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-16">
-            <speaker>BONNEAU.</speaker>
-            <l n="216" xml:id="l216">Ah ! mon Dieu, cela fait frémir !</l>
-          </sp>
-          <sp who="léon" xml:id="10-17">
-            <speaker>LÉON.</speaker>
-            <l n="217" xml:id="l217">Tous nos gens sont occupés à faire réparer les ressorts, les glaces, l’essieu.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-18">
-            <speaker>BONNEAU.</speaker>
-            <l n="218" xml:id="l218">Au moins, Son Excellence n’est point blessée ?</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="10-19">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="219" xml:id="l219">J’affre une petit douler... pas bien grand beaucoup, à la jointire.</l>
-          </sp>
-          <sp who="jolibois" xml:id="10-20">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="220" xml:id="l220">Et not’ chirurgien qui est parti pour ses vendanges.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="10-21">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="221" xml:id="l221">Ah ! j’affre pas besoin de tout.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-22">
-            <speaker>BONNEAU.</speaker>
-            <l n="222" xml:id="l222">C’est égal, Monseigneur ; je puis, tout comme un autre, préparer des compresse...</l>
-            <stage><hi rend="italic"><em>À sa maison.</em></hi></stage>
-            <l n="224" xml:id="l224">De l’eau-de-vie camphrée.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="10-23">
-            <speaker>SAINT-ERNEST, <em>avec impatience.</em></speaker>
-            <l n="225" xml:id="l225">Préparez mon dîner... c’est tout ce que je demande à vous.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-24">
-            <speaker>BONNEAU.</speaker>
-            <l n="226" xml:id="l226">Vous allez être servi... Pardonnez, Monseigneur, à ma joie, à mes transports... Ce jour est le plus beau de ma vie.</l>
-          </sp>
-          <sp who="léon" xml:id="10-25">
-            <speaker>LÉON, <em>à part.</em></speaker>
-            <l n="227" xml:id="l227">Le pauvre homme devient fou !</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-26">
-            <speaker>BONNEAU.</speaker>
-            <l n="228" xml:id="l228">L’honneur de posséder un moment une personne de votre rang, de votre mérite...</l>
-          </sp>
-          <sp who="jolibois" xml:id="10-27">
-            <speaker>JOLIBOIS, <em>bas.</em></speaker>
-            <l n="229" xml:id="l229">Vous savez donc qui c’est ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-28">
-            <speaker>BONNEAU, <em>bas.</em></speaker>
-            <l n="230" xml:id="l230">Non, mais ça n’ fait rien.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="10-29">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="231" xml:id="l231">Monsieur le hôte, je vois qui vous êtes un honnête homme, et je vous donne mon parole d’honneur qu’avant de partir, vous recevrez une gâche de mon estime.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-30">
-            <speaker>BONNEAU, <em>enchanté.</em></speaker>
-            <l n="232" xml:id="l232">Ah ! Vous me comblez, Monseigneur ; votre Excellence...</l>
-            <stage><hi rend="italic"><em>Bas à Jolibois.</em></hi></stage>
-            <l n="234" xml:id="l234">Mon ami, je n’y tiens pas, j’ai envie de risquer l’Altesse.</l>
-          </sp>
-          <sp who="jolibois" xml:id="10-31">
-            <speaker>JOLIBOIS</speaker>
-            <l n="235" xml:id="l235">Ma foi, ça n’peut rien gâter.</l>
-          </sp>
-          <sp who="léon" xml:id="10-32">
-            <speaker>LÉON.</speaker>
-            <l n="236" xml:id="l236">Le dîner, mon ami.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="10-33">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="237" xml:id="l237">La dîner, brave homme, la dîner.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-34">
-            <speaker>BONNEAU.</speaker>
-            <l n="238" xml:id="l238">Oui, Monseigneur... Mes enfants, courez donner des ordres. Moi, je vais conduire son Altesse.</l>
-          </sp>
-          <sp who="léon" xml:id="10-35">
-            <speaker>LÉON, <em>à part.</em></speaker>
-            <l n="239" xml:id="l239">Son Altesse ! Ceci devient sérieux !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="10-36">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="240" xml:id="l240">Major Ulric, marche en avant, et porte vous sur la dîner.</l>
-          </sp>
-          <sp who="bonneau" xml:id="10-37">
-            <speaker>BONNEAU, <em>le bonnet à la main.</em></speaker>
-            <l n="241" xml:id="l241">Par ici, votre Altesse, par ici ; je vais vous montrer le chemin... Fanchette, à la salle de verdure, le premier service est tout dressé.</l>
-            <stage><hi rend="italic"><em>Il entre dans le pavillon, suivi d’Ernest et de Léon.</em></hi></stage>
-          </sp>
-          <sp who="jolibois" xml:id="10-38">
-            <speaker>JOLIBOIS, <em>courant à l’auberge.</em></speaker>
-            <l n="243" xml:id="l243">Allons, des serviettes, les potages, les entrées, les bouts de table, etc. etc.</l>
-            <stage><hi rend="italic"><em>Il entre </em></hi></stage>
-            <l n="245" xml:id="l245"> </l>
-            <l n="246" xml:id="l246"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="247" xml:id="l247"> </l>
-          <sp who="fanchette" xml:id="11-1">
-            <speaker>FANCHETTE, <em>seule</em></speaker>
-            <l n="248" xml:id="l248"> </l>
-            <l n="249" xml:id="l249">Ah ! quel tapage pour un dîner ! Faut que ces grands messieurs-là aient plus d’appétit que les autres ! Je crois vraiment que j’ n’aurai jamais la hardiesse de parler à ce seigneur... Je ferai, peut-être, mieux de m’adresser à son ami, celui qu’on appelle le major... Si j’ pouvais consulter Alain... Mais demandez-moi un peu ce qu’il fait à présent ? s’il avait de l’esprit, il se serait tenu là aux environs ; en passant et repassant, on aurait pu se dire un p’tit mot ; mais les amoureux, v’là comme ils sont tous ! quand on y pense, on n’ les voit jamais : chassez-les, vous les avez toujours sur vos talons.</l>
-            <l n="250" xml:id="l250"> </l>
-            <l n="251" xml:id="l251"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="252" xml:id="l252"> </l>
-          <sp who="fanchette" xml:id="12-1">
-            <speaker>FANCHETTE, JOLIBOIS, <em>portant une soupière</em>, PLUSIEURS PAYSANS, <em>avec des serviettes sous le bras et des plats à la main</em></speaker>
-            <l n="253" xml:id="l253"> </l>
-          </sp>
-          <sp who="fanchette" xml:id="12-2">
-            <speaker>JOLIBOIS, <em>à Fanchette en passant.</em></speaker>
-            <l n="254" xml:id="l254">Qu’est-ce que vous faites-là, mam’zelle ? au lieu d’ préparer vot’ dessert ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="12-3">
-            <speaker>FANCHETTE.</speaker>
-            <l n="255" xml:id="l255">Ça n’ te regarde pas.</l>
-          </sp>
-          <sp who="jolibois" xml:id="12-4">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="256" xml:id="l256">Ça n’me r’garde pas ! et puis j’irai arranger vos corbeilles pour vous ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="12-5">
-            <speaker>FANCHETTE.</speaker>
-            <l n="257" xml:id="l257">Je n’veux pas d’tes services.</l>
-          </sp>
-          <sp who="jolibois" xml:id="12-6">
-            <speaker>JOLIBOIS, <em>avec amour.</em></speaker>
-            <l n="258" xml:id="l258">Ah ! petite tigresse ! que n’est-ce là le repas d’ nos noces !... Ouf !... Aye ! aye !</l>
-            <stage><hi rend="italic"><em>Il se brûle.</em></hi></stage>
-          </sp>
-          <sp who="fanchette" xml:id="12-7">
-            <speaker>FANCHETTE, <em>riant.</em></speaker>
-            <l n="260" xml:id="l260">Qu’as-tu donc ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="12-8">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="261" xml:id="l261">Je m’brûle... diable de soupe !</l>
-            <stage><hi rend="italic"><em>Aux paysans.</em></hi></stage>
-            <l n="263" xml:id="l263">Riez, vous autres, j’ vous l’ conseille ! voulez-vous bien marcher.</l>
-            <stage><hi rend="italic"><em>Ils entrent dans le pavillon.</em></hi></stage>
-          </sp>
-          <sp who="fanchette" xml:id="12-9">
-            <speaker>FANCHETTE, <em>seule.</em></speaker>
-            <l n="265" xml:id="l265">C’est décidé. Je vais vite m’occuper d’ mon dessert, et puis j’ viendrai épier l’occasion d’ parler à ce major, avant que mon père ait obtenu cette maudite signature. Sauvons-nous, j’entends Jolibois.</l>
-            <stage><hi rend="italic"><em>Elle rentre dans l’auberge.</em></hi></stage>
-            <l n="267" xml:id="l267"> </l>
-            <l n="268" xml:id="l268"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="269" xml:id="l269"> </l>
-          <sp who="jolibois" xml:id="13-1">
-            <speaker>JOLIBOIS, LES PAYSANS</speaker>
-            <l n="270" xml:id="l270"> </l>
-          </sp>
-          <sp who="jolibois" xml:id="13-2">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="271" xml:id="l271">Attendez donc, il faut que deux d’entre vous restent-là, pour donner des assiettes et verser à boire, parce que not’ maître di qu’ ça s’ fait comme ça à la Cour ; les autres peuvent retourner à la maison pour dresser le second service. V’là l’ père Bonneau : allons, en avant marche ; à la cuisine.</l>
-            <stage><hi rend="italic"><em>Les paysans sortent. </em></hi></stage>
-            <l n="273" xml:id="l273"> </l>
-            <l n="274" xml:id="l274"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="275" xml:id="l275"> </l>
-          <sp who="jolibois" xml:id="14-1">
-            <speaker>BONNEAU, JOLIBOIS</speaker>
-            <l n="276" xml:id="l276"> </l>
-          </sp>
-          <sp who="bonneau" xml:id="14-2">
-            <speaker>BONNEAU, <em>sortant du pavillon.</em></speaker>
-            <l n="277" xml:id="l277">Ah ! mon ami, tu me vois transporté, hors de moi !</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-3">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="278" xml:id="l278">Vraiment !</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-4">
-            <speaker>BONNEAU.</speaker>
-            <l n="279" xml:id="l279">Que d’amabilité ! que de grâce ! que de bonté !... Ces seigneurs ont une manière qui n’est qu’à eux ! As-tu remarqué, comme moi, ces traits nobles et distingués, cette démarche...</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-5">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="280" xml:id="l280">Jusqu’à son langage, qui a quelque chose d’extraordinaire.</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-6">
-            <speaker>BONNEAU.</speaker>
-            <l n="281" xml:id="l281">Imbécile, tu ne vois pas que c’est l’accent du pays.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-7">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="282" xml:id="l282">Je m’en suis douté ; mais, enfin, avez-vous découvert quelque chose sur son rang : car il y a des seigneurs de différents étages.</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-8">
-            <speaker>BONNEAU.</speaker>
-            <l n="283" xml:id="l283">Je jurerais que celui-ci est pour le moins un prince.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-9">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="284" xml:id="l284">Un prince !</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-10">
-            <speaker>BONNEAU.</speaker>
-            <l n="285" xml:id="l285">Mais un prince de la plus grande qualité ! d’abord, en m’approchant de lui pour le servir, j’ai entrevu sous son habit quelque chose qui brillait... comme qui dirait un ordre de diamants.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-11">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="286" xml:id="l286">Des diamants !... oh ! c’est un prince !</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-12">
-            <speaker>BONNEAU.</speaker>
-            <l n="287" xml:id="l287">Tu sens bien que je me suis étudié à ne jamais lui dire moins que votre Altesse ou votre Grandeur ; mais je crains de l’avoir offensé.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-13">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="288" xml:id="l288">Au fait, si c’était un Roi !</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-14">
-            <speaker>BONNEAU.</speaker>
-            <stage><hi rend="italic">Eh bien ! tu me croiras si tu veux ; mais vingt fois j’ai eu <em>Votre Majesté</em> sur le bout de la langue.</hi></stage>
-          </sp>
-          <sp who="jolibois" xml:id="14-15">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="290" xml:id="l290">C’était un pressentiment.</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-16">
-            <speaker>BONNEAU.</speaker>
-            <l n="291" xml:id="l291">Ah ! j’oubliais le meilleur ! Tu ne sais pas, mon ami ? il m’a serré la main.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-17">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="292" xml:id="l292">Il vous a serré la main !</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-18">
-            <speaker>BONNEAU.</speaker>
-            <l n="293" xml:id="l293">Oh ! mais d’une force à me faire crier.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-19">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="294" xml:id="l294">Par exemple, c’est ça qu’est flatteur.</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-20">
-            <speaker>BONNEAU.</speaker>
-            <l n="295" xml:id="l295">Il n’y a pas jusqu’au major qui, voyant que je plaisais au Prince, m’a fait des amitiés ! il me frappait sur l’épaule familièrement... avec une bonté... je suis sûr que j’en ai la marque.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-21">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="296" xml:id="l296">Ma foi, vous pouvez prétendre à tout. Avez-vous sollicité quelque chose ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-22">
-            <speaker>BONNEAU.</speaker>
-            <l n="297" xml:id="l297">Non, et je t’avoue que je suis dans un terrible embarras. Tant que j’aurai des doutes sur le rang de cet auguste personnage, je crains de lui faire des demandes ridicules ; si c’est un prince, je risque de demander trop peu : s’il ne l’est pas, j’ai peur d’être indiscret.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-23">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="298" xml:id="l298">Diable ! j’ n’avais pas pensé à cela.</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-24">
-            <speaker>BONNEAU.</speaker>
-            <l n="299" xml:id="l299">D’un autre côté, je tremble de laisser échapper une occasion si belle ! Ne parlent-ils pas de se mettre en route dans une heure ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-25">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="300" xml:id="l300">Il me vient une idée.</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-26">
-            <speaker>BONNEAU.</speaker>
-            <l n="301" xml:id="l301">Qu’est-ce que c’est ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-27">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="302" xml:id="l302">Not’ maître d’ poste qui d’meure au bout du village, n’ manque jamais d’ questionner les domestique des voyageurs qui passent sur c’te route ; les voitures du Prince y sont p’t’ être déjà, j’ vais y courir ; j’ m’informerai auprès d’ tous les valets, du nom, du pays, du rang d’ Monseigneur, et en deux sauts j’ r’viens vous dire tout c’ que j’en aurai appris.</l>
-          </sp>
-          <sp who="bonneau" xml:id="14-28">
-            <speaker>BONNEAU.</speaker>
-            <l n="303" xml:id="l303">Ah ! tu me rends la vie ! ne perds pas un instant.</l>
-          </sp>
-          <sp who="jolibois" xml:id="14-29">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="304" xml:id="l304">Veillez seulement sur mon rôti.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="306" xml:id="l306"> </l>
-            <l n="307" xml:id="l307"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="308" xml:id="l308"> </l>
-          <sp who="bonneau" xml:id="15-1">
-            <speaker>BONNEAU, <em>seul</em></speaker>
-            <l n="309" xml:id="l309"> </l>
-            <l n="310" xml:id="l310">Quelle journée pour moi ! quel éclat pour ma maison !... Un prince, peut-être un roi qui me fait l’honneur de manger mon dîner ! Comme ça vous relève un homme qui tient à sa réputation ! Que sera-ce donc, si je parviens à être nommé officier de bouche de son Altesse !</l>
-          </sp>
-          <sp who="léon" xml:id="15-2">
-            <speaker>LÉON, <em>en-dedans.</em></speaker>
-            <l n="311" xml:id="l311">Holà, hé ! garçon, la fille ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="15-3">
-            <speaker>BONNEAU.</speaker>
-            <l n="312" xml:id="l312">C’est le major !</l>
-            <l n="313" xml:id="l313"> </l>
-            <l n="314" xml:id="l314"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="315" xml:id="l315"> </l>
-          <sp who="bonneau" xml:id="16-1">
-            <speaker>BONNEAU, LÉON</speaker>
-            <l n="316" xml:id="l316"> </l>
-          </sp>
-          <sp who="léon" xml:id="16-2">
-            <speaker>LÉON.</speaker>
-            <l n="317" xml:id="l317">Allons donc, mon cher, vous nous abandonnez.</l>
-          </sp>
-          <sp who="bonneau" xml:id="16-3">
-            <speaker>BONNEAU.</speaker>
-            <l n="318" xml:id="l318">Que désirez-vous, monsieur le major ? Parlez.</l>
-          </sp>
-          <sp who="léon" xml:id="16-4">
-            <speaker>LÉON.</speaker>
-            <l n="319" xml:id="l319">Du vin, mon ami, du vin.</l>
-          </sp>
-          <sp who="bonneau" xml:id="16-5">
-            <speaker>BONNEAU.</speaker>
-            <l n="320" xml:id="l320">Comment, les coquins l’auraient oublié ! J’en avais pourtant placé moi-même quatre bouteilles.</l>
-          </sp>
-          <sp who="léon" xml:id="16-6">
-            <speaker>LÉON.</speaker>
-            <l n="321" xml:id="l321">C’est vrai ; mais la marche, la poussière ont tellement échauffé monseigneur... Nous vous demanderons du même.</l>
-          </sp>
-          <sp who="bonneau" xml:id="16-7">
-            <speaker>BONNEAU.</speaker>
-            <l n="322" xml:id="l322">Dans la minute. Son Altesse commence-t-elle à se remettre ?</l>
-          </sp>
-          <sp who="léon" xml:id="16-8">
-            <speaker>LÉON.</speaker>
-            <l n="323" xml:id="l323">Il n’y paraît plus.</l>
-          </sp>
-          <sp who="bonneau" xml:id="16-9">
-            <speaker>BONNEAU, <em>avec embarras.</em></speaker>
-            <l n="324" xml:id="l324">Monsieur le major, pardon de mon indiscrétion... Mais je serais si heureux de connaître cet auguste seigneur... Si vous vouliez me confier...</l>
-          </sp>
-          <sp who="léon" xml:id="16-10">
-            <speaker>LÉON, <em>lui mettant la main sur la bouche.</em></speaker>
-            <l n="325" xml:id="l325">Chut ! Ah ! mon ami, que demandez-vous ?... Je serais perdu !</l>
-          </sp>
-          <sp who="bonneau" xml:id="16-11">
-            <speaker>BONNEAU, <em>troublé.</em></speaker>
-            <l n="326" xml:id="l326">Rien, rien... Je n’en veux pas savoir davantage.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="328" xml:id="l328">C’est un roi, c’est certain... J’aurais parié ma fortune que c’était un roi !</l>
-            <stage><hi rend="italic"><em>Il rentre.</em></hi></stage>
-            <l n="330" xml:id="l330"> </l>
-            <l n="331" xml:id="l331"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="332" xml:id="l332"> </l>
-          <sp who="léon" xml:id="17-1">
-            <speaker>LÉON, <em>seul, riant</em></speaker>
-            <l n="333" xml:id="l333"> </l>
-            <stage><hi rend="italic">Ah ! ah ! ah ! le pauvre homme n’y peut plus tenir ! Notre <em>incognito</em> le désespère ! Il est vrai que Saint-Ernest joue son rôle à ravir ; il dévore avec une grâce !... Il faut convenir aussi que les dîners de prince sont excellents, et que ce rôle a vraiment de beaux côtés. Mais, chut, voici la petite Fanchette.</hi></stage>
-            <l n="335" xml:id="l335"> </l>
-            <l n="336" xml:id="l336"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="337" xml:id="l337"> </l>
-          <sp who="fanchette" xml:id="18-1">
-            <speaker>LÉON, FANCHETTE, <em>puis</em> BONNEAU</speaker>
-            <l n="338" xml:id="l338"> </l>
-          </sp>
-          <sp who="fanchette" xml:id="18-2">
-            <speaker>FANCHETTE, <em>à part.</em></speaker>
-            <l n="339" xml:id="l339">Il est seul ; faut profiter du moment.</l>
-          </sp>
-          <sp who="léon" xml:id="18-3">
-            <speaker>LÉON, <em>à part.</em></speaker>
-            <l n="340" xml:id="l340">Comme elle est jolie ! Ma foi, ce coquin d’Alain est encore plus heureux qu’un prince.</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-4">
-            <speaker>FANCHETTE, <em>à part.</em></speaker>
-            <l n="341" xml:id="l341">Je n’ sais par où commencer.</l>
-          </sp>
-          <sp who="léon" xml:id="18-5">
-            <speaker>LÉON.</speaker>
-            <l n="342" xml:id="l342">Approchez, mon enfant. À votre embarras, à votre rougeur, je devine que vous avez quelque confidence à me faire.</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-6">
-            <speaker>FANCHETTE.</speaker>
-            <l n="343" xml:id="l343">Mon Dieu ! monsieur le major, j’ suis toute tremblante !</l>
-          </sp>
-          <sp who="léon" xml:id="18-7">
-            <speaker>LÉON.</speaker>
-            <l n="344" xml:id="l344">Il ne faut pas trembler, quand on a des yeux comme ceux-là.</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-8">
-            <speaker>FANCHETTE.</speaker>
-            <l n="345" xml:id="l345">Dame ! excusez-moi si je n’ vous parle pas avec toutes les cérémonies que l’on y met pour des grands seigneurs comme vous.</l>
-          </sp>
-          <sp who="léon" xml:id="18-9">
-            <speaker>LÉON.</speaker>
-            <l n="346" xml:id="l346">Au fait, ma belle enfant, au fait. Je n’ai pas fini de dîner ; le prince m’attend, et je ne puis le laisser seul, sans manquer à mon devoir.</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-10">
-            <speaker>FANCHETTE.</speaker>
-            <l n="347" xml:id="l347">Rien qu’un mot, monsieur le major.</l>
-          </sp>
-          <sp who="léon" xml:id="18-11">
-            <speaker>LÉON.</speaker>
-            <l n="348" xml:id="l348">Allons, parlez.</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-12">
-            <speaker>FANCHETTE.</speaker>
-            <l n="349" xml:id="l349">Mon père prétend me marier aujourd’hui même.</l>
-          </sp>
-          <sp who="léon" xml:id="18-13">
-            <speaker>LÉON.</speaker>
-            <l n="350" xml:id="l350">Je ne vois pas grand mal à cela.</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-14">
-            <speaker>FANCHETTE.</speaker>
-            <l n="351" xml:id="l351">Non, sans doute ; mais je sais qu’il compte prier mon seigneur d’avoir la bonté de donner sa signature sur mon contrat de mariage.</l>
-          </sp>
-          <sp who="léon" xml:id="18-15">
-            <speaker>LÉON.</speaker>
-            <l n="352" xml:id="l352">Et vous désirez que je parle à son Altesse pour qu’elle vous accorde cet honneur !</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-16">
-            <speaker>FANCHETTE.</speaker>
-            <l n="353" xml:id="l353">Ben au contraire ; je voudrais que monseigneur me fit le plaisir de n’ pas m’ faire tant d’honneur.</l>
-          </sp>
-          <sp who="léon" xml:id="18-17">
-            <speaker>LÉON, <em>souriant.</em></speaker>
-            <l n="354" xml:id="l354">Ah ! j’entends ; il faut réserver cette signature pour le mariage avec Alain, n’est-ce pas ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-18">
-            <speaker>FANCHETTE, <em>ironiquement.</em></speaker>
-            <l n="355" xml:id="l355">Des voleurs ! Ils en ont bien la tournure !</l>
-          </sp>
-          <sp who="bonneau" xml:id="18-19">
-            <speaker>BONNEAU.</speaker>
-            <l n="356" xml:id="l356">Des voleurs ! Ah ! je ne saurais penser... Cependant leur conduite est très suspecte.</l>
-          </sp>
-          <sp who="jolibois" xml:id="18-20">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="357" xml:id="l357">Suspecte ! Vous êtes bien honnête ! Des inconnus qui s’ présentent dans une maison respectable, sous des noms supposés !</l>
-          </sp>
-          <sp who="bonneau" xml:id="18-21">
-            <speaker>BONNEAU.</speaker>
-            <l n="358" xml:id="l358">Qui trompent la bonne foi du maître du logis !</l>
-          </sp>
-          <sp who="jolibois" xml:id="18-22">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="359" xml:id="l359">Qui se font servir un dîner qui ne leur était pas destiné !</l>
-          </sp>
-          <sp who="bonneau" xml:id="18-23">
-            <speaker>BONNEAU.</speaker>
-            <l n="360" xml:id="l360">Qui boivent tout le vin !</l>
-          </sp>
-          <sp who="jolibois" xml:id="18-24">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="361" xml:id="l361">Se donnent les airs de seigneurs !</l>
-          </sp>
-          <sp who="bonneau" xml:id="18-25">
-            <speaker>BONNEAU.</speaker>
-            <l n="362" xml:id="l362">Me frappent sur l’épaule !</l>
-          </sp>
-          <sp who="jolibois" xml:id="18-26">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="363" xml:id="l363">Et me traitent d’imbécile !... Ces gens-là n’ peuvent avoir que d’ très mauvaises intentions.</l>
-          </sp>
-          <sp who="bonneau" xml:id="18-27">
-            <speaker>BONNEAU, <em>s’échauffant.</em></speaker>
-            <l n="364" xml:id="l364">Oui, sans doute ; ce sont des intrigants.</l>
-          </sp>
-          <sp who="jolibois" xml:id="18-28">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="365" xml:id="l365">Des escrocs !</l>
-          </sp>
-          <sp who="bonneau" xml:id="18-29">
-            <speaker>BONNEAU.</speaker>
-            <l n="366" xml:id="l366">Des fripons !</l>
-          </sp>
-          <sp who="jolibois" xml:id="18-30">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="367" xml:id="l367">Peut-être pis encore.</l>
-          </sp>
-          <sp who="fanchette" xml:id="18-31">
-            <speaker>FANCHETTE.</speaker>
-            <l n="368" xml:id="l368">Mon père, je vous en prie, prenez bien garde de vous compromettre.</l>
-            <l n="369" xml:id="l369"> </l>
-            <l n="370" xml:id="l370"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="371" xml:id="l371"> </l>
-          <sp who="fanchette" xml:id="19-1">
-            <speaker>LÉON, FANCHETTE, BONNEAU, LES PAYSANS, <em>sortant de l’auberge, avec des plats à la main</em></speaker>
-            <l n="372" xml:id="l372"> </l>
-          </sp>
-          <sp who="jolibois" xml:id="19-2">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="373" xml:id="l373">Eh ben ! où vont-ils donc ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="19-3">
-            <speaker>FANCHETTE.</speaker>
-            <l n="374" xml:id="l374">Servir ces Messieurs.</l>
-          </sp>
-          <sp who="jolibois" xml:id="19-4">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="375" xml:id="l375">Un moment, s’il vous plait ; ceci devient un peu trop sérieux.</l>
-            <stage><hi rend="italic"><em>Il les arrête au milieu du théâtre.</em></hi></stage>
-            <l n="377" xml:id="l377">Comment, père Bonneau, vous auriez la faiblesse de ménager ces deux aigrefins.</l>
-          </sp>
-          <sp who="bonneau" xml:id="19-5">
-            <speaker>BONNEAU.</speaker>
-            <l n="378" xml:id="l378">C’est fort embarrassant ; car ils comptent sur le second service... et en paraissant les soupçonner, nous pouvons nous exposer... Voyons, mes enfants, que me conseillez-vous ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="19-6">
-            <speaker>FANCHETTE.</speaker>
-            <l n="379" xml:id="l379">Mon avis, à moi...</l>
-          </sp>
-          <sp who="jolibois" xml:id="19-7">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="380" xml:id="l380">J’ suis ben fâché d’ vous interrompre ; mais les femmes me doivent pas s’ mêler des grands coups d’état.</l>
-          </sp>
-          <sp who="fanchette" xml:id="19-8">
-            <speaker>FANCHETTE.</speaker>
-            <l n="381" xml:id="l381">Le sot !</l>
-          </sp>
-          <sp who="jolibois" xml:id="19-9">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="382" xml:id="l382">Ç’ n’est pas là la question.</l>
-          </sp>
-          <sp who="bonneau" xml:id="19-10">
-            <speaker>BONNEAU.</speaker>
-            <l n="383" xml:id="l383">Quelle est ton opinion ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="19-11">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="384" xml:id="l384">Moi, je pense qu’il faut prendre des mesures de rigueur.</l>
-          </sp>
-          <sp who="bonneau" xml:id="19-12">
-            <speaker>BONNEAU.</speaker>
-            <l n="385" xml:id="l385">Des mesures de rigueur... Oui, qu’on remporte le second service... Ce sera toujours autant de sauvé.</l>
-          </sp>
-          <sp who="jolibois" xml:id="19-13">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="386" xml:id="l386">Sans doute.</l>
-            <stage><hi rend="italic"><em>Aux paysans.</em></hi></stage>
-            <l n="388" xml:id="l388">Allons, remportez tout cela à l’office.</l>
-            <stage><hi rend="italic"><em>Les paysans rentrent dans l’auberge.</em></hi></stage>
-            <l n="390" xml:id="l390"> </l>
-            <l n="391" xml:id="l391"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="20">
-          <head>Scène XX</head>
-            <l n="392" xml:id="l392"> </l>
-          <sp who="fanchette" xml:id="20-1">
-            <speaker>LÉON, FANCHETTE, BONNEAU</speaker>
-            <l n="393" xml:id="l393"> </l>
-          </sp>
-          <sp who="bonneau" xml:id="20-2">
-            <speaker>BONNEAU, <em>troublé.</em></speaker>
-            <l n="394" xml:id="l394">Mais quel parti prendre ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-3">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="395" xml:id="l395">C’est c’ que j’allais vous d’mander.</l>
-          </sp>
-          <sp who="bonneau" xml:id="20-4">
-            <speaker>BONNEAU.</speaker>
-            <l n="396" xml:id="l396">J’en ferai une maladie, c’est sûr ; le cœur me manque.</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-5">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="397" xml:id="l397">Il faut montrer du caractère, parce que vous entendez bien que si nous nous laissons effrayer... Qu’est-ce qui reluit donc là ?</l>
-            <stage><hi rend="italic"><em>Il aperçoit des fusils cachés dans le buisson.</em></hi></stage>
-            <l n="399" xml:id="l399">Ah ! par exemple, voici du nouveau... Des fusils ! V’là leur arsenal découvert.</l>
-          </sp>
-          <sp who="fanchette" xml:id="20-6">
-            <speaker>FANCHETTE.</speaker>
-            <l n="400" xml:id="l400">Des fusils !</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-7">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="401" xml:id="l401">Et à deux coups, encore ! C’est-y traître ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="20-8">
-            <speaker>BONNEAU.</speaker>
-            <l n="402" xml:id="l402">Des armes ! Ah ! mon Dieu, nous sommes perdus !</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-9">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="403" xml:id="l403">J’espère qu’ ça explique leurs projets.</l>
-          </sp>
-          <sp who="bonneau" xml:id="20-10">
-            <speaker>BONNEAU.</speaker>
-            <l n="404" xml:id="l404">V’là la sûreté du village compromise.</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-11">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="405" xml:id="l405">Ils veulent nous dévaliser.</l>
-          </sp>
-          <sp who="bonneau" xml:id="20-12">
-            <speaker>BONNEAU.</speaker>
-            <l n="406" xml:id="l406">Mes enfants, il faut sonner le tocsin, ameuter le village.</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-13">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="407" xml:id="l407">Bah ! ils se sauveront. Écoutez, si nous voulons les faire arrêter, ne faisons semblant de rien ; je vais chercher du secours, des armes : nous arrivons, nous les cernons, et nous les faisons pendre pour l’exemple.</l>
-          </sp>
-          <sp who="bonneau" xml:id="20-14">
-            <speaker>BONNEAU, <em>tremblant.</em></speaker>
-            <l n="408" xml:id="l408">Comment, tu nous laisses seuls ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-15">
-            <speaker>JOLIBOIS, <em>prenant les deux fusils.</em></speaker>
-            <l n="409" xml:id="l409">Vous ne risquez rien ; j’emporte leurs fusils.</l>
-          </sp>
-          <sp who="bonneau" xml:id="20-16">
-            <speaker>BONNEAU.</speaker>
-            <l n="410" xml:id="l410">Ne sois pas longtemps, mon ami.</l>
-          </sp>
-          <sp who="jolibois" xml:id="20-17">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="411" xml:id="l411">Amusez-les cinq minutes, et je réponds de l’affaire.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="413" xml:id="l413"> </l>
-            <l n="414" xml:id="l414"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="21">
-          <head>Scène XXI</head>
-            <l n="415" xml:id="l415"> </l>
-          <sp who="fanchette" xml:id="21-1">
-            <speaker>BONNEAU, FANCHETTE</speaker>
-            <l n="416" xml:id="l416"> </l>
-          </sp>
-          <sp who="bonneau" xml:id="21-2">
-            <speaker>BONNEAU.</speaker>
-            <l n="417" xml:id="l417">Me voilà bien ! Et ma place de maître-d’hôtel !</l>
-          </sp>
-          <sp who="fanchette" xml:id="21-3">
-            <speaker>FANCHETTE.</speaker>
-            <l n="418" xml:id="l418">Cet imbécile de Jolibois va faire encore quelque sottise. Moi, je ne puis croire que ces deux voyageurs soient des intrigants.</l>
-          </sp>
-          <sp who="bonneau" xml:id="21-4">
-            <speaker>BONNEAU.</speaker>
-            <l n="419" xml:id="l419">Comment, après tout ce que tu viens d’entendre ! Des fusils cachés, des seigneurs à pied, une voiture brisée... Tout cela n’est que trop clair, et il ne faut que du jugement pour voir que nous avons affaire à des coupe-jarrets.</l>
-          </sp>
-          <sp who="fanchette" xml:id="21-5">
-            <speaker>FANCHETTE.</speaker>
-            <l n="420" xml:id="l420">Rien ne prouve qu’ils aient des desseins malhonnêtes. Ils ont l’air si doux, si poli !</l>
-          </sp>
-          <sp who="bonneau" xml:id="21-6">
-            <speaker>BONNEAU.</speaker>
-            <l n="421" xml:id="l421">Ah ! tu vas les défendre !</l>
-          </sp>
-          <sp who="fanchette" xml:id="21-7">
-            <speaker>FANCHETTE.</speaker>
-            <l n="422" xml:id="l422">Vous-même, il n’y a pas un quart-d’heure que vous les trouviez charmants.</l>
-          </sp>
-          <sp who="bonneau" xml:id="21-8">
-            <speaker>BONNEAU.</speaker>
-            <l n="423" xml:id="l423">C’est vrai ; mais, diable ! je les croyais de véritables seigneurs ; et depuis qu’ils ne le sont plus, cela change furieusement les choses.</l>
-          </sp>
-          <sp who="fanchette" xml:id="21-9">
-            <speaker>FANCHETTE.</speaker>
-            <l n="424" xml:id="l424">Vous admiriez leur grâce, leurs façons, leurs figures distinguées.</l>
-          </sp>
-          <sp who="bonneau" xml:id="21-10">
-            <speaker>BONNEAU.</speaker>
-            <l n="425" xml:id="l425">Oh ! leurs figures distinguées... il n’y a pas d’excès.</l>
-          </sp>
-          <sp who="fanchette" xml:id="21-11">
-            <speaker>FANCHETTE.</speaker>
-            <l n="426" xml:id="l426">Vous l’avez dit.</l>
-          </sp>
-          <sp who="bonneau" xml:id="21-12">
-            <speaker>BONNEAU.</speaker>
-            <l n="427" xml:id="l427">Oui ; on dit ça, comme ça... parce que les seigneurs n’en doivent pas avoir d’autres. Mais la vérité est qu’ils ont des regards faux.</l>
-          </sp>
-          <sp who="fanchette" xml:id="21-13">
-            <speaker>FANCHETTE.</speaker>
-            <l n="428" xml:id="l428">Des regards faux !</l>
-          </sp>
-          <sp who="bonneau" xml:id="21-14">
-            <speaker>BONNEAU.</speaker>
-            <l n="429" xml:id="l429">Et puis... ils avaient trop d’appétit pour des gens de qualité.</l>
-          </sp>
-          <sp who="léon" xml:id="21-15">
-            <speaker>LÉON, <em>en dedans.</em></speaker>
-            <l n="430" xml:id="l430">Allons donc, hé, garçon.</l>
-          </sp>
-          <sp who="bonneau" xml:id="21-16">
-            <speaker>BONNEAU, <em>tremblant.</em></speaker>
-            <l n="431" xml:id="l431">Ah ! mon Dieu, en voilà un ! Qu’allons-nous devenir !</l>
-          </sp>
-          <sp who="fanchette" xml:id="21-17">
-            <speaker>FANCHETTE.</speaker>
-            <l n="432" xml:id="l432">Mon père ! ne tremblez donc pas comme ça ; v’là qu’ vous m’ faites peur.</l>
-            <l n="433" xml:id="l433"> </l>
-            <l n="434" xml:id="l434"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="22">
-          <head>Scène XXII</head>
-            <l n="435" xml:id="l435"> </l>
-          <sp who="fanchette" xml:id="22-1">
-            <speaker>BONNEAU, FANCHETTE, LÉON</speaker>
-            <l n="436" xml:id="l436"> </l>
-          </sp>
-          <sp who="léon" xml:id="22-2">
-            <speaker>LÉON.</speaker>
-            <l n="437" xml:id="l437">Monsieur Bonneau, c’est affreux ! Monseigneur attend depuis une heure.</l>
-          </sp>
-          <sp who="bonneau" xml:id="22-3">
-            <speaker>BONNEAU, <em>tremblant.</em></speaker>
-            <l n="438" xml:id="l438">Monsieur... monsieur le major... je suis confus, désolé.</l>
-          </sp>
-          <sp who="léon" xml:id="22-4">
-            <speaker>LÉON.</speaker>
-            <l n="439" xml:id="l439">Est-ce que vos rôtis sont brûlés ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="22-5">
-            <speaker>BONNEAU.</speaker>
-            <l n="440" xml:id="l440">Précisément, monsieur le major... précisément... les rôtis, les crèmes, les fraises, les pâtés... tout est brûlé !</l>
-          </sp>
-          <sp who="léon" xml:id="22-6">
-            <speaker>LÉON, <em>riant.</em></speaker>
-            <l n="441" xml:id="l441">Quel incendie ! c’est jouer de malheur !</l>
-          </sp>
-          <sp who="bonneau" xml:id="22-7">
-            <speaker>BONNEAU.</speaker>
-            <l n="442" xml:id="l442">Il semble que ce soit un fait exprès.</l>
-          </sp>
-          <sp who="fanchette" xml:id="22-8">
-            <speaker>FANCHETTE.</speaker>
-            <l n="443" xml:id="l443">Ah ! mon Dieu ! oui !</l>
-          </sp>
-          <sp who="bonneau" xml:id="22-9">
-            <speaker>BONNEAU, <em>à part.</em></speaker>
-            <l n="444" xml:id="l444">Jolibois ne revient pas !</l>
-            <stage><hi rend="italic"><em>Haut. </em></hi></stage>
-            <l n="446" xml:id="l446">Soyez sûr que, sans l’événement de la circonstance... qui fait que... certainement... parce qu’enfin... l’honneur de recevoir des personnes aussi estimables, aussi vertueuses... mais, vrai, il n’y a pas de ma faute.</l>
-          </sp>
-          <sp who="fanchette" xml:id="22-10">
-            <speaker>FANCHETTE, <em>à part.</em></speaker>
-            <l n="447" xml:id="l447">V’là qu’mon père bat la campagne.</l>
-          </sp>
-          <sp who="léon" xml:id="22-11">
-            <speaker>LÉON.</speaker>
-            <l n="448" xml:id="l448">Allons, allons, mon cher hôte, il ne faut pas vous désespérer pour si peu de chose. Vous ne nous connaissez pas.</l>
-          </sp>
-          <sp who="bonneau" xml:id="22-12">
-            <speaker>BONNEAU, <em>à part.</em></speaker>
-            <l n="449" xml:id="l449">Que trop, pour mon malheur.</l>
-          </sp>
-          <sp who="léon" xml:id="22-13">
-            <speaker>LÉON.</speaker>
-            <l n="450" xml:id="l450">Nous savons nous contenter de ce que nous trouvons.</l>
-          </sp>
-          <sp who="bonneau" xml:id="22-14">
-            <speaker>BONNEAU, <em>à part.</em></speaker>
-            <l n="451" xml:id="l451">Je le crois bien, dans leur métier.</l>
-          </sp>
-          <sp who="léon" xml:id="22-15">
-            <speaker>LÉON.</speaker>
-            <l n="452" xml:id="l452">Et nous prendrons tout simplement ce que vous aurez.</l>
-          </sp>
-          <sp who="bonneau" xml:id="22-16">
-            <speaker>BONNEAU, <em>à part.</em></speaker>
-            <l n="453" xml:id="l453">Il parle de mon argent.</l>
-            <stage><hi rend="italic"><em>Haut. </em></hi></stage>
-            <l n="455" xml:id="l455">Monsieur, je vous assure que je n’ai rien, rien du tout.</l>
-          </sp>
-          <sp who="léon" xml:id="22-17">
-            <speaker>LÉON, <em>étonné.</em></speaker>
-            <l n="456" xml:id="l456">Mais ce trouble n’est pas naturel ; il y a vraiment quelque chose d’extraordinaire. Ma petite Fanchette, vous me direz peut-être...</l>
-          </sp>
-          <sp who="fanchette" xml:id="22-18">
-            <speaker>FANCHETTE, <em>s’enfuyant.</em></speaker>
-            <l n="457" xml:id="l457">Moi, monsieur, je n’ai rien non plus.</l>
-          </sp>
-          <sp who="léon" xml:id="22-19">
-            <speaker>LÉON.</speaker>
-            <l n="458" xml:id="l458">Oh ! décidément ceci cache un mystère qu’il faut éclaircir, et je veux...</l>
-            <stage><hi rend="italic"><em>On entend un roulement de tambour.</em></hi></stage>
-            <l n="460" xml:id="l460">Qu’est-ce que cela signifie ?</l>
-            <l n="461" xml:id="l461"> </l>
-            <l n="462" xml:id="l462"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="23">
-          <head>Scène XXIII</head>
-            <l n="463" xml:id="l463"> </l>
-          <sp who="fanchette" xml:id="23-1">
-            <speaker>BONNEAU, FANCHETTE, LÉON, SAINT-ERNEST, <em>sortant du pavillon</em></speaker>
-            <l n="464" xml:id="l464"> </l>
-          </sp>
-          <sp who="saint-ernest" xml:id="23-2">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="465" xml:id="l465">Quel tapache, major ?</l>
-          </sp>
-          <sp who="bonneau" xml:id="23-3">
-            <speaker>BONNEAU, <em>à part.</em></speaker>
-            <l n="466" xml:id="l466">Ah ! voilà l’autre coquin, c’est fait de nous !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="23-4">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="467" xml:id="l467">Eh bien ! qu’avez-vous, bonnes gens ? Quel est ce timilte ? est-ce encore quelque nouveau accident ?</l>
-          </sp>
-          <sp who="léon" xml:id="23-5">
-            <speaker>LÉON.</speaker>
-            <l n="468" xml:id="l468">Ah ! je devine... Ce tambour, le trouble de notre hôte... c’est une surprise qu’on prépare pour Monseigneur.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="23-6">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="469" xml:id="l469">Une surprise pour Monseigneur !</l>
-          </sp>
-          <sp who="léon" xml:id="23-7">
-            <speaker>LÉON.</speaker>
-            <l n="470" xml:id="l470">Sans doute, des bouquets, de la musique, une fête villageoise.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="23-8">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="471" xml:id="l471">Ah ! fort bien ! fort bien !</l>
-          </sp>
-          <sp who="bonneau" xml:id="23-9">
-            <speaker>BONNEAU, <em>à part.</em></speaker>
-            <l n="472" xml:id="l472">Tiens ! ils croient qu’on va leur donner des fêtes, à présent !</l>
-            <stage><hi rend="italic"><em>On entend le tambour.</em></hi></stage>
-            <l n="474" xml:id="l474"> </l>
-            <l n="475" xml:id="l475"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="24">
-          <head>Scène XXIV</head>
-            <l n="476" xml:id="l476"> </l>
-          <sp who="fanchette" xml:id="24-1">
-            <speaker>BONNEAU, FANCHETTE, LÉON, SAINT-ERNEST, JOLIBOIS, PLUSIEURS PAYSANS <em>armés de fourches et de pieux, un tambour à leur tête</em></speaker>
-            <l n="477" xml:id="l477"> </l>
-          </sp>
-          <sp who="jolibois" xml:id="24-2">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="478" xml:id="l478">Suivez-moi, vous autres, suivez-moi. Bon ! il est encore temps !</l>
-          </sp>
-          <sp who="bonneau" xml:id="24-3">
-            <speaker>BONNEAU, <em>tout fier.</em></speaker>
-            <l n="479" xml:id="l479">Ah ! nous allons voir !</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-4">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="480" xml:id="l480">J’ai fait mettre tout l’ village sous les armes.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-5">
-            <speaker>SAINT-ERNEST,</speaker>
-            <l n="481" xml:id="l481">C’est bien, mes enfants, c’est bien ; je suis satisfait des honneurs que vous me rendez.</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-6">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="482" xml:id="l482">Ah ben ! il est bon là, des honneurs !</l>
-          </sp>
-          <sp who="léon" xml:id="24-7">
-            <speaker>LÉON.</speaker>
-            <l n="483" xml:id="l483">Oui, mes amis, Monseigneur est touché de votre empressement.</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-8">
-            <speaker>JOLIBOIS, <em>aux paysans.</em></speaker>
-            <l n="484" xml:id="l484">J’ crois qu’ils s’ moquent d’ nous. Attendez, j’ vais parler.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-9">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="485" xml:id="l485">Voyons, voyons le harangue.</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-10">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="486" xml:id="l486">Messieurs, j’ vous d’mande ben pardon ; mais vous êtes arrêtés.</l>
-          </sp>
-          <sp who="léon" xml:id="24-11">
-            <speaker>LÉON.</speaker>
-            <l n="487" xml:id="l487">Arrêtés !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-12">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="488" xml:id="l488">Voilà un harangue d’un nouveau genre, par exemple.</l>
-          </sp>
-          <sp who="léon" xml:id="24-13">
-            <speaker>LÉON.</speaker>
-            <l n="489" xml:id="l489">Comment ? misérable !</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-14">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="490" xml:id="l490">Oui, arrêtés comme vagabonds, suspects, intrigants et faussaires.</l>
-          </sp>
-          <sp who="léon" xml:id="24-15">
-            <speaker>LÉON.</speaker>
-            <l n="491" xml:id="l491">Ceci passe la plaisanterie !</l>
-          </sp>
-          <sp who="bonneau" xml:id="24-16">
-            <speaker>BONNEAU.</speaker>
-            <l n="492" xml:id="l492">Oui, faussaires. Ah ! Ah ! messieurs, vous voyez qu’on vous connaît.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-17">
-            <speaker>SAINT-ERNEST, <em>oubliant de baragouiner.</em></speaker>
-            <l n="493" xml:id="l493">Quoi, mes amis, vous pourriez penser ?...</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-18">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="494" xml:id="l494">Tenez, tenez, voyez-vous celui-ci qui parle français aussi ben qu’ moi ! v’là comme on s’ coupe.</l>
-          </sp>
-          <sp who="léon" xml:id="24-19">
-            <speaker>LÉON.</speaker>
-            <l n="495" xml:id="l495">Mais je puis vous jurer...</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-20">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="496" xml:id="l496">En prison.</l>
-          </sp>
-          <sp who="bonneau" xml:id="24-21">
-            <speaker>BONNEAU.</speaker>
-            <l n="497" xml:id="l497">En prison.</l>
-          </sp>
-          <sp who="les-paysans" xml:id="24-22">
-            <speaker>LES PAYSANS.</speaker>
-            <l n="498" xml:id="l498">En prison.</l>
-          </sp>
-          <sp who="fanchette" xml:id="24-23">
-            <speaker>FANCHETTE.</speaker>
-            <l n="499" xml:id="l499">Pauvres jeunes gens ! ils me font de la peine !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-24">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="500" xml:id="l500">Écoutez-nous.</l>
-          </sp>
-          <sp who="bonneau" xml:id="24-25">
-            <speaker>BONNEAU.</speaker>
-            <l n="501" xml:id="l501">Ah ! vous croyez qu’on peut se permettre impunément de s’introduire dans une maison !</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-26">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="502" xml:id="l502">De mettre toute une cuisine à feu et à sang !</l>
-          </sp>
-          <sp who="bonneau" xml:id="24-27">
-            <speaker>BONNEAU.</speaker>
-            <l n="503" xml:id="l503">De cacher des armes ?</l>
-          </sp>
-          <sp who="léon" xml:id="24-28">
-            <speaker>LÉON.</speaker>
-            <l n="504" xml:id="l504">Comment ! vous avez trouvé nos fusils ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-29">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="505" xml:id="l505">Là, ils en conviennent | C’est clair, je crois.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-30">
-            <speaker>SAINT-ERNEST, <em>riant.</em></speaker>
-            <l n="506" xml:id="l506">L’imbécile ! Ah ! ah ! ah !</l>
-          </sp>
-          <sp who="léon" xml:id="24-31">
-            <speaker>LÉON, <em>riant.</em></speaker>
-            <l n="507" xml:id="l507">Le sot ! Ah ! ah ! ah !</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-32">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="508" xml:id="l508">Ils font semblant d’ rire ; mais ça n’prend pas.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-33">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="509" xml:id="l509">Encore une fois, écoutez-nous.</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-34">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="510" xml:id="l510">Pour entendre des histoires.</l>
-          </sp>
-          <sp who="fanchette" xml:id="24-35">
-            <speaker>FANCHETTE.</speaker>
-            <l n="511" xml:id="l511">Mais, écoute-les donc.</l>
-          </sp>
-          <sp who="bonneau" xml:id="24-36">
-            <speaker>BONNEAU.</speaker>
-            <l n="512" xml:id="l512">Sans doute, on ne peut pas refuser cela.</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-37">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="513" xml:id="l513">C’est qu’ils vont vous enjôler.</l>
-          </sp>
-          <sp who="fanchette" xml:id="24-38">
-            <speaker>FANCHETTE.</speaker>
-            <l n="514" xml:id="l514">Tais-toi...</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-39">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="515" xml:id="l515">Je vous assure que nous sommes deux chasseurs égarés.</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-40">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="516" xml:id="l516">Oui, des chasseurs de bourses.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="24-41">
-            <speaker>SAINT-ERNEST, <em>lui donnant un soufflet.</em></speaker>
-            <l n="517" xml:id="l517">Faquin !</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-42">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="518" xml:id="l518">Eh ben ! tenez-le donc, vous autres : vous m’ laissez frapper, et dans mes fonctions encore !</l>
-          </sp>
-          <sp who="fanchette" xml:id="24-43">
-            <speaker>FANCHETTE.</speaker>
-            <l n="519" xml:id="l519">C’est bien fait.</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-44">
-            <speaker>JOLIBOIS, <em>furieux.</em></speaker>
-            <l n="520" xml:id="l520">Il n’y a plus d’ rémission.</l>
-          </sp>
-          <sp who="léon" xml:id="24-45">
-            <speaker>LÉON.</speaker>
-            <l n="521" xml:id="l521">Le premier qui approche...</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-46">
-            <speaker>JOLIBOIS, <em>saisissant un fusil.</em></speaker>
-            <l n="522" xml:id="l522">Rendez les armes... si vous en avez.</l>
-          </sp>
-          <sp who="léon" xml:id="24-47">
-            <speaker>SAINT-ERNEST <em>et</em> LÉON, <em>faisant un mouvement.</em></speaker>
-            <l n="523" xml:id="l523">Rendre les armes, malheureux !</l>
-          </sp>
-          <sp who="jolibois" xml:id="24-48">
-            <speaker>JOLIBOIS, <em>laissant tomber son fusil.</em></speaker>
-            <l n="524" xml:id="l524">Ah ! mon Dieu, ils ont peut-être des pistolets... Prenez garde... prenez garde !</l>
-            <stage><hi rend="italic"><em>Fanchette se cache avec son tablier. Bonneau se met derrière un arbre. Jolibois derrière les paysans, qui reculent aussi au mouvement de Saint-Ernest et de Léon.</em></hi></stage>
-            <l n="526" xml:id="l526"> </l>
-            <l n="527" xml:id="l527"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="25">
-          <head>Scène XXV</head>
-            <l n="528" xml:id="l528"> </l>
-          <sp who="alain" xml:id="25-1">
-            <speaker>BONNEAU, FANCHETTE, LÉON, SAINT-ERNEST, JOLIBOIS, LES PAYSANS, ALAIN</speaker>
-            <l n="529" xml:id="l529"> </l>
-          </sp>
-          <sp who="alain" xml:id="25-2">
-            <speaker>ALAIN.</speaker>
-            <l n="530" xml:id="l530">Me voilà ! me voilà !</l>
-          </sp>
-          <sp who="fanchette" xml:id="25-3">
-            <speaker>FANCHETTE.</speaker>
-            <l n="531" xml:id="l531">C’est Alain !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-4">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="532" xml:id="l532">Alain ! nous sommes sauvés !</l>
-          </sp>
-          <sp who="alain" xml:id="25-5">
-            <speaker>ALAIN.</speaker>
-            <l n="533" xml:id="l533">Enfin, me v’là de r’tour ; j’ suis v’nu d’un fier train ! monsieur l’ colonel, quand vous voudrez r’tourner à vot’ château, vot’ voiture est arrivée.</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-6">
-            <speaker>BONNEAU <em>et</em> JOLIBOIS.</speaker>
-            <l n="534" xml:id="l534">Sa voiture !</l>
-          </sp>
-          <sp who="alain" xml:id="25-7">
-            <speaker>ALAIN.</speaker>
-            <l n="535" xml:id="l535">J’ l’ai laissée à l’entrée du village, parce que la grande rue est trop étroite pour la faire passer.</l>
-          </sp>
-          <sp who="bonneau" xml:id="25-8">
-            <speaker>BONNEAU.</speaker>
-            <l n="536" xml:id="l536">Un colonel ! un château ! une voiture !... Miséricorde ! qu’avons-nous fait ?</l>
-          </sp>
-          <sp who="fanchette" xml:id="25-9">
-            <speaker>FANCHETTE.</speaker>
-            <l n="537" xml:id="l537">Quand j’ disais que ce n’étaient pas des voleurs !</l>
-          </sp>
-          <sp who="alain" xml:id="25-10">
-            <speaker>ALAIN.</speaker>
-            <l n="538" xml:id="l538">Comment, des voleurs ! Le colonel de Saint-Ernest ?</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-11">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="539" xml:id="l539">De Saint-Ernest !... Ah ben, j’en ai fait d’ belles !</l>
-          </sp>
-          <sp who="bonneau" xml:id="25-12">
-            <speaker>BONNEAU, <em>à Saint-Ernest.</em></speaker>
-            <l n="540" xml:id="l540">Ah ! monsieur le colonel, pardonnez-moi... Je vous ai manqué, c’es vrai... Mais aussi, c’est ce damné imbécile...</l>
-            <stage><hi rend="italic"><em>Montrant Jolibois.</em></hi></stage>
-          </sp>
-          <sp who="jolibois" xml:id="25-13">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="542" xml:id="l542">Vous verrez qu’ c’est moi qui finirai par avoir tort !</l>
-          </sp>
-          <sp who="léon" xml:id="25-14">
-            <speaker>LÉON.</speaker>
-            <l n="543" xml:id="l543">Cela doit être.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-15">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="544" xml:id="l544">Allons, monsieur Bonneau, si nous nous sommes un peu trop amusés à vos dépens, vous êtes le seul coupable. Nous avions un appétit dévorant : on ne pouvait être reçu chez vous sans faire ses preuves de noblesse, et pour ne pas nous passer de dîner, nous avons eu recours à une espièglerie de garnison.</l>
-          </sp>
-          <sp who="bonneau" xml:id="25-16">
-            <speaker>BONNEAU.</speaker>
-            <l n="545" xml:id="l545">Monsieur le colonel, c’est bien de l’honneur pour moi, assurément.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-17">
-            <speaker>SAINT-ERNEST, <em>lui donnant une bourse.</em></speaker>
-            <l n="546" xml:id="l546">Tenez, voilà pour vous indemniser du trouble que nous avons causé.</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-18">
-            <speaker>BONNEAU, <em>bas, à Jolibois.</em></speaker>
-            <l n="547" xml:id="l547">Une bourse d’or pour un dîner ! C’est vraiment digne d’un roi !</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-19">
-            <speaker>JOLIBOIS, <em>de même.</em></speaker>
-            <l n="548" xml:id="l548">Ah ! ça, est-ce qu’il ne m’indemnise pas aussi, moi ! Ce soufflet valait son pesant d’or, au moins !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-20">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="549" xml:id="l549">Parlons de l’intéressante Fanchette. Monsieur Bonneau, je ne suis ni prince ni roi ; c’est un petit inconvénient dont, pour ma part, je suis tout aussi fâché que vous ; mais, enfin, c’est un mal sans remède. J’ai mérité le grade de colonel ; je jouis d’une grande fortune : c’est bien quelque chose ; et si vous ne tenez pas absolument à ce que votre fille soit mariée par un souverain, je vous offre pour elle un mari et une dot.</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-21">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="550" xml:id="l550">Un mari !... Un moment, s’il vous plaît ; il est tout trouvé le mari.</l>
-          </sp>
-          <sp who="fanchette" xml:id="25-22">
-            <speaker>FANCHETTE.</speaker>
-            <l n="551" xml:id="l551">Oui ; mais mon père ne peut pas refuser monsieur le colonel.</l>
-          </sp>
-          <sp who="bonneau" xml:id="25-23">
-            <speaker>BONNEAU.</speaker>
-            <l n="552" xml:id="l552">Sans doute, et je suis prêt à accepter la dot et le mari.</l>
-          </sp>
-          <sp who="léon" xml:id="25-24">
-            <speaker>LÉON.</speaker>
-            <l n="553" xml:id="l553">Voilà ce qui s’appelle un bon père !</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-25">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="554" xml:id="l554">Allons, approche, Alain.</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-26">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="555" xml:id="l555">Alain !</l>
-          </sp>
-          <sp who="bonneau" xml:id="25-27">
-            <speaker>BONNEAU,</speaker>
-            <l n="556" xml:id="l556">Mais, monsieur le colonel, il n’a pas d’état, pas de fortune.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-28">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="557" xml:id="l557">Qu’à cela ne tienne : je veux lui donner une place distinguée ; je le nomme, dès aujourd’hui, mon premier garde...</l>
-          </sp>
-          <sp who="bonneau" xml:id="25-29">
-            <speaker>BONNEAU, <em>enchanté.</em></speaker>
-            <l n="558" xml:id="l558">Votre premier...</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-30">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="559" xml:id="l559">Garde-chasse. Je l’installe le jour des noces, et je le loge au château avec Fanchette.</l>
-          </sp>
-          <sp who="alain" xml:id="25-31">
-            <speaker>ALAIN.</speaker>
-            <l n="560" xml:id="l560">Ah ! monsieur le colonel, que de reconnaissance !</l>
-          </sp>
-          <sp who="bonneau" xml:id="25-32">
-            <speaker>BONNEAU.</speaker>
-            <l n="561" xml:id="l561">Je consens à tout, à tout absolument.</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-33">
-            <speaker>JOLIBOIS.</speaker>
-            <l n="562" xml:id="l562">J’étais sûr que vous finiriez par-là !</l>
-          </sp>
-          <sp who="jolibois" xml:id="25-34">
-            <speaker>BONNEAU, <em>bas, à Jolibois.</em></speaker>
-            <l n="563" xml:id="l563">Écoute donc, je ne puis pas désobliger un colonel ; mais, patience, mon ami ; demain nous recevrons un véritable seigneur, et certainement on ne m’y trompera plus.</l>
-          </sp>
-          <sp who="saint-ernest" xml:id="25-35">
-            <speaker>SAINT-ERNEST.</speaker>
-            <l n="564" xml:id="l564">Ne jurons de rien, mon cher monsieur Bonneau ! Croyez-moi, le plus sage est de bien accueillir tout le monde, de servir également le voyageur modeste, le seigneur fastueux...</l>
-            <stage><hi rend="italic"><em>En riant.</em></hi></stage>
-            <stage><hi rend="italic">et surtout de respecter les <em>incognito</em>.</hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="1">Non, mam’zelle, c’ n’est pas ainsi qu’on en agit au vis-à-vis d’un futur.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="2">Tu m’impatientes !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="3">C’est ça, j’ vous impatiente ! Croyez-vous donc que j’ sois aveugle, ou ben que j’ n’y voye pas clair ? Allez, vous d’vriez rougir. La fille unique d’ monsieur Bonneau, aubergiste distingué, d’un homme connu dans tout c’ canton, s’ laisser enjoler par un p’tit mauvais sujet.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="4">Vas-tu recommencer tes disputes éternelles ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="5">Vous verrez qu’all’ soutiendra qu’all’ me l’aime pas.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="6">Qui, Alain ? Et quand j’ l’aimerais, est-ce que cela te r’garde ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="7">Tiens ! si ça me r’garde ! nous sommes à la veille d’ nous marier !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="8">Ça n’est pas encore fait.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="9">C’est vrai ; mais vot’ père a promis...</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="10">Et moi, je n’ promets rien.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="11">C’est plus facile à t’nir. J’ vois ben qu’ vot’ amour vous tourne la tête ; mais monsieur Bonneau a pris son parti là-dessus, et faudra qu’ vous preniez l’ vôtre. Il ne veut plus entendre parler de c’ vaurien d’Alain, qui n’a jamais eu ni père ni mère, qui n’ tient à personne dans le village, et qui n’peut pas vous offrir dans le monde cette considération qu’ vous trouverez avec un jeune homme comme moi.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="12">Jolie considération ! Un garçon d’auberge !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="13">Oui ; mais il n’y a que c’t’ auberge-là dans tout l’ village.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="14">Cela n’empêche pas mon père de s’y ruiner. Pour un dîner ou deux qu’il donne aux voyageurs qui s’arrêtent ici par hasard ou par accident, notre maison reste vide des mois entiers.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="15">Il est vrai que nos bonnes fortunes nous viennent toujours des diligences versées ou des chaises brisées ; mais l’ dîner d’aujourd’hui va payer les frais d’ toute l’année : c’est un grand seigneur, à c’ qu’on dit.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="16">Bon ! ces gens-là paient encore plus mal que les autres.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="17">Ah ben ! si vot’ père vous entendait !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="18">Oh ! je connais sa manie, son respect pour tous les habits brodés. Parce qu’il a été cuisinier de l’ancien seigneur du lieu, et qu’il a vécu quelques mois au château, il se croit déplacé dans ce village, et ne soupire qu’après les cuisines de la cour.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="19">Dam’ ! il a d’ l’ambition ; et moi aussi, mam’zelle.</l>
+          <stage>&lt;em&gt;Il veut l’embrasser.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE le repoussant.</speaker>
+          <l n="20">Finis donc, ou je vais crier.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="21">C’est indigne, moi qui vous aime.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="22">Ce n’est pas ma faute.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="23">Nous verrons si vous parlerez comme ça en face d’ vot’ père ; nous verrons, mam’zelle. Le v’là, tenez.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="24">Eh bien ! avez-vous perdu la tête ? Vous vous amusez à faire les doux yeux, quand je suis dans mon coup de feu !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="25">Oui, les doux yeux d’une drôle d’ manière. Monsieur Bonneau, vot’ fille me f’ra mourir d’ chagrin. </l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à Fanchette.</speaker>
+          <l n="26">Finissons, s’il vous plaît, Mademoiselle ; toutes vos façons commencent à me fatiguer. Je vous ai dit ce que je pensais de Jolibois : c’est un garçon de mérite ; il sera votre mari, et pas plus tard que ce soir.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="27">Ce soir !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="28">Ce seigneur étranger qui doit s’arrêter ici pour dîner, me fera l’honneur de signer le contrat ; c’est la seule grâce que je solliciterai de lui. Si je l’obtiens, comme je n’en doute pas, je vous mène aussitôt chez le notaire, chez le curé, et demain il ne sera plus question de rien.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="29">Il faut que ce seigneur soit une fière protection. Depuis deux jours, vous ne cessez de parler des grâces que vous lui demanderez, et pourtant, s’il faut en croire son courrier, il ne s’arrêtera qu’une heure chez nous.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="30">Cette heure-là, mes enfants, sera la plus glorieuse de ma vie ! Songez donc que si je puis m’illustrer aux yeux de ce noble étranger, il m’offrira sans doute quelque récompense, et j’ai pris mon parti : je le suis en qualité de maître-d’hôtel ; car, voyez-vous, les grands seigneurs et les grandes maisons, il n’y a que cela pour faire son chemin.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="31">Vous connaissez donc ce voyageur ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="32">Pas du tout ; mais j’ai pris mes informations auprès du courrier, et par tout ce qu’il m’en a raconté, j’ai vu clairement que c’était un personnage de la plus haute importance.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="33">Tout de bon !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <stage>D’abord, il voyage &lt;em&gt;incognito&lt;/em&gt;... Ce qui est un signe... &lt;em&gt;Incognito&lt;/em&gt;, c’est tout dire.</stage>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <stage>&lt;em&gt;Incognito&lt;/em&gt; ! Qu’est-ce que cela signifie ?</stage>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <stage>&lt;em&gt;Incognito&lt;/em&gt; !... &lt;em&gt;incognito&lt;/em&gt; !... Diable ! il n’y a qu’ les gens de la cour qui voyagent de cette manière.</stage>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="34">Aussi j’ai voulu faire les choses magnifiquement ; j’ai accaparé toutes les provisions du voisinage : je suis sûr qu’on ne trouverait pas une salade à deux lieues à la ronde... Que sait-on ? Je vais peut-être traiter une Altesse !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="35">Eh bien ! l’ village jeûnera pour aujourd’hui.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, malignement.</speaker>
+          <l n="36">C’est un léger inconvénient, pourvu que son Altesse ne manque de rien.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="37">C’est à quoi nous devons veiller. Surtout, mes amis, la plus grande réserve : n’allez pas me compromettre. Si vous pouvez tirer adroitement quelque chose des gens de la suite, venez sur-le-champ m’en instruire ; mais point d’indiscrétions, je ne les aime pas. Allons, Jolibois, nos fourneaux sont allumés ; à la cuisine, mon garçon. Toi, ma fille, cours au verger ; apporte les plus beaux fruits, toutes les fleurs du parterre... Le couvert est déjà mis dans le salon de verdure... Je descends à la cave ; de l’ordre, de l’activité ; je veux que l’on parle de mon dîner dans tout le canton.</l>
+          <stage>&lt;em&gt;Il rentre avec Jolibois.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, seule</speaker>
+          <stage>Décidément, mon père en deviendra fou ! Il n’avait déjà la tête que trop remplie de ces idées de grande fortune, d’honneurs et de seigneuries ; mais le dîner de notre &lt;em&gt;incognito&lt;/em&gt; l’achèvera. Il va demander sa signature ! Voyez un peu la belle consolation pour moi ! Ah ! quand un mari ne plaît pas, toutes les signatures du monde ne le rendent pas plus aimable.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#alain">
+          <speaker>ALAIN, de loin.</speaker>
+          <l n="38">St ! st ! Fanchette ?... Es-tu seule ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="39">C’est Alain !... Oui, oui, tu peux approcher.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="40">Oh ! c’n’est pas que j’craigne d’ rencontrer ton père ; j’ viens justement lui parler ; mais j’étais bien aise de t’voir un instant tête-à-tête.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="41">Tu viens parler à mon père ?</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="42">Oui, pour deux jeunes gens qui se sont égarés à la chasse ; je les ai laissés chez mon oncle ; ils sont accablés de fatigue, et m’envoient commander un bon dîner.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="43">À mon père ! Ah ! ils peuvent chercher fortune ailleurs. Toutes nos provisions sont retenues pour ce grand personnage.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="44">C’est bien ce que je leur ai dit ; mais ils ne voulaient pas croire qu’en payant...</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="45">Ils ne connaissent pas mon père. Quand ils lui offriraient des sacs d’or, ils n’obtiendraient rien de lui.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="46">C’est pourtant dommage ; car j’ gagerais que ce sont deux jeunes seigneurs.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="47">À propos, tu ne sais pas c qui nous menace ?</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="48">Est-ce qu’il y a du nouveau ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="49">Mon père n’attend plus, pour me marier avec Jolibois, que la signature de ce voyageur dont il prépare le dîner.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="50">Sa signature ! Tiens, les gens d’ la cour font des cadeaux d’ noces qui ne leur coûtent pas cher !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="51">On dit que c’est l’usage. Je n’ai plus qu’un moyen : je tâcherai de voir cet étranger avant tout le monde ; je le prierai bien fort de refuser sa signature, et par ainsi, mon père ne sera plus si pressé de me faire épouser ce vilain Jolibois.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="52">Oh ! la bonne idée ! Mon Dieu, que tu as donc d’esprit !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="53">Écoute, Alain, tu viendras ce soir, aussitôt que les voitures seront parties, et j’espère que j’aurai de bonnes nouvelles à te donner.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU dans la maison.</speaker>
+          <l n="54">Fanchette ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="55">Mon père ! Je me sauve ; je vais être grondée.</l>
+          <stage>&lt;em&gt;Elle rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#alain">
+          <speaker>ALAIN, seul</speaker>
+          <l n="56">Voyez un peu cette ambition du père Bonneau ; risquer le bonheur de sa fille pour une signature : faut être timbré tout-à-fait. Voilà ces deux jeunes gens. Ma foi ! j’ les avais oubliés.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, LÉON, ALAIN</speaker>
+          <stage>&lt;em&gt;Saint-Ernest et Léon sont vêtus en chasseurs, mais avec une certaine élégance.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="57">Messieurs, j’ vous d’mande ben pardon ; mais j’allais vous r’joindre.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="58">Dis-moi, mon ami, quelle est cette jolie fille qui causait avec toi, et qui s’est enfuie à notre approche ?</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="59">C’est la fille de l’aubergiste dont je vous ai parlé.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à Saint-Ernest.</speaker>
+          <l n="60">Elle est charmante !</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="61">Eh bien, Monsieur, son père va la sacrifier ; il refuse de me l’accorder...</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, souriant.</speaker>
+          <l n="62">Oui ; je sais, mon cher Alain ; tu m’as déjà raconté tes peines deux ou trois fois.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="63">Dam’ ! j’en parle à tout le monde.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="64">Nous nous y intéressons beaucoup ; mais dans ce moment-ci le dîner demande tous nos soins. Est-on disposé à nous servir ?</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="65">Impossible, Monsieur.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="66">Comment, impossible !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="67">Tu me fais trembler !...</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="68">Je vous en avais déjà prévenu, et Fanchette vient de confirmer mes craintes. Tout est retenu pour le dîner de ce seigneur étranger, et vous n’auriez pas, au poids de l’or, une seule bouteille de vin.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="69">Nous voilà bien, avec un appétit de chasseurs.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="70">Quoi ! mon ami, tu crois qu’on nous refuserait ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="71">En lui disant que c’est pour le colonel Saint-Ernest et son ami le capitaine Léon...</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="72">Quand ce serait pour un général !... Oh ! c’est un glorieux, l’ père Bonneau ; et pour avoir l’ plaisir de traiter une excellence, il se ruinerait jusqu’au dernier sou.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="73">Au diable l’original ! Je n’ai plus la force de marcher.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="74">Je ne puis vous offrir que du pain bis et du vin de l’année.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <stage>Joli repas pour un gourmand comme Léon !... Eh ! mais, qui nous empêche... Oh ! la bonne idée ! Ce seigneur voyage, dit-on, &lt;em&gt;incognito&lt;/em&gt;...</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="75">À quoi rêves-tu donc, Saint-Ernest ?</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="76">Je cherche ton dîner ; mais, avant tout, occupons nous des moyens de retourner ce soir au château.</l>
+          <stage>&lt;em&gt;À Alain.&lt;/em&gt;</stage>
+          <l n="77">Sommes-nous loin de Bourgneuf ?</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="78">À deux grandes lieues.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="79">Un louis pour toi, si tu y portes un billet sur-le-champ.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="80">Ordonnez, je suis prêt.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, écrivant sur ses tablettes.</speaker>
+          <l n="81">« Ma voiture dans deux heures... Nous nous sommes égarés à la chasse... Qu’on ne nous attende pas pour dîner. »</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, vivement.</speaker>
+          <l n="82">Au contraire, mon cher colonel, qu’on nous attende ; cela est indispensable.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="83">Laisse donc.</l>
+          <stage>&lt;em&gt;À Alain.&lt;/em&gt;</stage>
+          <l n="84">Alain, tu demanderas l’intendant du château... Je te promets de veiller ici sur tes intérêts ; je parlerai au père de Fanchette, et je serai ! bien malheureux si je ne contente pas tout le monde.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="85">Ah ! Monsieur, que de reconnaissance !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="86">Tu reviendras avec ma voiture.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="87">Pour ne pas perdre de temps, je vais prendre un cheval chez mon oncle.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="88">Eh bien, Léon, as-tu toujours de l’humeur ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, avec humeur.</speaker>
+          <l n="89">J’ai tort, assurément. Monsieur veut se mêler de conduire la chasse, et il ne connaît pas les environs de son château ; il me fait faire dix lieues à jeun, pour m’amener enfin dans un village qu’un brutal prend par famine, et qui va devenir mon cercueil, s’il ne tombe un peu de manne.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="90">Je vais tout réparer.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="91">Oui, en te jetant dans les amours de village. Pour Dieu, laisse ce monsieur Bonneau donner sa fille à qui bon lui semble, pourvu qu’il nous donne à dîner.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="92">Il ne tient qu’à toi de faire un excellent repas.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="93">Qu’est-ce que tu dis donc ?</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="94">Écoute. On attend un grand personnage, dont on ne connaît ni le nom ni le pays... Eh bien, je suis ce grand personnage.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="95">Toi !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="96">Moi-même. On m’accueille, on me fête, on me sert un dîner délicieux !... Je reçois les honneurs, j’accepte le dîner.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="97">Quelle extravagance ! Mais le véritable voyageur arrivera ; tout s’expliquera...</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="98">Eh bien ! si c’est un galant homme, il rira le premier de notre comédie. S’il est assez sot pour s’en fâcher, je me charge de l’explication.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="99">Ma foi, j’ai un appétit de tous les diables ; tu commences à me convaincre ; mais comment veux-tu que, sans aucune suite, sans équipages, nous puissions leur persuader...</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="100">Ah ! mon Dieu ! pour un officier de hussards, que tu as peu d’imagination ! D’abord, notre voiture s’est brisée à une lieue du village, tous nos gens sont occupés à la faire réparer.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="101">Pas trop mal. Ces vestes de chasse...</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <stage>Servent au mieux notre &lt;em&gt;incognito&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="102">Ah ! ça, et de quel pays venons-nous ?</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="103">D’Allemagne, c’est plus commode ; il y pleut des gens de qualité.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="104">Fort bien. Cachons nos fusils et nos carniers dans ces buissons, et hâtons-nous d’aborder le dîner : car je tremble que nous n’arrivions un peu tard.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, ôtant son carnier.</speaker>
+          <l n="105">Je m’attends d’avance aux bouquets, à la musique... Dis donc, Léon, je fais une réflexion.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON,</speaker>
+          <l n="106">Est-ce que tu veux de la musique pendant ton dîner ? Tu n’as qu’à parler.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="107">Pour mieux jouer nos rôles, il serait, je crois, convenable que je me misse seul à table.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="108">Comment ? tu plaisantes, je crois ?</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, riant.</speaker>
+          <l n="109">Cela serait furieusement noble.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="110">Non, je ne te quitte point : je serai ton capitaine des gardes, ton grand écuyer... ce que tu voudras, pourvu que je jouisse de la plus grande intimité... à table.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="111">On vient : c’est la petite Fanchette.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="112">Allons, Monseigneur, de la dignité, de l’à-plomb, et montrez-nous un visage d’Excellence.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, à la cantonade.</speaker>
+          <l n="113">Oui, je viendrai vous avertir si on aperçoit les voitures.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, s’appuyant sur Léon.</speaker>
+          <l n="114">Tu vois qu’on nous attend.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="115">Des. messieurs ! ce sont, peut-être, les valets de chambre.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à Saint-Ernest.</speaker>
+          <l n="116">Monseigneur, je vais m’informer si vos ordres ont été exécutés.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, à part.</speaker>
+          <stage>Monseigneur ! Est-ce que ce serait ?... Comment à pied ! Ah ! c’est, peut-être, ce qu’ils appellent voyager &lt;em&gt;incognito&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, s’asseyant sur le banc, et baragouinant.</speaker>
+          <l n="117">Major Ulric, faites dépêcher vitement l’auberge... j’affre un appétit considérablement forte.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à Fanchette.</speaker>
+          <l n="118">Êtes-vous de la maison, mon enfant ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="119">Oui, monsieur.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="120">C’est bien à l’auberge du Lion d’Or que l’on a commandé le dîner de Monseigneur ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, vivement.</speaker>
+          <l n="121">Oui, monsieur, un courrier avec un habit brodé, un chapeau galonné, pour deux heures précises... un dîner de douze couverts.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="122">Ouf ! douze couverts !... nous n’en viendrons jamais à bout.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="123">Mais vous n’êtes que deux ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="124">Monseigneur a laissé ses officiers derrière lui... Un accident les retient quelque temps.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="125">Un accident !... Ah ! mon Dieu !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="126">Major, la dîner, je vous prie, pour la dîner.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="127">Tout de suite, Monseigneur...</l>
+          <stage>&lt;em&gt;Elle appelle. &lt;/em&gt;</stage>
+          <l n="128">Mon père !... Jolibois ! venez donc.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="129">Eh bien ! mamz’elle, n’criez donc pas comme ça... vous m’avez fait une peur !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="130">Voilà ce seigneur...</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="131">Il est arrivé !</l>
+          <stage>&lt;em&gt;Il appelle. &lt;/em&gt;</stage>
+          <l n="132">Monsieur Bonneau !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="133">Il ne vient pas.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="134">Il y a au moins une heure qu’il est à la cave.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="135">Miséricorde ! il fait son vin !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, appelant.</speaker>
+          <l n="136">Monsieur Bonneau !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, appelant.</speaker>
+          <l n="137">Mon père !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, riant.</speaker>
+          <l n="138">Voilà déjà toute l’auberge en désordre ! Allons, mon seigneur fait effet.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="139">On y va... On y va... Vous êtes bien pressés.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="140">Chût !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="141">Comment ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="142">Vous ne voyez pas ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="143">Qui donc ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="144">Monseigneur qui est arrivé !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, avec joie.</speaker>
+          <l n="145">Il est arrivé !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, montrant Saint-Ernest.</speaker>
+          <l n="146">Le voilà.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à Saint-Ernest.</speaker>
+          <l n="147">Ah ! Monseigneur, permettez que je vous témoigne le bonheur, l’ivresse...Votre Excellence n’est-elle point trop fatiguée.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="148">Après un accident comme celui-là !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="149">Un accident, dites-vous ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="150">Une des voitures s’est brisée au bas de la montagne.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="151">Et Monseigneur était dedans ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="152">Je l’ai cru perdu ! Il a roulé pendant un quart de lieue.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="153">Ah ! mon Dieu, cela fait frémir !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="154">Tous nos gens sont occupés à faire réparer les ressorts, les glaces, l’essieu.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="155">Au moins, Son Excellence n’est point blessée ?</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="156">J’affre une petit douler... pas bien grand beaucoup, à la jointire.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="157">Et not’ chirurgien qui est parti pour ses vendanges.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="158">Ah ! j’affre pas besoin de tout.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="159">C’est égal, Monseigneur ; je puis, tout comme un autre, préparer des compresse...</l>
+          <stage>&lt;em&gt;À sa maison.&lt;/em&gt;</stage>
+          <l n="160">De l’eau-de-vie camphrée.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, avec impatience.</speaker>
+          <l n="161">Préparez mon dîner... c’est tout ce que je demande à vous.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="162">Vous allez être servi... Pardonnez, Monseigneur, à ma joie, à mes transports... Ce jour est le plus beau de ma vie.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="163">Le pauvre homme devient fou !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="164">L’honneur de posséder un moment une personne de votre rang, de votre mérite...</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, bas.</speaker>
+          <l n="165">Vous savez donc qui c’est ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, bas.</speaker>
+          <l n="166">Non, mais ça n’ fait rien.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="167">Monsieur le hôte, je vois qui vous êtes un honnête homme, et je vous donne mon parole d’honneur qu’avant de partir, vous recevrez une gâche de mon estime.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, enchanté.</speaker>
+          <l n="168">Ah ! Vous me comblez, Monseigneur ; votre Excellence...</l>
+          <stage>&lt;em&gt;Bas à Jolibois.&lt;/em&gt;</stage>
+          <l n="169">Mon ami, je n’y tiens pas, j’ai envie de risquer l’Altesse.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS</speaker>
+          <l n="170">Ma foi, ça n’peut rien gâter.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="171">Le dîner, mon ami.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="172">La dîner, brave homme, la dîner.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="173">Oui, Monseigneur... Mes enfants, courez donner des ordres. Moi, je vais conduire son Altesse.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="174">Son Altesse ! Ceci devient sérieux !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="175">Major Ulric, marche en avant, et porte vous sur la dîner.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, le bonnet à la main.</speaker>
+          <l n="176">Par ici, votre Altesse, par ici ; je vais vous montrer le chemin... Fanchette, à la salle de verdure, le premier service est tout dressé.</l>
+          <stage>&lt;em&gt;Il entre dans le pavillon, suivi d’Ernest et de Léon.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, courant à l’auberge.</speaker>
+          <l n="177">Allons, des serviettes, les potages, les entrées, les bouts de table, etc. etc.</l>
+          <stage>&lt;em&gt;Il entre &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, seule</speaker>
+          <l n="178">Ah ! quel tapage pour un dîner ! Faut que ces grands messieurs-là aient plus d’appétit que les autres ! Je crois vraiment que j’ n’aurai jamais la hardiesse de parler à ce seigneur... Je ferai, peut-être, mieux de m’adresser à son ami, celui qu’on appelle le major... Si j’ pouvais consulter Alain... Mais demandez-moi un peu ce qu’il fait à présent ? s’il avait de l’esprit, il se serait tenu là aux environs ; en passant et repassant, on aurait pu se dire un p’tit mot ; mais les amoureux, v’là comme ils sont tous ! quand on y pense, on n’ les voit jamais : chassez-les, vous les avez toujours sur vos talons.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, à Fanchette en passant.</speaker>
+          <l n="179">Qu’est-ce que vous faites-là, mam’zelle ? au lieu d’ préparer vot’ dessert ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="180">Ça n’ te regarde pas.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="181">Ça n’me r’garde pas ! et puis j’irai arranger vos corbeilles pour vous ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="182">Je n’veux pas d’tes services.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, avec amour.</speaker>
+          <l n="183">Ah ! petite tigresse ! que n’est-ce là le repas d’ nos noces !... Ouf !... Aye ! aye !</l>
+          <stage>&lt;em&gt;Il se brûle.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, riant.</speaker>
+          <l n="184">Qu’as-tu donc ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="185">Je m’brûle... diable de soupe !</l>
+          <stage>&lt;em&gt;Aux paysans.&lt;/em&gt;</stage>
+          <l n="186">Riez, vous autres, j’ vous l’ conseille ! voulez-vous bien marcher.</l>
+          <stage>&lt;em&gt;Ils entrent dans le pavillon.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, seule.</speaker>
+          <l n="187">C’est décidé. Je vais vite m’occuper d’ mon dessert, et puis j’ viendrai épier l’occasion d’ parler à ce major, avant que mon père ait obtenu cette maudite signature. Sauvons-nous, j’entends Jolibois.</l>
+          <stage>&lt;em&gt;Elle rentre dans l’auberge.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="188">Attendez donc, il faut que deux d’entre vous restent-là, pour donner des assiettes et verser à boire, parce que not’ maître di qu’ ça s’ fait comme ça à la Cour ; les autres peuvent retourner à la maison pour dresser le second service. V’là l’ père Bonneau : allons, en avant marche ; à la cuisine.</l>
+          <stage>&lt;em&gt;Les paysans sortent. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, sortant du pavillon.</speaker>
+          <l n="189">Ah ! mon ami, tu me vois transporté, hors de moi !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="190">Vraiment !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="191">Que d’amabilité ! que de grâce ! que de bonté !... Ces seigneurs ont une manière qui n’est qu’à eux ! As-tu remarqué, comme moi, ces traits nobles et distingués, cette démarche...</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="192">Jusqu’à son langage, qui a quelque chose d’extraordinaire.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="193">Imbécile, tu ne vois pas que c’est l’accent du pays.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="194">Je m’en suis douté ; mais, enfin, avez-vous découvert quelque chose sur son rang : car il y a des seigneurs de différents étages.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="195">Je jurerais que celui-ci est pour le moins un prince.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="196">Un prince !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="197">Mais un prince de la plus grande qualité ! d’abord, en m’approchant de lui pour le servir, j’ai entrevu sous son habit quelque chose qui brillait... comme qui dirait un ordre de diamants.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="198">Des diamants !... oh ! c’est un prince !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="199">Tu sens bien que je me suis étudié à ne jamais lui dire moins que votre Altesse ou votre Grandeur ; mais je crains de l’avoir offensé.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="200">Au fait, si c’était un Roi !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <stage>Eh bien ! tu me croiras si tu veux ; mais vingt fois j’ai eu &lt;em&gt;Votre Majesté&lt;/em&gt; sur le bout de la langue.</stage>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="201">C’était un pressentiment.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="202">Ah ! j’oubliais le meilleur ! Tu ne sais pas, mon ami ? il m’a serré la main.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="203">Il vous a serré la main !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="204">Oh ! mais d’une force à me faire crier.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="205">Par exemple, c’est ça qu’est flatteur.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="206">Il n’y a pas jusqu’au major qui, voyant que je plaisais au Prince, m’a fait des amitiés ! il me frappait sur l’épaule familièrement... avec une bonté... je suis sûr que j’en ai la marque.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="207">Ma foi, vous pouvez prétendre à tout. Avez-vous sollicité quelque chose ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="208">Non, et je t’avoue que je suis dans un terrible embarras. Tant que j’aurai des doutes sur le rang de cet auguste personnage, je crains de lui faire des demandes ridicules ; si c’est un prince, je risque de demander trop peu : s’il ne l’est pas, j’ai peur d’être indiscret.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="209">Diable ! j’ n’avais pas pensé à cela.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="210">D’un autre côté, je tremble de laisser échapper une occasion si belle ! Ne parlent-ils pas de se mettre en route dans une heure ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="211">Il me vient une idée.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="212">Qu’est-ce que c’est ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="213">Not’ maître d’ poste qui d’meure au bout du village, n’ manque jamais d’ questionner les domestique des voyageurs qui passent sur c’te route ; les voitures du Prince y sont p’t’ être déjà, j’ vais y courir ; j’ m’informerai auprès d’ tous les valets, du nom, du pays, du rang d’ Monseigneur, et en deux sauts j’ r’viens vous dire tout c’ que j’en aurai appris.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="214">Ah ! tu me rends la vie ! ne perds pas un instant.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="215">Veillez seulement sur mon rôti.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, seul</speaker>
+          <l n="216">Quelle journée pour moi ! quel éclat pour ma maison !... Un prince, peut-être un roi qui me fait l’honneur de manger mon dîner ! Comme ça vous relève un homme qui tient à sa réputation ! Que sera-ce donc, si je parviens à être nommé officier de bouche de son Altesse !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, en-dedans.</speaker>
+          <l n="217">Holà, hé ! garçon, la fille ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="218">C’est le major !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="219">Allons donc, mon cher, vous nous abandonnez.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="220">Que désirez-vous, monsieur le major ? Parlez.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="221">Du vin, mon ami, du vin.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="222">Comment, les coquins l’auraient oublié ! J’en avais pourtant placé moi-même quatre bouteilles.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="223">C’est vrai ; mais la marche, la poussière ont tellement échauffé monseigneur... Nous vous demanderons du même.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="224">Dans la minute. Son Altesse commence-t-elle à se remettre ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="225">Il n’y paraît plus.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, avec embarras.</speaker>
+          <l n="226">Monsieur le major, pardon de mon indiscrétion... Mais je serais si heureux de connaître cet auguste seigneur... Si vous vouliez me confier...</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, lui mettant la main sur la bouche.</speaker>
+          <l n="227">Chut ! Ah ! mon ami, que demandez-vous ?... Je serais perdu !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, troublé.</speaker>
+          <l n="228">Rien, rien... Je n’en veux pas savoir davantage.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="229">C’est un roi, c’est certain... J’aurais parié ma fortune que c’était un roi !</l>
+          <stage>&lt;em&gt;Il rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#léon">
+          <speaker>LÉON, seul, riant</speaker>
+          <stage>Ah ! ah ! ah ! le pauvre homme n’y peut plus tenir ! Notre &lt;em&gt;incognito&lt;/em&gt; le désespère ! Il est vrai que Saint-Ernest joue son rôle à ravir ; il dévore avec une grâce !... Il faut convenir aussi que les dîners de prince sont excellents, et que ce rôle a vraiment de beaux côtés. Mais, chut, voici la petite Fanchette.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, à part.</speaker>
+          <l n="230">Il est seul ; faut profiter du moment.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="231">Comme elle est jolie ! Ma foi, ce coquin d’Alain est encore plus heureux qu’un prince.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, à part.</speaker>
+          <l n="232">Je n’ sais par où commencer.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="233">Approchez, mon enfant. À votre embarras, à votre rougeur, je devine que vous avez quelque confidence à me faire.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="234">Mon Dieu ! monsieur le major, j’ suis toute tremblante !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="235">Il ne faut pas trembler, quand on a des yeux comme ceux-là.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="236">Dame ! excusez-moi si je n’ vous parle pas avec toutes les cérémonies que l’on y met pour des grands seigneurs comme vous.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="237">Au fait, ma belle enfant, au fait. Je n’ai pas fini de dîner ; le prince m’attend, et je ne puis le laisser seul, sans manquer à mon devoir.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="238">Rien qu’un mot, monsieur le major.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="239">Allons, parlez.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="240">Mon père prétend me marier aujourd’hui même.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="241">Je ne vois pas grand mal à cela.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="242">Non, sans doute ; mais je sais qu’il compte prier mon seigneur d’avoir la bonté de donner sa signature sur mon contrat de mariage.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="243">Et vous désirez que je parle à son Altesse pour qu’elle vous accorde cet honneur !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="244">Ben au contraire ; je voudrais que monseigneur me fit le plaisir de n’ pas m’ faire tant d’honneur.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, souriant.</speaker>
+          <l n="245">Ah ! j’entends ; il faut réserver cette signature pour le mariage avec Alain, n’est-ce pas ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, ironiquement.</speaker>
+          <l n="246">Des voleurs ! Ils en ont bien la tournure !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="247">Des voleurs ! Ah ! je ne saurais penser... Cependant leur conduite est très suspecte.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="248">Suspecte ! Vous êtes bien honnête ! Des inconnus qui s’ présentent dans une maison respectable, sous des noms supposés !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="249">Qui trompent la bonne foi du maître du logis !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="250">Qui se font servir un dîner qui ne leur était pas destiné !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="251">Qui boivent tout le vin !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="252">Se donnent les airs de seigneurs !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="253">Me frappent sur l’épaule !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="254">Et me traitent d’imbécile !... Ces gens-là n’ peuvent avoir que d’ très mauvaises intentions.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, s’échauffant.</speaker>
+          <l n="255">Oui, sans doute ; ce sont des intrigants.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="256">Des escrocs !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="257">Des fripons !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="258">Peut-être pis encore.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="259">Mon père, je vous en prie, prenez bien garde de vous compromettre.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="260">Eh ben ! où vont-ils donc ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="261">Servir ces Messieurs.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="262">Un moment, s’il vous plait ; ceci devient un peu trop sérieux.</l>
+          <stage>&lt;em&gt;Il les arrête au milieu du théâtre.&lt;/em&gt;</stage>
+          <l n="263">Comment, père Bonneau, vous auriez la faiblesse de ménager ces deux aigrefins.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="264">C’est fort embarrassant ; car ils comptent sur le second service... et en paraissant les soupçonner, nous pouvons nous exposer... Voyons, mes enfants, que me conseillez-vous ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="265">Mon avis, à moi...</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="266">J’ suis ben fâché d’ vous interrompre ; mais les femmes me doivent pas s’ mêler des grands coups d’état.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="267">Le sot !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="268">Ç’ n’est pas là la question.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="269">Quelle est ton opinion ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="270">Moi, je pense qu’il faut prendre des mesures de rigueur.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="271">Des mesures de rigueur... Oui, qu’on remporte le second service... Ce sera toujours autant de sauvé.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="272">Sans doute.</l>
+          <stage>&lt;em&gt;Aux paysans.&lt;/em&gt;</stage>
+          <l n="273">Allons, remportez tout cela à l’office.</l>
+          <stage>&lt;em&gt;Les paysans rentrent dans l’auberge.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XX">
+        <head>Scène XX</head>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, troublé.</speaker>
+          <l n="274">Mais quel parti prendre ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="275">C’est c’ que j’allais vous d’mander.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="276">J’en ferai une maladie, c’est sûr ; le cœur me manque.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="277">Il faut montrer du caractère, parce que vous entendez bien que si nous nous laissons effrayer... Qu’est-ce qui reluit donc là ?</l>
+          <stage>&lt;em&gt;Il aperçoit des fusils cachés dans le buisson.&lt;/em&gt;</stage>
+          <l n="278">Ah ! par exemple, voici du nouveau... Des fusils ! V’là leur arsenal découvert.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="279">Des fusils !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="280">Et à deux coups, encore ! C’est-y traître ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="281">Des armes ! Ah ! mon Dieu, nous sommes perdus !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="282">J’espère qu’ ça explique leurs projets.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="283">V’là la sûreté du village compromise.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="284">Ils veulent nous dévaliser.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="285">Mes enfants, il faut sonner le tocsin, ameuter le village.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="286">Bah ! ils se sauveront. Écoutez, si nous voulons les faire arrêter, ne faisons semblant de rien ; je vais chercher du secours, des armes : nous arrivons, nous les cernons, et nous les faisons pendre pour l’exemple.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, tremblant.</speaker>
+          <l n="287">Comment, tu nous laisses seuls ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, prenant les deux fusils.</speaker>
+          <l n="288">Vous ne risquez rien ; j’emporte leurs fusils.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="289">Ne sois pas longtemps, mon ami.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="290">Amusez-les cinq minutes, et je réponds de l’affaire.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXI">
+        <head>Scène XXI</head>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="291">Me voilà bien ! Et ma place de maître-d’hôtel !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="292">Cet imbécile de Jolibois va faire encore quelque sottise. Moi, je ne puis croire que ces deux voyageurs soient des intrigants.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="293">Comment, après tout ce que tu viens d’entendre ! Des fusils cachés, des seigneurs à pied, une voiture brisée... Tout cela n’est que trop clair, et il ne faut que du jugement pour voir que nous avons affaire à des coupe-jarrets.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="294">Rien ne prouve qu’ils aient des desseins malhonnêtes. Ils ont l’air si doux, si poli !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="295">Ah ! tu vas les défendre !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="296">Vous-même, il n’y a pas un quart-d’heure que vous les trouviez charmants.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="297">C’est vrai ; mais, diable ! je les croyais de véritables seigneurs ; et depuis qu’ils ne le sont plus, cela change furieusement les choses.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="298">Vous admiriez leur grâce, leurs façons, leurs figures distinguées.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="299">Oh ! leurs figures distinguées... il n’y a pas d’excès.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="300">Vous l’avez dit.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="301">Oui ; on dit ça, comme ça... parce que les seigneurs n’en doivent pas avoir d’autres. Mais la vérité est qu’ils ont des regards faux.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="302">Des regards faux !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="303">Et puis... ils avaient trop d’appétit pour des gens de qualité.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, en dedans.</speaker>
+          <l n="304">Allons donc, hé, garçon.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, tremblant.</speaker>
+          <l n="305">Ah ! mon Dieu, en voilà un ! Qu’allons-nous devenir !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="306">Mon père ! ne tremblez donc pas comme ça ; v’là qu’ vous m’ faites peur.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXII">
+        <head>Scène XXII</head>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="307">Monsieur Bonneau, c’est affreux ! Monseigneur attend depuis une heure.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, tremblant.</speaker>
+          <l n="308">Monsieur... monsieur le major... je suis confus, désolé.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="309">Est-ce que vos rôtis sont brûlés ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="310">Précisément, monsieur le major... précisément... les rôtis, les crèmes, les fraises, les pâtés... tout est brûlé !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, riant.</speaker>
+          <l n="311">Quel incendie ! c’est jouer de malheur !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="312">Il semble que ce soit un fait exprès.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="313">Ah ! mon Dieu ! oui !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à part.</speaker>
+          <l n="314">Jolibois ne revient pas !</l>
+          <stage>&lt;em&gt;Haut. &lt;/em&gt;</stage>
+          <l n="315">Soyez sûr que, sans l’événement de la circonstance... qui fait que... certainement... parce qu’enfin... l’honneur de recevoir des personnes aussi estimables, aussi vertueuses... mais, vrai, il n’y a pas de ma faute.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, à part.</speaker>
+          <l n="316">V’là qu’mon père bat la campagne.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="317">Allons, allons, mon cher hôte, il ne faut pas vous désespérer pour si peu de chose. Vous ne nous connaissez pas.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à part.</speaker>
+          <l n="318">Que trop, pour mon malheur.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="319">Nous savons nous contenter de ce que nous trouvons.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à part.</speaker>
+          <l n="320">Je le crois bien, dans leur métier.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="321">Et nous prendrons tout simplement ce que vous aurez.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à part.</speaker>
+          <l n="322">Il parle de mon argent.</l>
+          <stage>&lt;em&gt;Haut. &lt;/em&gt;</stage>
+          <l n="323">Monsieur, je vous assure que je n’ai rien, rien du tout.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, étonné.</speaker>
+          <l n="324">Mais ce trouble n’est pas naturel ; il y a vraiment quelque chose d’extraordinaire. Ma petite Fanchette, vous me direz peut-être...</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE, s’enfuyant.</speaker>
+          <l n="325">Moi, monsieur, je n’ai rien non plus.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="326">Oh ! décidément ceci cache un mystère qu’il faut éclaircir, et je veux...</l>
+          <stage>&lt;em&gt;On entend un roulement de tambour.&lt;/em&gt;</stage>
+          <l n="327">Qu’est-ce que cela signifie ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXIII">
+        <head>Scène XXIII</head>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="328">Quel tapache, major ?</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à part.</speaker>
+          <l n="329">Ah ! voilà l’autre coquin, c’est fait de nous !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="330">Eh bien ! qu’avez-vous, bonnes gens ? Quel est ce timilte ? est-ce encore quelque nouveau accident ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="331">Ah ! je devine... Ce tambour, le trouble de notre hôte... c’est une surprise qu’on prépare pour Monseigneur.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="332">Une surprise pour Monseigneur !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="333">Sans doute, des bouquets, de la musique, une fête villageoise.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="334">Ah ! fort bien ! fort bien !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à part.</speaker>
+          <l n="335">Tiens ! ils croient qu’on va leur donner des fêtes, à présent !</l>
+          <stage>&lt;em&gt;On entend le tambour.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXIV">
+        <head>Scène XXIV</head>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="336">Suivez-moi, vous autres, suivez-moi. Bon ! il est encore temps !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, tout fier.</speaker>
+          <l n="337">Ah ! nous allons voir !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="338">J’ai fait mettre tout l’ village sous les armes.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST,</speaker>
+          <l n="339">C’est bien, mes enfants, c’est bien ; je suis satisfait des honneurs que vous me rendez.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="340">Ah ben ! il est bon là, des honneurs !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="341">Oui, mes amis, Monseigneur est touché de votre empressement.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, aux paysans.</speaker>
+          <l n="342">J’ crois qu’ils s’ moquent d’ nous. Attendez, j’ vais parler.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="343">Voyons, voyons le harangue.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="344">Messieurs, j’ vous d’mande ben pardon ; mais vous êtes arrêtés.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="345">Arrêtés !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="346">Voilà un harangue d’un nouveau genre, par exemple.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="347">Comment ? misérable !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="348">Oui, arrêtés comme vagabonds, suspects, intrigants et faussaires.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="349">Ceci passe la plaisanterie !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="350">Oui, faussaires. Ah ! Ah ! messieurs, vous voyez qu’on vous connaît.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, oubliant de baragouiner.</speaker>
+          <l n="351">Quoi, mes amis, vous pourriez penser ?...</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="352">Tenez, tenez, voyez-vous celui-ci qui parle français aussi ben qu’ moi ! v’là comme on s’ coupe.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="353">Mais je puis vous jurer...</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="354">En prison.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="355">En prison.</l>
+        </sp>
+        <sp who="#les-paysans">
+          <speaker>LES PAYSANS.</speaker>
+          <l n="356">En prison.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="357">Pauvres jeunes gens ! ils me font de la peine !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="358">Écoutez-nous.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="359">Ah ! vous croyez qu’on peut se permettre impunément de s’introduire dans une maison !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="360">De mettre toute une cuisine à feu et à sang !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="361">De cacher des armes ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="362">Comment ! vous avez trouvé nos fusils ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="363">Là, ils en conviennent | C’est clair, je crois.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, riant.</speaker>
+          <l n="364">L’imbécile ! Ah ! ah ! ah !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, riant.</speaker>
+          <l n="365">Le sot ! Ah ! ah ! ah !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="366">Ils font semblant d’ rire ; mais ça n’prend pas.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="367">Encore une fois, écoutez-nous.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="368">Pour entendre des histoires.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="369">Mais, écoute-les donc.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="370">Sans doute, on ne peut pas refuser cela.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="371">C’est qu’ils vont vous enjôler.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="372">Tais-toi...</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="373">Je vous assure que nous sommes deux chasseurs égarés.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="374">Oui, des chasseurs de bourses.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, lui donnant un soufflet.</speaker>
+          <l n="375">Faquin !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="376">Eh ben ! tenez-le donc, vous autres : vous m’ laissez frapper, et dans mes fonctions encore !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="377">C’est bien fait.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, furieux.</speaker>
+          <l n="378">Il n’y a plus d’ rémission.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="379">Le premier qui approche...</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, saisissant un fusil.</speaker>
+          <l n="380">Rendez les armes... si vous en avez.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST et LÉON, faisant un mouvement.</speaker>
+          <l n="381">Rendre les armes, malheureux !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, laissant tomber son fusil.</speaker>
+          <l n="382">Ah ! mon Dieu, ils ont peut-être des pistolets... Prenez garde... prenez garde !</l>
+          <stage>&lt;em&gt;Fanchette se cache avec son tablier. Bonneau se met derrière un arbre. Jolibois derrière les paysans, qui reculent aussi au mouvement de Saint-Ernest et de Léon.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXV">
+        <head>Scène XXV</head>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="383">Me voilà ! me voilà !</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="384">C’est Alain !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="385">Alain ! nous sommes sauvés !</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="386">Enfin, me v’là de r’tour ; j’ suis v’nu d’un fier train ! monsieur l’ colonel, quand vous voudrez r’tourner à vot’ château, vot’ voiture est arrivée.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU et JOLIBOIS.</speaker>
+          <l n="387">Sa voiture !</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="388">J’ l’ai laissée à l’entrée du village, parce que la grande rue est trop étroite pour la faire passer.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="389">Un colonel ! un château ! une voiture !... Miséricorde ! qu’avons-nous fait ?</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="390">Quand j’ disais que ce n’étaient pas des voleurs !</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="391">Comment, des voleurs ! Le colonel de Saint-Ernest ?</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="392">De Saint-Ernest !... Ah ben, j’en ai fait d’ belles !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, à Saint-Ernest.</speaker>
+          <l n="393">Ah ! monsieur le colonel, pardonnez-moi... Je vous ai manqué, c’es vrai... Mais aussi, c’est ce damné imbécile...</l>
+          <stage>&lt;em&gt;Montrant Jolibois.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="394">Vous verrez qu’ c’est moi qui finirai par avoir tort !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="395">Cela doit être.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="396">Allons, monsieur Bonneau, si nous nous sommes un peu trop amusés à vos dépens, vous êtes le seul coupable. Nous avions un appétit dévorant : on ne pouvait être reçu chez vous sans faire ses preuves de noblesse, et pour ne pas nous passer de dîner, nous avons eu recours à une espièglerie de garnison.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="397">Monsieur le colonel, c’est bien de l’honneur pour moi, assurément.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST, lui donnant une bourse.</speaker>
+          <l n="398">Tenez, voilà pour vous indemniser du trouble que nous avons causé.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, bas, à Jolibois.</speaker>
+          <l n="399">Une bourse d’or pour un dîner ! C’est vraiment digne d’un roi !</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS, de même.</speaker>
+          <l n="400">Ah ! ça, est-ce qu’il ne m’indemnise pas aussi, moi ! Ce soufflet valait son pesant d’or, au moins !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="401">Parlons de l’intéressante Fanchette. Monsieur Bonneau, je ne suis ni prince ni roi ; c’est un petit inconvénient dont, pour ma part, je suis tout aussi fâché que vous ; mais, enfin, c’est un mal sans remède. J’ai mérité le grade de colonel ; je jouis d’une grande fortune : c’est bien quelque chose ; et si vous ne tenez pas absolument à ce que votre fille soit mariée par un souverain, je vous offre pour elle un mari et une dot.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="402">Un mari !... Un moment, s’il vous plaît ; il est tout trouvé le mari.</l>
+        </sp>
+        <sp who="#fanchette">
+          <speaker>FANCHETTE.</speaker>
+          <l n="403">Oui ; mais mon père ne peut pas refuser monsieur le colonel.</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="404">Sans doute, et je suis prêt à accepter la dot et le mari.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="405">Voilà ce qui s’appelle un bon père !</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="406">Allons, approche, Alain.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="407">Alain !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU,</speaker>
+          <l n="408">Mais, monsieur le colonel, il n’a pas d’état, pas de fortune.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="409">Qu’à cela ne tienne : je veux lui donner une place distinguée ; je le nomme, dès aujourd’hui, mon premier garde...</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, enchanté.</speaker>
+          <l n="410">Votre premier...</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="411">Garde-chasse. Je l’installe le jour des noces, et je le loge au château avec Fanchette.</l>
+        </sp>
+        <sp who="#alain">
+          <speaker>ALAIN.</speaker>
+          <l n="412">Ah ! monsieur le colonel, que de reconnaissance !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU.</speaker>
+          <l n="413">Je consens à tout, à tout absolument.</l>
+        </sp>
+        <sp who="#jolibois">
+          <speaker>JOLIBOIS.</speaker>
+          <l n="414">J’étais sûr que vous finiriez par-là !</l>
+        </sp>
+        <sp who="#bonneau">
+          <speaker>BONNEAU, bas, à Jolibois.</speaker>
+          <l n="415">Écoute donc, je ne puis pas désobliger un colonel ; mais, patience, mon ami ; demain nous recevrons un véritable seigneur, et certainement on ne m’y trompera plus.</l>
+        </sp>
+        <sp who="#saint-ernest">
+          <speaker>SAINT-ERNEST.</speaker>
+          <l n="416">Ne jurons de rien, mon cher monsieur Bonneau ! Croyez-moi, le plus sage est de bien accueillir tout le monde, de servir également le voyageur modeste, le seigneur fastueux...</l>
+          <stage>&lt;em&gt;En riant.&lt;/em&gt;</stage>
+          <stage>et surtout de respecter les &lt;em&gt;incognito&lt;/em&gt;.</stage>
+          <l n="417" />
+        </sp>
       </div>
     </body>
   </text>

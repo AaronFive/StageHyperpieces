@@ -1,1124 +1,1058 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Paroles</title>
-        <author key="Paul MEURICE - Auguste VACQUERIE | (naissance-mort)">Paul MEURICE - Auguste VACQUERIE |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/paroles-paul-meurice-auguste-vacquerie</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Paul MEURICE - Auguste VACQUERIE |</author>. <title>Paroles</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/paroles-paul-meurice-auguste-vacquerie</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1843-02-28">Représentée pour la première fois, à Paris, sur le Théâtre de l’Odéon, le 28 février 1843.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="paroles" sex="SEX">
+            <persName>PAROLES</persName>
+          </person>
+          <person xml:id="roger" sex="SEX">
+            <persName>ROGER</persName>
+          </person>
+          <person xml:id="du-maine" sex="SEX">
+            <persName>DU MAINE</persName>
+          </person>
+          <person xml:id="caduco" sex="SEX">
+            <persName>CADUCO</persName>
+          </person>
+          <person xml:id="phénice" sex="SEX">
+            <persName>PHÉNICE</persName>
+          </person>
+          <person xml:id="deux-officiers" sex="SEX">
+            <persName>DEUX OFFICIERS</persName>
+          </person>
+          <person xml:id="soldats" sex="SEX">
+            <persName>SOLDATS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1843-02-28" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de l’Odéon, le 28 février 1843.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Paroles</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte et en vers, tirée de Shakespeare.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de l’Odéon, le 28 février 1843.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="paroles">PAROLES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="roger">ROGER</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="du-maine">DU MAINE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="caduco">CADUCO</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="phénice">PHÉNICE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="deux-officiers">DEUX OFFICIERS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="soldats">SOLDATS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>À Florence en</em><em> 15..</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Un bois. À droite, les premières tentes d’un camp.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="8" xml:id="l8"> </l>
-          <sp who="phénice" xml:id="1-1">
-            <speaker>GROUPES QUI PASSENT, UN AIR D’ATTENTE, CADUCO, PHÉNICE</speaker>
-            <l n="9" xml:id="l9"> </l>
-          </sp>
-          <sp who="voix-dans-la-foule" xml:id="1-2">
-            <speaker>VOIX DANS LA FOULE.</speaker>
-            <l n="10" xml:id="l10">Ah ! les voici.</l>
-          </sp>
-          <sp who="phénice" xml:id="1-3">
-            <speaker>PHÉNICE, <em>entrant avec messer Caduco.</em></speaker>
-            <l n="11" xml:id="l11">Faisons encore quelques pas,</l>
-            <l n="12" xml:id="l12">Mon père.</l>
-          </sp>
-          <sp who="caduco" xml:id="1-4">
-            <speaker>CADUCO.</speaker>
-            <l n="13" xml:id="l13">Oui, pour nous faire égorger, n’est-ce pas ?</l>
-            <l n="14" xml:id="l14">Je voudrais être un rat pour être dans ma cave !</l>
-            <l n="15" xml:id="l15">Tu profites toujours de ce que je suis brave</l>
-            <l n="16" xml:id="l16">Pour m’entrainer, les soirs de bataille, au-devant</l>
-            <l n="17" xml:id="l17">De nos vaillants soldats, Mais c’est assez avant.</l>
-            <l n="18" xml:id="l18">Phénice, ne rends pas ton père téméraire !</l>
-            <l n="19" xml:id="l19">Songe donc que le sort peut nous être contraire.</l>
-            <l n="20" xml:id="l20">Comment, si l’ennemi nous tombait sur les bras,</l>
-            <l n="21" xml:id="l21">Pourrions-nous regagner Florence tout là-bas ?</l>
-          </sp>
-          <sp who="phénice" xml:id="1-5">
-            <speaker>PHÉNICE.</speaker>
-            <l n="22" xml:id="l22">Le camp arrêterait l’ennemi.</l>
-          </sp>
-          <sp who="caduco" xml:id="1-6">
-            <speaker>CADUCO.</speaker>
-            <l n="23" xml:id="l23">Je l’espère.</l>
-          </sp>
-          <sp who="phénice" xml:id="1-7">
-            <speaker>PHÉNICE.</speaker>
-            <l n="24" xml:id="l24">Puis, comment voulez-vous qu’on nous batte, mon père,</l>
-            <l n="25" xml:id="l25">Quand Paroles...</l>
-          </sp>
-          <sp who="caduco" xml:id="1-8">
-            <speaker>CADUCO.</speaker>
-            <l n="26" xml:id="l26">Parole est un César français !</l>
-          </sp>
-          <sp who="phénice" xml:id="1-9">
-            <speaker>PHÉNICE.</speaker>
-            <l n="27" xml:id="l27">Parole est au combat, nous vaincrons !</l>
-          </sp>
-          <sp who="caduco" xml:id="1-10">
-            <speaker>CADUCO.</speaker>
-            <l n="28" xml:id="l28">Je ne sais.</l>
-            <l n="29" xml:id="l29">L’incertitude peut provenir de deux causes : –</l>
-            <l n="30" xml:id="l30">Du trouble de l’esprit ou du trouble des choses ;</l>
-            <l n="31" xml:id="l31">La chose n’est pas claire – ou l’homme est un dindon.</l>
-          </sp>
-          <sp who="phénice" xml:id="1-11">
-            <speaker>PHÉNICE.</speaker>
-            <l n="32" xml:id="l32">Ici la chose est claire !</l>
-          </sp>
-          <sp who="caduco" xml:id="1-12">
-            <speaker>CADUCO, <em>sincère, puis piqué.</em></speaker>
-            <l n="33" xml:id="l33">Alors, c’est moi... Dis donc !</l>
-          </sp>
-          <sp who="phénice" xml:id="1-13">
-            <speaker>PHÉNICE.</speaker>
-            <l n="34" xml:id="l34">Quel bonheur cependant que le duc de Florence.</l>
-            <l n="35" xml:id="l35">Ait ainsi réclamé l’appui du roi de France !</l>
-            <l n="36" xml:id="l36">Paroles est venu sur un mot de son roi.</l>
-            <l n="37" xml:id="l37">C’est un bien grand bonheur... pour Florence.</l>
-          </sp>
-          <sp who="caduco" xml:id="1-14">
-            <speaker>CADUCO.</speaker>
-            <l n="38" xml:id="l38">Et pour toi,</l>
-            <l n="39" xml:id="l39">Puisqu’il t’aime, ma fille. Ah ! l’orgueil me vient prendre</l>
-            <l n="40" xml:id="l40">Quand je songe parfois que je l’aurai pour gendre !</l>
-            <l n="41" xml:id="l41">Beau-père de Parole !</l>
-          </sp>
-          <sp who="phénice" xml:id="1-15">
-            <speaker>PHÉNICE.</speaker>
-            <l n="42" xml:id="l42">Il court en insensé</l>
-            <l n="43" xml:id="l43">Au devant du péril ; s’il revenait blessé !</l>
-          </sp>
-          <sp who="caduco" xml:id="1-16">
-            <speaker>CADUCO.</speaker>
-            <l n="44" xml:id="l44">Bast ? il revient toujours sans une égratignure.</l>
-          </sp>
-          <sp who="phénice" xml:id="1-17">
-            <speaker>PHÉNICE.</speaker>
-            <l n="45" xml:id="l45">Si j’étais là !</l>
-          </sp>
-          <sp who="caduco" xml:id="1-18">
-            <speaker>CADUCO.</speaker>
-            <l n="46" xml:id="l46">Quel homme ! et quelle autre tournure</l>
-            <l n="47" xml:id="l47">Que celle de Roger ! Celui-là t’aime aussi,</l>
-            <l n="48" xml:id="l48">Mais s’il croit que je vais comparer...</l>
-            <stage><hi rend="italic"><em>Bruit de tambours, cris dans la foule.</em></hi></stage>
-            <l n="50" xml:id="l50">Les voici.</l>
-            <l n="51" xml:id="l51"> </l>
-            <l n="52" xml:id="l52"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="53" xml:id="l53"> </l>
-          <sp who="roger" xml:id="2-1">
-            <speaker>LES MÊMES, QUELQUES OFFICIERS, ROGER, <em>le bras en écharpe</em></speaker>
-            <l n="54" xml:id="l54"> </l>
-          </sp>
-          <sp who="phénice" xml:id="2-2">
-            <speaker>PHÉNICE, <em>courant à Roger.</em></speaker>
-            <l n="55" xml:id="l55">Eh bien, Roger ?</l>
-          </sp>
-          <sp who="roger" xml:id="2-3">
-            <speaker>ROGER.</speaker>
-            <l n="56" xml:id="l56">Victoire !</l>
-          </sp>
-          <sp who="phénice" xml:id="2-4">
-            <speaker>PHÉNICE.</speaker>
-            <l n="57" xml:id="l57">Et Parole ?</l>
-          </sp>
-          <sp who="roger" xml:id="2-5">
-            <speaker>ROGER.</speaker>
-            <l n="58" xml:id="l58">Ah ! Parole !</l>
-            <l n="59" xml:id="l59">Toujours ! – Il n’est pas mort ! – Comment un pareil drôle</l>
-            <l n="60" xml:id="l60">Vous peut-il sur son compte abuser jusque-là !</l>
-          </sp>
-          <sp who="phénice" xml:id="2-6">
-            <speaker>PHÉNICE.</speaker>
-            <l n="61" xml:id="l61">Roger !</l>
-          </sp>
-          <sp who="roger" xml:id="2-7">
-            <speaker>ROGER.</speaker>
-            <l n="62" xml:id="l62">Ce plat faquin tranche de l’Attila !</l>
-            <l n="63" xml:id="l63">Un hâbleur qui vous vient parler de ses voyages</l>
-            <l n="64" xml:id="l64">Parce qu’on l’a toujours chassé de tous parages !</l>
-            <l n="65" xml:id="l65">Qui saute d’Amérique en Afrique – d’un bond, –</l>
-            <l n="66" xml:id="l66">Qui fait le voyageur et n’est qu’un vagabond !</l>
-            <l n="67" xml:id="l67">Qui n’est venu, malgré tous ses airs d’importance,</l>
-            <l n="68" xml:id="l68">Chercher la guerre ici que pour fuir la potence !</l>
-          </sp>
-          <sp who="phénice" xml:id="2-8">
-            <speaker>PHÉNICE.</speaker>
-            <l n="69" xml:id="l69">Cela n’empêche pas que, sans tant de façons,</l>
-            <l n="70" xml:id="l70">Il poursuit l’ennemi, – pendant que nous causons.</l>
-          </sp>
-          <sp who="roger" xml:id="2-9">
-            <speaker>ROGER.</speaker>
-            <l n="71" xml:id="l71">On ne se bat plus. Moi...</l>
-          </sp>
-          <sp who="phénice" xml:id="2-10">
-            <speaker>PHÉNICE.</speaker>
-            <l n="72" xml:id="l72">Lui se bat, j’en suis sûre !</l>
-          </sp>
-          <sp who="roger" xml:id="2-11">
-            <speaker>ROGER.</speaker>
-            <l n="73" xml:id="l73">Atteint à la main droite...</l>
-          </sp>
-          <sp who="caduco" xml:id="2-12">
-            <speaker>CADUCO.</speaker>
-            <l n="74" xml:id="l74">Encore une blessure !</l>
-            <l n="75" xml:id="l75">Ah ! ça, vous êtes donc tout à fait maladroit !</l>
-            <l n="76" xml:id="l76">La poitrine mardi ; dimanche... un autre endroit !</l>
-            <l n="77" xml:id="l77">Aujourd’hui cette main. Il faut qu’un gentilhomme</l>
-            <l n="78" xml:id="l78">Soit plus fort que cela. Qu’est-ce à dire, jeune homme ?</l>
-            <l n="79" xml:id="l79">Voyez le grand Parole ! Il n’est jamais blessé !</l>
-            <l n="80" xml:id="l80">Quel homme !</l>
-          </sp>
-          <sp who="roger" xml:id="2-13">
-            <speaker>ROGER.</speaker>
-            <l n="81" xml:id="l81">Oui, les hasards des batailles, je sais,</l>
-            <l n="82" xml:id="l82">Le traiteront toujours avec miséricorde,</l>
-            <l n="83" xml:id="l83">Et le fer sait trop bien qu’il le doit à la corde.</l>
-            <l n="84" xml:id="l84">Moi, nul gibet ne m’a par malheur réclamé,</l>
-            <l n="85" xml:id="l85">Et qu’importe la vie à qui n’est pas aimé !</l>
-          </sp>
-          <sp who="phénice" xml:id="2-14">
-            <speaker>PHÉNICE.</speaker>
-            <l n="86" xml:id="l86">Si loin que vous alliez dans votre frénésie,</l>
-            <l n="87" xml:id="l87">Je dois tout pardonner à votre jalousie.</l>
-            <l n="88" xml:id="l88">Mais mon cœur vous répond et n’en est pas changé.</l>
-            <l n="89" xml:id="l89">Je l’aime. Vous savez quel caractère j’ai.</l>
-            <l n="90" xml:id="l90">Un fer moins qu’un fuseau pèse à ma main mignonne,</l>
-            <l n="91" xml:id="l91">Et j’ai du page en moi bien plus que de la nonne.</l>
-            <l n="92" xml:id="l92">Je l’adore ! – et je hais vos langueurs. Il me faut</l>
-            <l n="93" xml:id="l93">Son œil toujours vainqueur et son front toujours haut.</l>
-            <l n="94" xml:id="l94">Vous, vous venez toujours avec des yeux humides,</l>
-            <l n="95" xml:id="l95">L’air contraint...</l>
-          </sp>
-          <sp who="roger" xml:id="2-15">
-            <speaker>ROGER.</speaker>
-            <l n="96" xml:id="l96">Croyez-moi, les braves sont timides.</l>
-          </sp>
-          <sp who="caduco" xml:id="2-16">
-            <speaker>CADUCO.</speaker>
-            <l n="97" xml:id="l97">Raconte-lui comment, l’autre jour, lundi soir,</l>
-            <l n="98" xml:id="l98">Croyant apparemment que je ne pouvais voir</l>
-            <l n="99" xml:id="l99">Parce que je penchais la tête à la croisée,</l>
-            <l n="100" xml:id="l100">Le grand Paroles t’a sur la bouche embrassée.</l>
-            <l n="101" xml:id="l101">– Jeune homme, elle a raison, et ce n’est pas français</l>
-            <l n="102" xml:id="l102">De ne pas l’embrasser !</l>
-          </sp>
-          <sp who="phénice" xml:id="2-17">
-            <speaker>PHÉNICE.</speaker>
-            <l n="103" xml:id="l103">Si je vous épousais,</l>
-            <l n="104" xml:id="l104">Je serais le garçon et vous la demoiselle !</l>
-          </sp>
-          <sp who="roger" xml:id="2-18">
-            <speaker>ROGER.</speaker>
-            <l n="105" xml:id="l105">Vaut-il mieux être donc deux garçons ? – Chère belle,</l>
-            <l n="106" xml:id="l106">Ah ! si j’en peux jamais trouver l’occasion,</l>
-            <l n="107" xml:id="l107">Je vous ferai rougir de sa confusion.</l>
-            <stage><hi rend="italic"><em>Bruits de voix.</em></hi></stage>
-            <l n="109" xml:id="l109"> </l>
-            <l n="110" xml:id="l110"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="111" xml:id="l111"> </l>
-          <sp who="paroles" xml:id="3-1">
-            <speaker>LES MÊMES, PAROLES, DU MAINE, OFFICIERS</speaker>
-            <l n="112" xml:id="l112"> </l>
-          </sp>
-          <sp who="phénice" xml:id="3-2">
-            <speaker>PHÉNICE.</speaker>
-            <l n="113" xml:id="l113">Ah ! c’est lui.</l>
-          </sp>
-          <sp who="paroles" xml:id="3-3">
-            <speaker>PAROLES.</speaker>
-            <l n="114" xml:id="l114">Perdre ainsi notre tambour ! du diable !</l>
-          </sp>
-          <sp who="du-maine" xml:id="3-4">
-            <speaker>DU MAINE.</speaker>
-            <l n="115" xml:id="l115">Mais cependant...</l>
-          </sp>
-          <sp who="paroles" xml:id="3-5">
-            <speaker>PAROLES, <em>aux officiers.</em></speaker>
-            <l n="116" xml:id="l116">Allons, c’est un coup effroyable !</l>
-          </sp>
-          <sp who="phénice" xml:id="3-6">
-            <speaker>PHÉNICE, <em>s’approchant doucement.</em></speaker>
-            <l n="117" xml:id="l117">Paroles.</l>
-          </sp>
-          <sp who="paroles" xml:id="3-7">
-            <speaker>PAROLES.</speaker>
-            <l n="118" xml:id="l118">Ah ! c’est vous, Phénice ! vous voilà,</l>
-            <l n="119" xml:id="l119">Caduco. – Le laisser prendre comme cela !</l>
-          </sp>
-          <sp who="phénice" xml:id="3-8">
-            <speaker>PHÉNICE.</speaker>
-            <l n="120" xml:id="l120">Seigneur, qu’arrive-t-il ? J’en suis tout alarmée.</l>
-            <l n="121" xml:id="l121">Que s’est-il donc passé de fâcheux pour l’armée ?</l>
-            <l n="122" xml:id="l122">Qu’avez-vous ? la victoire...</l>
-          </sp>
-          <sp who="paroles" xml:id="3-9">
-            <speaker>PAROLES.</speaker>
-            <l n="123" xml:id="l123">Est suffisante ainsi.</l>
-          </sp>
-          <sp who="phénice" xml:id="3-10">
-            <speaker>PHÉNICE.</speaker>
-            <l n="124" xml:id="l124">Vous n’êtes pas blessé pourtant ?</l>
-          </sp>
-          <sp who="paroles" xml:id="3-11">
-            <speaker>PAROLES.</speaker>
-            <l n="125" xml:id="l125">Non, Dieu merci.</l>
-          </sp>
-          <sp who="phénice" xml:id="3-12">
-            <speaker>PHÉNICE.</speaker>
-            <l n="126" xml:id="l126">L’aile où vous combattiez ?...</l>
-          </sp>
-          <sp who="paroles" xml:id="3-13">
-            <speaker>PAROLES, <em>n</em><em>égligemment.</em></speaker>
-            <l n="127" xml:id="l127">S’est couverte de gloire.</l>
-          </sp>
-          <sp who="phénice" xml:id="3-14">
-            <speaker>PHÉNICE.</speaker>
-            <l n="128" xml:id="l128">La bataille ?</l>
-          </sp>
-          <sp who="paroles" xml:id="3-15">
-            <speaker>PAROLES.</speaker>
-            <l n="129" xml:id="l129">Est pour nous une pleine victoire.</l>
-            <l n="130" xml:id="l130">L’ennemi ne se peut relever de ce jour,</l>
-            <l n="131" xml:id="l131">Mais nous avons perdu...</l>
-          </sp>
-          <sp who="phénice" xml:id="3-16">
-            <speaker>PHÉNICE.</speaker>
-            <l n="132" xml:id="l132">Le duc ?</l>
-          </sp>
-          <sp who="paroles" xml:id="3-17">
-            <speaker>PAROLES.</speaker>
-            <l n="133" xml:id="l133">Non. – Un tambour.</l>
-          </sp>
-          <sp who="phénice" xml:id="3-18">
-            <speaker>ROGER, <em>à Phénice.</em></speaker>
-            <l n="134" xml:id="l134">Ce n’est, – rassurez-vous, l’avantage nous reste, –</l>
-            <l n="135" xml:id="l135">Qu’un tambour !</l>
-          </sp>
-          <sp who="paroles" xml:id="3-19">
-            <speaker>PAROLES.</speaker>
-            <l n="136" xml:id="l136">Qu’un tambour ! Ce n’est qu’un tambour ! Peste !</l>
-            <l n="137" xml:id="l137">Si l’on m’eût écouté !</l>
-          </sp>
-          <sp who="roger" xml:id="3-20">
-            <speaker>ROGER, <em>à part.</em></speaker>
-            <l n="138" xml:id="l138">Quelle idée ! il faut voir.</l>
-            <stage><hi rend="italic"><em>Haut, à Paroles.</em></hi></stage>
-            <l n="140" xml:id="l140">Enfin, on ne peut plus maintenant le ravoir !</l>
-          </sp>
-          <sp who="paroles" xml:id="3-21">
-            <speaker>PAROLES.</speaker>
-            <l n="141" xml:id="l141">On pouvait le ravoir !</l>
-          </sp>
-          <sp who="roger" xml:id="3-22">
-            <speaker>ROGER.</speaker>
-            <l n="142" xml:id="l142">On le pouvait, peut-être,</l>
-            <l n="143" xml:id="l143">Mais on ne le peut plus.</l>
-          </sp>
-          <sp who="paroles" xml:id="3-23">
-            <speaker>PAROLES.</speaker>
-            <l n="144" xml:id="l144">On le peut encore !</l>
-          </sp>
-          <sp who="caduco" xml:id="3-24">
-            <speaker>CADUCO, <em>exalté.</em></speaker>
-            <l n="145" xml:id="l145">Être</l>
-            <l n="146" xml:id="l146">Beau-père de Parole ! Ah ! l’ai-je mérité !</l>
-          </sp>
-          <sp who="roger" xml:id="3-25">
-            <speaker>ROGER.</speaker>
-            <l n="147" xml:id="l147">Prétendez-vous par là que vous êtes tenté ?...</l>
-          </sp>
-          <sp who="phénice" xml:id="3-26">
-            <speaker>PHÉNICE.</speaker>
-            <l n="148" xml:id="l148">Vous n’allez pas vous mettre en ce péril, je pense !</l>
-          </sp>
-          <sp who="paroles" xml:id="3-27">
-            <speaker>PAROLES.</speaker>
-            <l n="149" xml:id="l149">Si je ne savais pas comment on récompense</l>
-            <l n="150" xml:id="l150">Les grandes actions, et que tout le profit</l>
-            <l n="151" xml:id="l151">Est vole par un drôle à celui qui les fit,</l>
-            <l n="152" xml:id="l152">J’entreprendrais le fait sans nulle patenôtre,</l>
-            <l n="153" xml:id="l153">Et je rapporterais ce tambour, ou quelque autre ;</l>
-            <stage><hi rend="italic">Ou bien j’y trouverais mon <em>hic jacet !</em></hi></stage>
-          </sp>
-          <sp who="roger" xml:id="3-28">
-            <speaker>ROGER.</speaker>
-            <l n="155" xml:id="l155">Parbleu !</l>
-            <l n="156" xml:id="l156">Lieutenant, nous voilà cinq ici qui, pour peu</l>
-            <l n="157" xml:id="l157">Que vous soyez tenté d’entreprendre la chose,</l>
-            <l n="158" xml:id="l158">En pouvons au besoin témoigner, je suppose.</l>
-          </sp>
-          <sp who="phénice" xml:id="3-29">
-            <speaker>PHÉNICE.</speaker>
-            <l n="159" xml:id="l159">Paroles, n’allez pas, pour un banal défi,</l>
-            <l n="160" xml:id="l160">Chercher un tel danger, – la mort peut-être !</l>
-          </sp>
-          <sp who="caduco" xml:id="3-30">
-            <speaker>CADUCO.</speaker>
-            <l n="161" xml:id="l161">Fi !</l>
-            <l n="162" xml:id="l162">Laisse-le donc aller.</l>
-          </sp>
-          <sp who="phénice" xml:id="3-31">
-            <speaker>PHÉNICE.</speaker>
-            <l n="163" xml:id="l163">Paroles ! sur ma vie !</l>
-          </sp>
-          <sp who="roger" xml:id="3-32">
-            <speaker>ROGER.</speaker>
-            <l n="164" xml:id="l164">Soyez tranquille, allez, il n’en a guère envie !</l>
-            <l n="165" xml:id="l165">Jamais dans son esprit ce projet n’est entré.</l>
-          </sp>
-          <sp who="caduco" xml:id="3-33">
-            <speaker>CADUCO.</speaker>
-            <l n="166" xml:id="l166">Il ira !</l>
-          </sp>
-          <sp who="roger" xml:id="3-34">
-            <speaker>ROGER.</speaker>
-            <l n="167" xml:id="l167">Vous verrez qu’il n’ira pas !</l>
-          </sp>
-          <sp who="paroles" xml:id="3-35">
-            <speaker>PAROLES.</speaker>
-            <l n="168" xml:id="l168">J’irai.</l>
-          </sp>
-          <sp who="phénice" xml:id="3-36">
-            <speaker>PHÉNICE.</speaker>
-            <l n="169" xml:id="l169">Ciel !</l>
-          </sp>
-          <sp who="roger" xml:id="3-37">
-            <speaker>ROGER, <em>raillant.</em></speaker>
-            <l n="170" xml:id="l170">Vrai ?</l>
-          </sp>
-          <sp who="paroles" xml:id="3-38">
-            <speaker>PAROLES.</speaker>
-            <l n="171" xml:id="l171">Foi de soldat !</l>
-          </sp>
-          <sp who="roger" xml:id="3-39">
-            <speaker>ROGER.</speaker>
-            <l n="172" xml:id="l172">Oui, demain.</l>
-          </sp>
-          <sp who="paroles" xml:id="3-40">
-            <speaker>PAROLES.</speaker>
-            <l n="173" xml:id="l173">Tout de suite !</l>
-            <l n="174" xml:id="l174">– J’essaierai ce qu’on peut. – Je verrai. Je vous quitte</l>
-            <l n="175" xml:id="l175">Pour aller dans ma tente à deux pas m’habiller ;</l>
-            <l n="176" xml:id="l176">Et pour coucher un peu mon plan sur le papier.</l>
-            <l n="177" xml:id="l177">Je ne crains ni le fer, ni les eaux, ni les flammes,</l>
-            <l n="178" xml:id="l178">Lorsque l’honneur m’appelle. – Un seul mot, bonnes lames :</l>
-            <l n="179" xml:id="l179">Si vous restez encore une minute ici,</l>
-            <l n="180" xml:id="l180">Vous me verrez partir dans un moment.</l>
-            <l n="181" xml:id="l181">Voici La nuit close déjà. Je me hâte. Tu voles,</l>
-            <l n="182" xml:id="l182">Ô temps ! et moi, je hais de te perdre en paroles.</l>
-          </sp>
-          <sp who="roger" xml:id="3-41">
-            <speaker>ROGER, <em>riant.</em></speaker>
-            <l n="183" xml:id="l183">Comme un poisson hait l’eau.</l>
-            <stage><hi rend="italic"><em>Paroles sort. La nuit est tout à fait tombée.</em></hi></stage>
-            <l n="185" xml:id="l185"> </l>
-            <l n="186" xml:id="l186"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="187" xml:id="l187"> </l>
-          <sp who="paroles" xml:id="4-1">
-            <speaker>LES MÊMES, <em>excepté</em> PAROLES</speaker>
-            <l n="188" xml:id="l188"> </l>
-          </sp>
-          <sp who="roger" xml:id="4-2">
-            <speaker>ROGER.</speaker>
-            <l n="189" xml:id="l189">Le maraud ! de quel front</l>
-            <l n="190" xml:id="l190">Il s’engage, sans peur du rire et de l’affront,</l>
-            <l n="191" xml:id="l191">À tenter, fanfaron qu’un fer tiré fait blême,</l>
-            <l n="192" xml:id="l192">Une action qu’il sait impossible lui-même !</l>
-          </sp>
-          <sp who="caduco" xml:id="4-3">
-            <speaker>CADUCO.</speaker>
-            <l n="193" xml:id="l193">Impossible ? – Jeune homme, il reviendra vainqueur !</l>
-          </sp>
-          <sp who="phénice" xml:id="4-4">
-            <speaker>PHÉNICE.</speaker>
-            <l n="194" xml:id="l194">L’impossible toujours a tenté tout grand cœur.</l>
-          </sp>
-          <sp who="roger" xml:id="4-5">
-            <speaker>ROGER.</speaker>
-            <l n="195" xml:id="l195">Or, sérieusement vous croyez que le drôle</l>
-            <l n="196" xml:id="l196">Est dans l’intention de tenir sa parole ?</l>
-          </sp>
-          <sp who="phénice" xml:id="4-6">
-            <speaker>PHÉNICE.</speaker>
-            <l n="197" xml:id="l197">Pourquoi pas ?</l>
-          </sp>
-          <sp who="roger" xml:id="4-7">
-            <speaker>ROGER.</speaker>
-            <l n="198" xml:id="l198">Et qu’il va courir un tel péril ?...</l>
-          </sp>
-          <sp who="phénice" xml:id="4-8">
-            <speaker>PHÉNICE.</speaker>
-            <l n="199" xml:id="l199">Eh ! sans doute ; autrement, pourquoi s’offrirait-il ?</l>
-          </sp>
-          <sp who="roger" xml:id="4-9">
-            <speaker>ROGER.</speaker>
-            <l n="200" xml:id="l200">Par le ciel ! il faut donc que je vous le démasque !</l>
-            <l n="201" xml:id="l201">Voulez-vous vous prêter à mon projet fantasque ?</l>
-            <l n="202" xml:id="l202">Vous verrez le dessous de sa valeur.</l>
-          </sp>
-          <sp who="phénice" xml:id="4-10">
-            <speaker>PHÉNICE.</speaker>
-            <l n="203" xml:id="l203">Pourquoi ?</l>
-            <l n="204" xml:id="l204">Je suis sûre de lui.</l>
-          </sp>
-          <sp who="caduco" xml:id="4-11">
-            <speaker>CADUCO.</speaker>
-            <l n="205" xml:id="l205">J’en suis sûr aussi, moi.</l>
-          </sp>
-          <sp who="roger" xml:id="4-12">
-            <speaker>ROGER.</speaker>
-            <l n="206" xml:id="l206">Alors, c’est le moyen de me fermer la bouche.</l>
-          </sp>
-          <sp who="phénice" xml:id="4-13">
-            <speaker>PHÉNICE.</speaker>
-            <l n="207" xml:id="l207">Voyons, que faut-il faire ?</l>
-          </sp>
-          <sp who="roger" xml:id="4-14">
-            <speaker>ROGER.</speaker>
-            <l n="208" xml:id="l208">Envelopper la mouche</l>
-            <l n="209" xml:id="l209">De toiles d’araignée. – En êtes-vous aussi,</l>
-            <l n="210" xml:id="l210">Messieurs ?</l>
-          </sp>
-          <sp who="du-maine" xml:id="4-15">
-            <speaker>DU MAINE.</speaker>
-            <l n="211" xml:id="l211">Volontiers.</l>
-          </sp>
-          <sp who="phénice" xml:id="4-16">
-            <speaker>PHÉNICE.</speaker>
-            <l n="212" xml:id="l212">Mais...</l>
-          </sp>
-          <sp who="roger" xml:id="4-17">
-            <speaker>ROGER.</speaker>
-            <l n="213" xml:id="l213">Vous verrez. – Le voici.</l>
-            <l n="214" xml:id="l214"> </l>
-            <l n="215" xml:id="l215"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="216" xml:id="l216"> </l>
-          <sp who="paroles" xml:id="5-1">
-            <speaker>LES MÊMES, PAROLES, <em>armé jusqu’aux dents</em></speaker>
-            <l n="217" xml:id="l217"> </l>
-          </sp>
-          <sp who="paroles" xml:id="5-2">
-            <speaker>PAROLES, <em>les apercevant. À part.</em></speaker>
-            <l n="218" xml:id="l218">Ah !</l>
-            <stage><hi rend="italic"><em>Comme ne les voyant pas. Méditant. </em></hi></stage>
-            <l n="220" xml:id="l220">C’est bien, le danger est terrible, n’importe !</l>
-            <l n="221" xml:id="l221">Et j’ensanglanterais ma mort d’étrange sorte !</l>
-            <l n="222" xml:id="l222">– Viens, ne fais pas défaut, mon épée, à mon bras,</l>
-            <l n="223" xml:id="l223">Et mon bras, j’en réponds, ne te manquera pas.</l>
-            <stage><hi rend="italic"><em>Il feint de les apercevoir.</em></hi></stage>
-            <l n="225" xml:id="l225">Quoi ! vous encore, enfants ? Rentrez donc.</l>
-          </sp>
-          <sp who="roger" xml:id="5-3">
-            <speaker>ROGER, <em>à part.</em></speaker>
-            <l n="226" xml:id="l226">Il m’assomme,</l>
-            <l n="227" xml:id="l227">Le lâche !</l>
-          </sp>
-          <sp who="phénice" xml:id="5-4">
-            <speaker>PHÉNICE, <em>à part.</em></speaker>
-            <l n="228" xml:id="l228">Il me ravit.</l>
-          </sp>
-          <sp who="caduco" xml:id="5-5">
-            <speaker>CADUCO, <em>à part.</em></speaker>
-            <l n="229" xml:id="l229">Il m’ébahit. Quel homme !</l>
-          </sp>
-          <sp who="phénice" xml:id="5-6">
-            <speaker>PHÉNICE.</speaker>
-            <l n="230" xml:id="l230">Soyez prudent, Parole.</l>
-          </sp>
-          <sp who="paroles" xml:id="5-7">
-            <speaker>PAROLES.</speaker>
-            <l n="231" xml:id="l231">Eh ! vous me connaissez !</l>
-            <l n="232" xml:id="l232">Je ne puis par malheur me contenir assez.</l>
-            <l n="233" xml:id="l233">Je ne vous promets rien ; – rien, excepté la gloire</l>
-            <l n="234" xml:id="l234">Qui devra rejaillir sur vous de ma victoire.</l>
-            <l n="235" xml:id="l235">Si je succombe, dam ! – bien des femmes, cher cœur,</l>
-            <l n="236" xml:id="l236">Sangloteront alors ; – vous mènerez le chœur.</l>
-            <l n="237" xml:id="l237">Beau spectacle !</l>
-          </sp>
-          <sp who="phénice" xml:id="5-8">
-            <speaker>PHÉNICE, <em>pleurant.</em></speaker>
-            <l n="238" xml:id="l238">Au revoir.</l>
-          </sp>
-          <sp who="paroles" xml:id="5-9">
-            <speaker>PAROLES.</speaker>
-            <l n="239" xml:id="l239">Va, bientôt, pauvre femme,</l>
-            <l n="240" xml:id="l240">Je viens mettre à tes pieds ce tambour et mon âme.</l>
-            <stage><hi rend="italic"><em>Il serre la main à tous, les reconduit jusqu’aux tentes, et fait quelques pas du côté de l’ennemi ; mais il revient précipitamment d’un pied léger sur le devant du théâtre. Les autres retiennent bientôt aussi sans bruit derrière lui et s’échelonnent dans l’ombre derrière les buissons et les arbres. </em></hi></stage>
-            <l n="242" xml:id="l242"> </l>
-            <l n="243" xml:id="l243"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="244" xml:id="l244"> </l>
-          <sp who="paroles" xml:id="6-1">
-            <speaker>PAROLES, LES AUTRES CACHÉS</speaker>
-            <l n="245" xml:id="l245"> </l>
-          </sp>
-          <sp who="paroles" xml:id="6-2">
-            <speaker>PAROLES.</speaker>
-            <l n="246" xml:id="l246">Partis ! me voilà seul, tout seul, trop seul, mon Dieu ! –</l>
-            <l n="247" xml:id="l247">Là, mes genoux ! – Voyons, réfléchissons un peu.</l>
-            <l n="248" xml:id="l248">Je tremble, il fait si chaud ! – Qu’est-ce que je vais faire ?</l>
-            <l n="249" xml:id="l249">Rester ici caché ; ce n’est pas là l’affaire !</l>
-            <l n="250" xml:id="l250">Je ne vais pas du camp, je sais bien, m’écarter !</l>
-            <l n="251" xml:id="l251">Mais que vais-je leur dire au retour ? qu’inventer ?</l>
-            <l n="252" xml:id="l252">Quelle histoire bâtir à l’histoire contraire ?</l>
-            <l n="253" xml:id="l253">Tu vois où tu me mets, ma langue ! Ah ! téméraire,</l>
-            <l n="254" xml:id="l254">Tu braves tout, ardente aux propos triomphants...</l>
-            <l n="255" xml:id="l255">– Mais mon cœur n’aime, lui, ni Mars, ni ses enfants.</l>
-            <l n="256" xml:id="l256">Mon pauvre faible cœur te dément, imprudente !</l>
-          </sp>
-          <sp who="roger" xml:id="6-3">
-            <speaker>ROGER, <em>à part.</em></speaker>
-            <l n="257" xml:id="l257">C’est le premier mot vrai qu’elle ait dit, l’impudente !</l>
-          </sp>
-          <sp who="paroles" xml:id="6-4">
-            <speaker>PAROLES.</speaker>
-            <l n="258" xml:id="l258">Quel démon me poussait quand je me suis chargé</l>
-            <l n="259" xml:id="l259">De ravoir ce tambour ? Où me suis-je engagé ?</l>
-            <l n="260" xml:id="l260">Dans quel sot cul-de sac d’une action terrible ?</l>
-            <l n="261" xml:id="l261">Avais-je donc vraiment soif de gloire impossible ?</l>
-            <l n="262" xml:id="l262">– Soif de mon sang ! non pas. – Si, pour m’en retirer,</l>
-            <l n="263" xml:id="l263">J’osais d’une blessure, hélas ! me balafrer !</l>
-            <l n="264" xml:id="l264">L’oserai-je ? – Il faudrait une plaie effroyable</l>
-            <l n="265" xml:id="l265">Pour les convaincre un peu, ces saints Thomas du diable !</l>
-            <l n="266" xml:id="l266">On ne sort qu’en morceaux d’un jeu comme cela !</l>
-            <l n="267" xml:id="l267">Enfin essayons. – Hai ! – Du courage ! – Oh ! là ! là !</l>
-            <l n="268" xml:id="l268">– C’est que je saigne presque avec cette chimère.</l>
-            <l n="269" xml:id="l269">Pauvre moi ! Je me porte un intérêt de mère !</l>
-            <l n="270" xml:id="l270">Là ! là ! – Chienne de langue ! Ah ! je te couperais</l>
-            <l n="271" xml:id="l271">Si tu ne me tenais, bâtarde, d’aussi près !</l>
-          </sp>
-          <sp who="du-maine" xml:id="6-5">
-            <speaker>DU MAINE, <em>caché.</em></speaker>
-            <l n="272" xml:id="l272">Qu’un pareil cuistre, avec sa lâche conscience,</l>
-            <l n="273" xml:id="l273">Prenne ainsi des dehors d’honneur et de vaillance !</l>
-          </sp>
-          <sp who="paroles" xml:id="6-6">
-            <speaker>PAROLES, <em>rêvant.</em></speaker>
-            <l n="274" xml:id="l274">Si je me transformais mes habits en haillons !</l>
-            <l n="275" xml:id="l275">– Ma bonne lame, vierge encor des bataillons,</l>
-            <l n="276" xml:id="l276">Si je la brisais !</l>
-          </sp>
-          <sp who="roger" xml:id="6-7">
-            <speaker>ROGER, <em>caché.</em></speaker>
-            <l n="277" xml:id="l277">Peuh ! misérable défaite !</l>
-          </sp>
-          <sp who="paroles" xml:id="6-8">
-            <speaker>PAROLES.</speaker>
-            <l n="278" xml:id="l278">Je puis couper ma barbe et jurer sur ma tête</l>
-            <l n="279" xml:id="l279">Que c’était une ruse adroite...</l>
-          </sp>
-          <sp who="du-maine" xml:id="6-9">
-            <speaker>DU MAINE, <em>caché.</em></speaker>
-            <l n="280" xml:id="l280">Maladroit !</l>
-          </sp>
-          <sp who="paroles" xml:id="6-10">
-            <speaker>PAROLES.</speaker>
-            <l n="281" xml:id="l281">Racontons-leur qu’au fort j’ai sauté d’un grand toit,</l>
-            <l n="282" xml:id="l282">D’un toit fait pour les chats courant sur les ardoises,</l>
-            <l n="283" xml:id="l283">D’un toit haut...</l>
-          </sp>
-          <sp who="roger" xml:id="6-11">
-            <speaker>ROGER, <em>caché.</em></speaker>
-            <l n="284" xml:id="l284">De combien ?...</l>
-          </sp>
-          <sp who="paroles" xml:id="6-12">
-            <speaker>PAROLES.</speaker>
-            <l n="285" xml:id="l285">Haut de trente-deux toises.</l>
-            <l n="286" xml:id="l286">– Noyons mes vêtements ; je dirais, ainsi nu,</l>
-            <l n="287" xml:id="l287">Que l’on m’a dépouillé.</l>
-          </sp>
-          <sp who="du-maine" xml:id="6-13">
-            <speaker>DU MAINE, <em>caché.</em></speaker>
-            <l n="288" xml:id="l288">Non, moyen saugrenu !</l>
-          </sp>
-          <sp who="paroles" xml:id="6-14">
-            <speaker>PAROLES, <em>désespéré.</em></speaker>
-            <l n="289" xml:id="l289">N’est-il pas dans un coin quelque tambour honnête ?</l>
-            <l n="290" xml:id="l290">Ma trouvaille pourrait passer pour ma conquête.</l>
-          </sp>
-          <sp who="roger" xml:id="6-15">
-            <speaker>ROGER.</speaker>
-            <l n="291" xml:id="l291">À nous, Messieurs ! Donnons à ses vœux de l’écho !</l>
-            <stage><hi rend="italic"><em>Bruit de tambour.</em></hi></stage>
-          </sp>
-          <sp who="paroles" xml:id="6-16">
-            <speaker>PAROLES, <em>effrayé.</em></speaker>
-            <l n="293" xml:id="l293">Un tambour ennemi !</l>
-            <l n="294" xml:id="l294"> </l>
-            <l n="295" xml:id="l295"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="296" xml:id="l296"> </l>
-          <sp who="soldats" xml:id="7-1">
-            <speaker>ROGER, CADUCO, DU MAINE, PHÉNICE, DEUX OFFICIERS, <em>sortent de leurs cachettes et tombent sur Paroles, des soldats portent des torches</em></speaker>
-            <l n="297" xml:id="l297"> </l>
-          </sp>
-          <sp who="tous" xml:id="7-2">
-            <speaker>TOUS, <em>criant et déguisant leurs voix.</em></speaker>
-            <l n="298" xml:id="l298">Cargo ! cargo ! cargo !</l>
-            <stage><hi rend="italic"><em>On lui met un mouchoir sur les yeux.</em></hi></stage>
-          </sp>
-          <sp who="paroles" xml:id="7-3">
-            <speaker>PAROLES.</speaker>
-            <l n="300" xml:id="l300">Quartier, Messieurs, quartier ! – Mes yeux ! on me les bande !</l>
-          </sp>
-          <sp who="roger" xml:id="7-4">
-            <speaker>ROGER, <em>d’un ton terrible.</em></speaker>
-            <l n="301" xml:id="l301">Throca morovousus par corbo villiande !</l>
-          </sp>
-          <sp who="paroles" xml:id="7-5">
-            <speaker>PAROLES.</speaker>
-            <l n="302" xml:id="l302">Grâce ! pardon ! pitié !</l>
-          </sp>
-          <sp who="roger" xml:id="7-6">
-            <speaker>ROGER.</speaker>
-            <l n="303" xml:id="l303">Boskos thromu boscos !</l>
-          </sp>
-          <sp who="paroles" xml:id="7-7">
-            <speaker>PAROLES, <em>épouvanté.</em></speaker>
-            <l n="304" xml:id="l304">Oui, vous êtes, je vois, la troupe de Muskos,</l>
-            <l n="305" xml:id="l305">Et vous m’allez tuer, faute de me comprendre !</l>
-            <l n="306" xml:id="l306">Nul de vous n’aurait-il ce service à me rendre</l>
-            <l n="307" xml:id="l307">D’être Allemand ? Danois ? Italien ? Français ?</l>
-            <l n="308" xml:id="l308">Qu’il parle ! et je dirai des choses que je sais,</l>
-            <l n="309" xml:id="l309">Et qui seraient bientôt la perte de Florence.</l>
-          </sp>
-          <sp who="roger" xml:id="7-8">
-            <speaker>ROGER.</speaker>
-            <l n="310" xml:id="l310">Boskos ravanvado. – Parle, je suis de France.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-9">
-            <speaker>PAROLES.</speaker>
-            <l n="311" xml:id="l311">Ah ! merci, mon sauveur !</l>
-          </sp>
-          <sp who="roger" xml:id="7-10">
-            <speaker>ROGER.</speaker>
-            <l n="312" xml:id="l312">Mais prends garde, ma foi,</l>
-            <l n="313" xml:id="l313">L’ami. Dix-sept poignards sont levés contre toi !</l>
-          </sp>
-          <sp who="paroles" xml:id="7-11">
-            <speaker>PAROLES.</speaker>
-            <l n="314" xml:id="l314">Heuh !</l>
-          </sp>
-          <sp who="roger" xml:id="7-12">
-            <speaker>ROGER.</speaker>
-            <l n="315" xml:id="l315">Tu peux prier Dieu. Foscorbin En prière.</l>
-            <l n="316" xml:id="l316">– Chamodovania ?</l>
-          </sp>
-          <sp who="du-maine" xml:id="7-13">
-            <speaker>DU MAINE, <em>d’un ton de clémence.</em></speaker>
-            <l n="317" xml:id="l317">Dulche volivorriere.</l>
-          </sp>
-          <sp who="roger" xml:id="7-14">
-            <speaker>ROGER.</speaker>
-            <l n="318" xml:id="l318">Le général consent à l’épargner encor ;</l>
-            <l n="319" xml:id="l319">Mais tu lui fourniras...</l>
-          </sp>
-          <sp who="paroles" xml:id="7-15">
-            <speaker>PAROLES.</speaker>
-            <l n="320" xml:id="l320">Des renseignements d’or</l>
-            <l n="321" xml:id="l321">Sur nos forces, nos plans ; tout pour sauver ma tête !</l>
-            <l n="322" xml:id="l322"> </l>
-          </sp>
-          <sp who="phénice" xml:id="7-16">
-            <speaker>ROGER, <em>bas à Phénice.</em></speaker>
-            <l n="323" xml:id="l323">Eh bien ?</l>
-          </sp>
-          <sp who="phénice" xml:id="7-17">
-            <speaker>PHÉNICE, bas.</speaker>
-            <l n="324" xml:id="l324">Ah ! j’en ai honte !</l>
-          </sp>
-          <sp who="caduco" xml:id="7-18">
-            <speaker>CADUCO, <em>bas.</em></speaker>
-            <l n="325" xml:id="l325">Et moi, j’en deviens bête.</l>
-          </sp>
-          <sp who="du-maine" xml:id="7-19">
-            <speaker>DU MAINE, <em>de même.</em></speaker>
-            <l n="326" xml:id="l326">Quel gueux !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-20">
-            <speaker>PHÉNICE, <em>de même.</em></speaker>
-            <l n="327" xml:id="l327">Mais avec vous je veux du moins, Roger,</l>
-            <l n="328" xml:id="l328">Le confondre, et moi-même ici l’interroger.</l>
-            <l n="329" xml:id="l329">Laissez-moi ce plaisir, dites, monsieur du Maine.</l>
-          </sp>
-          <sp who="du-maine" xml:id="7-21">
-            <speaker>DU MAINE.</speaker>
-            <l n="330" xml:id="l330">Faites à votre gré. Vous êtes notre reine.</l>
-          </sp>
-          <sp who="phénice" xml:id="7-22">
-            <speaker>PHÉNICE, <em>grossissant sa voix.</em></speaker>
-            <l n="331" xml:id="l331">Porto tartaros.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-23">
-            <speaker>PAROLES.</speaker>
-            <l n="332" xml:id="l332">Quoi ?</l>
-          </sp>
-          <sp who="roger" xml:id="7-24">
-            <speaker>ROGER.</speaker>
-            <l n="333" xml:id="l333">Réponds aux questions</l>
-            <l n="334" xml:id="l334">Du général lui-même.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-25">
-            <speaker>PAROLES.</speaker>
-            <l n="335" xml:id="l335">Ah ! bien.</l>
-          </sp>
-          <sp who="phénice" xml:id="7-26">
-            <speaker>PHÉNICE.</speaker>
-            <l n="336" xml:id="l336">Les bastions</l>
-            <l n="337" xml:id="l337">De la porte du Nord, y fait-on bonne garde,</l>
-            <l n="338" xml:id="l338">Drôle ?</l>
-          </sp>
-          <sp who="paroles" xml:id="7-27">
-            <speaker>PAROLES.</speaker>
-            <l n="339" xml:id="l339">Non, pas du tout, et, par cette cocarde,</l>
-            <l n="340" xml:id="l340">Je vous les livrerai, Monseigneur, dès ce soir.</l>
-            <l n="341" xml:id="l341">Voulez-vous ?</l>
-          </sp>
-          <sp who="phénice" xml:id="7-28">
-            <speaker>PHÉNICE.</speaker>
-            <l n="342" xml:id="l342">On verra. Fais nous toujours savoir</l>
-            <l n="343" xml:id="l343">À combien votre armée en ce moment se monte.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-29">
-            <speaker>PAROLES.</speaker>
-            <l n="344" xml:id="l344">Bon ! attendez. – D’abord mille chevaux. – Je compte</l>
-            <l n="345" xml:id="l345">D’une part dix-huit cents, douze cents d’autre part,</l>
-            <l n="346" xml:id="l346">Trois mille fantassins, – mais soldats de hasard,</l>
-            <l n="347" xml:id="l347">Comme je n’en ai pas commandé dans mes guerres.</l>
-            <l n="348" xml:id="l348">Et puis leurs officiers sont de si tristes hères !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-30">
-            <speaker>PHÉNICE.</speaker>
-            <l n="349" xml:id="l349">Oui-dà ? – Vous écrivez ce que ce maraud dit ?</l>
-          </sp>
-          <sp who="paroles" xml:id="7-31">
-            <speaker>PAROLES.</speaker>
-            <l n="350" xml:id="l350">Écrivez, écrivez ! et que je sois maudit</l>
-            <l n="351" xml:id="l351">Si je mens de cela. Notez-vous : tristes hères ?</l>
-          </sp>
-          <sp who="roger" xml:id="7-32">
-            <speaker>ROGER.</speaker>
-            <l n="352" xml:id="l352">C’est écrit.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-33">
-            <speaker>PAROLES.</speaker>
-            <l n="353" xml:id="l353">Merci bien.</l>
-          </sp>
-          <sp who="caduco" xml:id="7-34">
-            <speaker>CADUCO.</speaker>
-            <l n="354" xml:id="l354">En voilà de sévères !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-35">
-            <speaker>DU MAINE, <em>bas à Phénice.</em></speaker>
-            <l n="355" xml:id="l355">Mettez-le sur mon compte. Aggravons nos griefs.</l>
-          </sp>
-          <sp who="phénice" xml:id="7-36">
-            <speaker>PHÉNICE, <em>à Paroles.</em></speaker>
-            <l n="356" xml:id="l356">Qu’est-ce donc qu’un certain du Maine, un de vos chefs ?</l>
-          </sp>
-          <sp who="paroles" xml:id="7-37">
-            <speaker>PAROLES.</speaker>
-            <l n="357" xml:id="l357">Mais un assez bon diable et qui ferait, je pense,</l>
-            <l n="358" xml:id="l358">Un parfait panetier. Quant à l’intelligence,</l>
-            <l n="359" xml:id="l359">Il n’en aura jamais une indigestion ;</l>
-            <l n="360" xml:id="l360">Mais il coupe le pain dans la perfection !</l>
-            <l n="361" xml:id="l361">Puis, il saute à pieds joints huit tabourets. J’accorde</l>
-            <l n="362" xml:id="l362">Qu’il a les qualités d’un bon danseur de corde,</l>
-            <l n="363" xml:id="l363">Et qu’il sait plusieurs tours qui, sans être très forts,</l>
-            <l n="364" xml:id="l364">Prouvent qu’il est léger d’esprit comme de corps.</l>
-          </sp>
-          <sp who="du-maine" xml:id="7-38">
-            <speaker>DU MAINE, <em>furieux.</em></speaker>
-            <l n="365" xml:id="l365">Que devons-nous répondre à des choses pareilles ?</l>
-            <l n="366" xml:id="l366">Qu’allons-nous faire ?</l>
-          </sp>
-          <sp who="caduco" xml:id="7-39">
-            <speaker>CADUCO.</speaker>
-            <l n="367" xml:id="l367">Il faut lui couper les oreilles !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-40">
-            <speaker>PHÉNICE, <em>les contenant.</em></speaker>
-            <l n="368" xml:id="l368">Messieurs !... – Connaissez-vous le lieutenant Roger ?</l>
-          </sp>
-          <sp who="paroles" xml:id="7-41">
-            <speaker>PAROLES.</speaker>
-            <l n="369" xml:id="l369">Que trop ! – Un sot Achille, amoureux du danger,</l>
-            <l n="370" xml:id="l370">Qui cherche en tous combats une gloire nouvelle.</l>
-            <l n="371" xml:id="l371">Il y risque si peu de sang et de cervelle !</l>
-            <l n="372" xml:id="l372">C’est un de ces transis faits de papier mâché,</l>
-            <l n="373" xml:id="l373">Ennuyés, ennuyeux, blêmes, le front penché,</l>
-            <l n="374" xml:id="l374">Avec de longs cheveux épars sur leurs épaules,</l>
-            <l n="375" xml:id="l375">Bêtes comme des pots, pleureurs comme des saules,</l>
-            <l n="376" xml:id="l376">Un morne songe-creux, prétentieux, moqueur,</l>
-            <l n="377" xml:id="l377">Sans couleur à la joue et sans chaleur au cœur,</l>
-            <l n="378" xml:id="l378">Vrai héros du roman où toute femme aspire,</l>
-            <l n="379" xml:id="l379">Qui ne respire pas, non mordieu ! – qui soupire !</l>
-            <l n="380" xml:id="l380">– Aussi j’ai supplanté ce rêveur à bon droit</l>
-            <l n="381" xml:id="l381">Près d’une Florentine, un bijou de l’endroit,</l>
-            <l n="382" xml:id="l382">Phénice Donati, la fille d’un Cassandre,</l>
-            <l n="383" xml:id="l383">D’un Caduco, lequel m’aimerait fort pour gendre !</l>
-            <l n="384" xml:id="l384">– Ah ! Messieurs, que la vie est triste en vérité</l>
-            <l n="385" xml:id="l385">Pour qui sait comme moi la voir du vrai côté !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-42">
-            <speaker>PHÉNICE.</speaker>
-            <l n="386" xml:id="l386">Quel est ce Caduco ?</l>
-          </sp>
-          <sp who="paroles" xml:id="7-43">
-            <speaker>PAROLES.</speaker>
-            <l n="387" xml:id="l387">La bêtise incarnée !</l>
-            <l n="388" xml:id="l388">Vieux bambin qui ne semble âgé que d’une année !</l>
-            <l n="389" xml:id="l389">Qui dit sans cesse : – Eh quoi ! se peut-il ! bah ! vraiment ! –</l>
-            <l n="390" xml:id="l390">Et dont toute la vie est un étonnement.</l>
-            <l n="391" xml:id="l391">De rien à soixante ans il n’a pris l’habitude.</l>
-            <l n="392" xml:id="l392">D’ordinaire, tenez, voilà son attitude.</l>
-            <stage><hi rend="italic"><em>Il lève les bras et ouvre une bouche béante au moment où Caduco stupéfait a pris précisément la même posture.</em></hi></stage>
-            <l n="394" xml:id="l394">Ce gros, jeune et naïf point d’exclamation</l>
-            <l n="395" xml:id="l395">Honore immensément... la ponctuation.</l>
-          </sp>
-          <sp who="caduco" xml:id="7-44">
-            <speaker>CADUCO.</speaker>
-            <l n="396" xml:id="l396">Fer et flamme !</l>
-            <stage><hi rend="italic"><em>On le contient.</em></hi></stage>
-          </sp>
-          <sp who="roger" xml:id="7-45">
-            <speaker>ROGER.</speaker>
-            <l n="398" xml:id="l398">Je vois à la mine peu tendre</l>
-            <l n="399" xml:id="l399">Du général en chef, ami, qu’on te va pendre.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-46">
-            <speaker>PAROLES, <em>sautant de peur.</em></speaker>
-            <l n="400" xml:id="l400">Me pendre ! et mes péchés ! Non, vivre dans un trou !</l>
-            <l n="401" xml:id="l401">Au cachot ! dans les fers ! mais vivre, n’importe où !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-47">
-            <speaker>PHÉNICE.</speaker>
-            <l n="402" xml:id="l402">Qu’est-ce encor que Phénice ?</l>
-          </sp>
-          <sp who="paroles" xml:id="7-48">
-            <speaker>PAROLES.</speaker>
-            <l n="403" xml:id="l403">Une fille charmante.</l>
-          </sp>
-          <sp who="phénice" xml:id="7-49">
-            <speaker>PHÉNICE, <em>charmée.</em></speaker>
-            <l n="404" xml:id="l404">Tout de bon ?</l>
-          </sp>
-          <sp who="paroles" xml:id="7-50">
-            <speaker>PAROLES.</speaker>
-            <l n="405" xml:id="l405">Tout de bon. Et cette Bradamante</l>
-            <l n="406" xml:id="l406">Dont, en attendant mieux, je suis l’adorateur</l>
-            <l n="407" xml:id="l407">Raffole à deux genoux de votre serviteur.</l>
-          </sp>
-          <sp who="phénice" xml:id="7-51">
-            <speaker>PHÉNICE.</speaker>
-            <l n="408" xml:id="l408">Ah ! bah !</l>
-          </sp>
-          <sp who="paroles" xml:id="7-52">
-            <speaker>PAROLES, <em>à son oreille.</em></speaker>
-            <l n="409" xml:id="l409">Pauvre petite ! elle s’est mis en tête</l>
-            <l n="410" xml:id="l410">Que je l’épouserais. Je ne suis pas si bête,</l>
-            <l n="411" xml:id="l411">La virago ! J’irais me mettre sur les bras</l>
-            <l n="412" xml:id="l412">Ce céleste démon, héroïque embarras !</l>
-            <l n="413" xml:id="l413">Non certes ! Un Mars en jupe, une Vénus bravache,</l>
-            <l n="414" xml:id="l414">Qui toujours dans votre air fait siffler sa cravache !</l>
-            <l n="415" xml:id="l415">Amazone qu’il faut le soir escalader !</l>
-            <l n="416" xml:id="l416">Son aiguille a trois pieds ! – Moi, je tiens à garder,</l>
-            <l n="417" xml:id="l417">Non mon cœur de ses traits, mais mes yeux de sa pique.</l>
-            <l n="418" xml:id="l418">C’est une rose, soit, mais rose où l’on se pique.</l>
-            <l n="419" xml:id="l419">– Hai ! hai ! vous me pincez, général !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-53">
-            <speaker>PHÉNICE.</speaker>
-            <l n="420" xml:id="l420">Malheureux !</l>
-            <l n="421" xml:id="l421">De tous ces gens de bien dire ce mal affreux !</l>
-            <l n="422" xml:id="l422">Tu vas mourir.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-54">
-            <speaker>PAROLES, <em>se débattant.</em></speaker>
-            <l n="423" xml:id="l423">Pourquoi ? Parce que la Phénice,</l>
-            <l n="424" xml:id="l424">Minerve avec laquelle il sied qu’on en finisse,</l>
-            <l n="425" xml:id="l425">Me prenant pour mari, me prendrait pour valet,</l>
-            <l n="426" xml:id="l426">Et que j’aime bien mieux la duper, s’il vous plaît,</l>
-            <l n="427" xml:id="l427">En faire mon amante et changer la coquette</l>
-            <l n="428" xml:id="l428">En victime.</l>
-          </sp>
-          <sp who="phénice" xml:id="7-55">
-            <speaker>PHÉNICE, <em>exaspérée.</em></speaker>
-            <l n="429" xml:id="l429">Bourreau ! fais-lui sauter la tête.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-56">
-            <speaker>PAROLES.</speaker>
-            <l n="430" xml:id="l430">Ah ! Dieu ! laissez-moi voir ma mort en face au moins !</l>
-            <l n="431" xml:id="l431">Qu’on me juge !</l>
-            <stage><hi rend="italic"><em>Il arrache son bandeau. Jetant un cri de surprise à la vue de tous les assistants qui rient.</em></hi></stage>
-            <l n="433" xml:id="l433">Ah !</l>
-          </sp>
-          <sp who="phénice" xml:id="7-57">
-            <speaker>PHÉNICE.</speaker>
-            <l n="434" xml:id="l434">Jugé ! Tu l’es – par dix témoins.</l>
-          </sp>
-          <sp who="paroles" xml:id="7-58">
-            <speaker>PAROLES, <em>accablé.</em></speaker>
-            <l n="435" xml:id="l435">Ciel !</l>
-            <stage><hi rend="italic"><em>Prenant son parti et relevant impudemment la tête.</em></hi></stage>
-            <l n="437" xml:id="l437">Bah ! je l’aime autant.</l>
-          </sp>
-          <sp who="du-maine" xml:id="7-59">
-            <speaker>DU MAINE.</speaker>
-            <l n="438" xml:id="l438">Adieu, grand capitaine,</l>
-            <l n="439" xml:id="l439">Vous entendrez parler du panetier du Maine.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="roger" xml:id="7-60">
-            <speaker>ROGER.</speaker>
-            <l n="441" xml:id="l441">Adieu, noble héros, qui crains de déroger,</l>
-            <l n="442" xml:id="l442">N’est-ce pas, en rossant le songe-creux Roger ?</l>
-          </sp>
-          <sp who="phénice" xml:id="7-61">
-            <speaker>PHÉNICE.</speaker>
-            <l n="443" xml:id="l443">Attendez, cher Roger. – Ta victime Phénice,</l>
-            <l n="444" xml:id="l444">Beau vainqueur, te salue, et... que Dieu te bénisse !</l>
-            <stage><hi rend="italic"><em>Elle donne la main à Roger et sort avec lui. Caduco s’approche à son tour de Paroles, cherche, ne trouve rien, se lève alors sur la pointe du pied, et lui souffle au nez, puis s’éloigne majestueusement. Le reste des assistants sort aussi en riant aux éclats.</em></hi></stage>
-            <l n="446" xml:id="l446"> </l>
-            <l n="447" xml:id="l447"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="448" xml:id="l448"> </l>
-          <sp who="paroles" xml:id="8-1">
-            <speaker>PAROLES, <em>seul</em></speaker>
-            <l n="449" xml:id="l449"> </l>
-            <l n="450" xml:id="l450">Bon ! je me moque bien de leur rire moqueur !</l>
-            <l n="451" xml:id="l451">Mais où donc en serais-je, hein, si j’avais du cœur ?</l>
-            <l n="452" xml:id="l452">Ce coup le briserait. Dieu soit loué ! j’en manque. –</l>
-            <l n="453" xml:id="l453">Ils ne m’en ont pas moins pris pour leur saltimbanque,</l>
-            <l n="454" xml:id="l454">Et ma noce est au diable ! – Ah ! peste ! ils étaient dix,</l>
-            <l n="455" xml:id="l455">Nul n’a pu m’avertir de leurs complots maudits !</l>
-            <stage><hi rend="italic"><em>Aux spectateurs.</em></hi></stage>
-            <l n="457" xml:id="l457">Pas même vous, Messieurs ! ni vous non plus, Mesdames.</l>
-            <l n="458" xml:id="l458">Ah ! j’aurais cru pouvoir compter plus sur les femmes ;</l>
-            <l n="459" xml:id="l459">C’est mal. – Après cela, j’entends votre raison,</l>
-            <l n="460" xml:id="l460">Je sais... Vous aimiez mieux me voir rester garçon.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#voix-dans-la-foule">
+          <speaker>VOIX DANS LA FOULE.</speaker>
+          <l n="1">Ah ! les voici.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, entrant avec messer Caduco.</speaker>
+          <l n="2">Faisons encore quelques pas,</l>
+          <l n="3">Mon père.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="4">Oui, pour nous faire égorger, n’est-ce pas ?</l>
+          <l n="5">Je voudrais être un rat pour être dans ma cave !</l>
+          <l n="6">Tu profites toujours de ce que je suis brave</l>
+          <l n="7">Pour m’entrainer, les soirs de bataille, au-devant</l>
+          <l n="8">De nos vaillants soldats, Mais c’est assez avant.</l>
+          <l n="9">Phénice, ne rends pas ton père téméraire !</l>
+          <l n="10">Songe donc que le sort peut nous être contraire.</l>
+          <l n="11">Comment, si l’ennemi nous tombait sur les bras,</l>
+          <l n="12">Pourrions-nous regagner Florence tout là-bas ?</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="13">Le camp arrêterait l’ennemi.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="14">Je l’espère.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="15">Puis, comment voulez-vous qu’on nous batte, mon père,</l>
+          <l n="16">Quand Paroles...</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="17">Parole est un César français !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="18">Parole est au combat, nous vaincrons !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="19">Je ne sais.</l>
+          <l n="20">L’incertitude peut provenir de deux causes : –</l>
+          <l n="21">Du trouble de l’esprit ou du trouble des choses ;</l>
+          <l n="22">La chose n’est pas claire – ou l’homme est un dindon.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="23">Ici la chose est claire !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO, sincère, puis piqué.</speaker>
+          <l n="24">Alors, c’est moi... Dis donc !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="25">Quel bonheur cependant que le duc de Florence.</l>
+          <l n="26">Ait ainsi réclamé l’appui du roi de France !</l>
+          <l n="27">Paroles est venu sur un mot de son roi.</l>
+          <l n="28">C’est un bien grand bonheur... pour Florence.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="29">Et pour toi,</l>
+          <l n="30">Puisqu’il t’aime, ma fille. Ah ! l’orgueil me vient prendre</l>
+          <l n="31">Quand je songe parfois que je l’aurai pour gendre !</l>
+          <l n="32">Beau-père de Parole !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="33">Il court en insensé</l>
+          <l n="34">Au devant du péril ; s’il revenait blessé !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="35">Bast ? il revient toujours sans une égratignure.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="36">Si j’étais là !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="37">Quel homme ! et quelle autre tournure</l>
+          <l n="38">Que celle de Roger ! Celui-là t’aime aussi,</l>
+          <l n="39">Mais s’il croit que je vais comparer...</l>
+          <stage>&lt;em&gt;Bruit de tambours, cris dans la foule.&lt;/em&gt;</stage>
+          <l n="40">Les voici.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, courant à Roger.</speaker>
+          <l n="41">Eh bien, Roger ?</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="42">Victoire !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="43">Et Parole ?</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="44">Ah ! Parole !</l>
+          <l n="45">Toujours ! – Il n’est pas mort ! – Comment un pareil drôle</l>
+          <l n="46">Vous peut-il sur son compte abuser jusque-là !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="47">Roger !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="48">Ce plat faquin tranche de l’Attila !</l>
+          <l n="49">Un hâbleur qui vous vient parler de ses voyages</l>
+          <l n="50">Parce qu’on l’a toujours chassé de tous parages !</l>
+          <l n="51">Qui saute d’Amérique en Afrique – d’un bond, –</l>
+          <l n="52">Qui fait le voyageur et n’est qu’un vagabond !</l>
+          <l n="53">Qui n’est venu, malgré tous ses airs d’importance,</l>
+          <l n="54">Chercher la guerre ici que pour fuir la potence !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="55">Cela n’empêche pas que, sans tant de façons,</l>
+          <l n="56">Il poursuit l’ennemi, – pendant que nous causons.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="57">On ne se bat plus. Moi...</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="58">Lui se bat, j’en suis sûre !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="59">Atteint à la main droite...</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="60">Encore une blessure !</l>
+          <l n="61">Ah ! ça, vous êtes donc tout à fait maladroit !</l>
+          <l n="62">La poitrine mardi ; dimanche... un autre endroit !</l>
+          <l n="63">Aujourd’hui cette main. Il faut qu’un gentilhomme</l>
+          <l n="64">Soit plus fort que cela. Qu’est-ce à dire, jeune homme ?</l>
+          <l n="65">Voyez le grand Parole ! Il n’est jamais blessé !</l>
+          <l n="66">Quel homme !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="67">Oui, les hasards des batailles, je sais,</l>
+          <l n="68">Le traiteront toujours avec miséricorde,</l>
+          <l n="69">Et le fer sait trop bien qu’il le doit à la corde.</l>
+          <l n="70">Moi, nul gibet ne m’a par malheur réclamé,</l>
+          <l n="71">Et qu’importe la vie à qui n’est pas aimé !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="72">Si loin que vous alliez dans votre frénésie,</l>
+          <l n="73">Je dois tout pardonner à votre jalousie.</l>
+          <l n="74">Mais mon cœur vous répond et n’en est pas changé.</l>
+          <l n="75">Je l’aime. Vous savez quel caractère j’ai.</l>
+          <l n="76">Un fer moins qu’un fuseau pèse à ma main mignonne,</l>
+          <l n="77">Et j’ai du page en moi bien plus que de la nonne.</l>
+          <l n="78">Je l’adore ! – et je hais vos langueurs. Il me faut</l>
+          <l n="79">Son œil toujours vainqueur et son front toujours haut.</l>
+          <l n="80">Vous, vous venez toujours avec des yeux humides,</l>
+          <l n="81">L’air contraint...</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="82">Croyez-moi, les braves sont timides.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="83">Raconte-lui comment, l’autre jour, lundi soir,</l>
+          <l n="84">Croyant apparemment que je ne pouvais voir</l>
+          <l n="85">Parce que je penchais la tête à la croisée,</l>
+          <l n="86">Le grand Paroles t’a sur la bouche embrassée.</l>
+          <l n="87">– Jeune homme, elle a raison, et ce n’est pas français</l>
+          <l n="88">De ne pas l’embrasser !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="89">Si je vous épousais,</l>
+          <l n="90">Je serais le garçon et vous la demoiselle !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="91">Vaut-il mieux être donc deux garçons ? – Chère belle,</l>
+          <l n="92">Ah ! si j’en peux jamais trouver l’occasion,</l>
+          <l n="93">Je vous ferai rougir de sa confusion.</l>
+          <stage>&lt;em&gt;Bruits de voix.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="94">Ah ! c’est lui.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="95">Perdre ainsi notre tambour ! du diable !</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE.</speaker>
+          <l n="96">Mais cependant...</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, aux officiers.</speaker>
+          <l n="97">Allons, c’est un coup effroyable !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, s’approchant doucement.</speaker>
+          <l n="98">Paroles.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="99">Ah ! c’est vous, Phénice ! vous voilà,</l>
+          <l n="100">Caduco. – Le laisser prendre comme cela !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="101">Seigneur, qu’arrive-t-il ? J’en suis tout alarmée.</l>
+          <l n="102">Que s’est-il donc passé de fâcheux pour l’armée ?</l>
+          <l n="103">Qu’avez-vous ? la victoire...</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="104">Est suffisante ainsi.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="105">Vous n’êtes pas blessé pourtant ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="106">Non, Dieu merci.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="107">L’aile où vous combattiez ?...</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, négligemment.</speaker>
+          <l n="108">S’est couverte de gloire.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="109">La bataille ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="110">Est pour nous une pleine victoire.</l>
+          <l n="111">L’ennemi ne se peut relever de ce jour,</l>
+          <l n="112">Mais nous avons perdu...</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="113">Le duc ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="114">Non. – Un tambour.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, à Phénice.</speaker>
+          <l n="115">Ce n’est, – rassurez-vous, l’avantage nous reste, –</l>
+          <l n="116">Qu’un tambour !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="117">Qu’un tambour ! Ce n’est qu’un tambour ! Peste !</l>
+          <l n="118">Si l’on m’eût écouté !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, à part.</speaker>
+          <l n="119">Quelle idée ! il faut voir.</l>
+          <stage>&lt;em&gt;Haut, à Paroles.&lt;/em&gt;</stage>
+          <l n="120">Enfin, on ne peut plus maintenant le ravoir !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="121">On pouvait le ravoir !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="122">On le pouvait, peut-être,</l>
+          <l n="123">Mais on ne le peut plus.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="124">On le peut encore !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO, exalté.</speaker>
+          <l n="125">Être</l>
+          <l n="126">Beau-père de Parole ! Ah ! l’ai-je mérité !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="127">Prétendez-vous par là que vous êtes tenté ?...</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="128">Vous n’allez pas vous mettre en ce péril, je pense !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="129">Si je ne savais pas comment on récompense</l>
+          <l n="130">Les grandes actions, et que tout le profit</l>
+          <l n="131">Est vole par un drôle à celui qui les fit,</l>
+          <l n="132">J’entreprendrais le fait sans nulle patenôtre,</l>
+          <l n="133">Et je rapporterais ce tambour, ou quelque autre ;</l>
+          <stage>Ou bien j’y trouverais mon &lt;em&gt;hic jacet !&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="134">Parbleu !</l>
+          <l n="135">Lieutenant, nous voilà cinq ici qui, pour peu</l>
+          <l n="136">Que vous soyez tenté d’entreprendre la chose,</l>
+          <l n="137">En pouvons au besoin témoigner, je suppose.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="138">Paroles, n’allez pas, pour un banal défi,</l>
+          <l n="139">Chercher un tel danger, – la mort peut-être !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="140">Fi !</l>
+          <l n="141">Laisse-le donc aller.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="142">Paroles ! sur ma vie !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="143">Soyez tranquille, allez, il n’en a guère envie !</l>
+          <l n="144">Jamais dans son esprit ce projet n’est entré.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="145">Il ira !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="146">Vous verrez qu’il n’ira pas !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="147">J’irai.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="148">Ciel !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, raillant.</speaker>
+          <l n="149">Vrai ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="150">Foi de soldat !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="151">Oui, demain.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="152">Tout de suite !</l>
+          <l n="153">– J’essaierai ce qu’on peut. – Je verrai. Je vous quitte</l>
+          <l n="154">Pour aller dans ma tente à deux pas m’habiller ;</l>
+          <l n="155">Et pour coucher un peu mon plan sur le papier.</l>
+          <l n="156">Je ne crains ni le fer, ni les eaux, ni les flammes,</l>
+          <l n="157">Lorsque l’honneur m’appelle. – Un seul mot, bonnes lames :</l>
+          <l n="158">Si vous restez encore une minute ici,</l>
+          <l n="159">Vous me verrez partir dans un moment.</l>
+          <l n="160">Voici La nuit close déjà. Je me hâte. Tu voles,</l>
+          <l n="161">Ô temps ! et moi, je hais de te perdre en paroles.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, riant.</speaker>
+          <l n="162">Comme un poisson hait l’eau.</l>
+          <stage>&lt;em&gt;Paroles sort. La nuit est tout à fait tombée.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="163">Le maraud ! de quel front</l>
+          <l n="164">Il s’engage, sans peur du rire et de l’affront,</l>
+          <l n="165">À tenter, fanfaron qu’un fer tiré fait blême,</l>
+          <l n="166">Une action qu’il sait impossible lui-même !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="167">Impossible ? – Jeune homme, il reviendra vainqueur !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="168">L’impossible toujours a tenté tout grand cœur.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="169">Or, sérieusement vous croyez que le drôle</l>
+          <l n="170">Est dans l’intention de tenir sa parole ?</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="171">Pourquoi pas ?</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="172">Et qu’il va courir un tel péril ?...</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="173">Eh ! sans doute ; autrement, pourquoi s’offrirait-il ?</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="174">Par le ciel ! il faut donc que je vous le démasque !</l>
+          <l n="175">Voulez-vous vous prêter à mon projet fantasque ?</l>
+          <l n="176">Vous verrez le dessous de sa valeur.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="177">Pourquoi ?</l>
+          <l n="178">Je suis sûre de lui.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="179">J’en suis sûr aussi, moi.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="180">Alors, c’est le moyen de me fermer la bouche.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="181">Voyons, que faut-il faire ?</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="182">Envelopper la mouche</l>
+          <l n="183">De toiles d’araignée. – En êtes-vous aussi,</l>
+          <l n="184">Messieurs ?</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE.</speaker>
+          <l n="185">Volontiers.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="186">Mais...</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="187">Vous verrez. – Le voici.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#paroles">
+          <speaker>PAROLES, les apercevant. À part.</speaker>
+          <l n="188">Ah !</l>
+          <stage>&lt;em&gt;Comme ne les voyant pas. Méditant. &lt;/em&gt;</stage>
+          <l n="189">C’est bien, le danger est terrible, n’importe !</l>
+          <l n="190">Et j’ensanglanterais ma mort d’étrange sorte !</l>
+          <l n="191">– Viens, ne fais pas défaut, mon épée, à mon bras,</l>
+          <l n="192">Et mon bras, j’en réponds, ne te manquera pas.</l>
+          <stage>&lt;em&gt;Il feint de les apercevoir.&lt;/em&gt;</stage>
+          <l n="193">Quoi ! vous encore, enfants ? Rentrez donc.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, à part.</speaker>
+          <l n="194">Il m’assomme,</l>
+          <l n="195">Le lâche !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, à part.</speaker>
+          <l n="196">Il me ravit.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO, à part.</speaker>
+          <l n="197">Il m’ébahit. Quel homme !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="198">Soyez prudent, Parole.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="199">Eh ! vous me connaissez !</l>
+          <l n="200">Je ne puis par malheur me contenir assez.</l>
+          <l n="201">Je ne vous promets rien ; – rien, excepté la gloire</l>
+          <l n="202">Qui devra rejaillir sur vous de ma victoire.</l>
+          <l n="203">Si je succombe, dam ! – bien des femmes, cher cœur,</l>
+          <l n="204">Sangloteront alors ; – vous mènerez le chœur.</l>
+          <l n="205">Beau spectacle !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, pleurant.</speaker>
+          <l n="206">Au revoir.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="207">Va, bientôt, pauvre femme,</l>
+          <l n="208">Je viens mettre à tes pieds ce tambour et mon âme.</l>
+          <stage>&lt;em&gt;Il serre la main à tous, les reconduit jusqu’aux tentes, et fait quelques pas du côté de l’ennemi ; mais il revient précipitamment d’un pied léger sur le devant du théâtre. Les autres retiennent bientôt aussi sans bruit derrière lui et s’échelonnent dans l’ombre derrière les buissons et les arbres. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="209">Partis ! me voilà seul, tout seul, trop seul, mon Dieu ! –</l>
+          <l n="210">Là, mes genoux ! – Voyons, réfléchissons un peu.</l>
+          <l n="211">Je tremble, il fait si chaud ! – Qu’est-ce que je vais faire ?</l>
+          <l n="212">Rester ici caché ; ce n’est pas là l’affaire !</l>
+          <l n="213">Je ne vais pas du camp, je sais bien, m’écarter !</l>
+          <l n="214">Mais que vais-je leur dire au retour ? qu’inventer ?</l>
+          <l n="215">Quelle histoire bâtir à l’histoire contraire ?</l>
+          <l n="216">Tu vois où tu me mets, ma langue ! Ah ! téméraire,</l>
+          <l n="217">Tu braves tout, ardente aux propos triomphants...</l>
+          <l n="218">– Mais mon cœur n’aime, lui, ni Mars, ni ses enfants.</l>
+          <l n="219">Mon pauvre faible cœur te dément, imprudente !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, à part.</speaker>
+          <l n="220">C’est le premier mot vrai qu’elle ait dit, l’impudente !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="221">Quel démon me poussait quand je me suis chargé</l>
+          <l n="222">De ravoir ce tambour ? Où me suis-je engagé ?</l>
+          <l n="223">Dans quel sot cul-de sac d’une action terrible ?</l>
+          <l n="224">Avais-je donc vraiment soif de gloire impossible ?</l>
+          <l n="225">– Soif de mon sang ! non pas. – Si, pour m’en retirer,</l>
+          <l n="226">J’osais d’une blessure, hélas ! me balafrer !</l>
+          <l n="227">L’oserai-je ? – Il faudrait une plaie effroyable</l>
+          <l n="228">Pour les convaincre un peu, ces saints Thomas du diable !</l>
+          <l n="229">On ne sort qu’en morceaux d’un jeu comme cela !</l>
+          <l n="230">Enfin essayons. – Hai ! – Du courage ! – Oh ! là ! là !</l>
+          <l n="231">– C’est que je saigne presque avec cette chimère.</l>
+          <l n="232">Pauvre moi ! Je me porte un intérêt de mère !</l>
+          <l n="233">Là ! là ! – Chienne de langue ! Ah ! je te couperais</l>
+          <l n="234">Si tu ne me tenais, bâtarde, d’aussi près !</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE, caché.</speaker>
+          <l n="235">Qu’un pareil cuistre, avec sa lâche conscience,</l>
+          <l n="236">Prenne ainsi des dehors d’honneur et de vaillance !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, rêvant.</speaker>
+          <l n="237">Si je me transformais mes habits en haillons !</l>
+          <l n="238">– Ma bonne lame, vierge encor des bataillons,</l>
+          <l n="239">Si je la brisais !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, caché.</speaker>
+          <l n="240">Peuh ! misérable défaite !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="241">Je puis couper ma barbe et jurer sur ma tête</l>
+          <l n="242">Que c’était une ruse adroite...</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE, caché.</speaker>
+          <l n="243">Maladroit !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="244">Racontons-leur qu’au fort j’ai sauté d’un grand toit,</l>
+          <l n="245">D’un toit fait pour les chats courant sur les ardoises,</l>
+          <l n="246">D’un toit haut...</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, caché.</speaker>
+          <l n="247">De combien ?...</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="248">Haut de trente-deux toises.</l>
+          <l n="249">– Noyons mes vêtements ; je dirais, ainsi nu,</l>
+          <l n="250">Que l’on m’a dépouillé.</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE, caché.</speaker>
+          <l n="251">Non, moyen saugrenu !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, désespéré.</speaker>
+          <l n="252">N’est-il pas dans un coin quelque tambour honnête ?</l>
+          <l n="253">Ma trouvaille pourrait passer pour ma conquête.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="254">À nous, Messieurs ! Donnons à ses vœux de l’écho !</l>
+          <stage>&lt;em&gt;Bruit de tambour.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, effrayé.</speaker>
+          <l n="255">Un tambour ennemi !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#tous">
+          <speaker>TOUS, criant et déguisant leurs voix.</speaker>
+          <l n="256">Cargo ! cargo ! cargo !</l>
+          <stage>&lt;em&gt;On lui met un mouchoir sur les yeux.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="257">Quartier, Messieurs, quartier ! – Mes yeux ! on me les bande !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, d’un ton terrible.</speaker>
+          <l n="258">Throca morovousus par corbo villiande !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="259">Grâce ! pardon ! pitié !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="260">Boskos thromu boscos !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, épouvanté.</speaker>
+          <l n="261">Oui, vous êtes, je vois, la troupe de Muskos,</l>
+          <l n="262">Et vous m’allez tuer, faute de me comprendre !</l>
+          <l n="263">Nul de vous n’aurait-il ce service à me rendre</l>
+          <l n="264">D’être Allemand ? Danois ? Italien ? Français ?</l>
+          <l n="265">Qu’il parle ! et je dirai des choses que je sais,</l>
+          <l n="266">Et qui seraient bientôt la perte de Florence.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="267">Boskos ravanvado. – Parle, je suis de France.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="268">Ah ! merci, mon sauveur !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="269">Mais prends garde, ma foi,</l>
+          <l n="270">L’ami. Dix-sept poignards sont levés contre toi !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="271">Heuh !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="272">Tu peux prier Dieu. Foscorbin En prière.</l>
+          <l n="273">– Chamodovania ?</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE, d’un ton de clémence.</speaker>
+          <l n="274">Dulche volivorriere.</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="275">Le général consent à l’épargner encor ;</l>
+          <l n="276">Mais tu lui fourniras...</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="277">Des renseignements d’or</l>
+          <l n="278">Sur nos forces, nos plans ; tout pour sauver ma tête !</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER, bas à Phénice.</speaker>
+          <l n="279">Eh bien ?</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, bas.</speaker>
+          <l n="280">Ah ! j’en ai honte !</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO, bas.</speaker>
+          <l n="281">Et moi, j’en deviens bête.</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE, de même.</speaker>
+          <l n="282">Quel gueux !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, de même.</speaker>
+          <l n="283">Mais avec vous je veux du moins, Roger,</l>
+          <l n="284">Le confondre, et moi-même ici l’interroger.</l>
+          <l n="285">Laissez-moi ce plaisir, dites, monsieur du Maine.</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE.</speaker>
+          <l n="286">Faites à votre gré. Vous êtes notre reine.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, grossissant sa voix.</speaker>
+          <l n="287">Porto tartaros.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="288">Quoi ?</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="289">Réponds aux questions</l>
+          <l n="290">Du général lui-même.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="291">Ah ! bien.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="292">Les bastions</l>
+          <l n="293">De la porte du Nord, y fait-on bonne garde,</l>
+          <l n="294">Drôle ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="295">Non, pas du tout, et, par cette cocarde,</l>
+          <l n="296">Je vous les livrerai, Monseigneur, dès ce soir.</l>
+          <l n="297">Voulez-vous ?</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="298">On verra. Fais nous toujours savoir</l>
+          <l n="299">À combien votre armée en ce moment se monte.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="300">Bon ! attendez. – D’abord mille chevaux. – Je compte</l>
+          <l n="301">D’une part dix-huit cents, douze cents d’autre part,</l>
+          <l n="302">Trois mille fantassins, – mais soldats de hasard,</l>
+          <l n="303">Comme je n’en ai pas commandé dans mes guerres.</l>
+          <l n="304">Et puis leurs officiers sont de si tristes hères !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="305">Oui-dà ? – Vous écrivez ce que ce maraud dit ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="306">Écrivez, écrivez ! et que je sois maudit</l>
+          <l n="307">Si je mens de cela. Notez-vous : tristes hères ?</l>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="308">C’est écrit.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="309">Merci bien.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="310">En voilà de sévères !</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE, bas à Phénice.</speaker>
+          <l n="311">Mettez-le sur mon compte. Aggravons nos griefs.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, à Paroles.</speaker>
+          <l n="312">Qu’est-ce donc qu’un certain du Maine, un de vos chefs ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="313">Mais un assez bon diable et qui ferait, je pense,</l>
+          <l n="314">Un parfait panetier. Quant à l’intelligence,</l>
+          <l n="315">Il n’en aura jamais une indigestion ;</l>
+          <l n="316">Mais il coupe le pain dans la perfection !</l>
+          <l n="317">Puis, il saute à pieds joints huit tabourets. J’accorde</l>
+          <l n="318">Qu’il a les qualités d’un bon danseur de corde,</l>
+          <l n="319">Et qu’il sait plusieurs tours qui, sans être très forts,</l>
+          <l n="320">Prouvent qu’il est léger d’esprit comme de corps.</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE, furieux.</speaker>
+          <l n="321">Que devons-nous répondre à des choses pareilles ?</l>
+          <l n="322">Qu’allons-nous faire ?</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="323">Il faut lui couper les oreilles !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, les contenant.</speaker>
+          <l n="324">Messieurs !... – Connaissez-vous le lieutenant Roger ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="325">Que trop ! – Un sot Achille, amoureux du danger,</l>
+          <l n="326">Qui cherche en tous combats une gloire nouvelle.</l>
+          <l n="327">Il y risque si peu de sang et de cervelle !</l>
+          <l n="328">C’est un de ces transis faits de papier mâché,</l>
+          <l n="329">Ennuyés, ennuyeux, blêmes, le front penché,</l>
+          <l n="330">Avec de longs cheveux épars sur leurs épaules,</l>
+          <l n="331">Bêtes comme des pots, pleureurs comme des saules,</l>
+          <l n="332">Un morne songe-creux, prétentieux, moqueur,</l>
+          <l n="333">Sans couleur à la joue et sans chaleur au cœur,</l>
+          <l n="334">Vrai héros du roman où toute femme aspire,</l>
+          <l n="335">Qui ne respire pas, non mordieu ! – qui soupire !</l>
+          <l n="336">– Aussi j’ai supplanté ce rêveur à bon droit</l>
+          <l n="337">Près d’une Florentine, un bijou de l’endroit,</l>
+          <l n="338">Phénice Donati, la fille d’un Cassandre,</l>
+          <l n="339">D’un Caduco, lequel m’aimerait fort pour gendre !</l>
+          <l n="340">– Ah ! Messieurs, que la vie est triste en vérité</l>
+          <l n="341">Pour qui sait comme moi la voir du vrai côté !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="342">Quel est ce Caduco ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="343">La bêtise incarnée !</l>
+          <l n="344">Vieux bambin qui ne semble âgé que d’une année !</l>
+          <l n="345">Qui dit sans cesse : – Eh quoi ! se peut-il ! bah ! vraiment ! –</l>
+          <l n="346">Et dont toute la vie est un étonnement.</l>
+          <l n="347">De rien à soixante ans il n’a pris l’habitude.</l>
+          <l n="348">D’ordinaire, tenez, voilà son attitude.</l>
+          <stage>&lt;em&gt;Il lève les bras et ouvre une bouche béante au moment où Caduco stupéfait a pris précisément la même posture.&lt;/em&gt;</stage>
+          <l n="349">Ce gros, jeune et naïf point d’exclamation</l>
+          <l n="350">Honore immensément... la ponctuation.</l>
+        </sp>
+        <sp who="#caduco">
+          <speaker>CADUCO.</speaker>
+          <l n="351">Fer et flamme !</l>
+          <stage>&lt;em&gt;On le contient.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="352">Je vois à la mine peu tendre</l>
+          <l n="353">Du général en chef, ami, qu’on te va pendre.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, sautant de peur.</speaker>
+          <l n="354">Me pendre ! et mes péchés ! Non, vivre dans un trou !</l>
+          <l n="355">Au cachot ! dans les fers ! mais vivre, n’importe où !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="356">Qu’est-ce encor que Phénice ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="357">Une fille charmante.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, charmée.</speaker>
+          <l n="358">Tout de bon ?</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="359">Tout de bon. Et cette Bradamante</l>
+          <l n="360">Dont, en attendant mieux, je suis l’adorateur</l>
+          <l n="361">Raffole à deux genoux de votre serviteur.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="362">Ah ! bah !</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, à son oreille.</speaker>
+          <l n="363">Pauvre petite ! elle s’est mis en tête</l>
+          <l n="364">Que je l’épouserais. Je ne suis pas si bête,</l>
+          <l n="365">La virago ! J’irais me mettre sur les bras</l>
+          <l n="366">Ce céleste démon, héroïque embarras !</l>
+          <l n="367">Non certes ! Un Mars en jupe, une Vénus bravache,</l>
+          <l n="368">Qui toujours dans votre air fait siffler sa cravache !</l>
+          <l n="369">Amazone qu’il faut le soir escalader !</l>
+          <l n="370">Son aiguille a trois pieds ! – Moi, je tiens à garder,</l>
+          <l n="371">Non mon cœur de ses traits, mais mes yeux de sa pique.</l>
+          <l n="372">C’est une rose, soit, mais rose où l’on se pique.</l>
+          <l n="373">– Hai ! hai ! vous me pincez, général !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="374">Malheureux !</l>
+          <l n="375">De tous ces gens de bien dire ce mal affreux !</l>
+          <l n="376">Tu vas mourir.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, se débattant.</speaker>
+          <l n="377">Pourquoi ? Parce que la Phénice,</l>
+          <l n="378">Minerve avec laquelle il sied qu’on en finisse,</l>
+          <l n="379">Me prenant pour mari, me prendrait pour valet,</l>
+          <l n="380">Et que j’aime bien mieux la duper, s’il vous plaît,</l>
+          <l n="381">En faire mon amante et changer la coquette</l>
+          <l n="382">En victime.</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE, exaspérée.</speaker>
+          <l n="383">Bourreau ! fais-lui sauter la tête.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES.</speaker>
+          <l n="384">Ah ! Dieu ! laissez-moi voir ma mort en face au moins !</l>
+          <l n="385">Qu’on me juge !</l>
+          <stage>&lt;em&gt;Il arrache son bandeau. Jetant un cri de surprise à la vue de tous les assistants qui rient.&lt;/em&gt;</stage>
+          <l n="386">Ah !</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="387">Jugé ! Tu l’es – par dix témoins.</l>
+        </sp>
+        <sp who="#paroles">
+          <speaker>PAROLES, accablé.</speaker>
+          <l n="388">Ciel !</l>
+          <stage>&lt;em&gt;Prenant son parti et relevant impudemment la tête.&lt;/em&gt;</stage>
+          <l n="389">Bah ! je l’aime autant.</l>
+        </sp>
+        <sp who="#du-maine">
+          <speaker>DU MAINE.</speaker>
+          <l n="390">Adieu, grand capitaine,</l>
+          <l n="391">Vous entendrez parler du panetier du Maine.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger">
+          <speaker>ROGER.</speaker>
+          <l n="392">Adieu, noble héros, qui crains de déroger,</l>
+          <l n="393">N’est-ce pas, en rossant le songe-creux Roger ?</l>
+        </sp>
+        <sp who="#phénice">
+          <speaker>PHÉNICE.</speaker>
+          <l n="394">Attendez, cher Roger. – Ta victime Phénice,</l>
+          <l n="395">Beau vainqueur, te salue, et... que Dieu te bénisse !</l>
+          <stage>&lt;em&gt;Elle donne la main à Roger et sort avec lui. Caduco s’approche à son tour de Paroles, cherche, ne trouve rien, se lève alors sur la pointe du pied, et lui souffle au nez, puis s’éloigne majestueusement. Le reste des assistants sort aussi en riant aux éclats.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#paroles">
+          <speaker>PAROLES, seul</speaker>
+          <l n="396">Bon ! je me moque bien de leur rire moqueur !</l>
+          <l n="397">Mais où donc en serais-je, hein, si j’avais du cœur ?</l>
+          <l n="398">Ce coup le briserait. Dieu soit loué ! j’en manque. –</l>
+          <l n="399">Ils ne m’en ont pas moins pris pour leur saltimbanque,</l>
+          <l n="400">Et ma noce est au diable ! – Ah ! peste ! ils étaient dix,</l>
+          <l n="401">Nul n’a pu m’avertir de leurs complots maudits !</l>
+          <stage>&lt;em&gt;Aux spectateurs.&lt;/em&gt;</stage>
+          <l n="402">Pas même vous, Messieurs ! ni vous non plus, Mesdames.</l>
+          <l n="403">Ah ! j’aurais cru pouvoir compter plus sur les femmes ;</l>
+          <l n="404">C’est mal. – Après cela, j’entends votre raison,</l>
+          <l n="405">Je sais... Vous aimiez mieux me voir rester garçon.</l>
+          <l n="406" />
+        </sp>
       </div>
     </body>
   </text>

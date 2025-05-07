@@ -1,2109 +1,1968 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Colinette</title>
-        <author key="DE BEAUNOIR | (naissance-mort)">DE BEAUNOIR |</author>
+        <title type="main" />
+        <title type="sub">Pastorale</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/colinette-de-beaunoir</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>DE BEAUNOIR |</author>. <title>Colinette</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/colinette-de-beaunoir</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1780-04-04">Représentée pour la première fois, à Paris, sur le Théâtre des Grands Danseurs du Roi, le 4 avril 1780.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="l’amour" sex="SEX">
+            <persName>L’AMOUR</persName>
+          </person>
+          <person xml:id="colinette" sex="SEX">
+            <persName>COLINETTE</persName>
+          </person>
+          <person xml:id="rosette" sex="SEX">
+            <persName>ROSETTE</persName>
+          </person>
+          <person xml:id="la-mère-simone" sex="SEX">
+            <persName>LA MÈRE SIMONE</persName>
+          </person>
+          <person xml:id="colin" sex="SEX">
+            <persName>COLIN</persName>
+          </person>
+          <person xml:id="lucas" sex="SEX">
+            <persName>LUCAS</persName>
+          </person>
+          <person xml:id="blaise" sex="SEX">
+            <persName>BLAISE</persName>
+          </person>
+          <person xml:id="troupe-de-vendangeurs" sex="SEX">
+            <persName>TROUPE DE VENDANGEURS</persName>
+          </person>
+          <person xml:id="troupe-de-vendangeuses" sex="SEX">
+            <persName>TROUPE DE VENDANGEUSES</persName>
+          </person>
+          <person xml:id="quatre-petits-amours-en-messiers" sex="SEX">
+            <persName>QUATRE PETITS AMOURS EN MESSIERS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Pastorale</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q0</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1780-04-04" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre des Grands Danseurs du Roi, le 4 avril 1780.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Colinette</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Pastorale en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre des Grands Danseurs du Roi, le 4 avril 1780.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="l’amour">L’AMOUR</role>
-              <roleDesc>, <em>en habit d’Hermite</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="colinette">COLINETTE</role>
-              <roleDesc>, <em>jeune Bergère</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="rosette">ROSETTE</role>
-              <roleDesc>, <em>jeune Bergère</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-mère-simone">LA MÈRE SIMONE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="colin">COLIN</role>
-              <roleDesc>, <em>jeune Berger</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lucas">LUCAS</role>
-              <roleDesc>, <em>jeune Berger</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="blaise">BLAISE</role>
-              <roleDesc>, <em>jeune Berger</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-vendangeurs">TROUPE DE VENDANGEURS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-vendangeuses">TROUPE DE VENDANGEUSES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="quatre-petits-amours-en-messiers">QUATRE PETITS AMOURS EN MESSIERS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La Scène se passe au pied d’un coteau de Vignes, près d’un Hameau.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Le Théâtre représente un Verger charmant couronné par un coteau de Vignes. Sur le côté gauche est un petit carré de Vignes, entouré d’une jeune haie d’épine et de roses, fermé par une petite porte de bois, au-dessus de laquelle on lit :</em> VIGNE D’AMOUR. <em>Auprès est une petite grotte. Sur le côté droit Sont plusieurs arbres, et en avant une roche escarpée.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="colin" xml:id="1-1">
-            <speaker>COLIN,<em> seul</em></speaker>
-            <l n="10" xml:id="l10"> </l>
-            <stage><hi rend="italic"><em>À la levée de la toile Colin paraît occupé et graver sur une des pierres du rocher le Couplet suivant. </em></hi></stage>
-            <l n="12" xml:id="l12">Ah ! Colinette, en vain depuis le dernier printemps, je brûle pour toi de l’amour le plus tendre ; ton cœur n’éprouvera-t-il donc jamais ce sentiment si doux qu’inspirent tes beaux yeux ? Tu liras ces traits avec plaisir, et tu resteras insensible et tranquille.</l>
-            <stage><hi rend="italic"><em>Il entend dans le lointain le son du tambourin et de la musette, et se retire en disant. </em></hi></stage>
-            <l n="14" xml:id="l14">Ces sons joyeux annoncent l’arrivée de nos Vendangeurs éloignons-nous, ma tristesse troublerait leurs plaisirs, et leurs plaisirs augmenteraient mes peines.</l>
-            <l n="15" xml:id="l15"> </l>
-            <l n="16" xml:id="l16"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="17" xml:id="l17"> </l>
-          <sp who="troupe-de-vendangeurs" xml:id="2-1">
-            <speaker>TROUPE DE VENDANGEURS <em>et</em> DE VENDANGEUSES</speaker>
-            <l n="18" xml:id="l18"> </l>
-            <stage><hi rend="italic"><em>Ballet pantomime, représentant le départ pour la Vendange. </em></hi></stage>
-            <l n="20" xml:id="l20"> </l>
-            <l n="21" xml:id="l21"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="22" xml:id="l22"> </l>
-          <sp who="colin" xml:id="3-1">
-            <speaker>COLIN, <em>seul</em></speaker>
-            <l n="23" xml:id="l23"> </l>
-            <stage><hi rend="italic"><em>À mesure que les Vendangeurs s’éloignent Colin revient sur le Théâtre. Il les regarde tristement, les suit des yeux et dit.</em></hi></stage>
-            <l n="25" xml:id="l25">Heureux de votre indifférence ; allez-vous livrer au plaisir, il n’en est plus pour qui connait l’amour.</l>
-            <stage><hi rend="italic"><em>Il prend son flageolet, s’assied au pied de la roche et joue l’Air : </em>J’aime une ingrate beauté<em>. </em></hi></stage>
-            <l n="27" xml:id="l27"> </l>
-            <l n="28" xml:id="l28"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="29" xml:id="l29"> </l>
-          <sp who="lucas" xml:id="4-1">
-            <speaker>COLIN, LUCAS</speaker>
-            <l n="30" xml:id="l30"> </l>
-          </sp>
-          <sp who="lucas" xml:id="4-2">
-            <speaker>LUCAS <em>paraît sur le haut du coteau, une bouteille à la main ; il aperçoit Colin, et vient à lui en chantant.</em></speaker>
-            <stage><hi rend="italic"><em>À Colin. </em></hi></stage>
-            <l n="32" xml:id="l32">Qu’est-ce que tu fais donc là, Colin ? Est-ce que tu ne viens pas à la Vendange </l>
-          </sp>
-          <sp who="colin" xml:id="4-3">
-            <speaker>COLIN.</speaker>
-            <l n="33" xml:id="l33">Non.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-4">
-            <speaker>LUCAS.</speaker>
-            <l n="34" xml:id="l34">Pourquoi donc ?</l>
-          </sp>
-          <sp who="colin" xml:id="4-5">
-            <speaker>COLIN.</speaker>
-            <l n="35" xml:id="l35">Qu’irai-je faire parmi vous ?</l>
-          </sp>
-          <sp who="lucas" xml:id="4-6">
-            <speaker>LUCAS.</speaker>
-            <l n="36" xml:id="l36">Ce qu’on fait en Vendange : travailler, rire et chanter.</l>
-          </sp>
-          <sp who="colin" xml:id="4-7">
-            <speaker>COLIN.</speaker>
-            <l n="37" xml:id="l37">Peut-on rire quand on connaît l’amour ?</l>
-          </sp>
-          <sp who="lucas" xml:id="4-8">
-            <speaker>LUCAS.</speaker>
-            <l n="38" xml:id="l38">Pauvre Colin, je ne te reconnais plus ! Jadis ta présence inspirait partout la gaieté : depuis quelque temps nos Bergères te cherchent en vain sous la coudrette, t’appellent en vain dessous l’ormeau ; nos jeux n’ont plus rien qui te plaisent, ton flageolet n’anime plus nos danses : d’où vient ce changement ?</l>
-          </sp>
-          <sp who="colin" xml:id="4-9">
-            <speaker>COLIN.</speaker>
-            <l n="39" xml:id="l39">J’aime.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-10">
-            <speaker>LUCAS.</speaker>
-            <l n="40" xml:id="l40">L’Amour ne se plaît qu’au milieu des Jeux et des Ris.</l>
-          </sp>
-          <sp who="colin" xml:id="4-11">
-            <speaker>COLIN.</speaker>
-            <l n="41" xml:id="l41">L’Amour heureux !</l>
-          </sp>
-          <sp who="lucas" xml:id="4-12">
-            <speaker>LUCAS.</speaker>
-            <l n="42" xml:id="l42">Es-tu fait pour en connaître un autre ?</l>
-          </sp>
-          <sp who="colin" xml:id="4-13">
-            <speaker>COLIN.</speaker>
-            <l n="43" xml:id="l43">J’aime sans espoir !</l>
-          </sp>
-          <sp who="lucas" xml:id="4-14">
-            <speaker>LUCAS.</speaker>
-            <l n="44" xml:id="l44">Il faut cesser d’aimer.</l>
-          </sp>
-          <sp who="colin" xml:id="4-15">
-            <speaker>COLIN.</speaker>
-            <l n="45" xml:id="l45">Impossible !</l>
-          </sp>
-          <sp who="lucas" xml:id="4-16">
-            <speaker>LUCAS.</speaker>
-            <l n="46" xml:id="l46">Eh ! quelle est donc l’inhumaine qui te tien si fort rigueur ?</l>
-          </sp>
-          <sp who="colin" xml:id="4-17">
-            <speaker>COLIN.</speaker>
-            <l n="47" xml:id="l47">Tu connais Colinette ?</l>
-          </sp>
-          <sp who="lucas" xml:id="4-18">
-            <speaker>LUCAS.</speaker>
-            <l n="48" xml:id="l48">Colinette !...</l>
-          </sp>
-          <sp who="colin" xml:id="4-19">
-            <speaker>COLIN.</speaker>
-            <l n="49" xml:id="l49">Peut-on la voir et ne pas l’adorer ?</l>
-          </sp>
-          <sp who="lucas" xml:id="4-20">
-            <speaker>LUCAS.</speaker>
-            <l n="50" xml:id="l50">C’est la fleur de ce Hameau.</l>
-          </sp>
-          <sp who="colin" xml:id="4-21">
-            <speaker>COLIN.</speaker>
-            <l n="51" xml:id="l51">Heureuse la main sous laquelle cette belle rose s’épanouira.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-22">
-            <speaker>LUCAS.</speaker>
-            <l n="52" xml:id="l52">Elle est encore bien jeune.</l>
-          </sp>
-          <sp who="colin" xml:id="4-23">
-            <speaker>COLIN.</speaker>
-            <l n="53" xml:id="l53">L’âge heureux où l’on sait plaire est l’âge où l’on doit aimer.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-24">
-            <speaker>LUCAS.</speaker>
-            <l n="54" xml:id="l54">Tu lui as déjà fait, l’aveu de ton amour.</l>
-          </sp>
-          <sp who="colin" xml:id="4-25">
-            <speaker>COLIN.</speaker>
-            <l n="55" xml:id="l55">Je n’ai jamais osé.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-26">
-            <speaker>LUCAS.</speaker>
-            <l n="56" xml:id="l56">Tu me fais pitié, mon pauvre Colin, laisse là l’amour.</l>
-            <stage><hi rend="italic"><em>Lui montrant sa bouteille. </em></hi></stage>
-            <l n="58" xml:id="l58">Voilà la Maitresse sans rigueurs et sans caprice ; c’est au fond de la bouteille que tu retrouveras ta saison.</l>
-          </sp>
-          <sp who="colin" xml:id="4-27">
-            <speaker>COLIN.</speaker>
-            <l n="59" xml:id="l59">Je la perdrais sans diminuer mon amour.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-28">
-            <speaker>LUCAS.</speaker>
-            <l n="60" xml:id="l60">L’amour ?... L’Amant est son esclave ; il est celui du buveur. Ma Rosette joue-t-elle la cruelle, je la fais boire ; elle devient douce comme un agneau. Veut-elle se mettre en colère ; je bois ; elle s’apaise... Essaye de mon secret, il est infaillible.</l>
-          </sp>
-          <sp who="colin" xml:id="4-29">
-            <speaker>COLIN.</speaker>
-            <l n="61" xml:id="l61">Ma peine me plaît trop pour en vouloir guérir.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-30">
-            <speaker>LUCAS.</speaker>
-            <l n="62" xml:id="l62">Du moins faut-il la soulager... L’année dernière les Vignes gelèrent, le vin manqua ; je devins amoureux. Comme toi je séchais sur pied ; dans mon désespoir j’eus recours à ce bon Solitaire qui reste dans cet Hermitage.</l>
-          </sp>
-          <sp who="colin" xml:id="4-31">
-            <speaker>COLIN.</speaker>
-            <l n="63" xml:id="l63">Eh bien ?</l>
-          </sp>
-          <sp who="lucas" xml:id="4-32">
-            <speaker>LUCAS.</speaker>
-            <l n="64" xml:id="l64">Je lui contai mes peines ; il m’écouta avec bonté, me consola ; et, grâce à ses conseils, je vis bientôt ma farouche Rosette devenir aussi tendre qu’auparavant elle était indifférente.</l>
-          </sp>
-          <sp who="colin" xml:id="4-33">
-            <speaker>COLIN.</speaker>
-            <l n="65" xml:id="l65">Rosette n’aime qu’à rire.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-34">
-            <speaker>LUCAS.</speaker>
-            <l n="66" xml:id="l66">Elle me laisse boire.</l>
-          </sp>
-          <sp who="colin" xml:id="4-35">
-            <speaker>COLIN.</speaker>
-            <l n="67" xml:id="l67">Elle joue avec tous les garçons.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-36">
-            <speaker>LUCAS.</speaker>
-            <l n="68" xml:id="l68">Et tous les jours elle remplit ma bouteille.</l>
-          </sp>
-          <sp who="colin" xml:id="4-37">
-            <speaker>COLIN.</speaker>
-            <l n="69" xml:id="l69">Chacun a sa manière d’aimer.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-38">
-            <speaker>LUCAS.</speaker>
-            <l n="70" xml:id="l70">La mienne est la bonne, je la tiens du solitaire.</l>
-          </sp>
-          <sp who="colin" xml:id="4-39">
-            <speaker>COLIN.</speaker>
-            <l n="71" xml:id="l71">Mais crois-tu qu’il veuille bien aussi une consoler ?</l>
-          </sp>
-          <sp who="lucas" xml:id="4-40">
-            <speaker>LUCAS.</speaker>
-            <l n="72" xml:id="l72">N’en doute pas : son bonheur est de faire des heureux.</l>
-          </sp>
-          <sp who="colin" xml:id="4-41">
-            <speaker>COLIN.</speaker>
-            <l n="73" xml:id="l73">On le dit un peu sorcier.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-42">
-            <speaker>LUCAS.</speaker>
-            <l n="74" xml:id="l74">Je le crois.</l>
-          </sp>
-          <sp who="colin" xml:id="4-43">
-            <speaker>COLIN.</speaker>
-            <l n="75" xml:id="l75">On dit que fous son souffle le lys se change en rose ; que la chenille se transforme en papillon, et que l’épervier cruel prend auprès de la colombe la douceur du tourtereau.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-44">
-            <speaker>LUCAS.</speaker>
-            <l n="76" xml:id="l76">Il a pour tous les maux des secrets infaillibles ; tous nos jeunes Bergers célèbrent les bienfaits. Il est vrai, que quelques Bergères rougissent à son nom, et que plusieurs d’entre elles se plaignent, que les remèdes sont quelquefois plus dangereux que les maux mêmes qu’il guérit... Mais crois-moi, va-le trouver en assurance et conte-lui tes peines.</l>
-          </sp>
-          <sp who="colin" xml:id="4-45">
-            <speaker>COLIN.</speaker>
-            <l n="77" xml:id="l77">Dis-moi, pour me le rendre favorable, ne faudrait-il pas lui offrir ?...</l>
-          </sp>
-          <sp who="lucas" xml:id="4-46">
-            <speaker>LUCAS.</speaker>
-            <l n="78" xml:id="l78">Il méprise l’or et l’argent ; de simples dons lui plaisent mille fois davantage... Offre-lui ton flageolet.</l>
-          </sp>
-          <sp who="colin" xml:id="4-47">
-            <speaker>COLIN.</speaker>
-            <l n="79" xml:id="l79">Colinette m’en fit présent à la fête dernière.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-48">
-            <speaker>LUCAS.</speaker>
-            <l n="80" xml:id="l80">Ce ruban ?</l>
-          </sp>
-          <sp who="colin" xml:id="4-49">
-            <speaker>COLIN.</speaker>
-            <l n="81" xml:id="l81">Il a paré la houlette de ma Bergère.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-50">
-            <speaker>LUCAS.</speaker>
-            <l n="82" xml:id="l82">Ces fleurs ?</l>
-          </sp>
-          <sp who="colin" xml:id="4-51">
-            <speaker>COLIN.</speaker>
-            <l n="83" xml:id="l83">Je les avais cueillies pour Colinette ; mais je les lui donnerai volontiers s’il peut attendrir son cœur.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-52">
-            <speaker>LUCAS.</speaker>
-            <l n="84" xml:id="l84">Ne perds donc pas de temps ; moi, je vais de mon côté travailler à ton bonheur.</l>
-          </sp>
-          <sp who="colin" xml:id="4-53">
-            <speaker>COLIN.</speaker>
-            <l n="85" xml:id="l85">Comment cela ?</l>
-          </sp>
-          <sp who="lucas" xml:id="4-54">
-            <speaker>LUCAS.</speaker>
-            <l n="86" xml:id="l86">Ma Rosette est l’amie de ta Colinette.</l>
-          </sp>
-          <sp who="colin" xml:id="4-55">
-            <speaker>COLIN.</speaker>
-            <l n="87" xml:id="l87">Elles ne se quittent pas.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-56">
-            <speaker>LUCAS.</speaker>
-            <l n="88" xml:id="l88">Je vais lui confier ton amour pour la jeune Compagne. Elle est bonne enfant, et avec son secours Colinette sera bien fine si elle nous échappe.</l>
-          </sp>
-          <sp who="colin" xml:id="4-57">
-            <speaker>COLIN.</speaker>
-            <l n="89" xml:id="l89">Que je t’aurai d’obligation.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-58">
-            <speaker>LUCAS.</speaker>
-            <l n="90" xml:id="l90">Je voudrais déjà te voir heureux, pour boire ensemble à la santé de nos Belles. Adieu, mon pauvre Colin, je vais chercher Rosette.</l>
-          </sp>
-          <sp who="colin" xml:id="4-59">
-            <speaker>COLIN.</speaker>
-            <l n="91" xml:id="l91">Adieu, mon cher Lucas.</l>
-          </sp>
-          <sp who="lucas" xml:id="4-60">
-            <speaker>LUCAS, <em>remonte le coteau en chantant.</em></speaker>
-            <l n="92" xml:id="l92">Une pinte de vin vaut mieux qu’une Maîtresse.</l>
-            <l n="93" xml:id="l93"> </l>
-            <l n="94" xml:id="l94"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="95" xml:id="l95"> </l>
-          <sp who="colin" xml:id="5-1">
-            <speaker>COLIN, <em>seul, rassemble les fleurs qu’il a cueillies, et qui sont éparses sur la pierre qui est au bas du rocher ; il en forme une couronne et va frapper à la porte de l’Hermitage</em></speaker>
-            <l n="96" xml:id="l96"> </l>
-          </sp>
-          <sp who="l’amour" xml:id="5-2">
-            <speaker>L’AMOUR, <em>en dedans.</em></speaker>
-            <l n="97" xml:id="l97">Qui frappe ?</l>
-          </sp>
-          <sp who="colin" xml:id="5-3">
-            <speaker>COLIN.</speaker>
-            <l n="98" xml:id="l98">Un malheureux amant qui vient implorer vos bontés !</l>
-            <l n="99" xml:id="l99"> </l>
-            <l n="100" xml:id="l100"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="101" xml:id="l101"> </l>
-          <sp who="colin" xml:id="6-1">
-            <speaker>L’AMOUR, COLIN</speaker>
-            <l n="102" xml:id="l102"> </l>
-          </sp>
-          <sp who="l’amour" xml:id="6-2">
-            <speaker>L’AMOUR, <em>habillé en Hermite ; une longue barbe blanche lui couvre la poitrine.</em></speaker>
-            <l n="103" xml:id="l103">Soyez le bienvenu, mon enfant, puisque vous savez aimer, vous m’intéressez déjà.</l>
-          </sp>
-          <sp who="colin" xml:id="6-3">
-            <speaker>COLIN, <em>lui présentant une couronne de roses.</em></speaker>
-            <l n="104" xml:id="l104">Daignez accepter cette couronne les fleurs en sont simples comme le fond de mon cœur.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-4">
-            <speaker>L’AMOUR, <em>prenant la couronne.</em></speaker>
-            <l n="105" xml:id="l105">Je les reçois avec plaisir ; souvent je les fais naître, et au Hameau je n’ai point d’armes plus dangereuses. Contez-moi vos chagrins, et soyez assuré que j’emploierai tout mon savoir à les calmer.</l>
-          </sp>
-          <sp who="colin" xml:id="6-5">
-            <speaker>COLIN.</speaker>
-            <l n="106" xml:id="l106">Le mal que j’éprouve se sent mieux qu’il ne s’explique... Connaissez-vous l’amour ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-6">
-            <speaker>L’AMOUR.</speaker>
-            <l n="107" xml:id="l107">Un peu... Aimez-vous quelque Bergère qui refuse d’écouter vos soupirs ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-7">
-            <speaker>COLIN.</speaker>
-            <l n="108" xml:id="l108">Voilà justement ce qui cause ma langueur.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-8">
-            <speaker>L’AMOUR.</speaker>
-            <l n="109" xml:id="l109">Comment nommez-vous cette Belle ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-9">
-            <speaker>COLIN.</speaker>
-            <l n="110" xml:id="l110">Colinette.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-10">
-            <speaker>L’AMOUR.</speaker>
-            <l n="111" xml:id="l111">Quel est son âge ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-11">
-            <speaker>COLIN.</speaker>
-            <l n="112" xml:id="l112">Seize ans. La rose naissante a moins d’éclat et de fraîcheur ; elle a moins d’épine aussi.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-12">
-            <speaker>L’AMOUR.</speaker>
-            <l n="113" xml:id="l113">Aime-t-elle quelqu’autre Berger ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-13">
-            <speaker>COLIN.</speaker>
-            <l n="114" xml:id="l114">Trop jeune encore, elle ignore jusqu’au nom du plaisir.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-14">
-            <speaker>L’AMOUR.</speaker>
-            <l n="115" xml:id="l115">Et ses yeux ne devinent pas ce que lui disent les vôtres ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-15">
-            <speaker>COLIN.</speaker>
-            <l n="116" xml:id="l116">Non.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-16">
-            <speaker>L’AMOUR.</speaker>
-            <l n="117" xml:id="l117">Lui avez-vous déclaré votre amour ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-17">
-            <speaker>COLIN.</speaker>
-            <stage><hi rend="italic"><em>Air : Dans ma cabane obscure. </em></hi></stage>
-          </sp>
-          <sp who="l’amour" xml:id="6-18">
-            <speaker>L’AMOUR.</speaker>
-            <l n="119" xml:id="l119">C’est quelque chose ; mais il faudrait parler.</l>
-          </sp>
-          <sp who="colin" xml:id="6-19">
-            <speaker>COLIN.</speaker>
-            <l n="120" xml:id="l120">Je n’ose !...</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-20">
-            <speaker>L’AMOUR.</speaker>
-            <l n="121" xml:id="l121">Que craignez-vous ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-21">
-            <speaker>COLIN.</speaker>
-            <l n="122" xml:id="l122">Colinette me croit son ami. Ce titre si doux l’amène souvent près de moi ; elle me fuirait peut-être si j’osais m’avouer son amant.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-22">
-            <speaker>L’AMOUR.</speaker>
-            <l n="123" xml:id="l123">Je n’ai qu’un moyen à vous donner pour vous guérir.</l>
-          </sp>
-          <sp who="colin" xml:id="6-23">
-            <speaker>COLIN.</speaker>
-            <l n="124" xml:id="l124">Quel est-il ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-24">
-            <speaker>L’AMOUR.</speaker>
-            <l n="125" xml:id="l125">Le feu qui brûle votre cœur, vous l’avez puisé dans ses yeux... Fuyez-la.</l>
-          </sp>
-          <sp who="colin" xml:id="6-25">
-            <speaker>COLIN.</speaker>
-            <l n="126" xml:id="l126">La fuir !...</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-26">
-            <speaker>L’AMOUR.</speaker>
-            <l n="127" xml:id="l127">Fuyez jusqu’aux lieux qu’elle habite.</l>
-          </sp>
-          <sp who="colin" xml:id="6-27">
-            <speaker>COLIN.</speaker>
-            <l n="128" xml:id="l128">Vénérable Solitaire ! n’avez-vous pas d’autres conseil à me donner ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-28">
-            <speaker>L’AMOUR.</speaker>
-            <l n="129" xml:id="l129">Si votre cœur trop sensible a besoin d’aimer, l’Amour vous donnera des armes contre lui même : quand on ne peut briser la chaîne, on peut du moins en alléger le poids... Attachez-vous à quelqu’autre Bergère moins farouche, plus tendre et plus complaisante.</l>
-            <stage><hi rend="italic"><em>Colin lui fait une profonde révérence, se retire. L’Amour l’arrête. </em></hi></stage>
-            <l n="131" xml:id="l131">Où allez-vous donc ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-29">
-            <speaker>COLIN.</speaker>
-            <l n="132" xml:id="l132">J’attendais de vous d’autres secours ; ceux ci me sont inutiles.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-30">
-            <speaker>L’AMOUR.</speaker>
-            <l n="133" xml:id="l133">Comment ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-31">
-            <speaker>COLIN.</speaker>
-            <l n="134" xml:id="l134">Je ne viens pas vous prier de me guérir de mon amour ; il cause ma peine, mais il fait mon bonheur : je ne vous demandais qu’un secret pour rendre Colinette sensible.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-32">
-            <speaker>L’AMOUR.</speaker>
-            <l n="135" xml:id="l135">Aussi n’ai-je fait qu’éprouver votre cœur. On m’a soupçonné quelquefois de favoriser l’inconstance ; on s’est bien trompé : et vous éprouverez aujourd’hui même l’effet de mon pouvoir.</l>
-          </sp>
-          <sp who="colin" xml:id="6-33">
-            <speaker>COLIN.</speaker>
-            <l n="136" xml:id="l136">Que ne vous devrai-je pas !</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-34">
-            <speaker>L’AMOUR.</speaker>
-            <l n="137" xml:id="l137">Écoutez-moi : vous savez bien que la garde de cette Vigne m’est confiée ; qu’il est défendu à toute jeune Bergère d’y cueillir le raisin d’Amour ?</l>
-          </sp>
-          <sp who="colin" xml:id="6-35">
-            <speaker>COLIN.</speaker>
-            <l n="138" xml:id="l138">Oui.</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-36">
-            <speaker>L’AMOUR.</speaker>
-            <l n="139" xml:id="l139">Eh bien ! vantez-en la douceur à Colinette, engagez-la à le goûter ; si elle est assez hardie pour y porter la main, je vous réponds de la victoire.</l>
-          </sp>
-          <sp who="colin" xml:id="6-37">
-            <speaker>COLIN.</speaker>
-            <l n="140" xml:id="l140">Vous ne lui ferez aucun mal ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-38">
-            <speaker>L’AMOUR.</speaker>
-            <l n="141" xml:id="l141">Si le premier trait, dont l’Amour blesse fait verser quelques larmes, le plaisir les sèche bientôt.</l>
-          </sp>
-          <sp who="colin" xml:id="6-39">
-            <speaker>COLIN.</speaker>
-            <l n="142" xml:id="l142">Vous l’affligerez donc ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-40">
-            <speaker>L’AMOUR.</speaker>
-            <l n="143" xml:id="l143">Vous la consolerez : qu’elle touche le raisin seulement.</l>
-          </sp>
-          <sp who="colin" xml:id="6-41">
-            <speaker>COLIN.</speaker>
-            <l n="144" xml:id="l144">Vous ne me trompez pas ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="6-42">
-            <speaker>L’AMOUR.</speaker>
-            <l n="145" xml:id="l145">Si je voulais tromper, aurais-je abandonné la Ville ? Faites ce que je vous ai dit, je vais m’occuper de votre bonheur.</l>
-            <stage><hi rend="italic"><em>Il sort. </em></hi></stage>
-            <l n="147" xml:id="l147"> </l>
-            <l n="148" xml:id="l148"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="149" xml:id="l149"> </l>
-          <sp who="colin" xml:id="7-1">
-            <speaker>COLIN, <em>seul</em></speaker>
-            <l n="150" xml:id="l150"> </l>
-            <l n="151" xml:id="l151">Colinette partagerait mon ardeur ! Ah ! s’il est vrai, tous les jours une nouvelle couronne de fleurs, bienfaisant Solitaire, te prouvera ma reconnaissance et mon bonheur... Mon cœur bat, il palpite... Colinette approche... Rosette l’accompagne... Sans doute, elle prépare son âme à l’amour... Cachons nous derrière cette roche, et épions l’heureux instant de la trouver seule.</l>
-            <stage><hi rend="italic"><em>Il sort. </em></hi></stage>
-            <l n="153" xml:id="l153"> </l>
-            <l n="154" xml:id="l154"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="155" xml:id="l155"> </l>
-          <sp who="colin" xml:id="8-1">
-            <speaker>COLINETTE, ROSETTE</speaker>
-            <l n="156" xml:id="l156"> </l>
-          </sp>
-          <sp who="colin" xml:id="8-2">
-            <speaker>COLINETTE.</speaker>
-            <l n="157" xml:id="l157">Nous fuit-il encore ?</l>
-          </sp>
-          <sp who="rosette" xml:id="8-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="158" xml:id="l158">Oui, le voilà, le voilà.</l>
-          </sp>
-          <sp who="colin" xml:id="8-4">
-            <speaker>COLINETTE.</speaker>
-            <l n="159" xml:id="l159">Éloignons-nous.</l>
-          </sp>
-          <sp who="rosette" xml:id="8-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="160" xml:id="l160">Pourquoi ?</l>
-          </sp>
-          <sp who="colin" xml:id="8-6">
-            <speaker>COLINETTE.</speaker>
-            <l n="161" xml:id="l161">Il a l’air d’être bien en colère.</l>
-          </sp>
-          <sp who="rosette" xml:id="8-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="162" xml:id="l162">Raison de plus pour le faire enrager.</l>
-            <l n="163" xml:id="l163"> </l>
-            <l n="164" xml:id="l164"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="165" xml:id="l165"> </l>
-          <sp who="blaise" xml:id="9-1">
-            <speaker>COLINETTE, ROSETTE, BLAISE</speaker>
-            <l n="166" xml:id="l166"> </l>
-          </sp>
-          <sp who="blaise" xml:id="9-2">
-            <speaker>BLAISE.</speaker>
-            <l n="167" xml:id="l167">Ah ! vous voilà donc, Mademoiselle Rosette ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="168" xml:id="l168">Oui, mon ami Blaise.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-4">
-            <speaker>BLAISE.</speaker>
-            <l n="169" xml:id="l169">Votre ami Blaise !...</l>
-            <stage><hi rend="italic"><em>Rosette lui passe la main sous le menton. </em></hi></stage>
-            <l n="171" xml:id="l171">Pas de ces façons-là !</l>
-          </sp>
-          <sp who="rosette" xml:id="9-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="172" xml:id="l172">Tu es bien fier aujourd’hui.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-6">
-            <speaker>BLAISE.</speaker>
-            <l n="173" xml:id="l173">Je suis comme je suis... Ma serpette ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="174" xml:id="l174">Comment ta serpette ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-8">
-            <speaker>BLAISE.</speaker>
-            <l n="175" xml:id="l175">Allons vite, rendez-la moi ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-9">
-            <speaker>ROSETTE.</speaker>
-            <l n="176" xml:id="l176">Tu me l’as prêtée.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-10">
-            <speaker>BLAISE.</speaker>
-            <l n="177" xml:id="l177">Hé bien ! je vous la redemande.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-11">
-            <speaker>ROSETTE.</speaker>
-            <l n="178" xml:id="l178">Et pourquoi ça ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-12">
-            <speaker>BLAISE.</speaker>
-            <l n="179" xml:id="l179">Parce que ma serpette n’est pas faite pour une...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-13">
-            <speaker>ROSETTE.</speaker>
-            <l n="180" xml:id="l180">Pour une...</l>
-          </sp>
-          <sp who="blaise" xml:id="9-14">
-            <speaker>BLAISE.</speaker>
-            <l n="181" xml:id="l181">Pour une trompeuse.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-15">
-            <speaker>ROSETTE.</speaker>
-            <l n="182" xml:id="l182">Que veux-tu dire ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-16">
-            <speaker>BLAISE.</speaker>
-            <l n="183" xml:id="l183">Je sais ce que je sais.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-17">
-            <speaker>ROSETTE.</speaker>
-            <l n="184" xml:id="l184">Et que sais-tu ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-18">
-            <speaker>BLAISE.</speaker>
-            <l n="185" xml:id="l185">Bien des choses dont vous devriez rougir.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-19">
-            <speaker>ROSETTE.</speaker>
-            <l n="186" xml:id="l186">Tu badines.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-20">
-            <speaker>BLAISE.</speaker>
-            <l n="187" xml:id="l187">Ne me faites pas parler... Je dirais...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-21">
-            <speaker>ROSETTE.</speaker>
-            <l n="188" xml:id="l188">Hé bien ! qu’est-ce que tu dirais ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-22">
-            <speaker>BLAISE.</speaker>
-            <l n="189" xml:id="l189">Suffit...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-23">
-            <speaker>ROSETTE.</speaker>
-            <l n="190" xml:id="l190">Parles donc... Je t’en défie.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-24">
-            <speaker>BLAISE.</speaker>
-            <l n="191" xml:id="l191">Vous m’en défiez ?...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-25">
-            <speaker>ROSETTE.</speaker>
-            <l n="192" xml:id="l192">Oui...</l>
-          </sp>
-          <sp who="blaise" xml:id="9-26">
-            <speaker>BLAISE.</speaker>
-            <l n="193" xml:id="l193">Tenez, Mademoiselle, Colinette est une brave fille, elle ; qu’elle nous juge.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-27">
-            <speaker>ROSETTE.</speaker>
-            <l n="194" xml:id="l194">Volontiers.</l>
-          </sp>
-          <sp who="colin" xml:id="9-28">
-            <speaker>COLINETTE.</speaker>
-            <l n="195" xml:id="l195">De quoi te plains-tu, mon pauvre Blaise ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-29">
-            <speaker>BLAISE.</speaker>
-            <l n="196" xml:id="l196">D’abord de ce que je l’aime.</l>
-          </sp>
-          <sp who="colin" xml:id="9-30">
-            <speaker>COLINETTE.</speaker>
-            <l n="197" xml:id="l197">Ce n’est pas la faute.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-31">
-            <speaker>BLAISE.</speaker>
-            <l n="198" xml:id="l198">Pardonnez-moi, Mademoiselle, si elle ne voulait pas que je l’aimasse, il ne fallait pas me donner...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-32">
-            <speaker>ROSETTE.</speaker>
-            <l n="199" xml:id="l199">Quoi ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-33">
-            <speaker>BLAISE.</speaker>
-            <l n="200" xml:id="l200">De l’espérance... Une honnête fille doit dire tout de suite à un garçon oui ou non.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-34">
-            <speaker>ROSETTE.</speaker>
-            <l n="201" xml:id="l201">Ah ! ah !</l>
-          </sp>
-          <sp who="blaise" xml:id="9-35">
-            <speaker>BLAISE.</speaker>
-            <l n="202" xml:id="l202">C’est toujours la faute des filles quand les garçons les aiment.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-36">
-            <speaker>ROSETTE.</speaker>
-            <l n="203" xml:id="l203">Je ne savais pas ça.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-37">
-            <speaker>BLAISE.</speaker>
-            <l n="204" xml:id="l204">Oh ! que si vous le savez bien : et puis quand on ne veut pas d’un garçon, on ne reçoit rien de lui.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-38">
-            <speaker>ROSETTE.</speaker>
-            <l n="205" xml:id="l205">Je ne sais rien refuser, moi.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-39">
-            <speaker>BLAISE.</speaker>
-            <l n="206" xml:id="l206">Et rien garder. Mon beau bouquet de barbeaux d’hier, que j’ai risqué vingt fois de me faire mettre à l’amende pour vous le cueillir.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-40">
-            <speaker>ROSETTE.</speaker>
-            <l n="207" xml:id="l207">Hé bien ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-41">
-            <speaker>BLAISE.</speaker>
-            <l n="208" xml:id="l208">Hé bien ! vous en avez donné sur le champ la moitié à Lucas.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-42">
-            <speaker>ROSETTE.</speaker>
-            <l n="209" xml:id="l209">Il était si gros ; que voulais-tu que j’en fisse ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-43">
-            <speaker>BLAISE.</speaker>
-            <l n="210" xml:id="l210">Et mon beau ruban que je vous achetai à la Foire dernière ; Mathurin l’avait Dimanche à son chapeau, je l’ai bien reconnu.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-44">
-            <speaker>ROSETTE.</speaker>
-            <l n="211" xml:id="l211">Il me l’a pris en riant.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-45">
-            <speaker>BLAISE.</speaker>
-            <l n="212" xml:id="l212">Oh ! qu’on ne se laisse prendre que ce qu’on veut bien donner. Et mon nid de merles ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-46">
-            <speaker>ROSETTE.</speaker>
-            <l n="213" xml:id="l213">Hé bien ! ton nid de merles !</l>
-          </sp>
-          <sp who="blaise" xml:id="9-47">
-            <speaker>BLAISE.</speaker>
-            <l n="214" xml:id="l214">Que j’ai pensé me rompre le col pour vous le dénicher. Qu’il y avait dedans, quatre beaux petits merles, tous vivants : où sont-ils ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-48">
-            <speaker>ROSETTE.</speaker>
-            <l n="215" xml:id="l215">Je les ai donnés à Charlot.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-49">
-            <speaker>BLAISE.</speaker>
-            <l n="216" xml:id="l216">Et pourquoi ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-50">
-            <speaker>ROSETTE.</speaker>
-            <l n="217" xml:id="l217">Pour leur apprendre à siffler.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-51">
-            <speaker>BLAISE.</speaker>
-            <l n="218" xml:id="l218">Est-ce aussi pour vous apprendre à siffler qu’il vous mène le soir au petit bois ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-52">
-            <speaker>ROSETTE.</speaker>
-            <l n="219" xml:id="l219">C’est pour y chercher des noisettes... Que tu es bête, mon pauvre Blaise.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-53">
-            <speaker>BLAISE.</speaker>
-            <l n="220" xml:id="l220">Çà se peut bien ; mais rendez-moi toujours ma Serpette ?</l>
-          </sp>
-          <sp who="rosette" xml:id="9-54">
-            <speaker>ROSETTE.</speaker>
-            <l n="221" xml:id="l221">Et avec quoi veux-tu que je vendange ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-55">
-            <speaker>BLAISE.</speaker>
-            <l n="222" xml:id="l222">Monsieur Lucas vous prêtera la Sienne.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-56">
-            <speaker>ROSETTE.</speaker>
-            <l n="223" xml:id="l223">Tu as raison. Tiens la voilà.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-57">
-            <speaker>BLAISE.</speaker>
-            <l n="224" xml:id="l224">Vous êtes une ingrate.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-58">
-            <speaker>ROSETTE.</speaker>
-            <l n="225" xml:id="l225">À la bonne-heure.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-59">
-            <speaker>BLAISE.</speaker>
-            <l n="226" xml:id="l226">Vous verrez... Vous verrez...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-60">
-            <speaker>ROSETTE.</speaker>
-            <l n="227" xml:id="l227">Et que verrai-je ?</l>
-          </sp>
-          <sp who="blaise" xml:id="9-61">
-            <speaker>BLAISE.</speaker>
-            <l n="228" xml:id="l228">Je ne vous aimerai plus.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-62">
-            <speaker>ROSETTE.</speaker>
-            <l n="229" xml:id="l229">Le grand malheur.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-63">
-            <speaker>BLAISE.</speaker>
-            <l n="230" xml:id="l230">J’aurais rempli votre panier... Hé bien ! je n’y mettrais pas une seule grappe.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-64">
-            <speaker>ROSETTE.</speaker>
-            <l n="231" xml:id="l231">Vas, vas, mon pauvre Blaise ; tu peux t’en éviter la peine, je le remplirai bien sans toi... Et Lucas ?...</l>
-          </sp>
-          <sp who="blaise" xml:id="9-65">
-            <speaker>BLAISE.</speaker>
-            <l n="232" xml:id="l232">C’est bien décidé ça : s’il vous approche... Suffit...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-66">
-            <speaker>ROSETTE.</speaker>
-            <l n="233" xml:id="l233">Il est plus fort que toi.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-67">
-            <speaker>BLAISE.</speaker>
-            <l n="234" xml:id="l234">Il me battra : on saura que c’est pour vous, et çà ne vous fera pas d’honneur.</l>
-          </sp>
-          <sp who="rosette" xml:id="9-68">
-            <speaker>ROSETTE.</speaker>
-            <l n="235" xml:id="l235">Ni à toi de bien.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-69">
-            <speaker>BLAISE.</speaker>
-            <l n="236" xml:id="l236">C’est égal ; vous verrez...</l>
-          </sp>
-          <sp who="rosette" xml:id="9-70">
-            <speaker>ROSETTE.</speaker>
-            <l n="237" xml:id="l237">Adieu, mon ami Blaise.</l>
-          </sp>
-          <sp who="blaise" xml:id="9-71">
-            <speaker>BLAISE.</speaker>
-            <l n="238" xml:id="l238">Vous vous moquez de moi ; mais je n’en vais le dire à tout le Village, et que vous êtes une coquette, une trompeuse... Allez, Mademoiselle Colinette, vous avez tort de la fréquenter ; elle vous rendra comme elle, et puis vous ferez enrager les honnêtes garçons qui voudront s’attacher à vous...</l>
-            <stage><hi rend="italic"><em>Il sort. </em></hi></stage>
-            <l n="240" xml:id="l240"> </l>
-            <l n="241" xml:id="l241"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="242" xml:id="l242"> </l>
-          <sp who="colin" xml:id="10-1">
-            <speaker>COLINETTE, ROSETTE</speaker>
-            <l n="243" xml:id="l243"> </l>
-          </sp>
-          <sp who="colin" xml:id="10-2">
-            <speaker>COLINETTE.</speaker>
-            <l n="244" xml:id="l244">C’est donc là de l’amour !</l>
-          </sp>
-          <sp who="rosette" xml:id="10-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="245" xml:id="l245">À-peu-près.</l>
-          </sp>
-          <sp who="colin" xml:id="10-4">
-            <speaker>COLINETTE.</speaker>
-            <l n="246" xml:id="l246">C’est-là ce que tu me vantais comme le bonheur.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="247" xml:id="l247">Ah, Colinette ! il y a amour et amour.</l>
-          </sp>
-          <sp who="colin" xml:id="10-6">
-            <speaker>COLINETTE.</speaker>
-            <l n="248" xml:id="l248">Que veux-tu dire ?</l>
-          </sp>
-          <sp who="rosette" xml:id="10-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="249" xml:id="l249">Qu’un amant est bien différent d’un amoureux.</l>
-          </sp>
-          <sp who="colin" xml:id="10-8">
-            <speaker>COLINETTE.</speaker>
-            <l n="250" xml:id="l250">Je ne t’entends pas.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-9">
-            <speaker>ROSETTE.</speaker>
-            <l n="251" xml:id="l251">La rose qu’on nous donne, vaut-elle le barbeau qu’on nous défend de cueillir ?</l>
-          </sp>
-          <sp who="colin" xml:id="10-10">
-            <speaker>COLINETTE.</speaker>
-            <l n="252" xml:id="l252">Non.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-11">
-            <speaker>ROSETTE.</speaker>
-            <l n="253" xml:id="l253">On nous ordonne d’aimer un amoureux ; on nous défend de voir notre amant, et c’est ce qui nous le rend si cher.</l>
-          </sp>
-          <sp who="colin" xml:id="10-12">
-            <speaker>COLINETTE.</speaker>
-            <l n="254" xml:id="l254">Mais, Rosette...</l>
-          </sp>
-          <sp who="rosette" xml:id="10-13">
-            <speaker>ROSETTE.</speaker>
-            <l n="255" xml:id="l255">Hé bien ?</l>
-          </sp>
-          <sp who="colin" xml:id="10-14">
-            <speaker>COLINETTE.</speaker>
-            <l n="256" xml:id="l256">À quoi donc reconnaît-on un amant ?</l>
-          </sp>
-          <sp who="rosette" xml:id="10-15">
-            <speaker>ROSETTE.</speaker>
-            <l n="257" xml:id="l257">À tout... Au battement subit que le cœur éprouve à son approche, à la rougeur qui couvre notre front à la vue, au plaisir qu’elle inspire.</l>
-          </sp>
-          <sp who="colin" xml:id="10-16">
-            <speaker>COLINETTE.</speaker>
-            <l n="258" xml:id="l258">Et que fait un amant ?</l>
-          </sp>
-          <sp who="rosette" xml:id="10-17">
-            <speaker>ROSETTE.</speaker>
-            <l n="259" xml:id="l259">Sans cesse occupé de plaire à sa Bergère ; c’est toujours lui qu’on rencontre le premier en allant aux champs ; c’est lui qu’on y voit le dernier. Laisse-t-on tomber une fleur, on l’aperçoit le lendemain à son côté ; perd-t-on un ruban, on le retrouve à son chapeau : sous l’ormeau c’est toujours avec lui que l’on danse, même sans le vouloir ; sous la coudrette c’est toujours lui que l’on trouve : fredonne-t-on un Air, c’est celui que son flageolet répète...</l>
-          </sp>
-          <sp who="colin" xml:id="10-18">
-            <speaker>COLINETTE.</speaker>
-            <l n="260" xml:id="l260">Ah, Rosette ! tu te trompes.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-19">
-            <speaker>ROSETTE.</speaker>
-            <l n="261" xml:id="l261">Crois que je suis bonne connaisseuse.</l>
-          </sp>
-          <sp who="colin" xml:id="10-20">
-            <speaker>COLINETTE.</speaker>
-            <l n="262" xml:id="l262">C’est l’amitié que tu peins.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-21">
-            <speaker>ROSETTE.</speaker>
-            <l n="263" xml:id="l263">L’amitié !</l>
-          </sp>
-          <sp who="colin" xml:id="10-22">
-            <speaker>COLINETTE.</speaker>
-            <l n="264" xml:id="l264">Ce trouble, cette rougeur, ce plaisir surtout !...</l>
-          </sp>
-          <sp who="rosette" xml:id="10-23">
-            <speaker>ROSETTE.</speaker>
-            <l n="265" xml:id="l265">Hé bien ?</l>
-          </sp>
-          <sp who="colin" xml:id="10-24">
-            <speaker>COLINETTE.</speaker>
-            <l n="266" xml:id="l266">C’est ce que j’éprouve à l’aspect de Colin.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-25">
-            <speaker>ROSETTE.</speaker>
-            <l n="267" xml:id="l267">Ah, ah.</l>
-          </sp>
-          <sp who="colin" xml:id="10-26">
-            <speaker>COLINETTE.</speaker>
-            <l n="268" xml:id="l268">Ces soins, ces prévenances ; Colin les a toutes pour moi.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-27">
-            <speaker>ROSETTE.</speaker>
-            <l n="269" xml:id="l269">Colin est ton amant ?</l>
-          </sp>
-          <sp who="colin" xml:id="10-28">
-            <speaker>COLINETTE.</speaker>
-            <l n="270" xml:id="l270">Non, non, Rosette, il n’est que mon ami ; il me l’a dit vingt fois.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-29">
-            <speaker>ROSETTE.</speaker>
-            <l n="271" xml:id="l271">Vingt fois il t’a trompée.</l>
-          </sp>
-          <sp who="colin" xml:id="10-30">
-            <speaker>COLINETTE.</speaker>
-            <l n="272" xml:id="l272">Il en est incapable.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-31">
-            <speaker>ROSETTE.</speaker>
-            <l n="273" xml:id="l273">Hé bien ! il se trompe lui-même... Ah, Colinette ! si tu avais goûté du raisin d’Amour.</l>
-          </sp>
-          <sp who="colin" xml:id="10-32">
-            <speaker>COLINETTE.</speaker>
-            <l n="274" xml:id="l274">De ce mauvais raisin-là...</l>
-          </sp>
-          <sp who="rosette" xml:id="10-33">
-            <speaker>ROSETTE.</speaker>
-            <l n="275" xml:id="l275">Oui...</l>
-          </sp>
-          <sp who="colin" xml:id="10-34">
-            <speaker>COLINETTE.</speaker>
-            <l n="276" xml:id="l276">Fi donc ! on dit qu’il est amer, amer...</l>
-          </sp>
-          <sp who="rosette" xml:id="10-35">
-            <speaker>ROSETTE.</speaker>
-            <l n="277" xml:id="l277">Le premier grain l’est quelquefois, mais le second est délicieux.</l>
-          </sp>
-          <sp who="colin" xml:id="10-36">
-            <speaker>COLINETIE.</speaker>
-            <l n="278" xml:id="l278">Est-ce que tu en as goûté ?</l>
-          </sp>
-          <sp who="rosette" xml:id="10-37">
-            <speaker>ROSETTE.</speaker>
-            <l n="279" xml:id="l279">Non pas une, mais dix fois.</l>
-          </sp>
-          <sp who="colin" xml:id="10-38">
-            <speaker>COLINETTE.</speaker>
-            <l n="280" xml:id="l280">Eh, mon Dieu, Rosette ! comment as-tu donc fait ? il est si bien gardé.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-39">
-            <speaker>ROSETTE</speaker>
-            <l n="281" xml:id="l281">Il ne l’est pas si bien qu’on ne puisse en manger.</l>
-          </sp>
-          <sp who="colin" xml:id="10-40">
-            <speaker>COLINETTE.</speaker>
-            <l n="282" xml:id="l282">Mais quand on y touche ; on est saisie, dit-on.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-41">
-            <speaker>ROSETTE.</speaker>
-            <l n="283" xml:id="l283">Bon ; telle y a vendangé dix fois qui jamais n’y fut prise ; telle autre, à la vérité, pour un seul grain y perdit son panier : tout dépend de l’adresse et du moment favorable.</l>
-          </sp>
-          <sp who="colin" xml:id="10-42">
-            <speaker>COLINETTE.</speaker>
-            <l n="284" xml:id="l284">Et tu dis qu’il est bon ?</l>
-          </sp>
-          <sp who="rosette" xml:id="10-43">
-            <speaker>ROSETTE.</speaker>
-            <l n="285" xml:id="l285">Délicieux.</l>
-          </sp>
-          <sp who="colin" xml:id="10-44">
-            <speaker>COLINETTE.</speaker>
-            <l n="286" xml:id="l286">Rosette...</l>
-          </sp>
-          <sp who="rosette" xml:id="10-45">
-            <speaker>ROSETTE.</speaker>
-            <l n="287" xml:id="l287">Hé bien ?</l>
-          </sp>
-          <sp who="colin" xml:id="10-46">
-            <speaker>COLINETTE.</speaker>
-            <l n="288" xml:id="l288">Veux-tu en cueillir pour nous deux ?</l>
-          </sp>
-          <sp who="rosette" xml:id="10-47">
-            <speaker>ROSETTE.</speaker>
-            <l n="289" xml:id="l289">Oh ! chacune pour soi.</l>
-          </sp>
-          <sp who="colin" xml:id="10-48">
-            <speaker>COLINETTE.</speaker>
-            <l n="290" xml:id="l290">Que cette grappe est belle !</l>
-          </sp>
-          <sp who="rosette" xml:id="10-49">
-            <speaker>ROSETTE.</speaker>
-            <l n="291" xml:id="l291">Que les grains en font bien dorés !</l>
-          </sp>
-          <sp who="colin" xml:id="10-50">
-            <speaker>COLINETTE.</speaker>
-            <l n="292" xml:id="l292">Personne ne nous voit ?</l>
-          </sp>
-          <sp who="rosette" xml:id="10-51">
-            <speaker>ROSETTE.</speaker>
-            <l n="293" xml:id="l293">Non.</l>
-          </sp>
-          <sp who="colin" xml:id="10-52">
-            <speaker>COLINETTE.</speaker>
-            <l n="294" xml:id="l294">Arrachons-la.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-53">
-            <speaker>ROSETTE.</speaker>
-            <l n="295" xml:id="l295">Volontiers.</l>
-          </sp>
-          <sp who="colin" xml:id="10-54">
-            <speaker>COLINETTE.</speaker>
-            <l n="296" xml:id="l296">Elle tient bien fort.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-55">
-            <speaker>ROSETTE.</speaker>
-            <l n="297" xml:id="l297">Nous la flétrissons sans la cueillir.</l>
-          </sp>
-          <sp who="colin" xml:id="10-56">
-            <speaker>COLINETTE.</speaker>
-            <l n="298" xml:id="l298">Ah ! si nous avions une serpette ; ne fus-ce que celle de Blaise.</l>
-          </sp>
-          <sp who="rosette" xml:id="10-57">
-            <speaker>ROSETTE.</speaker>
-            <l n="299" xml:id="l299">Courage... Nous l’aurons...</l>
-            <l n="300" xml:id="l300"> </l>
-            <l n="301" xml:id="l301"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="302" xml:id="l302"> </l>
-          <sp who="colin" xml:id="11-1">
-            <speaker>COLINETTE, ROSETTE, LA MÈRE SIMONE</speaker>
-            <l n="303" xml:id="l303"> </l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-2">
-            <speaker>LA MÈRE SIMONE, <em>descendant du coteau avec précipitation.</em></speaker>
-            <l n="304" xml:id="l304">Arrête, Colinette, arrête !</l>
-          </sp>
-          <sp who="rosette" xml:id="11-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="305" xml:id="l305">C’est la mère Simone, elle nous a vues, je crois.</l>
-          </sp>
-          <sp who="colin" xml:id="11-4">
-            <speaker>COLINETTE.</speaker>
-            <l n="306" xml:id="l306">Nous sommes perdues.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="307" xml:id="l307">Il faut la laisser dire.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-6">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="308" xml:id="l308">Oh, mon enfant ! qu’allais-tu donc faire ?</l>
-          </sp>
-          <sp who="colin" xml:id="11-7">
-            <speaker>COLINETTE.</speaker>
-            <l n="309" xml:id="l309">Rien, ma bonne mère.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-8">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="310" xml:id="l310">Mais je t’ai vue...</l>
-          </sp>
-          <sp who="colin" xml:id="11-9">
-            <speaker>COLINETTE.</speaker>
-            <l n="311" xml:id="l311">Rosette m’a tant vanté, tant vanté la douceur du raisin d’Amour, que je voulais en goûter un seul grain.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-10">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="312" xml:id="l312">Ah, petit serpent ! peux-tu tromper ainsi cette innocente créature ; sais-tu bien, ma fille, que ce raisin est empoisonné.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-11">
-            <speaker>ROSETTE.</speaker>
-            <l n="313" xml:id="l313">Empoisonné !</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-12">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="314" xml:id="l314">Oui, empoisonné.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-13">
-            <speaker>ROSETTE.</speaker>
-            <l n="315" xml:id="l315">La jeune Agathe voyait tous les jours pâlir les roses de son teint, une langueur secrète la consumait ; elle goûta le raisin d’Amour, et les roses reparurent à l’instant avec sa gaieté.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-14">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="316" xml:id="l316">Colette fit longtemps les plaisirs de ce Hameau, sa présence seule inspirait la joie ; Colette goûta le raisin d’Amour ; Colette depuis ce temps fuit nos plaisirs et nos jeux, et dévore dans le silence une tristesse qu’elle ne peut vaincre.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-15">
-            <speaker>ROSETTE.</speaker>
-            <l n="317" xml:id="l317">Rien n’égalait la stupidité de Nice, on n’é tait ni plus simple, ni plus niaise ; un seul grain du raisin d’Amour a fait de Nice une Bergère charmante.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-16">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="318" xml:id="l318">On entend tout bas soupirer Thérèse depuis qu’elle a eu l’imprudence d’en goûter.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-17">
-            <speaker>ROSETTE.</speaker>
-            <l n="319" xml:id="l319">Depuis que Mathurin en a cueilli pour Isabeau, on la voit rire et folâtrer sans cesse.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-18">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="320" xml:id="l320">C’est une impudente, une effrontée, je ne sais pas ce que c’est de dire du mal de personne ; mais ou Mathurine, Louise, Marianne, Toinette, Agnès, Juliette, Françoise, Claudine, Babet, Annette et vingt autres que je ne veux pas nommer, ont-elles perdu leurs paniers ? à la vigne d’Amour : et cette pauvre Charlotte, de quoi est-elle morte, hem ? sinon d’en avoir trop mangé sans jamais vouloir l’avouer. Damne, tout le monde sait cela dans le Village, ce que j’en dis ce n’est pas par méchanceté ; mais on n’en a pas plutôt goûté un seul grain, qu’un feu dévorant se glisse jusqu’au fond du cœur, et y porte le trouble, la langueur et la mort.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-19">
-            <speaker>ROSETTE.</speaker>
-            <l n="321" xml:id="l321">Ce sont des contes.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-20">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="322" xml:id="l322">Comment des contes ?</l>
-          </sp>
-          <sp who="rosette" xml:id="11-21">
-            <speaker>ROSETTE.</speaker>
-            <l n="323" xml:id="l323">Et oui des contes ; en êtes-vous morte vous, la mère Simone ?</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-22">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="324" xml:id="l324">Aussi n’en ai-je jamais goûté.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-23">
-            <speaker>ROSETTE.</speaker>
-            <l n="325" xml:id="l325">Que certain jour que vous fûtes surprise... hem !...</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-24">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="326" xml:id="l326">Petite mauvaise langue ; j’étais si innocente, et puis il y a si longtemps...</l>
-          </sp>
-          <sp who="rosette" xml:id="11-25">
-            <speaker>ROSETTE.</speaker>
-            <l n="327" xml:id="l327">Vous ne le trouvâtes pas si mauvais, car vous y retournâtes huit jours après avec gros Pierre, et vous y perdîtes votre panier cette fois là.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-26">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="328" xml:id="l328">Qui te prie de dire tout cela, petite langue de vipère ?</l>
-          </sp>
-          <sp who="rosette" xml:id="11-27">
-            <speaker>ROSETTE.</speaker>
-            <l n="329" xml:id="l329">Pourquoi voulez-vous nous tromper ?</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-28">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="330" xml:id="l330">Ce n’est pas à toi que je parle, ce serait peine perdue, il y a longtemps que tu y as vendangé, je crois.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-29">
-            <speaker>ROSETTE.</speaker>
-            <l n="331" xml:id="l331">Personne ne m’y a surprise toujours, et j’ai encore mon panier tout entier.</l>
-          </sp>
-          <sp who="colin" xml:id="11-30">
-            <speaker>LA MÈRE SIMONE, <em>à Colinette.</em></speaker>
-            <l n="332" xml:id="l332">C’est toi, mon enfant, c’est toi que je veux Sauver du danger. Je l’avoue, j’ai eu la faiblesse de cueillir de ce maudit raisin ; mais si tu savais combien en secret j’ai répandu de larmes.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-31">
-            <speaker>ROSETTE.</speaker>
-            <l n="333" xml:id="l333">De regrets.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-32">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="334" xml:id="l334">Mais qui te parle donc ? Prends-y bien garde, Colinette ; si tu t’avisais d’en prendre un seul grain, tu serais perdue.</l>
-          </sp>
-          <sp who="colin" xml:id="11-33">
-            <speaker>COLINETTE.</speaker>
-            <l n="335" xml:id="l335">Que m’arriverait-il donc ?</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-34">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="336" xml:id="l336">On te saisirait ton panier ; et comment alors oserais-tu reparaître dans le Village ?</l>
-          </sp>
-          <sp who="colin" xml:id="11-35">
-            <speaker>COLINETTE.</speaker>
-            <l n="337" xml:id="l337">Mon panier est si peu de chose.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-36">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="338" xml:id="l338">C’est la richesse de l’innocence.</l>
-          </sp>
-          <sp who="colin" xml:id="11-37">
-            <speaker>COLINETTE.</speaker>
-            <l n="339" xml:id="l339">On n’est pas toujours prise.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-38">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="340" xml:id="l340">Vois cette haie ?</l>
-          </sp>
-          <sp who="colin" xml:id="11-39">
-            <speaker>COLINETTE.</speaker>
-            <l n="341" xml:id="l341">Elle est couverte de roses.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-40">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="342" xml:id="l342">Oui ; mais les épines sont dessous.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-41">
-            <speaker>ROSETTE.</speaker>
-            <l n="343" xml:id="l343">Le plaisir les émousse.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-42">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="344" xml:id="l344">Le précipice le plus dangereux, est tous jours celui qui le paraît le moins ; on se méfie des ronces, on s’approche imprudemment des fleurs : la vue même de cette Vigne est funeste aux jeunes filles, il ne faut pas trop accoutumer ses yeux à fixer le raisin d’Amour.</l>
-          </sp>
-          <sp who="colin" xml:id="11-43">
-            <speaker>COLINETTE.</speaker>
-            <l n="345" xml:id="l345">Il paraît si beau.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-44">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="346" xml:id="l346">Et voilà le danger ; la vue se trouble, la tête se perd, et l’on ne sait plus ce que l’on fait : retires-toi, fuis cette Vigne dangereuse.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-45">
-            <speaker>ROSETTE.</speaker>
-            <l n="347" xml:id="l347">Vous voudriez la voir sécher sur pied à présent.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-46">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="348" xml:id="l348">Certainement.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-47">
-            <speaker>ROSETTE.</speaker>
-            <l n="349" xml:id="l349">Parce que vous n’y trouvez plus de goût.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-48">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="350" xml:id="l350">Tu es une impertinente ; apprends que si je voulais j’y vendangerais encore.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-49">
-            <speaker>ROSETTE.</speaker>
-            <l n="351" xml:id="l351">À d’autres, la mère Simone, à d’autres ; chacun son tour.</l>
-          </sp>
-          <sp who="colin" xml:id="11-50">
-            <speaker>LA MÈRE SIMONE, <em>à Colinette.</em></speaker>
-            <l n="352" xml:id="l352">Ne l’écoute pas, ma chère enfant, c’est un petit mauvais sujet, elle te perdrait : vas rejoindre les Vendangeurs ; vas, ma fille, vas.</l>
-          </sp>
-          <sp who="rosette" xml:id="11-51">
-            <speaker>ROSETTE.</speaker>
-            <l n="353" xml:id="l353">Adieu, la mère Simone.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="11-52">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="354" xml:id="l354">Adieu, adieu...</l>
-            <stage><hi rend="italic"><em>Rosette et Colinette sortent. </em></hi></stage>
-            <l n="356" xml:id="l356"> </l>
-            <l n="357" xml:id="l357"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="358" xml:id="l358"> </l>
-          <sp who="la-mère-simone" xml:id="12-1">
-            <speaker>LA MÈRE SIMONE, <em>seule</em></speaker>
-            <l n="359" xml:id="l359"> </l>
-            <l n="360" xml:id="l360">Mais voyez donc un peu ces petites morveuses ; en vérité, il n’y a plus d’enfants. C’est pour elles vraiment qu’est fait ce beau raisin ; sans moi elles allaient le cueillir. Qu’il est beau, l’eau m’en vient à la bouche... Personne ne me voit... Goûtons-en-encore quelques grains... La grappe semble s’éloigner de ma main... Je ne puis y atteindre... Maudite haie... Je ne le crois pas encore bien mûr... Mais voici Blaise...</l>
-            <l n="361" xml:id="l361"> </l>
-            <l n="362" xml:id="l362"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="363" xml:id="l363"> </l>
-          <sp who="blaise" xml:id="13-1">
-            <speaker>LA MÈRE SIMONE, BLAISE</speaker>
-            <l n="364" xml:id="l364"> </l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-2">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="365" xml:id="l365">Bonjour, mon ami Blaise.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-3">
-            <speaker>BLAISE.</speaker>
-            <l n="366" xml:id="l366">Ah, bonjour, la mère Simone.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-4">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="367" xml:id="l367">Que cherches-tu donc, Blaise ?</l>
-          </sp>
-          <sp who="blaise" xml:id="13-5">
-            <speaker>BLAISE.</speaker>
-            <l n="368" xml:id="l368">Rien... C’est que... n’avez-vous pas vu Rosette ?</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-6">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="369" xml:id="l369">Oui, mon garçon... Que lui veux-tu ?</l>
-          </sp>
-          <sp who="blaise" xml:id="13-7">
-            <speaker>BLAISE.</speaker>
-            <l n="370" xml:id="l370">C’est que nous sommes fâches, voyez-vous, et je voudrais, sans faire semblant de rien, nous raccommoder ensemble.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-8">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="371" xml:id="l371">Quel dommage qu’un garçon sage, honnête comme toi, se soit emmouraché d’une petite coquette comme elle.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-9">
-            <speaker>BLAISE.</speaker>
-            <l n="372" xml:id="l372">Vous avez bien raison ; c’est un fort qu’on m’a jeté, je crois.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-10">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="373" xml:id="l373">Veux-tu que je t’en guérisse ?</l>
-          </sp>
-          <sp who="blaise" xml:id="13-11">
-            <speaker>BLAISE.</speaker>
-            <l n="374" xml:id="l374">Vous me rendriez là un beau service.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-12">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="375" xml:id="l375">C’est que j’ai bien de l’amitié pour toi, mon ami Blaise.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-13">
-            <speaker>BLAISE.</speaker>
-            <l n="376" xml:id="l376">Vous êtes trop bonne.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-14">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="377" xml:id="l377">Il te faudrait une femme sensée.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-15">
-            <speaker>BLAISE.</speaker>
-            <l n="378" xml:id="l378">Vous avez raison.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-16">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="379" xml:id="l379">Tu es un si bon garçon.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-17">
-            <speaker>BLAISE.</speaker>
-            <l n="380" xml:id="l380">Ah ! c’est vrai ça.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-18">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="381" xml:id="l381">Si tu veux que je te guérisse de ton amour pour cette petite Rosette, il faut me promettre de la discrétion.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-19">
-            <speaker>BLAISE.</speaker>
-            <l n="382" xml:id="l382">Personne n’est plus discret que moi : voyons que faut-il faire ?</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-20">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="383" xml:id="l383">As-tu jamais goûté du raisin d’Amour ?</l>
-          </sp>
-          <sp who="blaise" xml:id="13-21">
-            <speaker>BLAISE.</speaker>
-            <l n="384" xml:id="l384">Fi donc, on dit qu’il empoisonne.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-22">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="385" xml:id="l385">Ce sont des contes.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-23">
-            <speaker>BLAISE.</speaker>
-            <l n="386" xml:id="l386">Oh ! oh !</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-24">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="387" xml:id="l387">Il est délicieux.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-25">
-            <speaker>BLAISE.</speaker>
-            <l n="388" xml:id="l388">Tout de bon.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-26">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="389" xml:id="l389">Tout de bon : il a en outre la vertu de guérir les garçons de l’amour qu’ils ont pour les filles.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-27">
-            <speaker>BLAISE.</speaker>
-            <l n="390" xml:id="l390">C’est plaisant ça.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-28">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="391" xml:id="l391">Tiens, en voilà une bien belle grappe.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-29">
-            <speaker>BLAISE.</speaker>
-            <l n="392" xml:id="l392">Oui, ma foi.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-30">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="393" xml:id="l393">Cueilles-la.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-31">
-            <speaker>BLAISE.</speaker>
-            <l n="394" xml:id="l394">Et si je suis pris ?</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-32">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="395" xml:id="l395">Je payerai l’amende pour toi.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-33">
-            <speaker>BLAISE.</speaker>
-            <l n="396" xml:id="l396">Vous êtes bien bonne.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-34">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="397" xml:id="l397">Ne crains rien... Je guetterai, et si je vois quelqu’un, je t’avertirai.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-35">
-            <speaker>BLAISE.</speaker>
-            <l n="398" xml:id="l398">À la bonne heure.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-36">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="399" xml:id="l399">Jette dans mon panier, jette.</l>
-          </sp>
-          <sp who="blaise" xml:id="13-37">
-            <speaker>BLAISE.</speaker>
-            <l n="400" xml:id="l400">En voilà bien assez.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="13-38">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="401" xml:id="l401">Encore, encore...</l>
-            <l n="402" xml:id="l402"> </l>
-            <l n="403" xml:id="l403"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="404" xml:id="l404"> </l>
-          <sp who="blaise" xml:id="14-1">
-            <speaker>LA MÈRE SIMONE, COLINETTE, ROSETTE, BLAISE</speaker>
-            <l n="405" xml:id="l405"> </l>
-          </sp>
-          <sp who="colin" xml:id="14-2">
-            <speaker>COLINETTE, ROSETTE, <em>sur le coteau.</em></speaker>
-            <l n="406" xml:id="l406">Encore, encore...</l>
-          </sp>
-          <sp who="blaise" xml:id="14-3">
-            <speaker>BLAISE.</speaker>
-            <l n="407" xml:id="l407">On nous a vus.</l>
-          </sp>
-          <sp who="rosette" xml:id="14-4">
-            <speaker>ROSETTE.</speaker>
-            <l n="408" xml:id="l408">Courage, la mère Simone, courage.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="14-5">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="409" xml:id="l409">Ah, Ciel ! je suis perdue, ce sont ces morveuses.</l>
-            <stage><hi rend="italic"><em>Elle sort. </em></hi></stage>
-          </sp>
-          <sp who="blaise" xml:id="14-6">
-            <speaker>BLAISE.</speaker>
-            <l n="411" xml:id="l411">Où allez-vous donc ?... Et oui da, elle emporte tout le raisin... J’en veux avoir ma part.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="413" xml:id="l413"> </l>
-            <l n="414" xml:id="l414"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="415" xml:id="l415"> </l>
-          <sp who="colin" xml:id="15-1">
-            <speaker>COLINETTE, ROSETTE</speaker>
-            <l n="416" xml:id="l416"> </l>
-          </sp>
-          <sp who="colin" xml:id="15-2">
-            <speaker>COLINETTE.</speaker>
-            <l n="417" xml:id="l417">Où vas-tu donc ?</l>
-          </sp>
-          <sp who="rosette" xml:id="15-3">
-            <speaker>ROSETTE.</speaker>
-            <l n="418" xml:id="l418">Je suis bien aise de prendre ce nigaud de Blaise sur le fait... Je vais à mon tour lui chanter sa gamme.</l>
-          </sp>
-          <sp who="colin" xml:id="15-4">
-            <speaker>COLINETTE.</speaker>
-            <l n="419" xml:id="l419">Tu me laisses seule ?</l>
-          </sp>
-          <sp who="rosette" xml:id="15-5">
-            <speaker>ROSETTE.</speaker>
-            <l n="420" xml:id="l420">Je reviens dans l’instant...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="422" xml:id="l422">Allons vite chercher Colin...</l>
-            <stage><hi rend="italic"><em>Elle sort.</em></hi></stage>
-            <l n="424" xml:id="l424"> </l>
-            <l n="425" xml:id="l425"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="426" xml:id="l426"> </l>
-          <sp who="colin" xml:id="16-1">
-            <speaker>COLINETTE, <em>seule</em></speaker>
-            <l n="427" xml:id="l427"> </l>
-            <l n="428" xml:id="l428">Quoi ! la mère Simone qui décriait tant le raisin d’Amour, qui le disait si dangereux, s’en fait cueillir par Blaise : Rosette en vante la douceur, et Rosette est mon amie ; je brûle du désir d’en goûter... Mais si j’étais surprise... Ah ! voilà Colin ; il m’aime, il me consolera.</l>
-            <l n="429" xml:id="l429"> </l>
-            <l n="430" xml:id="l430"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="431" xml:id="l431"> </l>
-          <sp who="colin" xml:id="17-1">
-            <speaker>COLINETTE, COLIN</speaker>
-            <l n="432" xml:id="l432"> </l>
-          </sp>
-          <sp who="colin" xml:id="17-2">
-            <speaker>COLINETTE.</speaker>
-            <l n="433" xml:id="l433">Bonjour, Colin.</l>
-          </sp>
-          <sp who="colin" xml:id="17-3">
-            <speaker>COLIN.</speaker>
-            <l n="434" xml:id="l434">Bonjour, Colinette.</l>
-          </sp>
-          <sp who="colin" xml:id="17-4">
-            <speaker>COLINETTE.</speaker>
-            <l n="435" xml:id="l435">Tu viens bien tard à la Vendange.</l>
-          </sp>
-          <sp who="colin" xml:id="17-5">
-            <speaker>COLIN.</speaker>
-            <l n="436" xml:id="l436">Je ne t’ai pas vue parmi nos Vendangeuses, je ne comptais pas y aller.</l>
-          </sp>
-          <sp who="colin" xml:id="17-6">
-            <speaker>COLINETTE.</speaker>
-            <l n="437" xml:id="l437">Je t’attendais pour m’y conduire.</l>
-          </sp>
-          <sp who="colin" xml:id="17-7">
-            <speaker>COLIN.</speaker>
-            <l n="438" xml:id="l438">Que tu es bonne.</l>
-          </sp>
-          <sp who="colin" xml:id="17-8">
-            <speaker>COLINETTE.</speaker>
-            <l n="439" xml:id="l439">Qu’as-tu donc fait aujourd’hui ?...</l>
-          </sp>
-          <sp who="colin" xml:id="17-9">
-            <speaker>COLIN, <em>lui montrant les Vers qu’il a gravé sur le rocher.</em></speaker>
-            <l n="440" xml:id="l440">Regarde.</l>
-          </sp>
-          <sp who="colin" xml:id="17-10">
-            <speaker>COLINETTE <em>lit.</em></speaker>
-            <l n="441" xml:id="l441">Ah, Colin !</l>
-          </sp>
-          <sp who="colin" xml:id="17-11">
-            <speaker>COLIN.</speaker>
-            <l n="442" xml:id="l442">Ma chère Colinette !</l>
-          </sp>
-          <sp who="colin" xml:id="17-12">
-            <speaker>COLINETTE.</speaker>
-            <l n="443" xml:id="l443">C’est l’amitié qui t’a fait graver ces Vers ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-13">
-            <speaker>COLIN.</speaker>
-            <l n="444" xml:id="l444">L’amitié la plus tendre.</l>
-          </sp>
-          <sp who="colin" xml:id="17-14">
-            <speaker>COLINETTE.</speaker>
-            <l n="445" xml:id="l445">Tu n’es que mon ami.</l>
-          </sp>
-          <sp who="colin" xml:id="17-15">
-            <speaker>COLIN.</speaker>
-            <l n="446" xml:id="l446">Mais l’ami le plus vrai.</l>
-          </sp>
-          <sp who="colin" xml:id="17-16">
-            <speaker>COLINETTE.</speaker>
-            <l n="447" xml:id="l447">D’où te vient cette rose ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-17">
-            <speaker>COLIN.</speaker>
-            <l n="448" xml:id="l448">Tu l’a laissé tomber hier, je l’a ramassée, et elle m’a parue plus fraîche que celle que l’Aurore a fait épanouir.</l>
-          </sp>
-          <sp who="colin" xml:id="17-18">
-            <speaker>COLINETTE.</speaker>
-            <l n="449" xml:id="l449">Et ce ruban ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-19">
-            <speaker>COLIN.</speaker>
-            <l n="450" xml:id="l450">Il était à ta houlette ; Dimanche en dansant tu l’oublias près de l’ormeau, je le pris et n’ai pas eu le courage de te le rendre : tu l’as cherché peut-être ; me pardonneras-tu ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-20">
-            <speaker>COLINETTE.</speaker>
-            <l n="451" xml:id="l451">Ah ! oui... Colin...</l>
-          </sp>
-          <sp who="colin" xml:id="17-21">
-            <speaker>COLIN.</speaker>
-            <l n="452" xml:id="l452">Colinette...</l>
-          </sp>
-          <sp who="colin" xml:id="17-22">
-            <speaker>COLINETTE.</speaker>
-            <l n="453" xml:id="l453">As-tu jamais goûté du raisin d’Amour ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-23">
-            <speaker>COLIN.</speaker>
-            <l n="454" xml:id="l454">Jamais.</l>
-          </sp>
-          <sp who="colin" xml:id="17-24">
-            <speaker>COLINETTE.</speaker>
-            <l n="455" xml:id="l455">On le dit bien délicieux.</l>
-          </sp>
-          <sp who="colin" xml:id="17-25">
-            <speaker>COLIN.</speaker>
-            <l n="456" xml:id="l456">Je le crois.</l>
-          </sp>
-          <sp who="colin" xml:id="17-26">
-            <speaker>COLINETTE.</speaker>
-            <l n="457" xml:id="l457">Mais on dit aussi qu’il y a du danger à le goûter.</l>
-          </sp>
-          <sp who="colin" xml:id="17-27">
-            <speaker>COLIN.</speaker>
-            <l n="458" xml:id="l458">On nous trompe. S’il était si dangereux, pourquoi le garderait-on avec tant de soin ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-28">
-            <speaker>COLINETTE.</speaker>
-            <l n="459" xml:id="l459">Sans doute.</l>
-          </sp>
-          <sp who="colin" xml:id="17-29">
-            <speaker>COLIN.</speaker>
-            <l n="460" xml:id="l460">Tout semble inviter à le cueillir.</l>
-          </sp>
-          <sp who="colin" xml:id="17-30">
-            <speaker>COLINETTE.</speaker>
-            <l n="461" xml:id="l461">Mais si l’on est surprise ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-31">
-            <speaker>COLIN.</speaker>
-            <l n="462" xml:id="l462">On peut aisément ne pas l’être.</l>
-          </sp>
-          <sp who="colin" xml:id="17-32">
-            <speaker>COLINETTE.</speaker>
-            <l n="463" xml:id="l463">Comment cela ?...</l>
-          </sp>
-          <sp who="colin" xml:id="17-33">
-            <speaker>COLIN.</speaker>
-            <l n="464" xml:id="l464">En épiant le moment favorable. Ce bon Solitaire est souvent renfermé dans son Hermitage ; ces Messiers sont quelquefois éloignés : l’instant peut être favorable...</l>
-          </sp>
-          <sp who="colin" xml:id="17-34">
-            <speaker>COLINETTE.</speaker>
-            <l n="465" xml:id="l465">Hé bien ! Colin, fais-moi un plaisir ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-35">
-            <speaker>COLIN.</speaker>
-            <l n="466" xml:id="l466">Volontiers.</l>
-          </sp>
-          <sp who="colin" xml:id="17-36">
-            <speaker>COLINETTE</speaker>
-            <l n="467" xml:id="l467">Cueilles-m’en.</l>
-          </sp>
-          <sp who="colin" xml:id="17-37">
-            <speaker>COLIN.</speaker>
-            <l n="468" xml:id="l468">Moi !...</l>
-          </sp>
-          <sp who="colin" xml:id="17-38">
-            <speaker>COLINETTE.</speaker>
-            <l n="469" xml:id="l469">Que crains-tu ?</l>
-          </sp>
-          <sp who="colin" xml:id="17-39">
-            <speaker>COLIN.</speaker>
-            <l n="470" xml:id="l470">Je n’ai rien à te refuser ; mais je t’avertis d’une chose : ce raisin, pour être agréable doit être cueilli par les mains d’un amant...</l>
-          </sp>
-          <sp who="colin" xml:id="17-40">
-            <speaker>COLINETTE.</speaker>
-            <l n="471" xml:id="l471">Hé bien !</l>
-          </sp>
-          <sp who="colin" xml:id="17-41">
-            <speaker>COLIN.</speaker>
-            <l n="472" xml:id="l472">Et je ne suis que ton ami.</l>
-          </sp>
-          <sp who="colin" xml:id="17-42">
-            <speaker>COLINETTE.</speaker>
-            <l n="473" xml:id="l473">Il est vrai.</l>
-          </sp>
-          <sp who="colin" xml:id="17-43">
-            <speaker>COLIN.</speaker>
-            <l n="474" xml:id="l474">Qui t’empêche de le cueillir toi-même.</l>
-          </sp>
-          <sp who="colin" xml:id="17-44">
-            <speaker>COLINETTE.</speaker>
-            <l n="475" xml:id="l475">Je tremble.</l>
-          </sp>
-          <sp who="colin" xml:id="17-45">
-            <speaker>COLIN.</speaker>
-            <l n="476" xml:id="l476">Écoute : je vais monter sur cette hauteur je découvrirai tout le coteau, et si j’aperçois quelqu’un je t’en avertirai.</l>
-          </sp>
-          <sp who="colin" xml:id="17-46">
-            <speaker>COLINETTE.</speaker>
-            <l n="477" xml:id="l477">Prends bien garde.</l>
-          </sp>
-          <sp who="colin" xml:id="17-47">
-            <speaker>COLIN,</speaker>
-            <l n="478" xml:id="l478">Ne crains rien.</l>
-          </sp>
-          <sp who="colin" xml:id="17-48">
-            <speaker>COLINETTE.</speaker>
-            <l n="479" xml:id="l479">Je ne voudrais pas que personne sut que j’ai goûté le raisin d’Amour.</l>
-          </sp>
-          <sp who="colin" xml:id="17-49">
-            <speaker>COLIN.</speaker>
-            <l n="480" xml:id="l480">Tu peux compter sur ma discrétion.</l>
-            <l n="481" xml:id="l481"> </l>
-            <l n="482" xml:id="l482"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="483" xml:id="l483"> </l>
-          <sp who="colin" xml:id="18-1">
-            <speaker>COLINETTE, <em>seule</em></speaker>
-            <l n="484" xml:id="l484"> </l>
-            <l n="485" xml:id="l485">Mais pourquoi donc ce trouble qui m’agite ! Je désire et je tremble... Que je suis simple... Personne ne me voit... Colin guette exactement... Rosette en a goûté dix fois... Je ne puis résister au désir d’y toucher... Il est brûlant... Cette grappe semble m’inviter à la cueillir...Qu’elle est belle... C’en est fait.</l>
-            <stage><hi rend="italic"><em>Elle s’approche de la vigne, pose son panier et s’apprête à couper une grappe. Dans le moment la porte s’ouvre, l’Amour sort suivi de quatre petits Amours en Messiers, qui saisissent Colinette, et la lient d’une guirlande de fleurs. L’Amour se saisit de son panier.</em></hi></stage>
-            <l n="487" xml:id="l487"> </l>
-            <l n="488" xml:id="l488"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="489" xml:id="l489"> </l>
-          <sp who="colin" xml:id="19-1">
-            <speaker>L’AMOUR, COLINETTE, QUATRE PETITS AMOURS EN MESSIERS</speaker>
-            <l n="490" xml:id="l490"> </l>
-          </sp>
-          <sp who="colin" xml:id="19-2">
-            <speaker>COLINETTE.</speaker>
-            <l n="491" xml:id="l491">Ah, Ciel !</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-3">
-            <speaker>L’AMOUR.</speaker>
-            <l n="492" xml:id="l492">Qu’on l’arrête... Je saisis son panier.</l>
-          </sp>
-          <sp who="colin" xml:id="19-4">
-            <speaker>COLINETTE.</speaker>
-            <l n="493" xml:id="l493">Pardon, Monsieur le Solitaire, pardon.</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-5">
-            <speaker>L’AMOUR.</speaker>
-            <l n="494" xml:id="l494">Ah ! ah ! ma Poulette, vous venez donc Vendanger dans ma vigne ; vous venez voles mon raisin.</l>
-          </sp>
-          <sp who="colin" xml:id="19-6">
-            <speaker>COLINETTE.</speaker>
-            <l n="495" xml:id="l495">Hélas, Monsieur le Solitaire ! c’est la première fois, je n’en ai pris qu’un seul grain, je ne l’ai pas même goûté ; le voilà...</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-7">
-            <speaker>L’AMOUR.</speaker>
-            <l n="496" xml:id="l496">Tant-pis pour vous ; je vous tiens, et vous payerez pour toutes celles qui viennent saccager ma vigne, et qui pour manger mes raisins n’attendent pas même qu’ils soient mûrs.</l>
-          </sp>
-          <sp who="colin" xml:id="19-8">
-            <speaker>COLINETTE.</speaker>
-            <l n="497" xml:id="l497">Ne me perdez pas.</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-9">
-            <speaker>L’AMOUR.</speaker>
-            <l n="498" xml:id="l498">Point de grâce.</l>
-          </sp>
-          <sp who="colin" xml:id="19-10">
-            <speaker>COLINETTE.</speaker>
-            <l n="499" xml:id="l499">On vous dit si bon.</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-11">
-            <speaker>L’AMOUR.</speaker>
-            <l n="500" xml:id="l500">Et c’est pour cela que vous venez me voler.</l>
-          </sp>
-          <sp who="colin" xml:id="19-12">
-            <speaker>COLINETTE.</speaker>
-            <l n="501" xml:id="l501">Jamais cela ne m’arrivera.</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-13">
-            <speaker>L’AMOUR.</speaker>
-            <l n="502" xml:id="l502">Je l’espère bien.</l>
-          </sp>
-          <sp who="colin" xml:id="19-14">
-            <speaker>COLINETTE.</speaker>
-            <l n="503" xml:id="l503">Rendez-moi mon panier.</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-15">
-            <speaker>L’AMOUR.</speaker>
-            <l n="504" xml:id="l504">Non.</l>
-          </sp>
-          <sp who="colin" xml:id="19-16">
-            <speaker>COLINETTE.</speaker>
-            <l n="505" xml:id="l505">Je vous en conjure.</l>
-          </sp>
-          <sp who="l’amour" xml:id="19-17">
-            <speaker>L’AMOUR.</speaker>
-            <l n="506" xml:id="l506">Tout ce que je puis faire c’est de le remettre à ce jeune Berger.</l>
-            <l n="507" xml:id="l507"> </l>
-            <l n="508" xml:id="l508"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="20">
-          <head>Scène XX</head>
-            <l n="509" xml:id="l509"> </l>
-          <sp who="colin" xml:id="20-1">
-            <speaker>L’AMOUR, COLINETTE, COLIN, LES MESSIERS DE L’AMOUR</speaker>
-            <l n="510" xml:id="l510"> </l>
-          </sp>
-          <sp who="l’amour" xml:id="20-2">
-            <speaker>L’AMOUR.</speaker>
-            <l n="511" xml:id="l511">Approche, Colin, approche sans crainte, je te tiens ma promesse ; voilà le panier de Colinette.</l>
-          </sp>
-          <sp who="colin" xml:id="20-3">
-            <speaker>COLIN.</speaker>
-            <l n="512" xml:id="l512">Je vous dois le bonheur.</l>
-          </sp>
-          <sp who="colin" xml:id="20-4">
-            <speaker>COLINETTE.</speaker>
-            <l n="513" xml:id="l513">Hé, quoi ! vous me trompiez ; vous Colin, vous que je croyais mon ami.</l>
-          </sp>
-          <sp who="l’amour" xml:id="20-5">
-            <speaker>L’AMOUR.</speaker>
-            <l n="514" xml:id="l514">Ne voyez plus en lui que votre amant.</l>
-          </sp>
-          <sp who="colin" xml:id="20-6">
-            <speaker>COLINETTE,</speaker>
-            <l n="515" xml:id="l515">Mon amant...</l>
-          </sp>
-          <sp who="colin" xml:id="20-7">
-            <speaker>COLIN.</speaker>
-            <l n="516" xml:id="l516">Me le pardonneras-tu ?</l>
-          </sp>
-          <sp who="colin" xml:id="20-8">
-            <speaker>COLINETTE.</speaker>
-            <l n="517" xml:id="l517">Eh ! c’est toi qui me prend mon panier ?</l>
-          </sp>
-          <sp who="colin" xml:id="20-9">
-            <speaker>COLIN.</speaker>
-            <l n="518" xml:id="l518">Ah ! le voilà, Colinette, le voilà ; si sa perte doit te coûter une seule larme, je l’achèterais trop cher.</l>
-          </sp>
-          <sp who="colin" xml:id="20-10">
-            <speaker>COLINETTE.</speaker>
-            <l n="519" xml:id="l519">Vas, gardes-le.</l>
-          </sp>
-          <sp who="colin" xml:id="20-11">
-            <speaker>COLIN.</speaker>
-            <l n="520" xml:id="l520">Je ne le dois qu’à la force.</l>
-          </sp>
-          <sp who="colin" xml:id="20-12">
-            <speaker>COLINETTE.</speaker>
-            <l n="521" xml:id="l521">La force quelquefois peut ravir un panier ; mais l’Amour seul donne le cœur.</l>
-          </sp>
-          <sp who="colin" xml:id="20-13">
-            <speaker>COLIN.</speaker>
-            <l n="522" xml:id="l522">Mon bonheur est parfait.</l>
-          </sp>
-          <sp who="colin" xml:id="20-14">
-            <speaker>COLINETTE.</speaker>
-            <l n="523" xml:id="l523">Ah, Ciel ! voilà toutes nos Bergères.</l>
-          </sp>
-          <sp who="l’amour" xml:id="20-15">
-            <speaker>L’AMOUR.</speaker>
-            <l n="524" xml:id="l524">Ne rougissez pas de votre défaite : loin de venir vous reprocher votre faiblesse, ils viennent partager votre bonheur.</l>
-            <l n="525" xml:id="l525"> </l>
-            <l n="526" xml:id="l526"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="21">
-          <head>Scène XXI</head>
-            <l n="527" xml:id="l527"> </l>
-          <sp who="blaise" xml:id="21-1">
-            <speaker>L’AMOUR, COLINETTE, ROSETTE, LA MÈRE SIMONE, COLIN, LUCAS, BLAISE, TROUPE DE VENDANGEURS <em>et</em> DE VENDANGEUSES, LES MESSIERS DE L’AMOUR</speaker>
-            <l n="528" xml:id="l528"> </l>
-          </sp>
-          <sp who="rosette" xml:id="21-2">
-            <speaker>ROSETTE.</speaker>
-            <l n="529" xml:id="l529">Hé bien le raisin ?...</l>
-          </sp>
-          <sp who="colin" xml:id="21-3">
-            <speaker>COLINETTE.</speaker>
-            <l n="530" xml:id="l530">Ah ! méchante, c’est toi qui m’as trompée ; j’ai été surprise.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="21-4">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="531" xml:id="l531">Je te l’avais bien dit.</l>
-          </sp>
-          <sp who="colin" xml:id="21-5">
-            <speaker>COLINETTE.</speaker>
-            <l n="532" xml:id="l532">Encore !... Encore !...</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="21-6">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="533" xml:id="l533">Mauvaise.</l>
-          </sp>
-          <sp who="rosette" xml:id="21-7">
-            <speaker>ROSETTE.</speaker>
-            <l n="534" xml:id="l534">M’en veux-tu ?</l>
-          </sp>
-          <sp who="colin" xml:id="21-8">
-            <speaker>COLINETTE.</speaker>
-            <l n="535" xml:id="l535">Non, je suis trop heureuse.</l>
-          </sp>
-          <sp who="colin" xml:id="21-9">
-            <speaker>COLIN.</speaker>
-            <l n="536" xml:id="l536">Et vous, charmant Solitaire, comment pourrai-je vous témoigner toute ma reconnaissance ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-10">
-            <speaker>L’AMOUR.</speaker>
-            <l n="537" xml:id="l537">En lui restant toujours fidèle.</l>
-          </sp>
-          <sp who="colin" xml:id="21-11">
-            <speaker>COLINETTE</speaker>
-            <l n="538" xml:id="l538">Il le sera, car je l’aimerai toujours.</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-12">
-            <speaker>L’AMOUR, <em>ôtant se longue barbe, se dépouillant de sa robe et paraissant dans sa costume de Dieu.</em></speaker>
-            <l n="539" xml:id="l539">Et jamais l’Amour ne vous quittera ; reconnaissez en moi le Dieu de la tendresse.</l>
-          </sp>
-          <sp who="colin" xml:id="21-13">
-            <speaker>COLINETTE.</speaker>
-            <l n="540" xml:id="l540">L’Amour !</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-14">
-            <speaker>L’AMOUR.</speaker>
-            <l n="541" xml:id="l541">Banni des cieux, banni des villes, je reste pour jamais au village ; le plaisir y réside près de l’innocence, et l’innocence seule connaît le vrai bonheur.</l>
-          </sp>
-          <sp who="colin" xml:id="21-15">
-            <speaker>COLINETTE.</speaker>
-            <l n="542" xml:id="l542">Ne nous quittez jamais.</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-16">
-            <speaker>L’AMOUR.</speaker>
-            <l n="543" xml:id="l543">Jamais.</l>
-          </sp>
-          <sp who="rosette" xml:id="21-17">
-            <speaker>ROSETTE.</speaker>
-            <l n="544" xml:id="l544">Ne retournez jamais à la ville.</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-18">
-            <speaker>L’AMOUR.</speaker>
-            <l n="545" xml:id="l545">Si j’y fais encore quelques voyages, ce ne sera que rarement et incognito. Jadis j’y fus bien accueilli, je fus même quelque temps de mode à la Cour ; mais mon règne est passé, on m’y a tourné en ridicule, et le peu de Parti sans qui m’y restent, ne portent mon écharpe qu’en rougissant.</l>
-          </sp>
-          <sp who="colin" xml:id="21-19">
-            <speaker>COLINETTE.</speaker>
-            <l n="546" xml:id="l546">Vous nous serez toujours cher.</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-20">
-            <speaker>L’AMOUR.</speaker>
-            <l n="547" xml:id="l547">Et je vous aimerai toujours. Je vous abandonne ma vigne : vendangez, vendangez sans crainte le raisin d’Amour.</l>
-          </sp>
-          <sp who="rosette" xml:id="21-21">
-            <speaker>ROSETTE.</speaker>
-            <l n="548" xml:id="l548">Faites donc arracher cette haie d’épine.</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-22">
-            <speaker>L’AMOUR.</speaker>
-            <l n="549" xml:id="l549">Je m’en garderai bien, sans elle vous trouveriez mon raisin moitié moins bon.</l>
-          </sp>
-          <sp who="lucas" xml:id="21-23">
-            <speaker>LUCAS.</speaker>
-            <l n="550" xml:id="l550">Je veux en remplir ma cave... Rosette.</l>
-          </sp>
-          <sp who="rosette" xml:id="21-24">
-            <speaker>ROSETTE.</speaker>
-            <l n="551" xml:id="l551">Hé bien !</l>
-          </sp>
-          <sp who="lucas" xml:id="21-25">
-            <speaker>LUCAS.</speaker>
-            <l n="552" xml:id="l552">Me reprocheras-tu de trop boire ?</l>
-          </sp>
-          <sp who="rosette" xml:id="21-26">
-            <speaker>ROSETTE.</speaker>
-            <l n="553" xml:id="l553">Je te ferai bien raison... Pour toi, mon ami Blaise, tu as ta Vendangeuse.</l>
-          </sp>
-          <sp who="la-mère-simone" xml:id="21-27">
-            <speaker>LA MÈRE SIMONE.</speaker>
-            <l n="554" xml:id="l554">Et qui n’est ni une coquette, ni une trompeuse ; n’est-il pas vrai, mon ami Blaise ?</l>
-          </sp>
-          <sp who="blaise" xml:id="21-28">
-            <speaker>BLAISE.</speaker>
-            <l n="555" xml:id="l555">Sans doute.</l>
-          </sp>
-          <sp who="la-mère-simon" xml:id="21-29">
-            <speaker>LA MÈRE SIMON.</speaker>
-            <l n="556" xml:id="l556">Ah ! comme nous allons nous en donner.</l>
-          </sp>
-          <sp who="l’amour" xml:id="21-30">
-            <speaker>L’AMOUR.</speaker>
-            <l n="557" xml:id="l557">Tout beau, ma bonne mère, tout beau, il n’est qu’un âge pour vendanger dans la Vigne d’Amour ; laissez ce plaisir à la jeunesse, contentez-vous d’y grappiller.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#colin">
+          <speaker>COLIN, seul</speaker>
+          <stage>&lt;em&gt;À la levée de la toile Colin paraît occupé et graver sur une des pierres du rocher le Couplet suivant. &lt;/em&gt;</stage>
+          <l n="1">Colinette est faite pour plaire,</l>
+          <l n="2">Ah ! Colinette, en vain depuis le dernier printemps, je brûle pour toi de l’amour le plus tendre ; ton cœur n’éprouvera-t-il donc jamais ce sentiment si doux qu’inspirent tes beaux yeux ? Tu liras ces traits avec plaisir, et tu resteras insensible et tranquille.</l>
+          <stage>&lt;em&gt;Il entend dans le lointain le son du tambourin et de la musette, et se retire en disant. &lt;/em&gt;</stage>
+          <l n="3">Ces sons joyeux annoncent l’arrivée de nos Vendangeurs éloignons-nous, ma tristesse troublerait leurs plaisirs, et leurs plaisirs augmenteraient mes peines.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#troupe-de-vendangeurs">
+          <speaker>TROUPE DE VENDANGEURS et DE VENDANGEUSES</speaker>
+          <stage>&lt;em&gt;Ballet pantomime, représentant le départ pour la Vendange. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#colin">
+          <speaker>COLIN, seul</speaker>
+          <stage>&lt;em&gt;À mesure que les Vendangeurs s’éloignent Colin revient sur le Théâtre. Il les regarde tristement, les suit des yeux et dit.&lt;/em&gt;</stage>
+          <l n="4">Heureux de votre indifférence ; allez-vous livrer au plaisir, il n’en est plus pour qui connait l’amour.</l>
+          <stage>&lt;em&gt;Il prend son flageolet, s’assied au pied de la roche et joue l’Air : &lt;/em&gt;J’aime une ingrate beauté&lt;em&gt;. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#lucas">
+          <speaker>LUCAS paraît sur le haut du coteau, une bouteille à la main ; il aperçoit Colin, et vient à lui en chantant.</speaker>
+          <stage>Ami, laisse-là ta tendresse, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;À Colin. &lt;/em&gt;</stage>
+          <l n="5">Qu’est-ce que tu fais donc là, Colin ? Est-ce que tu ne viens pas à la Vendange </l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="6">Non.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="7">Pourquoi donc ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="8">Qu’irai-je faire parmi vous ?</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="9">Ce qu’on fait en Vendange : travailler, rire et chanter.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="10">Peut-on rire quand on connaît l’amour ?</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="11">Pauvre Colin, je ne te reconnais plus ! Jadis ta présence inspirait partout la gaieté : depuis quelque temps nos Bergères te cherchent en vain sous la coudrette, t’appellent en vain dessous l’ormeau ; nos jeux n’ont plus rien qui te plaisent, ton flageolet n’anime plus nos danses : d’où vient ce changement ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="12">J’aime.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="13">L’Amour ne se plaît qu’au milieu des Jeux et des Ris.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="14">L’Amour heureux !</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="15">Es-tu fait pour en connaître un autre ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="16">J’aime sans espoir !</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="17">Il faut cesser d’aimer.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="18">Impossible !</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="19">Eh ! quelle est donc l’inhumaine qui te tien si fort rigueur ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="20">Tu connais Colinette ?</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="21">Colinette !...</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="22">Peut-on la voir et ne pas l’adorer ?</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="23">C’est la fleur de ce Hameau.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="24">Heureuse la main sous laquelle cette belle rose s’épanouira.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="25">Elle est encore bien jeune.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="26">L’âge heureux où l’on sait plaire est l’âge où l’on doit aimer.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="27">Tu lui as déjà fait, l’aveu de ton amour.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="28">Je n’ai jamais osé.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="29">Tu me fais pitié, mon pauvre Colin, laisse là l’amour.</l>
+          <stage>&lt;em&gt;Lui montrant sa bouteille. &lt;/em&gt;</stage>
+          <l n="30">Voilà la Maitresse sans rigueurs et sans caprice ; c’est au fond de la bouteille que tu retrouveras ta saison.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="31">Je la perdrais sans diminuer mon amour.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="32">L’amour ?... L’Amant est son esclave ; il est celui du buveur. Ma Rosette joue-t-elle la cruelle, je la fais boire ; elle devient douce comme un agneau. Veut-elle se mettre en colère ; je bois ; elle s’apaise... Essaye de mon secret, il est infaillible.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="33">Ma peine me plaît trop pour en vouloir guérir.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="34">Du moins faut-il la soulager... L’année dernière les Vignes gelèrent, le vin manqua ; je devins amoureux. Comme toi je séchais sur pied ; dans mon désespoir j’eus recours à ce bon Solitaire qui reste dans cet Hermitage.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="35">Eh bien ?</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="36">Je lui contai mes peines ; il m’écouta avec bonté, me consola ; et, grâce à ses conseils, je vis bientôt ma farouche Rosette devenir aussi tendre qu’auparavant elle était indifférente.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="37">Rosette n’aime qu’à rire.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="38">Elle me laisse boire.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="39">Elle joue avec tous les garçons.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="40">Et tous les jours elle remplit ma bouteille.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="41">Chacun a sa manière d’aimer.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="42">La mienne est la bonne, je la tiens du solitaire.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="43">Mais crois-tu qu’il veuille bien aussi une consoler ?</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="44">N’en doute pas : son bonheur est de faire des heureux.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="45">On le dit un peu sorcier.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="46">Je le crois.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="47">On dit que fous son souffle le lys se change en rose ; que la chenille se transforme en papillon, et que l’épervier cruel prend auprès de la colombe la douceur du tourtereau.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="48">Il a pour tous les maux des secrets infaillibles ; tous nos jeunes Bergers célèbrent les bienfaits. Il est vrai, que quelques Bergères rougissent à son nom, et que plusieurs d’entre elles se plaignent, que les remèdes sont quelquefois plus dangereux que les maux mêmes qu’il guérit... Mais crois-moi, va-le trouver en assurance et conte-lui tes peines.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="49">Dis-moi, pour me le rendre favorable, ne faudrait-il pas lui offrir ?...</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="50">Il méprise l’or et l’argent ; de simples dons lui plaisent mille fois davantage... Offre-lui ton flageolet.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="51">Colinette m’en fit présent à la fête dernière.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="52">Ce ruban ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="53">Il a paré la houlette de ma Bergère.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="54">Ces fleurs ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="55">Je les avais cueillies pour Colinette ; mais je les lui donnerai volontiers s’il peut attendrir son cœur.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="56">Ne perds donc pas de temps ; moi, je vais de mon côté travailler à ton bonheur.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="57">Comment cela ?</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="58">Ma Rosette est l’amie de ta Colinette.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="59">Elles ne se quittent pas.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="60">Je vais lui confier ton amour pour la jeune Compagne. Elle est bonne enfant, et avec son secours Colinette sera bien fine si elle nous échappe.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="61">Que je t’aurai d’obligation.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="62">Je voudrais déjà te voir heureux, pour boire ensemble à la santé de nos Belles. Adieu, mon pauvre Colin, je vais chercher Rosette.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="63">Adieu, mon cher Lucas.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS, remonte le coteau en chantant.</speaker>
+          <l n="64">Une pinte de vin vaut mieux qu’une Maîtresse.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, en dedans.</speaker>
+          <l n="65">Qui frappe ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="66">Un malheureux amant qui vient implorer vos bontés !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, habillé en Hermite ; une longue barbe blanche lui couvre la poitrine.</speaker>
+          <l n="67">Soyez le bienvenu, mon enfant, puisque vous savez aimer, vous m’intéressez déjà.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN, lui présentant une couronne de roses.</speaker>
+          <l n="68">Daignez accepter cette couronne les fleurs en sont simples comme le fond de mon cœur.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, prenant la couronne.</speaker>
+          <l n="69">Je les reçois avec plaisir ; souvent je les fais naître, et au Hameau je n’ai point d’armes plus dangereuses. Contez-moi vos chagrins, et soyez assuré que j’emploierai tout mon savoir à les calmer.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="70">Le mal que j’éprouve se sent mieux qu’il ne s’explique... Connaissez-vous l’amour ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="71">Un peu... Aimez-vous quelque Bergère qui refuse d’écouter vos soupirs ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="72">Voilà justement ce qui cause ma langueur.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="73">Comment nommez-vous cette Belle ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="74">Colinette.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="75">Quel est son âge ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="76">Seize ans. La rose naissante a moins d’éclat et de fraîcheur ; elle a moins d’épine aussi.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="77">Aime-t-elle quelqu’autre Berger ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="78">Trop jeune encore, elle ignore jusqu’au nom du plaisir.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="79">Et ses yeux ne devinent pas ce que lui disent les vôtres ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="80">Non.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="81">Lui avez-vous déclaré votre amour ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <stage>&lt;em&gt;Air : Dans ma cabane obscure. &lt;/em&gt;</stage>
+          <l n="82">Sur l’écorce légère,</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="83">C’est quelque chose ; mais il faudrait parler.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="84">Je n’ose !...</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="85">Que craignez-vous ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="86">Colinette me croit son ami. Ce titre si doux l’amène souvent près de moi ; elle me fuirait peut-être si j’osais m’avouer son amant.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="87">Je n’ai qu’un moyen à vous donner pour vous guérir.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="88">Quel est-il ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="89">Le feu qui brûle votre cœur, vous l’avez puisé dans ses yeux... Fuyez-la.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="90">La fuir !...</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="91">Fuyez jusqu’aux lieux qu’elle habite.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="92">Vénérable Solitaire ! n’avez-vous pas d’autres conseil à me donner ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="93">Si votre cœur trop sensible a besoin d’aimer, l’Amour vous donnera des armes contre lui même : quand on ne peut briser la chaîne, on peut du moins en alléger le poids... Attachez-vous à quelqu’autre Bergère moins farouche, plus tendre et plus complaisante.</l>
+          <stage>&lt;em&gt;Colin lui fait une profonde révérence, se retire. L’Amour l’arrête. &lt;/em&gt;</stage>
+          <l n="94">Où allez-vous donc ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="95">J’attendais de vous d’autres secours ; ceux ci me sont inutiles.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="96">Comment ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="97">Je ne viens pas vous prier de me guérir de mon amour ; il cause ma peine, mais il fait mon bonheur : je ne vous demandais qu’un secret pour rendre Colinette sensible.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="98">Aussi n’ai-je fait qu’éprouver votre cœur. On m’a soupçonné quelquefois de favoriser l’inconstance ; on s’est bien trompé : et vous éprouverez aujourd’hui même l’effet de mon pouvoir.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="99">Que ne vous devrai-je pas !</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="100">Écoutez-moi : vous savez bien que la garde de cette Vigne m’est confiée ; qu’il est défendu à toute jeune Bergère d’y cueillir le raisin d’Amour ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="101">Oui.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="102">Eh bien ! vantez-en la douceur à Colinette, engagez-la à le goûter ; si elle est assez hardie pour y porter la main, je vous réponds de la victoire.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="103">Vous ne lui ferez aucun mal ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="104">Si le premier trait, dont l’Amour blesse fait verser quelques larmes, le plaisir les sèche bientôt.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="105">Vous l’affligerez donc ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="106">Vous la consolerez : qu’elle touche le raisin seulement.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="107">Vous ne me trompez pas ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="108">Si je voulais tromper, aurais-je abandonné la Ville ? Faites ce que je vous ai dit, je vais m’occuper de votre bonheur.</l>
+          <stage>&lt;em&gt;Il sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#colin">
+          <speaker>COLIN, seul</speaker>
+          <l n="109">Colinette partagerait mon ardeur ! Ah ! s’il est vrai, tous les jours une nouvelle couronne de fleurs, bienfaisant Solitaire, te prouvera ma reconnaissance et mon bonheur... Mon cœur bat, il palpite... Colinette approche... Rosette l’accompagne... Sans doute, elle prépare son âme à l’amour... Cachons nous derrière cette roche, et épions l’heureux instant de la trouver seule.</l>
+          <stage>&lt;em&gt;Il sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="110">Nous fuit-il encore ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="111">Oui, le voilà, le voilà.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="112">Éloignons-nous.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="113">Pourquoi ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="114">Il a l’air d’être bien en colère.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="115">Raison de plus pour le faire enrager.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="116">Ah ! vous voilà donc, Mademoiselle Rosette ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="117">Oui, mon ami Blaise.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="118">Votre ami Blaise !...</l>
+          <stage>&lt;em&gt;Rosette lui passe la main sous le menton. &lt;/em&gt;</stage>
+          <l n="119">Pas de ces façons-là !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="120">Tu es bien fier aujourd’hui.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="121">Je suis comme je suis... Ma serpette ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="122">Comment ta serpette ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="123">Allons vite, rendez-la moi ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="124">Tu me l’as prêtée.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="125">Hé bien ! je vous la redemande.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="126">Et pourquoi ça ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="127">Parce que ma serpette n’est pas faite pour une...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="128">Pour une...</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="129">Pour une trompeuse.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="130">Que veux-tu dire ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="131">Je sais ce que je sais.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="132">Et que sais-tu ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="133">Bien des choses dont vous devriez rougir.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="134">Tu badines.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="135">Ne me faites pas parler... Je dirais...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="136">Hé bien ! qu’est-ce que tu dirais ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="137">Suffit...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="138">Parles donc... Je t’en défie.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="139">Vous m’en défiez ?...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="140">Oui...</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="141">Tenez, Mademoiselle, Colinette est une brave fille, elle ; qu’elle nous juge.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="142">Volontiers.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="143">De quoi te plains-tu, mon pauvre Blaise ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="144">D’abord de ce que je l’aime.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="145">Ce n’est pas la faute.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="146">Pardonnez-moi, Mademoiselle, si elle ne voulait pas que je l’aimasse, il ne fallait pas me donner...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="147">Quoi ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="148">De l’espérance... Une honnête fille doit dire tout de suite à un garçon oui ou non.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="149">Ah ! ah !</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="150">C’est toujours la faute des filles quand les garçons les aiment.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="151">Je ne savais pas ça.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="152">Oh ! que si vous le savez bien : et puis quand on ne veut pas d’un garçon, on ne reçoit rien de lui.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="153">Je ne sais rien refuser, moi.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="154">Et rien garder. Mon beau bouquet de barbeaux d’hier, que j’ai risqué vingt fois de me faire mettre à l’amende pour vous le cueillir.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="155">Hé bien ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="156">Hé bien ! vous en avez donné sur le champ la moitié à Lucas.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="157">Il était si gros ; que voulais-tu que j’en fisse ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="158">Et mon beau ruban que je vous achetai à la Foire dernière ; Mathurin l’avait Dimanche à son chapeau, je l’ai bien reconnu.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="159">Il me l’a pris en riant.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="160">Oh ! qu’on ne se laisse prendre que ce qu’on veut bien donner. Et mon nid de merles ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="161">Hé bien ! ton nid de merles !</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="162">Que j’ai pensé me rompre le col pour vous le dénicher. Qu’il y avait dedans, quatre beaux petits merles, tous vivants : où sont-ils ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="163">Je les ai donnés à Charlot.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="164">Et pourquoi ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="165">Pour leur apprendre à siffler.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="166">Est-ce aussi pour vous apprendre à siffler qu’il vous mène le soir au petit bois ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="167">C’est pour y chercher des noisettes... Que tu es bête, mon pauvre Blaise.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="168">Çà se peut bien ; mais rendez-moi toujours ma Serpette ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="169">Et avec quoi veux-tu que je vendange ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="170">Monsieur Lucas vous prêtera la Sienne.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="171">Tu as raison. Tiens la voilà.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="172">Vous êtes une ingrate.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="173">À la bonne-heure.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="174">Vous verrez... Vous verrez...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="175">Et que verrai-je ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="176">Je ne vous aimerai plus.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="177">Le grand malheur.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="178">J’aurais rempli votre panier... Hé bien ! je n’y mettrais pas une seule grappe.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="179">Vas, vas, mon pauvre Blaise ; tu peux t’en éviter la peine, je le remplirai bien sans toi... Et Lucas ?...</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="180">C’est bien décidé ça : s’il vous approche... Suffit...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="181">Il est plus fort que toi.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="182">Il me battra : on saura que c’est pour vous, et çà ne vous fera pas d’honneur.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="183">Ni à toi de bien.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="184">C’est égal ; vous verrez...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="185">Adieu, mon ami Blaise.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="186">Vous vous moquez de moi ; mais je n’en vais le dire à tout le Village, et que vous êtes une coquette, une trompeuse... Allez, Mademoiselle Colinette, vous avez tort de la fréquenter ; elle vous rendra comme elle, et puis vous ferez enrager les honnêtes garçons qui voudront s’attacher à vous...</l>
+          <stage>&lt;em&gt;Il sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="187">C’est donc là de l’amour !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="188">À-peu-près.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="189">C’est-là ce que tu me vantais comme le bonheur.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="190">Ah, Colinette ! il y a amour et amour.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="191">Que veux-tu dire ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="192">Qu’un amant est bien différent d’un amoureux.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="193">Je ne t’entends pas.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="194">La rose qu’on nous donne, vaut-elle le barbeau qu’on nous défend de cueillir ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="195">Non.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="196">On nous ordonne d’aimer un amoureux ; on nous défend de voir notre amant, et c’est ce qui nous le rend si cher.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="197">Mais, Rosette...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="198">Hé bien ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="199">À quoi donc reconnaît-on un amant ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="200">À tout... Au battement subit que le cœur éprouve à son approche, à la rougeur qui couvre notre front à la vue, au plaisir qu’elle inspire.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="201">Et que fait un amant ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="202">Sans cesse occupé de plaire à sa Bergère ; c’est toujours lui qu’on rencontre le premier en allant aux champs ; c’est lui qu’on y voit le dernier. Laisse-t-on tomber une fleur, on l’aperçoit le lendemain à son côté ; perd-t-on un ruban, on le retrouve à son chapeau : sous l’ormeau c’est toujours avec lui que l’on danse, même sans le vouloir ; sous la coudrette c’est toujours lui que l’on trouve : fredonne-t-on un Air, c’est celui que son flageolet répète...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="203">Ah, Rosette ! tu te trompes.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="204">Crois que je suis bonne connaisseuse.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="205">C’est l’amitié que tu peins.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="206">L’amitié !</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="207">Ce trouble, cette rougeur, ce plaisir surtout !...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="208">Hé bien ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="209">C’est ce que j’éprouve à l’aspect de Colin.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="210">Ah, ah.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="211">Ces soins, ces prévenances ; Colin les a toutes pour moi.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="212">Colin est ton amant ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="213">Non, non, Rosette, il n’est que mon ami ; il me l’a dit vingt fois.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="214">Vingt fois il t’a trompée.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="215">Il en est incapable.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="216">Hé bien ! il se trompe lui-même... Ah, Colinette ! si tu avais goûté du raisin d’Amour.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="217">De ce mauvais raisin-là...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="218">Oui...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="219">Fi donc ! on dit qu’il est amer, amer...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="220">Le premier grain l’est quelquefois, mais le second est délicieux.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLINETIE.</speaker>
+          <l n="221">Est-ce que tu en as goûté ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="222">Non pas une, mais dix fois.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="223">Eh, mon Dieu, Rosette ! comment as-tu donc fait ? il est si bien gardé.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE</speaker>
+          <l n="224">Il ne l’est pas si bien qu’on ne puisse en manger.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="225">Mais quand on y touche ; on est saisie, dit-on.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="226">Bon ; telle y a vendangé dix fois qui jamais n’y fut prise ; telle autre, à la vérité, pour un seul grain y perdit son panier : tout dépend de l’adresse et du moment favorable.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="227">Et tu dis qu’il est bon ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="228">Délicieux.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="229">Rosette...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="230">Hé bien ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="231">Veux-tu en cueillir pour nous deux ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="232">Oh ! chacune pour soi.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="233">Que cette grappe est belle !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="234">Que les grains en font bien dorés !</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="235">Personne ne nous voit ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="236">Non.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="237">Arrachons-la.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="238">Volontiers.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="239">Elle tient bien fort.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="240">Nous la flétrissons sans la cueillir.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="241">Ah ! si nous avions une serpette ; ne fus-ce que celle de Blaise.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="242">Courage... Nous l’aurons...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE, descendant du coteau avec précipitation.</speaker>
+          <l n="243">Arrête, Colinette, arrête !</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="244">C’est la mère Simone, elle nous a vues, je crois.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="245">Nous sommes perdues.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="246">Il faut la laisser dire.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="247">Oh, mon enfant ! qu’allais-tu donc faire ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="248">Rien, ma bonne mère.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="249">Mais je t’ai vue...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="250">Rosette m’a tant vanté, tant vanté la douceur du raisin d’Amour, que je voulais en goûter un seul grain.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="251">Ah, petit serpent ! peux-tu tromper ainsi cette innocente créature ; sais-tu bien, ma fille, que ce raisin est empoisonné.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="252">Empoisonné !</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="253">Oui, empoisonné.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="254">La jeune Agathe voyait tous les jours pâlir les roses de son teint, une langueur secrète la consumait ; elle goûta le raisin d’Amour, et les roses reparurent à l’instant avec sa gaieté.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="255">Colette fit longtemps les plaisirs de ce Hameau, sa présence seule inspirait la joie ; Colette goûta le raisin d’Amour ; Colette depuis ce temps fuit nos plaisirs et nos jeux, et dévore dans le silence une tristesse qu’elle ne peut vaincre.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="256">Rien n’égalait la stupidité de Nice, on n’é tait ni plus simple, ni plus niaise ; un seul grain du raisin d’Amour a fait de Nice une Bergère charmante.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="257">On entend tout bas soupirer Thérèse depuis qu’elle a eu l’imprudence d’en goûter.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="258">Depuis que Mathurin en a cueilli pour Isabeau, on la voit rire et folâtrer sans cesse.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="259">C’est une impudente, une effrontée, je ne sais pas ce que c’est de dire du mal de personne ; mais ou Mathurine, Louise, Marianne, Toinette, Agnès, Juliette, Françoise, Claudine, Babet, Annette et vingt autres que je ne veux pas nommer, ont-elles perdu leurs paniers ? à la vigne d’Amour : et cette pauvre Charlotte, de quoi est-elle morte, hem ? sinon d’en avoir trop mangé sans jamais vouloir l’avouer. Damne, tout le monde sait cela dans le Village, ce que j’en dis ce n’est pas par méchanceté ; mais on n’en a pas plutôt goûté un seul grain, qu’un feu dévorant se glisse jusqu’au fond du cœur, et y porte le trouble, la langueur et la mort.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="260">Ce sont des contes.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="261">Comment des contes ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="262">Et oui des contes ; en êtes-vous morte vous, la mère Simone ?</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="263">Aussi n’en ai-je jamais goûté.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="264">Que certain jour que vous fûtes surprise... hem !...</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="265">Petite mauvaise langue ; j’étais si innocente, et puis il y a si longtemps...</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="266">Vous ne le trouvâtes pas si mauvais, car vous y retournâtes huit jours après avec gros Pierre, et vous y perdîtes votre panier cette fois là.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="267">Qui te prie de dire tout cela, petite langue de vipère ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="268">Pourquoi voulez-vous nous tromper ?</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="269">Ce n’est pas à toi que je parle, ce serait peine perdue, il y a longtemps que tu y as vendangé, je crois.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="270">Personne ne m’y a surprise toujours, et j’ai encore mon panier tout entier.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE, à Colinette.</speaker>
+          <l n="271">C’est toi, mon enfant, c’est toi que je veux Sauver du danger. Je l’avoue, j’ai eu la faiblesse de cueillir de ce maudit raisin ; mais si tu savais combien en secret j’ai répandu de larmes.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="272">De regrets.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="273">Mais qui te parle donc ? Prends-y bien garde, Colinette ; si tu t’avisais d’en prendre un seul grain, tu serais perdue.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="274">Que m’arriverait-il donc ?</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="275">On te saisirait ton panier ; et comment alors oserais-tu reparaître dans le Village ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="276">Mon panier est si peu de chose.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="277">C’est la richesse de l’innocence.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="278">On n’est pas toujours prise.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="279">Vois cette haie ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="280">Elle est couverte de roses.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="281">Oui ; mais les épines sont dessous.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="282">Le plaisir les émousse.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="283">Le précipice le plus dangereux, est tous jours celui qui le paraît le moins ; on se méfie des ronces, on s’approche imprudemment des fleurs : la vue même de cette Vigne est funeste aux jeunes filles, il ne faut pas trop accoutumer ses yeux à fixer le raisin d’Amour.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="284">Il paraît si beau.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="285">Et voilà le danger ; la vue se trouble, la tête se perd, et l’on ne sait plus ce que l’on fait : retires-toi, fuis cette Vigne dangereuse.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="286">Vous voudriez la voir sécher sur pied à présent.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="287">Certainement.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="288">Parce que vous n’y trouvez plus de goût.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="289">Tu es une impertinente ; apprends que si je voulais j’y vendangerais encore.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="290">À d’autres, la mère Simone, à d’autres ; chacun son tour.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE, à Colinette.</speaker>
+          <l n="291">Ne l’écoute pas, ma chère enfant, c’est un petit mauvais sujet, elle te perdrait : vas rejoindre les Vendangeurs ; vas, ma fille, vas.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="292">Adieu, la mère Simone.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="293">Adieu, adieu...</l>
+          <stage>&lt;em&gt;Rosette et Colinette sortent. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE, seule</speaker>
+          <l n="294">Mais voyez donc un peu ces petites morveuses ; en vérité, il n’y a plus d’enfants. C’est pour elles vraiment qu’est fait ce beau raisin ; sans moi elles allaient le cueillir. Qu’il est beau, l’eau m’en vient à la bouche... Personne ne me voit... Goûtons-en-encore quelques grains... La grappe semble s’éloigner de ma main... Je ne puis y atteindre... Maudite haie... Je ne le crois pas encore bien mûr... Mais voici Blaise...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="295">Bonjour, mon ami Blaise.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="296">Ah, bonjour, la mère Simone.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="297">Que cherches-tu donc, Blaise ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="298">Rien... C’est que... n’avez-vous pas vu Rosette ?</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="299">Oui, mon garçon... Que lui veux-tu ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="300">C’est que nous sommes fâches, voyez-vous, et je voudrais, sans faire semblant de rien, nous raccommoder ensemble.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="301">Quel dommage qu’un garçon sage, honnête comme toi, se soit emmouraché d’une petite coquette comme elle.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="302">Vous avez bien raison ; c’est un fort qu’on m’a jeté, je crois.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="303">Veux-tu que je t’en guérisse ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="304">Vous me rendriez là un beau service.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="305">C’est que j’ai bien de l’amitié pour toi, mon ami Blaise.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="306">Vous êtes trop bonne.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="307">Il te faudrait une femme sensée.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="308">Vous avez raison.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="309">Tu es un si bon garçon.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="310">Ah ! c’est vrai ça.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="311">Si tu veux que je te guérisse de ton amour pour cette petite Rosette, il faut me promettre de la discrétion.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="312">Personne n’est plus discret que moi : voyons que faut-il faire ?</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="313">As-tu jamais goûté du raisin d’Amour ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="314">Fi donc, on dit qu’il empoisonne.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="315">Ce sont des contes.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="316">Oh ! oh !</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="317">Il est délicieux.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="318">Tout de bon.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="319">Tout de bon : il a en outre la vertu de guérir les garçons de l’amour qu’ils ont pour les filles.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="320">C’est plaisant ça.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="321">Tiens, en voilà une bien belle grappe.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="322">Oui, ma foi.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="323">Cueilles-la.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="324">Et si je suis pris ?</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="325">Je payerai l’amende pour toi.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="326">Vous êtes bien bonne.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="327">Ne crains rien... Je guetterai, et si je vois quelqu’un, je t’avertirai.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="328">À la bonne heure.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="329">Jette dans mon panier, jette.</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="330">En voilà bien assez.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="331">Encore, encore...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE, ROSETTE, sur le coteau.</speaker>
+          <l n="332">Encore, encore...</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="333">On nous a vus.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="334">Courage, la mère Simone, courage.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="335">Ah, Ciel ! je suis perdue, ce sont ces morveuses.</l>
+          <stage>&lt;em&gt;Elle sort. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="336">Où allez-vous donc ?... Et oui da, elle emporte tout le raisin... J’en veux avoir ma part.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="337">Où vas-tu donc ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="338">Je suis bien aise de prendre ce nigaud de Blaise sur le fait... Je vais à mon tour lui chanter sa gamme.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="339">Tu me laisses seule ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="340">Je reviens dans l’instant...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="341">Allons vite chercher Colin...</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE, seule</speaker>
+          <l n="342">Quoi ! la mère Simone qui décriait tant le raisin d’Amour, qui le disait si dangereux, s’en fait cueillir par Blaise : Rosette en vante la douceur, et Rosette est mon amie ; je brûle du désir d’en goûter... Mais si j’étais surprise... Ah ! voilà Colin ; il m’aime, il me consolera.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="343">Bonjour, Colin.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="344">Bonjour, Colinette.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="345">Tu viens bien tard à la Vendange.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="346">Je ne t’ai pas vue parmi nos Vendangeuses, je ne comptais pas y aller.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="347">Je t’attendais pour m’y conduire.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="348">Que tu es bonne.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="349">Qu’as-tu donc fait aujourd’hui ?...</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN, lui montrant les Vers qu’il a gravé sur le rocher.</speaker>
+          <l n="350">Regarde.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE lit.</speaker>
+          <l n="351">Colinette est faite pour plaire,</l>
+          <l n="352">Ah, Colin !</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="353">Ma chère Colinette !</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="354">C’est l’amitié qui t’a fait graver ces Vers ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="355">L’amitié la plus tendre.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="356">Tu n’es que mon ami.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="357">Mais l’ami le plus vrai.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="358">D’où te vient cette rose ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="359">Tu l’a laissé tomber hier, je l’a ramassée, et elle m’a parue plus fraîche que celle que l’Aurore a fait épanouir.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="360">Et ce ruban ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="361">Il était à ta houlette ; Dimanche en dansant tu l’oublias près de l’ormeau, je le pris et n’ai pas eu le courage de te le rendre : tu l’as cherché peut-être ; me pardonneras-tu ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="362">Ah ! oui... Colin...</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="363">Colinette...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="364">As-tu jamais goûté du raisin d’Amour ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="365">Jamais.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="366">On le dit bien délicieux.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="367">Je le crois.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="368">Mais on dit aussi qu’il y a du danger à le goûter.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="369">On nous trompe. S’il était si dangereux, pourquoi le garderait-on avec tant de soin ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="370">Sans doute.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="371">Tout semble inviter à le cueillir.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="372">Mais si l’on est surprise ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="373">On peut aisément ne pas l’être.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="374">Comment cela ?...</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="375">En épiant le moment favorable. Ce bon Solitaire est souvent renfermé dans son Hermitage ; ces Messiers sont quelquefois éloignés : l’instant peut être favorable...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="376">Hé bien ! Colin, fais-moi un plaisir ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="377">Volontiers.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE</speaker>
+          <l n="378">Cueilles-m’en.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="379">Moi !...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="380">Que crains-tu ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="381">Je n’ai rien à te refuser ; mais je t’avertis d’une chose : ce raisin, pour être agréable doit être cueilli par les mains d’un amant...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="382">Hé bien !</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="383">Et je ne suis que ton ami.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="384">Il est vrai.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="385">Qui t’empêche de le cueillir toi-même.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="386">Je tremble.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="387">Écoute : je vais monter sur cette hauteur je découvrirai tout le coteau, et si j’aperçois quelqu’un je t’en avertirai.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="388">Prends bien garde.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN,</speaker>
+          <l n="389">Ne crains rien.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="390">Je ne voudrais pas que personne sut que j’ai goûté le raisin d’Amour.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="391">Tu peux compter sur ma discrétion.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE, seule</speaker>
+          <l n="392">Mais pourquoi donc ce trouble qui m’agite ! Je désire et je tremble... Que je suis simple... Personne ne me voit... Colin guette exactement... Rosette en a goûté dix fois... Je ne puis résister au désir d’y toucher... Il est brûlant... Cette grappe semble m’inviter à la cueillir...Qu’elle est belle... C’en est fait.</l>
+          <stage>&lt;em&gt;Elle s’approche de la vigne, pose son panier et s’apprête à couper une grappe. Dans le moment la porte s’ouvre, l’Amour sort suivi de quatre petits Amours en Messiers, qui saisissent Colinette, et la lient d’une guirlande de fleurs. L’Amour se saisit de son panier.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="393">Ah, Ciel !</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="394">Qu’on l’arrête... Je saisis son panier.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="395">Pardon, Monsieur le Solitaire, pardon.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="396">Ah ! ah ! ma Poulette, vous venez donc Vendanger dans ma vigne ; vous venez voles mon raisin.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="397">Hélas, Monsieur le Solitaire ! c’est la première fois, je n’en ai pris qu’un seul grain, je ne l’ai pas même goûté ; le voilà...</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="398">Tant-pis pour vous ; je vous tiens, et vous payerez pour toutes celles qui viennent saccager ma vigne, et qui pour manger mes raisins n’attendent pas même qu’ils soient mûrs.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="399">Ne me perdez pas.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="400">Point de grâce.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="401">On vous dit si bon.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="402">Et c’est pour cela que vous venez me voler.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="403">Jamais cela ne m’arrivera.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="404">Je l’espère bien.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="405">Rendez-moi mon panier.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="406">Non.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="407">Je vous en conjure.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="408">Tout ce que je puis faire c’est de le remettre à ce jeune Berger.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XX">
+        <head>Scène XX</head>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="409">Approche, Colin, approche sans crainte, je te tiens ma promesse ; voilà le panier de Colinette.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="410">Je vous dois le bonheur.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="411">Hé, quoi ! vous me trompiez ; vous Colin, vous que je croyais mon ami.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="412">Ne voyez plus en lui que votre amant.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE,</speaker>
+          <l n="413">Mon amant...</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="414">Me le pardonneras-tu ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="415">Eh ! c’est toi qui me prend mon panier ?</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="416">Ah ! le voilà, Colinette, le voilà ; si sa perte doit te coûter une seule larme, je l’achèterais trop cher.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="417">Vas, gardes-le.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="418">Je ne le dois qu’à la force.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="419">La force quelquefois peut ravir un panier ; mais l’Amour seul donne le cœur.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="420">Mon bonheur est parfait.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="421">Ah, Ciel ! voilà toutes nos Bergères.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="422">Ne rougissez pas de votre défaite : loin de venir vous reprocher votre faiblesse, ils viennent partager votre bonheur.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXI">
+        <head>Scène XXI</head>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="423">Hé bien le raisin ?...</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="424">Ah ! méchante, c’est toi qui m’as trompée ; j’ai été surprise.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="425">Je te l’avais bien dit.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="426">Encore !... Encore !...</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="427">Mauvaise.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="428">M’en veux-tu ?</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="429">Non, je suis trop heureuse.</l>
+        </sp>
+        <sp who="#colin">
+          <speaker>COLIN.</speaker>
+          <l n="430">Et vous, charmant Solitaire, comment pourrai-je vous témoigner toute ma reconnaissance ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="431">En lui restant toujours fidèle.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE</speaker>
+          <l n="432">Il le sera, car je l’aimerai toujours.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, ôtant se longue barbe, se dépouillant de sa robe et paraissant dans sa costume de Dieu.</speaker>
+          <l n="433">Et jamais l’Amour ne vous quittera ; reconnaissez en moi le Dieu de la tendresse.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="434">L’Amour !</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="435">Banni des cieux, banni des villes, je reste pour jamais au village ; le plaisir y réside près de l’innocence, et l’innocence seule connaît le vrai bonheur.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="436">Ne nous quittez jamais.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="437">Jamais.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="438">Ne retournez jamais à la ville.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="439">Si j’y fais encore quelques voyages, ce ne sera que rarement et incognito. Jadis j’y fus bien accueilli, je fus même quelque temps de mode à la Cour ; mais mon règne est passé, on m’y a tourné en ridicule, et le peu de Parti sans qui m’y restent, ne portent mon écharpe qu’en rougissant.</l>
+        </sp>
+        <sp who="#colinette">
+          <speaker>COLINETTE.</speaker>
+          <l n="440">Vous nous serez toujours cher.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="441">Et je vous aimerai toujours. Je vous abandonne ma vigne : vendangez, vendangez sans crainte le raisin d’Amour.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="442">Faites donc arracher cette haie d’épine.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="443">Je m’en garderai bien, sans elle vous trouveriez mon raisin moitié moins bon.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="444">Je veux en remplir ma cave... Rosette.</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="445">Hé bien !</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS.</speaker>
+          <l n="446">Me reprocheras-tu de trop boire ?</l>
+        </sp>
+        <sp who="#rosette">
+          <speaker>ROSETTE.</speaker>
+          <l n="447">Je te ferai bien raison... Pour toi, mon ami Blaise, tu as ta Vendangeuse.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMONE.</speaker>
+          <l n="448">Et qui n’est ni une coquette, ni une trompeuse ; n’est-il pas vrai, mon ami Blaise ?</l>
+        </sp>
+        <sp who="#blaise">
+          <speaker>BLAISE.</speaker>
+          <l n="449">Sans doute.</l>
+        </sp>
+        <sp who="#la-mère-simone">
+          <speaker>LA MÈRE SIMON.</speaker>
+          <l n="450">Ah ! comme nous allons nous en donner.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="451">Tout beau, ma bonne mère, tout beau, il n’est qu’un âge pour vendanger dans la Vigne d’Amour ; laissez ce plaisir à la jeunesse, contentez-vous d’y grappiller.</l>
+          <l n="452" />
+        </sp>
       </div>
     </body>
   </text>

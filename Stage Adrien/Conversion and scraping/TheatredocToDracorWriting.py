@@ -231,7 +231,8 @@ def write_title_parts(doc_title_node, main_title, sub_title=None):
         title_part_sub = ET.SubElement(doc_title_node, 'titlePart', attrib={'type': 'sub'})
         title_part_sub.text = sub_title
 
-#TODO: Handle Date print line, acheve imprime, privilege, printer
+
+# TODO: Handle Date print line, acheve imprime, privilege, printer
 # For now I don't find date_text
 def write_doc_date(front_node, date_text, date_print):
     """Adds the <docDate> node."""
@@ -272,7 +273,8 @@ def write_performance(front_node, premiere_text, premiere_date, premiere_locatio
     ab.set("date", premiere_date)
     ab.set("location", premiere_location)
 
-#Found in counters[dedicace] and counters[dedicace_head]
+
+# Found in counters[dedicace] and counters[dedicace_head]
 def write_dedicace(front_node, salute_text, head_text, paragraphs, signed_text):
     """Adds the dedication section (<div type="dedicace">)."""
     dedicace = ET.SubElement(front_node, 'div', attrib={'type': 'dedicace'})
@@ -286,9 +288,9 @@ def write_dedicace(front_node, salute_text, head_text, paragraphs, signed_text):
     for paragraph in paragraphs:
         p = ET.SubElement(dedicace, 'p')
         p.text = paragraph
-
-    signed = ET.SubElement(dedicace, 'signed')
-    signed.text = signed_text
+    if signed_text is not None:
+        signed = ET.SubElement(dedicace, 'signed')
+        signed.text = signed_text
 
 
 def write_preface(front_node, head_text, paragraphs):
@@ -319,7 +321,7 @@ def write_front_content(front_node, metadata, counters):
     """
     # Add docTitle
     doc_title = ET.SubElement(front_node, 'docTitle')
-    write_title_parts(doc_title, metadata['main_title'], metadata.get('sub_title',None))
+    write_title_parts(doc_title, metadata['main_title'], metadata.get('sub_title', None))
 
     # Add docDate
     write_doc_date(front_node, metadata['doc_date_text'], metadata['date_print'])
@@ -339,9 +341,9 @@ def write_front_content(front_node, metadata, counters):
 
     # Add dedication (dedicace)
     if counters['dedicaceFound']:
-        metadata['signed_text'] = metadata['author_forename'] + ' ' + metadata['author_surname'] #TODO: CHANGE THIS ONCE SIGNED DETECTION WORKS PROPERLY
+        signed_text = metadata.get('signed_text', None)
         write_dedicace(front_node, metadata['dedicaceSalute'], metadata['dedicaceHeader'], metadata['dedicace'],
-                     metadata['signed_text'])
+                       signed_text)
 
     # Add preface
     if counters['prefaceFound']:
@@ -367,7 +369,7 @@ def write_scene(scene_node, scene, replique_number):
             # Checking for first replique
             character = remove_html_tags(replique["content"])
             characterId = replique["characterId"]
-            sp = ET.SubElement(scene_node, 'sp', attrib={'who': f'"#{characterId}"'})
+            sp = ET.SubElement(scene_node, 'sp', attrib={'who': f'#{characterId}'})
             speaker = ET.SubElement(sp, 'speaker')
             speaker.text = character
             current_node = sp
@@ -447,7 +449,6 @@ def output_tei_file(root, output_file):
         ET.dump(root)
 
     # Print the XML to console for quick view
-
 
 
 if __name__ == "__main__":

@@ -1,390 +1,538 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Aristophane et Molière</title>
-        <author key="Jean BERTHEROY | (naissance-mort)">Jean BERTHEROY |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/aristophane-et-molière-jean-bertheroy</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Jean BERTHEROY |</author>. <title>Aristophane et Molière</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/aristophane-et-molière-jean-bertheroy</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1897-01-15">Représenté pour la première fois, à Paris, sur le Théâtre de la Comédie Française, le 15 janvier 1897.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="aristophane" sex="SEX">
+            <persName>ARISTOPHANE</persName>
+          </person>
+          <person xml:id="molière" sex="SEX">
+            <persName>MOLIÈRE</persName>
+          </person>
+          <person xml:id="l’humanité" sex="SEX">
+            <persName>L’HUMANITÉ</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1897-01-15" location="unknown">Représenté pour la première fois, à Paris, sur le Théâtre de la Comédie Française, le 15 janvier 1897.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Aristophane et Molière</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">À-propos en un acte et en vers.</l>
-            <l n="2" xml:id="l2">Représenté pour la première fois, à Paris, sur le Théâtre de la Comédie Française, le 15 janvier 1897.</l>
-            <l n="3" xml:id="l3"> </l>
-            <l n="4" xml:id="l4"> </l>
-            <l n="5" xml:id="l5">ARISTOPHANE</l>
-            <l n="6" xml:id="l6">MOLIÈRE</l>
-            <l n="7" xml:id="l7">L’HUMANITÉ</l>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9"><i><span style="font-size:10.0pt">Un décor à la Puvis de Chavannes. Quelques arbres lisses et droits. Au fond, à droite, on aperçoit la grande cité. Le jour commence à décroître.</span></i></l>
-            <l n="10" xml:id="l10"> </l>
-            <l n="11" xml:id="l11"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="12" xml:id="l12"> </l>
-            <l n="13" xml:id="l13"> </l>
-            <l n="14" xml:id="l14"><i><span style="font-size:10.0pt">Il arrive lentement par la gauche et regarde dans la direction de la grande cité.</span></i></l>
-            <l n="15" xml:id="l15">M’y voici. Je retrouve en leurs plis de dentelle</l>
-            <l n="16" xml:id="l16">Les tours de Notre-Dame et la Sainte-Chapelle,</l>
-            <l n="17" xml:id="l17">Et plus bas, s’estompant sous un ciel vaporeux,</l>
-            <l n="18" xml:id="l18">Les berges de la Seine où court le fleuve heureux.</l>
-            <l n="19" xml:id="l19">– Mon Dieu ! qu’on est craintif quand on vit chez les ombres !</l>
-            <l n="20" xml:id="l20">J’hésitai bien longtemps à franchir les bords sombres ;</l>
-            <l n="21" xml:id="l21">Mais je n’y tenais plus ! Je voulais à tout prix,</l>
-            <l n="22" xml:id="l22">Ne fût-ce qu’un instant, revoir mon cher Paris.</l>
-            <l n="23" xml:id="l23"><i><span style="font-size:10.0pt">Il regarde de nouveau dans la direction de la cité.</span></i></l>
-            <l n="24" xml:id="l24">Le cœur me bat un peu de me sentir tout proche.</l>
-            <l n="25" xml:id="l25">Paris si bon enfant ! Souvent je me reproche</l>
-            <l n="26" xml:id="l26">D’avoir grossi tes maux de mon rire cruel.</l>
-            <l n="27" xml:id="l27">Mais tu l’as oublié, ton cœur n’a point de fiel.</l>
-            <l n="28" xml:id="l28">Aujourd’hui, si quelqu’un te parlait de Molière,</l>
-            <l n="29" xml:id="l29">Tu dirais : « La paix soit à son heure dernière !</l>
-            <l n="30" xml:id="l30">Laissons parmi les morts se reposer les morts ! »</l>
-            <l n="31" xml:id="l31">Et tu n’aurais souci de mes tardifs remords.</l>
-            <l n="32" xml:id="l32">C’est donc en pèlerin, l’âme trouble et lassée,</l>
-            <l n="33" xml:id="l33">Que je viens près de toi recueillir ma pensée,</l>
-            <l n="34" xml:id="l34">Et, si des pleurs encor s’échappent de mes yeux,</l>
-            <l n="35" xml:id="l35">Nul ne saura du moins...</l>
-            <l n="36" xml:id="l36"><i><span style="font-size:10.0pt">Il s’éloigne par le fond.</span></i></l>
-            <l n="37" xml:id="l37"> </l>
-            <l n="38" xml:id="l38"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="39" xml:id="l39"> </l>
-            <l n="40" xml:id="l40"> </l>
-            <l n="41" xml:id="l41"><i><span style="font-size:10.0pt">Il entre par la droite en s’esclaffant.</span></i></l>
-            <l n="42" xml:id="l42">Thalès avait bien dit que la terre était ronde ;</l>
-            <l n="43" xml:id="l43">Elle roule, entraînant la sagesse du monde.</l>
-            <l n="44" xml:id="l44">Qui donc aurait pensé que depuis deux mille ans</l>
-            <l n="45" xml:id="l45">Ce bon peuple d’Athènes aiguise encor ses dents ?</l>
-            <l n="46" xml:id="l46">Ah ! ah ! bien m’en a pris de quitter l’Empyrée,</l>
-            <l n="47" xml:id="l47">Pour venir faire un tour du côté du Pirée ;</l>
-            <l n="48" xml:id="l48">Là-haut on perd son temps à toujours soupirer,</l>
-            <l n="49" xml:id="l49">Et la brise d’Attique est douce à respirer.</l>
-            <l n="50" xml:id="l50"><i><span style="font-size:10.0pt">Il fait quelques pas en regardant du côté de la cité.</span></i></l>
-            <l n="51" xml:id="l51">Oui vraiment c’est toujours la même comédie.</l>
-            <l n="52" xml:id="l52">La ville cependant s’est beaucoup agrandie,</l>
-            <l n="53" xml:id="l53">Les costumes n’ont plus leur ampleur d’autrefois</l>
-            <l n="54" xml:id="l54">Et les cerveaux aussi m’ont paru plus étroits.</l>
-            <l n="55" xml:id="l55">Mais ce sont seulement différences de forme ;</l>
-            <l n="56" xml:id="l56">Au fond le peuple encore attend son dieu sous l’orme</l>
-            <l n="57" xml:id="l57">Et se paye de mots, comme au siècle lointain</l>
-            <l n="58" xml:id="l58">Où le rustre Cléon présidait son destin.</l>
-            <l n="59" xml:id="l59">Pauvre peuple ! En a-t-il avalé de couleuvres !</l>
-            <l n="60" xml:id="l60">A-t-il assez tenté de grandir par ses œuvres</l>
-            <l n="61" xml:id="l61">Et de saisir enfin, d’un bras ensanglanté,</l>
-            <l n="62" xml:id="l62">La Chimère aux flancs creux qu’on nomme liberté !</l>
-            <l n="63" xml:id="l63"><i><span style="font-size:10.0pt">Il s’assied sur un tronc d’arbre.</span></i></l>
-            <l n="64" xml:id="l64">Peuple amoureux de joie.et vivant de contrastes,</l>
-            <l n="65" xml:id="l65">Il éclate de rire au nez des Héliastes,</l>
-            <l n="66" xml:id="l66">Et consent volontiers à rester humble et gueux,</l>
-            <l n="67" xml:id="l67">Pourvu que dans le Pnyx il parle plus fort qu’eux.</l>
-            <l n="68" xml:id="l68">Hélas ! qu’a-t-il gagné depuis les temps infâmes ?</l>
-            <l n="69" xml:id="l69">Je me suis cru tantôt à « l’Assemblée des femmes » ;</l>
-            <l n="70" xml:id="l70">Elles en sont encore à réclamer le droit</l>
-            <l n="71" xml:id="l71">De prendre leur mari du bras gauche ou du droit ;</l>
-            <l n="72" xml:id="l72">Et j ‘ai vu près d’ici – que Ploutos me pardonne ! –</l>
-            <l n="73" xml:id="l73">Des enfants en haillons qui demandaient l’aumône !</l>
-            <l n="74" xml:id="l74">Triste ! Mais le vrai sage en est surpris fort peu ;</l>
-            <l n="75" xml:id="l75">Il montre au peuple las les flots clairs, le ciel bleu,</l>
-            <l n="76" xml:id="l76">Le soleil dont chacun reçoit sa part égale,</l>
-            <l n="77" xml:id="l77">La beauté dont le plus indigent se régale,</l>
-            <l n="78" xml:id="l78">Et, pour le consoler d’être né miséreux,</l>
-            <l n="79" xml:id="l79">Il étale au grand jour les vices des heureux,</l>
-            <l n="80" xml:id="l80">Et le fait s’esclaffer sur les tyrans qu’il daube ;</l>
-            <l n="81" xml:id="l81">Car on vit de gaîté mieux que de viande en daube !</l>
-            <l n="82" xml:id="l82"><i><span style="font-size:10.0pt">On aperçoit Molière qui revient du même côté qu’Aristophane.</span></i></l>
-            <l n="83" xml:id="l83">Quelqu’un ! Mais à cette heure on est à l’Odéon !</l>
-            <l n="84" xml:id="l84">Serait-ce un sycophante, ainsi que sous Cléon ?</l>
-            <l n="85" xml:id="l85">Le plus sûr est d’abord d’attendre et de me taire,</l>
-            <l n="86" xml:id="l86">Car je n’ai plus le droit de rôder sur la terre.</l>
-            <l n="87" xml:id="l87"><i><span style="font-size:10.0pt">Il se cache derrière un massif d’arbres.</span></i></l>
-            <l n="88" xml:id="l88"> </l>
-            <l n="89" xml:id="l89"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="90" xml:id="l90"> </l>
-            <l n="91" xml:id="l91"> </l>
-            <l n="92" xml:id="l92">Je l’avais bien prévu : les siècles ont marché,</l>
-            <l n="93" xml:id="l93">Creusant l’étroit sillon autrefois ébauché.</l>
-            <l n="94" xml:id="l94">Lentement le progrès jour par jour s’élabore,</l>
-            <l n="95" xml:id="l95">Quelque rayon de plus éclaire chaque aurore,</l>
-            <l n="96" xml:id="l96">Et l’homme, sans faiblir, cherche son idéal</l>
-            <l n="97" xml:id="l97">À travers la douleur, le désordre et le mal.</l>
-            <l n="98" xml:id="l98">Voilà, par Jupiter, un étrange utopiste !</l>
-            <l n="99" xml:id="l99">Il poursuit, comme moi, l’âme humaine à la piste ;</l>
-            <l n="100" xml:id="l100">Mais nos conclusions sont loin d’être d’accord,</l>
-            <l n="101" xml:id="l101">Et je vais en deux mots lui prouver qu’il a tort.</l>
-            <l n="102" xml:id="l102"><i><span style="font-size:10.0pt">Il s’approche de Molière.</span></i></l>
-            <l n="103" xml:id="l103">Excusez. Le motif est grave qui m’amène.</l>
-            <l n="104" xml:id="l104">Vous êtes, je suppose, un citoyen d’Athènes ?</l>
-            <l n="105" xml:id="l105">D’Athènes ? Citoyen ? Non, monsieur, je suis mort !</l>
-            <l n="106" xml:id="l106">Mort ! Voilà qui va bien ! Mort ? Quel étrange sort !</l>
-            <l n="107" xml:id="l107">Mort, vraiment ? Mais alors, permettez-moi, de grâce...</l>
-            <l n="108" xml:id="l108"><i><span style="font-size:10.0pt">Il fait mine d’embrasser Molière.</span></i></l>
-            <l n="109" xml:id="l109">Ah ! pour l’amour du Grec souffrez qu’on vous embrasse !</l>
-            <l n="110" xml:id="l110">Mais vous-même peut-on savoir...</l>
-            <l n="111" xml:id="l111">Du temps où je vivais, plusieurs ne m’aimaient pas,</l>
-            <l n="112" xml:id="l112">Et mon nom est resté redoutable au profane.</l>
-            <l n="113" xml:id="l113">Je suis Celui qui rit de tout.</l>
-            <l n="114" xml:id="l114">Tu l’as dit. À ton tour de m’apprendre ton nom.</l>
-            <l n="115" xml:id="l115">Es-tu Cratès ? Amipsias ? Ménandre ?</l>
-            <l n="116" xml:id="l116">Ne cherche pas si loin, ô mon illustre ancêtre.</l>
-            <l n="117" xml:id="l117">Bien que je sois des tiens, tu ne peux me connaître...</l>
-            <l n="118" xml:id="l118">J’ai, longtemps après toi, suivi le même but,</l>
-            <l n="119" xml:id="l119">Et pressé sous mes doigts les cordes de ton luth,</l>
-            <l n="120" xml:id="l120">Si bien qu’ont résonné dans un accord unique</l>
-            <l n="121" xml:id="l121">Le franc rire gaulois et le vieux rire attique !</l>
-            <l n="122" xml:id="l122">Va, tous deux nous pouvons, malgré plus d’un affront,</l>
-            <l n="123" xml:id="l123">Discourir haut et ferme et relever le front ;</l>
-            <l n="124" xml:id="l124">Car de notre ironie a jailli la lumière,</l>
-            <l n="125" xml:id="l125">Toi, grand Aristophane, et moi, pauvre Molière !</l>
-            <l n="126" xml:id="l126">J’entends ! Tu fus sans doute un censeur comme moi.</l>
-            <l n="127" xml:id="l127">Flagellant tour à tour les dieux, l’homme et la loi ?</l>
-            <l n="128" xml:id="l128">Mais, dis-moi, vivais-tu dans Athènes ou Mégare ?</l>
-            <l n="129" xml:id="l129">Hors l’Hellade, la terre en tous lieux est barbare.</l>
-            <l n="130" xml:id="l130">Guerroyait-on encor de ton temps ?</l>
-            <l n="131" xml:id="l131">Quoi ? Le spectre fatal n’est point évanoui ?</l>
-            <l n="132" xml:id="l132">Et le sang pur d’Hellé, le sang des blonds éphèbes,</l>
-            <l n="133" xml:id="l133">Sous le fer dorien rougit encor nos glèbes ?</l>
-            <l n="134" xml:id="l134">Athènes aux bras puissants contre Sparte aux seins durs</l>
-            <l n="135" xml:id="l135">Lutte pour agrandir jusqu’à la mer ses murs ?</l>
-            <l n="136" xml:id="l136">Il est vrai que la Paix, vierge auguste et féconde.</l>
-            <l n="137" xml:id="l137">N’a pas encore ouvert ses ailes sur le monde,</l>
-            <l n="138" xml:id="l138">Mais il ne s’agit pas d’Athènes par ici,</l>
-            <l n="139" xml:id="l139">Et Sparte est, je le crains, notre dernier souci.</l>
-            <l n="140" xml:id="l140">La ville aux dômes blancs qui devant nous s’étale,</l>
-            <l n="141" xml:id="l141">C’est Paris, une noble et vaste capitale,</l>
-            <l n="142" xml:id="l142">Où l’homme libre et fier compte pour ce qu’il vaut,</l>
-            <l n="143" xml:id="l143">Où dans des temples neufs s’érige un art nouveau.</l>
-            <l n="144" xml:id="l144">Tu t’es trompé de route, ô chantre de Phalère !</l>
-            <l n="145" xml:id="l145">Quoi ! ce mont que le soir teint d’une ombre légère,</l>
-            <l n="146" xml:id="l146">Ce n’est point le Parnès ?</l>
-            <l n="147" xml:id="l147">Montmartre, le cerveau du monde et de Paris !</l>
-            <l n="148" xml:id="l148">Autrefois ce n’était qu’une butte lointaine</l>
-            <l n="149" xml:id="l149">Où les amants furtifs ascendaient avec peine.</l>
-            <l n="150" xml:id="l150">Des couples maintenant y vont encor, dit-on,</l>
-            <l n="151" xml:id="l151">Mais ce n’est plus pour fuir la trique ou le bâton ;</l>
-            <l n="152" xml:id="l152">Et si quelques Arnolphe ont toujours les mains rudes,</l>
-            <l n="153" xml:id="l153">Les Agnès ont perdu le souci d’être prudes,</l>
-            <l n="154" xml:id="l154">Et font ouvertement ce qu’au temps du Grand Roi</l>
-            <l n="155" xml:id="l155">Leurs aïeules faisaient en plus modeste arroi.</l>
-            <l n="156" xml:id="l156">Conte-moi tout cela. C’est drôle.</l>
-            <l n="157" xml:id="l157"><i><span style="font-size:10.0pt">Ils s’asseyent à côté l’un de l’autre.</span></i></l>
-            <l n="158" xml:id="l158">Aussi bien dans mon cœur sommeille quelque doute.</l>
-            <l n="159" xml:id="l159">Certes, l’homme actuel me paraît assagi,</l>
-            <l n="160" xml:id="l160">Et j’ai l’orgueil d’avoir sur sa raison agi.</l>
-            <l n="161" xml:id="l161">Mais si je me trompais ? Si mon œuvre était vaine ?</l>
-            <l n="162" xml:id="l162">Je voudrais posséder la science certaine.</l>
-            <l n="163" xml:id="l163">Éclaire-moi, veux-tu ?</l>
-            <l n="164" xml:id="l164">Enfant, j’étudiai d’abord sans grands profits ;</l>
-            <l n="165" xml:id="l165">Les leçons des savants me cassaient les oreilles,</l>
-            <l n="166" xml:id="l166">Et j’aimais mieux courir ou bayer aux corneilles</l>
-            <l n="167" xml:id="l167">Que de me disputer avec le <i>De Viris</i>.</l>
-            <l n="168" xml:id="l168">Nez au vent, œil au guet, je flânais dans Paris,</l>
-            <l n="169" xml:id="l169">Heureux quand le hasard me permettait d’entendre</l>
-            <l n="170" xml:id="l170">Quelque propos bourgeois bien inepte ou bien tendre,</l>
-            <l n="171" xml:id="l171">Et dans les carrefours tout seul m’esbaudissant</l>
-            <l n="172" xml:id="l172">Des mines d’une fille ou du dos d’un passant.</l>
-            <l n="173" xml:id="l173">Le ridicule humain déjà chauffait ma bile ;</l>
-            <l n="174" xml:id="l174">À le saisir au vol je me sentais habile,</l>
-            <l n="175" xml:id="l175">Puis longtemps j’en suivais les ondoiements divers,</l>
-            <l n="176" xml:id="l176">Les reflets différents, blancs ou noirs, gris ou verts,</l>
-            <l n="177" xml:id="l177">Papillons enfermés dans un filet de gaze</l>
-            <l n="178" xml:id="l178">Que j’avais attrapés sans enfourcher Pégase.</l>
-            <l n="179" xml:id="l179">Oh ! oh ! Ce bon Pégase ! Il doit être poussif</l>
-            <l n="180" xml:id="l180">Depuis qu’à l’Hélicon...</l>
-            <l n="181" xml:id="l181">Mais le peuple est clément à celui qui l’amuse.</l>
-            <l n="182" xml:id="l182">Pour moi, ce fut à pied que je menai ma muse ;</l>
-            <l n="183" xml:id="l183">Je la fis voyager par les chemins poudreux,</l>
-            <l n="184" xml:id="l184">De Lyon à Pézenas et de Paris à Dreux.</l>
-            <l n="185" xml:id="l185">Partout où je trouvais un hangar, une grange,</l>
-            <l n="186" xml:id="l186">Je m’y campais avec la Béjard et Lagrange,</l>
-            <l n="187" xml:id="l187">Et j’essayais devant les rustres étonnés</l>
-            <l n="188" xml:id="l188">De mêler la morale avec le pied de nez,</l>
-            <l n="189" xml:id="l189">De joindre hardiment la farce et la satire,</l>
-            <l n="190" xml:id="l190">Et de faire éclater les pleurs avec le rire.</l>
-            <l n="191" xml:id="l191">Chose étrange ! ce fut par ces simples esprits</l>
-            <l n="192" xml:id="l192">Que je me sentis mieux et plus souvent compris.</l>
-            <l n="193" xml:id="l193">Le paysan de France a l’âme juste et bonne ;</l>
-            <l n="194" xml:id="l194">Il vibre tout autant que les gens de Sorbonne,</l>
-            <l n="195" xml:id="l195">Quand on sait à propos frapper le pur cristal</l>
-            <l n="196" xml:id="l196">De son bon sens pétri du clair soleil natal.</l>
-            <l n="197" xml:id="l197">À Paris, à la Cour, ce fut plus difficile ;</l>
-            <l n="198" xml:id="l198">Il me fallut changer vingt fois de domicile,</l>
-            <l n="199" xml:id="l199">Et transformer vingt fois ma perruque et mon tic</l>
-            <l n="200" xml:id="l200">Avant que de forcer la faveur du public ;</l>
-            <l n="201" xml:id="l201">Jusqu’au jour où le Roi, m’ayant trouvé très drôle,</l>
-            <l n="202" xml:id="l202">Daigna me confier les honneurs d’un grand rôle.</l>
-            <l n="203" xml:id="l203">Ce fut l’aube de gloire en mes destins changeants.</l>
-            <l n="204" xml:id="l204">Dès lors je pus sans peur braver les sottes gens,</l>
-            <l n="205" xml:id="l205">Rire au nez des maris et persifler les belles</l>
-            <l n="206" xml:id="l206">Qui pensaient avoir pris les Grâces pour modèles.</l>
-            <l n="207" xml:id="l207">Je fixais chaque jour quelque travers nouveau ;</l>
-            <l n="208" xml:id="l208">Tour à tour je me fis vrai marquis, faux dévot,</l>
-            <l n="209" xml:id="l209">Vieillard brûlant d’amour, Don Juan, Misanthrope,</l>
-            <l n="210" xml:id="l210">Médecin qu’un hoquet fait tomber en syncope.</l>
-            <l n="211" xml:id="l211">J’incarnais mes héros dans un être réel,</l>
-            <l n="212" xml:id="l212">J’étais le Bouc chargé des péchés d’Israël,</l>
-            <l n="213" xml:id="l213">Et j’entendais les gens s’écrier : « Le pauvre homme ! »</l>
-            <l n="214" xml:id="l214">Alors que c’était eux que je raillais, en somme,</l>
-            <l n="215" xml:id="l215">Mais ça m’était égal ; mon but était plus haut</l>
-            <l n="216" xml:id="l216">Que le plaisir d’un prince ou l’émoi d’un badaud.</l>
-            <l n="217" xml:id="l217">J’aimais l’Humanité d’une immense tendresse,</l>
-            <l n="218" xml:id="l218">Comme un amant jaloux adore sa maîtresse ;</l>
-            <l n="219" xml:id="l219">Je l’aimais tout entière et malgré ses défauts,</l>
-            <l n="220" xml:id="l220">Malgré ses lèvres de mensonge et ses yeux faux ;</l>
-            <l n="221" xml:id="l221">Je l’aimais par pitié, par angoisse, par crainte.</l>
-            <l n="222" xml:id="l222">Oh ! oui ! je l’aimais bien, cette Humanité sainte !...</l>
-            <l n="223" xml:id="l223">Je la crois plutôt vile, entre nous ; mais ton cas</l>
-            <l n="224" xml:id="l224">Me parait curieux, survivant au trépas.</l>
-            <l n="225" xml:id="l225">Pour moi, c’est en blasé que je reviens sur terre,</l>
-            <l n="226" xml:id="l226">Je n’y puis découvrir ni trouble ni mystère,</l>
-            <l n="227" xml:id="l227">Ni sentiment nouveau, ni vice ni vertu ;</l>
-            <l n="228" xml:id="l228">Vraiment le cœur humain est un sentier battu.</l>
-            <l n="229" xml:id="l229">Tout ce que j’ai connu, je le revois encore :</l>
-            <l n="230" xml:id="l230">S’il s’est fait un progrès dans l’homme, je l’ignore.</l>
-            <l n="231" xml:id="l231">Mais les sociétés sont autant qu’autrefois</l>
-            <l n="232" xml:id="l232">Soumises dans leur règne à d’amers désarrois.</l>
-            <l n="233" xml:id="l233">La marche vers le Bien est aveugle, incertaine ;</l>
-            <l n="234" xml:id="l234">Aujourd’hui ton Paris ressemble à mon Athènes,</l>
-            <l n="235" xml:id="l235">Ce sont les mêmes mœurs que connut l’Agora ;</l>
-            <l n="236" xml:id="l236">Bien fin qui peut prévoir comment tout finira.</l>
-            <l n="237" xml:id="l237">En effet nul ne sait le devenir de l’homme.</l>
-            <l n="238" xml:id="l238">Mais que d’efforts depuis qu’il a mangé la pomme !</l>
-            <l n="239" xml:id="l239">Nieras-tu le chemin jusqu’ici parcouru ?</l>
-            <l n="240" xml:id="l240">Né trois siècles plus tôt, toi-même aurais-tu cru</l>
-            <l n="241" xml:id="l241">Que ta patrie un jour parviendrait au pinacle ?</l>
-            <l n="242" xml:id="l242">Sur ce sujet douteux je m’en tiens à l’oracle.</l>
-            <l n="243" xml:id="l243">S’il ne parle pas clair, du moins il ne ment point.</l>
-            <l n="244" xml:id="l244">L’homme, éternel Sisyphe, atteint un certain point</l>
-            <l n="245" xml:id="l245">Au bout duquel il butte et retourne en arrière,</l>
-            <l n="246" xml:id="l246">Et souvent à ce choc tombe sur son derrière.</l>
-            <l n="247" xml:id="l247">Voilà pourquoi, jalons de ce triste chemin,</l>
-            <l n="248" xml:id="l248">Demain ressemble à hier, hier ressemble à demain.</l>
-            <l n="249" xml:id="l249">Mais à quoi sert dès lors l’humaine conscience,</l>
-            <l n="250" xml:id="l250">L’énergie au combat, la belle impatience</l>
-            <l n="251" xml:id="l251">Du triomphe ? À quoi sert l’amour, même l’amour ?</l>
-            <l n="252" xml:id="l252">À rendre plus léger le poids lassant du jour.</l>
-            <l n="253" xml:id="l253">Non ! Tant d’ardents désirs, tant de nobles pensées,</l>
-            <l n="254" xml:id="l254">Tant d’efforts douloureux, tant de larmes versées</l>
-            <l n="255" xml:id="l255">Doivent avoir un but qui se laisse saisir.</l>
-            <l n="256" xml:id="l256">Le vrai but de la vie, ami, c’est le plaisir.</l>
-            <l n="257" xml:id="l257">Le sage s’en contente et n’en cherche point d’autres.</l>
-            <l n="258" xml:id="l258">Tel n’est point le secret prévu des grands apôtres</l>
-            <l n="259" xml:id="l259">Qu’un siècle glorieux inscrit à son fronton :</l>
-            <l n="260" xml:id="l260">Nous avons eu Pascal et vous eûtes Platon.</l>
-            <l n="261" xml:id="l261">Certes ! et plus tard encor d’autres viendront sans doute</l>
-            <l n="262" xml:id="l262">Qui de leur fier génie éclaireront la route ;</l>
-            <l n="263" xml:id="l263">Et les oiseaux obscurs, chats-huants ou corbeaux,</l>
-            <l n="264" xml:id="l264">D’un coup d’aile en passant éteindront ces flambeaux !</l>
-            <l n="265" xml:id="l265">Ainsi tu n’as point foi dans les idéologues ?</l>
-            <l n="266" xml:id="l266">J’ai tantôt entendu hurler des démagogues !</l>
-            <l n="267" xml:id="l267">Par la fraternité les peuples ont grandi.</l>
-            <l n="268" xml:id="l268">Oui, mais le sens commun s’est partout engourdi.</l>
-            <l n="269" xml:id="l269">On voit moins d’imposteurs ; la parole est plus franche.</l>
-            <l n="270" xml:id="l270">Et le nombre des sots multiplie en revanche.</l>
-            <l n="271" xml:id="l271">Un seul Dieu véritable a remplacé tes dieux.</l>
-            <l n="272" xml:id="l272">Eh ! quand ils étaient faux, on les adorait mieux !</l>
-            <l n="273" xml:id="l273">Tu crois donc de vertu les âmes dénuées ?</l>
-            <l n="274" xml:id="l274">Oui, je le crois. Adieu. Je vais dans les Nuées</l>
-            <l n="275" xml:id="l275">Où flottent les esprits des plantes et des eaux.</l>
-            <l n="276" xml:id="l276">Là s’irise l’éther et planent les oiseaux ;</l>
-            <l n="277" xml:id="l277">Légères elles sont, impalpables et douces,</l>
-            <l n="278" xml:id="l278">Et mon Éternité s’y fondra sans secousses.</l>
-            <l n="279" xml:id="l279"><i><span style="font-size:10.0pt">Il sort.</span></i></l>
-            <l n="280" xml:id="l280"> </l>
-            <l n="281" xml:id="l281"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="282" xml:id="l282"> </l>
-            <l n="283" xml:id="l283"> </l>
-            <l n="284" xml:id="l284">Il disparaît, laissant le doute en mes esprits.</l>
-            <l n="285" xml:id="l285">Ah ! Molière ! valet du Roi ! bien t’en a pris</l>
-            <l n="286" xml:id="l286">De vouloir te survivre et contempler ton œuvre !</l>
-            <l n="287" xml:id="l287">Qu’est donc l’Humanité, génie errant ou pieuvre,</l>
-            <l n="288" xml:id="l288">Pieuvre que l’Océan rejette chaque jour,</l>
-            <l n="289" xml:id="l289">Ou génie en chemin pour l’éternel amour ?</l>
-            <l n="290" xml:id="l290">Oui, celui-là fut grand, celui-là seul est sage,</l>
-            <l n="291" xml:id="l291">Qui sait rire de tout sans chercher davantage</l>
-            <l n="292" xml:id="l292">Et chante autour de soi comme un merle joyeux</l>
-            <l n="293" xml:id="l293">Sifflant l’obscur destin sous la clarté des cieux !</l>
-            <l n="294" xml:id="l294">Grand naïf que tu fus, rêveur, amateur d’âmes,</l>
-            <l n="295" xml:id="l295">Tu croyais réformer le monde avec tes blâmes,</l>
-            <l n="296" xml:id="l296">En pétrir un meilleur, tout neuf, à ta façon ;</l>
-            <l n="297" xml:id="l297">Mais ce Grec aujourd’hui te donne une leçon !</l>
-            <l n="298" xml:id="l298">Allons ! Rentre au néant et laisse là ton rêve.</l>
-            <l n="299" xml:id="l299">Aussi bien, comme lui, ce jour triste s’achève ;</l>
-            <l n="300" xml:id="l300">Paris est dans la brume, hélas ! comme ton cœur,</l>
-            <l n="301" xml:id="l301">Et la lumière sombre, et le mal est vainqueur !</l>
-            <l n="302" xml:id="l302"><i><span style="font-size:10.0pt">Il reste quelques minutes pensif.</span></i></l>
-            <l n="303" xml:id="l303"> </l>
-            <l n="304" xml:id="l304"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="305" xml:id="l305"> </l>
-            <l n="306" xml:id="l306"> </l>
-            <l n="307" xml:id="l307"><i><span style="font-size:10.0pt">L’Humanité, souriante, s’approche de Molière qui lui tend les bras.</span></i></l>
-            <l n="308" xml:id="l308">Ô toi, qui donc es-tu, Splendeur et Vérité ?</l>
-            <l n="309" xml:id="l309">Molière, ô mon amant, je suis l’Humanité !</l>
-            <l n="310" xml:id="l310"><i><span style="font-size:10.0pt">Elle baise Molière sur le front.</span></i></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#molière">
+          <speaker>MOLIÈRE</speaker>
+          <l n="1">Il arrive lentement par la gauche et regarde dans la direction de la grande cité.</l>
+          <l n="2">M’y voici. Je retrouve en leurs plis de dentelle</l>
+          <l n="3">Les tours de Notre-Dame et la Sainte-Chapelle,</l>
+          <l n="4">Et plus bas, s’estompant sous un ciel vaporeux,</l>
+          <l n="5">Les berges de la Seine où court le fleuve heureux.</l>
+          <l n="6">– Mon Dieu ! qu’on est craintif quand on vit chez les ombres !</l>
+          <l n="7">J’hésitai bien longtemps à franchir les bords sombres ;</l>
+          <l n="8">Mais je n’y tenais plus ! Je voulais à tout prix,</l>
+          <l n="9">Ne fût-ce qu’un instant, revoir mon cher Paris.</l>
+          <l n="10">Il regarde de nouveau dans la direction de la cité.</l>
+          <l n="11">Le cœur me bat un peu de me sentir tout proche.</l>
+          <l n="12">Paris si bon enfant ! Souvent je me reproche</l>
+          <l n="13">D’avoir grossi tes maux de mon rire cruel.</l>
+          <l n="14">Mais tu l’as oublié, ton cœur n’a point de fiel.</l>
+          <l n="15">Aujourd’hui, si quelqu’un te parlait de Molière,</l>
+          <l n="16">Tu dirais : « La paix soit à son heure dernière !</l>
+          <l n="17">Laissons parmi les morts se reposer les morts ! »</l>
+          <l n="18">Et tu n’aurais souci de mes tardifs remords.</l>
+          <l n="19">C’est donc en pèlerin, l’âme trouble et lassée,</l>
+          <l n="20">Que je viens près de toi recueillir ma pensée,</l>
+          <l n="21">Et, si des pleurs encor s’échappent de mes yeux,</l>
+          <l n="22">Nul ne saura du moins...</l>
+          <l n="23">Il s’éloigne par le fond.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE</speaker>
+          <l n="24">Il entre par la droite en s’esclaffant.</l>
+          <l n="25">Ah ! de par tous les dieux !</l>
+          <l n="26">Thalès avait bien dit que la terre était ronde ;</l>
+          <l n="27">Elle roule, entraînant la sagesse du monde.</l>
+          <l n="28">Qui donc aurait pensé que depuis deux mille ans</l>
+          <l n="29">Ce bon peuple d’Athènes aiguise encor ses dents ?</l>
+          <l n="30">Ah ! ah ! bien m’en a pris de quitter l’Empyrée,</l>
+          <l n="31">Pour venir faire un tour du côté du Pirée ;</l>
+          <l n="32">Là-haut on perd son temps à toujours soupirer,</l>
+          <l n="33">Et la brise d’Attique est douce à respirer.</l>
+          <l n="34">Il fait quelques pas en regardant du côté de la cité.</l>
+          <l n="35">Oui vraiment c’est toujours la même comédie.</l>
+          <l n="36">La ville cependant s’est beaucoup agrandie,</l>
+          <l n="37">Les costumes n’ont plus leur ampleur d’autrefois</l>
+          <l n="38">Et les cerveaux aussi m’ont paru plus étroits.</l>
+          <l n="39">Mais ce sont seulement différences de forme ;</l>
+          <l n="40">Au fond le peuple encore attend son dieu sous l’orme</l>
+          <l n="41">Et se paye de mots, comme au siècle lointain</l>
+          <l n="42">Où le rustre Cléon présidait son destin.</l>
+          <l n="43">Pauvre peuple ! En a-t-il avalé de couleuvres !</l>
+          <l n="44">A-t-il assez tenté de grandir par ses œuvres</l>
+          <l n="45">Et de saisir enfin, d’un bras ensanglanté,</l>
+          <l n="46">La Chimère aux flancs creux qu’on nomme liberté !</l>
+          <l n="47">Il s’assied sur un tronc d’arbre.</l>
+          <l n="48">Peuple amoureux de joie.et vivant de contrastes,</l>
+          <l n="49">Il éclate de rire au nez des Héliastes,</l>
+          <l n="50">Et consent volontiers à rester humble et gueux,</l>
+          <l n="51">Pourvu que dans le Pnyx il parle plus fort qu’eux.</l>
+          <l n="52">Hélas ! qu’a-t-il gagné depuis les temps infâmes ?</l>
+          <l n="53">Je me suis cru tantôt à « l’Assemblée des femmes » ;</l>
+          <l n="54">Elles en sont encore à réclamer le droit</l>
+          <l n="55">De prendre leur mari du bras gauche ou du droit ;</l>
+          <l n="56">Et j ‘ai vu près d’ici – que Ploutos me pardonne ! –</l>
+          <l n="57">Des enfants en haillons qui demandaient l’aumône !</l>
+          <l n="58">Triste ! Mais le vrai sage en est surpris fort peu ;</l>
+          <l n="59">Il montre au peuple las les flots clairs, le ciel bleu,</l>
+          <l n="60">Le soleil dont chacun reçoit sa part égale,</l>
+          <l n="61">La beauté dont le plus indigent se régale,</l>
+          <l n="62">Et, pour le consoler d’être né miséreux,</l>
+          <l n="63">Il étale au grand jour les vices des heureux,</l>
+          <l n="64">Et le fait s’esclaffer sur les tyrans qu’il daube ;</l>
+          <l n="65">Car on vit de gaîté mieux que de viande en daube !</l>
+          <l n="66">On aperçoit Molière qui revient du même côté qu’Aristophane.</l>
+          <l n="67">Quelqu’un ! Mais à cette heure on est à l’Odéon !</l>
+          <l n="68">Serait-ce un sycophante, ainsi que sous Cléon ?</l>
+          <l n="69">Le plus sûr est d’abord d’attendre et de me taire,</l>
+          <l n="70">Car je n’ai plus le droit de rôder sur la terre.</l>
+          <l n="71">Il se cache derrière un massif d’arbres.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#aristophane">
+          <speaker>MOLIÈRE s’assoit sur le siège rustique qu’Aristophane vient de quitter.</speaker>
+          <l n="72">Je l’avais bien prévu : les siècles ont marché,</l>
+          <l n="73">Creusant l’étroit sillon autrefois ébauché.</l>
+          <l n="74">Lentement le progrès jour par jour s’élabore,</l>
+          <l n="75">Quelque rayon de plus éclaire chaque aurore,</l>
+          <l n="76">Et l’homme, sans faiblir, cherche son idéal</l>
+          <l n="77">À travers la douleur, le désordre et le mal.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE, toujours caché et regardant Molière.</speaker>
+          <l n="78">Voilà, par Jupiter, un étrange utopiste !</l>
+          <l n="79">Il poursuit, comme moi, l’âme humaine à la piste ;</l>
+          <l n="80">Mais nos conclusions sont loin d’être d’accord,</l>
+          <l n="81">Et je vais en deux mots lui prouver qu’il a tort.</l>
+          <l n="82">Il s’approche de Molière.</l>
+          <l n="83">Excusez. Le motif est grave qui m’amène.</l>
+          <l n="84">Vous êtes, je suppose, un citoyen d’Athènes ?</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE, devenant railleur.</speaker>
+          <l n="85">D’Athènes ? Citoyen ? Non, monsieur, je suis mort !</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE, éclatant de rire.</speaker>
+          <l n="86">Mort ! Voilà qui va bien ! Mort ? Quel étrange sort !</l>
+          <l n="87">Mort, vraiment ? Mais alors, permettez-moi, de grâce...</l>
+          <l n="88">Il fait mine d’embrasser Molière.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE, même jeu.</speaker>
+          <l n="89">Ah ! pour l’amour du Grec souffrez qu’on vous embrasse !</l>
+          <l n="90">Mais vous-même peut-on savoir...</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE, mettant un doigt sur sa bouche.</speaker>
+          <l n="91">Parlez plus bas !</l>
+          <l n="92">Du temps où je vivais, plusieurs ne m’aimaient pas,</l>
+          <l n="93">Et mon nom est resté redoutable au profane.</l>
+          <l n="94">Je suis Celui qui rit de tout.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE, avec respect.</speaker>
+          <l n="95">Aristophane ?</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="96">Tu l’as dit. À ton tour de m’apprendre ton nom.</l>
+          <l n="97">Es-tu Cratès ? Amipsias ? Ménandre ?</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="98">Non !</l>
+          <l n="99">Ne cherche pas si loin, ô mon illustre ancêtre.</l>
+          <l n="100">Bien que je sois des tiens, tu ne peux me connaître...</l>
+          <l n="101">J’ai, longtemps après toi, suivi le même but,</l>
+          <l n="102">Et pressé sous mes doigts les cordes de ton luth,</l>
+          <l n="103">Si bien qu’ont résonné dans un accord unique</l>
+          <l n="104">Le franc rire gaulois et le vieux rire attique !</l>
+          <l n="105">Va, tous deux nous pouvons, malgré plus d’un affront,</l>
+          <l n="106">Discourir haut et ferme et relever le front ;</l>
+          <l n="107">Car de notre ironie a jailli la lumière,</l>
+          <l n="108">Toi, grand Aristophane, et moi, pauvre Molière !</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="109">J’entends ! Tu fus sans doute un censeur comme moi.</l>
+          <l n="110">Flagellant tour à tour les dieux, l’homme et la loi ?</l>
+          <l n="111">Mais, dis-moi, vivais-tu dans Athènes ou Mégare ?</l>
+          <l n="112">Hors l’Hellade, la terre en tous lieux est barbare.</l>
+          <l n="113">Guerroyait-on encor de ton temps ?</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="114">Hélas ! oui.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="115">Quoi ? Le spectre fatal n’est point évanoui ?</l>
+          <l n="116">Et le sang pur d’Hellé, le sang des blonds éphèbes,</l>
+          <l n="117">Sous le fer dorien rougit encor nos glèbes ?</l>
+          <l n="118">Athènes aux bras puissants contre Sparte aux seins durs</l>
+          <l n="119">Lutte pour agrandir jusqu’à la mer ses murs ?</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="120">Il est vrai que la Paix, vierge auguste et féconde.</l>
+          <l n="121">N’a pas encore ouvert ses ailes sur le monde,</l>
+          <l n="122">Mais il ne s’agit pas d’Athènes par ici,</l>
+          <l n="123">Et Sparte est, je le crains, notre dernier souci.</l>
+          <l n="124">La ville aux dômes blancs qui devant nous s’étale,</l>
+          <l n="125">C’est Paris, une noble et vaste capitale,</l>
+          <l n="126">Où l’homme libre et fier compte pour ce qu’il vaut,</l>
+          <l n="127">Où dans des temples neufs s’érige un art nouveau.</l>
+          <l n="128">Tu t’es trompé de route, ô chantre de Phalère !</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE, étendant le bras.</speaker>
+          <l n="129">Quoi ! ce mont que le soir teint d’une ombre légère,</l>
+          <l n="130">Ce n’est point le Parnès ?</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="131">Non ! Montmartre.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="132">Tu dis ?</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE, avec une emphase comique.</speaker>
+          <l n="133">Montmartre, le cerveau du monde et de Paris !</l>
+          <l n="134">Autrefois ce n’était qu’une butte lointaine</l>
+          <l n="135">Où les amants furtifs ascendaient avec peine.</l>
+          <l n="136">Des couples maintenant y vont encor, dit-on,</l>
+          <l n="137">Mais ce n’est plus pour fuir la trique ou le bâton ;</l>
+          <l n="138">Et si quelques Arnolphe ont toujours les mains rudes,</l>
+          <l n="139">Les Agnès ont perdu le souci d’être prudes,</l>
+          <l n="140">Et font ouvertement ce qu’au temps du Grand Roi</l>
+          <l n="141">Leurs aïeules faisaient en plus modeste arroi.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="142">Conte-moi tout cela. C’est drôle.</l>
+          <l n="143">Ils s’asseyent à côté l’un de l’autre.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="144">Donc écoute.</l>
+          <l n="145">Aussi bien dans mon cœur sommeille quelque doute.</l>
+          <l n="146">Certes, l’homme actuel me paraît assagi,</l>
+          <l n="147">Et j’ai l’orgueil d’avoir sur sa raison agi.</l>
+          <l n="148">Mais si je me trompais ? Si mon œuvre était vaine ?</l>
+          <l n="149">Je voudrais posséder la science certaine.</l>
+          <l n="150">Éclaire-moi, veux-tu ?</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="151">Dis-moi ce que tu fis.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="152">Enfant, j’étudiai d’abord sans grands profits ;</l>
+          <l n="153">Les leçons des savants me cassaient les oreilles,</l>
+          <l n="154">Et j’aimais mieux courir ou bayer aux corneilles</l>
+          <l n="155">Que de me disputer avec le De Viris.</l>
+          <l n="156">Nez au vent, œil au guet, je flânais dans Paris,</l>
+          <l n="157">Heureux quand le hasard me permettait d’entendre</l>
+          <l n="158">Quelque propos bourgeois bien inepte ou bien tendre,</l>
+          <l n="159">Et dans les carrefours tout seul m’esbaudissant</l>
+          <l n="160">Des mines d’une fille ou du dos d’un passant.</l>
+          <l n="161">Le ridicule humain déjà chauffait ma bile ;</l>
+          <l n="162">À le saisir au vol je me sentais habile,</l>
+          <l n="163">Puis longtemps j’en suivais les ondoiements divers,</l>
+          <l n="164">Les reflets différents, blancs ou noirs, gris ou verts,</l>
+          <l n="165">Papillons enfermés dans un filet de gaze</l>
+          <l n="166">Que j’avais attrapés sans enfourcher Pégase.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="167">Oh ! oh ! Ce bon Pégase ! Il doit être poussif</l>
+          <l n="168">Depuis qu’à l’Hélicon...</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="169">Il est surtout poncif.</l>
+          <l n="170">Mais le peuple est clément à celui qui l’amuse.</l>
+          <l n="171">Pour moi, ce fut à pied que je menai ma muse ;</l>
+          <l n="172">Je la fis voyager par les chemins poudreux,</l>
+          <l n="173">De Lyon à Pézenas et de Paris à Dreux.</l>
+          <l n="174">Partout où je trouvais un hangar, une grange,</l>
+          <l n="175">Je m’y campais avec la Béjard et Lagrange,</l>
+          <l n="176">Et j’essayais devant les rustres étonnés</l>
+          <l n="177">De mêler la morale avec le pied de nez,</l>
+          <l n="178">De joindre hardiment la farce et la satire,</l>
+          <l n="179">Et de faire éclater les pleurs avec le rire.</l>
+          <l n="180">Chose étrange ! ce fut par ces simples esprits</l>
+          <l n="181">Que je me sentis mieux et plus souvent compris.</l>
+          <l n="182">Le paysan de France a l’âme juste et bonne ;</l>
+          <l n="183">Il vibre tout autant que les gens de Sorbonne,</l>
+          <l n="184">Quand on sait à propos frapper le pur cristal</l>
+          <l n="185">De son bon sens pétri du clair soleil natal.</l>
+          <l n="186">À Paris, à la Cour, ce fut plus difficile ;</l>
+          <l n="187">Il me fallut changer vingt fois de domicile,</l>
+          <l n="188">Et transformer vingt fois ma perruque et mon tic</l>
+          <l n="189">Avant que de forcer la faveur du public ;</l>
+          <l n="190">Jusqu’au jour où le Roi, m’ayant trouvé très drôle,</l>
+          <l n="191">Daigna me confier les honneurs d’un grand rôle.</l>
+          <l n="192">Ce fut l’aube de gloire en mes destins changeants.</l>
+          <l n="193">Dès lors je pus sans peur braver les sottes gens,</l>
+          <l n="194">Rire au nez des maris et persifler les belles</l>
+          <l n="195">Qui pensaient avoir pris les Grâces pour modèles.</l>
+          <l n="196">Je fixais chaque jour quelque travers nouveau ;</l>
+          <l n="197">Tour à tour je me fis vrai marquis, faux dévot,</l>
+          <l n="198">Vieillard brûlant d’amour, Don Juan, Misanthrope,</l>
+          <l n="199">Médecin qu’un hoquet fait tomber en syncope.</l>
+          <l n="200">J’incarnais mes héros dans un être réel,</l>
+          <l n="201">J’étais le Bouc chargé des péchés d’Israël,</l>
+          <l n="202">Et j’entendais les gens s’écrier : « Le pauvre homme ! »</l>
+          <l n="203">Alors que c’était eux que je raillais, en somme,</l>
+          <l n="204">Mais ça m’était égal ; mon but était plus haut</l>
+          <l n="205">Que le plaisir d’un prince ou l’émoi d’un badaud.</l>
+          <l n="206">J’aimais l’Humanité d’une immense tendresse,</l>
+          <l n="207">Comme un amant jaloux adore sa maîtresse ;</l>
+          <l n="208">Je l’aimais tout entière et malgré ses défauts,</l>
+          <l n="209">Malgré ses lèvres de mensonge et ses yeux faux ;</l>
+          <l n="210">Je l’aimais par pitié, par angoisse, par crainte.</l>
+          <l n="211">Oh ! oui ! je l’aimais bien, cette Humanité sainte !...</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="212">Je la crois plutôt vile, entre nous ; mais ton cas</l>
+          <l n="213">Me parait curieux, survivant au trépas.</l>
+          <l n="214">Pour moi, c’est en blasé que je reviens sur terre,</l>
+          <l n="215">Je n’y puis découvrir ni trouble ni mystère,</l>
+          <l n="216">Ni sentiment nouveau, ni vice ni vertu ;</l>
+          <l n="217">Vraiment le cœur humain est un sentier battu.</l>
+          <l n="218">Tout ce que j’ai connu, je le revois encore :</l>
+          <l n="219">S’il s’est fait un progrès dans l’homme, je l’ignore.</l>
+          <l n="220">Mais les sociétés sont autant qu’autrefois</l>
+          <l n="221">Soumises dans leur règne à d’amers désarrois.</l>
+          <l n="222">La marche vers le Bien est aveugle, incertaine ;</l>
+          <l n="223">Aujourd’hui ton Paris ressemble à mon Athènes,</l>
+          <l n="224">Ce sont les mêmes mœurs que connut l’Agora ;</l>
+          <l n="225">Bien fin qui peut prévoir comment tout finira.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="226">En effet nul ne sait le devenir de l’homme.</l>
+          <l n="227">Mais que d’efforts depuis qu’il a mangé la pomme !</l>
+          <l n="228">Nieras-tu le chemin jusqu’ici parcouru ?</l>
+          <l n="229">Né trois siècles plus tôt, toi-même aurais-tu cru</l>
+          <l n="230">Que ta patrie un jour parviendrait au pinacle ?</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="231">Sur ce sujet douteux je m’en tiens à l’oracle.</l>
+          <l n="232">S’il ne parle pas clair, du moins il ne ment point.</l>
+          <l n="233">L’homme, éternel Sisyphe, atteint un certain point</l>
+          <l n="234">Au bout duquel il butte et retourne en arrière,</l>
+          <l n="235">Et souvent à ce choc tombe sur son derrière.</l>
+          <l n="236">Voilà pourquoi, jalons de ce triste chemin,</l>
+          <l n="237">Demain ressemble à hier, hier ressemble à demain.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="238">Mais à quoi sert dès lors l’humaine conscience,</l>
+          <l n="239">L’énergie au combat, la belle impatience</l>
+          <l n="240">Du triomphe ? À quoi sert l’amour, même l’amour ?</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="241">À rendre plus léger le poids lassant du jour.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="242">Non ! Tant d’ardents désirs, tant de nobles pensées,</l>
+          <l n="243">Tant d’efforts douloureux, tant de larmes versées</l>
+          <l n="244">Doivent avoir un but qui se laisse saisir.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="245">Le vrai but de la vie, ami, c’est le plaisir.</l>
+          <l n="246">Le sage s’en contente et n’en cherche point d’autres.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="247">Tel n’est point le secret prévu des grands apôtres</l>
+          <l n="248">Qu’un siècle glorieux inscrit à son fronton :</l>
+          <l n="249">Nous avons eu Pascal et vous eûtes Platon.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="250">Certes ! et plus tard encor d’autres viendront sans doute</l>
+          <l n="251">Qui de leur fier génie éclaireront la route ;</l>
+          <l n="252">Et les oiseaux obscurs, chats-huants ou corbeaux,</l>
+          <l n="253">D’un coup d’aile en passant éteindront ces flambeaux !</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="254">Ainsi tu n’as point foi dans les idéologues ?</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="255">J’ai tantôt entendu hurler des démagogues !</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="256">Par la fraternité les peuples ont grandi.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="257">Oui, mais le sens commun s’est partout engourdi.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="258">On voit moins d’imposteurs ; la parole est plus franche.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="259">Et le nombre des sots multiplie en revanche.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="260">Un seul Dieu véritable a remplacé tes dieux.</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="261">Eh ! quand ils étaient faux, on les adorait mieux !</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="262">Tu crois donc de vertu les âmes dénuées ?</l>
+        </sp>
+        <sp who="#aristophane">
+          <speaker>ARISTOPHANE.</speaker>
+          <l n="263">Oui, je le crois. Adieu. Je vais dans les Nuées</l>
+          <l n="264">Où flottent les esprits des plantes et des eaux.</l>
+          <l n="265">Là s’irise l’éther et planent les oiseaux ;</l>
+          <l n="266">Légères elles sont, impalpables et douces,</l>
+          <l n="267">Et mon Éternité s’y fondra sans secousses.</l>
+          <l n="268">Il sort.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#molière">
+          <speaker>MOLIÈRE</speaker>
+          <l n="269">Il disparaît, laissant le doute en mes esprits.</l>
+          <l n="270">Ah ! Molière ! valet du Roi ! bien t’en a pris</l>
+          <l n="271">De vouloir te survivre et contempler ton œuvre !</l>
+          <l n="272">Qu’est donc l’Humanité, génie errant ou pieuvre,</l>
+          <l n="273">Pieuvre que l’Océan rejette chaque jour,</l>
+          <l n="274">Ou génie en chemin pour l’éternel amour ?</l>
+          <l n="275">Oui, celui-là fut grand, celui-là seul est sage,</l>
+          <l n="276">Qui sait rire de tout sans chercher davantage</l>
+          <l n="277">Et chante autour de soi comme un merle joyeux</l>
+          <l n="278">Sifflant l’obscur destin sous la clarté des cieux !</l>
+          <l n="279">Grand naïf que tu fus, rêveur, amateur d’âmes,</l>
+          <l n="280">Tu croyais réformer le monde avec tes blâmes,</l>
+          <l n="281">En pétrir un meilleur, tout neuf, à ta façon ;</l>
+          <l n="282">Mais ce Grec aujourd’hui te donne une leçon !</l>
+          <l n="283">Allons ! Rentre au néant et laisse là ton rêve.</l>
+          <l n="284">Aussi bien, comme lui, ce jour triste s’achève ;</l>
+          <l n="285">Paris est dans la brume, hélas ! comme ton cœur,</l>
+          <l n="286">Et la lumière sombre, et le mal est vainqueur !</l>
+          <l n="287">Il reste quelques minutes pensif.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#i&gt;apparaît-dans-une-lumière-qui">
+          <speaker>L’HUMANITÉ apparaît dans une lumière qui, à mesure qu’elle parle et se rapproche, devient plus intense.</speaker>
+          <l n="288">Non, la pure lumière,</l>
+          <l n="289">Toujours elle rayonne,</l>
+          <l n="290">Au loin elle projette</l>
+          <l n="291">Partout où la pensée</l>
+          <l n="292">Sous le fouet de ta verve</l>
+          <l n="293">Au miroir de ton rire</l>
+          <l n="294">Chasse à jamais le doute,</l>
+          <l n="295">Le passé reste sombre,</l>
+          <l n="296">L’avenir y flamboie,</l>
+          <l n="297">Garde ta foi suprême,</l>
+          <l n="298">L’Humanité, souriante, s’approche de Molière qui lui tend les bras.</l>
+        </sp>
+        <sp who="#molière">
+          <speaker>MOLIÈRE.</speaker>
+          <l n="299">Ô toi, qui donc es-tu, Splendeur et Vérité ?</l>
+        </sp>
+        <sp who="#l’humanité">
+          <speaker>L’HUMANITÉ.</speaker>
+          <l n="300">Molière, ô mon amant, je suis l’Humanité !</l>
+          <l n="301">Elle baise Molière sur le front.</l>
+          <l n="302" />
+        </sp>
       </div>
     </body>
   </text>

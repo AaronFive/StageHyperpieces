@@ -1,760 +1,1770 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Singe de Nicolet</title>
-        <author key="Henri MEILHAC - Ludovic HALÉVY | (naissance-mort)">Henri MEILHAC - Ludovic HALÉVY |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/le-singe-de-nicolet-henri-meilhac-ludovic-halévy</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Henri MEILHAC - Ludovic HALÉVY |</author>. <title>Le Singe de Nicolet</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/le-singe-de-nicolet-henri-meilhac-ludovic-halévy</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1865-01-29">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 29 janvier 1865.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="boisgarnier" sex="SEX">
+            <persName>BOISGARNIER</persName>
+          </person>
+          <person xml:id="martineau" sex="SEX">
+            <persName>MARTINEAU</persName>
+          </person>
+          <person xml:id="sainte-amaranthe" sex="SEX">
+            <persName>SAINTE-AMARANTHE</persName>
+          </person>
+          <person xml:id="turquet" sex="SEX">
+            <persName>TURQUET</persName>
+          </person>
+          <person xml:id="casimir" sex="SEX">
+            <persName>CASIMIR</persName>
+          </person>
+          <person xml:id="ferdinand" sex="SEX">
+            <persName>FERDINAND</persName>
+          </person>
+          <person xml:id="madame-delaunay" sex="SEX">
+            <persName>MADAME DELAUNAY</persName>
+          </person>
+          <person xml:id="louise" sex="SEX">
+            <persName>LOUISE</persName>
+          </person>
+          <person xml:id="annette" sex="SEX">
+            <persName>ANNETTE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1865-01-29" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 29 janvier 1865.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le Singe de Nicolet</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1"><span style="letter-spacing:-.3pt">Comédie en un acte, mêlée de chants.</span></l>
-            <l n="2" xml:id="l2"><span style="letter-spacing:-.3pt">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 29 janvier 1865.</span></l>
-            <l n="3" xml:id="l3"> </l>
-            <l n="4" xml:id="l4"> </l>
-            <l n="5" xml:id="l5"><span style="letter-spacing:-.3pt">BOISGARNIER, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">journaliste</span></span></i></l>
-            <l n="6" xml:id="l6"><span style="letter-spacing:-.3pt">MARTINEAU, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">employé dans un chemin de fer</span></span></i></l>
-            <l n="7" xml:id="l7"><span style="letter-spacing:-.3pt">SAINTE-AMARANTHE, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">entrepreneur de mariages</span></span></i></l>
-            <l n="8" xml:id="l8"><span style="letter-spacing:-.3pt">TURQUET, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">photographe</span></span></i></l>
-            <l n="9" xml:id="l9"><span style="letter-spacing:-.3pt">CASIMIR, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">domestique de Martineau</span></span></i></l>
-            <l n="10" xml:id="l10"><span style="letter-spacing:-.3pt">FERDINAND, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">aide de Turquet</span></span></i></l>
-            <l n="11" xml:id="l11"><span style="letter-spacing:-.3pt">MADAME DELAUNAY</span></l>
-            <l n="12" xml:id="l12"><span style="letter-spacing:-.3pt">LOUISE, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">sa nièce</span></span></i></l>
-            <l n="13" xml:id="l13"><span style="letter-spacing:-.3pt">ANNETTE, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">femme de chambre de madame Delaunay</span></span></i></l>
-            <l n="14" xml:id="l14"> </l>
-            <l n="15" xml:id="l15"><i><span style="letter-spacing:-.3pt">À Paris, de nos jours. </span></i></l>
-            <l n="16" xml:id="l16"> </l>
-            <l n="17" xml:id="l17"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Un petit salon chez Martineau. Porte au fond. Dans les pans coupés, à droite, une autre porte ; à gauche, une fenêtre. À droite, premier plan, une cheminée. À gauche, sur le devant, un bureau garni de tous ses accessoires, faisant face au public. Fauteuils, chaises, tableaux, statuettes.</span></span></i></l>
-            <l n="18" xml:id="l18"> </l>
-            <l n="19" xml:id="l19"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="20" xml:id="l20"> </l>
-            <l n="21" xml:id="l21"> </l>
-            <l n="22" xml:id="l22"><span style="letter-spacing:-.3pt">Pas de nouvelles, monsieur Casimir ?... </span></l>
-            <l n="23" xml:id="l23"><span style="letter-spacing:-.3pt">Pas de nouvelles ! Je crois bien que nous ne reverrons plus monsieur. </span></l>
-            <l n="24" xml:id="l24"><span style="letter-spacing:-.3pt">Il était cramponné à la corde, cependant, et il se tenait bien ! </span></l>
-            <l n="25" xml:id="l25"><span style="letter-spacing:-.3pt">À la longue, ses mains se seront fatiguées... et alors... </span></l>
-            <l n="26" xml:id="l26"><span style="letter-spacing:-.3pt">Ne me dites pas ça... </span></l>
-            <l n="27" xml:id="l27"><span style="letter-spacing:-.3pt">Je voudrais pouvoir vous dire autre chose... </span></l>
-            <l n="28" xml:id="l28"><span style="letter-spacing:-.3pt">Enfin !... je m’en retourne chez nous... Madame sera désolée... et mademoiselle donc, mademoiselle que votre maître devait épouser dans quinze jours... </span></l>
-            <l n="29" xml:id="l29"><span style="letter-spacing:-.3pt">Que voulez-vous !... Elle se mariera avec un autre... </span></l>
-            <l n="30" xml:id="l30"><span style="letter-spacing:-.3pt">Je sais bien, mais c’est toujours désagréable... </span></l>
-            <l n="31" xml:id="l31"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">On entend du bruit. </span></span></i></l>
-            <l n="32" xml:id="l32"><span style="letter-spacing:-.3pt">Qu’est-ce que c’est que ça ?... </span></l>
-            <l n="33" xml:id="l33"><span style="letter-spacing:-.3pt">Une voiture !... suivie de tous les gens du quartier... Elle s’arrête devant la maison... </span></l>
-            <l n="34" xml:id="l34"><span style="letter-spacing:-.3pt">Ah ! mon Dieu !... le corps de monsieur... qu’on rapporte !... </span></l>
-            <l n="35" xml:id="l35"><span style="letter-spacing:-.3pt">Non !... il est vivant... très vivant. Il s’élance hors de la voiture... </span></l>
-            <l n="36" xml:id="l36"><span style="letter-spacing:-.3pt">Ah !... </span></l>
-            <l n="37" xml:id="l37"><span style="letter-spacing:-.3pt">Il bouscule la fruitière, il écarte l’épicier... il entre... nous allons le voir... </span></l>
-            <l n="38" xml:id="l38"><span style="letter-spacing:-.3pt">Allez donc lui ouvrir !... </span></l>
-            <l n="39" xml:id="l39"><span style="letter-spacing:-.3pt">Ah ! je n’ai pas la force... L’émotion, et puis, d’ailleurs, il a sa clef. </span></l>
-            <l n="40" xml:id="l40"><span style="letter-spacing:-.3pt">Le voici ! </span></l>
-            <l n="41" xml:id="l41"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Entre par le fond Martineau, dans le plus grand désordre.</span></span></i></l>
-            <l n="42" xml:id="l42"> </l>
-            <l n="43" xml:id="l43"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="44" xml:id="l44"> </l>
-            <l n="45" xml:id="l45"> </l>
-            <l n="46" xml:id="l46"><span style="letter-spacing:-.3pt">Ils ne me lâcheront pas !... Casimir !... </span></l>
-            <l n="47" xml:id="l47"><span style="letter-spacing:-.3pt">Ah ! monsieur, que je suis content ! </span></l>
-            <l n="48" xml:id="l48"><span style="letter-spacing:-.3pt">Fermez la porte à double tour !... poussez les verrous !... ne laissez entrer personne !... </span></l>
-            <l n="49" xml:id="l49"><span style="letter-spacing:-.3pt">Bien, monsieur. </span></l>
-            <l n="50" xml:id="l50"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort par le fond.</span></span></i></l>
-            <l n="51" xml:id="l51"><span style="letter-spacing:-.3pt">Bonjour, Annette. C’est madame Delaunay qui vous a envoyée ? </span></l>
-            <l n="52" xml:id="l52"><span style="letter-spacing:-.3pt">Oui, monsieur, afin d’avoir de vos nouvelles ; mademoiselle est dans un état... </span></l>
-            <l n="53" xml:id="l53"><span style="letter-spacing:-.3pt">Cette bonne Louise !... Dites-lui bien, ainsi qu’à madame Delaunay, qu’il ne m’est rien arrivé de fâcheux, et que j’aurai avant une heure le plaisir d’aller les rassurer moi même !... </span></l>
-            <l n="54" xml:id="l54"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Casimir rentre par le fond. </span></span></i></l>
-            <l n="55" xml:id="l55"><span style="letter-spacing:-.3pt">Monsieur, il y a le pharmacien qui s’obstine à entrer... Il dit que vous devez être blessé... contusionné tout au moins !... </span></l>
-            <l n="56" xml:id="l56"><span style="letter-spacing:-.3pt">Qu’il aille au diable !... Je n’ai pas besoin de lui... Tout ça, c’est de la curiosité, voilà tout. </span></l>
-            <l n="57" xml:id="l57"><span style="letter-spacing:-.3pt">Je m’en vais, monsieur... </span></l>
-            <l n="58" xml:id="l58"><span style="letter-spacing:-.3pt">Adieu, Annette !... Casimir, entr’ouvrez la porte pour laisser sortir Annette, et ne laissez pas pénétrer le pharmacien !...</span></l>
-            <l n="59" xml:id="l59"><span style="letter-spacing:-.3pt">Soyez tranquille !... Je suis bien content, monsieur... </span></l>
-            <l n="60" xml:id="l60"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Sortent par le fond Annette et Casimir.</span></span></i></l>
-            <l n="61" xml:id="l61"> </l>
-            <l n="62" xml:id="l62"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="63" xml:id="l63"> </l>
-            <l n="64" xml:id="l64"> </l>
-            <l n="65" xml:id="l65"><span style="letter-spacing:-.3pt">J’arrive de Juvisy !... Je ne comptais pas aller aussi loin... Hier, dimanche, j’avais offert l’adorable Louise et à sa jeune tante, madame Delaunay, de les conduire à l’Hippodrome, pour voir partir un ballon... Ces dames avaient accepté... Nous arrivons... le ballon était là, commençant à se gonfler... Tout autour des cordes qui frétillaient... On demande pour tenir ces cordes une quarantaine de gaillards solides... À ce mot, un éclair passa devant mes yeux ; l’idée de montrer à l’adorable Louise que si j’avais un cœur pour la chérir, j’avais également un bras pour la... je bondis dans l’enceinte, je saisis une des cordes et je m’arc-boutai. Cela me fut d’autant plus facile, qu’il y avait au bout de la corde une sorte de noud coulant... Je me sentais fort et posé d’une façon qui n’était pas vulgaire... le pied passé dans le nœud coulant, les deux mains serrant la corde, la tête renversée avec une certaine grâce et les yeux attachés sur Louise, qui me souriait... En ce moment, une voix aigrelette cria : Lâchez tout !... Moi, je continuais à contempler l’adorable Louise ; tout à coup, je m’aperçus que je la contemplais à vol d’oiseau. J’étais déjà à une hauteur prodigieuse... Alors, il me vint une idée excellente... il me vint l’idée de ne pas lâcher la corde... Je m’y cramponnai, au contraire !... Au-dessous de moi, bien au dessous... les populations, avec de grands gestes et des clameurs immenses, me désignaient... Moi, je criais, j’appelais l’aéronaute... Il ne m’entendait pas, tout occupé qu’il était de saluer et d’agiter un petit drapeau de ci et de là... Enfin, au bout d’un temps qui me parut long, il m’aperçut... nous étions au-dessus des nuages... Qu’est-ce que vous faites là ? me dit-il d’un air mécontent... J’avoue qu’à cette question ma surprise fut telle que les bras faillirent m’en tomber... Heureusement, je réfléchis que, si mes bras tombaient, il était plus que probable que le reste du corps suivrait... je me contins... Pendant cette conversation, le ballon descendait... nous retraversâmes les nuages... je revis la terre... je tombai au milieu d’un champ... Des agriculteurs accoururent... on me transporta... J’étais à Juvisy !... J’y passai la nuit... dans un hôtel... une nuit abominable... non pas à cause de ma chute, j’en avais été quitte pour quelques foulures... mais j’avais peur d’être grotesque... Ce matin, j’ai pris le chemin de fer, et pour rentrer chez moi, je me suis caché au fond d’un fiacre... Mais j’ai été reconnu... on a couru après mon fiacre... pour me voir... Ce que je craignais est arrivé... je suis passé à l’état de bête curieuse... </span></l>
-            <l n="66" xml:id="l66"> </l>
-            <l n="67" xml:id="l67"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="68" xml:id="l68"> </l>
-            <l n="69" xml:id="l69"> </l>
-            <l n="70" xml:id="l70"><span style="letter-spacing:-.3pt">Monsieur !... c’est un des amis de monsieur... l’ami de monsieur qui écrit dans les journaux... </span></l>
-            <l n="71" xml:id="l71"><span style="letter-spacing:-.3pt">Boisgarnier ?... </span></l>
-            <l n="72" xml:id="l72"><span style="letter-spacing:-.3pt">Oui, monsieur. </span></l>
-            <l n="73" xml:id="l73"><span style="letter-spacing:-.3pt">Il vient pour se moquer de moi. </span></l>
-            <l n="74" xml:id="l74"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Haut.</span></span></i></l>
-            <l n="75" xml:id="l75"><span style="letter-spacing:-.3pt">Dites-lui que je suis désolé, mais que maintenant il est impossible... </span></l>
-            <l n="76" xml:id="l76"><span style="letter-spacing:-.3pt">Impossible !... Qu’est-ce qui est impossible ? Ce que c’est que la célébrité !... La tienne date seulement d’hier, et aujourd’hui tu refuses ta porte à tes amis !... </span></l>
-            <l n="77" xml:id="l77"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Casimir passe à gauche. </span></span></i></l>
-            <l n="78" xml:id="l78"><span style="letter-spacing:-.3pt">Voilà qu’il commence à se moquer... </span></l>
-            <l n="79" xml:id="l79"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Haut. </span></span></i></l>
-            <l n="80" xml:id="l80"><span style="letter-spacing:-.3pt">Je te demande pardon... c’est que... </span></l>
-            <l n="81" xml:id="l81"><span style="letter-spacing:-.3pt">Je te pardonne tout de suite, parce que je suis pressé... </span></l>
-            <l n="82" xml:id="l82"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">S’asseyant au bureau. </span></span></i></l>
-            <l n="83" xml:id="l83"><span style="letter-spacing:-.3pt">Dépêchons-nous, Casimir... Du papier, des plumes... de l’encre... tout ce qu’il faut pour... lancer une gloire naissante... </span></l>
-            <l n="84" xml:id="l84"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il prend la plume. </span></span></i></l>
-            <l n="85" xml:id="l85"><span style="letter-spacing:-.3pt">Parle maintenant, j’écoute et j’écris... </span></l>
-            <l n="86" xml:id="l86"><span style="letter-spacing:-.3pt">Que je parle ?... </span></l>
-            <l n="87" xml:id="l87"><span style="letter-spacing:-.3pt">Parlez, monsieur, parlez. </span></l>
-            <l n="88" xml:id="l88"><span style="letter-spacing:-.3pt">Oui, vite... quelques particularités sur ton existence... </span></l>
-            <l n="89" xml:id="l89"><span style="letter-spacing:-.3pt">Pourquoi faire, ces particularités ?... </span></l>
-            <l n="90" xml:id="l90"><span style="letter-spacing:-.3pt">Pour les mettre dans mon journal, pardieu ! le nouveau journal... Cinq centimes pour Paris... un sou pour la province... Cent mille abonnés ce matin... Deux cent mille ce soir !... Parle donc... mes postillons attendent !... </span></l>
-            <l n="91" xml:id="l91"><span style="letter-spacing:-.3pt">Ah ! quel homme ! </span></l>
-            <l n="92" xml:id="l92"><span style="letter-spacing:-.3pt">Ah bien ! ils attendront longtemps !... </span></l>
-            <l n="93" xml:id="l93"><span style="letter-spacing:-.3pt">Par exemple !... </span></l>
-            <l n="94" xml:id="l94"><span style="letter-spacing:-.3pt">Si tu crois que je te permettrai d’aller raconter à cent mille, à deux cent mille abonnés... C’est bien assez d’être ridicule dans ma rue... </span></l>
-            <l n="95" xml:id="l95"><span style="letter-spacing:-.3pt">Ridicule !... Tu as dit ridicule ? </span></l>
-            <l n="96" xml:id="l96"><span style="letter-spacing:-.3pt">Monsieur l’a dit !... </span></l>
-            <l n="97" xml:id="l97"><span style="letter-spacing:-.3pt">Ridicule !... l’homme qui a occupé, qui occupe l’attention de tout Paris !... l’homme dont tous les journaux par lent ce matin !... Non, Martineau, tu n’es pas un homme ridicule... Tu es un homme remarquable, Martineau !... tu es un grand homme !... Qu’est-ce que je dis, un grand homme ?... mieux que cela, car il y a nombre de grands hommes qui n’ont jamais pu arriver à être ce que tu es... </span></l>
-            <l n="98" xml:id="l98"><span style="letter-spacing:-.3pt">Qu’est-ce que je suis donc ?... </span></l>
-            <l n="99" xml:id="l99"><span style="letter-spacing:-.3pt">Tu es le singe à la mode !... </span></l>
-            <l n="100" xml:id="l100"><span style="letter-spacing:-.3pt">Le singe ?... </span></l>
-            <l n="101" xml:id="l101"><span style="letter-spacing:-.3pt">À la mode ! </span></l>
-            <l n="102" xml:id="l102"><span style="letter-spacing:-.3pt">Monsieur est un singe ? </span></l>
-            <l n="103" xml:id="l103"><span style="letter-spacing:-.3pt">Tu sais ce que c’était que Nicolet ?... </span></l>
-            <l n="104" xml:id="l104"><span style="letter-spacing:-.3pt">De plus fort en plus fort ?... </span></l>
-            <l n="105" xml:id="l105"><span style="letter-spacing:-.3pt">Tu l’as dit. Nicolet avait un théâtre... </span></l>
-            <l n="106" xml:id="l106"><span style="letter-spacing:-.3pt">La Gaîté... </span></l>
-            <l n="107" xml:id="l107"><span style="letter-spacing:-.3pt">Un théâtre et un singe... et avec ce singe, Nicolet s’entendait merveilleusement à remplir son théâtre, en singeant l’événement ou le héros du jour... événement sérieux ou bouffon... héros sublime ou grotesque !... Molé, l’acteur, se dit souffrant, et Paris est en l’air... Aussitôt, voilà le singe qui s’affuble d’une robe de chambre, et qui se plaint, et qui se pâme... et qui, avec des grâces impertinentes, remercie les duchesses des trois mille bouteilles d’excellent vin qu’elles lui ont envoyées pour hâter sa guérison... Le lendemain, autre chose... le surlendemain, autre chose encore... Combien de formes a-t-il pris, avant de se fourrer Scène dans ton paletot, combien de noms a-t-il portés ?... Tout y a passé !... hier, le singe de Nicolet s’appelait... </span></l>
-            <l n="108" xml:id="l108"><span style="letter-spacing:-.3pt">Comment s’appelait-il ?... </span></l>
-            <l n="109" xml:id="l109"><span style="letter-spacing:-.3pt">Mais qu’importe le nom que le singe avait hier ?... Aujourd’hui, il s’appelle Martineau... Saute donc, Martineau ! Fais les grimaces et tes gambades ! Paris est à toi... demande lui tout ce qu’il peut donner... Devant toi, la gravité des hommes sérieux s’inclinera ; les femmes garderont pour toi leurs sourires les plus significatifs. Ouvre ta porte, Martineau ; aujourd’hui, c’est toi que Paris adore... et son choix est au moins justifié en un certain sens, car tu as... – ton tour de force vient de le prouver, tu as, toi, au moins la moitié de ce qu’il faut pour faire un homme célèbre : tu es un saltimbanque assez distingué... </span></l>
-            <l n="110" xml:id="l110"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il va se rasseoir au bureau. </span></span></i></l>
-            <l n="111" xml:id="l111"><span style="letter-spacing:-.3pt">Moi, un homme célèbre ! </span></l>
-            <l n="112" xml:id="l112"><span style="letter-spacing:-.3pt">Si j’avais un conseil à donner à monsieur, ce serait de faire un article avec ce qu’il vient de dire ; c’était bien tapé ! </span></l>
-            <l n="113" xml:id="l113"><span style="letter-spacing:-.3pt">Sois tranquille, ça ne sera pas perdu... c’est de la copie... Cent lignes avec cette tirade... </span></l>
-            <l n="114" xml:id="l114"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À Martineau.</span></span></i></l>
-            <l n="115" xml:id="l115"><span style="letter-spacing:-.3pt">Cent autres lignes avec l’histoire de la vie... que tu vas me raconter... </span></l>
-            <l n="116" xml:id="l116"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Casimir passe à gauche. </span></span></i></l>
-            <l n="117" xml:id="l117"><span style="letter-spacing:-.3pt">Mon histoire... mais je n’ai pas d’histoire. Jusque-là, je n’avais rien fait d’extraordinaire... </span></l>
-            <l n="118" xml:id="l118"><span style="letter-spacing:-.3pt">Des détails, vite, des détails ! </span></l>
-            <l n="119" xml:id="l119"><span style="letter-spacing:-.3pt">Racontez, monsieur, racontez ; parlez de mon dévouement, de ma probité. </span></l>
-            <l n="120" xml:id="l120"><span style="letter-spacing:-.3pt">Mais je n’ai rien à dire... rien à dire... Après être sorti du collège, j’ai passé un examen pour entrer dans un chemin de fer... On m’a interrogé sur l’algèbre, et j’ai été reçu parce que j’avais une jolie écriture... Une fois dans les bureaux, j’ai tracé mon sillon... surnuméraire d’abord... ensuite commis à douze cents francs... puis à quatorze, à dix-huit, à deux mille et trois mille... et enfin, commis principal à trois mille six... </span></l>
-            <l n="121" xml:id="l121"><span style="letter-spacing:-.3pt">« Parti d’en bas, il préluda, par des progrès successifs, à une élévation définitive et suprême... » </span></l>
-            <l n="122" xml:id="l122"><span style="letter-spacing:-.3pt">Une élévation ?... Ah ! si tu parles de mon élévation avec le ballon, bien... mais dans mon bureau, je ne me suis pas élevé du tout... On m’a laissé commis principal... </span></l>
-            <l n="123" xml:id="l123"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Amèrement. </span></span></i></l>
-            <l n="124" xml:id="l124"><span style="letter-spacing:-.3pt">C’est parce qu’on sait que j’ai une petite fortune, sans doute, alors on ne juge pas nécessaire... </span></l>
-            <l n="125" xml:id="l125"><span style="letter-spacing:-.3pt">Bien... bien... mais autre chose maintenant... je parlerai de toi dans deux, dans trois, dans quatre journaux... Je suis bien obligé de varier un peu... </span></l>
-            <l n="126" xml:id="l126"><span style="letter-spacing:-.3pt">Je ne sais pas alors... </span></l>
-            <l n="127" xml:id="l127"><span style="letter-spacing:-.3pt">Monsieur est sur le point de se marier... </span></l>
-            <l n="128" xml:id="l128"><span style="letter-spacing:-.3pt">Il va se marier ! Parlait ! parfait ! Le nom de la jeune personne ? </span></l>
-            <l n="129" xml:id="l129"><span style="letter-spacing:-.3pt">C’est l’adorable Louise... la nièce de madame Delaunay. </span></l>
-            <l n="130" xml:id="l130"><span style="letter-spacing:-.3pt">Madame Delaunay, la veuve d’un banquier, n’est-ce pas ? qui a fait fortune en Amérique ?... </span></l>
-            <l n="131" xml:id="l131"><span style="letter-spacing:-.3pt">Justement ! </span></l>
-            <l n="132" xml:id="l132"><span style="letter-spacing:-.3pt">Une jeune femme un peu coquelle... Trente lignes avec ça... </span></l>
-            <l n="133" xml:id="l133"><span style="letter-spacing:-.3pt">Tu parles de madame Delaunay ? </span></l>
-            <l n="134" xml:id="l134"><span style="letter-spacing:-.3pt">Certainement... J’ai besoin de trente lignes... </span></l>
-            <l n="135" xml:id="l135"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">On sonne. </span></span></i></l>
-            <l n="136" xml:id="l136"><span style="letter-spacing:-.3pt">Ne vous dérangez pas, monsieur... je vais voir. </span></l>
-            <l n="137" xml:id="l137"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort par le fond.</span></span></i></l>
-            <l n="138" xml:id="l138"><span style="letter-spacing:-.3pt">Là !... Maintenant, j’ai un service à te demander. </span></l>
-            <l n="139" xml:id="l139"><span style="letter-spacing:-.3pt">Quel service ? </span></l>
-            <l n="140" xml:id="l140"><span style="letter-spacing:-.3pt">Sois tranquille... ce n’est pas de l’argent... On donne ce soir au théâtre de... </span></l>
-            <l n="141" xml:id="l141"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Lui donnant un papier. </span></span></i></l>
-            <l n="142" xml:id="l142"><span style="letter-spacing:-.3pt">voilà le billet... un petit acte assez inepte... il est de moi... </span></l>
-            <l n="143" xml:id="l143"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Modestement.</span></span></i></l>
-            <l n="144" xml:id="l144"><span style="letter-spacing:-.3pt">et de quatre autres... J’annonce dans mes journaux que tu iras ce soir... Tout le monde voudra te voir... la salle sera comble, ça fera une recette !... </span></l>
-            <l n="145" xml:id="l145"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Rentre Casimir par le fond.</span></span></i></l>
-            <l n="146" xml:id="l146"><span style="letter-spacing:-.3pt">Eh bien ! Casimir ?... </span></l>
-            <l n="147" xml:id="l147"><span style="letter-spacing:-.3pt">C’est une personne qui désire parler à monsieur. </span></l>
-            <l n="148" xml:id="l148"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il donne une carte. </span></span></i></l>
-            <l n="149" xml:id="l149"><span style="letter-spacing:-.3pt">Monsieur Turquet ! </span></l>
-            <l n="150" xml:id="l150"><span style="letter-spacing:-.3pt">Un de nos photographes les plus achalandés !... Il vient chez toi ?... Qu’est-ce que je te disais ? </span></l>
-            <l n="151" xml:id="l151"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À Casimir. </span></span></i></l>
-            <l n="152" xml:id="l152"><span style="letter-spacing:-.3pt">Faites entrer M. Turquet... </span></l>
-            <l n="153" xml:id="l153"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Turquet entre par le fond. </span></span></i></l>
-            <l n="154" xml:id="l154"> </l>
-            <l n="155" xml:id="l155"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="156" xml:id="l156"> </l>
-            <l n="157" xml:id="l157"> </l>
-            <l n="158" xml:id="l158"><span style="letter-spacing:-.3pt">Monsieur, je suis bien votre serviteur... </span></l>
-            <l n="159" xml:id="l159"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Amicalement.</span></span></i></l>
-            <l n="160" xml:id="l160"><span style="letter-spacing:-.3pt">Bonjour, monsieur Boisgarnier. </span></l>
-            <l n="161" xml:id="l161"><span style="letter-spacing:-.3pt">Bonjour, monsieur Turquet. </span></l>
-            <l n="162" xml:id="l162"><span style="letter-spacing:-.3pt">Entrez, Ferdinand, et préparez tout ce qu’il faut... </span></l>
-            <l n="163" xml:id="l163"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Entre le préparateur. Il dépose l’appareil avec Casimir à droite près de la cheminée. </span></span></i></l>
-            <l n="164" xml:id="l164"><span style="letter-spacing:-.3pt">Mon habitude n’est pas d’opérer moi-même... </span></l>
-            <l n="165" xml:id="l165"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Saluant Martineau. </span></span></i></l>
-            <l n="166" xml:id="l166"><span style="letter-spacing:-.3pt">à moins qu’il ne s’agisse, comme aujourd’hui, d’une personne... </span></l>
-            <l n="167" xml:id="l167"><span style="letter-spacing:-.3pt">Monsieur... </span></l>
-            <l n="168" xml:id="l168"><span style="letter-spacing:-.3pt">Tu entends ?... </span></l>
-            <l n="169" xml:id="l169"><span style="letter-spacing:-.3pt">Je me doutais bien, monsieur Turquet, que l’on ne tarderait pas à vous voir ici, vous et votre appareil... </span></l>
-            <l n="170" xml:id="l170"><span style="letter-spacing:-.3pt">Je n’ai pas été surpris de vous y rencontrer... nous marchons rarement l’un sans l’autre, et il se fabrique bien peu d’hommes célèbres dont la célébrité n’ait d’abord passé par nos mains... </span></l>
-            <l n="171" xml:id="l171"><span style="letter-spacing:-.3pt">Monsieur Turquet a raison... Un article dans le nouveau journal, une photographie exposée dans les principaux débits de tabac... voilà la gloire à présent... Le temps est bien loin où Apelles était le seul à qui il fût permis de faire le portrait d’Alexandre !... Apelles, aujourd’hui, s’appelle Turquet... je te laisse dans ses mains et je vais porter mon article à l’imprimerie. </span></l>
-            <l n="172" xml:id="l172"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Vive la lithographie. </span></span></i></l>
-            <l n="173" xml:id="l173"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Boisgarnier sort par le fond.</span></span></i></l>
-            <l n="174" xml:id="l174"> </l>
-            <l n="175" xml:id="l175"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="176" xml:id="l176"> </l>
-            <l n="177" xml:id="l177"> </l>
-            <l n="178" xml:id="l178"><span style="letter-spacing:-.3pt">Est-ce prêt, Ferdinand ? </span></l>
-            <l n="179" xml:id="l179"><span style="letter-spacing:-.3pt">Oui, monsieur. </span></l>
-            <l n="180" xml:id="l180"><span style="letter-spacing:-.3pt">Monsieur... ayez la bonté de prendre ceci... </span></l>
-            <l n="181" xml:id="l181"><span style="letter-spacing:-.3pt">Cette corde ? </span></l>
-            <l n="182" xml:id="l182"><span style="letter-spacing:-.3pt">Oui, ayez la bonté de passer votre pied dans ce nœud. </span></l>
-            <l n="183" xml:id="l183"><span style="letter-spacing:-.3pt">Vous voulez ?... </span></l>
-            <l n="184" xml:id="l184"><span style="letter-spacing:-.3pt">Tendez la corde maintenant... comme cela. Très bien ! </span></l>
-            <l n="185" xml:id="l185"><span style="letter-spacing:-.3pt">Vous allez me photographier avec cette corde ?... Est-ce que vous ne craignez pas... Un employé... je suis employé... </span></l>
-            <l n="186" xml:id="l186"><span style="letter-spacing:-.3pt">Je ne connais pas l’employé, je ne veux pas le connaître... s’il s’agissait de l’employé, je ne serais pas ici... Ferdinand suffirait... Je m’occupe de l’homme célèbre, moi, et tout naturellement, je le représente avec les instruments de sa célébrité. </span></l>
-            <l n="187" xml:id="l187"><span style="letter-spacing:-.3pt">Monsieur, si vous vouliez me photographier avec mon plumeau ? </span></l>
-            <l n="188" xml:id="l188"><span style="letter-spacing:-.3pt">Pour vous, Ferdinand suffira.</span></l>
-            <l n="189" xml:id="l189"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À Martineau. </span></span></i></l>
-            <l n="190" xml:id="l190"><span style="letter-spacing:-.3pt">Tâchez, autant que possible, de vous souvenir de la pose que vous aviez là haut. </span></l>
-            <l n="191" xml:id="l191"><span style="letter-spacing:-.3pt">Là-haut ?... Ah ! je ne sais pas si je me rappellerai... </span></l>
-            <l n="192" xml:id="l192"><span style="letter-spacing:-.3pt">Autant que possible. Ah ! et le vent dans vos cheveux... ne vous dérangez pas, je vous prie... </span></l>
-            <l n="193" xml:id="l193"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À Casimir. </span></span></i></l>
-            <l n="194" xml:id="l194"><span style="letter-spacing:-.3pt">Mon ami, faites le vent dans les cheveux de monsieur. </span></l>
-            <l n="195" xml:id="l195"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Casimir passe à gauche, derrière son maître, dont il dérange un peu les cheveux, puis va se placer au fond.</span></span></i></l>
-            <l n="196" xml:id="l196"><span style="letter-spacing:-.3pt">Y êtes-vous, monsieur ? Souriez, je vous prie, souriez. </span></l>
-            <l n="197" xml:id="l197"><span style="letter-spacing:-.3pt">C’est que là-haut je ne souriais pas. Enfin... </span></l>
-            <l n="198" xml:id="l198"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sourit. </span></span></i></l>
-            <l n="199" xml:id="l199"><span style="letter-spacing:-.3pt">Très bien ! M. Boisgarnier est un homme que j’aime beaucoup... sa tête vient très bien... mais il se trompe lourdement en mettant sur la même ligne, comme influence, sa prose et ma photographie !... Je rends illustres en quinze jours des gens que, lui, ne ferait pas connaitre en six mois... Ainsi, il ya une jeune comédienne qui demeure justement en face de vous... </span></l>
-            <l n="200" xml:id="l200"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Martineau se trouble.</span></span></i></l>
-            <l n="201" xml:id="l201"><span style="letter-spacing:-.3pt">Saviez-vous, monsieur ? </span></l>
-            <l n="202" xml:id="l202"><span style="letter-spacing:-.3pt">Hein... si ça m’était arrivé là haut ?... </span></l>
-            <l n="203" xml:id="l203"><span style="letter-spacing:-.3pt">Gardez la pose, je vous prie. M. Boisgarnier a écrit, en l’honneur de cette demoiselle, je ne sais combien d’articles... ça a été de l’encre perdue... Alors elle m’est venue trouver, j’ai inondé Paris de ses portraits... vous avez dû les voir ; la pose était hardie, et... </span></l>
-            <l n="204" xml:id="l204"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il se courbe sur son appareil, puis se relevant. </span></span></i></l>
-            <l n="205" xml:id="l205"><span style="letter-spacing:-.3pt">le succès a dépassé toutes ses espérances !... Reprenez la pose... Vous faut-il un autre exemple ?... Je vous citerai, parmi les gens en place, un de nos plus éminents... Ne bougeons plus, monsieur... </span></l>
-            <l n="206" xml:id="l206"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Entrent par le fond madame Delaunay et Louise.</span></span></i></l>
-            <l n="207" xml:id="l207"> </l>
-            <l n="208" xml:id="l208"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="209" xml:id="l209"> </l>
-            <l n="210" xml:id="l210"> </l>
-            <l n="211" xml:id="l211"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Scène muette. </span></span></i></l>
-            <l n="212" xml:id="l212"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Casimir reçoit madame Delaunay et Louise. Martineau exprime par ses regards qu’il ne peut pas bouger ; madame Delaunay et Louise l’engagent tendrement à se tenir tranquille. </span></span></i></l>
-            <l n="213" xml:id="l213"><span style="letter-spacing:-.3pt">Là... voilà qui est fait !... Ferdinand, enlevez tout cela. </span></l>
-            <l n="214" xml:id="l214"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ferdinand, aidé de Casimir, emporte l’appareil. Ils sortent par le fond.</span></span></i></l>
-            <l n="215" xml:id="l215"><span style="letter-spacing:-.3pt">Ah ! que je suis heureuse de vous revoir ! </span></l>
-            <l n="216" xml:id="l216"><span style="letter-spacing:-.3pt">Je vais en faire coller trois mille pour commencer... </span></l>
-            <l n="217" xml:id="l217"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Remontant et saluant les dames. </span></span></i></l>
-            <l n="218" xml:id="l218"><span style="letter-spacing:-.3pt">Mesdames, je suis votre serviteur. Monsieur Martineau, je ne tarderai pas à vous envoyer des épreuves. </span></l>
-            <l n="219" xml:id="l219"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort par le fond.</span></span></i></l>
-            <l n="220" xml:id="l220"> </l>
-            <l n="221" xml:id="l221"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="222" xml:id="l222"> </l>
-            <l n="223" xml:id="l223"> </l>
-            <l n="224" xml:id="l224"><span style="letter-spacing:-.3pt">La première sera pour moi, n’est-ce pas ?... J’ai un album, </span></l>
-            <l n="225" xml:id="l225"><span style="letter-spacing:-.3pt">Certainement, madame... </span></l>
-            <l n="226" xml:id="l226"><span style="letter-spacing:-.3pt">Mon ami... mon neveu... Laissez-moi vous appeler mon neveu ! </span></l>
-            <l n="227" xml:id="l227"><span style="letter-spacing:-.3pt">Croyez, madame, que de mon côté, je suis... </span></l>
-            <l n="228" xml:id="l228"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À Louise.</span></span></i></l>
-            <l n="229" xml:id="l229"><span style="letter-spacing:-.3pt">Et vous, mademoiselle, est-ce que ça ne vous fait pas un peu de plaisir ?... </span></l>
-            <l n="230" xml:id="l230"><span style="letter-spacing:-.3pt">Ah ! monsieur... </span></l>
-            <l n="231" xml:id="l231"><span style="letter-spacing:-.3pt">Ne la tourmentez pas ; pour être contenus, ses sentiments n’en sont pas moins d’une violence !... Vous le saurez un jour... </span></l>
-            <l n="232" xml:id="l232"><span style="letter-spacing:-.3pt">Il me semblait que dans une pareille circonstance, mademoiselle pouvait... </span></l>
-            <l n="233" xml:id="l233"><span style="letter-spacing:-.3pt">N’accusez pas mon cœur. Ma maîtresse de pension, ma demoiselle Caroline, m’a appris qu’il ne fallait jamais rien dire quand il y avait du monde. </span></l>
-            <l n="234" xml:id="l234"><span style="letter-spacing:-.3pt">C’est très bien, sans doute... mais permettez-moi de vous faire observer que si tout le monde était élevé de cette façon-là, ça rendrait la conversation fort difficile. </span></l>
-            <l n="235" xml:id="l235"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il rit ainsi que Louise. </span></span></i></l>
-            <l n="236" xml:id="l236"><span style="letter-spacing:-.3pt">Vous êtes un folâtre. Nous sommes venues vous voir, parce que nous avions une bonne nouvelle à vous annoncer... </span></l>
-            <l n="237" xml:id="l237"><span style="letter-spacing:-.3pt">Une bonne nouvelle ?... </span></l>
-            <l n="238" xml:id="l238"><span style="letter-spacing:-.3pt">Oh ! oui, une bonne nouvelle... </span></l>
-            <l n="239" xml:id="l239"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Elle s’arrête tout à coup sur un regard de sa tante.</span></span></i></l>
-            <l n="240" xml:id="l240"><span style="letter-spacing:-.3pt">Vous vous rappelez la lettre que vous avez écrite à l’ancien ami de mon mari... M. Bernier... N’étant pas satisfait de la position qui vous a été faite au chemin de fer, vous lui de mandiez une place dans sa maison de banque... </span></l>
-            <l n="241" xml:id="l241"><span style="letter-spacing:-.3pt">En effet ; il m’a répondu que, pour le moment, il lui était impossible... </span></l>
-            <l n="242" xml:id="l242"><span style="letter-spacing:-.3pt">Il vous a fait cette réponse, à vous, il m’en a fait une autre, à moi ; il m’a déclaré tout net qu’il vous refusait cette place parce qu’à son avis vous étiez un homme d’une intelligence médiocre... </span></l>
-            <l n="243" xml:id="l243"><span style="letter-spacing:-.3pt">Par exemple !... </span></l>
-            <l n="244" xml:id="l244"><span style="letter-spacing:-.3pt">C’est un peu brutal... et je ne me serais certes pas permis... si je n’avais à ajouter quelque chose qui doit tout réparer... </span></l>
-            <l n="245" xml:id="l245"><span style="letter-spacing:-.3pt">À la bonne heure ! </span></l>
-            <l n="246" xml:id="l246"><span style="letter-spacing:-.3pt">Il a ajouté qu’il ne comprenait même pas comment vous aviez pu arriver à être commis principal... il m’a dit encore... </span></l>
-            <l n="247" xml:id="l247"><span style="letter-spacing:-.3pt">Ma tante, vous pourriez peut-être arriver tout de suite à ce qui doit tout réparer... Je crois que M. Martineau aimerait mieux ça... </span></l>
-            <l n="248" xml:id="l248"><span style="letter-spacing:-.3pt">En effet... </span></l>
-            <l n="249" xml:id="l249"><span style="letter-spacing:-.3pt">N’est-ce pas ?... </span></l>
-            <l n="250" xml:id="l250"><span style="letter-spacing:-.3pt">Je veux bien. Je viens de recevoir une lettre de M. Bernier... Dès qu’il a su que c’était vous qui aviez fait cette promenade aérienne, il a tout de suite changé d’avis sur votre compte... « Comment, a-t-il dit, c’est ce monsieur... Ça m’amusera beaucoup d’avoir un homme comme ça dans mes bureaux... Qu’il vienne me voir... je lui donnerai très volontiers la place qu’il désire... » </span></l>
-            <l n="251" xml:id="l251"><span style="letter-spacing:-.3pt">Est-ce possible ?... Mais je ne comprends pas bien comment cette promenade au bout d’une corde a pu... </span></l>
-            <l n="252" xml:id="l252"><span style="letter-spacing:-.3pt">Vous allez donner votre démission, je pense ?... </span></l>
-            <l n="253" xml:id="l253"><span style="letter-spacing:-.3pt">Je crois bien... J’en ai assez, de mes trois cents francs par mois... </span></l>
-            <l n="254" xml:id="l254"><span style="letter-spacing:-.3pt">Je vais faire savoir à M. Bernier que vous acceptez... </span></l>
-            <l n="255" xml:id="l255"><span style="letter-spacing:-.3pt">Avec reconnaissance... </span></l>
-            <l n="256" xml:id="l256"><span style="letter-spacing:-.3pt">Viens, Louise. </span></l>
-            <l n="257" xml:id="l257"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Elle remonte.</span></span></i></l>
-            <l n="258" xml:id="l258"><span style="letter-spacing:-.3pt">Oui, ma tante. </span></l>
-            <l n="259" xml:id="l259"><span style="letter-spacing:-.3pt">Pas un mot en partant, mademoiselle ? </span></l>
-            <l n="260" xml:id="l260"><span style="letter-spacing:-.3pt">Oh ! monsieur... </span></l>
-            <l n="261" xml:id="l261"><span style="letter-spacing:-.3pt">Assez, chère enfant, assez ! </span></l>
-            <l n="262" xml:id="l262"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À Martineau.</span></span></i></l>
-            <l n="263" xml:id="l263"><span style="letter-spacing:-.3pt">Un jour, il lui sera permis de parler, et alors... </span></l>
-            <l n="264" xml:id="l264"><span style="letter-spacing:-.3pt">Je l’espère... et je le mérite ; je l’aime bien, madame, et je n’aime qu’elle... </span></l>
-            <l n="265" xml:id="l265"><span style="letter-spacing:-.3pt">Je le sais, mon ami... Je vous ai fait surveiller... à votre insu. C’était mon droit et mon devoir... J’ai appris tout ce que je voulais apprendre. </span></l>
-            <l n="266" xml:id="l266"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Avec bonheur. </span></span></i></l>
-            <l n="267" xml:id="l267"><span style="letter-spacing:-.3pt">Je n’ai rien appris du tout !... À bientôt... dépêchez-vous d’envoyer votre démission ! </span></l>
-            <l n="268" xml:id="l268"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ensemble. </span></span></i></l>
-            <l n="269" xml:id="l269"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Du serment (Auber). </span></span></i></l>
-            <l n="270" xml:id="l270"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Sortent par le fond Louise et madame Delaunay.</span></span></i></l>
-            <l n="271" xml:id="l271"> </l>
-            <l n="272" xml:id="l272"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="273" xml:id="l273"> </l>
-            <l n="274" xml:id="l274"> </l>
-            <l n="275" xml:id="l275"><span style="letter-spacing:-.3pt">Écrivons-la tout suite, cette bienheureuse démission... et de ma plus belle écriture... afin de leur montrer ce qu’ils perdent... </span></l>
-            <l n="276" xml:id="l276"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Tout en écrivant. </span></span></i></l>
-            <l n="277" xml:id="l277"><span style="letter-spacing:-.3pt">Ma chère belle-tante qui me faisait surveiller... C’est un peu vif... heureusement on n’a rien à me reprocher... </span></l>
-            <l n="278" xml:id="l278"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">En riant. </span></span></i></l>
-            <l n="279" xml:id="l279"><span style="letter-spacing:-.3pt">Il faut bien avouer que ce n’est pas précisément de ma faute s’il n’y avait rien... Cette petite actrice... Le photographe qui me demande si je sais qu’elle demeure en face de moi... Je crois bien que je le sais !... J’ai essayé plusieurs fois d’établir une correspondance... télégraphique par la croisée... je n’ai pas été agréé... </span></l>
-            <l n="280" xml:id="l280"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">En disant ces mots, il a terminé sa lettre et la mise sous enveloppe. </span></span></i></l>
-            <l n="281" xml:id="l281"><span style="letter-spacing:-.3pt">Là !... </span></l>
-            <l n="282" xml:id="l282"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Écrivant l’adresse. </span></span></i></l>
-            <l n="283" xml:id="l283"><span style="letter-spacing:-.3pt">« À monsieur... monsieur le directeur du personnel... » Il n’y a plus qu’à envoyer... </span></l>
-            <l n="284" xml:id="l284"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il se lève et va à la fenêtre.</span></span></i></l>
-            <l n="285" xml:id="l285"><span style="letter-spacing:-.3pt">Tiens !... elle est chez elle, la petite actrice... elle soulève le rideau de sa fenêtre. Ah çà, mais... on dirait qu’elle me fait des signes... qu’elle me sourit... Ce que Boisgarnier me disait tout à l’heure... les femmes garderont pour toi leurs sourires... les plus significatifs... Voyons... voyons... avant tout... est-ce bien à moi qu’elle s’adresse ?... Il faut prendre garde. Je me rappelle, au théâtre, avoir une fois répondu, pendant trois quarts d’heure, à des agaceries qu’elle envoyait à une personne placée derrière moi... C’est que ça arrive très souvent, ces choses-là ! </span></l>
-            <l n="286" xml:id="l286"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Regardant de nouveau. </span></span></i></l>
-            <l n="287" xml:id="l287"><span style="letter-spacing:-.3pt">Non... cette fois, je ne me trompe pas... il n’y a que moi... c’est bien à moi !... Elle m’appelle... ma parole d’honneur, je crois qu’elle m’appelle... </span></l>
-            <l n="288" xml:id="l288"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il répond par gestes. Entre Casimir par le fond.</span></span></i></l>
-            <l n="289" xml:id="l289"> </l>
-            <l n="290" xml:id="l290"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="291" xml:id="l291"> </l>
-            <l n="292" xml:id="l292"> </l>
-            <l n="293" xml:id="l293"><span style="letter-spacing:-.3pt">Monsieur ?... </span></l>
-            <l n="294" xml:id="l294"><span style="letter-spacing:-.3pt">Qu’est-ce qu’il y a, Casimir ?... </span></l>
-            <l n="295" xml:id="l295"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À part. </span></span></i></l>
-            <l n="296" xml:id="l296"><span style="letter-spacing:-.3pt">Est-ce qu’il m’a vu ?... </span></l>
-            <l n="297" xml:id="l297"><span style="letter-spacing:-.3pt">C’est une lettre, monsieur... </span></l>
-            <l n="298" xml:id="l298"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il ferme la fenêtre et repasse à droite.</span></span></i></l>
-            <l n="299" xml:id="l299"><span style="letter-spacing:-.3pt">Une lettre... </span></l>
-            <l n="300" xml:id="l300"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">En l’examinant.</span></span></i></l>
-            <l n="301" xml:id="l301"><span style="letter-spacing:-.3pt">Une lettre de femme. Boisgarnier avait raison, c’est une lettre de femme. Voilà que ça commence. </span></l>
-            <l n="302" xml:id="l302"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Après avoir décacheté. </span></span></i></l>
-            <l n="303" xml:id="l303"><span style="letter-spacing:-.3pt">C’est d’elle... </span></l>
-            <l n="304" xml:id="l304"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Lisant.</span></span></i></l>
-            <l n="305" xml:id="l305"><span style="letter-spacing:-.3pt">« Venez, je vous attends toute <i>cuite</i>. » La malheureuse ! Il ne peut pas y avoir ça... C’est écrit pourtant... Casimir ?... </span></l>
-            <l n="306" xml:id="l306"><span style="letter-spacing:-.3pt">Monsieur ?... </span></l>
-            <l n="307" xml:id="l307"><span style="letter-spacing:-.3pt">Dites-moi... </span></l>
-            <l n="308" xml:id="l308"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À part. </span></span></i></l>
-            <l n="309" xml:id="l309"><span style="letter-spacing:-.3pt">Cachons le nom. </span></l>
-            <l n="310" xml:id="l310"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Haut.</span></span></i></l>
-            <l n="311" xml:id="l311"><span style="letter-spacing:-.3pt">Dites-moi ce qu’il y a d’écrit là ? </span></l>
-            <l n="312" xml:id="l312"><span style="letter-spacing:-.3pt">« Venez, je vous attends tout de suite. » </span></l>
-            <l n="313" xml:id="l313"><span style="letter-spacing:-.3pt">Tout de suite... c’est juste. Je n’y avais pas pensé... ce que c’est que l’éducation. Je vous attends toute cuite... tout de suite, veux-je dire... Je cours... je vole... </span></l>
-            <l n="314" xml:id="l314"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À lui-même. </span></span></i></l>
-            <l n="315" xml:id="l315"><span style="letter-spacing:-.3pt">Elle a eu un sourire !... et je suis bien sûr que cette fois... Si ma belle-tante savait ça !... Ah ! bah !... elle ne le saura pas ! </span></l>
-            <l n="316" xml:id="l316"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il prend son chapeau que lui tend Casimir et sort par le fond.</span></span></i></l>
-            <l n="317" xml:id="l317"> </l>
-            <l n="318" xml:id="l318"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="319" xml:id="l319"> </l>
-            <l n="320" xml:id="l320"> </l>
-            <l n="321" xml:id="l321"><span style="letter-spacing:-.3pt">Mettons au courant mes comptes personnels... Acheté six mètres de corde à cinquante centimes le mètre... – ci, trois francs. – Revendu au détail à diverses personnes, par morceaux de deux ou trois pouces, ladite corde, comme étant celle à laquelle monsieur était accroché pendant son voyage : ci... cent vingt-neuf francs. Qui de cent vingt-neuf paye trois francs, reste cent trente-quatre... </span></l>
-            <l n="322" xml:id="l322"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Se levant.</span></span></i></l>
-            <l n="323" xml:id="l323"><span style="letter-spacing:-.3pt">bénéfice net : cent trente-quatre francs. – Acheté de nouveau, pour continuer la même opération, plus en grand, douze mètres... </span></l>
-            <l n="324" xml:id="l324"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Entre Sainte-Amaranthe par le fond.</span></span></i></l>
-            <l n="325" xml:id="l325"> </l>
-            <l n="326" xml:id="l326"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="327" xml:id="l327"> </l>
-            <l n="328" xml:id="l328"> </l>
-            <l n="329" xml:id="l329"><span style="letter-spacing:-.3pt">Monsieur Martineau, je vous prie ? </span></l>
-            <l n="330" xml:id="l330"><span style="letter-spacing:-.3pt">Il n’est pas ici... monsieur... </span></l>
-            <l n="331" xml:id="l331"><span style="letter-spacing:-.3pt">J’arrive trop tard... où pourrai-je le trouver ?... </span></l>
-            <l n="332" xml:id="l332"><span style="letter-spacing:-.3pt">Il rentrera tout à l’heure... </span></l>
-            <l n="333" xml:id="l333"><span style="letter-spacing:-.3pt">Ah ! je l’attendrai alors... permettez que je l’attende... </span></l>
-            <l n="334" xml:id="l334"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il s’assied à droite et respire à plusieurs reprises, comme un homme essoufflé. </span></span></i></l>
-            <l n="335" xml:id="l335"><span style="letter-spacing:-.3pt">C’est une machine à vapeur ! </span></l>
-            <l n="336" xml:id="l336"><span style="letter-spacing:-.3pt">Mais, en attendant, êtes-vous marié ? </span></l>
-            <l n="337" xml:id="l337"><span style="letter-spacing:-.3pt">Monsieur me demande ?... </span></l>
-            <l n="338" xml:id="l338"><span style="letter-spacing:-.3pt">Si vous êtes marié ?... </span></l>
-            <l n="339" xml:id="l339"><span style="letter-spacing:-.3pt">Non, monsieur... </span></l>
-            <l n="340" xml:id="l340"><span style="letter-spacing:-.3pt">Pas marié ? </span></l>
-            <l n="341" xml:id="l341"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Tirant un carnet de sa poche. </span></span></i></l>
-            <l n="342" xml:id="l342"><span style="letter-spacing:-.3pt">Comment vous appelle-t-on ? </span></l>
-            <l n="343" xml:id="l343"><span style="letter-spacing:-.3pt">Casimir.</span></l>
-            <l n="344" xml:id="l344"><span style="letter-spacing:-.3pt">Votre âge ? </span></l>
-            <l n="345" xml:id="l345"><span style="letter-spacing:-.3pt">Vingt-trois ans... </span></l>
-            <l n="346" xml:id="l346"><span style="letter-spacing:-.3pt">Joli garçon... agréablement tourné... </span></l>
-            <l n="347" xml:id="l347"><span style="letter-spacing:-.3pt">Monsieur... </span></l>
-            <l n="348" xml:id="l348"><span style="letter-spacing:-.3pt">Oh ! vous savez... c’est une formule... J’écris ça à la suite de tous les noms... ça ne peut pas faire de mal... Vous gagnez ?... </span></l>
-            <l n="349" xml:id="l349"><span style="letter-spacing:-.3pt">Mais, monsieur... </span></l>
-            <l n="350" xml:id="l350"><span style="letter-spacing:-.3pt">Répondez vite, c’est pour votre bien... </span></l>
-            <l n="351" xml:id="l351"><span style="letter-spacing:-.3pt">Six cents francs. </span></l>
-            <l n="352" xml:id="l352"><span style="letter-spacing:-.3pt">Et les menus profils... l’anse du panier... ça fait bien quinze cents francs. </span></l>
-            <l n="353" xml:id="l353"><span style="letter-spacing:-.3pt">Oh ! monsieur ! je vous jure... </span></l>
-            <l n="354" xml:id="l354"><span style="letter-spacing:-.3pt">Il suffit ! Je vous trouverai quelque chose... dans les mêmes prix... </span></l>
-            <l n="355" xml:id="l355"><span style="letter-spacing:-.3pt">Vous dites ?... </span></l>
-            <l n="356" xml:id="l356"><span style="letter-spacing:-.3pt">Soyez tranquille, avant six semaines vous serez loti... J’aurai seulement mon petit prélèvement sur la dot... </span></l>
-            <l n="357" xml:id="l357"><span style="letter-spacing:-.3pt">Qu’est-ce que c’est que cet homme-là ? </span></l>
-            <l n="358" xml:id="l358"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Rentre par le fond Martineau. Haut.</span></span></i></l>
-            <l n="359" xml:id="l359"><span style="letter-spacing:-.3pt">Ah ! voilà monsieur. </span></l>
-            <l n="360" xml:id="l360"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Martineau descend la scène sans apercevoir Sainte-Amaranthe et Casimir.</span></span></i></l>
-            <l n="361" xml:id="l361"> </l>
-            <l n="362" xml:id="l362"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="363" xml:id="l363"> </l>
-            <l n="364" xml:id="l364"> </l>
-            <l n="365" xml:id="l365"><span style="letter-spacing:-.3pt">Eh bien ! non !... ce n’était pas pour ce que je pensais... c’était pour me montrer à un prince russe... un homme superbe qui était là comme chez lui... Il m’a beaucoup regardé, puis il m’a dit : </span></l>
-            <l n="366" xml:id="l366"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Accent russe. </span></span></i></l>
-            <l n="367" xml:id="l367"><span style="letter-spacing:-.3pt">« Je vous en prie, mon cher, vous êtes donc la personne dont déjà tout Paris s’occupe absolument ? » </span></l>
-            <l n="368" xml:id="l368"><span style="letter-spacing:-.3pt">Vous dites... commis principal... </span></l>
-            <l n="369" xml:id="l369"><span style="letter-spacing:-.3pt">J’avoue que dans le premier moment, la déception... Je n’étais pas content... Et bien !... j’avais tort... car en me reconduisant elle m’a glissé à l’oreille ces trois mots : « À ce soir !... » </span></l>
-            <l n="370" xml:id="l370"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Avec joie. </span></span></i></l>
-            <l n="371" xml:id="l371"><span style="letter-spacing:-.3pt">C’est pour ce soir ! </span></l>
-            <l n="372" xml:id="l372"><span style="letter-spacing:-.3pt">Monsieur... il y a là une personne... </span></l>
-            <l n="373" xml:id="l373"><span style="letter-spacing:-.3pt">Une femme ?... </span></l>
-            <l n="374" xml:id="l374"><span style="letter-spacing:-.3pt">Eh ! non, c’est... </span></l>
-            <l n="375" xml:id="l375"><span style="letter-spacing:-.3pt">Ah ! pardon, monsieur... Casimir ?... </span></l>
-            <l n="376" xml:id="l376"><span style="letter-spacing:-.3pt">Monsieur ?... </span></l>
-            <l n="377" xml:id="l377"><span style="letter-spacing:-.3pt">Vous allez porter tout de suite cette lettre... c’est ma démission... En revenant, vous achèterez tous les journaux du soir et vous me les apporterez... </span></l>
-            <l n="378" xml:id="l378"><span style="letter-spacing:-.3pt">Oui, monsieur. </span></l>
-            <l n="379" xml:id="l379"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort par le fond.</span></span></i></l>
-            <l n="380" xml:id="l380"><span style="letter-spacing:-.3pt">On doit parler aussi de moi dans les journaux du soir. </span></l>
-            <l n="381" xml:id="l381"> </l>
-            <l n="382" xml:id="l382"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="383" xml:id="l383"> </l>
-            <l n="384" xml:id="l384"> </l>
-            <l n="385" xml:id="l385"><span style="letter-spacing:-.3pt">Vous me connaissez, monsieur ?... </span></l>
-            <l n="386" xml:id="l386"><span style="letter-spacing:-.3pt">Pas que je sache, monsieur. </span></l>
-            <l n="387" xml:id="l387"><span style="letter-spacing:-.3pt">Sainte-Amaranthe. </span></l>
-            <l n="388" xml:id="l388"><span style="letter-spacing:-.3pt">Il me semble, en effet, avoir vu ce nom. </span></l>
-            <l n="389" xml:id="l389"><span style="letter-spacing:-.3pt">Quoi de plus agréable pour une mère de famille que de pouvoir, par l’entremise de M. de Sainte-Amaranthe, trouver dans les vingt-quatre heures un parti pour sa fille, soit dans la plus haute noblesse, soit dans la... </span></l>
-            <l n="390" xml:id="l390"><span style="letter-spacing:-.3pt">Ah ! j’y suis... vous êtes... </span></l>
-            <l n="391" xml:id="l391"><span style="letter-spacing:-.3pt">Oui, monsieur ; vous, vous n’êtes pas... </span></l>
-            <l n="392" xml:id="l392"><span style="letter-spacing:-.3pt">Quoi, monsieur ? </span></l>
-            <l n="393" xml:id="l393"><span style="letter-spacing:-.3pt">Marié, parbleu ! </span></l>
-            <l n="394" xml:id="l394"><span style="letter-spacing:-.3pt">Non, mais je suis sur le point. </span></l>
-            <l n="395" xml:id="l395"><span style="letter-spacing:-.3pt">Vous ne l’êtes pas, cela suffit. Un homme comme vous, marié et pas par moi... je ne me serais jamais consolé... </span></l>
-            <l n="396" xml:id="l396"><span style="letter-spacing:-.3pt">Il faudra pourtant bien que vous vous en consoliez. </span></l>
-            <l n="397" xml:id="l397"><span style="letter-spacing:-.3pt">J’ai apporté sur moi des échantillons choisis... inutile de dire que je ne vous parlerai que de ce que j’ai de mieux. J’ai là un assortiment complet de vertus bourgeoises... tout ce qu’il y a de plus solide comme vertus bourgeoises. Mais monsieur a le droit d’aspirer à mieux que cela, je lui pro poserai tout de suite quelque chose qui est plus à la mode... </span></l>
-            <l n="398" xml:id="l398"><span style="letter-spacing:-.3pt">Ah ! il y a quelque chose qui est plus à la mode que les vertus bourgeoises ? </span></l>
-            <l n="399" xml:id="l399"><span style="letter-spacing:-.3pt">Assurément, monsieur... Mais laissons de côté la bourgeoisie... et arrivons à la plus haute noblesse. </span></l>
-            <l n="400" xml:id="l400"><span style="letter-spacing:-.3pt">À la noblesse ? </span></l>
-            <l n="401" xml:id="l401"><span style="letter-spacing:-.3pt">Non, ce n’est pas ça, la noblesse... c’est la série des veuves de province... de cinquante à soixante ans... Tenez, j’ai là sur moi une comtesse moldave... Elle m’a parlé de vous. </span></l>
-            <l n="402" xml:id="l402"><span style="letter-spacing:-.3pt">Une comtesse !... une comtesse !... C’est beaucoup. </span></l>
-            <l n="403" xml:id="l403"><span style="letter-spacing:-.3pt">Nullement. Un homme comme vous a le droit de prendre les choses d’un peu haut. </span></l>
-            <l n="404" xml:id="l404"><span style="letter-spacing:-.3pt">D’un peu haut ?... C’est une plaisanterie, cela... </span></l>
-            <l n="405" xml:id="l405"><span style="letter-spacing:-.3pt">Où diable ai-je fourré ma comtesse ?... </span></l>
-            <l n="406" xml:id="l406"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Trouvant la carte.</span></span></i></l>
-            <l n="407" xml:id="l407"><span style="letter-spacing:-.3pt">Ah ! la voici !...</span></l>
-            <l n="408" xml:id="l408"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">La lui présentant.</span></span></i></l>
-            <l n="409" xml:id="l409"><span style="letter-spacing:-.3pt">La comtesse monte à cheval comme un ange... et elle joue la comédie... comme la première figurante venue... Voici la carte. </span></l>
-            <l n="410" xml:id="l410"><span style="letter-spacing:-.3pt">Son adresse ? </span></l>
-            <l n="411" xml:id="l411"><span style="letter-spacing:-.3pt">Non pas... sa photographie. « Turquet operavit !... » </span></l>
-            <l n="412" xml:id="l412"><span style="letter-spacing:-.3pt">Turquet... Je connais... C’est mon photographe !... </span></l>
-            <l n="413" xml:id="l413"><span style="letter-spacing:-.3pt">Regardez ! regardez ! </span></l>
-            <l n="414" xml:id="l414"><span style="letter-spacing:-.3pt">Oh ! oh ! </span></l>
-            <l n="415" xml:id="l415"><span style="letter-spacing:-.3pt">Elle s’est fait représenter en pêcheur napolitain... comme vous voyez. C’est ingénieux, parce que, de cette façon-là, on est tout de suite fixé sur certains détails... </span></l>
-            <l n="416" xml:id="l416"><span style="letter-spacing:-.3pt">Oh ! oh ! oh ! </span></l>
-            <l n="417" xml:id="l417"><span style="letter-spacing:-.3pt">Charmante, n’est-ce pas, charmante !... </span></l>
-            <l n="418" xml:id="l418"><span style="letter-spacing:-.3pt">Il est incontestable que si tous les pêcheurs à la ligne ressemblaient à celui-ci, il y aurait du monde sur les ponts... </span></l>
-            <l n="419" xml:id="l419"><span style="letter-spacing:-.3pt">N’est-ce pas ?... Il n’y a plus qu’à fixer un rendez-vous... </span></l>
-            <l n="420" xml:id="l420"><span style="letter-spacing:-.3pt">Pas du tout pas du tout ! Je regrette de ne pas pouvoir donner suite... Je vais me marier avec mademoiselle Louise Delaunay... </span></l>
-            <l n="421" xml:id="l421"><span style="letter-spacing:-.3pt">Louise Delaunay... Ce nom-là n’est pas sur mes registres... </span></l>
-            <l n="422" xml:id="l422"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Prenant son carnet. </span></span></i></l>
-            <l n="423" xml:id="l423"><span style="letter-spacing:-.3pt">Je l’inscris sur mon carnet... Vous dites : Louise Delaunay... </span></l>
-            <l n="424" xml:id="l424"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il écrit.</span></span></i></l>
-            <l n="425" xml:id="l425"><span style="letter-spacing:-.3pt">Mais c’est inutile, puisque je vous dis que je vais... </span></l>
-            <l n="426" xml:id="l426"><span style="letter-spacing:-.3pt">Une petite bourgeoise... j’en suis sûr... Allons donc !... vous ne pouvez pas l’épouser... ce serait une mésalliance. Je trouverai un autre mari pour cette demoiselle.</span></l>
-            <l n="427" xml:id="l427"><span style="letter-spacing:-.3pt">Comment ? </span></l>
-            <l n="428" xml:id="l428"><span style="letter-spacing:-.3pt">Il faut rompre... </span></l>
-            <l n="429" xml:id="l429"><span style="letter-spacing:-.3pt">Je ne veux pas. </span></l>
-            <l n="430" xml:id="l430"><span style="letter-spacing:-.3pt">Il le faut... </span></l>
-            <l n="431" xml:id="l431"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">En allant à lui il le prend presque au collet. Entre Casimir par le fond.</span></span></i></l>
-            <l n="432" xml:id="l432"><span style="letter-spacing:-.3pt">Monsieur, monsieur ! </span></l>
-            <l n="433" xml:id="l433"><span style="letter-spacing:-.3pt">Qu’est-ce que c’est ? </span></l>
-            <l n="434" xml:id="l434"><span style="letter-spacing:-.3pt">Je vas vous dire, monsieur, mais d’abord... </span></l>
-            <l n="435" xml:id="l435"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il va à Sainte-Amaranthe.</span></span></i></l>
-            <l n="436" xml:id="l436"><span style="letter-spacing:-.3pt">J’ai pensé à ce que vous m’avez proposé... un mariage... ça me va... seulement, je voudrais une Flamande. </span></l>
-            <l n="437" xml:id="l437"><span style="letter-spacing:-.3pt">J’en ai trois disponibles... vous choisirez... </span></l>
-            <l n="438" xml:id="l438"><span style="letter-spacing:-.3pt">Qu’est-ce que tu avais à m’annoncer ? </span></l>
-            <l n="439" xml:id="l439"><span style="letter-spacing:-.3pt">Ah ! oui, au fait... C’est madame Delaunay, monsieur, elle est furieuse. </span></l>
-            <l n="440" xml:id="l440"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Entre madame Delaunay par le fond. Casimir sort après son entrée.</span></span></i></l>
-            <l n="441" xml:id="l441"> </l>
-            <l n="442" xml:id="l442"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="443" xml:id="l443"> </l>
-            <l n="444" xml:id="l444"> </l>
-            <l n="445" xml:id="l445"><span style="letter-spacing:-.3pt">Qu’est-ce que cela veut dire, monsieur ? </span></l>
-            <l n="446" xml:id="l446"><span style="letter-spacing:-.3pt">Quoi donc... madame ? </span></l>
-            <l n="447" xml:id="l447"><span style="letter-spacing:-.3pt">Un article dans lequel on parle de moi ! </span></l>
-            <l n="448" xml:id="l448"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Sainte-Amaranthe passe à gauche, en examinant madame Delaunay. </span></span></i></l>
-            <l n="449" xml:id="l449"><span style="letter-spacing:-.3pt">C’est Boisgarnier... je sais... </span></l>
-            <l n="450" xml:id="l450"><span style="letter-spacing:-.3pt">Vous savez !... et savez-vous ce qu’on dit dans cet article ? On dit que mon mari a fait sa fortune en tenant une maison de jeu à San-Francisco. </span></l>
-            <l n="451" xml:id="l451"><span style="letter-spacing:-.3pt">Un mari !... rien à faire ! </span></l>
-            <l n="452" xml:id="l452"><span style="letter-spacing:-.3pt">On raconte que j’ai été enlevée plusieurs fois ! </span></l>
-            <l n="453" xml:id="l453"><span style="letter-spacing:-.3pt">Mon Dieu, madame... c’est Boisgarnier... il lui manquait trente lignes. J’avoue que ce n’est pas une raison... </span></l>
-            <l n="454" xml:id="l454"><span style="letter-spacing:-.3pt">Voilà votre prétexte ! Rompez ! </span></l>
-            <l n="455" xml:id="l455"><span style="letter-spacing:-.3pt">On ajoute que depuis mon veuvage... </span></l>
-            <l n="456" xml:id="l456"><span style="letter-spacing:-.3pt">Vous êtes veuve, madame, parfait !... Je me charge de vous... Madame Delaunay, n’est-ce pas ? </span></l>
-            <l n="457" xml:id="l457"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il prend son carnet et écrit. </span></span></i></l>
-            <l n="458" xml:id="l458"><span style="letter-spacing:-.3pt">Qu’est-ce que cet homme-là ? </span></l>
-            <l n="459" xml:id="l459"><span style="letter-spacing:-.3pt">Est-ce que je sais ?... Il s’est installé ici... et il prend des notes... et il me maltraite !... </span></l>
-            <l n="460" xml:id="l460"><span style="letter-spacing:-.3pt">Peu importe, d’ailleurs !... Je n’avais qu’une chose à vous dire et je vous la dis... tout projet de mariage est brisé. Vous ne reverrez plus ni ma nièce ni moi... </span></l>
-            <l n="461" xml:id="l461"><span style="letter-spacing:-.3pt">Mais laissez-moi répondre.</span></l>
-            <l n="462" xml:id="l462"><span style="letter-spacing:-.3pt">Mais non, ne répondez pas ! </span></l>
-            <l n="463" xml:id="l463"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À madame Delaunay. </span></span></i></l>
-            <l n="464" xml:id="l464"><span style="letter-spacing:-.3pt">Madame, je trouverai, dans les vingt-quatre heures, pour vous et pour votre nièce, des partis, soit dans la plus haute noblesse... soit dans la finance... soit dans la... </span></l>
-            <l n="465" xml:id="l465"><span style="letter-spacing:-.3pt">Laissez-moi donc parler ! </span></l>
-            <l n="466" xml:id="l466"><span style="letter-spacing:-.3pt">Rompez, monsieur, vous épouserez la comtesse !... </span></l>
-            <l n="467" xml:id="l467"><span style="letter-spacing:-.3pt">La comtesse !... vous devez épouser une comtesse ? </span></l>
-            <l n="468" xml:id="l468"><span style="letter-spacing:-.3pt">Certainement... Rompez, madame, rompez ! </span></l>
-            <l n="469" xml:id="l469"><span style="letter-spacing:-.3pt">Madame... je vous en prie... </span></l>
-            <l n="470" xml:id="l470"><span style="letter-spacing:-.3pt">Ah ! vous devez épouser une comtesse !... </span></l>
-            <l n="471" xml:id="l471"><span style="letter-spacing:-.3pt">Non, madame, non... </span></l>
-            <l n="472" xml:id="l472"><span style="letter-spacing:-.3pt">Si fait ! si fait ! Rompez, monsieur, rompez ! </span></l>
-            <l n="473" xml:id="l473"><span style="letter-spacing:-.3pt">Cela se trouve à merveille... adieu, monsieur, Adieu ! </span></l>
-            <l n="474" xml:id="l474"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Elle remonte. </span></span></i></l>
-            <l n="475" xml:id="l475"><span style="letter-spacing:-.3pt">Madame, je vous en prie, madame... </span></l>
-            <l n="476" xml:id="l476"><span style="letter-spacing:-.3pt">Sainte-Amaranthe, madame... Sainte-Amaranthe... prenez des prospectus. </span></l>
-            <l n="477" xml:id="l477"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il lui en remplit les mains et en donne aussi à Martineau qui les jette. </span></span></i></l>
-            <l n="478" xml:id="l478"><span style="letter-spacing:-.3pt">Eh ! laissez-moi ! </span></l>
-            <l n="479" xml:id="l479"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Elle sort par le fond.</span></span></i></l>
-            <l n="480" xml:id="l480"> </l>
-            <l n="481" xml:id="l481"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="482" xml:id="l482"> </l>
-            <l n="483" xml:id="l483"> </l>
-            <l n="484" xml:id="l484"><span style="letter-spacing:-.3pt">Parfait ! Trois mariages à faire avec les morceaux de votre mariage cassé ! Je n’ai pas perdu mon temps ! </span></l>
-            <l n="485" xml:id="l485"><span style="letter-spacing:-.3pt">Qu’est-ce que vous avez fait ? </span></l>
-            <l n="486" xml:id="l486"><span style="letter-spacing:-.3pt">Je vous ai sauvé !... Je cours chez la comtesse, lui faire savoir que tout est arrangé. </span></l>
-            <l n="487" xml:id="l487"><span style="letter-spacing:-.3pt">Mais c’est que... l’adorable Louise... je l’aimais !... </span></l>
-            <l n="488" xml:id="l488"><span style="letter-spacing:-.3pt">Qu’est-ce que ça fait ? Louis XIV aimait mademoiselle de Mancini. </span></l>
-            <l n="489" xml:id="l489"><span style="letter-spacing:-.3pt">Louis XIV ?... </span></l>
-            <l n="490" xml:id="l490"><span style="letter-spacing:-.3pt">Il ne l’a pas épousée, cependant... D’ailleurs, ne soyez pas inquiet... je vous marierai... je marier ai l’adorable Louise, je marierai la petite veuve, je marierai votre domestique, je marierai tout le monde ! Tel que vous me voyez, je descends en droite ligne de cette Frosine qui aurait marié le Grand Turc avec la république de Venise !... Au revoir !... Je cours chez la comtesse !... </span></l>
-            <l n="491" xml:id="l491"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort par le fond, puis rentre.</span></span></i></l>
-            <l n="492" xml:id="l492"><span style="letter-spacing:-.3pt">Ah ! pardon... je ne vous ai pas donné de prospectus, je crois... quel oubli !... Prenez... </span></l>
-            <l n="493" xml:id="l493"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il lui en donne une liasse et sort vivement par le fond, en débitant son boniment. </span></span></i></l>
-            <l n="494" xml:id="l494"> </l>
-            <l n="495" xml:id="l495"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="496" xml:id="l496"> </l>
-            <l n="497" xml:id="l497"> </l>
-            <l n="498" xml:id="l498"><span style="letter-spacing:-.3pt">Des prospectus, des prospectus... Si, il m’en avait donné !... </span></l>
-            <l n="499" xml:id="l499"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il les jette avec colère, puis réfléchissant.</span></span></i></l>
-            <l n="500" xml:id="l500"><span style="letter-spacing:-.3pt">Une comtesse !... une comtesse !... Je sais bien qu’épouser une comtesse moldave... c’est flatteur, mais ça ne fait rien... Louise... ma pauvre Louise !... </span></l>
-            <l n="501" xml:id="l501"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Se frappant le cœur. </span></span></i></l>
-            <l n="502" xml:id="l502"><span style="letter-spacing:-.3pt">J’ai là quelque chose qui me... </span></l>
-            <l n="503" xml:id="l503"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Casimir entre par le fond, tenant des journaux. </span></span></i></l>
-            <l n="504" xml:id="l504"><span style="letter-spacing:-.3pt">Monsieur, voici les journaux que vous m’avez demandés... </span></l>
-            <l n="505" xml:id="l505"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il lui donne les journaux et sort par le fond.</span></span></i></l>
-            <l n="506" xml:id="l506"><span style="letter-spacing:-.3pt">Les journaux !... Allons, la célébrité me consolera !... </span></l>
-            <l n="507" xml:id="l507"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il regarde les journaux pendant un moment. </span></span></i></l>
-            <l n="508" xml:id="l508"><span style="letter-spacing:-.3pt">Tout cela parle de moi... tout cela est rempli de mon nom ! Ah ! ça fait plaisir tout de même ! Voyons ! </span></l>
-            <l n="509" xml:id="l509"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il ouvre un journal.</span></span></i></l>
-            <l n="510" xml:id="l510"><span style="letter-spacing:-.3pt">« Chronique du jour... Il n’est bruit que de l’arrivée à Paris d’un danseur à une jambe nommé... » Qu’est-ce que ça me fait ça ?... Voilà un journal bête ! </span></l>
-            <l n="511" xml:id="l511"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il le jette et en prend un autre.</span></span></i></l>
-            <l n="512" xml:id="l512"><span style="letter-spacing:-.3pt">« Le danseur à une jambe a été vu aujourd’hui sur le boulevard. On admirait l’élégance de sa démarche... » Mais qu’est-ce que cet homme-là ? </span></l>
-            <l n="513" xml:id="l513"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Autre journal.</span></span></i></l>
-            <l n="514" xml:id="l514"><span style="letter-spacing:-.3pt">« On annonce l’engagement du danseur à une jambe à un des quatorze théâtres de la compagnie générale... » Encore ! </span></l>
-            <l n="515" xml:id="l515"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Autre journal.</span></span></i></l>
-            <l n="516" xml:id="l516"><span style="letter-spacing:-.3pt">« Nous publierons dimanche le portrait du danseur à une jambe... » Eh bien ! et moi ? et moi ? Pas un mot sur moi ! </span></l>
-            <l n="517" xml:id="l517"> </l>
-            <l n="518" xml:id="l518"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="519" xml:id="l519"> </l>
-            <l n="520" xml:id="l520"> </l>
-            <l n="521" xml:id="l521"><span style="letter-spacing:-.3pt">Ah ! le voilà... toi ! </span></l>
-            <l n="522" xml:id="l522"><span style="letter-spacing:-.3pt">Vite, mon ami... je viens ici n’ayant pas même le temps d’aller chez moi... </span></l>
-            <l n="523" xml:id="l523"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Allant s’asseoir au bureau. </span></span></i></l>
-            <l n="524" xml:id="l524"><span style="letter-spacing:-.3pt">Des plumes, de l’encre... vite ! </span></l>
-            <l n="525" xml:id="l525"><span style="letter-spacing:-.3pt">Tu vas me dire... </span></l>
-            <l n="526" xml:id="l526"><span style="letter-spacing:-.3pt">Tout ce que tu voudras... mais plus tard... Cent lignes avant tout... cent lignes sur ton successeur.</span></l>
-            <l n="527" xml:id="l527"><span style="letter-spacing:-.3pt">Mon successeur ? </span></l>
-            <l n="528" xml:id="l528"><span style="letter-spacing:-.3pt">Eh oui, le danseur à une jambe... Est-ce que tu n’en as pas entendu parler ?... Tout le monde en parle cependant. </span></l>
-            <l n="529" xml:id="l529"><span style="letter-spacing:-.3pt">Comment ! j’ai déjà un successeur, et ce successeur, c’est... </span></l>
-            <l n="530" xml:id="l530"><span style="letter-spacing:-.3pt">Certainement... Ne t’ai-je pas dit que ce qui faisait l’éternel succès du singe de Nicolet, c’était la rapidité vertigineuse avec laquelle il changeait de forme ? </span></l>
-            <l n="531" xml:id="l531"><span style="letter-spacing:-.3pt">Je les ai lus, tes journaux. Personne ne parle de moi. </span></l>
-            <l n="532" xml:id="l532"><span style="letter-spacing:-.3pt">Eh bien ? </span></l>
-            <l n="533" xml:id="l533"><span style="letter-spacing:-.3pt">Rien, rien ! Pas une ligne sur moi, pas un mot ! </span></l>
-            <l n="534" xml:id="l534"><span style="letter-spacing:-.3pt">Et pourquoi, diable, veux-tu qu’on parle de toi ce soir ?... On en a parlé ce matin. Paris n’aime pas toujours parler de la même chose. Tu as eu ton jour... tu as été, tu n’es plus ! Tu es fini ! </span></l>
-            <l n="535" xml:id="l535"><span style="letter-spacing:-.3pt">Et toi qui me promettais de la célébrité... </span></l>
-            <l n="536" xml:id="l536"><span style="letter-spacing:-.3pt">Je t’en avais promis... tu en as eu... je l’en ai donné pour un sou... Je ne pouvais pas t’en donner pour un million ! </span></l>
-            <l n="537" xml:id="l537"><span style="letter-spacing:-.3pt">Et je le dis, moi !... </span></l>
-            <l n="538" xml:id="l538"><span style="letter-spacing:-.3pt">Tu me dis ? </span></l>
-            <l n="539" xml:id="l539"><span style="letter-spacing:-.3pt">Je le dis que je ne suis pas fini... je te dis que je suis toujours le singe... </span></l>
-            <l n="540" xml:id="l540"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Se reprenant.</span></span></i></l>
-            <l n="541" xml:id="l541"><span style="letter-spacing:-.3pt">l’homme à la mode. </span></l>
-            <l n="542" xml:id="l542"><span style="letter-spacing:-.3pt">Je ne crois pas, mon ami. </span></l>
-            <l n="543" xml:id="l543"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Entre Casimir par le fond.</span></span></i></l>
-            <l n="544" xml:id="l544"><span style="letter-spacing:-.3pt">Des lettres pour monsieur. </span></l>
-            <l n="545" xml:id="l545"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il lui donne deux lettres et sort. </span></span></i></l>
-            <l n="546" xml:id="l546"><span style="letter-spacing:-.3pt">Ah ! tu vas voir ! </span></l>
-            <l n="547" xml:id="l547"><span style="letter-spacing:-.3pt">Nous allons voir ! </span></l>
-            <l n="548" xml:id="l548"><span style="letter-spacing:-.3pt">« Monsieur, je vous annonce que la comtesse... » </span></l>
-            <l n="549" xml:id="l549"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">S’interrompant, à Boisgarnier.</span></span></i></l>
-            <l n="550" xml:id="l550"><span style="letter-spacing:-.3pt">Hein !... une comtesse !... </span></l>
-            <l n="551" xml:id="l551"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Continuant de lire.</span></span></i></l>
-            <l n="552" xml:id="l552"><span style="letter-spacing:-.3pt">« Que la comtesse refuse énergiquement de devenir votre femme. » </span></l>
-            <l n="553" xml:id="l553"><span style="letter-spacing:-.3pt">La comtesse ?... </span></l>
-            <l n="554" xml:id="l554"><span style="letter-spacing:-.3pt">Une comtesse moldave qui voulait m’épouser. </span></l>
-            <l n="555" xml:id="l555"><span style="letter-spacing:-.3pt">Maintenant elle ne veut plus... Je te disais bien... fini ! </span></l>
-            <l n="556" xml:id="l556"><span style="letter-spacing:-.3pt">Ah ! je reconnais le cachet... c’est de la petite actrice... celle qui m’a dit : À ce soir... </span></l>
-            <l n="557" xml:id="l557"><span style="letter-spacing:-.3pt">Ah ! il y a une petite actrice qui l’a dit... </span></l>
-            <l n="558" xml:id="l558"><span style="letter-spacing:-.3pt">Oui. </span></l>
-            <l n="559" xml:id="l559"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Lisant. </span></span></i></l>
-            <l n="560" xml:id="l560"><span style="letter-spacing:-.3pt">« Mossieu, ne venez pas ce soir, je vais voir le danseur à une jambe, et puis, quand vous me rencontrerez, ne m’ôtez pas votre chapeau, je ne vous le rendrais pas... » </span></l>
-            <l n="561" xml:id="l561"><span style="letter-spacing:-.3pt">Eh bien ! te voilà brouillé avec l’actrice !... Il fallait profiter de ton heure. </span></l>
-            <l n="562" xml:id="l562"><span style="letter-spacing:-.3pt">Je ne pouvais pas... il y avait là... un prince russe... un homme superbe... </span></l>
-            <l n="563" xml:id="l563"><span style="letter-spacing:-.3pt">Oh ! alors, donc... s’il y avait déjà un Russe, mon cher... </span></l>
-            <l n="564" xml:id="l564"><span style="letter-spacing:-.3pt">Voilà donc ce que Paris fait de ses grands hommes !... </span></l>
-            <l n="565" xml:id="l565"><span style="letter-spacing:-.3pt">Monsieur... une jeune personne qui désire vous parler... tout de suite. </span></l>
-            <l n="566" xml:id="l566"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il remonte à gauche.</span></span></i></l>
-            <l n="567" xml:id="l567"><span style="letter-spacing:-.3pt">Une jeune personne... tu entends... il y a encore des cours fidèles... Il y en a un au moins... </span></l>
-            <l n="568" xml:id="l568"><span style="letter-spacing:-.3pt">Eh bien ! puisqu’il n’y a pas de prince russe ici... profite de ton heure, mon ami... dépêche-toi donc de profiter... </span></l>
-            <l n="569" xml:id="l569"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Reprenant sa voix ordinaire. </span></span></i></l>
-            <l n="570" xml:id="l570"><span style="letter-spacing:-.3pt">Je vais écrire mon article dans la chambre. </span></l>
-            <l n="571" xml:id="l571"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il entre à droite</span></span></i></l>
-            <l n="572" xml:id="l572"><span style="letter-spacing:-.3pt">Maintenant, faites entrer. </span></l>
-            <l n="573" xml:id="l573"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Casimir fait entrer Louise et Annette par le fond, puis il sort. Louise, en entrant, donne sa voilette à Annette, qui suit Casimir. </span></span></i></l>
-            <l n="574" xml:id="l574"> </l>
-            <l n="575" xml:id="l575"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="576" xml:id="l576"> </l>
-            <l n="577" xml:id="l577"> </l>
-            <l n="578" xml:id="l578"><span style="letter-spacing:-.3pt">Louise ! </span></l>
-            <l n="579" xml:id="l579"><span style="letter-spacing:-.3pt">J’ai été fort étonnée, quand le bruit a couru que vous étiez devenu un grand homme ; j’ai été encore plus étonnée lorsque ma tante m’a fait entendre que vous ne m’aimiez plus, et que ce mariage annoncé à nos parents, à nos amis, ne se ferait pas. J’ai profité d’un moment où ma tante était sortie, et je suis venue avec Annette vous demander si tout cela était vrai. </span></l>
-            <l n="580" xml:id="l580"><span style="letter-spacing:-.3pt">Mademoiselle... </span></l>
-            <l n="581" xml:id="l581"><span style="letter-spacing:-.3pt">Attendez... je n’ai pas fini... Ma tante a eu bien raison de vous dire que, pour être contenus, mes sentiments n’en étaient pas moins d’une violence... Ils éclatent aujourd’hui, mes sentiments... Je vous aime, monsieur, oui, je vous aime ! </span></l>
-            <l n="582" xml:id="l582"><span style="letter-spacing:-.3pt">Ma chère Louise ! </span></l>
-            <l n="583" xml:id="l583"><span style="letter-spacing:-.3pt">Attendez, je n’ai pas fini... Si vous saviez mes rêves, mes espérances... Notre bonheur, je ne pensais qu’à cela... De puis trois mois je travaille à de grandes tapisseries pour notre chambre... J’ai déjà fait les deux fenêtres avec des lambrequins et un baldaquin pour le lit... je n’ai plus à faire que deux fauteuils... </span></l>
-            <l n="584" xml:id="l584"><span style="letter-spacing:-.3pt">Oh ! un seul suffira. </span></l>
-            <l n="585" xml:id="l585"><span style="letter-spacing:-.3pt">Je me disais : Nous appellerons nos deux premiers petits garçons Marcel et Fernand, et nos deux premières petites filles Louise et Gabrielle... </span></l>
-            <l n="586" xml:id="l586"><span style="letter-spacing:-.3pt">Nos deux premiers petits garçons ! Nos deux premières petites filles !... </span></l>
-            <l n="587" xml:id="l587"><span style="letter-spacing:-.3pt">Attendez... je n’ai pas fini... Ma perruche... vous savez, ma petite perruche verte... eh bien, en secret, je lui ai appris votre nom... elle le dit très bien... </span></l>
-            <l n="588" xml:id="l588"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Imitant la perruche.</span></span></i></l>
-            <l n="589" xml:id="l589"><span style="letter-spacing:-.3pt">Bonjour, Alfred... Alfred, mon ami... Vous voyez bien qu’il faut que nous nous mariions... ou je suis condamnée à rester fille... </span></l>
-            <l n="590" xml:id="l590"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Souriant.</span></span></i></l>
-            <l n="591" xml:id="l591"><span style="letter-spacing:-.3pt">à moins que je ne trouve un autre Alfred. </span></l>
-            <l n="592" xml:id="l592"><span style="letter-spacing:-.3pt">Oh ! non, Louise, ma chère Louise !... Ne cherchez pas d’autre Alfred, je vous aime toujours, et ce mariage se fera... </span></l>
-            <l n="593" xml:id="l593"><span style="letter-spacing:-.3pt">Mademoiselle, voici madame Delaunay. </span></l>
-            <l n="594" xml:id="l594"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort par la droite, madame Delaunay entre par le fond. </span></span></i></l>
-            <l n="595" xml:id="l595"><span style="letter-spacing:-.3pt">Oh ! ma tante ! </span></l>
-            <l n="596" xml:id="l596"><span style="letter-spacing:-.3pt">Quant à toi, Louise, je te pardonne... Depuis longtemps je connaissais la violence des sentiments que tu l’efforçais de contenir... Cependant ce mariage ne se fera pas. </span></l>
-            <l n="597" xml:id="l597"><span style="letter-spacing:-.3pt">Oh ! madame... </span></l>
-            <l n="598" xml:id="l598"><span style="letter-spacing:-.3pt">Le refus ne viendra pas de moi... il viendra de vous... Vous n’êtes pas dans une position de fortune qui vous permette de vous marier. </span></l>
-            <l n="599" xml:id="l599"><span style="letter-spacing:-.3pt">Qu’est-ce que vous dites donc, madame ?... Au moment où j’obtiens cette place dans la maison de banque de M. Bernier !... </span></l>
-            <l n="600" xml:id="l600"><span style="letter-spacing:-.3pt">Cette place ?... M. Bernier vous l’accordait, il y a deux heures, maintenant il vous la refuse. </span></l>
-            <l n="601" xml:id="l601"><span style="letter-spacing:-.3pt">Que m’importe ! il me reste mes appointements de commis principal... </span></l>
-            <l n="602" xml:id="l602"><span style="letter-spacing:-.3pt">Non pas, vous avez donné votre démission. </span></l>
-            <l n="603" xml:id="l603"><span style="letter-spacing:-.3pt">À l’imprimerie, Casimir !... à l’imprimerie tout de suite... </span></l>
-            <l n="604" xml:id="l604"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il descend en scène. </span></span></i></l>
-            <l n="605" xml:id="l605"><span style="letter-spacing:-.3pt">C’est vrai, Casimir l’a portée, cette malheureuse démission ! </span></l>
-            <l n="606" xml:id="l606"><span style="letter-spacing:-.3pt">Votre démission, monsieur ?... Ah ! il faudra que monsieur ait la complaisance d’en écrire une nouvelle. </span></l>
-            <l n="607" xml:id="l607"><span style="letter-spacing:-.3pt">Comment cela ? </span></l>
-            <l n="608" xml:id="l608"><span style="letter-spacing:-.3pt">Pardonnez-moi, mais au moment où j’allais la porter, j’ai été accosté par un riche Anglais qui n’a proposé de me payer très cher quelques lignes écrites par vous... je n’avais que cette grande lettre... et ma foi... </span></l>
-            <l n="609" xml:id="l609"><span style="letter-spacing:-.3pt">Vous la lui avez donnée ? </span></l>
-            <l n="610" xml:id="l610"><span style="letter-spacing:-.3pt">Je la lui ai vendue. </span></l>
-            <l n="611" xml:id="l611"><span style="letter-spacing:-.3pt">Ah !... dans mes bras... </span></l>
-            <l n="612" xml:id="l612"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il l’embrasse. </span></span></i></l>
-            <l n="613" xml:id="l613"><span style="letter-spacing:-.3pt">Que vous avez bien fait ! </span></l>
-            <l n="614" xml:id="l614"><span style="letter-spacing:-.3pt">Consentez, ma tante, puisqu’il a toujours sa place, et puis, vous savez, ma perruche... </span></l>
-            <l n="615" xml:id="l615"><span style="letter-spacing:-.3pt">Il a traversé les grandeurs et il se retrouve sur ses pieds... laissez-vous fléchir, madame, à cause de la rareté du fait. </span></l>
-            <l n="616" xml:id="l616"><span style="letter-spacing:-.3pt">Boisgarnier a raison, madame. </span></l>
-            <l n="617" xml:id="l617"><span style="letter-spacing:-.3pt">Ah ! c’est monsieur Boisgarnier ? </span></l>
-            <l n="618" xml:id="l618"><span style="letter-spacing:-.3pt">Moi-même, madame. </span></l>
-            <l n="619" xml:id="l619"><span style="letter-spacing:-.3pt">Eh bien, je consens... à la condition que vous vous rétracterez... de la façon la plus formelle... Vous écrirez dans votre journal que M. Delaunay n’a pas tenu de maison de jeu et que je n’ai été enlevée qu’une seule fois, et par mon mari... je crois. </span></l>
-            <l n="620" xml:id="l620"><span style="letter-spacing:-.3pt">Je me rétracterai volontiers. </span></l>
-            <l n="621" xml:id="l621"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Passant à gauche. </span></span></i></l>
-            <l n="622" xml:id="l622"><span style="letter-spacing:-.3pt">J’ai juste ment besoin de trente lignes. </span></l>
-            <l n="623" xml:id="l623"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Madame Delaunay a fait passer Louise près de Martineau.</span></span></i></l>
-            <l n="624" xml:id="l624"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Des dragons de Villars (Maillart). </span></span></i></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="1">Pas de nouvelles, monsieur Casimir ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, d’un air chagrin.</speaker>
+          <l n="2">Pas de nouvelles ! Je crois bien que nous ne reverrons plus monsieur. </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="3">Il était cramponné à la corde, cependant, et il se tenait bien ! </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="4">À la longue, ses mains se seront fatiguées... et alors... </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="5">Ne me dites pas ça... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="6">Je voudrais pouvoir vous dire autre chose... </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="7">Enfin !... je m’en retourne chez nous... Madame sera désolée... et mademoiselle donc, mademoiselle que votre maître devait épouser dans quinze jours... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="8">Que voulez-vous !... Elle se mariera avec un autre... </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="9">Je sais bien, mais c’est toujours désagréable... </l>
+          <l n="10">On entend du bruit. </l>
+          <l n="11">Qu’est-ce que c’est que ça ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, courant à la fenêtre.</speaker>
+          <l n="12">Une voiture !... suivie de tous les gens du quartier... Elle s’arrête devant la maison... </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="13">Ah ! mon Dieu !... le corps de monsieur... qu’on rapporte !... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="14">Non !... il est vivant... très vivant. Il s’élance hors de la voiture... </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="15">Ah !... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="16">Il bouscule la fruitière, il écarte l’épicier... il entre... nous allons le voir... </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="17">Allez donc lui ouvrir !... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, passant à droite.</speaker>
+          <l n="18">Ah ! je n’ai pas la force... L’émotion, et puis, d’ailleurs, il a sa clef. </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="19">Le voici ! </l>
+          <l n="20">Entre par le fond Martineau, dans le plus grand désordre.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="21">Ils ne me lâcheront pas !... Casimir !... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="22">Ah ! monsieur, que je suis content ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="23">Fermez la porte à double tour !... poussez les verrous !... ne laissez entrer personne !... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="24">Bien, monsieur. </l>
+          <l n="25">Il sort par le fond.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="26">Bonjour, Annette. C’est madame Delaunay qui vous a envoyée ? </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE.</speaker>
+          <l n="27">Oui, monsieur, afin d’avoir de vos nouvelles ; mademoiselle est dans un état... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="28">Cette bonne Louise !... Dites-lui bien, ainsi qu’à madame Delaunay, qu’il ne m’est rien arrivé de fâcheux, et que j’aurai avant une heure le plaisir d’aller les rassurer moi même !... </l>
+          <l n="29">Casimir rentre par le fond. </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="30">Monsieur, il y a le pharmacien qui s’obstine à entrer... Il dit que vous devez être blessé... contusionné tout au moins !... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="31">Qu’il aille au diable !... Je n’ai pas besoin de lui... Tout ça, c’est de la curiosité, voilà tout. </l>
+        </sp>
+        <sp who="#annette">
+          <speaker>ANNETTE,</speaker>
+          <l n="32">Je m’en vais, monsieur... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="33">Adieu, Annette !... Casimir, entr’ouvrez la porte pour laisser sortir Annette, et ne laissez pas pénétrer le pharmacien !...</l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="34">Soyez tranquille !... Je suis bien content, monsieur... </l>
+          <l n="35">Sortent par le fond Annette et Casimir.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, seul</speaker>
+          <l n="36">J’arrive de Juvisy !... Je ne comptais pas aller aussi loin... Hier, dimanche, j’avais offert l’adorable Louise et à sa jeune tante, madame Delaunay, de les conduire à l’Hippodrome, pour voir partir un ballon... Ces dames avaient accepté... Nous arrivons... le ballon était là, commençant à se gonfler... Tout autour des cordes qui frétillaient... On demande pour tenir ces cordes une quarantaine de gaillards solides... À ce mot, un éclair passa devant mes yeux ; l’idée de montrer à l’adorable Louise que si j’avais un cœur pour la chérir, j’avais également un bras pour la... je bondis dans l’enceinte, je saisis une des cordes et je m’arc-boutai. Cela me fut d’autant plus facile, qu’il y avait au bout de la corde une sorte de noud coulant... Je me sentais fort et posé d’une façon qui n’était pas vulgaire... le pied passé dans le nœud coulant, les deux mains serrant la corde, la tête renversée avec une certaine grâce et les yeux attachés sur Louise, qui me souriait... En ce moment, une voix aigrelette cria : Lâchez tout !... Moi, je continuais à contempler l’adorable Louise ; tout à coup, je m’aperçus que je la contemplais à vol d’oiseau. J’étais déjà à une hauteur prodigieuse... Alors, il me vint une idée excellente... il me vint l’idée de ne pas lâcher la corde... Je m’y cramponnai, au contraire !... Au-dessous de moi, bien au dessous... les populations, avec de grands gestes et des clameurs immenses, me désignaient... Moi, je criais, j’appelais l’aéronaute... Il ne m’entendait pas, tout occupé qu’il était de saluer et d’agiter un petit drapeau de ci et de là... Enfin, au bout d’un temps qui me parut long, il m’aperçut... nous étions au-dessus des nuages... Qu’est-ce que vous faites là ? me dit-il d’un air mécontent... J’avoue qu’à cette question ma surprise fut telle que les bras faillirent m’en tomber... Heureusement, je réfléchis que, si mes bras tombaient, il était plus que probable que le reste du corps suivrait... je me contins... Pendant cette conversation, le ballon descendait... nous retraversâmes les nuages... je revis la terre... je tombai au milieu d’un champ... Des agriculteurs accoururent... on me transporta... J’étais à Juvisy !... J’y passai la nuit... dans un hôtel... une nuit abominable... non pas à cause de ma chute, j’en avais été quitte pour quelques foulures... mais j’avais peur d’être grotesque... Ce matin, j’ai pris le chemin de fer, et pour rentrer chez moi, je me suis caché au fond d’un fiacre... Mais j’ai été reconnu... on a couru après mon fiacre... pour me voir... Ce que je craignais est arrivé... je suis passé à l’état de bête curieuse... </l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#casimir">
+          <speaker>CASIMIR, entrant par le fond.</speaker>
+          <l n="37">Monsieur !... c’est un des amis de monsieur... l’ami de monsieur qui écrit dans les journaux... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="38">Boisgarnier ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="39">Oui, monsieur. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à part.</speaker>
+          <l n="40">Il vient pour se moquer de moi. </l>
+          <l n="41">Haut.</l>
+          <l n="42">Dites-lui que je suis désolé, mais que maintenant il est impossible... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, ouvrant brusquement la porte du fond.</speaker>
+          <l n="43">Impossible !... Qu’est-ce qui est impossible ? Ce que c’est que la célébrité !... La tienne date seulement d’hier, et aujourd’hui tu refuses ta porte à tes amis !... </l>
+          <l n="44">Casimir passe à gauche. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à part.</speaker>
+          <l n="45">Voilà qu’il commence à se moquer... </l>
+          <l n="46">Haut. </l>
+          <l n="47">Je te demande pardon... c’est que... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="48">Je te pardonne tout de suite, parce que je suis pressé... </l>
+          <l n="49">S’asseyant au bureau. </l>
+          <l n="50">Dépêchons-nous, Casimir... Du papier, des plumes... de l’encre... tout ce qu’il faut pour... lancer une gloire naissante... </l>
+          <l n="51">Il prend la plume. </l>
+          <l n="52">Parle maintenant, j’écoute et j’écris... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="53">Que je parle ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="54">Parlez, monsieur, parlez. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="55">Oui, vite... quelques particularités sur ton existence... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="56">Pourquoi faire, ces particularités ?... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="57">Pour les mettre dans mon journal, pardieu ! le nouveau journal... Cinq centimes pour Paris... un sou pour la province... Cent mille abonnés ce matin... Deux cent mille ce soir !... Parle donc... mes postillons attendent !... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, à part.</speaker>
+          <l n="58">Ah ! quel homme ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="59">Ah bien ! ils attendront longtemps !... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="60">Par exemple !... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="61">Si tu crois que je te permettrai d’aller raconter à cent mille, à deux cent mille abonnés... C’est bien assez d’être ridicule dans ma rue... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="62">Ridicule !... Tu as dit ridicule ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="63">Monsieur l’a dit !... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, se levant.</speaker>
+          <l n="64">Ridicule !... l’homme qui a occupé, qui occupe l’attention de tout Paris !... l’homme dont tous les journaux par lent ce matin !... Non, Martineau, tu n’es pas un homme ridicule... Tu es un homme remarquable, Martineau !... tu es un grand homme !... Qu’est-ce que je dis, un grand homme ?... mieux que cela, car il y a nombre de grands hommes qui n’ont jamais pu arriver à être ce que tu es... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="65">Qu’est-ce que je suis donc ?... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="66">Tu es le singe à la mode !... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="67">Le singe ?... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="68">À la mode ! </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="69">Monsieur est un singe ? </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="70">Tu sais ce que c’était que Nicolet ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="71">De plus fort en plus fort ?... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="72">Tu l’as dit. Nicolet avait un théâtre... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="73">La Gaîté... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="74">Un théâtre et un singe... et avec ce singe, Nicolet s’entendait merveilleusement à remplir son théâtre, en singeant l’événement ou le héros du jour... événement sérieux ou bouffon... héros sublime ou grotesque !... Molé, l’acteur, se dit souffrant, et Paris est en l’air... Aussitôt, voilà le singe qui s’affuble d’une robe de chambre, et qui se plaint, et qui se pâme... et qui, avec des grâces impertinentes, remercie les duchesses des trois mille bouteilles d’excellent vin qu’elles lui ont envoyées pour hâter sa guérison... Le lendemain, autre chose... le surlendemain, autre chose encore... Combien de formes a-t-il pris, avant de se fourrer Scène dans ton paletot, combien de noms a-t-il portés ?... Tout y a passé !... hier, le singe de Nicolet s’appelait... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="75">Comment s’appelait-il ?... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, s’arrêtant net.</speaker>
+          <l n="76">Mais qu’importe le nom que le singe avait hier ?... Aujourd’hui, il s’appelle Martineau... Saute donc, Martineau ! Fais les grimaces et tes gambades ! Paris est à toi... demande lui tout ce qu’il peut donner... Devant toi, la gravité des hommes sérieux s’inclinera ; les femmes garderont pour toi leurs sourires les plus significatifs. Ouvre ta porte, Martineau ; aujourd’hui, c’est toi que Paris adore... et son choix est au moins justifié en un certain sens, car tu as... – ton tour de force vient de le prouver, tu as, toi, au moins la moitié de ce qu’il faut pour faire un homme célèbre : tu es un saltimbanque assez distingué... </l>
+          <l n="77">Il va se rasseoir au bureau. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, abruti.</speaker>
+          <l n="78">Moi, un homme célèbre ! </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, à Boisgarnier.</speaker>
+          <l n="79">Si j’avais un conseil à donner à monsieur, ce serait de faire un article avec ce qu’il vient de dire ; c’était bien tapé ! </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, se préparant à écrire.</speaker>
+          <l n="80">Sois tranquille, ça ne sera pas perdu... c’est de la copie... Cent lignes avec cette tirade... </l>
+          <l n="81">À Martineau.</l>
+          <l n="82">Cent autres lignes avec l’histoire de la vie... que tu vas me raconter... </l>
+          <l n="83">Casimir passe à gauche. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="84">Mon histoire... mais je n’ai pas d’histoire. Jusque-là, je n’avais rien fait d’extraordinaire... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="85">Des détails, vite, des détails ! </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="86">Racontez, monsieur, racontez ; parlez de mon dévouement, de ma probité. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="87">Mais je n’ai rien à dire... rien à dire... Après être sorti du collège, j’ai passé un examen pour entrer dans un chemin de fer... On m’a interrogé sur l’algèbre, et j’ai été reçu parce que j’avais une jolie écriture... Une fois dans les bureaux, j’ai tracé mon sillon... surnuméraire d’abord... ensuite commis à douze cents francs... puis à quatorze, à dix-huit, à deux mille et trois mille... et enfin, commis principal à trois mille six... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, écrivant.</speaker>
+          <l n="88">« Parti d’en bas, il préluda, par des progrès successifs, à une élévation définitive et suprême... » </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="89">Une élévation ?... Ah ! si tu parles de mon élévation avec le ballon, bien... mais dans mon bureau, je ne me suis pas élevé du tout... On m’a laissé commis principal... </l>
+          <l n="90">Amèrement. </l>
+          <l n="91">C’est parce qu’on sait que j’ai une petite fortune, sans doute, alors on ne juge pas nécessaire... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="92">Bien... bien... mais autre chose maintenant... je parlerai de toi dans deux, dans trois, dans quatre journaux... Je suis bien obligé de varier un peu... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="93">Je ne sais pas alors... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="94">Monsieur est sur le point de se marier... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="95">Il va se marier ! Parlait ! parfait ! Le nom de la jeune personne ? </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="96">C’est l’adorable Louise... la nièce de madame Delaunay. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="97">Madame Delaunay, la veuve d’un banquier, n’est-ce pas ? qui a fait fortune en Amérique ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="98">Justement ! </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, écrivant très vite.</speaker>
+          <l n="99">Une jeune femme un peu coquelle... Trente lignes avec ça... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="100">Tu parles de madame Delaunay ? </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, écrivant toujours.</speaker>
+          <l n="101">Certainement... J’ai besoin de trente lignes... </l>
+          <l n="102">On sonne. </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="103">Ne vous dérangez pas, monsieur... je vais voir. </l>
+          <l n="104">Il sort par le fond.</l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, se levant.</speaker>
+          <l n="105">Là !... Maintenant, j’ai un service à te demander. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, un peu inquiet.</speaker>
+          <l n="106">Quel service ? </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="107">Sois tranquille... ce n’est pas de l’argent... On donne ce soir au théâtre de... </l>
+          <l n="108">Lui donnant un papier. </l>
+          <l n="109">voilà le billet... un petit acte assez inepte... il est de moi... </l>
+          <l n="110">Modestement.</l>
+          <l n="111">et de quatre autres... J’annonce dans mes journaux que tu iras ce soir... Tout le monde voudra te voir... la salle sera comble, ça fera une recette !... </l>
+          <l n="112">Rentre Casimir par le fond.</l>
+          <l n="113">Eh bien ! Casimir ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, à Martineau.</speaker>
+          <l n="114">C’est une personne qui désire parler à monsieur. </l>
+          <l n="115">Il donne une carte. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, lisant la carte.</speaker>
+          <l n="116">Monsieur Turquet ! </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="117">Un de nos photographes les plus achalandés !... Il vient chez toi ?... Qu’est-ce que je te disais ? </l>
+          <l n="118">À Casimir. </l>
+          <l n="119">Faites entrer M. Turquet... </l>
+          <l n="120">Turquet entre par le fond. </l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#turquet">
+          <speaker>TURQUET, à Martineau.</speaker>
+          <l n="121">Monsieur, je suis bien votre serviteur... </l>
+          <l n="122">Amicalement.</l>
+          <l n="123">Bonjour, monsieur Boisgarnier. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="124">Bonjour, monsieur Turquet. </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET, allant au fond.</speaker>
+          <l n="125">Entrez, Ferdinand, et préparez tout ce qu’il faut... </l>
+          <l n="126">Entre le préparateur. Il dépose l’appareil avec Casimir à droite près de la cheminée. </l>
+          <l n="127">Mon habitude n’est pas d’opérer moi-même... </l>
+          <l n="128">Saluant Martineau. </l>
+          <l n="129">à moins qu’il ne s’agisse, comme aujourd’hui, d’une personne... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="130">Monsieur... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, bas à Martineau.</speaker>
+          <l n="131">Tu entends ?... </l>
+          <l n="132">Allant à Turquet.</l>
+          <l n="133">Je me doutais bien, monsieur Turquet, que l’on ne tarderait pas à vous voir ici, vous et votre appareil... </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="134">Je n’ai pas été surpris de vous y rencontrer... nous marchons rarement l’un sans l’autre, et il se fabrique bien peu d’hommes célèbres dont la célébrité n’ait d’abord passé par nos mains... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="135">Monsieur Turquet a raison... Un article dans le nouveau journal, une photographie exposée dans les principaux débits de tabac... voilà la gloire à présent... Le temps est bien loin où Apelles était le seul à qui il fût permis de faire le portrait d’Alexandre !... Apelles, aujourd’hui, s’appelle Turquet... je te laisse dans ses mains et je vais porter mon article à l’imprimerie. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="136">Air : Vive la lithographie. </l>
+          <l n="137">Vive la photographie,</l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="138">Vive aussi l’imprimerie !</l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, à Martineau.</speaker>
+          <l n="139">Cher ami, tu vas voir comme</l>
+        </sp>
+        <sp who="#reprise-ensemble">
+          <speaker>Reprise ENSEMBLE.</speaker>
+          <l n="140">Vive la photographie... etc.</l>
+          <l n="141">Boisgarnier sort par le fond.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="142">Est-ce prêt, Ferdinand ? </l>
+        </sp>
+        <sp who="#ferdinand">
+          <speaker>FERDINAND.</speaker>
+          <l n="143">Oui, monsieur. </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET, offrant une corde à Martineau.</speaker>
+          <l n="144">Monsieur... ayez la bonté de prendre ceci... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, prenant la corde.</speaker>
+          <l n="145">Cette corde ? </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="146">Oui, ayez la bonté de passer votre pied dans ce nœud. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="147">Vous voulez ?... </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="148">Tendez la corde maintenant... comme cela. Très bien ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="149">Vous allez me photographier avec cette corde ?... Est-ce que vous ne craignez pas... Un employé... je suis employé... </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="150">Je ne connais pas l’employé, je ne veux pas le connaître... s’il s’agissait de l’employé, je ne serais pas ici... Ferdinand suffirait... Je m’occupe de l’homme célèbre, moi, et tout naturellement, je le représente avec les instruments de sa célébrité. </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, à Turquet.</speaker>
+          <l n="151">Monsieur, si vous vouliez me photographier avec mon plumeau ? </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="152">Pour vous, Ferdinand suffira.</l>
+          <l n="153">À Martineau. </l>
+          <l n="154">Tâchez, autant que possible, de vous souvenir de la pose que vous aviez là haut. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="155">Là-haut ?... Ah ! je ne sais pas si je me rappellerai... </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="156">Autant que possible. Ah ! et le vent dans vos cheveux... ne vous dérangez pas, je vous prie... </l>
+          <l n="157">À Casimir. </l>
+          <l n="158">Mon ami, faites le vent dans les cheveux de monsieur. </l>
+          <l n="159">Casimir passe à gauche, derrière son maître, dont il dérange un peu les cheveux, puis va se placer au fond.</l>
+          <l n="160">Y êtes-vous, monsieur ? Souriez, je vous prie, souriez. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="161">C’est que là-haut je ne souriais pas. Enfin... </l>
+          <l n="162">Il sourit. </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET, tout en se préparant.</speaker>
+          <l n="163">Très bien ! M. Boisgarnier est un homme que j’aime beaucoup... sa tête vient très bien... mais il se trompe lourdement en mettant sur la même ligne, comme influence, sa prose et ma photographie !... Je rends illustres en quinze jours des gens que, lui, ne ferait pas connaitre en six mois... Ainsi, il ya une jeune comédienne qui demeure justement en face de vous... </l>
+          <l n="164">Martineau se trouble.</l>
+          <l n="165">Saviez-vous, monsieur ? </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, se troublant de plus en plus, et s’embarrassant le pied dans la corde il manque de tomber.</speaker>
+          <l n="166">Hein... si ça m’était arrivé là haut ?... </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="167">Gardez la pose, je vous prie. M. Boisgarnier a écrit, en l’honneur de cette demoiselle, je ne sais combien d’articles... ça a été de l’encre perdue... Alors elle m’est venue trouver, j’ai inondé Paris de ses portraits... vous avez dû les voir ; la pose était hardie, et... </l>
+          <l n="168">Il se courbe sur son appareil, puis se relevant. </l>
+          <l n="169">le succès a dépassé toutes ses espérances !... Reprenez la pose... Vous faut-il un autre exemple ?... Je vous citerai, parmi les gens en place, un de nos plus éminents... Ne bougeons plus, monsieur... </l>
+          <l n="170">Entrent par le fond madame Delaunay et Louise.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, CASIMIR, TURQUET, FERDINAND, MADAME DELAUNAY, LOUISE</speaker>
+          <l n="171">Scène muette. </l>
+          <l n="172">Casimir reçoit madame Delaunay et Louise. Martineau exprime par ses regards qu’il ne peut pas bouger ; madame Delaunay et Louise l’engagent tendrement à se tenir tranquille. </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET.</speaker>
+          <l n="173">Là... voilà qui est fait !... Ferdinand, enlevez tout cela. </l>
+          <l n="174">Ferdinand, aidé de Casimir, emporte l’appareil. Ils sortent par le fond.</l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, à Martineau.</speaker>
+          <l n="175">Ah ! que je suis heureuse de vous revoir ! </l>
+        </sp>
+        <sp who="#turquet">
+          <speaker>TURQUET, à Martineau.</speaker>
+          <l n="176">Je vais en faire coller trois mille pour commencer... </l>
+          <l n="177">Remontant et saluant les dames. </l>
+          <l n="178">Mesdames, je suis votre serviteur. Monsieur Martineau, je ne tarderai pas à vous envoyer des épreuves. </l>
+          <l n="179">Il sort par le fond.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, avec effusion.</speaker>
+          <l n="180">La première sera pour moi, n’est-ce pas ?... J’ai un album, </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="181">Certainement, madame... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="182">Mon ami... mon neveu... Laissez-moi vous appeler mon neveu ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="183">Croyez, madame, que de mon côté, je suis... </l>
+          <l n="184">À Louise.</l>
+          <l n="185">Et vous, mademoiselle, est-ce que ça ne vous fait pas un peu de plaisir ?... </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE, baissant les yeux.</speaker>
+          <l n="186">Ah ! monsieur... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="187">Ne la tourmentez pas ; pour être contenus, ses sentiments n’en sont pas moins d’une violence !... Vous le saurez un jour... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="188">Il me semblait que dans une pareille circonstance, mademoiselle pouvait... </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="189">N’accusez pas mon cœur. Ma maîtresse de pension, ma demoiselle Caroline, m’a appris qu’il ne fallait jamais rien dire quand il y avait du monde. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="190">C’est très bien, sans doute... mais permettez-moi de vous faire observer que si tout le monde était élevé de cette façon-là, ça rendrait la conversation fort difficile. </l>
+          <l n="191">Il rit ainsi que Louise. </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, comprimant d’un regard le rire de Louise.</speaker>
+          <l n="192">Vous êtes un folâtre. Nous sommes venues vous voir, parce que nous avions une bonne nouvelle à vous annoncer... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="193">Une bonne nouvelle ?... </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE, avec feu.</speaker>
+          <l n="194">Oh ! oui, une bonne nouvelle... </l>
+          <l n="195">Elle s’arrête tout à coup sur un regard de sa tante.</l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="196">Vous vous rappelez la lettre que vous avez écrite à l’ancien ami de mon mari... M. Bernier... N’étant pas satisfait de la position qui vous a été faite au chemin de fer, vous lui de mandiez une place dans sa maison de banque... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="197">En effet ; il m’a répondu que, pour le moment, il lui était impossible... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="198">Il vous a fait cette réponse, à vous, il m’en a fait une autre, à moi ; il m’a déclaré tout net qu’il vous refusait cette place parce qu’à son avis vous étiez un homme d’une intelligence médiocre... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="199">Par exemple !... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, souriant.</speaker>
+          <l n="200">C’est un peu brutal... et je ne me serais certes pas permis... si je n’avais à ajouter quelque chose qui doit tout réparer... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="201">À la bonne heure ! </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="202">Il a ajouté qu’il ne comprenait même pas comment vous aviez pu arriver à être commis principal... il m’a dit encore... </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="203">Ma tante, vous pourriez peut-être arriver tout de suite à ce qui doit tout réparer... Je crois que M. Martineau aimerait mieux ça... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="204">En effet... </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE, riant.</speaker>
+          <l n="205">N’est-ce pas ?... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, lui jetant un regard.</speaker>
+          <l n="206">Je veux bien. Je viens de recevoir une lettre de M. Bernier... Dès qu’il a su que c’était vous qui aviez fait cette promenade aérienne, il a tout de suite changé d’avis sur votre compte... « Comment, a-t-il dit, c’est ce monsieur... Ça m’amusera beaucoup d’avoir un homme comme ça dans mes bureaux... Qu’il vienne me voir... je lui donnerai très volontiers la place qu’il désire... » </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="207">Est-ce possible ?... Mais je ne comprends pas bien comment cette promenade au bout d’une corde a pu... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="208">Vous allez donner votre démission, je pense ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="209">Je crois bien... J’en ai assez, de mes trois cents francs par mois... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="210">Je vais faire savoir à M. Bernier que vous acceptez... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="211">Avec reconnaissance... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="212">Viens, Louise. </l>
+          <l n="213">Elle remonte.</l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE, la suivant.</speaker>
+          <l n="214">Oui, ma tante. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="215">Pas un mot en partant, mademoiselle ? </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE, s’arrêtant.</speaker>
+          <l n="216">Oh ! monsieur... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, l’interrompant.</speaker>
+          <l n="217">Assez, chère enfant, assez ! </l>
+          <l n="218">À Martineau.</l>
+          <l n="219">Un jour, il lui sera permis de parler, et alors... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="220">Je l’espère... et je le mérite ; je l’aime bien, madame, et je n’aime qu’elle... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="221">Je le sais, mon ami... Je vous ai fait surveiller... à votre insu. C’était mon droit et mon devoir... J’ai appris tout ce que je voulais apprendre. </l>
+          <l n="222">Avec bonheur. </l>
+          <l n="223">Je n’ai rien appris du tout !... À bientôt... dépêchez-vous d’envoyer votre démission ! </l>
+          <l n="224">Ensemble. </l>
+          <l n="225">Air : Du serment (Auber). </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="226">Mon sous-chef, je te brave !</l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="227">Ô ma tante, est-il brave !</l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="228">Mon enfant, il est brave !</l>
+          <l n="229">Sortent par le fond Louise et madame Delaunay.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, seul, s’asseyant à son bureau</speaker>
+          <l n="230">Écrivons-la tout suite, cette bienheureuse démission... et de ma plus belle écriture... afin de leur montrer ce qu’ils perdent... </l>
+          <l n="231">Tout en écrivant. </l>
+          <l n="232">Ma chère belle-tante qui me faisait surveiller... C’est un peu vif... heureusement on n’a rien à me reprocher... </l>
+          <l n="233">En riant. </l>
+          <l n="234">Il faut bien avouer que ce n’est pas précisément de ma faute s’il n’y avait rien... Cette petite actrice... Le photographe qui me demande si je sais qu’elle demeure en face de moi... Je crois bien que je le sais !... J’ai essayé plusieurs fois d’établir une correspondance... télégraphique par la croisée... je n’ai pas été agréé... </l>
+          <l n="235">En disant ces mots, il a terminé sa lettre et la mise sous enveloppe. </l>
+          <l n="236">Là !... </l>
+          <l n="237">Écrivant l’adresse. </l>
+          <l n="238">« À monsieur... monsieur le directeur du personnel... » Il n’y a plus qu’à envoyer... </l>
+          <l n="239">Il se lève et va à la fenêtre.</l>
+          <l n="240">Tiens !... elle est chez elle, la petite actrice... elle soulève le rideau de sa fenêtre. Ah çà, mais... on dirait qu’elle me fait des signes... qu’elle me sourit... Ce que Boisgarnier me disait tout à l’heure... les femmes garderont pour toi leurs sourires... les plus significatifs... Voyons... voyons... avant tout... est-ce bien à moi qu’elle s’adresse ?... Il faut prendre garde. Je me rappelle, au théâtre, avoir une fois répondu, pendant trois quarts d’heure, à des agaceries qu’elle envoyait à une personne placée derrière moi... C’est que ça arrive très souvent, ces choses-là ! </l>
+          <l n="241">Regardant de nouveau. </l>
+          <l n="242">Non... cette fois, je ne me trompe pas... il n’y a que moi... c’est bien à moi !... Elle m’appelle... ma parole d’honneur, je crois qu’elle m’appelle... </l>
+          <l n="243">Il répond par gestes. Entre Casimir par le fond.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#casimir">
+          <speaker>CASIMIR, tirant Martineau par son habit.</speaker>
+          <l n="244">Monsieur ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, quittant vivement la fenêtre.</speaker>
+          <l n="245">Qu’est-ce qu’il y a, Casimir ?... </l>
+          <l n="246">À part. </l>
+          <l n="247">Est-ce qu’il m’a vu ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, lui donnant une lettre.</speaker>
+          <l n="248">C’est une lettre, monsieur... </l>
+          <l n="249">Il ferme la fenêtre et repasse à droite.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="250">Une lettre... </l>
+          <l n="251">En l’examinant.</l>
+          <l n="252">Une lettre de femme. Boisgarnier avait raison, c’est une lettre de femme. Voilà que ça commence. </l>
+          <l n="253">Après avoir décacheté. </l>
+          <l n="254">C’est d’elle... </l>
+          <l n="255">Lisant.</l>
+          <l n="256">« Venez, je vous attends toute cuite. » La malheureuse ! Il ne peut pas y avoir ça... C’est écrit pourtant... Casimir ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, s’approchant.</speaker>
+          <l n="257">Monsieur ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, lui montrant la lettre.</speaker>
+          <l n="258">Dites-moi... </l>
+          <l n="259">À part. </l>
+          <l n="260">Cachons le nom. </l>
+          <l n="261">Haut.</l>
+          <l n="262">Dites-moi ce qu’il y a d’écrit là ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, lisant.</speaker>
+          <l n="263">« Venez, je vous attends tout de suite. » </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="264">Tout de suite... c’est juste. Je n’y avais pas pensé... ce que c’est que l’éducation. Je vous attends toute cuite... tout de suite, veux-je dire... Je cours... je vole... </l>
+          <l n="265">À lui-même. </l>
+          <l n="266">Elle a eu un sourire !... et je suis bien sûr que cette fois... Si ma belle-tante savait ça !... Ah ! bah !... elle ne le saura pas ! </l>
+          <l n="267">Il prend son chapeau que lui tend Casimir et sort par le fond.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#casimir">
+          <speaker>CASIMIR, seul, s’asseyant à droite</speaker>
+          <l n="268">Mettons au courant mes comptes personnels... Acheté six mètres de corde à cinquante centimes le mètre... – ci, trois francs. – Revendu au détail à diverses personnes, par morceaux de deux ou trois pouces, ladite corde, comme étant celle à laquelle monsieur était accroché pendant son voyage : ci... cent vingt-neuf francs. Qui de cent vingt-neuf paye trois francs, reste cent trente-quatre... </l>
+          <l n="269">Se levant.</l>
+          <l n="270">bénéfice net : cent trente-quatre francs. – Acheté de nouveau, pour continuer la même opération, plus en grand, douze mètres... </l>
+          <l n="271">Entre Sainte-Amaranthe par le fond.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="272">Monsieur Martineau, je vous prie ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="273">Il n’est pas ici... monsieur... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="274">J’arrive trop tard... où pourrai-je le trouver ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="275">Il rentrera tout à l’heure... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="276">Ah ! je l’attendrai alors... permettez que je l’attende... </l>
+          <l n="277">Il s’assied à droite et respire à plusieurs reprises, comme un homme essoufflé. </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, à part.</speaker>
+          <l n="278">C’est une machine à vapeur ! </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="279">Mais, en attendant, êtes-vous marié ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, étonné.</speaker>
+          <l n="280">Monsieur me demande ?... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="281">Si vous êtes marié ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="282">Non, monsieur... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="283">Pas marié ? </l>
+          <l n="284">Tirant un carnet de sa poche. </l>
+          <l n="285">Comment vous appelle-t-on ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="286">Casimir.</l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="287">Votre âge ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="288">Vingt-trois ans... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, écrivant.</speaker>
+          <l n="289">Joli garçon... agréablement tourné... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, flatté.</speaker>
+          <l n="290">Monsieur... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="291">Oh ! vous savez... c’est une formule... J’écris ça à la suite de tous les noms... ça ne peut pas faire de mal... Vous gagnez ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="292">Mais, monsieur... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="293">Répondez vite, c’est pour votre bien... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="294">Six cents francs. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="295">Et les menus profils... l’anse du panier... ça fait bien quinze cents francs. </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="296">Oh ! monsieur ! je vous jure... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="297">Il suffit ! Je vous trouverai quelque chose... dans les mêmes prix... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="298">Vous dites ?... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, se levant.</speaker>
+          <l n="299">Soyez tranquille, avant six semaines vous serez loti... J’aurai seulement mon petit prélèvement sur la dot... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, à part.</speaker>
+          <l n="300">Qu’est-ce que c’est que cet homme-là ? </l>
+          <l n="301">Rentre par le fond Martineau. Haut.</l>
+          <l n="302">Ah ! voilà monsieur. </l>
+          <l n="303">Martineau descend la scène sans apercevoir Sainte-Amaranthe et Casimir.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à part, sur le devant de la scène, d’un air déconfit.</speaker>
+          <l n="304">Eh bien ! non !... ce n’était pas pour ce que je pensais... c’était pour me montrer à un prince russe... un homme superbe qui était là comme chez lui... Il m’a beaucoup regardé, puis il m’a dit : </l>
+          <l n="305">Accent russe. </l>
+          <l n="306">« Je vous en prie, mon cher, vous êtes donc la personne dont déjà tout Paris s’occupe absolument ? » </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, qui a examiné Martineau et à qui Casimir parle bas.</speaker>
+          <l n="307">Vous dites... commis principal... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, toujours à part.</speaker>
+          <l n="308">J’avoue que dans le premier moment, la déception... Je n’étais pas content... Et bien !... j’avais tort... car en me reconduisant elle m’a glissé à l’oreille ces trois mots : « À ce soir !... » </l>
+          <l n="309">Avec joie. </l>
+          <l n="310">C’est pour ce soir ! </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, s’approchant.</speaker>
+          <l n="311">Monsieur... il y a là une personne... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, légèrement.</speaker>
+          <l n="312">Une femme ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="313">Eh ! non, c’est... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, apercevant Sainte-Amaranthe et allant à lui.</speaker>
+          <l n="314">Ah ! pardon, monsieur... Casimir ?... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="315">Monsieur ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, montrant la lettre qui est sur le bureau.</speaker>
+          <l n="316">Vous allez porter tout de suite cette lettre... c’est ma démission... En revenant, vous achèterez tous les journaux du soir et vous me les apporterez... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, qui a pris la lettre.</speaker>
+          <l n="317">Oui, monsieur. </l>
+          <l n="318">Il sort par le fond.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à lui-même.</speaker>
+          <l n="319">On doit parler aussi de moi dans les journaux du soir. </l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="320">Vous me connaissez, monsieur ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="321">Pas que je sache, monsieur. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="322">Sainte-Amaranthe. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="323">Il me semble, en effet, avoir vu ce nom. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, très vite et du ton d’un boniment débité.</speaker>
+          <l n="324">Quoi de plus agréable pour une mère de famille que de pouvoir, par l’entremise de M. de Sainte-Amaranthe, trouver dans les vingt-quatre heures un parti pour sa fille, soit dans la plus haute noblesse, soit dans la... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="325">Ah ! j’y suis... vous êtes... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, s’inclinant.</speaker>
+          <l n="326">Oui, monsieur ; vous, vous n’êtes pas... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="327">Quoi, monsieur ? </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="328">Marié, parbleu ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="329">Non, mais je suis sur le point. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="330">Vous ne l’êtes pas, cela suffit. Un homme comme vous, marié et pas par moi... je ne me serais jamais consolé... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="331">Il faudra pourtant bien que vous vous en consoliez. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, tirant son carnet.</speaker>
+          <l n="332">J’ai apporté sur moi des échantillons choisis... inutile de dire que je ne vous parlerai que de ce que j’ai de mieux. J’ai là un assortiment complet de vertus bourgeoises... tout ce qu’il y a de plus solide comme vertus bourgeoises. Mais monsieur a le droit d’aspirer à mieux que cela, je lui pro poserai tout de suite quelque chose qui est plus à la mode... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="333">Ah ! il y a quelque chose qui est plus à la mode que les vertus bourgeoises ? </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="334">Assurément, monsieur... Mais laissons de côté la bourgeoisie... et arrivons à la plus haute noblesse. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="335">À la noblesse ? </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, tirant de sa poche un paquet de photographies.</speaker>
+          <l n="336">Non, ce n’est pas ça, la noblesse... c’est la série des veuves de province... de cinquante à soixante ans... Tenez, j’ai là sur moi une comtesse moldave... Elle m’a parlé de vous. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, flatté.</speaker>
+          <l n="337">Une comtesse !... une comtesse !... C’est beaucoup. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="338">Nullement. Un homme comme vous a le droit de prendre les choses d’un peu haut. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="339">D’un peu haut ?... C’est une plaisanterie, cela... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, se fouillant.</speaker>
+          <l n="340">Où diable ai-je fourré ma comtesse ?... </l>
+          <l n="341">Trouvant la carte.</l>
+          <l n="342">Ah ! la voici !...</l>
+          <l n="343">La lui présentant.</l>
+          <l n="344">La comtesse monte à cheval comme un ange... et elle joue la comédie... comme la première figurante venue... Voici la carte. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, la prenant.</speaker>
+          <l n="345">Son adresse ? </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="346">Non pas... sa photographie. « Turquet operavit !... » </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="347">Turquet... Je connais... C’est mon photographe !... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="348">Regardez ! regardez ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, regardant la carte avec admiration.</speaker>
+          <l n="349">Oh ! oh ! </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="350">Elle s’est fait représenter en pêcheur napolitain... comme vous voyez. C’est ingénieux, parce que, de cette façon-là, on est tout de suite fixé sur certains détails... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, en extase devant le portrait.</speaker>
+          <l n="351">Oh ! oh ! oh ! </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="352">Charmante, n’est-ce pas, charmante !... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="353">Il est incontestable que si tous les pêcheurs à la ligne ressemblaient à celui-ci, il y aurait du monde sur les ponts... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="354">N’est-ce pas ?... Il n’y a plus qu’à fixer un rendez-vous... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, rendant la carte.</speaker>
+          <l n="355">Pas du tout pas du tout ! Je regrette de ne pas pouvoir donner suite... Je vais me marier avec mademoiselle Louise Delaunay... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="356">Louise Delaunay... Ce nom-là n’est pas sur mes registres... </l>
+          <l n="357">Prenant son carnet. </l>
+          <l n="358">Je l’inscris sur mon carnet... Vous dites : Louise Delaunay... </l>
+          <l n="359">Il écrit.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="360">Mais c’est inutile, puisque je vous dis que je vais... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="361">Une petite bourgeoise... j’en suis sûr... Allons donc !... vous ne pouvez pas l’épouser... ce serait une mésalliance. Je trouverai un autre mari pour cette demoiselle.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="362">Comment ? </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="363">Il faut rompre... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="364">Je ne veux pas. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="365">Il le faut... </l>
+          <l n="366">En allant à lui il le prend presque au collet. Entre Casimir par le fond.</l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="367">Monsieur, monsieur ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="368">Qu’est-ce que c’est ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="369">Je vas vous dire, monsieur, mais d’abord... </l>
+          <l n="370">Il va à Sainte-Amaranthe.</l>
+          <l n="371">J’ai pensé à ce que vous m’avez proposé... un mariage... ça me va... seulement, je voudrais une Flamande. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="372">J’en ai trois disponibles... vous choisirez... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à Casimir.</speaker>
+          <l n="373">Qu’est-ce que tu avais à m’annoncer ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="374">Ah ! oui, au fait... C’est madame Delaunay, monsieur, elle est furieuse. </l>
+          <l n="375">Entre madame Delaunay par le fond. Casimir sort après son entrée.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, à Martineau.</speaker>
+          <l n="376">Qu’est-ce que cela veut dire, monsieur ? </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="377">Quoi donc... madame ? </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="378">Un article dans lequel on parle de moi ! </l>
+          <l n="379">Sainte-Amaranthe passe à gauche, en examinant madame Delaunay. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="380">C’est Boisgarnier... je sais... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="381">Vous savez !... et savez-vous ce qu’on dit dans cet article ? On dit que mon mari a fait sa fortune en tenant une maison de jeu à San-Francisco. </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, à part.</speaker>
+          <l n="382">Un mari !... rien à faire ! </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="383">On raconte que j’ai été enlevée plusieurs fois ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="384">Mon Dieu, madame... c’est Boisgarnier... il lui manquait trente lignes. J’avoue que ce n’est pas une raison... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, à Martineau.</speaker>
+          <l n="385">Voilà votre prétexte ! Rompez ! </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="386">On ajoute que depuis mon veuvage... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, allant à madame Delaunay, et bousculant Martineau.</speaker>
+          <l n="387">Vous êtes veuve, madame, parfait !... Je me charge de vous... Madame Delaunay, n’est-ce pas ? </l>
+          <l n="388">Il prend son carnet et écrit. </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, surprise.</speaker>
+          <l n="389">Qu’est-ce que cet homme-là ? </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="390">Est-ce que je sais ?... Il s’est installé ici... et il prend des notes... et il me maltraite !... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="391">Peu importe, d’ailleurs !... Je n’avais qu’une chose à vous dire et je vous la dis... tout projet de mariage est brisé. Vous ne reverrez plus ni ma nièce ni moi... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="392">Mais laissez-moi répondre.</l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, l’arrêtant.</speaker>
+          <l n="393">Mais non, ne répondez pas ! </l>
+          <l n="394">À madame Delaunay. </l>
+          <l n="395">Madame, je trouverai, dans les vingt-quatre heures, pour vous et pour votre nièce, des partis, soit dans la plus haute noblesse... soit dans la finance... soit dans la... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="396">Laissez-moi donc parler ! </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="397">Rompez, monsieur, vous épouserez la comtesse !... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, à Martineau.</speaker>
+          <l n="398">La comtesse !... vous devez épouser une comtesse ? </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="399">Certainement... Rompez, madame, rompez ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="400">Madame... je vous en prie... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="401">Ah ! vous devez épouser une comtesse !... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="402">Non, madame, non... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="403">Si fait ! si fait ! Rompez, monsieur, rompez ! </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="404">Cela se trouve à merveille... adieu, monsieur, Adieu ! </l>
+          <l n="405">Elle remonte. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, courant à elle.</speaker>
+          <l n="406">Madame, je vous en prie, madame... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, courant de l’autre côté.</speaker>
+          <l n="407">Sainte-Amaranthe, madame... Sainte-Amaranthe... prenez des prospectus. </l>
+          <l n="408">Il lui en remplit les mains et en donne aussi à Martineau qui les jette. </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, impatientée.</speaker>
+          <l n="409">Eh ! laissez-moi ! </l>
+          <l n="410">Elle sort par le fond.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE, prenant Martineau sous le bras.</speaker>
+          <l n="411">Parfait ! Trois mariages à faire avec les morceaux de votre mariage cassé ! Je n’ai pas perdu mon temps ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, ahuri et se dégageant.</speaker>
+          <l n="412">Qu’est-ce que vous avez fait ? </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="413">Je vous ai sauvé !... Je cours chez la comtesse, lui faire savoir que tout est arrangé. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="414">Mais c’est que... l’adorable Louise... je l’aimais !... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="415">Qu’est-ce que ça fait ? Louis XIV aimait mademoiselle de Mancini. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="416">Louis XIV ?... </l>
+        </sp>
+        <sp who="#sainte-amaranthe">
+          <speaker>SAINTE-AMARANTHE.</speaker>
+          <l n="417">Il ne l’a pas épousée, cependant... D’ailleurs, ne soyez pas inquiet... je vous marierai... je marier ai l’adorable Louise, je marierai la petite veuve, je marierai votre domestique, je marierai tout le monde ! Tel que vous me voyez, je descends en droite ligne de cette Frosine qui aurait marié le Grand Turc avec la république de Venise !... Au revoir !... Je cours chez la comtesse !... </l>
+          <l n="418">Il sort par le fond, puis rentre.</l>
+          <l n="419">Ah ! pardon... je ne vous ai pas donné de prospectus, je crois... quel oubli !... Prenez... </l>
+          <l n="420">Il lui en donne une liasse et sort vivement par le fond, en débitant son boniment. </l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, seul, tout étourdi.</speaker>
+          <l n="421">Des prospectus, des prospectus... Si, il m’en avait donné !... </l>
+          <l n="422">Il les jette avec colère, puis réfléchissant.</l>
+          <l n="423">Une comtesse !... une comtesse !... Je sais bien qu’épouser une comtesse moldave... c’est flatteur, mais ça ne fait rien... Louise... ma pauvre Louise !... </l>
+          <l n="424">Se frappant le cœur. </l>
+          <l n="425">J’ai là quelque chose qui me... </l>
+          <l n="426">Casimir entre par le fond, tenant des journaux. </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="427">Monsieur, voici les journaux que vous m’avez demandés... </l>
+          <l n="428">Il lui donne les journaux et sort par le fond.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, seul.</speaker>
+          <l n="429">Les journaux !... Allons, la célébrité me consolera !... </l>
+          <l n="430">Il regarde les journaux pendant un moment. </l>
+          <l n="431">Tout cela parle de moi... tout cela est rempli de mon nom ! Ah ! ça fait plaisir tout de même ! Voyons ! </l>
+          <l n="432">Il ouvre un journal.</l>
+          <l n="433">« Chronique du jour... Il n’est bruit que de l’arrivée à Paris d’un danseur à une jambe nommé... » Qu’est-ce que ça me fait ça ?... Voilà un journal bête ! </l>
+          <l n="434">Il le jette et en prend un autre.</l>
+          <l n="435">« Le danseur à une jambe a été vu aujourd’hui sur le boulevard. On admirait l’élégance de sa démarche... » Mais qu’est-ce que cet homme-là ? </l>
+          <l n="436">Autre journal.</l>
+          <l n="437">« On annonce l’engagement du danseur à une jambe à un des quatorze théâtres de la compagnie générale... » Encore ! </l>
+          <l n="438">Autre journal.</l>
+          <l n="439">« Nous publierons dimanche le portrait du danseur à une jambe... » Eh bien ! et moi ? et moi ? Pas un mot sur moi ! </l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="440">Ah ! le voilà... toi ! </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="441">Vite, mon ami... je viens ici n’ayant pas même le temps d’aller chez moi... </l>
+          <l n="442">Allant s’asseoir au bureau. </l>
+          <l n="443">Des plumes, de l’encre... vite ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="444">Tu vas me dire... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER. </speaker>
+          <l n="445">Tout ce que tu voudras... mais plus tard... Cent lignes avant tout... cent lignes sur ton successeur.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="446">Mon successeur ? </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="447">Eh oui, le danseur à une jambe... Est-ce que tu n’en as pas entendu parler ?... Tout le monde en parle cependant. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="448">Comment ! j’ai déjà un successeur, et ce successeur, c’est... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, se levant.</speaker>
+          <l n="449">Certainement... Ne t’ai-je pas dit que ce qui faisait l’éternel succès du singe de Nicolet, c’était la rapidité vertigineuse avec laquelle il changeait de forme ? </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="450">Je les ai lus, tes journaux. Personne ne parle de moi. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="451">Eh bien ? </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="452">Rien, rien ! Pas une ligne sur moi, pas un mot ! </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="453">Et pourquoi, diable, veux-tu qu’on parle de toi ce soir ?... On en a parlé ce matin. Paris n’aime pas toujours parler de la même chose. Tu as eu ton jour... tu as été, tu n’es plus ! Tu es fini ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="454">Et toi qui me promettais de la célébrité... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="455">Je t’en avais promis... tu en as eu... je l’en ai donné pour un sou... Je ne pouvais pas t’en donner pour un million ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="456">Et je le dis, moi !... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="457">Tu me dis ? </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="458">Je le dis que je ne suis pas fini... je te dis que je suis toujours le singe... </l>
+          <l n="459">Se reprenant.</l>
+          <l n="460">l’homme à la mode. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="461">Je ne crois pas, mon ami. </l>
+          <l n="462">Entre Casimir par le fond.</l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="463">Des lettres pour monsieur. </l>
+          <l n="464">Il lui donne deux lettres et sort. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à Boisgarnier.</speaker>
+          <l n="465">Ah ! tu vas voir ! </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="466">Nous allons voir ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, lisant la première lettre.</speaker>
+          <l n="467">« Monsieur, je vous annonce que la comtesse... » </l>
+          <l n="468">S’interrompant, à Boisgarnier.</l>
+          <l n="469">Hein !... une comtesse !... </l>
+          <l n="470">Continuant de lire.</l>
+          <l n="471">« Que la comtesse refuse énergiquement de devenir votre femme. » </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="472">La comtesse ?... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="473">Une comtesse moldave qui voulait m’épouser. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="474">Maintenant elle ne veut plus... Je te disais bien... fini ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, regardant l’autre lettre.</speaker>
+          <l n="475">Ah ! je reconnais le cachet... c’est de la petite actrice... celle qui m’a dit : À ce soir... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="476">Ah ! il y a une petite actrice qui l’a dit... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="477">Oui. </l>
+          <l n="478">Lisant. </l>
+          <l n="479">« Mossieu, ne venez pas ce soir, je vais voir le danseur à une jambe, et puis, quand vous me rencontrerez, ne m’ôtez pas votre chapeau, je ne vous le rendrais pas... » </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, riant.</speaker>
+          <l n="480">Eh bien ! te voilà brouillé avec l’actrice !... Il fallait profiter de ton heure. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, désespéré.</speaker>
+          <l n="481">Je ne pouvais pas... il y avait là... un prince russe... un homme superbe... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, accent russe.</speaker>
+          <l n="482">Oh ! alors, donc... s’il y avait déjà un Russe, mon cher... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, jetant la lettre.</speaker>
+          <l n="483">Voilà donc ce que Paris fait de ses grands hommes !... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, rentrant par le fond.</speaker>
+          <l n="484">Monsieur... une jeune personne qui désire vous parler... tout de suite. </l>
+          <l n="485">Il remonte à gauche.</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à Boisgarnier.</speaker>
+          <l n="486">Une jeune personne... tu entends... il y a encore des cours fidèles... Il y en a un au moins... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, même accent russe.</speaker>
+          <l n="487">Eh bien ! puisqu’il n’y a pas de prince russe ici... profite de ton heure, mon ami... dépêche-toi donc de profiter... </l>
+          <l n="488">Reprenant sa voix ordinaire. </l>
+          <l n="489">Je vais écrire mon article dans la chambre. </l>
+          <l n="490">Il entre à droite</l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, à Casimir.</speaker>
+          <l n="491">Maintenant, faites entrer. </l>
+          <l n="492">Casimir fait entrer Louise et Annette par le fond, puis il sort. Louise, en entrant, donne sa voilette à Annette, qui suit Casimir. </l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, allant à Louise.</speaker>
+          <l n="493">Louise ! </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="494">J’ai été fort étonnée, quand le bruit a couru que vous étiez devenu un grand homme ; j’ai été encore plus étonnée lorsque ma tante m’a fait entendre que vous ne m’aimiez plus, et que ce mariage annoncé à nos parents, à nos amis, ne se ferait pas. J’ai profité d’un moment où ma tante était sortie, et je suis venue avec Annette vous demander si tout cela était vrai. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, ému.</speaker>
+          <l n="495">Mademoiselle... </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE, tranquillement.</speaker>
+          <l n="496">Attendez... je n’ai pas fini... Ma tante a eu bien raison de vous dire que, pour être contenus, mes sentiments n’en étaient pas moins d’une violence... Ils éclatent aujourd’hui, mes sentiments... Je vous aime, monsieur, oui, je vous aime ! </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="497">Ma chère Louise ! </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="498">Attendez, je n’ai pas fini... Si vous saviez mes rêves, mes espérances... Notre bonheur, je ne pensais qu’à cela... De puis trois mois je travaille à de grandes tapisseries pour notre chambre... J’ai déjà fait les deux fenêtres avec des lambrequins et un baldaquin pour le lit... je n’ai plus à faire que deux fauteuils... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, avec amour.</speaker>
+          <l n="499">Oh ! un seul suffira. </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="500">Je me disais : Nous appellerons nos deux premiers petits garçons Marcel et Fernand, et nos deux premières petites filles Louise et Gabrielle... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="501">Nos deux premiers petits garçons ! Nos deux premières petites filles !... </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="502">Attendez... je n’ai pas fini... Ma perruche... vous savez, ma petite perruche verte... eh bien, en secret, je lui ai appris votre nom... elle le dit très bien... </l>
+          <l n="503">Imitant la perruche.</l>
+          <l n="504">Bonjour, Alfred... Alfred, mon ami... Vous voyez bien qu’il faut que nous nous mariions... ou je suis condamnée à rester fille... </l>
+          <l n="505">Souriant.</l>
+          <l n="506">à moins que je ne trouve un autre Alfred. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="507">Oh ! non, Louise, ma chère Louise !... Ne cherchez pas d’autre Alfred, je vous aime toujours, et ce mariage se fera... </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, entrant par le fond.</speaker>
+          <l n="508">Mademoiselle, voici madame Delaunay. </l>
+          <l n="509">Il sort par la droite, madame Delaunay entre par le fond. </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE, allant à sa tante.</speaker>
+          <l n="510">Oh ! ma tante ! </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, à Louise.</speaker>
+          <l n="511">Quant à toi, Louise, je te pardonne... Depuis longtemps je connaissais la violence des sentiments que tu l’efforçais de contenir... Cependant ce mariage ne se fera pas. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="512">Oh ! madame... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY, à Martineau.</speaker>
+          <l n="513">Le refus ne viendra pas de moi... il viendra de vous... Vous n’êtes pas dans une position de fortune qui vous permette de vous marier. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="514">Qu’est-ce que vous dites donc, madame ?... Au moment où j’obtiens cette place dans la maison de banque de M. Bernier !... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="515">Cette place ?... M. Bernier vous l’accordait, il y a deux heures, maintenant il vous la refuse. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="516">Que m’importe ! il me reste mes appointements de commis principal... </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="517">Non pas, vous avez donné votre démission. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, sortant de la chambre à droite avec Casimir et lui donnant des papiers.</speaker>
+          <l n="518">À l’imprimerie, Casimir !... à l’imprimerie tout de suite... </l>
+          <l n="519">Il descend en scène. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, abattu.</speaker>
+          <l n="520">C’est vrai, Casimir l’a portée, cette malheureuse démission ! </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, descendant à gauche.</speaker>
+          <l n="521">Votre démission, monsieur ?... Ah ! il faudra que monsieur ait la complaisance d’en écrire une nouvelle. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="522">Comment cela ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR.</speaker>
+          <l n="523">Pardonnez-moi, mais au moment où j’allais la porter, j’ai été accosté par un riche Anglais qui n’a proposé de me payer très cher quelques lignes écrites par vous... je n’avais que cette grande lettre... et ma foi... </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="524">Vous la lui avez donnée ? </l>
+        </sp>
+        <sp who="#casimir">
+          <speaker>CASIMIR, tombant à genoux.</speaker>
+          <l n="525">Je la lui ai vendue. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU, le relevant.</speaker>
+          <l n="526">Ah !... dans mes bras... </l>
+          <l n="527">Il l’embrasse. </l>
+          <l n="528">Que vous avez bien fait ! </l>
+        </sp>
+        <sp who="#louise">
+          <speaker>LOUISE.</speaker>
+          <l n="529">Consentez, ma tante, puisqu’il a toujours sa place, et puis, vous savez, ma perruche... </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER, à madame Delaunay.</speaker>
+          <l n="530">Il a traversé les grandeurs et il se retrouve sur ses pieds... laissez-vous fléchir, madame, à cause de la rareté du fait. </l>
+        </sp>
+        <sp who="#martineau">
+          <speaker>MARTINEAU.</speaker>
+          <l n="531">Boisgarnier a raison, madame. </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="532">Ah ! c’est monsieur Boisgarnier ? </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="533">Moi-même, madame. </l>
+        </sp>
+        <sp who="#madame-delaunay">
+          <speaker>MADAME DELAUNAY.</speaker>
+          <l n="534">Eh bien, je consens... à la condition que vous vous rétracterez... de la façon la plus formelle... Vous écrirez dans votre journal que M. Delaunay n’a pas tenu de maison de jeu et que je n’ai été enlevée qu’une seule fois, et par mon mari... je crois. </l>
+        </sp>
+        <sp who="#boisgarnier">
+          <speaker>BOISGARNIER.</speaker>
+          <l n="535">Je me rétracterai volontiers. </l>
+          <l n="536">Passant à gauche. </l>
+          <l n="537">J’ai juste ment besoin de trente lignes. </l>
+          <l n="538">Madame Delaunay a fait passer Louise près de Martineau.</l>
+        </sp>
+        <sp who="#chœur-final">
+          <speaker>CHŒUR FINAL.</speaker>
+          <l n="539">Air : Des dragons de Villars (Maillart). </l>
+          <l n="540">Ce qui nous conviendrait,</l>
+          <l n="541" />
+        </sp>
       </div>
     </body>
   </text>

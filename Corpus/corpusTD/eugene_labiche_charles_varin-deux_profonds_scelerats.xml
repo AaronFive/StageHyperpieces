@@ -1,1565 +1,1574 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Deux profonds scélérats</title>
-        <author key="Eugène LABICHE - Charles VARIN | (naissance-mort)">Eugène LABICHE - Charles VARIN |</author>
+        <title type="main" />
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/deux-profonds-scélérats-eugène-labiche-charles-varin</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène LABICHE - Charles VARIN |</author>. <title>Deux profonds scélérats</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/deux-profonds-scélérats-eugène-labiche-charles-varin</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1854-02-24">Représentée pour la première fois, à Paris, sur le Théâtre du Palais-Royal, le 24 février 1854.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="poncastor" sex="SEX">
+            <persName>PONCASTOR</persName>
+          </person>
+          <person xml:id="frétillard" sex="SEX">
+            <persName>FRÉTILLARD</persName>
+          </person>
+          <person xml:id="farouchon" sex="SEX">
+            <persName>FAROUCHON</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>[indéfini]</term>
+          <term>[indéfini]</term>
         </keywords>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1854-02-24" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre du Palais-Royal, le 24 février 1854.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Deux profonds scélérats</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Pochade en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre du Palais-Royal, le 24 février 1854.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="poncastor">PONCASTOR</role>
-              <roleDesc>, <em>parfumeur</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="frétillard">FRÉTILLARD</role>
-              <roleDesc>, <em>professeur de langues</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="farouchon">FAROUCHON</role>
-              <roleDesc>, <em>guichetier</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>Un cachot. Un banc de bois, une cruche d’eau. Une table rustique avec ce qu’il faut pour écrire, à gauche.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="7" xml:id="l7"> </l>
-          <sp who="farouchon" xml:id="1-1">
-            <speaker>PONCASTOR, FAROUCHON</speaker>
-            <l n="8" xml:id="l8"> </l>
-          </sp>
-          <sp who="farouchon" xml:id="1-2">
-            <speaker>FAROUCHON, <em>entrant une lanterne à la main et parlant à la cantonade.</em></speaker>
-            <l n="9" xml:id="l9">Par ici ! amenez le prisonnier !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-3">
-            <speaker>PONCASTOR, <em>entrant poussé par les épaules.</em></speaker>
-            <l n="10" xml:id="l10">Ne poussez-donc pas ! puisque je suis résigné...</l>
-            <stage><hi rend="italic"><em>Au public.</em></hi></stage>
-            <l n="12" xml:id="l12">Ce n’est pas à Paris qu’on me bousculerait comme ça ! Mais, à Nantes, on est si mal élevé ! Garçon !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-4">
-            <speaker>FAROUCHON.</speaker>
-            <l n="13" xml:id="l13">Guichetier ! Il me semble que vous n’êtes pas dans un estaminet !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-5">
-            <speaker>PONCASTOR.</speaker>
-            <l n="14" xml:id="l14">Mais où suis-je ? voilà ce que je demande à tous les les corridors ! où suis-je ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-6">
-            <speaker>FAROUCHON.</speaker>
-            <l n="15" xml:id="l15">Dans un endroit provisoire, vu que la nouvelle prison n’est pas finie ! c’est dommage ! vous en auriez eu l’étrenne.</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-7">
-            <speaker>PONCASTOR.</speaker>
-            <l n="16" xml:id="l16">En prison ! moi ! Poncastor ! fabricant de denrées coloniales ! Les siècles à venir ne le croiront pas !</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="18" xml:id="l18">Garçon ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-8">
-            <speaker>FAROUCHON.</speaker>
-            <l n="19" xml:id="l19">Guichetier !</l>
-            <stage><hi rend="italic"><em>L’examinant.</em></hi></stage>
-            <l n="21" xml:id="l21">Mais attendez donc, je vous remets, vous !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-9">
-            <speaker>PONCASTOR.</speaker>
-            <l n="22" xml:id="l22">Moi ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-10">
-            <speaker>FAROUCHON.</speaker>
-            <l n="23" xml:id="l23">J’ai manqué d’être arrêté pour vous, tout à l’heure ! dans la grande rue, à l’hôtel du Cheval-Blanc.</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-11">
-            <speaker>PONCASTOR.</speaker>
-            <l n="24" xml:id="l24">J’y prends quelquefois ma nourriture !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-12">
-            <speaker>FAROUCHON.</speaker>
-            <l n="25" xml:id="l25">Il faut vous dire que j’ai un sentiment au Cheval-Blanc ! Ma bonne amie demeure au second.</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-13">
-            <speaker>PONCASTOR.</speaker>
-            <l n="26" xml:id="l26">Je m’en bats complètement la paupière !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-14">
-            <speaker>FAROUCHON.</speaker>
-            <l n="27" xml:id="l27">Elle était absente... elle est souvent absente, ma bonne amie ! Je dégringolais l’escalier. Tout-à-coup un monsieur pas bien mis me saute à la cravate en criant : c’est lui ! Alors un autre monsieur, pas bien mis non plus, répond, ce n’est pas lui ! nous le tenons ! Effectivement on vous tenait ! vous aviez l.’air d’un chat qui sort du bain !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-15">
-            <speaker>PONCASTOR.</speaker>
-            <l n="28" xml:id="l28">J’étais abasourdi ! un pareil scandale ! Qu’avez-vous dû penser de moi ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-16">
-            <speaker>FAROUCHON</speaker>
-            <l n="29" xml:id="l29">Rien de désagréable ! je me suis dit : voilà un filou qui travaille dans l’argenterie !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-17">
-            <speaker>PONCASTOR.</speaker>
-            <l n="30" xml:id="l30">Moi ! me soupçonner...</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-18">
-            <speaker>FAROUCHON.</speaker>
-            <l n="31" xml:id="l31">C’est donc un couvert que vous avez pris ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-19">
-            <speaker>PONCASTOR.</speaker>
-            <l n="32" xml:id="l32">Ah ! si je n’étais pas résigné !</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="34" xml:id="l34">Garçon !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-20">
-            <speaker>FAROUCHON.</speaker>
-            <l n="35" xml:id="l35">Guichetier !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-21">
-            <speaker>PONCASTOR.</speaker>
-            <l n="36" xml:id="l36">Donnez-moi un cabinet particulier !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-22">
-            <speaker>FAROUCHON.</speaker>
-            <l n="37" xml:id="l37">Plaît-il ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-23">
-            <speaker>PONCASTOR.</speaker>
-            <l n="38" xml:id="l38">Une cellule, quoi !</l>
-            <stage><hi rend="italic"><em>Air de la Famille de l’Apothicaire.</em></hi></stage>
-          <stage>FAROUCHON.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="1-24">
-            <speaker>PONCASTOR.</speaker>
-            <l n="40" xml:id="l40">Hein ? qu’est-ce que tu dis ?</l>
-          <stage>FAROUCHON.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="1-25">
-            <speaker>PONCASTOR.</speaker>
-            <l n="41" xml:id="l41">Oh ! si je n’étais pas résigné !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-26">
-            <speaker>FAROUCHON.</speaker>
-            <l n="42" xml:id="l42">C’est six francs par jour la cellule !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-27">
-            <speaker>PONCASTOR.</speaker>
-            <l n="43" xml:id="l43">Voici la somme, maintenant conduis-moi !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-28">
-            <speaker>FAROUCHON.</speaker>
-            <l n="44" xml:id="l44">Comment ! conduis-moi... vous y êtes...</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-29">
-            <speaker>PONCASTOR.</speaker>
-            <l n="45" xml:id="l45">Comment, ce trou ? tu n’as rien de mieux distribué ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-30">
-            <speaker>FAROUCHON.</speaker>
-            <l n="46" xml:id="l46">Je vous assure que, s’il y avait seulement des glaces et des tapis... mais vous êtes libre d’en faire poser !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-31">
-            <speaker>PONCASTOR.</speaker>
-            <l n="47" xml:id="l47">Au fait, une nuit est bientôt passée... Demain, ma famille me réclamera !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-32">
-            <speaker>FAROUCHON</speaker>
-            <l n="48" xml:id="l48">C’est donc un couvert que vous avez pris ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-33">
-            <speaker>PONCASTOR.</speaker>
-            <l n="49" xml:id="l49">Fiche-moi la paix...</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-34">
-            <speaker>FAROUCHON.</speaker>
-            <l n="50" xml:id="l50">Vous n’avez plus besoin de rien ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-35">
-            <speaker>PONCASTOR.</speaker>
-            <l n="51" xml:id="l51">Non ! si ! Je ne sais où diable j’ai laissé ma tabatière ! Achète-moi pour quatre sous de tabac !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-36">
-            <speaker>FAROUCHON.</speaker>
-            <l n="52" xml:id="l52">Bien ! monsieur ? Il tire son mouchoir et y fait un nœud.</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-37">
-            <speaker>PONCASTOR.</speaker>
-            <l n="53" xml:id="l53">Qu’est-ce que tu fais là ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-38">
-            <speaker>FAROUCHON.</speaker>
-            <l n="54" xml:id="l54">Un nœud ! c’est pour me rappeler ! là, vous êtes noté ! À présent, donnez-moi huit sous !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-39">
-            <speaker>PONCASTOR.</speaker>
-            <l n="55" xml:id="l55">Je t’ai dit pour quatre.</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-40">
-            <speaker>FAROUCHON.</speaker>
-            <l n="56" xml:id="l56">J’ai bien entendu !... Mais ici, quatre sous de tabac, c’est huit sous !</l>
-          </sp>
-          <sp who="poncastor" xml:id="1-41">
-            <speaker>PONCASTOR, <em>les lui donnant.</em></speaker>
-            <l n="57" xml:id="l57">Ah ! jeune homme, vous n’êtes pas délicat !</l>
-          </sp>
-          <sp who="farouchon" xml:id="1-42">
-            <speaker>FAROUCHON.</speaker>
-            <l n="58" xml:id="l58">Ah ! ah ! ah ! Il prend des couverts et il me fait de la morale ! V’là bien le monde à présent !</l>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air du Prophète.</em></hi></stage>
-          <stage>FAROUCHON.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="1-43">
-            <speaker>PONCASTOR.</speaker>
-            <stage><hi rend="italic"><em>Farouchon sort.</em></hi></stage>
-            <l n="62" xml:id="l62"> </l>
-            <l n="63" xml:id="l63"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="64" xml:id="l64"> </l>
-          <sp who="poncastor" xml:id="2-1">
-            <speaker>PONCASTOR, <em>seul</em></speaker>
-            <l n="65" xml:id="l65"> </l>
-            <l n="66" xml:id="l66">En prison ! moi ! un homme établi ! et sans tabac !... Moi, qui n’eus jamais rien à démêler avec la justice des hommes !ah !si ! une petite fois ! il y a quinze jours ! je suis droguiste, et, comme tel, je m’occupe un peu de chimie ! J’avais composé une eau admirable pour les yeux ! Un de mes clients, affligé d’une ophtalmie, fit usage de mon remède. Au bout de trois jours, il était radicalement guéri d’un œil... mais, de l’autre, il était borgne ! Croirait-on qu’on a vu là-dedans quelque chose de louche ! Je fus dénoncé par un marchand de lunettes. On m’accuse de tricoter la médecine...et le tribunal. Mais, pourquoi m’en plaindrais-je ? Galilée ne fut pas compris par son siècle... aussi, je me résignerais, sans cette nouvelle tuile qui me tombe sur la boule ! Que va penser ma légitime, en ne me voyant pas rentrer ? et quand elle saura le motif ! Une femme du midi ! jalouse jusque dans la moelle ! Elle est capable de faire des choses déplacées ! certainement, je suis plein de confiance en elle ! Mais j’ai aposté quelqu’un dans ses alentours pour la moucharder ! Encore, si j’avais ma tabatière !... ça me donnerait peut-être une inspiration pour sortir d’ici ! car je ne crains pas de le dire, j’ai des projets d’évation ! J’ai lu Monte-Cristo ! cet homme reclus mais non perclus, perçu 22 murs a l’aide d’un clou !</l>
-            <stage><hi rend="italic"><em>Se fouillant.</em></hi></stage>
-            <l n="68" xml:id="l68">Voyons, si j’ai sur moi ! Juste ! un cure-dents ! ça sera plus long, mais avec de la patience !</l>
-            <stage><hi rend="italic"><em>On entend du bruit.</em></hi></stage>
-            <l n="70" xml:id="l70">On vient ! cachons mon jeu !</l>
-            <stage><hi rend="italic"><em>Il cache son cure-dents.</em></hi></stage>
-            <l n="72" xml:id="l72"> </l>
-            <l n="73" xml:id="l73"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="74" xml:id="l74"> </l>
-          <sp who="farouchon" xml:id="3-1">
-            <speaker>PONCASTOR, FRÉTILLARD, FAROUCHON</speaker>
-            <l n="75" xml:id="l75"> </l>
-          </sp>
-          <sp who="farouchon" xml:id="3-2">
-            <speaker>FAROUCHON, <em>introduisant Frétillard.</em></speaker>
-            <l n="76" xml:id="l76">Par ici ! par ici !</l>
-          </sp>
-          <sp who="frétillard" xml:id="3-3">
-            <speaker>FRÉTILLARD, <em>sans cravate, et son habit sous le bras.</em></speaker>
-            <l n="77" xml:id="l77">Ne poussez donc pas, sacrebleu !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="79" xml:id="l79">Les gueux ! ils ne m’ont pas même laissé le temps de remettre mon habit !</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-4">
-            <speaker>FAROUCHON, <em>à Frétillard.</em></speaker>
-            <l n="80" xml:id="l80">Monsieur, pour être seul, c’est six francs !</l>
-          </sp>
-          <sp who="frétillard" xml:id="3-5">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="81" xml:id="l81">Les voici !</l>
-            <stage><hi rend="italic"><em>À part, remettant son habit.</em></hi></stage>
-            <l n="83" xml:id="l83">Ô amour ! tu me flanques dans de beaux draps...</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-6">
-            <speaker>PONCASTOR, <em>prenant Farouchon à part.</em></speaker>
-            <l n="84" xml:id="l84">Quel est cet intrus ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-7">
-            <speaker>FAROUCHON.</speaker>
-            <l n="85" xml:id="l85">Ça ? c’est un confrère ! Vous vous plairez avec lui, je crois que c’est un assassin...</l>
-          </sp>
-          <sp who="frétillard" xml:id="3-8">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="86" xml:id="l86">Mais, animal, j’ai payé pour être seul !</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-9">
-            <speaker>FAROUCHON.</speaker>
-            <l n="87" xml:id="l87">Lui, aussi, monsieur !</l>
-          </sp>
-          <sp who="frétillard" xml:id="3-10">
-            <speaker>FRÉTILLARD, <em>apercevant Poncastor.</em></speaker>
-            <l n="88" xml:id="l88">Quelqu’un !</l>
-            <stage><hi rend="italic"><em>Appelant Farouchon.</em></hi></stage>
-            <l n="90" xml:id="l90">Alguazil ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-11">
-            <speaker>FAROUCHON.</speaker>
-            <l n="91" xml:id="l91">Guichetier !</l>
-          </sp>
-          <sp who="frétillard" xml:id="3-12">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="92" xml:id="l92">Quel est ce bipède qui se dandine là-bas !</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-13">
-            <speaker>FAROUCHON.</speaker>
-            <l n="93" xml:id="l93">C’est un homme très bien... il a été arrêté pour de tournement...</l>
-          </sp>
-          <sp who="frétillard" xml:id="3-14">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="94" xml:id="l94">De mineure ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-15">
-            <speaker>FAROUCHON.</speaker>
-            <l n="95" xml:id="l95">Non, l’argenterie...</l>
-          </sp>
-          <sp who="frétillard" xml:id="3-16">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="96" xml:id="l96">Mais, corne-de-bœuf ! j’ai payé pour être seul !</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-17">
-            <speaker>FAROUCHON.</speaker>
-            <l n="97" xml:id="l97">Lui aussi, monsieur !</l>
-          </sp>
-          <sp who="poncastor" xml:id="3-18">
-            <speaker>PONCASTOR.</speaker>
-            <l n="98" xml:id="l98">Si encore j’avais ma tabatière...</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="100" xml:id="l100">Garçon, mon tabac ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-19">
-            <speaker>FAROUCHON.</speaker>
-            <l n="101" xml:id="l101">Ah ! pomme-de-reinette, je l’ai oublié... attendez, je vais faire un nœud...</l>
-          </sp>
-          <sp who="poncastor" xml:id="3-20">
-            <speaker>PONCASTOR.</speaker>
-            <l n="102" xml:id="l102">Mais il y en a déjà un !</l>
-          </sp>
-          <sp who="farouchon" xml:id="3-21">
-            <speaker>FAROUCHON, <em>faisant un nœud.</em></speaker>
-            <l n="103" xml:id="l103">Le second est pour me rappeler le premier... Là, vous êtes renoté...</l>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air de l’Elissire d’Amore.</em></hi></stage>
-          <stage>FAROUCHON.</stage>
-          </sp>
-          <sp who="frétillard" xml:id="3-22">
-            <speaker>FRÉTILLARD <em>et</em> PONCASTOR, <em>à part.</em></speaker>
-            <l n="106" xml:id="l106"> </l>
-            <l n="107" xml:id="l107"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="108" xml:id="l108"> </l>
-          <sp who="frétillard" xml:id="4-1">
-            <speaker>PONCASTOR, FRÉTILLARD</speaker>
-            <l n="109" xml:id="l109"> </l>
-          </sp>
-          <sp who="poncastor" xml:id="4-2">
-            <speaker>PONCASTOR, <em>à part.</em></speaker>
-            <l n="110" xml:id="l110">Seul avec cette canaille ! et je n’ai pas de tabac !</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-3">
-            <speaker>FRÉTILLARD, <em>à part.</em></speaker>
-            <l n="111" xml:id="l111">Enfermé avec ce brigand ! moi, un professeur de langues... pour les jeunes personnes !</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-4">
-            <speaker>PONCASTOR, <em>à part.</em></speaker>
-            <l n="112" xml:id="l112">Sa figure porte l’empreinte de tous les vices...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-5">
-            <speaker>FRÉTILLARD, <em>à part.</em></speaker>
-            <l n="113" xml:id="l113">Il a une physionomie abjecte !</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-6">
-            <speaker>PONCASTOR, <em>à part.</em></speaker>
-            <l n="114" xml:id="l114">S’il se doute que je suis un honnête homme, il est capable de me serrer le cou !</l>
-            <stage><hi rend="italic"><em>Le saluant.</em></hi></stage>
-            <l n="116" xml:id="l116">Monsieur !</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-7">
-            <speaker>FRÉTILLARD, <em>de même.</em></speaker>
-            <l n="117" xml:id="l117">Monsieur !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="119" xml:id="l119">On dit qu’il faut hurler avec les loups... hurlons !...</l>
-            <stage><hi rend="italic"><em>Haut et frappant sur l’épaule de Poncastor.</em></hi></stage>
-            <l n="121" xml:id="l121">Eh bien ! camarade... Eh, eh, eh !</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-8">
-            <speaker>PONCASTOR.</speaker>
-            <l n="122" xml:id="l122">Eh, eh, eh !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="124" xml:id="l124">Il me prend pour un confrère, poussons-le dans cette voie...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-9">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="125" xml:id="l125">Vous vous êtes donc laissé pincer ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-10">
-            <speaker>PONCASTOR.</speaker>
-            <l n="126" xml:id="l126">Mais oui, mais oui... tant va la cruche à l’eau... comme on dit...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-11">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="127" xml:id="l127">Est-ce la première fois qu’on vous coffre ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-12">
-            <speaker>PONCASTOR.</speaker>
-            <l n="128" xml:id="l128">Certainement... c’est-à-dire... non... entre nous... c’est la treizième...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-13">
-            <speaker>FRÉTILLARD, <em>à part.</em></speaker>
-            <l n="129" xml:id="l129">Treize fois ! c’est un habitué...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-14">
-            <speaker>PONCASTOR.</speaker>
-            <l n="130" xml:id="l130">Et vous ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-15">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="131" xml:id="l131">Oh ! moi ! je ne me suis encore échappe que quatre fois de Brest...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-16">
-            <speaker>PONCASTOR.</speaker>
-            <l n="132" xml:id="l132">À votre âgé ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-17">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="133" xml:id="l133">Une fois à pied ! une à cheval ! une en voiture ! et la dernière...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-18">
-            <speaker>PONCASTOR.</speaker>
-            <l n="134" xml:id="l134">En ballon ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-19">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="135" xml:id="l135">Non, en caleçon...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-20">
-            <speaker>PONCASTOR.</speaker>
-            <l n="136" xml:id="l136">C’est hardi ! j’aime cette vie là ! quelle belle vie...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-21">
-            <speaker>FRÉTILLARD, <em>chantant.</em></speaker>
-            <l n="137" xml:id="l137">La belle vie !</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-22">
-            <speaker>PONCASTOR, <em>de même.</em></speaker>
-            <l n="138" xml:id="l138">La belle fête !</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-23">
-            <speaker>FRÉTILLARD, <em>à part.</em></speaker>
-            <l n="139" xml:id="l139">Quel gueux !</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-24">
-            <speaker>PONCASTOR, <em>à part.</em></speaker>
-            <l n="140" xml:id="l140">Quel brigand !</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-25">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="141" xml:id="l141">Moi, d’abord... dès que je vois briller un bijou quelconque, ça me démange...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-26">
-            <speaker>PONCASTOR, <em>passant vivement une bague, de la main droite à la gauche.</em></speaker>
-            <l n="142" xml:id="l142">Ça te démange... et tu te grattes ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-27">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="143" xml:id="l143">Comme tu dis...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-28">
-            <speaker>PONCASTOR.</speaker>
-            <l n="144" xml:id="l144">Cher ami...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-29">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="145" xml:id="l145">Mon frère !...</l>
-            <stage><hi rend="italic"><em>Ils sont sur le point de s’embrasser et s’arrêtent tous les deux.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="4-30">
-            <speaker>PONCASTOR, <em>à part.</em></speaker>
-            <l n="147" xml:id="l147">Sapristi ! et ma montre que j’oubliais...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-31">
-            <speaker>FRÉTILLARD, <em>de même.</em></speaker>
-            <l n="148" xml:id="l148">Bigre... et mon épingle...</l>
-            <stage><hi rend="italic"><em>Il se boutonne.</em></hi></stage>
-            <l n="150" xml:id="l150">Ah ! ça ! pourquoi es-tu ici, toi ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-32">
-            <speaker>PONCASTOR.</speaker>
-            <l n="151" xml:id="l151">Oh ! moi ! je n’y suis pas pour longtemps... c’est une erreur...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-33">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="152" xml:id="l152">Une erreur... Serais-tu innocent ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-34">
-            <speaker>PONCASTOR.</speaker>
-            <l n="153" xml:id="l153">Moi !...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="155" xml:id="l155">Quel regard il m’a lancé !...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="157" xml:id="l157">Ah ! bien oui !... Je suis un affreux gredin... Je grinche, tu grinches, nous grinchons !</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-35">
-            <speaker>FRÉTILLARD, <em>à part.</em></speaker>
-            <l n="158" xml:id="l158">Ah ! tu parles argot !... Attends... attends... j’en distille aussi comme professeur de langues...</l>
-            <stage><hi rend="italic"><em>L’appelant.</em></hi></stage>
-            <l n="160" xml:id="l160">Pstt...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-36">
-            <speaker>PONCASTOR.</speaker>
-            <l n="161" xml:id="l161">Hein ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-37">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="162" xml:id="l162">Lago ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-38">
-            <speaker>PONCASTOR, <em>à part.</em></speaker>
-            <l n="163" xml:id="l163">Lago ! c’est de l’Italien ! la Dona del lago...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-39">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="164" xml:id="l164">Il s’agit de bouliner la duraille et dare, et dare...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-40">
-            <speaker>PONCASTOR.</speaker>
-            <l n="165" xml:id="l165">La duraille !... ça va...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-41">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="166" xml:id="l166">Poussons-nous de l’air !</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-42">
-            <speaker>PONCASTOR.</speaker>
-            <l n="167" xml:id="l167">Poussons-nous-en !</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-43">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="168" xml:id="l168">As-tu des outils ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-44">
-            <speaker>PONCASTOR.</speaker>
-            <l n="169" xml:id="l169">Chut ! j’ai un cure-dents...</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-45">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="170" xml:id="l170">Chut ! voici une épingle... Maintenant, pioche... bouline !...</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-46">
-            <speaker>PONCASTOR, <em>à part.</em></speaker>
-            <l n="171" xml:id="l171">Qu’est-ce qu’il veut que je bouline avec ça ?</l>
-            <stage><hi rend="italic"><em>On entend du bruit.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="4-47">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="173" xml:id="l173">Attention, un raille.</l>
-          </sp>
-          <sp who="poncastor" xml:id="4-48">
-            <speaker>PONCASTOR.</speaker>
-            <l n="174" xml:id="l174">Plaît-il ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="4-49">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="175" xml:id="l175">Un raille... le guichemard !</l>
-            <l n="176" xml:id="l176"> </l>
-            <l n="177" xml:id="l177"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="178" xml:id="l178"> </l>
-          <sp who="farouchon" xml:id="5-1">
-            <speaker>PONCASTOR, FRÉTILLARD, FAROUCHON</speaker>
-            <l n="179" xml:id="l179"> </l>
-          </sp>
-          <sp who="farouchon" xml:id="5-2">
-            <speaker>FAROUCHON, <em>passant deux pains noirs et un broc, qu’il pose sur la table à gauche.</em></speaker>
-            <l n="180" xml:id="l180">Voilà votre souper... Deux pains de munition et une cruche d’eau !</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-3">
-            <speaker>PONCASTOR.</speaker>
-            <l n="181" xml:id="l181">Une cruche d’eau !...</l>
-          </sp>
-          <sp who="farouchon" xml:id="5-4">
-            <speaker>FAROUCHON.</speaker>
-            <l n="182" xml:id="l182">C’est le menu de l’établissement... mais il y a un restaurant à côté !</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-5">
-            <speaker>PONCASTOR.</speaker>
-            <l n="183" xml:id="l183">Que ne parlais-tu tout de suite ! sers-nous un festin splendide !</l>
-          </sp>
-          <sp who="frétillard" xml:id="5-6">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="184" xml:id="l184">Vous êtes donc riche, vous ?...</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-7">
-            <speaker>PONCASTOR, <em>cachant sa bourse.</em></speaker>
-            <l n="185" xml:id="l185">Riche...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="187" xml:id="l187">Quelle imprudence.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="189" xml:id="l189">J’ai neuf sous... et vous ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="5-8">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="190" xml:id="l190">Moi du vent dans les valades...</l>
-          </sp>
-          <sp who="farouchon" xml:id="5-9">
-            <speaker>FAROUCHON.</speaker>
-            <l n="191" xml:id="l191">Alors, vous êtes servis.</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-10">
-            <speaker>PONCASTOR, <em>prenant un pain.</em></speaker>
-            <l n="192" xml:id="l192">Quel pain...</l>
-          </sp>
-          <sp who="frétillard" xml:id="5-11">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="193" xml:id="l193">C’est fait avec du son.</l>
-          </sp>
-          <sp who="farouchon" xml:id="5-12">
-            <speaker>FAROUCHON</speaker>
-            <l n="194" xml:id="l194">Par exemple... il n’entre pas de son ici... c’est de la sciure de bois...</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-13">
-            <speaker>PONCASTOR.</speaker>
-            <l n="195" xml:id="l195">Ah ! le système pénitentiaire appelle de grandes réformes !</l>
-          </sp>
-          <sp who="farouchon" xml:id="5-14">
-            <speaker>FAROUCHON.</speaker>
-            <l n="196" xml:id="l196">À propos, vous n’avez pas signé l’écrou, vous ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-15">
-            <speaker>PONCASTOR.</speaker>
-            <l n="197" xml:id="l197">C’est vrai !</l>
-          </sp>
-          <sp who="farouchon" xml:id="5-16">
-            <speaker>FAROUCHON.</speaker>
-            <l n="198" xml:id="l198">Eh bien, allons-y !</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-17">
-            <speaker>PONCASTOR.</speaker>
-            <l n="199" xml:id="l199">Avec plaisir...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="201" xml:id="l201">Je vais tâcher de me faire caser ailleurs...</l>
-          </sp>
-          <sp who="frétillard" xml:id="5-18">
-            <speaker>FRÉTILLARD, <em>à part.</em></speaker>
-            <l n="202" xml:id="l202">Si il pouvait ne pas revenir...</l>
-          </sp>
-          <sp who="poncastor" xml:id="5-19">
-            <speaker>PONCASTOR.</speaker>
-            <l n="203" xml:id="l203">Au revoir, cher ami !</l>
-          </sp>
-          <sp who="frétillard" xml:id="5-20">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="204" xml:id="l204">Au revoir, mon chéri.</l>
-            <stage><hi rend="italic"><em>Farouchon sort avec Poncastor.</em></hi></stage>
-            <l n="206" xml:id="l206"> </l>
-            <l n="207" xml:id="l207"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="208" xml:id="l208"> </l>
-          <sp who="frétillard" xml:id="6-1">
-            <speaker>FRÉTILLARD, <em>seul</em></speaker>
-            <l n="209" xml:id="l209"> </l>
-            <l n="210" xml:id="l210">Enfin... je ne suis plus forcé de me travestir en cartouche et de mettre un faux nez à mes principes... moi, Frétillard, qui ne prendrais pas une prise de tabac à mon portier... parce qu’il a les mains sales... et voilà l’homme vertueux qu’on plonge dans les cachots... Quand je dit que je ne prends rien... je ne cacherai pas que ce matin j’ai pris l’omnibus qui mène dans le faubourg... J’ai une élève dans cette localité... la femme d’un marchand de bois qui désire savoir l’italien pour comprendre la musique... À peine étais-je installé dans le véhicule susnommé, que j’entends une douce voix de femme qui s’écrie : conducteur ! rendez-moi quatre sous... je me retourne, c’était Juliette... Juliette, mon premier amour... je dirais même mon seul amour, si je ne craignais pas de me tromper... un ange au teint de neige, avec un cou de cygne et un signe au cou... Je commis autrefois la folichonnerie de demander sa main à son père... ce vieux conservateur... d’hypothèques, se fit un devoir de la donner à un autre... une buse que je ne connais pas, mais je le déclare une buse... Qu’on juge de mon émotion. Retrouver Juliette en omnibus... mariée depuis trois ans... Je ne lui dis que ces mots simples, mais bien accentués... Juliette, est-ce que vous allez jusqu’à Constantinople ?... Non, fit-elle... je descends ! voici ma demeure... Point ne me fis prier pour la suivre... nous montons et nous voilà seuls... Honoré, me dit-elle... (Honoré est mon nom de femme.) te souviens-tu de nos jeunes années ?... j’allais lui répondre... Oh ! oui, je m’en souviens, quand une voix sinistre me crie, à travers la porte ; Ouvrez au nom de la loi... cette voix était celle d’une écharpe ornée d’un commissaire, l’ami du mari... Ce magistrat me dit avec sévérité... maladroit ! comment diable, vous êtes-vous laissé piper ! c’est stupide... il me pipa... et me voilà... Le bruit court que j’en ai pour six mois... de prison, pour avoir pris un omnibus... sans préméditation ! c’est salé...</l>
-            <stage><hi rend="italic"><em>On entend crier les verrous.</em></hi></stage>
-            <l n="212" xml:id="l212">Chut ! c’est mon pègre... reprenons le masque du crime !</l>
-            <l n="213" xml:id="l213"> </l>
-            <l n="214" xml:id="l214"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="215" xml:id="l215"> </l>
-          <sp who="farouchon" xml:id="7-1">
-            <speaker>FRÉTILLARD, PONCASTOR, FAROUCHON</speaker>
-            <l n="216" xml:id="l216"> </l>
-          </sp>
-          <sp who="poncastor" xml:id="7-2">
-            <speaker>PONCASTOR, <em>entrant en scène en riant.</em></speaker>
-            <l n="217" xml:id="l217">Ah ! ah ! ah ! j’en ris depuis la cime jusqu’aux talons...</l>
-          </sp>
-          <sp who="frétillard" xml:id="7-3">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="218" xml:id="l218">Vous êtes bien folâtre ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="7-4">
-            <speaker>PONCASTOR.</speaker>
-            <l n="219" xml:id="l219">Malin... j’ai parcouru la liste des écrous !</l>
-          </sp>
-          <sp who="frétillard" xml:id="7-5">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="220" xml:id="l220">Après...</l>
-          </sp>
-          <sp who="poncastor" xml:id="7-6">
-            <speaker>PONCASTOR.</speaker>
-            <l n="221" xml:id="l221">Vous m’avez mis dedans, vous n’êtes pas un voleur.</l>
-          </sp>
-          <sp who="frétillard" xml:id="7-7">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="222" xml:id="l222">Par exemple ! est-ce pour m’insulter ?...</l>
-          </sp>
-          <sp who="poncastor" xml:id="7-8">
-            <speaker>PONCASTOR.</speaker>
-            <l n="223" xml:id="l223">Mais ni moi non plus...</l>
-          </sp>
-          <sp who="frétillard" xml:id="7-9">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="224" xml:id="l224">Bah !</l>
-          </sp>
-          <sp who="poncastor" xml:id="7-10">
-            <speaker>PONCASTOR.</speaker>
-            <l n="225" xml:id="l225">Flagrant délit comme vous... comme toi...</l>
-          </sp>
-          <sp who="frétillard" xml:id="7-11">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="226" xml:id="l226">Saisi au gîte ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="7-12">
-            <speaker>PONCASTOR.</speaker>
-            <l n="227" xml:id="l227">Pour cause d’amour !</l>
-          </sp>
-          <sp who="frétillard" xml:id="7-13">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="228" xml:id="l228">Nous grinchons donc aussi (‘les lemmes mariées !...</l>
-          </sp>
-          <sp who="poncastor" xml:id="7-14">
-            <speaker>PONCASTOR.</speaker>
-            <l n="229" xml:id="l229">Oui ! hi ! hi !</l>
-            <stage><hi rend="italic"><em>Air du Petit Malblanchi.</em></hi></stage>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="7-15">
-            <speaker>PONCASTOR.</speaker>
-            <stage><hi rend="italic"><em>Pendant le refrain, Poncastor et Frétillard se prennent par la main et dansent.</em></hi></stage>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="7-16">
-            <speaker>PONCASTOR.</speaker>
-            <l n="232" xml:id="l232">Eh ! là-bas ! vous faites un sabbat d’enfer !</l>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="7-17">
-            <speaker>PONCASTOR.</speaker>
-            <l n="233" xml:id="l233">Du champagne !</l>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="reprise" xml:id="7-18">
-            <speaker>REPRISE.</speaker>
-            <l n="234" xml:id="l234">Un pâté !</l>
-          <stage>FAROUCHON, <em>paraissant au grillage du fond.</em></stage>
-          </sp>
-          <sp who="frétillard" xml:id="7-19">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="235" xml:id="l235">Attendez que je fasse des nœuds !</l>
-          <stage>PONCASTOR.</stage>
-          </sp>
-          <sp who="farouchon" xml:id="7-20">
-            <speaker>FAROUCHON, <em>tirant son mouchoir.</em></speaker>
-            <l n="236" xml:id="l236">Et mon tabac !</l>
-          <stage>PONCASTOR.</stage>
-          </sp>
-          <sp who="farouchon" xml:id="7-21">
-            <speaker>FAROUCHON, <em>lui montrant le nœud fait à son mouchoir.</em></speaker>
-            <l n="237" xml:id="l237">Voilà ! vous êtes noté !</l>
-            <stage><hi rend="italic"><em>Il disparaît.</em></hi></stage>
-            <l n="239" xml:id="l239"> </l>
-            <l n="240" xml:id="l240"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="241" xml:id="l241"> </l>
-          <sp who="frétillard" xml:id="8-1">
-            <speaker>FRÉTILLARD, PONCASTOR</speaker>
-            <l n="242" xml:id="l242"> </l>
-          </sp>
-          <sp who="frétillard" xml:id="8-2">
-            <speaker>FRÉTILLARD, <em>gaiement.</em></speaker>
-            <l n="243" xml:id="l243">Ah ! nous allons rire ! nous allons embellir le court espace !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-3">
-            <speaker>PONCASTOR.</speaker>
-            <l n="244" xml:id="l244">Oui, rions ! pourtant j’ai un tond de tristesse...</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-4">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="245" xml:id="l245">Ah ! et pourquoi ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-5">
-            <speaker>PONCASTOR.</speaker>
-            <l n="246" xml:id="l246">Je suis marié !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-6">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="247" xml:id="l247">Tiens, et moi aussi !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-7">
-            <speaker>PONCASTOR.</speaker>
-            <l n="248" xml:id="l248">Que diront nos femmes ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-8">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="249" xml:id="l249">Elles vont faire un nez d’une longueur...</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-9">
-            <speaker>PONCASTOR.</speaker>
-            <l n="250" xml:id="l250">Oh ! hi ! hi ! hi ! Je ris, mais j’ai un fond de tristesse.</l>
-            <stage><hi rend="italic"><em>Ils se promènent côte à côte en remontant et descendant le théâtre.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="8-10">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="252" xml:id="l252">Je vous dirai que la mienne !... je m’en soucie médiocrement... Elle porte des bonnets oranges !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-11">
-            <speaker>PONCASTOR.</speaker>
-            <l n="253" xml:id="l253">Mais il y a des femmes remarquables qui portent des bonnets oranges !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-12">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="254" xml:id="l254">Des Portugaises, c’est possible !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-13">
-            <speaker>PONCASTOR.</speaker>
-            <l n="255" xml:id="l255">Non ! des Bretonnes ! J’en connais !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-14">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="256" xml:id="l256">Au surplus, si ma femme veut une séparation... liberté, libertas !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-15">
-            <speaker>PONCASTOR.</speaker>
-            <l n="257" xml:id="l257">Homme immoral ! et vos enfants ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-16">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="258" xml:id="l258">Est-ce que vous en avez ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-17">
-            <speaker>PONCASTOR.</speaker>
-            <l n="259" xml:id="l259">Je ne crois pas !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-18">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="260" xml:id="l260">Ni moi non plus !</l>
-            <stage><hi rend="italic"><em>Ils sont revenus à l’avant-scène.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="8-19">
-            <speaker>PONCASTOR.</speaker>
-            <l n="262" xml:id="l262">C’est inouï, comme il y a de l’analogie entre nous...</l>
-            <stage><hi rend="italic"><em>L’enlaçant.</em></hi></stage>
-            <l n="264" xml:id="l264">Les deux frères Siamois !</l>
-            <stage><hi rend="italic"><em>Air de l’Ours et le Pacha.</em></hi></stage>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="8-20">
-            <speaker>PONCASTOR.</speaker>
-            <l n="266" xml:id="l266">Dites donc, est-elle jolie, la vôtre ?</l>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="8-21">
-            <speaker>PONCASTOR.</speaker>
-            <l n="267" xml:id="l267">Ma femme !</l>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="8-22">
-            <speaker>PONCASTOR.</speaker>
-            <l n="268" xml:id="l268">Non, l’illicite ?</l>
-          <stage>ENSEMBLE.</stage>
-          </sp>
-          <sp who="frétillard" xml:id="8-23">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="269" xml:id="l269">Ah ! mon ami ! des cheveux comme un cheval arabe ! Nous arrivons au Cheval-Blanc, et madame commande le souper !</l>
-          <stage>PONCASTOR.</stage>
-          </sp>
-          <sp who="frétillard" xml:id="8-24">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="270" xml:id="l270">Un souper gaillard et truffé ?</l>
-          <stage>PONCASTOR.</stage>
-          </sp>
-          <sp who="frétillard" xml:id="8-25">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="271" xml:id="l271">Non ! de la morue aux pommes de terre !</l>
-          <stage>PONCASTOR</stage>
-          </sp>
-          <sp who="frétillard" xml:id="8-26">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="272" xml:id="l272">Tiens, de la morue aux pommes ! Madame Frétillard m’en assomme quelquefois.</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-27">
-            <speaker>PONCASTOR.</speaker>
-            <l n="273" xml:id="l273">Nous nous dispositions à l’arroser d’un Mâcon provocateur... Vous n’avez pas de tabac ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-28">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="274" xml:id="l274">Non !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-29">
-            <speaker>PONCASTOR.</speaker>
-            <l n="275" xml:id="l275">Quand, tout à coup, la vindicte publique paraît à la porte !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-30">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="276" xml:id="l276">C’est à peu près mon anecdote ! moi, j’ai été appréhendé dans le faubourg, 8.</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-31">
-            <speaker>PONCASTOR.</speaker>
-            <l n="277" xml:id="l277">Tiens, ma boutique est en bas, j’y demeure avec Malentrain.</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-32">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="278" xml:id="l278">Qui ça, Malentrain ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-33">
-            <speaker>PONCASTOR.</speaker>
-            <l n="279" xml:id="l279">Mon associé !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-34">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="280" xml:id="l280">Oh ! c’est drôle ! dans ma précipitation, j’ai emporté la tabatière du mari !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-35">
-            <speaker>PONCASTOR.</speaker>
-            <l n="281" xml:id="l281">Vous avez du tabac ! vous me sauvez la vie.</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-36">
-            <speaker>FRÉTILLARD, <em>tirant sa tabatière.</em></speaker>
-            <l n="282" xml:id="l282">Puisez, monsieur, ne vous gênez pas, c’est au mari.</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-37">
-            <speaker>PONCASTOR.</speaker>
-            <l n="283" xml:id="l283">Attendez que je me mouche !</l>
-            <stage><hi rend="italic"><em>Croyant prendre son mouchoir, il tire de sa poche un bonnet orange.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="8-38">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="285" xml:id="l285">Un bonnet ! l’orange de ma femme !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-39">
-            <speaker>PONCASTOR, <em>saisissant la tabatière.</em></speaker>
-            <l n="286" xml:id="l286">Ma tabatière !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-40">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="287" xml:id="l287">Misérable ! infâme ! gueux ! polisson.</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-41">
-            <speaker>PONCASTOR, <em>prenant une prise.</em></speaker>
-            <l n="288" xml:id="l288">Mâtin ! mâtin ! mâtin !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-42">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="289" xml:id="l289">On a beau avoir une femme orange, c’est toujours vexant !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-43">
-            <speaker>PONCASTOR.</speaker>
-            <l n="290" xml:id="l290">Mâtin ! matin ! mâtin !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-44">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="291" xml:id="l291">Monsieur, un de nous deux est de trop sur le globe !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-45">
-            <speaker>PONCASTOR.</speaker>
-            <l n="292" xml:id="l292">Tu oses me provoquer, Jean-Fichtre que tu es...</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-46">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="293" xml:id="l293">J’ai le choix des armes !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-47">
-            <speaker>PONCASTOR.</speaker>
-            <l n="294" xml:id="l294">Du tout ! Je suis l’offensé !</l>
-          </sp>
-          <sp who="frétillard" xml:id="8-48">
-            <speaker>FRÉTILLARD</speaker>
-            <l n="295" xml:id="l295">Tu ne l’es pas plus que moi !</l>
-          </sp>
-          <sp who="poncastor" xml:id="8-49">
-            <speaker>PONCASTOR.</speaker>
-            <l n="296" xml:id="l296">Nous le sommes tous les deux !</l>
-            <stage><hi rend="italic"><em>Air du Prophète.</em></hi></stage>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="poncastor" xml:id="8-50">
-            <speaker>PONCASTOR.</speaker>
-            <stage><hi rend="italic"><em>Reprise du couplet entier.</em></hi></stage>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="tous-deux" xml:id="8-51">
-            <speaker>TOUS DEUX.</speaker>
-            <stage><hi rend="italic"><em>Pendant l’ensemble ils boxent.</em></hi></stage>
-          </sp>
-          <sp who="ensemble" xml:id="8-52">
-            <speaker>ENSEMBLE.</speaker>
-            <l n="300" xml:id="l300"> </l>
-            <l n="301" xml:id="l301"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="302" xml:id="l302"> </l>
-          <sp who="farouchon" xml:id="9-1">
-            <speaker>FRÉTILLARD, PONCASTOR, FAROUCHON</speaker>
-            <l n="303" xml:id="l303"> </l>
-          </sp>
-          <sp who="farouchon" xml:id="9-2">
-            <speaker>FAROUCHON, <em>apportant le souper, se plaçant entr’eux et recevant une gifle de chacun.</em></speaker>
-            <l n="304" xml:id="l304">Hein ! quoi ? une émeute !</l>
-          </sp>
-          <sp who="poncastor" xml:id="9-3">
-            <speaker>PONCASTOR.</speaker>
-            <l n="305" xml:id="l305">Garçon ! des épées !</l>
-          </sp>
-          <sp who="frétillard" xml:id="9-4">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="306" xml:id="l306">Garçon ! des pistolets !</l>
-          </sp>
-          <sp who="farouchon" xml:id="9-5">
-            <speaker>FAROUCHON.</speaker>
-            <l n="307" xml:id="l307">Pardon ! ces articles-là manquent sur la carte !</l>
-          </sp>
-          <sp who="frétillard" xml:id="9-6">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="308" xml:id="l308">Quelle gargote !</l>
-          </sp>
-          <sp who="farouchon" xml:id="9-7">
-            <speaker>FAROUCHON, <em>mettant la table au milieu du théâtre.</em></speaker>
-            <l n="309" xml:id="l309">Mais voici le pâté et le champagne !</l>
-          </sp>
-          <sp who="poncastor" xml:id="9-8">
-            <speaker>PONCASTOR.</speaker>
-            <l n="310" xml:id="l310">Nous n’en voulons pas !</l>
-          </sp>
-          <sp who="farouchon" xml:id="9-9">
-            <speaker>FAROUCHON.</speaker>
-            <l n="311" xml:id="l311">Bah ! vous m’en faites cadeau !</l>
-          </sp>
-          <sp who="frétillard" xml:id="9-10">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="312" xml:id="l312">Laisse ça là ! Nous ne mangeons pas, mais nous ne voulons pas que tu manges !</l>
-          </sp>
-          <sp who="farouchon" xml:id="9-11">
-            <speaker>FAROUCHON.</speaker>
-            <l n="313" xml:id="l313">Vous en avez le droit, mais c’est vilain !</l>
-            <l n="314" xml:id="l314"> </l>
-            <l n="315" xml:id="l315"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="316" xml:id="l316"> </l>
-          <sp who="frétillard" xml:id="10-1">
-            <speaker>FRÉTILLARD, PONCASTOR</speaker>
-            <l n="317" xml:id="l317"> </l>
-            <stage><hi rend="italic"><em>Ils arpentent le théâtre en montant et en descendant, de façon que l’un remonte quand l’autre descend.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-2">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="319" xml:id="l319">Ah ! que je rage ! pas d’épées ! pas même de gourdins !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-3">
-            <speaker>PONCASTOR.</speaker>
-            <l n="320" xml:id="l320">Je le regrette vivement !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-4">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="321" xml:id="l321">Mais nous sortirons d’ici, monsieur !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-5">
-            <speaker>PONCASTOR.</speaker>
-            <l n="322" xml:id="l322">J’en ai l’espoir !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-6">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="323" xml:id="l323">Et nous nous écharperons !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-7">
-            <speaker>PONCASTOR.</speaker>
-            <l n="324" xml:id="l324">C’est encore l’espoir que j’ai.</l>
-            <stage><hi rend="italic"><em>Ils continuent d’arpenter le théâtre, l’un à l’avant-scène, l’autre au fond, et de droite à gauche et vice versa.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-8">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="326" xml:id="l326">Dieu de Dieu ! être obligé de rester en tête à tête avec son plus mortel ennemi.</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-9">
-            <speaker>PONCASTOR.</speaker>
-            <l n="327" xml:id="l327">Avoir continuellement devant les yeux un être qui vous a... ah !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-10">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="328" xml:id="l328">Si j’avais seulement un livre de philosophie... ou de cuisine !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-11">
-            <speaker>PONCASTOR.</speaker>
-            <l n="329" xml:id="l329">Et rien pour se distraire ! pas même un bilboquet... Ah ! je vais souper ! ça m’occupera !</l>
-            <stage><hi rend="italic"><em>Il se met à table.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-12">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="331" xml:id="l331">Vous soupez, vous ? sans cœur. J’espère que vous me laisserez ma part ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-13">
-            <speaker>PONCASTOR.</speaker>
-            <l n="332" xml:id="l332">Je coupe le pâté en deux ! et je prends une bouteille de champagne ! le reste vous appartient !... je respecte votre moitié !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-14">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="333" xml:id="l333">Vous ne l’avez pas toujours respectée, ma moitié !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-15">
-            <speaker>PONCASTOR.</speaker>
-            <l n="334" xml:id="l334">Il me semble que je pourrais me livrer au même calembour ! Mais non ! j’ai un fond de tristesse ! prenez votre pâté.</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-16">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="335" xml:id="l335">Ma pâtée ! pour qui me prenez-vous ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-17">
-            <speaker>PONCASTOR.</speaker>
-            <l n="336" xml:id="l336">Et portez-le où vous voudrez.</l>
-            <stage><hi rend="italic"><em>Il pose la moitié du pâté à terre.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-18">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="338" xml:id="l338">Comment ! que je le porte ! Est-ce que la table est à vous plus qu’à moi !</l>
-            <stage><hi rend="italic"><em>Il prend l’assiette.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-19">
-            <speaker>PONCASTOR.</speaker>
-            <l n="340" xml:id="l340">J’y étais le premier.</l>
-            <stage><hi rend="italic"><em>Il attire la table à lui.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-20">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="342" xml:id="l342">C’est égal, je veux m’y mettre.</l>
-            <stage><hi rend="italic"><em>Il s’y met et attire la table à lui.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-21">
-            <speaker>PONCASTOR.</speaker>
-            <l n="344" xml:id="l344">Mais je ne me soucie pas de souper en face de votre face !</l>
-            <stage><hi rend="italic"><em>Même jeu de table.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-22">
-            <speaker>FRÉTILLARD, <em>se servant du pâté.</em></speaker>
-            <l n="346" xml:id="l346">Alors, allez-vous-en !</l>
-            <stage><hi rend="italic"><em>Même jeu.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-23">
-            <speaker>PONCASTOR.</speaker>
-            <l n="348" xml:id="l348">Ah ! si je n’avais pas aussi faim ! C’est drôle comme j’ai faim quand je suis triste.</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-24">
-            <speaker>FRÉTILLARD, <em>mangeant.</em></speaker>
-            <l n="349" xml:id="l349">Moi, voilà que ça me prend ! Je trouve même ce pâté fort bon ! Que l’estomac est donc dépravé !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-25">
-            <speaker>PONCASTOR.</speaker>
-            <l n="350" xml:id="l350">Monsieur, je ne sais pas si c’est votre figure qui m’étouffe, mais il faut que je boive...</l>
-            <stage><hi rend="italic"><em>Il débouche sa bouteille.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-26">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="352" xml:id="l352">J’ai besoin de boire aussi ! mais pas à votre santé !</l>
-            <stage><hi rend="italic"><em>Même jeu.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-27">
-            <speaker>PONCASTOR, <em>se versant.</em></speaker>
-            <l n="354" xml:id="l354">Moi, je bois à l’aversion que tu m’inspires !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-28">
-            <speaker>FRÉTILLARD, <em>se versant.</em></speaker>
-            <l n="355" xml:id="l355">Et moi, au mépris dont je t’accable !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-29">
-            <speaker>PONCASTOR.</speaker>
-            <stage><hi rend="italic"><em>Air de Mangeant.</em></hi></stage>
-            <stage><hi rend="italic"><em>Ils boivent en même temps.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-30">
-            <speaker>FRÉTILLARD.</speaker>
-            <stage><hi rend="italic"><em>Ils boivent.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-31">
-            <speaker>PONCASTOR.</speaker>
-            <stage><hi rend="italic"><em>Ils boivent.</em></hi></stage>
-          <stage>FRÉTILLARD.</stage>
-          </sp>
-          <sp who="ensemble" xml:id="10-32">
-            <speaker>ENSEMBLE.</speaker>
-            <stage><hi rend="italic"><em>Ils boivent.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-33">
-            <speaker>PONCASTOR, <em>pleurant.</em></speaker>
-            <l n="361" xml:id="l361">Ah ! gueux ! que je t’en veux, va !</l>
-            <stage><hi rend="italic"><em>Il boit.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-34">
-            <speaker>FRÉTILLARD, <em>riant.</em></speaker>
-            <l n="363" xml:id="l363">Ah ! scélérat ! que tu m’es désagréable !</l>
-            <stage><hi rend="italic"><em>Il boit.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-35">
-            <speaker>PONCASTOR, <em>pleurant, un peu gris.</em></speaker>
-            <l n="365" xml:id="l365">Tu m’as fait bien du chagrin, animal que tu es !</l>
-            <stage><hi rend="italic"><em>Il boit.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-36">
-            <speaker>FRÉTILLARD, <em>riant, un peu gris aussi.</em></speaker>
-            <l n="367" xml:id="l367">Il a bien dit ça ! tu as bien dit ça ! Tu ne m’en as donc pas fait à moi, du chagrin ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-37">
-            <speaker>PONCASTOR, <em>pleurant.</em></speaker>
-            <l n="368" xml:id="l368">Est-ce que je savais que c’était ta femme !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-38">
-            <speaker>FRÉTILLARD, <em>riant.</em></speaker>
-            <l n="369" xml:id="l369">Eh bien ! et moi... savais-je que c’était la tienne !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-39">
-            <speaker>PONCASTOR, <em>pleurant.</em></speaker>
-            <l n="370" xml:id="l370">Oh ! j’ai un grand fond de tristesse !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-40">
-            <speaker>FRÉTILLARD, <em>riant.</em></speaker>
-            <l n="371" xml:id="l371">Eh ! eh ! eh ! tu pleures ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-41">
-            <speaker>PONCASTOR, <em>pleurant.</em></speaker>
-            <l n="372" xml:id="l372">Tu ris ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-42">
-            <speaker>FRÉTILLARD, <em>riant.</em></speaker>
-            <l n="373" xml:id="l373">Oui ! hi ! hi ! hi ! c’est si drôle, notre position ! hi ! hi ! hi ! deux citoyens qui se sont mutuellement... hi ! hi ! hi !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-43">
-            <speaker>PONCASTOR, <em>riant aussi.</em></speaker>
-            <l n="374" xml:id="l374">Hi ! hi ! hi ! ne me fais pas rire. Je ne veux pas rire.</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-44">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="375" xml:id="l375">Tiens, vois-tu, on mettrait ça sur le théâtre... il ya des imbéciles qui diraient que c’est invraisemblable !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-45">
-            <speaker>PONCASTOR.</speaker>
-            <l n="376" xml:id="l376">Dame ! ça ne s’est peut-être jamais vu.</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-46">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="377" xml:id="l377">C’est rare ! c’est très rare ! car au fond... tout-à-fait au fond... nous ne pouvons rien nous reprocher...</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-47">
-            <speaker>PONCASTOR, <em>remplissant son verre.</em></speaker>
-            <l n="378" xml:id="l378">Heu ! heu !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-48">
-            <speaker>FRÉTILLARD, <em>de même.</em></speaker>
-            <l n="379" xml:id="l379">Je suis à plaindre ! tu es à plaindre ! tu me plains ! je te plains !</l>
-            <stage><hi rend="italic"><em>Ils boivent.</em></hi></stage>
-            <l n="381" xml:id="l381">nous sommes pleins !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-49">
-            <speaker>PONCASTOR.</speaker>
-            <l n="382" xml:id="l382">Nous sommes manche à manche.</l>
-            <stage><hi rend="italic"><em>Ils se lèvent.</em></hi></stage>
-          </sp>
-          <sp who="frétillard" xml:id="10-50">
-            <speaker>FRÉTILLARD, <em>gaiement.</em></speaker>
-            <l n="384" xml:id="l384">Et puis, vois-tu, en raisonnant bien !... c’est peut-être heureux que ce soit nous qui... parce que si ce n’était pas nous... ça aurait pu nous arriver avec d’autres !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-51">
-            <speaker>PONCASTOR, <em>de même.</em></speaker>
-            <l n="385" xml:id="l385">Nous, du moins, nous nous connaissons !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-52">
-            <speaker>FRÉTILLARD, <em>l’embrasse.</em></speaker>
-            <l n="386" xml:id="l386">Nous sommes d’honnêtes gens !</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-53">
-            <speaker>PONCASTOR, <em>l’embrasse.</em></speaker>
-            <l n="387" xml:id="l387">Des gens comme il faut !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-54">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="388" xml:id="l388">Comment t’appelles-tu ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-55">
-            <speaker>PONCASTOR.</speaker>
-            <l n="389" xml:id="l389">De Poncastor !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-56">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="390" xml:id="l390">Et moi, Saint-Frétillard.</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-57">
-            <speaker>PONCASTOR.</speaker>
-            <l n="391" xml:id="l391">À propos ! une chose que je voudrais savoir... Qu’est-ce que ma femme vous a dit de moi ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-58">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="392" xml:id="l392">Curieux !... Elle m’a dit... Ça va vous tacher...</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-59">
-            <speaker>PONCASTOR.</speaker>
-            <l n="393" xml:id="l393">Du tout ! Je suis au-dessus de ce détail !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-60">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="394" xml:id="l394">Il paraît que quand vous dormez...</l>
-            <stage><hi rend="italic"><em>Il imite quelqu’un qui ronfle.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-61">
-            <speaker>PONCASTOR.</speaker>
-            <l n="396" xml:id="l396">Je ronfle !... Tiens, je ne m’en étais jamais aperçu !</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-62">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="397" xml:id="l397">Ah ça, et la mienne ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-63">
-            <speaker>PONCASTOR.</speaker>
-            <l n="398" xml:id="l398">La vôtre ?... Elle prétend que vous nous mouchez en trompette.</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-64">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="399" xml:id="l399">Quel mensonge !... quand je me mouche, je ne fais pas plus de bruit qu’une chandelle...</l>
-          </sp>
-          <sp who="poncastor" xml:id="10-65">
-            <speaker>PONCASTOR, <em>riant.</em></speaker>
-            <l n="400" xml:id="l400">Je ris, mais j’ai un fond de tristesse.</l>
-          </sp>
-          <sp who="frétillard" xml:id="10-66">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="401" xml:id="l401">Tu m’es sympathique !...</l>
-            <stage><hi rend="italic"><em>Il l’embrasse.</em></hi></stage>
-          </sp>
-          <sp who="poncastor" xml:id="10-67">
-            <speaker>PONCASTOR.</speaker>
-            <l n="403" xml:id="l403">Ah ! gueusard ! tu me séduis !</l>
-            <stage><hi rend="italic"><em>Il l’embrasse.</em></hi></stage>
-          </sp>
-          <sp who="ensemble" xml:id="10-68">
-            <speaker>ENSEMBLE.</speaker>
-            <stage><hi rend="italic"><em>Air précédent.</em></hi></stage>
-            <l n="406" xml:id="l406"> </l>
-            <l n="407" xml:id="l407"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="408" xml:id="l408"> </l>
-          <sp who="farouchon" xml:id="11-1">
-            <speaker>FRÉTILLARD, PONCASTOR, FAROUCHON</speaker>
-            <l n="409" xml:id="l409"> </l>
-          </sp>
-          <sp who="farouchon" xml:id="11-2">
-            <speaker>FAROUCHON, <em>à Frétillard.</em></speaker>
-            <l n="410" xml:id="l410">Monsieur !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-3">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="411" xml:id="l411">Quoi ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="11-4">
-            <speaker>FAROUCHON.</speaker>
-            <l n="412" xml:id="l412">Une lettre pour vous... c’est huit sous...</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-5">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="413" xml:id="l413">Fais un nœud ! On sait déjà mon adresse.</l>
-            <stage><hi rend="italic"><em>Lisant.</em></hi></stage>
-            <l n="415" xml:id="l415">« Cher monsieur, Juliette vient de m’expliquer votre présence dans mon domicile... Du moment qu’il ne s’agissait que d’une leçon d’Italien, je retire ma plainte. Signe : MALENTRAIN. »</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-6">
-            <speaker>PONCASTOR.</speaker>
-            <l n="416" xml:id="l416">Mon associé !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-7">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="417" xml:id="l417">Il retire sa plainte !... lui !... Ah ça ! Juliette n’est donc pas votre femme ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-8">
-            <speaker>PONCASTOR.</speaker>
-            <l n="418" xml:id="l418">Jamais ! je suis l’époux d’une Béatrix !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-9">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="419" xml:id="l419">Alors, qu’est-ce que vous me rabâchez depuis tantôt ? Beatrix m’est inconnue !</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-10">
-            <speaker>PONCASTOR.</speaker>
-            <l n="420" xml:id="l420">Cependant, ma tabletière ? ah ! je me remémore !... hier au soir, je l’ai prêtée à Malentrain !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-11">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="421" xml:id="l421">Malentrain ! le mari de Juliette ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-12">
-            <speaker>PONCASTOR.</speaker>
-            <l n="422" xml:id="l422">C’est lui ! j’en éprouve une joie d’enfant !... Ah ! mon ami !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-13">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="423" xml:id="l423">Ton ami ! Il n’y a plus d’ami !</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-14">
-            <speaker>PONCASTOR.</speaker>
-            <l n="424" xml:id="l424">Tu repousses mes phalanges ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-15">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="425" xml:id="l425">Avec horreur ! nos comptes ne se balancent plus, je suis en déficit, et tu vas me payer la différence !</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-16">
-            <speaker>PONCASTOR.</speaker>
-            <l n="426" xml:id="l426">Frétillard, tu m’affectes ! Je t’en voulais à cause de la tabatière, mais, puisque je l’avais prêtée !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-17">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="427" xml:id="l427">Et le bonnet ? moi, je n’ai pas prêté le bonnet !</l>
-            <stage><hi rend="italic"><em>Il le montre.</em></hi></stage>
-          </sp>
-          <sp who="farouchon" xml:id="11-18">
-            <speaker>FAROUCHON, <em>regardant.</em></speaker>
-            <l n="429" xml:id="l429">Tiens ! attendez donc ? mais, c’est lui !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-19">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="430" xml:id="l430">Mêle-toi de tes affaires.</l>
-          </sp>
-          <sp who="farouchon" xml:id="11-20">
-            <speaker>FAROUCHON.</speaker>
-            <l n="431" xml:id="l431">C’est l’orange que j’ai acheté a Clorinde, ma bonne amie.</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-21">
-            <speaker>FRÉTILLARD <em>et</em> PONCASTOR.</speaker>
-            <l n="432" xml:id="l432">Clorinde !</l>
-          </sp>
-          <sp who="farouchon" xml:id="11-22">
-            <speaker>FAROUCHON.</speaker>
-            <l n="433" xml:id="l433">Avant-hier, chez la modiste de la grande rue !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-23">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="434" xml:id="l434">Celle qui fournil ma femme.</l>
-          </sp>
-          <sp who="farouchon" xml:id="11-24">
-            <speaker>FAROUCHON.</speaker>
-            <l n="435" xml:id="l435">À preuve que j’ai fait un nœud au ruban, pour me souvenir que je l’avais dans ma poche.</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-25">
-            <speaker>PONCASTOR.</speaker>
-            <l n="436" xml:id="l436">Le nœud y est encore.</l>
-          <stage>PONCASTOR <em>et</em> FRÉTILLARD, <em>dansant autour de Farouchon.</em></stage>
-          </sp>
-          <sp who="poncastor" xml:id="11-26">
-            <speaker>PONCASTOR.</speaker>
-            <l n="437" xml:id="l437">Mais puisque je n’ai pas été arrêtée pour cause d’amour, pourquoi diable m’a-bon flanqué en prison ?</l>
-          </sp>
-          <sp who="farouchon" xml:id="11-27">
-            <speaker>FAROUCHON.</speaker>
-            <l n="438" xml:id="l438">Je le sais à présent ! c’est à cause de votre eau pour les yeux ! Vous êtes donc dentiste, vous ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-28">
-            <speaker>PONCASTOR.</speaker>
-            <l n="439" xml:id="l439">Une eau excellente... quelle injustice !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-29">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="440" xml:id="l440">C’est vrai ! je m’en suis servi... Elle est très bonne pour les cors aux pieds !</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-30">
-            <speaker>PONCASTOR, <em>riant.</em></speaker>
-            <l n="441" xml:id="l441">Eh bien ! Frétillard ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-31">
-            <speaker>FRÉTILLARD, <em>riant.</em></speaker>
-            <l n="442" xml:id="l442">Eh bien ! Poncastor ?</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-32">
-            <speaker>PONCASTOR.</speaker>
-            <l n="443" xml:id="l443">C’est fini ! nous ne nous sommes plus de rien !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-33">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="444" xml:id="l444">Nous n’en serons pas moins bons amis, n’est-ce pas !</l>
-          </sp>
-          <sp who="poncastor" xml:id="11-34">
-            <speaker>PONCASTOR.</speaker>
-            <l n="445" xml:id="l445">Je l’espère bien ! sans ça je serais capable de regretter !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-35">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="446" xml:id="l446">Et moi aussi... car au fond c’était drôle !</l>
-          </sp>
-          <sp who="farouchon" xml:id="11-36">
-            <speaker>FAROUCHON, <em>ouvrant la porte.</em></speaker>
-            <l n="447" xml:id="l447">Ah ! ça, vous pouvez sortir quand vous voudrez ?</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-37">
-            <speaker>FRÉTILLARD.</speaker>
-            <l n="448" xml:id="l448">Bravo !</l>
-          </sp>
-          <sp who="frétillard" xml:id="11-38">
-            <speaker>PONCASTOR, <em>à Frétillard.</em></speaker>
-            <l n="449" xml:id="l449">En ce cas, entonnons le chant de la délivrance !</l>
-          </sp>
-          <sp who="ensemble" xml:id="11-39">
-            <speaker>ENSEMBLE.</speaker>
-            <stage><hi rend="italic"><em>Air de la Retraite (Clapisson.)</em></hi></stage>
-            <stage><hi rend="italic"><em>Poncastor et Frétillard se trouvent éloignés l’un de l’autre ; ils se rapprochent en marchant au pas et font face au public. Farouchon reste dans le fond, à gauche, près de la porte.</em></hi></stage>
-            <stage><hi rend="italic"><em>Ils reculent sur la reprise, en marchant toujours au pas.</em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, entrant une lanterne à la main et parlant à la cantonade.</speaker>
+          <l n="1">Par ici ! amenez le prisonnier !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, entrant poussé par les épaules.</speaker>
+          <l n="2">Ne poussez-donc pas ! puisque je suis résigné...</l>
+          <stage>&lt;em&gt;Au public.&lt;/em&gt;</stage>
+          <l n="3">Ce n’est pas à Paris qu’on me bousculerait comme ça ! Mais, à Nantes, on est si mal élevé ! Garçon !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="4">Guichetier ! Il me semble que vous n’êtes pas dans un estaminet !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="5">Mais où suis-je ? voilà ce que je demande à tous les les corridors ! où suis-je ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="6">Dans un endroit provisoire, vu que la nouvelle prison n’est pas finie ! c’est dommage ! vous en auriez eu l’étrenne.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="7">En prison ! moi ! Poncastor ! fabricant de denrées coloniales ! Les siècles à venir ne le croiront pas !</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="8">Garçon ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="9">Guichetier !</l>
+          <stage>&lt;em&gt;L’examinant.&lt;/em&gt;</stage>
+          <l n="10">Mais attendez donc, je vous remets, vous !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="11">Moi ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="12">J’ai manqué d’être arrêté pour vous, tout à l’heure ! dans la grande rue, à l’hôtel du Cheval-Blanc.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="13">J’y prends quelquefois ma nourriture !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="14">Il faut vous dire que j’ai un sentiment au Cheval-Blanc ! Ma bonne amie demeure au second.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="15">Je m’en bats complètement la paupière !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="16">Elle était absente... elle est souvent absente, ma bonne amie ! Je dégringolais l’escalier. Tout-à-coup un monsieur pas bien mis me saute à la cravate en criant : c’est lui ! Alors un autre monsieur, pas bien mis non plus, répond, ce n’est pas lui ! nous le tenons ! Effectivement on vous tenait ! vous aviez l.’air d’un chat qui sort du bain !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="17">J’étais abasourdi ! un pareil scandale ! Qu’avez-vous dû penser de moi ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON</speaker>
+          <l n="18">Rien de désagréable ! je me suis dit : voilà un filou qui travaille dans l’argenterie !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="19">Moi ! me soupçonner...</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="20">C’est donc un couvert que vous avez pris ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="21">Ah ! si je n’étais pas résigné !</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="22">Garçon !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="23">Guichetier !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="24">Donnez-moi un cabinet particulier !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="25">Plaît-il ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="26">Une cellule, quoi !</l>
+          <stage>&lt;em&gt;Air de la Famille de l’Apothicaire.&lt;/em&gt;</stage>
+          <l n="27">Enfin, un endroit isolé ;</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="28">Ah ! là-dessus on n’se trompe guère ;</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="29">Hein ? qu’est-ce que tu dis ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <stage>On voit bien, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="30">Oh ! si je n’étais pas résigné !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="31">C’est six francs par jour la cellule !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="32">Voici la somme, maintenant conduis-moi !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="33">Comment ! conduis-moi... vous y êtes...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="34">Comment, ce trou ? tu n’as rien de mieux distribué ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="35">Je vous assure que, s’il y avait seulement des glaces et des tapis... mais vous êtes libre d’en faire poser !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="36">Au fait, une nuit est bientôt passée... Demain, ma famille me réclamera !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON</speaker>
+          <l n="37">C’est donc un couvert que vous avez pris ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="38">Fiche-moi la paix...</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="39">Vous n’avez plus besoin de rien ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="40">Non ! si ! Je ne sais où diable j’ai laissé ma tabatière ! Achète-moi pour quatre sous de tabac !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="41">Bien ! monsieur ? Il tire son mouchoir et y fait un nœud.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="42">Qu’est-ce que tu fais là ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="43">Un nœud ! c’est pour me rappeler ! là, vous êtes noté ! À présent, donnez-moi huit sous !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="44">Je t’ai dit pour quatre.</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="45">J’ai bien entendu !... Mais ici, quatre sous de tabac, c’est huit sous !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, les lui donnant.</speaker>
+          <l n="46">Ah ! jeune homme, vous n’êtes pas délicat !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="47">Ah ! ah ! ah ! Il prend des couverts et il me fait de la morale ! V’là bien le monde à présent !</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air du Prophète.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="48">Allez, comptez sur mon zèle,</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="49">Va, je compte sur ton zèle,</l>
+          <stage>&lt;em&gt;Farouchon sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, seul</speaker>
+          <l n="50">En prison ! moi ! un homme établi ! et sans tabac !... Moi, qui n’eus jamais rien à démêler avec la justice des hommes !ah !si ! une petite fois ! il y a quinze jours ! je suis droguiste, et, comme tel, je m’occupe un peu de chimie ! J’avais composé une eau admirable pour les yeux ! Un de mes clients, affligé d’une ophtalmie, fit usage de mon remède. Au bout de trois jours, il était radicalement guéri d’un œil... mais, de l’autre, il était borgne ! Croirait-on qu’on a vu là-dedans quelque chose de louche ! Je fus dénoncé par un marchand de lunettes. On m’accuse de tricoter la médecine...et le tribunal. Mais, pourquoi m’en plaindrais-je ? Galilée ne fut pas compris par son siècle... aussi, je me résignerais, sans cette nouvelle tuile qui me tombe sur la boule ! Que va penser ma légitime, en ne me voyant pas rentrer ? et quand elle saura le motif ! Une femme du midi ! jalouse jusque dans la moelle ! Elle est capable de faire des choses déplacées ! certainement, je suis plein de confiance en elle ! Mais j’ai aposté quelqu’un dans ses alentours pour la moucharder ! Encore, si j’avais ma tabatière !... ça me donnerait peut-être une inspiration pour sortir d’ici ! car je ne crains pas de le dire, j’ai des projets d’évation ! J’ai lu Monte-Cristo ! cet homme reclus mais non perclus, perçu 22 murs a l’aide d’un clou !</l>
+          <stage>&lt;em&gt;Se fouillant.&lt;/em&gt;</stage>
+          <l n="51">Voyons, si j’ai sur moi ! Juste ! un cure-dents ! ça sera plus long, mais avec de la patience !</l>
+          <stage>&lt;em&gt;On entend du bruit.&lt;/em&gt;</stage>
+          <l n="52">On vient ! cachons mon jeu !</l>
+          <stage>&lt;em&gt;Il cache son cure-dents.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, introduisant Frétillard.</speaker>
+          <l n="53">Par ici ! par ici !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, sans cravate, et son habit sous le bras.</speaker>
+          <l n="54">Ne poussez donc pas, sacrebleu !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="55">Les gueux ! ils ne m’ont pas même laissé le temps de remettre mon habit !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, à Frétillard.</speaker>
+          <l n="56">Monsieur, pour être seul, c’est six francs !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="57">Les voici !</l>
+          <stage>&lt;em&gt;À part, remettant son habit.&lt;/em&gt;</stage>
+          <l n="58">Ô amour ! tu me flanques dans de beaux draps...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, prenant Farouchon à part.</speaker>
+          <l n="59">Quel est cet intrus ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="60">Ça ? c’est un confrère ! Vous vous plairez avec lui, je crois que c’est un assassin...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="61">Mais, animal, j’ai payé pour être seul !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="62">Lui, aussi, monsieur !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, apercevant Poncastor.</speaker>
+          <l n="63">Quelqu’un !</l>
+          <stage>&lt;em&gt;Appelant Farouchon.&lt;/em&gt;</stage>
+          <l n="64">Alguazil ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="65">Guichetier !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="66">Quel est ce bipède qui se dandine là-bas !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="67">C’est un homme très bien... il a été arrêté pour de tournement...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="68">De mineure ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="69">Non, l’argenterie...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="70">Mais, corne-de-bœuf ! j’ai payé pour être seul !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="71">Lui aussi, monsieur !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="72">Si encore j’avais ma tabatière...</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="73">Garçon, mon tabac ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="74">Ah ! pomme-de-reinette, je l’ai oublié... attendez, je vais faire un nœud...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="75">Mais il y en a déjà un !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, faisant un nœud.</speaker>
+          <l n="76">Le second est pour me rappeler le premier... Là, vous êtes renoté...</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air de l’Elissire d’Amore.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="77">Cette fois, soyez tranquille,</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD et PONCASTOR, à part.</speaker>
+          <l n="78">Ah ! je ne suis pas tranquille,</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à part.</speaker>
+          <l n="79">Seul avec cette canaille ! et je n’ai pas de tabac !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, à part.</speaker>
+          <l n="80">Enfermé avec ce brigand ! moi, un professeur de langues... pour les jeunes personnes !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à part.</speaker>
+          <l n="81">Sa figure porte l’empreinte de tous les vices...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, à part.</speaker>
+          <l n="82">Il a une physionomie abjecte !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à part.</speaker>
+          <l n="83">S’il se doute que je suis un honnête homme, il est capable de me serrer le cou !</l>
+          <stage>&lt;em&gt;Le saluant.&lt;/em&gt;</stage>
+          <l n="84">Monsieur !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, de même.</speaker>
+          <l n="85">Monsieur !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="86">On dit qu’il faut hurler avec les loups... hurlons !...</l>
+          <stage>&lt;em&gt;Haut et frappant sur l’épaule de Poncastor.&lt;/em&gt;</stage>
+          <l n="87">Eh bien ! camarade... Eh, eh, eh !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="88">Eh, eh, eh !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="89">Il me prend pour un confrère, poussons-le dans cette voie...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="90">Vous vous êtes donc laissé pincer ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="91">Mais oui, mais oui... tant va la cruche à l’eau... comme on dit...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="92">Est-ce la première fois qu’on vous coffre ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="93">Certainement... c’est-à-dire... non... entre nous... c’est la treizième...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, à part.</speaker>
+          <l n="94">Treize fois ! c’est un habitué...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="95">Et vous ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="96">Oh ! moi ! je ne me suis encore échappe que quatre fois de Brest...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="97">À votre âgé ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="98">Une fois à pied ! une à cheval ! une en voiture ! et la dernière...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="99">En ballon ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="100">Non, en caleçon...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="101">C’est hardi ! j’aime cette vie là ! quelle belle vie...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, chantant.</speaker>
+          <l n="102">La belle vie !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, de même.</speaker>
+          <l n="103">La belle fête !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, à part.</speaker>
+          <l n="104">Quel gueux !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à part.</speaker>
+          <l n="105">Quel brigand !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="106">Moi, d’abord... dès que je vois briller un bijou quelconque, ça me démange...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, passant vivement une bague, de la main droite à la gauche.</speaker>
+          <l n="107">Ça te démange... et tu te grattes ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="108">Comme tu dis...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="109">Cher ami...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="110">Mon frère !...</l>
+          <stage>&lt;em&gt;Ils sont sur le point de s’embrasser et s’arrêtent tous les deux.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à part.</speaker>
+          <l n="111">Sapristi ! et ma montre que j’oubliais...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, de même.</speaker>
+          <l n="112">Bigre... et mon épingle...</l>
+          <stage>&lt;em&gt;Il se boutonne.&lt;/em&gt;</stage>
+          <l n="113">Ah ! ça ! pourquoi es-tu ici, toi ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="114">Oh ! moi ! je n’y suis pas pour longtemps... c’est une erreur...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="115">Une erreur... Serais-tu innocent ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="116">Moi !...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="117">Quel regard il m’a lancé !...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="118">Ah ! bien oui !... Je suis un affreux gredin... Je grinche, tu grinches, nous grinchons !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, à part.</speaker>
+          <l n="119">Ah ! tu parles argot !... Attends... attends... j’en distille aussi comme professeur de langues...</l>
+          <stage>&lt;em&gt;L’appelant.&lt;/em&gt;</stage>
+          <l n="120">Pstt...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="121">Hein ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="122">Lago ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à part.</speaker>
+          <l n="123">Lago ! c’est de l’Italien ! la Dona del lago...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="124">Il s’agit de bouliner la duraille et dare, et dare...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="125">La duraille !... ça va...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="126">Poussons-nous de l’air !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="127">Poussons-nous-en !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="128">As-tu des outils ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="129">Chut ! j’ai un cure-dents...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="130">Chut ! voici une épingle... Maintenant, pioche... bouline !...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à part.</speaker>
+          <l n="131">Qu’est-ce qu’il veut que je bouline avec ça ?</l>
+          <stage>&lt;em&gt;On entend du bruit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="132">Attention, un raille.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="133">Plaît-il ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="134">Un raille... le guichemard !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, passant deux pains noirs et un broc, qu’il pose sur la table à gauche.</speaker>
+          <l n="135">Voilà votre souper... Deux pains de munition et une cruche d’eau !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="136">Une cruche d’eau !...</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="137">C’est le menu de l’établissement... mais il y a un restaurant à côté !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="138">Que ne parlais-tu tout de suite ! sers-nous un festin splendide !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="139">Vous êtes donc riche, vous ?...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, cachant sa bourse.</speaker>
+          <l n="140">Riche...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="141">Quelle imprudence.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="142">J’ai neuf sous... et vous ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="143">Moi du vent dans les valades...</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="144">Alors, vous êtes servis.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, prenant un pain.</speaker>
+          <l n="145">Quel pain...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="146">C’est fait avec du son.</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON</speaker>
+          <l n="147">Par exemple... il n’entre pas de son ici... c’est de la sciure de bois...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="148">Ah ! le système pénitentiaire appelle de grandes réformes !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="149">À propos, vous n’avez pas signé l’écrou, vous ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="150">C’est vrai !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="151">Eh bien, allons-y !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="152">Avec plaisir...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="153">Je vais tâcher de me faire caser ailleurs...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, à part.</speaker>
+          <l n="154">Si il pouvait ne pas revenir...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="155">Au revoir, cher ami !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="156">Au revoir, mon chéri.</l>
+          <stage>&lt;em&gt;Farouchon sort avec Poncastor.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, seul</speaker>
+          <l n="157">Enfin... je ne suis plus forcé de me travestir en cartouche et de mettre un faux nez à mes principes... moi, Frétillard, qui ne prendrais pas une prise de tabac à mon portier... parce qu’il a les mains sales... et voilà l’homme vertueux qu’on plonge dans les cachots... Quand je dit que je ne prends rien... je ne cacherai pas que ce matin j’ai pris l’omnibus qui mène dans le faubourg... J’ai une élève dans cette localité... la femme d’un marchand de bois qui désire savoir l’italien pour comprendre la musique... À peine étais-je installé dans le véhicule susnommé, que j’entends une douce voix de femme qui s’écrie : conducteur ! rendez-moi quatre sous... je me retourne, c’était Juliette... Juliette, mon premier amour... je dirais même mon seul amour, si je ne craignais pas de me tromper... un ange au teint de neige, avec un cou de cygne et un signe au cou... Je commis autrefois la folichonnerie de demander sa main à son père... ce vieux conservateur... d’hypothèques, se fit un devoir de la donner à un autre... une buse que je ne connais pas, mais je le déclare une buse... Qu’on juge de mon émotion. Retrouver Juliette en omnibus... mariée depuis trois ans... Je ne lui dis que ces mots simples, mais bien accentués... Juliette, est-ce que vous allez jusqu’à Constantinople ?... Non, fit-elle... je descends ! voici ma demeure... Point ne me fis prier pour la suivre... nous montons et nous voilà seuls... Honoré, me dit-elle... (Honoré est mon nom de femme.) te souviens-tu de nos jeunes années ?... j’allais lui répondre... Oh ! oui, je m’en souviens, quand une voix sinistre me crie, à travers la porte ; Ouvrez au nom de la loi... cette voix était celle d’une écharpe ornée d’un commissaire, l’ami du mari... Ce magistrat me dit avec sévérité... maladroit ! comment diable, vous êtes-vous laissé piper ! c’est stupide... il me pipa... et me voilà... Le bruit court que j’en ai pour six mois... de prison, pour avoir pris un omnibus... sans préméditation ! c’est salé...</l>
+          <stage>&lt;em&gt;On entend crier les verrous.&lt;/em&gt;</stage>
+          <l n="158">Chut ! c’est mon pègre... reprenons le masque du crime !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, entrant en scène en riant.</speaker>
+          <l n="159">Ah ! ah ! ah ! j’en ris depuis la cime jusqu’aux talons...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="160">Vous êtes bien folâtre ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="161">Malin... j’ai parcouru la liste des écrous !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="162">Après...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="163">Vous m’avez mis dedans, vous n’êtes pas un voleur.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="164">Par exemple ! est-ce pour m’insulter ?...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="165">Mais ni moi non plus...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="166">Bah !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="167">Flagrant délit comme vous... comme toi...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="168">Saisi au gîte ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="169">Pour cause d’amour !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="170">Nous grinchons donc aussi (‘les lemmes mariées !...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="171">Oui ! hi ! hi !</l>
+          <stage>&lt;em&gt;Air du Petit Malblanchi.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="172">C’est pour ça que je suis en cage !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="173">C’est pour ça que l’on m’a surpris !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="174">Coffres tous deux pour amoureux délit !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="175">Péché mignon dont l’hymen nous punit.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="176">Ah ! ah ! ah ! ah ! nous volions des maris !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="177">Din, din, din, din ! mon Dieu, comme j’en ris !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="178">Ah ! je bénis ce troc,</l>
+        </sp>
+        <sp who="#reprise">
+          <speaker>REPRISE.</speaker>
+          <stage>C’est pour ça, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Pendant le refrain, Poncastor et Frétillard se prennent par la main et dansent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, paraissant au grillage du fond.</speaker>
+          <l n="179">Eh ! là-bas ! vous faites un sabbat d’enfer !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="180">Du champagne !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="181">Un pâté !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, tirant son mouchoir.</speaker>
+          <l n="182">Attendez que je fasse des nœuds !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="183">Et mon tabac !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, lui montrant le nœud fait à son mouchoir.</speaker>
+          <l n="184">Voilà ! vous êtes noté !</l>
+          <stage>&lt;em&gt;Il disparaît.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, gaiement.</speaker>
+          <l n="185">Ah ! nous allons rire ! nous allons embellir le court espace !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="186">Oui, rions ! pourtant j’ai un tond de tristesse...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="187">Ah ! et pourquoi ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="188">Je suis marié !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="189">Tiens, et moi aussi !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="190">Que diront nos femmes ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="191">Elles vont faire un nez d’une longueur...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="192">Oh ! hi ! hi ! hi ! Je ris, mais j’ai un fond de tristesse.</l>
+          <stage>&lt;em&gt;Ils se promènent côte à côte en remontant et descendant le théâtre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="193">Je vous dirai que la mienne !... je m’en soucie médiocrement... Elle porte des bonnets oranges !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="194">Mais il y a des femmes remarquables qui portent des bonnets oranges !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="195">Des Portugaises, c’est possible !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="196">Non ! des Bretonnes ! J’en connais !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="197">Au surplus, si ma femme veut une séparation... liberté, libertas !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="198">Homme immoral ! et vos enfants ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="199">Est-ce que vous en avez ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="200">Je ne crois pas !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="201">Ni moi non plus !</l>
+          <stage>&lt;em&gt;Ils sont revenus à l’avant-scène.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="202">C’est inouï, comme il y a de l’analogie entre nous...</l>
+          <stage>&lt;em&gt;L’enlaçant.&lt;/em&gt;</stage>
+          <l n="203">Les deux frères Siamois !</l>
+          <stage>&lt;em&gt;Air de l’Ours et le Pacha.&lt;/em&gt;</stage>
+          <l n="204">Par l’hymen tous deux enchaînés,</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="205">Dans la même prison entraînés,</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="206">Le même astre, à ce qu’il paraît,</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="207">Mêmes plaisirs, même misère !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="208">Et si ta femme te trompait !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="209">Tu serais sûr de ton affaire !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="210">Tu serais sûr de ton affaire !</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <l n="211">Nous serions sûrs de notre affaire !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="212">Dites donc, est-elle jolie, la vôtre ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="213">Ma femme !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="214">Non, l’illicite ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="215">Ah ! mon ami ! des cheveux comme un cheval arabe ! Nous arrivons au Cheval-Blanc, et madame commande le souper !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="216">Un souper gaillard et truffé ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR</speaker>
+          <l n="217">Non ! de la morue aux pommes de terre !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="218">Tiens, de la morue aux pommes ! Madame Frétillard m’en assomme quelquefois.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="219">Nous nous dispositions à l’arroser d’un Mâcon provocateur... Vous n’avez pas de tabac ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="220">Non !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="221">Quand, tout à coup, la vindicte publique paraît à la porte !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="222">C’est à peu près mon anecdote ! moi, j’ai été appréhendé dans le faubourg, 8.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="223">Tiens, ma boutique est en bas, j’y demeure avec Malentrain.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="224">Qui ça, Malentrain ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="225">Mon associé !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="226">Oh ! c’est drôle ! dans ma précipitation, j’ai emporté la tabatière du mari !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="227">Vous avez du tabac ! vous me sauvez la vie.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, tirant sa tabatière.</speaker>
+          <l n="228">Puisez, monsieur, ne vous gênez pas, c’est au mari.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="229">Attendez que je me mouche !</l>
+          <stage>&lt;em&gt;Croyant prendre son mouchoir, il tire de sa poche un bonnet orange.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="230">Un bonnet ! l’orange de ma femme !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, saisissant la tabatière.</speaker>
+          <l n="231">Ma tabatière !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="232">Misérable ! infâme ! gueux ! polisson.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, prenant une prise.</speaker>
+          <l n="233">Mâtin ! mâtin ! mâtin !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="234">On a beau avoir une femme orange, c’est toujours vexant !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="235">Mâtin ! matin ! mâtin !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="236">Monsieur, un de nous deux est de trop sur le globe !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="237">Tu oses me provoquer, Jean-Fichtre que tu es...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="238">J’ai le choix des armes !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="239">Du tout ! Je suis l’offensé !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD</speaker>
+          <l n="240">Tu ne l’es pas plus que moi !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="241">Nous le sommes tous les deux !</l>
+          <stage>&lt;em&gt;Air du Prophète.&lt;/em&gt;</stage>
+          <l n="242">Je voudrais le déchirer !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="243">Je voudrais te dévorer !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="244">Et comme un frelon !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="245">Ou comme un moucheron...</l>
+        </sp>
+        <sp who="#tous-deux">
+          <speaker>TOUS DEUX.</speaker>
+          <l n="246">T’écraser sous mon talon.</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>&lt;em&gt;Reprise du couplet entier.&lt;/em&gt;</stage>
+          <stage>Je voudrais le déchirer, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Pendant l’ensemble ils boxent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, apportant le souper, se plaçant entr’eux et recevant une gifle de chacun.</speaker>
+          <l n="247">Hein ! quoi ? une émeute !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="248">Garçon ! des épées !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="249">Garçon ! des pistolets !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="250">Pardon ! ces articles-là manquent sur la carte !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="251">Quelle gargote !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, mettant la table au milieu du théâtre.</speaker>
+          <l n="252">Mais voici le pâté et le champagne !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="253">Nous n’en voulons pas !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="254">Bah ! vous m’en faites cadeau !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="255">Laisse ça là ! Nous ne mangeons pas, mais nous ne voulons pas que tu manges !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="256">Vous en avez le droit, mais c’est vilain !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, PONCASTOR</speaker>
+          <stage>&lt;em&gt;Ils arpentent le théâtre en montant et en descendant, de façon que l’un remonte quand l’autre descend.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="257">Ah ! que je rage ! pas d’épées ! pas même de gourdins !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="258">Je le regrette vivement !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="259">Mais nous sortirons d’ici, monsieur !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="260">J’en ai l’espoir !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="261">Et nous nous écharperons !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="262">C’est encore l’espoir que j’ai.</l>
+          <stage>&lt;em&gt;Ils continuent d’arpenter le théâtre, l’un à l’avant-scène, l’autre au fond, et de droite à gauche et vice versa.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="263">Dieu de Dieu ! être obligé de rester en tête à tête avec son plus mortel ennemi.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="264">Avoir continuellement devant les yeux un être qui vous a... ah !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="265">Si j’avais seulement un livre de philosophie... ou de cuisine !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="266">Et rien pour se distraire ! pas même un bilboquet... Ah ! je vais souper ! ça m’occupera !</l>
+          <stage>&lt;em&gt;Il se met à table.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="267">Vous soupez, vous ? sans cœur. J’espère que vous me laisserez ma part ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="268">Je coupe le pâté en deux ! et je prends une bouteille de champagne ! le reste vous appartient !... je respecte votre moitié !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="269">Vous ne l’avez pas toujours respectée, ma moitié !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="270">Il me semble que je pourrais me livrer au même calembour ! Mais non ! j’ai un fond de tristesse ! prenez votre pâté.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="271">Ma pâtée ! pour qui me prenez-vous ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="272">Et portez-le où vous voudrez.</l>
+          <stage>&lt;em&gt;Il pose la moitié du pâté à terre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="273">Comment ! que je le porte ! Est-ce que la table est à vous plus qu’à moi !</l>
+          <stage>&lt;em&gt;Il prend l’assiette.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="274">J’y étais le premier.</l>
+          <stage>&lt;em&gt;Il attire la table à lui.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="275">C’est égal, je veux m’y mettre.</l>
+          <stage>&lt;em&gt;Il s’y met et attire la table à lui.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="276">Mais je ne me soucie pas de souper en face de votre face !</l>
+          <stage>&lt;em&gt;Même jeu de table.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, se servant du pâté.</speaker>
+          <l n="277">Alors, allez-vous-en !</l>
+          <stage>&lt;em&gt;Même jeu.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="278">Ah ! si je n’avais pas aussi faim ! C’est drôle comme j’ai faim quand je suis triste.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, mangeant.</speaker>
+          <l n="279">Moi, voilà que ça me prend ! Je trouve même ce pâté fort bon ! Que l’estomac est donc dépravé !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="280">Monsieur, je ne sais pas si c’est votre figure qui m’étouffe, mais il faut que je boive...</l>
+          <stage>&lt;em&gt;Il débouche sa bouteille.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="281">J’ai besoin de boire aussi ! mais pas à votre santé !</l>
+          <stage>&lt;em&gt;Même jeu.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, se versant.</speaker>
+          <l n="282">Moi, je bois à l’aversion que tu m’inspires !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, se versant.</speaker>
+          <l n="283">Et moi, au mépris dont je t’accable !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <stage>&lt;em&gt;Air de Mangeant.&lt;/em&gt;</stage>
+          <l n="284">À la haine éternelle</l>
+          <stage>&lt;em&gt;Ils boivent en même temps.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="285">Et moi, je bois à celle</l>
+          <stage>&lt;em&gt;Ils boivent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="286">Je bois à la vengeance</l>
+          <stage>&lt;em&gt;Ils boivent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="287">Je bois à l’espérance</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <l n="288">Ah ! que tu me déplais !</l>
+          <stage>&lt;em&gt;Ils boivent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, pleurant.</speaker>
+          <l n="289">Ah ! gueux ! que je t’en veux, va !</l>
+          <stage>&lt;em&gt;Il boit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, riant.</speaker>
+          <l n="290">Ah ! scélérat ! que tu m’es désagréable !</l>
+          <stage>&lt;em&gt;Il boit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, pleurant, un peu gris.</speaker>
+          <l n="291">Tu m’as fait bien du chagrin, animal que tu es !</l>
+          <stage>&lt;em&gt;Il boit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, riant, un peu gris aussi.</speaker>
+          <l n="292">Il a bien dit ça ! tu as bien dit ça ! Tu ne m’en as donc pas fait à moi, du chagrin ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, pleurant.</speaker>
+          <l n="293">Est-ce que je savais que c’était ta femme !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, riant.</speaker>
+          <l n="294">Eh bien ! et moi... savais-je que c’était la tienne !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, pleurant.</speaker>
+          <l n="295">Oh ! j’ai un grand fond de tristesse !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, riant.</speaker>
+          <l n="296">Eh ! eh ! eh ! tu pleures ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, pleurant.</speaker>
+          <l n="297">Tu ris ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, riant.</speaker>
+          <l n="298">Oui ! hi ! hi ! hi ! c’est si drôle, notre position ! hi ! hi ! hi ! deux citoyens qui se sont mutuellement... hi ! hi ! hi !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, riant aussi.</speaker>
+          <l n="299">Hi ! hi ! hi ! ne me fais pas rire. Je ne veux pas rire.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="300">Tiens, vois-tu, on mettrait ça sur le théâtre... il ya des imbéciles qui diraient que c’est invraisemblable !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="301">Dame ! ça ne s’est peut-être jamais vu.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="302">C’est rare ! c’est très rare ! car au fond... tout-à-fait au fond... nous ne pouvons rien nous reprocher...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, remplissant son verre.</speaker>
+          <l n="303">Heu ! heu !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, de même.</speaker>
+          <l n="304">Je suis à plaindre ! tu es à plaindre ! tu me plains ! je te plains !</l>
+          <stage>&lt;em&gt;Ils boivent.&lt;/em&gt;</stage>
+          <l n="305">nous sommes pleins !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="306">Nous sommes manche à manche.</l>
+          <stage>&lt;em&gt;Ils se lèvent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, gaiement.</speaker>
+          <l n="307">Et puis, vois-tu, en raisonnant bien !... c’est peut-être heureux que ce soit nous qui... parce que si ce n’était pas nous... ça aurait pu nous arriver avec d’autres !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, de même.</speaker>
+          <l n="308">Nous, du moins, nous nous connaissons !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, l’embrasse.</speaker>
+          <l n="309">Nous sommes d’honnêtes gens !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, l’embrasse.</speaker>
+          <l n="310">Des gens comme il faut !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="311">Comment t’appelles-tu ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="312">De Poncastor !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="313">Et moi, Saint-Frétillard.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="314">À propos ! une chose que je voudrais savoir... Qu’est-ce que ma femme vous a dit de moi ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="315">Curieux !... Elle m’a dit... Ça va vous tacher...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="316">Du tout ! Je suis au-dessus de ce détail !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="317">Il paraît que quand vous dormez...</l>
+          <stage>&lt;em&gt;Il imite quelqu’un qui ronfle.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="318">Je ronfle !... Tiens, je ne m’en étais jamais aperçu !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="319">Ah ça, et la mienne ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="320">La vôtre ?... Elle prétend que vous nous mouchez en trompette.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="321">Quel mensonge !... quand je me mouche, je ne fais pas plus de bruit qu’une chandelle...</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, riant.</speaker>
+          <l n="322">Je ris, mais j’ai un fond de tristesse.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="323">Tu m’es sympathique !...</l>
+          <stage>&lt;em&gt;Il l’embrasse.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="324">Ah ! gueusard ! tu me séduis !</l>
+          <stage>&lt;em&gt;Il l’embrasse.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>&lt;em&gt;Air précédent.&lt;/em&gt;</stage>
+          <l n="325">Ah ! ah ! ah ! ah ! ah ! ah ! ah ! ah ! ah !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, à Frétillard.</speaker>
+          <l n="326">Monsieur !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="327">Quoi ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="328">Une lettre pour vous... c’est huit sous...</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="329">Fais un nœud ! On sait déjà mon adresse.</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <l n="330">« Cher monsieur, Juliette vient de m’expliquer votre présence dans mon domicile... Du moment qu’il ne s’agissait que d’une leçon d’Italien, je retire ma plainte. Signe : MALENTRAIN. »</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="331">Mon associé !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="332">Il retire sa plainte !... lui !... Ah ça ! Juliette n’est donc pas votre femme ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="333">Jamais ! je suis l’époux d’une Béatrix !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="334">Alors, qu’est-ce que vous me rabâchez depuis tantôt ? Beatrix m’est inconnue !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="335">Cependant, ma tabletière ? ah ! je me remémore !... hier au soir, je l’ai prêtée à Malentrain !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="336">Malentrain ! le mari de Juliette ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="337">C’est lui ! j’en éprouve une joie d’enfant !... Ah ! mon ami !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="338">Ton ami ! Il n’y a plus d’ami !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="339">Tu repousses mes phalanges ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="340">Avec horreur ! nos comptes ne se balancent plus, je suis en déficit, et tu vas me payer la différence !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="341">Frétillard, tu m’affectes ! Je t’en voulais à cause de la tabatière, mais, puisque je l’avais prêtée !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="342">Et le bonnet ? moi, je n’ai pas prêté le bonnet !</l>
+          <stage>&lt;em&gt;Il le montre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, regardant.</speaker>
+          <l n="343">Tiens ! attendez donc ? mais, c’est lui !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="344">Mêle-toi de tes affaires.</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="345">C’est l’orange que j’ai acheté a Clorinde, ma bonne amie.</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD et PONCASTOR.</speaker>
+          <l n="346">Clorinde !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="347">Avant-hier, chez la modiste de la grande rue !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="348">Celle qui fournil ma femme.</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="349">À preuve que j’ai fait un nœud au ruban, pour me souvenir que je l’avais dans ma poche.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="350">Le nœud y est encore.</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR et FRÉTILLARD, dansant autour de Farouchon.</speaker>
+          <l n="351">Drin, drin, drin !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="352">Mais puisque je n’ai pas été arrêtée pour cause d’amour, pourquoi diable m’a-bon flanqué en prison ?</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON.</speaker>
+          <l n="353">Je le sais à présent ! c’est à cause de votre eau pour les yeux ! Vous êtes donc dentiste, vous ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="354">Une eau excellente... quelle injustice !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="355">C’est vrai ! je m’en suis servi... Elle est très bonne pour les cors aux pieds !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, riant.</speaker>
+          <l n="356">Eh bien ! Frétillard ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD, riant.</speaker>
+          <l n="357">Eh bien ! Poncastor ?</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="358">C’est fini ! nous ne nous sommes plus de rien !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="359">Nous n’en serons pas moins bons amis, n’est-ce pas !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR.</speaker>
+          <l n="360">Je l’espère bien ! sans ça je serais capable de regretter !</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="361">Et moi aussi... car au fond c’était drôle !</l>
+        </sp>
+        <sp who="#farouchon">
+          <speaker>FAROUCHON, ouvrant la porte.</speaker>
+          <l n="362">Ah ! ça, vous pouvez sortir quand vous voudrez ?</l>
+        </sp>
+        <sp who="#frétillard">
+          <speaker>FRÉTILLARD.</speaker>
+          <l n="363">Bravo !</l>
+        </sp>
+        <sp who="#poncastor">
+          <speaker>PONCASTOR, à Frétillard.</speaker>
+          <l n="364">En ce cas, entonnons le chant de la délivrance !</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>&lt;em&gt;Air de la Retraite (Clapisson.)&lt;/em&gt;</stage>
+          <l n="365">Je vais retrouver mon épouse</l>
+          <stage>&lt;em&gt;Poncastor et Frétillard se trouvent éloignés l’un de l’autre ; ils se rapprochent en marchant au pas et font face au public. Farouchon reste dans le fond, à gauche, près de la porte.&lt;/em&gt;</stage>
+          <l n="366">Allons, allons, qu’a rentrer l’on s’apprête,</l>
+          <stage>&lt;em&gt;Ils reculent sur la reprise, en marchant toujours au pas.&lt;/em&gt;</stage>
+          <l n="367" />
+        </sp>
       </div>
     </body>
   </text>

@@ -7,17 +7,24 @@ Created on Thu Mar 25 14:19:25 2021
 Compute various indicators, based on Marcus work.
 """
 
-import glob, os, re, sys, requests, math, csv
+import csv
+import os
+import re
+import sys
 from xml.dom import minidom
+
+from play_parsing import get_genre
 
 # Get the current folder
 folder = os.path.abspath(os.path.dirname(sys.argv[0]))
 corpusFolder = os.path.join(folder, "corpus11paires")
+corpusDracor = os.path.join("Corpus", "CorpusDracor - new")
 
-playname = "GILBERT_RODOGUNE"
-play = open(playname + ".xml", 'rb')
-mydoc = minidom.parse(play)
-tags = mydoc.getElementsByTagName('castItem')
+
+# playname = "GILBERT_RODOGUNE"
+# play = open(playname + ".xml", 'rb')
+# mydoc = minidom.parse(play)
+# tags = mydoc.getElementsByTagName('castItem')
 
 
 def get_characters_by_cast(doc):
@@ -45,40 +52,40 @@ def get_characters_by_bruteforce(doc):
     return id_list
 
 
-def get_characters(doc):
-    """Returns the list of identifiers of characters"""
-    char_list = doc.getElementsByTagName('role')
-    if not char_list:
-        return get_characters_by_bruteforce(doc)
-    else:
-        return get_characters_by_cast(doc)
+# def get_characters(doc):
+#     """Returns the list of identifiers of characters"""
+#     char_list = doc.getElementsByTagName('role')
+#     if not char_list:
+#         return get_characters_by_bruteforce(doc)
+#     else:
+#         return get_characters_by_cast(doc)
 
 
 # characters=get_characters(mydoc)
-characters = get_characters_by_bruteforce(mydoc)
+# characters = get_characters_by_bruteforce(mydoc)
 
 
-def get_genre(doc):
-    """Returns the genre of the play : Tragedie, Comédie, Tragi-Comédie.
-    TODO : Make sure it works """
-    genre = ""
-    genre_entry = doc.getElementsByTagName('genre')
-    if len(genre_entry) >= 1:
-        genre = genre_entry[0].firstChild.nodeValue
-    if genre == "":
-        title = doc.getElementsByTagName('title')
-        for c in title:
-            typ = c.getAttribute("type")
-            if typ == "sub":
-                genre = c.firstChild.nodeValue
-                genre = re.split(", ", genre)[1]
-    if genre == "":
-        term = doc.getElementsByTagName("term")
-        for c in term:
-            typ = c.getAttribute("type")
-            if typ == "genre":
-                genre = c.firstChild.nodeValue
-    return genre
+# def get_genre(doc):
+#     """Returns the genre of the play : Tragedie, Comédie, Tragi-Comédie.
+#     TODO : Make sure it works """
+#     genre = ""
+#     genre_entry = doc.getElementsByTagName('genre')
+#     if len(genre_entry) >= 1:
+#         genre = genre_entry[0].firstChild.nodeValue
+#     if genre == "":
+#         title = doc.getElementsByTagName('title')
+#         for c in title:
+#             typ = c.getAttribute("type")
+#             if typ == "sub":
+#                 genre = c.firstChild.nodeValue
+#                 genre = re.split(", ", genre)[1]
+#     if genre == "":
+#         term = doc.getElementsByTagName("term")
+#         for c in term:
+#             typ = c.getAttribute("type")
+#             if typ == "genre":
+#                 genre = c.firstChild.nodeValue
+#     return genre
 
 
 ### HERE I COMPUTE THNGS BASED ONLY ON PRESENCE/ABSENCE FROM A SCENE ###
@@ -103,7 +110,7 @@ def get_matrix(doc, characters):
     return A
 
 
-A = get_matrix(mydoc, characters)
+# A = get_matrix(mydoc, characters)
 
 
 def character_density(A, k, characters):
@@ -121,7 +128,7 @@ def get_scenes_sets(characters, A):
     return [set([i for i in range(len(A)) if A[i][char] == 1]) for char in range(len(characters))]
 
 
-setlist = get_scenes_sets(characters, A)
+# setlist = get_scenes_sets(characters, A)
 
 
 def character_occurences(characters, A):
@@ -129,7 +136,7 @@ def character_occurences(characters, A):
     return [sum(A[i][j] for i in range(len(A))) for j in range(len(characters))]
 
 
-occurences = character_occurences(characters, A)
+# occurences = character_occurences(characters, A)
 
 
 def character_frequencies(characters, A):
@@ -137,7 +144,7 @@ def character_frequencies(characters, A):
     return [sum(A[i][j] for i in range(len(A))) / (len(A)) for j in range(len(characters))]
 
 
-frequencies = character_frequencies(characters, A)
+# frequencies = character_frequencies(characters, A)
 
 
 def get_co_occurences(setlist, characters):
@@ -146,13 +153,13 @@ def get_co_occurences(setlist, characters):
     return [[len(setlist[i].intersection(setlist[j])) for i in range(k)] for j in range(k)]
 
 
-co_occurences = get_co_occurences(setlist, characters)
+# co_occurences = get_co_occurences(setlist, characters)
 
 
 def occurences_deviation(A, characters, co_occurences, occurences):
     k = len(characters)
     n = len(A)
-    deviations = [[0 for i in range(k)] for j in range(k)]
+    deviations = [[0 for _ in range(k)] for _ in range(k)]
     for i in range(k):
         for j in range(k):
             qi, qj = occurences[i], occurences[j]
@@ -163,7 +170,7 @@ def occurences_deviation(A, characters, co_occurences, occurences):
     return deviations
 
 
-deviations = occurences_deviation(A, characters, co_occurences, frequencies)
+# deviations = occurences_deviation(A, characters, co_occurences, frequencies)
 
 
 def get_confrontations(A, characters):
@@ -177,10 +184,10 @@ def get_confrontations(A, characters):
         conf = sum(l) - l[i]
         confrontations[i] = conf
     tot = sum(confrontations)
-    return [x / tot for x in confrontations]
+    return [x / (tot if tot != 0 else 1) for x in confrontations]
 
 
-confrontations = get_confrontations(A, characters)
+# confrontations = get_confrontations(A, characters)
 
 
 ###HERE I COMPUTE THINGS BASED ON THE NUMBER OF LINES SPOKEN ###
@@ -199,15 +206,15 @@ def get_lines(doc, characters):
     return (total_lines, lines)
 
 
-total_lines, lines = get_lines(mydoc, characters)
-speech_frequency = [x / total_lines for x in lines]
+# total_lines, lines = get_lines(mydoc, characters)
+# speech_frequency = [x / total_lines for x in lines]
 
 
 # Returns the list of succesions
 # succesions[i][j] is the number of time character i has spoken after character j
 def get_successions(doc, characters):
     n = len(characters)
-    successions = [[0 for i in range(n)] for j in range(n)]
+    successions = [[0 for _ in range(n)] for _ in range(n)]
     repliques = doc.getElementsByTagName('sp')
     previous_speaker_number = -1
     for r in repliques:
@@ -216,11 +223,11 @@ def get_successions(doc, characters):
         if not (previous_speaker_number == -1):
             successions[speaker_number][previous_speaker_number] += 1
         previous_speaker_number = speaker_number
-    return (successions)
+    return successions
 
 
-successions = get_successions(mydoc, characters)
-normalized_succesions = [[x / sum(l) for x in l] for l in successions]
+# successions = get_successions(mydoc, characters)
+# normalized_succesions = [[x / sum(l) for x in l] for l in successions]
 
 
 ### OUTPUT TO CSV : CONVERTING TO DICTIONNARIES AND WRITING
@@ -242,7 +249,8 @@ def table_to_dict(l, characters, value):
 # Writing all data corresponding to a play in a separate file
 
 def create_outputs(corpusFolder):
-    global_csv_file = open('globalstats.csv', mode='w')
+    output_file = os.path.join("Outputs", "Stats Markov Dracor")
+    global_csv_file = open(os.path.join(output_file, 'global_stats_Dracor.csv'), mode='w', encoding='utf8', newline='')
     fieldnames = ['Pièce', 'Perso principal', 'genre', 'Première apparition', 'Fréquence(scène)',
                   'Fréquence(répliques)', 'Confrontation']
     gwriter = csv.DictWriter(global_csv_file, fieldnames=fieldnames)
@@ -255,16 +263,20 @@ def create_outputs(corpusFolder):
         genre = get_genre(mydoc)
         print(genre)
         characters = get_characters_by_bruteforce(mydoc)
+        if len(characters) <= 1:
+            continue
         A = get_matrix(mydoc, characters)
+        if not A:
+            continue
         setlist = get_scenes_sets(characters, A)
         frequencies = character_frequencies(characters, A)
         confrontations = get_confrontations(A, characters)
         total_lines, lines = get_lines(mydoc, characters)
-        speech_frequency = [x / total_lines for x in lines]
+        speech_frequency = [x / (total_lines if total_lines else 1) for x in lines]
         co_occurences = get_co_occurences(setlist, characters)
         deviations = occurences_deviation(A, characters, co_occurences, frequencies)
         successions = get_successions(mydoc, characters)
-        normalized_succesions = [[x / sum(l) for x in l] for l in successions]
+        normalized_succesions = [[(x / sum(l)) if sum(l) != 0 else None for x in l] for l in successions]
 
         # Handling global csv
         mc_index = frequencies.index(max(frequencies))
@@ -277,7 +289,8 @@ def create_outputs(corpusFolder):
         gwriter.writerow(d)
 
         # Handling individual csv
-        individual_csv_file = open('stats' + playname + '.csv', mode='w')
+        individual_csv_file = open(os.path.join(output_file, f'stats {playname}.csv'), mode='w', encoding='utf8',
+                                   newline='')
         fieldnames = ['VALEUR'] + characters
         iwriter = csv.DictWriter(individual_csv_file, fieldnames=fieldnames)
         iwriter.writeheader()
@@ -298,7 +311,9 @@ def create_outputs(corpusFolder):
         for d in succdicts:
             iwriter.writerow(d)
 
-        # create_outputs(corpusFolder)
+
+if __name__ == "__main__":
+    create_outputs(corpusDracor)
 
 # folder = os.getcwd()
 # corpusFolder = os.path.join(folder,"corpusTC")

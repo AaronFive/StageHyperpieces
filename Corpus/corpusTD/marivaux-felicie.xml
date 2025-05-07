@@ -1,1436 +1,1363 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Félicie</title>
-        <author key="MARIVAUX | (naissance-mort)">MARIVAUX |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/495</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>MARIVAUX |</author>. <title>Félicie</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/495</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1750">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, en 1750</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="félicie" sex="SEX">
+            <persName>FÉLICIE</persName>
+          </person>
+          <person xml:id="lucidor" sex="SEX">
+            <persName>LUCIDOR</persName>
+          </person>
+          <person xml:id="la-fée" sex="SEX">
+            <persName>LA FÉE</persName>
+          </person>
+          <person xml:id="la-modestie" sex="SEX">
+            <persName>LA MODESTIE</persName>
+          </person>
+          <person xml:id="diane" sex="SEX">
+            <persName>DIANE</persName>
+          </person>
+          <person xml:id="troupe-de-chasseurs" sex="SEX">
+            <persName>TROUPE DE CHASSEURS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>prose</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1750" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, en 1750</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Félicie</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte, en prose.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, en 1750</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="félicie">FÉLICIE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lucidor">LUCIDOR</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-fée">LA FÉE</role>
-              <roleDesc>, <em>sous le nom d’Hortense</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-modestie">LA MODESTIE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="diane">DIANE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-chasseurs">TROUPE DE CHASSEURS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <l n="4" xml:id="l4"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="5" xml:id="l5"> </l>
-          <sp who="félicie" xml:id="1-1">
-            <speaker>FÉLICIE, LA FÉE, <em>sous le nom d’</em>HORTENSE</speaker>
-            <l n="6" xml:id="l6"> </l>
-          </sp>
-          <sp who="félicie" xml:id="1-2">
-            <speaker>FÉLICIE.</speaker>
-            <l n="7" xml:id="l7">Il faut avouer qu’il fait un beau jour.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-3">
-            <speaker>HORTENSE.</speaker>
-            <l n="8" xml:id="l8">Aussi y a-t-il longtemps que nous nous promenons.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-4">
-            <speaker>FÉLICIE.</speaker>
-            <l n="9" xml:id="l9">Aussi le plaisir d’être avec vous, qui est toujours si grand pour moi, ne m’a-t-il jamais été si sensible.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-5">
-            <speaker>HORTENSE.</speaker>
-            <l n="10" xml:id="l10">Je crois, en effet, que vous m’aimez, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-6">
-            <speaker>FÉLICIE.</speaker>
-            <l n="11" xml:id="l11">Vous croyez, Madame ? Quoi ! n’est-ce que d’aujourd’hui que vous êtes bien sûre de cette vérité-là, vous, avec qui je suis dès mon enfance, vous, à qui je dois tout ce que je puis avoir d’estimable dans le cœur et dans l’esprit !</l>
-          </sp>
-          <sp who="hortense" xml:id="1-7">
-            <speaker>HORTENSE.</speaker>
-            <l n="12" xml:id="l12">Il est vrai que vous avez toujours été l’objet de mes complaisances ; et s’il vous reste encore quelque chose à désirer de mon pouvoir et de ma science, vous n’avez qu’à parler, Félicie ; je ne vous ai aujourd’hui menée ici que pour vous le dire.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-8">
-            <speaker>FÉLICIE.</speaker>
-            <l n="13" xml:id="l13">Vos bontés m’ont-elles rien laissé à souhaiter ?</l>
-          </sp>
-          <sp who="hortense" xml:id="1-9">
-            <speaker>HORTENSE.</speaker>
-            <l n="14" xml:id="l14">N’y a-t-il point quelque vertu, quelque qualité dont je puisse encore vous douer ?</l>
-          </sp>
-          <sp who="félicie" xml:id="1-10">
-            <speaker>FÉLICIE.</speaker>
-            <l n="15" xml:id="l15">Il n’y en a point dont vous n’ayez voulu embellir mon âme.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-11">
-            <speaker>HORTENSE.</speaker>
-            <l n="16" xml:id="l16">Vous avez bien de l’esprit, en demandez-vous encore ?</l>
-          </sp>
-          <sp who="félicie" xml:id="1-12">
-            <speaker>FÉLICIE.</speaker>
-            <l n="17" xml:id="l17">Je m’en fie à votre tendresse, elle m’en a sans doute donné tout ce qu’il m’en faut.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-13">
-            <speaker>HORTENSE.</speaker>
-            <l n="18" xml:id="l18">Parcourez tous les avantages possibles, et voyez celui que je pourrais augmenter en vous, ou bien ajouter à ceux que vous avez : rêvez-y.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-14">
-            <speaker>FÉLICIE.</speaker>
-            <l n="19" xml:id="l19">J’y rêve, puisque vous me l’ordonnez, et jusqu’ici je ne vois rien ; car enfin, que demanderais-je ? Attendez pourtant, Madame ; des grâces, par exemple, je n’y songeais point ; qu’en dites-vous ? il me semble que je n’en ai pas assez.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-15">
-            <speaker>HORTENSE.</speaker>
-            <l n="20" xml:id="l20">Des grâces, Félicie ! je m’en garderai bien ; la nature y a suffisamment pourvu ; et si je vous en donnais encore, vous en auriez trop ; je vous nuirais.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-16">
-            <speaker>FÉLICIE.</speaker>
-            <l n="21" xml:id="l21">Ah, Madame ! ce n’est assurément que par bonté que vous le dites ?</l>
-          </sp>
-          <sp who="hortense" xml:id="1-17">
-            <speaker>HORTENSE.</speaker>
-            <l n="22" xml:id="l22">Non, je vous parle sérieusement.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-18">
-            <speaker>FÉLICIE.</speaker>
-            <l n="23" xml:id="l23">Je pense pourtant que je n’en serais que mieux, si j’en avais un peu plus.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-19">
-            <speaker>HORTENSE.</speaker>
-            <l n="24" xml:id="l24">L’industrie de toutes vos réponses m’a fait deviner que vous en viendriez là.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-20">
-            <speaker>FÉLICIE.</speaker>
-            <l n="25" xml:id="l25">Hélas, Madame ! c’est de bonne foi ; si je savais mieux, je le dirais.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-21">
-            <speaker>HORTENSE.</speaker>
-            <l n="26" xml:id="l26">Songez que c’est peut-être de tous les dons le plus dangereux que vous choisissez, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-22">
-            <speaker>FÉLICIE.</speaker>
-            <l n="27" xml:id="l27">Dangereux, Madame ! oh ! que non : vous m’avez trop bien élevée ; il n’y a rien à craindre.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-23">
-            <speaker>HORTENSE.</speaker>
-            <l n="28" xml:id="l28">Vous ne vous y arrêtez pourtant que par l’envie de plaire.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-24">
-            <speaker>FÉLICIE.</speaker>
-            <l n="29" xml:id="l29">Mais, de plaire : non, ce n’est pas positivement cela ; c’est qu’on a l’amitié de tout le monde quand on est aimable, et l’amitié de tout le monde est utile et souhaitable.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-25">
-            <speaker>HORTENSE.</speaker>
-            <l n="30" xml:id="l30">Oui, l’amitié, mais non pas l’amour de tout le monde.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-26">
-            <speaker>FÉLICIE.</speaker>
-            <l n="31" xml:id="l31">Oh ! pour celui-là, je n’y songe pas, je vous assure.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-27">
-            <speaker>HORTENSE.</speaker>
-            <l n="32" xml:id="l32">Vous n’y songez pas, Félicie ? Regardez-moi ; vous rougissez : êtes-vous sincère ?</l>
-          </sp>
-          <sp who="félicie" xml:id="1-28">
-            <speaker>FÉLICIE.</speaker>
-            <l n="33" xml:id="l33">Peut-être que je ne le suis pas autant que je l’ai cru.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-29">
-            <speaker>HORTENSE.</speaker>
-            <l n="34" xml:id="l34">N’importe : puisque vous le voulez, soyez aimable autant qu’on le peut être.</l>
-            <stage><hi rend="italic"><em>Hortense la frappe de la main sur l’épaule.</em></hi></stage>
-          </sp>
-          <sp who="félicie" xml:id="1-30">
-            <speaker>FÉLICIE, <em>tressaillant de joie.</em></speaker>
-            <l n="36" xml:id="l36">Ah !… Je vous suis bien obligée, Madame.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-31">
-            <speaker>HORTENSE.</speaker>
-            <l n="37" xml:id="l37">Vous voilà pourvue de toutes les grâces imaginables.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-32">
-            <speaker>FÉLICIE.</speaker>
-            <l n="38" xml:id="l38">J’en ai une reconnaissance infinie ; et apparemment qu’il y a bien du changement en moi, quoique je ne le voie pas.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-33">
-            <speaker>HORTENSE.</speaker>
-            <l n="39" xml:id="l39">C’est-à-dire que vous voulez en être sûre.</l>
-            <l n="40" xml:id="l40">Tenez, regardez-vous.</l>
-            <l n="41" xml:id="l41">Comment vous trouvez-vous ?</l>
-          </sp>
-          <sp who="félicie" xml:id="1-34">
-            <speaker>FÉLICIE.</speaker>
-            <l n="42" xml:id="l42">Comblée de vos bontés ; vous n’y avez rien épargné.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-35">
-            <speaker>HORTENSE.</speaker>
-            <l n="43" xml:id="l43">Vous vous en réjouissez ; je ne sais si vous ne devriez pas en être inquiète.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-36">
-            <speaker>FÉLICIE.</speaker>
-            <l n="44" xml:id="l44">Allez, Madame, vous n’aurez pas lieu de vous en repentir.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-37">
-            <speaker>HORTENSE.</speaker>
-            <l n="45" xml:id="l45">Je l’espère ; mais à ce présent que je viens de vous faire, j’y prétends joindre encore une chose. Vous allez dans le monde, je veux vous rendre heureuse ; et il faut pour cela que je connaisse parfaitement vos inclinations, afin de vous assurer le genre de bonheur qui vous sera le plus convenable. Voyez-vous cet endroit où nous sommes ? C’est le monde même.</l>
-          </sp>
-          <sp who="félicie" xml:id="1-38">
-            <speaker>FÉLICIE.</speaker>
-            <l n="46" xml:id="l46">Le monde ! et je croyais être encore auprès de notre demeure.</l>
-          </sp>
-          <sp who="hortense" xml:id="1-39">
-            <speaker>HORTENSE.</speaker>
-            <l n="47" xml:id="l47">Vous n’en êtes pas éloignée non plus ; mais ne vous embarrassez de rien : quoi qu’il en soit, votre cœur va trouver ici tout ce qui peut déterminer son goût.</l>
-            <l n="48" xml:id="l48"> </l>
-            <l n="49" xml:id="l49"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="50" xml:id="l50"> </l>
-          <sp who="félicie" xml:id="2-1">
-            <speaker>FÉLICIE, HORTENSE, LA MODESTIE</speaker>
-            <l n="51" xml:id="l51"> </l>
-          </sp>
-          <sp who="hortense" xml:id="2-2">
-            <speaker>HORTENSE, <em>à la Modestie, qui est à quelques pas.</em></speaker>
-            <l n="52" xml:id="l52">Vous, approchez.</l>
-            <stage><hi rend="italic"><em>Quand la Modestie est venue.</em></hi></stage>
-            <l n="54" xml:id="l54">C’est une compagne que je vous laisse, Félicie ; elle porte le nom d’une de vos plus estimables qualités, la modestie, ou plutôt la pudeur.</l>
-          </sp>
-          <sp who="félicie" xml:id="2-3">
-            <speaker>FÉLICIE.</speaker>
-            <l n="55" xml:id="l55">Je ne sais tout ce que cela signifie ; mais je la trouve charmante, et je serai ravie d’être avec elle : nous ne nous quitterons donc point ?</l>
-          </sp>
-          <sp who="hortense" xml:id="2-4">
-            <speaker>HORTENSE.</speaker>
-            <l n="56" xml:id="l56">Votre union dépend de vous ; gardez toujours cette qualité dont elle porte le nom, et vous serez toujours ensemble.</l>
-          </sp>
-          <sp who="félicie" xml:id="2-5">
-            <speaker>FÉLICIE, <em>s’en allant à elle.</em></speaker>
-            <l n="57" xml:id="l57">Oh ! vraiment ! nous serons donc inséparables.</l>
-          </sp>
-          <sp who="hortense" xml:id="2-6">
-            <speaker>HORTENSE.</speaker>
-            <l n="58" xml:id="l58">Adieu, je vous laisse ; mais je ne vous abandonne point.</l>
-          </sp>
-          <sp who="félicie" xml:id="2-7">
-            <speaker>FÉLICIE.</speaker>
-            <l n="59" xml:id="l59">Votre retraite m’afflige. Que sais-je ce qui peut m’arriver ici où je ne connais personne ?</l>
-          </sp>
-          <sp who="hortense" xml:id="2-8">
-            <speaker>HORTENSE.</speaker>
-            <l n="60" xml:id="l60">N’y craignez rien, vous dis-je ; c’est moi qui vous y protège. Adieu.</l>
-            <l n="61" xml:id="l61"> </l>
-            <l n="62" xml:id="l62"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="63" xml:id="l63"> </l>
-          <sp who="félicie" xml:id="3-1">
-            <speaker>FÉLICIE, LA MODESTIE</speaker>
-            <l n="64" xml:id="l64"> </l>
-          </sp>
-          <sp who="félicie" xml:id="3-2">
-            <speaker>FÉLICIE.</speaker>
-            <l n="65" xml:id="l65">Sur ce pied-là, soyons donc en repos, et parcourons ces lieux. Voilà un canton qui me paraît bien riant ; ma chère compagne, allons-y ; voyons ce que c’est.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-3">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="66" xml:id="l66">Non, j’y entends du bruit ; tournons plutôt de l’autre côté ; je le crois plus sûr pour vous.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-4">
-            <speaker>FÉLICIE.</speaker>
-            <l n="67" xml:id="l67">Qu’appelez-vous plus sûr ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-5">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="68" xml:id="l68">Oui ; vous êtes extrêmement jolie, et l’endroit où vous voulez vous engager me paraît un pays trop galant.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-6">
-            <speaker>FÉLICIE.</speaker>
-            <l n="69" xml:id="l69">Eh bien ! est-ce qu’on m’y fera un crime d’être jolie, dans ce pays galant ? Ne sommes-nous ici que pour y visiter des déserts ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-7">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="70" xml:id="l70">Non ; mais je prévois de l’autre côté les pièges qu’on y pourra tendre à votre cœur, et franchement, j’ai peur que nous ne nous y perdions.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-8">
-            <speaker>FÉLICIE.</speaker>
-            <l n="71" xml:id="l71">Eh ! comment l’entendez-vous donc, s’il vous plaît, ma chère compagne ? Quoi ! sous le prétexte qu’on est aimable, on n’osera pas se montrer ; il ne faudra rien voir, toujours s’enfuir, et ne s’occuper qu’à faire la sauvage ? La condition d’une jolie personne serait donc bien triste ! Oh ! je ne crois point cela du tout ; il vaudrait mieux être laide : je redemanderais la médiocrité des agréments que j’avais, si cela était ; et à vous entendre dire, ce serait une vraie perte pour une fille que de perdre sa laideur ; ce serait lui rendre un très mauvais service que de la rendre aimable, et on ne l’a jamais compris de cette manière-là.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-9">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="72" xml:id="l72">Écoutez, Félicie, ne vous y trompez pas ; les grâces et la sagesse ont toujours eu de la peine à rester ensemble.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-10">
-            <speaker>FÉLICIE.</speaker>
-            <l n="73" xml:id="l73">À la bonne heure : s’il n’y avait pas un peu de peine, il n’y aurait pas grand mérite. À l’égard des pièges dont vous parlez, il me semble à moi qu’il n’est pas question de les fuir, mais d’apprendre à les mépriser ; et pourquoi ? parce qu’ils sont inutiles pour qui les méprise, et qu’en les fuyant d’un côté, on peut les trouver d’un autre. Voilà mes idées, que je crois bonnes.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-11">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="74" xml:id="l74">Elles sont hardies.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-12">
-            <speaker>FÉLICIE.</speaker>
-            <l n="75" xml:id="l75">Toutes simples. Que peut-il m’arriver dans le canton que vous craignez tant ? Voyons ; si je plais, on m’y regardera, n’est-il pas vrai ? Supposons même qu’on m’y parle. Eh bien ! qu’on m’y regarde, qu’on m’y parle, qu’on m’y fasse des compliments, si l’on veut, quel mal cela me fera-t-il ? sont-ce là ces pièges si redoutables, qu’il faille renoncer au jour pour les éviter ? Me prenez-vous pour un enfant ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-13">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="76" xml:id="l76">Vous avez trop de confiance, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-14">
-            <speaker>FÉLICIE.</speaker>
-            <l n="77" xml:id="l77">Et vous, bien des terreurs paniques, Modestie.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-15">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="78" xml:id="l78">Je suis timide, il est vrai ; c’est mon caractère.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-16">
-            <speaker>FÉLICIE.</speaker>
-            <l n="79" xml:id="l79">Fort bien ; et moyennant ce caractère, nous voilà donc condamnées à rester là : nos relations seront curieuses !</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-17">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="80" xml:id="l80">Je ne vous dis pas de rester là ; voyons toujours ce côté, il est plus tranquille.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-18">
-            <speaker>FÉLICIE.</speaker>
-            <l n="81" xml:id="l81">Quelle antipathie avez-vous pour l’autre ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-19">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="82" xml:id="l82">Quel dégoût vous prend-il pour celui-ci ?</l>
-          </sp>
-          <sp who="félicie" xml:id="3-20">
-            <speaker>FÉLICIE.</speaker>
-            <l n="83" xml:id="l83">C’est qu’il me réjouit moins la vue.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-21">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="84" xml:id="l84">Et moi, c’est que je fuis le danger que je soupçonne ici.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-22">
-            <speaker>FÉLICIE.</speaker>
-            <l n="85" xml:id="l85">Mais pour le fuir, il faut le voir.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-23">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="86" xml:id="l86">Il n’est quelquefois plus temps de le fuir, quand on l’a vu.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-24">
-            <speaker>FÉLICIE.</speaker>
-            <l n="87" xml:id="l87">Encore une fois, pour fuir, il faut un objet ; on ne fuit point sans avoir peur de quelque chose, et je ne vois rien qui m’épouvante.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-25">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="88" xml:id="l88">Disons mieux ; vous avez des charmes, et vous voulez qu’on les voie.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-26">
-            <speaker>FÉLICIE.</speaker>
-            <l n="89" xml:id="l89">Et parce que j’en ai, il faut que je les cache, il faut que l’obscurité soit mon partage ! Eh ! que ne m’a-t-on dit que c’était le plus grand malheur du monde que d’être jolie, puisqu’il faut être esclave des conséquences de son visage ? Ne voyez-vous pas bien que la raison n’est point d’accord de cela ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-27">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="90" xml:id="l90">Plus que vous ne croyez.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-28">
-            <speaker>FÉLICIE.</speaker>
-            <l n="91" xml:id="l91">Je me suis donc étrangement trompée ; j’ai souhaité d’être aimable, afin qu’on m’aimât dès qu’on me verrait, ce qui est assurément très innocent ; et il se trouverait que, selon vos chicanes, ce serait afin qu’on ne me vît jamais : en vérité, je ne saurai goûter ce que vous me dites.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-29">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="92" xml:id="l92">Je n’insiste plus ; il en sera ce qui vous plaira.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-30">
-            <speaker>FÉLICIE.</speaker>
-            <l n="93" xml:id="l93">Il en sera ce qui me plaira ! Ce n’est pas là répondre ; je veux que vous soyez de mon avis, dès que j’ai raison. Puisque vous êtes la Modestie, on est bien aise d’avoir votre approbation.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-31">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="94" xml:id="l94">Je vous ai dit ce que je pensais.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-32">
-            <speaker>FÉLICIE.</speaker>
-            <l n="95" xml:id="l95">Allons, allons, je vois bien que vous vous rendez.</l>
-            <stage><hi rend="italic"><em>Ici on entend une symphonie.</em></hi></stage>
-            <l n="97" xml:id="l97">Mais me trompé-je ? Entendez-vous la gaieté des sons qui partent de ce côté-là ? Nous nous y amuserons assurément ; il doit y avoir quelque agréable fête. Que cela est vif et touchant !</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-33">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="98" xml:id="l98">Vous ne le sentez que trop.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-34">
-            <speaker>FÉLICIE.</speaker>
-            <l n="99" xml:id="l99">Pourquoi trop ? Est-ce qu’il n’est pas permis d’avoir du goût ? Allez-vous encore trembler là-dessus ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-35">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="100" xml:id="l100">Le goût du plaisir et de la curiosité mène bien loin.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-36">
-            <speaker>FÉLICIE.</speaker>
-            <l n="101" xml:id="l101">Parlez franchement ; c’est qu’on a tort d’avoir des yeux et des oreilles, n’est-ce pas ? Ah ! que vous êtes farouche !</l>
-            <stage><hi rend="italic"><em>La symphonie recommence.</em></hi></stage>
-            <l n="103" xml:id="l103">Ce que j’entends là me fait pourtant grand plaisir… Prêtons-y un peu d’attention… Que cela est tendre et animé tout ensemble !</l>
-          </sp>
-          <sp who="la-modestie" xml:id="3-37">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="104" xml:id="l104">J’entends aussi du bruit de l’autre côté ; écoutez, je crois qu’on y chante.</l>
-            <stage><hi rend="italic"><em>On chante.</em></hi></stage>
-          </sp>
-          <sp who="la-modestie" xml:id="3-38">
-            <speaker>LA MODESTIE <em>continue.</em></speaker>
-            <l n="106" xml:id="l106">Ce que cette voix-là m’inspire ne m’effraie point, par exemple : elle a quelque chose de noble.</l>
-          </sp>
-          <sp who="félicie" xml:id="3-39">
-            <speaker>FÉLICIE.</speaker>
-            <l n="107" xml:id="l107">Oui, elle est belle, mais sérieuse.</l>
-            <l n="108" xml:id="l108"> </l>
-            <l n="109" xml:id="l109"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="110" xml:id="l110"> </l>
-          <sp who="diane" xml:id="4-1">
-            <speaker>FÉLICIE, LA MODESTIE, DIANE, <em>dans l’éloignement</em></speaker>
-            <l n="111" xml:id="l111"> </l>
-          </sp>
-          <sp who="la-modestie" xml:id="4-2">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="112" xml:id="l112">C’est un charme différent. Mais, que vois-je ? tenez, Félicie : voyez-vous cette dame qui nous regarde d’une façon si riante, et qui semble nous inviter à venir à elle ? Qu’elle a l’air respectable !</l>
-          </sp>
-          <sp who="félicie" xml:id="4-3">
-            <speaker>FÉLICIE.</speaker>
-            <l n="113" xml:id="l113">Cela est vrai, je lui trouve de la majesté.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="4-4">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="114" xml:id="l114">Elle sort de chez elle, apparemment ; voulez-vous l’aborder ? Je m’y rends volontiers.</l>
-          </sp>
-          <sp who="félicie" xml:id="4-5">
-            <speaker>FÉLICIE.</speaker>
-            <l n="115" xml:id="l115">N’allons pas si vite ; elle a quelque chose de grave qui m’arrête.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="4-6">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="116" xml:id="l116">Elle vous plaît pourtant ?</l>
-          </sp>
-          <sp who="félicie" xml:id="4-7">
-            <speaker>FÉLICIE.</speaker>
-            <l n="117" xml:id="l117">Oui, je l’avoue.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="4-8">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="118" xml:id="l118">Allons donc, je crois qu’elle nous attend ; elle paraît faire les avances.</l>
-          </sp>
-          <sp who="félicie" xml:id="4-9">
-            <speaker>FÉLICIE.</speaker>
-            <l n="119" xml:id="l119">J’aurais bien voulu voir ce qui se passe de l’autre côté.</l>
-            <l n="120" xml:id="l120"> </l>
-            <l n="121" xml:id="l121"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="122" xml:id="l122"> </l>
-          <sp who="diane" xml:id="5-1">
-            <speaker>FÉLICIE, LA MODESTIE, DIANE, LUCIDOR, <em>au fond du théâtre</em></speaker>
-            <l n="123" xml:id="l123"> </l>
-          </sp>
-          <sp who="félicie" xml:id="5-2">
-            <speaker>FÉLICIE.</speaker>
-            <l n="124" xml:id="l124">Mais voici bien autre chose ; regardez à votre tour, et voyez à gauche ce beau jeune homme qui vient de paraître, accompagné de ces jolis chasseurs, et qui nous salue ; il ne nous épargne pas non plus les avances.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="5-3">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="125" xml:id="l125">Ne le regardons point, il m’inquiète ; allons plutôt à cette dame.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-4">
-            <speaker>FÉLICIE.</speaker>
-            <l n="126" xml:id="l126">Attendez.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="5-5">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="127" xml:id="l127">Elle avance.</l>
-          </sp>
-          <sp who="diane" xml:id="5-6">
-            <speaker>DIANE.</speaker>
-            <l n="128" xml:id="l128">Voulez-vous bien que j’approche, mon aimable fille ? Peut-être ne connaissez-vous pas ces lieux, et vous voyez l’envie que j’ai de vous y servir. Ne me refusez pas d’entrer chez moi ; je chéris la vertu, et vous y serez en sûreté.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-7">
-            <speaker>FÉLICIE, <em>la saluant.</em></speaker>
-            <l n="129" xml:id="l129">Je vous rends grâces, Madame, et je verrai.</l>
-          </sp>
-          <sp who="diane" xml:id="5-8">
-            <speaker>DIANE.</speaker>
-            <l n="130" xml:id="l130">Eh ! pourquoi voir ? Votre jeunesse et vos charmes vous exposent ici ; n’hésitez point ; croyez-moi, suivez le conseil que je vous donne.</l>
-            <stage><hi rend="italic"><em>Ici le jeune homme la regarde, lui sourit et la salue ; elle lui rend le salut.</em></hi></stage>
-            <l n="132" xml:id="l132">Voici un jeune homme qui vous distrait, et qui pourtant mérite bien moins votre attention que moi.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-9">
-            <speaker>FÉLICIE.</speaker>
-            <l n="133" xml:id="l133">J’en fais beaucoup à ce que vous me dites ; mais cela ne me dispense pas de le saluer, puisqu’il me salue.</l>
-            <stage><hi rend="italic"><em>Lucidor lui fait encore des révérences, et elle les rend.</em></hi></stage>
-          </sp>
-          <sp who="diane" xml:id="5-10">
-            <speaker>DIANE.</speaker>
-            <l n="135" xml:id="l135">Encore des révérences !</l>
-          </sp>
-          <sp who="félicie" xml:id="5-11">
-            <speaker>FÉLICIE.</speaker>
-            <l n="136" xml:id="l136">Vous voyez bien qu’il continue les siennes.</l>
-          </sp>
-          <sp who="diane" xml:id="5-12">
-            <speaker>LA MODESTIE, <em>à Diane.</em></speaker>
-            <l n="137" xml:id="l137">Emmenez-la, Madame, avant qu’il nous aborde.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-13">
-            <speaker>FÉLICIE.</speaker>
-            <l n="138" xml:id="l138">Mais vous voulez donc que je sois malhonnête ?</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-14">
-            <speaker>LUCIDOR, <em>approchant.</em></speaker>
-            <l n="139" xml:id="l139">Beauté céleste, je règne dans ces cantons ; j’ose assurer qu’ils sont les plus riants ; daignez les honorer de votre présence.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-15">
-            <speaker>FÉLICIE.</speaker>
-            <l n="140" xml:id="l140">Je serais volontiers de cet avis-là, l’aspect m’en plaît beaucoup.</l>
-          </sp>
-          <sp who="diane" xml:id="5-16">
-            <speaker>DIANE, <em>la prenant par la main.</em></speaker>
-            <l n="141" xml:id="l141">Commencez par les lieux que j’habite ; plus d’irrésolution ; venez.</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-17">
-            <speaker>LUCIDOR, <em>la prenant par l’autre main.</em></speaker>
-            <l n="142" xml:id="l142">Quoi ! l’on vous entraîne, et vous me rejetez !</l>
-          </sp>
-          <sp who="félicie" xml:id="5-18">
-            <speaker>FÉLICIE.</speaker>
-            <l n="143" xml:id="l143">Non, je vous l’avoue, il n’y a rien d’égal à l’embarras où vous me mettez tous deux ; car je ne saurais prendre l’un que je ne laisse l’autre ; et le moyen d’être partout !</l>
-          </sp>
-          <sp who="la-modestie" xml:id="5-19">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="144" xml:id="l144">Trop faible Félicie !</l>
-          </sp>
-          <sp who="félicie" xml:id="5-20">
-            <speaker>FÉLICIE, <em>à la Modestie.</em></speaker>
-            <l n="145" xml:id="l145">Oh ! vraiment, je sais bien que vous n’y feriez pas tant de façons ; vous en parlez bien à votre aise.</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-21">
-            <speaker>LUCIDOR.</speaker>
-            <l n="146" xml:id="l146">Vous me haïssez donc ?</l>
-          </sp>
-          <sp who="félicie" xml:id="5-22">
-            <speaker>FÉLICIE.</speaker>
-            <l n="147" xml:id="l147">Autre injustice.</l>
-          </sp>
-          <sp who="diane" xml:id="5-23">
-            <speaker>DIANE.</speaker>
-            <l n="148" xml:id="l148">Je suis sûre qu’il vous en coûte pour me résister, et que votre cœur me regrette.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-24">
-            <speaker>FÉLICIE.</speaker>
-            <l n="149" xml:id="l149">Eh ! mais sans doute ; mais mon cœur ne sait ce qu’il veut, voilà ce que c’est ; il ne choisit point ; tenez, il vous voudrait tous deux ; voyez, n’y aurait-il pas moyen de vous accorder ?</l>
-          </sp>
-          <sp who="diane" xml:id="5-25">
-            <speaker>DIANE.</speaker>
-            <l n="150" xml:id="l150">Non, Félicie, cela ne se peut pas.</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-26">
-            <speaker>LUCIDOR.</speaker>
-            <l n="151" xml:id="l151">Pour moi, j’y consens : que Madame vous suive où je vais vous mener, je ne l’en empêche pas ; ma douceur et ma bonne foi me rendent de meilleure composition qu’elle.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-27">
-            <speaker>FÉLICIE.</speaker>
-            <l n="152" xml:id="l152">Eh bien ! voilà un accommodement qui me paraît très raisonnable, par exemple ; ne nous quittons point, allons ensemble.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-28">
-            <speaker>LA MODESTIE, <em>bas à Félicie.</em></speaker>
-            <l n="153" xml:id="l153">Ah ! le fourbe !</l>
-          </sp>
-          <sp who="félicie" xml:id="5-29">
-            <speaker>FÉLICIE, <em>à part les premiers mots.</em></speaker>
-            <l n="154" xml:id="l154">Vous en jugez mal, il n’a point cet air-là. Allons, Madame ; ayez cette complaisance-là pour moi, qui vous aime : considérez que je suis une jeune personne à qui l’âge donne une petite curiosité pardonnable et sans conséquence ; je vous en prie, ne me refusez pas.</l>
-          </sp>
-          <sp who="diane" xml:id="5-30">
-            <speaker>DIANE.</speaker>
-            <l n="155" xml:id="l155">Non, Félicie ; vous ne savez pas ce que vous demandez ; son commerce et le mien sont incompatibles ; et quand je vous suivrais, j’aurais beau vous donner mes conseils, ils vous seraient inutiles.</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-31">
-            <speaker>LUCIDOR.</speaker>
-            <l n="156" xml:id="l156">Mille plaisirs innocents vous attendent où nous allons.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-32">
-            <speaker>FÉLICIE.</speaker>
-            <l n="157" xml:id="l157">Pour innocents, j’en suis persuadée ; il serait inutile de m’en proposer d’autres.</l>
-          </sp>
-          <sp who="diane" xml:id="5-33">
-            <speaker>DIANE.</speaker>
-            <l n="158" xml:id="l158">Il vous dit qu’ils sont innocents, mais ils cessent bientôt de l’être.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-34">
-            <speaker>FÉLICIE.</speaker>
-            <l n="159" xml:id="l159">Tant pis pour eux ; sauf à les laisser là, quand ils ne le seront plus.</l>
-          </sp>
-          <sp who="diane" xml:id="5-35">
-            <speaker>DIANE.</speaker>
-            <l n="160" xml:id="l160">Je vous en promets, moi, de plus satisfaisants, quand vous les aurez un peu goûtés, des plaisirs qui vont au profit de la vertu même.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-36">
-            <speaker>FÉLICIE.</speaker>
-            <l n="161" xml:id="l161">Je n’en doute pas un instant, j’en ai la meilleure opinion du monde, assurément, et je les aime d’avance ; je vous le dis de tout mon cœur. Mais prenons toujours ceux-ci qui se présentent, et qui sont permis ; voyons ce que c’est, et puis nous irons aux vôtres : est-ce que j’y renonce ?</l>
-          </sp>
-          <sp who="diane" xml:id="5-37">
-            <speaker>DIANE.</speaker>
-            <l n="162" xml:id="l162">Ils vous ôteront le goût des miens.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="5-38">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="163" xml:id="l163">Pour moi, je ne veux pas des siens ; prenez-y garde.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-39">
-            <speaker>FÉLICIE.</speaker>
-            <l n="164" xml:id="l164">Oh ! je sais toujours votre avis, à vous, sans que vous le disiez.</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-40">
-            <speaker>LUCIDOR.</speaker>
-            <l n="165" xml:id="l165">Quel ridicule entêtement ! Je n’ai que vos bontés pour ressource.</l>
-          </sp>
-          <sp who="diane" xml:id="5-41">
-            <speaker>DIANE.</speaker>
-            <l n="166" xml:id="l166">Pour la dernière fois, suivez-moi, ma fille.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-42">
-            <speaker>FÉLICIE.</speaker>
-            <l n="167" xml:id="l167">Tenez, vous parlerai-je franchement ? Cette rigueur-là n’est point du tout persuasive, point du tout : austérité superflue que tout cela ; l’excès n’est point une sagesse, et je sais me conduire.</l>
-          </sp>
-          <sp who="diane" xml:id="5-43">
-            <speaker>DIANE.</speaker>
-            <l n="168" xml:id="l168">Vous le préférez donc ? Adieu.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-44">
-            <speaker>FÉLICIE, <em>impatiemment.</em></speaker>
-            <l n="169" xml:id="l169">Ahi !</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-45">
-            <speaker>LUCIDOR, <em>à genoux.</em></speaker>
-            <l n="170" xml:id="l170">Au nom de tant de charmes, ne vous rendez point ; songez qu’il ne s’agit que d’une bagatelle.</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-46">
-            <speaker>FÉLICIE,<em> à Lucidor.</em></speaker>
-            <l n="171" xml:id="l171">Oui, mais levez-vous donc ; ne faites rien qui lui donne raison.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="5-47">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="172" xml:id="l172">Cette dame s’en va.</l>
-          </sp>
-          <sp who="lucidor" xml:id="5-48">
-            <speaker>LUCIDOR.</speaker>
-            <l n="173" xml:id="l173">Laissez-la aller ; vous la rejoindrez.</l>
-          </sp>
-          <sp who="diane" xml:id="5-49">
-            <speaker>DIANE.</speaker>
-            <l n="174" xml:id="l174">Adieu, trop imprudente Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-50">
-            <speaker>FÉLICIE.</speaker>
-            <l n="175" xml:id="l175">Bon, imprudente ! Je ne vous dis pas adieu, moi ; j’irai vous retrouver.</l>
-          </sp>
-          <sp who="diane" xml:id="5-51">
-            <speaker>DIANE.</speaker>
-            <l n="176" xml:id="l176">Je ne l’espère pas.</l>
-          </sp>
-          <sp who="félicie" xml:id="5-52">
-            <speaker>FÉLICIE.</speaker>
-            <l n="177" xml:id="l177">Et moi, je le sais bien ; vous le verrez.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="5-53">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="178" xml:id="l178">Que vous m’alarmez ! Elle est partie ; il ne vous reste plus que moi, Félicie, et peut-être nous séparons-nous aussi.</l>
-            <l n="179" xml:id="l179"> </l>
-            <l n="180" xml:id="l180"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="181" xml:id="l181"> </l>
-          <sp who="lucidor" xml:id="6-1">
-            <speaker>LA MODESTIE, FÉLICIE, LUCIDOR</speaker>
-            <l n="182" xml:id="l182"> </l>
-          </sp>
-          <sp who="félicie" xml:id="6-2">
-            <speaker>FÉLICIE.</speaker>
-            <l n="183" xml:id="l183">À qui en avez-vous ? à qui en a-t-elle ? Dites-moi donc le crime que j’ai fait ; car je l’ignore ! De quoi s’est-elle fâchée ? De quoi l’êtes-vous ? Où cela va-t-il ?</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-3">
-            <speaker>LUCIDOR.</speaker>
-            <l n="184" xml:id="l184">Si le plaisir qu’on sent à vous voir la chagrine, sa peine est sans remède, Félicie ; mais n’y songez plus, nous nous passerons bien d’elle.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-4">
-            <speaker>FÉLICIE.</speaker>
-            <l n="185" xml:id="l185">Il est pourtant vrai que, sans vous, je l’aurais suivie, Seigneur.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-5">
-            <speaker>LUCIDOR.</speaker>
-            <l n="186" xml:id="l186">Vous repentez-vous déjà d’avoir bien voulu demeurer ? Que nous sommes différents l’un de l’autre ! Je ferais ma félicité d’être toujours avec vous : oui, Félicie, vous êtes les délices de mes yeux et de mon cœur.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-6">
-            <speaker>FÉLICIE.</speaker>
-            <l n="187" xml:id="l187">À merveille ! voilà un langage qui vient fort à propos ! Courage ! si vous continuez sur ce ton-là, je pourrai bien avoir tort d’être ici.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-7">
-            <speaker>LUCIDOR.</speaker>
-            <l n="188" xml:id="l188">Eh ! qui pourrait condamner les sentiments que j’exprime ? Jamais l’amour offrit-il d’objet aussi charmant que vous l’êtes ? Vos regards me pénètrent ; ils sont des traits de flamme.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-8">
-            <speaker>FÉLICIE, <em>impatiente.</em></speaker>
-            <l n="189" xml:id="l189">Je vous dis que ces flammes-là vont encore effaroucher ma compagne.</l>
-            <stage><hi rend="italic"><em>La Modestie paraît sombre.</em></hi></stage>
-          </sp>
-          <sp who="lucidor" xml:id="6-9">
-            <speaker>LUCIDOR.</speaker>
-            <l n="191" xml:id="l191">Eh ! quel autre discours voulez-vous que je vous tienne ? Vous ne m’inspirez que des transports, et je vous en parle ; vous me ravissez, et je m’écrie ; vous m’embrasez du plus tendre et du plus invincible de tous les amours, et je soupire.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-10">
-            <speaker>FÉLICIE.</speaker>
-            <l n="192" xml:id="l192">Ah ! que j’ai mal fait de rester !</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-11">
-            <speaker>LUCIDOR.</speaker>
-            <l n="193" xml:id="l193">Ô ciel ! quel discours !</l>
-          </sp>
-          <sp who="la-modestie" xml:id="6-12">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="194" xml:id="l194">Vous voyez ce qui en est.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-13">
-            <speaker>FÉLICIE, <em>à la Modestie.</em></speaker>
-            <l n="195" xml:id="l195">Au moins, ne me quittez pas.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="6-14">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="196" xml:id="l196">Il est encore temps de vous retirer.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-15">
-            <speaker>FÉLICIE.</speaker>
-            <l n="197" xml:id="l197">Oh ! toujours temps ! aussi n’y manquerai-je pas, s’il continue. Ah !</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-16">
-            <speaker>LUCIDOR.</speaker>
-            <l n="198" xml:id="l198">De grâce, adorable Félicie, expliquez-moi ce soupir ; à qui s’adresse-t-il ? Que signifie-t-il ?</l>
-          </sp>
-          <sp who="félicie" xml:id="6-17">
-            <speaker>FÉLICIE.</speaker>
-            <l n="199" xml:id="l199">Il signifie que je vais m’en retourner, et que vous n’êtes pas raisonnable.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="6-18">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="200" xml:id="l200">Allons donc, sauvez-vous.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-19">
-            <speaker>LUCIDOR.</speaker>
-            <l n="201" xml:id="l201">Non, vous ne vous en retournerez pas sitôt ; vous n’aurez pas la cruauté de me déchirer le cœur.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-20">
-            <speaker>FÉLICIE.</speaker>
-            <l n="202" xml:id="l202">En un mot, je ne veux pas que vous m’aimiez.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-21">
-            <speaker>LUCIDOR.</speaker>
-            <l n="203" xml:id="l203">Donnez-moi donc la force de faire l’impossible.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-22">
-            <speaker>FÉLICIE.</speaker>
-            <l n="204" xml:id="l204">L’impossible ! et toujours des expressions tendres ! Eh bien ! si vous m’aimez, ne me le dites point.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-23">
-            <speaker>LUCIDOR.</speaker>
-            <l n="205" xml:id="l205">En quel endroit de la terre irez-vous, où l’on ne vous le dise pas ?</l>
-          </sp>
-          <sp who="félicie" xml:id="6-24">
-            <speaker>FÉLICIE, <em>à la Modestie.</em></speaker>
-            <l n="206" xml:id="l206">Je n’ai point de réplique à cela ; mais je vous défie de me rien reprocher, car je me défends bien.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-25">
-            <speaker>LUCIDOR.</speaker>
-            <l n="207" xml:id="l207">Content de vous voir, de vous aimer, je ne vous demande que de souffrir mes respects et ma tendresse.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-26">
-            <speaker>FÉLICIE, <em>à la Modestie.</em></speaker>
-            <l n="208" xml:id="l208">Cela ne prend rien sur mon cœur ; ainsi, ne vous inquiétez pas ; ce ne sera rien.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="6-27">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="209" xml:id="l209">Son respect vous trompe et vous séduit.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-28">
-            <speaker>LUCIDOR, <em>à la Modestie.</em></speaker>
-            <l n="210" xml:id="l210">Vous, qui l’accompagnez, d’où vient que vous vous déclarez mon ennemie ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="6-29">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="211" xml:id="l211">C’est que je suis l’amie de la vertu.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-30">
-            <speaker>LUCIDOR, <em>en baisant la main de Félicie.</em></speaker>
-            <l n="212" xml:id="l212">Et moi, je suis l’adorateur de la sienne.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-31">
-            <speaker>LA MODESTIE, <em>à Félicie.</em></speaker>
-            <l n="213" xml:id="l213">Et vous voyez qu’il l’attaque en l’adorant.</l>
-            <stage><hi rend="italic"><em>Elle fait semblant de partir.</em></hi></stage>
-            <l n="215" xml:id="l215">Je n’y tiens point non plus, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="6-32">
-            <speaker>FÉLICIE, <em>courant après elle.</em></speaker>
-            <l n="216" xml:id="l216">Arrêtez, Modestie ! Seigneur, je vous déclare que je ne veux point la perdre.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-33">
-            <speaker>LUCIDOR.</speaker>
-            <l n="217" xml:id="l217">Elle devrait avoir nom Férocité, et non pas Modestie.</l>
-            <stage><hi rend="italic"><em>Il va à elle.</em></hi></stage>
-            <l n="219" xml:id="l219">Revenez, Madame, revenez ; je ne dirai plus rien qui vous déplaise et je me tairai. Mais, pendant mon silence, Félicie, permettez à ces jeunes chasseurs, que vous voyez épars, de vous marquer, à leur tour, la joie qu’ils ont de vous avoir rencontrée ; ils me divertissent quelquefois moi-même par leurs danses et par leurs chants : souffrez qu’ils essaient de vous amuser. La musique et la danse ne doivent effrayer personne.</l>
-            <stage><hi rend="italic"><em>À Félicie, bas.</em></hi></stage>
-            <l n="221" xml:id="l221">Qu’elle est revêche et bourrue !</l>
-          </sp>
-          <sp who="félicie" xml:id="6-34">
-            <speaker>FÉLICIE, <em>tout bas aussi.</em></speaker>
-            <l n="222" xml:id="l222">C’est ma compagne.</l>
-          </sp>
-          <sp who="lucidor" xml:id="6-35">
-            <speaker>LUCIDOR.</speaker>
-            <l n="223" xml:id="l223">Asseyons-nous et écoutons.</l>
-            <l n="224" xml:id="l224"> </l>
-            <l n="225" xml:id="l225"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="226" xml:id="l226"> </l>
-          <sp who="lucidor" xml:id="7-1">
-            <speaker>LA MODESTIE, FÉLICIE, LUCIDOR, <em>troupe de</em> CHASSEURS</speaker>
-            <l n="227" xml:id="l227"> </l>
-            <stage><hi rend="italic"><em>Les instruments préludent : on danse.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air.</em></hi></stage>
-          <stage>UN CHASSEUR.</stage>
-          </sp>
-          <sp who="lucidor" xml:id="7-2">
-            <speaker>LUCIDOR.</speaker>
-            <l n="230" xml:id="l230">Vous intéressez tous les cœurs, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="7-3">
-            <speaker>FÉLICIE.</speaker>
-            <l n="231" xml:id="l231">N’interrompez point.</l>
-            <stage><hi rend="italic"><em>On danse encore.</em></hi></stage>
-          </sp>
-          <sp who="lucidor" xml:id="7-4">
-            <speaker>LUCIDOR, <em>ensuite, dit.</em></speaker>
-            <l n="233" xml:id="l233">Ils n’auront pas seuls l’honneur de vous amuser, et je prétends y avoir part.</l>
-            <stage><hi rend="italic"><em>Il chante un menuet.</em></hi></stage>
-            <stage><hi rend="italic"><em>Les chasseurs se retirent.</em></hi></stage>
-            <l n="236" xml:id="l236"> </l>
-            <l n="237" xml:id="l237"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="238" xml:id="l238"> </l>
-          <sp who="lucidor" xml:id="8-1">
-            <speaker>FÉLICIE, LUCIDOR, LA MODESTIE</speaker>
-            <l n="239" xml:id="l239"> </l>
-          </sp>
-          <sp who="félicie" xml:id="8-2">
-            <speaker>FÉLICIE.</speaker>
-            <l n="240" xml:id="l240">Toujours de l’amour, vous ne vous corrigez point.</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-3">
-            <speaker>LUCIDOR.</speaker>
-            <l n="241" xml:id="l241">Et vous, toujours de nouveaux charmes ; ils ne finissent point.</l>
-            <stage><hi rend="italic"><em>Il lui prend la main.</em></hi></stage>
-          </sp>
-          <sp who="félicie" xml:id="8-4">
-            <speaker>FÉLICIE.</speaker>
-            <l n="243" xml:id="l243">Laissez là ma main, elle n’est pas de la conversation.</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-5">
-            <speaker>LUCIDOR.</speaker>
-            <l n="244" xml:id="l244">Mon cœur voudrait pourtant bien en avoir une avec elle.</l>
-          </sp>
-          <sp who="félicie" xml:id="8-6">
-            <speaker>FÉLICIE, <em>voulant retirer sa main.</em></speaker>
-            <l n="245" xml:id="l245">Et moi, je ne veux point.</l>
-            <stage><hi rend="italic"><em>Il lui baise la main.</em></hi></stage>
-            <l n="247" xml:id="l247">Eh bien, encore ! ne vous l’avais-je pas défendu ? Cela nous brouillera, vous dis-je, cela nous brouillera.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="8-7">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="248" xml:id="l248">Vous me donnez mon congé, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="8-8">
-            <speaker>FÉLICIE.</speaker>
-            <l n="249" xml:id="l249">Vous voyez bien que je me fâche, afin qu’il n’y revienne plus : qu’avez-vous à dire ?</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-9">
-            <speaker>LUCIDOR, <em>impatient.</em></speaker>
-            <l n="250" xml:id="l250">L’insupportable fille !</l>
-          </sp>
-          <sp who="félicie" xml:id="8-10">
-            <speaker>FÉLICIE, <em>à la Modestie.</em></speaker>
-            <l n="251" xml:id="l251">Il est vrai que vous vous scandalisez de trop peu de chose.</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-11">
-            <speaker>LUCIDOR, <em>avec dépit.</em></speaker>
-            <l n="252" xml:id="l252">Ma tendresse ne vous fatiguerait pas tant sans elle.</l>
-          </sp>
-          <sp who="félicie" xml:id="8-12">
-            <speaker>FÉLICIE.</speaker>
-            <l n="253" xml:id="l253">Oh ! si votre cœur n’a pas besoin d’elle, le mien n’est pas de même, entendez-vous ?</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-13">
-            <speaker>LUCIDOR.</speaker>
-            <l n="254" xml:id="l254">Eh ! quel besoin le vôtre en a-t-il ? Dites-moi le moindre mot consolant.</l>
-          </sp>
-          <sp who="félicie" xml:id="8-14">
-            <speaker>FÉLICIE.</speaker>
-            <l n="255" xml:id="l255">Je suis bien heureuse qu’elle me gêne.</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-15">
-            <speaker>LUCIDOR.</speaker>
-            <l n="256" xml:id="l256">Achevez.</l>
-          </sp>
-          <sp who="félicie" xml:id="8-16">
-            <speaker>FÉLICIE, <em>à la Modestie, bas.</em></speaker>
-            <l n="257" xml:id="l257">Si je lui disais, pour m’en défaire, que je suis un peu sensible, le trouveriez-vous mauvais ? il n’en sera pas plus avancé.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="8-17">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="258" xml:id="l258">Gardez-vous-en bien ; je ne soutiendrai pas ce discours-là.</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-18">
-            <speaker>FÉLICIE<em>, à Lucidor.</em></speaker>
-            <l n="259" xml:id="l259">Passez-vous donc de ma réponse.</l>
-          </sp>
-          <sp who="lucidor" xml:id="8-19">
-            <speaker>LUCIDOR.</speaker>
-            <l n="260" xml:id="l260">Si elle s’écartait un moment, comme elle le pourrait, sans s’éloigner, quel inconvénient y aurait-il ?</l>
-          </sp>
-          <sp who="félicie" xml:id="8-20">
-            <speaker>FÉLICIE, <em>à la Modestie.</em></speaker>
-            <l n="261" xml:id="l261">Ce jeune homme vous impatiente : promenez-vous un instant sans me quitter ; je tâcherai d’abréger la conversation.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="8-21">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="262" xml:id="l262">Hélas ! si je m’écarte, je ne reviendrai peut-être plus.</l>
-          </sp>
-          <sp who="félicie" xml:id="8-22">
-            <speaker>FÉLICIE.</speaker>
-            <l n="263" xml:id="l263">Je ne vous propose pas de vous en aller, je ne veux pas seulement vous perdre de vue, et ce que j’en dis n’est que pour vous épargner son importunité.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="8-23">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="264" xml:id="l264">Puisque vous m’y forcez, vous voilà seule.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="266" xml:id="l266">Je me retire, mais je ne la quitte pas.</l>
-            <l n="267" xml:id="l267"> </l>
-            <l n="268" xml:id="l268"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="269" xml:id="l269"> </l>
-          <sp who="lucidor" xml:id="9-1">
-            <speaker>LUCIDOR, FÉLICIE</speaker>
-            <l n="270" xml:id="l270"> </l>
-          </sp>
-          <sp who="lucidor" xml:id="9-2">
-            <speaker>LUCIDOR.</speaker>
-            <l n="271" xml:id="l271">Ah ! je respire.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-3">
-            <speaker>FÉLICIE.</speaker>
-            <l n="272" xml:id="l272">Et moi, je suis honteuse.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-4">
-            <speaker>LUCIDOR.</speaker>
-            <l n="273" xml:id="l273">Non, Félicie, ne troublez point un si doux moment par de chagrinantes réflexions ; vous voilà libre, et vous m’avez promis de vous expliquer ; je vous adore, commencez par me dire que vous le voulez bien.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-5">
-            <speaker>FÉLICIE.</speaker>
-            <l n="274" xml:id="l274">Oh ! pour ce commencement-là, il n’est pas difficile : oui, j’y consens ; quand je ne le voudrais pas, il n’en serait ni plus ni moins, ainsi, il vaut autant vous le permettre.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-6">
-            <speaker>LUCIDOR.</speaker>
-            <l n="275" xml:id="l275">Ce n’est pas encore assez.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-7">
-            <speaker>FÉLICIE.</speaker>
-            <l n="276" xml:id="l276">Surtout, réglez vos demandes.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-8">
-            <speaker>LUCIDOR.</speaker>
-            <l n="277" xml:id="l277">Je n’en ferai que de légitimes ; je vous aime, y répondez-vous ? votre compagne n’y est plus.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-9">
-            <speaker>FÉLICIE.</speaker>
-            <l n="278" xml:id="l278">Oui ; mais j’y suis, moi.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-10">
-            <speaker>LUCIDOR.</speaker>
-            <l n="279" xml:id="l279">Vous avez trop de bonté pour me tenir si longtemps inquiet de mon sort, et vous ne l’avez éloignée que pour m’en éclaircir.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-11">
-            <speaker>FÉLICIE.</speaker>
-            <l n="280" xml:id="l280">J’avoue que, si elle y était, je n’oserais jamais vous dire le plaisir que j’ai à vous voir.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-12">
-            <speaker>LUCIDOR.</speaker>
-            <l n="281" xml:id="l281">Je suis donc un peu aimé ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-13">
-            <speaker>FÉLICIE.</speaker>
-            <l n="282" xml:id="l282">Presque autant qu’aimable.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-14">
-            <speaker>LUCIDOR, <em>charmé.</em></speaker>
-            <l n="283" xml:id="l283">Vous m’aimez ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-15">
-            <speaker>FÉLICIE.</speaker>
-            <l n="284" xml:id="l284">Je vous aime, et j’avais grande envie de vous le dire ; rappelons ma compagne.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-16">
-            <speaker>LUCIDOR.</speaker>
-            <l n="285" xml:id="l285">Pas encore.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-17">
-            <speaker>FÉLICIE.</speaker>
-            <l n="286" xml:id="l286">Comment, pas encore ? je vous aime, mais voilà tout.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-18">
-            <speaker>LUCIDOR.</speaker>
-            <l n="287" xml:id="l287">Attendez ce qui me reste à vous dire, il n’en sera que ce que vous voudrez.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-19">
-            <speaker>FÉLICIE.</speaker>
-            <l n="288" xml:id="l288">Oui, oui, que ce que je voudrai ! Je n’ai pourtant fait jusqu’ici que ce que vous avez voulu.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-20">
-            <speaker>LUCIDOR.</speaker>
-            <l n="289" xml:id="l289">Écoutez-moi, charmante Félicie, n’est-ce pas toujours à la personne que l’on aime qu’il faut se marier ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-21">
-            <speaker>FÉLICIE.</speaker>
-            <l n="290" xml:id="l290">Qui est-ce qui a jamais douté de cela ?</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-22">
-            <speaker>LUCIDOR.</speaker>
-            <l n="291" xml:id="l291">Et pour qui se marie-t-on ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-23">
-            <speaker>FÉLICIE.</speaker>
-            <l n="292" xml:id="l292">Pour soi-même, assurément.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-24">
-            <speaker>LUCIDOR.</speaker>
-            <l n="293" xml:id="l293">On est donc, à cet égard-là, les maîtres de sa destinée ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-25">
-            <speaker>FÉLICIE.</speaker>
-            <l n="294" xml:id="l294">Avec l’avis de ses parents, pourtant.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-26">
-            <speaker>LUCIDOR.</speaker>
-            <l n="295" xml:id="l295">Souvent ces parents, en disposant de nous, ne s’embarrassent guère de nos cœurs.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-27">
-            <speaker>FÉLICIE.</speaker>
-            <l n="296" xml:id="l296">Vous avez raison.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-28">
-            <speaker>LUCIDOR.</speaker>
-            <l n="297" xml:id="l297">Trouvez-vous qu’ils ont tort ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-29">
-            <speaker>FÉLICIE.</speaker>
-            <l n="298" xml:id="l298">Un très grand tort.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-30">
-            <speaker>LUCIDOR.</speaker>
-            <l n="299" xml:id="l299">M’en croirez-vous ? prévenons celui que nos parents pourraient avoir avec nous. Les miens me chérissent, et seront bientôt apaisés : assurons-nous d’une union éternelle autant que légitime ; on peut nous marier ici, et quand nous serons époux, il faudra bien qu’ils y consentent.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-31">
-            <speaker>FÉLICIE.</speaker>
-            <l n="300" xml:id="l300">Ah ! vous me faites frémir, et par bonheur ma compagne n’est qu’à deux pas d’ici.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-32">
-            <speaker>LUCIDOR.</speaker>
-            <l n="301" xml:id="l301">Quoi ! vous frémissez de songer que je serais votre époux ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-33">
-            <speaker>FÉLICIE.</speaker>
-            <l n="302" xml:id="l302">Mon époux, Lucidor ! Voulez-vous que mon cœur soit la dupe de ce mot-là ! Vous devriez craindre vous-même de me persuader. N’est-il pas de votre intérêt que je sois estimable ? et l’estime que je mérite encore, que deviendrait-elle ? Vous permettre de m’aimer, vous l’entendre dire, vous aimer moi-même, à la bonne heure, passe pour cela ; s’il y entre de la faiblesse, elle est excusable ; on peut être tendre et pourtant vertueuse ; mais vous me proposez d’être insensée, d’être extravagante, d’être méprisable ; oh ! je suis fâchée contre vous ; je ne vous reconnais point à ce trait-là.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-34">
-            <speaker>LUCIDOR.</speaker>
-            <l n="303" xml:id="l303">Vous parlez de vertu, Félicie, les dieux me sont témoins que je suis aussi jaloux de la vôtre que vous même, et que je ne songe qu’à rendre notre séparation impossible.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-35">
-            <speaker>FÉLICIE.</speaker>
-            <l n="304" xml:id="l304">Et moi, je vous dis, Lucidor, que c’est la rendre immanquable : non, non, n’en parlons plus ; je ne me rendrai jamais à cela ; tout ce que je puis faire, c’est de vous pardonner de me l’avoir dit.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-36">
-            <speaker>LUCIDOR, <em>à genoux.</em></speaker>
-            <l n="305" xml:id="l305">Félicie, vous défiez-vous de moi ? ma probité vous est-elle suspecte ? ma douleur et mes larmes n’obtiendront-elles rien ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-37">
-            <speaker>FÉLICIE.</speaker>
-            <l n="306" xml:id="l306">Quel malheur que d’aimer ! qu’on me l’avait bien dit, et que je mérite bien ce qui m’arrive !</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-38">
-            <speaker>LUCIDOR.</speaker>
-            <l n="307" xml:id="l307">Vous me croyez donc un perfide ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-39">
-            <speaker>FÉLICIE.</speaker>
-            <l n="308" xml:id="l308">Je ne crois rien, je pleure. Adieu, trop imprudente Félicie, me disait cette dame en partant : oh ! que cela est vrai !</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-40">
-            <speaker>LUCIDOR.</speaker>
-            <l n="309" xml:id="l309">Pouvez-vous abandonner notre amour au hasard ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-41">
-            <speaker>FÉLICIE.</speaker>
-            <l n="310" xml:id="l310">Se marier de son chef, sans consulter qui que ce soit au monde, sans témoin de ma part, car je ne connais personne ici ; quel mariage !</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-42">
-            <speaker>LUCIDOR.</speaker>
-            <l n="311" xml:id="l311">Les témoins les plus sacrés ne sont-ils pas votre cœur et le mien ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-43">
-            <speaker>FÉLICIE.</speaker>
-            <l n="312" xml:id="l312">Oh ! pour nos cœurs, ne m’en parlez pas, je ne m’y fierai plus, ils m’ont trompée tous deux.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-44">
-            <speaker>LUCIDOR.</speaker>
-            <l n="313" xml:id="l313">Vous ne voulez donc point m’épouser ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-45">
-            <speaker>FÉLICIE.</speaker>
-            <l n="314" xml:id="l314">Dès aujourd’hui, si on le veut ; et si on ne l’approuve pas, je l’approuverai, moi.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-46">
-            <speaker>LUCIDOR.</speaker>
-            <l n="315" xml:id="l315">Eh ! pensez-vous qu’on vous en laisse la liberté ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-47">
-            <speaker>FÉLICIE.</speaker>
-            <l n="316" xml:id="l316">Par pitié pour moi, demeurons raisonnables.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-48">
-            <speaker>LUCIDOR.</speaker>
-            <l n="317" xml:id="l317">Je mourrai donc, puisque vous me condamnez à mourir.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-49">
-            <speaker>FÉLICIE.</speaker>
-            <l n="318" xml:id="l318">Lucidor, ce mariage-là ne réussira pas.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-50">
-            <speaker>LUCIDOR.</speaker>
-            <l n="319" xml:id="l319">Notre sort n’est assuré que par là.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-51">
-            <speaker>FÉLICIE.</speaker>
-            <l n="320" xml:id="l320">Hélas ! je suis donc sans secours.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-52">
-            <speaker>LUCIDOR.</speaker>
-            <l n="321" xml:id="l321">Qui est-ce qui s’intéresse à vous plus que moi ?</l>
-          </sp>
-          <sp who="félicie" xml:id="9-53">
-            <speaker>FÉLICIE.</speaker>
-            <l n="322" xml:id="l322">Eh bien ! puisqu’il le faut, donnez-moi, de grâce, un quart d’heure pour me résoudre ; mon esprit est tout en désordre ; je ne sais où je suis, laissez-moi me reconnaître, n’arrachez rien au trouble où je me sens, et fiez-vous à mon amour ; il aura plus de soin de vous que de moi-même.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-54">
-            <speaker>LUCIDOR.</speaker>
-            <l n="323" xml:id="l323">Ah ! je suis perdu ; votre compagne reviendra, vous la rappellerez.</l>
-          </sp>
-          <sp who="félicie" xml:id="9-55">
-            <speaker>FÉLICIE.</speaker>
-            <l n="324" xml:id="l324">Non, cher Lucidor ; je vous promets de n’avoir à faire qu’à mon cœur, et vous n’aurez que lui pour juge. Laissez-moi, vous reviendrez me trouver.</l>
-          </sp>
-          <sp who="lucidor" xml:id="9-56">
-            <speaker>LUCIDOR.</speaker>
-            <l n="325" xml:id="l325">J’obéis ; mais sauvez-moi la vie, voilà tout ce que je puis vous dire.</l>
-            <l n="326" xml:id="l326"> </l>
-            <l n="327" xml:id="l327"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="328" xml:id="l328"> </l>
-          <sp who="félicie" xml:id="10-1">
-            <speaker>FÉLICIE, LA MODESTIE, <em>qui paraît et se tient loin</em></speaker>
-            <l n="329" xml:id="l329"> </l>
-          </sp>
-          <sp who="félicie" xml:id="10-2">
-            <speaker>FÉLICIE, <em>se croyant seule.</em></speaker>
-            <l n="330" xml:id="l330">Ah ! que suis-je devenue ?</l>
-          </sp>
-          <sp who="la-modestie" xml:id="10-3">
-            <speaker>LA MODESTIE, <em>de loin.</em></speaker>
-            <l n="331" xml:id="l331">Me voilà, Félicie.</l>
-            <stage><hi rend="italic"><em>Félicie la regarde tristement. La Modestie continue.</em></hi></stage>
-            <l n="333" xml:id="l333">Ne m’appelez-vous pas ?</l>
-          </sp>
-          <sp who="félicie" xml:id="10-4">
-            <speaker>FÉLICIE.</speaker>
-            <l n="334" xml:id="l334">Je n’en sais rien.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="10-5">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="335" xml:id="l335">Voulez-vous que je vienne ?</l>
-          </sp>
-          <sp who="félicie" xml:id="10-6">
-            <speaker>FÉLICIE.</speaker>
-            <l n="336" xml:id="l336">Je n’en sais rien non plus.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="10-7">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="337" xml:id="l337">Que vous êtes à plaindre !</l>
-          </sp>
-          <sp who="félicie" xml:id="10-8">
-            <speaker>FÉLICIE.</speaker>
-            <l n="338" xml:id="l338">Infiniment.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="10-9">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="339" xml:id="l339">Je vous parle de trop loin ; si je me rapprochais, vous seriez plus forte.</l>
-          </sp>
-          <sp who="félicie" xml:id="10-10">
-            <speaker>FÉLICIE.</speaker>
-            <l n="340" xml:id="l340">Plus forte ! Je n’ai pas le courage de vouloir l’être.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="10-11">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="341" xml:id="l341">Tâchez d’ouvrir les yeux sur votre état.</l>
-          </sp>
-          <sp who="félicie" xml:id="10-12">
-            <speaker>FÉLICIE.</speaker>
-            <l n="342" xml:id="l342">Je ne saurais ; je soupire de mon état, et je l’aime ; de peur d’en sortir, je ne veux pas le connaître.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="10-13">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="343" xml:id="l343">Servez-vous de votre raison.</l>
-          </sp>
-          <sp who="félicie" xml:id="10-14">
-            <speaker>FÉLICIE.</speaker>
-            <l n="344" xml:id="l344">Elle me guérirait de mon amour.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="10-15">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="345" xml:id="l345">Ah ! tant mieux, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="10-16">
-            <speaker>FÉLICIE.</speaker>
-            <l n="346" xml:id="l346">Et mon amour m’est cher.</l>
-            <l n="347" xml:id="l347"> </l>
-            <l n="348" xml:id="l348"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="349" xml:id="l349"> </l>
-          <sp who="diane" xml:id="11-1">
-            <speaker>DIANE <em>paraît</em>, LA MODESTIE, FÉLICIE</speaker>
-            <l n="350" xml:id="l350"> </l>
-          </sp>
-          <sp who="la-modestie" xml:id="11-2">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="351" xml:id="l351">Voici cette dame qui vous sollicitait tantôt de la suivre, et qui paraît ; vous vous détournez pour ne la point voir.</l>
-          </sp>
-          <sp who="félicie" xml:id="11-3">
-            <speaker>FÉLICIE.</speaker>
-            <l n="352" xml:id="l352">Je l’estime, mais je n’ai rien à lui dire, et je crains qu’elle ne me parle.</l>
-          </sp>
-          <sp who="diane" xml:id="11-4">
-            <speaker>LA MODESTIE, <em>à Diane.</em></speaker>
-            <l n="353" xml:id="l353">Pressez-la, Madame ; vos discours la ramèneront peut-être.</l>
-          </sp>
-          <sp who="diane" xml:id="11-5">
-            <speaker>DIANE.</speaker>
-            <l n="354" xml:id="l354">Non, dès qu’elle ne veut pas de vous, qui devez être sa plus intime amie, elle n’est pas en état de m’entendre.</l>
-          </sp>
-          <sp who="la-modestie" xml:id="11-6">
-            <speaker>LA MODESTIE.</speaker>
-            <l n="355" xml:id="l355">Cependant elle nous regrette.</l>
-          </sp>
-          <sp who="diane" xml:id="11-7">
-            <speaker>DIANE.</speaker>
-            <l n="356" xml:id="l356">L’infortunée n’a pas moins résolu de se perdre.</l>
-          </sp>
-          <sp who="félicie" xml:id="11-8">
-            <speaker>FÉLICIE.</speaker>
-            <l n="357" xml:id="l357">Non, je ne risque rien : Lucidor est plein d’honneur, il m’aime ; je sens que je ne vivrais pas sans lui ; on me le refuserait peut-être, je l’épouse ; il est question d’un mariage qu’il me propose avec toute la tendresse imaginable, et sans lequel je sens que je ne puis être heureuse : ai-je tort de vouloir l’être ?</l>
-          </sp>
-          <sp who="diane" xml:id="11-9">
-            <speaker>DIANE, <em>toujours de loin.</em></speaker>
-            <l n="358" xml:id="l358">Fille infortunée, croyez-en nos conseils et nos alarmes.</l>
-            <l n="359" xml:id="l359">Fuyez, le voici qui revient ; mais rien ne la touche. Adieu encore une fois, Félicie.</l>
-          </sp>
-          <sp who="félicie" xml:id="11-10">
-            <speaker>FÉLICIE.</speaker>
-            <l n="360" xml:id="l360">Quelle obstination ! Est-ce qu’il est défendu, dans le monde, de faire son bonheur ?</l>
-            <l n="361" xml:id="l361"> </l>
-            <l n="362" xml:id="l362"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="363" xml:id="l363"> </l>
-          <sp who="lucidor" xml:id="12-1">
-            <speaker>LUCIDOR, FÉLICIE</speaker>
-            <l n="364" xml:id="l364"> </l>
-          </sp>
-          <sp who="lucidor" xml:id="12-2">
-            <speaker>LUCIDOR.</speaker>
-            <l n="365" xml:id="l365">Je vous revois donc, délices de mon cœur ! Eh bien ! le vôtre me rend-il justice ? En est-ce fait ? Notre union sera-t-elle éternelle ?</l>
-            <stage><hi rend="italic"><em>Il lui prend la main qu’il baise.</em></hi></stage>
-            <l n="367" xml:id="l367">Vous pleurez, ce me semble ? Est-ce mon retour qui cause vos pleurs ?</l>
-          </sp>
-          <sp who="félicie" xml:id="12-3">
-            <speaker>FÉLICIE, <em>pleurant.</em></speaker>
-            <l n="368" xml:id="l368">Hélas ! elles me quittent, elles disparaissent toujours à votre aspect, et je ne sais pourquoi.</l>
-          </sp>
-          <sp who="lucidor" xml:id="12-4">
-            <speaker>LUCIDOR.</speaker>
-            <l n="369" xml:id="l369">Qui ? cette sombre compagne appelée Modestie ? cette autre dame qui désapprouve que vous veniez dans nos cantons, quand j’offre d’aller avec vous dans les siens ? Et ce sont deux aussi revêches, deux aussi impraticables personnes que celles-là, deux sauvages d’une défiance aussi ridicule, que vous regrettez ! Ce sont elles dont le départ excite vos pleurs au moment où j’arrive, pénétré de l’amour le plus tendre et le plus inviolable, avec l’espérance de l’hymen le plus fortuné qui sera jamais ! Ah ciel ! est-ce ainsi que vous traitez, que vous recevez un amant qui vous adore, un époux qui va faire sa félicité de la vôtre, et qui ne veut respirer que par vous et pour vous ? Allons, Félicie, n’hésitez plus ; venez, tout est prêt pour nous unir ; la chaîne du plaisir et du bonheur nous attend.</l>
-            <stage><hi rend="italic"><em>Une symphonie douce commence ici.</em></hi></stage>
-            <l n="371" xml:id="l371">Venez me donner une main chérie, que je ne puis toucher sans ravissement.</l>
-          </sp>
-          <sp who="félicie" xml:id="12-5">
-            <speaker>FÉLICIE.</speaker>
-            <l n="372" xml:id="l372">De grâce, Lucidor, du moins rappelons-les, et qu’elles nous suivent.</l>
-          </sp>
-          <sp who="lucidor" xml:id="12-6">
-            <speaker>LUCIDOR.</speaker>
-            <l n="373" xml:id="l373">Eh ! de qui parlez-vous encore ?</l>
-          </sp>
-          <sp who="félicie" xml:id="12-7">
-            <speaker>FÉLICIE.</speaker>
-            <l n="374" xml:id="l374">Hélas ! de ma compagne et de l’autre dame.</l>
-          </sp>
-          <sp who="lucidor" xml:id="12-8">
-            <speaker>LUCIDOR.</speaker>
-            <l n="375" xml:id="l375">Elles haïssent notre amour, vous ne l’ignorez pas ; venez, vous dis-je ; votre injuste résistance me désespère ; partons.</l>
-            <stage><hi rend="italic"><em>Il l’entraîne un peu.</em></hi></stage>
-          </sp>
-          <sp who="félicie" xml:id="12-9">
-            <speaker>FÉLICIE.</speaker>
-            <l n="377" xml:id="l377">Ô ciel ! vous m’entraînez ! Où suis-je ? Que vais-je devenir ? Mon trouble, leur absence et mon amour m’épouvantent : rappelons-les, qu’elles reviennent.</l>
-            <stage><hi rend="italic"><em>Elle crie haut.</em></hi></stage>
-            <l n="379" xml:id="l379">Ah ! chère Modestie, chère compagne, où êtes-vous ? Où sont-elles ?</l>
-            <stage><hi rend="italic"><em>Alors la Modestie, Diane et la Fée reparaissent.</em></hi></stage>
-            <l n="381" xml:id="l381"> </l>
-            <l n="382" xml:id="l382"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="383" xml:id="l383"> </l>
-          <sp who="diane" xml:id="13-1">
-            <speaker>LUCIDOR, FÉLICIE, LA MODESTIE, DIANE, LA FÉE</speaker>
-            <l n="384" xml:id="l384"> </l>
-          </sp>
-          <sp who="la-fée" xml:id="13-2">
-            <speaker>LA FÉE.</speaker>
-            <l n="385" xml:id="l385">Amant dangereux et trompeur, ennemi de la vertu, perfides impressions de l’amour, effacez-vous de son cœur, et disparaissez.</l>
-            <stage><hi rend="italic"><em>Lucidor fuit ; la symphonie finit ; la Modestie, la Vertu et la Fée vont à Félicie qui tombe dans leurs bras, et qui, à la fin, ouvrant les yeux, embrasse la Fée, caresse la Modestie et Diane, et dit à la Fée :</em></hi></stage>
-          </sp>
-          <sp who="félicie" xml:id="13-3">
-            <speaker>FÉLICIE.</speaker>
-            <l n="387" xml:id="l387">Ah ! Madame, ah ! ma protectrice ! que je vous ai d’obligation. Vous me pardonnez donc ? Je vous retrouve ; que je suis heureuse ! et qu’il est doux de me revoir entre vos bras !</l>
-          </sp>
-          <sp who="la-fée" xml:id="13-4">
-            <speaker>LA FÉE.</speaker>
-            <l n="388" xml:id="l388">Félicie, vous êtes instruite ; je ne vous ai pas perdue de vue, et vous avez mérité notre secours, dès que vous avez eu la force de l’implorer.</l>
-            <l n="389" xml:id="l389"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="1">Il faut avouer qu’il fait un beau jour.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="2">Aussi y a-t-il longtemps que nous nous promenons.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="3">Aussi le plaisir d’être avec vous, qui est toujours si grand pour moi, ne m’a-t-il jamais été si sensible.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="4">Je crois, en effet, que vous m’aimez, Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="5">Vous croyez, Madame ? Quoi ! n’est-ce que d’aujourd’hui que vous êtes bien sûre de cette vérité-là, vous, avec qui je suis dès mon enfance, vous, à qui je dois tout ce que je puis avoir d’estimable dans le cœur et dans l’esprit !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="6">Il est vrai que vous avez toujours été l’objet de mes complaisances ; et s’il vous reste encore quelque chose à désirer de mon pouvoir et de ma science, vous n’avez qu’à parler, Félicie ; je ne vous ai aujourd’hui menée ici que pour vous le dire.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="7">Vos bontés m’ont-elles rien laissé à souhaiter ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="8">N’y a-t-il point quelque vertu, quelque qualité dont je puisse encore vous douer ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="9">Il n’y en a point dont vous n’ayez voulu embellir mon âme.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="10">Vous avez bien de l’esprit, en demandez-vous encore ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="11">Je m’en fie à votre tendresse, elle m’en a sans doute donné tout ce qu’il m’en faut.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="12">Parcourez tous les avantages possibles, et voyez celui que je pourrais augmenter en vous, ou bien ajouter à ceux que vous avez : rêvez-y.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="13">J’y rêve, puisque vous me l’ordonnez, et jusqu’ici je ne vois rien ; car enfin, que demanderais-je ? Attendez pourtant, Madame ; des grâces, par exemple, je n’y songeais point ; qu’en dites-vous ? il me semble que je n’en ai pas assez.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="14">Des grâces, Félicie ! je m’en garderai bien ; la nature y a suffisamment pourvu ; et si je vous en donnais encore, vous en auriez trop ; je vous nuirais.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="15">Ah, Madame ! ce n’est assurément que par bonté que vous le dites ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="16">Non, je vous parle sérieusement.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="17">Je pense pourtant que je n’en serais que mieux, si j’en avais un peu plus.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="18">L’industrie de toutes vos réponses m’a fait deviner que vous en viendriez là.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="19">Hélas, Madame ! c’est de bonne foi ; si je savais mieux, je le dirais.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="20">Songez que c’est peut-être de tous les dons le plus dangereux que vous choisissez, Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="21">Dangereux, Madame ! oh ! que non : vous m’avez trop bien élevée ; il n’y a rien à craindre.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="22">Vous ne vous y arrêtez pourtant que par l’envie de plaire.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="23">Mais, de plaire : non, ce n’est pas positivement cela ; c’est qu’on a l’amitié de tout le monde quand on est aimable, et l’amitié de tout le monde est utile et souhaitable.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="24">Oui, l’amitié, mais non pas l’amour de tout le monde.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="25">Oh ! pour celui-là, je n’y songe pas, je vous assure.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="26">Vous n’y songez pas, Félicie ? Regardez-moi ; vous rougissez : êtes-vous sincère ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="27">Peut-être que je ne le suis pas autant que je l’ai cru.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="28">N’importe : puisque vous le voulez, soyez aimable autant qu’on le peut être.</l>
+          <stage>&lt;em&gt;Hortense la frappe de la main sur l’épaule.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, tressaillant de joie.</speaker>
+          <l n="29">Ah !… Je vous suis bien obligée, Madame.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="30">Vous voilà pourvue de toutes les grâces imaginables.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="31">J’en ai une reconnaissance infinie ; et apparemment qu’il y a bien du changement en moi, quoique je ne le voie pas.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="32">C’est-à-dire que vous voulez en être sûre.</l>
+          <stage>&lt;em&gt;Elle lui présente un petit miroir.&lt;/em&gt;</stage>
+          <l n="33">Tenez, regardez-vous.</l>
+          <stage>&lt;em&gt;Félicie se regarde. Hortense continue.&lt;/em&gt;</stage>
+          <l n="34">Comment vous trouvez-vous ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="35">Comblée de vos bontés ; vous n’y avez rien épargné.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="36">Vous vous en réjouissez ; je ne sais si vous ne devriez pas en être inquiète.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="37">Allez, Madame, vous n’aurez pas lieu de vous en repentir.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="38">Je l’espère ; mais à ce présent que je viens de vous faire, j’y prétends joindre encore une chose. Vous allez dans le monde, je veux vous rendre heureuse ; et il faut pour cela que je connaisse parfaitement vos inclinations, afin de vous assurer le genre de bonheur qui vous sera le plus convenable. Voyez-vous cet endroit où nous sommes ? C’est le monde même.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="39">Le monde ! et je croyais être encore auprès de notre demeure.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="40">Vous n’en êtes pas éloignée non plus ; mais ne vous embarrassez de rien : quoi qu’il en soit, votre cœur va trouver ici tout ce qui peut déterminer son goût.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#hortense">
+          <speaker>HORTENSE, à la Modestie, qui est à quelques pas.</speaker>
+          <l n="41">Vous, approchez.</l>
+          <stage>&lt;em&gt;Quand la Modestie est venue.&lt;/em&gt;</stage>
+          <l n="42">C’est une compagne que je vous laisse, Félicie ; elle porte le nom d’une de vos plus estimables qualités, la modestie, ou plutôt la pudeur.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="43">Je ne sais tout ce que cela signifie ; mais je la trouve charmante, et je serai ravie d’être avec elle : nous ne nous quitterons donc point ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="44">Votre union dépend de vous ; gardez toujours cette qualité dont elle porte le nom, et vous serez toujours ensemble.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, s’en allant à elle.</speaker>
+          <l n="45">Oh ! vraiment ! nous serons donc inséparables.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="46">Adieu, je vous laisse ; mais je ne vous abandonne point.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="47">Votre retraite m’afflige. Que sais-je ce qui peut m’arriver ici où je ne connais personne ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="48">N’y craignez rien, vous dis-je ; c’est moi qui vous y protège. Adieu.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="49">Sur ce pied-là, soyons donc en repos, et parcourons ces lieux. Voilà un canton qui me paraît bien riant ; ma chère compagne, allons-y ; voyons ce que c’est.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="50">Non, j’y entends du bruit ; tournons plutôt de l’autre côté ; je le crois plus sûr pour vous.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="51">Qu’appelez-vous plus sûr ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="52">Oui ; vous êtes extrêmement jolie, et l’endroit où vous voulez vous engager me paraît un pays trop galant.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="53">Eh bien ! est-ce qu’on m’y fera un crime d’être jolie, dans ce pays galant ? Ne sommes-nous ici que pour y visiter des déserts ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="54">Non ; mais je prévois de l’autre côté les pièges qu’on y pourra tendre à votre cœur, et franchement, j’ai peur que nous ne nous y perdions.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="55">Eh ! comment l’entendez-vous donc, s’il vous plaît, ma chère compagne ? Quoi ! sous le prétexte qu’on est aimable, on n’osera pas se montrer ; il ne faudra rien voir, toujours s’enfuir, et ne s’occuper qu’à faire la sauvage ? La condition d’une jolie personne serait donc bien triste ! Oh ! je ne crois point cela du tout ; il vaudrait mieux être laide : je redemanderais la médiocrité des agréments que j’avais, si cela était ; et à vous entendre dire, ce serait une vraie perte pour une fille que de perdre sa laideur ; ce serait lui rendre un très mauvais service que de la rendre aimable, et on ne l’a jamais compris de cette manière-là.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="56">Écoutez, Félicie, ne vous y trompez pas ; les grâces et la sagesse ont toujours eu de la peine à rester ensemble.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="57">À la bonne heure : s’il n’y avait pas un peu de peine, il n’y aurait pas grand mérite. À l’égard des pièges dont vous parlez, il me semble à moi qu’il n’est pas question de les fuir, mais d’apprendre à les mépriser ; et pourquoi ? parce qu’ils sont inutiles pour qui les méprise, et qu’en les fuyant d’un côté, on peut les trouver d’un autre. Voilà mes idées, que je crois bonnes.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="58">Elles sont hardies.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="59">Toutes simples. Que peut-il m’arriver dans le canton que vous craignez tant ? Voyons ; si je plais, on m’y regardera, n’est-il pas vrai ? Supposons même qu’on m’y parle. Eh bien ! qu’on m’y regarde, qu’on m’y parle, qu’on m’y fasse des compliments, si l’on veut, quel mal cela me fera-t-il ? sont-ce là ces pièges si redoutables, qu’il faille renoncer au jour pour les éviter ? Me prenez-vous pour un enfant ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="60">Vous avez trop de confiance, Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="61">Et vous, bien des terreurs paniques, Modestie.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="62">Je suis timide, il est vrai ; c’est mon caractère.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="63">Fort bien ; et moyennant ce caractère, nous voilà donc condamnées à rester là : nos relations seront curieuses !</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="64">Je ne vous dis pas de rester là ; voyons toujours ce côté, il est plus tranquille.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="65">Quelle antipathie avez-vous pour l’autre ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="66">Quel dégoût vous prend-il pour celui-ci ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="67">C’est qu’il me réjouit moins la vue.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="68">Et moi, c’est que je fuis le danger que je soupçonne ici.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="69">Mais pour le fuir, il faut le voir.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="70">Il n’est quelquefois plus temps de le fuir, quand on l’a vu.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="71">Encore une fois, pour fuir, il faut un objet ; on ne fuit point sans avoir peur de quelque chose, et je ne vois rien qui m’épouvante.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="72">Disons mieux ; vous avez des charmes, et vous voulez qu’on les voie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="73">Et parce que j’en ai, il faut que je les cache, il faut que l’obscurité soit mon partage ! Eh ! que ne m’a-t-on dit que c’était le plus grand malheur du monde que d’être jolie, puisqu’il faut être esclave des conséquences de son visage ? Ne voyez-vous pas bien que la raison n’est point d’accord de cela ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="74">Plus que vous ne croyez.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="75">Je me suis donc étrangement trompée ; j’ai souhaité d’être aimable, afin qu’on m’aimât dès qu’on me verrait, ce qui est assurément très innocent ; et il se trouverait que, selon vos chicanes, ce serait afin qu’on ne me vît jamais : en vérité, je ne saurai goûter ce que vous me dites.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="76">Je n’insiste plus ; il en sera ce qui vous plaira.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="77">Il en sera ce qui me plaira ! Ce n’est pas là répondre ; je veux que vous soyez de mon avis, dès que j’ai raison. Puisque vous êtes la Modestie, on est bien aise d’avoir votre approbation.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="78">Je vous ai dit ce que je pensais.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="79">Allons, allons, je vois bien que vous vous rendez.</l>
+          <stage>&lt;em&gt;Ici on entend une symphonie.&lt;/em&gt;</stage>
+          <l n="80">Mais me trompé-je ? Entendez-vous la gaieté des sons qui partent de ce côté-là ? Nous nous y amuserons assurément ; il doit y avoir quelque agréable fête. Que cela est vif et touchant !</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="81">Vous ne le sentez que trop.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="82">Pourquoi trop ? Est-ce qu’il n’est pas permis d’avoir du goût ? Allez-vous encore trembler là-dessus ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="83">Le goût du plaisir et de la curiosité mène bien loin.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="84">Parlez franchement ; c’est qu’on a tort d’avoir des yeux et des oreilles, n’est-ce pas ? Ah ! que vous êtes farouche !</l>
+          <stage>&lt;em&gt;La symphonie recommence.&lt;/em&gt;</stage>
+          <l n="85">Ce que j’entends là me fait pourtant grand plaisir… Prêtons-y un peu d’attention… Que cela est tendre et animé tout ensemble !</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="86">J’entends aussi du bruit de l’autre côté ; écoutez, je crois qu’on y chante.</l>
+          <stage>&lt;em&gt;On chante.&lt;/em&gt;</stage>
+          <l n="87">De la vertu suivez les lois,</l>
+          <l n="88">Beautés qui de nos cœurs voulez fixer le choix.</l>
+          <l n="89">Les attraits qu’elle éclaire en brillent davantage.</l>
+          <l n="90">Est-il rien de plus enchanteur</l>
+          <l n="91">Que de voir sur un beau visage</l>
+          <l n="92">Et la jeunesse et la pudeur ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE continue.</speaker>
+          <l n="93">Ce que cette voix-là m’inspire ne m’effraie point, par exemple : elle a quelque chose de noble.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="94">Oui, elle est belle, mais sérieuse.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="95">C’est un charme différent. Mais, que vois-je ? tenez, Félicie : voyez-vous cette dame qui nous regarde d’une façon si riante, et qui semble nous inviter à venir à elle ? Qu’elle a l’air respectable !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="96">Cela est vrai, je lui trouve de la majesté.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="97">Elle sort de chez elle, apparemment ; voulez-vous l’aborder ? Je m’y rends volontiers.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="98">N’allons pas si vite ; elle a quelque chose de grave qui m’arrête.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="99">Elle vous plaît pourtant ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="100">Oui, je l’avoue.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="101">Allons donc, je crois qu’elle nous attend ; elle paraît faire les avances.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="102">J’aurais bien voulu voir ce qui se passe de l’autre côté.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="103">Mais voici bien autre chose ; regardez à votre tour, et voyez à gauche ce beau jeune homme qui vient de paraître, accompagné de ces jolis chasseurs, et qui nous salue ; il ne nous épargne pas non plus les avances.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="104">Ne le regardons point, il m’inquiète ; allons plutôt à cette dame.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="105">Attendez.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="106">Elle avance.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="107">Voulez-vous bien que j’approche, mon aimable fille ? Peut-être ne connaissez-vous pas ces lieux, et vous voyez l’envie que j’ai de vous y servir. Ne me refusez pas d’entrer chez moi ; je chéris la vertu, et vous y serez en sûreté.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, la saluant.</speaker>
+          <l n="108">Je vous rends grâces, Madame, et je verrai.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="109">Eh ! pourquoi voir ? Votre jeunesse et vos charmes vous exposent ici ; n’hésitez point ; croyez-moi, suivez le conseil que je vous donne.</l>
+          <stage>&lt;em&gt;Ici le jeune homme la regarde, lui sourit et la salue ; elle lui rend le salut.&lt;/em&gt;</stage>
+          <l n="110">Voici un jeune homme qui vous distrait, et qui pourtant mérite bien moins votre attention que moi.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="111">J’en fais beaucoup à ce que vous me dites ; mais cela ne me dispense pas de le saluer, puisqu’il me salue.</l>
+          <stage>&lt;em&gt;Lucidor lui fait encore des révérences, et elle les rend.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="112">Encore des révérences !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="113">Vous voyez bien qu’il continue les siennes.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE, à Diane.</speaker>
+          <l n="114">Emmenez-la, Madame, avant qu’il nous aborde.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="115">Mais vous voulez donc que je sois malhonnête ?</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, approchant.</speaker>
+          <l n="116">Beauté céleste, je règne dans ces cantons ; j’ose assurer qu’ils sont les plus riants ; daignez les honorer de votre présence.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="117">Je serais volontiers de cet avis-là, l’aspect m’en plaît beaucoup.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE, la prenant par la main.</speaker>
+          <l n="118">Commencez par les lieux que j’habite ; plus d’irrésolution ; venez.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, la prenant par l’autre main.</speaker>
+          <l n="119">Quoi ! l’on vous entraîne, et vous me rejetez !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="120">Non, je vous l’avoue, il n’y a rien d’égal à l’embarras où vous me mettez tous deux ; car je ne saurais prendre l’un que je ne laisse l’autre ; et le moyen d’être partout !</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="121">Trop faible Félicie !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à la Modestie.</speaker>
+          <l n="122">Oh ! vraiment, je sais bien que vous n’y feriez pas tant de façons ; vous en parlez bien à votre aise.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="123">Vous me haïssez donc ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="124">Autre injustice.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="125">Je suis sûre qu’il vous en coûte pour me résister, et que votre cœur me regrette.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="126">Eh ! mais sans doute ; mais mon cœur ne sait ce qu’il veut, voilà ce que c’est ; il ne choisit point ; tenez, il vous voudrait tous deux ; voyez, n’y aurait-il pas moyen de vous accorder ?</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="127">Non, Félicie, cela ne se peut pas.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="128">Pour moi, j’y consens : que Madame vous suive où je vais vous mener, je ne l’en empêche pas ; ma douceur et ma bonne foi me rendent de meilleure composition qu’elle.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="129">Eh bien ! voilà un accommodement qui me paraît très raisonnable, par exemple ; ne nous quittons point, allons ensemble.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE, bas à Félicie.</speaker>
+          <l n="130">Ah ! le fourbe !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à part les premiers mots.</speaker>
+          <l n="131">Vous en jugez mal, il n’a point cet air-là. Allons, Madame ; ayez cette complaisance-là pour moi, qui vous aime : considérez que je suis une jeune personne à qui l’âge donne une petite curiosité pardonnable et sans conséquence ; je vous en prie, ne me refusez pas.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="132">Non, Félicie ; vous ne savez pas ce que vous demandez ; son commerce et le mien sont incompatibles ; et quand je vous suivrais, j’aurais beau vous donner mes conseils, ils vous seraient inutiles.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="133">Mille plaisirs innocents vous attendent où nous allons.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="134">Pour innocents, j’en suis persuadée ; il serait inutile de m’en proposer d’autres.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="135">Il vous dit qu’ils sont innocents, mais ils cessent bientôt de l’être.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="136">Tant pis pour eux ; sauf à les laisser là, quand ils ne le seront plus.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="137">Je vous en promets, moi, de plus satisfaisants, quand vous les aurez un peu goûtés, des plaisirs qui vont au profit de la vertu même.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="138">Je n’en doute pas un instant, j’en ai la meilleure opinion du monde, assurément, et je les aime d’avance ; je vous le dis de tout mon cœur. Mais prenons toujours ceux-ci qui se présentent, et qui sont permis ; voyons ce que c’est, et puis nous irons aux vôtres : est-ce que j’y renonce ?</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="139">Ils vous ôteront le goût des miens.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="140">Pour moi, je ne veux pas des siens ; prenez-y garde.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="141">Oh ! je sais toujours votre avis, à vous, sans que vous le disiez.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="142">Quel ridicule entêtement ! Je n’ai que vos bontés pour ressource.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="143">Pour la dernière fois, suivez-moi, ma fille.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="144">Tenez, vous parlerai-je franchement ? Cette rigueur-là n’est point du tout persuasive, point du tout : austérité superflue que tout cela ; l’excès n’est point une sagesse, et je sais me conduire.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="145">Vous le préférez donc ? Adieu.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, impatiemment.</speaker>
+          <l n="146">Ahi !</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, à genoux.</speaker>
+          <l n="147">Au nom de tant de charmes, ne vous rendez point ; songez qu’il ne s’agit que d’une bagatelle.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à Lucidor.</speaker>
+          <l n="148">Oui, mais levez-vous donc ; ne faites rien qui lui donne raison.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="149">Cette dame s’en va.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="150">Laissez-la aller ; vous la rejoindrez.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="151">Adieu, trop imprudente Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="152">Bon, imprudente ! Je ne vous dis pas adieu, moi ; j’irai vous retrouver.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="153">Je ne l’espère pas.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="154">Et moi, je le sais bien ; vous le verrez.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="155">Que vous m’alarmez ! Elle est partie ; il ne vous reste plus que moi, Félicie, et peut-être nous séparons-nous aussi.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="156">À qui en avez-vous ? à qui en a-t-elle ? Dites-moi donc le crime que j’ai fait ; car je l’ignore ! De quoi s’est-elle fâchée ? De quoi l’êtes-vous ? Où cela va-t-il ?</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="157">Si le plaisir qu’on sent à vous voir la chagrine, sa peine est sans remède, Félicie ; mais n’y songez plus, nous nous passerons bien d’elle.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="158">Il est pourtant vrai que, sans vous, je l’aurais suivie, Seigneur.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="159">Vous repentez-vous déjà d’avoir bien voulu demeurer ? Que nous sommes différents l’un de l’autre ! Je ferais ma félicité d’être toujours avec vous : oui, Félicie, vous êtes les délices de mes yeux et de mon cœur.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="160">À merveille ! voilà un langage qui vient fort à propos ! Courage ! si vous continuez sur ce ton-là, je pourrai bien avoir tort d’être ici.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="161">Eh ! qui pourrait condamner les sentiments que j’exprime ? Jamais l’amour offrit-il d’objet aussi charmant que vous l’êtes ? Vos regards me pénètrent ; ils sont des traits de flamme.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, impatiente.</speaker>
+          <l n="162">Je vous dis que ces flammes-là vont encore effaroucher ma compagne.</l>
+          <stage>&lt;em&gt;La Modestie paraît sombre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="163">Eh ! quel autre discours voulez-vous que je vous tienne ? Vous ne m’inspirez que des transports, et je vous en parle ; vous me ravissez, et je m’écrie ; vous m’embrasez du plus tendre et du plus invincible de tous les amours, et je soupire.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="164">Ah ! que j’ai mal fait de rester !</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="165">Ô ciel ! quel discours !</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="166">Vous voyez ce qui en est.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à la Modestie.</speaker>
+          <l n="167">Au moins, ne me quittez pas.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="168">Il est encore temps de vous retirer.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="169">Oh ! toujours temps ! aussi n’y manquerai-je pas, s’il continue. Ah !</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="170">De grâce, adorable Félicie, expliquez-moi ce soupir ; à qui s’adresse-t-il ? Que signifie-t-il ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="171">Il signifie que je vais m’en retourner, et que vous n’êtes pas raisonnable.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="172">Allons donc, sauvez-vous.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="173">Non, vous ne vous en retournerez pas sitôt ; vous n’aurez pas la cruauté de me déchirer le cœur.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="174">En un mot, je ne veux pas que vous m’aimiez.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="175">Donnez-moi donc la force de faire l’impossible.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="176">L’impossible ! et toujours des expressions tendres ! Eh bien ! si vous m’aimez, ne me le dites point.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="177">En quel endroit de la terre irez-vous, où l’on ne vous le dise pas ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à la Modestie.</speaker>
+          <l n="178">Je n’ai point de réplique à cela ; mais je vous défie de me rien reprocher, car je me défends bien.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="179">Content de vous voir, de vous aimer, je ne vous demande que de souffrir mes respects et ma tendresse.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à la Modestie.</speaker>
+          <l n="180">Cela ne prend rien sur mon cœur ; ainsi, ne vous inquiétez pas ; ce ne sera rien.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="181">Son respect vous trompe et vous séduit.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, à la Modestie.</speaker>
+          <l n="182">Vous, qui l’accompagnez, d’où vient que vous vous déclarez mon ennemie ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="183">C’est que je suis l’amie de la vertu.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, en baisant la main de Félicie.</speaker>
+          <l n="184">Et moi, je suis l’adorateur de la sienne.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE, à Félicie.</speaker>
+          <l n="185">Et vous voyez qu’il l’attaque en l’adorant.</l>
+          <stage>&lt;em&gt;Elle fait semblant de partir.&lt;/em&gt;</stage>
+          <l n="186">Je n’y tiens point non plus, Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, courant après elle.</speaker>
+          <l n="187">Arrêtez, Modestie ! Seigneur, je vous déclare que je ne veux point la perdre.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="188">Elle devrait avoir nom Férocité, et non pas Modestie.</l>
+          <stage>&lt;em&gt;Il va à elle.&lt;/em&gt;</stage>
+          <l n="189">Revenez, Madame, revenez ; je ne dirai plus rien qui vous déplaise et je me tairai. Mais, pendant mon silence, Félicie, permettez à ces jeunes chasseurs, que vous voyez épars, de vous marquer, à leur tour, la joie qu’ils ont de vous avoir rencontrée ; ils me divertissent quelquefois moi-même par leurs danses et par leurs chants : souffrez qu’ils essaient de vous amuser. La musique et la danse ne doivent effrayer personne.</l>
+          <stage>&lt;em&gt;À Félicie, bas.&lt;/em&gt;</stage>
+          <l n="190">Qu’elle est revêche et bourrue !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, tout bas aussi.</speaker>
+          <l n="191">C’est ma compagne.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="192">Asseyons-nous et écoutons.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE, FÉLICIE, LUCIDOR, troupe de CHASSEURS</speaker>
+          <stage>&lt;em&gt;Les instruments préludent : on danse.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#un-chasseur">
+          <speaker>UN CHASSEUR.</speaker>
+          <l n="193">Amis, laissons en paix les hôtes de ces bois ;</l>
+          <l n="194">La beauté que je vois</l>
+          <l n="195">Doit nous fixer sous cet ombrage.</l>
+          <l n="196">Venez, venez, suivez mes pas :</l>
+          <l n="197">Par un juste et fidèle hommage,</l>
+          <l n="198">Méritons le bonheur d’admirer tant d’appas.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="199">Vous intéressez tous les cœurs, Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="200">N’interrompez point.</l>
+          <stage>&lt;em&gt;On danse encore.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, ensuite, dit.</speaker>
+          <l n="201">Ils n’auront pas seuls l’honneur de vous amuser, et je prétends y avoir part.</l>
+          <stage>&lt;em&gt;Il chante un menuet.&lt;/em&gt;</stage>
+          <l n="202">De vos beaux yeux le charme inévitable</l>
+          <l n="203">Me fait brûler de la plus vive ardeur :</l>
+          <l n="204">Plus que Diane redoutable,</l>
+          <l n="205">Sans flèches ni carquois, vous irez droit au cœur.</l>
+          <stage>&lt;em&gt;Les chasseurs se retirent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="206">Toujours de l’amour, vous ne vous corrigez point.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="207">Et vous, toujours de nouveaux charmes ; ils ne finissent point.</l>
+          <stage>&lt;em&gt;Il lui prend la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="208">Laissez là ma main, elle n’est pas de la conversation.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="209">Mon cœur voudrait pourtant bien en avoir une avec elle.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, voulant retirer sa main.</speaker>
+          <l n="210">Et moi, je ne veux point.</l>
+          <stage>&lt;em&gt;Il lui baise la main.&lt;/em&gt;</stage>
+          <l n="211">Eh bien, encore ! ne vous l’avais-je pas défendu ? Cela nous brouillera, vous dis-je, cela nous brouillera.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="212">Vous me donnez mon congé, Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="213">Vous voyez bien que je me fâche, afin qu’il n’y revienne plus : qu’avez-vous à dire ?</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, impatient.</speaker>
+          <l n="214">L’insupportable fille !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à la Modestie.</speaker>
+          <l n="215">Il est vrai que vous vous scandalisez de trop peu de chose.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, avec dépit.</speaker>
+          <l n="216">Ma tendresse ne vous fatiguerait pas tant sans elle.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="217">Oh ! si votre cœur n’a pas besoin d’elle, le mien n’est pas de même, entendez-vous ?</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="218">Eh ! quel besoin le vôtre en a-t-il ? Dites-moi le moindre mot consolant.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="219">Je suis bien heureuse qu’elle me gêne.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="220">Achevez.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à la Modestie, bas.</speaker>
+          <l n="221">Si je lui disais, pour m’en défaire, que je suis un peu sensible, le trouveriez-vous mauvais ? il n’en sera pas plus avancé.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="222">Gardez-vous-en bien ; je ne soutiendrai pas ce discours-là.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à Lucidor.</speaker>
+          <l n="223">Passez-vous donc de ma réponse.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="224">Si elle s’écartait un moment, comme elle le pourrait, sans s’éloigner, quel inconvénient y aurait-il ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, à la Modestie.</speaker>
+          <l n="225">Ce jeune homme vous impatiente : promenez-vous un instant sans me quitter ; je tâcherai d’abréger la conversation.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="226">Hélas ! si je m’écarte, je ne reviendrai peut-être plus.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="227">Je ne vous propose pas de vous en aller, je ne veux pas seulement vous perdre de vue, et ce que j’en dis n’est que pour vous épargner son importunité.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="228">Puisque vous m’y forcez, vous voilà seule.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="229">Je me retire, mais je ne la quitte pas.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="230">Ah ! je respire.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="231">Et moi, je suis honteuse.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="232">Non, Félicie, ne troublez point un si doux moment par de chagrinantes réflexions ; vous voilà libre, et vous m’avez promis de vous expliquer ; je vous adore, commencez par me dire que vous le voulez bien.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="233">Oh ! pour ce commencement-là, il n’est pas difficile : oui, j’y consens ; quand je ne le voudrais pas, il n’en serait ni plus ni moins, ainsi, il vaut autant vous le permettre.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="234">Ce n’est pas encore assez.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="235">Surtout, réglez vos demandes.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="236">Je n’en ferai que de légitimes ; je vous aime, y répondez-vous ? votre compagne n’y est plus.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="237">Oui ; mais j’y suis, moi.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="238">Vous avez trop de bonté pour me tenir si longtemps inquiet de mon sort, et vous ne l’avez éloignée que pour m’en éclaircir.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="239">J’avoue que, si elle y était, je n’oserais jamais vous dire le plaisir que j’ai à vous voir.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="240">Je suis donc un peu aimé ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="241">Presque autant qu’aimable.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, charmé.</speaker>
+          <l n="242">Vous m’aimez ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="243">Je vous aime, et j’avais grande envie de vous le dire ; rappelons ma compagne.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="244">Pas encore.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="245">Comment, pas encore ? je vous aime, mais voilà tout.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="246">Attendez ce qui me reste à vous dire, il n’en sera que ce que vous voudrez.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="247">Oui, oui, que ce que je voudrai ! Je n’ai pourtant fait jusqu’ici que ce que vous avez voulu.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="248">Écoutez-moi, charmante Félicie, n’est-ce pas toujours à la personne que l’on aime qu’il faut se marier ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="249">Qui est-ce qui a jamais douté de cela ?</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="250">Et pour qui se marie-t-on ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="251">Pour soi-même, assurément.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="252">On est donc, à cet égard-là, les maîtres de sa destinée ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="253">Avec l’avis de ses parents, pourtant.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="254">Souvent ces parents, en disposant de nous, ne s’embarrassent guère de nos cœurs.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="255">Vous avez raison.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="256">Trouvez-vous qu’ils ont tort ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="257">Un très grand tort.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="258">M’en croirez-vous ? prévenons celui que nos parents pourraient avoir avec nous. Les miens me chérissent, et seront bientôt apaisés : assurons-nous d’une union éternelle autant que légitime ; on peut nous marier ici, et quand nous serons époux, il faudra bien qu’ils y consentent.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="259">Ah ! vous me faites frémir, et par bonheur ma compagne n’est qu’à deux pas d’ici.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="260">Quoi ! vous frémissez de songer que je serais votre époux ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="261">Mon époux, Lucidor ! Voulez-vous que mon cœur soit la dupe de ce mot-là ! Vous devriez craindre vous-même de me persuader. N’est-il pas de votre intérêt que je sois estimable ? et l’estime que je mérite encore, que deviendrait-elle ? Vous permettre de m’aimer, vous l’entendre dire, vous aimer moi-même, à la bonne heure, passe pour cela ; s’il y entre de la faiblesse, elle est excusable ; on peut être tendre et pourtant vertueuse ; mais vous me proposez d’être insensée, d’être extravagante, d’être méprisable ; oh ! je suis fâchée contre vous ; je ne vous reconnais point à ce trait-là.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="262">Vous parlez de vertu, Félicie, les dieux me sont témoins que je suis aussi jaloux de la vôtre que vous même, et que je ne songe qu’à rendre notre séparation impossible.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="263">Et moi, je vous dis, Lucidor, que c’est la rendre immanquable : non, non, n’en parlons plus ; je ne me rendrai jamais à cela ; tout ce que je puis faire, c’est de vous pardonner de me l’avoir dit.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR, à genoux.</speaker>
+          <l n="264">Félicie, vous défiez-vous de moi ? ma probité vous est-elle suspecte ? ma douleur et mes larmes n’obtiendront-elles rien ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="265">Quel malheur que d’aimer ! qu’on me l’avait bien dit, et que je mérite bien ce qui m’arrive !</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="266">Vous me croyez donc un perfide ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="267">Je ne crois rien, je pleure. Adieu, trop imprudente Félicie, me disait cette dame en partant : oh ! que cela est vrai !</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="268">Pouvez-vous abandonner notre amour au hasard ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="269">Se marier de son chef, sans consulter qui que ce soit au monde, sans témoin de ma part, car je ne connais personne ici ; quel mariage !</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="270">Les témoins les plus sacrés ne sont-ils pas votre cœur et le mien ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="271">Oh ! pour nos cœurs, ne m’en parlez pas, je ne m’y fierai plus, ils m’ont trompée tous deux.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="272">Vous ne voulez donc point m’épouser ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="273">Dès aujourd’hui, si on le veut ; et si on ne l’approuve pas, je l’approuverai, moi.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="274">Eh ! pensez-vous qu’on vous en laisse la liberté ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="275">Par pitié pour moi, demeurons raisonnables.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="276">Je mourrai donc, puisque vous me condamnez à mourir.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="277">Lucidor, ce mariage-là ne réussira pas.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="278">Notre sort n’est assuré que par là.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="279">Hélas ! je suis donc sans secours.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="280">Qui est-ce qui s’intéresse à vous plus que moi ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="281">Eh bien ! puisqu’il le faut, donnez-moi, de grâce, un quart d’heure pour me résoudre ; mon esprit est tout en désordre ; je ne sais où je suis, laissez-moi me reconnaître, n’arrachez rien au trouble où je me sens, et fiez-vous à mon amour ; il aura plus de soin de vous que de moi-même.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="282">Ah ! je suis perdu ; votre compagne reviendra, vous la rappellerez.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="283">Non, cher Lucidor ; je vous promets de n’avoir à faire qu’à mon cœur, et vous n’aurez que lui pour juge. Laissez-moi, vous reviendrez me trouver.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="284">J’obéis ; mais sauvez-moi la vie, voilà tout ce que je puis vous dire.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, se croyant seule.</speaker>
+          <l n="285">Ah ! que suis-je devenue ?</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE, de loin.</speaker>
+          <l n="286">Me voilà, Félicie.</l>
+          <stage>&lt;em&gt;Félicie la regarde tristement. La Modestie continue.&lt;/em&gt;</stage>
+          <l n="287">Ne m’appelez-vous pas ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="288">Je n’en sais rien.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="289">Voulez-vous que je vienne ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="290">Je n’en sais rien non plus.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="291">Que vous êtes à plaindre !</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="292">Infiniment.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="293">Je vous parle de trop loin ; si je me rapprochais, vous seriez plus forte.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="294">Plus forte ! Je n’ai pas le courage de vouloir l’être.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="295">Tâchez d’ouvrir les yeux sur votre état.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="296">Je ne saurais ; je soupire de mon état, et je l’aime ; de peur d’en sortir, je ne veux pas le connaître.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="297">Servez-vous de votre raison.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="298">Elle me guérirait de mon amour.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="299">Ah ! tant mieux, Félicie.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="300">Et mon amour m’est cher.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="301">Voici cette dame qui vous sollicitait tantôt de la suivre, et qui paraît ; vous vous détournez pour ne la point voir.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="302">Je l’estime, mais je n’ai rien à lui dire, et je crains qu’elle ne me parle.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE, à Diane.</speaker>
+          <l n="303">Pressez-la, Madame ; vos discours la ramèneront peut-être.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="304">Non, dès qu’elle ne veut pas de vous, qui devez être sa plus intime amie, elle n’est pas en état de m’entendre.</l>
+        </sp>
+        <sp who="#la-modestie">
+          <speaker>LA MODESTIE.</speaker>
+          <l n="305">Cependant elle nous regrette.</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE.</speaker>
+          <l n="306">L’infortunée n’a pas moins résolu de se perdre.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="307">Non, je ne risque rien : Lucidor est plein d’honneur, il m’aime ; je sens que je ne vivrais pas sans lui ; on me le refuserait peut-être, je l’épouse ; il est question d’un mariage qu’il me propose avec toute la tendresse imaginable, et sans lequel je sens que je ne puis être heureuse : ai-je tort de vouloir l’être ?</l>
+        </sp>
+        <sp who="#diane">
+          <speaker>DIANE, toujours de loin.</speaker>
+          <l n="308">Fille infortunée, croyez-en nos conseils et nos alarmes.</l>
+          <stage>&lt;em&gt;Apercevant Lucidor.&lt;/em&gt;</stage>
+          <l n="309">Fuyez, le voici qui revient ; mais rien ne la touche. Adieu encore une fois, Félicie.</l>
+          <stage>&lt;em&gt;Elles se retirent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="310">Quelle obstination ! Est-ce qu’il est défendu, dans le monde, de faire son bonheur ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="311">Je vous revois donc, délices de mon cœur ! Eh bien ! le vôtre me rend-il justice ? En est-ce fait ? Notre union sera-t-elle éternelle ?</l>
+          <stage>&lt;em&gt;Il lui prend la main qu’il baise.&lt;/em&gt;</stage>
+          <l n="312">Vous pleurez, ce me semble ? Est-ce mon retour qui cause vos pleurs ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE, pleurant.</speaker>
+          <l n="313">Hélas ! elles me quittent, elles disparaissent toujours à votre aspect, et je ne sais pourquoi.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="314">Qui ? cette sombre compagne appelée Modestie ? cette autre dame qui désapprouve que vous veniez dans nos cantons, quand j’offre d’aller avec vous dans les siens ? Et ce sont deux aussi revêches, deux aussi impraticables personnes que celles-là, deux sauvages d’une défiance aussi ridicule, que vous regrettez ! Ce sont elles dont le départ excite vos pleurs au moment où j’arrive, pénétré de l’amour le plus tendre et le plus inviolable, avec l’espérance de l’hymen le plus fortuné qui sera jamais ! Ah ciel ! est-ce ainsi que vous traitez, que vous recevez un amant qui vous adore, un époux qui va faire sa félicité de la vôtre, et qui ne veut respirer que par vous et pour vous ? Allons, Félicie, n’hésitez plus ; venez, tout est prêt pour nous unir ; la chaîne du plaisir et du bonheur nous attend.</l>
+          <stage>&lt;em&gt;Une symphonie douce commence ici.&lt;/em&gt;</stage>
+          <l n="315">Venez me donner une main chérie, que je ne puis toucher sans ravissement.</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="316">De grâce, Lucidor, du moins rappelons-les, et qu’elles nous suivent.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="317">Eh ! de qui parlez-vous encore ?</l>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="318">Hélas ! de ma compagne et de l’autre dame.</l>
+        </sp>
+        <sp who="#lucidor">
+          <speaker>LUCIDOR.</speaker>
+          <l n="319">Elles haïssent notre amour, vous ne l’ignorez pas ; venez, vous dis-je ; votre injuste résistance me désespère ; partons.</l>
+          <stage>&lt;em&gt;Il l’entraîne un peu.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="320">Ô ciel ! vous m’entraînez ! Où suis-je ? Que vais-je devenir ? Mon trouble, leur absence et mon amour m’épouvantent : rappelons-les, qu’elles reviennent.</l>
+          <stage>&lt;em&gt;Elle crie haut.&lt;/em&gt;</stage>
+          <l n="321">Ah ! chère Modestie, chère compagne, où êtes-vous ? Où sont-elles ?</l>
+          <stage>&lt;em&gt;Alors la Modestie, Diane et la Fée reparaissent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#la-fée">
+          <speaker>LA FÉE.</speaker>
+          <l n="322">Amant dangereux et trompeur, ennemi de la vertu, perfides impressions de l’amour, effacez-vous de son cœur, et disparaissez.</l>
+          <stage>&lt;em&gt;Lucidor fuit ; la symphonie finit ; la Modestie, la Vertu et la Fée vont à Félicie qui tombe dans leurs bras, et qui, à la fin, ouvrant les yeux, embrasse la Fée, caresse la Modestie et Diane, et dit à la Fée :&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#félicie">
+          <speaker>FÉLICIE.</speaker>
+          <l n="323">Ah ! Madame, ah ! ma protectrice ! que je vous ai d’obligation. Vous me pardonnez donc ? Je vous retrouve ; que je suis heureuse ! et qu’il est doux de me revoir entre vos bras !</l>
+        </sp>
+        <sp who="#la-fée">
+          <speaker>LA FÉE.</speaker>
+          <l n="324">Félicie, vous êtes instruite ; je ne vous ai pas perdue de vue, et vous avez mérité notre secours, dès que vous avez eu la force de l’implorer.</l>
+          <l n="325" />
+          <l n="326" />
+        </sp>
       </div>
     </body>
   </text>

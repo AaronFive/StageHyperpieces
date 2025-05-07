@@ -1,1687 +1,1520 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Les Huit Mariannes</title>
-        <author key="Alexis PIRON | (naissance-mort)">Alexis PIRON |</author>
+        <title type="main" />
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/les-huit-mariannes-alexis-piron</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Alexis PIRON |</author>. <title>Les Huit Mariannes</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/les-huit-mariannes-alexis-piron</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1725-04-20">Représentée pour la première fois, à Paris, sur le Théâtre de l’Hôtel de Bourgogne, le 20 avril 1725.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="le-sultan-public" sex="SEX">
+            <persName>LE SULTAN-PUBLIC</persName>
+          </person>
+          <person xml:id="bacha-bilboquet" sex="SEX">
+            <persName>BACHA-BILBOQUET</persName>
+          </person>
+          <person xml:id="vizir-polichinelle" sex="SEX">
+            <persName>VIZIR-POLICHINELLE</persName>
+          </person>
+          <person xml:id="apollon" sex="SEX">
+            <persName>APOLLON</persName>
+          </person>
+          <person xml:id="hérode" sex="SEX">
+            <persName>HÉRODE</persName>
+          </person>
+          <person xml:id="marianne-l’inconnue" sex="SEX">
+            <persName>MARIANNE l’Inconnue</persName>
+          </person>
+          <person xml:id="marianne-de-l’abbé-nadal" sex="SEX">
+            <persName>MARIANNE de l’Abbé Nadal</persName>
+          </person>
+          <person xml:id="marianne-de-voltaire" sex="SEX">
+            <persName>MARIANNE de Voltaire</persName>
+          </person>
+          <person xml:id="marianne-de-tristan-l’hermite" sex="SEX">
+            <persName>MARIANNE de Tristan l’Hermite</persName>
+          </person>
+          <person xml:id="les-quatre-mariannes-de-fuzelier" sex="SEX">
+            <persName>LES QUATRE MARIANNES de Fuzelier</persName>
+          </person>
+          <person xml:id="un-eunuques-du-sérail" sex="SEX">
+            <persName>UN EUNUQUES du Sérail</persName>
+          </person>
+          <person xml:id="la-reine-des-péris" sex="SEX">
+            <persName>LA REINE DES PÉRIS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>[indéfini]</term>
+          <term>vers</term>
         </keywords>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1725-04-20" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de l’Hôtel de Bourgogne, le 20 avril 1725.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Les Huit Mariannes</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Parodie en un acte et en vers.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de l’Hôtel de Bourgogne, le 20 avril 1725.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="le-sultan-public">LE SULTAN-PUBLIC</role>
-              <roleDesc>, <em>Dominique</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="bacha-bilboquet">BACHA-BILBOQUET</role>
-              <roleDesc>, <em>Confident du Sultan-Public</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="vizir-polichinelle">VIZIR-POLICHINELLE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="apollon">APOLLON</role>
-              <roleDesc>, <em>Chef des Eunuques du Sérail</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="hérode">HÉRODE</role>
-              <roleDesc>, <em>le Chanteur</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="marianne-<em>l’inconnue">MARIANNE <em>l’Inconnue</role>
-              <roleDesc>, Scaramouche</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="marianne-<em>de-l’abbé-nadal">MARIANNE <em>de l’Abbé Nadal</role>
-              <roleDesc>, Pantalon</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="marianne-<em>de-voltaire">MARIANNE <em>de Voltaire</role>
-              <roleDesc>, Arlequin et Sylvia</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="marianne-<em>de-tristan-l’hermite">MARIANNE <em>de Tristan l’Hermite</role>
-              <roleDesc>, Fabia</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="les-quatre-mariannes-<em>de-fuzelier</em>">LES QUATRE MARIANNES <em>de Fuzelier</em></role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-eunuques-<em>du-sérail</em>">UN EUNUQUES <em>du Sérail</em></role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-reine-des-péris">LA REINE DES PÉRIS</role>
-              <roleDesc>, <em>Personnage muet</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La Scène est dans le Sérail du Sultan.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-            <l n="7" xml:id="l7"> </l>
-            <stage><hi rend="italic">Si, malheureusement, le Misanthrope n’avait pas dit, que le temps ne fait rien à l’affaire, je prierais le Lecteur d’avoir, pour cette Pièce, la même indulgence qu’ait le Spectateur. L’idée en a paru assez heureuse ; et ce fut avec regret que je me refusai le plaisir de la mieux travailler. Mais les MARIANNES venaient d’inonder les Théâtres ; et il était important de ne pas laisser refroidir le Public sur cette singulière nouveauté. Il fallait donc concevoir la Pièce, l’écrire, et préparer les Acteurs, en moins de douze ou quinze jours. Ce n’est pas tout, j’avais encore à gagner de vitesse un Comédien François, qui travaillait, avec la plus grande diligence, à une Parodie de la <em>Marianne</em> de M. de Voltaire. Comme ce genre d’écrire est très commode pour quiconque veut ménager le temps, l’esprit et l’imagination, la foule des Parodies allait égaler celles des <em>Mariannes</em>. D’ailleurs, ces sortes de farces, faisant beaucoup plus de profit aux Comédiens, que d’honneur aux Auteurs, elles obtiennent la préférence aux Italiens, plus curieux, avec raison, d’une bonne recette, que de la gloire de l’Écrivain.</hi></stage>
-            <l n="9" xml:id="l9"> </l>
-            <l n="10" xml:id="l10"> </l>
-          </sp>
-          <sp who="em>en-lui-envoyant-à-rôle-de" xml:id="0-2">
-            <speaker><em>En lui envoyant à rôle de</em> SULTAN-PUBLIC, <em>dans mes</em> HUIT MARIANNES.</speaker>
-            <l n="11" xml:id="l11"> </l>
-            <l n="12" xml:id="l12">Fils d’un homme<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a> sur qui Thalie</l>
-            <l n="13" xml:id="l13">S’épuisa d’amour et de soins ;</l>
-            <l n="14" xml:id="l14">Qui, préférant la France à l’Italie,</l>
-            <l n="15" xml:id="l15">Ne sembla t’y donner la vie,</l>
-            <l n="16" xml:id="l16">Qu’afin qu’on l’y regrettât moins ;</l>
-            <l n="17" xml:id="l17">Toi qui, depuis Molière, en France,</l>
-            <l n="18" xml:id="l18">As, comme lui, seul à la fois,</l>
-            <l n="19" xml:id="l19">De Roscius<a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2">[2]</a> et de Térence,</l>
-            <l n="20" xml:id="l20">Exercé les scabreux emplois ;</l>
-            <l n="21" xml:id="l21">DOMINIQUE, à mon gré, préférable à tous autres,</l>
-            <l n="22" xml:id="l22">Pour Toi, j’ai composé ce rôle de Sultan,</l>
-            <l n="23" xml:id="l23">Qui couronne ou proscrit tes travaux et les nôtres,</l>
-            <l n="24" xml:id="l24">Et qui règne sur nous en vrai Prince Ottoman,</l>
-            <l n="25" xml:id="l25">Je ne te parle pas de faire diligence ;</l>
-            <l n="26" xml:id="l26">Prose et vers t’ont été familiers dès l’enfance :</l>
-            <l n="27" xml:id="l27">Ils sont dans ta mémoire en un moment gravés.</l>
-            <l n="28" xml:id="l28">Je prétends encor moins, en Auteur d’importance,</l>
-            <l n="29" xml:id="l29">Te faisant du Public un portrait en substance,</l>
-            <l n="30" xml:id="l30">Aider de mes leçons, tes talents éprouvés ;</l>
-            <l n="31" xml:id="l31">Le personnage est de ta connaissance,</l>
-            <l n="32" xml:id="l32">J’en sais bien moins de lui, que tous, vous n’en savez.</l>
-            <l n="33" xml:id="l33">Depuis longtemps ensemble vous vivez,</l>
-            <l n="34" xml:id="l34">Et vous et lui vivez en bonne intelligence.</l>
-            <l n="35" xml:id="l35">Parais donc mécontent, dédaigneux, dégoûté :</l>
-            <l n="36" xml:id="l36">Tel qu’est, le plus souvent, le barbare Parterre,</l>
-            <l n="37" xml:id="l37">Quand on donne une nouveauté.</l>
-            <l n="38" xml:id="l38">Tel que de jour en jour il devient pour V...<a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3">[3]</a> ;</l>
-            <stage><hi rend="italic">Tel que, pour <em>La Chaussée</em>, on le voit d’ordinaire,</hi></stage>
-            <stage><hi rend="italic">Et tel que pour <em>Nadal</em><a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4">[4]</a> il a toujours été.</hi></stage>
-            <l n="41" xml:id="l41">Je ne dis rien non plus de ce ton frénétique</l>
-            <l n="42" xml:id="l42">Qu’il te faudra prendre à la fin :</l>
-            <l n="43" xml:id="l43">Eh ! qui sait mieux que toi travestir le tragique ?</l>
-            <l n="44" xml:id="l44">Le Marais retentit encor du ris malin,</l>
-            <l n="45" xml:id="l45">Qu’excita le pendant de l’organe héroïque,</l>
-            <l n="46" xml:id="l46">Dont Baron<a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5">[5]</a> fit frémir le Faubourg Saint Germain.</l>
-            <l n="47" xml:id="l47">De la part seulement des Filles de Mémoire,</l>
-            <l n="48" xml:id="l48">J’écris, pour te prier d’adopter leur enfant :</l>
-            <l n="49" xml:id="l49">Il leur devra le jour ; mais, s’il est triomphant,</l>
-            <l n="50" xml:id="l50">C’est à toi qu’il devra sa gloire !</l>
-            <l n="51" xml:id="l51"> </l>
-            <l n="52" xml:id="l52"> </l>
-        <div type="scene" xml:id="1">
+      <div type="act" n="1">
+        <head>AVERTISSEMENT DE L’AUTEUR</head>
+      </div>
+      <div type="act" n="2">
+        <head>VERS À DOMINIQUE</head>
+        <div type="scene" xml:id="première">
           <head>Scène première</head>
-            <l n="53" xml:id="l53"> </l>
-          <sp who="apollon" xml:id="1-1">
-            <speaker>APOLLON, LE SULTAN, <em>habillé à la turque, il a, pour sceptre, un grand sifflet</em></speaker>
-            <l n="54" xml:id="l54"> </l>
-          </sp>
-          <sp who="apollon" xml:id="1-2">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="55" xml:id="l55">Je viens, avec respect, me rendre à mon devoir :</l>
-            <l n="56" xml:id="l56">Vous avez, m’a-t-on dit, grand désir de me voir.</l>
-            <l n="57" xml:id="l57">Puis-je apprendre, Seigneur, ce qui l’aura fait naître ?</l>
-            <l n="58" xml:id="l58">Et pourquoi, mon Sultan, mon Souverain, mon Maître,</l>
-            <l n="59" xml:id="l59">Le Public, a mandé son esclave Apollon,</l>
+            <l n="1">Je viens, avec respect, me rendre à mon devoir :</l>
+            <l n="2">Vous avez, m’a-t-on dit, grand désir de me voir.</l>
+            <l n="3">Puis-je apprendre, Seigneur, ce qui l’aura fait naître ?</l>
+            <l n="4">Et pourquoi, mon Sultan, mon Souverain, mon Maître,</l>
+            <l n="5">Le Public, a mandé son esclave Apollon,</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="60" xml:id="l60">C’est pour vous avertir, mon petit violon,</l>
-            <l n="61" xml:id="l61">Que le Maître n’est point content de son esclave ;</l>
-            <l n="62" xml:id="l62">Que je suis mal servi ; qu’il semble qu’on me brave ;</l>
-            <l n="63" xml:id="l63">Et que si je ne suis bientôt mieux satisfait,</l>
-            <l n="64" xml:id="l64">Nous allons, vous et moi, nous brouiller tout-à-fait.</l>
+            <l n="6">C’est pour vous avertir, mon petit violon,</l>
+            <l n="7">Que le Maître n’est point content de son esclave ;</l>
+            <l n="8">Que je suis mal servi ; qu’il semble qu’on me brave ;</l>
+            <l n="9">Et que si je ne suis bientôt mieux satisfait,</l>
+            <l n="10">Nous allons, vous et moi, nous brouiller tout-à-fait.</l>
           </sp>
-          <sp who="apollon" xml:id="1-4">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="65" xml:id="l65">Quoi ! pour votre service, en butte à mille outrages,</l>
-            <l n="66" xml:id="l66">J’affronte aveuglément les plus fâcheux orages,</l>
-            <l n="67" xml:id="l67">Les sifilets, la disette, et quelquefois les coups !</l>
-            <l n="68" xml:id="l68">Et je ne pourrai pas du moins compter sur vous ?</l>
+            <l n="11">Quoi ! pour votre service, en butte à mille outrages,</l>
+            <l n="12">J’affronte aveuglément les plus fâcheux orages,</l>
+            <l n="13">Les sifilets, la disette, et quelquefois les coups !</l>
+            <l n="14">Et je ne pourrai pas du moins compter sur vous ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-5">
-            <speaker>LE SULTAN, <em>fièrement.</em></speaker>
-            <l n="69" xml:id="l69">Non, je veux qu’on m’amuse et qu’on me divertisse ;</l>
-            <l n="70" xml:id="l70">Qu’on ne s’en mêle point, ou qu’on y réussisse ;</l>
-            <l n="71" xml:id="l71">Mon sérail, des Beautés, jadis le rendez-vous.</l>
-            <l n="72" xml:id="l72">N’est plus qu’un triste lieu d’ennuis et de dégoûts.</l>
-            <l n="73" xml:id="l73">Que pour moi votre zèle autrement s’évertue !</l>
-            <l n="74" xml:id="l74">De Sultanes bientôt qu’on fasse une recrue,</l>
-            <l n="75" xml:id="l75">Point de retard, du beau ; vite, et me contentez.</l>
-            <l n="76" xml:id="l76">Ou vous n’êtes plus Chef des Eunuques. Partez.</l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, fièrement.</speaker>
+            <l n="15">Non, je veux qu’on m’amuse et qu’on me divertisse ;</l>
+            <l n="16">Qu’on ne s’en mêle point, ou qu’on y réussisse ;</l>
+            <l n="17">Mon sérail, des Beautés, jadis le rendez-vous.</l>
+            <l n="18">N’est plus qu’un triste lieu d’ennuis et de dégoûts.</l>
+            <l n="19">Que pour moi votre zèle autrement s’évertue !</l>
+            <l n="20">De Sultanes bientôt qu’on fasse une recrue,</l>
+            <l n="21">Point de retard, du beau ; vite, et me contentez.</l>
+            <l n="22">Ou vous n’êtes plus Chef des Eunuques. Partez.</l>
           </sp>
-          <sp who="apollon" xml:id="1-6">
-            <speaker>APOLLON, <em>humblement.</em></speaker>
-            <l n="77" xml:id="l77">J’obéis ; mais Seigneur, soit dit sans vous déplaire,</l>
-            <l n="78" xml:id="l78">Je ne sais presque plus comment vous satisfaire.</l>
-            <l n="79" xml:id="l79">De votre vieux sérail les appas surannés</l>
-            <l n="80" xml:id="l80">Sont de tout votre amour les objets fortunés.</l>
-            <l n="81" xml:id="l81">Le temps qui détruit tout, vainement les attaque</l>
-            <l n="82" xml:id="l82">Monime, Iphigénie, Athalie, Andromaque,</l>
-            <l n="83" xml:id="l83">(La Française, s’entend) ont toujours votre cœur,</l>
-            <l n="84" xml:id="l84">Et malgré l’âge encor conservant leur faveur,</l>
-            <l n="85" xml:id="l85">D’un jeune amant en vous, éprouvent la tendresse.</l>
+          <sp who="#apollon">
+            <speaker>APOLLON, humblement.</speaker>
+            <l n="23">J’obéis ; mais Seigneur, soit dit sans vous déplaire,</l>
+            <l n="24">Je ne sais presque plus comment vous satisfaire.</l>
+            <l n="25">De votre vieux sérail les appas surannés</l>
+            <l n="26">Sont de tout votre amour les objets fortunés.</l>
+            <l n="27">Le temps qui détruit tout, vainement les attaque</l>
+            <l n="28">Monime, Iphigénie, Athalie, Andromaque,</l>
+            <l n="29">(La Française, s’entend) ont toujours votre cœur,</l>
+            <l n="30">Et malgré l’âge encor conservant leur faveur,</l>
+            <l n="31">D’un jeune amant en vous, éprouvent la tendresse.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-7">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="86" xml:id="l86">Que ne me pourvoit-on d’agréable jeunesse ?</l>
+            <l n="32">Que ne me pourvoit-on d’agréable jeunesse ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-8">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="87" xml:id="l87">Oserait-elle, hélas ! se présenter à vous !</l>
-            <l n="88" xml:id="l88">Quand vous dormez près d’elle, ainsi qu’un vieil époux !</l>
-            <l n="89" xml:id="l89">Que presque en l’abordant votre feu se rétracte ;</l>
-            <l n="90" xml:id="l90">Et que vous ne passez qu’à peine un troisième acte ?</l>
-            <l n="91" xml:id="l91">Ce n’est pas là son compte au moins.</l>
+            <l n="33">Oserait-elle, hélas ! se présenter à vous !</l>
+            <l n="34">Quand vous dormez près d’elle, ainsi qu’un vieil époux !</l>
+            <l n="35">Que presque en l’abordant votre feu se rétracte ;</l>
+            <l n="36">Et que vous ne passez qu’à peine un troisième acte ?</l>
+            <l n="37">Ce n’est pas là son compte au moins.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-9">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="92" xml:id="l92">Qui s’en plaint ?</l>
+            <l n="38">Qui s’en plaint ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-10">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="93" xml:id="l93">Qui ?</l>
-            <l n="94" xml:id="l94">Tant de tendrons tous neufs, déjà mis en oubli,</l>
-            <l n="95" xml:id="l95">La Sultane Hersilie, une amante ingénue,</l>
-            <l n="96" xml:id="l96">La Sultane Artemire, Héroïne inconnue,</l>
-            <l n="97" xml:id="l97">Que je fus, sur Pégase, au galop, comme un fou,</l>
-            <l n="98" xml:id="l98">Croyant vous ragoûter, chercher, je ne sais où.</l>
-            <l n="99" xml:id="l99">Sultane Nitétis<a href="#_ftn6" name="_ftnref6" title="" id="_ftnref6">[6]</a>...</l>
+            <l n="39">Qui ?</l>
+            <l n="40">Tant de tendrons tous neufs, déjà mis en oubli,</l>
+            <l n="41">La Sultane Hersilie, une amante ingénue,</l>
+            <l n="42">La Sultane Artemire, Héroïne inconnue,</l>
+            <l n="43">Que je fus, sur Pégase, au galop, comme un fou,</l>
+            <l n="44">Croyant vous ragoûter, chercher, je ne sais où.</l>
+            <l n="45">Sultane Nitétis[6]...</l>
           </sp>
-          <sp who="" xml:id="1-11">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN</speaker>
-            <l n="100" xml:id="l100">Nitétis ! ah, pour elle,</l>
-            <l n="101" xml:id="l101">Par une complaisance, en moi peu naturelle,</l>
-            <l n="102" xml:id="l102">J’ai souvent, sans plaisir, été la visiter :</l>
-            <l n="103" xml:id="l103">Elle a tort de se plaindre.</l>
+            <l n="46">Nitétis ! ah, pour elle,</l>
+            <l n="47">Par une complaisance, en moi peu naturelle,</l>
+            <l n="48">J’ai souvent, sans plaisir, été la visiter :</l>
+            <l n="49">Elle a tort de se plaindre.</l>
           </sp>
-          <sp who="apollon" xml:id="1-12">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="104" xml:id="l104">Hélas ! à l’écouter,</l>
-            <l n="105" xml:id="l105">Vous étiez, dans le fonds, un galant bien barbare,</l>
-            <l n="106" xml:id="l106">Et du mouchoir, pour elle, étrangement avare.</l>
+            <l n="50">Hélas ! à l’écouter,</l>
+            <l n="51">Vous étiez, dans le fonds, un galant bien barbare,</l>
+            <l n="52">Et du mouchoir, pour elle, étrangement avare.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-13">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="107" xml:id="l107">Il est vrai ; mais enfin c’est votre faute aussi,</l>
-            <l n="108" xml:id="l108">Quelle espèce d’objets m’amenez-vous ici ?</l>
-            <l n="109" xml:id="l109">Des monstres, contre qui la voix du cœur murmure,</l>
-            <l n="110" xml:id="l110">Formés tous en dépit de l’aimable Nature,</l>
-            <l n="111" xml:id="l111">Et pour en parler net, de l’Art, enfants mort-nés,</l>
-            <l n="112" xml:id="l112">Sur la seule étiquette aux sifflets condamnés.</l>
-            <l n="113" xml:id="l113">Que ne présentez-vous à ma galanterie,</l>
-            <l n="114" xml:id="l114">Des beautés dont je puisse avoir l’âme attendrie ?</l>
+            <l n="53">Il est vrai ; mais enfin c’est votre faute aussi,</l>
+            <l n="54">Quelle espèce d’objets m’amenez-vous ici ?</l>
+            <l n="55">Des monstres, contre qui la voix du cœur murmure,</l>
+            <l n="56">Formés tous en dépit de l’aimable Nature,</l>
+            <l n="57">Et pour en parler net, de l’Art, enfants mort-nés,</l>
+            <l n="58">Sur la seule étiquette aux sifflets condamnés.</l>
+            <l n="59">Que ne présentez-vous à ma galanterie,</l>
+            <l n="60">Des beautés dont je puisse avoir l’âme attendrie ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-14">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="115" xml:id="l115">Et la Sultane Inès !</l>
+            <l n="61">Et la Sultane Inès !</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-15">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="116" xml:id="l116">Morbleu ! j’en suis si las,</l>
-            <l n="117" xml:id="l117">Qu’on me rend un service, en ne m’en parlant pas.</l>
-            <l n="118" xml:id="l118">Elle a reçu de moi ma dernière visite.</l>
-            <l n="119" xml:id="l119">Elle est de ces beautés, qui, malgré leur mérite,</l>
-            <l n="120" xml:id="l120">Ne sauraient pour longtemps s’assujettir un cœur.</l>
-            <l n="121" xml:id="l121">Tiens, cela ne sait pas rappeler son buveur.</l>
+            <l n="62">Morbleu ! j’en suis si las,</l>
+            <l n="63">Qu’on me rend un service, en ne m’en parlant pas.</l>
+            <l n="64">Elle a reçu de moi ma dernière visite.</l>
+            <l n="65">Elle est de ces beautés, qui, malgré leur mérite,</l>
+            <l n="66">Ne sauraient pour longtemps s’assujettir un cœur.</l>
+            <l n="67">Tiens, cela ne sait pas rappeler son buveur.</l>
           </sp>
-          <sp who="apollon" xml:id="1-16">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="122" xml:id="l122">Inès, Seigneur, Inès ! que vous trouviez si belle !</l>
+            <l n="68">Inès, Seigneur, Inès ! que vous trouviez si belle !</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-17">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="123" xml:id="l123">Le jour m’a détrompé du fard de la chandelle ;</l>
-            <l n="124" xml:id="l124">Et n’y voyant plus rien de ce qui m’a séduit,</l>
-            <l n="125" xml:id="l125">Ce n’est plus qu’une Actrice, en cornette de nuit.</l>
-            <l n="126" xml:id="l126">Eh quoi, rien de nouveau ? Point d’âme sans faiblesse</l>
-            <l n="127" xml:id="l127">Et toujours, sous mes yeux quelque sotte Princesse,</l>
-            <l n="128" xml:id="l128">Qui, pleine d’un amour faiblement combattu,</l>
-            <l n="129" xml:id="l129">Ne parle à tout venant qu’honneur et que vertu</l>
-            <l n="130" xml:id="l130">Et toutefois au fond n’est qu’une libertine ?</l>
-            <l n="131" xml:id="l131">Ne trouverai-je point quelque brave Héroïne,</l>
-            <l n="132" xml:id="l132">Intraitable, farouche, et dont le cœur altier,</l>
-            <l n="133" xml:id="l133">Au moindre mot d’amour n’ait jamais fait quartier ;</l>
-            <l n="134" xml:id="l134">Un prodige...</l>
+            <l n="69">Le jour m’a détrompé du fard de la chandelle ;</l>
+            <l n="70">Et n’y voyant plus rien de ce qui m’a séduit,</l>
+            <l n="71">Ce n’est plus qu’une Actrice, en cornette de nuit.</l>
+            <l n="72">Eh quoi, rien de nouveau ? Point d’âme sans faiblesse</l>
+            <l n="73">Et toujours, sous mes yeux quelque sotte Princesse,</l>
+            <l n="74">Qui, pleine d’un amour faiblement combattu,</l>
+            <l n="75">Ne parle à tout venant qu’honneur et que vertu</l>
+            <l n="76">Et toutefois au fond n’est qu’une libertine ?</l>
+            <l n="77">Ne trouverai-je point quelque brave Héroïne,</l>
+            <l n="78">Intraitable, farouche, et dont le cœur altier,</l>
+            <l n="79">Au moindre mot d’amour n’ait jamais fait quartier ;</l>
+            <l n="80">Un prodige...</l>
           </sp>
-          <sp who="apollon" xml:id="1-18">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="135" xml:id="l135">Attendez ; mon Commissionnaire,</l>
-            <l n="136" xml:id="l136">M’a de la Palestine envoyé votre affaire.</l>
-            <l n="137" xml:id="l137">La Dame assurément sera tout votre fait ;</l>
+            <l n="81">Attendez ; mon Commissionnaire,</l>
+            <l n="82">M’a de la Palestine envoyé votre affaire.</l>
+            <l n="83">La Dame assurément sera tout votre fait ;</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-19">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="138" xml:id="l138">Voyons-la donc. Holà hé, Bacha-Bilboquet ?</l>
-            <l n="139" xml:id="l139">Que l’on fasse avertir Vizir-Polichinelle.</l>
-            <l n="140" xml:id="l140">Comment la nommez-vous ?</l>
+            <l n="84">Voyons-la donc. Holà hé, Bacha-Bilboquet ?</l>
+            <l n="85">Que l’on fasse avertir Vizir-Polichinelle.</l>
+            <l n="86">Comment la nommez-vous ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-20">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="141" xml:id="l141">Marianne.</l>
+            <l n="87">Marianne.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-21">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="142" xml:id="l142">Elle est belle ?</l>
+            <l n="88">Elle est belle ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-22">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="143" xml:id="l143">À peindre.</l>
+            <l n="89">À peindre.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-23">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="144" xml:id="l144">Jeune ?</l>
+            <l n="90">Jeune ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-24">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="145" xml:id="l145">À l’âge où vous les désirez.</l>
+            <l n="91">À l’âge où vous les désirez.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-25">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="146" xml:id="l146">De l’esprit ?</l>
+            <l n="92">De l’esprit ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-26">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="147" xml:id="l147">Tant et plus.</l>
+            <l n="93">Tant et plus.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-27">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="148" xml:id="l148">Bien faite ?</l>
+            <l n="94">Bien faite ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-28">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="149" xml:id="l149">Vous verrez.</l>
+            <l n="95">Vous verrez.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-29">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="150" xml:id="l150">Et fière, dites-vous ?</l>
+            <l n="96">Et fière, dites-vous ?</l>
           </sp>
-          <sp who="apollon" xml:id="1-30">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="151" xml:id="l151">D’une froideur piquante.</l>
+            <l n="97">D’une froideur piquante.</l>
           </sp>
-          <sp who="le-sultan" xml:id="1-31">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="152" xml:id="l152">Ah, ne me laissez pas languir dans mon attente !</l>
-            <l n="153" xml:id="l153">Vite ! envoyez-la moi.</l>
-            <stage><hi rend="italic"><em>Apollon sort.</em></hi></stage>
-            <l n="155" xml:id="l155"> </l>
-            <l n="156" xml:id="l156"> </l>
+            <l n="98">Ah, ne me laissez pas languir dans mon attente !</l>
+            <l n="99">Vite ! envoyez-la moi.</l>
+            <stage>&lt;em&gt;Apollon sort.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="2">
+        <div type="scene" xml:id="II">
           <head>Scène II</head>
-            <l n="157" xml:id="l157"> </l>
-          <sp who="vizir-polichinelle" xml:id="2-1">
-            <speaker>SULTAN-PUBLIC, VIZIR-POLICHINELLE</speaker>
-            <l n="158" xml:id="l158"> </l>
-          </sp>
-          <sp who="le-sultan" xml:id="2-2">
-            <speaker>LE SULTAN, <em>continuant, et embrassant Polichinelle avec transport.</em></speaker>
-            <l n="159" xml:id="l159">Vizir ! je suis heureux !</l>
-            <l n="160" xml:id="l160">Apollon me va mettre au comble de mes vœux :</l>
-            <l n="161" xml:id="l161">Je vais voir enrichir mon sérail d’une Dame...</l>
-            <l n="162" xml:id="l162">Marianne ! à ce nom, je sens déjà mon âme</l>
-            <l n="163" xml:id="l163">Réveiller sa tendresse, et prête à s’émouvoir...</l>
-            <l n="164" xml:id="l164">À ma place, Vizir, il faut la recevoir.</l>
-            <l n="165" xml:id="l165">Pour un moment, ailleurs quelque affaire m’appelle.</l>
-            <l n="166" xml:id="l166">Dans son appartement, en conduisant la Belle ;</l>
-            <l n="167" xml:id="l167">Examinez-la bien, je sais votre bon goût.</l>
-            <stage><hi rend="italic"><em>Il s’en va, puis revenant sur ses pas.</em></hi></stage>
-            <l n="169" xml:id="l169">Polichinelle, au moins, n’examinez pas tout.</l>
-            <l n="170" xml:id="l170"> </l>
-            <l n="171" xml:id="l171"> </l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, continuant, et embrassant Polichinelle avec transport.</speaker>
+            <l n="100">Vizir ! je suis heureux !</l>
+            <l n="101">Apollon me va mettre au comble de mes vœux :</l>
+            <l n="102">Je vais voir enrichir mon sérail d’une Dame...</l>
+            <l n="103">Marianne ! à ce nom, je sens déjà mon âme</l>
+            <l n="104">Réveiller sa tendresse, et prête à s’émouvoir...</l>
+            <l n="105">À ma place, Vizir, il faut la recevoir.</l>
+            <l n="106">Pour un moment, ailleurs quelque affaire m’appelle.</l>
+            <l n="107">Dans son appartement, en conduisant la Belle ;</l>
+            <l n="108">Examinez-la bien, je sais votre bon goût.</l>
+            <stage>&lt;em&gt;Il s’en va, puis revenant sur ses pas.&lt;/em&gt;</stage>
+            <l n="109">Polichinelle, au moins, n’examinez pas tout.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="3">
+        <div type="scene" xml:id="III">
           <head>Scène III</head>
-            <l n="172" xml:id="l172"> </l>
-          <sp who="polichinelle" xml:id="3-1">
-            <speaker>POLICHINELLE, <em>seul</em></speaker>
-            <l n="173" xml:id="l173"> </l>
-            <l n="174" xml:id="l174">Vizir, as-tu du cœur, fais un coup de ta tête !</l>
-            <l n="175" xml:id="l175">Le Public en veut trop : ravis lui sa conquête.</l>
-            <l n="176" xml:id="l176">Des Muses, jours et nuits, la montagne en travail,</l>
-            <l n="177" xml:id="l177">Fournit à ses plaisirs, et lui peuple un sérail.</l>
-            <l n="178" xml:id="l178">Scrupuleux confident de ses bonnes fortunes,</l>
-            <l n="179" xml:id="l179">N’en oserai-je donc escroquer quelques-unes ?</l>
-            <l n="180" xml:id="l180">L’Amour, en cas pareil, corrompt plus d’un agent,</l>
-            <l n="181" xml:id="l181">Et d’ailleurs le Public est un Prince indulgent.</l>
-            <stage><hi rend="italic"><em>Il chante brusquement.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Ma pinte et m’Amie, ô gué. </em></hi></stage>
-            <l n="184" xml:id="l184"> </l>
-            <l n="185" xml:id="l185"> </l>
+          <sp who="#vizir-polichinelle">
+            <speaker>POLICHINELLE, seul</speaker>
+            <l n="110">Vizir, as-tu du cœur, fais un coup de ta tête !</l>
+            <l n="111">Le Public en veut trop : ravis lui sa conquête.</l>
+            <l n="112">Des Muses, jours et nuits, la montagne en travail,</l>
+            <l n="113">Fournit à ses plaisirs, et lui peuple un sérail.</l>
+            <l n="114">Scrupuleux confident de ses bonnes fortunes,</l>
+            <l n="115">N’en oserai-je donc escroquer quelques-unes ?</l>
+            <l n="116">L’Amour, en cas pareil, corrompt plus d’un agent,</l>
+            <l n="117">Et d’ailleurs le Public est un Prince indulgent.</l>
+            <stage>&lt;em&gt;Il chante brusquement.&lt;/em&gt;</stage>
+            <stage>&lt;em&gt;Air : Ma pinte et m’Amie, ô gué. &lt;/em&gt;</stage>
+            <l n="118">Qui pardonnera, je crois,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="4">
+        <div type="scene" xml:id="IV">
           <head>Scène IV</head>
-            <l n="186" xml:id="l186"> </l>
-          <sp who="polichinelle" xml:id="4-1">
-            <speaker>POLICHINELLE, UN EUNUQUE</speaker>
-            <l n="187" xml:id="l187"> </l>
-          </sp>
-          <sp who="l’eunuque" xml:id="4-2">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="188" xml:id="l188">Une Dame qu’un voile empêche qu’on ne voie,</l>
-            <l n="189" xml:id="l189">Et qui dit que du Pinde, au Public on l’envoie,</l>
-            <l n="190" xml:id="l190">De la part d’Apollon demande à lui parler.</l>
+            <l n="119">Une Dame qu’un voile empêche qu’on ne voie,</l>
+            <l n="120">Et qui dit que du Pinde, au Public on l’envoie,</l>
+            <l n="121">De la part d’Apollon demande à lui parler.</l>
           </sp>
-          <sp who="polichinelle" xml:id="4-3">
-            <speaker>POLICHINELLE, <em>gravement.</em></speaker>
-            <l n="191" xml:id="l191">Faites entrer.</l>
-            <l n="192" xml:id="l192"> </l>
-            <l n="193" xml:id="l193"> </l>
+          <sp who="#vizir-polichinelle">
+            <speaker>POLICHINELLE, gravement.</speaker>
+            <l n="122">Faites entrer.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="5">
+        <div type="scene" xml:id="V">
           <head>Scène V</head>
-            <l n="194" xml:id="l194"> </l>
-          <sp who="polichinelle" xml:id="5-1">
-            <speaker>POLICHINELLE, LA PREMIÈRE MARIANNE<a href="#_ftn7" name="_ftnref7" title="" id="_ftnref7">[7]</a>, <em>voilée et représentée par Scaramouche</em></speaker>
-            <l n="195" xml:id="l195"> </l>
+          <sp who="#vizir-polichinelle">
+            <speaker>POLICHINELLE, lui voulant lever son voile par force.</speaker>
+            <l n="123">Madame, il faut vous dévoiler.</l>
+            <stage>&lt;em&gt;Air : Du Cotillon, des fêtes de Thalie.&lt;/em&gt;</stage>
+            <l n="124">Marianne, levez le menton.</l>
+            <stage>&lt;em&gt;Scaramouche baisse son voile violemment.&lt;/em&gt;</stage>
+            <l n="125">Oh, ne t’en déplaise,</l>
           </sp>
-          <sp who="polichinelle" xml:id="5-2">
-            <speaker>POLICHINELLE, <em>lui voulant lever son voile par force.</em></speaker>
-            <l n="196" xml:id="l196">Madame, il faut vous dévoiler.</l>
-            <stage><hi rend="italic"><em>Air : Du Cotillon, des fêtes de Thalie.</em></hi></stage>
-            <stage><hi rend="italic"><em>Scaramouche baisse son voile violemment.</em></hi></stage>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Scaramouche, s’opiniâtrant à se cacher.</speaker>
+            <l n="126">Non, non, l’éclat du jour éblouit ma visière ;</l>
+            <l n="127">Je ne puis, cher Sultan, supporter la lumière.</l>
           </sp>
-          <sp who="marianne-" xml:id="5-3">
-            <speaker>MARIANNE-<em>Scaramouche, s’opiniâtrant à se cacher.</em></speaker>
-            <l n="199" xml:id="l199">Non, non, l’éclat du jour éblouit ma visière ;</l>
-            <l n="200" xml:id="l200">Je ne puis, cher Sultan, supporter la lumière.</l>
-          </sp>
-          <sp who="polichinelle" xml:id="5-4">
+          <sp who="#vizir-polichinelle">
             <speaker>POLICHINELLE.</speaker>
-            <l n="201" xml:id="l201">Vous prenez le Vizir ici pour l’Empereur</l>
-            <l n="202" xml:id="l202">Madame, il est absent : je suis son essayeur,</l>
-            <l n="203" xml:id="l203">À qui l’on a sur vous donné droit de visite.</l>
+            <l n="128">Vous prenez le Vizir ici pour l’Empereur</l>
+            <l n="129">Madame, il est absent : je suis son essayeur,</l>
+            <l n="130">À qui l’on a sur vous donné droit de visite.</l>
           </sp>
-          <sp who="marianne-" xml:id="5-5">
-            <speaker>MARIANNE-<em>Scaramouche.</em></speaker>
-            <l n="204" xml:id="l204">Eh bien ! puis-je espérer d’être sa favorite ?</l>
-            <l n="205" xml:id="l205">Suis-je digne du poste ?</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Scaramouche.</speaker>
+            <l n="131">Eh bien ! puis-je espérer d’être sa favorite ?</l>
+            <l n="132">Suis-je digne du poste ?</l>
           </sp>
-          <sp who="polichinelle" xml:id="5-6">
+          <sp who="#vizir-polichinelle">
             <speaker>POLICHINELLE.</speaker>
-            <l n="206" xml:id="l206">Oh, c’est lui qui n’est pas</l>
-            <l n="207" xml:id="l207">Digne de posséder vos célestes appas !</l>
-            <l n="208" xml:id="l208">Une fille avec lui n’est jamais bien lotie,</l>
-            <l n="209" xml:id="l209">Et mon avis, Madame, est que l’on vous marie.</l>
-            <stage><hi rend="italic"><em>Air : Ma Commère, quand je danse, etc.</em></hi></stage>
+            <l n="133">Oh, c’est lui qui n’est pas</l>
+            <l n="134">Digne de posséder vos célestes appas !</l>
+            <l n="135">Une fille avec lui n’est jamais bien lotie,</l>
+            <l n="136">Et mon avis, Madame, est que l’on vous marie.</l>
+            <stage>&lt;em&gt;Air : Ma Commère, quand je danse, etc.&lt;/em&gt;</stage>
+            <l n="137">À Monsieur Po,</l>
           </sp>
-          <sp who="marianne-" xml:id="5-7">
-            <speaker>MARIANNE-<em>Scaramouche.</em></speaker>
-            <l n="211" xml:id="l211">Est-ce un homme bien fait, de bon air ?</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Scaramouche.</speaker>
+            <l n="138">Est-ce un homme bien fait, de bon air ?</l>
           </sp>
-          <sp who="polichinelle" xml:id="5-8">
+          <sp who="#vizir-polichinelle">
             <speaker>POLICHINELLE.</speaker>
-            <l n="212" xml:id="l212">Je le crois.</l>
-            <l n="213" xml:id="l213">Et pour vous en convaincre, un mot suffit : c’est moi.</l>
-            <l n="214" xml:id="l214">À bien considérer ma figure et la vôtre,</l>
-            <l n="215" xml:id="l215">Là, n’étions-nous pas faits tous les deux l’un pour l’autre ?</l>
-            <stage><hi rend="italic"><em>Air : Et Zing, etc.</em></hi></stage>
-            <l n="217" xml:id="l217"> </l>
-            <l n="218" xml:id="l218"> </l>
+            <l n="139">Je le crois.</l>
+            <l n="140">Et pour vous en convaincre, un mot suffit : c’est moi.</l>
+            <l n="141">À bien considérer ma figure et la vôtre,</l>
+            <l n="142">Là, n’étions-nous pas faits tous les deux l’un pour l’autre ?</l>
+            <stage>&lt;em&gt;Air : Et Zing, etc.&lt;/em&gt;</stage>
+            <l n="143">Allons donc, ma Reine,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="6">
+        <div type="scene" xml:id="VI">
           <head>Scène VI</head>
-            <l n="219" xml:id="l219"> </l>
-          <sp who="le-sultan-public" xml:id="6-1">
-            <speaker>LE SULTAN-PUBLIC, POLICHINELLE, MARIANNE-<em>Scaramouche</em></speaker>
-            <l n="220" xml:id="l220"> </l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, arrêtant Polichinelle au collet.</speaker>
+            <l n="144">Vizir, où courez-vous ? Est-ce là Marianne ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="6-2">
-            <speaker>LE SULTAN, <em>arrêtant Polichinelle au collet.</em></speaker>
-            <l n="221" xml:id="l221">Vizir, où courez-vous ? Est-ce là Marianne ?</l>
-          </sp>
-          <sp who="polichinelle" xml:id="6-3">
+          <sp who="#vizir-polichinelle">
             <speaker>POLICHINELLE.</speaker>
-            <l n="222" xml:id="l222">Oui ; mais elle est à moi.</l>
+            <l n="145">Oui ; mais elle est à moi.</l>
           </sp>
-          <sp who="le-sultan" xml:id="6-4">
-            <speaker>LE SULTAN, <em>le prenant à la gorge.</em></speaker>
-            <l n="223" xml:id="l223">Comment à toi, profane !</l>
-            <stage><hi rend="italic"><em>Ils se la tiraillent.</em></hi></stage>
-            <l n="225" xml:id="l225">Insolent ! lâche ; cède ! ou crains tout mon courroux !</l>
-            <stage><hi rend="italic"><em>Le voile tombe.</em></hi></stage>
-            <l n="227" xml:id="l227">Quoi traître ! oser ainsi dire qu’elle est à vous !</l>
-            <l n="228" xml:id="l228">Suis-je donc le Public ? Est-ce ainsi qu’on me joue.</l>
-            <l n="229" xml:id="l229">Ce morceau vous convient. J’avais tort je l’avoue ;</l>
-            <l n="230" xml:id="l230">Ah, je te punirai, téméraire Apollon !</l>
-            <stage><hi rend="italic"><em>Polichinelle emmène Marianne-Scaramouche.</em></hi></stage>
-            <l n="232" xml:id="l232"> </l>
-            <l n="233" xml:id="l233"> </l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, le prenant à la gorge.</speaker>
+            <l n="146">Comment à toi, profane !</l>
+            <stage>&lt;em&gt;Ils se la tiraillent.&lt;/em&gt;</stage>
+            <l n="147">Insolent ! lâche ; cède ! ou crains tout mon courroux !</l>
+            <stage>&lt;em&gt;Le voile tombe.&lt;/em&gt;</stage>
+            <l n="148">Quoi traître ! oser ainsi dire qu’elle est à vous !</l>
+            <l n="149">Suis-je donc le Public ? Est-ce ainsi qu’on me joue.</l>
+            <l n="150">Ce morceau vous convient. J’avais tort je l’avoue ;</l>
+            <l n="151">Ah, je te punirai, téméraire Apollon !</l>
+            <stage>&lt;em&gt;Polichinelle emmène Marianne-Scaramouche.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="7">
+        <div type="scene" xml:id="VII">
           <head>Scène VII</head>
-            <l n="234" xml:id="l234"> </l>
-          <sp who="le-sultan" xml:id="7-1">
-            <speaker>LE SULTAN, L’EUNUQUE</speaker>
-            <l n="235" xml:id="l235"> </l>
-          </sp>
-          <sp who="l’eunuque" xml:id="7-2">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="236" xml:id="l236">Une Dame demande à vous parler.</l>
+            <l n="152">Une Dame demande à vous parler.</l>
           </sp>
-          <sp who="le-sultan" xml:id="7-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="237" xml:id="l237">Son nom ?</l>
+            <l n="153">Son nom ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="7-4">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="238" xml:id="l238">Marianne.</l>
+            <l n="154">Marianne.</l>
           </sp>
-          <sp who="le-sultan" xml:id="7-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="239" xml:id="l239">Comment ? Que ceci veut-il dire ?</l>
-            <l n="240" xml:id="l240">Une autre Marianne ! on aura voulu rire,</l>
-            <l n="241" xml:id="l241">Et m’en faire paraître une fausse en ces lieux,</l>
-            <l n="242" xml:id="l242">Pour que la véritable ensuite y brillât mieux.</l>
-            <l n="243" xml:id="l243">Qu’elle entre.</l>
-            <l n="244" xml:id="l244"> </l>
-            <l n="245" xml:id="l245"> </l>
+            <l n="155">Comment ? Que ceci veut-il dire ?</l>
+            <l n="156">Une autre Marianne ! on aura voulu rire,</l>
+            <l n="157">Et m’en faire paraître une fausse en ces lieux,</l>
+            <l n="158">Pour que la véritable ensuite y brillât mieux.</l>
+            <l n="159">Qu’elle entre.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="8">
+        <div type="scene" xml:id="VIII">
           <head>Scène VIII</head>
-            <l n="246" xml:id="l246"> </l>
-          <sp who="le-sultan" xml:id="8-1">
-            <speaker>LE SULTAN, LA PREMIÈRE MARIANNE<a href="#_ftn8" name="_ftnref8" title="" id="_ftnref8">[8]</a> <em>de M. de Voltaire, représentée par Arlequin voilé, et tenant à la main une coupe à l’antique</em></speaker>
-            <l n="247" xml:id="l247"> </l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, avec un accent gascon.</speaker>
+            <l n="160">Il se répand un bruit que sa Hautesse,</l>
+            <l n="161">Dans un corps accompli cherche un cœur sans faiblesse,</l>
+            <l n="162">Un cœur incombustible : et tel est celui-là ;</l>
+            <l n="163">Pour mes charmes, Seigneur, jugez-en, les voilà.</l>
+            <stage>&lt;em&gt;Se dévoilant.&lt;/em&gt;</stage>
+            <l n="164">Oui, comme eux, ma fierté passa la vraisemblance ;</l>
+            <l n="165">Concevez jusqu’où j’ai poussé l’indifférence !</l>
+            <l n="166">Et combien j’étais loin d’avoir un favori :</l>
+            <l n="167">Je n’ai jamais senti d’amour pour mon mari.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-2">
-            <speaker>MARIANNE-<em>Arlequin, avec un accent gascon.</em></speaker>
-            <l n="248" xml:id="l248">Il se répand un bruit que sa Hautesse,</l>
-            <l n="249" xml:id="l249">Dans un corps accompli cherche un cœur sans faiblesse,</l>
-            <l n="250" xml:id="l250">Un cœur incombustible : et tel est celui-là ;</l>
-            <l n="251" xml:id="l251">Pour mes charmes, Seigneur, jugez-en, les voilà.</l>
-            <stage><hi rend="italic"><em>Se dévoilant.</em></hi></stage>
-            <l n="253" xml:id="l253">Oui, comme eux, ma fierté passa la vraisemblance ;</l>
-            <l n="254" xml:id="l254">Concevez jusqu’où j’ai poussé l’indifférence !</l>
-            <l n="255" xml:id="l255">Et combien j’étais loin d’avoir un favori :</l>
-            <l n="256" xml:id="l256">Je n’ai jamais senti d’amour pour mon mari.</l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, ironiquement.</speaker>
+            <l n="168">La peste ! où le mari vainement tâche à plaire,</l>
+            <l n="169">Le galant en effet n’a pas grand’chose à faire ;</l>
+            <l n="170">Je le crois. Mais, Madame, en tout cas, à vous voir,</l>
+            <l n="171">Vous n’avez pas bien mis du monde au désespoir ;</l>
+            <l n="172">Quand vous auriez été mille fois plus sévère.</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-3">
-            <speaker>LE SULTAN, <em>ironiquement.</em></speaker>
-            <l n="257" xml:id="l257">La peste ! où le mari vainement tâche à plaire,</l>
-            <l n="258" xml:id="l258">Le galant en effet n’a pas grand’chose à faire ;</l>
-            <l n="259" xml:id="l259">Je le crois. Mais, Madame, en tout cas, à vous voir,</l>
-            <l n="260" xml:id="l260">Vous n’avez pas bien mis du monde au désespoir ;</l>
-            <l n="261" xml:id="l261">Quand vous auriez été mille fois plus sévère.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="173">Songeons à terminer seulement notre affaire :</l>
+            <l n="174">Et tranchant pour cela tout propos superflu,</l>
+            <l n="175">Répondez ; me voilà ; je veux plaire ; ai-je plu ?</l>
           </sp>
-          <sp who="marianne-" xml:id="8-4">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="262" xml:id="l262">Songeons à terminer seulement notre affaire :</l>
-            <l n="263" xml:id="l263">Et tranchant pour cela tout propos superflu,</l>
-            <l n="264" xml:id="l264">Répondez ; me voilà ; je veux plaire ; ai-je plu ?</l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, sèchement.</speaker>
+            <l n="176">Ma foi non.</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-5">
-            <speaker>LE SULTAN, <em>sèchement.</em></speaker>
-            <l n="265" xml:id="l265">Ma foi non.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, avec hauteur.</speaker>
+            <l n="177">Comment, non ? Seigneur, qu’osez-vous dire ?</l>
           </sp>
-          <sp who="marianne-" xml:id="8-6">
-            <speaker>MARIANNE-<em>Arlequin, avec hauteur.</em></speaker>
-            <l n="266" xml:id="l266">Comment, non ? Seigneur, qu’osez-vous dire ?</l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, d’un air d’indifférence.</speaker>
+            <l n="178">Ce qu’à votre sujet, la vérité m’inspire.</l>
+            <l n="179">Le Public est sincère et n’a pas grands égards.</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-7">
-            <speaker>LE SULTAN, <em>d’un air d’indifférence.</em></speaker>
-            <l n="267" xml:id="l267">Ce qu’à votre sujet, la vérité m’inspire.</l>
-            <l n="268" xml:id="l268">Le Public est sincère et n’a pas grands égards.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, d’un ton menaçant.</speaker>
+            <l n="180">Cadédis ! prenez garde ! encore un mot ; je pars.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-8">
-            <speaker>MARIANNE-<em>Arlequin, d’un ton menaçant.</em></speaker>
-            <l n="269" xml:id="l269">Cadédis ! prenez garde ! encore un mot ; je pars.</l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, froidement.</speaker>
+            <l n="181">Volontiers.</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-9">
-            <speaker>LE SULTAN, <em>froidement.</em></speaker>
-            <l n="270" xml:id="l270">Volontiers.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, du même ton.</speaker>
+            <l n="182">Je m’éclipse ; et plus de Marianne</l>
           </sp>
-          <sp who="marianne-" xml:id="8-10">
-            <speaker>MARIANNE-<em>Arlequin, du même ton.</em></speaker>
-            <l n="271" xml:id="l271">Je m’éclipse ; et plus de Marianne</l>
-          </sp>
-          <sp who="le-sultan" xml:id="8-11">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="272" xml:id="l272">Soit.</l>
+            <l n="183">Soit.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-12">
-            <speaker>MARIANNE-<em>Arlequin, faisant semblant de s’en aller.</em></speaker>
-            <l n="273" xml:id="l273">Adieu Turc ! adieu !</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, faisant semblant de s’en aller.</speaker>
+            <l n="184">Adieu Turc ! adieu !</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-13">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="274" xml:id="l274">La plaisante Sultane !</l>
+            <l n="185">La plaisante Sultane !</l>
           </sp>
-          <sp who="marianne-" xml:id="8-14">
-            <speaker>MARIANNE-<em>Arlequin, revenant sur ses pas et adoucissant sa voix.</em></speaker>
-            <l n="275" xml:id="l275">Ne vous exposez pas à d’éternels regrets.</l>
-            <l n="276" xml:id="l276">Je reviens par pitié ; voyez-moi de plus près.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, revenant sur ses pas et adoucissant sa voix.</speaker>
+            <l n="186">Ne vous exposez pas à d’éternels regrets.</l>
+            <l n="187">Je reviens par pitié ; voyez-moi de plus près.</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-15">
-            <speaker>LE SULTAN, <em>la repoussant.</em></speaker>
-            <l n="277" xml:id="l277">Eh fi !</l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, la repoussant.</speaker>
+            <l n="188">Eh fi !</l>
           </sp>
-          <sp who="marianne-" xml:id="8-16">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="278" xml:id="l278">L’on ne voit pas d’abord toute une femme,</l>
-            <l n="279" xml:id="l279">Peut-être...</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="189">L’on ne voit pas d’abord toute une femme,</l>
+            <l n="190">Peut-être...</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-17">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="280" xml:id="l280">Oh par sambleu ! vous m’ennuyez, Madame ;</l>
-            <l n="281" xml:id="l281">Adieu, séparons-nous.</l>
+            <l n="191">Oh par sambleu ! vous m’ennuyez, Madame ;</l>
+            <l n="192">Adieu, séparons-nous.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-18">
-            <speaker>MARIANNE-<em>Arlequin, reprenant son premier ton.</em></speaker>
-            <l n="282" xml:id="l282">Non, Seigneur, demeurons.</l>
-            <l n="283" xml:id="l283">Je ne veux pas plus loin porter de tels affronts.</l>
-            <l n="284" xml:id="l284">Je me suis, dans la peur de ce mortel outrage,</l>
-            <stage><hi rend="italic"><em>Elle tire une bouteille de sa poche.</em></hi></stage>
-            <l n="286" xml:id="l286">Munie heureusement d’un venimeux breuvage ;</l>
-            <l n="287" xml:id="l287">Marianne aurait tort de vouloir, un instant,</l>
-            <l n="288" xml:id="l288">Survivre au déshonneur d’un affront si constant ;</l>
-            <l n="289" xml:id="l289">Voyons votre maintien. Me voilà prête à boire.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, reprenant son premier ton.</speaker>
+            <l n="193">Non, Seigneur, demeurons.</l>
+            <l n="194">Je ne veux pas plus loin porter de tels affronts.</l>
+            <l n="195">Je me suis, dans la peur de ce mortel outrage,</l>
+            <stage>&lt;em&gt;Elle tire une bouteille de sa poche.&lt;/em&gt;</stage>
+            <l n="196">Munie heureusement d’un venimeux breuvage ;</l>
+            <l n="197">Marianne aurait tort de vouloir, un instant,</l>
+            <l n="198">Survivre au déshonneur d’un affront si constant ;</l>
+            <l n="199">Voyons votre maintien. Me voilà prête à boire.</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-19">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="290" xml:id="l290">Et moi prêt à verser.</l>
+            <l n="200">Et moi prêt à verser.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-20">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="291" xml:id="l291">Non, je ne le puis croire ;</l>
-            <l n="292" xml:id="l292">Vous craignez mon trépas, Seigneur, vous m’éprouvez.</l>
-            <l n="293" xml:id="l293">Répondez ; m’aimez-vous ? ou boirai-je ?</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="201">Non, je ne le puis croire ;</l>
+            <l n="202">Vous craignez mon trépas, Seigneur, vous m’éprouvez.</l>
+            <l n="203">Répondez ; m’aimez-vous ? ou boirai-je ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-21">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="294" xml:id="l294">Buvez.</l>
+            <l n="204">Buvez.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-22">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="295" xml:id="l295">Le terme est décisif ; et la réponse est nette.</l>
-            <l n="296" xml:id="l296">Buvons et mourons donc.</l>
-            <stage><hi rend="italic"><em>Elle boit.</em></hi></stage>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="205">Le terme est décisif ; et la réponse est nette.</l>
+            <l n="206">Buvons et mourons donc.</l>
+            <stage>&lt;em&gt;Elle boit.&lt;/em&gt;</stage>
           </sp>
-          <sp who="le-sultan" xml:id="8-23">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <stage><hi rend="italic"><em>Air connu.</em></hi></stage>
+            <stage>&lt;em&gt;Air connu.&lt;/em&gt;</stage>
+            <l n="207">Eh houppe, eh houplinette,</l>
           </sp>
-          <sp who="marianne-" xml:id="8-24">
-            <speaker>MARIANNE-<em>Arlequin, tranquillement après avoir bu.</em></speaker>
-            <l n="299" xml:id="l299">Autant sertit-ce, hélas ! si c’était du poison...</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, tranquillement après avoir bu.</speaker>
+            <l n="208">Autant sertit-ce, hélas ! si c’était du poison...</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-25">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="300" xml:id="l300">Ce n’en était donc pas ?</l>
+            <l n="209">Ce n’en était donc pas ?</l>
           </sp>
-          <sp who="marianne-" xml:id="8-26">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="301" xml:id="l301">Quelque sotte ! oh que non</l>
-            <l n="302" xml:id="l302">Je veux vivre ; et bon-gré malgré, je veux te plaire.</l>
-            <l n="303" xml:id="l303">Aime-moi.</l>
-            <stage><hi rend="italic"><em>Sautant à la gorge du Sultan.</em></hi></stage>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="210">Quelque sotte ! oh que non</l>
+            <l n="211">Je veux vivre ; et bon-gré malgré, je veux te plaire.</l>
+            <l n="212">Aime-moi.</l>
+            <stage>&lt;em&gt;Sautant à la gorge du Sultan.&lt;/em&gt;</stage>
           </sp>
-          <sp who="le-sultan" xml:id="8-27">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="305" xml:id="l305">Je ne puis.</l>
+            <l n="213">Je ne puis.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-28">
-            <speaker>MARIANNE-<em>Arlequin, pressant encore plus le Sultan.</em></speaker>
-            <l n="306" xml:id="l306">Tu le dois.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, pressant encore plus le Sultan.</speaker>
+            <l n="214">Tu le dois.</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-29">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="307" xml:id="l307">Plus d’affaire</l>
-            <stage><hi rend="italic"><em>Air connu.</em></hi></stage>
+            <l n="215">Plus d’affaire</l>
+            <stage>&lt;em&gt;Air connu.&lt;/em&gt;</stage>
+            <l n="216">Ce n’est point par effort qu’on aime.</l>
           </sp>
-          <sp who="marianne-" xml:id="8-30">
-            <speaker>MARIANNE-<em>Arlequin, avec un accent gascon.</em></speaker>
-            <l n="309" xml:id="l309">Capdebious, je m’en vais ! mais malheur au rebelle !</l>
-            <l n="310" xml:id="l310">Je rentre à ma toilette : et je reviens si belle,</l>
-            <l n="311" xml:id="l311">Que je veux d’un coup d’œil pulvériser ton cœur,</l>
-            <l n="312" xml:id="l312">Et le prendre en tabac. À revoir !</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, avec un accent gascon.</speaker>
+            <l n="217">Capdebious, je m’en vais ! mais malheur au rebelle !</l>
+            <l n="218">Je rentre à ma toilette : et je reviens si belle,</l>
+            <l n="219">Que je veux d’un coup d’œil pulvériser ton cœur,</l>
+            <l n="220">Et le prendre en tabac. À revoir !</l>
           </sp>
-          <sp who="le-sultan" xml:id="8-31">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="313" xml:id="l313">Serviteur !</l>
-            <l n="314" xml:id="l314"> </l>
-            <l n="315" xml:id="l315"> </l>
+            <l n="221">Serviteur !</l>
           </sp>
         </div>
-        <div type="scene" xml:id="9">
+        <div type="scene" xml:id="IX">
           <head>Scène IX</head>
-            <l n="316" xml:id="l316"> </l>
-          <sp who="le-sultan" xml:id="9-1">
-            <speaker>LE SULTAN, <em>seul</em></speaker>
-            <l n="317" xml:id="l317"> </l>
-            <l n="318" xml:id="l318">Quel orgueil ! ainsi faite, oser avec audace,</l>
-            <l n="319" xml:id="l319">Dans mon sérail auguste extorquer une place !</l>
-            <l n="320" xml:id="l320">Fort bien, Sire Apollon, courage, est-ce là tout ?</l>
-            <l n="321" xml:id="l321">Et deux. Allons, encore une autre dans ce goût !</l>
-            <l n="322" xml:id="l322">De beautés désormais vous ferez mes emplettes.</l>
-            <l n="323" xml:id="l323"> </l>
-            <l n="324" xml:id="l324"> </l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, seul</speaker>
+            <l n="222">Quel orgueil ! ainsi faite, oser avec audace,</l>
+            <l n="223">Dans mon sérail auguste extorquer une place !</l>
+            <l n="224">Fort bien, Sire Apollon, courage, est-ce là tout ?</l>
+            <l n="225">Et deux. Allons, encore une autre dans ce goût !</l>
+            <l n="226">De beautés désormais vous ferez mes emplettes.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="10">
+        <div type="scene" xml:id="X">
           <head>Scène X</head>
-            <l n="325" xml:id="l325"> </l>
-          <sp who="le-sultan" xml:id="10-1">
-            <speaker>LE SULTAN, L’EUNUQUE</speaker>
-            <l n="326" xml:id="l326"> </l>
-          </sp>
-          <sp who="l’eunuque" xml:id="10-2">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="327" xml:id="l327">Une Dame, Seigneur, qui paraît des mieux faites,</l>
-            <l n="328" xml:id="l328">Demande à vous parler.</l>
+            <l n="227">Une Dame, Seigneur, qui paraît des mieux faites,</l>
+            <l n="228">Demande à vous parler.</l>
           </sp>
-          <sp who="le-sultan" xml:id="10-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="329" xml:id="l329">A-t-elle dit son nom ?</l>
+            <l n="229">A-t-elle dit son nom ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="10-4">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="330" xml:id="l330">Marianne.</l>
+            <l n="230">Marianne.</l>
           </sp>
-          <sp who="le-sultan" xml:id="10-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="331" xml:id="l331">Encore une ! oh qu’elle aille... mais non ;</l>
-            <l n="332" xml:id="l332">Qu’elle entre ; il n’est pas temps que je m’impatiente,</l>
-            <l n="333" xml:id="l333">Peut-être celle-ci remplira mon attente.</l>
-            <l n="334" xml:id="l334">Voyons-la.</l>
-            <l n="335" xml:id="l335"> </l>
-            <l n="336" xml:id="l336"> </l>
+            <l n="231">Encore une ! oh qu’elle aille... mais non ;</l>
+            <l n="232">Qu’elle entre ; il n’est pas temps que je m’impatiente,</l>
+            <l n="233">Peut-être celle-ci remplira mon attente.</l>
+            <l n="234">Voyons-la.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="11">
+        <div type="scene" xml:id="XI">
           <head>Scène XI</head>
-            <l n="337" xml:id="l337"> </l>
-          <sp who="le-sultan" xml:id="11-1">
-            <speaker>LE SULTAN, LA MARIANNE <em>de l’Abbé Nadal, représentée par Pantalon, voilé et richement habillé en Reine</em></speaker>
-            <l n="338" xml:id="l338"> </l>
-          </sp>
-          <sp who="le-sultan" xml:id="11-2">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="339" xml:id="l339">C’est ma foi la bonne pour le coup !</l>
-            <l n="340" xml:id="l340">Ce port majestueux promet déjà beaucoup.</l>
-            <l n="341" xml:id="l341">Quelle taille élégante, et quel air de noblesse !</l>
-            <l n="342" xml:id="l342">Est-ce vous, Marianne ? Oui, divine Princesse !</l>
-            <l n="343" xml:id="l343">Je le sens aux transports qui me viennent saisir,</l>
-            <stage><hi rend="italic"><em>Il la dévoile, et voyant l’horrible visage de Pantalon, il s’écrie.</em></hi></stage>
-            <l n="345" xml:id="l345">Enfin... fi donc au diable ! au Vizir ! au Vizir.</l>
+            <l n="235">C’est ma foi la bonne pour le coup !</l>
+            <l n="236">Ce port majestueux promet déjà beaucoup.</l>
+            <l n="237">Quelle taille élégante, et quel air de noblesse !</l>
+            <l n="238">Est-ce vous, Marianne ? Oui, divine Princesse !</l>
+            <l n="239">Je le sens aux transports qui me viennent saisir,</l>
+            <stage>&lt;em&gt;Il la dévoile, et voyant l’horrible visage de Pantalon, il s’écrie.&lt;/em&gt;</stage>
+            <l n="240">Enfin... fi donc au diable ! au Vizir ! au Vizir.</l>
           </sp>
-          <sp who="marianne-" xml:id="11-3">
-            <speaker>MARIANNE-<em>Pantalon.</em></speaker>
-            <l n="346" xml:id="l346">Quoi, Seigneur, vous trouvez que je ne suis pas belle ?</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Pantalon.</speaker>
+            <l n="241">Quoi, Seigneur, vous trouvez que je ne suis pas belle ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="11-4">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="347" xml:id="l347">Bâcha, conduisez-la vite à Polichinelle !</l>
-            <l n="348" xml:id="l348">Que sa présence ici ne blesse plus mes yeux !</l>
+            <l n="242">Bâcha, conduisez-la vite à Polichinelle !</l>
+            <l n="243">Que sa présence ici ne blesse plus mes yeux !</l>
           </sp>
-          <sp who="marianne-" xml:id="11-5">
-            <speaker>MARIANNE-<em>Pantalon.</em></speaker>
-            <l n="349" xml:id="l349">Je ne reviendrai pas du moins, Seigneur.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Pantalon.</speaker>
+            <l n="244">Je ne reviendrai pas du moins, Seigneur.</l>
           </sp>
-          <sp who="le-sultan" xml:id="11-6">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="350" xml:id="l350">Tant mieux.</l>
-            <l n="351" xml:id="l351"> </l>
-            <l n="352" xml:id="l352"> </l>
+            <l n="245">Tant mieux.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="12">
+        <div type="scene" xml:id="XII">
           <head>Scène XII</head>
-            <l n="353" xml:id="l353"> </l>
-          <sp who="le-sultan" xml:id="12-1">
-            <speaker>LE SULTAN, <em>seul</em></speaker>
-            <l n="354" xml:id="l354"> </l>
-            <l n="355" xml:id="l355">Où suis-je ? tout, je crois, en ces lieux haïssables,</l>
-            <l n="356" xml:id="l356">Se change en Marianne, ou, pour mieux dire, en Diables</l>
-            <l n="357" xml:id="l357">Déchaînés, et d’accord pour me martyriser !</l>
-            <l n="358" xml:id="l358">En serait-ce une encor qu’on viendrait m’annoncer ?</l>
-            <l n="359" xml:id="l359"> </l>
-            <l n="360" xml:id="l360"> </l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, seul</speaker>
+            <l n="246">Où suis-je ? tout, je crois, en ces lieux haïssables,</l>
+            <l n="247">Se change en Marianne, ou, pour mieux dire, en Diables</l>
+            <l n="248">Déchaînés, et d’accord pour me martyriser !</l>
+            <l n="249">En serait-ce une encor qu’on viendrait m’annoncer ?</l>
           </sp>
         </div>
-        <div type="scene" xml:id="13">
+        <div type="scene" xml:id="XIII">
           <head>Scène XIII</head>
-            <l n="361" xml:id="l361"> </l>
-          <sp who="le-sultan" xml:id="13-1">
-            <speaker>LE SULTAN, L’EUNUQUE<a href="#_ftn9" name="_ftnref9" title="" id="_ftnref9">[9]</a></speaker>
-            <l n="362" xml:id="l362"> </l>
-          </sp>
-          <sp who="le-sultan" xml:id="13-2">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <stage><hi rend="italic"><em>Air : des Trembleurs.</em></hi></stage>
-          <stage>L’EUNUQUE.</stage>
+            <stage>&lt;em&gt;Air : des Trembleurs.&lt;/em&gt;</stage>
+            <l n="250">Quelque vilaine pécore,</l>
           </sp>
-          <sp who="le-sultan" xml:id="13-3">
-            <speaker>LE SULTAN.</speaker>
-            <l n="364" xml:id="l364">Je ne la veux point voir.</l>
-          </sp>
-          <sp who="l’eunuque" xml:id="13-4">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="365" xml:id="l365">Elle a pourtant, je pense,</l>
-            <l n="366" xml:id="l366">De l’Eunuque Apollon la lettre de créance.</l>
+            <l n="251">Seigneur, vous avez raison :</l>
           </sp>
-          <sp who="le-sultan" xml:id="13-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="367" xml:id="l367">Qu’elle aille en l’autre monde, avec mes trisaïeux,</l>
-            <l n="368" xml:id="l368">Trafiquer cette lettre et des appas si vieux.</l>
-            <l n="369" xml:id="l369">Sors, et, si tu m’en crois, ne reviens, de la vie,</l>
-            <l n="370" xml:id="l370">Du nom de Marianne, affliger mon ouïe.</l>
-            <l n="371" xml:id="l371"> </l>
-            <l n="372" xml:id="l372"> </l>
+            <l n="252">Je ne la veux point voir.</l>
+          </sp>
+          <sp who="#l’eunuque">
+            <speaker>L’EUNUQUE.</speaker>
+            <l n="253">Elle a pourtant, je pense,</l>
+            <l n="254">De l’Eunuque Apollon la lettre de créance.</l>
+          </sp>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN.</speaker>
+            <l n="255">Qu’elle aille en l’autre monde, avec mes trisaïeux,</l>
+            <l n="256">Trafiquer cette lettre et des appas si vieux.</l>
+            <l n="257">Sors, et, si tu m’en crois, ne reviens, de la vie,</l>
+            <l n="258">Du nom de Marianne, affliger mon ouïe.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="14">
+        <div type="scene" xml:id="XIV">
           <head>Scène XIV</head>
-            <l n="373" xml:id="l373"> </l>
-          <sp who="le-sultan" xml:id="14-1">
-            <speaker>LE SULTAN, <em>la seconde</em> MARIANNE <em>de M. de Voltaire, avec un grand manteau de Reine, tout couvert de clinquant</em></speaker>
-            <l n="374" xml:id="l374"> </l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="259">Je reparais, Seigneur, et je viens, d’une œillade,</l>
+            <l n="260">Obliger votre cœur à battre la chamade.</l>
+            <l n="261">De mes charmes vainqueurs vous subirez la loi :</l>
+            <l n="262">Vous m’aimerez enfin ; ou vous direz pourquoi.</l>
+            <l n="263">Vos mépris méritaient que je me mutinasse,</l>
+            <l n="264">Qu’à votre mauvais sort je vous abandonnasse.</l>
+            <l n="265">Mais, Seigneur, je suis bonne, et généreuse au point</l>
+            <l n="266">D’accorder un pardon...</l>
           </sp>
-          <sp who="marianne-" xml:id="14-2">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="375" xml:id="l375">Je reparais, Seigneur, et je viens, d’une œillade,</l>
-            <l n="376" xml:id="l376">Obliger votre cœur à battre la chamade.</l>
-            <l n="377" xml:id="l377">De mes charmes vainqueurs vous subirez la loi :</l>
-            <l n="378" xml:id="l378">Vous m’aimerez enfin ; ou vous direz pourquoi.</l>
-            <l n="379" xml:id="l379">Vos mépris méritaient que je me mutinasse,</l>
-            <l n="380" xml:id="l380">Qu’à votre mauvais sort je vous abandonnasse.</l>
-            <l n="381" xml:id="l381">Mais, Seigneur, je suis bonne, et généreuse au point</l>
-            <l n="382" xml:id="l382">D’accorder un pardon...</l>
-          </sp>
-          <sp who="le-sultan" xml:id="14-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="383" xml:id="l383">Qu’on ne demande point !</l>
-            <l n="384" xml:id="l384">Fuyez-moi pour jamais ; votre lourde présence,</l>
-            <l n="385" xml:id="l385">Tient pour moi du pardon, moins que de la vengeance</l>
-            <l n="386" xml:id="l386">Je ne vous puis souffrir. Et ces charmes exquis,</l>
-            <l n="387" xml:id="l387">Où sont-ils ? Plus parée, est-ce en avoir acquis !</l>
-            <l n="388" xml:id="l388">Loin de rien voir en vous de nouveau qui m’enflamme,</l>
-            <l n="389" xml:id="l389">Votre prix a baissé de moitié<a href="#_ftn10" name="_ftnref10" title="" id="_ftnref10">[10]</a>. Quoi ! Madame ;</l>
-            <l n="390" xml:id="l390">Pour quelque aune d’étoffe, et ce clinquant de plus,</l>
-            <l n="391" xml:id="l391">Pensez-vous que mes vœux vous en seront mieux dus ?</l>
-            <l n="392" xml:id="l392">Non, non...</l>
+            <l n="267">Qu’on ne demande point !</l>
+            <l n="268">Fuyez-moi pour jamais ; votre lourde présence,</l>
+            <l n="269">Tient pour moi du pardon, moins que de la vengeance</l>
+            <l n="270">Je ne vous puis souffrir. Et ces charmes exquis,</l>
+            <l n="271">Où sont-ils ? Plus parée, est-ce en avoir acquis !</l>
+            <l n="272">Loin de rien voir en vous de nouveau qui m’enflamme,</l>
+            <l n="273">Votre prix a baissé de moitié[10]. Quoi ! Madame ;</l>
+            <l n="274">Pour quelque aune d’étoffe, et ce clinquant de plus,</l>
+            <l n="275">Pensez-vous que mes vœux vous en seront mieux dus ?</l>
+            <l n="276">Non, non...</l>
           </sp>
-          <sp who="em>la-seconde" xml:id="14-4">
-            <speaker><em>La seconde</em> MARIANNE <em>de M. de Voltaire, à part.</em></speaker>
-            <l n="393" xml:id="l393">Rien ne pourra toucher ce cœur de roche.</l>
-            <stage><hi rend="italic"><em>Au Sultan.</em></hi></stage>
-            <l n="395" xml:id="l395">Écoutez. J’ai, Seigneur, de l’arsenic en poche :</l>
-            <l n="396" xml:id="l396">Peste ! c’est du poison qui fait passer le pas,</l>
-            <l n="397" xml:id="l397">Celui-là ! Si j’en meurs, je n’en reviendrai pas.</l>
-            <l n="398" xml:id="l398">Et je suis assez folle...</l>
+          <sp who="#/em&gt;-marianne">
+            <speaker>La seconde MARIANNE de M. de Voltaire, à part.</speaker>
+            <l n="277">Rien ne pourra toucher ce cœur de roche.</l>
+            <stage>&lt;em&gt;Au Sultan.&lt;/em&gt;</stage>
+            <l n="278">Écoutez. J’ai, Seigneur, de l’arsenic en poche :</l>
+            <l n="279">Peste ! c’est du poison qui fait passer le pas,</l>
+            <l n="280">Celui-là ! Si j’en meurs, je n’en reviendrai pas.</l>
+            <l n="281">Et je suis assez folle...</l>
           </sp>
-          <sp who="le-sultan" xml:id="14-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="399" xml:id="l399">Oh ! soyez folle ou sage,</l>
-            <l n="400" xml:id="l400">Et vous empoisonnez d’un bole ou d’un breuvage.</l>
-            <l n="401" xml:id="l401">Buvez, mangez, crevez... Bon ! voici mon butor :</l>
-            <l n="402" xml:id="l402">Bourreau ! n’en viens-tu pas annoncer une encor ?</l>
-            <l n="403" xml:id="l403"> </l>
-            <l n="404" xml:id="l404"> </l>
+            <l n="282">Oh ! soyez folle ou sage,</l>
+            <l n="283">Et vous empoisonnez d’un bole ou d’un breuvage.</l>
+            <l n="284">Buvez, mangez, crevez... Bon ! voici mon butor :</l>
+            <l n="285">Bourreau ! n’en viens-tu pas annoncer une encor ?</l>
           </sp>
         </div>
-        <div type="scene" xml:id="15">
+        <div type="scene" xml:id="XV">
           <head>Scène XV</head>
-            <l n="405" xml:id="l405"> </l>
-          <sp who="le-sultan" xml:id="15-1">
-            <speaker>LE SULTAN, <em>la seconde</em> MARIANNE <em>de M. de Voltaire</em>, L’EUNUQUE</speaker>
-            <l n="406" xml:id="l406"> </l>
-          </sp>
-          <sp who="l’eunuque" xml:id="15-2">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="407" xml:id="l407">Une Marianne ?</l>
+            <l n="286">Une Marianne ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="15-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="408" xml:id="l408">Oui ; tu vas te faire battre !</l>
+            <l n="287">Oui ; tu vas te faire battre !</l>
           </sp>
-          <sp who="l’eunuque" xml:id="15-4">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="409" xml:id="l409">Une ? oh que non, Seigneur, j’en viens annoncer quatre<a href="#_ftn11" name="_ftnref11" title="" id="_ftnref11">[11]</a>.</l>
+            <l n="288">Une ? oh que non, Seigneur, j’en viens annoncer quatre[11].</l>
           </sp>
-          <sp who="le-sultan" xml:id="15-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="410" xml:id="l410">Quatre ! C’est bien le diable ! Et de la part de qui ?</l>
+            <l n="289">Quatre ! C’est bien le diable ! Et de la part de qui ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="15-6">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="411" xml:id="l411">De la part du démon Couplegor. Les voici.</l>
-            <l n="412" xml:id="l412"> </l>
-            <l n="413" xml:id="l413"> </l>
+            <l n="290">De la part du démon Couplegor. Les voici.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="16">
+        <div type="scene" xml:id="XVI">
           <head>Scène XVI</head>
-            <l n="414" xml:id="l414"> </l>
-          <sp who="le-sultan" xml:id="16-1">
-            <speaker>LE SULTAN, <em>la seconde</em> MARIANNE <em>de M. de Voltaire, les quatre</em> MARIANNES <em>de la Foire, courte-vêtues, en corset et en cotillons rouges</em></speaker>
-            <l n="415" xml:id="l415"> </l>
-          <stage><em>Les quatre</em> MARIANNES <em>chantent en trio, sur un air connu.</em></stage>
+          <sp who="#/em&gt;-mariannes">
+            <speaker>Les quatre MARIANNES chantent en trio, sur un air connu.</speaker>
+            <l n="291">J’avons des guenilles !</l>
           </sp>
-          <sp who="une-des-quatre" xml:id="16-2">
-            <speaker>UNE DES QUATRE, <em>s’adressant au Public.</em></speaker>
-            <l n="416" xml:id="l416">Grand Prince, fussiez-vous le Roi des Misanthropes,</l>
-            <l n="417" xml:id="l417">J’espérons...</l>
+          <sp who="#une-des-quatre">
+            <speaker>UNE DES QUATRE, s’adressant au Public.</speaker>
+            <l n="292">Grand Prince, fussiez-vous le Roi des Misanthropes,</l>
+            <l n="293">J’espérons...</l>
           </sp>
-          <sp who="marianne-" xml:id="16-3">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="418" xml:id="l418">Parlez donc, Mesdames les Salopes,</l>
-            <l n="419" xml:id="l419">D’où vous vient cette audace, avec vos guenillons.</l>
-            <l n="420" xml:id="l420">De vous oser parer du plus noble des noms ?</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="294">Parlez donc, Mesdames les Salopes,</l>
+            <l n="295">D’où vous vient cette audace, avec vos guenillons.</l>
+            <l n="296">De vous oser parer du plus noble des noms ?</l>
           </sp>
-          <sp who="marianne" xml:id="16-4">
-            <speaker>MARIANNE <em>de la Foire.</em></speaker>
-            <stage><hi rend="italic"><em>Air connu.</em></hi></stage>
-          <stage>TOUTES QUATRE ENSEMBLE.</stage>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE de la Foire.</speaker>
+            <stage>&lt;em&gt;Air connu.&lt;/em&gt;</stage>
+            <l n="297">Marie Salisson est en colère,</l>
           </sp>
-          <sp who="la-première" xml:id="16-5">
+          <sp who="#toutes-quatre-ensemble">
+            <speaker>TOUTES QUATRE ENSEMBLE.</speaker>
+            <l n="298">Ho, ho, tourelouribo !</l>
+          </sp>
+          <sp who="#la-première">
             <speaker>LA PREMIÈRE.</speaker>
-            <l n="422" xml:id="l422">C’est bien à vous, rebut du Pont-neuf et des Halles,</l>
-          <stage>TOUTES QUATRE ENSEMBLE.</stage>
+            <l n="299">Des compliments du Parterre.</l>
           </sp>
-          <sp who="la-première" xml:id="16-6">
+          <sp who="#toutes-quatre-ensemble">
+            <speaker>TOUTES QUATRE ENSEMBLE.</speaker>
+            <l n="300">Ho, ho, tourelouribo !</l>
+          </sp>
+          <sp who="#la-première">
             <speaker>LA PREMIÈRE.</speaker>
-            <l n="423" xml:id="l423">D’oser, impudemment, faire ici les rivales ;</l>
-          <stage>TOUTES QUATRE ENSEMBLE, <em>se criant aux oreilles.</em></stage>
+            <l n="301">Et de nous entendre braire.</l>
           </sp>
-          <sp who="marianne-" xml:id="16-7">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="424" xml:id="l424">Et, du sacré Vallon, l’opprobre de tout temps,</l>
-            <l n="425" xml:id="l425">De croire escamoter un cœur où je prétends.</l>
+          <sp who="#toutes-quatre-ensemble">
+            <speaker>TOUTES QUATRE ENSEMBLE, se criant aux oreilles.</speaker>
+            <l n="302">Ho, ho, ho, tourelouribo !</l>
           </sp>
-          <sp who="la-marianne" xml:id="16-8">
-            <speaker>LA MARIANNE <em>de la Foire.</em></speaker>
-            <stage><hi rend="italic"><em>Air : C’est l’Abbesse de Poissy, etc.</em></hi></stage>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="303">C’est bien à vous, rebut du Pont-neuf et des Halles,</l>
+            <l n="304">D’oser, impudemment, faire ici les rivales ;</l>
+            <l n="305">Et, du sacré Vallon, l’opprobre de tout temps,</l>
+            <l n="306">De croire escamoter un cœur où je prétends.</l>
           </sp>
-          <sp who="marianne-" xml:id="16-9">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="427" xml:id="l427">Vous pouvez bien vanter à mes yeux, devant moi,</l>
-            <l n="428" xml:id="l428">Des appas si grossiers et de si bas aloi ?</l>
+          <sp who="#la-marianne">
+            <speaker>LA MARIANNE de la Foire.</speaker>
+            <stage>&lt;em&gt;Air : C’est l’Abbesse de Poissy, etc.&lt;/em&gt;</stage>
+            <l n="307">Je l’aurai peut-être, hélas !</l>
           </sp>
-          <sp who="la-marianne" xml:id="16-10">
-            <speaker>LA MARIANNE <em>de la Foire.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Des sept sauts.</em></hi></stage>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="308">Vous pouvez bien vanter à mes yeux, devant moi,</l>
+            <l n="309">Des appas si grossiers et de si bas aloi ?</l>
           </sp>
-          <sp who="marianne-" xml:id="16-11">
-            <speaker>MARIANNE-<em>Arlequin, au Public qui rit.</em></speaker>
-            <l n="430" xml:id="l430">Riez, applaudissez encor à la Carogne,</l>
-            <l n="431" xml:id="l431">Un flon flon ridicule, un conte à la cicogne,</l>
-            <l n="432" xml:id="l432">Tout cela vous amuse ; un rien vous réjouit.</l>
-            <l n="433" xml:id="l433">De mes grands sentiments, quoi c’est-là tout le fruit ?</l>
+          <sp who="#la-marianne">
+            <speaker>LA MARIANNE de la Foire.</speaker>
+            <stage>&lt;em&gt;Air : Des sept sauts.&lt;/em&gt;</stage>
+            <l n="310">Du moins, je n’ons pas à ta toilette,</l>
           </sp>
-          <sp who="le-sultan" xml:id="16-12">
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, au Public qui rit.</speaker>
+            <l n="311">Riez, applaudissez encor à la Carogne,</l>
+            <l n="312">Un flon flon ridicule, un conte à la cicogne,</l>
+            <l n="313">Tout cela vous amuse ; un rien vous réjouit.</l>
+            <l n="314">De mes grands sentiments, quoi c’est-là tout le fruit ?</l>
+          </sp>
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="434" xml:id="l434">Oh trêve, s’il vous plaît, de complaintes pareilles,</l>
-            <l n="435" xml:id="l435">Ou vous aurez du Sceptre encor par les oreilles.</l>
+            <l n="315">Oh trêve, s’il vous plaît, de complaintes pareilles,</l>
+            <l n="316">Ou vous aurez du Sceptre encor par les oreilles.</l>
           </sp>
-          <sp who="marianne-" xml:id="16-13">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="436" xml:id="l436">Dites-moi donc au moins que vous les dédaignez !</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="317">Dites-moi donc au moins que vous les dédaignez !</l>
           </sp>
-          <sp who="le-sultan" xml:id="16-14">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="437" xml:id="l437">Je puis les dédaigner, sans que vous y gagniez.</l>
+            <l n="318">Je puis les dédaigner, sans que vous y gagniez.</l>
           </sp>
-          <sp who="marianne" xml:id="16-15">
-            <speaker>MARIANNE, <em>aux Foraines.</em></speaker>
-            <l n="438" xml:id="l438">Retirez-vous, allons bégueules ! que l’on sorte !</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE, aux Foraines.</speaker>
+            <l n="319">Retirez-vous, allons bégueules ! que l’on sorte !</l>
           </sp>
-          <sp who="la-foraine" xml:id="16-16">
+          <sp who="#la-foraine">
             <speaker>LA FORAINE.</speaker>
-            <l n="439" xml:id="l439">Que Sire le Roi parle, et je passons la porte.</l>
-            <stage><hi rend="italic"><em>Air : J’en ferai la folie, sans doute.</em></hi></stage>
-            <l n="441" xml:id="l441">De notre règne aussi, le terme est toujours court ;</l>
-            <l n="442" xml:id="l442">Et la Foire finie, adieu ; plus de retour.</l>
-            <stage><hi rend="italic"><em>Air : Et tiens-moi bien, tandis que tu me tiens.</em></hi></stage>
+            <l n="320">Que Sire le Roi parle, et je passons la porte.</l>
+            <stage>&lt;em&gt;Air : J’en ferai la folie, sans doute.&lt;/em&gt;</stage>
+            <l n="321">Drez que de farmer boutique</l>
+            <l n="322">De notre règne aussi, le terme est toujours court ;</l>
+            <l n="323">Et la Foire finie, adieu ; plus de retour.</l>
+            <stage>&lt;em&gt;Air : Et tiens-moi bien, tandis que tu me tiens.&lt;/em&gt;</stage>
+            <l n="324">Aussi nous sarvon-je d’un refrain,</l>
           </sp>
-          <sp who="marianne-" xml:id="16-17">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="444" xml:id="l444">Eh quel est ce refrain, qu’au Parterre endurci</l>
-            <l n="445" xml:id="l445">J’aurais à votre avis pu dire ?</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="325">Eh quel est ce refrain, qu’au Parterre endurci</l>
+            <l n="326">J’aurais à votre avis pu dire ?</l>
           </sp>
-          <sp who="la-foraine" xml:id="16-18">
+          <sp who="#la-foraine">
             <speaker>LA FORAINE.</speaker>
-            <l n="446" xml:id="l446">Le voici.</l>
-            <stage><hi rend="italic"><em>Air connu.</em></hi></stage>
+            <l n="327">Le voici.</l>
+            <stage>&lt;em&gt;Air connu.&lt;/em&gt;</stage>
+            <l n="328">Et tiens-moi bien, tandis que tu me tiens,</l>
           </sp>
-          <sp who="marianne-" xml:id="16-19">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="448" xml:id="l448">Allez, vous radotez.</l>
-            <l n="449" xml:id="l449"> </l>
-            <l n="450" xml:id="l450"> </l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="329">Allez, vous radotez.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="17">
+        <div type="scene" xml:id="XVII">
           <head>Scène XVII</head>
-            <l n="451" xml:id="l451"> </l>
-          <sp who="les-acteurs" xml:id="17-1">
-            <speaker>LES ACTEURS <em>de la Scène précédente, et</em> MARIANNE-<em>Scaramouche</em></speaker>
-            <l n="452" xml:id="l452"> </l>
-          </sp>
-          <sp who="marianne-" xml:id="17-2">
-            <speaker>MARIANNE-<em>Scaramouche.</em></speaker>
-            <l n="453" xml:id="l453">Des drôlesses, dit-on,</l>
-            <l n="454" xml:id="l454">Osent à vos faveurs aspirer sous mon nom !</l>
-            <l n="455" xml:id="l455">Et je viens...</l>
-            <l n="456" xml:id="l456"> </l>
-            <l n="457" xml:id="l457"> </l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Scaramouche.</speaker>
+            <l n="330">Des drôlesses, dit-on,</l>
+            <l n="331">Osent à vos faveurs aspirer sous mon nom !</l>
+            <l n="332">Et je viens...</l>
           </sp>
         </div>
-        <div type="scene" xml:id="18">
+        <div type="scene" xml:id="XVIII">
           <head>Scène XVIII</head>
-            <l n="458" xml:id="l458"> </l>
-          <sp who="les-acteurs" xml:id="18-1">
-            <speaker>LES ACTEURS <em>de la Scène précédente, et</em> MARIANNE <em>de l’Abbé Nadal</em></speaker>
-            <l n="459" xml:id="l459"> </l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE de Nadal.</speaker>
+            <l n="333">On m’a dit, qu’au rang de vos Sultanes,</l>
+            <l n="334">Il s’est offert ici quatre ou cinq Mariannes ;</l>
+            <l n="335">Et je reviens, Seigneur, vous jurer sur ma foi,</l>
+            <l n="336">Qu’il n’en est qu’une bonne et cette une...</l>
           </sp>
-          <sp who="marianne" xml:id="18-2">
-            <speaker>MARIANNE <em>de Nadal.</em></speaker>
-            <l n="460" xml:id="l460">On m’a dit, qu’au rang de vos Sultanes,</l>
-            <l n="461" xml:id="l461">Il s’est offert ici quatre ou cinq Mariannes ;</l>
-            <l n="462" xml:id="l462">Et je reviens, Seigneur, vous jurer sur ma foi,</l>
-            <l n="463" xml:id="l463">Qu’il n’en est qu’une bonne et cette une...</l>
-          </sp>
-          <sp who="toutes-les-sept-ensemble" xml:id="18-3">
+          <sp who="#toutes-les-sept-ensemble">
             <speaker>TOUTES LES SEPT ENSEMBLE.</speaker>
-            <l n="464" xml:id="l464">C’est moi !</l>
-            <l n="465" xml:id="l465"> </l>
-            <l n="466" xml:id="l466"> </l>
+            <l n="337">C’est moi !</l>
           </sp>
         </div>
-        <div type="scene" xml:id="19">
+        <div type="scene" xml:id="XIX">
           <head>Scène XIX</head>
-            <l n="467" xml:id="l467"> </l>
-          <sp who="les-acteurs" xml:id="19-1">
-            <speaker>LES ACTEURS <em>de la Scène précédente, et</em> MARIANNE <em>de Tristan</em></speaker>
-            <l n="468" xml:id="l468"> </l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE de Tristan.</speaker>
+            <l n="338">Oyez mon déconfort ! on veut vous faire niches,</l>
+            <l n="339">Ce sont toutes ici, Mariannes postiches.</l>
+            <l n="340">Je suis la véritable...</l>
           </sp>
-          <sp who="marianne" xml:id="19-2">
-            <speaker>MARIANNE <em>de Tristan.</em></speaker>
-            <l n="469" xml:id="l469">Oyez mon déconfort ! on veut vous faire niches,</l>
-            <l n="470" xml:id="l470">Ce sont toutes ici, Mariannes postiches.</l>
-            <l n="471" xml:id="l471">Je suis la véritable...</l>
-          </sp>
-          <sp who="la-foraine" xml:id="19-3">
+          <sp who="#la-foraine">
             <speaker>LA FORAINE.</speaker>
-            <stage><hi rend="italic"><em>Air : Lampons.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Ma raison s’en va beau train.</em></hi></stage>
+            <stage>&lt;em&gt;Air : Lampons.&lt;/em&gt;</stage>
+            <l n="341">Une Marianne encor !</l>
+            <stage>&lt;em&gt;Air : Ma raison s’en va beau train.&lt;/em&gt;</stage>
+            <l n="342">Ah que de Mariannes !</l>
           </sp>
-          <sp who="marianne" xml:id="19-4">
-            <speaker>MARIANNE <em>de Tristan.</em></speaker>
-            <l n="474" xml:id="l474">Apollon m’est témoin de mon dire : et je sors</l>
-            <l n="475" xml:id="l475">Exprès, pour le Sultan, du Royaume des morts.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE de Tristan.</speaker>
+            <l n="343">Apollon m’est témoin de mon dire : et je sors</l>
+            <l n="344">Exprès, pour le Sultan, du Royaume des morts.</l>
           </sp>
-          <sp who="marianne-" xml:id="19-5">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <l n="476" xml:id="l476">Mal-à-propos. Personne ici ne s’accommode</l>
-            <l n="477" xml:id="l477">D’une beauté passée, et vieille comme Hérode.</l>
-            <l n="478" xml:id="l478">Enfin, Seigneur, la chose est en votre pouvoir :</l>
-            <l n="479" xml:id="l479">Optez ; accordez-nous ; et jetez le mouchoir.</l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="345">Mal-à-propos. Personne ici ne s’accommode</l>
+            <l n="346">D’une beauté passée, et vieille comme Hérode.</l>
+            <l n="347">Enfin, Seigneur, la chose est en votre pouvoir :</l>
+            <l n="348">Optez ; accordez-nous ; et jetez le mouchoir.</l>
           </sp>
-          <sp who="le-sultan" xml:id="19-6">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="480" xml:id="l480">Mesdames, je finis cette guerre importune,</l>
-            <l n="481" xml:id="l481">En jurant que des huit s je n’en aime pas une.</l>
-            <l n="482" xml:id="l482">Est-ce assez ?</l>
+            <l n="349">Mesdames, je finis cette guerre importune,</l>
+            <l n="350">En jurant que des huit s je n’en aime pas une.</l>
+            <l n="351">Est-ce assez ?</l>
           </sp>
-          <sp who="hérode" xml:id="19-7">
-            <speaker>HÉRODE, <em>derrière le Théâtre, crie de toutes ses forces.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Elle est morte la vache à Panier.</em></hi></stage>
+          <sp who="#hérode">
+            <speaker>HÉRODE, derrière le Théâtre, crie de toutes ses forces.</speaker>
+            <stage>&lt;em&gt;Air : Elle est morte la vache à Panier.&lt;/em&gt;</stage>
+            <l n="352">Elle est morte,</l>
           </sp>
-          <sp who="le-sultan" xml:id="19-8">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="484" xml:id="l484">Mais quels cris font retentir ces lieux ?</l>
-            <stage><hi rend="italic"><em>Hérode entre comme un fou.</em></hi></stage>
-            <l n="486" xml:id="l486">Que veut dire ? à qui donc en a ce furieux ?</l>
-            <l n="487" xml:id="l487"> </l>
-            <l n="488" xml:id="l488"> </l>
+            <l n="353">Mais quels cris font retentir ces lieux ?</l>
+            <stage>&lt;em&gt;Hérode entre comme un fou.&lt;/em&gt;</stage>
+            <l n="354">Que veut dire ? à qui donc en a ce furieux ?</l>
           </sp>
         </div>
-        <div type="scene" xml:id="20">
+        <div type="scene" xml:id="XX">
           <head>Scène XX</head>
-            <l n="489" xml:id="l489"> </l>
-          <sp who="hérode" xml:id="20-1">
-            <speaker>LES ACTEURS <em>de la Scène précédente</em>, HÉRODE</speaker>
-            <l n="490" xml:id="l490"> </l>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE de Tristan, en s’enfuyant.</speaker>
+            <l n="355">C’est Hérode ! fuyons !</l>
           </sp>
-          <sp who="marianne" xml:id="20-2">
-            <speaker>MARIANNE <em>de Tristan, en s’enfuyant.</em></speaker>
-            <l n="491" xml:id="l491">C’est Hérode ! fuyons !</l>
-          </sp>
-          <sp who="hérode" xml:id="20-3">
+          <sp who="#hérode">
             <speaker>HÉRODE.</speaker>
-            <stage><hi rend="italic"><em>Air : Le fameux Diogène, ou la femme par sa malice.</em></hi></stage>
+            <stage>&lt;em&gt;Air : Le fameux Diogène, ou la femme par sa malice.&lt;/em&gt;</stage>
+            <l n="356">Que le Diable t’emporte !</l>
           </sp>
-          <sp who="la-foraine" xml:id="20-4">
+          <sp who="#la-foraine">
             <speaker>LA FORAINE.</speaker>
-            <stage><hi rend="italic"><em>Air : Je reviendrai demain au soir.</em></hi></stage>
-          <stage>HÉRODE.</stage>
+            <stage>&lt;em&gt;Air : Je reviendrai demain au soir.&lt;/em&gt;</stage>
+            <l n="357">Cet homme a l’esprit égaré !</l>
           </sp>
-          <sp who="la-foraine" xml:id="20-5">
+          <sp who="#hérode">
+            <speaker>HÉRODE.</speaker>
+            <stage>Je suis désespéré ! &lt;em&gt;(bis.)&lt;/em&gt;</stage>
+          </sp>
+          <sp who="#la-foraine">
             <speaker>LA FORAINE.</speaker>
-            <l n="494" xml:id="l494">La plainte et le malheur assurément sont rares !</l>
-          <stage>HÉRODE.</stage>
+            <l n="358">Que vous est-il donc avenu ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="20-6">
-            <speaker>LE SULTAN.</speaker>
-            <l n="495" xml:id="l495">Et voilà, je l’avoue, un fou des plus bizarres.</l>
-            <stage><hi rend="italic"><em>Même air.</em></hi></stage>
-          <stage>HÉRODE.</stage>
-          </sp>
-          <sp who="le-sultan" xml:id="20-7">
-            <speaker>LE SULTAN.</speaker>
-            <l n="497" xml:id="l497">Qui ? quoi ? parlez ? qui peut troubler ainsi votre âme ?</l>
-            <l n="498" xml:id="l498">Qu’avez-vous perdu ?</l>
-          </sp>
-          <sp who="hérode" xml:id="20-8">
+          <sp who="#hérode">
             <speaker>HÉRODE.</speaker>
-            <l n="499" xml:id="l499">Tout.</l>
+            <stage>Je ne suis point cocu ! &lt;em&gt;(bis.)&lt;/em&gt;</stage>
           </sp>
-          <sp who="le-sultan" xml:id="20-9">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="500" xml:id="l500">Mais quoi donques ?</l>
+            <l n="359">La plainte et le malheur assurément sont rares !</l>
+            <l n="360">Et voilà, je l’avoue, un fou des plus bizarres.</l>
+            <stage>&lt;em&gt;Même air.&lt;/em&gt;</stage>
+            <l n="361">Calmez ce furieux transport.</l>
           </sp>
-          <sp who="hérode" xml:id="20-10">
+          <sp who="#hérode">
             <speaker>HÉRODE.</speaker>
-            <l n="501" xml:id="l501">Ma femme.</l>
+            <stage>Hélas, j’avais grand tort ! &lt;em&gt;(bis.)&lt;/em&gt;&lt;br&gt;</stage>
           </sp>
-          <sp who="le-sultan" xml:id="20-11">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <stage><hi rend="italic"><em>Air : La bonne aventure, ô gué.</em></hi></stage>
+            <l n="362">Qui ? quoi ? parlez ? qui peut troubler ainsi votre âme ?</l>
+            <l n="363">Qu’avez-vous perdu ?</l>
           </sp>
-          <sp who="hérode" xml:id="20-12">
+          <sp who="#hérode">
             <speaker>HÉRODE.</speaker>
-            <stage><hi rend="italic"><em>Fin de l’Air : Je reviendrai demain au soir.</em></hi></stage>
+            <l n="364">Tout.</l>
           </sp>
-          <sp who="le-sultan" xml:id="20-13">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="504" xml:id="l504">Je veux qu’elle vous soit bientôt restituée :</l>
-            <l n="505" xml:id="l505">Voyons ! où peut-elle être ?</l>
+            <l n="365">Mais quoi donques ?</l>
           </sp>
-          <sp who="hérode" xml:id="20-14">
-            <speaker>HÉRODE, <em>d’un air paisible.</em></speaker>
-            <l n="506" xml:id="l506">Hélas ! je l’ai tuée !</l>
-            <stage><hi rend="italic"><em>Reprenant sa fureur s et courant de côté et d’autre.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air connu.</em></hi></stage>
-          </sp>
-          <sp who="le-sultan" xml:id="20-15">
-            <speaker>LE SULTAN, <em>adressant la parole aux autres Mariannes.</em></speaker>
-            <l n="509" xml:id="l509">Mesdames, c’est Hérode, il vous accordera.</l>
-            <stage><hi rend="italic"><em>À Hérode.</em></hi></stage>
-            <l n="511" xml:id="l511">Si Marianne était le nom de votre épouse,</l>
-            <l n="512" xml:id="l512">Consolez-vous, pour une, en voici dix ou douze.</l>
-            <l n="513" xml:id="l513">Et vous ne pouviez mieux vous adresser qu’ici.</l>
-            <l n="514" xml:id="l514">Voyez : est-ce cela ? Tenez : est-ce ceci ?</l>
-            <stage><hi rend="italic"><em>Montrant les unes et les autres.</em></hi></stage>
-          </sp>
-          <sp who="hérode" xml:id="20-16">
+          <sp who="#hérode">
             <speaker>HÉRODE.</speaker>
-            <stage><hi rend="italic"><em>Fin de l’Air : Non, non, il n’est point de si joli nom.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Belle Brune, belle Brune.</em></hi></stage>
-            <stage><hi rend="italic"><em>En s’en allant.</em></hi></stage>
-          <stage>LE SULTAN.</stage>
+            <l n="366">Ma femme.</l>
           </sp>
-          <sp who="hérode" xml:id="20-17">
-            <speaker>HÉRODE, <em>dans les coulisses.</em></speaker>
-            <l n="519" xml:id="l519"> </l>
-            <l n="520" xml:id="l520"> </l>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN.</speaker>
+            <stage>&lt;em&gt;Air : La bonne aventure, ô gué.&lt;/em&gt;</stage>
+            <l n="367">Eh fi donc, ne pleurez pas !</l>
+          </sp>
+          <sp who="#hérode">
+            <speaker>HÉRODE.</speaker>
+            <stage>&lt;em&gt;Fin de l’Air : Je reviendrai demain au soir.&lt;/em&gt;</stage>
+            <l n="368">Je meurs, si je ne la revois !</l>
+          </sp>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN.</speaker>
+            <l n="369">Je veux qu’elle vous soit bientôt restituée :</l>
+            <l n="370">Voyons ! où peut-elle être ?</l>
+          </sp>
+          <sp who="#hérode">
+            <speaker>HÉRODE, d’un air paisible.</speaker>
+            <l n="371">Hélas ! je l’ai tuée !</l>
+            <stage>&lt;em&gt;Reprenant sa fureur s et courant de côté et d’autre.&lt;/em&gt;</stage>
+            <stage>&lt;em&gt;Air connu.&lt;/em&gt;</stage>
+            <stage>L’avez-vous vu passer ? &lt;em&gt;(bis.)&lt;/em&gt;&lt;br&gt;</stage>
+          </sp>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, adressant la parole aux autres Mariannes.</speaker>
+            <l n="372">Mesdames, c’est Hérode, il vous accordera.</l>
+            <stage>&lt;em&gt;À Hérode.&lt;/em&gt;</stage>
+            <l n="373">Si Marianne était le nom de votre épouse,</l>
+            <l n="374">Consolez-vous, pour une, en voici dix ou douze.</l>
+            <l n="375">Et vous ne pouviez mieux vous adresser qu’ici.</l>
+            <l n="376">Voyez : est-ce cela ? Tenez : est-ce ceci ?</l>
+            <stage>&lt;em&gt;Montrant les unes et les autres.&lt;/em&gt;</stage>
+          </sp>
+          <sp who="#hérode">
+            <speaker>HÉRODE.</speaker>
+            <stage>&lt;em&gt;Fin de l’Air : Non, non, il n’est point de si joli nom.&lt;/em&gt;</stage>
+            <l n="377">Non, non !</l>
+            <stage>&lt;em&gt;Air : Belle Brune, belle Brune.&lt;/em&gt;</stage>
+            <stage>&lt;em&gt;En s’en allant.&lt;/em&gt;</stage>
+            <l n="378">Marianne !</l>
+          </sp>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN.</speaker>
+            <l n="379">Ah ventrebleu, quel organe !</l>
+          </sp>
+          <sp who="#hérode">
+            <speaker>HÉRODE, dans les coulisses.</speaker>
+            <l n="380">Marianne !</l>
           </sp>
         </div>
-        <div type="scene" xml:id="21">
+        <div type="scene" xml:id="XXI">
           <head>Scène XXI</head>
-            <l n="521" xml:id="l521"> </l>
-          <sp who="le-sultan-public" xml:id="21-1">
-            <speaker>LE SULTAN-PUBLIC, LES HUIT MARIANNES</speaker>
-            <l n="522" xml:id="l522"> </l>
-          <stage>LE SULTAN.</stage>
-          </sp>
-          <sp who="marianne-" xml:id="21-2">
-            <speaker>MARIANNE-<em>Arlequin.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Voici les Dragons qui viennent.</em></hi></stage>
-          <stage>TOUTES HUIT ENSEMBLE.</stage>
-          </sp>
-          <sp who="le-sultan" xml:id="21-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="524" xml:id="l524">Sortez ! ouais ! que chez moi, du moins, je sois le maître !</l>
-          <stage>MARIANNE-<em>Arlequin.</em></stage>
+            <l n="381">D’Hérode enfin, le jugement nous laisse</l>
           </sp>
-          <sp who="toutes-huit-ensemble" xml:id="21-4">
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="382">Oh bien, Seigneur, en vain l’on me chicane.</l>
+          </sp>
+          <sp who="#toutes-huit-ensemble">
             <speaker>TOUTES HUIT ENSEMBLE.</speaker>
-            <l n="525" xml:id="l525">Que tout, à ce signal, soit prompt à disparaître !</l>
+            <l n="383">Je suis Marianne,</l>
           </sp>
-          <sp who="le-sultan" xml:id="21-5">
-            <speaker>LE SULTAN, <em>les chassant.</em></speaker>
-            <stage><hi rend="italic"><em>Il donne un grand coup de sifflet.</em></hi></stage>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN.</speaker>
+            <stage>&lt;em&gt;Air : Voici les Dragons qui viennent.&lt;/em&gt;</stage>
+            <l n="384">Oh, je perds la tramontane !</l>
           </sp>
-          <sp who="marianne-" xml:id="21-6">
-            <speaker>MARIANNE-<em>Arlequin, aux Mariannes Foraines.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Troussez, Belle, votre cotillon.</em></hi></stage>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin.</speaker>
+            <l n="385">Oui, Seigneur, ou Dieu me damne !</l>
           </sp>
-          <sp who="la-foraine" xml:id="21-7">
-            <speaker>LA FORAINE, <em>aux trois autres.</em></speaker>
-            <l n="528" xml:id="l528"> </l>
-            <l n="529" xml:id="l529"> </l>
+          <sp who="#toutes-huit-ensemble">
+            <speaker>TOUTES HUIT ENSEMBLE.</speaker>
+            <l n="386">Et moi itou !</l>
+          </sp>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, les chassant.</speaker>
+            <l n="387">Sortez ! ouais ! que chez moi, du moins, je sois le maître !</l>
+            <l n="388">Que tout, à ce signal, soit prompt à disparaître !</l>
+            <stage>&lt;em&gt;Il donne un grand coup de sifflet.&lt;/em&gt;</stage>
+          </sp>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE-Arlequin, aux Mariannes Foraines.</speaker>
+            <stage>&lt;em&gt;Air : Troussez, Belle, votre cotillon.&lt;/em&gt;</stage>
+            <l n="389">Adieu donc les Chambrillons,</l>
+          </sp>
+          <sp who="#la-foraine">
+            <speaker>LA FORAINE, aux trois autres.</speaker>
+            <l n="390">Tenez, les Maries souillons,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="22">
+        <div type="scene" xml:id="XXII">
           <head>Scène XXII</head>
-            <l n="530" xml:id="l530"> </l>
-          <sp who="le-sultan" xml:id="22-1">
-            <speaker>LE SULTAN, <em>seul</em></speaker>
-            <l n="531" xml:id="l531"> </l>
-            <l n="532" xml:id="l532">M’en voilà quitte enfin : non jamais, sur les bras,</l>
-            <l n="533" xml:id="l533">Je n’eus, qu’il m’en souvienne, un pareil embarras.</l>
-            <stage><hi rend="italic"><em>Air : Morguienne de vous.</em></hi></stage>
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN, seul</speaker>
+            <l n="391">M’en voilà quitte enfin : non jamais, sur les bras,</l>
+            <l n="392">Je n’eus, qu’il m’en souvienne, un pareil embarras.</l>
+            <stage>&lt;em&gt;Air : Morguienne de vous.&lt;/em&gt;</stage>
+            <l n="393">Bon, l’autre qui revient !</l>
           </sp>
-          <sp who="l’eunuque" xml:id="22-2">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="535" xml:id="l535">Rassurez-vous, Seigneur, et calmez ce courroux.</l>
-            <l n="536" xml:id="l536">Écoutez.</l>
+            <l n="394">Rassurez-vous, Seigneur, et calmez ce courroux.</l>
+            <l n="395">Écoutez.</l>
           </sp>
-          <sp who="le-sultan" xml:id="22-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="537" xml:id="l537">Eh bien donc, trêve de Mariannes !</l>
+            <l n="396">Eh bien donc, trêve de Mariannes !</l>
           </sp>
-          <sp who="l’eunuque" xml:id="22-4">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="538" xml:id="l538">Il s’agit maintenant de Princesses Persanes.</l>
-            <stage><hi rend="italic"><em>Air : La bonne aventure, ô gué.</em></hi></stage>
+            <l n="397">Il s’agit maintenant de Princesses Persanes.</l>
+            <stage>&lt;em&gt;Air : La bonne aventure, ô gué.&lt;/em&gt;</stage>
+            <l n="398">De votre Eunuque divin,</l>
           </sp>
-          <sp who="le-sultan" xml:id="22-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="540" xml:id="l540">Comment la nomme-t-il ?</l>
+            <l n="399">Comment la nomme-t-il ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="22-6">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="541" xml:id="l541">La Reine des Péris<a href="#_ftn13" name="_ftnref13" title="" id="_ftnref13">[13]</a>,</l>
-            <l n="542" xml:id="l542">La Reine, à ce qu’on dit, et des Jeux et des Ris.</l>
+            <l n="400">La Reine des Péris[13],</l>
+            <l n="401">La Reine, à ce qu’on dit, et des Jeux et des Ris.</l>
           </sp>
-          <sp who="le-sultan" xml:id="22-7">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="543" xml:id="l543">Pour la Reine des Ris, cela pourrait bien être ;</l>
-            <l n="544" xml:id="l544">Car je pourrai bien rire, en la voyant paraître :</l>
-            <l n="545" xml:id="l545">Mais pour celle des Jeux, tout franc, j’ai peur que non,</l>
-            <l n="546" xml:id="l546">Et le cœur là-dessus ne me dit rien de bon.</l>
-            <l n="547" xml:id="l547">Un nom, que ne m’apprend la fable, ni l’histoire,</l>
-            <l n="548" xml:id="l548">Me sent peu son Parnasse, et me sent bien sa Foire.</l>
-            <l n="549" xml:id="l549">Qu’elle entre<a href="#_ftn14" name="_ftnref14" title="" id="_ftnref14">[14]</a>. Oh ! oh ! qu’entends-je ? Un son mélodieux !</l>
-            <l n="550" xml:id="l550">S’il faut que tout réponde au prélude burlesque,</l>
-            <l n="551" xml:id="l551">Cette Reine sera passablement grotesque.</l>
-            <l n="552" xml:id="l552"> </l>
-            <l n="553" xml:id="l553"> </l>
+            <l n="402">Pour la Reine des Ris, cela pourrait bien être ;</l>
+            <l n="403">Car je pourrai bien rire, en la voyant paraître :</l>
+            <l n="404">Mais pour celle des Jeux, tout franc, j’ai peur que non,</l>
+            <l n="405">Et le cœur là-dessus ne me dit rien de bon.</l>
+            <l n="406">Un nom, que ne m’apprend la fable, ni l’histoire,</l>
+            <l n="407">Me sent peu son Parnasse, et me sent bien sa Foire.</l>
+            <l n="408">Qu’elle entre[14]. Oh ! oh ! qu’entends-je ? Un son mélodieux !</l>
+            <l n="409">S’il faut que tout réponde au prélude burlesque,</l>
+            <l n="410">Cette Reine sera passablement grotesque.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="23">
+        <div type="scene" xml:id="XXIII">
           <head>Scène XXIII</head>
-            <l n="554" xml:id="l554"> </l>
-          <sp who="le-sultan" xml:id="23-1">
-            <speaker>LE SULTAN, LA REINE DES PÉRIS, UN SAVOYARD</speaker>
-            <l n="555" xml:id="l555"> </l>
+          <sp who="#le-savoyard">
+            <speaker>LE SAVOYARD, en menant un cul de jatte qui n’a point de tête, et qui avance cahin caha, avec des béquilles basses à sa main.</speaker>
+            <l n="411">Qui veut voir la marmotte en vie ?</l>
           </sp>
-          <sp who="le-savoyard" xml:id="23-2">
-            <speaker>LE SAVOYARD, <em>en menant un cul de jatte qui n’a point de tête, et qui avance cahin caha, avec des béquilles basses à sa main.</em></speaker>
-            <l n="556" xml:id="l556">Qui veut voir la marmotte en vie ?</l>
-          </sp>
-          <sp who="le-sultan" xml:id="23-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="557" xml:id="l557">Ah, ventrebleu !</l>
-            <l n="558" xml:id="l558">Un cul de jatte ! oh, mais, ceci passe le jeu !</l>
-            <l n="559" xml:id="l559">Phébus, en l’envoyant, pour comble d’impudence,</l>
-            <l n="560" xml:id="l560">A donc juré de mettre à bout ma patience ?</l>
-            <stage><hi rend="italic"><em>Air : Ma raison s’en va beau train.</em></hi></stage>
-            <l n="562" xml:id="l562">On m’a je crois appris, autrefois, qu’un Péris,</l>
-            <l n="563" xml:id="l563">N’est Ange, Homme, ni Diable ; on m’a très bien appris ;</l>
-            <l n="564" xml:id="l564">Cette Reine en fait foi.</l>
-            <stage><hi rend="italic"><em>Air : Petit boudrillon.</em></hi></stage>
-            <stage><hi rend="italic"><em>Le monstre s’en va.</em></hi></stage>
-            <l n="567" xml:id="l567"> </l>
-            <l n="568" xml:id="l568"> </l>
+            <l n="412">Ah, ventrebleu !</l>
+            <l n="413">Un cul de jatte ! oh, mais, ceci passe le jeu !</l>
+            <l n="414">Phébus, en l’envoyant, pour comble d’impudence,</l>
+            <l n="415">A donc juré de mettre à bout ma patience ?</l>
+            <stage>&lt;em&gt;Air : Ma raison s’en va beau train.&lt;/em&gt;</stage>
+            <l n="416">Mais voyons ce qu’à nos yeux,</l>
+            <l n="417">On m’a je crois appris, autrefois, qu’un Péris,</l>
+            <l n="418">N’est Ange, Homme, ni Diable ; on m’a très bien appris ;</l>
+            <l n="419">Cette Reine en fait foi.</l>
+            <stage>&lt;em&gt;Air : Petit boudrillon.&lt;/em&gt;</stage>
+            <l n="420">Vous êtes une Reine,</l>
+            <stage>&lt;em&gt;Le monstre s’en va.&lt;/em&gt;</stage>
+            <l n="421">Adieu donc tortillon,Boudrillon,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="24">
+        <div type="scene" xml:id="XXIV">
           <head>Scène XXIV</head>
-            <l n="569" xml:id="l569"> </l>
-          <sp who="le-sultant" xml:id="24-1">
-            <speaker>LE SULTANT, <em>seul</em></speaker>
-            <l n="570" xml:id="l570"> </l>
-            <l n="571" xml:id="l571">Ma foi, je n’y tiens plus, j’abandonne la place :</l>
-            <l n="572" xml:id="l572">Je crois que, pour le coup, la peste est au Parnasse.</l>
-            <l n="573" xml:id="l573">Tout y meurt en naissant ; ou, du sacré valoir,</l>
-            <l n="574" xml:id="l574">Si quelque enfant nous vient, ce n’est qu’un avorton.</l>
-            <l n="575" xml:id="l575"> </l>
-            <l n="576" xml:id="l576"> </l>
+          <sp who="#le-sultant">
+            <speaker>LE SULTANT, seul</speaker>
+            <l n="422">Ma foi, je n’y tiens plus, j’abandonne la place :</l>
+            <l n="423">Je crois que, pour le coup, la peste est au Parnasse.</l>
+            <l n="424">Tout y meurt en naissant ; ou, du sacré valoir,</l>
+            <l n="425">Si quelque enfant nous vient, ce n’est qu’un avorton.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="25">
+        <div type="scene" xml:id="XXV">
           <head>Scène XXV</head>
-            <l n="577" xml:id="l577"> </l>
-          <sp who="le-sultan" xml:id="25-1">
-            <speaker>LE SULTAN, L’EUNUQUE</speaker>
-            <l n="578" xml:id="l578"> </l>
-          </sp>
-          <sp who="l’eunuque" xml:id="25-2">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="579" xml:id="l579">Seigneur, est-il bien vrai ?</l>
+            <l n="426">Seigneur, est-il bien vrai ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="25-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="580" xml:id="l580">Quoi ?</l>
+            <l n="427">Quoi ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="25-4">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="581" xml:id="l581">Qu’une Marianne,</l>
-            <l n="582" xml:id="l582">Avec ce nom fâcheux qu’à l’oubli tout condamne,</l>
-            <l n="583" xml:id="l583">Par votre ordre, en ces lieux, revienne en ce moment,</l>
-            <l n="584" xml:id="l584">Et doive ce retour à votre empressement<a href="#_ftn15" name="_ftnref15" title="" id="_ftnref15">[15]</a>.</l>
+            <l n="428">Qu’une Marianne,</l>
+            <l n="429">Avec ce nom fâcheux qu’à l’oubli tout condamne,</l>
+            <l n="430">Par votre ordre, en ces lieux, revienne en ce moment,</l>
+            <l n="431">Et doive ce retour à votre empressement[15].</l>
           </sp>
-          <sp who="le-sultan" xml:id="25-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="585" xml:id="l585">À mon empressement ? Garde ! on vous en impose.</l>
-            <l n="586" xml:id="l586">Qui le dit ?</l>
+            <l n="432">À mon empressement ? Garde ! on vous en impose.</l>
+            <l n="433">Qui le dit ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="25-6">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="587" xml:id="l587">Elle-même.</l>
+            <l n="434">Elle-même.</l>
           </sp>
-          <sp who="le-sultan" xml:id="25-7">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="588" xml:id="l588">Elle ?</l>
+            <l n="435">Elle ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="25-8">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="589" xml:id="l589">Oui, Seigneur, elle ose,</l>
-            <l n="590" xml:id="l590">Dans ses beaux compliments appuyer sur ce point.</l>
+            <l n="436">Oui, Seigneur, elle ose,</l>
+            <l n="437">Dans ses beaux compliments appuyer sur ce point.</l>
           </sp>
-          <sp who="le-sultan" xml:id="25-9">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="591" xml:id="l591">Elle ment. Tenez ferme, et ne la croyez point.</l>
-            <l n="592" xml:id="l592"> </l>
-            <l n="593" xml:id="l593"> </l>
+            <l n="438">Elle ment. Tenez ferme, et ne la croyez point.</l>
+            <l n="439">Qu’elle ne soit pas la plus forte :</l>
           </sp>
         </div>
-        <div type="scene" xml:id="26">
+        <div type="scene" xml:id="XXVI">
           <head>Scène XXVI</head>
-            <l n="594" xml:id="l594"> </l>
-          <sp who="le-sultan" xml:id="26-1">
-            <speaker>LE SULTAN, BILBOQUET, MARIANNE-<em>Arlequin, devenue</em> SILVIA, <em>sautant par la fenêtre</em></speaker>
-            <l n="595" xml:id="l595"> </l>
-          <stage>MARIANNE.</stage>
-          </sp>
-          <sp who="le-sultan" xml:id="26-2">
-            <speaker>LE SULTAN.</speaker>
-            <l n="596" xml:id="l596">Seigneur, je viens, malgré votre aveugle caprice,</l>
-          </sp>
-          <sp who="marianne" xml:id="26-3">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="597" xml:id="l597">Victime de la brigue et de son injustice...</l>
+            <l n="440">Par la porte on me chasse, oh bien,</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-4">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="598" xml:id="l598">Pensez vous qu’on me dupe, et qu’avec de grands mots...</l>
+            <l n="441">Oh, pour cette fois-là, je n’y sais rien de mieux,</l>
           </sp>
-          <sp who="marianne" xml:id="26-5">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="599" xml:id="l599">Juge-t-on d’une Belle, en lui tournant le dos ?</l>
-            <l n="600" xml:id="l600">Regardez-moi du moins !</l>
+            <l n="442">Seigneur, je viens, malgré votre aveugle caprice,</l>
+            <l n="443">Victime de la brigue et de son injustice...</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-6">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="601" xml:id="l601">J’appellerai mes Gardes.</l>
-            <l n="602" xml:id="l602">J’ai de la Marianne, en un mot Jusqu’aux gardes.</l>
-            <l n="603" xml:id="l603">Au Vizir !</l>
+            <l n="444">Pensez vous qu’on me dupe, et qu’avec de grands mots...</l>
           </sp>
-          <sp who="marianne" xml:id="26-7">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="604" xml:id="l604">Seigneur !</l>
+            <l n="445">Juge-t-on d’une Belle, en lui tournant le dos ?</l>
+            <l n="446">Regardez-moi du moins !</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-8">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="605" xml:id="l605">Fi ! cette importunité,</l>
-            <l n="606" xml:id="l606">Convient-elle, Madame, à la noble fierté,</l>
-            <l n="607" xml:id="l607">Qu’à votre abord ici vous avez tant vantée ?</l>
-            <l n="608" xml:id="l608">Tâchez, jusqu’au mépris de paraître irritée ;</l>
-            <l n="609" xml:id="l609">Et craignez, en faisant un ridicule éclat,</l>
-            <l n="610" xml:id="l610">La honte de poursuivre et d’aimer... un ingrat.</l>
+            <l n="447">J’appellerai mes Gardes.</l>
+            <l n="448">J’ai de la Marianne, en un mot Jusqu’aux gardes.</l>
+            <l n="449">Au Vizir !</l>
           </sp>
-          <sp who="marianne" xml:id="26-9">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="611" xml:id="l611">Seigneur, dans cet aveu dépouillé d’artifice,</l>
-            <l n="612" xml:id="l612">J’aime à voir que du moins vous vous rendez justice,</l>
-            <l n="613" xml:id="l613">Et qu’osant, pour époux, m’offrir Polichinel,</l>
-            <l n="614" xml:id="l614">Vous vous abandonniez au crime, en criminel.</l>
-            <l n="615" xml:id="l615">Pour prix du bel aveu que vous venez de faire,</l>
-            <l n="616" xml:id="l616">Sachez, que si j’ai fait tant d’efforts pour vous plaire,</l>
-            <l n="617" xml:id="l617">C’était par amitié, moins que par intérêt.</l>
+            <l n="450">Seigneur !</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-10">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="618" xml:id="l618">Rien ne vous engageait à m’aimer, en effet.</l>
+            <l n="451">Fi ! cette importunité,</l>
+            <l n="452">Convient-elle, Madame, à la noble fierté,</l>
+            <l n="453">Qu’à votre abord ici vous avez tant vantée ?</l>
+            <l n="454">Tâchez, jusqu’au mépris de paraître irritée ;</l>
+            <l n="455">Et craignez, en faisant un ridicule éclat,</l>
+            <l n="456">La honte de poursuivre et d’aimer... un ingrat.</l>
           </sp>
-          <sp who="marianne" xml:id="26-11">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="619" xml:id="l619">Je ne t’ai pas aimé, bourreau ! qu’ai-je donc fait ?</l>
-            <l n="620" xml:id="l620">J’ai démenti, pour toi, ma suffisance extrême !</l>
-            <l n="621" xml:id="l621">Au fond de ton sérail, je t’ai cherché moi-même !</l>
-            <l n="622" xml:id="l622">J’y suis encor, malgré tes incivilités,</l>
-            <l n="623" xml:id="l623">Et, malgré mille avis que j’ai mal écoutés !</l>
-            <l n="624" xml:id="l624">Je t’aimais, me sifflant ; que ferai-je, applaudie !</l>
-            <l n="625" xml:id="l625">Et même, en ce moment, que de sa mélodie,</l>
-            <l n="626" xml:id="l626">Ton sifflet rigoureux est prêt à m’accabler ;</l>
-            <l n="627" xml:id="l627">Barbare !...</l>
+            <l n="457">Seigneur, dans cet aveu dépouillé d’artifice,</l>
+            <l n="458">J’aime à voir que du moins vous vous rendez justice,</l>
+            <l n="459">Et qu’osant, pour époux, m’offrir Polichinel,</l>
+            <l n="460">Vous vous abandonniez au crime, en criminel.</l>
+            <l n="461">Pour prix du bel aveu que vous venez de faire,</l>
+            <l n="462">Sachez, que si j’ai fait tant d’efforts pour vous plaire,</l>
+            <l n="463">C’était par amitié, moins que par intérêt.</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-12">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="628" xml:id="l628">La pitié commence à m’ébranler,</l>
-            <l n="629" xml:id="l629">Madame... Mais que vois-je ? Elle est ma foi passable ;</l>
-            <l n="630" xml:id="l630">Ce visage nouveau n’est plus reconnaissable,</l>
-            <l n="631" xml:id="l631">L’objet est presque tel que je l’ai désiré ;</l>
-            <l n="632" xml:id="l632">Je l’aime ; la toilette a très bien opéré.</l>
-            <l n="633" xml:id="l633">Le mouchoir est à vous.</l>
+            <l n="464">Rien ne vous engageait à m’aimer, en effet.</l>
           </sp>
-          <sp who="marianne" xml:id="26-13">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="634" xml:id="l634">Juste Ciel ! je te loue !</l>
+            <l n="465">Je ne t’ai pas aimé, bourreau ! qu’ai-je donc fait ?</l>
+            <l n="466">J’ai démenti, pour toi, ma suffisance extrême !</l>
+            <l n="467">Au fond de ton sérail, je t’ai cherché moi-même !</l>
+            <l n="468">J’y suis encor, malgré tes incivilités,</l>
+            <l n="469">Et, malgré mille avis que j’ai mal écoutés !</l>
+            <l n="470">Je t’aimais, me sifflant ; que ferai-je, applaudie !</l>
+            <l n="471">Et même, en ce moment, que de sa mélodie,</l>
+            <l n="472">Ton sifflet rigoureux est prêt à m’accabler ;</l>
+            <l n="473">Barbare !...</l>
           </sp>
-          <sp who="bilboquet" xml:id="26-14">
+          <sp who="#le-sultan-public">
+            <speaker>LE SULTAN.</speaker>
+            <l n="474">La pitié commence à m’ébranler,</l>
+            <l n="475">Madame... Mais que vois-je ? Elle est ma foi passable ;</l>
+            <l n="476">Ce visage nouveau n’est plus reconnaissable,</l>
+            <l n="477">L’objet est presque tel que je l’ai désiré ;</l>
+            <l n="478">Je l’aime ; la toilette a très bien opéré.</l>
+            <l n="479">Le mouchoir est à vous.</l>
+          </sp>
+          <sp who="#marianne-l’inconnue">
+            <speaker>MARIANNE.</speaker>
+            <l n="480">Juste Ciel ! je te loue !</l>
+          </sp>
+          <sp who="#bacha-bilboquet">
             <speaker>BILBOQUET.</speaker>
-            <l n="635" xml:id="l635">Ma foi, j’ai bien poussé, je vous jure, à la roue.</l>
+            <l n="481">Ma foi, j’ai bien poussé, je vous jure, à la roue.</l>
           </sp>
-          <sp who="marianne" xml:id="26-15">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="636" xml:id="l636">Taisez-vous, Bilboquet ; craignez peu mon courroux,</l>
-            <l n="637" xml:id="l637">Je ne m’abaisse point à me plaindre de vous.</l>
+            <l n="482">Taisez-vous, Bilboquet ; craignez peu mon courroux,</l>
+            <l n="483">Je ne m’abaisse point à me plaindre de vous.</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-16">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="638" xml:id="l638">Voilà, parler en Reine. Ah...</l>
+            <l n="484">Voilà, parler en Reine. Ah...</l>
           </sp>
-          <sp who="marianne" xml:id="26-17">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="639" xml:id="l639">Le bon de l’affaire</l>
-            <l n="640" xml:id="l640">Serait que Marianne, à présent, fit la fière,</l>
-            <l n="641" xml:id="l641">Et que pour se venger d’un malhonnête accueil,</l>
-            <l n="642" xml:id="l642">Elle ne voulût plus maintenant...</l>
+            <l n="485">Le bon de l’affaire</l>
+            <l n="486">Serait que Marianne, à présent, fit la fière,</l>
+            <l n="487">Et que pour se venger d’un malhonnête accueil,</l>
+            <l n="488">Elle ne voulût plus maintenant...</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-18">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="643" xml:id="l643">Point d’orgueil.</l>
-            <l n="644" xml:id="l644">Avec raison, tantôt vous avez dit, Madame,</l>
-            <l n="645" xml:id="l645">Que l’on ne voyait pas d’abord toute une femme.</l>
-            <l n="646" xml:id="l646">Un peu légèrement, souvent nous triomphons ;</l>
-            <l n="647" xml:id="l647">Vous n’êtes pas encore examinée à fonds.</l>
-            <l n="648" xml:id="l648">Vous chanterez victoire, alors. Une coquette,</l>
-            <l n="649" xml:id="l649">Le matin, quelquefois, emprunte à la toilette,</l>
-            <l n="650" xml:id="l650">Mille appas étrangers, qu’elle y laisse le soir.</l>
-            <l n="651" xml:id="l651">De plus près, au grand jour, je m’apprête à vous voir.</l>
-            <l n="652" xml:id="l652">Cependant en ces lieux, cessant d’être importune,</l>
-            <l n="653" xml:id="l653">Demeurez, j’y consens : touchez-là : sans rancune :</l>
-            <l n="654" xml:id="l654">Marianne, cessons de nous persécuter.</l>
+            <l n="489">Point d’orgueil.</l>
+            <l n="490">Avec raison, tantôt vous avez dit, Madame,</l>
+            <l n="491">Que l’on ne voyait pas d’abord toute une femme.</l>
+            <l n="492">Un peu légèrement, souvent nous triomphons ;</l>
+            <l n="493">Vous n’êtes pas encore examinée à fonds.</l>
+            <l n="494">Vous chanterez victoire, alors. Une coquette,</l>
+            <l n="495">Le matin, quelquefois, emprunte à la toilette,</l>
+            <l n="496">Mille appas étrangers, qu’elle y laisse le soir.</l>
+            <l n="497">De plus près, au grand jour, je m’apprête à vous voir.</l>
+            <l n="498">Cependant en ces lieux, cessant d’être importune,</l>
+            <l n="499">Demeurez, j’y consens : touchez-là : sans rancune :</l>
+            <l n="500">Marianne, cessons de nous persécuter.</l>
           </sp>
-          <sp who="marianne" xml:id="26-19">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="655" xml:id="l655">Cessons. Mais n’allez pas du moins vous arrêter</l>
-            <l n="656" xml:id="l656">À des bruits qu’en tous lieux, contre moi l’on publie ;</l>
-            <l n="657" xml:id="l657">Que ma noble fierté, souvent s’est démentie ;</l>
-            <l n="658" xml:id="l658">Que mon vilain époux, tout vieux qu’il est, m’a plu ;</l>
-            <l n="659" xml:id="l659">Que je l’aurais aimé, pour peu qu’il l’eût voulu ;</l>
-            <l n="660" xml:id="l660">Que voulant par la fuite, éviter sa présence,</l>
-            <l n="661" xml:id="l661">J’ai d’un certain Quidam, imploré l’assistance ;</l>
-            <l n="662" xml:id="l662">Que ce Quidam m’ayant déclaré ses amours,</l>
-            <l n="663" xml:id="l663">Je n’ai pas assez tôt rejeté son secours ;</l>
-            <l n="664" xml:id="l664">Qu’en cela, Marianne, après s’être oubliée,</l>
-            <l n="665" xml:id="l665">S’est près de son époux, très mal justifiée.</l>
-            <l n="666" xml:id="l666">Que sais-je enfin, Seigneur, elle est, vous dira-ton,</l>
-            <l n="667" xml:id="l667">De temps en temps, sans rime, et sou vent, sans raison :</l>
-            <l n="668" xml:id="l668">Soyez aveugle et sourd, trouvez-moi toujours belle.</l>
+            <l n="501">Cessons. Mais n’allez pas du moins vous arrêter</l>
+            <l n="502">À des bruits qu’en tous lieux, contre moi l’on publie ;</l>
+            <l n="503">Que ma noble fierté, souvent s’est démentie ;</l>
+            <l n="504">Que mon vilain époux, tout vieux qu’il est, m’a plu ;</l>
+            <l n="505">Que je l’aurais aimé, pour peu qu’il l’eût voulu ;</l>
+            <l n="506">Que voulant par la fuite, éviter sa présence,</l>
+            <l n="507">J’ai d’un certain Quidam, imploré l’assistance ;</l>
+            <l n="508">Que ce Quidam m’ayant déclaré ses amours,</l>
+            <l n="509">Je n’ai pas assez tôt rejeté son secours ;</l>
+            <l n="510">Qu’en cela, Marianne, après s’être oubliée,</l>
+            <l n="511">S’est près de son époux, très mal justifiée.</l>
+            <l n="512">Que sais-je enfin, Seigneur, elle est, vous dira-ton,</l>
+            <l n="513">De temps en temps, sans rime, et sou vent, sans raison :</l>
+            <l n="514">Soyez aveugle et sourd, trouvez-moi toujours belle.</l>
           </sp>
-          <sp who="le-sultan" xml:id="26-20">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="669" xml:id="l669">Oui, du premier coup d’œil, vous m’avez paru telle.</l>
-            <l n="670" xml:id="l670">Il suffit. Je vous aime ; aimez-moi.</l>
+            <l n="515">Oui, du premier coup d’œil, vous m’avez paru telle.</l>
+            <l n="516">Il suffit. Je vous aime ; aimez-moi.</l>
           </sp>
-          <sp who="marianne" xml:id="26-21">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="671" xml:id="l671">De bon cœur.</l>
-            <l n="672" xml:id="l672"> </l>
-            <l n="673" xml:id="l673"> </l>
+            <l n="517">De bon cœur.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="27">
+        <div type="scene" xml:id="XXVII">
           <head>Scène XXVII</head>
-            <l n="674" xml:id="l674"> </l>
-          <sp who="le-sultan" xml:id="27-1">
-            <speaker>LE SULTAN, MARIANNE, L’EUNUQUE</speaker>
-            <l n="675" xml:id="l675"> </l>
-          </sp>
-          <sp who="l’eunuque" xml:id="27-2">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="676" xml:id="l676">Au voleur ! au voleur ! au voleur ! au voleur !</l>
-            <l n="677" xml:id="l677">Seigneur, sans boursoufler mon récit d’épithètes,</l>
-            <l n="678" xml:id="l678">Des Sultanes, on vient de plier les toilettes :</l>
-            <l n="679" xml:id="l679">On leur a tout pillé ! tout volé ! leur douleur,</l>
-            <l n="680" xml:id="l680">Contre ce brigandage, implore un bras vengeur.</l>
-            <l n="681" xml:id="l681">Sultane Élisabeth, Pauline, Iphigénie,</l>
-            <l n="682" xml:id="l682">Andromaque, que sais-je ? Une foule infinie</l>
-            <l n="683" xml:id="l683">D’autres que vous aimez, souffrent de ce coup-là.</l>
+            <l n="518">Au voleur ! au voleur ! au voleur ! au voleur !</l>
+            <l n="519">Seigneur, sans boursoufler mon récit d’épithètes,</l>
+            <l n="520">Des Sultanes, on vient de plier les toilettes :</l>
+            <l n="521">On leur a tout pillé ! tout volé ! leur douleur,</l>
+            <l n="522">Contre ce brigandage, implore un bras vengeur.</l>
+            <l n="523">Sultane Élisabeth, Pauline, Iphigénie,</l>
+            <l n="524">Andromaque, que sais-je ? Une foule infinie</l>
+            <l n="525">D’autres que vous aimez, souffrent de ce coup-là.</l>
           </sp>
-          <sp who="le-sultan" xml:id="27-3">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="684" xml:id="l684">Et, connaît-on l’auteur de ces vols ?</l>
+            <l n="526">Et, connaît-on l’auteur de ces vols ?</l>
           </sp>
-          <sp who="l’eunuque" xml:id="27-4">
+          <sp who="#l’eunuque">
             <speaker>L’EUNUQUE.</speaker>
-            <l n="685" xml:id="l685">Le voilà.</l>
+            <l n="527">Le voilà.</l>
           </sp>
-          <sp who="le-sultan" xml:id="27-5">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="686" xml:id="l686">Perfide !</l>
+            <l n="528">Perfide !</l>
           </sp>
-          <sp who="marianne" xml:id="27-6">
+          <sp who="#marianne-l’inconnue">
             <speaker>MARIANNE.</speaker>
-            <l n="687" xml:id="l687">Quelques noms, Seigneur, que je mérite,</l>
-            <l n="688" xml:id="l688">Des douceurs, aux gros mots, ne passez pas si vite :</l>
-            <l n="689" xml:id="l689">Que dirait-on de vous ?</l>
+            <l n="529">Quelques noms, Seigneur, que je mérite,</l>
+            <l n="530">Des douceurs, aux gros mots, ne passez pas si vite :</l>
+            <l n="531">Que dirait-on de vous ?</l>
           </sp>
-          <sp who="le-sultan" xml:id="27-7">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="690" xml:id="l690">Ainsi donc aujourd’hui,</l>
-            <l n="691" xml:id="l691">Quand vous voulez charmer, c’est aux dépens d’autrui.</l>
-            <l n="692" xml:id="l692">Que la friponne rende à chacun sa dépouille.</l>
-            <l n="693" xml:id="l693">Sachons ce qu’il en est : vous Gardes, qu’on la fouille :</l>
-            <l n="694" xml:id="l694">S’il lui reste de quoi me plaire et m’émouvoir,</l>
-            <l n="695" xml:id="l695">À la bonne-heure, alors ! Mais j’en doute : allez voir.</l>
-            <stage><hi rend="italic"><em>Seul.</em></hi></stage>
-            <l n="697" xml:id="l697">C’est donc à des objets de cette indigne espèce,</l>
-            <l n="698" xml:id="l698">Que de mon pourvoyeur aboutit la promesse ?</l>
-            <l n="699" xml:id="l699"> </l>
-            <l n="700" xml:id="l700"> </l>
+            <l n="532">Ainsi donc aujourd’hui,</l>
+            <l n="533">Quand vous voulez charmer, c’est aux dépens d’autrui.</l>
+            <l n="534">Que la friponne rende à chacun sa dépouille.</l>
+            <l n="535">Sachons ce qu’il en est : vous Gardes, qu’on la fouille :</l>
+            <l n="536">S’il lui reste de quoi me plaire et m’émouvoir,</l>
+            <l n="537">À la bonne-heure, alors ! Mais j’en doute : allez voir.</l>
+            <stage>&lt;em&gt;Seul.&lt;/em&gt;</stage>
+            <l n="538">C’est donc à des objets de cette indigne espèce,</l>
+            <l n="539">Que de mon pourvoyeur aboutit la promesse ?</l>
           </sp>
         </div>
-        <div type="scene" xml:id="28">
+        <div type="scene" xml:id="XXVIII">
           <head>Scène XXVIII</head>
-            <l n="701" xml:id="l701"> </l>
-          <sp who="apollon" xml:id="28-1">
-            <speaker>LE SULTAN, APOLLON</speaker>
-            <l n="702" xml:id="l702"> </l>
-          </sp>
-          <sp who="le-sultan" xml:id="28-2">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="703" xml:id="l703">Viens Eunuque maudit ! viens recevoir le prix ;</l>
-            <l n="704" xml:id="l704">Des soins...</l>
+            <l n="540">Viens Eunuque maudit ! viens recevoir le prix ;</l>
+            <l n="541">Des soins...</l>
           </sp>
-          <sp who="apollon" xml:id="28-3">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="705" xml:id="l705">Seigneur !...</l>
+            <l n="542">Seigneur !...</l>
           </sp>
-          <sp who="le-sultan" xml:id="28-4">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="706" xml:id="l706">Quel trouble agite ses esprits ?</l>
-            <l n="707" xml:id="l707">Se serait il au Pinde, ému quelques désordres ?</l>
+            <l n="543">Quel trouble agite ses esprits ?</l>
+            <l n="544">Se serait il au Pinde, ému quelques désordres ?</l>
           </sp>
-          <sp who="apollon" xml:id="28-5">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="708" xml:id="l708">Tandis qu’ici, tantôt je recevais vos ordres,</l>
-            <l n="709" xml:id="l709">La fortune attentive à me persécuter,</l>
-            <l n="710" xml:id="l710">Me privait du moyen de les exécuter.</l>
+            <l n="545">Tandis qu’ici, tantôt je recevais vos ordres,</l>
+            <l n="546">La fortune attentive à me persécuter,</l>
+            <l n="547">Me privait du moyen de les exécuter.</l>
           </sp>
-          <sp who="le-sultan" xml:id="28-6">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="711" xml:id="l711">Calme un peu la douleur, ami, qui te transporte.</l>
-            <l n="712" xml:id="l712">Poursuis.</l>
+            <l n="548">Calme un peu la douleur, ami, qui te transporte.</l>
+            <l n="549">Poursuis.</l>
           </sp>
-          <sp who="apollon" xml:id="28-7">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="713" xml:id="l713">J’avais laissé Pégase à votre porte ;</l>
-            <l n="714" xml:id="l714">Le fougueux animal a pris le mords aux dents,</l>
-            <l n="715" xml:id="l715">Et s’envole à travers et les airs et les champs.</l>
+            <l n="550">J’avais laissé Pégase à votre porte ;</l>
+            <l n="551">Le fougueux animal a pris le mords aux dents,</l>
+            <l n="552">Et s’envole à travers et les airs et les champs.</l>
           </sp>
-          <sp who="le-sultan" xml:id="28-8">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="716" xml:id="l716">Il est perdu !</l>
+            <l n="553">Il est perdu !</l>
           </sp>
-          <sp who="apollon" xml:id="28-9">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="717" xml:id="l717">Perdu, sans ressource ! j’ignore,</l>
-            <l n="718" xml:id="l718">Si je dois parcourir le couchant ou l’aurore.</l>
-            <l n="719" xml:id="l719">Est-il chez l’Allobroge ? Est-il chez l’Iroquois ?</l>
-            <l n="720" xml:id="l720">Je ne sais !</l>
+            <l n="554">Perdu, sans ressource ! j’ignore,</l>
+            <l n="555">Si je dois parcourir le couchant ou l’aurore.</l>
+            <l n="556">Est-il chez l’Allobroge ? Est-il chez l’Iroquois ?</l>
+            <l n="557">Je ne sais !</l>
           </sp>
-          <sp who="le-sultan" xml:id="28-10">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="721" xml:id="l721">Que de maux m’accablent à la fois !</l>
+            <l n="558">Que de maux m’accablent à la fois !</l>
           </sp>
-          <sp who="apollon" xml:id="28-11">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="722" xml:id="l722">En me désespérant, j’ai nommé la Princesse,</l>
-            <l n="723" xml:id="l723">Dont la beauté devait dégager ma promesse :</l>
-            <l n="724" xml:id="l724">Plusieurs à la faveur de cet illustre nom,</l>
-            <l n="725" xml:id="l725">De votre patience ont abusé, dit-on.</l>
-            <l n="726" xml:id="l726">Je venais...</l>
+            <l n="559">En me désespérant, j’ai nommé la Princesse,</l>
+            <l n="560">Dont la beauté devait dégager ma promesse :</l>
+            <l n="561">Plusieurs à la faveur de cet illustre nom,</l>
+            <l n="562">De votre patience ont abusé, dit-on.</l>
+            <l n="563">Je venais...</l>
           </sp>
-          <sp who="le-sultan" xml:id="28-12">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="727" xml:id="l727">Soutiens-moi ! ce cheval d’importance</l>
-            <l n="728" xml:id="l728">M’enlève, en s’envolant, toute mon espérance ;</l>
-            <l n="729" xml:id="l729">Quelque Belle pouvait jusqu’ici parvenir,</l>
-            <l n="730" xml:id="l730">Et le Parnasse encor eût pu nous en fournir.</l>
-            <l n="731" xml:id="l731">Pégase avait bon dos ; mais, adieu la voiture !</l>
-            <l n="732" xml:id="l732">C’en est donc fait ! voilà mon sérail en roture !</l>
-            <l n="733" xml:id="l733">Que de laidrons bientôt vont ici m’assiéger !</l>
-            <l n="734" xml:id="l734">Par un terrible exemple, écartons le danger.</l>
-            <l n="735" xml:id="l735">Où sont ces huit guenons à qui j’étais en proie !</l>
-            <l n="736" xml:id="l736">Que de cent coups nouveaux, mon sceptre les foudroie ;</l>
-            <l n="737" xml:id="l737">Toutes les huit ici, je veux les accabler.</l>
-            <l n="738" xml:id="l738">Malheur à qui verra leur chute, sans trembler !</l>
-            <l n="739" xml:id="l739">Mais quel froid tout-à-coup me glace et m’environne !</l>
-            <l n="740" xml:id="l740">Je suis tout morfondu ! d’où vient que je frissonne ?</l>
-            <l n="741" xml:id="l741">Je baille ! jet m’endors ! certain je ne sais quoi...</l>
-            <l n="742" xml:id="l742">Dieux ! quel tas de pavots semés autour de moi !</l>
+            <l n="564">Soutiens-moi ! ce cheval d’importance</l>
+            <l n="565">M’enlève, en s’envolant, toute mon espérance ;</l>
+            <l n="566">Quelque Belle pouvait jusqu’ici parvenir,</l>
+            <l n="567">Et le Parnasse encor eût pu nous en fournir.</l>
+            <l n="568">Pégase avait bon dos ; mais, adieu la voiture !</l>
+            <l n="569">C’en est donc fait ! voilà mon sérail en roture !</l>
+            <l n="570">Que de laidrons bientôt vont ici m’assiéger !</l>
+            <l n="571">Par un terrible exemple, écartons le danger.</l>
+            <l n="572">Où sont ces huit guenons à qui j’étais en proie !</l>
+            <l n="573">Que de cent coups nouveaux, mon sceptre les foudroie ;</l>
+            <l n="574">Toutes les huit ici, je veux les accabler.</l>
+            <l n="575">Malheur à qui verra leur chute, sans trembler !</l>
+            <l n="576">Mais quel froid tout-à-coup me glace et m’environne !</l>
+            <l n="577">Je suis tout morfondu ! d’où vient que je frissonne ?</l>
+            <l n="578">Je baille ! jet m’endors ! certain je ne sais quoi...</l>
+            <l n="579">Dieux ! quel tas de pavots semés autour de moi !</l>
           </sp>
-          <sp who="apollon" xml:id="28-13">
+          <sp who="#apollon">
             <speaker>APOLLON.</speaker>
-            <l n="743" xml:id="l743">Seigneur...</l>
+            <l n="580">Seigneur...</l>
           </sp>
-          <sp who="le-sultan" xml:id="28-14">
+          <sp who="#le-sultan-public">
             <speaker>LE SULTAN.</speaker>
-            <l n="744" xml:id="l744">Quoi ! Marianne, on te revoit encore ?</l>
-            <l n="745" xml:id="l745">Ne pourrai-je éviter un objet que j’abhorre ?</l>
-            <l n="746" xml:id="l746">Comment t’es-tu r’ouvert en ces lieux un chemin ?</l>
-            <l n="747" xml:id="l747">Tiens, tiens !... Mais j’en vois mille ! ô Dieux ! tout en est plein.</l>
-            <l n="748" xml:id="l748">Eh bien, fille d’ennui ! J’attends en paix l’orage !</l>
-            <l n="749" xml:id="l749">Pour qui tant d’opium ! contre qui cette rage,</l>
-            <l n="750" xml:id="l750">Et cet acharnement à le tout consommer ?</l>
-            <l n="751" xml:id="l751">Pour la dernière fois, venez-vous m’assommer ?</l>
-            <l n="752" xml:id="l752">Venez ! à vos fureurs, le Public s’abandonne !</l>
-            <l n="753" xml:id="l753">Mais non, retirez-vous, votre nombre m’étonne :</l>
-            <l n="754" xml:id="l754">Une seule suffit ; et je succombe enfin,</l>
-            <l n="755" xml:id="l755">Sous celle qui renaît au Faubourg Saint-Germain.</l>
-            <l n="756" xml:id="l756"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> Le fameux Arlequin de l’ancien Théâtre Italien, que son Fils nommait majestueusement Arlequin I, du même ton qu’il se nommait et se glorifiait d’être le premier TRIVELIN du Royaume.</l>
-            <stage><hi rend="italic"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2">[2]</a> On a un Recueil de ses Pièces sans nombre, toutes oubliées, excepté <em>Agnès de Chaillot</em>, qui n’est pas de lui.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3">[3]</a> On venait de très mal recevoir <em>Marianne</em>, <em>Brutus</em>, et <em>Artémise</em>.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref4" name="_ftn4" title="" id="_ftn4">[4]</a> NADAL avait aussi donné une Tragédie de <em>Marianne</em>.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref5" name="_ftn5" title="" id="_ftn5">[5]</a> DOMINIQUE, dans <em>Agnès de Chaillot</em>, faisant le rôle du <em>Bailli</em>, parodie de celui d’Alphonse, venait de parfaitement bien réussir à imiter BARON.</hi></stage>
-            <l n="761" xml:id="l761"><a href="#_ftnref6" name="_ftn6" title="" id="_ftn6">[6]</a> NITÉTIS fut assez suivie, quoique peu goûtée ; et, malgré la foule des reconnaissances, tout le monde en sortait, sans avoir été ému.</l>
-            <stage><hi rend="italic"><a href="#_ftnref7" name="_ftn7" title="" id="_ftn7">[7]</a> Cette Marianne, surnommée par Fuzelier dans ses quatre <em>Mariannes</em>, <em>l’Inconnue</em>, en est une qui fut lue aux Comédiens Français, avant celle de M. de Voltaire et de Nadal, et qui fut refusée.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref8" name="_ftn8" title="" id="_ftn8">[8]</a> Cette première <em>Marianne</em> de M. de Voltaire s’empoisonnait en buvant sur le Théâtre, ce qui fit beaucoup rire, et crier : <em>La Reine boit</em>.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref9" name="_ftn9" title="" id="_ftn9">[9]</a> L’impression croyant profiter de la vogue qu’avaient les <em>Mariannes</em>, donna une nouvelle édition de la célèbre <em>Marianne</em> de TRISTAN L’HERMITE.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref10" name="_ftn10" title="" id="_ftn10">[10]</a> La première <em>Marianne</em> avoir pris 40 sols au Parterre ; et cette seconde, plus modeste, se contenta du prix ordinaire de 20 sols.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref11" name="_ftn11" title="" id="_ftn11">[11]</a> FUZELIER venait de faire jouer les quatre <em>Mariannes</em> précédentes à la Foire ; et comme il m’en avait dérobé l’idée, je donnai les huit aux Italiens, pour m’en venger.</hi></stage>
-            <l n="767" xml:id="l767"><a href="#_ftnref12" name="_ftn12" title="" id="_ftn12">[12]</a> Met du Rideau des premières Marionnettes qui se mêlèrent d’Opéra-Comique.</l>
-            <l n="768" xml:id="l768"><a href="#_ftnref13" name="_ftn13" title="" id="_ftn13">[13]</a> Opéra nouveau de Fuzelier, où il n’y avait ni pieds ni tête, et dont la musique d’Aubert ne valait guère mieux que les paroles.</l>
-            <l n="769" xml:id="l769"><a href="#_ftnref14" name="_ftn14" title="" id="_ftn14">[14]</a> Toutes les pièces de la Foire sont, pour la plupart, tirées des Mille et une nuits et Mille et un jours, d’où cet Opéra était tiré. On entendait jouer dans les coulisses d’une orgue d’Allemagne, comme les portent les Savoyards qui montrent la Curiosité.</l>
-            <stage><hi rend="italic"><a href="#_ftnref15" name="_ftn15" title="" id="_ftn15">[15]</a> M. de VOLTAIRE fit faire un compliment au Parterre, avant de représenter sa seconde <em>Marianne</em>, et dit qu’il l’a rendait, par un juste respect, pour l’empressement du Public : on le désavoua tout haut.</hi></stage>
+            <l n="581">Quoi ! Marianne, on te revoit encore ?</l>
+            <l n="582">Ne pourrai-je éviter un objet que j’abhorre ?</l>
+            <l n="583">Comment t’es-tu r’ouvert en ces lieux un chemin ?</l>
+            <l n="584">Tiens, tiens !... Mais j’en vois mille ! ô Dieux ! tout en est plein.</l>
+            <l n="585">Eh bien, fille d’ennui ! J’attends en paix l’orage !</l>
+            <l n="586">Pour qui tant d’opium ! contre qui cette rage,</l>
+            <l n="587">Et cet acharnement à le tout consommer ?</l>
+            <l n="588">Pour la dernière fois, venez-vous m’assommer ?</l>
+            <l n="589">Venez ! à vos fureurs, le Public s’abandonne !</l>
+            <l n="590">Mais non, retirez-vous, votre nombre m’étonne :</l>
+            <l n="591">Une seule suffit ; et je succombe enfin,</l>
+            <l n="592">Sous celle qui renaît au Faubourg Saint-Germain.</l>
+            <l n="593">[1] Le fameux Arlequin de l’ancien Théâtre Italien, que son Fils nommait majestueusement Arlequin I, du même ton qu’il se nommait et se glorifiait d’être le premier TRIVELIN du Royaume.</l>
+            <stage>&lt;a href="#_ftnref2" name="_ftn2" title="" id="_ftn2"&gt;[2]&lt;/a&gt; On a un Recueil de ses Pièces sans nombre, toutes oubliées, excepté &lt;em&gt;Agnès de Chaillot&lt;/em&gt;, qui n’est pas de lui.</stage>
+            <stage>&lt;a href="#_ftnref3" name="_ftn3" title="" id="_ftn3"&gt;[3]&lt;/a&gt; On venait de très mal recevoir &lt;em&gt;Marianne&lt;/em&gt;, &lt;em&gt;Brutus&lt;/em&gt;, et &lt;em&gt;Artémise&lt;/em&gt;.</stage>
+            <stage>&lt;a href="#_ftnref4" name="_ftn4" title="" id="_ftn4"&gt;[4]&lt;/a&gt; NADAL avait aussi donné une Tragédie de &lt;em&gt;Marianne&lt;/em&gt;.</stage>
+            <stage>&lt;a href="#_ftnref5" name="_ftn5" title="" id="_ftn5"&gt;[5]&lt;/a&gt; DOMINIQUE, dans &lt;em&gt;Agnès de Chaillot&lt;/em&gt;, faisant le rôle du &lt;em&gt;Bailli&lt;/em&gt;, parodie de celui d’Alphonse, venait de parfaitement bien réussir à imiter BARON.</stage>
+            <l n="594">[6] NITÉTIS fut assez suivie, quoique peu goûtée ; et, malgré la foule des reconnaissances, tout le monde en sortait, sans avoir été ému.</l>
+            <stage>&lt;a href="#_ftnref7" name="_ftn7" title="" id="_ftn7"&gt;[7]&lt;/a&gt; Cette Marianne, surnommée par Fuzelier dans ses quatre &lt;em&gt;Mariannes&lt;/em&gt;, &lt;em&gt;l’Inconnue&lt;/em&gt;, en est une qui fut lue aux Comédiens Français, avant celle de M. de Voltaire et de Nadal, et qui fut refusée.</stage>
+            <stage>&lt;a href="#_ftnref8" name="_ftn8" title="" id="_ftn8"&gt;[8]&lt;/a&gt; Cette première &lt;em&gt;Marianne&lt;/em&gt; de M. de Voltaire s’empoisonnait en buvant sur le Théâtre, ce qui fit beaucoup rire, et crier : &lt;em&gt;La Reine boit&lt;/em&gt;.</stage>
+            <stage>&lt;a href="#_ftnref9" name="_ftn9" title="" id="_ftn9"&gt;[9]&lt;/a&gt; L’impression croyant profiter de la vogue qu’avaient les &lt;em&gt;Mariannes&lt;/em&gt;, donna une nouvelle édition de la célèbre &lt;em&gt;Marianne&lt;/em&gt; de TRISTAN L’HERMITE.</stage>
+            <stage>&lt;a href="#_ftnref10" name="_ftn10" title="" id="_ftn10"&gt;[10]&lt;/a&gt; La première &lt;em&gt;Marianne&lt;/em&gt; avoir pris 40 sols au Parterre ; et cette seconde, plus modeste, se contenta du prix ordinaire de 20 sols.</stage>
+            <stage>&lt;a href="#_ftnref11" name="_ftn11" title="" id="_ftn11"&gt;[11]&lt;/a&gt; FUZELIER venait de faire jouer les quatre &lt;em&gt;Mariannes&lt;/em&gt; précédentes à la Foire ; et comme il m’en avait dérobé l’idée, je donnai les huit aux Italiens, pour m’en venger.</stage>
+            <l n="595">[12] Met du Rideau des premières Marionnettes qui se mêlèrent d’Opéra-Comique.</l>
+            <l n="596">[13] Opéra nouveau de Fuzelier, où il n’y avait ni pieds ni tête, et dont la musique d’Aubert ne valait guère mieux que les paroles.</l>
+            <l n="597">[14] Toutes les pièces de la Foire sont, pour la plupart, tirées des Mille et une nuits et Mille et un jours, d’où cet Opéra était tiré. On entendait jouer dans les coulisses d’une orgue d’Allemagne, comme les portent les Savoyards qui montrent la Curiosité.</l>
+            <stage>&lt;a href="#_ftnref15" name="_ftn15" title="" id="_ftn15"&gt;[15]&lt;/a&gt; M. de VOLTAIRE fit faire un compliment au Parterre, avant de représenter sa seconde &lt;em&gt;Marianne&lt;/em&gt;, et dit qu’il l’a rendait, par un juste respect, pour l’empressement du Public : on le désavoua tout haut.</stage>
+            <l n="598" />
           </sp>
-          <p>FIN</p>
         </div>
       </div>
     </body>

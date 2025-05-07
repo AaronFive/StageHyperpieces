@@ -1,1486 +1,1465 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Perruquier et le coiffeur</title>
-        <author key="Thomas SAUVAGE - Armand D’ARTOIS - Jean-Henri DUPIN | (naissance-mort)">Thomas SAUVAGE - Armand D’ARTOIS - Jean-Henri DUPIN |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/le-perruquier-et-le-coiffeur-thomas-sauvage-armand-d’artois-jean-henri-dupin</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Thomas SAUVAGE - Armand D’ARTOIS - Jean-Henri DUPIN |</author>. <title>Le Perruquier et le coiffeur</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/le-perruquier-et-le-coiffeur-thomas-sauvage-armand-d’artois-jean-henri-dupin</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1824-02-19">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 19 février 1824.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="monsieur-dumont" sex="SEX">
+            <persName>MONSIEUR DUMONT</persName>
+          </person>
+          <person xml:id="hortense" sex="SEX">
+            <persName>HORTENSE</persName>
+          </person>
+          <person xml:id="justine" sex="SEX">
+            <persName>JUSTINE</persName>
+          </person>
+          <person xml:id="lahouppe" sex="SEX">
+            <persName>LAHOUPPE</persName>
+          </person>
+          <person xml:id="mondésir" sex="SEX">
+            <persName>MONDÉSIR</persName>
+          </person>
+          <person xml:id="barbe" sex="SEX">
+            <persName>BARBE</persName>
+          </person>
+          <person xml:id="vincent" sex="SEX">
+            <persName>VINCENT</persName>
+          </person>
+          <person xml:id="james" sex="SEX">
+            <persName>JAMES</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1824-02-19" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 19 février 1824.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le Perruquier et le coiffeur</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte, mêlée de couplets.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre des Variétés, le 19 février 1824.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="monsieur-dumont">MONSIEUR DUMONT</role>
-              <roleDesc>, <em>bourgeois du marais</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="hortense">HORTENSE</role>
-              <roleDesc>, <em>sa femme, jeune et jolie</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="justine">JUSTINE</role>
-              <roleDesc>, <em>femme de chambre de Madame Dumont</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lahouppe">LAHOUPPE</role>
-              <roleDesc>, <em>perruquier</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mondésir">MONDÉSIR</role>
-              <roleDesc>, <em>coiffeur</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="barbe">BARBE</role>
-              <roleDesc>, <em>vieux domestique de Dumont</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="vincent">VINCENT</role>
-              <roleDesc>, <em>vieux domestique Madame de Dumont</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="james">JAMES</role>
-              <roleDesc>, <em>jockey de Mondésir</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène se passe à Paris, dans la maison de M. Dumont, au Marais. </em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Le théâtre représente un salon. Trois portes au fond ; celle du milieu conduit à l’antichambre. À droite est la chambre d’Hortense. À gauche la chambre de Dumont, Au premier plan, à gauche un cabinet fermé par une porte vitrée. Au premier plan, à droite une porte vitrée semblable fermant une armoire, Une toilette élégante avec une glace ; une table recouverte d’un tapis ; des fauteuils. </em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="vincent" xml:id="1-1">
-            <speaker>VINCENT, BARBE</speaker>
-            <l n="10" xml:id="l10"> </l>
-            <stage><hi rend="italic"><em>Ils apprêtent des toilettes de bal.</em></hi></stage>
-          </sp>
-          <sp who="barbe" xml:id="1-2">
-            <speaker>BARBE.</speaker>
-            <stage><hi rend="italic"><em>Air : Vaudeville de M. Vautour. </em></hi></stage>
-          <stage>VINCENT.</stage>
-          </sp>
-          <sp who="ensemble" xml:id="1-3">
-            <speaker>ENSEMBLE.</speaker>
-            <l n="13" xml:id="l13">Mademoiselle Justine, la femme de chambre de Madame, n’aura plus rien à faire pour la toilette de sa maîtresse.</l>
-          <stage>BARBE.</stage>
-          </sp>
-          <sp who="vincent" xml:id="1-4">
-            <speaker>VINCENT.</speaker>
-            <l n="14" xml:id="l14">Quand le perruquier aura frisé la perruque de Monsieur, il ne manquera rien à son costume de bal.</l>
-          </sp>
-          <sp who="barbe" xml:id="1-5">
-            <speaker>BARBE.</speaker>
-            <l n="15" xml:id="l15">Tu me fais penser que nous aurons besoin du ministère de M. Lahouppe... Nous sommes invités aussi à ce bal ; il y aura, à ce qu’il paraît, un souper magnifique... et pour qu’il n’y ait rien de perdu...</l>
-          </sp>
-          <sp who="vincent" xml:id="1-6">
-            <speaker>VINCENT.</speaker>
-            <l n="16" xml:id="l16">Le valet de chambre de Madame De Senange en donne à l’office une seconde édition... un peu diminuée.</l>
-          </sp>
-          <sp who="barbe" xml:id="1-7">
-            <speaker>BARBE.</speaker>
-            <l n="17" xml:id="l17">Alors tu conçois bien qu’il faut une certaine mise.</l>
-          </sp>
-          <sp who="vincent" xml:id="1-8">
-            <speaker>VINCENT.</speaker>
-            <l n="18" xml:id="l18">Tu crois ?</l>
-          </sp>
-          <sp who="barbe" xml:id="1-9">
-            <speaker>BARBE.</speaker>
-            <l n="19" xml:id="l19">Oui, mon bichon... pour la société... ça sera très bien composé... tous gens comme il faut... femmes de chambre, intendants, concierges... La livrée ne sera point admise. Tu mettras ton habit vert à boutons d’acier.</l>
-          </sp>
-          <sp who="vincent" xml:id="1-10">
-            <speaker>VINCENT.</speaker>
-            <l n="20" xml:id="l20">Tu trouves qu’il me va bien ?</l>
-          </sp>
-          <sp who="barbe" xml:id="1-11">
-            <speaker>BARBE.</speaker>
-            <l n="21" xml:id="l21">Tu es éblouissant avec... moi j’aurai ma robe de taffetas fleur d’abricot.</l>
-          </sp>
-          <sp who="vincent" xml:id="1-12">
-            <speaker>VINCENT.</speaker>
-            <l n="22" xml:id="l22">C’est donc pour les autres ; car tu ne me parais jamais plus belle que lorsque, dédaignant ces vains atours, je te vois.</l>
-          </sp>
-          <sp who="barbe" xml:id="1-13">
-            <speaker>BARBE.</speaker>
-            <l n="23" xml:id="l23">N’achève pas, mon cœur, je te comprends.</l>
-            <stage><hi rend="italic"><em>Air : Dodo, l’enfant do. </em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="1-14">
-            <speaker>VINCENT.</speaker>
-            <l n="25" xml:id="l25">Dis-moi, ma poule, pourquoi, nous, vieux époux, nous entendons-nous si bien, tandis que nos maîtres, mariés depuis peu, sont presque toujours en dispute ?</l>
-          </sp>
-          <sp who="barbe" xml:id="1-15">
-            <speaker>BARBE.</speaker>
-            <l n="26" xml:id="l26">Tu n’en devines pas la cause ?</l>
-          </sp>
-          <sp who="vincent" xml:id="1-16">
-            <speaker>VINCENT.</speaker>
-            <l n="27" xml:id="l27">Non.</l>
-          </sp>
-          <sp who="barbe" xml:id="1-17">
-            <speaker>BARBE.</speaker>
-            <l n="28" xml:id="l28">Quel âge a Madame Dumont ?</l>
-          </sp>
-          <sp who="vincent" xml:id="1-18">
-            <speaker>VINCENT.</speaker>
-            <l n="29" xml:id="l29">Dam !... si par précaution pour l’avenir, elle ne le cache pas... ça doit avoir dix-huit ans.</l>
-          </sp>
-          <sp who="barbe" xml:id="1-19">
-            <speaker>BARBE.</speaker>
-            <l n="30" xml:id="l30">Et ton maître, qu’est-ce que tu lui donnes ?</l>
-          </sp>
-          <sp who="vincent" xml:id="1-20">
-            <speaker>VINCENT.</speaker>
-            <l n="31" xml:id="l31">J’ai cinquante-neuf ans et il est mon aîné de quatre, ce qui fait 63 ; mais tu connais le proverbe : les extrêmes se touchent...</l>
-          </sp>
-          <sp who="barbe" xml:id="1-21">
-            <speaker>BARBE.</speaker>
-            <l n="32" xml:id="l32">Oui, ils se touchent ; mais ils ne peuvent pas se sentir. Crois-tu que M. Dumont soit enchanté de ce bal ?... c’est en murmurant qu’il y va... il aimerait mieux dormir...</l>
-          </sp>
-          <sp who="vincent" xml:id="1-22">
-            <speaker>VINCENT.</speaker>
-            <l n="33" xml:id="l33"> J’entends, sa femme est une éveillée... et il faut qu’il marche droit ; v’là ce que c’est que d’avoir une jeune femme... je n’ai pas cet inconvénient-la, moi...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="1-23">
-            <speaker>LAHOUPPE, <em>dans la coulisse.</em></speaker>
-            <l n="34" xml:id="l34">C’est bon !... j’ai mes rasoirs et ma houppe.</l>
-          </sp>
-          <sp who="vincent" xml:id="1-24">
-            <speaker>VINCENT.</speaker>
-            <l n="35" xml:id="l35">Ah ! voilà son perruquier...</l>
-            <l n="36" xml:id="l36"> </l>
-            <l n="37" xml:id="l37"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="38" xml:id="l38"> </l>
-          <sp who="vincent" xml:id="2-1">
-            <speaker>VINCENT, BARBE, LAHOUPPE</speaker>
-            <l n="39" xml:id="l39"> </l>
-            <stage><hi rend="italic"><em>Lahouppe est habillé comme un perruquier d’autrefois... caricature connue. Il tient à la main rasoir, savonnette, bassin et cuir.</em></hi></stage>
-          </sp>
-          <sp who="lahouppe" xml:id="2-2">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Air : Ô Richard. </em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="2-3">
-            <speaker>VINCENT <em>et</em> BARBE, <em>l’interrompant.</em></speaker>
-            <l n="42" xml:id="l42">Bonjour, M. Lahouppe !</l>
-          </sp>
-          <sp who="lahouppe" xml:id="2-4">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Air : Bonjour, mon ami Vincent. </em></hi></stage>
-          <stage>VINCENT.</stage>
-          </sp>
-          <sp who="lahouppe" xml:id="2-5">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>À Barbe, lui donnant un petit carton.</em></hi></stage>
-            <stage><hi rend="italic"><em>À Vincent lui donnant un rasoir. </em></hi></stage>
-            <stage><hi rend="italic"><em>À Barbe.</em></hi></stage>
-            <stage><hi rend="italic"><em>À Vincent.</em></hi></stage>
-          <stage>VINCENT <em>et</em> BARBE, <em>essayant un le rasoir et l’autre le chignon.</em></stage>
-          </sp>
-          <sp who="lahouppe" xml:id="2-6">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>À Barbe. </em></hi></stage>
-            <stage><hi rend="italic"><em>À Vincent. </em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="2-7">
-            <speaker>VINCENT.</speaker>
-            <l n="50" xml:id="l50">Il a un fameux fil, votre rasoir !... Mais M. Dumont vous attend depuis huit heures.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="2-8">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="51" xml:id="l51">Diable ! il s’éveillait plus tard autrefois... mais à présent nous avons tous deux la puce à l’oreille... un mari, un, perruquier sont obligés de se lever matin.</l>
-          </sp>
-          <sp who="barbe" xml:id="2-9">
-            <speaker>BARBE.</speaker>
-            <l n="52" xml:id="l52">M. Lahouppe, depuis quelque temps, je vous trouve mélancolique.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="2-10">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="53" xml:id="l53">Je crains de devenir romantique.</l>
-          </sp>
-          <sp who="vincent" xml:id="2-11">
-            <speaker>VINCENT.</speaker>
-            <l n="54" xml:id="l54">Vous auriez tort ; c’est bête...Qu’est devenu ce bavardage vif et spirituel qui caractérise d’ordinaire le vrai perruquier ?...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="2-12">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="55" xml:id="l55">Il a fait place aux phrases de la réflexion... et il y a de quoi... Hier encore il s’est tramé, dans cette maison, un complot contre moi... je puis dire que je l’ai échappé belle... il ne s’en est pas fallu l’épaisseur d’un cheveu !... Après avoir rasé Monsieur, comme j’étais à serrer le peignoir, Madame Dumont est arrivée... a critiqué la frisure de son mari... l’a traitée de gothique et lui a conseillé la Titus. La Titus !... si je les tenais, ces Titus, je voudrais les réduire en poudre !... un respectable bourgeois de Paris à la Titus ! ça fait dresser les cheveux sur la tête !...</l>
-          </sp>
-          <sp who="barbe" xml:id="2-13">
-            <speaker>BARBE.</speaker>
-            <l n="56" xml:id="l56">J’espère qu’il a refusé ?...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="2-14">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="57" xml:id="l57">Oui... mais persistera-t-il dans cette estimable résolution... Hélas ! quand on a, pendant quarante-cinq ans, fréquenté les têtes les plus distinguées de Paris, on connait les hommes... Il fera comme les autres... il suivra le torrent... et voilà justement la cause de la décadence universelle... Voyez dans le grand siècle, le siècle des fortes têtes, les grandes perruques... les arts commencèrent à dégénérer quand les ailes de pigeons parurent, et maintenant nous voilà arrivés à la Titus... si ça continue, nous serons bientôt rasés. Oui, si l’on n’en revient point à la poudre, tout est perdu. La raison en est claire, et vous allez la comprendre facilement : Quelle est la partie la plus noble de l’homme, celle qui dirige tout ?... la tête... vous mettez des bas à vos jambes... des souliers à vos pieds... une cravate à votre cou... des gants à vos mains</l>
-            <stage><hi rend="italic"><em>Montrant la tête.</em></hi></stage>
-            <l n="59" xml:id="l59">et rien là !... Ah ! si les têtes ne sont plus aussi saines, c’est depuis qu’on les a si cruellement négligées ; autrefois, jeunes, vieux, tout était pommadé, frisé, poudré.</l>
-            <stage><hi rend="italic"><em>Air : Je suis né natif de Ferrare. </em></hi></stage>
-            <l n="61" xml:id="l61">Mais hélas ! tout a disparu ; à peine maintenant compte-t-on, dans chaque famille, une ou deux têtes à perruques.</l>
-          </sp>
-          <sp who="vincent" xml:id="2-15">
-            <speaker>VINCENT.</speaker>
-            <l n="62" xml:id="l62">Ça reviendra, M. Lahouppe.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="2-16">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="63" xml:id="l63">Mes amis, j’ai longtemps dit comme vous : ça reviendra, ça repoussera ; mais je commence à perdre courage... j’avais un neveu unique et dernier espoir d’une génération de perruquiers... Ignace-Bonaventure Lahouppe ; le siècle l’a entraîné... il a oublié tout ce que je lui avais appris, et je ne sais ce qu’il est devenu.</l>
-          </sp>
-          <sp who="barbe" xml:id="2-17">
-            <speaker>BARBE.</speaker>
-            <l n="64" xml:id="l64">Vous le retrouverez peut-être un jour.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="2-18">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="65" xml:id="l65">Jamais !</l>
-            <stage><hi rend="italic"><em>On entend gronder dans la coulisse.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="2-19">
-            <speaker>VINCENT, <em>regardant à la cantonade.</em></speaker>
-            <l n="67" xml:id="l67">Voilà notre maître... il a l’air de se disputer avec mademoiselle Justine.</l>
-          </sp>
-          <sp who="barbe" xml:id="2-20">
-            <speaker>BARBE.</speaker>
-            <l n="68" xml:id="l68">Ça ne m’étonne pas, elle est si bien avec Madame...</l>
-          </sp>
-          <sp who="vincent" xml:id="2-21">
-            <speaker>VINCENT.</speaker>
-            <l n="69" xml:id="l69">Ce sont deux têtes dans un bonnet.</l>
-            <l n="70" xml:id="l70"> </l>
-            <l n="71" xml:id="l71"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="72" xml:id="l72"> </l>
-          <sp who="vincent" xml:id="3-1">
-            <speaker>VINCENT, BARBE, LAHOUPPE, DUMONT, JUSTINE</speaker>
-            <l n="73" xml:id="l73"> </l>
-            <stage><hi rend="italic"><em>Ils sortent de la chambre à gauche. Dumont en robe de chambre, bonnet de velours. </em></hi></stage>
-          </sp>
-          <sp who="justine" xml:id="3-2">
-            <speaker>DUMONT, <em>à Justine.</em></speaker>
-            <l n="75" xml:id="l75">Non, Mademoiselle ; je m’oppose à ce mariage.</l>
-          </sp>
-          <sp who="justine" xml:id="3-3">
-            <speaker>JUSTINE.</speaker>
-            <l n="76" xml:id="l76">Madame m’avait pourtant fait espérer que j’aurais le consentement de Monsieur.</l>
-          </sp>
-          <sp who="dumont" xml:id="3-4">
-            <speaker>DUMONT.</speaker>
-            <l n="77" xml:id="l77">Madame a ses idées, et j’ai les miennes...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="79" xml:id="l79">Introduire un inconnu dans ma maison... qui serait tout dévoué à ma femme...</l>
-          </sp>
-          <sp who="justine" xml:id="3-5">
-            <speaker>JUSTINE.</speaker>
-            <l n="80" xml:id="l80">Si Monsieur voulait seulement voir mon prétendu... un garçon rangé, profession superbe ; c’est un des meilleurs coiffeurs de Paris.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="3-6">
-            <speaker>LAHOUPPE, <em>s’avançant.</em></speaker>
-            <l n="81" xml:id="l81">Ô ciel !</l>
-            <stage><hi rend="italic"><em>À Dumont.</em></hi></stage>
-            <l n="83" xml:id="l83">comment, Monsieur, un coiffeur ici ?</l>
-          </sp>
-          <sp who="dumont" xml:id="3-7">
-            <speaker>DUMONT.</speaker>
-            <l n="84" xml:id="l84">Rassure-toi, mon vieux la Houppe.</l>
-            <stage><hi rend="italic"><em>Haut à Justine.</em></hi></stage>
-            <l n="86" xml:id="l86">Non, Mademoiselle, encore une fois non... Vous voyez Monsieur Lahouppe... il n’y aura jamais que lui, ou ses descendants qui toucheront à ma tête ; et je vous permets de compter sur mon consentement à votre mariage avec un coiffeur, quand vous me verrez affublé d’une perruque à la mode.</l>
-          </sp>
-          <sp who="justine" xml:id="3-8">
-            <speaker>JUSTINE.</speaker>
-            <stage><hi rend="italic"><em>Air : Vaudeville des Blouses. </em></hi></stage>
-          <stage>DUMONT.</stage>
-          </sp>
-          <sp who="justine" xml:id="3-9">
-            <speaker>JUSTINE.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>DUMONT.</stage>
-          </sp>
-          <sp who="vincent" xml:id="3-10">
-            <speaker>BARBE, VINCENT, LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Justine et Barbe rentrent dans la chambre de Madame et Vincent dans celle de M. Dumont. </em></hi></stage>
-            <l n="90" xml:id="l90"> </l>
-            <l n="91" xml:id="l91"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="92" xml:id="l92"> </l>
-          <sp who="lahouppe" xml:id="4-1">
-            <speaker>DUMONT, LAHOUPPE</speaker>
-            <l n="93" xml:id="l93"> </l>
-          </sp>
-          <sp who="lahouppe" xml:id="4-2">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="94" xml:id="l94">Faisons-nous cette barbe, Monsieur ?</l>
-          </sp>
-          <sp who="dumont" xml:id="4-3">
-            <speaker>DUMONT.</speaker>
-            <l n="95" xml:id="l95">Non, Lahouppe ; ce soir... je vais au bal, elle sera plus fraîche...</l>
-            <stage><hi rend="italic"><em>Moment de silence. </em></hi></stage>
-            <l n="97" xml:id="l97">Eh bien ! mon vieux, tu ne me dis rien... quelle nouvelle ?</l>
-          </sp>
-          <sp who="lahouppe" xml:id="4-4">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="98" xml:id="l98">Vous savez, Monsieur, que la politique est rayée de mon catalogue.</l>
-            <stage><hi rend="italic"><em>Air : Vaudeville de Turenne. </em></hi></stage>
-          </sp>
-          <sp who="dumont" xml:id="4-5">
-            <speaker>DUMONT.</speaker>
-            <l n="100" xml:id="l100">Ah ça ! je mène ce soir Madame Dumont dans une fête, il faudra te distinguer, Lahouppe.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="4-6">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="101" xml:id="l101">Soyez tranquille, Monsieur ; je n’ai plus de garçon chez moi, et votre perruque sera frisée de main de maître.</l>
-          </sp>
-          <sp who="dumont" xml:id="4-7">
-            <speaker>DUMONT.</speaker>
-            <l n="102" xml:id="l102">Je veux surtout plaire, à ma femme.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="4-8">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="103" xml:id="l103">Elle est bien jeune, Monsieur ! Madame Dumont aime les plaisirs, le monde... Le monde est plein de jeunes gens aimables... à la nouvelle manière...</l>
-            <stage><hi rend="italic"><em>Air : Du partage de la richesse. </em></hi></stage>
-          <stage>DUMONT.</stage>
-          </sp>
-          <sp who="lahouppe" xml:id="4-9">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="105" xml:id="l105">Si jamais quelqu’un osait regarder ma femme... il aurait affaire à moi... Dieu merci ! mon épée est toujours là... Te rappelles-tu que je tirais avec Saint-Georges ?</l>
-          <stage>DUMONT.</stage>
-          </sp>
-          <sp who="lahouppe" xml:id="4-10">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic">Ah ! ce grand brun, avec qui vous jouiez aux fleurets, et qui vous donnait toujours <em>des gilets</em> ?... Vous a-t-il tué de fois, celui-là !... pour de rire.</hi></stage>
-          </sp>
-          <sp who="dumont" xml:id="4-11">
-            <speaker>DUMONT.</speaker>
-            <l n="107" xml:id="l107">Je le touchais bien aussi de temps en temps, et je saurai me mettre en garde...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="4-12">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="108" xml:id="l108">Vous ferez bien... Tenez, les jeunes femmes de chambre et les coiffeurs d’à présent, ne font pas autre chose que de se prêter à des intrigues. Enfin, sans aller plus loin, j’ai vu, ce matin, dans la loge du portier, une lettre... que Mademoiselle Justine a cachée à mon approche.</l>
-          </sp>
-          <sp who="dumont" xml:id="4-13">
-            <speaker>DUMONT.</speaker>
-            <l n="109" xml:id="l109">Une lettre !... C’est décidé, Lahouppe, tu seras le coiffeur de ma femme.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="4-14">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="110" xml:id="l110">Monsieur, j’allais vous demander sa pratique...</l>
-          </sp>
-          <sp who="dumont" xml:id="4-15">
-            <speaker>DUMONT.</speaker>
-            <l n="111" xml:id="l111">Je te la donne.</l>
-            <stage><hi rend="italic"><em>Air : D’une visite à Bedlam. </em></hi></stage>
-          </sp>
-          <sp who="lahouppe" xml:id="4-16">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>DUMONT.</stage>
-          </sp>
-          <sp who="lahouppe" xml:id="4-17">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="114" xml:id="l114"> </l>
-            <l n="115" xml:id="l115"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="116" xml:id="l116"> </l>
-          <sp who="lahouppe" xml:id="5-1">
-            <speaker>DUMONT, LAHOUPPE, HORTENSE, JUSTINE</speaker>
-            <l n="117" xml:id="l117"> </l>
-            <stage><hi rend="italic"><em>Hortense est en négligé du matin ; elle a encore ses papillotes.</em></hi></stage>
-          </sp>
-          <sp who="lahouppe" xml:id="5-2">
-            <speaker>DUMONT, <em>à Lahouppe.</em></speaker>
-            <l n="119" xml:id="l119">Voici Madame, reste !</l>
-            <stage><hi rend="italic"><em>Haut. </em></hi></stage>
-            <l n="121" xml:id="l121">Eh bien ! ma chère amie, vous disposez-vous pour cette fête ?</l>
-          </sp>
-          <sp who="hortense" xml:id="5-3">
-            <speaker>HORTENSE.</speaker>
-            <l n="122" xml:id="l122">Oui, Monsieur... dans un instant je vais commencer ma toilette... Je venais vous demander à quelle heure vous comptez partir.</l>
-          </sp>
-          <sp who="dumont" xml:id="5-4">
-            <speaker>DUMONT.</speaker>
-            <l n="123" xml:id="l123">Mais, ma bonne amie, mon heure sera la vôtre... Cependant, puisque vous voulez bien me consulter, je crois que, pour ne pas arriver des premiers...</l>
-          </sp>
-          <sp who="hortense" xml:id="5-5">
-            <speaker>HORTENSE.</speaker>
-            <l n="124" xml:id="l124">Ce qui n’est pas convenable...</l>
-          </sp>
-          <sp who="dumont" xml:id="5-6">
-            <speaker>DUMONT.</speaker>
-            <l n="125" xml:id="l125">Et cependant... pour ne pas nous faire attendre...</l>
-          </sp>
-          <sp who="hortense" xml:id="5-7">
-            <speaker>HORTENSE.</speaker>
-            <l n="126" xml:id="l126">Ce qui serait d’un mauvais genre.</l>
-          </sp>
-          <sp who="dumont" xml:id="5-8">
-            <speaker>DUMONT.</speaker>
-            <l n="127" xml:id="l127">Il faudrait arriver entre sept et huit.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-9">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="128" xml:id="l128">Parfaitement calculé !</l>
-          </sp>
-          <sp who="hortense" xml:id="5-10">
-            <speaker>HORTENSE.</speaker>
-            <l n="129" xml:id="l129">Que dites-vous donc là, mon ami ?... Pour arriver à une heure décente, nous partirons un peu avant minuit.</l>
-          </sp>
-          <sp who="dumont" xml:id="5-11">
-            <speaker>DUMONT.</speaker>
-            <l n="130" xml:id="l130">Ah ! mon Dieu ! mais j’espérais être couché à cette heure-là...</l>
-          </sp>
-          <sp who="hortense" xml:id="5-12">
-            <speaker>HORTENSE.</speaker>
-            <l n="131" xml:id="l131">Comment ferais-je pour arriver à huit heures ?... il en est cinq, et ma toilette n’est pas commencée... vous pensez bien qu’il me faut du temps... La réunion sera des plus brillantes !... il y aura concert, bal...</l>
-          </sp>
-          <sp who="dumont" xml:id="5-13">
-            <speaker>DUMONT.</speaker>
-            <l n="132" xml:id="l132">Vous chercherez le plaisir partout.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-14">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="133" xml:id="l133">Et vous jouerez à l’écarté. Voici le moment de parler de moi...</l>
-          </sp>
-          <sp who="dumont" xml:id="5-15">
-            <speaker>DUMONT.</speaker>
-            <l n="134" xml:id="l134">J’y pensais.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="136" xml:id="l136">Au reste, j’avais prévu vos intentions, ma chère Hortense, et voici un homme aussi habile qu’expéditif...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-16">
-            <speaker>LAHOUPPE, <em>s’avançant.</em></speaker>
-            <l n="137" xml:id="l137">J’avais l’honneur de coiffer autrefois feue Madame Dumont, la maman de Monsieur, femme infiniment respectable, que l’on citait partout pour l’élégance de sa mise, et la facture de son chignon... J’accommode M. Dumont depuis qu’il a l’âge de raison... les évènements nous avaient séparés... comme tant d’autres ; mais enfin, je l’ai retrouvé avec les mêmes sentiments et la même coiffure... J’espère, Madame que vous ne l’en ferez pas changer, et que vous voudrez bien agréer les services de l’ancien serviteur de toute la famille...</l>
-          </sp>
-          <sp who="hortense" xml:id="5-17">
-            <speaker>HORTENSE.</speaker>
-            <l n="138" xml:id="l138">Je suis désespérée, Monsieur, de ne pouvoir accueillir votre demande.</l>
-          </sp>
-          <sp who="dumont" xml:id="5-18">
-            <speaker>DUMONT.</speaker>
-            <l n="139" xml:id="l139">Madame !</l>
-          </sp>
-          <sp who="hortense" xml:id="5-19">
-            <speaker>HORTENSE.</speaker>
-            <l n="140" xml:id="l140">Bien loin de là, si M. Dumont m’en croyait, il cosserait d’avoir recours à votre ministère.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-20">
-            <speaker>LAHOUPPE, <em>stupéfait.</em></speaker>
-            <l n="141" xml:id="l141">Et pourquoi donc ?</l>
-          </sp>
-          <sp who="hortense" xml:id="5-21">
-            <speaker>HORTENSE.</speaker>
-            <l n="142" xml:id="l142">Parce que sa large perruque le fait paraître beaucoup plus âgé qu’il ne l’est en effet.</l>
-          </sp>
-          <sp who="dumont" xml:id="5-22">
-            <speaker>DUMONT.</speaker>
-            <l n="143" xml:id="l143">Croyez-vous ?</l>
-          </sp>
-          <sp who="hortense" xml:id="5-23">
-            <speaker>HORTENSE.</speaker>
-            <l n="144" xml:id="l144">Elle vous cache le front que vous avez noble et élevé, et vous prive d’une partie de vos avantages. Je vous ai déjà dit souvent ma façon de penser là-dessus, vous n’en avez pas tenu compte... soit, je ne veux pas vous contraindre ; mais souffrez que je choisisse les gens dont je prétends me servir.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-24">
-            <speaker>LAHOUPPE, <em>bas à Dumont.</em></speaker>
-            <l n="145" xml:id="l145">Voyez-vous où l’on veut en venir ?</l>
-          </sp>
-          <sp who="dumont" xml:id="5-25">
-            <speaker>DUMONT.</speaker>
-            <l n="146" xml:id="l146">Ceci est différent, Madame ! j’ai le droit de connaître les personnes qui s’introduisent chez vous, et je veux savoir par qui vous prétendez vous faire coiffer.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-26">
-            <speaker>LAHOUPPE, <em>bas à Dumont.</em></speaker>
-            <l n="147" xml:id="l147">Ferme !</l>
-          </sp>
-          <sp who="hortense" xml:id="5-27">
-            <speaker>HORTENSE.</speaker>
-            <l n="148" xml:id="l148">Par qui, Monsieur ?... et par l’homme le plus habile, le plus célèbre de Paris, par Michalon ou l’un de ses élèves.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-28">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="149" xml:id="l149">Sans doute quelque jeune homme ?</l>
-          </sp>
-          <sp who="hortense" xml:id="5-29">
-            <speaker>HORTENSE.</speaker>
-            <l n="150" xml:id="l150">Certainement, les jeunes gens ont le goût plus frais les idées plus nouvelles.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-30">
-            <speaker>LAHOUPPE, <em>bas à Dumont.</em></speaker>
-            <l n="151" xml:id="l151">Quand je vous le disais.</l>
-            <stage><hi rend="italic"><em>À Hortense.</em></hi></stage>
-            <l n="153" xml:id="l153">Ainsi, Madame, vous révoquez en doute ma capacité ?</l>
-          </sp>
-          <sp who="hortense" xml:id="5-31">
-            <speaker>HORTENSE.</speaker>
-            <l n="154" xml:id="l154">Nullement, Monsieur, mais je ne veux pas la mettre à l’épreuve.</l>
-          </sp>
-          <sp who="dumont" xml:id="5-32">
-            <speaker>DUMONT, <em>avec fermeté.</em></speaker>
-            <l n="155" xml:id="l155">Et moi, Madame, je prétends...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-33">
-            <speaker>LAHOUPPE, <em>l’interrompant.</em></speaker>
-            <l n="156" xml:id="l156">Ah ! de grâce, M. Dumont, arrêtez, je vous prie... je ne souffrirai pas que vous chagriniez Madame à mon occasion.</l>
-          </sp>
-          <sp who="justine" xml:id="5-34">
-            <speaker>JUSTINE, <em>à part.</em></speaker>
-            <l n="157" xml:id="l157">Ah ! le sournois !...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="5-35">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="158" xml:id="l158">Si je n’ai pu obtenir la pomme, je ne veux pas jeter celle de discorde dans votre ménage... Oui, Madame, suivez votre goût, puisque vous ne m’en trouvez pas assez... la confiance ne se commande pas...  prenez quelque jeune artiste en cheveux, livrez lui votre tête... je la regretterai, car je dois l’avouer, il m’en passe peu par les mains d’aussi jolies... mais je m’en consolerai dans l’espérance que quel que jour on reviendra au vrai beau, à l’ancien goût.</l>
-            <stage><hi rend="italic"><em>Air : Il faut attendre avec philosophie. </em></hi></stage>
-            <stage><hi rend="italic"><em>Il fait quelques pas et revient.</em></hi></stage>
-            <l n="161" xml:id="l161">Si Madame se ravise, voilà ma nouvelle adresse : « Lahouppe, perruquier, rue de la Savonnerie ; fait la barbe à miracle et la queue aux oiseaux. »</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="163" xml:id="l163"> </l>
-            <l n="164" xml:id="l164"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="165" xml:id="l165"> </l>
-          <sp who="justine" xml:id="6-1">
-            <speaker>JUSTINE, DUMONT, HORTENSE</speaker>
-            <l n="166" xml:id="l166"> </l>
-          </sp>
-          <sp who="justine" xml:id="6-2">
-            <speaker>JUSTINE, <em>à part.</em></speaker>
-            <l n="167" xml:id="l167">Il est piqué.</l>
-            <stage><hi rend="italic"><em>À Hortense.</em></hi></stage>
-            <l n="169" xml:id="l169">Tenez bon, Madame, si vous cédez une seule fois à votre mari, c’en est fait pour le reste de votre vie.</l>
-          </sp>
-          <sp who="dumont" xml:id="6-3">
-            <speaker>DUMONT.</speaker>
-            <l n="170" xml:id="l170">Je suis étonné, Madame, que vous ayez ainsi rejeté les services de Lahouppe... vous l’avez humilié.</l>
-          </sp>
-          <sp who="hortense" xml:id="6-4">
-            <speaker>HORTENSE, <em>se regardant dans une glace et ôtant ses papillotes.</em></speaker>
-            <l n="171" xml:id="l171">J’en suis fâchée, monsieur ; mais vous m’avez poussée à bout... pourquoi ne pas me laisser choisir les gens que je veux employer ?</l>
-          </sp>
-          <sp who="dumont" xml:id="6-5">
-            <speaker>DUMONT.</speaker>
-            <l n="172" xml:id="l172">Il me semble que je mets avec vous assez de complaisance... car vos plaisirs ne sont pas les miens.</l>
-            <stage><hi rend="italic"><em>Il prend en parlant les papillotes qu’Hortense a ôtées.</em></hi></stage>
-          </sp>
-          <sp who="justine" xml:id="6-6">
-            <speaker>JUSTINE.</speaker>
-            <l n="174" xml:id="l174">Je le crois bien !</l>
-          </sp>
-          <sp who="hortense" xml:id="6-7">
-            <speaker>HORTENSE.</speaker>
-            <l n="175" xml:id="l175">Je ne sais vraiment à qui vous en avez aujourd’hui... parce que je désire vivement aller à ce bal...</l>
-          </sp>
-          <sp who="dumont" xml:id="6-8">
-            <speaker>DUMONT, <em>à part lisant une papillote.</em></speaker>
-            <l n="176" xml:id="l176">« Vous y serez, je m’y promets le plus grand plaisir... Ô ciel ! qu’ai-je vu ?... c’est le billet...</l>
-          </sp>
-          <sp who="justine" xml:id="6-9">
-            <speaker>JUSTINE, <em>bas à Hortense.</em></speaker>
-            <l n="177" xml:id="l177">Madame, on lit vos papillotes.</l>
-          </sp>
-          <sp who="hortense" xml:id="6-10">
-            <speaker>HORTENSE.</speaker>
-            <l n="178" xml:id="l178">Chut !... n’ayons pas l’air de nous en apercevoir.</l>
-          </sp>
-          <sp who="dumont" xml:id="6-11">
-            <speaker>DUMONT, <em>lisant une seconde papillote.</em></speaker>
-            <l n="179" xml:id="l179">« Adieu... à ce soir !... ma chère. » Le reste manque... quelle découverte !</l>
-          </sp>
-          <sp who="hortense" xml:id="6-12">
-            <speaker>HORTENSE.</speaker>
-            <l n="180" xml:id="l180">J’espère que pour réparer vos torts, vous voudrez bien me permettre de faire venir ce soir...</l>
-          </sp>
-          <sp who="dumont" xml:id="6-13">
-            <speaker>DUMONT.</speaker>
-            <l n="181" xml:id="l181">Qui, Madame ?</l>
-          </sp>
-          <sp who="hortense" xml:id="6-14">
-            <speaker>HORTENSE, <em>quittant sa toilette.</em></speaker>
-            <l n="182" xml:id="l182">Un coiffeur...</l>
-          </sp>
-          <sp who="dumont" xml:id="6-15">
-            <speaker>DUMONT.</speaker>
-            <l n="183" xml:id="l183">N’y comptez pas.</l>
-          </sp>
-          <sp who="hortense" xml:id="6-16">
-            <speaker>HORTENSE.</speaker>
-            <l n="184" xml:id="l184">Vous me refusez un coiffeur ?</l>
-          </sp>
-          <sp who="dumont" xml:id="6-17">
-            <speaker>DUMONT, <em>avec une fureur concentrée.</em></speaker>
-            <l n="185" xml:id="l185">Oui, Madame.</l>
-          </sp>
-          <sp who="hortense" xml:id="6-18">
-            <speaker>HORTENSE.</speaker>
-            <l n="186" xml:id="l186">Eh bien ! monsieur, vous êtes un monstre !... je suis une femme opprimée. Pouvais-je m’attendre à ce qui m’arrive ?</l>
-            <l n="187" xml:id="l187"> </l>
-            <l n="188" xml:id="l188"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="189" xml:id="l189"> </l>
-          <sp who="vincent" xml:id="7-1">
-            <speaker>JUSTINE, DUMONT, HORTENSE, VINCENT, BARBE</speaker>
-            <l n="190" xml:id="l190"> </l>
-          </sp>
-          <sp who="barbe" xml:id="7-2">
-            <speaker>BARBE, <em>arrivant.</em></speaker>
-            <l n="191" xml:id="l191">La toilette de Madame est prête.</l>
-          </sp>
-          <sp who="hortense" xml:id="7-3">
-            <speaker>HORTENSE.</speaker>
-            <l n="192" xml:id="l192">Je ne m’habille pas.</l>
-            <stage><hi rend="italic"><em>Elle rentre dans sa chambre, suivie de Justine.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="7-4">
-            <speaker>VINCENT, <em>arrivant, à Dumont.</em></speaker>
-            <l n="194" xml:id="l194">L’habit de bal de monsieur est brossé.</l>
-          </sp>
-          <sp who="dumont" xml:id="7-5">
-            <speaker>DUMONT.</speaker>
-            <l n="195" xml:id="l195">Va-t’en au diable !</l>
-            <stage><hi rend="italic"><em>Il rentre dans sa chambre.</em></hi></stage>
-            <l n="197" xml:id="l197"> </l>
-            <l n="198" xml:id="l198"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="199" xml:id="l199"> </l>
-          <sp who="vincent" xml:id="8-1">
-            <speaker>VINCENT, BARBE</speaker>
-            <l n="200" xml:id="l200"> </l>
-          </sp>
-          <sp who="vincent" xml:id="8-2">
-            <speaker>VINCENT.</speaker>
-            <l n="201" xml:id="l201">Là !... voilà la bombe partie ! gare les éclats !</l>
-          </sp>
-          <sp who="barbe" xml:id="8-3">
-            <speaker>BARBE.</speaker>
-            <l n="202" xml:id="l202">Le joli petit ménage !...</l>
-            <stage><hi rend="italic"><em>On entend un grand bruit sur l’escalier.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="8-4">
-            <speaker>VINCENT, <em>regardant par la porte du fond.</em></speaker>
-            <l n="204" xml:id="l204">Qu’est-ce que c’est que ça ?... Ah ! mon dieu ! c’est M. Lahouppe qui dégringole en bas de l’escalier... comme il a l’air effaré.</l>
-            <l n="205" xml:id="l205"> </l>
-            <l n="206" xml:id="l206"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="207" xml:id="l207"> </l>
-          <sp who="vincent" xml:id="9-1">
-            <speaker>VINCENT, BARBE, LAHOUPPE</speaker>
-            <l n="208" xml:id="l208"> </l>
-          </sp>
-          <sp who="lahouppe" xml:id="9-2">
-            <speaker>LAHOUPPE, <em>entrant vivement.</em></speaker>
-            <l n="209" xml:id="l209">J’ai pensé me casser les jambes !</l>
-          </sp>
-          <sp who="vincent" xml:id="9-3">
-            <speaker>VINCENT.</speaker>
-            <l n="210" xml:id="l210">Vous ne vous êtes pas fait de mal ?</l>
-          </sp>
-          <sp who="lahouppe" xml:id="9-4">
-            <speaker>LAHOUPPE, <em>se frottant la jambe.</em></speaker>
-            <l n="211" xml:id="l211">Non, au contraire.</l>
-          </sp>
-          <sp who="vincent" xml:id="9-5">
-            <speaker>VINCENT.</speaker>
-            <l n="212" xml:id="l212">Qu’est-ce qui vous fait donc revenir si vite ?...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="9-6">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Air : Je regardais Madelinette. </em></hi></stage>
-          <stage>VINCENT, BARBE.</stage>
-          </sp>
-          <sp who="lahouppe" xml:id="9-7">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Ensemble. </em></hi></stage>
-          <stage>VINCENT</stage>
-          </sp>
-          <sp who="lahouppe" xml:id="9-8">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Ils entrent tous trois chez Dumont. </em></hi></stage>
-          <stage>VINCENT.</stage>
-          </sp>
-          <sp who="vincent" xml:id="9-9">
-            <speaker>VINCENT <em>et</em> BARBE.</speaker>
-            <l n="216" xml:id="l216"> </l>
-          </sp>
-          <sp who="lahouppe" xml:id="9-10">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="217" xml:id="l217"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="218" xml:id="l218"> </l>
-          <sp who="james" xml:id="10-1">
-            <speaker>MONDÉSIR, JAMES</speaker>
-            <l n="219" xml:id="l219"> </l>
-            <stage><hi rend="italic"><em>Ils sortent du cabinet vitré à gauche, James paraît le premier. </em></hi></stage>
-          </sp>
-          <sp who="james" xml:id="10-2">
-            <speaker>JAMES.</speaker>
-            <l n="221" xml:id="l221">Personne ici ? Entrez, mon maître.</l>
-          </sp>
-          <sp who="mondésir" xml:id="10-3">
-            <speaker>MONDÉSIR. <em>Il s’avance avec mystère, un lorgnon à la main.</em></speaker>
-            <l n="222" xml:id="l222">Je crois être dans la bonne route : le petit escalier à gauche, la seconde porte à droite... les indications sont exactes... Allons, allons, il faut me soigner ici ; d’après le mystère que l’on met dans cette affaire, il est clair que j’ai un rival ; mais j’en triompherai... La dame qui m’a fait venir a du goût sans doute, et pour peu qu’elle soit jeune et jolie, je veux en faire un bijou... c’en est fait, me voilà à la mode !</l>
-            <stage><hi rend="italic"><em>Air : Sans mentir. </em></hi></stage>
-            <l n="224" xml:id="l224">James, as-tu été aux Bouffes me prendre un billet de balcon pour TANCRÉDI ?</l>
-          </sp>
-          <sp who="james" xml:id="10-4">
-            <speaker>JAMES.</speaker>
-            <l n="225" xml:id="l225">Yes.</l>
-          </sp>
-          <sp who="mondésir" xml:id="10-5">
-            <speaker>MONDÉSIR, <em>regardant l’appartement avec son lorgnon.</em></speaker>
-            <l n="226" xml:id="l226">Cet hôtel est magnifique... quoiqu’un peu éloigné du centre de Paris ; mais j’ai mon cabriolet. James, as-tu été prévenir cette jolie danseuse de l’Opéra que je ne puis être à elle que dans une heure ?</l>
-          </sp>
-          <sp who="james" xml:id="10-6">
-            <speaker>JAMES.</speaker>
-            <l n="227" xml:id="l227">Yes.</l>
-          </sp>
-          <sp who="james" xml:id="10-7">
-            <speaker>MONDÉSIR, <em>voyant James froisser un petit paquet qu’il porte.</em></speaker>
-            <l n="228" xml:id="l228">Ah ! diable ! prends donc garde, maladroit !</l>
-            <stage><hi rend="italic"><em>Il prend des mains de James un papier dans lequel est enveloppée une jolie perruque blonde. </em></hi></stage>
-            <l n="230" xml:id="l230">C’est un objet précieux que je dois poser moi-même ; mais où la mettre pour qu’elle ne se détériore pas ?</l>
-            <stage><hi rend="italic"><em>Apercevant l’armoire vitrée. </em></hi></stage>
-            <l n="232" xml:id="l232">Eh ! justement, voici sa place</l>
-            <stage><hi rend="italic"><em>Il la pose. </em></hi></stage>
-            <l n="234" xml:id="l234">Je la reprendrai en sortant... Ah ! James !... va m’attendre dans mon cabriolet... Ah ! prends ce volume de Walter-Scott... Ah !... amuse un peu ma petite jument.</l>
-          </sp>
-          <sp who="james" xml:id="10-8">
-            <speaker>JAMES.</speaker>
-            <l n="235" xml:id="l235">Je vais le amuser avec le fouet.</l>
-            <stage><hi rend="italic"><em>Il sort par le cabinet vitre</em></hi></stage>
-            <l n="237" xml:id="l237"> </l>
-            <l n="238" xml:id="l238"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="239" xml:id="l239"> </l>
-          <sp who="mondésir" xml:id="11-1">
-            <speaker>MONDÉSIR, <em>seul</em></speaker>
-            <l n="240" xml:id="l240"> </l>
-            <l n="241" xml:id="l241">C’en est fait, je suis lancé,</l>
-            <stage><hi rend="italic"><em>Cavatine. </em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Di piacere. (De la Gazza ladra.) </em></hi></stage>
-          </sp>
-          <sp who="justine" xml:id="11-2">
-            <speaker>JUSTINE, <em>ouvrant la porte de la chambre à droite.</em></speaker>
-            <l n="244" xml:id="l244">Psitt ! psitt... M. Mondésir.</l>
-          </sp>
-          <sp who="mondésir" xml:id="11-3">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="245" xml:id="l245">On m’appelle, allons !</l>
-            <stage><hi rend="italic"><em>Il entre dans la chambre avec Justine en chantant. </em></hi></stage>
-            <l n="247" xml:id="l247">Amour, seconde mon ouvrage !</l>
-            <l n="248" xml:id="l248"> </l>
-            <l n="249" xml:id="l249"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="250" xml:id="l250"> </l>
-          <sp who="lahouppe" xml:id="12-1">
-            <speaker>DUMONT, LAHOUPPE</speaker>
-            <l n="251" xml:id="l251"> </l>
-            <stage><hi rend="italic"><em>Ils sortent de la chambre à gauche. </em></hi></stage>
-          </sp>
-          <sp who="dumont" xml:id="12-2">
-            <speaker>DUMONT, <em>fort animé.</em></speaker>
-            <l n="253" xml:id="l253">Se peut-il ?</l>
-          </sp>
-          <sp who="lahouppe" xml:id="12-3">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="254" xml:id="l254">C’est comme j’ai l’honneur de vous le dire ; le galant est gentil... je viens de le voir descendre d’un superbe cabriolet.</l>
-            <stage><hi rend="italic"><em>Air : Vaudeville du premier prix. </em></hi></stage>
-            <l n="256" xml:id="l256">Il est monté par le petit escalier.</l>
-          </sp>
-          <sp who="dumont" xml:id="12-4">
-            <speaker>DUMONT, <em>un peu troublé.</em></speaker>
-            <l n="257" xml:id="l257">Et sais-tu ce qu’il demande ?</l>
-          </sp>
-          <sp who="lahouppe" xml:id="12-5">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="258" xml:id="l258">Dam, monsieur, il ne vous a pas demandé.</l>
-          </sp>
-          <sp who="dumont" xml:id="12-6">
-            <speaker>DUMONT.</speaker>
-            <l n="259" xml:id="l259">C’est sans doute le galant au billet ?</l>
-          </sp>
-          <sp who="lahouppe" xml:id="12-7">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="260" xml:id="l260">Ça ne peut être que lui.</l>
-          </sp>
-          <sp who="dumont" xml:id="12-8">
-            <speaker>DUMONT.</speaker>
-            <l n="261" xml:id="l261">Et ce jeune homme est dans ce moment ?...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="12-9">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="262" xml:id="l262">Je ne sais pas où est le jeune homme, mais je sais bien que le cabriolet est toujours à la porte... sans le jeune homme.</l>
-          </sp>
-          <sp who="dumont" xml:id="12-10">
-            <speaker>DUMONT, <em>après un instant de réflexions.</em></speaker>
-            <l n="263" xml:id="l263">Mon ami Lahouppe... car tu es mon ami ?...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="12-11">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="264" xml:id="l264">Après le service que je viens de vous rendre, pouvez vous en douter ?</l>
-          </sp>
-          <sp who="dumont" xml:id="12-12">
-            <speaker>DUMONT.</speaker>
-            <l n="265" xml:id="l265">Eh bien ! fais-moi le plaisir de ne point soupçonner la vertu de ma femme.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="12-13">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="266" xml:id="l266">Si ça peut vous obliger ?</l>
-          </sp>
-          <sp who="dumont" xml:id="12-14">
-            <speaker>DUMONT.</speaker>
-            <l n="267" xml:id="l267">Ne peut-elle recevoir un parent... un cousin ?</l>
-          </sp>
-          <sp who="lahouppe" xml:id="12-15">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="268" xml:id="l268">En effet, je n’avais pas songé aux cousins... toutes ces dames en ont... par exemple ces parents-là ne sont jamais cousins avec les maris... cependant, il peut se faire que celui de Madame... c’est possible... mais c’est rare... Allons, vous voilà plus tranquille, je vous laisse avec le petit cousin... bonne chance... cousin, c’est convenu ?</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="270" xml:id="l270">Dieu ! comme le mariage change la tête d’un homme... comme ça le défrise !</l>
-            <stage><hi rend="italic"><em>Il sort. </em></hi></stage>
-            <l n="272" xml:id="l272"> </l>
-            <l n="273" xml:id="l273"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="274" xml:id="l274"> </l>
-          <sp who="dumont" xml:id="13-1">
-            <speaker>DUMONT, <em>seul</em></speaker>
-            <l n="275" xml:id="l275"> </l>
-            <l n="276" xml:id="l276">Il est parti !... est-ce que Madame Dumont voudrait ?... je ne puis le croire, je connais trop la sagesse de ma femme... je suis certain que jamais un jeune homme...</l>
-            <l n="277" xml:id="l277"> </l>
-            <l n="278" xml:id="l278"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="279" xml:id="l279"> </l>
-          <sp who="mondésir" xml:id="14-1">
-            <speaker>DUMONT, MONDÉSIR</speaker>
-            <l n="280" xml:id="l280"> </l>
-          </sp>
-          <sp who="mondésir" xml:id="14-2">
-            <speaker>MONDÉSIR, <em>sortant de chez Hortense.</em></speaker>
-            <l n="281" xml:id="l281">Elle est charmante !</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-3">
-            <speaker>DUMONT, <em>apercevant Mondésir.</em></speaker>
-            <l n="282" xml:id="l282">Ciel !... que vois-je ?</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-4">
-            <speaker>MONDÉSIR, <em>sans voir Dumont qui s’est mis à l’écart.</em></speaker>
-            <l n="283" xml:id="l283">C’est drôle, je me suis trouvé là en pays de connaissance.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-5">
-            <speaker>DUMONT, <em>à part.</em></speaker>
-            <l n="284" xml:id="l284">Ils s’étaient déjà vus !</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-6">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="285" xml:id="l285">Allons, l’ouvrage donne, ça m’en fait une de plus !</l>
-          </sp>
-          <sp who="dumont" xml:id="14-7">
-            <speaker>DUMONT.</speaker>
-            <l n="286" xml:id="l286">Qu’entends-je ?</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-8">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="287" xml:id="l287">À présent, sortons avec prudence ; on m’a surtout recommandé d’éviter le mari.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-9">
-            <speaker>DUMONT.</speaker>
-            <l n="288" xml:id="l288">Vous ne l’éviterez pas, monsieur.</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-10">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="289" xml:id="l289">Ah ! diable ! Justine aurait bien du prévoir...</l>
-          </sp>
-          <sp who="dumont" xml:id="14-11">
-            <speaker>DUMONT, <em>avec une fureur concentrée.</em></speaker>
-            <l n="290" xml:id="l290">Vous plairait-il, Monsieur, de me dire ce que vous venez faire ici ?</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-12">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="291" xml:id="l291">Ce que je viens faire ici ?... pardon, Monsieur, j’ai des instructions à cet égard et je dois me taire...</l>
-          </sp>
-          <sp who="dumont" xml:id="14-13">
-            <speaker>DUMONT.</speaker>
-            <l n="292" xml:id="l292">Monsieur, il est inutile de feindre... vous devez bien penser que je sais tout.</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-14">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="293" xml:id="l293">Alors, Monsieur, je ne puis rien vous apprendre ; je suis pressé, permettez...</l>
-          </sp>
-          <sp who="dumont" xml:id="14-15">
-            <speaker>DUMONT, <em>le retenant.</em></speaker>
-            <l n="294" xml:id="l294">Un moment.</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-16">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="295" xml:id="l295">Il faut contenter tout le monde ; je n’ai pas que votre femme...</l>
-          </sp>
-          <sp who="dumont" xml:id="14-17">
-            <speaker>DUMONT.</speaker>
-            <l n="296" xml:id="l296">Insolent !</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-18">
-            <speaker>MONDÉSIR, <em>s’échauffant.</em></speaker>
-            <l n="297" xml:id="l297">Ah ça ! monsieur, pour qui me prenez-vous ?</l>
-          </sp>
-          <sp who="dumont" xml:id="14-19">
-            <speaker>DUMONT.</speaker>
-            <l n="298" xml:id="l298">Pour ce que tu es... pour un vil séducteur.</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-20">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="299" xml:id="l299">Qu’appelez-vous séducteur ?... je suis coiffeur... oui, coiffeur, patenté ! puisqu’il faut décliner ses titres.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-21">
-            <speaker>DUMONT, <em>à part.</em></speaker>
-            <l n="300" xml:id="l300">Un coiffeur en cabriolet !...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="302" xml:id="l302">Le détour est adroit, Monsieur ; mais je n’en suis pas dupe... je suis aussi fin que vous : nous allons voir...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="304" xml:id="l304">Je vais bien l’embarrasser.</l>
-            <stage><hi rend="italic"><em>Haut </em></hi></stage>
-            <l n="306" xml:id="l306">Eh bien ! monsieur, puisque vous êtes coiffeur... coiffez-moi...</l>
-            <stage><hi rend="italic"><em>Il se jette violemment dans un fauteuil, ôte son bonnet et laisse voir une tête entièrement chauve.</em></hi></stage>
-            <l n="308" xml:id="l308">Le voilà pris !</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-22">
-            <speaker>MONDÉSIR, <em>regardant la tête de Dumont avec son lorgnon.</em></speaker>
-            <l n="309" xml:id="l309">Comment voulez-vous que l’on travaille sur une tête comme celle-là ? Je vous conseille cependant l’huile de Macassar, et la pommade des sultanes... la pâte de coco des Indes.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-23">
-            <speaker>DUMONT, <em>en colère.</em></speaker>
-            <l n="310" xml:id="l310">Coco des Indes !</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-24">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="311" xml:id="l311">Si ça ne fait de mal, ça ne peut pas faire de bien... vous pourriez encore essayer du fluide de Java.</l>
-            <stage><hi rend="italic"><em>Le lorgnant de plus près.</em></hi></stage>
-            <l n="313" xml:id="l313">Mais, je vois... vous portez perruque... perruque poudrée.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="315" xml:id="l315">Il a bien une véritable tête...</l>
-            <stage><hi rend="italic"><em>Haut. </em></hi></stage>
-            <l n="317" xml:id="l317">Vous n’êtes pas de mon ressort ; men talent n’est que pour les dames.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-25">
-            <speaker>DUMONT, <em>se levant.</em></speaker>
-            <l n="318" xml:id="l318">Je savais bien que je vous prendrais dans votre propre piège... mais j’ai d’autres preuves encore... nierez-vous ces témoins irrécusables ?</l>
-            <stage><hi rend="italic"><em>Il lui montre les deux papillotes qu’il a prises sur la toilette de sa femme.</em></hi></stage>
-            <l n="320" xml:id="l320">Qu’est-ce que c’est que cela, Monsieur ?</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-26">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="321" xml:id="l321">Ah ! par exemple, je m’y reconnais, ce sont des papillotes... ça rentre dans ma partie.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-27">
-            <speaker>DUMONT.</speaker>
-            <l n="322" xml:id="l322">Parlons sérieusement.</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-28">
-            <speaker>MONDÉSIR, <em>se fâchant.</em></speaker>
-            <l n="323" xml:id="l323">Tout ça est bel et bon, mais, monsieur, je vous l’ai déjà dit, plusieurs dames m’attendent... La femme du notaire Valcour, la femme du banquier Richard, la femme de l’a voué...</l>
-          </sp>
-          <sp who="dumont" xml:id="14-29">
-            <speaker>DUMONT.</speaker>
-            <l n="324" xml:id="l324">Quelle indiscrétion !</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-30">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="325" xml:id="l325">J’ai encore la femme de M. Derbin, receveur-général... elle est fort exigeante.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-31">
-            <speaker>DUMONT.</speaker>
-            <l n="326" xml:id="l326">Derbin ? mon ancien ami !... il est aussi victime !... Monsieur, cela ne se terminera pas ainsi, je vous demande satisfaction, et si vous avez du cœur...</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-32">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="327" xml:id="l327">Si j’ai du cœur ! je suis tout cœur, moi, monsieur.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-33">
-            <speaker>DUMONT.</speaker>
-            <l n="328" xml:id="l328">Votre adresse...</l>
-          </sp>
-          <sp who="mondésir" xml:id="14-34">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="329" xml:id="l329">Je n’en ai pas sur moi, mais je reviendrai ce soir et je vous en donnerai tant que vous voudrez.</l>
-          </sp>
-          <sp who="dumont" xml:id="14-35">
-            <speaker>DUMONT.</speaker>
-            <l n="330" xml:id="l330">À ce soir donc, Monsieur.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Mon cœur à l’espoir s’abandonne. </em></hi></stage>
-          <stage>MONDÉSIR.</stage>
-          </sp>
-          <sp who="dumont" xml:id="14-36">
-            <speaker>DUMONT.</speaker>
-            <stage><hi rend="italic"><em>Ensemble. </em></hi></stage>
-          <stage>MONDÉSIR.</stage>
-          </sp>
-          <sp who="dumont" xml:id="14-37">
-            <speaker>DUMONT.</speaker>
-            <stage><hi rend="italic"><em>Mondésir sort par la porte du fond. </em></hi></stage>
-          </sp>
-          <sp who="mondésir" xml:id="14-38">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="335" xml:id="l335"> </l>
-            <l n="336" xml:id="l336"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="337" xml:id="l337"> </l>
-          <sp who="dumont" xml:id="15-1">
-            <speaker>DUMONT, <em>seul</em></speaker>
-            <l n="338" xml:id="l338"> </l>
-            <l n="339" xml:id="l339">Ce soir il me trouvera ici, et je lui donnerai une leçon.</l>
-            <l n="340" xml:id="l340"> </l>
-            <l n="341" xml:id="l341"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="342" xml:id="l342"> </l>
-          <sp who="vincent" xml:id="16-1">
-            <speaker>DUMONT, VINCENT, BARBE, <em>apportant des lumières</em></speaker>
-            <l n="343" xml:id="l343"> </l>
-          </sp>
-          <sp who="vincent" xml:id="16-2">
-            <speaker>BARBE, <em>à Vincent.</em></speaker>
-            <l n="344" xml:id="l344">Viens voir ce qui s’est passé... parle-lui... il a l’air doux...</l>
-          </sp>
-          <sp who="dumont" xml:id="16-3">
-            <speaker>DUMONT, <em>appelant.</em></speaker>
-            <l n="345" xml:id="l345">Vincent ! Vincent !</l>
-          </sp>
-          <sp who="barbe" xml:id="16-4">
-            <speaker>BARBE.</speaker>
-            <l n="346" xml:id="l346">Monsieur...</l>
-          </sp>
-          <sp who="vincent" xml:id="16-5">
-            <speaker>VINCENT.</speaker>
-            <l n="347" xml:id="l347">Monsieur veut sortir ?</l>
-          </sp>
-          <sp who="dumont" xml:id="16-6">
-            <speaker>DUMONT.</speaker>
-            <l n="348" xml:id="l348">Non ; personne ne sort... Je vais me coucher, et j’ordonne que tout le monde en fasse autant.</l>
-            <stage><hi rend="italic"><em>Il rentre chez lui. </em></hi></stage>
-            <l n="350" xml:id="l350"> </l>
-            <l n="351" xml:id="l351"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="352" xml:id="l352"> </l>
-          <sp who="vincent" xml:id="17-1">
-            <speaker>VINCENT, BARBE</speaker>
-            <l n="353" xml:id="l353"> </l>
-          </sp>
-          <sp who="vincent" xml:id="17-2">
-            <speaker>VINCENT.</speaker>
-            <l n="354" xml:id="l354">Tu appelles ca de la douceur, toi ?</l>
-          </sp>
-          <sp who="barbe" xml:id="17-3">
-            <speaker>BARBE.</speaker>
-            <l n="355" xml:id="l355">Il veut que tout le monde aille se coucher !</l>
-          </sp>
-          <sp who="vincent" xml:id="17-4">
-            <speaker>VINCENT.</speaker>
-            <l n="356" xml:id="l356">Si nous n’avons pas envie de dormir !... voilà bien la tyrannie des maîtres !</l>
-            <l n="357" xml:id="l357"> </l>
-            <l n="358" xml:id="l358"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="359" xml:id="l359"> </l>
-          <sp who="vincent" xml:id="18-1">
-            <speaker>VINCENT, BARBE, LAHOUPPE</speaker>
-            <l n="360" xml:id="l360"> </l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-2">
-            <speaker>LAHOUPPE, <em>entrant vivement.</em></speaker>
-            <l n="361" xml:id="l361">Eh bien ! comment ça va-t-il ici ?</l>
-          </sp>
-          <sp who="barbe" xml:id="18-3">
-            <speaker>BARBE.</speaker>
-            <l n="362" xml:id="l362">Mal... Plus de bal !</l>
-          </sp>
-          <sp who="vincent" xml:id="18-4">
-            <speaker>VINCENT.</speaker>
-            <l n="363" xml:id="l363">Plus de souper...</l>
-          </sp>
-          <sp who="barbe" xml:id="18-5">
-            <speaker>BARBE.</speaker>
-            <l n="364" xml:id="l364">Tout le monde reste à la maison.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-6">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="365" xml:id="l365">Ah ! il a montré du caractère... Eh bien ! tant mieux, car j’avais oublié sa perruque... Je me suis retiré tellement affecté.</l>
-          </sp>
-          <sp who="barbe" xml:id="18-7">
-            <speaker>BARBE.</speaker>
-            <l n="366" xml:id="l366">Mais, nous autres ?...</l>
-          </sp>
-          <sp who="barbe" xml:id="18-8">
-            <speaker>LAHOUPPE, <em>à Barbe.</em></speaker>
-            <l n="367" xml:id="l367">C’est désolant ! d’autant plus que je me proposais de vous coiffer de manière à faire révolution.</l>
-          </sp>
-          <sp who="barbe" xml:id="18-9">
-            <speaker>BARBE.</speaker>
-            <l n="368" xml:id="l368">Là ! voyez-vous !</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-10">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="369" xml:id="l369">Oui ; j’avais médité cela... Je voulais que vous fussiez comme Mademoiselle Clairon, un jour qu’elle fut couverte d’applaudissements... C’était dans Phèdre... les cheveux en racine... trois crochets à gauche ; une couronne de roses, soutenue par une colonne poudrée, de dix-huit pouces de hauteur : c’était éblouissant... Ah ! l’on en reviendra à cette coiffure là... Et si j’avais l’honneur de connaître Mademoiselle Duchesnois, je la lui conseillerais bien.</l>
-          </sp>
-          <sp who="barbe" xml:id="18-11">
-            <speaker>BARBE.</speaker>
-            <l n="370" xml:id="l370">Quel dommage !</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-12">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="371" xml:id="l371">Mais, écoutez donc. Si vous avez bien envie d’aller à ce souper... Monsieur est couché... Madame va bientôt en faire autant ; en sortant sans bruit, qu’est-ce qui saurait ?...</l>
-          </sp>
-          <sp who="barbe" xml:id="18-13">
-            <speaker>BARBE.</speaker>
-            <l n="372" xml:id="l372">Il a raison, mon cœur !</l>
-          </sp>
-          <sp who="vincent" xml:id="18-14">
-            <speaker>VINCENT.</speaker>
-            <l n="373" xml:id="l373">Au fait, nous qui sommes toujours d’accord, il n’est pas juste que nous souffrions des querelles de nos maîtres... N’est-il pas vrai, mamour ?</l>
-          </sp>
-          <sp who="barbe" xml:id="18-15">
-            <speaker>BARBE.</speaker>
-            <l n="374" xml:id="l374">Oui, mon poulet.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-16">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="375" xml:id="l375">Charmant ménage ! et tous deux fidèles...</l>
-          </sp>
-          <sp who="vincent" xml:id="18-17">
-            <speaker>VINCENT.</speaker>
-            <l n="376" xml:id="l376">Oh ! ça...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-18">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="377" xml:id="l377">À la poudre et à l’amour conjugal... vous devriez servir d’exemple à tout Paris... Mais ce n’est pas de cela qu’il s’agit ; voilà neuf heures, il faut vous commencer... Tout est-il prêt ?</l>
-          </sp>
-          <sp who="barbe" xml:id="18-19">
-            <speaker>BARBE.</speaker>
-            <l n="378" xml:id="l378">Oui, monsieur Lahouppe.</l>
-          </sp>
-          <sp who="vincent" xml:id="18-20">
-            <speaker>VINCENT.</speaker>
-            <l n="379" xml:id="l379">Voilà le ruban de queue et la bourse...</l>
-          </sp>
-          <sp who="barbe" xml:id="18-21">
-            <speaker>BARBE.</speaker>
-            <l n="380" xml:id="l380">Voilà ma guirlande de roses !</l>
-            <stage><hi rend="italic"><em>Elle la prend des mains de Vincent. </em></hi></stage>
-          </sp>
-          <sp who="lahouppe" xml:id="18-22">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="382" xml:id="l382">Fraîche comme vous...</l>
-          </sp>
-          <sp who="barbe" xml:id="18-23">
-            <speaker>BARBE.</speaker>
-            <l n="383" xml:id="l383">Comme ces perruquiers sont galants !...</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-24">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="384" xml:id="l384">À l’ouvrage.</l>
-          </sp>
-          <sp who="vincent" xml:id="18-25">
-            <speaker>VINCENT.</speaker>
-            <l n="385" xml:id="l385">Par qui commencez-vous ?</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-26">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="386" xml:id="l386">Tous les deux à la fois... Un coup de peigne à l’un... un œil de poudre à l’autre... Deux ouvrages différents, ça rafraîchit les idées. Et puis, moi, je fais ça sans regarder ; la grande habitude...</l>
-            <stage><hi rend="italic"><em>Il leur met de la poudre sur la figure.</em></hi></stage>
-            <l n="388" xml:id="l388">Tenez, voyez-vous ?</l>
-            <stage><hi rend="italic"><em>On entend du bruit.</em></hi></stage>
-            <l n="390" xml:id="l390">Ah ! qu’est-ce que c’est que ça ?</l>
-          </sp>
-          <sp who="vincent" xml:id="18-27">
-            <speaker>VINCENT <em>et</em> BARBE.</speaker>
-            <stage><hi rend="italic"><em>Air : Comme le vin rajeunit la veillesse. </em></hi></stage>
-          </sp>
-          <sp who="lahouppe" xml:id="18-28">
-            <speaker>LAHOUPPE, <em>parlé.</em></speaker>
-            <l n="392" xml:id="l392">Entrez dans ce cabinet.</l>
-          </sp>
-          <sp who="vincent" xml:id="18-29">
-            <speaker>VINCENT.</speaker>
-            <l n="393" xml:id="l393">Il est vitré, la lumière va nous trahir.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="18-30">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="394" xml:id="l394">Éteignez-la, je m’en passerai.</l>
-            <stage><hi rend="italic"><em>Vincent souffle les bougies.</em></hi></stage>
-          </sp>
-          <sp who="barbe" xml:id="18-31">
-            <speaker>BARBE.</speaker>
-            <stage><hi rend="italic"><em>Suite de l’air.</em></hi></stage>
-          </sp>
-          <sp who="lahouppe" xml:id="18-32">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Ensemble. </em></hi></stage>
-          <stage>DUMONT <em>et</em> BARBE.</stage>
-          </sp>
-          <sp who="lahouppe" xml:id="18-33">
-            <speaker>LAHOUPPE.</speaker>
-            <stage><hi rend="italic"><em>Ils entrent tous trois dans le cabinet vitré.</em></hi></stage>
-            <l n="399" xml:id="l399"> </l>
-            <l n="400" xml:id="l400"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="401" xml:id="l401"> </l>
-          <sp who="dumont" xml:id="19-1">
-            <speaker>DUMONT, <em>avec une épée, des pistolets, un grand manteau et son bonnet de velours ; il s’avance sans lumière</em></speaker>
-            <l n="402" xml:id="l402"> </l>
-            <l n="403" xml:id="l403">Tout est tranquille... J’ai laissé ma lumière de peur d’être aperçu... Mes armes sont prêtes... je voudrais être déjà sur le terrain... j’enfonce mon chapeau sur mes yeux.</l>
-            <stage><hi rend="italic"><em>Il porte la main à sa tête.</em></hi></stage>
-            <l n="405" xml:id="l405">Ah ! c’est mon bonnet !... et pas de perruque... Ah ! ce diable de Lahouppe ne m’a pas coiffé aujourd’hui... Voyons si, par hasard, il ne l’aurait pas laissée dans cette armoire.</l>
-            <stage><hi rend="italic"><em>Il ouvre l’armoire. </em></hi></stage>
-            <l n="407" xml:id="l407">Ah ! justement, la voici... prenons-la ainsi que mon chapeau...</l>
-            <stage><hi rend="italic"><em>Il met la perruque sur sa tête.</em></hi></stage>
-            <l n="409" xml:id="l409">Mais, ce Monsieur se fait bien attendre.</l>
-            <stage><hi rend="italic"><em>On entend rire dans l’appartement d’Hortense. </em></hi></stage>
-            <l n="411" xml:id="l411">Ah ! on rit, je crois, chez ma femme... serait-ce à mes dépens ?... c’est ce que je vais savoir, morbleu !...</l>
-            <stage><hi rend="italic"><em>Il frappe.</em></hi></stage>
-            <l n="413" xml:id="l413">Ouvrez, Madame, ouvrez ; je vous l’ordonne...</l>
-            <l n="414" xml:id="l414"> </l>
-            <l n="415" xml:id="l415"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="20">
-          <head>Scène XX</head>
-            <l n="416" xml:id="l416"> </l>
-          <sp who="justine" xml:id="20-1">
-            <speaker>DUMONT, HORTENSE JUSTINE</speaker>
-            <l n="417" xml:id="l417"> </l>
-            <stage><hi rend="italic"><em>Justine porte des lumières, Hortense est coiffée et parée. </em></hi></stage>
-          </sp>
-          <sp who="hortense" xml:id="20-2">
-            <speaker>HORTENSE.</speaker>
-            <l n="419" xml:id="l419">Eh ! bon Dieu, Monsieur, pourquoi tout ce vacarme !... pourquoi cet appareil de guerre ?...</l>
-          </sp>
-          <sp who="dumont" xml:id="20-3">
-            <speaker>DUMONT.</speaker>
-            <l n="420" xml:id="l420">Vous n’étiez pas seule là-dedans ; j’ai entendu la voix d’un homme. Qu’il paraisse, ce monsieur, qu’il ose se présenter devant moi.</l>
-            <l n="421" xml:id="l421"> </l>
-            <l n="422" xml:id="l422"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="21">
-          <head>Scène XXI</head>
-            <l n="423" xml:id="l423"> </l>
-          <sp who="mondésir" xml:id="21-1">
-            <speaker>DUMONT, HORTENSE JUSTINE, MONDÉSIR, <em>à la porte de la chambre d’Hortense, un fer à papillote à la main</em>, LAHOUPPE, <em>sur le seuil du cabinet vitré</em></speaker>
-            <l n="424" xml:id="l424"> </l>
-          </sp>
-          <sp who="mondésir" xml:id="21-2">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="425" xml:id="l425">Me voici !</l>
-          </sp>
-          <sp who="lahouppe" xml:id="21-3">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="426" xml:id="l426">Dieu ! c’est Ignace ! mon neveu ?</l>
-          </sp>
-          <sp who="mondésir" xml:id="21-4">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="427" xml:id="l427">Mon oncle !</l>
-          </sp>
-          <sp who="dumont" xml:id="21-5">
-            <speaker>DUMONT.</speaker>
-            <l n="428" xml:id="l428">Le jeune homme de tantôt !</l>
-            <stage><hi rend="italic"><em>Lahouppe embrasse Mondésir.</em></hi></stage>
-          </sp>
-          <sp who="hortense" xml:id="21-6">
-            <speaker>HORTENSE.</speaker>
-            <l n="430" xml:id="l430">Mon coiffeur, que j’ai bien été forcée de faire venir en secret, puisque vos ridicules soupçons...</l>
-          </sp>
-          <sp who="dumont" xml:id="21-7">
-            <speaker>DUMONT.</speaker>
-            <l n="431" xml:id="l431">Vous comptiez donc aller au bal ?</l>
-          </sp>
-          <sp who="hortense" xml:id="21-8">
-            <speaker>HORTENSE.</speaker>
-            <l n="432" xml:id="l432">Certainement, Monsieur ; je l’avais promis à Madame de Senange, qui m’avait écrit qu’elle viendrait me chercher. Mais, vous deviez le savoir... car, ce matin, vous avez pris, sur ma toilette, des fragments de son billet...</l>
-          </sp>
-          <sp who="dumont" xml:id="21-9">
-            <speaker>DUMONT.</speaker>
-            <l n="433" xml:id="l433">Quoi ! les papillotes...</l>
-            <stage><hi rend="italic"><em>Il ôte son chapeau qu’il a gardé jusques là.</em></hi></stage>
-          </sp>
-          <sp who="hortense" xml:id="21-10">
-            <speaker>HORTENSE.</speaker>
-            <l n="435" xml:id="l435">Mais, vous-même, Monsieur, il paraît que vous aviez des projets pour ce soir ?... cette nouvelle coiffure...</l>
-          </sp>
-          <sp who="dumont" xml:id="21-11">
-            <speaker>DUMONT.</speaker>
-            <l n="436" xml:id="l436">Que voulez-vous dire ?</l>
-          </sp>
-          <sp who="hortense" xml:id="21-12">
-            <speaker>HORTENSE.</speaker>
-            <l n="437" xml:id="l437">Elle vous va fort bien.</l>
-          </sp>
-          <sp who="dumont" xml:id="21-13">
-            <speaker>DUMONT, <em>se regardant dans la glace.</em></speaker>
-            <l n="438" xml:id="l438">En effet...</l>
-          </sp>
-          <sp who="mondésir" xml:id="21-14">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="439" xml:id="l439">Ma foi, Monsieur, je l’ai apportée par hasard ; mais je vous l’aurais destinée, que je n’aurais pas mieux réussi.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="21-15">
-            <speaker>LAHOUPPE, <em>à Dumont.</em></speaker>
-            <l n="440" xml:id="l440">Et vous aussi !... vous m’abandonnez ; vous en êtes le maître !... D’ailleurs, c’est mon neveu qui hérite de votre pratique, et cela me rend le coup moins sensible.</l>
-          </sp>
-          <sp who="dumont" xml:id="21-16">
-            <speaker>DUMONT.</speaker>
-            <l n="441" xml:id="l441">Ah ! c’est ton neveu !</l>
-          </sp>
-          <sp who="lahouppe" xml:id="21-17">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="442" xml:id="l442">Ingrat ! Vous ne savez pas ce que je vous destinais...</l>
-            <stage><hi rend="italic"><em>À Hortense.</em></hi></stage>
-            <l n="444" xml:id="l444">C’est Ignace qui a coiffé Madame ?...</l>
-            <stage><hi rend="italic"><em>À Mondésir. </em></hi></stage>
-            <l n="446" xml:id="l446">Mon neveu, comment appelles-tu cette coiffure ?</l>
-          </sp>
-          <sp who="mondésir" xml:id="21-18">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="447" xml:id="l447">C’est une coiffure à la neige.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="21-19">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="448" xml:id="l448">Une coiffure à la Neige !... et pas un grain de poudre !... comme ça manque de vérité ! Je vais vous en faire voir des coiffures à la Neige, moi !... et aux frimas !...</l>
-            <stage><hi rend="italic"><em>Il court au cabinet vitré, et en ramène Vincent et Barbe Vincent a une couronne de roses, et Barbe une bourse. </em></hi></stage>
-            <l n="450" xml:id="l450"> </l>
-            <l n="451" xml:id="l451"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="22">
-          <head>Scène XXII</head>
-            <l n="452" xml:id="l452"> </l>
-          <sp who="vincent" xml:id="22-1">
-            <speaker>DUMONT, HORTENSE JUSTINE, MONDÉSIR, LAHOUPPE, VINCENT <em>et</em> BARBE</speaker>
-            <l n="453" xml:id="l453"> </l>
-          </sp>
-          <sp who="lahouppe" xml:id="22-2">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="454" xml:id="l454">Voilà comment je voulais vous coiffer !</l>
-          </sp>
-          <sp who="tout-le-monde" xml:id="22-3">
-            <speaker>TOUT LE MONDE, <em>riant.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Le voilà le vrai modèle. </em></hi></stage>
-            <stage><hi rend="italic"><em>Pendant ce chœur ; Lahouppe rétablit les coiffures.</em></hi></stage>
-          </sp>
-          <sp who="mondésir" xml:id="22-4">
-            <speaker>MONDÉSIR.</speaker>
-            <l n="457" xml:id="l457">Allons, mon oncle, prenez gaiment votre disgrâce ! Que voulez-vous ? c’est la marche du siècle... Au reste, vous n’avez plus rien à désirer ; je reviens à vous, non en enfant prodigue, mais avec une fortune et une réputation solidement établies. Faites désormais votre état en amateur, il y aura toujours assez de têtes à perruques pour vos menus-plaisirs.</l>
-          </sp>
-          <sp who="lahouppe" xml:id="22-5">
-            <speaker>LAHOUPPE.</speaker>
-            <l n="458" xml:id="l458">Soit, je me résigne. </l>
-            <stage><hi rend="italic"><em>Vaudeville. </em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Du Vaudeville de la Somnambule. </em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, BARBE</speaker>
+          <stage>&lt;em&gt;Ils apprêtent des toilettes de bal.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <stage>&lt;em&gt;Air : Vaudeville de M. Vautour. &lt;/em&gt;</stage>
+          <l n="1">Des plaisirs doux signal,</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="2">Je n’en disconviens pas ;</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>Des plaisirs, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="3">Mademoiselle Justine, la femme de chambre de Madame, n’aura plus rien à faire pour la toilette de sa maîtresse.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="4">Quand le perruquier aura frisé la perruque de Monsieur, il ne manquera rien à son costume de bal.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="5">Tu me fais penser que nous aurons besoin du ministère de M. Lahouppe... Nous sommes invités aussi à ce bal ; il y aura, à ce qu’il paraît, un souper magnifique... et pour qu’il n’y ait rien de perdu...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="6">Le valet de chambre de Madame De Senange en donne à l’office une seconde édition... un peu diminuée.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="7">Alors tu conçois bien qu’il faut une certaine mise.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="8">Tu crois ?</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="9">Oui, mon bichon... pour la société... ça sera très bien composé... tous gens comme il faut... femmes de chambre, intendants, concierges... La livrée ne sera point admise. Tu mettras ton habit vert à boutons d’acier.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="10">Tu trouves qu’il me va bien ?</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="11">Tu es éblouissant avec... moi j’aurai ma robe de taffetas fleur d’abricot.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="12">C’est donc pour les autres ; car tu ne me parais jamais plus belle que lorsque, dédaignant ces vains atours, je te vois.</l>
+          <l n="13">...Dans le simple appareil</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="14">N’achève pas, mon cœur, je te comprends.</l>
+          <stage>&lt;em&gt;Air : Dodo, l’enfant do. &lt;/em&gt;</stage>
+          <l n="15">À ce compliment gracieux,</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="16">Je te vois comme tout le monde ;</l>
+          <l n="17">Dis-moi, ma poule, pourquoi, nous, vieux époux, nous entendons-nous si bien, tandis que nos maîtres, mariés depuis peu, sont presque toujours en dispute ?</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="18">Tu n’en devines pas la cause ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="19">Non.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="20">Quel âge a Madame Dumont ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="21">Dam !... si par précaution pour l’avenir, elle ne le cache pas... ça doit avoir dix-huit ans.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="22">Et ton maître, qu’est-ce que tu lui donnes ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="23">J’ai cinquante-neuf ans et il est mon aîné de quatre, ce qui fait 63 ; mais tu connais le proverbe : les extrêmes se touchent...</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="24">Oui, ils se touchent ; mais ils ne peuvent pas se sentir. Crois-tu que M. Dumont soit enchanté de ce bal ?... c’est en murmurant qu’il y va... il aimerait mieux dormir...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="25"> J’entends, sa femme est une éveillée... et il faut qu’il marche droit ; v’là ce que c’est que d’avoir une jeune femme... je n’ai pas cet inconvénient-la, moi...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, dans la coulisse.</speaker>
+          <l n="26">C’est bon !... j’ai mes rasoirs et ma houppe.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="27">Ah ! voilà son perruquier...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, BARBE, LAHOUPPE</speaker>
+          <stage>&lt;em&gt;Lahouppe est habillé comme un perruquier d’autrefois... caricature connue. Il tient à la main rasoir, savonnette, bassin et cuir.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <stage>&lt;em&gt;Air : Ô Richard. &lt;/em&gt;</stage>
+          <l n="28">Ô ma houppe !... je le vois,</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT et BARBE, l’interrompant.</speaker>
+          <l n="29">Bonjour, M. Lahouppe !</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <stage>&lt;em&gt;Air : Bonjour, mon ami Vincent. &lt;/em&gt;</stage>
+          <l n="30">Bonjour, mon ami Vincent !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="31">Non.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="32">Je viens lui fair’ la barbe.</l>
+          <stage>&lt;em&gt;À Barbe, lui donnant un petit carton.&lt;/em&gt;</stage>
+          <l n="33">Voilà vot’ chignon que j’ai renforcé.</l>
+          <stage>&lt;em&gt;À Vincent lui donnant un rasoir. &lt;/em&gt;</stage>
+          <l n="34">Voilà vot’ rasoir que j’ai repassé.</l>
+          <stage>&lt;em&gt;À Barbe.&lt;/em&gt;</stage>
+          <l n="35">Mettez l’un.</l>
+          <stage>&lt;em&gt;À Vincent.&lt;/em&gt;</stage>
+          <l n="36">Vous, essayez l’autre.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT et BARBE, essayant un le rasoir et l’autre le chignon.</speaker>
+          <l n="37">Quel art est le vôtre !</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="38">Et quels résultats !</l>
+          <stage>&lt;em&gt;À Barbe. &lt;/em&gt;</stage>
+          <l n="39">Ça vous va-t-y bien ?</l>
+          <stage>&lt;em&gt;À Vincent. &lt;/em&gt;</stage>
+          <stage>Ça n’vous bless’-t-il pas ? &lt;em&gt;(bis) &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="40">Il a un fameux fil, votre rasoir !... Mais M. Dumont vous attend depuis huit heures.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="41">Diable ! il s’éveillait plus tard autrefois... mais à présent nous avons tous deux la puce à l’oreille... un mari, un, perruquier sont obligés de se lever matin.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="42">M. Lahouppe, depuis quelque temps, je vous trouve mélancolique.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="43">Je crains de devenir romantique.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="44">Vous auriez tort ; c’est bête...Qu’est devenu ce bavardage vif et spirituel qui caractérise d’ordinaire le vrai perruquier ?...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="45">Il a fait place aux phrases de la réflexion... et il y a de quoi... Hier encore il s’est tramé, dans cette maison, un complot contre moi... je puis dire que je l’ai échappé belle... il ne s’en est pas fallu l’épaisseur d’un cheveu !... Après avoir rasé Monsieur, comme j’étais à serrer le peignoir, Madame Dumont est arrivée... a critiqué la frisure de son mari... l’a traitée de gothique et lui a conseillé la Titus. La Titus !... si je les tenais, ces Titus, je voudrais les réduire en poudre !... un respectable bourgeois de Paris à la Titus ! ça fait dresser les cheveux sur la tête !...</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="46">J’espère qu’il a refusé ?...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="47">Oui... mais persistera-t-il dans cette estimable résolution... Hélas ! quand on a, pendant quarante-cinq ans, fréquenté les têtes les plus distinguées de Paris, on connait les hommes... Il fera comme les autres... il suivra le torrent... et voilà justement la cause de la décadence universelle... Voyez dans le grand siècle, le siècle des fortes têtes, les grandes perruques... les arts commencèrent à dégénérer quand les ailes de pigeons parurent, et maintenant nous voilà arrivés à la Titus... si ça continue, nous serons bientôt rasés. Oui, si l’on n’en revient point à la poudre, tout est perdu. La raison en est claire, et vous allez la comprendre facilement : Quelle est la partie la plus noble de l’homme, celle qui dirige tout ?... la tête... vous mettez des bas à vos jambes... des souliers à vos pieds... une cravate à votre cou... des gants à vos mains</l>
+          <stage>&lt;em&gt;Montrant la tête.&lt;/em&gt;</stage>
+          <l n="48">et rien là !... Ah ! si les têtes ne sont plus aussi saines, c’est depuis qu’on les a si cruellement négligées ; autrefois, jeunes, vieux, tout était pommadé, frisé, poudré.</l>
+          <stage>&lt;em&gt;Air : Je suis né natif de Ferrare. &lt;/em&gt;</stage>
+          <l n="49">Jadis cette blanche coiffure</l>
+          <l n="50">Mais hélas ! tout a disparu ; à peine maintenant compte-t-on, dans chaque famille, une ou deux têtes à perruques.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="51">Ça reviendra, M. Lahouppe.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="52">Mes amis, j’ai longtemps dit comme vous : ça reviendra, ça repoussera ; mais je commence à perdre courage... j’avais un neveu unique et dernier espoir d’une génération de perruquiers... Ignace-Bonaventure Lahouppe ; le siècle l’a entraîné... il a oublié tout ce que je lui avais appris, et je ne sais ce qu’il est devenu.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="53">Vous le retrouverez peut-être un jour.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="54">Jamais !</l>
+          <stage>&lt;em&gt;On entend gronder dans la coulisse.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, regardant à la cantonade.</speaker>
+          <l n="55">Voilà notre maître... il a l’air de se disputer avec mademoiselle Justine.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="56">Ça ne m’étonne pas, elle est si bien avec Madame...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="57">Ce sont deux têtes dans un bonnet.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, BARBE, LAHOUPPE, DUMONT, JUSTINE</speaker>
+          <stage>&lt;em&gt;Ils sortent de la chambre à gauche. Dumont en robe de chambre, bonnet de velours. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, à Justine.</speaker>
+          <l n="58">Non, Mademoiselle ; je m’oppose à ce mariage.</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE.</speaker>
+          <l n="59">Madame m’avait pourtant fait espérer que j’aurais le consentement de Monsieur.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="60">Madame a ses idées, et j’ai les miennes...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="61">Introduire un inconnu dans ma maison... qui serait tout dévoué à ma femme...</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE.</speaker>
+          <l n="62">Si Monsieur voulait seulement voir mon prétendu... un garçon rangé, profession superbe ; c’est un des meilleurs coiffeurs de Paris.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, s’avançant.</speaker>
+          <l n="63">Ô ciel !</l>
+          <stage>&lt;em&gt;À Dumont.&lt;/em&gt;</stage>
+          <l n="64">comment, Monsieur, un coiffeur ici ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="65">Rassure-toi, mon vieux la Houppe.</l>
+          <stage>&lt;em&gt;Haut à Justine.&lt;/em&gt;</stage>
+          <l n="66">Non, Mademoiselle, encore une fois non... Vous voyez Monsieur Lahouppe... il n’y aura jamais que lui, ou ses descendants qui toucheront à ma tête ; et je vous permets de compter sur mon consentement à votre mariage avec un coiffeur, quand vous me verrez affublé d’une perruque à la mode.</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE.</speaker>
+          <stage>&lt;em&gt;Air : Vaudeville des Blouses. &lt;/em&gt;</stage>
+          <l n="67">En quoi ! Monsieur me refuse... de grâce,</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="68">Ils seraient superflus ;</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE.</speaker>
+          <l n="69">Contre l’hymen quel courroux vous entraîne ?</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+          <l n="70">À mon amant, ah ! Monsieur, faites grâce !</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="71">Je vous le dis, n’espérez pas de grâce,</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE, VINCENT, LAHOUPPE.</speaker>
+          <l n="72">Il vous le dit, n’espérez pas de grâce,</l>
+          <stage>&lt;em&gt;Justine et Barbe rentrent dans la chambre de Madame et Vincent dans celle de M. Dumont. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="73">Faisons-nous cette barbe, Monsieur ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="74">Non, Lahouppe ; ce soir... je vais au bal, elle sera plus fraîche...</l>
+          <stage>&lt;em&gt;Moment de silence. &lt;/em&gt;</stage>
+          <l n="75">Eh bien ! mon vieux, tu ne me dis rien... quelle nouvelle ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="76">Vous savez, Monsieur, que la politique est rayée de mon catalogue.</l>
+          <stage>&lt;em&gt;Air : Vaudeville de Turenne. &lt;/em&gt;</stage>
+          <l n="77">Naguère encor, Monsieur, notre éloquence</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="78">Ah ça ! je mène ce soir Madame Dumont dans une fête, il faudra te distinguer, Lahouppe.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="79">Soyez tranquille, Monsieur ; je n’ai plus de garçon chez moi, et votre perruque sera frisée de main de maître.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="80">Je veux surtout plaire, à ma femme.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="81">Elle est bien jeune, Monsieur ! Madame Dumont aime les plaisirs, le monde... Le monde est plein de jeunes gens aimables... à la nouvelle manière...</l>
+          <stage>&lt;em&gt;Air : Du partage de la richesse. &lt;/em&gt;</stage>
+          <l n="82">Des maris écoutez les plaintes :</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="83">À cet égard j’aurais bien quelques craintes,</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="84">Si vous étiez resté célibataire,</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="85">Si jamais quelqu’un osait regarder ma femme... il aurait affaire à moi... Dieu merci ! mon épée est toujours là... Te rappelles-tu que je tirais avec Saint-Georges ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <stage>Ah ! ce grand brun, avec qui vous jouiez aux fleurets, et qui vous donnait toujours &lt;em&gt;des gilets&lt;/em&gt; ?... Vous a-t-il tué de fois, celui-là !... pour de rire.</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="86">Je le touchais bien aussi de temps en temps, et je saurai me mettre en garde...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="87">Vous ferez bien... Tenez, les jeunes femmes de chambre et les coiffeurs d’à présent, ne font pas autre chose que de se prêter à des intrigues. Enfin, sans aller plus loin, j’ai vu, ce matin, dans la loge du portier, une lettre... que Mademoiselle Justine a cachée à mon approche.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="88">Une lettre !... C’est décidé, Lahouppe, tu seras le coiffeur de ma femme.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="89">Monsieur, j’allais vous demander sa pratique...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="90">Je te la donne.</l>
+          <stage>&lt;em&gt;Air : D’une visite à Bedlam. &lt;/em&gt;</stage>
+          <l n="91">Ah ! puisqu’il en est ainsi,</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="92">Oui, je vais dans le quartier,</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <stage>Ah ! puisqu’il en est ainsi, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="93">Ah ! puisqu’il en est ainsi,</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, LAHOUPPE, HORTENSE, JUSTINE</speaker>
+          <stage>&lt;em&gt;Hortense est en négligé du matin ; elle a encore ses papillotes.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, à Lahouppe.</speaker>
+          <l n="94">Voici Madame, reste !</l>
+          <stage>&lt;em&gt;Haut. &lt;/em&gt;</stage>
+          <l n="95">Eh bien ! ma chère amie, vous disposez-vous pour cette fête ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="96">Oui, Monsieur... dans un instant je vais commencer ma toilette... Je venais vous demander à quelle heure vous comptez partir.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="97">Mais, ma bonne amie, mon heure sera la vôtre... Cependant, puisque vous voulez bien me consulter, je crois que, pour ne pas arriver des premiers...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="98">Ce qui n’est pas convenable...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="99">Et cependant... pour ne pas nous faire attendre...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="100">Ce qui serait d’un mauvais genre.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="101">Il faudrait arriver entre sept et huit.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="102">Parfaitement calculé !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="103">Que dites-vous donc là, mon ami ?... Pour arriver à une heure décente, nous partirons un peu avant minuit.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="104">Ah ! mon Dieu ! mais j’espérais être couché à cette heure-là...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="105">Comment ferais-je pour arriver à huit heures ?... il en est cinq, et ma toilette n’est pas commencée... vous pensez bien qu’il me faut du temps... La réunion sera des plus brillantes !... il y aura concert, bal...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="106">Vous chercherez le plaisir partout.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="107">Et vous jouerez à l’écarté. Voici le moment de parler de moi...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="108">J’y pensais.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="109">Au reste, j’avais prévu vos intentions, ma chère Hortense, et voici un homme aussi habile qu’expéditif...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, s’avançant.</speaker>
+          <l n="110">J’avais l’honneur de coiffer autrefois feue Madame Dumont, la maman de Monsieur, femme infiniment respectable, que l’on citait partout pour l’élégance de sa mise, et la facture de son chignon... J’accommode M. Dumont depuis qu’il a l’âge de raison... les évènements nous avaient séparés... comme tant d’autres ; mais enfin, je l’ai retrouvé avec les mêmes sentiments et la même coiffure... J’espère, Madame que vous ne l’en ferez pas changer, et que vous voudrez bien agréer les services de l’ancien serviteur de toute la famille...</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="111">Je suis désespérée, Monsieur, de ne pouvoir accueillir votre demande.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="112">Madame !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="113">Bien loin de là, si M. Dumont m’en croyait, il cosserait d’avoir recours à votre ministère.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, stupéfait.</speaker>
+          <l n="114">Et pourquoi donc ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="115">Parce que sa large perruque le fait paraître beaucoup plus âgé qu’il ne l’est en effet.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="116">Croyez-vous ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="117">Elle vous cache le front que vous avez noble et élevé, et vous prive d’une partie de vos avantages. Je vous ai déjà dit souvent ma façon de penser là-dessus, vous n’en avez pas tenu compte... soit, je ne veux pas vous contraindre ; mais souffrez que je choisisse les gens dont je prétends me servir.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, bas à Dumont.</speaker>
+          <l n="118">Voyez-vous où l’on veut en venir ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="119">Ceci est différent, Madame ! j’ai le droit de connaître les personnes qui s’introduisent chez vous, et je veux savoir par qui vous prétendez vous faire coiffer.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, bas à Dumont.</speaker>
+          <l n="120">Ferme !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="121">Par qui, Monsieur ?... et par l’homme le plus habile, le plus célèbre de Paris, par Michalon ou l’un de ses élèves.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="122">Sans doute quelque jeune homme ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="123">Certainement, les jeunes gens ont le goût plus frais les idées plus nouvelles.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, bas à Dumont.</speaker>
+          <l n="124">Quand je vous le disais.</l>
+          <stage>&lt;em&gt;À Hortense.&lt;/em&gt;</stage>
+          <l n="125">Ainsi, Madame, vous révoquez en doute ma capacité ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="126">Nullement, Monsieur, mais je ne veux pas la mettre à l’épreuve.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, avec fermeté.</speaker>
+          <l n="127">Et moi, Madame, je prétends...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, l’interrompant.</speaker>
+          <l n="128">Ah ! de grâce, M. Dumont, arrêtez, je vous prie... je ne souffrirai pas que vous chagriniez Madame à mon occasion.</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE, à part.</speaker>
+          <l n="129">Ah ! le sournois !...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="130">Si je n’ai pu obtenir la pomme, je ne veux pas jeter celle de discorde dans votre ménage... Oui, Madame, suivez votre goût, puisque vous ne m’en trouvez pas assez... la confiance ne se commande pas...  prenez quelque jeune artiste en cheveux, livrez lui votre tête... je la regretterai, car je dois l’avouer, il m’en passe peu par les mains d’aussi jolies... mais je m’en consolerai dans l’espérance que quel que jour on reviendra au vrai beau, à l’ancien goût.</l>
+          <stage>&lt;em&gt;Air : Il faut attendre avec philosophie. &lt;/em&gt;</stage>
+          <l n="131">Dieu, le bel art que l’art de la coiffure,</l>
+          <stage>&lt;em&gt;Il fait quelques pas et revient.&lt;/em&gt;</stage>
+          <l n="132">Si Madame se ravise, voilà ma nouvelle adresse : « Lahouppe, perruquier, rue de la Savonnerie ; fait la barbe à miracle et la queue aux oiseaux. »</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#justine">
+          <speaker>JUSTINE, à part.</speaker>
+          <l n="133">Il est piqué.</l>
+          <stage>&lt;em&gt;À Hortense.&lt;/em&gt;</stage>
+          <l n="134">Tenez bon, Madame, si vous cédez une seule fois à votre mari, c’en est fait pour le reste de votre vie.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="135">Je suis étonné, Madame, que vous ayez ainsi rejeté les services de Lahouppe... vous l’avez humilié.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, se regardant dans une glace et ôtant ses papillotes.</speaker>
+          <l n="136">J’en suis fâchée, monsieur ; mais vous m’avez poussée à bout... pourquoi ne pas me laisser choisir les gens que je veux employer ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="137">Il me semble que je mets avec vous assez de complaisance... car vos plaisirs ne sont pas les miens.</l>
+          <stage>&lt;em&gt;Il prend en parlant les papillotes qu’Hortense a ôtées.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE.</speaker>
+          <l n="138">Je le crois bien !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="139">Je ne sais vraiment à qui vous en avez aujourd’hui... parce que je désire vivement aller à ce bal...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, à part lisant une papillote.</speaker>
+          <l n="140">« Vous y serez, je m’y promets le plus grand plaisir... Ô ciel ! qu’ai-je vu ?... c’est le billet...</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE, bas à Hortense.</speaker>
+          <l n="141">Madame, on lit vos papillotes.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="142">Chut !... n’ayons pas l’air de nous en apercevoir.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, lisant une seconde papillote.</speaker>
+          <l n="143">« Adieu... à ce soir !... ma chère. » Le reste manque... quelle découverte !</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="144">J’espère que pour réparer vos torts, vous voudrez bien me permettre de faire venir ce soir...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="145">Qui, Madame ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE, quittant sa toilette.</speaker>
+          <l n="146">Un coiffeur...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="147">N’y comptez pas.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="148">Vous me refusez un coiffeur ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, avec une fureur concentrée.</speaker>
+          <l n="149">Oui, Madame.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="150">Eh bien ! monsieur, vous êtes un monstre !... je suis une femme opprimée. Pouvais-je m’attendre à ce qui m’arrive ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#barbe">
+          <speaker>BARBE, arrivant.</speaker>
+          <l n="151">La toilette de Madame est prête.</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="152">Je ne m’habille pas.</l>
+          <stage>&lt;em&gt;Elle rentre dans sa chambre, suivie de Justine.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, arrivant, à Dumont.</speaker>
+          <l n="153">L’habit de bal de monsieur est brossé.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="154">Va-t’en au diable !</l>
+          <stage>&lt;em&gt;Il rentre dans sa chambre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="155">Là !... voilà la bombe partie ! gare les éclats !</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="156">Le joli petit ménage !...</l>
+          <stage>&lt;em&gt;On entend un grand bruit sur l’escalier.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, regardant par la porte du fond.</speaker>
+          <l n="157">Qu’est-ce que c’est que ça ?... Ah ! mon dieu ! c’est M. Lahouppe qui dégringole en bas de l’escalier... comme il a l’air effaré.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, entrant vivement.</speaker>
+          <l n="158">J’ai pensé me casser les jambes !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="159">Vous ne vous êtes pas fait de mal ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, se frottant la jambe.</speaker>
+          <l n="160">Non, au contraire.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="161">Qu’est-ce qui vous fait donc revenir si vite ?...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <stage>&lt;em&gt;Air : Je regardais Madelinette. &lt;/em&gt;</stage>
+          <l n="162">Conduisez-moi chez votre maître.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, BARBE.</speaker>
+          <l n="163">Il a l’air d’un évènement.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="164">Répondez vite, où peut-il être ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT</speaker>
+          <l n="165">Il est dans son appartement.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="166">Vous, qui, passé l’âg’ des folies,</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="167">Mon cher, à qui le dites-vous ?</l>
+          <stage>&lt;em&gt;Ensemble. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT et BARBE.</speaker>
+          <l n="168">Suivez-nous donc chez notre maître</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="169">Conduisez-moi chez votre maître</l>
+          <stage>&lt;em&gt;Ils entrent tous trois chez Dumont. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, JAMES</speaker>
+          <stage>&lt;em&gt;Ils sortent du cabinet vitré à gauche, James paraît le premier. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#james">
+          <speaker>JAMES.</speaker>
+          <l n="170">Personne ici ? Entrez, mon maître.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR. Il s’avance avec mystère, un lorgnon à la main.</speaker>
+          <l n="171">Je crois être dans la bonne route : le petit escalier à gauche, la seconde porte à droite... les indications sont exactes... Allons, allons, il faut me soigner ici ; d’après le mystère que l’on met dans cette affaire, il est clair que j’ai un rival ; mais j’en triompherai... La dame qui m’a fait venir a du goût sans doute, et pour peu qu’elle soit jeune et jolie, je veux en faire un bijou... c’en est fait, me voilà à la mode !</l>
+          <stage>&lt;em&gt;Air : Sans mentir. &lt;/em&gt;</stage>
+          <l n="172">À la déesse infidèle</l>
+          <l n="173">James, as-tu été aux Bouffes me prendre un billet de balcon pour TANCRÉDI ?</l>
+        </sp>
+        <sp who="#james">
+          <speaker>JAMES.</speaker>
+          <l n="174">Yes.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, regardant l’appartement avec son lorgnon.</speaker>
+          <l n="175">Cet hôtel est magnifique... quoiqu’un peu éloigné du centre de Paris ; mais j’ai mon cabriolet. James, as-tu été prévenir cette jolie danseuse de l’Opéra que je ne puis être à elle que dans une heure ?</l>
+        </sp>
+        <sp who="#james">
+          <speaker>JAMES.</speaker>
+          <l n="176">Yes.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, voyant James froisser un petit paquet qu’il porte.</speaker>
+          <l n="177">Ah ! diable ! prends donc garde, maladroit !</l>
+          <stage>&lt;em&gt;Il prend des mains de James un papier dans lequel est enveloppée une jolie perruque blonde. &lt;/em&gt;</stage>
+          <l n="178">C’est un objet précieux que je dois poser moi-même ; mais où la mettre pour qu’elle ne se détériore pas ?</l>
+          <stage>&lt;em&gt;Apercevant l’armoire vitrée. &lt;/em&gt;</stage>
+          <l n="179">Eh ! justement, voici sa place</l>
+          <stage>&lt;em&gt;Il la pose. &lt;/em&gt;</stage>
+          <l n="180">Je la reprendrai en sortant... Ah ! James !... va m’attendre dans mon cabriolet... Ah ! prends ce volume de Walter-Scott... Ah !... amuse un peu ma petite jument.</l>
+        </sp>
+        <sp who="#james">
+          <speaker>JAMES.</speaker>
+          <l n="181">Je vais le amuser avec le fouet.</l>
+          <stage>&lt;em&gt;Il sort par le cabinet vitre&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, seul</speaker>
+          <l n="182">C’en est fait, je suis lancé,</l>
+          <stage>&lt;em&gt;Cavatine. &lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Di piacere. (De la Gazza ladra.) &lt;/em&gt;</stage>
+          <l n="183">Tout à la mode,</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE, ouvrant la porte de la chambre à droite.</speaker>
+          <l n="184">Psitt ! psitt... M. Mondésir.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="185">On m’appelle, allons !</l>
+          <stage>&lt;em&gt;Il entre dans la chambre avec Justine en chantant. &lt;/em&gt;</stage>
+          <l n="186">Amour, seconde mon ouvrage !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, LAHOUPPE</speaker>
+          <stage>&lt;em&gt;Ils sortent de la chambre à gauche. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, fort animé.</speaker>
+          <l n="187">Se peut-il ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="188">C’est comme j’ai l’honneur de vous le dire ; le galant est gentil... je viens de le voir descendre d’un superbe cabriolet.</l>
+          <stage>&lt;em&gt;Air : Vaudeville du premier prix. &lt;/em&gt;</stage>
+          <l n="189">Craignant pour l’objet d’ leur tendresse,</l>
+          <l n="190">Il est monté par le petit escalier.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, un peu troublé.</speaker>
+          <l n="191">Et sais-tu ce qu’il demande ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="192">Dam, monsieur, il ne vous a pas demandé.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="193">C’est sans doute le galant au billet ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="194">Ça ne peut être que lui.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="195">Et ce jeune homme est dans ce moment ?...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="196">Je ne sais pas où est le jeune homme, mais je sais bien que le cabriolet est toujours à la porte... sans le jeune homme.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, après un instant de réflexions.</speaker>
+          <l n="197">Mon ami Lahouppe... car tu es mon ami ?...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="198">Après le service que je viens de vous rendre, pouvez vous en douter ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="199">Eh bien ! fais-moi le plaisir de ne point soupçonner la vertu de ma femme.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="200">Si ça peut vous obliger ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="201">Ne peut-elle recevoir un parent... un cousin ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="202">En effet, je n’avais pas songé aux cousins... toutes ces dames en ont... par exemple ces parents-là ne sont jamais cousins avec les maris... cependant, il peut se faire que celui de Madame... c’est possible... mais c’est rare... Allons, vous voilà plus tranquille, je vous laisse avec le petit cousin... bonne chance... cousin, c’est convenu ?</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="203">Dieu ! comme le mariage change la tête d’un homme... comme ça le défrise !</l>
+          <stage>&lt;em&gt;Il sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, seul</speaker>
+          <l n="204">Il est parti !... est-ce que Madame Dumont voudrait ?... je ne puis le croire, je connais trop la sagesse de ma femme... je suis certain que jamais un jeune homme...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, sortant de chez Hortense.</speaker>
+          <l n="205">Elle est charmante !</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, apercevant Mondésir.</speaker>
+          <l n="206">Ciel !... que vois-je ?</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, sans voir Dumont qui s’est mis à l’écart.</speaker>
+          <l n="207">C’est drôle, je me suis trouvé là en pays de connaissance.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, à part.</speaker>
+          <l n="208">Ils s’étaient déjà vus !</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="209">Allons, l’ouvrage donne, ça m’en fait une de plus !</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="210">Qu’entends-je ?</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="211">À présent, sortons avec prudence ; on m’a surtout recommandé d’éviter le mari.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="212">Vous ne l’éviterez pas, monsieur.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="213">Ah ! diable ! Justine aurait bien du prévoir...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, avec une fureur concentrée.</speaker>
+          <l n="214">Vous plairait-il, Monsieur, de me dire ce que vous venez faire ici ?</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="215">Ce que je viens faire ici ?... pardon, Monsieur, j’ai des instructions à cet égard et je dois me taire...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="216">Monsieur, il est inutile de feindre... vous devez bien penser que je sais tout.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="217">Alors, Monsieur, je ne puis rien vous apprendre ; je suis pressé, permettez...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, le retenant.</speaker>
+          <l n="218">Un moment.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="219">Il faut contenter tout le monde ; je n’ai pas que votre femme...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="220">Insolent !</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, s’échauffant.</speaker>
+          <l n="221">Ah ça ! monsieur, pour qui me prenez-vous ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="222">Pour ce que tu es... pour un vil séducteur.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="223">Qu’appelez-vous séducteur ?... je suis coiffeur... oui, coiffeur, patenté ! puisqu’il faut décliner ses titres.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, à part.</speaker>
+          <l n="224">Un coiffeur en cabriolet !...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="225">Le détour est adroit, Monsieur ; mais je n’en suis pas dupe... je suis aussi fin que vous : nous allons voir...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="226">Je vais bien l’embarrasser.</l>
+          <stage>&lt;em&gt;Haut &lt;/em&gt;</stage>
+          <l n="227">Eh bien ! monsieur, puisque vous êtes coiffeur... coiffez-moi...</l>
+          <stage>&lt;em&gt;Il se jette violemment dans un fauteuil, ôte son bonnet et laisse voir une tête entièrement chauve.&lt;/em&gt;</stage>
+          <l n="228">Le voilà pris !</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, regardant la tête de Dumont avec son lorgnon.</speaker>
+          <l n="229">Comment voulez-vous que l’on travaille sur une tête comme celle-là ? Je vous conseille cependant l’huile de Macassar, et la pommade des sultanes... la pâte de coco des Indes.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, en colère.</speaker>
+          <l n="230">Coco des Indes !</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="231">Si ça ne fait de mal, ça ne peut pas faire de bien... vous pourriez encore essayer du fluide de Java.</l>
+          <stage>&lt;em&gt;Le lorgnant de plus près.&lt;/em&gt;</stage>
+          <l n="232">Mais, je vois... vous portez perruque... perruque poudrée.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="233">Il a bien une véritable tête...</l>
+          <stage>&lt;em&gt;Haut. &lt;/em&gt;</stage>
+          <l n="234">Vous n’êtes pas de mon ressort ; men talent n’est que pour les dames.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, se levant.</speaker>
+          <l n="235">Je savais bien que je vous prendrais dans votre propre piège... mais j’ai d’autres preuves encore... nierez-vous ces témoins irrécusables ?</l>
+          <stage>&lt;em&gt;Il lui montre les deux papillotes qu’il a prises sur la toilette de sa femme.&lt;/em&gt;</stage>
+          <l n="236">Qu’est-ce que c’est que cela, Monsieur ?</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="237">Ah ! par exemple, je m’y reconnais, ce sont des papillotes... ça rentre dans ma partie.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="238">Parlons sérieusement.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR, se fâchant.</speaker>
+          <l n="239">Tout ça est bel et bon, mais, monsieur, je vous l’ai déjà dit, plusieurs dames m’attendent... La femme du notaire Valcour, la femme du banquier Richard, la femme de l’a voué...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="240">Quelle indiscrétion !</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="241">J’ai encore la femme de M. Derbin, receveur-général... elle est fort exigeante.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="242">Derbin ? mon ancien ami !... il est aussi victime !... Monsieur, cela ne se terminera pas ainsi, je vous demande satisfaction, et si vous avez du cœur...</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="243">Si j’ai du cœur ! je suis tout cœur, moi, monsieur.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="244">Votre adresse...</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="245">Je n’en ai pas sur moi, mais je reviendrai ce soir et je vous en donnerai tant que vous voudrez.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="246">À ce soir donc, Monsieur.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Mon cœur à l’espoir s’abandonne. &lt;/em&gt;</stage>
+          <l n="247">Ah ! quel affront ! j’étouffe de colère !</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="248">Vous me jugerez mieux, j’espère,</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="249">Monsieur, ce ton railleur m’enflamme.</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="250">Ah ! loin de crier sans succès,</l>
+          <stage>&lt;em&gt;Ensemble. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="251">Ah ! quel affront ! j’étouffe de colère !</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="252">Ah ! quel affront ! j’étouffe de colère !</l>
+          <stage>&lt;em&gt;Mondésir sort par la porte du fond. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, seul</speaker>
+          <l n="253">Ce soir il me trouvera ici, et je lui donnerai une leçon.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#barbe">
+          <speaker>BARBE, à Vincent.</speaker>
+          <l n="254">Viens voir ce qui s’est passé... parle-lui... il a l’air doux...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, appelant.</speaker>
+          <l n="255">Vincent ! Vincent !</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="256">Monsieur...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="257">Monsieur veut sortir ?</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="258">Non ; personne ne sort... Je vais me coucher, et j’ordonne que tout le monde en fasse autant.</l>
+          <stage>&lt;em&gt;Il rentre chez lui. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="259">Tu appelles ca de la douceur, toi ?</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="260">Il veut que tout le monde aille se coucher !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="261">Si nous n’avons pas envie de dormir !... voilà bien la tyrannie des maîtres !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, entrant vivement.</speaker>
+          <l n="262">Eh bien ! comment ça va-t-il ici ?</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="263">Mal... Plus de bal !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="264">Plus de souper...</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="265">Tout le monde reste à la maison.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="266">Ah ! il a montré du caractère... Eh bien ! tant mieux, car j’avais oublié sa perruque... Je me suis retiré tellement affecté.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="267">Mais, nous autres ?...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, à Barbe.</speaker>
+          <l n="268">C’est désolant ! d’autant plus que je me proposais de vous coiffer de manière à faire révolution.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="269">Là ! voyez-vous !</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="270">Oui ; j’avais médité cela... Je voulais que vous fussiez comme Mademoiselle Clairon, un jour qu’elle fut couverte d’applaudissements... C’était dans Phèdre... les cheveux en racine... trois crochets à gauche ; une couronne de roses, soutenue par une colonne poudrée, de dix-huit pouces de hauteur : c’était éblouissant... Ah ! l’on en reviendra à cette coiffure là... Et si j’avais l’honneur de connaître Mademoiselle Duchesnois, je la lui conseillerais bien.</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="271">Quel dommage !</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="272">Mais, écoutez donc. Si vous avez bien envie d’aller à ce souper... Monsieur est couché... Madame va bientôt en faire autant ; en sortant sans bruit, qu’est-ce qui saurait ?...</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="273">Il a raison, mon cœur !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="274">Au fait, nous qui sommes toujours d’accord, il n’est pas juste que nous souffrions des querelles de nos maîtres... N’est-il pas vrai, mamour ?</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="275">Oui, mon poulet.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="276">Charmant ménage ! et tous deux fidèles...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="277">Oh ! ça...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="278">À la poudre et à l’amour conjugal... vous devriez servir d’exemple à tout Paris... Mais ce n’est pas de cela qu’il s’agit ; voilà neuf heures, il faut vous commencer... Tout est-il prêt ?</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="279">Oui, monsieur Lahouppe.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="280">Voilà le ruban de queue et la bourse...</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="281">Voilà ma guirlande de roses !</l>
+          <stage>&lt;em&gt;Elle la prend des mains de Vincent. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="282">Fraîche comme vous...</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="283">Comme ces perruquiers sont galants !...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="284">À l’ouvrage.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="285">Par qui commencez-vous ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="286">Tous les deux à la fois... Un coup de peigne à l’un... un œil de poudre à l’autre... Deux ouvrages différents, ça rafraîchit les idées. Et puis, moi, je fais ça sans regarder ; la grande habitude...</l>
+          <stage>&lt;em&gt;Il leur met de la poudre sur la figure.&lt;/em&gt;</stage>
+          <l n="287">Tenez, voyez-vous ?</l>
+          <stage>&lt;em&gt;On entend du bruit.&lt;/em&gt;</stage>
+          <l n="288">Ah ! qu’est-ce que c’est que ça ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT et BARBE.</speaker>
+          <stage>&lt;em&gt;Air : Comme le vin rajeunit la veillesse. &lt;/em&gt;</stage>
+          <l n="289">Ciel ! c’est Monsieur, c’est bien lui ; quel mystère ?</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, parlé.</speaker>
+          <l n="290">Entrez dans ce cabinet.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="291">Il est vitré, la lumière va nous trahir.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="292">Éteignez-la, je m’en passerai.</l>
+          <stage>&lt;em&gt;Vincent souffle les bougies.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <stage>&lt;em&gt;Suite de l’air.&lt;/em&gt;</stage>
+          <l n="293">Quoi ! sans lumière ?...</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="294">Oh ! point d’inquiétude ;</l>
+          <stage>&lt;em&gt;Ensemble. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT et BARBE.</speaker>
+          <stage>Ciel ! c’est Monsieur, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="295">Oui, c’est Monsieur, c’est bien lui ; quel mystère ?</l>
+          <stage>&lt;em&gt;Ils entrent tous trois dans le cabinet vitré.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, avec une épée, des pistolets, un grand manteau et son bonnet de velours ; il s’avance sans lumière</speaker>
+          <l n="296">Tout est tranquille... J’ai laissé ma lumière de peur d’être aperçu... Mes armes sont prêtes... je voudrais être déjà sur le terrain... j’enfonce mon chapeau sur mes yeux.</l>
+          <stage>&lt;em&gt;Il porte la main à sa tête.&lt;/em&gt;</stage>
+          <l n="297">Ah ! c’est mon bonnet !... et pas de perruque... Ah ! ce diable de Lahouppe ne m’a pas coiffé aujourd’hui... Voyons si, par hasard, il ne l’aurait pas laissée dans cette armoire.</l>
+          <stage>&lt;em&gt;Il ouvre l’armoire. &lt;/em&gt;</stage>
+          <l n="298">Ah ! justement, la voici... prenons-la ainsi que mon chapeau...</l>
+          <stage>&lt;em&gt;Il met la perruque sur sa tête.&lt;/em&gt;</stage>
+          <l n="299">Mais, ce Monsieur se fait bien attendre.</l>
+          <stage>&lt;em&gt;On entend rire dans l’appartement d’Hortense. &lt;/em&gt;</stage>
+          <l n="300">Ah ! on rit, je crois, chez ma femme... serait-ce à mes dépens ?... c’est ce que je vais savoir, morbleu !...</l>
+          <stage>&lt;em&gt;Il frappe.&lt;/em&gt;</stage>
+          <l n="301">Ouvrez, Madame, ouvrez ; je vous l’ordonne...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XX">
+        <head>Scène XX</head>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, HORTENSE JUSTINE</speaker>
+          <stage>&lt;em&gt;Justine porte des lumières, Hortense est coiffée et parée. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="302">Eh ! bon Dieu, Monsieur, pourquoi tout ce vacarme !... pourquoi cet appareil de guerre ?...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="303">Vous n’étiez pas seule là-dedans ; j’ai entendu la voix d’un homme. Qu’il paraisse, ce monsieur, qu’il ose se présenter devant moi.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXI">
+        <head>Scène XXI</head>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="304">Me voici !</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="305">Dieu ! c’est Ignace ! mon neveu ?</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="306">Mon oncle !</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="307">Le jeune homme de tantôt !</l>
+          <stage>&lt;em&gt;Lahouppe embrasse Mondésir.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="308">Mon coiffeur, que j’ai bien été forcée de faire venir en secret, puisque vos ridicules soupçons...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="309">Vous comptiez donc aller au bal ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="310">Certainement, Monsieur ; je l’avais promis à Madame de Senange, qui m’avait écrit qu’elle viendrait me chercher. Mais, vous deviez le savoir... car, ce matin, vous avez pris, sur ma toilette, des fragments de son billet...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="311">Quoi ! les papillotes...</l>
+          <stage>&lt;em&gt;Il ôte son chapeau qu’il a gardé jusques là.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="312">Mais, vous-même, Monsieur, il paraît que vous aviez des projets pour ce soir ?... cette nouvelle coiffure...</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="313">Que voulez-vous dire ?</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="314">Elle vous va fort bien.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT, se regardant dans la glace.</speaker>
+          <l n="315">En effet...</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="316">Ma foi, Monsieur, je l’ai apportée par hasard ; mais je vous l’aurais destinée, que je n’aurais pas mieux réussi.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, à Dumont.</speaker>
+          <l n="317">Et vous aussi !... vous m’abandonnez ; vous en êtes le maître !... D’ailleurs, c’est mon neveu qui hérite de votre pratique, et cela me rend le coup moins sensible.</l>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="318">Ah ! c’est ton neveu !</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="319">Ingrat ! Vous ne savez pas ce que je vous destinais...</l>
+          <stage>&lt;em&gt;À Hortense.&lt;/em&gt;</stage>
+          <l n="320">C’est Ignace qui a coiffé Madame ?...</l>
+          <stage>&lt;em&gt;À Mondésir. &lt;/em&gt;</stage>
+          <l n="321">Mon neveu, comment appelles-tu cette coiffure ?</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="322">C’est une coiffure à la neige.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="323">Une coiffure à la Neige !... et pas un grain de poudre !... comme ça manque de vérité ! Je vais vous en faire voir des coiffures à la Neige, moi !... et aux frimas !...</l>
+          <stage>&lt;em&gt;Il court au cabinet vitré, et en ramène Vincent et Barbe Vincent a une couronne de roses, et Barbe une bourse. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXII">
+        <head>Scène XXII</head>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="324">Voilà comment je voulais vous coiffer !</l>
+        </sp>
+        <sp who="#tout-le-monde">
+          <speaker>TOUT LE MONDE, riant.</speaker>
+          <stage>&lt;em&gt;Air : Le voilà le vrai modèle. &lt;/em&gt;</stage>
+          <l n="325">Ô la drôle de coiffure !</l>
+          <stage>&lt;em&gt;Pendant ce chœur ; Lahouppe rétablit les coiffures.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="326">Allons, mon oncle, prenez gaiment votre disgrâce ! Que voulez-vous ? c’est la marche du siècle... Au reste, vous n’avez plus rien à désirer ; je reviens à vous, non en enfant prodigue, mais avec une fortune et une réputation solidement établies. Faites désormais votre état en amateur, il y aura toujours assez de têtes à perruques pour vos menus-plaisirs.</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE.</speaker>
+          <l n="327">Soit, je me résigne. </l>
+          <stage>&lt;em&gt;Vaudeville. &lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Du Vaudeville de la Somnambule. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dumont">
+          <speaker>DUMONT.</speaker>
+          <l n="328">En tous temps par des épigrammes,</l>
+        </sp>
+        <sp who="#hortense">
+          <speaker>HORTENSE.</speaker>
+          <l n="329">Mon caractère est des plus raisonnables,</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="330">De la bazoch’, dans ma jeunesse</l>
+        </sp>
+        <sp who="#justine">
+          <speaker>JUSTINE.</speaker>
+          <l n="331">Quand le violon appelait à la danse</l>
+        </sp>
+        <sp who="#barbe">
+          <speaker>BARBE.</speaker>
+          <l n="332">Teint frais et mine un peu pincée,</l>
+        </sp>
+        <sp who="#mondésir">
+          <speaker>MONDÉSIR.</speaker>
+          <l n="333">Lorsqu’aux Français à l’orchestre j’arrive,</l>
+        </sp>
+        <sp who="#lahouppe">
+          <speaker>LAHOUPPE, au public.</speaker>
+          <l n="334">La poudre n’est plus à la mode,</l>
+          <l n="335" />
+        </sp>
       </div>
     </body>
   </text>

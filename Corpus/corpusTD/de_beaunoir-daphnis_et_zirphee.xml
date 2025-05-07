@@ -1,1182 +1,1174 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Daphnis et Zirphée</title>
-        <author key="DE BEAUNOIR | (naissance-mort)">DE BEAUNOIR |</author>
+        <title type="main" />
+        <title type="sub">Pastorale</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/daphnis-et-zirphée-de-beaunoir</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>DE BEAUNOIR |</author>. <title>Daphnis et Zirphée</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/daphnis-et-zirphée-de-beaunoir</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="l’amour" sex="SEX">
+            <persName>L’AMOUR</persName>
+          </person>
+          <person xml:id="zirphée" sex="SEX">
+            <persName>ZIRPHÉE</persName>
+          </person>
+          <person xml:id="hyale" sex="SEX">
+            <persName>HYALE</persName>
+          </person>
+          <person xml:id="dictinne" sex="SEX">
+            <persName>DICTINNE</persName>
+          </person>
+          <person xml:id="daphnis" sex="SEX">
+            <persName>DAPHNIS</persName>
+          </person>
+          <person xml:id="tircis" sex="SEX">
+            <persName>TIRCIS</persName>
+          </person>
+          <person xml:id="troupe-de-jeunes-nymphes" sex="SEX">
+            <persName>TROUPE DE JEUNES NYMPHES</persName>
+          </person>
+          <person xml:id="plaisirs" sex="SEX">
+            <persName>PLAISIRS</persName>
+          </person>
+          <person xml:id="jeux" sex="SEX">
+            <persName>JEUX</persName>
+          </person>
+          <person xml:id="troupe-de-jeunes-bergers" sex="SEX">
+            <persName>TROUPE DE JEUNES BERGERS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Pastorale</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q0</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="[vide]" location="unknown">[vide]</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Daphnis et Zirphée</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Pastorale en trois actes, mêlée de chants et de danses.</l>
-            <l n="2" xml:id="l2"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="l’amour">L’AMOUR</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="zirphée">ZIRPHÉE</role>
-              <roleDesc>, <em>Nymphe de Diane</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="hyale">HYALE</role>
-              <roleDesc>, <em>Nymphe de Diane</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="dictinne">DICTINNE</role>
-              <roleDesc>, <em>Nymphe de Diane</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="daphnis">DAPHNIS</role>
-              <roleDesc>, <em>jeune Berger</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="tircis">TIRCIS</role>
-              <roleDesc>, <em>jeune Berger</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-jeunes-nymphes">TROUPE DE JEUNES NYMPHES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="plaisirs">PLAISIRS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="jeux">JEUX</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-jeunes-bergers">TROUPE DE JEUNES BERGERS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La Scène est en Sicile.</em></hi></stage>
-            <l n="4" xml:id="l4"> </l>
-            <l n="5" xml:id="l5"> </l>
-          </castList>
-        </div>
-      </div>
-      <div type="act" xml:id="I">
+      <div type="act" n="1">
         <head>ACTE I</head>
-            <l n="6" xml:id="l6"> </l>
-            <stage><hi rend="italic"><em>Le Théâtre représente dans le fond une haute Montagne, vers le milieu de laquelle, sur le côté droit, est un Temple, consacré à Diane. Au pied de la Montagne, tout le côté droit du Théâtre est occupé par une épaisse forêt. Le côté gauche en avant est couvert de rochers. En arrière est un berceau de myrtes et de chèvrefeuilles ; près du berceau est un simple. Autel de gazon, consacré à l’Amour, et derrière un trône de fleurs, plus élevé.</em></hi></stage>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9"> </l>
-        <div type="scene" xml:id="I1">
+        <div type="scene" xml:id="première">
           <head>Scène première</head>
-            <l n="10" xml:id="l10"> </l>
-          <sp who="tircis" xml:id="I1-1">
+          <sp who="#l’amour">
             <speaker>L’AMOUR, TIRCIS, TROUPE DE JEUNES BERGERS</speaker>
-            <l n="11" xml:id="l11"> </l>
-            <stage><hi rend="italic"><em>À la levée de la toile l’Amour est placé sur le trône de fleurs : une troupe de jeunes Bergers l’entoure à genoux, en lui présentant des couronnes et des guirlandes de roses.</em></hi></stage>
-          <stage>CHŒUR DES JEUNES BERGERS.</stage>
+            <stage>&lt;em&gt;À la levée de la toile l’Amour est placé sur le trône de fleurs : une troupe de jeunes Bergers l’entoure à genoux, en lui présentant des couronnes et des guirlandes de roses.&lt;/em&gt;</stage>
           </sp>
-          <sp who="l’amour" xml:id="I1-2">
+          <sp who="#chœur-des-jeunes-bergers">
+            <speaker>CHŒUR DES JEUNES BERGERS.</speaker>
+            <l n="1">Toi, qui fais les plaisirs et le bonheur du monde,</l>
+          </sp>
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="13" xml:id="l13">Jeunes Bergers, dont les nombreux troupeaux couvrent les riches campagnes de la Sicile, je vois avec plaisir qu’en vous rendant heureux je n’ai pas fait des ingrats.</l>
+            <l n="2">Jeunes Bergers, dont les nombreux troupeaux couvrent les riches campagnes de la Sicile, je vois avec plaisir qu’en vous rendant heureux je n’ai pas fait des ingrats.</l>
           </sp>
-          <sp who="tircis" xml:id="I1-3">
+          <sp who="#tircis">
             <speaker>TIRCIS.</speaker>
-            <l n="14" xml:id="l14">Dieu charmant, souffre donc qu’à la place de ce simple autel de gazon, de ce berceau que forment le myrte et le chèvrefeuille, nous t’élevions un Temple plus digne de toi, près de celui que nos pères ont consacré à Diane.</l>
+            <l n="3">Dieu charmant, souffre donc qu’à la place de ce simple autel de gazon, de ce berceau que forment le myrte et le chèvrefeuille, nous t’élevions un Temple plus digne de toi, près de celui que nos pères ont consacré à Diane.</l>
           </sp>
-          <sp who="l’amour" xml:id="I1-4">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="15" xml:id="l15">Non, les Temples ou brillent l’or, des autels toujours couverts de fang, ne flattent pas l’Amour : j’aime un culte plus doux, j’aime des dons plus simples. Ce berceau, cet autel me suffisent : je ne veux recevoir pour offrande que quelques fleurs et les prémices de vos fruits. Voilà le Temple, voilà le culte que j’exige de vous. Ce lieu me sera cher, et jamais le Berger amoureux, jamais la timide Bergère ne m’y invoqueront en vain ; je reposerai souvent à l’ombre de ce jeune berceau, et le préférerai à Guide et à Paphos. Allez, jeunes Bergers, les Nymphes de Diane vont sortir de son Temple, retirez-vous.</l>
-            <stage><hi rend="italic"><em>Les Bergers se retirent.</em></hi></stage>
-            <l n="17" xml:id="l17"> </l>
-            <l n="18" xml:id="l18"> </l>
+            <l n="4">Non, les Temples ou brillent l’or, des autels toujours couverts de fang, ne flattent pas l’Amour : j’aime un culte plus doux, j’aime des dons plus simples. Ce berceau, cet autel me suffisent : je ne veux recevoir pour offrande que quelques fleurs et les prémices de vos fruits. Voilà le Temple, voilà le culte que j’exige de vous. Ce lieu me sera cher, et jamais le Berger amoureux, jamais la timide Bergère ne m’y invoqueront en vain ; je reposerai souvent à l’ombre de ce jeune berceau, et le préférerai à Guide et à Paphos. Allez, jeunes Bergers, les Nymphes de Diane vont sortir de son Temple, retirez-vous.</l>
+            <stage>&lt;em&gt;Les Bergers se retirent.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="I2">
+        <div type="scene" xml:id="II">
           <head>Scène II</head>
-            <l n="19" xml:id="l19"> </l>
-          <sp who="l’amour" xml:id="I2-1">
-            <speaker>L’AMOUR, <em>seul</em></speaker>
-            <l n="20" xml:id="l20"> </l>
-            <l n="21" xml:id="l21">Et vous, jeunes Nymphes, qui me bravez, avant la fin du jour vous reconnaîtrez mon pouvoir... C’est toi, Zirphée, qui fera ma première victime, l’instant de ta défaite est arrivé.</l>
-            <l n="22" xml:id="l22">Mais les portes du Temples s’ouvrent ; fuyons, l’Amour caché n’en est souvent que plus dangereux.</l>
-            <stage><hi rend="italic"><em>L’Amour le retire et se cache sous le berceau de chèvrefeuille.</em></hi></stage>
-            <l n="24" xml:id="l24"> </l>
-            <l n="25" xml:id="l25"> </l>
+          <sp who="#l’amour">
+            <speaker>L’AMOUR, seul</speaker>
+            <l n="5">Et vous, jeunes Nymphes, qui me bravez, avant la fin du jour vous reconnaîtrez mon pouvoir... C’est toi, Zirphée, qui fera ma première victime, l’instant de ta défaite est arrivé.</l>
+            <l n="6">Lorsqu’en voyant deux jeunes tourterelles,</l>
+            <l n="7">Mais les portes du Temples s’ouvrent ; fuyons, l’Amour caché n’en est souvent que plus dangereux.</l>
+            <stage>&lt;em&gt;L’Amour le retire et se cache sous le berceau de chèvrefeuille.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="I3">
+        <div type="scene" xml:id="III">
           <head>Scène III</head>
-            <l n="26" xml:id="l26"> </l>
-          <sp who="dictinne" xml:id="I3-1">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE, HYALE, DICTINNE, TROUPE DE JEUNES NYMPHES</speaker>
-            <l n="27" xml:id="l27"> </l>
-            <stage><hi rend="italic"><em>Les portes du Temple de Diane s’ouvrent. Zirphée en sort, suivie de ses jeunes Compagnes : leurs cheveux sont couronnés d’une simple branche de chêne, de myrte ou de laurier ; une peau de tigre couvre leurs épaules et tombe sur le genou, laissant la jambe à découvert : un léger carquois flotte sur leurs épaules ; leurs mains sont armées d’un arc redoutable ; elles descendent la montagne et s’apprêtent à s’élancer dans la forêt.</em></hi></stage>
+            <stage>&lt;em&gt;Les portes du Temple de Diane s’ouvrent. Zirphée en sort, suivie de ses jeunes Compagnes : leurs cheveux sont couronnés d’une simple branche de chêne, de myrte ou de laurier ; une peau de tigre couvre leurs épaules et tombe sur le genou, laissant la jambe à découvert : un léger carquois flotte sur leurs épaules ; leurs mains sont armées d’un arc redoutable ; elles descendent la montagne et s’apprêtent à s’élancer dans la forêt.&lt;/em&gt;</stage>
           </sp>
-          <sp who="chœur-des-jeunes-nymphes" xml:id="I3-2">
+          <sp who="#chœur-des-jeunes-nymphes">
             <speaker>CHŒUR DES JEUNES NYMPHES.</speaker>
-            <stage><hi rend="italic"><em>Zirphée modère leur ardeur et les retient.</em></hi></stage>
+            <l n="8">Goûtons les plaisirs de la chasse,</l>
+            <stage>&lt;em&gt;Zirphée modère leur ardeur et les retient.&lt;/em&gt;</stage>
           </sp>
-          <sp who="zirphée" xml:id="I3-3">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="30" xml:id="l30">Arrêtez, jeunes Nymphes, un sanglier furieux, après avoir ravagé les campagnes, s’est retiré dans cette forêt, les habitants épouvantés ont imploré notre secours, et je leur ai promis de faire tomber cette bête cruelle sous nos coups : vous voyez cet arc d’or, Diane en honora mon jeune courage, il sera le prix de celle dont la flèche avide déchirera la première les flancs du sanglier. Mais avant tout examinons nos armes, et dirigeons nos flèches vers ce but, contre lequel nous venons quelquefois nous exercer.</l>
-            <stage><hi rend="italic"><em>À la voix de Zirphée tous les arcs sont tendus : elle donne le signal, la flèche part en sifflant ; mais aucune ne touche le but. Alors Zirphée choisit dans son carquois la plus légère de ses flèches ; la pose sur son arc ; la corde se détend avec bruit ; la flèche vole et va droit au but, qu’elle perce d’outre en outre.</em></hi></stage>
-            <l n="32" xml:id="l32"> </l>
-            <l n="33" xml:id="l33"> </l>
+            <l n="9">Arrêtez, jeunes Nymphes, un sanglier furieux, après avoir ravagé les campagnes, s’est retiré dans cette forêt, les habitants épouvantés ont imploré notre secours, et je leur ai promis de faire tomber cette bête cruelle sous nos coups : vous voyez cet arc d’or, Diane en honora mon jeune courage, il sera le prix de celle dont la flèche avide déchirera la première les flancs du sanglier. Mais avant tout examinons nos armes, et dirigeons nos flèches vers ce but, contre lequel nous venons quelquefois nous exercer.</l>
+            <stage>&lt;em&gt;À la voix de Zirphée tous les arcs sont tendus : elle donne le signal, la flèche part en sifflant ; mais aucune ne touche le but. Alors Zirphée choisit dans son carquois la plus légère de ses flèches ; la pose sur son arc ; la corde se détend avec bruit ; la flèche vole et va droit au but, qu’elle perce d’outre en outre.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="I4">
+        <div type="scene" xml:id="IV">
           <head>Scène IV</head>
-            <l n="34" xml:id="l34"> </l>
-          <sp who="daphnis" xml:id="I4-1">
+          <sp who="#les-mêmes">
             <speaker>LES MÊMES, DAPHNIS.</speaker>
-            <l n="35" xml:id="l35"> </l>
-            <stage><hi rend="italic"><em>Daphnis, jeune Berger du canton, paraît dans ce moment sur la montagne ; surpris à la vue de tant de charmes, il reste immobile de plaisirs et d’admiration, et ne songe pas à se retirer. Dictinne l’aperçoit et le fait remarquer avec colère à ses Compagnes.</em></hi></stage>
+            <stage>&lt;em&gt;Daphnis, jeune Berger du canton, paraît dans ce moment sur la montagne ; surpris à la vue de tant de charmes, il reste immobile de plaisirs et d’admiration, et ne songe pas à se retirer. Dictinne l’aperçoit et le fait remarquer avec colère à ses Compagnes.&lt;/em&gt;</stage>
           </sp>
-          <sp who="dictinne" xml:id="I4-2">
+          <sp who="#dictinne">
             <speaker>DICTINNE.</speaker>
-            <l n="37" xml:id="l37">Zirphée, nos exercices sont profanés ; vois ce mortel audacieux, dont l’œil osent nous fixer.</l>
+            <l n="10">Zirphée, nos exercices sont profanés ; vois ce mortel audacieux, dont l’œil osent nous fixer.</l>
+            <l n="11">Partagez mon courroux</l>
           </sp>
-          <sp who="chœur-des-jeunes-nymphes" xml:id="I4-3">
+          <sp who="#chœur-des-jeunes-nymphes">
             <speaker>CHŒUR DES JEUNES NYMPHES.</speaker>
-            <stage><hi rend="italic"><em>Zirphée ordonne à ses Nymphes de l’arrêter ; on le saisit, et on l’amène tremblant à ses pieds. À sa vue Zirphée se trouble ; mais elle cache avec soin cette tendre émotion à ses compagnes.</em></hi></stage>
+            <l n="12">Partageons son courroux,</l>
+            <stage>&lt;em&gt;Zirphée ordonne à ses Nymphes de l’arrêter ; on le saisit, et on l’amène tremblant à ses pieds. À sa vue Zirphée se trouble ; mais elle cache avec soin cette tendre émotion à ses compagnes.&lt;/em&gt;</stage>
           </sp>
-          <sp who="zirphée" xml:id="I4-4">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="39" xml:id="l39">Mortel audacieux, qui donc ta rendu si hardi d’oser fixer ton œil profane sur les Nymphes et les Compagnes de Diane ?</l>
+            <l n="13">Mortel audacieux, qui donc ta rendu si hardi d’oser fixer ton œil profane sur les Nymphes et les Compagnes de Diane ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I4-5">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="40" xml:id="l40">Pardonnez à mon imprudence ; j’ai cru que je pouvais admirer la beauté comme j’admire l’astre du jour.</l>
+            <l n="14">Pardonnez à mon imprudence ; j’ai cru que je pouvais admirer la beauté comme j’admire l’astre du jour.</l>
           </sp>
-          <sp who="zirphée" xml:id="I4-6">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="41" xml:id="l41">Quel dessein t’amenait sur cette montagne ?</l>
+            <l n="15">Quel dessein t’amenait sur cette montagne ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I4-7">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="42" xml:id="l42">Hier j’y pris dans des filets un jeune tourtereau ; mais tout la nuit il n’a fait que gémir, il refuse la nourriture, et semble appeler la jeune tourterelle dont il est séparé. Mon cœur n’a pu supporter sa peine, et je venais le rendre à sa compagne.</l>
+            <l n="16">Hier j’y pris dans des filets un jeune tourtereau ; mais tout la nuit il n’a fait que gémir, il refuse la nourriture, et semble appeler la jeune tourterelle dont il est séparé. Mon cœur n’a pu supporter sa peine, et je venais le rendre à sa compagne.</l>
           </sp>
-          <sp who="zirphée" xml:id="I4-8">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="43" xml:id="l43">Quel est ton nom ?</l>
+            <l n="17">Quel est ton nom ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I4-9">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="44" xml:id="l44">Daphnis.</l>
+            <l n="18">Daphnis.</l>
           </sp>
-          <sp who="zirphée" xml:id="I4-10">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="45" xml:id="l45">Ton âge ?</l>
+            <l n="19">Ton âge ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I4-11">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="46" xml:id="l46">J’ai vu seize fois la terre couronner et d’épis et de fleurs.</l>
+            <l n="20">J’ai vu seize fois la terre couronner et d’épis et de fleurs.</l>
           </sp>
-          <sp who="zirphée" xml:id="I4-12">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="47" xml:id="l47">À quoi t’occupes-tu ?</l>
+            <l n="21">À quoi t’occupes-tu ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I4-13">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="48" xml:id="l48">Je garde dans la plaine douze jeunes agneaux, confiés à mes soins.</l>
+            <l n="22">Je garde dans la plaine douze jeunes agneaux, confiés à mes soins.</l>
           </sp>
-          <sp who="zirphée" xml:id="I4-14">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="49" xml:id="l49">N’es-tu pas un de ces Bergers qui osent insulter à Diane, et qui tous les jours attachent une guirlande de roses à cet Autel ?</l>
+            <l n="23">N’es-tu pas un de ces Bergers qui osent insulter à Diane, et qui tous les jours attachent une guirlande de roses à cet Autel ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I4-15">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="50" xml:id="l50">Je ne le connais pas, et ma main ne l’a couvert encore d’aucune fleur.</l>
+            <l n="24">Je ne le connais pas, et ma main ne l’a couvert encore d’aucune fleur.</l>
           </sp>
-          <sp who="dictinne" xml:id="I4-16">
+          <sp who="#dictinne">
             <speaker>DICTINNE.</speaker>
-            <l n="51" xml:id="l51">Ne l’écoutes pas, Zirphée, il t’en impose, il mérite la mort.</l>
-            <stage><hi rend="italic"><em>En prononçant ces mots, Dictinne pose sur son arc une flèche pour en percer le cœur du jeune Berger, ses Compagnes l’imitent en détournant les yeux.</em></hi></stage>
-          <stage>DAPHNIS.</stage>
+            <l n="25">Ne l’écoutes pas, Zirphée, il t’en impose, il mérite la mort.</l>
+            <stage>&lt;em&gt;En prononçant ces mots, Dictinne pose sur son arc une flèche pour en percer le cœur du jeune Berger, ses Compagnes l’imitent en détournant les yeux.&lt;/em&gt;</stage>
           </sp>
-          <sp who="chœur-des-jeunes-nymphes" xml:id="I4-17">
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="26">Que faites-vous, Nymphes cruelles,</l>
+          </sp>
+          <sp who="#chœur-des-jeunes-nymphes">
             <speaker>CHŒUR DES JEUNES NYMPHES.</speaker>
-            <l n="53" xml:id="l53">Arrêtez, Nymphes de Diane, arrêtez, le sang de ce vil mortel fouillerait nos mains, et la Déesse nous reprocherait, sans doute, l’indigne usage que nous faisons de nos armes : qu’il périsse ! mais non pas sous nos coups ; son trépas serait trop glorieux : dépouillez ce jeune ormeau de ses branches encore tendres et flexibles ; attachez cet audacieux à cet arbre, et laissons-le dans cet état exposé à la fureur des bêtes féroces, qui, sans doute, ne tarderont pas à le dévorer.</l>
+            <l n="27">Méfions-nous de ses pleurs,</l>
           </sp>
-          <sp who="zirphée" xml:id="I4-18">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <stage><hi rend="italic"><em>Les Nymphes exécutent les ordres de Zirphée ; elles dépouillent un jeune ormeau de ses branches ; Saisissent Daphnis ; lui lient les mains, et l’attachent à un chêne.</em></hi></stage>
-          <stage>DAPHNIS.</stage>
+            <l n="28">Arrêtez, Nymphes de Diane, arrêtez, le sang de ce vil mortel fouillerait nos mains, et la Déesse nous reprocherait, sans doute, l’indigne usage que nous faisons de nos armes : qu’il périsse ! mais non pas sous nos coups ; son trépas serait trop glorieux : dépouillez ce jeune ormeau de ses branches encore tendres et flexibles ; attachez cet audacieux à cet arbre, et laissons-le dans cet état exposé à la fureur des bêtes féroces, qui, sans doute, ne tarderont pas à le dévorer.</l>
+            <stage>&lt;em&gt;Les Nymphes exécutent les ordres de Zirphée ; elles dépouillent un jeune ormeau de ses branches ; Saisissent Daphnis ; lui lient les mains, et l’attachent à un chêne.&lt;/em&gt;</stage>
           </sp>
-          <sp who="chœur-des-jeunes-nymphes" xml:id="I4-19">
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="29">Prenez pitié d’un Berger malheureux :</l>
+          </sp>
+          <sp who="#chœur-des-jeunes-nymphes">
             <speaker>CHŒUR DES JEUNES NYMPHES.</speaker>
-            <l n="55" xml:id="l55">Ô Zirphée ! prends pitié de la jeunesse, sa peau est presqu’aussi douce que la tienne, son cœur soupire, ses yeux sont baignés de pleurs, il se plaint ; mais sans se défendre, sans nous reprocher notre cruauté...</l>
+            <l n="30">Méfions-nous de ses pleurs,</l>
           </sp>
-          <sp who="hyale" xml:id="I4-20">
-            <speaker>HYALE, <em>se jetant aux pieds de Zirphée.</em></speaker>
-            <stage><hi rend="italic"><em>Se relevant.</em></hi></stage>
-            <l n="57" xml:id="l57">Et quel si grand crime a-t-il donc commis ? Il nous a regardées ; mais nous a-t-il insultées ? Nous a-t-il outragées ? L’innocence est sur son front, la candeur est sur ses lèvres comme dans son cœur, et il va périr.</l>
-            <stage><hi rend="italic"><em>Elle prend une des mains de Zirphée qu’elle presse contre son sein. </em></hi></stage>
-            <l n="59" xml:id="l59">Ô Zirphée ! que dira son père en apprenant la mort ; combien de larmes versera sa mère : et s’il avait une sœur, s’il avait une...</l>
-            <stage><hi rend="italic"><em>Elle rougit, baisse les yeux et n’ose achever. Zirphée retire la main qu’Hyale pressait contre son sein.</em></hi></stage>
+          <sp who="#hyale">
+            <speaker>HYALE, se jetant aux pieds de Zirphée.</speaker>
+            <l n="31">Ô Zirphée ! prends pitié de la jeunesse, sa peau est presqu’aussi douce que la tienne, son cœur soupire, ses yeux sont baignés de pleurs, il se plaint ; mais sans se défendre, sans nous reprocher notre cruauté...</l>
+            <stage>&lt;em&gt;Se relevant.&lt;/em&gt;</stage>
+            <l n="32">Et quel si grand crime a-t-il donc commis ? Il nous a regardées ; mais nous a-t-il insultées ? Nous a-t-il outragées ? L’innocence est sur son front, la candeur est sur ses lèvres comme dans son cœur, et il va périr.</l>
+            <stage>&lt;em&gt;Elle prend une des mains de Zirphée qu’elle presse contre son sein. &lt;/em&gt;</stage>
+            <l n="33">Ô Zirphée ! que dira son père en apprenant la mort ; combien de larmes versera sa mère : et s’il avait une sœur, s’il avait une...</l>
+            <stage>&lt;em&gt;Elle rougit, baisse les yeux et n’ose achever. Zirphée retire la main qu’Hyale pressait contre son sein.&lt;/em&gt;</stage>
           </sp>
-          <sp who="zirphée" xml:id="I4-21">
-            <speaker>ZIRPHÉE, <em>à part.</em></speaker>
-            <l n="61" xml:id="l61">Dieux !... Son cœur bat aussi fort que le mien !...</l>
-            <stage><hi rend="italic"><em>Haut, avec une colère feinte. </em></hi></stage>
-            <l n="63" xml:id="l63">Imprudente Hyale, osez-vous bien parler ainsi, vous mériteriez... J’aurai les yeux sur vous pendant toute la chasse ; songez à mériter votre pardon... Le soleil commence à rougir les cieux, ne perdons pas de temps, volons où la gloire et l’honneur nous appellent.</l>
-            <stage><hi rend="italic"><em>À la voix de Zirphée toutes les Nymphes s’enfoncent dans la forêt.</em></hi></stage>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE, à part.</speaker>
+            <l n="34">Dieux !... Son cœur bat aussi fort que le mien !...</l>
+            <stage>&lt;em&gt;Haut, avec une colère feinte. &lt;/em&gt;</stage>
+            <l n="35">Imprudente Hyale, osez-vous bien parler ainsi, vous mériteriez... J’aurai les yeux sur vous pendant toute la chasse ; songez à mériter votre pardon... Le soleil commence à rougir les cieux, ne perdons pas de temps, volons où la gloire et l’honneur nous appellent.</l>
+            <stage>&lt;em&gt;À la voix de Zirphée toutes les Nymphes s’enfoncent dans la forêt.&lt;/em&gt;</stage>
           </sp>
-          <sp who="chœur-des-jeunes-nymphes" xml:id="I4-22">
+          <sp who="#chœur-des-jeunes-nymphes">
             <speaker>CHŒUR DES JEUNES NYMPHES.</speaker>
-            <stage><hi rend="italic"><em>Elles sortent.</em></hi></stage>
-            <l n="66" xml:id="l66"> </l>
-            <l n="67" xml:id="l67"> </l>
+            <l n="36">Goûtons les plaisirs de la chasse,</l>
+            <stage>&lt;em&gt;Elles sortent.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="I5">
+        <div type="scene" xml:id="V">
           <head>Scène V</head>
-            <l n="68" xml:id="l68"> </l>
-          <sp who="daphnis" xml:id="I5-1">
-            <speaker>DAPHNIS, <em>seul, attaché à un arbre, abandonné à la fureur des bêtes féroces, regarde tristement les Nymphes s’éloigner</em></speaker>
-            <l n="69" xml:id="l69"> </l>
-            <l n="70" xml:id="l70"> </l>
-            <l n="71" xml:id="l71"> </l>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS, seul, attaché à un arbre, abandonné à la fureur des bêtes féroces, regarde tristement les Nymphes s’éloigner</speaker>
+            <l n="37">On me fuit... m’abandonne...</l>
           </sp>
         </div>
-        <div type="scene" xml:id="I6">
+        <div type="scene" xml:id="VI">
           <head>Scène VI</head>
-            <l n="72" xml:id="l72"> </l>
-          <sp who="daphnis" xml:id="I6-1">
+          <sp who="#l’amour">
             <speaker>L’AMOUR, DAPHNIS</speaker>
-            <l n="73" xml:id="l73"> </l>
-            <stage><hi rend="italic"><em>Dans ce moment l’Amour sort du berceau de chèvrefeuille et vole à Daphnis, qui, en le voyant, jette un cri de surprise et de crainte.</em></hi></stage>
+            <stage>&lt;em&gt;Dans ce moment l’Amour sort du berceau de chèvrefeuille et vole à Daphnis, qui, en le voyant, jette un cri de surprise et de crainte.&lt;/em&gt;</stage>
           </sp>
-          <sp who="daphnis" xml:id="I6-2">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="75" xml:id="l75">Ah !...</l>
+            <l n="38">Ah !...</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-3">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="76" xml:id="l76">Rassures-toi, Daphnis, me prends-tu pour un monstre prêt à te dévorer ?</l>
+            <l n="39">Rassures-toi, Daphnis, me prends-tu pour un monstre prêt à te dévorer ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-4">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="77" xml:id="l77">Non, tu me semble doux ; mais ces jeunes Nymphes, qui m’ont inhumainement attaché à cet arbre, étaient belles comme toi, et paraissaient presqu’aussi douces.</l>
+            <l n="40">Non, tu me semble doux ; mais ces jeunes Nymphes, qui m’ont inhumainement attaché à cet arbre, étaient belles comme toi, et paraissaient presqu’aussi douces.</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-5">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="78" xml:id="l78">Ne crains rien, je viens te sauver de leur cruauté... Sois libre.</l>
-            <stage><hi rend="italic"><em>Il touche de la flèche les liens de Daphnis : à l’instant ils se détachent d’eux mêmes ; tombent aux pieds du Berger, et le laissent libre. Son écharpe seule reste embarrassé dans les liens.</em></hi></stage>
+            <l n="41">Ne crains rien, je viens te sauver de leur cruauté... Sois libre.</l>
+            <stage>&lt;em&gt;Il touche de la flèche les liens de Daphnis : à l’instant ils se détachent d’eux mêmes ; tombent aux pieds du Berger, et le laissent libre. Son écharpe seule reste embarrassé dans les liens.&lt;/em&gt;</stage>
           </sp>
-          <sp who="daphnis" xml:id="I6-6">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="80" xml:id="l80">Comment pourrai-je jamais reconnaître ca bienfait ?...</l>
+            <l n="42">Comment pourrai-je jamais reconnaître ca bienfait ?...</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-7">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="81" xml:id="l81">En suivant mes lois.</l>
+            <l n="43">En suivant mes lois.</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-8">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="82" xml:id="l82">Qui donc es-tu ?</l>
+            <l n="44">Qui donc es-tu ?</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-9">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="83" xml:id="l83">Le plus petit, mais le plus puissant des Dieux ; celui par qui tout vit : à ces traits, Daphnis, peux-tu méconnaître l’Amour...</l>
+            <l n="45">Le plus petit, mais le plus puissant des Dieux ; celui par qui tout vit : à ces traits, Daphnis, peux-tu méconnaître l’Amour...</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-10">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="84" xml:id="l84">L’Amour !...</l>
+            <l n="46">L’Amour !...</l>
           </sp>
-          <sp who="" xml:id="I6-11">
+          <sp who="#lamour">
             <speaker>LAMOUR</speaker>
-            <l n="85" xml:id="l85">Lui-même.</l>
+            <l n="47">Lui-même.</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-12">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="86" xml:id="l86">Est-ce toi dont les Bergers de ce canton célèbrent les bienfaits ; à qui ils ont élevé ce simple Autel couvert de fleurs ?</l>
+            <l n="48">Est-ce toi dont les Bergers de ce canton célèbrent les bienfaits ; à qui ils ont élevé ce simple Autel couvert de fleurs ?</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-13">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="87" xml:id="l87">C’est moi...</l>
+            <l n="49">C’est moi...</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-14">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="88" xml:id="l88">Mais tous les Dieux, m’a-t-on dit souvent, veillent sur les humains. Jupiter, la foudre à la main, gouverne l’Univers ; Apollon, monté sur un char de feux, dispense la lumière ; Cérès fertilise nos Campagnes ; Pan protège les Troupeaux et les Bergers, et toi ?</l>
+            <l n="50">Mais tous les Dieux, m’a-t-on dit souvent, veillent sur les humains. Jupiter, la foudre à la main, gouverne l’Univers ; Apollon, monté sur un char de feux, dispense la lumière ; Cérès fertilise nos Campagnes ; Pan protège les Troupeaux et les Bergers, et toi ?</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-15">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="89" xml:id="l89">Moi... je fais des heureux.</l>
+            <l n="51">Moi... je fais des heureux.</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-16">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="90" xml:id="l90">Tu fais des heureux, et tu es armé.</l>
+            <l n="52">Tu fais des heureux, et tu es armé.</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-17">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="91" xml:id="l91">Armé par la Beauté, je ne le suis que pour le bonheur.</l>
-            <l n="92" xml:id="l92">Éprouves-en toi-même l’effet.</l>
-            <stage><hi rend="italic"><em>Il touche d’une des es flèches le cœur de Daphnis ; le jeune Berger jette un cri de plaisir.</em></hi></stage>
+            <l n="53">Armé par la Beauté, je ne le suis que pour le bonheur.</l>
+            <l n="54">De l’Amour la flèche toujours sûre,</l>
+            <l n="55">Éprouves-en toi-même l’effet.</l>
+            <stage>&lt;em&gt;Il touche d’une des es flèches le cœur de Daphnis ; le jeune Berger jette un cri de plaisir.&lt;/em&gt;</stage>
           </sp>
-          <sp who="daphnis" xml:id="I6-18">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="94" xml:id="l94">Ah, Ciel ?...</l>
+            <l n="56">Ah, Ciel ?...</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-19">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="95" xml:id="l95">Es-tu blessé ?</l>
+            <l n="57">Es-tu blessé ?</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-20">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="96" xml:id="l96">Non... Mais quel est donc le changement que j’éprouve ?</l>
-          <stage>L’AMOUR.</stage>
+            <l n="58">Non... Mais quel est donc le changement que j’éprouve ?</l>
+            <l n="59">Quel trouble soudain,</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-21">
-            <speaker>DAPHNIS.</speaker>
-            <l n="97" xml:id="l97">Mais il me manque encore quelque chose, que je cherche autour de moi sans savoir ce que ce peut être... Ô Dieu charmant ! achève ton ouvrage, donnes-moi ce que je cherche ?</l>
-          <stage>L’AMOUR.</stage>
-          </sp>
-          <sp who="daphnis" xml:id="I6-22">
-            <speaker>DAPHNIS.</speaker>
-            <l n="98" xml:id="l98">Songes, songes plutôt à sauver tes jours, Zirphée va reparaître.</l>
-          <stage>L’AMOUR.</stage>
-          </sp>
-          <sp who="daphnis" xml:id="I6-23">
-            <speaker>DAPHNIS.</speaker>
-            <l n="99" xml:id="l99">Zirphée !</l>
-          <stage>L’AMOUR.</stage>
-          </sp>
-          <sp who="daphnis" xml:id="I6-24">
-            <speaker>DAPHNIS.</speaker>
-            <l n="100" xml:id="l100">Oui... Cette Nymphe barbare qui voulait ta mort.</l>
-          <stage>L’AMOUR.</stage>
-          </sp>
-          <sp who="daphnis" xml:id="I6-25">
-            <speaker>DAPHNIS.</speaker>
-            <l n="101" xml:id="l101">Qu’elle était belle.</l>
-          </sp>
-          <sp who="l’amour" xml:id="I6-26">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="102" xml:id="l102">C’est par son ordre cruel que ses Compagnes t’ont lié à cet arbre.</l>
+            <l n="60">C’est un trait de flamme,</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-27">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="103" xml:id="l103">Reviendra-t-elle seule ?</l>
+            <l n="61">Un sang tout de feu,</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-28">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="104" xml:id="l104">Oui : évite avec soin la présence.</l>
+            <l n="62">On devient un Dieu,</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-29">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="105" xml:id="l105">Pourquoi ?</l>
+            <l n="63">Un trait de lumière</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-30">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="106" xml:id="l106">Elle te tuera.</l>
+            <l n="64">Ton cœur s’agrandit.</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-31">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="107" xml:id="l107">Non, non.</l>
+            <l n="65">Mais il me manque encore quelque chose, que je cherche autour de moi sans savoir ce que ce peut être... Ô Dieu charmant ! achève ton ouvrage, donnes-moi ce que je cherche ?</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-32">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="108" xml:id="l108">Je t’avertis du danger.</l>
+            <l n="66">Songes, songes plutôt à sauver tes jours, Zirphée va reparaître.</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-33">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="109" xml:id="l109">Vas : tout ce que je crains, c’est de ne la plus revoir... Je l’adore...</l>
+            <l n="67">Zirphée !</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-34">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="110" xml:id="l110">Et ton amour est mon ouvrage... Je l’achèverai, Daphnis... Mais Zirphée va paraître, suis moi, je le veux, suis moi...</l>
+            <l n="68">Oui... Cette Nymphe barbare qui voulait ta mort.</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-35">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="111" xml:id="l111">Je ne le puis...</l>
+            <l n="69">Qu’elle était belle.</l>
           </sp>
-          <sp who="l’amour" xml:id="I6-36">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="112" xml:id="l112">Obéis-moi.</l>
+            <l n="70">C’est par son ordre cruel que ses Compagnes t’ont lié à cet arbre.</l>
           </sp>
-          <sp who="daphnis" xml:id="I6-37">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="113" xml:id="l113">Que tu es cruel.</l>
-            <stage><hi rend="italic"><em>L’Amour entraîne Daphnis malgré lui sous le berceau. Daphnis en se retirant laisse son écharpe dans les liens.</em></hi></stage>
-            <l n="115" xml:id="l115"> </l>
-            <l n="116" xml:id="l116"> </l>
-        </sp>
+            <l n="71">Reviendra-t-elle seule ?</l>
+          </sp>
+          <sp who="#l’amour">
+            <speaker>L’AMOUR.</speaker>
+            <l n="72">Oui : évite avec soin la présence.</l>
+          </sp>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="73">Pourquoi ?</l>
+          </sp>
+          <sp who="#l’amour">
+            <speaker>L’AMOUR.</speaker>
+            <l n="74">Elle te tuera.</l>
+          </sp>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="75">Non, non.</l>
+            <l n="76">La Beauté n’est jamais cruelle,</l>
+          </sp>
+          <sp who="#l’amour">
+            <speaker>L’AMOUR.</speaker>
+            <l n="77">Je t’avertis du danger.</l>
+          </sp>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="78">Vas : tout ce que je crains, c’est de ne la plus revoir... Je l’adore...</l>
+          </sp>
+          <sp who="#l’amour">
+            <speaker>L’AMOUR.</speaker>
+            <l n="79">Et ton amour est mon ouvrage... Je l’achèverai, Daphnis... Mais Zirphée va paraître, suis moi, je le veux, suis moi...</l>
+          </sp>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="80">Je ne le puis...</l>
+          </sp>
+          <sp who="#l’amour">
+            <speaker>L’AMOUR.</speaker>
+            <l n="81">Obéis-moi.</l>
+          </sp>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="82">Que tu es cruel.</l>
+            <stage>&lt;em&gt;L’Amour entraîne Daphnis malgré lui sous le berceau. Daphnis en se retirant laisse son écharpe dans les liens.&lt;/em&gt;</stage>
+          </sp>
+        </div>
       </div>
-      </div>
-      <div type="act" xml:id="II">
+      <div type="act" n="2">
         <head>ACTE II</head>
-            <l n="117" xml:id="l117"> </l>
-            <l n="118" xml:id="l118"> </l>
-        <div type="scene" xml:id="II1">
+        <div type="scene" xml:id="première">
           <head>Scène première</head>
-            <l n="119" xml:id="l119"> </l>
-          <sp who="daphnis" xml:id="II1-1">
-            <speaker>ZIRPHÉE, <em>seule, sort de la forêt et s’avance grands pas vers l’arbre auquel elle a fait attacher Daphnis</em></speaker>
-            <l n="120" xml:id="l120"> </l>
-            <stage><hi rend="italic"><em>Surprise de ne l’y plus trouver, elle l’appelle tendrement.</em></hi></stage>
-            <stage><hi rend="italic"><em>Elle le cherche avec inquiétude.</em></hi></stage>
-            <stage><hi rend="italic"><em>Elle aperçoit l’écharpe de Daphnis embarrassée dans les liens.</em></hi></stage>
-            <stage><hi rend="italic"><em>Elle se livre au plus affreux désespoir.</em></hi></stage>
-            <stage><hi rend="italic"><em>Zirphée lève sur son sein le plus aigu de ses traits, et est prête à s’en percer le cœur.</em></hi></stage>
-            <l n="126" xml:id="l126"> </l>
-            <l n="127" xml:id="l127"> </l>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE, seule, sort de la forêt et s’avance grands pas vers l’arbre auquel elle a fait attacher Daphnis</speaker>
+            <stage>&lt;em&gt;Surprise de ne l’y plus trouver, elle l’appelle tendrement.&lt;/em&gt;</stage>
+            <l n="83">Daphnis... Daphnis... mes cris sont superflus ;</l>
+            <stage>&lt;em&gt;Elle le cherche avec inquiétude.&lt;/em&gt;</stage>
+            <l n="84">Ne crains rien, ce n’est plus une Nymphe en fureur,</l>
+            <stage>&lt;em&gt;Elle aperçoit l’écharpe de Daphnis embarrassée dans les liens.&lt;/em&gt;</stage>
+            <l n="85">Que vois-je !... son écharpe en ces liens restée...</l>
+            <stage>&lt;em&gt;Elle se livre au plus affreux désespoir.&lt;/em&gt;</stage>
+            <l n="86">De ma sévérité, malheureuse victime,</l>
+            <stage>&lt;em&gt;Zirphée lève sur son sein le plus aigu de ses traits, et est prête à s’en percer le cœur.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="II2">
+        <div type="scene" xml:id="II">
           <head>Scène II</head>
-            <l n="128" xml:id="l128"> </l>
-          <sp who="daphnis" xml:id="II2-1">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE, DAPHNIS</speaker>
-            <l n="129" xml:id="l129"> </l>
-            <stage><hi rend="italic"><em>Dans ce moment Daphnis s’élance de dessous le berceau, vole à Zirphée, arrête son bras, la désarme et tombe à ses pieds. Zirphée pâlit de joie, rougit de plaisir, baisse les yeux, et n’a pas la force de retirer sa main, que Daphnis presse amoureusement dans les siennes et qu’il couvre de baisers brûlants ; ils se regardent tendrement et restent dans le silence.</em></hi></stage>
+            <stage>&lt;em&gt;Dans ce moment Daphnis s’élance de dessous le berceau, vole à Zirphée, arrête son bras, la désarme et tombe à ses pieds. Zirphée pâlit de joie, rougit de plaisir, baisse les yeux, et n’a pas la force de retirer sa main, que Daphnis presse amoureusement dans les siennes et qu’il couvre de baisers brûlants ; ils se regardent tendrement et restent dans le silence.&lt;/em&gt;</stage>
           </sp>
-          <sp who="daphnis" xml:id="II2-2">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="131" xml:id="l131">Ô ma Zirphée !... Tu m’aimes ?...</l>
+            <l n="87">Ô ma Zirphée !... Tu m’aimes ?...</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-3">
-            <speaker>ZIRPHÉE, <em>d’une voix basse et timide.</em></speaker>
-            <l n="132" xml:id="l132">Je t’aime !... Mais toi, Daphnis ?...</l>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE, d’une voix basse et timide.</speaker>
+            <l n="88">Je t’aime !... Mais toi, Daphnis ?...</l>
           </sp>
-          <sp who="daphnis" xml:id="II2-4">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="133" xml:id="l133">Je t’adore !...</l>
+            <l n="89">Je t’adore !...</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-5">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="134" xml:id="l134">Je t’ai parue cruelle ; me pardonneras-tu ?</l>
+            <l n="90">Je t’ai parue cruelle ; me pardonneras-tu ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II2-6">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="135" xml:id="l135">Tu parles de pardon quand tu fais mon bonheur.</l>
+            <l n="91">Tu parles de pardon quand tu fais mon bonheur.</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-7">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="136" xml:id="l136">Mes Compagnes sont jeunes, elles sont belles ; verras-tu sans émotion leurs attraits ? Me seras-tu fidèle ?</l>
+            <l n="92">Mes Compagnes sont jeunes, elles sont belles ; verras-tu sans émotion leurs attraits ? Me seras-tu fidèle ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II2-8">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="137" xml:id="l137">Ô ma Zirphée ! ton doute m’afflige : tes Compagnes sont belles, sans doute ; mais aucune n’a pour moi les charmes de Zirphée... Écoute ; vois-tu ce simple Autel ?</l>
+            <l n="93">Ô ma Zirphée ! ton doute m’afflige : tes Compagnes sont belles, sans doute ; mais aucune n’a pour moi les charmes de Zirphée... Écoute ; vois-tu ce simple Autel ?</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-9">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="138" xml:id="l138">Il est consacré à l’Amour.</l>
+            <l n="94">Il est consacré à l’Amour.</l>
           </sp>
-          <sp who="daphnis" xml:id="II2-10">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="139" xml:id="l139">L’Amour et le Dieu du bonheur,</l>
+            <l n="95">L’Amour et le Dieu du bonheur,</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-11">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="140" xml:id="l140">Diane m’a recommandé d’éviter avec soin et l’Autel et le Berceau.</l>
+            <l n="96">Diane m’a recommandé d’éviter avec soin et l’Autel et le Berceau.</l>
           </sp>
-          <sp who="daphnis" xml:id="II2-12">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="141" xml:id="l141">Diane a-t-elle un cœur de marbre ? Endymion en sut trouver la route. Endymion était-il plus tendre que Daphnis ?</l>
+            <l n="97">Diane a-t-elle un cœur de marbre ? Endymion en sut trouver la route. Endymion était-il plus tendre que Daphnis ?</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-13">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="142" xml:id="l142">Il n’était pas plus aimé.</l>
+            <l n="98">Il n’était pas plus aimé.</l>
           </sp>
-          <sp who="daphnis" xml:id="II2-14">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="143" xml:id="l143">Viens donc à cet Autel, ma Zirphée ; prenons ce Dieu lui-même à témoin de nos serments... Tu hésites ?</l>
+            <l n="99">Viens donc à cet Autel, ma Zirphée ; prenons ce Dieu lui-même à témoin de nos serments... Tu hésites ?</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-15">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="144" xml:id="l144">Ô Diane ! pardonne au pouvoir invincible qui m’entraine aux pieds de cet Autel.</l>
-            <stage><hi rend="italic"><em>Elle suit en tremblant Daphnis à l’Autel de l’Amour : tous deux la main posée sur l’Autel, s’y jurent une tendresse éternelle.</em></hi></stage>
-          <stage>DAPHNIS, ZIRPHÉE.</stage>
+            <l n="100">Ô Diane ! pardonne au pouvoir invincible qui m’entraine aux pieds de cet Autel.</l>
+            <stage>&lt;em&gt;Elle suit en tremblant Daphnis à l’Autel de l’Amour : tous deux la main posée sur l’Autel, s’y jurent une tendresse éternelle.&lt;/em&gt;</stage>
           </sp>
-          <sp who="daphnis" xml:id="II2-16">
+          <sp who="#daphnis">
+            <speaker>DAPHNIS, ZIRPHÉE.</speaker>
+            <l n="101">Âme de l’Univers, consacre notre ardeur,</l>
+          </sp>
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
+            <l n="102">Si jamais j’oubliais les charmes de Zirphée,</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-17">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <stage><hi rend="italic"><em>La foudre gronde.</em></hi></stage>
+            <l n="103">Si je trahis son amour,</l>
+            <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+            <l n="104">Âme de l’Univers, consacre notre ardeur,</l>
+            <stage>&lt;em&gt;La foudre gronde.&lt;/em&gt;</stage>
           </sp>
-          <sp who="daphnis" xml:id="II2-18">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="148" xml:id="l148">Zirphée, le Ciel approuve notre tendresse.</l>
+            <l n="105">Zirphée, le Ciel approuve notre tendresse.</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-19">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="149" xml:id="l149">Daphnis, l’Amour a reçu nos serments.</l>
-          <stage>DAPHNIS, ZIRPHÉE.</stage>
+            <l n="106">Daphnis, l’Amour a reçu nos serments.</l>
           </sp>
-          <sp who="zirphệe" xml:id="II2-20">
+          <sp who="#daphnis">
+            <speaker>DAPHNIS, ZIRPHÉE.</speaker>
+            <l n="107">À jamais aimons-nous</l>
+          </sp>
+          <sp who="#zirphệe">
             <speaker>ZIRPHỆE.</speaker>
-            <l n="150" xml:id="l150">Daphnis, il faut nous séparer.</l>
-          <stage>DAPHNIS.</stage>
+            <l n="108">La volupté suprême,</l>
           </sp>
-          <sp who="ensemble" xml:id="II2-21">
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="109">Le Dieu d’amour lui-même,</l>
+          </sp>
+          <sp who="#ensemble">
             <speaker>ENSEMBLE.</speaker>
-            <l n="151" xml:id="l151">Nous séparer, Zirphée ?</l>
-          <stage>ZIRPHÉE, <em>en attachant au bras de Daphnis un simple collier qu’elle avait à son col.</em></stage>
+            <l n="110">À jamais aimons-nous,</l>
           </sp>
-          <sp who="daphnis" xml:id="II2-22">
-            <speaker>DAPHNIS, <em>en lui offrant un nœud de ruban qui orne son chapeau et que Zirphée place sur son cœur.</em></speaker>
-            <l n="152" xml:id="l152">Je dois cacher ma faiblesse, ou plutôt mon bonheur à mes Compagnes, elles en seraient jalouses, et la moindre indiscrétion me pendrait ; dérobons, s’il se peut, notre amour à tous les yeux. Ne quitte pas ce berceau charmant ; quand la chasse sera finie, que j’aurai ramené mes Compagnes dans le Temple de Diane, je profiterai de l’obscurité de la nuit pour venir t(y rejoindre.</l>
-          <stage>ENSEMBLE.</stage>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE, en attachant au bras de Daphnis un simple collier qu’elle avait à son col.</speaker>
+            <l n="111">De ma félicité,</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-23">
+          <sp who="#daphnis">
+            <speaker>DAPHNIS, en lui offrant un nœud de ruban qui orne son chapeau et que Zirphée place sur son cœur.</speaker>
+            <l n="112">De ma félicité,</l>
+          </sp>
+          <sp who="#ensemble">
+            <speaker>ENSEMBLE.</speaker>
+            <l n="113">À jamais aimons-nous,</l>
+          </sp>
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="153" xml:id="l153">Tu me quittes ?</l>
-          <stage>DAPHNIS.</stage>
+            <l n="114">Daphnis, il faut nous séparer.</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-24">
-            <speaker>ZIRPHÉE.</speaker>
-            <l n="154" xml:id="l154">Il le faut.</l>
-          <stage>DAPHNIS</stage>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="115">Nous séparer, Zirphée ?</l>
           </sp>
-          <sp who="zirphée" xml:id="II2-25">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <stage><hi rend="italic"><em>Daphnis veut en vain la retenir, Zirphée lui donne un léger baiser sur le front, s’échappe de ses bras et vole rejoindre Ses Compagnes.</em></hi></stage>
-            <l n="156" xml:id="l156"> </l>
-            <l n="157" xml:id="l157"> </l>
+            <l n="116">Je dois cacher ma faiblesse, ou plutôt mon bonheur à mes Compagnes, elles en seraient jalouses, et la moindre indiscrétion me pendrait ; dérobons, s’il se peut, notre amour à tous les yeux. Ne quitte pas ce berceau charmant ; quand la chasse sera finie, que j’aurai ramené mes Compagnes dans le Temple de Diane, je profiterai de l’obscurité de la nuit pour venir t(y rejoindre.</l>
+          </sp>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS</speaker>
+            <l n="117">Tu me quittes ?</l>
+          </sp>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE.</speaker>
+            <l n="118">Il le faut.</l>
+            <stage>&lt;em&gt;Daphnis veut en vain la retenir, Zirphée lui donne un léger baiser sur le front, s’échappe de ses bras et vole rejoindre Ses Compagnes.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="II3">
+        <div type="scene" xml:id="III">
           <head>Scène III</head>
-            <l n="158" xml:id="l158"> </l>
-          <sp who="daphnis" xml:id="II3-1">
-            <speaker>DAPHNIS, <em>seul</em></speaker>
-            <l n="159" xml:id="l159"> </l>
-            <stage><hi rend="italic"><em>Daphnis cueille plusieurs fleurs, dont il forme un bouquet pour Zirphée.</em></hi></stage>
-            <l n="161" xml:id="l161"> </l>
-            <l n="162" xml:id="l162"> </l>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS, seul</speaker>
+            <l n="119">Amour, je te dois le bonheur,</l>
+            <l n="120">C’est du premier moment qu’on aime,</l>
+            <l n="121">Amour, je te dois le bonheur,</l>
+            <stage>&lt;em&gt;Daphnis cueille plusieurs fleurs, dont il forme un bouquet pour Zirphée.&lt;/em&gt;</stage>
+            <l n="122">Charmantes fleurs, rose nouvelle,</l>
+            <l n="123">Amour, je te dois le bonheur,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="II4">
+        <div type="scene" xml:id="IV">
           <head>Scène IV</head>
-            <l n="163" xml:id="l163"> </l>
-          <sp who="daphnis" xml:id="II4-1">
+          <sp who="#hyale">
             <speaker>HYALE, DAPHNIS</speaker>
-            <l n="164" xml:id="l164"> </l>
-            <stage><hi rend="italic"><em>On entend dans le loin tain de la forêt Hyale, qui s’avance en chantant la Ronde suivante.</em></hi></stage>
-            <stage><hi rend="italic"><em>Ronde.</em></hi></stage>
+            <stage>&lt;em&gt;On entend dans le loin tain de la forêt Hyale, qui s’avance en chantant la Ronde suivante.&lt;/em&gt;</stage>
+            <stage>&lt;em&gt;Ronde.&lt;/em&gt;</stage>
+            <l n="124">Au bord de la fontaine</l>
+            <l n="125">Tircis s’approchant d’elle,</l>
+            <l n="126">Vers le bois, Célimène</l>
+            <l n="127">Dans ce bois solitaire,</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-2">
-            <speaker>HYALE, <em>arrive en sautant, le plaisir brille dans ses yeux ; elle aperçoit Daphnis, et vole à lui d’un air gai.</em></speaker>
-            <l n="167" xml:id="l167">Ah ! vous voilà, jeune Berger ; j’ai quitté mes Compagnes pour venir vous délivrer : on m’a prévenu, j’en suis fâchée ; car j’aurais eu bien du plaisir à vous rendre la liberté.</l>
+          <sp who="#hyale">
+            <speaker>HYALE, arrive en sautant, le plaisir brille dans ses yeux ; elle aperçoit Daphnis, et vole à lui d’un air gai.</speaker>
+            <l n="128">Ah ! vous voilà, jeune Berger ; j’ai quitté mes Compagnes pour venir vous délivrer : on m’a prévenu, j’en suis fâchée ; car j’aurais eu bien du plaisir à vous rendre la liberté.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-3">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="168" xml:id="l168">Je vous en ai le même obligation, et jamais je n’oublierai le tendre intérêt que vous avez daigné prendre à mon sort.</l>
+            <l n="129">Je vous en ai le même obligation, et jamais je n’oublierai le tendre intérêt que vous avez daigné prendre à mon sort.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-4">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="169" xml:id="l169">C’est que du premier moment que je vous ai vu, vous m’avez plu.</l>
+            <l n="130">C’est que du premier moment que je vous ai vu, vous m’avez plu.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-5">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="170" xml:id="l170">Comment vous en marquer toute ma reconnaissance ?</l>
+            <l n="131">Comment vous en marquer toute ma reconnaissance ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-6">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="171" xml:id="l171">En m’aimant.</l>
+            <l n="132">En m’aimant.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-7">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="172" xml:id="l172">En vous aimant ?...</l>
+            <l n="133">En vous aimant ?...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-8">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="173" xml:id="l173">Sans doute... Est-ce que l’amour vous fait peur ?</l>
+            <l n="134">Sans doute... Est-ce que l’amour vous fait peur ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-9">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="174" xml:id="l174">Non... Mais...</l>
+            <l n="135">Non... Mais...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-10">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="175" xml:id="l175">Je suis jeune, jolie, je vous aime ; pourquoi ce mais ?</l>
+            <l n="136">Je suis jeune, jolie, je vous aime ; pourquoi ce mais ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-11">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="176" xml:id="l176">Un simple Berger...</l>
+            <l n="137">Un simple Berger...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-12">
+          <sp who="#hyale">
             <speaker>HYALE</speaker>
-            <l n="177" xml:id="l177">Un simple Berger vaut un Dieu quand il plaît ; je suis franche comme vous voyez ; le culte de Diane me fatigue ; mes Compagnes m’ennuient ; je n’aime plus la chasse, et je trouve qu’à vingt ans la garde de son cœur est par trop difficile ; il me manque quelque chose, c’est un amant, et je vous choisis.</l>
+            <l n="138">Un simple Berger vaut un Dieu quand il plaît ; je suis franche comme vous voyez ; le culte de Diane me fatigue ; mes Compagnes m’ennuient ; je n’aime plus la chasse, et je trouve qu’à vingt ans la garde de son cœur est par trop difficile ; il me manque quelque chose, c’est un amant, et je vous choisis.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-13">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="178" xml:id="l178">Vous me faites trop d’honneur.</l>
+            <l n="139">Vous me faites trop d’honneur.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-14">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="179" xml:id="l179">Ne parlons que de plaisir : est-ce que vous ne voulez pas m’aimer ?</l>
+            <l n="140">Ne parlons que de plaisir : est-ce que vous ne voulez pas m’aimer ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-15">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="180" xml:id="l180">Je ne dis pas cela.</l>
+            <l n="141">Je ne dis pas cela.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-16">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="181" xml:id="l181">Tant mieux : voilà de belles roses, donner les moi. Vous me refusez ?</l>
+            <l n="142">Tant mieux : voilà de belles roses, donner les moi. Vous me refusez ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-17">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="182" xml:id="l182">Les voilà. Elle est charmante.</l>
+            <l n="143">Les voilà. Elle est charmante.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-18">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="183" xml:id="l183">Vous semblez ne me les donner qu’avec peine.</l>
+            <l n="144">Vous semblez ne me les donner qu’avec peine.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-19">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="184" xml:id="l184">Je les destinais...</l>
+            <l n="145">Je les destinais...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-20">
+          <sp who="#hyale">
             <speaker>HYALE</speaker>
-            <l n="185" xml:id="l185">À quelque jeune Bergère ?</l>
+            <l n="146">À quelque jeune Bergère ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-21">
+          <sp who="#daphnis">
             <speaker>DAPHNIS</speaker>
-            <l n="186" xml:id="l186">Il est vrai.</l>
+            <l n="147">Il est vrai.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-22">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="187" xml:id="l187">Vous lui en cueillerez d’autres.</l>
+            <l n="148">Vous lui en cueillerez d’autres.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-23">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="188" xml:id="l188">Mais !...</l>
+            <l n="149">Mais !...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-24">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="189" xml:id="l189">Quoi ! mais !...</l>
+            <l n="150">Quoi ! mais !...</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-25">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="190" xml:id="l190">Si je l’aimais...</l>
+            <l n="151">Si je l’aimais...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-26">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="191" xml:id="l191">Hé bien ?</l>
+            <l n="152">Hé bien ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-27">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="192" xml:id="l192">Je ne pourrais être votre amant.</l>
+            <l n="153">Je ne pourrais être votre amant.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-28">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="193" xml:id="l193">Pourquoi ?</l>
+            <l n="154">Pourquoi ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-29">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="194" xml:id="l194">Est-ce qu’on peut aimer deux Belles à la fois ?</l>
+            <l n="155">Est-ce qu’on peut aimer deux Belles à la fois ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-30">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="195" xml:id="l195">Sans doute.</l>
+            <l n="156">Sans doute.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-31">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="196" xml:id="l196">Mais la fidélité ?...</l>
+            <l n="157">Mais la fidélité ?...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-32">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="197" xml:id="l197">Mais qui veut bien s’y laisser prendre.</l>
+            <l n="158">N’est qu’un léger filet,</l>
+            <l n="159">Mais qui veut bien s’y laisser prendre.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-33">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="198" xml:id="l198">Vous ne seriez donc pas fidèle, vous ?</l>
+            <l n="160">Vous ne seriez donc pas fidèle, vous ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-34">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="199" xml:id="l199">Si fait... Tant que mon Berger me plairait plus qu’un autre.</l>
+            <l n="161">Si fait... Tant que mon Berger me plairait plus qu’un autre.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-35">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="200" xml:id="l200">Mais il ne vous plairait peut-être pas toujours ?</l>
+            <l n="162">Mais il ne vous plairait peut-être pas toujours ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-36">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="201" xml:id="l201">Je n’en sais rien... L’Amour n’a qu’un flambeau ; mais l’Amour a deux ailes.</l>
+            <l n="163">Je n’en sais rien... L’Amour n’a qu’un flambeau ; mais l’Amour a deux ailes.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-37">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="202" xml:id="l202">Et vous appelez cela, aimer ?</l>
+            <l n="164">Et vous appelez cela, aimer ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-38">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="203" xml:id="l203">Oui.</l>
+            <l n="165">Oui.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-39">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="204" xml:id="l204">Il y a donc deux Amours ?</l>
+            <l n="166">Il y a donc deux Amours ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-40">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="205" xml:id="l205">Certainement.</l>
+            <l n="167">Certainement.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-41">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="206" xml:id="l206">Je ne le savais pas.</l>
-          <stage>HYALE.</stage>
+            <l n="168">Je ne le savais pas.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-42">
-            <speaker>DAPHNIS.</speaker>
-            <l n="207" xml:id="l207">Ah ! vous en faites un portrait charmant.</l>
-          </sp>
-          <sp who="hyale" xml:id="II4-43">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="208" xml:id="l208">Il est encore plus doux de le connaître.</l>
+            <l n="169">L’un est fils du plaisir, l’autre du Sentiment.</l>
+            <l n="170">Il est un autre enfant,</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-44">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="209" xml:id="l209">Je vous crois... Et je voudrais bien...</l>
+            <l n="171">Ah ! vous en faites un portrait charmant.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-45">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="210" xml:id="l210">Faire connaissance avec lui ?</l>
+            <l n="172">Il est encore plus doux de le connaître.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-46">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="211" xml:id="l211">Oui...</l>
+            <l n="173">Je vous crois... Et je voudrais bien...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-47">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="212" xml:id="l212">Je vois bien que vous êtes encore sans expérience, je veux vous instruire.</l>
+            <l n="174">Faire connaissance avec lui ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-48">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="213" xml:id="l213">Je vous en aurai bien de l’obligation.</l>
+            <l n="175">Oui...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-49">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="214" xml:id="l214">Et que me donnerez-vous pour mes leçons ?</l>
+            <l n="176">Je vois bien que vous êtes encore sans expérience, je veux vous instruire.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-50">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="215" xml:id="l215">Tout ce que vous voudrez...</l>
+            <l n="177">Je vous en aurai bien de l’obligation.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-51">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="216" xml:id="l216">Eh bien ! donnez-moi... Qu’est-ce que c’est que ce ruban ?</l>
+            <l n="178">Et que me donnerez-vous pour mes leçons ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-52">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="217" xml:id="l217">Oh !... C’est...</l>
+            <l n="179">Tout ce que vous voudrez...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-53">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="218" xml:id="l218">Un don de l’Amour à Sentiment, je gage ; je reconnais bien la sa triste écharpe... Votre Bergère vous l’a donné ?</l>
+            <l n="180">Eh bien ! donnez-moi... Qu’est-ce que c’est que ce ruban ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-54">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="219" xml:id="l219">Oui...</l>
+            <l n="181">Oh !... C’est...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-55">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="220" xml:id="l220">Je le veux.</l>
+            <l n="182">Un don de l’Amour à Sentiment, je gage ; je reconnais bien la sa triste écharpe... Votre Bergère vous l’a donné ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-56">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="221" xml:id="l221">Impossible.</l>
+            <l n="183">Oui...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-57">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="222" xml:id="l222">Pourquoi ?</l>
+            <l n="184">Je le veux.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-58">
+          <sp who="#daphnis">
+            <speaker>DAPHNIS.</speaker>
+            <l n="185">Impossible.</l>
+          </sp>
+          <sp who="#hyale">
+            <speaker>HYALE.</speaker>
+            <l n="186">Pourquoi ?</l>
+          </sp>
+          <sp who="#daphnis">
             <speaker>DAPHNIS</speaker>
-            <l n="223" xml:id="l223">Que penserait-elle de ma fidélité ?</l>
+            <l n="187">Que penserait-elle de ma fidélité ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-59">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="224" xml:id="l224">Encore votre fidélité : mais défaites-vous donc de ce mot, il est du règne de Saturne. Tenez, vous voyez bien cette couronne de myrte, un jeune Satyre me l’offrit hier ; elle me parut charmante : donnez-moi votre ruban, je vous donnerai ma couronne.</l>
+            <l n="188">Encore votre fidélité : mais défaites-vous donc de ce mot, il est du règne de Saturne. Tenez, vous voyez bien cette couronne de myrte, un jeune Satyre me l’offrit hier ; elle me parut charmante : donnez-moi votre ruban, je vous donnerai ma couronne.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-60">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="225" xml:id="l225">Mais !...</l>
+            <l n="189">Mais !...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-61">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="226" xml:id="l226">Mais vous ne méritez pas les bontés qu’on veut avoir pour vous... Tenez...</l>
-            <stage><hi rend="italic"><em>Elle détache sa couronne et la présente à Daphnis : il n’y a pas plutôt porté la main qu’il se trouble.</em></hi></stage>
+            <l n="190">Mais vous ne méritez pas les bontés qu’on veut avoir pour vous... Tenez...</l>
+            <stage>&lt;em&gt;Elle détache sa couronne et la présente à Daphnis : il n’y a pas plutôt porté la main qu’il se trouble.&lt;/em&gt;</stage>
           </sp>
-          <sp who="daphnis" xml:id="II4-62">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="228" xml:id="l228">Ô Ciel !... Quel trouble j’éprouve !... Quel feu me brûle !... Ah ! prenez-le... Prenez-le...</l>
-            <stage><hi rend="italic"><em>Hyale s’empare du collier de Zirphée ; à l’instant la foudre gronde, le ciel s’obscurcit, un nuage épais se répand sur les yeux de Daphnis, et les ferme à la clarté du jour. </em></hi></stage>
-            <l n="230" xml:id="l230">Dieux !... Qu’ai-je fait ?</l>
+            <l n="191">Ô Ciel !... Quel trouble j’éprouve !... Quel feu me brûle !... Ah ! prenez-le... Prenez-le...</l>
+            <stage>&lt;em&gt;Hyale s’empare du collier de Zirphée ; à l’instant la foudre gronde, le ciel s’obscurcit, un nuage épais se répand sur les yeux de Daphnis, et les ferme à la clarté du jour. &lt;/em&gt;</stage>
+            <l n="192">Dieux !... Qu’ai-je fait ?</l>
           </sp>
-          <sp who="hyale" xml:id="II4-63">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="231" xml:id="l231">Qu’avez-vous donc ?</l>
+            <l n="193">Qu’avez-vous donc ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-64">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="232" xml:id="l232">Vous m’avez perdu... Malheureux que je suis, j’ai trahi l’Amour ; l’Amour m’a puni : c’est vous qui causez mon malheur ; c’est cette maudite couronne qui m’a troublé.</l>
-            <stage><hi rend="italic"><em>Il jette avec fureur loin de lui la couronne d’Hyale, et s’abandonne au plus affreux désespoir.</em></hi></stage>
+            <l n="194">Vous m’avez perdu... Malheureux que je suis, j’ai trahi l’Amour ; l’Amour m’a puni : c’est vous qui causez mon malheur ; c’est cette maudite couronne qui m’a troublé.</l>
+            <stage>&lt;em&gt;Il jette avec fureur loin de lui la couronne d’Hyale, et s’abandonne au plus affreux désespoir.&lt;/em&gt;</stage>
           </sp>
-          <sp who="hyale" xml:id="II4-65">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="234" xml:id="l234">Que faites-vous ?...</l>
+            <l n="195">Que faites-vous ?...</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-66">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="235" xml:id="l235">Éloignez-vous, cruelle... Je pourrais...</l>
+            <l n="196">Éloignez-vous, cruelle... Je pourrais...</l>
           </sp>
-          <sp who="hyale" xml:id="II4-67">
+          <sp who="#hyale">
             <speaker>HYALE</speaker>
-            <l n="236" xml:id="l236">Que voulez-vous donc dire ?</l>
+            <l n="197">Que voulez-vous donc dire ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-68">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="237" xml:id="l237">J’avais juré sur cet Autel un attachement éternel à la plus belle des Nymphes ; j’ai prié l’Amour de fermer mes yeux à la clarté du jour, si jamais je la trahissais ; je l’ai trahi pour vous ; un voile épais couvre ma paupière, et jamais je ne verrai celle que j’adore.</l>
+            <l n="198">J’avais juré sur cet Autel un attachement éternel à la plus belle des Nymphes ; j’ai prié l’Amour de fermer mes yeux à la clarté du jour, si jamais je la trahissais ; je l’ai trahi pour vous ; un voile épais couvre ma paupière, et jamais je ne verrai celle que j’adore.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-69">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="238" xml:id="l238">Je vous plains... Adieu.</l>
+            <l n="199">Je vous plains... Adieu.</l>
           </sp>
-          <sp who="daphnis" xml:id="II4-70">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="239" xml:id="l239">Vous me quittez : et vous disiez que vous m’aimiez.</l>
+            <l n="200">Vous me quittez : et vous disiez que vous m’aimiez.</l>
           </sp>
-          <sp who="hyale" xml:id="II4-71">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="240" xml:id="l240">L’Amour porte un bandeau, mais il n’est pas aveugle. Adieu, je suis obligée d’aller rejoindre mes Compagnes.</l>
-            <stage><hi rend="italic"><em>Elle s’enfonce dans la forêt.</em></hi></stage>
-            <l n="242" xml:id="l242"> </l>
-            <l n="243" xml:id="l243"> </l>
+            <l n="201">L’Amour porte un bandeau, mais il n’est pas aveugle. Adieu, je suis obligée d’aller rejoindre mes Compagnes.</l>
+            <stage>&lt;em&gt;Elle s’enfonce dans la forêt.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="II5">
+        <div type="scene" xml:id="V">
           <head>Scène V</head>
-            <l n="244" xml:id="l244"> </l>
-          <sp who="daphnis" xml:id="II5-1">
-            <speaker>DAPHNIS, <em>seul</em></speaker>
-            <l n="245" xml:id="l245"> </l>
-            <l n="246" xml:id="l246">Elle m’abandonne... Que vais-je devenir ?... Où fuir ?... Ô, ma Zirphée, je ne te verrai donc jamais !... Jamais !</l>
-            <stage><hi rend="italic"><em>Il marche en s’appuyant de rochers en rochers, s’assoit tristement sur un quartier de pierre et s’y abandonne à toute sa douleur. </em></hi></stage>
-            <l n="248" xml:id="l248">Dieux ! mon cœur bat, il palpite ; Zirphée s’avance.</l>
-            <stage><hi rend="italic"><em>Il fait un mouvement involontaire pour aller à elle, se lève et retombe désespéré. </em></hi></stage>
-            <l n="250" xml:id="l250">Ô ! comment oserais-je reparaître à ses yeux ?</l>
-            <stage><hi rend="italic"><em>Il laisse tomber sa tête sur son sein, et couvre ses yeux de ses deux mains. </em></hi></stage>
-            <l n="252" xml:id="l252">Redoublons, s’il se peut, le nuage épais qui couvre ma paupière !</l>
-            <l n="253" xml:id="l253"> </l>
-            <l n="254" xml:id="l254"> </l>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS, seul</speaker>
+            <l n="202">Elle m’abandonne... Que vais-je devenir ?... Où fuir ?... Ô, ma Zirphée, je ne te verrai donc jamais !... Jamais !</l>
+            <stage>&lt;em&gt;Il marche en s’appuyant de rochers en rochers, s’assoit tristement sur un quartier de pierre et s’y abandonne à toute sa douleur. &lt;/em&gt;</stage>
+            <l n="203">Dieux ! mon cœur bat, il palpite ; Zirphée s’avance.</l>
+            <stage>&lt;em&gt;Il fait un mouvement involontaire pour aller à elle, se lève et retombe désespéré. &lt;/em&gt;</stage>
+            <l n="204">Ô ! comment oserais-je reparaître à ses yeux ?</l>
+            <stage>&lt;em&gt;Il laisse tomber sa tête sur son sein, et couvre ses yeux de ses deux mains. &lt;/em&gt;</stage>
+            <l n="205">Redoublons, s’il se peut, le nuage épais qui couvre ma paupière !</l>
           </sp>
         </div>
-        <div type="scene" xml:id="II6">
+        <div type="scene" xml:id="VI">
           <head>Scène VI</head>
-            <l n="255" xml:id="l255"> </l>
-          <sp who="daphnis" xml:id="II6-1">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE, DAPHNIS</speaker>
-            <l n="256" xml:id="l256"> </l>
-            <stage><hi rend="italic"><em>Zirphée arrive ; appelle Daphnis ; le cherche ; l’aperçoit, et vole à lui. </em></hi></stage>
+            <stage>&lt;em&gt;Zirphée arrive ; appelle Daphnis ; le cherche ; l’aperçoit, et vole à lui. &lt;/em&gt;</stage>
           </sp>
-          <sp who="zirphée" xml:id="II6-2">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="258" xml:id="l258">Daphnis... Daphnis... Eh ! quoi Daphnis, ne m’entendiez-vous pas ?</l>
+            <l n="206">Daphnis... Daphnis... Eh ! quoi Daphnis, ne m’entendiez-vous pas ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-3">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="259" xml:id="l259">Fuyez... Éloignez vous à jamais d’un malheureux.</l>
+            <l n="207">Fuyez... Éloignez vous à jamais d’un malheureux.</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-4">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="260" xml:id="l260">Tu m’as trahie.</l>
+            <l n="208">Tu m’as trahie.</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-5">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="261" xml:id="l261">Les Dieux m’en ont puni.</l>
+            <l n="209">Les Dieux m’en ont puni.</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-6">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="262" xml:id="l262">Tu m’as trahie.</l>
+            <l n="210">Tu m’as trahie.</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-7">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="263" xml:id="l263">Non... Mon cœur vous est toujours reste fidèle, mais un pouvoir invincible a pour un instant troublé ma raison... Ne m’aimes plus.</l>
+            <l n="211">Non... Mon cœur vous est toujours reste fidèle, mais un pouvoir invincible a pour un instant troublé ma raison... Ne m’aimes plus.</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-8">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="264" xml:id="l264">Ne plus t’aimer, cruel !... Est-il en mon pouvoir ?</l>
+            <l n="212">Ne plus t’aimer, cruel !... Est-il en mon pouvoir ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-9">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="265" xml:id="l265">Laissez-moi ?...</l>
+            <l n="213">Laissez-moi ?...</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-10">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="266" xml:id="l266">Moi, t’abandonner !... Non, jamais... Jamais... Ton infortune te rend plus cher à ta Zirphée.</l>
+            <l n="214">Moi, t’abandonner !... Non, jamais... Jamais... Ton infortune te rend plus cher à ta Zirphée.</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-11">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="267" xml:id="l267">Ah ! combien vous augmentez mon crime et mes remords.</l>
+            <l n="215">Ah ! combien vous augmentez mon crime et mes remords.</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-12">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="268" xml:id="l268">Mais, comment ?...</l>
+            <l n="216">Mais, comment ?...</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-13">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="269" xml:id="l269">Ne m’interrogez pas... Une de vos Compagnes est venue... Que vous dirai-je ?... Ce ruban... Ce gage de votre amour...</l>
+            <l n="217">Ne m’interrogez pas... Une de vos Compagnes est venue... Que vous dirai-je ?... Ce ruban... Ce gage de votre amour...</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-14">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="270" xml:id="l270">Tu le lui as donné ?...</l>
+            <l n="218">Tu le lui as donné ?...</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-15">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="271" xml:id="l271">Non, non... Elle même... À l’instant un nuage épais a couvert mes yeux... Mais c’est moins la lumière que je regrette que la vue de Zirphée...</l>
+            <l n="219">Non, non... Elle même... À l’instant un nuage épais a couvert mes yeux... Mais c’est moins la lumière que je regrette que la vue de Zirphée...</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-16">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="272" xml:id="l272">Le Ciel a fermé tes yeux ; mais ton cœur ?</l>
+            <l n="220">Le Ciel a fermé tes yeux ; mais ton cœur ?</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-17">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="273" xml:id="l273">Ah ! oui, mon cœur te voit.</l>
+            <l n="221">Ah ! oui, mon cœur te voit.</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-18">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="274" xml:id="l274">Il me suffit...</l>
+            <l n="222">Il me suffit...</l>
+            <l n="223">Il est un charme dans les pleurs,</l>
+            <l n="224">Les chiffres du bonheur,</l>
+            <l n="225">Il est un charme dans les pleurs,</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-19">
-            <speaker>DAPHNIS, <em>avec l’accent de la plus grande douleur.</em></speaker>
-            <l n="275" xml:id="l275">Pourquoi bêtes féroces ne m’ont-elles pas dévoré ?</l>
+          <sp who="#daphnis">
+            <speaker>DAPHNIS, avec l’accent de la plus grande douleur.</speaker>
+            <l n="226">Pourquoi bêtes féroces ne m’ont-elles pas dévoré ?</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-20">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="276" xml:id="l276">Daphnis, calme ton désespoir. Écoute-moi, l’Amour chérit cet Autel ; jamais, dit-on, l’amante infortunée ne l’y invoqua en vain, je vais lui faire un sacrifice, et tâcher par mes pleurs d’apaiser sa colère et de mériter ton pardon... Viens, Daphnis, viens...</l>
+            <l n="227">Daphnis, calme ton désespoir. Écoute-moi, l’Amour chérit cet Autel ; jamais, dit-on, l’amante infortunée ne l’y invoqua en vain, je vais lui faire un sacrifice, et tâcher par mes pleurs d’apaiser sa colère et de mériter ton pardon... Viens, Daphnis, viens...</l>
           </sp>
-          <sp who="daphnis" xml:id="II6-21">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="277" xml:id="l277">Où me conduis-tu ?</l>
+            <l n="228">Où me conduis-tu ?</l>
           </sp>
-          <sp who="zirphée" xml:id="II6-22">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="278" xml:id="l278">Sous ce berceau qui devait être témoin de nos plaisirs, qui ne le fera que de nos larmes.</l>
-            <stage><hi rend="italic"><em>Elle conduit Daphnis sous le berceau de chèvrefeuille.</em></hi></stage>
-            <l n="280" xml:id="l280"> </l>
-            <l n="281" xml:id="l281"> </l>
-        </sp>
+            <l n="229">Sous ce berceau qui devait être témoin de nos plaisirs, qui ne le fera que de nos larmes.</l>
+            <stage>&lt;em&gt;Elle conduit Daphnis sous le berceau de chèvrefeuille.&lt;/em&gt;</stage>
+          </sp>
+        </div>
       </div>
-      </div>
-      <div type="act" xml:id="III">
+      <div type="act" n="3">
         <head>ACTE III</head>
-            <l n="282" xml:id="l282"> </l>
-            <l n="283" xml:id="l283"> </l>
-        <div type="scene" xml:id="III1">
+        <div type="scene" xml:id="première">
           <head>Scène première</head>
-            <l n="284" xml:id="l284"> </l>
-          <sp who="orphée" xml:id="III1-1">
-            <speaker>ORPHÉE, <em>seule, ressort du berceau, tenant de sa main une couronne de rose</em></speaker>
-            <l n="285" xml:id="l285"> </l>
-            <stage><hi rend="italic"><em>Elle la pose sur l’Autel de l’Amour, devant lequel elle se prosterne, l’embrasse et l’arrose de ses larmes.</em></hi></stage>
-            <stage><hi rend="italic"><em>Un éclair sillonne les cieux, la foudre tombe sur l’Autel, l’enflamme, et trace dessus en caractères de feux cet Oracle.</em></hi></stage>
-            <stage><hi rend="italic"><em>En lisant cet Oracle funeste, elle s’abandonne au désespoir, et dit.</em></hi></stage>
-            <l n="289" xml:id="l289">Daphnis !... Tu reverrais le jour pour ma rivale... Non, non, périsse plutôt, Daphnis, que d’être uni à cette Nymphe que j’abhorre ! Qu’il reste à jamais privé de la lumière... À jamais... Ô, Zirphée ! c’est donc toi qui ordonne son supplice ! Plus sévère, plus cruelle que le Dieu même, tu condamnes ton amant à un aveuglement éternel !... Et tu l’aimes... Montre-le lui donc en sacrifiant ton bonheur au sien...</l>
-            <stage><hi rend="italic"><em>Les Nymphes dans ce moment font retentir du forêt de leurs Chants de victoire.</em></hi></stage>
+          <sp who="#orphée">
+            <speaker>ORPHÉE, seule, ressort du berceau, tenant de sa main une couronne de rose</speaker>
+            <stage>&lt;em&gt;Elle la pose sur l’Autel de l’Amour, devant lequel elle se prosterne, l’embrasse et l’arrose de ses larmes.&lt;/em&gt;</stage>
+            <l n="230">Ô toi, qui règne sur les cœurs ;</l>
+            <l n="231">Lorsque tu frappes mon amant,</l>
+            <l n="232">Ô toi, qui règne sur les cœurs ;</l>
+            <stage>&lt;em&gt;Un éclair sillonne les cieux, la foudre tombe sur l’Autel, l’enflamme, et trace dessus en caractères de feux cet Oracle.&lt;/em&gt;</stage>
+            <l n="233">« Tu ne peux rendre la lumière</l>
+            <stage>&lt;em&gt;En lisant cet Oracle funeste, elle s’abandonne au désespoir, et dit.&lt;/em&gt;</stage>
+            <l n="234">Daphnis !... Tu reverrais le jour pour ma rivale... Non, non, périsse plutôt, Daphnis, que d’être uni à cette Nymphe que j’abhorre ! Qu’il reste à jamais privé de la lumière... À jamais... Ô, Zirphée ! c’est donc toi qui ordonne son supplice ! Plus sévère, plus cruelle que le Dieu même, tu condamnes ton amant à un aveuglement éternel !... Et tu l’aimes... Montre-le lui donc en sacrifiant ton bonheur au sien...</l>
+            <stage>&lt;em&gt;Les Nymphes dans ce moment font retentir du forêt de leurs Chants de victoire.&lt;/em&gt;</stage>
           </sp>
-          <sp who="chœur-des-nymphes" xml:id="III1-2">
-            <speaker>CHŒUR DES NYMPHES, <em>dans la forêt.</em></speaker>
-            <l n="291" xml:id="l291"> </l>
-            <l n="292" xml:id="l292"> </l>
+          <sp who="#chœur-des-nymphes">
+            <speaker>CHŒUR DES NYMPHES, dans la forêt.</speaker>
+            <l n="235">Chantons, célébrons Hyale,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="III2">
+        <div type="scene" xml:id="II">
           <head>Scène II</head>
-            <l n="293" xml:id="l293"> </l>
-          <sp who="dictinne" xml:id="III2-1">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE, HYALE, DICTINNE, TROUPE DE JEUNES NYMPHES</speaker>
-            <l n="294" xml:id="l294"> </l>
-            <stage><hi rend="italic"><em>Les Nymphes victorieuses sortent de la forêt ; Dictinne s’avance à leur tête, tenant Hyale par la main.</em></hi></stage>
-          <stage>HYALE.</stage>
+            <stage>&lt;em&gt;Les Nymphes victorieuses sortent de la forêt ; Dictinne s’avance à leur tête, tenant Hyale par la main.&lt;/em&gt;</stage>
           </sp>
-          <sp who="chœur-des-nymphes" xml:id="III2-2">
+          <sp who="#hyale">
+            <speaker>HYALE.</speaker>
+            <l n="236">Célébrez moins mon courage,</l>
+          </sp>
+          <sp who="#chœur-des-nymphes">
             <speaker>CHŒUR DES NYMPHES.</speaker>
-            <l n="296" xml:id="l296">Zirphée, ce sanglier terrible, qui portait partout la terreur et la mort, vient de tomber sous nos coups, mais c’est le javelot d’Hyale qui le premier s’est teint de son sang ; qu’elle reçoive de ta main le prix de son courage.</l>
+            <l n="237">Chantons, célébrons Hyale,</l>
           </sp>
-          <sp who="dictinne" xml:id="III2-3">
-            <speaker>DICTINNE, <em>présentant Hyale et Zirphée.</em></speaker>
-            <stage><hi rend="italic"><em>Dans ce moment Zirphée aperçoit au bras d’Hyale le collier qu’elle a donné à Daphnis ; elle reconnaît en elle sa rivale.</em></hi></stage>
+          <sp who="#dictinne">
+            <speaker>DICTINNE, présentant Hyale et Zirphée.</speaker>
+            <l n="238">Zirphée, ce sanglier terrible, qui portait partout la terreur et la mort, vient de tomber sous nos coups, mais c’est le javelot d’Hyale qui le premier s’est teint de son sang ; qu’elle reçoive de ta main le prix de son courage.</l>
+            <stage>&lt;em&gt;Dans ce moment Zirphée aperçoit au bras d’Hyale le collier qu’elle a donné à Daphnis ; elle reconnaît en elle sa rivale.&lt;/em&gt;</stage>
           </sp>
-          <sp who="zirphée" xml:id="III2-4">
-            <speaker>ZIRPHÉE, <em>à part.</em></speaker>
-            <l n="298" xml:id="l298">Que vois-je !... C’est mon collier dont la perfide se pare ; c’est ma rivale qu’il faut que je couronne !... Ô ! ma fierté, affermis mon cœur...</l>
-            <stage><hi rend="italic"><em>Haut. </em></hi></stage>
-            <l n="300" xml:id="l300">Approchez, Hyale, recevez de mes mains cet arc que je promis à la valeur.</l>
-            <stage><hi rend="italic"><em>Elle lui présente son arc ; Hyale, en le recevant, lui baise la main. </em></hi></stage>
-            <l n="302" xml:id="l302">Les traits qui partent de vos mains, son donc aussi sûrs que ceux que lancent vos yeux.</l>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE, à part.</speaker>
+            <l n="239">Que vois-je !... C’est mon collier dont la perfide se pare ; c’est ma rivale qu’il faut que je couronne !... Ô ! ma fierté, affermis mon cœur...</l>
+            <stage>&lt;em&gt;Haut. &lt;/em&gt;</stage>
+            <l n="240">Approchez, Hyale, recevez de mes mains cet arc que je promis à la valeur.</l>
+            <stage>&lt;em&gt;Elle lui présente son arc ; Hyale, en le recevant, lui baise la main. &lt;/em&gt;</stage>
+            <l n="241">Les traits qui partent de vos mains, son donc aussi sûrs que ceux que lancent vos yeux.</l>
           </sp>
-          <sp who="hyale" xml:id="III2-5">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="303" xml:id="l303">Que voulez-vous dire ?</l>
+            <l n="242">Que voulez-vous dire ?</l>
           </sp>
-          <sp who="zirphée" xml:id="III2-6">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="304" xml:id="l304">Pourquoi dissimuler ?... D’où vous vient ce ruban ?...</l>
+            <l n="243">Pourquoi dissimuler ?... D’où vous vient ce ruban ?...</l>
           </sp>
-          <sp who="hyale" xml:id="III2-7">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="305" xml:id="l305">Ce ruban ?...</l>
+            <l n="244">Ce ruban ?...</l>
           </sp>
-          <sp who="zirphée" xml:id="III2-8">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="306" xml:id="l306">Imitez ma sincérité... Jeunes Nymphes, que Diane avait confiées à mes soins, écoutez-moi... Ce jeune Berger, dont ce matin je commandais la mort, a vaincu ma fierté ; je l’aime... J’ai trahi pour lui les lois de Diane, en lui jurant un amour éternel : mais infidèle à ses serments, il a trompé ma tendresse... Vos charmes, Hyale, m’ont enlevé son cœur !...</l>
+            <l n="245">Imitez ma sincérité... Jeunes Nymphes, que Diane avait confiées à mes soins, écoutez-moi... Ce jeune Berger, dont ce matin je commandais la mort, a vaincu ma fierté ; je l’aime... J’ai trahi pour lui les lois de Diane, en lui jurant un amour éternel : mais infidèle à ses serments, il a trompé ma tendresse... Vos charmes, Hyale, m’ont enlevé son cœur !...</l>
           </sp>
-          <sp who="hyale" xml:id="III2-9">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="307" xml:id="l307">Moi ?...</l>
+            <l n="246">Moi ?...</l>
           </sp>
-          <sp who="zirphée" xml:id="III2-10">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="308" xml:id="l308">Vous... Je n’en puis douter, puisque je vois votre bras serré de ce ruban qu’il reçut comme un gage de ma foi.</l>
+            <l n="247">Vous... Je n’en puis douter, puisque je vois votre bras serré de ce ruban qu’il reçut comme un gage de ma foi.</l>
           </sp>
-          <sp who="hyale" xml:id="III2-11">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="309" xml:id="l309">J’ignorais vos engagements.</l>
+            <l n="248">J’ignorais vos engagements.</l>
           </sp>
-          <sp who="zirphée" xml:id="III2-12">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="310" xml:id="l310">Ils sont rompus à jamais ; les Dieux l’ont puni de son parjure en fermant ses yeux : mais l’Amour s’est laissé toucher par mes larmes, et Daphnis reverra la lumière si vous daignez lui accorder votre main... Y consentez-vous ?</l>
+            <l n="249">Ils sont rompus à jamais ; les Dieux l’ont puni de son parjure en fermant ses yeux : mais l’Amour s’est laissé toucher par mes larmes, et Daphnis reverra la lumière si vous daignez lui accorder votre main... Y consentez-vous ?</l>
           </sp>
-          <sp who="hyale" xml:id="III2-13">
+          <sp who="#hyale">
             <speaker>HYALE.</speaker>
-            <l n="311" xml:id="l311">Avec plaisir.</l>
+            <l n="250">Avec plaisir.</l>
           </sp>
-          <sp who="zirphée" xml:id="III2-14">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="312" xml:id="l312">Je vais vous l’amener.</l>
-            <l n="313" xml:id="l313"> </l>
-            <l n="314" xml:id="l314"> </l>
+            <l n="251">Je vais vous l’amener.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="III3">
+        <div type="scene" xml:id="III">
           <head>Scène III</head>
-            <l n="315" xml:id="l315"> </l>
-          <sp who="daphnis" xml:id="III3-1">
-            <speaker>LES MÊMES, DAPHNIS</speaker>
-            <l n="316" xml:id="l316"> </l>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE va chercher Daphnis sous le berceau et l’amène au milieu de ses Compagnes.</speaker>
+            <l n="252">Daphnis, le Dieu qui reçut sur cet Autel vos serments et les miens, le Dieu qui vous a puni de votre inconstance, s’est laissé désarmer par mes pleurs ; vous allez recouvrer la lumière, en vous unissant pour toujours à l’objet de votre tendresse.</l>
           </sp>
-          <sp who="daphnis" xml:id="III3-2">
-            <speaker>ZIRPHÉE <em>va chercher Daphnis sous le berceau et l’amène au milieu de ses Compagnes.</em></speaker>
-            <l n="317" xml:id="l317">Daphnis, le Dieu qui reçut sur cet Autel vos serments et les miens, le Dieu qui vous a puni de votre inconstance, s’est laissé désarmer par mes pleurs ; vous allez recouvrer la lumière, en vous unissant pour toujours à l’objet de votre tendresse.</l>
-          </sp>
-          <sp who="daphnis" xml:id="III3-3">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="318" xml:id="l318">Je reverrai Zirphée !... Comment te témoigner toute ma reconnaissance ?...</l>
+            <l n="253">Je reverrai Zirphée !... Comment te témoigner toute ma reconnaissance ?...</l>
           </sp>
-          <sp who="zirphée" xml:id="III3-4">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="319" xml:id="l319">J’aurai fait votre bonheur ; il me suffit... Suivez-moi... Approchez Hyale...</l>
-            <stage><hi rend="italic"><em>Elle conduit Daphnis à l’Autel de l’Amour, et lui présente la main d’Hyale, que Daphnis prend pour la sienne et qu’il serre amoureusement.</em></hi></stage>
-            <l n="321" xml:id="l321">Répétez le serment que je vais prononcer : Amour, reçois mon nouveau serment : je jure sur ton Autel...</l>
+            <l n="254">J’aurai fait votre bonheur ; il me suffit... Suivez-moi... Approchez Hyale...</l>
+            <stage>&lt;em&gt;Elle conduit Daphnis à l’Autel de l’Amour, et lui présente la main d’Hyale, que Daphnis prend pour la sienne et qu’il serre amoureusement.&lt;/em&gt;</stage>
+            <l n="255">Répétez le serment que je vais prononcer : Amour, reçois mon nouveau serment : je jure sur ton Autel...</l>
           </sp>
-          <sp who="daphnis" xml:id="III3-5">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="322" xml:id="l322">Amour, reçois mon nouveau serment : je jure sur ton Autel...</l>
+            <l n="256">Amour, reçois mon nouveau serment : je jure sur ton Autel...</l>
           </sp>
-          <sp who="zirphée" xml:id="III3-6">
-            <speaker>ZIRPHÉE, <em>avec effort et d’une voix étouffée.</em></speaker>
-            <l n="323" xml:id="l323">De ne vivre... que pour Hyale !</l>
+          <sp who="#zirphée">
+            <speaker>ZIRPHÉE, avec effort et d’une voix étouffée.</speaker>
+            <l n="257">De ne vivre... que pour Hyale !</l>
           </sp>
-          <sp who="daphnis" xml:id="III3-7">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="324" xml:id="l324">Que voulez-vous dire, Zirphée, je jure de ne vivre que pour vous ; c’est à vous seule que je consacre mes jours !</l>
+            <l n="258">Que voulez-vous dire, Zirphée, je jure de ne vivre que pour vous ; c’est à vous seule que je consacre mes jours !</l>
           </sp>
-          <sp who="zirphée" xml:id="III3-8">
+          <sp who="#zirphée">
             <speaker>ZIRPHÉE.</speaker>
-            <l n="325" xml:id="l325">Non, Daphnis, non !... Nous nous étions flattés d’une espérance vaine ; il faut former de nouveaux nœuds : ce n’est qu’en épousant</l>
-            <l n="326" xml:id="l326">Hyale, cette Nymphe qui m’a ravi votre amour, que vous pouvez recouvrer la lumière.</l>
+            <l n="259">Non, Daphnis, non !... Nous nous étions flattés d’une espérance vaine ; il faut former de nouveaux nœuds : ce n’est qu’en épousant</l>
+            <l n="260">Hyale, cette Nymphe qui m’a ravi votre amour, que vous pouvez recouvrer la lumière.</l>
           </sp>
-          <sp who="daphnis" xml:id="III3-9">
+          <sp who="#daphnis">
             <speaker>DAPHNIS.</speaker>
-            <l n="327" xml:id="l327">Dure... Dure à jamais mon aveuglement, plutôt que de vivre un moment pour une autre que ma Zirphée ; j’aime mieux ne jamais voir l’éclat du soleil que de l’abandonner. Amour, reçois mon serment ; je jure sur ton Autel de ne vivre que pour Zirphée !</l>
-            <stage><hi rend="italic"><em>À peine Daphnis a-t-il prononcé ce serment, que le nuage épais qui couvrait ses yeux se dissipe. À l’instant il tombe aux pieds de Zirphée en s’écriant.</em></hi></stage>
-            <l n="329" xml:id="l329">Je te vois, ma Zirphée !</l>
-            <l n="330" xml:id="l330"> </l>
-            <l n="331" xml:id="l331"> </l>
+            <l n="261">Dure... Dure à jamais mon aveuglement, plutôt que de vivre un moment pour une autre que ma Zirphée ; j’aime mieux ne jamais voir l’éclat du soleil que de l’abandonner. Amour, reçois mon serment ; je jure sur ton Autel de ne vivre que pour Zirphée !</l>
+            <stage>&lt;em&gt;À peine Daphnis a-t-il prononcé ce serment, que le nuage épais qui couvrait ses yeux se dissipe. À l’instant il tombe aux pieds de Zirphée en s’écriant.&lt;/em&gt;</stage>
+            <l n="262">Je te vois, ma Zirphée !</l>
           </sp>
         </div>
-        <div type="scene" xml:id="III4">
+        <div type="scene" xml:id="IV">
           <head>Scène IV</head>
-            <l n="332" xml:id="l332"> </l>
-          <sp who="jeux" xml:id="III4-1">
-            <speaker>LES MÊMES, L’AMOUR, PLAISIRS <em>et</em> JEUX</speaker>
-            <l n="333" xml:id="l333"> </l>
-            <stage><hi rend="italic"><em>Un nuage brillant couvre tout le fond du Théâtre ; l’Amour paraît dessus, groupé au milieu des Plaisirs et des Jeux. </em></hi></stage>
+          <sp who="#les-mêmes">
+            <speaker>LES MÊMES, L’AMOUR, PLAISIRS et JEUX</speaker>
+            <stage>&lt;em&gt;Un nuage brillant couvre tout le fond du Théâtre ; l’Amour paraît dessus, groupé au milieu des Plaisirs et des Jeux. &lt;/em&gt;</stage>
           </sp>
-          <sp who="l’amour" xml:id="III4-2">
+          <sp who="#l’amour">
             <speaker>L’AMOUR.</speaker>
-            <l n="335" xml:id="l335">Daphnis, tu viens de mériter ton pardon ; si tu avais été assez lâche pour sacrifier Zirphée, tu restais à jamais dans les ténèbres : j’ai voulu t’éprouver, je suis content de ton cœur. Zirphée, reçois de ma main ton amant pour époux, et ne crains plus son in constance. Et vous, charmantes Nymphes, soumettez-vous à mon pouvoir : Diane, peut-être, en murmurera ; mais ne craignez pas ses reproches, elle-même a senti mes traits, elle-même a souri quelquefois aux plaisirs. L’Amour commande à l’Univers ; mais il ne tient ses traits que des mains de la Beauté.</l>
-            <stage><hi rend="italic"><em>Les Nymphes oublient leur fierté pour applaudir au bonheur de Daphnis et de Zirphée.</em></hi></stage>
-            <l n="337" xml:id="l337"> </l>
-            <l n="338" xml:id="l338"> </l>
+            <l n="263">Daphnis, tu viens de mériter ton pardon ; si tu avais été assez lâche pour sacrifier Zirphée, tu restais à jamais dans les ténèbres : j’ai voulu t’éprouver, je suis content de ton cœur. Zirphée, reçois de ma main ton amant pour époux, et ne crains plus son in constance. Et vous, charmantes Nymphes, soumettez-vous à mon pouvoir : Diane, peut-être, en murmurera ; mais ne craignez pas ses reproches, elle-même a senti mes traits, elle-même a souri quelquefois aux plaisirs. L’Amour commande à l’Univers ; mais il ne tient ses traits que des mains de la Beauté.</l>
+            <stage>&lt;em&gt;Les Nymphes oublient leur fierté pour applaudir au bonheur de Daphnis et de Zirphée.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="III5">
+        <div type="scene" xml:id="V">
           <head>Scène V</head>
-            <l n="339" xml:id="l339"> </l>
-          <sp who="les-mêmes" xml:id="III5-1">
+          <sp who="#les-mêmes">
             <speaker>LES MÊMES, TROUPE DE JEUNES BERGERS</speaker>
-            <l n="340" xml:id="l340"> </l>
-            <stage><hi rend="italic"><em>Une troupe de jeunes Bergers paraît ; les Nymphes veulent en vain les fuir, les Jeux et les Plaisirs les arrêtent avec des guirlandes de fleurs, et les unissent aux jeunes Bergers. Tous ensemble tombent aux genoux de l’Amour, célèbrent sa puissance, et chantent ses bienfaits.</em></hi></stage>
+            <stage>&lt;em&gt;Une troupe de jeunes Bergers paraît ; les Nymphes veulent en vain les fuir, les Jeux et les Plaisirs les arrêtent avec des guirlandes de fleurs, et les unissent aux jeunes Bergers. Tous ensemble tombent aux genoux de l’Amour, célèbrent sa puissance, et chantent ses bienfaits.&lt;/em&gt;</stage>
+            <l n="264" />
           </sp>
-          <p>FIN</p>
         </div>
       </div>
     </body>

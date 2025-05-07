@@ -1,1297 +1,1182 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La Vengeance de Pluton</title>
-        <author key="Michel de CUBIÈRES- PALMÉZEAUX | (naissance-mort)">Michel de CUBIÈRES- PALMÉZEAUX |</author>
+        <title type="main" />
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/la-vengeance-de-pluton-michel-de-cubières-palmézeaux</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Michel de CUBIÈRES- PALMÉZEAUX |</author>. <title>La Vengeance de Pluton</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/la-vengeance-de-pluton-michel-de-cubières-palmézeaux</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="pluton" sex="SEX">
+            <persName>PLUTON</persName>
+          </person>
+          <person xml:id="minos" sex="SEX">
+            <persName>MINOS</persName>
+          </person>
+          <person xml:id="mercure" sex="SEX">
+            <persName>MERCURE</persName>
+          </person>
+          <person xml:id="apollon" sex="SEX">
+            <persName>APOLLON</persName>
+          </person>
+          <person xml:id="atropos" sex="SEX">
+            <persName>ATROPOS</persName>
+          </person>
+          <person xml:id="caron" sex="SEX">
+            <persName>CARON</persName>
+          </person>
+          <person xml:id="l’ombre-de-haller" sex="SEX">
+            <persName>L’Ombre de HALLER</persName>
+          </person>
+          <person xml:id="l’ombre-de-le-kain" sex="SEX">
+            <persName>L’Ombre de LE KAIN</persName>
+          </person>
+          <person xml:id="l’ombre-de-garrick" sex="SEX">
+            <persName>L’Ombre de GARRICK</persName>
+          </person>
+          <person xml:id="l’ombre-de-rousseau" sex="SEX">
+            <persName>L’Ombre de ROUSSEAU</persName>
+          </person>
+          <person xml:id="trois-ombres" sex="SEX">
+            <persName>TROIS OMBRES</persName>
+          </person>
+          <person xml:id="clotho" sex="SEX">
+            <persName>CLOTHO</persName>
+          </person>
+          <person xml:id="lachésis" sex="SEX">
+            <persName>LACHÉSIS</persName>
+          </person>
+          <person xml:id="les-arts" sex="SEX">
+            <persName>LES ARTS</persName>
+          </person>
+          <person xml:id="suite-d’apollon" sex="SEX">
+            <persName>SUITE D’APOLLON</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>[indéfini]</term>
+          <term>prose</term>
         </keywords>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="[vide]" location="unknown">[vide]</ab>
+      </performance>
+      <div type="preface">
+        <head>PRÉFACE</head>
+        <p>L’Europe a perdu, presque la même année, Voltaire, Rousseau, Linneüs, Haller, le Beau, le Chevalier de Laurés, le Lord Chatam, Garrick et le Kain. Ces Morts multipliées m’ont donné l’idée de la Pièce que je présente au Public. Comme je la destinais au Théâtre, j’ai cru pou voir y célébrer deux hommes qui s’y sont illustrés. Les noms d’Esopus et de Roscius ont passé jusqu’à nous avec ceux de Cicéron et de Térence ; j’avoue que je suis un peu Anglais sur l’article des talents, je les admire, je les honore partout où ils se trouvent, et je les louerais même ayant à m’en plaindre. Tout ce que je regrette, c’est de n’avoir pas pu, dans cette bagatelle, célébrer tous ceux que la mort nous a enlevés, il m’a été impossible de les y placer tous, je voulais faire une Pièce de Théâtre et non une Liste mortuaire, ainsi j’ai dû choisir non les plus intéressants mais les plus théâtral ; pour les rendre plus théâtral encore, j’en ai fait paroître trois sous l’habit le plus pittoresque que j’ai pu imaginer, sans blesser les vraisemblances. J. Jacques, comme on fait, s’est montré quelque temps dans Paris avec un habit d’Arménien, Haller était Médecin, et le rôle de Vendôme est le dernier que le Kain ait joué, en conséquence j’ai imaginé que le Kain en habit guerrier, Haller en robe noire et Rousseau avec un turban, frapperaient davantage que s’ils avaient paru avec leur vêtement ordinaire. Le Théâtre étant, le trône de l’illusion, pour y parler à l’âme il faut surtout y parler aux yeux. Quoique les principaux Acteurs de ma Pièce ne soient pas tous morts le même jour, je l’ai supposé et je l’ai dû, MM. les Critiques le trouveront mauvais peut-être, mais ils doivent savoir que ces rapprochements sont permis, autorisés même par les lois du Théâtre, ils pourront me faire tant de reproches plus graves et plus mérités que je n’insisterai point là-dessus. Les deux premières femmes de Haller sont mortes avant lui, mais la troisième lui a-t-elle survécu ? Voilà encore une grande question, si Haller a laissé une veuve, il est clair que dans ma Pièce j’ai eu tort de lui donner trois épouses, et que j’aurais dû ne lui en donner que deux.</p>
+        <p>C’est en Province que j’ai fait cette Bagatelle, lorsqu’elle fut achevée, je l’envoyai à Paris à Monsieur de M..., et je le priai de la présenter aux Comédiens Français : voici ce qu’il m’écrivit à ce sujet.</p>
+        <p>« Mon cher ami, la Comédie a entendu votre Pièce, hier 18 du courant, c’est M. Courville qui l’a lue, ces Messieurs et ces Dames l’ont trouvée intéressante et bien écrite, mais des considérations particulières ne leur permettent point de la représenter, etc. ».</p>
+        <p>De Paris le 19 Mai 1779</p>
+      </div>
+      <castList />
+    </front>
     <body>
-      <head>La Vengeance de Pluton</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Pièce en un acte, en vers et en prose.</l>
-            <l n="2" xml:id="l2"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="pluton">PLUTON</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="minos">MINOS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mercure">MERCURE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="apollon">APOLLON</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="atropos">ATROPOS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="caron">CARON</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="<em>l’ombre-de</em>-haller"><em>L’Ombre de</em> HALLER</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="<em>l’ombre-de</em>-le-kain"><em>L’Ombre de</em> LE KAIN</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="<em>l’ombre-de</em>-garrick"><em>L’Ombre de</em> GARRICK</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="<em>l’ombre-de</em>-rousseau"><em>L’Ombre de</em> ROUSSEAU</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="trois-ombres">TROIS OMBRES</role>
-              <roleDesc>, <em>heureuses, épouses de Haller, personnages muets</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="clotho">CLOTHO</role>
-              <roleDesc>, <em>personnage muet</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lachésis">LACHÉSIS</role>
-              <roleDesc>, <em>personnage muet</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="les-arts">LES ARTS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="suite-d’apollon">SUITE D’APOLLON</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La Scène est dans le Palais de Pluton.</em></hi></stage>
-            <l n="4" xml:id="l4"> </l>
-            <stage><hi rend="italic"><em>La Scène représente le Palais de Pluton. Son Trône est au milieu du Théâtre ou sur l’un des côtés, et non loin on voit une Estrade où vont s’asseoir les Ombres après qu’on les a jugées. </em></hi></stage>
-            <l n="6" xml:id="l6"> </l>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9">L’Europe a perdu, presque la même année, Voltaire, Rousseau, Linneüs, Haller, le Beau, le Chevalier de Laurés, le Lord Chatam, Garrick et le Kain. Ces Morts multipliées m’ont donné l’idée de la Pièce que je présente au Public. Comme je la destinais au Théâtre, j’ai cru pou voir y célébrer deux hommes qui s’y sont illustrés. Les noms d’Esopus et de Roscius ont passé jusqu’à nous avec ceux de Cicéron et de Térence ; j’avoue que je suis un peu Anglais sur l’article des talents, je les admire, je les honore partout où ils se trouvent, et je les louerais même ayant à m’en plaindre. Tout ce que je regrette, c’est de n’avoir pas pu, dans cette bagatelle, célébrer tous ceux que la mort nous a enlevés, il m’a été impossible de les y placer tous, je voulais faire une Pièce de Théâtre et non une Liste mortuaire, ainsi j’ai dû choisir non les plus intéressants mais les plus théâtral ; pour les rendre plus théâtral encore, j’en ai fait paroître trois sous l’habit le plus pittoresque que j’ai pu imaginer, sans blesser les vraisemblances. J. Jacques, comme on fait, s’est montré quelque temps dans Paris avec un habit d’Arménien, Haller était Médecin, et le rôle de Vendôme est le dernier que le Kain ait joué, en conséquence j’ai imaginé que le Kain en habit guerrier, Haller en robe noire et Rousseau avec un turban, frapperaient davantage que s’ils avaient paru avec leur vêtement ordinaire. Le Théâtre étant, le trône de l’illusion, pour y parler à l’âme il faut surtout y parler aux yeux. Quoique les principaux Acteurs de ma Pièce ne soient pas tous morts le même jour, je l’ai supposé et je l’ai dû, MM. les Critiques le trouveront mauvais peut-être, mais ils doivent savoir que ces rapprochements sont permis, autorisés même par les lois du Théâtre, ils pourront me faire tant de reproches plus graves et plus mérités que je n’insisterai point là-dessus. Les deux premières femmes de Haller sont mortes avant lui, mais la troisième lui a-t-elle survécu ? Voilà encore une grande question, si Haller a laissé une veuve, il est clair que dans ma Pièce j’ai eu tort de lui donner trois épouses, et que j’aurais dû ne lui en donner que deux.</l>
-            <l n="10" xml:id="l10">C’est en Province que j’ai fait cette Bagatelle, lorsqu’elle fut achevée, je l’envoyai à Paris à Monsieur de M..., et je le priai de la présenter aux Comédiens Français : voici ce qu’il m’écrivit à ce sujet.</l>
-            <l n="11" xml:id="l11">« Mon cher ami, la Comédie a entendu votre Pièce, hier 18 du courant, c’est M. Courville qui l’a lue, ces Messieurs et ces Dames l’ont trouvée intéressante et bien écrite, mais des considérations particulières ne leur permettent point de la représenter, etc. ».</l>
-            <l n="12" xml:id="l12"> </l>
-            <l n="13" xml:id="l13"> </l>
-            <l n="14" xml:id="l14"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="15" xml:id="l15"> </l>
-          <sp who="mercure" xml:id="1-1">
-            <speaker>PLUTON, MINOS, MERCURE</speaker>
-            <l n="16" xml:id="l16"> </l>
-          </sp>
-          <sp who="pluton" xml:id="1-2">
-            <speaker>PLUTON.</speaker>
-            <l n="17" xml:id="l17">Apollon a formé ce projet téméraire !</l>
-          </sp>
-          <sp who="mercure" xml:id="1-3">
-            <speaker>MERCURE.</speaker>
-            <l n="18" xml:id="l18">Oui rien n’est plus certain, Momus est peu discret,</l>
-            <l n="19" xml:id="l19">C’est de lui que je tiens cet important secret.</l>
-          </sp>
-          <sp who="pluton" xml:id="1-4">
-            <speaker>PLUTON.</speaker>
-            <l n="20" xml:id="l20">Il prétend m’enlever Voltaire !</l>
-            <l n="21" xml:id="l21">Ignore-t-il la loi du sort,</l>
-            <l n="22" xml:id="l22">Qui veut que les Héros, les Sages, les Poètes</l>
-            <l n="23" xml:id="l23">De l’Élysée après leur mort</l>
-            <l n="24" xml:id="l24">Peuplant les aimables retraites,</l>
-            <l n="25" xml:id="l25">Y goûtent à jamais un bonheur sans remord ?</l>
-            <l n="26" xml:id="l26">Aristote, Sophocle, Anacréon, Virgile</l>
-            <l n="27" xml:id="l27">Déjà depuis longtemps habitent cet asile.</l>
-          </sp>
-          <sp who="mercure" xml:id="1-5">
-            <speaker>MERCURE.</speaker>
-            <l n="28" xml:id="l28">Voltaire est plus grand qu’eux, Voltaire a mérité</l>
-            <l n="29" xml:id="l29">Une plus brillante couronne,</l>
-            <l n="30" xml:id="l30">Et des Lois du destin qui n’exceptent personnes</l>
-            <l n="31" xml:id="l31">Voltaire doit être excepté ;</l>
-            <l n="32" xml:id="l32">Apollon le prétend. Sans que rien les arrête,</l>
-            <l n="33" xml:id="l33">Déjà de cet Auteur divin Les Muses célèbrent la fête<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>,</l>
-            <l n="34" xml:id="l34">Et chacune déjà pour en parer sa tête,</l>
-            <l n="35" xml:id="l35">L’attend une palme à la main.</l>
-          </sp>
-          <sp who="pluton" xml:id="1-6">
-            <speaker>PLUTON.</speaker>
-            <l n="36" xml:id="l36">Que je plains d’Apollon l’audacieux délire !</l>
-            <l n="37" xml:id="l37">Il peut tout sur les cœurs par ses charmants concerts ;</l>
-            <l n="38" xml:id="l38">Mais pense-t-il qu’armé seulement de sa lyre,</l>
-            <l n="39" xml:id="l39">Il triomphera des Enfers ?</l>
-          </sp>
-          <sp who="mercure" xml:id="1-7">
-            <speaker>MERCURE.</speaker>
-            <l n="40" xml:id="l40">Le Dieu Mars dont souvent il a chanté la gloire,</l>
-            <l n="41" xml:id="l41">Doit lui prêter un sûr appui,</l>
-            <l n="42" xml:id="l42">Et dans l’Élysée aujourd’hui</l>
-            <l n="43" xml:id="l43">Tous deux doivent entrer par la porte d’ivoire.</l>
-          </sp>
-          <sp who="pluton" xml:id="1-8">
-            <speaker>PLUTON.</speaker>
-            <l n="44" xml:id="l44">Neptune, sans pâlir, voit la fureur des flots</l>
-            <l n="45" xml:id="l45">Tel de mon agresseur impie</l>
-            <l n="46" xml:id="l46">Je vois tous les lâches complots.</l>
-            <l n="47" xml:id="l47">Qu’on fasse venir Atropos,</l>
-            <l n="48" xml:id="l48">Je veux l’opposer seule à tant de perfidie.</l>
-            <stage><hi rend="italic"><em>À Minos. </em></hi></stage>
-            <l n="50" xml:id="l50">Et vous, Minos, préparez-vous</l>
-            <l n="51" xml:id="l51">À juger les ombres plaintives</l>
-            <l n="52" xml:id="l52">Que la Parque dans son courroux,</l>
-            <l n="53" xml:id="l53">Va nous envoyer sur ces rives,</l>
-            <stage><hi rend="italic"><em>Pluton monte sur son Trône et Minos prend place à son côté. </em></hi></stage>
-            <l n="55" xml:id="l55"> </l>
-            <l n="56" xml:id="l56"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="57" xml:id="l57"> </l>
-          <sp who="atropos" xml:id="2-1">
-            <speaker>PLUTON, MINOS, ATROPOS</speaker>
-            <l n="58" xml:id="l58"> </l>
-          </sp>
-          <sp who="pluton" xml:id="2-2">
-            <speaker>PLUTON.</speaker>
-            <l n="59" xml:id="l59">Inflexible Divinité,</l>
-            <l n="60" xml:id="l60">Dont la rigueur prompte à me plaire,</l>
-            <l n="61" xml:id="l61">Peuple de citoyens mon Palais redouté,</l>
-            <l n="62" xml:id="l62">Défendez votre Maître et servez ma colère.</l>
-            <l n="63" xml:id="l63">Le téméraire Dieu du jour</l>
-            <l n="64" xml:id="l64">Veut avec le Dieu Mars descendre en ce séjour</l>
-            <l n="65" xml:id="l65">Je songe à le punir et non à le combattre.</l>
-            <l n="66" xml:id="l66">Préparez, aiguisez vos ciseaux inhumains.</l>
-          </sp>
-          <sp who="atropos" xml:id="2-3">
-            <speaker>ATROPOS.</speaker>
-            <l n="67" xml:id="l67">Quelles têtes faut-il abattre ?</l>
-            <l n="68" xml:id="l68">Parle, de tout mortel la vie est dans nos mains.</l>
-          </sp>
-          <sp who="pluton" xml:id="2-4">
-            <speaker>PLUTON.</speaker>
-            <l n="69" xml:id="l69">Il reste encore sur la terre</l>
-            <l n="70" xml:id="l70">Des Auteurs qu’Apollon et chérit et révère,</l>
-            <l n="71" xml:id="l71">Abrégez de leurs jours le tissu glorieux,</l>
-            <l n="72" xml:id="l72">Et qu’ils viennent tous en ces lieux</l>
-            <l n="73" xml:id="l73">Joindre le célèbre Voltaire.</l>
-          </sp>
-          <sp who="atropos" xml:id="2-5">
-            <speaker>ATROPOS.</speaker>
-            <l n="74" xml:id="l74">Déjà du blond Phébus je savais le dessein,</l>
-            <l n="75" xml:id="l75">Et pour punir ce téméraire,</l>
-            <l n="76" xml:id="l76">Je viens de lui ravir son meilleur Médecin.</l>
-          </sp>
-          <sp who="pluton" xml:id="2-6">
-            <speaker>PLUTON.</speaker>
-            <l n="77" xml:id="l77">Qu’avez-vous fait ? Ô Cieux !</l>
-          </sp>
-          <sp who="atropos" xml:id="2-7">
-            <speaker>ATROPOS.</speaker>
-            <l n="78" xml:id="l78">Ce que je devais faire.</l>
-          </sp>
-          <sp who="pluton" xml:id="2-8">
-            <speaker>PLUTON.</speaker>
-            <l n="79" xml:id="l79">Eh quoi donc ! ne savez-vous pas</l>
-            <l n="80" xml:id="l80">Combien un Médecin là-haut m’est nécessaire ?</l>
-            <l n="81" xml:id="l81">Qu’il y remplit le ministère</l>
-            <l n="82" xml:id="l82">Que vous exercez ici-bas ?</l>
-          </sp>
-          <sp who="atropos" xml:id="2-9">
-            <speaker>ATROPOS.</speaker>
-            <l n="83" xml:id="l83">Loin de raffermir ta couronne,</l>
-            <l n="84" xml:id="l84">Celui-ci pouvait l’ébranler ;</l>
-            <l n="85" xml:id="l85">L’insolent ne tuait personne.</l>
-          </sp>
-          <sp who="pluton" xml:id="2-10">
-            <speaker>PLUTON.</speaker>
-            <l n="86" xml:id="l86">Ô prodige ! qu’il vienne à l’instant me parler.</l>
-            <l n="87" xml:id="l87"> </l>
-            <l n="88" xml:id="l88"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène IIΙ</head>
-            <l n="89" xml:id="l89"> </l>
-          <sp who="atropos" xml:id="3-1">
-            <speaker><em>L’Ombre de</em> HALLER, PLUTON, MINOS, ATROPOS</speaker>
-            <l n="90" xml:id="l90"> </l>
-          </sp>
-          <sp who="pluton" xml:id="3-2">
-            <speaker>PLUTON, <em>à l’Ombre.</em></speaker>
-            <l n="91" xml:id="l91">Comment te nommes-tu ?</l>
-          </sp>
-          <sp who="em>l’ombre-de" xml:id="3-3">
-            <speaker><em>L’Ombre de</em> HALLER <em>vêtue en Médecin, mais simplement et sans aucune espèce de charge.</em></speaker>
-            <l n="92" xml:id="l92">Haller.</l>
-          </sp>
-          <sp who="minos" xml:id="3-4">
-            <speaker>PLUTON,<em> à Minos.</em></speaker>
-            <l n="93" xml:id="l93">Minos, interrogez cette Ombre ;</l>
-            <l n="94" xml:id="l94">Sachez de ses forfaits et l’espèce et le nombre ;</l>
-            <l n="95" xml:id="l95">Pluton, vous le savez, souscrit à vos Arrêts,</l>
-            <l n="96" xml:id="l96">Je les attends avec impatience.</l>
-            <stage><hi rend="italic"><em>À Atropos.</em></hi></stage>
-            <l n="98" xml:id="l98">Vous, à qui j’ai remis mes plus chers intérêts,</l>
-            <l n="99" xml:id="l99">Allez, continuez de servir ma vengeance.</l>
-            <stage><hi rend="italic"><em>Atropos sort. </em></hi></stage>
-            <l n="101" xml:id="l101"> </l>
-            <l n="102" xml:id="l102"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="103" xml:id="l103"> </l>
-          <sp who="minos" xml:id="4-1">
-            <speaker><em>L’Ombre de</em> HALLER, PLUTON, MINOS</speaker>
-            <l n="104" xml:id="l104"> </l>
-          </sp>
-          <sp who="minos" xml:id="4-2">
-            <speaker>MINOS.</speaker>
-            <l n="105" xml:id="l105">Qu’as-tu fait sur la terre ?</l>
-          </sp>
-          <sp who="haller" xml:id="4-3">
-            <speaker>HALLER.</speaker>
-            <l n="106" xml:id="l106">Au sortir du berceau</l>
-            <l n="107" xml:id="l107">Apollon m’enflamma de l’amour de la gloire</l>
-            <l n="108" xml:id="l108">Dont j’ai brûlé jusqu’au tombeau.</l>
-          </sp>
-          <sp who="minos" xml:id="4-4">
-            <speaker>MINOS.</speaker>
-            <l n="109" xml:id="l109">Quels furent tes travaux ? Raconte m’en l’histoire.</l>
-          </sp>
-          <sp who="haller" xml:id="4-5">
-            <speaker>HALLER.</speaker>
-            <l n="110" xml:id="l110">J’instruisis tour-à-tour et charmai les humains ;</l>
-            <l n="111" xml:id="l111">Ami de tous les arts et de la tolérance,</l>
-            <l n="112" xml:id="l112">Je fus presque chez les Germains</l>
-            <l n="113" xml:id="l113">Ce que Voltaire fut en France.</l>
-            <l n="114" xml:id="l114">Clio me plût toujours : cette Divinité</l>
-            <l n="115" xml:id="l115">Récompensant mes soins, mon assiduité,</l>
-            <l n="116" xml:id="l116">Ouvrit à mes regards les archives du monde,</l>
-            <l n="117" xml:id="l117">Et mon œil philosophe y lut la vérité,</l>
-            <l n="118" xml:id="l118">Que ma plume libre et féconde</l>
-            <l n="119" xml:id="l119">Transmit à la postérité.</l>
-            <l n="120" xml:id="l120">Bientôt de Genève et de Rome.</l>
-            <l n="121" xml:id="l121">J’étudiai les intérêts,</l>
-            <l n="122" xml:id="l122">Sans prendre aucun parti que celui de la paix ;</l>
-            <l n="123" xml:id="l123">Bientôt je fus plus sage et j’étudiai l’homme.</l>
-            <l n="124" xml:id="l124">Dans ce dédale obscur, par un effort nouveau,</l>
-            <l n="125" xml:id="l125">Appuyé des secours d’une heureuse science,</l>
-            <l n="126" xml:id="l126">Je portai le double flambeau</l>
-            <l n="127" xml:id="l127">De la raison et de l’expérience.</l>
-            <l n="128" xml:id="l128">Sur le Luth de Pindare en vers nobles, heureux,</l>
-            <l n="129" xml:id="l129">Je chantai des Alpes antiques ;</l>
-            <l n="130" xml:id="l130">Et ces monts qu’Annibal avait rendus fameux ;</l>
-            <l n="131" xml:id="l131">Vont l’être plus encor, grâces à mes Cantiques.</l>
-            <l n="132" xml:id="l132">J’éveillai de ces monts les sensibles échos,</l>
-            <l n="133" xml:id="l133">Je leur fis répéter ces plaintes admirées</l>
-            <l n="134" xml:id="l134">Ces vers plus touchants et plus beaux</l>
-            <l n="135" xml:id="l135">Que j’allais soupirer sur les tristes tombeaux</l>
-            <l n="136" xml:id="l136">De mes épouses adorées.</l>
-            <l n="137" xml:id="l137">Le vice dans mes vers fut toujours combattu,</l>
-            <l n="138" xml:id="l138">D’horreur à son aspect mon âme était saisie,</l>
-            <l n="139" xml:id="l139">Je revêtis enfin et parai la vertu</l>
-            <l n="140" xml:id="l140">Des atours de la Poésie.</l>
-          </sp>
-          <sp who="minos" xml:id="4-6">
-            <speaker>MINOS.</speaker>
-            <l n="141" xml:id="l141">Arrête ! qu’est-ce que tu dis ?</l>
-            <l n="142" xml:id="l142">La vertu dès longtemps sur la terre est proscrite.</l>
-          </sp>
-          <sp who="haller" xml:id="4-7">
-            <speaker>HALLER.</speaker>
-            <l n="143" xml:id="l143">Eh bien ! j’en ai donné malgré ses ennemis,</l>
-            <l n="144" xml:id="l144">Le précepte dans mes écrits</l>
-            <l n="145" xml:id="l145">Et l’exemple dans ma conduite.</l>
-          </sp>
-          <sp who="minos" xml:id="4-8">
-            <speaker>MINOS.</speaker>
-            <l n="146" xml:id="l146">S’il faut en croire tes discours,</l>
-            <l n="147" xml:id="l147">L’Hyménée a souvent couronné tes amours.</l>
-            <l n="148" xml:id="l148">N’as-tu fait nul affront à la foi conjugale ?</l>
-          </sp>
-          <sp who="haller" xml:id="4-9">
-            <speaker>HALLER.</speaker>
-            <l n="149" xml:id="l149">Non. Dans ma couche nuptiale</l>
-            <l n="150" xml:id="l150">Je n’ai jamais porté d’adultère désir ;</l>
-            <l n="151" xml:id="l151">Jamais je n’ai souffert ni donné de scandale.</l>
-            <l n="152" xml:id="l152">Sans la vertu point de plaisir :</l>
-            <l n="153" xml:id="l153">Telle fut toujours ma morale.</l>
-          </sp>
-          <sp who="minos" xml:id="4-10">
-            <speaker>MINOS.</speaker>
-            <l n="154" xml:id="l154">L’art savant d’Esculape inspire le respect,</l>
-            <l n="155" xml:id="l155">Quoiqu’à certains Esprits il semble un peu suspect.</l>
-            <l n="156" xml:id="l156">Tu cultivas cette art utile, mais perfide</l>
-            <l n="157" xml:id="l157">Dis-moi : n’as-tu jamais fait descendre ici-bas</l>
-            <stage><hi rend="italic">Quelqu’un <em>incognito</em> ?</hi></stage>
-          </sp>
-          <sp who="haller" xml:id="4-11">
-            <speaker>HALLER.</speaker>
-            <l n="159" xml:id="l159">Non ; je ne le crois pas.</l>
-            <l n="160" xml:id="l160">L’expérience fut mon guide ;</l>
-            <l n="161" xml:id="l161">En tout temps je suivis ses lois :</l>
-            <l n="162" xml:id="l162">Elles n’égarent point ; mais l’on peut quelquefois</l>
-            <l n="163" xml:id="l163">Être innocemment homicide.</l>
-            <l n="164" xml:id="l164">D’un succès dans cet art on ne peut s’assurer,</l>
-            <l n="165" xml:id="l165">Et de rien, entre nous, je ne voudrais jurer.</l>
-          </sp>
-          <sp who="minos" xml:id="4-12">
-            <speaker>MINOS.</speaker>
-            <l n="166" xml:id="l166">Tes talents, ta franchise et ta vaste science</l>
-            <l n="167" xml:id="l167">Sont dignes qu’op les récompense :</l>
-            <l n="168" xml:id="l168">Dans le séjour Élyséen</l>
-            <l n="169" xml:id="l169">Tu mérites que l’on te place</l>
-            <l n="170" xml:id="l170">Entre Pindare et Galien ;</l>
-            <l n="171" xml:id="l171">Tel est mon jugement.</l>
-          </sp>
-          <sp who="haller" xml:id="4-13">
-            <speaker>HALLER.</speaker>
-            <l n="172" xml:id="l172">J’ose attendre une grâce</l>
-            <l n="173" xml:id="l173">Qui sera plus chère à mon cœur.</l>
-            <l n="174" xml:id="l174">Respectable Minos, de cet excès d’honneur</l>
-            <l n="175" xml:id="l175">Quelques Ombres seraient jalouses :</l>
-            <l n="176" xml:id="l176">Pour prévenir leur plainte et combler mon bonheur,</l>
-            <l n="177" xml:id="l177">Placez-moi près de mes épouses.</l>
-          </sp>
-          <sp who="pluton" xml:id="4-14">
-            <speaker>PLUTON.</speaker>
-            <l n="178" xml:id="l178">Ce qu’il demande est juste ; il faut le contenter.</l>
-            <stage><hi rend="italic"><em>À un de ses Gardes.</em></hi></stage>
-            <l n="180" xml:id="l180">Qu’on les fasse venir !</l>
-            <stage><hi rend="italic"><em>L’Ombre de Haller va se placer sur l’estrade. </em></hi></stage>
-            <l n="182" xml:id="l182"> </l>
-            <l n="183" xml:id="l183"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="184" xml:id="l184"> </l>
-          <sp who="atropos" xml:id="5-1">
-            <speaker>ATROPOS, <em>L’Ombre de</em> HALLER, PLUTON, MINOS</speaker>
-            <l n="185" xml:id="l185"> </l>
-          </sp>
-          <sp who="atropos" xml:id="5-2">
-            <speaker>ATROPOS,<em> à Pluton.</em></speaker>
-            <l n="186" xml:id="l186">Puis-je te présenter,</l>
-            <l n="187" xml:id="l187">Ô Souverain de l’Onde noire !</l>
-            <l n="188" xml:id="l188">Un mortel adoré des filles de mémoire,</l>
-            <l n="189" xml:id="l189">Dont je viens à l’instant de trancher le destin ?</l>
-          </sp>
-          <sp who="pluton" xml:id="5-3">
-            <speaker>PLUTON.</speaker>
-            <l n="190" xml:id="l190">Comment se nomme-t-il ?</l>
-          </sp>
-          <sp who="atropos" xml:id="5-4">
-            <speaker>ATROPOS.</speaker>
-            <l n="191" xml:id="l191">LE KAIN</l>
-            <l n="192" xml:id="l192">Cet Acteur, d’Apollon faisait chérir la gloire,</l>
-            <l n="193" xml:id="l193">Et la sienne déjà volait dans l’univers.</l>
-            <l n="194" xml:id="l194">De ses jours j’ai coupé la trame</l>
-            <l n="195" xml:id="l195">Au moment que du plus beau drame</l>
-            <l n="196" xml:id="l196">Sur la scène Française il récitait les vers.</l>
-            <l n="197" xml:id="l197">Jamais il ne montra plus de talent, plus d’âme ;</l>
-            <l n="198" xml:id="l198">Il y jouait Vendôme et la mort l’a saisi</l>
-            <stage><hi rend="italic">Comme il disait ces mots : <em>Es-tu content, Couci ?</em></hi></stage>
-          </sp>
-          <sp who="pluton" xml:id="5-5">
-            <speaker>PLUTON.</speaker>
-            <l n="200" xml:id="l200">Le Kain ! ah ! ma joie est extrême ;</l>
-            <l n="201" xml:id="l201">Son nom avait déjà pénétré dans ces lieux :</l>
-            <l n="202" xml:id="l202">Qu’il vienne, qu’il paroisse au plutôt à mes yeux,</l>
-            <l n="203" xml:id="l203">Je veux l’interroger moi-même.</l>
-            <l n="204" xml:id="l204"> </l>
-            <l n="205" xml:id="l205"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="206" xml:id="l206"> </l>
-          <sp who="atropos" xml:id="6-1">
-            <speaker><em>L’Ombre de</em> LE KAIN <em>en habit de Vendôme</em>, LES PRÉCÉDENTS, <em>excepté</em> ATROPOS</speaker>
-            <l n="207" xml:id="l207"> </l>
-          </sp>
-          <sp who="pluton" xml:id="6-2">
-            <speaker>PLUTON.</speaker>
-            <l n="208" xml:id="l208">Est-il vrai qu’Apollon, par tes talents chéris,</l>
-            <l n="209" xml:id="l209">À souvent faire verser les plus aimables larmes,</l>
-            <l n="210" xml:id="l210">Et qu’ils prêtaient de nouveaux charmes</l>
-            <l n="211" xml:id="l211">Aux talents de ses favoris ?</l>
-          </sp>
-          <sp who="le-kain" xml:id="6-3">
-            <speaker>LE KAIN.</speaker>
-            <l n="212" xml:id="l212">Oui, Seigneur, de mon art tout un peuple idolâtre,</l>
-            <l n="213" xml:id="l213">Pour me voir et m’entendre, accourait au Théâtre :</l>
-            <l n="214" xml:id="l214">Il me comblait souvent d’éloges répétés ;</l>
-            <l n="215" xml:id="l215">Mais je ne pense pas les avoir mérités.</l>
-          </sp>
-          <sp who="pluton" xml:id="6-4">
-            <speaker>PLUTON.</speaker>
-            <l n="216" xml:id="l216">La modestie ici n’est pas fort nécessaire</l>
-            <l n="217" xml:id="l217">En parlant à son Juge il faut être sincère,</l>
-            <l n="218" xml:id="l218">D’ailleurs aux grands talents on permet la fierté,</l>
-            <l n="219" xml:id="l219">Lorsqu’ils sont descendus dans ces demeures sombres :</l>
-            <l n="220" xml:id="l220">On y pense tout haut, et le séjour des Ombres</l>
-            <l n="221" xml:id="l221">Est celui de la vérité.</l>
-          </sp>
-          <sp who="le-kain" xml:id="6-5">
-            <speaker>LE KAIN.</speaker>
-            <l n="222" xml:id="l222">S’obéis donc, Seigneur. Le grand Baron, du Fresne,</l>
-            <l n="223" xml:id="l223">Avaient reçu du Ciel, pour régner sur la scène,</l>
-            <l n="224" xml:id="l224">Les plus rares bienfaits, les plus heureux présents ;</l>
-            <l n="225" xml:id="l225">Organes enchanteurs, taille, traits imposants,</l>
-            <l n="226" xml:id="l226">Ils avaient tout ; pour eux s’épuisa la nature ;</l>
-            <l n="227" xml:id="l227">Fidèles au costume, adroits dans leur parure,</l>
-            <l n="228" xml:id="l228">Tous deux offraient à l’œil du spectateur surpris,</l>
-            <l n="229" xml:id="l229">La stature d’Hector, les grâces de Pâris.</l>
-            <l n="230" xml:id="l230">Moins fortuné, du Ciel je ne reçus qu’une âme ;</l>
-            <l n="231" xml:id="l231">Ce fut mon seul trésor, mais elle était de flamme :</l>
-            <l n="232" xml:id="l232">Elle fut mon seul maître et me tint lieu de tout ;</l>
-            <l n="233" xml:id="l233">Seule elle m’enseigna tous les secrets du goût,</l>
-            <l n="234" xml:id="l234">Seule elle m’instruisit des finesses d’un rôle,</l>
-            <l n="235" xml:id="l235">Me fit seule accorder le geste et la parole,</l>
-            <l n="236" xml:id="l236">À tous mes traits enfin donnant de la grandeur ;</l>
-            <l n="237" xml:id="l237">Elle seule en beauté transforma ma laideur.</l>
-            <l n="238" xml:id="l238">Ma voix n’avait d’abord ni grâce, ni souplesse,</l>
-            <l n="239" xml:id="l239">Seule elle en adoucit l’âpreté, la rudesse :</l>
-            <l n="240" xml:id="l240">Fallut-il exprimer la clémence, l’amour,</l>
-            <l n="241" xml:id="l241">Le dépit, la fureur ? Ma voix fut tour-à-tour</l>
-            <l n="242" xml:id="l242">Tendre, soumise, fière, ironique, terrible ;</l>
-            <l n="243" xml:id="l243">Elle acquit tous les tons. En ce moment horrible</l>
-            <l n="244" xml:id="l244">Où cédant aux soupçons qui déchirent son sein,</l>
-            <l n="245" xml:id="l245">Orosmane poursuit, un poignard à la main,</l>
-            <l n="246" xml:id="l246">Les jours infortunés d’une femme innocente,</l>
-            <l n="247" xml:id="l247">Concentrée, étouffée et pourtant menaçante,</l>
-            <l n="248" xml:id="l248">Elle n’eut plus, glaçant les cœurs et les esprits,</l>
-            <l n="249" xml:id="l249">Que des rugissements, des sanglots et des cris ;</l>
-            <l n="250" xml:id="l250">Mais même en déployant toute sa violence,</l>
-            <l n="251" xml:id="l251">Elle fut moins sublime encor que mon silence.</l>
-            <l n="252" xml:id="l252">Mon silence effrayait lorsque dans Manlius,</l>
-            <l n="253" xml:id="l253">Trahi, je me taisais devant Servilius.</l>
-            <stage><hi rend="italic"><em>Il se tait un instant.</em></hi></stage>
-          </sp>
-          <sp who="pluton" xml:id="6-6">
-            <speaker>PLUTON.</speaker>
-            <l n="255" xml:id="l255">Quand tu représentais ce Conquérant impie,</l>
-            <l n="256" xml:id="l256">Qui convertit le monde à sa Religion,</l>
-            <l n="257" xml:id="l257">Tu faisais, m’a-t-on dit, verser, même à l’envie</l>
-            <l n="258" xml:id="l258">Des larmes d’admiration,</l>
-            <l n="259" xml:id="l259">Et Mahomet semblait retourner à la vie.</l>
-          </sp>
-          <sp who="le-kain" xml:id="6-7">
-            <speaker>LE KAIN.</speaker>
-            <l n="260" xml:id="l260">Oui, de cet Imposteur audacieux, cruel,</l>
-            <l n="261" xml:id="l261">Qui plongea dans le sang et le Trône et l’Autel,</l>
-            <l n="262" xml:id="l262">Jamais on n’embellit d’un charme plus tragique,</l>
-            <l n="263" xml:id="l263">Les jalouses amours, la sombre politique.</l>
-            <l n="264" xml:id="l264">Tous mes concitoyens dans ce Drame enchanteur,</l>
-            <l n="265" xml:id="l265">Admiraient à la fois le Poète et l’Acteur,</l>
-            <l n="266" xml:id="l266">Et ce spectacle offrait à leur âme attendrie,</l>
-            <l n="267" xml:id="l267">Tout ce qu’eut de plus grand notre double génie.</l>
-          </sp>
-          <sp who="pluton" xml:id="6-8">
-            <speaker>PLUTON.</speaker>
-            <l n="268" xml:id="l268">Depuis que je t’ai fait descendre au monument</l>
-            <l n="269" xml:id="l269">Ils ont pu réparer ta perte,</l>
-            <l n="270" xml:id="l270">Ils ont laissé la lice ouverte</l>
-            <l n="271" xml:id="l271">Et tu renais pour eux peut-être en ce moment.</l>
-          </sp>
-          <sp who="le-kain" xml:id="6-9">
-            <speaker>LE KAIN.</speaker>
-            <l n="272" xml:id="l272">Qui leur rendra Néron ? De ce tyran atroce</l>
-            <l n="273" xml:id="l273">Qui leur rendra jamais le sourire féroce ?</l>
-            <l n="274" xml:id="l274">L’hypocrite bonté de ce Tigre adouci,</l>
-            <l n="275" xml:id="l275">Qui de meurtres, de rapts, d’adultères noirci,</l>
-            <l n="276" xml:id="l276">Feint de laisser fléchir sa colère farouche,</l>
-            <l n="277" xml:id="l277">Et dont l’âme semblait s’exhaler par ma bouche ?</l>
-            <l n="278" xml:id="l278">Qui leur rendra Tancrède en ce double moment</l>
-            <l n="279" xml:id="l279">Où le Guerrier triomphe, où succombe l’Amant ?</l>
-            <l n="280" xml:id="l280">Le vengeur de Ninus sortant du mausolée</l>
-            <l n="281" xml:id="l281">Où de sa propre main sa Mère est immolée ?</l>
-            <l n="282" xml:id="l282">Qui leur rendra surtout l’élève d’Annibal,</l>
-            <l n="283" xml:id="l283">Ce Nicomède altier si craint de son Rival,</l>
-            <l n="284" xml:id="l284">Et qui si finement à l’Envoyé de Rome</l>
-            <l n="285" xml:id="l285">Rappelle les leçons qu’il reçut d’un grand homme ?</l>
-            <l n="286" xml:id="l286">Qui leur rendra Warwick ? Sévère ? Gengis kan ?</l>
-            <l n="287" xml:id="l287">L’impétueux Zamore aux genoux de Guzman ?</l>
-            <l n="288" xml:id="l288">Et tant d’autres encor qu’adore Melpomène ?</l>
-            <l n="289" xml:id="l289">Français, avec ivresse ils voyaient sur la scène</l>
-            <l n="290" xml:id="l290">Ressusciter leurs Rois ainsi que leurs Héros,</l>
-            <l n="291" xml:id="l291">Qui leur rendra Bayard sur son lit de repos ?</l>
-            <l n="292" xml:id="l292">Qui leur rendra Vendôme ?</l>
-          </sp>
-          <sp who="pluton" xml:id="6-10">
-            <speaker>PLUTON.</speaker>
-            <l n="293" xml:id="l293">Arrête,</l>
-            <l n="294" xml:id="l294">Vendôme par ta voix, exprimait son remord,</l>
-            <l n="295" xml:id="l295">Lorsqu’Atropos, sœur de la mort,</l>
-            <l n="296" xml:id="l296">Sous le ciseau fatal a fait tomber ta tête,</l>
-            <l n="297" xml:id="l297">Redis-nous d’un Héros le repentir touchant ;</l>
-            <l n="298" xml:id="l298">Que les tristes échos du ténébreux empire</l>
-            <l n="299" xml:id="l299">Du Cygne au moment qu’il expire</l>
-            <l n="300" xml:id="l300">Répètent le sublime chant.</l>
-          </sp>
-          <sp who="le-kain" xml:id="6-11">
-            <speaker>LE KAIN <em>déclame les vers suivants d’Adélaïde du Guesclin.</em></speaker>
-            <l n="301" xml:id="l301">« Trop fortunés époux, oui, mon âme attendrie</l>
-            <l n="302" xml:id="l302">« Imite votre exemple et chérit la patrie.</l>
-            <l n="303" xml:id="l303">« Allez apprendre au Roi, pour qui vous combattez,</l>
-            <l n="304" xml:id="l304">« Mon crime, mes remords et vos félicités :</l>
-            <l n="305" xml:id="l305">« Allez, ainsi que vous je vais le reconnaître,</l>
-            <l n="306" xml:id="l306">« Sur nos remparts soumis amenez votre Maître,</l>
-            <l n="307" xml:id="l307">« Il est déjà le mien, nous allons à ses pieds.</l>
-            <l n="308" xml:id="l308">« Abaisser sans regret nos fronts humiliés,</l>
-            <l n="309" xml:id="l309">« J’égalerai pour lui votre intrépide zèle.</l>
-            <l n="310" xml:id="l310">« Bon Français, meilleur frère, ami, sujet fidele,</l>
-            <l n="311" xml:id="l311">« Es-tu content, Couci ? »</l>
-          </sp>
-          <sp who="pluton" xml:id="6-12">
-            <speaker>PLUTON.</speaker>
-            <l n="312" xml:id="l312">Je le suis, et Minos</l>
-            <l n="313" xml:id="l313">Sans t’admirer n’a pu t’entendre,</l>
-            <l n="314" xml:id="l314">Il va te juger et m’apprendre</l>
-            <l n="315" xml:id="l315">Quel prix je dois à tes travaux,</l>
-            <l n="316" xml:id="l316">Parlez, Minos.</l>
-          </sp>
-          <sp who="minos" xml:id="6-13">
-            <speaker>MINOS.</speaker>
-            <l n="317" xml:id="l317">Cette Ombre est digne</l>
-            <l n="318" xml:id="l318">D’entrer dans l’Élysée, et son talent insigne</l>
-            <l n="319" xml:id="l319">Doit l’y faire placer à côté de Baron.</l>
-          </sp>
-          <sp who="pluton" xml:id="6-14">
-            <speaker>PLUTON.</speaker>
-            <l n="320" xml:id="l320">Souscris à cet Arrêt qu’à dicté la raison.</l>
-          </sp>
-          <sp who="le-kain" xml:id="6-15">
-            <speaker>LE KAIN.</speaker>
-            <l n="321" xml:id="l321">On pourrait m’accorder une faveur plus chère ;</l>
-            <l n="322" xml:id="l322">Puis-je la demander ?</l>
-          </sp>
-          <sp who="pluton" xml:id="6-16">
-            <speaker>PLUTON.</speaker>
-            <l n="323" xml:id="l323">Parle.</l>
-          </sp>
-          <sp who="le-kain" xml:id="6-17">
-            <speaker>LE KAIN.</speaker>
-            <l n="324" xml:id="l324">Près de Voltaire</l>
-            <l n="325" xml:id="l325">Ne pourrais-je être assis ? Je dois à ses talents</l>
-            <l n="326" xml:id="l326">Mes succès les plus chers, même les plus brillants,</l>
-            <l n="327" xml:id="l327">Et je voudrais du moins dans l’heureuse retraite...</l>
-          </sp>
-          <sp who="pluton" xml:id="6-18">
-            <speaker>PLUTON.</speaker>
-            <l n="328" xml:id="l328">J’approuve le vœu de ton cœur ;</l>
-            <l n="329" xml:id="l329">À côté du plus grand Poète</l>
-            <l n="330" xml:id="l330">On verra le plus grand Acteur.</l>
-            <stage><hi rend="italic"><em>Il est conduit sur l’Estrade.</em></hi></stage>
-            <l n="332" xml:id="l332"> </l>
-            <l n="333" xml:id="l333"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="334" xml:id="l334"> </l>
-          <sp who="caron" xml:id="7-1">
-            <speaker>ATROPOS, LES PRÉCÉDENTS, CARON</speaker>
-            <l n="335" xml:id="l335"> </l>
-          </sp>
-          <sp who="atropos" xml:id="7-2">
-            <speaker>ATROPOS.</speaker>
-            <l n="336" xml:id="l336">Des Auteurs qui charmaient la terre</l>
-            <l n="337" xml:id="l337">Le plus fameux après Voltaire</l>
-            <l n="338" xml:id="l338">Vient de tomber fous mon ciseau ;</l>
-            <l n="339" xml:id="l339">J’ai tranché le destin de J. JACQUES ROUSSEAU,</l>
-            <l n="340" xml:id="l340">Et mis par ce seul coup le comble à ta vengeance.</l>
-          </sp>
-          <sp who="pluton" xml:id="7-3">
-            <speaker>PLUTON.</speaker>
-            <l n="341" xml:id="l341">Jean-Jacques ! ô bonheur ! qu’il vienne en ma présence !</l>
-          </sp>
-          <sp who="atropos" xml:id="7-4">
-            <speaker>ATROPOS.</speaker>
-            <l n="342" xml:id="l342">Un obstacle l’arrête et ne lui permet pas</l>
-            <l n="343" xml:id="l343">De pénétrer sitôt au séjour du trépas,</l>
-            <l n="344" xml:id="l344">Il est encor sur le rivage</l>
-            <l n="345" xml:id="l345">Du fleuve redouté.</l>
-          </sp>
-          <sp who="pluton" xml:id="7-5">
-            <speaker>PLUTON.</speaker>
-            <l n="346" xml:id="l346">Qui donc retient ses pas ?</l>
-          </sp>
-          <sp who="atropos" xml:id="7-6">
-            <speaker>ATROPOS.</speaker>
-            <l n="347" xml:id="l347">Il n’a pu payer son passage.</l>
-            <l n="348" xml:id="l348">Je t’amène Caron, fléchis sa dureté.</l>
-          </sp>
-          <sp who="caron" xml:id="7-7">
-            <speaker>PLUTON, <em>à Caron.</em></speaker>
-            <l n="349" xml:id="l349">J’apprends que de Rousseau la carrière est finie,</l>
-            <l n="350" xml:id="l350">N’exige rien de lui, qu’il passe, et du génie</l>
-            <l n="351" xml:id="l351">Qu’on respecte la pauvreté.</l>
-          </sp>
-          <sp who="caron" xml:id="7-8">
-            <speaker>CARON.</speaker>
-            <l n="352" xml:id="l352">Tu seras satisfait.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="354" xml:id="l354"> </l>
-            <l n="355" xml:id="l355"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="356" xml:id="l356"> </l>
-          <sp who="atropos" xml:id="8-1">
-            <speaker>ATROPOS, LES PRÉCÉDENTS</speaker>
-            <l n="357" xml:id="l357"> </l>
-          </sp>
-          <sp who="atropos" xml:id="8-2">
-            <speaker>ATROPOS.</speaker>
-            <l n="358" xml:id="l358">Une Ombre allez folâtre</l>
-            <l n="359" xml:id="l359">Vient de nous arriver, Garrick était son nom :</l>
-            <l n="360" xml:id="l360">Londres, à ce qu’on m’a dit, en était idolâtre.</l>
-          </sp>
-          <sp who="pluton" xml:id="8-3">
-            <speaker>PLUTON.</speaker>
-            <l n="361" xml:id="l361">On connait en ces lieux sa réputation :</l>
-            <l n="362" xml:id="l362">Qu’elle vienne.</l>
-          </sp>
-          <sp who="atropos" xml:id="8-4">
-            <speaker>ATROPOS.</speaker>
-            <l n="363" xml:id="l363">Il n’est pas facile</l>
-            <l n="364" xml:id="l364">De la conduire à tes genoux,</l>
-            <l n="365" xml:id="l365">À tes ordres sacrés plaisamment indocile,</l>
-            <l n="366" xml:id="l366">Sans cesse elle les brave et se moque de nous.</l>
-            <l n="367" xml:id="l367">Sur nos fronts de sinistre, augure</l>
-            <l n="368" xml:id="l368">La gaité n’eut jamais des droits</l>
-            <l n="369" xml:id="l369">Pardonne, en voyant la figure,</l>
-            <l n="370" xml:id="l370">Les trois parques ont ri pour la première fois.</l>
-            <l n="371" xml:id="l371">Au lieu d’aboyer à la vue,</l>
-            <l n="372" xml:id="l372">Cerbère a laissé dans les airs</l>
-            <l n="373" xml:id="l373">Sa triple gueule suspendue</l>
-            <l n="374" xml:id="l374">Et n’a plus défendu la porte des Enfers.</l>
-            <l n="375" xml:id="l375">La voici, mes saurs la conduisent,</l>
-            <l n="376" xml:id="l376">De ses devoirs en vain sans doute elles l’instruisent.</l>
-            <l n="377" xml:id="l377"> </l>
-            <l n="378" xml:id="l378"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="379" xml:id="l379"> </l>
-          <sp who="lachésis" xml:id="9-1">
-            <speaker><em>L’Ombre de</em> GARRICK <em>conduite par</em> CLOCHO <em>et</em> LACHÉSIS, ATROPOS, LES PRÉCÉDENTS</speaker>
-            <l n="380" xml:id="l380"> </l>
-          </sp>
-          <sp who="garrick" xml:id="9-2">
-            <speaker>GARRICK.</speaker>
-            <l n="381" xml:id="l381">Est-ce là le Seigneur Pluton ?</l>
-          </sp>
-          <sp who="atropos" xml:id="9-3">
-            <speaker>ATROPOS</speaker>
-            <l n="382" xml:id="l382">C’est lui-même.</l>
-          </sp>
-          <sp who="garrick" xml:id="9-4">
-            <speaker>GARRICK.</speaker>
-            <l n="383" xml:id="l383">J’ai vu son portrait dans Milton ;</l>
-            <l n="384" xml:id="l384">Il est ressemblant.</l>
-          </sp>
-          <sp who="atropos" xml:id="9-5">
-            <speaker>ATROPOS.</speaker>
-            <l n="385" xml:id="l385">Téméraire !</l>
-            <l n="386" xml:id="l386">Quand tu devrais frémir !...</l>
-          </sp>
-          <sp who="garrick" xml:id="9-6">
-            <speaker>GARRICK.</speaker>
-            <l n="387" xml:id="l387">Et cette Ombre sévère</l>
-            <l n="388" xml:id="l388">Assise à son côté ?</l>
-          </sp>
-          <sp who="atropos" xml:id="9-7">
-            <speaker>ATROPOS.</speaker>
-            <l n="389" xml:id="l389">C’est ton Juge, Minos.</l>
-          </sp>
-          <sp who="garrick" xml:id="9-8">
-            <speaker>GARRICK.</speaker>
-            <l n="390" xml:id="l390">Ah ! ah ! des Harangueurs voilà donc les Tribunes ?</l>
-            <l n="391" xml:id="l391">Fort bien ! les Esprits infernaux</l>
-            <l n="392" xml:id="l392">Ont une Chambre des Communes ?</l>
-            <l n="393" xml:id="l393">S’y chamaille-t-on bien ?</l>
-          </sp>
-          <sp who="atropos" xml:id="9-9">
-            <speaker>ATROPOS, <em>à Pluton.</em></speaker>
-            <l n="394" xml:id="l394">Ces insolents propos</l>
-            <l n="395" xml:id="l395">Te doivent offenser ? Pour prix de ses bons mots,</l>
-            <l n="396" xml:id="l396">Ordonne qu’à l’instant on le livre aux Furies,</l>
-            <l n="397" xml:id="l397">Et qu’à coups de serpents...</l>
-          </sp>
-          <sp who="pluton" xml:id="9-10">
-            <speaker>PLUTON.</speaker>
-            <l n="398" xml:id="l398">Non, ses plaisanteries</l>
-            <l n="399" xml:id="l399">N’ont rien qui me puisse outrager ;</l>
-            <l n="400" xml:id="l400">Non, Minos va l’interroger,</l>
-            <l n="401" xml:id="l401">Et s’il est en effet coupable,</l>
-            <l n="402" xml:id="l402">Il faudra le punir et non pas me venger.</l>
-          </sp>
-          <sp who="garrick" xml:id="9-11">
-            <speaker>GARRICK.</speaker>
-            <l n="403" xml:id="l403">Il raisonne bien pour un Diable.</l>
-          </sp>
-          <sp who="minos" xml:id="9-12">
-            <speaker>MINOS.</speaker>
-            <l n="404" xml:id="l404">Quels travaux de ta vie ont occupé le cours ?</l>
-          </sp>
-          <sp who="garrick" xml:id="9-13">
-            <speaker>GARRICK.</speaker>
-            <l n="405" xml:id="l405">J’ai fait rire et pleurer.</l>
-          </sp>
-          <sp who="minos" xml:id="9-14">
-            <speaker>MINOS.</speaker>
-            <l n="406" xml:id="l406">As-tu de ce discours</l>
-            <l n="407" xml:id="l407">Quelque garant certain ?</l>
-          </sp>
-          <sp who="garrick" xml:id="9-15">
-            <speaker>GARRICK.</speaker>
-            <l n="408" xml:id="l408">Oui, toute l’Angleterre.</l>
-          </sp>
-          <sp who="minos" xml:id="9-16">
-            <speaker>MINOS.</speaker>
-            <l n="409" xml:id="l409">Un mensonge en ces lieux a coûté cher souvent :</l>
-            <l n="410" xml:id="l410">Prends-y garde, on a vu peu d’hommes sur la terre</l>
-            <l n="411" xml:id="l411">Réunir ce double talent.</l>
-          </sp>
-          <sp who="garrick" xml:id="9-17">
-            <speaker>GARRICK.</speaker>
-            <l n="412" xml:id="l412">Je les ai réunis et vous pouvez m’en croire,</l>
-            <l n="413" xml:id="l413">Émule de Préville et rival de le Kain,</l>
-            <l n="414" xml:id="l414">J’ai chaussé tour à tour, et toujours avec gloire</l>
-            <l n="415" xml:id="l415">Le Cothurne et le Brodequin.</l>
-            <l n="416" xml:id="l416">Acteur sur l’une et l’autre scène,</l>
-            <l n="417" xml:id="l417">Je représentais à mon choix,</l>
-            <l n="418" xml:id="l418">Un Citoyen de Sparte, un Archonte d’Athènes ;</l>
-            <l n="419" xml:id="l419">On me voyait un jour sous la pourpre romaine,</l>
-            <l n="420" xml:id="l420">Je paraissais une autrefois</l>
-            <l n="421" xml:id="l421">Sous le chapeau d’un Quaker ou le bandeau des Rois ;</l>
-            <l n="422" xml:id="l422">Favori de Thalie, ami de Melpomène,</l>
-            <l n="423" xml:id="l423">Tantôt j’étais Sofie et tantôt Richard trois ;</l>
-            <l n="424" xml:id="l424">Mais couvert d’un chapeau, d’un turban ou d’un casque,</l>
-            <l n="425" xml:id="l425">De chaque passion j’offrais toujours le masque.</l>
-            <l n="426" xml:id="l426">Lorsque par Iago<a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2">[2]</a> trompé,</l>
-            <l n="427" xml:id="l427">En proie à mon humeur jalouse,</l>
-            <l n="428" xml:id="l428">Sur son lit nuptial de ses larmes trempé</l>
-            <l n="429" xml:id="l429">J’étouffais de mes mains mon innocente épouse,</l>
-            <l n="430" xml:id="l430">On voyait tour à tour se peindre sur mon front,</l>
-            <l n="431" xml:id="l431">Mille caractères terribles ;</l>
-            <l n="432" xml:id="l432">De la fureur surtout les symptômes horribles</l>
-            <l n="433" xml:id="l433">Y paraissaient gravés ainsi que mon affront ;</l>
-            <l n="434" xml:id="l434">Mais lorsqu’éclairé sur mon crime,</l>
-            <l n="435" xml:id="l435">Je baignais, j’arrosais des pleurs du repentir</l>
-            <l n="436" xml:id="l436">Le corps inanimé de ma chaste victime,</l>
-            <l n="437" xml:id="l437">À tous les cours remplis d’un effroi légitime,</l>
-            <l n="438" xml:id="l438">Ma douleur se faisait sentir,</l>
-            <l n="439" xml:id="l439">Et mon remord plus qu’elle encore était sublime.</l>
-            <l n="440" xml:id="l440">Tous les rares talents que le Ciel me donna</l>
-            <l n="441" xml:id="l441">Éclataient alors sans se nuire,</l>
-            <l n="442" xml:id="l442">Et l’on pleurait Desdemona</l>
-            <l n="443" xml:id="l443">Autant que l’on pleure Zaïre.</l>
-            <l n="444" xml:id="l444">Dans les Commères de Windsor</l>
-            <l n="445" xml:id="l445">Un autre jour me voyait-on paraître ?</l>
-            <l n="446" xml:id="l446">Je prenais un nouvel essor</l>
-            <l n="447" xml:id="l447">Et le héros devenait petit-maître.</l>
-            <l n="448" xml:id="l448">De l’art, dans ce passage incroyable et soudain,</l>
-            <l n="449" xml:id="l449">J’offrais la diverse merveille ;</l>
-            <l n="450" xml:id="l450">Car le Falstaff<a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3">[3]</a> du lendemain</l>
-            <l n="451" xml:id="l451">Était l’Othello de la veille.</l>
-          </sp>
-          <sp who="minos" xml:id="9-18">
-            <speaker>MINOS.</speaker>
-            <l n="452" xml:id="l452">S’il est ainsi, jamais personne autant que toi</l>
-            <l n="453" xml:id="l453">N’eut le don de charmer et la cour et la ville.</l>
-          </sp>
-          <sp who="garrick" xml:id="9-19">
-            <speaker>GARRICK.</speaker>
-            <l n="454" xml:id="l454">Oui, si je n’avais point là-haut laissé Préville</l>
-            <l n="455" xml:id="l455">Qui, moins universel, est plus parfait que moi.</l>
-          </sp>
-          <sp who="minos" xml:id="9-20">
-            <speaker>MINOS.</speaker>
-            <l n="456" xml:id="l456">Cette noble candeur, digne d’être prisée,</l>
-            <l n="457" xml:id="l457">Ajoute un nouveau lustre à tes talents heureux,</l>
-            <l n="458" xml:id="l458">Et je pense qu’on doit leur ouvrir l’Élysée,</l>
-            <l n="459" xml:id="l459">Quelle est dans ce séjour la place que tu veux ?</l>
-          </sp>
-          <sp who="garrick" xml:id="9-21">
-            <speaker>GARRICK.</speaker>
-            <l n="460" xml:id="l460">De Caron j’ai passé la barque</l>
-            <l n="461" xml:id="l461">Avec quelques Anglais que Messieurs de Boston</l>
-            <l n="462" xml:id="l462">Venaient de dépêcher au ténébreux Monarque</l>
-            <l n="463" xml:id="l463">Par les ordres de Wasington,</l>
-            <l n="464" xml:id="l464">S’il n’est dans leurs récits ni mensonge, ni feinte,</l>
-            <l n="465" xml:id="l465">Des Lords furent présents à mon dernier soupir,</l>
-            <l n="466" xml:id="l466">Et je fus inhumé dans cette noble enceinte</l>
-            <l n="467" xml:id="l467">Où reposent les Rois, près du grand Shakespeare.</l>
-            <l n="468" xml:id="l468">Garrick, après sa mort, est l’égal d’Alexandre.</l>
-            <l n="469" xml:id="l469">Je crois donc ici-bas avoir droit à l’honneur</l>
-            <l n="470" xml:id="l470">Qu’on rendit là-haut à ma cendre.</l>
-          </sp>
-          <sp who="pluton" xml:id="9-22">
-            <speaker>PLUTON.</speaker>
-            <l n="471" xml:id="l471">Je t’en réserve un plus flatteur,</l>
-            <l n="472" xml:id="l472">Quoique maître d’un grand Empire,</l>
-            <l n="473" xml:id="l473">Quelquefois je m’ennuie, et je sens que le rire</l>
-            <l n="474" xml:id="l474">Est bon à la santé ; pour chasser ma langueur,</l>
-            <l n="475" xml:id="l475">Dans l’un des souterrains de ce séjour noirâtre</l>
-            <l n="476" xml:id="l476">Je veux que l’on dresse un Théâtre,</l>
-            <l n="477" xml:id="l477">Je t’en fais le premier Acteur,</l>
-            <l n="478" xml:id="l478">Et qui plus est le Directeur,</l>
-            <l n="479" xml:id="l479">Minos у consent ?</l>
-          </sp>
-          <sp who="minos" xml:id="9-23">
-            <speaker>MINOS.</speaker>
-            <l n="480" xml:id="l480">Oui, Seigneur.</l>
-          </sp>
-          <sp who="atropos" xml:id="9-24">
-            <speaker>ATROPOS.</speaker>
-            <l n="481" xml:id="l481">Voici Jean-Jacques enfin que Caron vous amène.</l>
-            <stage><hi rend="italic"><em>L’Ombre de Garrick va se placer sur l’Estrade.</em></hi></stage>
-            <l n="483" xml:id="l483"> </l>
-            <l n="484" xml:id="l484"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="485" xml:id="l485"> </l>
-          <sp who="caron" xml:id="10-1">
-            <speaker><em>L’Ombre de</em> JEAN-JACQUES ROUSSEAU <em>en habit ďArménien</em>, CARON, PLUTON, MINOS, ATROPOS, <em>etc.</em></speaker>
-            <l n="486" xml:id="l486"> </l>
-          </sp>
-          <sp who="pluton" xml:id="10-2">
-            <speaker>PLUTON.</speaker>
-            <l n="487" xml:id="l487">Mais est-ce bien lui que je vois ?</l>
-            <l n="488" xml:id="l488">Un habit à l’Arménienne !...</l>
-            <l n="489" xml:id="l489">On m’a dit qu’il vivait aux rives de la Seine,</l>
-            <l n="490" xml:id="l490">Que même il était Genevois.</l>
-          </sp>
-          <sp who="atropos" xml:id="10-3">
-            <speaker>ATROPOS.</speaker>
-            <l n="491" xml:id="l491">Oui ; mais ennemi de la mode,</l>
-            <l n="492" xml:id="l492">Par singularité, je crois,</l>
-            <l n="493" xml:id="l493">Il changeait d’habit quelquefois</l>
-            <l n="494" xml:id="l494">Et prenait celui-là, d’ailleurs assez commode ;</l>
-            <l n="495" xml:id="l495">C’est celui qu’il portait alors que j’ai coupé</l>
-            <l n="496" xml:id="l496">La trame de ses jours.</l>
-          </sp>
-          <sp who="pluton" xml:id="10-4">
-            <speaker>PLUTON.</speaker>
-            <l n="497" xml:id="l497">Il paraît occupé</l>
-            <l n="498" xml:id="l498">De méditations sublimes,</l>
-            <stage><hi rend="italic"><em>À Minos. </em></hi></stage>
-            <l n="500" xml:id="l500">Que par vous à l’instant son Arrêt soit rendu !</l>
-          </sp>
-          <sp who="minos" xml:id="10-5">
-            <speaker>MINOS, <em>à J. J. Rousseau.</em></speaker>
-            <l n="501" xml:id="l501">Homme, te voilà descendu</l>
-            <l n="502" xml:id="l502">Dans les redoutables abymes,</l>
-            <l n="503" xml:id="l503">Où tu vas recevoir le loyer qui t’est dû.</l>
-            <l n="504" xml:id="l504">Dis-nous tes vertus et tes crimes.</l>
-          </sp>
-          <sp who="j" xml:id="10-6">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="505" xml:id="l505">Pourquoi m’interroger en vers ? Tu veux savoir la vérité, laisse-là le langage du mensonge.</l>
-          </sp>
-          <sp who="minos" xml:id="10-7">
-            <speaker>MINOS.</speaker>
-            <l n="506" xml:id="l506">D’où te vient cette frénésie ?</l>
-            <l n="507" xml:id="l507">Tu m’étonnes vraiment ! hais-tu la Poésie ?</l>
-          </sp>
-          <sp who="j" xml:id="10-8">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="508" xml:id="l508">Oui, les vers sont funestes à la société, je l’ai prouvé, et pour ne point lui nuire, j’ai eu grand soin de n’en faire que fort peu de bons. Laisse-là ce jargon puérile, sans quoi notre Dialogue ne sera qu’une suite de dissonances, tu m’entendras peut-être, mais je ne t’entendrai point.</l>
-          </sp>
-          <sp who="minos" xml:id="10-9">
-            <speaker>MINOS.</speaker>
-            <l n="509" xml:id="l509">Quoique l’art des vers ne soit pas aussi dangereux que tu l’as prétendu, dans ce moment néanmoins tu as une sorte de raison, et je veux bien descendre à ton niveau. Je vais t’interroger sur ta vie et sur tes Ouvrages. Songe que tu répondras à ton Juge, et que d’après tes réponses tu seras plongé dans le Tartare, ou admis dans l’Élysée. Qu’as-tu fait sur la terre ?</l>
-          </sp>
-          <sp who="j" xml:id="10-10">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="510" xml:id="l510">Tout le bien que j’ai pu.</l>
-          </sp>
-          <sp who="minos" xml:id="10-11">
-            <speaker>MINOS.</speaker>
-            <l n="511" xml:id="l511">C’est-à-dire, fort peu : car pour en faire beaucoup, il faut être armé du pouvoir, il faut régner par les Lois ou par les armes ; il faut tenir la balance de Thémis ou le sceptre des Rois, et tu n’as été qu’un simple Citoyen.</l>
-          </sp>
-          <sp who="j" xml:id="10-12">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="512" xml:id="l512">Crois-tu donc que le Philosophe n’ait autant de pouvoir sur les hommes que le Monarque ? L’Empire le plus étendu est celui du génie. Les Rois ne font pas toujours tout le bien qu’ils veulent. Ils trouvent des obstacles insurmontables, le génie les franchit, les moindres désirs deviennent des lois. Auguste, du haut de son Trône, à moins influé sur le bonheur des hommes que Socrate du fond de son École. Les bienfaits du premier surent passagers, ceux de l’autre seront éternels.</l>
-          </sp>
-          <sp who="minos" xml:id="10-13">
-            <speaker>MINOS.</speaker>
-            <l n="513" xml:id="l513">Mais quels moyens as-tu pris pour faire le bien ?</l>
-          </sp>
-          <sp who="j" xml:id="10-14">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="514" xml:id="l514">J’ai dit la vérité.</l>
-          </sp>
-          <sp who="minos" xml:id="10-15">
-            <speaker>MINOS.</speaker>
-            <l n="515" xml:id="l515">C’est bien quelque chose, mais ce n’est pas tout : as-tu joint l’exemple au précepte ?</l>
-          </sp>
-          <sp who="j" xml:id="10-16">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="516" xml:id="l516">Pas toujours, je l’avoue : au contraire, ma vie a été une antithèse continuelle, et mes actions ont presque toujours réfuté mes écrits. J’ai dit que les Sciences et les Arts avaient corrompu les mœurs, et je les ai cultivés toute ma vie. J’ai dit aux hommes : Voulez-vous être heureux ? Allez dans les forêts, vivez avec les bêtes sauvages, et j’ai vécu dans les Villes avec des hommes civilisés. J’ai dit aux Français qu’ils n’avaient que de la détestable Musique, et j’ai fait de la Musique française excellente. J’ai écrit contre les Pièces de Théâtre et les Romans, et j’ai fait des Romans et des Pièces de Théâtre. J’ai très mal parlé des femmes, et je les idolâtrais, enfin mon désir le plus vif était de voir les hommes heureux, et je haïssais les hommes.</l>
-          </sp>
-          <sp who="minos" xml:id="10-17">
-            <speaker>MINOS.</speaker>
-            <l n="517" xml:id="l517">Je ne vois pas dans tout cela le bien que tu as pu faire.</l>
-          </sp>
-          <sp who="j" xml:id="10-18">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="518" xml:id="l518">Tu ne le vois pas ?</l>
-          </sp>
-          <sp who="minos" xml:id="10-19">
-            <speaker>MINOS.</speaker>
-            <l n="519" xml:id="l519">Non, en vérité.</l>
-          </sp>
-          <sp who="j" xml:id="10-20">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="520" xml:id="l520">Tant pis pour toi.</l>
-          </sp>
-          <sp who="minos" xml:id="10-21">
-            <speaker>MINOS.</speaker>
-            <l n="521" xml:id="l521">Ce ton sec et tranchant était bon quand tu vivais parmi les hommes ; mais songe encore une fois que tu parles à ton Juge, et si tu crains qu’il ne te condamne, ne dédaigne pas de le corrompre, tu dois aimer à bien parler de toi, car tu n’as pas manqué d’orgueil, tu as dit quelque part que dans un Gouvernement éclairé on t’aurait élevé des statues.</l>
-          </sp>
-          <sp who="j" xml:id="10-22">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="522" xml:id="l522">Qui, je l’ai dit, et quel autre eut plus que moi le droit de le dire ? Quel autre par ses Écrits, a rendu plus de services à l’humanité ? J’ai prouvé aux Français, il est vrai, que leur Musique était détestable, ou plutôt qu’ils n’en avaient point ; ma Lettre célèbre n’a fait mal à personne et vois le bien qui en a résulté. Le Français indocile à la voix du goût et de la raison, admirait la psalmodie ennuyeuse d’un chant traînant, monotone et soporifique, et ma Lettre a donné lieu à l’heureuse révolution qui vient de transporter sur ses Théâtres la Musique d’Italie. Le Français a un plaisir de plus, et son Opéra un vice de moins.</l>
-          </sp>
-          <sp who="minos" xml:id="10-23">
-            <speaker>MINOS.</speaker>
-            <l n="523" xml:id="l523">Je ne vois pas quel bien peuvent faire à l’humanité des notes de Musique combinées d’une certaine manière plutôt que d’une autre, et je crois qu’on  peut être heureux sans connaître la vertu des doubles et des triples croches.</l>
-          </sp>
-          <sp who="j" xml:id="10-24">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="524" xml:id="l524">À la bonne heure. Passons à des objets plus essentiels. La liberté de l’homme a-t-elle jamais eu un défenseur plus ardent que moi ? L’homme était esclave au berceau, des liens funestes tenaient prisonniers ses membres délicats ; dans un âge plus avancé, des chaînes odieuses chargeaient et chargent même encore les mains robustes, n’est ce pas moi qui l’ai presque affranchi de la double servitude des nourrices et des tyrans ? Est-il un seul homme élevé selon mes principes, qui ne me dut ses vertus et son bonheur ? Quel père n’aurait point voulu m’avoir pour le Gouverneur de son fils ? Quelle mère n’aurait point voulu que son fils ressemblât à Émile ? Les combats généraux et particuliers font descendre ici-bas le tiers des hommes, n’ai-je pas fait tous mes efforts pour abolir ces usages dont rien n’égale la barbarie, si ce n’est le ridicule ? N’est-ce pas moi qui ai tonné dans l’âme de l’adultère ? N’est-ce pas moi qui ai fait rougir pour la première fois peut-être ce contempteur des propriétés les plus sacrées ? Quelle couche nuptiale ne serait point sous les ailes des Anges si ceux qui y reposent suivaient mes préceptes ? Quelle mère de famille ne serait point sur la terre l’image de la Divinité, si elle ressemblait en tout à Julie ? Quelle cabane enfin habitée par des époux chastes et fidèles, ne serait point le sanctuaire de la vertu. Enfin quoique les hommes m’aient toujours persécuté, ai-je tracé une seule ligne qui ne m’ait pas été inspirée par le désir de les voir heureux ? S’il en est une seule, qu’on me la montre ; je consens, pour l’expier, à retourner dans l’Île des Peupliers, à y reprendre ma dépouille charnelle et à redescendre vivant dans le Tartare.</l>
-          </sp>
-          <sp who="minos" xml:id="10-25">
-            <speaker>MINOS.</speaker>
-            <l n="525" xml:id="l525">Vouloir le bien est beaucoup ; mais il faut encore savoir supporter le mal. On ta persécuté, dis-tu, qu’as-tu opposé à tes ennemis ?</l>
-          </sp>
-          <sp who="j" xml:id="10-26">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="526" xml:id="l526">Ma vertu.</l>
-          </sp>
-          <sp who="minos" xml:id="10-27">
-            <speaker>MINOS.</speaker>
-            <l n="527" xml:id="l527">Mais ta vertu a été calomniée ; qui a été son vengeur ?</l>
-          </sp>
-          <sp who="j" xml:id="10-28">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <stage><hi rend="italic">Le temps. Quand je donnai ma Lettre sur la Musique, cette brochure souleva contre moi la moitié de la Nation chez laquelle je l’écrivis. Toute la populace musicale se mit sous les armes, on me chassa du Temple de l’harmonie ; ne sachant où trouver ma personne, que j’avais mise à couvert de tant de fureur on y brûla mon Image, on en fit un sacrifice au Dieu de la Musique. Je laissai passer l’orage ; je revins quand il fut calmé, et les auteurs de mon supplice furent les admirateurs de mon talent. Ma patrie que j’avais honorée, crut me déshonorer en condamnant <em>Émile</em> le meilleur de mes Ouvrages et le plus beau peut-être de tous les livres. J’aurais pu dénoncer ma patrie au reste de l’univers et terrasser mes Concitoyens avec l’arme de l’Éloquence, arme terrible et redoutable que je ne maniai jamais<a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4">[4]</a> inglorieusement : je me vengeai d’une manière plus noble pour moi et moins dangereuse pour eux. Je renonçai à ma patrie, j’ôtai à cette mère injuste le droit de m’appeler son fils, et je me tus.</hi></stage>
-          </sp>
-          <sp who="minos" xml:id="10-29">
-            <speaker>MINOS.</speaker>
-            <l n="529" xml:id="l529">Mais si j’en crois des bruits parvenus jusques dans ce séjour, les Tribunaux te dénoncèrent ; qu’opposas-tu à leurs anathèmes ?</l>
-          </sp>
-          <sp who="j" xml:id="10-30">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="530" xml:id="l530">Le silence.</l>
-          </sp>
-          <sp who="minos" xml:id="10-31">
-            <speaker>MINOS.</speaker>
-            <l n="531" xml:id="l531">L’envie te calomnia ; qu’opposas-tu à ses manèges ?</l>
-          </sp>
-          <sp who="j" xml:id="10-32">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="532" xml:id="l532">Le silence.</l>
-          </sp>
-          <sp who="minos" xml:id="10-33">
-            <speaker>MINOS.</speaker>
-            <l n="533" xml:id="l533">Le silence est bon ; mais il est dangereux de se taire quand on est innocent : on est cru coupable, et l’on meurt pauvre et persécuté. Tel fut ton fort.</l>
-          </sp>
-          <sp who="j" xml:id="10-34">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="534" xml:id="l534">Je serais bien fâché d’être mort autrement. La postérité dira : le Philosophe le plus éloquent et le plus sensible est mort pauvre dans le sein de la Nation la plus éclairé. À peine, au moment d’expirer, a-t-il pu trouver une place pour reposer sa tête. Si j’étais mort comme un financier, elle ne dirait rien.</l>
-          </sp>
-          <sp who="minos" xml:id="10-35">
-            <speaker>MINOS.</speaker>
-            <l n="535" xml:id="l535">Je serai plus juste que tes contemporains, j’admire tes talents et tes vertus, et je décide que l’on te place dans l’Élysée entre Socrate et Diogène.</l>
-          </sp>
-          <sp who="j" xml:id="10-36">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="536" xml:id="l536">Soit. J’ai imité l’un dans ma conduite et l’autre dans mes Écrits : je serai là avec mes Pairs. De temps en temps je prierai Diogène de me prêter son tonneau ; j’y ferai entrer Socrate, et tout en prenant de la ciguë, s’il lui en reste encore, nous jaserons de l’immortalité de l’âme.</l>
-          </sp>
-          <sp who="minos" xml:id="10-37">
-            <speaker>MINOS.</speaker>
-            <l n="537" xml:id="l537">Ce projet est sage, je n’y trouve que la ciguë d’inutile ; quand on est mort, on n’en a plus besoin.</l>
-          </sp>
-          <sp who="j" xml:id="10-38">
-            <speaker>J. J. ROUSSEAU.</speaker>
-            <l n="538" xml:id="l538">Il en faut toujours un peu ; c’est le thé des Philosophes.</l>
-            <l n="539" xml:id="l539"> </l>
-            <l n="540" xml:id="l540"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="541" xml:id="l541"> </l>
-          <sp who="mercure" xml:id="11-1">
-            <speaker>MERCURE, LES PRÉCÉDENTS</speaker>
-            <l n="542" xml:id="l542"> </l>
-          </sp>
-          <sp who="mercure" xml:id="11-2">
-            <speaker>MERCURE.</speaker>
-            <l n="543" xml:id="l543">Dieu puissant des Enfers, je t’annonce Apollon.</l>
-          </sp>
-          <sp who="minos" xml:id="11-3">
-            <speaker>PLUTON, <em>descendant de son Trône ainsi que Minos.</em></speaker>
-            <l n="544" xml:id="l544">Apollon ! le Dieu Mars l’accompagne-t-il ?</l>
-          </sp>
-          <sp who="mercure" xml:id="11-4">
-            <speaker>MERCURE.</speaker>
-            <l n="545" xml:id="l545">Non.</l>
-            <l n="546" xml:id="l546">Il voit les Dieux de son Parnasse</l>
-            <l n="547" xml:id="l547">L’un sur l’autre tomber sous les fatals ciseaux,</l>
-            <l n="548" xml:id="l548">Forcé de dépouiller son inutile audace</l>
-            <l n="549" xml:id="l549">Il vient pour te demander grâce,</l>
-            <l n="550" xml:id="l550">Et pour fléchir enfin le courroux d’Atropos ;</l>
-            <l n="551" xml:id="l551">Il est sous ces parvis funèbres,</l>
-            <l n="552" xml:id="l552">Peut-on l’introduire à son tour ?</l>
-          </sp>
-          <sp who="pluton" xml:id="11-5">
-            <speaker>PLUTON.</speaker>
-            <l n="553" xml:id="l553">Oui.</l>
-            <l n="554" xml:id="l554"> </l>
-            <l n="555" xml:id="l555"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène ΧII</head>
-            <l n="556" xml:id="l556"> </l>
-          <sp who="apollon" xml:id="12-1">
-            <speaker>APOLLON, LES PRÉCÉDENTS</speaker>
-            <l n="557" xml:id="l557"> </l>
-          </sp>
-          <sp who="pluton" xml:id="12-2">
-            <speaker>PLUTON.</speaker>
-            <l n="558" xml:id="l558">Dans l’empire des ténèbres,</l>
-            <l n="559" xml:id="l559">Que vient faire le Dieu du jour ?</l>
-          </sp>
-          <sp who="apollon" xml:id="12-3">
-            <speaker>APOLLON.</speaker>
-            <l n="560" xml:id="l560">Implorer ta clémence.</l>
-          </sp>
-          <sp who="pluton" xml:id="12-4">
-            <speaker>PLUTON.</speaker>
-            <l n="561" xml:id="l561">Il te sied bien, perfide,</l>
-            <l n="562" xml:id="l562">D’abaisser à mes pieds un front obéissant,</l>
-            <l n="563" xml:id="l563">Quand je fais le sujet qui dans ces lieux te guide !</l>
-            <l n="564" xml:id="l564">Quand tu veux m’enlever !...</l>
-          </sp>
-          <sp who="apollon" xml:id="12-5">
-            <speaker>APOLLON.</speaker>
-            <l n="565" xml:id="l565">Pardonne, Dieu puissant,</l>
-            <l n="566" xml:id="l566">Il est vrai qu’un instant de t’enlever Voltaire</l>
-            <l n="567" xml:id="l567">J’ai formé le projet insensé, téméraire,</l>
-            <l n="568" xml:id="l568">Pardonne ; ce mortel me fut toujours si cher,</l>
-            <l n="569" xml:id="l569">Que frappé plus que lui du coup qui nous sépare,</l>
-            <l n="570" xml:id="l570">J’ai cru qu’aux antres du Ténare</l>
-            <l n="571" xml:id="l571">Il me serait permis de venir l’arracher.</l>
-          </sp>
-          <sp who="pluton" xml:id="12-6">
-            <speaker>PLUTON.</speaker>
-            <l n="572" xml:id="l572">Quoi ! ne savais-tu pas ?...</l>
-          </sp>
-          <sp who="apollon" xml:id="12-7">
-            <speaker>APOLLON.</speaker>
-            <l n="573" xml:id="l573">Je savais tout, pardonne,</l>
-            <l n="574" xml:id="l574">Qu’à ton juste courroux succède la pitié,</l>
-            <l n="575" xml:id="l575">Je devins criminel par excès d’amitié ;</l>
-            <l n="576" xml:id="l576">Un Dieu même ose tout quand l’amitié l’ordonne,</l>
-            <l n="577" xml:id="l577">Si mes pleurs qui baignent ta main</l>
-            <l n="578" xml:id="l578">Si de mon repentir ces touchants interprètes</l>
-            <l n="579" xml:id="l579">Te peuvent émouvoir, de ces sombres retraites</l>
-            <l n="580" xml:id="l580">Laisse du moins sortir et Garrick et le Kain.</l>
-            <l n="581" xml:id="l581">Du séjour où leurs noms de bouche en bouche volent</l>
-            <l n="582" xml:id="l582">Que ton ordre leur ouvre une fois les sentiers.</l>
-            <l n="583" xml:id="l583">Jamais les grands Auteurs n’expirent tout entiers,</l>
-            <l n="584" xml:id="l584">Leurs Écrits immortels de leur mort nous consolent.</l>
-            <l n="585" xml:id="l585">Homère est-il mort ? Non. Son poème savant</l>
-            <l n="586" xml:id="l586">À la postérité la transmis tout vivant.</l>
-            <l n="587" xml:id="l587">Sous la faux du trépas lorsqu’un Acteur succombe,</l>
-            <l n="588" xml:id="l588">Son talent avec lui disparaît sous la tombe,</l>
-            <l n="589" xml:id="l589">Rien ne lui survit que son nom.</l>
-            <l n="590" xml:id="l590">On lit, on lit encor les Écrits de Baron,</l>
-            <l n="591" xml:id="l591">Mais de son jeu noble et sublime</l>
-            <l n="592" xml:id="l592">Que nous reste-t-il ? Rien. À mes cris, à mes pleurs</l>
-            <l n="593" xml:id="l593">Rends donc ces célèbres Acteurs</l>
-            <l n="594" xml:id="l594">Et fois une fois magnanime.</l>
-          </sp>
-          <sp who="apollon" xml:id="12-8">
-            <speaker><em>L’Ombre de</em> LE KAIN <em>à Apollon.</em></speaker>
-            <l n="595" xml:id="l595">« On ne voit point deux fois le rivage des morts<a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5">[5]</a> :</l>
-            <l n="596" xml:id="l596">« Quand nous avons tous deux passé les sombres bords,</l>
-            <l n="597" xml:id="l597">« En vain vous espérez que Pluton nous renvoie,</l>
-            <l n="598" xml:id="l598">« Et l’avare Achéron ne lâche point sa proie. »</l>
-          </sp>
-          <sp who="pluton" xml:id="12-9">
-            <speaker>PLUTON.</speaker>
-            <l n="599" xml:id="l599">Il te répond pour moi : ne crois pas cependant</l>
-            <l n="600" xml:id="l600">Qu’aux pleurs du repentir mon cœur soit insensible,</l>
-            <l n="601" xml:id="l601">De l’amour autrefois il subit l’ascendant ;</l>
-            <l n="602" xml:id="l602">Je suis juste, sévère et non pas inflexible.</l>
-          </sp>
-          <sp who="apollon" xml:id="12-10">
-            <speaker>APOLLON.</speaker>
-            <l n="603" xml:id="l603">Voici donc, c’en est fait, l’éternelle prison</l>
-            <l n="604" xml:id="l604">De mes sujets les plus célèbres !</l>
-            <l n="605" xml:id="l605">À peine avais-je atteint ma neuvième<a href="#_ftn6" name="_ftnref6" title="" id="_ftnref6">[6]</a> maison,</l>
-            <l n="606" xml:id="l606">Ils étaient descendus dans ces palais funèbres,</l>
-            <l n="607" xml:id="l607">Ô disgrâce, qui me confond !</l>
-            <stage><hi rend="italic"><em>À Pluton.</em></hi></stage>
-            <l n="609" xml:id="l609">Puisqu’enfin tes fureurs expirent,</l>
-            <l n="610" xml:id="l610">Épargne au moins ceux qui respirent</l>
-            <l n="611" xml:id="l611">Laisse vivre surtout d’Alembert et Buffon.</l>
-          </sp>
-          <sp who="pluton" xml:id="12-11">
-            <speaker>PLUTON.</speaker>
-            <l n="612" xml:id="l612">Déjà je te l’ai dit, ton repentir me touche,</l>
-            <l n="613" xml:id="l613">Ils vivront. Le ciseau de la parque farouche</l>
-            <l n="614" xml:id="l614">Respectera longtemps la trame de leurs jours.</l>
-          </sp>
-          <sp who="apollon" xml:id="12-12">
-            <speaker>APOLLON.</speaker>
-            <l n="615" xml:id="l615">Ta bonté m’enhardit ô généreux Monarque !</l>
-            <l n="616" xml:id="l616">Mon cœur s’en souviendra toujours,</l>
-            <l n="617" xml:id="l617">Mais j’ose en espérer une plus chère marque.</l>
-            <l n="618" xml:id="l618">ANTOINETTE et LOUIS, imitant les Césars,</l>
-            <l n="619" xml:id="l619">M’ont souri du haut de leur Trône ;</l>
-            <l n="620" xml:id="l620">On voit fleurir autour de leur double Couronne,</l>
-            <l n="621" xml:id="l621">L’Olive de Minerve et la palme des Arts.</l>
-            <l n="622" xml:id="l622">Prolonge, tu le peux, leurs belles destinées</l>
-            <l n="623" xml:id="l623">J’implore cette grâce encor.</l>
-          </sp>
-          <sp who="pluton" xml:id="12-13">
-            <speaker>PLUTON.</speaker>
-            <l n="624" xml:id="l624">Je ferai durer leurs années</l>
-            <l n="625" xml:id="l625">Autant que celles de Nestor</l>
-            <l n="626" xml:id="l626">J’en jure par le stix ; tout le peuple de France</l>
-            <l n="627" xml:id="l627">Depuis assez longtemps m’intercède pour eux,</l>
-            <l n="628" xml:id="l628">Que de ce peuple aimable ils comblent l’espérance,</l>
-            <l n="629" xml:id="l629">Qu’ils vivent pour le rendre heureux.</l>
-          </sp>
-          <sp who="em>l’ombre-de" xml:id="12-14">
-            <speaker><em>L’Ombre de</em> GARRICK.</speaker>
-            <l n="630" xml:id="l630">Respectable Pluton, quand j’étais sur la terre,</l>
-            <l n="631" xml:id="l631">On m’a souvent parlé de ce charmant parterre</l>
-            <l n="632" xml:id="l632">Où Votre Majesté prend quelquefois le frais,</l>
-            <l n="633" xml:id="l633">Du désir de le voir mon âme est embrasée,</l>
-            <l n="634" xml:id="l634">Et je voudrais savoir enfin si l’Élysée</l>
-            <l n="635" xml:id="l635">Vaut mieux que nos Jardins Anglais.</l>
-          </sp>
-          <sp who="pluton" xml:id="12-15">
-            <speaker>PLUTON.</speaker>
-            <l n="636" xml:id="l636">N’en doute point : il a tout ce qui peut séduire,</l>
-            <l n="637" xml:id="l637">Et moi-même bientôt je prétends t’y conduire</l>
-            <l n="638" xml:id="l638">Avec les Ombres que voilà.</l>
-          </sp>
-          <sp who="atropos" xml:id="12-16">
-            <speaker>ATROPOS.</speaker>
-            <l n="639" xml:id="l639">Trois Ombres encore sont-là</l>
-            <l n="640" xml:id="l640">Qui demandent Haller.</l>
-          </sp>
-          <sp who="haller" xml:id="12-17">
-            <speaker>HALLER, <em>les apercevant dans la Coulisse et s’élançant dans leurs bras.</em></speaker>
-            <l n="641" xml:id="l641">Ah ! ce sont mes Épouses.</l>
-            <stage><hi rend="italic"><em>Ces trois Ombres vêtues de blanc, commencent une danse agréable autour de Haller, et lui mettent chacune sur la tête une Couronne de Myrte entremêlée de Laurier. </em></hi></stage>
-          </sp>
-          <sp who="apollon" xml:id="12-18">
-            <speaker>APOLLON.</speaker>
-            <l n="643" xml:id="l643">Les Arts m’ont suivi dans ces lieux</l>
-            <l n="644" xml:id="l644">Avant que de fouler les riantes pelouses</l>
-            <l n="645" xml:id="l645">De l’asile des bienheureux.</l>
-            <stage><hi rend="italic"><em>À Pluton.</em></hi></stage>
-            <l n="647" xml:id="l647">Permets qu’ils te rendent hommage,</l>
-            <l n="648" xml:id="l648">Et qu’au moins dans leurs nobles jeux,</l>
-            <l n="649" xml:id="l649">De ma reconnaissance ils te tracent l’image.</l>
-            <stage><hi rend="italic"><em>Les Arts se mêlent aux trois Ombres heureuses ; et continuent le Ballet qui termine la Pièce.</em></hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> Allusion aux <em>Muses Rivales</em>, Jolie pièce de M. de la Harpe.</hi></stage>
-            <l n="652" xml:id="l652"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2">[2]</a> Personnage de la Tragédie d’Othello, le plus odieux peut-être qu’on ait jamais mis sur la scène.</l>
-            <l n="653" xml:id="l653"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3">[3]</a> Personnage très ridicule des Commères de Windsor, Comédie de Shakespeare.</l>
-            <stage><hi rend="italic"><a href="#_ftnref4" name="_ftn4" title="" id="_ftn4">[4]</a> Comme Jean-Jacques Rousseau a inventé plusieurs mots, on a cru pouvoir mettre celui-ci dans sa bouche, il n’est pas plus extraordinaire que <em>Déflechir, Mensuétude</em>, courbe philosophesque, etc...</hi></stage>
-            <l n="655" xml:id="l655"><a href="#_ftnref5" name="_ftn5" title="" id="_ftn5">[5]</a> Vers de Racine.</l>
-            <l n="656" xml:id="l656"><a href="#_ftnref6" name="_ftn6" title="" id="_ftn6">[6]</a> Voltaire, Rousseau, Haller, Garrick, le Kain et plusieurs autres hommes célèbres sont morts presque dans l’espace de neuf mois. Il a fallu supposer, pour faire cette Pièce, que les quatre derniers étaient morts le même jour. On fait que ces rapprochements sont permis au Théâtre.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="1">Apollon a formé ce projet téméraire !</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="2">Oui rien n’est plus certain, Momus est peu discret,</l>
+          <l n="3">C’est de lui que je tiens cet important secret.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="4">Il prétend m’enlever Voltaire !</l>
+          <l n="5">Ignore-t-il la loi du sort,</l>
+          <l n="6">Qui veut que les Héros, les Sages, les Poètes</l>
+          <l n="7">De l’Élysée après leur mort</l>
+          <l n="8">Peuplant les aimables retraites,</l>
+          <l n="9">Y goûtent à jamais un bonheur sans remord ?</l>
+          <l n="10">Aristote, Sophocle, Anacréon, Virgile</l>
+          <l n="11">Déjà depuis longtemps habitent cet asile.</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="12">Voltaire est plus grand qu’eux, Voltaire a mérité</l>
+          <l n="13">Une plus brillante couronne,</l>
+          <l n="14">Et des Lois du destin qui n’exceptent personnes</l>
+          <l n="15">Voltaire doit être excepté ;</l>
+          <l n="16">Apollon le prétend. Sans que rien les arrête,</l>
+          <l n="17">Déjà de cet Auteur divin Les Muses célèbrent la fête[1],</l>
+          <l n="18">Et chacune déjà pour en parer sa tête,</l>
+          <l n="19">L’attend une palme à la main.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="20">Que je plains d’Apollon l’audacieux délire !</l>
+          <l n="21">Il peut tout sur les cœurs par ses charmants concerts ;</l>
+          <l n="22">Mais pense-t-il qu’armé seulement de sa lyre,</l>
+          <l n="23">Il triomphera des Enfers ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="24">Le Dieu Mars dont souvent il a chanté la gloire,</l>
+          <l n="25">Doit lui prêter un sûr appui,</l>
+          <l n="26">Et dans l’Élysée aujourd’hui</l>
+          <l n="27">Tous deux doivent entrer par la porte d’ivoire.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="28">Neptune, sans pâlir, voit la fureur des flots</l>
+          <l n="29">Tel de mon agresseur impie</l>
+          <l n="30">Je vois tous les lâches complots.</l>
+          <l n="31">Qu’on fasse venir Atropos,</l>
+          <l n="32">Je veux l’opposer seule à tant de perfidie.</l>
+          <stage>&lt;em&gt;À Minos. &lt;/em&gt;</stage>
+          <l n="33">Et vous, Minos, préparez-vous</l>
+          <l n="34">À juger les ombres plaintives</l>
+          <l n="35">Que la Parque dans son courroux,</l>
+          <l n="36">Va nous envoyer sur ces rives,</l>
+          <stage>&lt;em&gt;Pluton monte sur son Trône et Minos prend place à son côté. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="37">Inflexible Divinité,</l>
+          <l n="38">Dont la rigueur prompte à me plaire,</l>
+          <l n="39">Peuple de citoyens mon Palais redouté,</l>
+          <l n="40">Défendez votre Maître et servez ma colère.</l>
+          <l n="41">Le téméraire Dieu du jour</l>
+          <l n="42">Veut avec le Dieu Mars descendre en ce séjour</l>
+          <l n="43">Je songe à le punir et non à le combattre.</l>
+          <l n="44">Préparez, aiguisez vos ciseaux inhumains.</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="45">Quelles têtes faut-il abattre ?</l>
+          <l n="46">Parle, de tout mortel la vie est dans nos mains.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="47">Il reste encore sur la terre</l>
+          <l n="48">Des Auteurs qu’Apollon et chérit et révère,</l>
+          <l n="49">Abrégez de leurs jours le tissu glorieux,</l>
+          <l n="50">Et qu’ils viennent tous en ces lieux</l>
+          <l n="51">Joindre le célèbre Voltaire.</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="52">Déjà du blond Phébus je savais le dessein,</l>
+          <l n="53">Et pour punir ce téméraire,</l>
+          <l n="54">Je viens de lui ravir son meilleur Médecin.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="55">Qu’avez-vous fait ? Ô Cieux !</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="56">Ce que je devais faire.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="57">Eh quoi donc ! ne savez-vous pas</l>
+          <l n="58">Combien un Médecin là-haut m’est nécessaire ?</l>
+          <l n="59">Qu’il y remplit le ministère</l>
+          <l n="60">Que vous exercez ici-bas ?</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="61">Loin de raffermir ta couronne,</l>
+          <l n="62">Celui-ci pouvait l’ébranler ;</l>
+          <l n="63">L’insolent ne tuait personne.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="64">Ô prodige ! qu’il vienne à l’instant me parler.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IIΙ">
+        <head>Scène IIΙ</head>
+        <sp who="#pluton">
+          <speaker>PLUTON, à l’Ombre.</speaker>
+          <l n="65">Comment te nommes-tu ?</l>
+        </sp>
+        <sp who="#/em&gt;-haller">
+          <speaker>L’Ombre de HALLER vêtue en Médecin, mais simplement et sans aucune espèce de charge.</speaker>
+          <l n="66">Haller.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON, à Minos.</speaker>
+          <l n="67">Minos, interrogez cette Ombre ;</l>
+          <l n="68">Sachez de ses forfaits et l’espèce et le nombre ;</l>
+          <l n="69">Pluton, vous le savez, souscrit à vos Arrêts,</l>
+          <l n="70">Je les attends avec impatience.</l>
+          <stage>&lt;em&gt;À Atropos.&lt;/em&gt;</stage>
+          <l n="71">Vous, à qui j’ai remis mes plus chers intérêts,</l>
+          <l n="72">Allez, continuez de servir ma vengeance.</l>
+          <stage>&lt;em&gt;Atropos sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="73">Qu’as-tu fait sur la terre ?</l>
+        </sp>
+        <sp who="#l’ombre-de-haller">
+          <speaker>HALLER.</speaker>
+          <l n="74">Au sortir du berceau</l>
+          <l n="75">Apollon m’enflamma de l’amour de la gloire</l>
+          <l n="76">Dont j’ai brûlé jusqu’au tombeau.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="77">Quels furent tes travaux ? Raconte m’en l’histoire.</l>
+        </sp>
+        <sp who="#l’ombre-de-haller">
+          <speaker>HALLER.</speaker>
+          <l n="78">J’instruisis tour-à-tour et charmai les humains ;</l>
+          <l n="79">Ami de tous les arts et de la tolérance,</l>
+          <l n="80">Je fus presque chez les Germains</l>
+          <l n="81">Ce que Voltaire fut en France.</l>
+          <l n="82">Clio me plût toujours : cette Divinité</l>
+          <l n="83">Récompensant mes soins, mon assiduité,</l>
+          <l n="84">Ouvrit à mes regards les archives du monde,</l>
+          <l n="85">Et mon œil philosophe y lut la vérité,</l>
+          <l n="86">Que ma plume libre et féconde</l>
+          <l n="87">Transmit à la postérité.</l>
+          <l n="88">Bientôt de Genève et de Rome.</l>
+          <l n="89">J’étudiai les intérêts,</l>
+          <l n="90">Sans prendre aucun parti que celui de la paix ;</l>
+          <l n="91">Bientôt je fus plus sage et j’étudiai l’homme.</l>
+          <l n="92">Dans ce dédale obscur, par un effort nouveau,</l>
+          <l n="93">Appuyé des secours d’une heureuse science,</l>
+          <l n="94">Je portai le double flambeau</l>
+          <l n="95">De la raison et de l’expérience.</l>
+          <l n="96">Sur le Luth de Pindare en vers nobles, heureux,</l>
+          <l n="97">Je chantai des Alpes antiques ;</l>
+          <l n="98">Et ces monts qu’Annibal avait rendus fameux ;</l>
+          <l n="99">Vont l’être plus encor, grâces à mes Cantiques.</l>
+          <l n="100">J’éveillai de ces monts les sensibles échos,</l>
+          <l n="101">Je leur fis répéter ces plaintes admirées</l>
+          <l n="102">Ces vers plus touchants et plus beaux</l>
+          <l n="103">Que j’allais soupirer sur les tristes tombeaux</l>
+          <l n="104">De mes épouses adorées.</l>
+          <l n="105">Le vice dans mes vers fut toujours combattu,</l>
+          <l n="106">D’horreur à son aspect mon âme était saisie,</l>
+          <l n="107">Je revêtis enfin et parai la vertu</l>
+          <l n="108">Des atours de la Poésie.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="109">Arrête ! qu’est-ce que tu dis ?</l>
+          <l n="110">La vertu dès longtemps sur la terre est proscrite.</l>
+        </sp>
+        <sp who="#l’ombre-de-haller">
+          <speaker>HALLER.</speaker>
+          <l n="111">Eh bien ! j’en ai donné malgré ses ennemis,</l>
+          <l n="112">Le précepte dans mes écrits</l>
+          <l n="113">Et l’exemple dans ma conduite.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="114">S’il faut en croire tes discours,</l>
+          <l n="115">L’Hyménée a souvent couronné tes amours.</l>
+          <l n="116">N’as-tu fait nul affront à la foi conjugale ?</l>
+        </sp>
+        <sp who="#l’ombre-de-haller">
+          <speaker>HALLER.</speaker>
+          <l n="117">Non. Dans ma couche nuptiale</l>
+          <l n="118">Je n’ai jamais porté d’adultère désir ;</l>
+          <l n="119">Jamais je n’ai souffert ni donné de scandale.</l>
+          <l n="120">Sans la vertu point de plaisir :</l>
+          <l n="121">Telle fut toujours ma morale.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="122">L’art savant d’Esculape inspire le respect,</l>
+          <l n="123">Quoiqu’à certains Esprits il semble un peu suspect.</l>
+          <l n="124">Tu cultivas cette art utile, mais perfide</l>
+          <l n="125">Dis-moi : n’as-tu jamais fait descendre ici-bas</l>
+          <stage>Quelqu’un &lt;em&gt;incognito&lt;/em&gt; ?</stage>
+        </sp>
+        <sp who="#l’ombre-de-haller">
+          <speaker>HALLER.</speaker>
+          <l n="126">Non ; je ne le crois pas.</l>
+          <l n="127">L’expérience fut mon guide ;</l>
+          <l n="128">En tout temps je suivis ses lois :</l>
+          <l n="129">Elles n’égarent point ; mais l’on peut quelquefois</l>
+          <l n="130">Être innocemment homicide.</l>
+          <l n="131">D’un succès dans cet art on ne peut s’assurer,</l>
+          <l n="132">Et de rien, entre nous, je ne voudrais jurer.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="133">Tes talents, ta franchise et ta vaste science</l>
+          <l n="134">Sont dignes qu’op les récompense :</l>
+          <l n="135">Dans le séjour Élyséen</l>
+          <l n="136">Tu mérites que l’on te place</l>
+          <l n="137">Entre Pindare et Galien ;</l>
+          <l n="138">Tel est mon jugement.</l>
+        </sp>
+        <sp who="#l’ombre-de-haller">
+          <speaker>HALLER.</speaker>
+          <l n="139">J’ose attendre une grâce</l>
+          <l n="140">Qui sera plus chère à mon cœur.</l>
+          <l n="141">Respectable Minos, de cet excès d’honneur</l>
+          <l n="142">Quelques Ombres seraient jalouses :</l>
+          <l n="143">Pour prévenir leur plainte et combler mon bonheur,</l>
+          <l n="144">Placez-moi près de mes épouses.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="145">Ce qu’il demande est juste ; il faut le contenter.</l>
+          <stage>&lt;em&gt;À un de ses Gardes.&lt;/em&gt;</stage>
+          <l n="146">Qu’on les fasse venir !</l>
+          <stage>&lt;em&gt;L’Ombre de Haller va se placer sur l’estrade. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#atropos">
+          <speaker>ATROPOS, à Pluton.</speaker>
+          <l n="147">Puis-je te présenter,</l>
+          <l n="148">Ô Souverain de l’Onde noire !</l>
+          <l n="149">Un mortel adoré des filles de mémoire,</l>
+          <l n="150">Dont je viens à l’instant de trancher le destin ?</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="151">Comment se nomme-t-il ?</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="152">LE KAIN</l>
+          <l n="153">Cet Acteur, d’Apollon faisait chérir la gloire,</l>
+          <l n="154">Et la sienne déjà volait dans l’univers.</l>
+          <l n="155">De ses jours j’ai coupé la trame</l>
+          <l n="156">Au moment que du plus beau drame</l>
+          <l n="157">Sur la scène Française il récitait les vers.</l>
+          <l n="158">Jamais il ne montra plus de talent, plus d’âme ;</l>
+          <l n="159">Il y jouait Vendôme et la mort l’a saisi</l>
+          <stage>Comme il disait ces mots : &lt;em&gt;Es-tu content, Couci ?&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="160">Le Kain ! ah ! ma joie est extrême ;</l>
+          <l n="161">Son nom avait déjà pénétré dans ces lieux :</l>
+          <l n="162">Qu’il vienne, qu’il paroisse au plutôt à mes yeux,</l>
+          <l n="163">Je veux l’interroger moi-même.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="164">Est-il vrai qu’Apollon, par tes talents chéris,</l>
+          <l n="165">À souvent faire verser les plus aimables larmes,</l>
+          <l n="166">Et qu’ils prêtaient de nouveaux charmes</l>
+          <l n="167">Aux talents de ses favoris ?</l>
+        </sp>
+        <sp who="#l’ombre-de-le-kain">
+          <speaker>LE KAIN.</speaker>
+          <l n="168">Oui, Seigneur, de mon art tout un peuple idolâtre,</l>
+          <l n="169">Pour me voir et m’entendre, accourait au Théâtre :</l>
+          <l n="170">Il me comblait souvent d’éloges répétés ;</l>
+          <l n="171">Mais je ne pense pas les avoir mérités.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="172">La modestie ici n’est pas fort nécessaire</l>
+          <l n="173">En parlant à son Juge il faut être sincère,</l>
+          <l n="174">D’ailleurs aux grands talents on permet la fierté,</l>
+          <l n="175">Lorsqu’ils sont descendus dans ces demeures sombres :</l>
+          <l n="176">On y pense tout haut, et le séjour des Ombres</l>
+          <l n="177">Est celui de la vérité.</l>
+        </sp>
+        <sp who="#l’ombre-de-le-kain">
+          <speaker>LE KAIN.</speaker>
+          <l n="178">S’obéis donc, Seigneur. Le grand Baron, du Fresne,</l>
+          <l n="179">Avaient reçu du Ciel, pour régner sur la scène,</l>
+          <l n="180">Les plus rares bienfaits, les plus heureux présents ;</l>
+          <l n="181">Organes enchanteurs, taille, traits imposants,</l>
+          <l n="182">Ils avaient tout ; pour eux s’épuisa la nature ;</l>
+          <l n="183">Fidèles au costume, adroits dans leur parure,</l>
+          <l n="184">Tous deux offraient à l’œil du spectateur surpris,</l>
+          <l n="185">La stature d’Hector, les grâces de Pâris.</l>
+          <l n="186">Moins fortuné, du Ciel je ne reçus qu’une âme ;</l>
+          <l n="187">Ce fut mon seul trésor, mais elle était de flamme :</l>
+          <l n="188">Elle fut mon seul maître et me tint lieu de tout ;</l>
+          <l n="189">Seule elle m’enseigna tous les secrets du goût,</l>
+          <l n="190">Seule elle m’instruisit des finesses d’un rôle,</l>
+          <l n="191">Me fit seule accorder le geste et la parole,</l>
+          <l n="192">À tous mes traits enfin donnant de la grandeur ;</l>
+          <l n="193">Elle seule en beauté transforma ma laideur.</l>
+          <l n="194">Ma voix n’avait d’abord ni grâce, ni souplesse,</l>
+          <l n="195">Seule elle en adoucit l’âpreté, la rudesse :</l>
+          <l n="196">Fallut-il exprimer la clémence, l’amour,</l>
+          <l n="197">Le dépit, la fureur ? Ma voix fut tour-à-tour</l>
+          <l n="198">Tendre, soumise, fière, ironique, terrible ;</l>
+          <l n="199">Elle acquit tous les tons. En ce moment horrible</l>
+          <l n="200">Où cédant aux soupçons qui déchirent son sein,</l>
+          <l n="201">Orosmane poursuit, un poignard à la main,</l>
+          <l n="202">Les jours infortunés d’une femme innocente,</l>
+          <l n="203">Concentrée, étouffée et pourtant menaçante,</l>
+          <l n="204">Elle n’eut plus, glaçant les cœurs et les esprits,</l>
+          <l n="205">Que des rugissements, des sanglots et des cris ;</l>
+          <l n="206">Mais même en déployant toute sa violence,</l>
+          <l n="207">Elle fut moins sublime encor que mon silence.</l>
+          <l n="208">Mon silence effrayait lorsque dans Manlius,</l>
+          <l n="209">Trahi, je me taisais devant Servilius.</l>
+          <stage>&lt;em&gt;Il se tait un instant.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="210">Quand tu représentais ce Conquérant impie,</l>
+          <l n="211">Qui convertit le monde à sa Religion,</l>
+          <l n="212">Tu faisais, m’a-t-on dit, verser, même à l’envie</l>
+          <l n="213">Des larmes d’admiration,</l>
+          <l n="214">Et Mahomet semblait retourner à la vie.</l>
+        </sp>
+        <sp who="#l’ombre-de-le-kain">
+          <speaker>LE KAIN.</speaker>
+          <l n="215">Oui, de cet Imposteur audacieux, cruel,</l>
+          <l n="216">Qui plongea dans le sang et le Trône et l’Autel,</l>
+          <l n="217">Jamais on n’embellit d’un charme plus tragique,</l>
+          <l n="218">Les jalouses amours, la sombre politique.</l>
+          <l n="219">Tous mes concitoyens dans ce Drame enchanteur,</l>
+          <l n="220">Admiraient à la fois le Poète et l’Acteur,</l>
+          <l n="221">Et ce spectacle offrait à leur âme attendrie,</l>
+          <l n="222">Tout ce qu’eut de plus grand notre double génie.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="223">Depuis que je t’ai fait descendre au monument</l>
+          <l n="224">Ils ont pu réparer ta perte,</l>
+          <l n="225">Ils ont laissé la lice ouverte</l>
+          <l n="226">Et tu renais pour eux peut-être en ce moment.</l>
+        </sp>
+        <sp who="#l’ombre-de-le-kain">
+          <speaker>LE KAIN.</speaker>
+          <l n="227">Qui leur rendra Néron ? De ce tyran atroce</l>
+          <l n="228">Qui leur rendra jamais le sourire féroce ?</l>
+          <l n="229">L’hypocrite bonté de ce Tigre adouci,</l>
+          <l n="230">Qui de meurtres, de rapts, d’adultères noirci,</l>
+          <l n="231">Feint de laisser fléchir sa colère farouche,</l>
+          <l n="232">Et dont l’âme semblait s’exhaler par ma bouche ?</l>
+          <l n="233">Qui leur rendra Tancrède en ce double moment</l>
+          <l n="234">Où le Guerrier triomphe, où succombe l’Amant ?</l>
+          <l n="235">Le vengeur de Ninus sortant du mausolée</l>
+          <l n="236">Où de sa propre main sa Mère est immolée ?</l>
+          <l n="237">Qui leur rendra surtout l’élève d’Annibal,</l>
+          <l n="238">Ce Nicomède altier si craint de son Rival,</l>
+          <l n="239">Et qui si finement à l’Envoyé de Rome</l>
+          <l n="240">Rappelle les leçons qu’il reçut d’un grand homme ?</l>
+          <l n="241">Qui leur rendra Warwick ? Sévère ? Gengis kan ?</l>
+          <l n="242">L’impétueux Zamore aux genoux de Guzman ?</l>
+          <l n="243">Et tant d’autres encor qu’adore Melpomène ?</l>
+          <l n="244">Français, avec ivresse ils voyaient sur la scène</l>
+          <l n="245">Ressusciter leurs Rois ainsi que leurs Héros,</l>
+          <l n="246">Qui leur rendra Bayard sur son lit de repos ?</l>
+          <l n="247">Qui leur rendra Vendôme ?</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="248">Arrête,</l>
+          <l n="249">Vendôme par ta voix, exprimait son remord,</l>
+          <l n="250">Lorsqu’Atropos, sœur de la mort,</l>
+          <l n="251">Sous le ciseau fatal a fait tomber ta tête,</l>
+          <l n="252">Redis-nous d’un Héros le repentir touchant ;</l>
+          <l n="253">Que les tristes échos du ténébreux empire</l>
+          <l n="254">Du Cygne au moment qu’il expire</l>
+          <l n="255">Répètent le sublime chant.</l>
+        </sp>
+        <sp who="#l’ombre-de-le-kain">
+          <speaker>LE KAIN déclame les vers suivants d’Adélaïde du Guesclin.</speaker>
+          <l n="256">« Trop fortunés époux, oui, mon âme attendrie</l>
+          <l n="257">« Imite votre exemple et chérit la patrie.</l>
+          <l n="258">« Allez apprendre au Roi, pour qui vous combattez,</l>
+          <l n="259">« Mon crime, mes remords et vos félicités :</l>
+          <l n="260">« Allez, ainsi que vous je vais le reconnaître,</l>
+          <l n="261">« Sur nos remparts soumis amenez votre Maître,</l>
+          <l n="262">« Il est déjà le mien, nous allons à ses pieds.</l>
+          <l n="263">« Abaisser sans regret nos fronts humiliés,</l>
+          <l n="264">« J’égalerai pour lui votre intrépide zèle.</l>
+          <l n="265">« Bon Français, meilleur frère, ami, sujet fidele,</l>
+          <l n="266">« Es-tu content, Couci ? »</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="267">Je le suis, et Minos</l>
+          <l n="268">Sans t’admirer n’a pu t’entendre,</l>
+          <l n="269">Il va te juger et m’apprendre</l>
+          <l n="270">Quel prix je dois à tes travaux,</l>
+          <l n="271">Parlez, Minos.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="272">Cette Ombre est digne</l>
+          <l n="273">D’entrer dans l’Élysée, et son talent insigne</l>
+          <l n="274">Doit l’y faire placer à côté de Baron.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="275">Souscris à cet Arrêt qu’à dicté la raison.</l>
+        </sp>
+        <sp who="#l’ombre-de-le-kain">
+          <speaker>LE KAIN.</speaker>
+          <l n="276">On pourrait m’accorder une faveur plus chère ;</l>
+          <l n="277">Puis-je la demander ?</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="278">Parle.</l>
+        </sp>
+        <sp who="#l’ombre-de-le-kain">
+          <speaker>LE KAIN.</speaker>
+          <l n="279">Près de Voltaire</l>
+          <l n="280">Ne pourrais-je être assis ? Je dois à ses talents</l>
+          <l n="281">Mes succès les plus chers, même les plus brillants,</l>
+          <l n="282">Et je voudrais du moins dans l’heureuse retraite...</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="283">J’approuve le vœu de ton cœur ;</l>
+          <l n="284">À côté du plus grand Poète</l>
+          <l n="285">On verra le plus grand Acteur.</l>
+          <stage>&lt;em&gt;Il est conduit sur l’Estrade.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="286">Des Auteurs qui charmaient la terre</l>
+          <l n="287">Le plus fameux après Voltaire</l>
+          <l n="288">Vient de tomber fous mon ciseau ;</l>
+          <l n="289">J’ai tranché le destin de J. JACQUES ROUSSEAU,</l>
+          <l n="290">Et mis par ce seul coup le comble à ta vengeance.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="291">Jean-Jacques ! ô bonheur ! qu’il vienne en ma présence !</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="292">Un obstacle l’arrête et ne lui permet pas</l>
+          <l n="293">De pénétrer sitôt au séjour du trépas,</l>
+          <l n="294">Il est encor sur le rivage</l>
+          <l n="295">Du fleuve redouté.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="296">Qui donc retient ses pas ?</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="297">Il n’a pu payer son passage.</l>
+          <l n="298">Je t’amène Caron, fléchis sa dureté.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON, à Caron.</speaker>
+          <l n="299">J’apprends que de Rousseau la carrière est finie,</l>
+          <l n="300">N’exige rien de lui, qu’il passe, et du génie</l>
+          <l n="301">Qu’on respecte la pauvreté.</l>
+        </sp>
+        <sp who="#caron">
+          <speaker>CARON.</speaker>
+          <l n="302">Tu seras satisfait.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="303">Une Ombre allez folâtre</l>
+          <l n="304">Vient de nous arriver, Garrick était son nom :</l>
+          <l n="305">Londres, à ce qu’on m’a dit, en était idolâtre.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="306">On connait en ces lieux sa réputation :</l>
+          <l n="307">Qu’elle vienne.</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="308">Il n’est pas facile</l>
+          <l n="309">De la conduire à tes genoux,</l>
+          <l n="310">À tes ordres sacrés plaisamment indocile,</l>
+          <l n="311">Sans cesse elle les brave et se moque de nous.</l>
+          <l n="312">Sur nos fronts de sinistre, augure</l>
+          <l n="313">La gaité n’eut jamais des droits</l>
+          <l n="314">Pardonne, en voyant la figure,</l>
+          <l n="315">Les trois parques ont ri pour la première fois.</l>
+          <l n="316">Au lieu d’aboyer à la vue,</l>
+          <l n="317">Cerbère a laissé dans les airs</l>
+          <l n="318">Sa triple gueule suspendue</l>
+          <l n="319">Et n’a plus défendu la porte des Enfers.</l>
+          <l n="320">La voici, mes saurs la conduisent,</l>
+          <l n="321">De ses devoirs en vain sans doute elles l’instruisent.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="322">Est-ce là le Seigneur Pluton ?</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS</speaker>
+          <l n="323">C’est lui-même.</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="324">J’ai vu son portrait dans Milton ;</l>
+          <l n="325">Il est ressemblant.</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="326">Téméraire !</l>
+          <l n="327">Quand tu devrais frémir !...</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="328">Et cette Ombre sévère</l>
+          <l n="329">Assise à son côté ?</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="330">C’est ton Juge, Minos.</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="331">Ah ! ah ! des Harangueurs voilà donc les Tribunes ?</l>
+          <l n="332">Fort bien ! les Esprits infernaux</l>
+          <l n="333">Ont une Chambre des Communes ?</l>
+          <l n="334">S’y chamaille-t-on bien ?</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS, à Pluton.</speaker>
+          <l n="335">Ces insolents propos</l>
+          <l n="336">Te doivent offenser ? Pour prix de ses bons mots,</l>
+          <l n="337">Ordonne qu’à l’instant on le livre aux Furies,</l>
+          <l n="338">Et qu’à coups de serpents...</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="339">Non, ses plaisanteries</l>
+          <l n="340">N’ont rien qui me puisse outrager ;</l>
+          <l n="341">Non, Minos va l’interroger,</l>
+          <l n="342">Et s’il est en effet coupable,</l>
+          <l n="343">Il faudra le punir et non pas me venger.</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="344">Il raisonne bien pour un Diable.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="345">Quels travaux de ta vie ont occupé le cours ?</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="346">J’ai fait rire et pleurer.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="347">As-tu de ce discours</l>
+          <l n="348">Quelque garant certain ?</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="349">Oui, toute l’Angleterre.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="350">Un mensonge en ces lieux a coûté cher souvent :</l>
+          <l n="351">Prends-y garde, on a vu peu d’hommes sur la terre</l>
+          <l n="352">Réunir ce double talent.</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="353">Je les ai réunis et vous pouvez m’en croire,</l>
+          <l n="354">Émule de Préville et rival de le Kain,</l>
+          <l n="355">J’ai chaussé tour à tour, et toujours avec gloire</l>
+          <l n="356">Le Cothurne et le Brodequin.</l>
+          <l n="357">Acteur sur l’une et l’autre scène,</l>
+          <l n="358">Je représentais à mon choix,</l>
+          <l n="359">Un Citoyen de Sparte, un Archonte d’Athènes ;</l>
+          <l n="360">On me voyait un jour sous la pourpre romaine,</l>
+          <l n="361">Je paraissais une autrefois</l>
+          <l n="362">Sous le chapeau d’un Quaker ou le bandeau des Rois ;</l>
+          <l n="363">Favori de Thalie, ami de Melpomène,</l>
+          <l n="364">Tantôt j’étais Sofie et tantôt Richard trois ;</l>
+          <l n="365">Mais couvert d’un chapeau, d’un turban ou d’un casque,</l>
+          <l n="366">De chaque passion j’offrais toujours le masque.</l>
+          <l n="367">Lorsque par Iago[2] trompé,</l>
+          <l n="368">En proie à mon humeur jalouse,</l>
+          <l n="369">Sur son lit nuptial de ses larmes trempé</l>
+          <l n="370">J’étouffais de mes mains mon innocente épouse,</l>
+          <l n="371">On voyait tour à tour se peindre sur mon front,</l>
+          <l n="372">Mille caractères terribles ;</l>
+          <l n="373">De la fureur surtout les symptômes horribles</l>
+          <l n="374">Y paraissaient gravés ainsi que mon affront ;</l>
+          <l n="375">Mais lorsqu’éclairé sur mon crime,</l>
+          <l n="376">Je baignais, j’arrosais des pleurs du repentir</l>
+          <l n="377">Le corps inanimé de ma chaste victime,</l>
+          <l n="378">À tous les cours remplis d’un effroi légitime,</l>
+          <l n="379">Ma douleur se faisait sentir,</l>
+          <l n="380">Et mon remord plus qu’elle encore était sublime.</l>
+          <l n="381">Tous les rares talents que le Ciel me donna</l>
+          <l n="382">Éclataient alors sans se nuire,</l>
+          <l n="383">Et l’on pleurait Desdemona</l>
+          <l n="384">Autant que l’on pleure Zaïre.</l>
+          <l n="385">Dans les Commères de Windsor</l>
+          <l n="386">Un autre jour me voyait-on paraître ?</l>
+          <l n="387">Je prenais un nouvel essor</l>
+          <l n="388">Et le héros devenait petit-maître.</l>
+          <l n="389">De l’art, dans ce passage incroyable et soudain,</l>
+          <l n="390">J’offrais la diverse merveille ;</l>
+          <l n="391">Car le Falstaff[3] du lendemain</l>
+          <l n="392">Était l’Othello de la veille.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="393">S’il est ainsi, jamais personne autant que toi</l>
+          <l n="394">N’eut le don de charmer et la cour et la ville.</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="395">Oui, si je n’avais point là-haut laissé Préville</l>
+          <l n="396">Qui, moins universel, est plus parfait que moi.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="397">Cette noble candeur, digne d’être prisée,</l>
+          <l n="398">Ajoute un nouveau lustre à tes talents heureux,</l>
+          <l n="399">Et je pense qu’on doit leur ouvrir l’Élysée,</l>
+          <l n="400">Quelle est dans ce séjour la place que tu veux ?</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>GARRICK.</speaker>
+          <l n="401">De Caron j’ai passé la barque</l>
+          <l n="402">Avec quelques Anglais que Messieurs de Boston</l>
+          <l n="403">Venaient de dépêcher au ténébreux Monarque</l>
+          <l n="404">Par les ordres de Wasington,</l>
+          <l n="405">S’il n’est dans leurs récits ni mensonge, ni feinte,</l>
+          <l n="406">Des Lords furent présents à mon dernier soupir,</l>
+          <l n="407">Et je fus inhumé dans cette noble enceinte</l>
+          <l n="408">Où reposent les Rois, près du grand Shakespeare.</l>
+          <l n="409">Garrick, après sa mort, est l’égal d’Alexandre.</l>
+          <l n="410">Je crois donc ici-bas avoir droit à l’honneur</l>
+          <l n="411">Qu’on rendit là-haut à ma cendre.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="412">Je t’en réserve un plus flatteur,</l>
+          <l n="413">Quoique maître d’un grand Empire,</l>
+          <l n="414">Quelquefois je m’ennuie, et je sens que le rire</l>
+          <l n="415">Est bon à la santé ; pour chasser ma langueur,</l>
+          <l n="416">Dans l’un des souterrains de ce séjour noirâtre</l>
+          <l n="417">Je veux que l’on dresse un Théâtre,</l>
+          <l n="418">Je t’en fais le premier Acteur,</l>
+          <l n="419">Et qui plus est le Directeur,</l>
+          <l n="420">Minos у consent ?</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="421">Oui, Seigneur.</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="422">Voici Jean-Jacques enfin que Caron vous amène.</l>
+          <stage>&lt;em&gt;L’Ombre de Garrick va se placer sur l’Estrade.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="423">Mais est-ce bien lui que je vois ?</l>
+          <l n="424">Un habit à l’Arménienne !...</l>
+          <l n="425">On m’a dit qu’il vivait aux rives de la Seine,</l>
+          <l n="426">Que même il était Genevois.</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="427">Oui ; mais ennemi de la mode,</l>
+          <l n="428">Par singularité, je crois,</l>
+          <l n="429">Il changeait d’habit quelquefois</l>
+          <l n="430">Et prenait celui-là, d’ailleurs assez commode ;</l>
+          <l n="431">C’est celui qu’il portait alors que j’ai coupé</l>
+          <l n="432">La trame de ses jours.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="433">Il paraît occupé</l>
+          <l n="434">De méditations sublimes,</l>
+          <stage>&lt;em&gt;À Minos. &lt;/em&gt;</stage>
+          <l n="435">Que par vous à l’instant son Arrêt soit rendu !</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS, à J. J. Rousseau.</speaker>
+          <l n="436">Homme, te voilà descendu</l>
+          <l n="437">Dans les redoutables abymes,</l>
+          <l n="438">Où tu vas recevoir le loyer qui t’est dû.</l>
+          <l n="439">Dis-nous tes vertus et tes crimes.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="440">Pourquoi m’interroger en vers ? Tu veux savoir la vérité, laisse-là le langage du mensonge.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="441">D’où te vient cette frénésie ?</l>
+          <l n="442">Tu m’étonnes vraiment ! hais-tu la Poésie ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="443">Oui, les vers sont funestes à la société, je l’ai prouvé, et pour ne point lui nuire, j’ai eu grand soin de n’en faire que fort peu de bons. Laisse-là ce jargon puérile, sans quoi notre Dialogue ne sera qu’une suite de dissonances, tu m’entendras peut-être, mais je ne t’entendrai point.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="444">Quoique l’art des vers ne soit pas aussi dangereux que tu l’as prétendu, dans ce moment néanmoins tu as une sorte de raison, et je veux bien descendre à ton niveau. Je vais t’interroger sur ta vie et sur tes Ouvrages. Songe que tu répondras à ton Juge, et que d’après tes réponses tu seras plongé dans le Tartare, ou admis dans l’Élysée. Qu’as-tu fait sur la terre ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="445">Tout le bien que j’ai pu.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="446">C’est-à-dire, fort peu : car pour en faire beaucoup, il faut être armé du pouvoir, il faut régner par les Lois ou par les armes ; il faut tenir la balance de Thémis ou le sceptre des Rois, et tu n’as été qu’un simple Citoyen.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="447">Crois-tu donc que le Philosophe n’ait autant de pouvoir sur les hommes que le Monarque ? L’Empire le plus étendu est celui du génie. Les Rois ne font pas toujours tout le bien qu’ils veulent. Ils trouvent des obstacles insurmontables, le génie les franchit, les moindres désirs deviennent des lois. Auguste, du haut de son Trône, à moins influé sur le bonheur des hommes que Socrate du fond de son École. Les bienfaits du premier surent passagers, ceux de l’autre seront éternels.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="448">Mais quels moyens as-tu pris pour faire le bien ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="449">J’ai dit la vérité.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="450">C’est bien quelque chose, mais ce n’est pas tout : as-tu joint l’exemple au précepte ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="451">Pas toujours, je l’avoue : au contraire, ma vie a été une antithèse continuelle, et mes actions ont presque toujours réfuté mes écrits. J’ai dit que les Sciences et les Arts avaient corrompu les mœurs, et je les ai cultivés toute ma vie. J’ai dit aux hommes : Voulez-vous être heureux ? Allez dans les forêts, vivez avec les bêtes sauvages, et j’ai vécu dans les Villes avec des hommes civilisés. J’ai dit aux Français qu’ils n’avaient que de la détestable Musique, et j’ai fait de la Musique française excellente. J’ai écrit contre les Pièces de Théâtre et les Romans, et j’ai fait des Romans et des Pièces de Théâtre. J’ai très mal parlé des femmes, et je les idolâtrais, enfin mon désir le plus vif était de voir les hommes heureux, et je haïssais les hommes.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="452">Je ne vois pas dans tout cela le bien que tu as pu faire.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="453">Tu ne le vois pas ?</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="454">Non, en vérité.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="455">Tant pis pour toi.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="456">Ce ton sec et tranchant était bon quand tu vivais parmi les hommes ; mais songe encore une fois que tu parles à ton Juge, et si tu crains qu’il ne te condamne, ne dédaigne pas de le corrompre, tu dois aimer à bien parler de toi, car tu n’as pas manqué d’orgueil, tu as dit quelque part que dans un Gouvernement éclairé on t’aurait élevé des statues.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="457">Qui, je l’ai dit, et quel autre eut plus que moi le droit de le dire ? Quel autre par ses Écrits, a rendu plus de services à l’humanité ? J’ai prouvé aux Français, il est vrai, que leur Musique était détestable, ou plutôt qu’ils n’en avaient point ; ma Lettre célèbre n’a fait mal à personne et vois le bien qui en a résulté. Le Français indocile à la voix du goût et de la raison, admirait la psalmodie ennuyeuse d’un chant traînant, monotone et soporifique, et ma Lettre a donné lieu à l’heureuse révolution qui vient de transporter sur ses Théâtres la Musique d’Italie. Le Français a un plaisir de plus, et son Opéra un vice de moins.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="458">Je ne vois pas quel bien peuvent faire à l’humanité des notes de Musique combinées d’une certaine manière plutôt que d’une autre, et je crois qu’on  peut être heureux sans connaître la vertu des doubles et des triples croches.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="459">À la bonne heure. Passons à des objets plus essentiels. La liberté de l’homme a-t-elle jamais eu un défenseur plus ardent que moi ? L’homme était esclave au berceau, des liens funestes tenaient prisonniers ses membres délicats ; dans un âge plus avancé, des chaînes odieuses chargeaient et chargent même encore les mains robustes, n’est ce pas moi qui l’ai presque affranchi de la double servitude des nourrices et des tyrans ? Est-il un seul homme élevé selon mes principes, qui ne me dut ses vertus et son bonheur ? Quel père n’aurait point voulu m’avoir pour le Gouverneur de son fils ? Quelle mère n’aurait point voulu que son fils ressemblât à Émile ? Les combats généraux et particuliers font descendre ici-bas le tiers des hommes, n’ai-je pas fait tous mes efforts pour abolir ces usages dont rien n’égale la barbarie, si ce n’est le ridicule ? N’est-ce pas moi qui ai tonné dans l’âme de l’adultère ? N’est-ce pas moi qui ai fait rougir pour la première fois peut-être ce contempteur des propriétés les plus sacrées ? Quelle couche nuptiale ne serait point sous les ailes des Anges si ceux qui y reposent suivaient mes préceptes ? Quelle mère de famille ne serait point sur la terre l’image de la Divinité, si elle ressemblait en tout à Julie ? Quelle cabane enfin habitée par des époux chastes et fidèles, ne serait point le sanctuaire de la vertu. Enfin quoique les hommes m’aient toujours persécuté, ai-je tracé une seule ligne qui ne m’ait pas été inspirée par le désir de les voir heureux ? S’il en est une seule, qu’on me la montre ; je consens, pour l’expier, à retourner dans l’Île des Peupliers, à y reprendre ma dépouille charnelle et à redescendre vivant dans le Tartare.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="460">Vouloir le bien est beaucoup ; mais il faut encore savoir supporter le mal. On ta persécuté, dis-tu, qu’as-tu opposé à tes ennemis ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="461">Ma vertu.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="462">Mais ta vertu a été calomniée ; qui a été son vengeur ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <stage>Le temps. Quand je donnai ma Lettre sur la Musique, cette brochure souleva contre moi la moitié de la Nation chez laquelle je l’écrivis. Toute la populace musicale se mit sous les armes, on me chassa du Temple de l’harmonie ; ne sachant où trouver ma personne, que j’avais mise à couvert de tant de fureur on y brûla mon Image, on en fit un sacrifice au Dieu de la Musique. Je laissai passer l’orage ; je revins quand il fut calmé, et les auteurs de mon supplice furent les admirateurs de mon talent. Ma patrie que j’avais honorée, crut me déshonorer en condamnant &lt;em&gt;Émile&lt;/em&gt; le meilleur de mes Ouvrages et le plus beau peut-être de tous les livres. J’aurais pu dénoncer ma patrie au reste de l’univers et terrasser mes Concitoyens avec l’arme de l’Éloquence, arme terrible et redoutable que je ne maniai jamais&lt;a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4"&gt;[4]&lt;/a&gt; inglorieusement : je me vengeai d’une manière plus noble pour moi et moins dangereuse pour eux. Je renonçai à ma patrie, j’ôtai à cette mère injuste le droit de m’appeler son fils, et je me tus.</stage>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="463">Mais si j’en crois des bruits parvenus jusques dans ce séjour, les Tribunaux te dénoncèrent ; qu’opposas-tu à leurs anathèmes ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="464">Le silence.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="465">L’envie te calomnia ; qu’opposas-tu à ses manèges ?</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="466">Le silence.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="467">Le silence est bon ; mais il est dangereux de se taire quand on est innocent : on est cru coupable, et l’on meurt pauvre et persécuté. Tel fut ton fort.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="468">Je serais bien fâché d’être mort autrement. La postérité dira : le Philosophe le plus éloquent et le plus sensible est mort pauvre dans le sein de la Nation la plus éclairé. À peine, au moment d’expirer, a-t-il pu trouver une place pour reposer sa tête. Si j’étais mort comme un financier, elle ne dirait rien.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="469">Je serai plus juste que tes contemporains, j’admire tes talents et tes vertus, et je décide que l’on te place dans l’Élysée entre Socrate et Diogène.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="470">Soit. J’ai imité l’un dans ma conduite et l’autre dans mes Écrits : je serai là avec mes Pairs. De temps en temps je prierai Diogène de me prêter son tonneau ; j’y ferai entrer Socrate, et tout en prenant de la ciguë, s’il lui en reste encore, nous jaserons de l’immortalité de l’âme.</l>
+        </sp>
+        <sp who="#minos">
+          <speaker>MINOS.</speaker>
+          <l n="471">Ce projet est sage, je n’y trouve que la ciguë d’inutile ; quand on est mort, on n’en a plus besoin.</l>
+        </sp>
+        <sp who="#j.-j.-rousseau">
+          <speaker>J. J. ROUSSEAU.</speaker>
+          <l n="472">Il en faut toujours un peu ; c’est le thé des Philosophes.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="473">Dieu puissant des Enfers, je t’annonce Apollon.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON, descendant de son Trône ainsi que Minos.</speaker>
+          <l n="474">Apollon ! le Dieu Mars l’accompagne-t-il ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="475">Non.</l>
+          <l n="476">Il voit les Dieux de son Parnasse</l>
+          <l n="477">L’un sur l’autre tomber sous les fatals ciseaux,</l>
+          <l n="478">Forcé de dépouiller son inutile audace</l>
+          <l n="479">Il vient pour te demander grâce,</l>
+          <l n="480">Et pour fléchir enfin le courroux d’Atropos ;</l>
+          <l n="481">Il est sous ces parvis funèbres,</l>
+          <l n="482">Peut-on l’introduire à son tour ?</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="483">Oui.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="ΧII">
+        <head>Scène ΧII</head>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="484">Dans l’empire des ténèbres,</l>
+          <l n="485">Que vient faire le Dieu du jour ?</l>
+        </sp>
+        <sp who="#apollon">
+          <speaker>APOLLON.</speaker>
+          <l n="486">Implorer ta clémence.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="487">Il te sied bien, perfide,</l>
+          <l n="488">D’abaisser à mes pieds un front obéissant,</l>
+          <l n="489">Quand je fais le sujet qui dans ces lieux te guide !</l>
+          <l n="490">Quand tu veux m’enlever !...</l>
+        </sp>
+        <sp who="#apollon">
+          <speaker>APOLLON.</speaker>
+          <l n="491">Pardonne, Dieu puissant,</l>
+          <l n="492">Il est vrai qu’un instant de t’enlever Voltaire</l>
+          <l n="493">J’ai formé le projet insensé, téméraire,</l>
+          <l n="494">Pardonne ; ce mortel me fut toujours si cher,</l>
+          <l n="495">Que frappé plus que lui du coup qui nous sépare,</l>
+          <l n="496">J’ai cru qu’aux antres du Ténare</l>
+          <l n="497">Il me serait permis de venir l’arracher.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="498">Quoi ! ne savais-tu pas ?...</l>
+        </sp>
+        <sp who="#apollon">
+          <speaker>APOLLON.</speaker>
+          <l n="499">Je savais tout, pardonne,</l>
+          <l n="500">Qu’à ton juste courroux succède la pitié,</l>
+          <l n="501">Je devins criminel par excès d’amitié ;</l>
+          <l n="502">Un Dieu même ose tout quand l’amitié l’ordonne,</l>
+          <l n="503">Si mes pleurs qui baignent ta main</l>
+          <l n="504">Si de mon repentir ces touchants interprètes</l>
+          <l n="505">Te peuvent émouvoir, de ces sombres retraites</l>
+          <l n="506">Laisse du moins sortir et Garrick et le Kain.</l>
+          <l n="507">Du séjour où leurs noms de bouche en bouche volent</l>
+          <l n="508">Que ton ordre leur ouvre une fois les sentiers.</l>
+          <l n="509">Jamais les grands Auteurs n’expirent tout entiers,</l>
+          <l n="510">Leurs Écrits immortels de leur mort nous consolent.</l>
+          <l n="511">Homère est-il mort ? Non. Son poème savant</l>
+          <l n="512">À la postérité la transmis tout vivant.</l>
+          <l n="513">Sous la faux du trépas lorsqu’un Acteur succombe,</l>
+          <l n="514">Son talent avec lui disparaît sous la tombe,</l>
+          <l n="515">Rien ne lui survit que son nom.</l>
+          <l n="516">On lit, on lit encor les Écrits de Baron,</l>
+          <l n="517">Mais de son jeu noble et sublime</l>
+          <l n="518">Que nous reste-t-il ? Rien. À mes cris, à mes pleurs</l>
+          <l n="519">Rends donc ces célèbres Acteurs</l>
+          <l n="520">Et fois une fois magnanime.</l>
+        </sp>
+        <sp who="#/em&gt;-le-kain">
+          <speaker>L’Ombre de LE KAIN à Apollon.</speaker>
+          <l n="521">« On ne voit point deux fois le rivage des morts[5] :</l>
+          <l n="522">« Quand nous avons tous deux passé les sombres bords,</l>
+          <l n="523">« En vain vous espérez que Pluton nous renvoie,</l>
+          <l n="524">« Et l’avare Achéron ne lâche point sa proie. »</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="525">Il te répond pour moi : ne crois pas cependant</l>
+          <l n="526">Qu’aux pleurs du repentir mon cœur soit insensible,</l>
+          <l n="527">De l’amour autrefois il subit l’ascendant ;</l>
+          <l n="528">Je suis juste, sévère et non pas inflexible.</l>
+        </sp>
+        <sp who="#apollon">
+          <speaker>APOLLON.</speaker>
+          <l n="529">Voici donc, c’en est fait, l’éternelle prison</l>
+          <l n="530">De mes sujets les plus célèbres !</l>
+          <l n="531">À peine avais-je atteint ma neuvième[6] maison,</l>
+          <l n="532">Ils étaient descendus dans ces palais funèbres,</l>
+          <l n="533">Ô disgrâce, qui me confond !</l>
+          <stage>&lt;em&gt;À Pluton.&lt;/em&gt;</stage>
+          <l n="534">Puisqu’enfin tes fureurs expirent,</l>
+          <l n="535">Épargne au moins ceux qui respirent</l>
+          <l n="536">Laisse vivre surtout d’Alembert et Buffon.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="537">Déjà je te l’ai dit, ton repentir me touche,</l>
+          <l n="538">Ils vivront. Le ciseau de la parque farouche</l>
+          <l n="539">Respectera longtemps la trame de leurs jours.</l>
+        </sp>
+        <sp who="#apollon">
+          <speaker>APOLLON.</speaker>
+          <l n="540">Ta bonté m’enhardit ô généreux Monarque !</l>
+          <l n="541">Mon cœur s’en souviendra toujours,</l>
+          <l n="542">Mais j’ose en espérer une plus chère marque.</l>
+          <l n="543">ANTOINETTE et LOUIS, imitant les Césars,</l>
+          <l n="544">M’ont souri du haut de leur Trône ;</l>
+          <l n="545">On voit fleurir autour de leur double Couronne,</l>
+          <l n="546">L’Olive de Minerve et la palme des Arts.</l>
+          <l n="547">Prolonge, tu le peux, leurs belles destinées</l>
+          <l n="548">J’implore cette grâce encor.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="549">Je ferai durer leurs années</l>
+          <l n="550">Autant que celles de Nestor</l>
+          <l n="551">J’en jure par le stix ; tout le peuple de France</l>
+          <l n="552">Depuis assez longtemps m’intercède pour eux,</l>
+          <l n="553">Que de ce peuple aimable ils comblent l’espérance,</l>
+          <l n="554">Qu’ils vivent pour le rendre heureux.</l>
+        </sp>
+        <sp who="#l’ombre-de-garrick">
+          <speaker>L’Ombre de GARRICK.</speaker>
+          <l n="555">Respectable Pluton, quand j’étais sur la terre,</l>
+          <l n="556">On m’a souvent parlé de ce charmant parterre</l>
+          <l n="557">Où Votre Majesté prend quelquefois le frais,</l>
+          <l n="558">Du désir de le voir mon âme est embrasée,</l>
+          <l n="559">Et je voudrais savoir enfin si l’Élysée</l>
+          <l n="560">Vaut mieux que nos Jardins Anglais.</l>
+        </sp>
+        <sp who="#pluton">
+          <speaker>PLUTON.</speaker>
+          <l n="561">N’en doute point : il a tout ce qui peut séduire,</l>
+          <l n="562">Et moi-même bientôt je prétends t’y conduire</l>
+          <l n="563">Avec les Ombres que voilà.</l>
+        </sp>
+        <sp who="#atropos">
+          <speaker>ATROPOS.</speaker>
+          <l n="564">Trois Ombres encore sont-là</l>
+          <l n="565">Qui demandent Haller.</l>
+        </sp>
+        <sp who="#l’ombre-de-haller">
+          <speaker>HALLER, les apercevant dans la Coulisse et s’élançant dans leurs bras.</speaker>
+          <l n="566">Ah ! ce sont mes Épouses.</l>
+          <stage>&lt;em&gt;Ces trois Ombres vêtues de blanc, commencent une danse agréable autour de Haller, et lui mettent chacune sur la tête une Couronne de Myrte entremêlée de Laurier. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#apollon">
+          <speaker>APOLLON.</speaker>
+          <l n="567">Les Arts m’ont suivi dans ces lieux</l>
+          <l n="568">Avant que de fouler les riantes pelouses</l>
+          <l n="569">De l’asile des bienheureux.</l>
+          <stage>&lt;em&gt;À Pluton.&lt;/em&gt;</stage>
+          <l n="570">Permets qu’ils te rendent hommage,</l>
+          <l n="571">Et qu’au moins dans leurs nobles jeux,</l>
+          <l n="572">De ma reconnaissance ils te tracent l’image.</l>
+          <stage>&lt;em&gt;Les Arts se mêlent aux trois Ombres heureuses ; et continuent le Ballet qui termine la Pièce.&lt;/em&gt;</stage>
+          <stage>&lt;a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"&gt;[1]&lt;/a&gt; Allusion aux &lt;em&gt;Muses Rivales&lt;/em&gt;, Jolie pièce de M. de la Harpe.</stage>
+          <l n="573">[2] Personnage de la Tragédie d’Othello, le plus odieux peut-être qu’on ait jamais mis sur la scène.</l>
+          <l n="574">[3] Personnage très ridicule des Commères de Windsor, Comédie de Shakespeare.</l>
+          <stage>&lt;a href="#_ftnref4" name="_ftn4" title="" id="_ftn4"&gt;[4]&lt;/a&gt; Comme Jean-Jacques Rousseau a inventé plusieurs mots, on a cru pouvoir mettre celui-ci dans sa bouche, il n’est pas plus extraordinaire que &lt;em&gt;Déflechir, Mensuétude&lt;/em&gt;, courbe philosophesque, etc...</stage>
+          <l n="575">[5] Vers de Racine.</l>
+          <l n="576">[6] Voltaire, Rousseau, Haller, Garrick, le Kain et plusieurs autres hommes célèbres sont morts presque dans l’espace de neuf mois. Il a fallu supposer, pour faire cette Pièce, que les quatre derniers étaient morts le même jour. On fait que ces rapprochements sont permis au Théâtre.</l>
+          <l n="577" />
+        </sp>
       </div>
     </body>
   </text>

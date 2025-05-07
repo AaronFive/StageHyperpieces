@@ -1,1604 +1,1580 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Petit Voyage</title>
-        <author key="Eugène LABICHE | (naissance-mort)">Eugène LABICHE |</author>
+        <title type="main" />
+        <title type="sub">Vaudeville</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/1008</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène LABICHE |</author>. <title>Le Petit Voyage</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/1008</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1868-12-01">Représentée pour la première fois, à Paris, sur le Théâtre du Vaudeville, le 1er décembre 1868.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="ernest-de-maxenville" sex="SEX">
+            <persName>ERNEST DE MAXENVILLE</persName>
+          </person>
+          <person xml:id="godais" sex="SEX">
+            <persName>GODAIS</persName>
+          </person>
+          <person xml:id="auguste" sex="SEX">
+            <persName>AUGUSTE</persName>
+          </person>
+          <person xml:id="marie" sex="SEX">
+            <persName>MARIE</persName>
+          </person>
+          <person xml:id="un-garçon-d’hôtel" sex="SEX">
+            <persName>UN GARÇON D’HÔTEL</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Vaudeville</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q186286</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1868-12-01" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre du Vaudeville, le 1er décembre 1868.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le Petit Voyage</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Pochade en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre du Vaudeville, le 1<sup>er</sup> décembre 1868.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="ernest-de-maxenville">ERNEST DE MAXENVILLE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="godais">GODAIS</role>
-              <roleDesc>, <em>maître d’hôtel</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="auguste">AUGUSTE</role>
-              <roleDesc>, <em>garçon d’hôtel</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="marie">MARIE</role>
-              <roleDesc>, <em>femme d’Ernest</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-garçon-d’hôtel">UN GARÇON D’HÔTEL</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>            La scène se passe dans un hôtel de Fontainebleau.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Le théâtre représente une chambre d’hôtel. Porte au fond. À droite, deuxième plan, une fenêtre avec rideaux. À gauche, au deuxième plan, une porte avec le n° 7 au-dessus. À gauche, premier plan, une cheminée avec garniture, pendule et candélabres sans bougies. Sur la cheminée, un flambeau avec une bougie allumée. Porte-allumettes ; un soufflet au pied de la cheminée ; un guéridon couvert d’un tapis devant la cheminée ; un fauteuil à côté du guéridon ; une chaise, premier plan, à la cheminée ; un fauteuil, premier plan, à droite ; deux chaises au fond. Les fauteuils et chaises sont couverts de housses. </em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-2">
-            <speaker>GODAIS, <em>entrant, à Auguste, qui dort dans un fauteuil.</em></speaker>
-            <l n="10" xml:id="l10">Auguste !... Auguste ! Auguste !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-3">
-            <speaker>AUGUSTE, <em>se réveillant.</em></speaker>
-            <l n="11" xml:id="l11">Hein ?... Tiens ! c’est le patron !</l>
-          </sp>
-          <sp who="godais" xml:id="0-4">
-            <speaker>GODAIS.</speaker>
-            <l n="12" xml:id="l12">Il est onze heures et demie... il ne viendra plus de voyageurs... Tu peux aller te coucher.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-5">
-            <speaker>AUGUSTE.</speaker>
-            <l n="13" xml:id="l13">Bonsoir, monsieur...</l>
-            <stage><hi rend="italic"><em>Il remonte et revient.</em></hi></stage>
-            <l n="15" xml:id="l15">Ah ! je savais bien... Et le turbot, monsieur ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-6">
-            <speaker>GODAIS.</speaker>
-            <l n="16" xml:id="l16">Eh bien, quoi, le turbot ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-7">
-            <speaker>AUGUSTE.</speaker>
-            <l n="17" xml:id="l17">Voilà cinq jours qu’il est là !... il commence à... s’impatienter.</l>
-          </sp>
-          <sp who="godais" xml:id="0-8">
-            <speaker>GODAIS.</speaker>
-            <l n="18" xml:id="l18">Que veux-tu que j’y fasse ? il n’est venu personne à Fontainebleau cette semaine. Tu diras au chef de le mettre en mayonnaise.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-9">
-            <speaker>AUGUSTE.</speaker>
-            <l n="19" xml:id="l19">Oui... la mayonnaise prolonge le turbot... mais pas longtemps.</l>
-          </sp>
-          <sp who="godais" xml:id="0-10">
-            <speaker>GODAIS.</speaker>
-            <l n="20" xml:id="l20">Si, dans deux ou trois jours, je n’en ai pas trouvé le placement... eh bien, vous le mangerez à l’office... Un turbot de douze francs... je vous gâte !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-11">
-            <speaker>AUGUSTE.</speaker>
-            <l n="21" xml:id="l21">Ah ! c’est bien le mot !... Bonsoir, monsieur.</l>
-          </sp>
-          <sp who="godais" xml:id="0-12">
-            <speaker>GODAIS.</speaker>
-            <l n="22" xml:id="l22">Bonsoir !</l>
-            <stage><hi rend="italic"><em>Auguste sort. </em></hi></stage>
-            <l n="24" xml:id="l24"> </l>
-            <l n="25" xml:id="l25"> </l>
-            <l n="26" xml:id="l26">Je vais faire ma ronde, pour voir si tout est en ordre... et je me coucherai aussi.</l>
-          </sp>
-          <sp who="un-garçon-d’hôtel" xml:id="0-13">
-            <speaker>UN GARÇON D’HÔTEL, <em>entrant.</em></speaker>
-            <l n="27" xml:id="l27">Patron !... une lettre que le facteur apporte à l’instant.</l>
-          </sp>
-          <sp who="godais" xml:id="0-14">
-            <speaker>GODAIS.</speaker>
-            <l n="28" xml:id="l28">Une lettre ?... donne.</l>
-            <stage><hi rend="italic"><em>Le garçon sort. Lisant.</em></hi></stage>
-            <l n="30" xml:id="l30">« À monsieur Godais, maître d’Hôtel à Fontainebleau. »</l>
-            <stage><hi rend="italic"><em>Parlé.</em></hi></stage>
-            <l n="32" xml:id="l32">C’est bien pour moi.</l>
-            <stage><hi rend="italic"><em>Lisant.</em></hi></stage>
-            <l n="34" xml:id="l34">« Monsieur, je me marie aujourd’hui, j’arriverai à Fontainebleau avec ma jeune femme par le train de minuit cinq. »</l>
-            <stage><hi rend="italic"><em>Parlé.</em></hi></stage>
-            <l n="36" xml:id="l36">Comment ! ce soir ?</l>
-            <stage><hi rend="italic"><em>Lisant.</em></hi></stage>
-            <l n="38" xml:id="l38">« Je désire un appartement confortable, pour y passer ma lune de miel. Faites faire du feu partout et préparez-nous un petit souper délicat. Je veux que ce soit très bien ; je ne regarde pas au prix... »</l>
-            <stage><hi rend="italic"><em>Parlé.</em></hi></stage>
-            <l n="40" xml:id="l40">Il n’y a pas une minute à perdre.</l>
-            <stage><hi rend="italic"><em>Remontant et appelant.</em></hi></stage>
-            <l n="42" xml:id="l42">Auguste ! Auguste !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-15">
-            <speaker>AUGUSTE, <em>dans la coulisse.</em></speaker>
-            <l n="43" xml:id="l43">Bonsoir, monsieur... Je suis couché !</l>
-          </sp>
-          <sp who="godais" xml:id="0-16">
-            <speaker>GODAIS.</speaker>
-            <l n="44" xml:id="l44">Habille-toi… et viens tout de suite... tout de suite !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-17">
-            <speaker>AUGUSTE, <em>dans la coulisse.</em></speaker>
-            <l n="45" xml:id="l45">Saprelotte !... qu’est-ce qu’il y a ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-18">
-            <speaker>GODAIS, <em>seul, regardant sa lettre.</em></speaker>
-            <l n="46" xml:id="l46">Ah ! Il y a un post-scriptum.</l>
-            <stage><hi rend="italic"><em>Lisant.</em></hi></stage>
-            <stage><hi rend="italic">« Vous me mettrez deux oreillers, je ne peux pas dormir la tête basse ; cela fera trois oreillers, en comptant celui de ma femme... Mais, dans le cas où elle aussi aimerait à avoir la tête haute... ce que je ne sais pas encore... je vous le dirais... alors il nous faudrait quatre oreillers... Je ne regarde pas au prix… je veux que ce soit très bien. Recevez mes salutations. – <em>Ernest de Maxenville. </em>– Paris, le 1<sup>er</sup> avril 1868. »</hi></stage>
-            <stage><hi rend="italic"><em>Parlé.</em></hi></stage>
-            <l n="50" xml:id="l50">Je vais lui donner la chambre n° 7... avec salon... C’est l’appartement réservé aux lunes de miel... Fontainebleau est très à la mode depuis quelque temps pour ces sortes d’expéditions.</l>
-            <l n="51" xml:id="l51"> </l>
-            <l n="52" xml:id="l52"> </l>
-            <l n="53" xml:id="l53"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-19">
-            <speaker>AUGUSTE, <em>entrant.</em></speaker>
-            <l n="54" xml:id="l54">Me voilà ! Est-ce qu’il y a le feu ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-20">
-            <speaker>GODAIS.</speaker>
-            <l n="55" xml:id="l55">Non... Une lune de miel qui nous arrive par le train de minuit cinq...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-21">
-            <speaker>AUGUSTE.</speaker>
-            <l n="56" xml:id="l56">Aujourd’hui ?... ce n’est pas possible !</l>
-          </sp>
-          <sp who="godais" xml:id="0-22">
-            <speaker>GODAIS, <em>lui montrant la lettre.</em></speaker>
-            <l n="57" xml:id="l57">Voici la lettre !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-23">
-            <speaker>AUGUSTE, <em>la regardant.</em></speaker>
-            <l n="58" xml:id="l58">« 1<sup>er</sup> avril... » J’en étais sûr... c’est un poisson d’avril… Ils ne viendront pas... allons nous coucher...</l>
-          </sp>
-          <sp who="godais" xml:id="0-24">
-            <speaker>GODAIS.</speaker>
-            <l n="59" xml:id="l59">Un moment ! attendons au moins l’arrivée du train.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-25">
-            <speaker>AUGUSTE.</speaker>
-            <l n="60" xml:id="l60">Quelle rage ont ces gens-là de venir pendre la crémaillère chez les autres !</l>
-          </sp>
-          <sp who="godais" xml:id="0-26">
-            <speaker>GODAIS.</speaker>
-            <l n="61" xml:id="l61">Puisque c’est la mode !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-27">
-            <speaker>AUGUSTE.</speaker>
-            <l n="62" xml:id="l62">Pas pour tout le monde !... moi, je me suis marié l’année dernière…</l>
-          </sp>
-          <sp who="godais" xml:id="0-28">
-            <speaker>GODAIS.</speaker>
-            <l n="63" xml:id="l63">Oui, une fameuse idée !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-29">
-            <speaker>AUGUSTE.</speaker>
-            <l n="64" xml:id="l64">Eh bien, je suis resté chez moi... et je n’ai pas eu à le regretter... ma femme non plus !</l>
-          </sp>
-          <sp who="godais" xml:id="0-30">
-            <speaker>GODAIS.</speaker>
-            <l n="65" xml:id="l65">Ah ça ! pourquoi diable t’es-tu marié, à ton âge ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-31">
-            <speaker>AUGUSTE.</speaker>
-            <l n="66" xml:id="l66">Monsieur, j’avais depuis longtemps le projet de m’unir à une jeune et jolie femme... Julie a vingt-deux ans...</l>
-          </sp>
-          <sp who="godais" xml:id="0-32">
-            <speaker>GODAIS.</speaker>
-            <l n="67" xml:id="l67">Elle louche...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-33">
-            <speaker>AUGUSTE.</speaker>
-            <l n="68" xml:id="l68">Non, monsieur... elle ne louche pas... elle a. un œil qui regarde en haut... un œil qui implore… mais elle ne louche pas.</l>
-          </sp>
-          <sp who="godais" xml:id="0-34">
-            <speaker>GODAIS.</speaker>
-            <l n="69" xml:id="l69">Mais à quoi te sert ta femme ?... elle est placée à Paris, et toi, tu es à Fontainebleau.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-35">
-            <speaker>AUGUSTE.</speaker>
-            <l n="70" xml:id="l70">Je prends le train tous les samedis soir... Mais, dans ce moment, la pauvre enfant est sans place... et si monsieur avait besoin de quelqu’un...</l>
-          </sp>
-          <sp who="godais" xml:id="0-36">
-            <speaker>GODAIS.</speaker>
-            <l n="71" xml:id="l71">Ici, chez moi ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-37">
-            <speaker>AUGUSTE.</speaker>
-            <l n="72" xml:id="l72">Ça m’épargnerait des déplacements...</l>
-          </sp>
-          <sp who="godais" xml:id="0-38">
-            <speaker>GODAIS.</speaker>
-            <l n="73" xml:id="l73">Merci... je n’ai besoin de personne.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="75" xml:id="l75">Une gaillarde pareille… il passe trop de cavalerie à Fontainebleau.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-39">
-            <speaker>AUGUSTE, <em>montrant la pendule.</em></speaker>
-            <l n="76" xml:id="l76">Monsieur... minuit et demi... Quand je vous disais que c’était un poisson d’avril !</l>
-          </sp>
-          <sp who="godais" xml:id="0-40">
-            <speaker>GODAIS.</speaker>
-            <l n="77" xml:id="l77">Non, je ne puis croire à une pareille gaminerie.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-41">
-            <speaker>AUGUSTE.</speaker>
-            <l n="78" xml:id="l78">Alors je vais allumer le feu.</l>
-          </sp>
-          <sp who="godais" xml:id="0-42">
-            <speaker>GODAIS.</speaker>
-            <l n="79" xml:id="l79">Un instant !... s’ils ne viennent pas... ils devraient être ici depuis un quart d’heure... Attendons encore cinq minutes.</l>
-            <stage><hi rend="italic"><em>Il s’assied.</em></hi></stage>
-          </sp>
-          <sp who="auguste" xml:id="0-43">
-            <speaker>AUGUSTE, <em>s’asseyant aussi.</em></speaker>
-            <l n="81" xml:id="l81">Attendons !...</l>
-            <stage><hi rend="italic"><em>Un </em><em>temps.</em></hi></stage>
-            <l n="83" xml:id="l83">Monsieur, il me vient une idée pour le turbot.</l>
-          </sp>
-          <sp who="godais" xml:id="0-44">
-            <speaker>GODAIS.</speaker>
-            <l n="84" xml:id="l84">Laquelle ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-45">
-            <speaker>AUGUSTE.</speaker>
-            <l n="85" xml:id="l85">L’employé de l’octroi est très enrhumé du cerveau... si vous lui en faisiez hommage ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-46">
-            <speaker>GODAIS.</speaker>
-            <l n="86" xml:id="l86">Par exemple !... un turbot de douze francs.</l>
-            <stage><hi rend="italic"><em>Se levant et regardant la pendule.</em></hi></stage>
-            <l n="88" xml:id="l88">Minuit trente-cinq... ils ne viendront pas ! Tu peux aller te coucher.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-47">
-            <speaker>AUGUSTE.</speaker>
-            <l n="89" xml:id="l89">Si j’ai un regret... c’est de m’être relevé...</l>
-            <stage><hi rend="italic"><em>Sortant.</em></hi></stage>
-            <l n="91" xml:id="l91">Bonsoir, monsieur.</l>
-          </sp>
-          <sp who="godais" xml:id="0-48">
-            <speaker>GODAIS.</speaker>
-            <l n="92" xml:id="l92">Bonsoir !</l>
-            <l n="93" xml:id="l93"> </l>
-            <l n="94" xml:id="l94"> </l>
-            <l n="95" xml:id="l95"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-49">
-            <speaker>GODAIS, <em>puis</em> ERNEST DE MAXENVILLE <em>et</em> MARIE</speaker>
-            <l n="96" xml:id="l96">C’est la première fois qu’on me fait une aussi sotte plaisanterie ! Il y a des gens qui ne savent qu’inventer.</l>
-            <stage><hi rend="italic"><em>On entend le roulement d’une voiture. Il prend la bougie et se </em><em>dirige vers la fenêtre.</em></hi></stage>
-            <l n="98" xml:id="l98">Hein ? une voiture !</l>
-            <stage><hi rend="italic"><em>Courant à la fenêtre.</em></hi></stage>
-            <l n="100" xml:id="l100">Un jeune homme... une dame... ce sont eux.</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="102" xml:id="l102">Auguste ! Auguste !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-50">
-            <speaker><em>La voix d’</em>AUGUSTE, <em>dans la coulisse.</em></speaker>
-            <l n="103" xml:id="l103">Bonsoir, monsieur !... Je suis couché...</l>
-          </sp>
-          <sp who="godais" xml:id="0-51">
-            <speaker>GODAIS.</speaker>
-            <l n="104" xml:id="l104">Habille-toi ! tout de suite !... tout de suite !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-52">
-            <speaker><em>Voix d’</em>AUGUSTE.</speaker>
-            <l n="105" xml:id="l105">Encore ! nom d’un petit bonhomme !</l>
-            <stage><hi rend="italic"><em>Ernest parait avec Marie. Tous deux portent des sacs de nuit et des nécessaires de voyage.</em></hi></stage>
-          </sp>
-          <sp who="marie" xml:id="0-53">
-            <speaker>ERNEST, <em>à Marie.</em></speaker>
-            <l n="107" xml:id="l107">Entrez, mademoiselle… n’ayez pas peur... nous serons ici comme chez nous.</l>
-          </sp>
-          <sp who="godais" xml:id="0-54">
-            <speaker>GODAIS, <em>les saluant.</em></speaker>
-            <l n="108" xml:id="l108">Monsieur... madame...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-55">
-            <speaker>ERNEST.</speaker>
-            <l n="109" xml:id="l109">Ah ! c’est vous le nommé Godais ?...</l>
-          </sp>
-          <sp who="godais" xml:id="0-56">
-            <speaker>GODAIS.</speaker>
-            <l n="110" xml:id="l110">J’ai reçu votre lettre… je vous attendais...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-57">
-            <speaker>ERNEST.</speaker>
-            <l n="111" xml:id="l111">Nous avons eu toutes les peines du monde à trouver une voiture à la gare. Voyons, tout est-il prêt, l’appartement ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-58">
-            <speaker>GODAIS.</speaker>
-            <l n="112" xml:id="l112">Voici le salon… et la chambre à côté, n° 7.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-59">
-            <speaker>ERNEST.</speaker>
-            <l n="113" xml:id="l113">Je veux que ce soit très bien ! je ne regarde pas au prix... Le souper ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-60">
-            <speaker>GODAIS.</speaker>
-            <l n="114" xml:id="l114">Dans un quart d’heure... je puis vous offrir un joli perdreau rôti...</l>
-          </sp>
-          <sp who="marie" xml:id="0-61">
-            <speaker>ERNEST, <em>à Marie.</em></speaker>
-            <l n="115" xml:id="l115">Acceptez-vous le perdreau ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-62">
-            <speaker>MARIE, <em>s’asseyant à la cheminée.</em></speaker>
-            <l n="116" xml:id="l116">Oh ! tout ce que vous voudrez... Je n’ai presque pas faim.</l>
-          </sp>
-          <sp who="godais" xml:id="0-63">
-            <speaker>ERNEST, <em>bas, à Godais.</em></speaker>
-            <l n="117" xml:id="l117">L’émotion...</l>
-          </sp>
-          <sp who="godais" xml:id="0-64">
-            <speaker>GODAIS, <em>bas.</em></speaker>
-            <l n="118" xml:id="l118">Je connais ça... Ici, on ne commence à manger que le troisième jour.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-65">
-            <speaker>ERNEST.</speaker>
-            <l n="119" xml:id="l119">Et après le perdreau ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-66">
-            <speaker>GODAIS.</speaker>
-            <l n="120" xml:id="l120">Turbot sauce mayonnaise... bien frais.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-67">
-            <speaker>ERNEST.</speaker>
-            <l n="121" xml:id="l121">Non... je vais peut-être vous faire bondir... mais je n’aime pas le turbot...</l>
-          </sp>
-          <sp who="godais" xml:id="0-68">
-            <speaker>GODAIS.</speaker>
-            <l n="122" xml:id="l122">Ah ! c’est fâcheux !... Je puis le remplacer par une truite saumonée.</l>
-          </sp>
-          <sp who="marie" xml:id="0-69">
-            <speaker>ERNEST, <em>à Marie.</em></speaker>
-            <l n="123" xml:id="l123">Acceptez-vous la truite saumonée ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-70">
-            <speaker>MARIE.</speaker>
-            <l n="124" xml:id="l124">Oh ! tout ce que vous voudrez !</l>
-          </sp>
-          <sp who="godais" xml:id="0-71">
-            <speaker>GODAIS.</speaker>
-            <l n="125" xml:id="l125">Macaroni au gratin… c’est le triomphe de la maison.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-72">
-            <speaker>ERNEST.</speaker>
-            <l n="126" xml:id="l126">Très bien... Maintenant, fricassez-nous quelque chose de sucré...</l>
-          </sp>
-          <sp who="godais" xml:id="0-73">
-            <speaker>GODAIS.</speaker>
-            <l n="127" xml:id="l127">Parfait glacé... vanille et orange... c’est le triomphe de la maison.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-74">
-            <speaker>ERNEST.</speaker>
-            <l n="128" xml:id="l128">Accepté ! mais dépêchez-vous.</l>
-            <stage><hi rend="italic"><em>Le rappelant.</em></hi></stage>
-            <l n="130" xml:id="l130">Ah ! monsieur Godais !...</l>
-          </sp>
-          <sp who="godais" xml:id="0-75">
-            <speaker>GODAIS.</speaker>
-            <l n="131" xml:id="l131">Monsieur ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-76">
-            <speaker>ERNEST, <em>bas.</em></speaker>
-            <l n="132" xml:id="l132">N’oubliez pas mes deux oreillers...</l>
-          </sp>
-          <sp who="godais" xml:id="0-77">
-            <speaker>GODAIS, <em>bas.</em></speaker>
-            <l n="133" xml:id="l133">Oui, monsieur... j’en ai pris note... Et pour madame, est-ce un ou deux ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-78">
-            <speaker>ERNEST, <em>bas.</em></speaker>
-            <l n="134" xml:id="l134">Je ne sais pas encore... vous comprenez... je suis marié de ce matin… je vais le lui demander.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="136" xml:id="l136">Mademoiselle...</l>
-          </sp>
-          <sp who="marie" xml:id="0-79">
-            <speaker>MARIE.</speaker>
-            <l n="137" xml:id="l137">Quoi, monsieur ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-80">
-            <speaker>ERNEST.</speaker>
-            <l n="138" xml:id="l138">Je ne voudrais pas que ma question vous parût indiscrète... mais chacun a ses petites habitudes.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="140" xml:id="l140">Comment lui tourner ça... sans la faire bondir ?</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="142" xml:id="l142">En ménage... quand on est destiné à vivre ensemble... il faut se mettre à son aise... parce que là où il y a de la gêne... il n’y a pas de plaisir.</l>
-            <stage><hi rend="italic"><em>Se reprenant.</em></hi></stage>
-            <l n="144" xml:id="l144">Non !... ce n’est pas ça... Enfin, les uns ont la tête haute, les autres l’ont basse... Ainsi, monsieur votre père...</l>
-          </sp>
-          <sp who="marie" xml:id="0-81">
-            <speaker>MARIE, <em>vivement.</em></speaker>
-            <l n="145" xml:id="l145">Mon père, monsieur, n’a aucune raison de baisser la tête, je vous prie de le croire.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-82">
-            <speaker>ERNEST.</speaker>
-            <l n="146" xml:id="l146">Pardon... vous ne me comprenez pas... Loin de moi la pensée...</l>
-          </sp>
-          <sp who="marie" xml:id="0-83">
-            <speaker>MARIE.</speaker>
-            <l n="147" xml:id="l147">Mais quoi ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-84">
-            <speaker>ERNEST.</speaker>
-            <l n="148" xml:id="l148">Rien... rien...</l>
-            <stage><hi rend="italic"><em>Bas, à Godais qui attend.</em></hi></stage>
-            <l n="150" xml:id="l150">Allez, je vous le dirai demain matin.</l>
-          </sp>
-          <sp who="godais" xml:id="0-85">
-            <speaker>GODAIS.</speaker>
-            <l n="151" xml:id="l151">Très bien !... Je vais réveiller tout le monde.</l>
-            <l n="152" xml:id="l152"> </l>
-            <l n="153" xml:id="l153"> </l>
-            <l n="154" xml:id="l154">Je suis un peu émus… c’est la première fois que je me trouve seul avec elle... pas de maman... d’oncles… de tantes… de cousines... Elle... Fontainebleau et moi !...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="156" xml:id="l156">Mademoiselle...</l>
-          </sp>
-          <sp who="marie" xml:id="0-86">
-            <speaker>MARIE.</speaker>
-            <l n="157" xml:id="l157">Monsieur...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-87">
-            <speaker>ERNEST.</speaker>
-            <l n="158" xml:id="l158">Vous paraissez triste… contrariée...</l>
-          </sp>
-          <sp who="marie" xml:id="0-88">
-            <speaker>MARIE.</speaker>
-            <l n="159" xml:id="l159">Je le crois bien... après la façon dont vous venez de traiter mon père...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-89">
-            <speaker>ERNEST.</speaker>
-            <l n="160" xml:id="l160">Je me suis fait bien mal comprendre : quand je me suis permis de dire que monsieur votre père avait la tête basse, cela signifiait qu’il ne mettait qu’un oreiller.</l>
-          </sp>
-          <sp who="marie" xml:id="0-90">
-            <speaker>MARIE.</speaker>
-            <l n="161" xml:id="l161">Eh bien ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-91">
-            <speaker>ERNEST.</speaker>
-            <l n="162" xml:id="l162">Cela n’attaque en rien son honorabilité ni son intelligence.</l>
-          </sp>
-          <sp who="marie" xml:id="0-92">
-            <speaker>MARIE.</speaker>
-            <l n="163" xml:id="l163">Quelle singulière conversation !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-93">
-            <speaker>ERNEST, <em>riant.</em></speaker>
-            <l n="164" xml:id="l164">Le fait est que...</l>
-            <stage><hi rend="italic"><em>À </em><em>part.</em></hi></stage>
-            <l n="166" xml:id="l166">Pour un jour de noce ! je ne sais pas pourquoi je me suis embarqué dans les oreillers.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="168" xml:id="l168">Nous serons très bien ici...</l>
-          </sp>
-          <sp who="marie" xml:id="0-94">
-            <speaker>MARIE.</speaker>
-            <l n="169" xml:id="l169">Vous croyez ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-95">
-            <speaker>ERNEST.</speaker>
-            <l n="170" xml:id="l170">C’est simple...</l>
-          </sp>
-          <sp who="marie" xml:id="0-96">
-            <speaker>MARIE.</speaker>
-            <l n="171" xml:id="l171">Oh ! oui !... il n’y a pas de luxe... Mais vous aviez mis dans votre tête de faire ce voyage… malgré tout le monde... malgré mon père surtout, un homme de bon sens, quoi que vous en disiez...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-97">
-            <speaker>ERNEST.</speaker>
-            <l n="172" xml:id="l172">Moi ? Je n’ai jamais prétendu le contraire…</l>
-          </sp>
-          <sp who="marie" xml:id="0-98">
-            <speaker>MARIE.</speaker>
-            <l n="173" xml:id="l173">« Je ne comprends pas, vous disait-il, quand vous avez un appartement bien chaud, bien commode, bien meublé... que vous alliez faire vingt lieues, au beau milieu de la nuit, pour tomber dans une misérable chambre d’auberge... »</l>
-          </sp>
-          <sp who="ernest" xml:id="0-99">
-            <speaker>ERNEST.</speaker>
-            <l n="174" xml:id="l174">C’est l’usage... après la cérémonie... on disparaît, on fait ce qu’on appelle le petit voyage, c’est consacré. On éprouve le besoin de fuir les regards indiscrets, de se soustraire aux sottes interprétations, aux questions équivoques...</l>
-          </sp>
-          <sp who="marie" xml:id="0-100">
-            <speaker>MARIE, <em>vivement.</em></speaker>
-            <l n="175" xml:id="l175">Quelles questions ? Je n’en redoute aucune !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-101">
-            <speaker>ERNEST.</speaker>
-            <l n="176" xml:id="l176">Aujourd’hui... c’est possible ;</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="178" xml:id="l178">mais demain !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="180" xml:id="l180">Enfin, ce que je voulais, c’était de m’isoler du monde... avec vous... Nous ne nous quitterons pas, nous ferons de longues promenades à pied... dans la forêt...</l>
-          </sp>
-          <sp who="marie" xml:id="0-102">
-            <speaker>MARIE.</speaker>
-            <l n="181" xml:id="l181">Il n’y a pas encore de feuilles... et il pleut.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-103">
-            <speaker>ERNEST.</speaker>
-            <l n="182" xml:id="l182">J’ai apporté des parapluies... Mais ne vous tourmentez pas... ces huit jours passeront comme un rêve.</l>
-          </sp>
-          <sp who="marie" xml:id="0-104">
-            <speaker>MARIE.</speaker>
-            <l n="183" xml:id="l183">Comment ! nous allons rester huit jours ici ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-105">
-            <speaker>ERNEST.</speaker>
-            <l n="184" xml:id="l184">Vous les regretterez peut-être... Tenez, asseyons-nous près du feu.</l>
-          </sp>
-          <sp who="marie" xml:id="0-106">
-            <speaker>MARIE, <em>montrant la cheminée.</em></speaker>
-            <l n="185" xml:id="l185">Il n’y en a pas.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-107">
-            <speaker>ERNEST.</speaker>
-            <l n="186" xml:id="l186">Tiens ! c’est vrai...</l>
-            <stage><hi rend="italic"><em>Il va à la cheminée.</em></hi></stage>
-            <l n="188" xml:id="l188">Ils ont oublié d’allumer, je vais sonner.</l>
-            <stage><hi rend="italic"><em>Il sonne plusieurs fois.</em></hi></stage>
-            <l n="190" xml:id="l190">Eh bien, la sonnette est cassée !</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="192" xml:id="l192">Garçon ! garçon !... personne ! Tout le monde est occupé de nous... mais on va apporter le souper...</l>
-          </sp>
-          <sp who="marie" xml:id="0-108">
-            <speaker>MARIE, <em>s’asseyant au fauteuil près de la table</em>.</speaker>
-            <l n="193" xml:id="l193">Oh ! moi, j’ai juré que je ne mangerais jamais dans un restaurant !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-109">
-            <speaker>ERNEST.</speaker>
-            <l n="194" xml:id="l194">Pourquoi ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-110">
-            <speaker>MARIE.</speaker>
-            <l n="195" xml:id="l195">Je n’y suis allée qu’une seule fois... avec mon père... et j’y ai vu faire une chose !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-111">
-            <speaker>ERNEST.</speaker>
-            <l n="196" xml:id="l196">Laquelle ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-112">
-            <speaker>MARIE.</speaker>
-            <l n="197" xml:id="l197">Il y avait dans le salon, tout près de nous, un monsieur... bien désagréable, il faut en convenir !... il ne trouvait rien de bon... Son filet était trop cuit, son poisson ne l’était pas assez... il dérangeait le garçon à chaque instant. « Garçon ! du citron !... Garçon !... de la moutarde ! Garçon !... un cure-dents !... » Le pauvre homme n’était occupé qu’après lui... et il le traitait d’imbécile, d’idiot...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-113">
-            <speaker>ERNEST.</speaker>
-            <l n="198" xml:id="l198">Oh ! ils sont habitués à ça... et avec un bon pourboire…</l>
-          </sp>
-          <sp who="marie" xml:id="0-114">
-            <speaker>MARIE.</speaker>
-            <l n="199" xml:id="l199">Oui, mais celui-là s’est joliment vengé !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-115">
-            <speaker>ERNEST.</speaker>
-            <l n="200" xml:id="l200">Et de quelle manière ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-116">
-            <speaker>MARIE.</speaker>
-            <l n="201" xml:id="l201">De ma place, mes yeux plongeaient dans l’escalier par où se faisait le service, et j’aperçus ce garçon montant un macaroni destiné à ce monsieur... Avant d’entrer, savez-vous ce qu’il fit ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-117">
-            <speaker>ERNEST.</speaker>
-            <l n="202" xml:id="l202">Non.</l>
-          </sp>
-          <sp who="marie" xml:id="0-118">
-            <speaker>MARIE.</speaker>
-            <l n="203" xml:id="l203">Il tenait son plat comme ça... devant lui... et il osa... Oh ! non ! je ne peux pas le dire... c’est trop vilain !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-119">
-            <speaker>ERNEST.</speaker>
-            <l n="204" xml:id="l204">Il y jeta du poivre ?...</l>
-          </sp>
-          <sp who="marie" xml:id="0-120">
-            <speaker>MARIE.</speaker>
-            <l n="205" xml:id="l205">Si ce n’était que cela !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-121">
-            <speaker>ERNEST.</speaker>
-            <l n="206" xml:id="l206">De la cendre de cigare ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-122">
-            <speaker>MARIE.</speaker>
-            <l n="207" xml:id="l207">Non.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-123">
-            <speaker>ERNEST.</speaker>
-            <l n="208" xml:id="l208">Du tabac ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-124">
-            <speaker>MARIE.</speaker>
-            <l n="209" xml:id="l209">Non.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-125">
-            <speaker>ERNEST.</speaker>
-            <l n="210" xml:id="l210">Ah ! j’y suis !... Il éternua dedans !</l>
-          </sp>
-          <sp who="marie" xml:id="0-126">
-            <speaker>MARIE.</speaker>
-            <l n="211" xml:id="l211">Pis que cela !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-127">
-            <speaker>ERNEST.</speaker>
-            <l n="212" xml:id="l212">Je comprends… il le traita comme le dernier des lâches.</l>
-            <stage><hi rend="italic"><em>Il </em><em>fait très légèrement le simulacre de cracher.</em></hi></stage>
-            <l n="214" xml:id="l214">Ah ! c’est affreux !</l>
-          </sp>
-          <sp who="marie" xml:id="0-128">
-            <speaker>MARIE.</speaker>
-            <l n="215" xml:id="l215">Et il eut le front d’entrer en criant : « Macaroni... soigné !... »</l>
-          </sp>
-          <sp who="ernest" xml:id="0-129">
-            <speaker>ERNEST.</speaker>
-            <l n="216" xml:id="l216">Vraiment !</l>
-          </sp>
-          <sp who="marie" xml:id="0-130">
-            <speaker>MARIE.</speaker>
-            <l n="217" xml:id="l217">J’avais envie de prévenir notre voisin, lorsqu’il s’écria : « Enfin ! voilà un plat réussi ! »</l>
-          </sp>
-          <sp who="ernest" xml:id="0-131">
-            <speaker>ERNEST, <em>riant.</em></speaker>
-            <l n="218" xml:id="l218">Ah ! charmant !</l>
-          </sp>
-          <sp who="marie" xml:id="0-132">
-            <speaker>MARIE.</speaker>
-            <l n="219" xml:id="l219">C’est horrible ! et voilà pourquoi jamais je ne mangerai dans un restaurant !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-133">
-            <speaker>ERNEST.</speaker>
-            <l n="220" xml:id="l220">Oh ! à Fontainebleau, il n’y a rien à craindre, les garçons sont sans malice...</l>
-            <stage><hi rend="italic"><em>Apercevant une botte d’allumettes sur la cheminée.</em></hi></stage>
-            <l n="222" xml:id="l222">Tiens !... un briquet !... je vais allumer le feu.</l>
-            <stage><hi rend="italic"><em>Il </em><em>frotte une allumette qui ne prend pas.</em></hi></stage>
-            <l n="224" xml:id="l224">En voyage, il faut se servir soi-même.</l>
-            <stage><hi rend="italic"><em>Il en frotte une seconde, même jeu.</em></hi></stage>
-            <l n="226" xml:id="l226">Comme dit le proverbe : « Aide-toi,</l>
-            <stage><hi rend="italic"><em>Même jeu.</em></hi></stage>
-            <l n="228" xml:id="l228">le ciel t’aidera. »</l>
-            <stage><hi rend="italic"><em>S’impatientant.</em></hi></stage>
-            <l n="230" xml:id="l230">Ah ! c’est insupportable !</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="232" xml:id="l232">Garçon ! garçon !...</l>
-            <l n="233" xml:id="l233"> </l>
-            <l n="234" xml:id="l234"> </l>
-            <l n="235" xml:id="l235"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-134">
-            <speaker>ERNEST, MARIE, AUGUSTE</speaker>
-            <l n="236" xml:id="l236"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-135">
-            <speaker>AUGUSTE, <em>entrant.</em></speaker>
-            <l n="237" xml:id="l237">Voilà !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-136">
-            <speaker>ERNEST.</speaker>
-            <l n="238" xml:id="l238">Allumez le feu... Vos allumettes ne prennent pas...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-137">
-            <speaker>AUGUSTE.</speaker>
-            <l n="239" xml:id="l239">Monsieur... cela dépend de la manière de les frotter... Regardez...</l>
-            <stage><hi rend="italic"><em>Il prend une allumette et l’allume à La bougie.</em></hi></stage>
-            <l n="241" xml:id="l241">Ce n’est pas bien difficile.</l>
-            <stage><hi rend="italic"><em>À part, désignant Ernest.</em></hi></stage>
-            <l n="243" xml:id="l243">Et cela croit appartenir aux classes supérieures…</l>
-          </sp>
-          <sp who="marie" xml:id="0-138">
-            <speaker>MARIE, <em>à part, regardant Auguste.</em></speaker>
-            <l n="244" xml:id="l244">Oh ! c’est singulier... ce garçon... il m’a semblé reconnaître... Ah ! je me trompe...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-139">
-            <speaker>ERNEST, <em>à Auguste, qui a allumé le feu.</em></speaker>
-            <l n="245" xml:id="l245">C’est bien... Maintenant, allumez dans la chambre... au numéro 7...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-140">
-            <speaker>AUGUSTE, <em>prenant une seule allumette, et la montrant à Ernest.</em></speaker>
-            <l n="246" xml:id="l246">Monsieur, je n’en prends qu’une... il ne m’en faut pas davantage à moi.</l>
-            <stage><hi rend="italic"><em>À part, en sortant.</em></hi></stage>
-            <l n="248" xml:id="l248">J’en ai d’autres dans ma poche.</l>
-            <stage><hi rend="italic"><em>Il entre au numéro 7. </em></hi></stage>
-            <l n="250" xml:id="l250"> </l>
-            <l n="251" xml:id="l251"> </l>
-            <l n="252" xml:id="l252"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-141">
-            <speaker>MARIE, <em>à part.</em></speaker>
-            <l n="253" xml:id="l253">Oh ! je me trompe… Quelle apparence que ce garçon se retrouve juste à Fontainebleau ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-142">
-            <speaker>ERNEST, <em>à la cheminée.</em></speaker>
-            <l n="254" xml:id="l254">Ce bois est mouillé… il ne flambe pas... je vais baisser la trappe...</l>
-            <stage><hi rend="italic"><em>Il fait des efforts pour baisser la trappe, qui résiste.</em></hi></stage>
-            <l n="256" xml:id="l256">Bien !... elle est rouillée !... Ah ! un soufflet !...</l>
-            <stage><hi rend="italic"><em>Il fait manœuvrer le soufflet, qui jette des cris plaintifs. </em></hi></stage>
-          </sp>
-          <sp who="marie" xml:id="0-143">
-            <speaker>MARIE.</speaker>
-            <l n="258" xml:id="l258">Écoutez... on dirait d’un enfant qui pleure...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-144">
-            <speaker>ERNEST.</speaker>
-            <l n="259" xml:id="l259">Non ! c’est ce soufflet qui est crevé...</l>
-            <stage><hi rend="italic"><em>Il </em><em>le rejette.</em></hi></stage>
-            <l n="261" xml:id="l261">Ah çà ! c’est donc un magasin de bric-à-brac que cette maison ?...</l>
-          </sp>
-          <sp who="marie" xml:id="0-145">
-            <speaker>MARIE.</speaker>
-            <l n="262" xml:id="l262">Il me semble que mon père n’avait pas tout a fait tort...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-146">
-            <speaker>ERNEST.</speaker>
-            <l n="263" xml:id="l263">Moi, ces petites mésaventures ne me déplaisent pas. Tenez, je vais peut-être vous faire bondir... eh bien...</l>
-            <stage><hi rend="italic"><em>S’interrompant.</em></hi></stage>
-            <l n="265" xml:id="l265">Sapristi !... Est-ce que vous ne sentez pas un courant d’air… là... derrière la tête ?...</l>
-          </sp>
-          <sp who="marie" xml:id="0-147">
-            <speaker>MARIE.</speaker>
-            <l n="266" xml:id="l266">Non.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-148">
-            <speaker>ERNEST, <em>courant à la fenêtre.</em></speaker>
-            <l n="267" xml:id="l267">Allons, bon !... un carreau cassé !</l>
-            <stage><hi rend="italic"><em>Appelant.</em></hi></stage>
-            <l n="269" xml:id="l269">Garçon ! garçon !...</l>
-            <l n="270" xml:id="l270"> </l>
-            <l n="271" xml:id="l271"> </l>
-            <l n="272" xml:id="l272"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-149">
-            <speaker>AUGUSTE, <em>entrant.</em></speaker>
-            <l n="273" xml:id="l273">Monsieur ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-150">
-            <speaker>ERNEST, <em>lui montrant la fenêtre.</em></speaker>
-            <l n="274" xml:id="l274">Qu’est-ce que c’est que ça ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-151">
-            <speaker>AUGUSTE, <em>allant à la fenêtre, après avoir examiné.</em></speaker>
-            <l n="275" xml:id="l275">Tiens ! monsieur a cassé un carreau ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-152">
-            <speaker>ERNEST.</speaker>
-            <l n="276" xml:id="l276">Ce n’est pas moi... imbécile !</l>
-          </sp>
-          <sp who="marie" xml:id="0-153">
-            <speaker>MARIE, <em>bas, à Ernest.</em></speaker>
-            <l n="277" xml:id="l277">Prenez garde !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-154">
-            <speaker>ERNEST.</speaker>
-            <l n="278" xml:id="l278">Va me chercher un vitrier !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-155">
-            <speaker>AUGUSTE.</speaker>
-            <l n="279" xml:id="l279">À une heure du matin ?... Monsieur veut rire…</l>
-          </sp>
-          <sp who="ernest" xml:id="0-156">
-            <speaker>ERNEST, <em>s’emportant.</em></speaker>
-            <l n="280" xml:id="l280">Nous ne pouvons pourtant pas rester dans un courant d’air, sacrebleu !</l>
-            <stage><hi rend="italic"><em>À Marie.</em></hi></stage>
-            <l n="282" xml:id="l282">Oh ! pardon !</l>
-          </sp>
-          <sp who="marie" xml:id="0-157">
-            <speaker>MARIE, <em>à part.</em></speaker>
-            <l n="283" xml:id="l283">Il jure !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-158">
-            <speaker>AUGUSTE.</speaker>
-            <l n="284" xml:id="l284">Calmez-vous !... j’ai une idée... je la crois bonne... Attendez cinq minutes.</l>
-            <stage><hi rend="italic"><em>Il sort. </em></hi></stage>
-            <l n="286" xml:id="l286"> </l>
-            <l n="287" xml:id="l287"> </l>
-            <l n="288" xml:id="l288">Brrr ! Ordinairement je porte de la flanelle… mais un jour de noces... je sens que je m’enrhume.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="290" xml:id="l290">Je vous demanderai la permission de remettre mon paletot.</l>
-          </sp>
-          <sp who="marie" xml:id="0-159">
-            <speaker>MARIE.</speaker>
-            <l n="291" xml:id="l291">Et moi, mon manteau...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-160">
-            <speaker>ERNEST, <em>mettant son paletot et son cache-nez.</em></speaker>
-            <l n="292" xml:id="l292">Il fait un froid de loup...</l>
-          </sp>
-          <sp who="marie" xml:id="0-161">
-            <speaker>MARIE, <em>à part, mettant son manteau.</em></speaker>
-            <l n="293" xml:id="l293">Je suis gelée...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-162">
-            <speaker>ERNEST, <em>à part</em>.</speaker>
-            <l n="294" xml:id="l294">Un jour de noces... quel drôle d’uniforme !... C’est égal... je sens la chaleur qui revient.</l>
-            <stage><hi rend="italic"><em>S’approchant de Marie, et tendrement.</em></hi></stage>
-            <l n="296" xml:id="l296">Mademoiselle... non, permettez-moi de vous appeler Marie… ma chère Marie...</l>
-          </sp>
-          <sp who="marie" xml:id="0-163">
-            <speaker>MARIE, <em>frappant le parquet du pied.</em></speaker>
-            <l n="297" xml:id="l297">Mon Dieu, que j’ai froid aux pieds !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-164">
-            <speaker>ERNEST.</speaker>
-            <l n="298" xml:id="l298">Voulez-vous une chaufferette ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-165">
-            <speaker>AUGUSTE, <em>entrant avec une feuille de papier.</em></speaker>
-            <l n="299" xml:id="l299">Voilà l’affaire !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-166">
-            <speaker>ERNEST.</speaker>
-            <l n="300" xml:id="l300">Quoi ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-167">
-            <speaker>AUGUSTE.</speaker>
-            <l n="301" xml:id="l301">Le carreau !</l>
-            <stage><hi rend="italic"><em>Il colle le carreau en papier sur la fenêtre.</em></hi></stage>
-            <l n="303" xml:id="l303">Au moins, si vous cassez celui-là… ça ne vous coûtera pas cher.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-168">
-            <speaker>ERNEST.</speaker>
-            <l n="304" xml:id="l304">Mon ami, voulez-vous avoir l’obligeance d’apporter une chaufferette pour madame ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-169">
-            <speaker>AUGUSTE.</speaker>
-            <l n="305" xml:id="l305">Une chaufferette ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-170">
-            <speaker>ERNEST.</speaker>
-            <l n="306" xml:id="l306">Vous devez en avoir.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-171">
-            <speaker>AUGUSTE.</speaker>
-            <l n="307" xml:id="l307">II y en a une... mais je ne sais pas si elle est complète... je vais voir.</l>
-            <stage><hi rend="italic"><em>Il sort. </em></hi></stage>
-          </sp>
-          <sp who="marie" xml:id="0-172">
-            <speaker>MARIE.</speaker>
-            <l n="309" xml:id="l309">Il faut avouer que nous ne pouvions pas plus mal tomber.</l>
-            <stage><hi rend="italic"><em>Tous deux arpentent la scène en frappant du pied pour se réchauffer. </em></hi></stage>
-          </sp>
-          <sp who="ernest" xml:id="0-173">
-            <speaker>ERNEST.</speaker>
-            <l n="311" xml:id="l311">C’est l’installation qui est pénible... mais, une fois que nous aurons pris nos petites habitudes... Ce carreau... en papier... est déjà une amélioration... Je sentais sur la nuque un courant d’air...</l>
-          </sp>
-          <sp who="marie" xml:id="0-174">
-            <speaker>MARIE.</speaker>
-            <l n="312" xml:id="l312">Tiens ! voilà le feu qui prend !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-175">
-            <speaker>ERNEST.</speaker>
-            <l n="313" xml:id="l313">C’est, ma foi, vrai !</l>
-            <stage><hi rend="italic"><em>La faisant asseoir devant la cheminée.</em></hi></stage>
-            <l n="315" xml:id="l315">Approchez-vous ! chauffez-vous les pieds...</l>
-          </sp>
-          <sp who="marie" xml:id="0-176">
-            <speaker>MARIE.</speaker>
-            <l n="316" xml:id="l316">Ah ! avec plaisir.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-177">
-            <speaker>ERNEST, <em>s’asseyant près d’elle.</em></speaker>
-            <l n="317" xml:id="l317">Notre horizon s’éclaircit !... un bon feu... un bon souper et...</l>
-            <stage><hi rend="italic"><em>Lui prenant la main.</em></hi></stage>
-            <l n="319" xml:id="l319">Marie !... permettez-moi de vous appeler Marie...</l>
-          </sp>
-          <sp who="marie" xml:id="0-178">
-            <speaker>MARIE, <em>baissant les yeux.</em></speaker>
-            <l n="320" xml:id="l320">Je le veux bien, monsieur.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-179">
-            <speaker>ERNEST.</speaker>
-            <l n="321" xml:id="l321">Et vous... vous m’appellerez Ernest... plus tard !...</l>
-          </sp>
-          <sp who="marie" xml:id="0-180">
-            <speaker>MARIE, <em>vivement.</em></speaker>
-            <l n="322" xml:id="l322">Oh ! pas devant le monde !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-181">
-            <speaker>ERNEST.</speaker>
-            <l n="323" xml:id="l323">Non !... quand nous serons seuls... tous les deux, votre main dans la mienne... comme en ce moment... moment délicieux !</l>
-            <stage><hi rend="italic"><em>Se levant et à part.</em></hi></stage>
-            <l n="325" xml:id="l325">Ah ! j’ai trop chaud maintenant...</l>
-            <stage><hi rend="italic"><em>Il ôte son paletot ainsi que son cache-nez. Marie laisse tomber son manteau sur sa chaise. Ernest, revenant s’asseoir près d’elle.</em></hi></stage>
-            <l n="327" xml:id="l327">Marie… permettez-moi de vous appeler Marie !... c’est la première fois que je me trouve vraiment seul avec vous... car, en chemin de fer, nous avions dans notre compartiment… un capitaine de dragons dont la présence m’empêchait de vous exprimer tous mes sentiments...</l>
-          </sp>
-          <sp who="marie" xml:id="0-182">
-            <speaker>MARIE.</speaker>
-            <l n="328" xml:id="l328">Oh !... il sentait affreusement le cigare ! Fumez-vous monsieur ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-183">
-            <speaker>ERNEST.</speaker>
-            <l n="329" xml:id="l329">Moi, je fume... c’est-à-dire... je fume quand on le désire…</l>
-          </sp>
-          <sp who="marie" xml:id="0-184">
-            <speaker>MARIE.</speaker>
-            <l n="330" xml:id="l330">Eh bien, moi, monsieur, je ne le désire pas !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-185">
-            <speaker>ERNEST.</speaker>
-            <l n="331" xml:id="l331">Cela suffit, mademoiselle, un mot de vous.</l>
-          </sp>
-          <sp who="marie" xml:id="0-186">
-            <speaker>MARIE.</speaker>
-            <l n="332" xml:id="l332">Papa dit que tous les fumeurs deviennent fous ou imbéciles...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-187">
-            <speaker>ERNEST.</speaker>
-            <l n="333" xml:id="l333">Oh !... monsieur votre père a des idées...</l>
-          </sp>
-          <sp who="marie" xml:id="0-188">
-            <speaker>MARIE.</speaker>
-            <l n="334" xml:id="l334">Quoi ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-189">
-            <speaker>ERNEST.</speaker>
-            <l n="335" xml:id="l335">Un peu arriérées...</l>
-          </sp>
-          <sp who="marie" xml:id="0-190">
-            <speaker>MARIE.</speaker>
-            <l n="336" xml:id="l336">Encore !... Ah ! je le vois bien... vous n’aimez pas mon père !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-191">
-            <speaker>ERNEST.</speaker>
-            <l n="337" xml:id="l337">Mais si !</l>
-          </sp>
-          <sp who="marie" xml:id="0-192">
-            <speaker>MARIE, <em>lui tournant le dos.</em></speaker>
-            <l n="338" xml:id="l338">C’est de l’antipathie !...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-193">
-            <speaker>ERNEST.</speaker>
-            <l n="339" xml:id="l339">Je vous jure...</l>
-            <stage><hi rend="italic"><em>Se mettant à genoux devant elle.</em></hi></stage>
-            <l n="341" xml:id="l341">Voyons, Marie… ma petite Marie… ne me boudez pas... mais votre père... je l’adore... et vous aussi !...</l>
-            <stage><hi rend="italic"><em>Il l’embrasse. Auguste parait avec une chaufferette à la main et un oreiller sous le bras. Ernest, surpris à genoux, prend le soufflet pour se donner une contenance et lui fait rendre des cris plaintifs. </em></hi></stage>
-          </sp>
-          <sp who="auguste" xml:id="0-194">
-            <speaker>AUGUSTE.</speaker>
-            <l n="343" xml:id="l343">Monsieur, c’est la chaufferette... il manque le couvercle.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-195">
-            <speaker>ERNEST, <em>se relevant.</em></speaker>
-            <l n="344" xml:id="l344">C’est inutile… le feu est pris...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-196">
-            <speaker>AUGUSTE.</speaker>
-            <l n="345" xml:id="l345">Ça, c’est votre oreiller...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-197">
-            <speaker>ERNEST.</speaker>
-            <l n="346" xml:id="l346">Ah ! très bien !...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-198">
-            <speaker>AUGUSTE.</speaker>
-            <l n="347" xml:id="l347">Je vous gâte... c’est le mien !</l>
-            <stage><hi rend="italic"><em>Il entre au n° 7. </em></hi></stage>
-          </sp>
-          <sp who="ernest" xml:id="0-199">
-            <speaker>ERNEST, <em>courant à la porte de la chambre et criant.</em></speaker>
-            <l n="349" xml:id="l349">Comment, le sien ?... Mets-le par-dessous ! par-dessous !</l>
-            <stage><hi rend="italic"><em>Revenant.</em></hi></stage>
-            <l n="351" xml:id="l351">Je n’ai pas envie de poser ma joue... Ah çà, mais... notre souper ne vient pas... Ils dorment à la cuisine... je vais les réveiller...</l>
-            <stage><hi rend="italic"><em>À </em><em>Marie.</em></hi></stage>
-            <l n="353" xml:id="l353">Vous permettez ?... deux minutes...</l>
-            <stage><hi rend="italic"><em>Il sort par le fond. </em></hi></stage>
-            <l n="355" xml:id="l355"> </l>
-            <l n="356" xml:id="l356"> </l>
-            <l n="357" xml:id="l357"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-200">
-            <speaker>MARIE, <em>seule.</em></speaker>
-            <l n="358" xml:id="l358">Quand je pense que nous allons passer huit jours ici...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-201">
-            <speaker>AUGUSTE, <em>entrant et à part.</em></speaker>
-            <l n="359" xml:id="l359">J’ai réfléchi... Un jeune ménage, ils doivent avoir besoin d’une femme de chambre.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="361" xml:id="l361">Madame...</l>
-          </sp>
-          <sp who="marie" xml:id="0-202">
-            <speaker>MARIE, <em>à part, le regardant.</em></speaker>
-            <l n="362" xml:id="l362">La ressemblance est frappante...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-203">
-            <speaker>AUGUSTE.</speaker>
-            <l n="363" xml:id="l363">J’oserai vous adresser une petite requête... Ma femme...</l>
-          </sp>
-          <sp who="marie" xml:id="0-204">
-            <speaker>MARIE.</speaker>
-            <l n="364" xml:id="l364">Est-ce qu’il y a longtemps que vous êtes à Fontainebleau ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-205">
-            <speaker>AUGUSTE.</speaker>
-            <l n="365" xml:id="l365">Trois ans... Ma femme...</l>
-          </sp>
-          <sp who="marie" xml:id="0-206">
-            <speaker>MARIE.</speaker>
-            <l n="366" xml:id="l366">Et auparavant ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-207">
-            <speaker>AUGUSTE.</speaker>
-            <l n="367" xml:id="l367">Je servais à Paris, dans un des premiers restaurants du boulevard Montmartre.</l>
-          </sp>
-          <sp who="marie" xml:id="0-208">
-            <speaker>MARIE, <em>à part.</em></speaker>
-            <l n="368" xml:id="l368">Boulevard Montmartre ! c’est lui !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-209">
-            <speaker>AUGUSTE.</speaker>
-            <l n="369" xml:id="l369">Ma femme, Julie... désirerait se placer comme femme de chambre, et, si vous n’avez personne en vue...</l>
-          </sp>
-          <sp who="marie" xml:id="0-210">
-            <speaker>MARIE, <em>prenant ses paquets sur la table.</em></speaker>
-            <l n="370" xml:id="l370">Oh ! cela ne me regarde pas ! Adressez-vous à monsieur... c’est lui qui est chargé de choisir les domestiques...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-211">
-            <speaker>ERNEST, <em>entrant.</em></speaker>
-            <l n="371" xml:id="l371">On va servir...</l>
-          </sp>
-          <sp who="marie" xml:id="0-212">
-            <speaker>MARIE.</speaker>
-            <l n="372" xml:id="l372">Vous me ferez appeler... je vais procéder à notre installation.</l>
-            <stage><hi rend="italic"><em>Bas à Ernest.</em></hi></stage>
-            <l n="374" xml:id="l374">Surtout, soyez très poli avec ce garçon ! je vous dirai pourquoi.</l>
-            <stage><hi rend="italic"><em>Elle entre au n° 7. </em></hi></stage>
-            <l n="376" xml:id="l376"> </l>
-            <l n="377" xml:id="l377"> </l>
-            <l n="378" xml:id="l378"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-213">
-            <speaker>ERNEST, AUGUSTE</speaker>
-            <l n="379" xml:id="l379"> </l>
-          </sp>
-          <sp who="ernest" xml:id="0-214">
-            <speaker>ERNEST, <em>à lui-même.</em></speaker>
-            <l n="380" xml:id="l380">Il me semble que je n’ai pas l’habitude d’être malhonnête avec les domestiques...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-215">
-            <speaker>AUGUSTE.</speaker>
-            <l n="381" xml:id="l381">Monsieur... j’oserai vous adresser une petite requête.. Je connais une femme de chambre à placer.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-216">
-            <speaker>ERNEST.</speaker>
-            <l n="382" xml:id="l382">Justement j’en cherche une.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-217">
-            <speaker>AUGUSTE.</speaker>
-            <l n="383" xml:id="l383">Elle coud, elle repasse, elle raccommode... elle touche même un peu du piano…</l>
-          </sp>
-          <sp who="ernest" xml:id="0-218">
-            <speaker>ERNEST <em>effrayé.</em></speaker>
-            <l n="384" xml:id="l384">Hein ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-219">
-            <speaker>AUGUSTE.</speaker>
-            <l n="385" xml:id="l385">Quand les maîtres sont sortis... Elle s’appelle Julie...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-220">
-            <speaker>ERNEST.</speaker>
-            <l n="386" xml:id="l386">Tiens ! j’en ai connu une... qui louchait...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-221">
-            <speaker>AUGUSTE.</speaker>
-            <l n="387" xml:id="l387">Celle-là ne louche pas... elle a un œil qui implore... mais elle ne louche pas... Quant aux renseignements, monsieur peut s’adresser à madame la comtesse de Pertuisan...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-222">
-            <speaker>ERNEST.</speaker>
-            <l n="388" xml:id="l388">Ma tante !... Ah ! c’est la Julie qui était chez ma tante ?... une grande... belle fille ?...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-223">
-            <speaker>AUGUSTE.</speaker>
-            <l n="389" xml:id="l389">Superbe !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-224">
-            <speaker>ERNEST.</speaker>
-            <l n="390" xml:id="l390">Eh bien ! mon ami, c’est impossible !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-225">
-            <speaker>AUGUSTE.</speaker>
-            <l n="391" xml:id="l391">Pourquoi ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-226">
-            <speaker>ERNEST.</speaker>
-            <l n="392" xml:id="l392">Ma tante l’a renvoyée parce qu’elle s’est aperçue de notre liaison... Ne parle pas de ça à ma femme !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-227">
-            <speaker>AUGUSTE.</speaker>
-            <l n="393" xml:id="l393">Quelle liaison ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-228">
-            <speaker>ERNEST.</speaker>
-            <l n="394" xml:id="l394">Eh bien, notre liaison !... tu comprends ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-229">
-            <speaker>AUGUSTE.</speaker>
-            <l n="395" xml:id="l395">C’est faux !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-230">
-            <speaker>ERNEST.</speaker>
-            <l n="396" xml:id="l396">Comment ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-231">
-            <speaker>AUGUSTE.</speaker>
-            <l n="397" xml:id="l397">Il y a dans le monde une foule de petits crevés...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-232">
-            <speaker>ERNEST.</speaker>
-            <l n="398" xml:id="l398">Hein ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-233">
-            <speaker>AUGUSTE.</speaker>
-            <l n="399" xml:id="l399">Qui se vantent d’avoir des femmes et qui ne sont que des hâbleurs et des rien du tout !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-234">
-            <speaker>ERNEST.</speaker>
-            <l n="400" xml:id="l400">Ah ! mais prends garde !</l>
-          </sp>
-          <sp who="auguste" xml:id="0-235">
-            <speaker>AUGUSTE.</speaker>
-            <l n="401" xml:id="l401">Et des rien du tout !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-236">
-            <speaker>ERNEST.</speaker>
-            <l n="402" xml:id="l402">Insolent !... Tiens !</l>
-            <stage><hi rend="italic"><em>Il lui donne un coup de pied, Marie paraît. </em></hi></stage>
-          </sp>
-          <sp who="auguste" xml:id="0-237">
-            <speaker>AUGUSTE, <em>à part.</em></speaker>
-            <l n="404" xml:id="l404">Il lève la main sur moi !... Il me le payera.</l>
-            <stage><hi rend="italic"><em>Il se dirige vers la parte du fond, se ravise et va crever le carreau en papier. Il retourne à la porte et dit avant de sortir.</em></hi></stage>
-            <l n="406" xml:id="l406">Et des rien du tout !</l>
-            <stage><hi rend="italic"><em>Il disparaît.</em></hi></stage>
-            <l n="408" xml:id="l408"> </l>
-            <l n="409" xml:id="l409"> </l>
-            <l n="410" xml:id="l410"> </l>
-            <l n="411" xml:id="l411"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-238">
-            <speaker>ERNEST, MARIE, <em>puis</em> GODAIS</speaker>
-            <l n="412" xml:id="l412"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-239">
-            <speaker>MARIE.</speaker>
-            <l n="413" xml:id="l413">Eh bien, monsieur, si c’est comme cela que vous tenez compte de mes recommandations.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-240">
-            <speaker>ERNEST.</speaker>
-            <l n="414" xml:id="l414">Quoi donc ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-241">
-            <speaker>MARIE.</speaker>
-            <l n="415" xml:id="l415">Je vous avais prié d’être très poli avec ce garçon…</l>
-          </sp>
-          <sp who="ernest" xml:id="0-242">
-            <speaker>ERNEST.</speaker>
-            <l n="416" xml:id="l416">Oh ! une petite altercation... je lui donnerai cent sous...</l>
-          </sp>
-          <sp who="marie" xml:id="0-243">
-            <speaker>MARIE.</speaker>
-            <l n="417" xml:id="l417">Frapper un domestique ! Ah ! je vois bien que j’ai épousé un homme violent, emporté...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-244">
-            <speaker>ERNEST.</speaker>
-            <l n="418" xml:id="l418">Mais non !... c’est tout le contraire !</l>
-          </sp>
-          <sp who="marie" xml:id="0-245">
-            <speaker>MARIE.</speaker>
-            <l n="419" xml:id="l419">Vous avez su vous contenir tant que je n’étais pas votre femme... mais maintenant…</l>
-          </sp>
-          <sp who="ernest" xml:id="0-246">
-            <speaker>ERNEST.</speaker>
-            <l n="420" xml:id="l420">Je vous assure que je suis un mouton... Tenez, je vais vous raconter mon caractère... avec tous ses défauts. Voici mon caractère : Je suis bon, je suis doux, je suis généreux...</l>
-            <stage><hi rend="italic"><em>Il éternue.</em></hi></stage>
-            <l n="422" xml:id="l422">Oh ! je ne vous cache rien !</l>
-          </sp>
-          <sp who="marie" xml:id="0-247">
-            <speaker>MARIE.</speaker>
-            <l n="423" xml:id="l423">Oui, mais vous commencez par les qualités...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-248">
-            <speaker>ERNEST.</speaker>
-            <l n="424" xml:id="l424">S’arrive aux défauts... À vrai dire, je ne m’en connais qu’un...</l>
-          </sp>
-          <sp who="marie" xml:id="0-249">
-            <speaker>MARIE.</speaker>
-            <l n="425" xml:id="l425">Vraiment ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-250">
-            <speaker>ERNEST.</speaker>
-            <l n="426" xml:id="l426">Je suis doué d’une extrême sensibilité... je ne peux pas voir un malheureux... je le fuis !</l>
-          </sp>
-          <sp who="marie" xml:id="0-251">
-            <speaker>MARIE.</speaker>
-            <l n="427" xml:id="l427">Ah !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-252">
-            <speaker>ERNEST.</speaker>
-            <l n="428" xml:id="l428">Mes aspirations me portent à la rêverie, à la mélancolie... Je suis ce qu’on appelle un homme mélancolique.</l>
-            <stage><hi rend="italic"><em>Il éternue, à part.</em></hi></stage>
-            <l n="430" xml:id="l430">Ça y est, me voilà enrhumé !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="432" xml:id="l432">Je puis le dire sans fausse modestie... je porte un cœur de poète...</l>
-            <stage><hi rend="italic"><em>Il se mouche. </em></hi></stage>
-          </sp>
-          <sp who="marie" xml:id="0-253">
-            <speaker>MARIE.</speaker>
-            <l n="434" xml:id="l434">Vous faites des vers ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-254">
-            <speaker>ERNEST.</speaker>
-            <l n="435" xml:id="l435">Oh ! quelques romances... assez réussies... Je suis organisé d’une façon exceptionnelle, j’entends vibrer en moi toutes les harmonies de la nature...</l>
-            <stage><hi rend="italic"><em>Il prononce tout ce qui va suivre comme un homme fortement enrhumé du cerveau.</em></hi></stage>
-            <l n="437" xml:id="l437">Je comprends les voix qui ne parlent pas... le frémissement des feuilles sous les pieds de la femme aimée,</l>
-            <stage><hi rend="italic"><em>Il se mouche.</em></hi></stage>
-            <l n="439" xml:id="l439">la chanson plaintive du vent qui souffle dans les grands bois,</l>
-            <stage><hi rend="italic"><em>Il se mouche.</em></hi></stage>
-            <l n="441" xml:id="l441">le concert des étoiles... la goutte de rosée... qui dit à sa sœur...</l>
-            <stage><hi rend="italic"><em>Se retournant vivement.</em></hi></stage>
-            <l n="443" xml:id="l443">Sapristi ! il y a encore un courant d’air !</l>
-            <stage><hi rend="italic"><em>Courant à la fenêtre.</em></hi></stage>
-            <l n="445" xml:id="l445">On a crevé le carreau !</l>
-            <stage><hi rend="italic"><em>Il éternue et baisse le rideau de la fenêtre. </em></hi></stage>
-          </sp>
-          <sp who="marie" xml:id="0-255">
-            <speaker>MARIE.</speaker>
-            <l n="447" xml:id="l447">Vous êtes enrhumé ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-256">
-            <speaker>ERNEST.</speaker>
-            <l n="448" xml:id="l448">Non... ce n’est rien... Marie… permettez-moi de vous appeler Marie !... Je vous le dis du fond du cœur... ce que j’aime avant tout… c’est le bruit harmonieux de vos pas...</l>
-            <stage><hi rend="italic"><em>Il se mouche.</em></hi></stage>
-            <l n="450" xml:id="l450">c’est le frissonnement de votre robe... c’est...</l>
-            <stage><hi rend="italic"><em>Il se mouche, part.</em></hi></stage>
-            <l n="452" xml:id="l452">Ah ! je deviens impossible !</l>
-            <stage><hi rend="italic"><em>Haut, avec résolution.</em></hi></stage>
-            <l n="454" xml:id="l454">Marie !...</l>
-          </sp>
-          <sp who="marie" xml:id="0-257">
-            <speaker>MARIE.</speaker>
-            <l n="455" xml:id="l455">Monsieur ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-258">
-            <speaker>ERNEST.</speaker>
-            <l n="456" xml:id="l456">Je vais peut-être vous faire bondir... Si nous retournions à Paris... chez nous ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-259">
-            <speaker>MARIE.</speaker>
-            <l n="457" xml:id="l457">Oh ! ça, avec plaisir... tout de suite !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-260">
-            <speaker>ERNEST.</speaker>
-            <l n="458" xml:id="l458">C’est-à-dire après souper.</l>
-          </sp>
-          <sp who="marie" xml:id="0-261">
-            <speaker>MARIE.</speaker>
-            <l n="459" xml:id="l459">Comment, monsieur, vous aurez le courage de souper... et de vous faire servir par ce garçon ?...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-262">
-            <speaker>ERNEST.</speaker>
-            <l n="460" xml:id="l460">Pourquoi pas ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-263">
-            <speaker>MARIE.</speaker>
-            <l n="461" xml:id="l461">Si vous saviez...</l>
-          </sp>
-          <sp who="godais" xml:id="0-264">
-            <speaker>GODAIS, <em>qui est entré, suivi de deux garçons portant une table servie.</em></speaker>
-            <l n="462" xml:id="l462">Monsieur est servi.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-265">
-            <speaker>ERNEST.</speaker>
-            <l n="463" xml:id="l463">Ah ! ce n’est pas malheureux ! Nous repartons dans une heure.</l>
-          </sp>
-          <sp who="marie" xml:id="0-266">
-            <speaker>MARIE.</speaker>
-            <l n="464" xml:id="l464">Le plus tôt possible.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-267">
-            <speaker>ERNEST.</speaker>
-            <l n="465" xml:id="l465">Chargez-vous de nous procurer une voiture.</l>
-          </sp>
-          <sp who="godais" xml:id="0-268">
-            <speaker>GODAIS.</speaker>
-            <l n="466" xml:id="l466">Est-ce que monsieur n’est pas content de la maison ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-269">
-            <speaker>ERNEST, <em>se mouchant.</em></speaker>
-            <l n="467" xml:id="l467">Mon ami... je n’ai apporté qu’une douzaine de mouchoirs... et je vois que c’est insuffisant...</l>
-          </sp>
-          <sp who="godais" xml:id="0-270">
-            <speaker>GODAIS.</speaker>
-            <l n="468" xml:id="l468">Je puis en prêter à monsieur.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-271">
-            <speaker>ERNEST.</speaker>
-            <l n="469" xml:id="l469">Merci, mon ami.</l>
-          </sp>
-          <sp who="godais" xml:id="0-272">
-            <speaker>GODAIS.</speaker>
-            <l n="470" xml:id="l470">Comme monsieur voudra… et, dès qu’Auguste sera rentré...</l>
-          </sp>
-          <sp who="marie" xml:id="0-273">
-            <speaker>MARIE.</speaker>
-            <l n="471" xml:id="l471">Ah !... il est sorti ?</l>
-          </sp>
-          <sp who="godais" xml:id="0-274">
-            <speaker>GODAIS, <em>en sortant.</em></speaker>
-            <l n="472" xml:id="l472">Il est parti comme un fou, pour envoyer une dépêche à Julie.</l>
-          </sp>
-          <sp who="marie" xml:id="0-275">
-            <speaker>MARIE.</speaker>
-            <l n="473" xml:id="l473">À sa femme ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-276">
-            <speaker>ERNEST, <em>bondissant.</em></speaker>
-            <l n="474" xml:id="l474">Comment !... Julie ?... c’est sa femme ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-277">
-            <speaker>MARIE.</speaker>
-            <l n="475" xml:id="l475">Sang doute... Qu’avez-vous donc ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-278">
-            <speaker>ERNEST.</speaker>
-            <l n="476" xml:id="l476">Rien... c’est le rhume !</l>
-            <stage><hi rend="italic"><em>À </em><em>part.</em></hi></stage>
-            <l n="478" xml:id="l478">Et moi qui lui ai raconté... saprelotte !</l>
-            <stage><hi rend="italic"><em>Il tombe sur une chaise, prés de la table servie. </em></hi></stage>
-            <l n="480" xml:id="l480"> </l>
-            <l n="481" xml:id="l481"> </l>
-            <l n="482" xml:id="l482"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-279">
-            <speaker>ERNEST, MARIE,  GODAIS, AUGUSTE</speaker>
-            <l n="483" xml:id="l483"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-280">
-            <speaker>AUGUSTE, <em>entrant avec un plat de macaroni.</em></speaker>
-            <l n="484" xml:id="l484">Macaroni... soigné !</l>
-          </sp>
-          <sp who="marie" xml:id="0-281">
-            <speaker>MARIE.</speaker>
-            <l n="485" xml:id="l485">Lui !</l>
-            <stage><hi rend="italic"><em>Bas, à Ernest.</em></hi></stage>
-            <l n="487" xml:id="l487">Pour rien au monde, ne touchez à ce macaroni.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-282">
-            <speaker>ERNEST.</speaker>
-            <l n="488" xml:id="l488">Comment ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-283">
-            <speaker>MARIE.</speaker>
-            <l n="489" xml:id="l489">Plus tard, je vous dirai... Je vais chercher les manteaux.... les sacs de nuit.</l>
-            <stage><hi rend="italic"><em>Elle entre au numéro 7. </em></hi></stage>
-            <l n="491" xml:id="l491"> </l>
-            <l n="492" xml:id="l492"> </l>
-            <l n="493" xml:id="l493"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-284">
-            <speaker>ERNEST, AUGUSTE</speaker>
-            <l n="494" xml:id="l494"> </l>
-          </sp>
-          <sp who="auguste" xml:id="0-285">
-            <speaker>ERNEST, <em>à part, regardant Auguste.</em></speaker>
-            <l n="495" xml:id="l495">Je l’ai trompé... et il le sait !... ce sourire sardonique... et vindicatif..</l>
-            <stage><hi rend="italic"><em>Tout à coup, part.</em></hi></stage>
-            <l n="497" xml:id="l497">Ce macaroni doit être empoisonné !!!</l>
-          </sp>
-          <sp who="auguste" xml:id="0-286">
-            <speaker>AUGUSTE, <em>montrant la table.</em></speaker>
-            <l n="498" xml:id="l498">Monsieur... ça va refroidir.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-287">
-            <speaker>ERNEST, <em>à part.</em></speaker>
-            <l n="499" xml:id="l499">Comme il est pressé !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="501" xml:id="l501">Malheureux, tu comptes sans doute sur l’impunité... mais ce macaroni, je puis le faire analyser ; car, aujourd’hui, il n’y a plus de secrets pour la science... La chimie a su trouver des appareils... qui permettent de découvrir de l’arsenic dans un bâton de chaise.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-288">
-            <speaker>AUGUSTE.</speaker>
-            <l n="502" xml:id="l502">Monsieur ne me paraît pas avoir bien faim.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-289">
-            <speaker>ERNEST.</speaker>
-            <l n="503" xml:id="l503">Je pourrais me transporter immédiatement chez le procureur impérial...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-290">
-            <speaker>AUGUSTE.</speaker>
-            <l n="504" xml:id="l504">Il est à la chasse...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-291">
-            <speaker>ERNEST.</speaker>
-            <l n="505" xml:id="l505">Mais non !... mais non !... je serai clément, car j’ai eu des torts envers toi... torts involontaires… j’ignorais que cette Julie fût ta femme...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-292">
-            <speaker>AUGUSTE.</speaker>
-            <l n="506" xml:id="l506">Ah ! monsieur, pour ce qui est de Julie, je vous engage à ne pas continuer votre petite balançoire... J’ai dans ma poche la preuve de son innocence...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-293">
-            <speaker>ERNEST.</speaker>
-            <l n="507" xml:id="l507">La preuve ?... Ah ! c’est un peu fort.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-294">
-            <speaker>AUGUSTE.</speaker>
-            <l n="508" xml:id="l508">Nous avons un télégraphe de nuit à Fontainebleau... et je l’ai fait jouer.</l>
-            <stage><hi rend="italic"><em>Tirant une dépêche de sa poche.</em></hi></stage>
-            <l n="510" xml:id="l510">Lisez !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-295">
-            <speaker>ERNEST, <em>lisant.</em></speaker>
-            <l n="511" xml:id="l511">«  Imbécile… »</l>
-          </sp>
-          <sp who="auguste" xml:id="0-296">
-            <speaker>AUGUSTE.</speaker>
-            <l n="512" xml:id="l512">C’est à moi qu’elle s’adresse.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-297">
-            <speaker>ERNEST.</speaker>
-            <l n="513" xml:id="l513">Je le vois bien.</l>
-            <stage><hi rend="italic"><em>Lisant.</em></hi></stage>
-            <l n="515" xml:id="l515">« Tu crois les cancans du premier cocodès venu... »</l>
-          </sp>
-          <sp who="auguste" xml:id="0-298">
-            <speaker>AUGUSTE.</speaker>
-            <l n="516" xml:id="l516">Ça, c’est pour vous...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-299">
-            <speaker>ERNEST, <em>lisant.</em></speaker>
-            <l n="517" xml:id="l517">« M. Ernest m’a offert une montre en or avec sa chaîne ; je l’ai refusée... »</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="519" xml:id="l519">Elle a préféré un bracelet.</l>
-          </sp>
-          <sp who="auguste" xml:id="0-300">
-            <speaker>AUGUSTE.</speaker>
-            <l n="520" xml:id="l520">Brave fille !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-301">
-            <speaker>ERNEST, <em>lisant.</em></speaker>
-            <l n="521" xml:id="l521">« Sois tranquille.., si jamais je te trompe, je te le dirai... »</l>
-          </sp>
-          <sp who="auguste" xml:id="0-302">
-            <speaker>AUGUSTE, <em>reprenant sa dépêche.</em></speaker>
-            <l n="522" xml:id="l522">Vous entendez... elle me le dira...</l>
-            <stage><hi rend="italic"><em>Avec triomphe.</em></hi></stage>
-            <l n="524" xml:id="l524">Eh bien, qu’est-ce que vous avez à répondre à ça ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-303">
-            <speaker>ERNEST.</speaker>
-            <l n="525" xml:id="l525">Rien... mon ami... rien !... je me vantais. Mais alors qu’as-tu fourré dans ce macaroni ?</l>
-          </sp>
-          <sp who="auguste" xml:id="0-304">
-            <speaker>AUGUSTE.</speaker>
-            <l n="526" xml:id="l526">Rien, parole d’honneur !... J’ai eu un moment l’idée... quand vous avez levé la main sur moi... d’y déposer l’expression de mon mécontentement… mais la dépêche de Julie est arrivée...</l>
-            <l n="527" xml:id="l527"> </l>
-            <l n="528" xml:id="l528"> </l>
-            <l n="529" xml:id="l529"> </l>
-          </sp>
-          <sp who="marie" xml:id="0-305">
-            <speaker>ERNEST, AUGUSTE, GODAIS, <em>puis</em> MARIE</speaker>
-            <l n="530" xml:id="l530"> </l>
-          </sp>
-          <sp who="godais" xml:id="0-306">
-            <speaker>GODAIS.</speaker>
-            <l n="531" xml:id="l531">La voiture est en bas.</l>
-          </sp>
-          <sp who="ernest" xml:id="0-307">
-            <speaker>ERNEST.</speaker>
-            <l n="532" xml:id="l532">C’est bien... prévenez madame.</l>
-            <stage><hi rend="italic"><em>Godais remet la carte à payer à Auguste, et entre au numéro 7.</em></hi></stage>
-          </sp>
-          <sp who="auguste" xml:id="0-308">
-            <speaker>AUGUSTE, <em>à Ernest.</em></speaker>
-            <l n="534" xml:id="l534">Monsieur... c’est la petite note...</l>
-          </sp>
-          <sp who="ernest" xml:id="0-309">
-            <speaker>ERNEST, <em>la prenant et lisant.</em></speaker>
-            <l n="535" xml:id="l535">« Souper... feu... bougies... service… un carreau cassé... recollage dudit carreau... Total : soixante-cinq francs. »</l>
-            <stage><hi rend="italic"><em>Marie entre, suivie de Godais, qui porte des paquets. À </em><em>Auguste.</em></hi></stage>
-            <l n="537" xml:id="l537">Tiens ! voilà cent francs... tu garderas le reste...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="539" xml:id="l539">Je lui dois bien ça !...</l>
-          </sp>
-          <sp who="auguste" xml:id="0-310">
-            <speaker>AUGUSTE, <em>à part.</em></speaker>
-            <l n="540" xml:id="l540">Trente-cinq francs de pourboire !... il a des remords.</l>
-            <stage><hi rend="italic"><em>À part, à Godais.</em></hi></stage>
-            <l n="542" xml:id="l542">Il y a quatre francs à déduire, le carreau était cassé...</l>
-          </sp>
-          <sp who="marie" xml:id="0-311">
-            <speaker>GODAIS, <em>présentant le livre des voyageurs à Marie.</em></speaker>
-            <l n="543" xml:id="l543">Si madame est contente et veut avoir la bonté de le certifier… voici le livre des voyageurs.</l>
-          </sp>
-          <sp who="marie" xml:id="0-312">
-            <speaker>MARIE.</speaker>
-            <l n="544" xml:id="l544">Moi ?...</l>
-            <stage><hi rend="italic"><em>À Ernest, bas.</em></hi></stage>
-            <l n="546" xml:id="l546">Qu’est-ce qu’il faut écrire là-dessus ?</l>
-          </sp>
-          <sp who="ernest" xml:id="0-313">
-            <speaker>ERNEST.</speaker>
-            <l n="547" xml:id="l547">Êtes-vous contente ?</l>
-          </sp>
-          <sp who="marie" xml:id="0-314">
-            <speaker>MARIE.</speaker>
-            <l n="548" xml:id="l548">Mais non !</l>
-          </sp>
-          <sp who="ernest" xml:id="0-315">
-            <speaker>ERNEST.</speaker>
-            <l n="549" xml:id="l549">Moi non plus ! Alors écrivez : « Jeunes époux, restez chez vous ! »</l>
-          </sp>
-          <sp who="marie" xml:id="0-316">
-            <speaker>MARIE, <em>écrivant.</em></speaker>
-            <l n="550" xml:id="l550">Oh ! approuvé !</l>
-            <stage><hi rend="italic"><em>Elle ferme le livre. </em></hi></stage>
-          </sp>
-          <sp who="ernest" xml:id="0-317">
-            <speaker>ERNEST.</speaker>
-            <l n="552" xml:id="l552">Marie… permettez-moi de vous appeler Marie !... pardonnez-moi ce voyage... inutile… et acceptez mon bras.</l>
-          </sp>
-          <sp who="marie" xml:id="0-318">
-            <speaker>MARIE.</speaker>
-            <l n="553" xml:id="l553">Volontiers.</l>
-            <stage><hi rend="italic"><em>Elle éternue.</em></hi></stage>
-          </sp>
-          <sp who="ernest" xml:id="0-319">
-            <speaker>ERNEST.</speaker>
-            <l n="555" xml:id="l555">Vous aussi ? sauvons-nous !</l>
-            <stage><hi rend="italic"><em>Ils remontent vivement vers la porte du fond, accompagnés de Godais. </em></hi></stage>
-          </sp>
-          <sp who="auguste" xml:id="0-320">
-            <speaker>AUGUSTE, <em>se mettant à table.</em></speaker>
-            <l n="557" xml:id="l557">Moi, je vais manger le macaroni.</l>
-            <stage><hi rend="italic"><em>Le rideau baisse.</em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#godais">
+          <speaker>GODAIS, entrant, à Auguste, qui dort dans un fauteuil.</speaker>
+          <l n="1">Auguste !... Auguste ! Auguste !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, se réveillant.</speaker>
+          <l n="2">Hein ?... Tiens ! c’est le patron !</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="3">Il est onze heures et demie... il ne viendra plus de voyageurs... Tu peux aller te coucher.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="4">Bonsoir, monsieur...</l>
+          <stage>&lt;em&gt;Il remonte et revient.&lt;/em&gt;</stage>
+          <l n="5">Ah ! je savais bien... Et le turbot, monsieur ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="6">Eh bien, quoi, le turbot ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="7">Voilà cinq jours qu’il est là !... il commence à... s’impatienter.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="8">Que veux-tu que j’y fasse ? il n’est venu personne à Fontainebleau cette semaine. Tu diras au chef de le mettre en mayonnaise.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="9">Oui... la mayonnaise prolonge le turbot... mais pas longtemps.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="10">Si, dans deux ou trois jours, je n’en ai pas trouvé le placement... eh bien, vous le mangerez à l’office... Un turbot de douze francs... je vous gâte !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="11">Ah ! c’est bien le mot !... Bonsoir, monsieur.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="12">Bonsoir !</l>
+          <stage>&lt;em&gt;Auguste sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="13">Je vais faire ma ronde, pour voir si tout est en ordre... et je me coucherai aussi.</l>
+        </sp>
+        <sp who="#un-garçon-d’hôtel">
+          <speaker>UN GARÇON D’HÔTEL, entrant.</speaker>
+          <l n="14">Patron !... une lettre que le facteur apporte à l’instant.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="15">Une lettre ?... donne.</l>
+          <stage>&lt;em&gt;Le garçon sort. Lisant.&lt;/em&gt;</stage>
+          <l n="16">« À monsieur Godais, maître d’Hôtel à Fontainebleau. »</l>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="17">C’est bien pour moi.</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <l n="18">« Monsieur, je me marie aujourd’hui, j’arriverai à Fontainebleau avec ma jeune femme par le train de minuit cinq. »</l>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="19">Comment ! ce soir ?</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <l n="20">« Je désire un appartement confortable, pour y passer ma lune de miel. Faites faire du feu partout et préparez-nous un petit souper délicat. Je veux que ce soit très bien ; je ne regarde pas au prix... »</l>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="21">Il n’y a pas une minute à perdre.</l>
+          <stage>&lt;em&gt;Remontant et appelant.&lt;/em&gt;</stage>
+          <l n="22">Auguste ! Auguste !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, dans la coulisse.</speaker>
+          <l n="23">Bonsoir, monsieur... Je suis couché !</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="24">Habille-toi… et viens tout de suite... tout de suite !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, dans la coulisse.</speaker>
+          <l n="25">Saprelotte !... qu’est-ce qu’il y a ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, seul, regardant sa lettre.</speaker>
+          <l n="26">Ah ! Il y a un post-scriptum.</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <stage>« Vous me mettrez deux oreillers, je ne peux pas dormir la tête basse ; cela fera trois oreillers, en comptant celui de ma femme... Mais, dans le cas où elle aussi aimerait à avoir la tête haute... ce que je ne sais pas encore... je vous le dirais... alors il nous faudrait quatre oreillers... Je ne regarde pas au prix… je veux que ce soit très bien. Recevez mes salutations. – &lt;em&gt;Ernest de Maxenville. &lt;/em&gt;– Paris, le 1&lt;sup&gt;er&lt;/sup&gt; avril 1868. »</stage>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="27">Je vais lui donner la chambre n° 7... avec salon... C’est l’appartement réservé aux lunes de miel... Fontainebleau est très à la mode depuis quelque temps pour ces sortes d’expéditions.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, entrant.</speaker>
+          <l n="28">Me voilà ! Est-ce qu’il y a le feu ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="29">Non... Une lune de miel qui nous arrive par le train de minuit cinq...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="30">Aujourd’hui ?... ce n’est pas possible !</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, lui montrant la lettre.</speaker>
+          <l n="31">Voici la lettre !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, la regardant.</speaker>
+          <l n="32">« 1er avril... » J’en étais sûr... c’est un poisson d’avril… Ils ne viendront pas... allons nous coucher...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="33">Un moment ! attendons au moins l’arrivée du train.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="34">Quelle rage ont ces gens-là de venir pendre la crémaillère chez les autres !</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="35">Puisque c’est la mode !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="36">Pas pour tout le monde !... moi, je me suis marié l’année dernière…</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="37">Oui, une fameuse idée !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="38">Eh bien, je suis resté chez moi... et je n’ai pas eu à le regretter... ma femme non plus !</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="39">Ah ça ! pourquoi diable t’es-tu marié, à ton âge ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="40">Monsieur, j’avais depuis longtemps le projet de m’unir à une jeune et jolie femme... Julie a vingt-deux ans...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="41">Elle louche...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="42">Non, monsieur... elle ne louche pas... elle a. un œil qui regarde en haut... un œil qui implore… mais elle ne louche pas.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="43">Mais à quoi te sert ta femme ?... elle est placée à Paris, et toi, tu es à Fontainebleau.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="44">Je prends le train tous les samedis soir... Mais, dans ce moment, la pauvre enfant est sans place... et si monsieur avait besoin de quelqu’un...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="45">Ici, chez moi ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="46">Ça m’épargnerait des déplacements...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="47">Merci... je n’ai besoin de personne.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="48">Une gaillarde pareille… il passe trop de cavalerie à Fontainebleau.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, montrant la pendule.</speaker>
+          <l n="49">Monsieur... minuit et demi... Quand je vous disais que c’était un poisson d’avril !</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="50">Non, je ne puis croire à une pareille gaminerie.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="51">Alors je vais allumer le feu.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="52">Un instant !... s’ils ne viennent pas... ils devraient être ici depuis un quart d’heure... Attendons encore cinq minutes.</l>
+          <stage>&lt;em&gt;Il s’assied.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, s’asseyant aussi.</speaker>
+          <l n="53">Attendons !...</l>
+          <stage>&lt;em&gt;Un &lt;/em&gt;&lt;em&gt;temps.&lt;/em&gt;</stage>
+          <l n="54">Monsieur, il me vient une idée pour le turbot.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="55">Laquelle ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="56">L’employé de l’octroi est très enrhumé du cerveau... si vous lui en faisiez hommage ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="57">Par exemple !... un turbot de douze francs.</l>
+          <stage>&lt;em&gt;Se levant et regardant la pendule.&lt;/em&gt;</stage>
+          <l n="58">Minuit trente-cinq... ils ne viendront pas ! Tu peux aller te coucher.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="59">Si j’ai un regret... c’est de m’être relevé...</l>
+          <stage>&lt;em&gt;Sortant.&lt;/em&gt;</stage>
+          <l n="60">Bonsoir, monsieur.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="61">Bonsoir !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#godais">
+          <speaker>GODAIS, montrant la lettre.</speaker>
+          <l n="62">C’est la première fois qu’on me fait une aussi sotte plaisanterie ! Il y a des gens qui ne savent qu’inventer.</l>
+          <stage>&lt;em&gt;On entend le roulement d’une voiture. Il prend la bougie et se &lt;/em&gt;&lt;em&gt;dirige vers la fenêtre.&lt;/em&gt;</stage>
+          <l n="63">Hein ? une voiture !</l>
+          <stage>&lt;em&gt;Courant à la fenêtre.&lt;/em&gt;</stage>
+          <l n="64">Un jeune homme... une dame... ce sont eux.</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="65">Auguste ! Auguste !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>La voix d’AUGUSTE, dans la coulisse.</speaker>
+          <l n="66">Bonsoir, monsieur !... Je suis couché...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="67">Habille-toi ! tout de suite !... tout de suite !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>Voix d’AUGUSTE.</speaker>
+          <l n="68">Encore ! nom d’un petit bonhomme !</l>
+          <stage>&lt;em&gt;Ernest parait avec Marie. Tous deux portent des sacs de nuit et des nécessaires de voyage.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à Marie.</speaker>
+          <l n="69">Entrez, mademoiselle… n’ayez pas peur... nous serons ici comme chez nous.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, les saluant.</speaker>
+          <l n="70">Monsieur... madame...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="71">Ah ! c’est vous le nommé Godais ?...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="72">J’ai reçu votre lettre… je vous attendais...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="73">Nous avons eu toutes les peines du monde à trouver une voiture à la gare. Voyons, tout est-il prêt, l’appartement ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="74">Voici le salon… et la chambre à côté, n° 7.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="75">Je veux que ce soit très bien ! je ne regarde pas au prix... Le souper ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="76">Dans un quart d’heure... je puis vous offrir un joli perdreau rôti...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à Marie.</speaker>
+          <l n="77">Acceptez-vous le perdreau ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, s’asseyant à la cheminée.</speaker>
+          <l n="78">Oh ! tout ce que vous voudrez... Je n’ai presque pas faim.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, bas, à Godais.</speaker>
+          <l n="79">L’émotion...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, bas.</speaker>
+          <l n="80">Je connais ça... Ici, on ne commence à manger que le troisième jour.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="81">Et après le perdreau ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="82">Turbot sauce mayonnaise... bien frais.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="83">Non... je vais peut-être vous faire bondir... mais je n’aime pas le turbot...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="84">Ah ! c’est fâcheux !... Je puis le remplacer par une truite saumonée.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à Marie.</speaker>
+          <l n="85">Acceptez-vous la truite saumonée ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="86">Oh ! tout ce que vous voudrez !</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="87">Macaroni au gratin… c’est le triomphe de la maison.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="88">Très bien... Maintenant, fricassez-nous quelque chose de sucré...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="89">Parfait glacé... vanille et orange... c’est le triomphe de la maison.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="90">Accepté ! mais dépêchez-vous.</l>
+          <stage>&lt;em&gt;Le rappelant.&lt;/em&gt;</stage>
+          <l n="91">Ah ! monsieur Godais !...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="92">Monsieur ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, bas.</speaker>
+          <l n="93">N’oubliez pas mes deux oreillers...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, bas.</speaker>
+          <l n="94">Oui, monsieur... j’en ai pris note... Et pour madame, est-ce un ou deux ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, bas.</speaker>
+          <l n="95">Je ne sais pas encore... vous comprenez... je suis marié de ce matin… je vais le lui demander.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="96">Mademoiselle...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="97">Quoi, monsieur ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="98">Je ne voudrais pas que ma question vous parût indiscrète... mais chacun a ses petites habitudes.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="99">Comment lui tourner ça... sans la faire bondir ?</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="100">En ménage... quand on est destiné à vivre ensemble... il faut se mettre à son aise... parce que là où il y a de la gêne... il n’y a pas de plaisir.</l>
+          <stage>&lt;em&gt;Se reprenant.&lt;/em&gt;</stage>
+          <l n="101">Non !... ce n’est pas ça... Enfin, les uns ont la tête haute, les autres l’ont basse... Ainsi, monsieur votre père...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, vivement.</speaker>
+          <l n="102">Mon père, monsieur, n’a aucune raison de baisser la tête, je vous prie de le croire.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="103">Pardon... vous ne me comprenez pas... Loin de moi la pensée...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="104">Mais quoi ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="105">Rien... rien...</l>
+          <stage>&lt;em&gt;Bas, à Godais qui attend.&lt;/em&gt;</stage>
+          <l n="106">Allez, je vous le dirai demain matin.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="107">Très bien !... Je vais réveiller tout le monde.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à part, regardant Marie.</speaker>
+          <l n="108">Je suis un peu émus… c’est la première fois que je me trouve seul avec elle... pas de maman... d’oncles… de tantes… de cousines... Elle... Fontainebleau et moi !...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="109">Mademoiselle...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="110">Monsieur...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="111">Vous paraissez triste… contrariée...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="112">Je le crois bien... après la façon dont vous venez de traiter mon père...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="113">Je me suis fait bien mal comprendre : quand je me suis permis de dire que monsieur votre père avait la tête basse, cela signifiait qu’il ne mettait qu’un oreiller.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="114">Eh bien ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="115">Cela n’attaque en rien son honorabilité ni son intelligence.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="116">Quelle singulière conversation !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, riant.</speaker>
+          <l n="117">Le fait est que...</l>
+          <stage>&lt;em&gt;À &lt;/em&gt;&lt;em&gt;part.&lt;/em&gt;</stage>
+          <l n="118">Pour un jour de noce ! je ne sais pas pourquoi je me suis embarqué dans les oreillers.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="119">Nous serons très bien ici...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="120">Vous croyez ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="121">C’est simple...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="122">Oh ! oui !... il n’y a pas de luxe... Mais vous aviez mis dans votre tête de faire ce voyage… malgré tout le monde... malgré mon père surtout, un homme de bon sens, quoi que vous en disiez...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="123">Moi ? Je n’ai jamais prétendu le contraire…</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="124">« Je ne comprends pas, vous disait-il, quand vous avez un appartement bien chaud, bien commode, bien meublé... que vous alliez faire vingt lieues, au beau milieu de la nuit, pour tomber dans une misérable chambre d’auberge... »</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="125">C’est l’usage... après la cérémonie... on disparaît, on fait ce qu’on appelle le petit voyage, c’est consacré. On éprouve le besoin de fuir les regards indiscrets, de se soustraire aux sottes interprétations, aux questions équivoques...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, vivement.</speaker>
+          <l n="126">Quelles questions ? Je n’en redoute aucune !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="127">Aujourd’hui... c’est possible ;</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="128">mais demain !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="129">Enfin, ce que je voulais, c’était de m’isoler du monde... avec vous... Nous ne nous quitterons pas, nous ferons de longues promenades à pied... dans la forêt...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="130">Il n’y a pas encore de feuilles... et il pleut.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="131">J’ai apporté des parapluies... Mais ne vous tourmentez pas... ces huit jours passeront comme un rêve.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="132">Comment ! nous allons rester huit jours ici ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="133">Vous les regretterez peut-être... Tenez, asseyons-nous près du feu.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, montrant la cheminée.</speaker>
+          <l n="134">Il n’y en a pas.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="135">Tiens ! c’est vrai...</l>
+          <stage>&lt;em&gt;Il va à la cheminée.&lt;/em&gt;</stage>
+          <l n="136">Ils ont oublié d’allumer, je vais sonner.</l>
+          <stage>&lt;em&gt;Il sonne plusieurs fois.&lt;/em&gt;</stage>
+          <l n="137">Eh bien, la sonnette est cassée !</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="138">Garçon ! garçon !... personne ! Tout le monde est occupé de nous... mais on va apporter le souper...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, s’asseyant au fauteuil près de la table.</speaker>
+          <l n="139">Oh ! moi, j’ai juré que je ne mangerais jamais dans un restaurant !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="140">Pourquoi ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="141">Je n’y suis allée qu’une seule fois... avec mon père... et j’y ai vu faire une chose !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="142">Laquelle ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="143">Il y avait dans le salon, tout près de nous, un monsieur... bien désagréable, il faut en convenir !... il ne trouvait rien de bon... Son filet était trop cuit, son poisson ne l’était pas assez... il dérangeait le garçon à chaque instant. « Garçon ! du citron !... Garçon !... de la moutarde ! Garçon !... un cure-dents !... » Le pauvre homme n’était occupé qu’après lui... et il le traitait d’imbécile, d’idiot...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="144">Oh ! ils sont habitués à ça... et avec un bon pourboire…</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="145">Oui, mais celui-là s’est joliment vengé !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="146">Et de quelle manière ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="147">De ma place, mes yeux plongeaient dans l’escalier par où se faisait le service, et j’aperçus ce garçon montant un macaroni destiné à ce monsieur... Avant d’entrer, savez-vous ce qu’il fit ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="148">Non.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="149">Il tenait son plat comme ça... devant lui... et il osa... Oh ! non ! je ne peux pas le dire... c’est trop vilain !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="150">Il y jeta du poivre ?...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="151">Si ce n’était que cela !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="152">De la cendre de cigare ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="153">Non.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="154">Du tabac ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="155">Non.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="156">Ah ! j’y suis !... Il éternua dedans !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="157">Pis que cela !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="158">Je comprends… il le traita comme le dernier des lâches.</l>
+          <stage>&lt;em&gt;Il &lt;/em&gt;&lt;em&gt;fait très légèrement le simulacre de cracher.&lt;/em&gt;</stage>
+          <l n="159">Ah ! c’est affreux !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="160">Et il eut le front d’entrer en criant : « Macaroni... soigné !... »</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="161">Vraiment !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="162">J’avais envie de prévenir notre voisin, lorsqu’il s’écria : « Enfin ! voilà un plat réussi ! »</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, riant.</speaker>
+          <l n="163">Ah ! charmant !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="164">C’est horrible ! et voilà pourquoi jamais je ne mangerai dans un restaurant !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="165">Oh ! à Fontainebleau, il n’y a rien à craindre, les garçons sont sans malice...</l>
+          <stage>&lt;em&gt;Apercevant une botte d’allumettes sur la cheminée.&lt;/em&gt;</stage>
+          <l n="166">Tiens !... un briquet !... je vais allumer le feu.</l>
+          <stage>&lt;em&gt;Il &lt;/em&gt;&lt;em&gt;frotte une allumette qui ne prend pas.&lt;/em&gt;</stage>
+          <l n="167">En voyage, il faut se servir soi-même.</l>
+          <stage>&lt;em&gt;Il en frotte une seconde, même jeu.&lt;/em&gt;</stage>
+          <l n="168">Comme dit le proverbe : « Aide-toi,</l>
+          <stage>&lt;em&gt;Même jeu.&lt;/em&gt;</stage>
+          <l n="169">le ciel t’aidera. »</l>
+          <stage>&lt;em&gt;S’impatientant.&lt;/em&gt;</stage>
+          <l n="170">Ah ! c’est insupportable !</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="171">Garçon ! garçon !...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, entrant.</speaker>
+          <l n="172">Voilà !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="173">Allumez le feu... Vos allumettes ne prennent pas...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="174">Monsieur... cela dépend de la manière de les frotter... Regardez...</l>
+          <stage>&lt;em&gt;Il prend une allumette et l’allume à La bougie.&lt;/em&gt;</stage>
+          <l n="175">Ce n’est pas bien difficile.</l>
+          <stage>&lt;em&gt;À part, désignant Ernest.&lt;/em&gt;</stage>
+          <l n="176">Et cela croit appartenir aux classes supérieures…</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, à part, regardant Auguste.</speaker>
+          <l n="177">Oh ! c’est singulier... ce garçon... il m’a semblé reconnaître... Ah ! je me trompe...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à Auguste, qui a allumé le feu.</speaker>
+          <l n="178">C’est bien... Maintenant, allumez dans la chambre... au numéro 7...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, prenant une seule allumette, et la montrant à Ernest.</speaker>
+          <l n="179">Monsieur, je n’en prends qu’une... il ne m’en faut pas davantage à moi.</l>
+          <stage>&lt;em&gt;À part, en sortant.&lt;/em&gt;</stage>
+          <l n="180">J’en ai d’autres dans ma poche.</l>
+          <stage>&lt;em&gt;Il entre au numéro 7. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#marie">
+          <speaker>MARIE, à part.</speaker>
+          <l n="181">Oh ! je me trompe… Quelle apparence que ce garçon se retrouve juste à Fontainebleau ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à la cheminée.</speaker>
+          <l n="182">Ce bois est mouillé… il ne flambe pas... je vais baisser la trappe...</l>
+          <stage>&lt;em&gt;Il fait des efforts pour baisser la trappe, qui résiste.&lt;/em&gt;</stage>
+          <l n="183">Bien !... elle est rouillée !... Ah ! un soufflet !...</l>
+          <stage>&lt;em&gt;Il fait manœuvrer le soufflet, qui jette des cris plaintifs. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="184">Écoutez... on dirait d’un enfant qui pleure...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="185">Non ! c’est ce soufflet qui est crevé...</l>
+          <stage>&lt;em&gt;Il &lt;/em&gt;&lt;em&gt;le rejette.&lt;/em&gt;</stage>
+          <l n="186">Ah çà ! c’est donc un magasin de bric-à-brac que cette maison ?...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="187">Il me semble que mon père n’avait pas tout a fait tort...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="188">Moi, ces petites mésaventures ne me déplaisent pas. Tenez, je vais peut-être vous faire bondir... eh bien...</l>
+          <stage>&lt;em&gt;S’interrompant.&lt;/em&gt;</stage>
+          <l n="189">Sapristi !... Est-ce que vous ne sentez pas un courant d’air… là... derrière la tête ?...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="190">Non.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, courant à la fenêtre.</speaker>
+          <l n="191">Allons, bon !... un carreau cassé !</l>
+          <stage>&lt;em&gt;Appelant.&lt;/em&gt;</stage>
+          <l n="192">Garçon ! garçon !...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, entrant.</speaker>
+          <l n="193">Monsieur ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, lui montrant la fenêtre.</speaker>
+          <l n="194">Qu’est-ce que c’est que ça ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, allant à la fenêtre, après avoir examiné.</speaker>
+          <l n="195">Tiens ! monsieur a cassé un carreau ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="196">Ce n’est pas moi... imbécile !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, bas, à Ernest.</speaker>
+          <l n="197">Prenez garde !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="198">Va me chercher un vitrier !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="199">À une heure du matin ?... Monsieur veut rire…</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, s’emportant.</speaker>
+          <l n="200">Nous ne pouvons pourtant pas rester dans un courant d’air, sacrebleu !</l>
+          <stage>&lt;em&gt;À Marie.&lt;/em&gt;</stage>
+          <l n="201">Oh ! pardon !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, à part.</speaker>
+          <l n="202">Il jure !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="203">Calmez-vous !... j’ai une idée... je la crois bonne... Attendez cinq minutes.</l>
+          <stage>&lt;em&gt;Il sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à part.</speaker>
+          <l n="204">Brrr ! Ordinairement je porte de la flanelle… mais un jour de noces... je sens que je m’enrhume.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="205">Je vous demanderai la permission de remettre mon paletot.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="206">Et moi, mon manteau...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, mettant son paletot et son cache-nez.</speaker>
+          <l n="207">Il fait un froid de loup...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, à part, mettant son manteau.</speaker>
+          <l n="208">Je suis gelée...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à part.</speaker>
+          <l n="209">Un jour de noces... quel drôle d’uniforme !... C’est égal... je sens la chaleur qui revient.</l>
+          <stage>&lt;em&gt;S’approchant de Marie, et tendrement.&lt;/em&gt;</stage>
+          <l n="210">Mademoiselle... non, permettez-moi de vous appeler Marie… ma chère Marie...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, frappant le parquet du pied.</speaker>
+          <l n="211">Mon Dieu, que j’ai froid aux pieds !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="212">Voulez-vous une chaufferette ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, entrant avec une feuille de papier.</speaker>
+          <l n="213">Voilà l’affaire !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="214">Quoi ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="215">Le carreau !</l>
+          <stage>&lt;em&gt;Il colle le carreau en papier sur la fenêtre.&lt;/em&gt;</stage>
+          <l n="216">Au moins, si vous cassez celui-là… ça ne vous coûtera pas cher.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="217">Mon ami, voulez-vous avoir l’obligeance d’apporter une chaufferette pour madame ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="218">Une chaufferette ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="219">Vous devez en avoir.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="220">II y en a une... mais je ne sais pas si elle est complète... je vais voir.</l>
+          <stage>&lt;em&gt;Il sort. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="221">Il faut avouer que nous ne pouvions pas plus mal tomber.</l>
+          <stage>&lt;em&gt;Tous deux arpentent la scène en frappant du pied pour se réchauffer. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="222">C’est l’installation qui est pénible... mais, une fois que nous aurons pris nos petites habitudes... Ce carreau... en papier... est déjà une amélioration... Je sentais sur la nuque un courant d’air...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="223">Tiens ! voilà le feu qui prend !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="224">C’est, ma foi, vrai !</l>
+          <stage>&lt;em&gt;La faisant asseoir devant la cheminée.&lt;/em&gt;</stage>
+          <l n="225">Approchez-vous ! chauffez-vous les pieds...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="226">Ah ! avec plaisir.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, s’asseyant près d’elle.</speaker>
+          <l n="227">Notre horizon s’éclaircit !... un bon feu... un bon souper et...</l>
+          <stage>&lt;em&gt;Lui prenant la main.&lt;/em&gt;</stage>
+          <l n="228">Marie !... permettez-moi de vous appeler Marie...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, baissant les yeux.</speaker>
+          <l n="229">Je le veux bien, monsieur.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="230">Et vous... vous m’appellerez Ernest... plus tard !...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, vivement.</speaker>
+          <l n="231">Oh ! pas devant le monde !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="232">Non !... quand nous serons seuls... tous les deux, votre main dans la mienne... comme en ce moment... moment délicieux !</l>
+          <stage>&lt;em&gt;Se levant et à part.&lt;/em&gt;</stage>
+          <l n="233">Ah ! j’ai trop chaud maintenant...</l>
+          <stage>&lt;em&gt;Il ôte son paletot ainsi que son cache-nez. Marie laisse tomber son manteau sur sa chaise. Ernest, revenant s’asseoir près d’elle.&lt;/em&gt;</stage>
+          <l n="234">Marie… permettez-moi de vous appeler Marie !... c’est la première fois que je me trouve vraiment seul avec vous... car, en chemin de fer, nous avions dans notre compartiment… un capitaine de dragons dont la présence m’empêchait de vous exprimer tous mes sentiments...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="235">Oh !... il sentait affreusement le cigare ! Fumez-vous monsieur ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="236">Moi, je fume... c’est-à-dire... je fume quand on le désire…</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="237">Eh bien, moi, monsieur, je ne le désire pas !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="238">Cela suffit, mademoiselle, un mot de vous.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="239">Papa dit que tous les fumeurs deviennent fous ou imbéciles...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="240">Oh !... monsieur votre père a des idées...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="241">Quoi ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="242">Un peu arriérées...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="243">Encore !... Ah ! je le vois bien... vous n’aimez pas mon père !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="244">Mais si !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, lui tournant le dos.</speaker>
+          <l n="245">C’est de l’antipathie !...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="246">Je vous jure...</l>
+          <stage>&lt;em&gt;Se mettant à genoux devant elle.&lt;/em&gt;</stage>
+          <l n="247">Voyons, Marie… ma petite Marie… ne me boudez pas... mais votre père... je l’adore... et vous aussi !...</l>
+          <stage>&lt;em&gt;Il l’embrasse. Auguste parait avec une chaufferette à la main et un oreiller sous le bras. Ernest, surpris à genoux, prend le soufflet pour se donner une contenance et lui fait rendre des cris plaintifs. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="248">Monsieur, c’est la chaufferette... il manque le couvercle.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, se relevant.</speaker>
+          <l n="249">C’est inutile… le feu est pris...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="250">Ça, c’est votre oreiller...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="251">Ah ! très bien !...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="252">Je vous gâte... c’est le mien !</l>
+          <stage>&lt;em&gt;Il entre au n° 7. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, courant à la porte de la chambre et criant.</speaker>
+          <l n="253">Comment, le sien ?... Mets-le par-dessous ! par-dessous !</l>
+          <stage>&lt;em&gt;Revenant.&lt;/em&gt;</stage>
+          <l n="254">Je n’ai pas envie de poser ma joue... Ah çà, mais... notre souper ne vient pas... Ils dorment à la cuisine... je vais les réveiller...</l>
+          <stage>&lt;em&gt;À &lt;/em&gt;&lt;em&gt;Marie.&lt;/em&gt;</stage>
+          <l n="255">Vous permettez ?... deux minutes...</l>
+          <stage>&lt;em&gt;Il sort par le fond. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#marie">
+          <speaker>MARIE, seule.</speaker>
+          <l n="256">Quand je pense que nous allons passer huit jours ici...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, entrant et à part.</speaker>
+          <l n="257">J’ai réfléchi... Un jeune ménage, ils doivent avoir besoin d’une femme de chambre.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="258">Madame...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, à part, le regardant.</speaker>
+          <l n="259">La ressemblance est frappante...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="260">J’oserai vous adresser une petite requête... Ma femme...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="261">Est-ce qu’il y a longtemps que vous êtes à Fontainebleau ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="262">Trois ans... Ma femme...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="263">Et auparavant ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="264">Je servais à Paris, dans un des premiers restaurants du boulevard Montmartre.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, à part.</speaker>
+          <l n="265">Boulevard Montmartre ! c’est lui !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="266">Ma femme, Julie... désirerait se placer comme femme de chambre, et, si vous n’avez personne en vue...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, prenant ses paquets sur la table.</speaker>
+          <l n="267">Oh ! cela ne me regarde pas ! Adressez-vous à monsieur... c’est lui qui est chargé de choisir les domestiques...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, entrant.</speaker>
+          <l n="268">On va servir...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="269">Vous me ferez appeler... je vais procéder à notre installation.</l>
+          <stage>&lt;em&gt;Bas à Ernest.&lt;/em&gt;</stage>
+          <l n="270">Surtout, soyez très poli avec ce garçon ! je vous dirai pourquoi.</l>
+          <stage>&lt;em&gt;Elle entre au n° 7. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à lui-même.</speaker>
+          <l n="271">Il me semble que je n’ai pas l’habitude d’être malhonnête avec les domestiques...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="272">Monsieur... j’oserai vous adresser une petite requête.. Je connais une femme de chambre à placer.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="273">Justement j’en cherche une.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="274">Elle coud, elle repasse, elle raccommode... elle touche même un peu du piano…</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST effrayé.</speaker>
+          <l n="275">Hein ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="276">Quand les maîtres sont sortis... Elle s’appelle Julie...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="277">Tiens ! j’en ai connu une... qui louchait...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="278">Celle-là ne louche pas... elle a un œil qui implore... mais elle ne louche pas... Quant aux renseignements, monsieur peut s’adresser à madame la comtesse de Pertuisan...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="279">Ma tante !... Ah ! c’est la Julie qui était chez ma tante ?... une grande... belle fille ?...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="280">Superbe !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="281">Eh bien ! mon ami, c’est impossible !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="282">Pourquoi ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="283">Ma tante l’a renvoyée parce qu’elle s’est aperçue de notre liaison... Ne parle pas de ça à ma femme !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="284">Quelle liaison ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="285">Eh bien, notre liaison !... tu comprends ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="286">C’est faux !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="287">Comment ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="288">Il y a dans le monde une foule de petits crevés...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="289">Hein ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="290">Qui se vantent d’avoir des femmes et qui ne sont que des hâbleurs et des rien du tout !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="291">Ah ! mais prends garde !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="292">Et des rien du tout !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="293">Insolent !... Tiens !</l>
+          <stage>&lt;em&gt;Il lui donne un coup de pied, Marie paraît. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, à part.</speaker>
+          <l n="294">Il lève la main sur moi !... Il me le payera.</l>
+          <stage>&lt;em&gt;Il se dirige vers la parte du fond, se ravise et va crever le carreau en papier. Il retourne à la porte et dit avant de sortir.&lt;/em&gt;</stage>
+          <l n="295">Et des rien du tout !</l>
+          <stage>&lt;em&gt;Il disparaît.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="296">Eh bien, monsieur, si c’est comme cela que vous tenez compte de mes recommandations.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="297">Quoi donc ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="298">Je vous avais prié d’être très poli avec ce garçon…</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="299">Oh ! une petite altercation... je lui donnerai cent sous...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="300">Frapper un domestique ! Ah ! je vois bien que j’ai épousé un homme violent, emporté...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="301">Mais non !... c’est tout le contraire !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="302">Vous avez su vous contenir tant que je n’étais pas votre femme... mais maintenant…</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="303">Je vous assure que je suis un mouton... Tenez, je vais vous raconter mon caractère... avec tous ses défauts. Voici mon caractère : Je suis bon, je suis doux, je suis généreux...</l>
+          <stage>&lt;em&gt;Il éternue.&lt;/em&gt;</stage>
+          <l n="304">Oh ! je ne vous cache rien !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="305">Oui, mais vous commencez par les qualités...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="306">S’arrive aux défauts... À vrai dire, je ne m’en connais qu’un...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="307">Vraiment ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="308">Je suis doué d’une extrême sensibilité... je ne peux pas voir un malheureux... je le fuis !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="309">Ah !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="310">Mes aspirations me portent à la rêverie, à la mélancolie... Je suis ce qu’on appelle un homme mélancolique.</l>
+          <stage>&lt;em&gt;Il éternue, à part.&lt;/em&gt;</stage>
+          <l n="311">Ça y est, me voilà enrhumé !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="312">Je puis le dire sans fausse modestie... je porte un cœur de poète...</l>
+          <stage>&lt;em&gt;Il se mouche. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="313">Vous faites des vers ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="314">Oh ! quelques romances... assez réussies... Je suis organisé d’une façon exceptionnelle, j’entends vibrer en moi toutes les harmonies de la nature...</l>
+          <stage>&lt;em&gt;Il prononce tout ce qui va suivre comme un homme fortement enrhumé du cerveau.&lt;/em&gt;</stage>
+          <l n="315">Je comprends les voix qui ne parlent pas... le frémissement des feuilles sous les pieds de la femme aimée,</l>
+          <stage>&lt;em&gt;Il se mouche.&lt;/em&gt;</stage>
+          <l n="316">la chanson plaintive du vent qui souffle dans les grands bois,</l>
+          <stage>&lt;em&gt;Il se mouche.&lt;/em&gt;</stage>
+          <l n="317">le concert des étoiles... la goutte de rosée... qui dit à sa sœur...</l>
+          <stage>&lt;em&gt;Se retournant vivement.&lt;/em&gt;</stage>
+          <l n="318">Sapristi ! il y a encore un courant d’air !</l>
+          <stage>&lt;em&gt;Courant à la fenêtre.&lt;/em&gt;</stage>
+          <l n="319">On a crevé le carreau !</l>
+          <stage>&lt;em&gt;Il éternue et baisse le rideau de la fenêtre. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="320">Vous êtes enrhumé ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="321">Non... ce n’est rien... Marie… permettez-moi de vous appeler Marie !... Je vous le dis du fond du cœur... ce que j’aime avant tout… c’est le bruit harmonieux de vos pas...</l>
+          <stage>&lt;em&gt;Il se mouche.&lt;/em&gt;</stage>
+          <l n="322">c’est le frissonnement de votre robe... c’est...</l>
+          <stage>&lt;em&gt;Il se mouche, part.&lt;/em&gt;</stage>
+          <l n="323">Ah ! je deviens impossible !</l>
+          <stage>&lt;em&gt;Haut, avec résolution.&lt;/em&gt;</stage>
+          <l n="324">Marie !...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="325">Monsieur ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="326">Je vais peut-être vous faire bondir... Si nous retournions à Paris... chez nous ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="327">Oh ! ça, avec plaisir... tout de suite !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="328">C’est-à-dire après souper.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="329">Comment, monsieur, vous aurez le courage de souper... et de vous faire servir par ce garçon ?...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="330">Pourquoi pas ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="331">Si vous saviez...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, qui est entré, suivi de deux garçons portant une table servie.</speaker>
+          <l n="332">Monsieur est servi.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="333">Ah ! ce n’est pas malheureux ! Nous repartons dans une heure.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="334">Le plus tôt possible.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="335">Chargez-vous de nous procurer une voiture.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="336">Est-ce que monsieur n’est pas content de la maison ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, se mouchant.</speaker>
+          <l n="337">Mon ami... je n’ai apporté qu’une douzaine de mouchoirs... et je vois que c’est insuffisant...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="338">Je puis en prêter à monsieur.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="339">Merci, mon ami.</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="340">Comme monsieur voudra… et, dès qu’Auguste sera rentré...</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="341">Ah !... il est sorti ?</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, en sortant.</speaker>
+          <l n="342">Il est parti comme un fou, pour envoyer une dépêche à Julie.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="343">À sa femme ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, bondissant.</speaker>
+          <l n="344">Comment !... Julie ?... c’est sa femme ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="345">Sang doute... Qu’avez-vous donc ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="346">Rien... c’est le rhume !</l>
+          <stage>&lt;em&gt;À &lt;/em&gt;&lt;em&gt;part.&lt;/em&gt;</stage>
+          <l n="347">Et moi qui lui ai raconté... saprelotte !</l>
+          <stage>&lt;em&gt;Il tombe sur une chaise, prés de la table servie. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, entrant avec un plat de macaroni.</speaker>
+          <l n="348">Macaroni... soigné !</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="349">Lui !</l>
+          <stage>&lt;em&gt;Bas, à Ernest.&lt;/em&gt;</stage>
+          <l n="350">Pour rien au monde, ne touchez à ce macaroni.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="351">Comment ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="352">Plus tard, je vous dirai... Je vais chercher les manteaux.... les sacs de nuit.</l>
+          <stage>&lt;em&gt;Elle entre au numéro 7. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à part, regardant Auguste.</speaker>
+          <l n="353">Je l’ai trompé... et il le sait !... ce sourire sardonique... et vindicatif..</l>
+          <stage>&lt;em&gt;Tout à coup, part.&lt;/em&gt;</stage>
+          <l n="354">Ce macaroni doit être empoisonné !!!</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, montrant la table.</speaker>
+          <l n="355">Monsieur... ça va refroidir.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, à part.</speaker>
+          <l n="356">Comme il est pressé !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="357">Malheureux, tu comptes sans doute sur l’impunité... mais ce macaroni, je puis le faire analyser ; car, aujourd’hui, il n’y a plus de secrets pour la science... La chimie a su trouver des appareils... qui permettent de découvrir de l’arsenic dans un bâton de chaise.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="358">Monsieur ne me paraît pas avoir bien faim.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="359">Je pourrais me transporter immédiatement chez le procureur impérial...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="360">Il est à la chasse...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="361">Mais non !... mais non !... je serai clément, car j’ai eu des torts envers toi... torts involontaires… j’ignorais que cette Julie fût ta femme...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="362">Ah ! monsieur, pour ce qui est de Julie, je vous engage à ne pas continuer votre petite balançoire... J’ai dans ma poche la preuve de son innocence...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="363">La preuve ?... Ah ! c’est un peu fort.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="364">Nous avons un télégraphe de nuit à Fontainebleau... et je l’ai fait jouer.</l>
+          <stage>&lt;em&gt;Tirant une dépêche de sa poche.&lt;/em&gt;</stage>
+          <l n="365">Lisez !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, lisant.</speaker>
+          <l n="366">«  Imbécile… »</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="367">C’est à moi qu’elle s’adresse.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="368">Je le vois bien.</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <l n="369">« Tu crois les cancans du premier cocodès venu... »</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="370">Ça, c’est pour vous...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, lisant.</speaker>
+          <l n="371">« M. Ernest m’a offert une montre en or avec sa chaîne ; je l’ai refusée... »</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="372">Elle a préféré un bracelet.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="373">Brave fille !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, lisant.</speaker>
+          <l n="374">« Sois tranquille.., si jamais je te trompe, je te le dirai... »</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, reprenant sa dépêche.</speaker>
+          <l n="375">Vous entendez... elle me le dira...</l>
+          <stage>&lt;em&gt;Avec triomphe.&lt;/em&gt;</stage>
+          <l n="376">Eh bien, qu’est-ce que vous avez à répondre à ça ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="377">Rien... mon ami... rien !... je me vantais. Mais alors qu’as-tu fourré dans ce macaroni ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="378">Rien, parole d’honneur !... J’ai eu un moment l’idée... quand vous avez levé la main sur moi... d’y déposer l’expression de mon mécontentement… mais la dépêche de Julie est arrivée...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#godais">
+          <speaker>GODAIS.</speaker>
+          <l n="379">La voiture est en bas.</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="380">C’est bien... prévenez madame.</l>
+          <stage>&lt;em&gt;Godais remet la carte à payer à Auguste, et entre au numéro 7.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, à Ernest.</speaker>
+          <l n="381">Monsieur... c’est la petite note...</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST, la prenant et lisant.</speaker>
+          <l n="382">« Souper... feu... bougies... service… un carreau cassé... recollage dudit carreau... Total : soixante-cinq francs. »</l>
+          <stage>&lt;em&gt;Marie entre, suivie de Godais, qui porte des paquets. À &lt;/em&gt;&lt;em&gt;Auguste.&lt;/em&gt;</stage>
+          <l n="383">Tiens ! voilà cent francs... tu garderas le reste...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="384">Je lui dois bien ça !...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, à part.</speaker>
+          <l n="385">Trente-cinq francs de pourboire !... il a des remords.</l>
+          <stage>&lt;em&gt;À part, à Godais.&lt;/em&gt;</stage>
+          <l n="386">Il y a quatre francs à déduire, le carreau était cassé...</l>
+        </sp>
+        <sp who="#godais">
+          <speaker>GODAIS, présentant le livre des voyageurs à Marie.</speaker>
+          <l n="387">Si madame est contente et veut avoir la bonté de le certifier… voici le livre des voyageurs.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="388">Moi ?...</l>
+          <stage>&lt;em&gt;À Ernest, bas.&lt;/em&gt;</stage>
+          <l n="389">Qu’est-ce qu’il faut écrire là-dessus ?</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="390">Êtes-vous contente ?</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="391">Mais non !</l>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="392">Moi non plus ! Alors écrivez : « Jeunes époux, restez chez vous ! »</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE, écrivant.</speaker>
+          <l n="393">Oh ! approuvé !</l>
+          <stage>&lt;em&gt;Elle ferme le livre. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="394">Marie… permettez-moi de vous appeler Marie !... pardonnez-moi ce voyage... inutile… et acceptez mon bras.</l>
+        </sp>
+        <sp who="#marie">
+          <speaker>MARIE.</speaker>
+          <l n="395">Volontiers.</l>
+          <stage>&lt;em&gt;Elle éternue.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ernest-de-maxenville">
+          <speaker>ERNEST.</speaker>
+          <l n="396">Vous aussi ? sauvons-nous !</l>
+          <stage>&lt;em&gt;Ils remontent vivement vers la porte du fond, accompagnés de Godais. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, se mettant à table.</speaker>
+          <l n="397">Moi, je vais manger le macaroni.</l>
+          <stage>&lt;em&gt;Le rideau baisse.&lt;/em&gt;</stage>
+          <l n="398" />
+        </sp>
       </div>
     </body>
   </text>

@@ -1,1596 +1,1453 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Les Précieuses ridicules</title>
-        <author key="MOLIÈRE | (naissance-mort)">MOLIÈRE |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/606</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>MOLIÈRE |</author>. <title>Les Précieuses ridicules</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/606</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1659-11-18">Représentée pour la première fois sur le Théâtre du Petit-Bourbon le 18 novembre 1659, par le Troupe de Monsieur, frère unique du Roi.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="la-grange" sex="SEX">
+            <persName>LA GRANGE</persName>
+          </person>
+          <person xml:id="du-croisy" sex="SEX">
+            <persName>DU CROISY</persName>
+          </person>
+          <person xml:id="gorgibus" sex="SEX">
+            <persName>GORGIBUS</persName>
+          </person>
+          <person xml:id="madelon" sex="SEX">
+            <persName>MADELON</persName>
+          </person>
+          <person xml:id="cathos" sex="SEX">
+            <persName>CATHOS</persName>
+          </person>
+          <person xml:id="marotte" sex="SEX">
+            <persName>MAROTTE</persName>
+          </person>
+          <person xml:id="almanzor" sex="SEX">
+            <persName>ALMANZOR</persName>
+          </person>
+          <person xml:id="le-marquis-de-mascarille" sex="SEX">
+            <persName>LE MARQUIS DE MASCARILLE</persName>
+          </person>
+          <person xml:id="le-vicomte-de-jodelet" sex="SEX">
+            <persName>LE VICOMTE DE JODELET</persName>
+          </person>
+          <person xml:id="deux-porteurs-de-chaise" sex="SEX">
+            <persName>DEUX PORTEURS DE CHAISE</persName>
+          </person>
+          <person xml:id="voisines" sex="SEX">
+            <persName>VOISINES</persName>
+          </person>
+          <person xml:id="violons" sex="SEX">
+            <persName>VIOLONS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1659-11-18" location="unknown">Représentée pour la première fois sur le Théâtre du Petit-Bourbon le 18 novembre 1659, par le Troupe de Monsieur, frère unique du Roi.</ab>
+      </performance>
+      <div type="preface">
+        <head>PRÉFACE</head>
+        <p>C’est une chose étrange qu’on imprime les gens malgré eux. Je ne vois rien de si injuste, et je pardonnerais toute autre violence plutôt que celle-là.</p>
+        <p>Ce n’est pas que je veuille faire ici l’auteur modeste, et mépriser, par honneur, ma comédie. J’offenserais mal à propos tout Paris, si je l’accusais d’avoir pu applaudir à une sottise. Comme le public est le juge absolu de ces sortes d’ouvrages, il y aurait de l’impertinence à moi de le démentir ; et quand j’aurais eu la plus mauvaise opinion du monde de mes &lt;em&gt;Précieuses ridicules&lt;/em&gt; avant leur représentation, je dois croire maintenant qu’elles valent quelque chose, puisque tant de gens ensemble en ont dit du bien. Mais comme une grande partie des grâces qu’on y a trouvées dépendent de l’action et du ton de voix, il m’importait qu’on ne les dépouillât pas de ces ornements ; et je trouvais que le succès qu’elles avaient eu dans la représentation était assez beau pour en demeurer là. J’avais résolu, dis-je, de ne les faire voir qu’à la chandelle, pour ne point donner lieu à quelqu’un de dire le proverbe ; et je ne voulais pas qu’elles sautassent du théâtre de Bourbon dans la galerie du Palais. Cependant je n’ai pu l’éviter, et je suis tombé dans la disgrâce de voir une copie dérobée de ma pièce entre les mains des libraires, accompagnée d’un privilège obtenu par surprise. J’ai eu beau crier : Ô temps ! ô mœurs ! on m’a fait voir une nécessité pour moi d’être imprimé, ou d’avoir un procès ; et le dernier mal est encore pire que le premier. Il faut donc se laisser aller à la destinée, et consentir à une chose qu’on ne laisserait pas de faire sans moi.</p>
+        <p>Mon Dieu, l’étrange embarras qu’un livre à mettre au jour, et qu’un auteur est neuf la première fois qu’on l’imprime ! Encore si l’on m’avait donné du temps, j’aurais pu mieux songer à moi, et j’aurais pris toutes les précautions que Messieurs les auteurs, à présent mes confrères, ont coutume de prendre en semblables occasions. Outre quelque grand seigneur que j’aurais été prendre malgré lui pour protecteur de mon ouvrage, et dont j’aurais tenté la libéralité par une épître dédicatoire bien fleurie, j’aurais tâché de faire une belle et docte préface ; et je ne manque point de livres qui m’auraient fourni tout ce qu’on peut dire de savant sur la tragédie et la comédie, l’étymologie de toutes deux, leur origine, leur définition et le reste.</p>
+        <p>J’aurais parlé aussi à mes amis, qui pour la recommandation de ma pièce ne m’auraient pas refusé ou des vers français, ou des vers latins. J’en ai même qui m’auraient loué en grec, et l’on n’ignore pas qu’une louange en grec est d’une merveilleuse efficace à la tête d’un livre. Mais on me met au jour sans me donner le loisir de me reconnaître ; et je ne puis même obtenir la liberté de dire deux mots pour justifier mes intentions sur le sujet de cette comédie. J’aurais voulu faire voir qu’elle se tient partout dans les bornes de la satire honnête et permise ; que les plus excellentes choses sont sujettes à être copiées par de mauvais singes, qui méritent d’être bernés ; que ces vicieuses imitations de ce qu’il y a de plus parfait ont été de tout temps la matière de la comédie ; et que, par la même raison que les véritables savants et les vrais braves ne se sont point encore avisés de s’offenser du Docteur de la comédie et du Capitan, non plus que les juges, les princes et les rois de voir Trivelin, ou quelque autre sur le théâtre, faire ridiculement le prince, le juge ou le roi, aussi les véritables précieuses auraient tort de se piquer lorsqu’on joue les ridicules qui les imitent mal. Mais enfin, comme je l’ai dit, on ne me laisse pas le temps de respirer, et M. de Luynes veut m’aller relier de ce pas : à la bonne heure, puisque Dieu l’a voulu !</p>
+      </div>
+      <castList />
+    </front>
     <body>
-      <head>Les Précieuses ridicules</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois sur le Théâtre du Petit-Bourbon le 18 novembre 1659, par le Troupe de Monsieur, frère unique du Roi.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="la-grange">LA GRANGE</role>
-              <roleDesc>, <em>amant rebuté</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="du-croisy">DU CROISY</role>
-              <roleDesc>, <em>amant rebuté</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="gorgibus">GORGIBUS</role>
-              <roleDesc>, <em>bon bourgeois</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madelon">MADELON</role>
-              <roleDesc>, <em>fille de Gorgibus, précieuse ridicule</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="cathos">CATHOS</role>
-              <roleDesc>, <em>nièce de Gorgibus, précieuse ridicule</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="marotte">MAROTTE</role>
-              <roleDesc>, <em>servante des précieuses ridicules</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="almanzor">ALMANZOR</role>
-              <roleDesc>, <em>laquais des précieuses ridicules</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-marquis-de-mascarille">LE MARQUIS DE MASCARILLE</role>
-              <roleDesc>, <em>valet de la Grange</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-vicomte-de-jodelet">LE VICOMTE DE JODELET</role>
-              <roleDesc>, <em>valet de du Croisy</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="deux-porteurs-de-chaise">DEUX PORTEURS DE CHAISE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="voisines">VOISINES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="violons">VIOLONS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <l n="4" xml:id="l4"> </l>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6">C’est une chose étrange qu’on imprime les gens malgré eux. Je ne vois rien de si injuste, et je pardonnerais toute autre violence plutôt que celle-là.</l>
-            <stage><hi rend="italic">Ce n’est pas que je veuille faire ici l’auteur modeste, et mépriser, par honneur, ma comédie. J’offenserais mal à propos tout Paris, si je l’accusais d’avoir pu applaudir à une sottise. Comme le public est le juge absolu de ces sortes d’ouvrages, il y aurait de l’impertinence à moi de le démentir ; et quand j’aurais eu la plus mauvaise opinion du monde de mes <em>Précieuses ridicules</em> avant leur représentation, je dois croire maintenant qu’elles valent quelque chose, puisque tant de gens ensemble en ont dit du bien. Mais comme une grande partie des grâces qu’on y a trouvées dépendent de l’action et du ton de voix, il m’importait qu’on ne les dépouillât pas de ces ornements ; et je trouvais que le succès qu’elles avaient eu dans la représentation était assez beau pour en demeurer là. J’avais résolu, dis-je, de ne les faire voir qu’à la chandelle, pour ne point donner lieu à quelqu’un de dire le proverbe ; et je ne voulais pas qu’elles sautassent du théâtre de Bourbon dans la galerie du Palais. Cependant je n’ai pu l’éviter, et je suis tombé dans la disgrâce de voir une copie dérobée de ma pièce entre les mains des libraires, accompagnée d’un privilège obtenu par surprise. J’ai eu beau crier : Ô temps ! ô mœurs ! on m’a fait voir une nécessité pour moi d’être imprimé, ou d’avoir un procès ; et le dernier mal est encore pire que le premier. Il faut donc se laisser aller à la destinée, et consentir à une chose qu’on ne laisserait pas de faire sans moi.</hi></stage>
-            <l n="8" xml:id="l8">Mon Dieu, l’étrange embarras qu’un livre à mettre au jour, et qu’un auteur est neuf la première fois qu’on l’imprime ! Encore si l’on m’avait donné du temps, j’aurais pu mieux songer à moi, et j’aurais pris toutes les précautions que Messieurs les auteurs, à présent mes confrères, ont coutume de prendre en semblables occasions. Outre quelque grand seigneur que j’aurais été prendre malgré lui pour protecteur de mon ouvrage, et dont j’aurais tenté la libéralité par une épître dédicatoire bien fleurie, j’aurais tâché de faire une belle et docte préface ; et je ne manque point de livres qui m’auraient fourni tout ce qu’on peut dire de savant sur la tragédie et la comédie, l’étymologie de toutes deux, leur origine, leur définition et le reste.</l>
-            <l n="9" xml:id="l9">J’aurais parlé aussi à mes amis, qui pour la recommandation de ma pièce ne m’auraient pas refusé ou des vers français, ou des vers latins. J’en ai même qui m’auraient loué en grec, et l’on n’ignore pas qu’une louange en grec est d’une merveilleuse efficace à la tête d’un livre. Mais on me met au jour sans me donner le loisir de me reconnaître ; et je ne puis même obtenir la liberté de dire deux mots pour justifier mes intentions sur le sujet de cette comédie. J’aurais voulu faire voir qu’elle se tient partout dans les bornes de la satire honnête et permise ; que les plus excellentes choses sont sujettes à être copiées par de mauvais singes, qui méritent d’être bernés ; que ces vicieuses imitations de ce qu’il y a de plus parfait ont été de tout temps la matière de la comédie ; et que, par la même raison que les véritables savants et les vrais braves ne se sont point encore avisés de s’offenser du Docteur de la comédie et du Capitan, non plus que les juges, les princes et les rois de voir Trivelin, ou quelque autre sur le théâtre, faire ridiculement le prince, le juge ou le roi, aussi les véritables précieuses auraient tort de se piquer lorsqu’on joue les ridicules qui les imitent mal. Mais enfin, comme je l’ai dit, on ne me laisse pas le temps de respirer, et M. de Luynes veut m’aller relier de ce pas : à la bonne heure, puisque Dieu l’a voulu !</l>
-            <l n="10" xml:id="l10"> </l>
-            <l n="11" xml:id="l11"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="12" xml:id="l12"> </l>
-          <sp who="la-grange" xml:id="1-1">
-            <speaker>LA GRANGE, DU CROISY</speaker>
-            <l n="13" xml:id="l13"> </l>
-          </sp>
-          <sp who="du-croisy" xml:id="1-2">
-            <speaker>DU CROISY.</speaker>
-            <l n="14" xml:id="l14">Seigneur La Grange.</l>
-          </sp>
-          <sp who="la-grange" xml:id="1-3">
-            <speaker>LA GRANGE.</speaker>
-            <l n="15" xml:id="l15">Quoi ?</l>
-          </sp>
-          <sp who="du-croisy" xml:id="1-4">
-            <speaker>DU CROISY.</speaker>
-            <l n="16" xml:id="l16">Regardez-moi un peu sans rire.</l>
-          </sp>
-          <sp who="la-grange" xml:id="1-5">
-            <speaker>LA GRANGE.</speaker>
-            <l n="17" xml:id="l17">Eh bien !</l>
-          </sp>
-          <sp who="du-croisy" xml:id="1-6">
-            <speaker>DU CROISY.</speaker>
-            <l n="18" xml:id="l18">Que dites-vous de notre visite ? en êtes-vous fort satisfait ?</l>
-          </sp>
-          <sp who="la-grange" xml:id="1-7">
-            <speaker>LA GRANGE.</speaker>
-            <l n="19" xml:id="l19">À votre avis, avons-nous sujet de l’être tous deux ?</l>
-          </sp>
-          <sp who="du-croisy" xml:id="1-8">
-            <speaker>DU CROISY.</speaker>
-            <l n="20" xml:id="l20">Pas tout à fait, à dire vrai.</l>
-          </sp>
-          <sp who="la-grange" xml:id="1-9">
-            <speaker>LA GRANGE.</speaker>
-            <l n="21" xml:id="l21">Pour moi, je vous avoue que j’en suis tout scandalisé. A-t-on jamais vu, dites-moi, deux pecques provinciales faire plus les renchéries que celles-là, et deux hommes traités avec plus de mépris que nous ? À peine ont-elles pu se résoudre à nous faire donner des sièges. Je n’ai jamais vu tant parler à l’oreille qu’elles ont fait entre elles, tant bâiller, tant se frotter les yeux, et demander tant de fois : Quelle heure est-il ? Ont-elles répondu que oui et non à tout ce que nous avons pu leur dire ? et ne m’avouerez-vous pas enfin que, quand nous aurions été les dernières personnes du monde, on ne pouvait nous faire pis qu’elles ont fait ?</l>
-          </sp>
-          <sp who="du-croisy" xml:id="1-10">
-            <speaker>DU CROISY.</speaker>
-            <l n="22" xml:id="l22">Il me semble que vous prenez la chose fort à cœur.</l>
-          </sp>
-          <sp who="la-grange" xml:id="1-11">
-            <speaker>LA GRANGE.</speaker>
-            <l n="23" xml:id="l23">Sans doute, je l’y prends, et de telle façon que je veux me venger de cette impertinence. Je connais ce qui nous a fait mépriser. L’air précieux n’a pas seulement infecté Paris, il s’est aussi répandu dans les provinces, et nos donzelles ridicules en ont humé leur bonne part. En un mot, c’est un ambigu de précieuse et de coquette que leur personne. Je vois ce qu’il faut être pour en être bien reçu ; et, si vous m’en croyez, nous leur jouerons tous deux une pièce qui leur fera voir leur sottise, et pourra leur apprendre à connaître un peu mieux leur monde.</l>
-          </sp>
-          <sp who="du-croisy" xml:id="1-12">
-            <speaker>DU CROISY.</speaker>
-            <l n="24" xml:id="l24">Et comment encore ?</l>
-          </sp>
-          <sp who="la-grange" xml:id="1-13">
-            <speaker>LA GRANGE.</speaker>
-            <l n="25" xml:id="l25">J’ai un certain valet, nommé Mascarille, qui passe, au sentiment de beaucoup de gens, pour une manière de bel esprit : car il n’y a rien à meilleur marché que le bel esprit maintenant. C’est un extravagant qui s’est mis dans la tête de vouloir faire l’homme de condition. Il se pique ordinairement de galanterie et de vers, et dédaigne les autres valets, jusqu’à les appeler brutaux.</l>
-          </sp>
-          <sp who="du-croisy" xml:id="1-14">
-            <speaker>DU CROISY.</speaker>
-            <l n="26" xml:id="l26">Eh bien ! qu’en prétendez-vous faire ?</l>
-          </sp>
-          <sp who="la-grange" xml:id="1-15">
-            <speaker>LA GRANGE.</speaker>
-            <l n="27" xml:id="l27">Ce que j’en prétends faire ? Il faut... mais sortons d’ici auparavant.</l>
-            <l n="28" xml:id="l28"> </l>
-            <l n="29" xml:id="l29"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="30" xml:id="l30"> </l>
-          <sp who="gorgibus" xml:id="2-1">
-            <speaker>GORGIBUS, DU CROISY, LA GRANGE</speaker>
-            <l n="31" xml:id="l31"> </l>
-          </sp>
-          <sp who="gorgibus" xml:id="2-2">
-            <speaker>GORGIBUS.</speaker>
-            <l n="32" xml:id="l32">Hé bien ! vous avez vu ma nièce et ma fille ? les affaires iront-elles bien ? quel est le résultat de cette visite ?</l>
-          </sp>
-          <sp who="la-grange" xml:id="2-3">
-            <speaker>LA GRANGE.</speaker>
-            <l n="33" xml:id="l33">C’est une chose que vous pourrez mieux apprendre d’elles que de nous. Tout ce que nous pouvons vous dire, c’est que nous vous rendons grâce de la faveur que vous nous avez faite, et demeurons vos très humbles serviteurs.</l>
-          </sp>
-          <sp who="du-croisy" xml:id="2-4">
-            <speaker>DU CROISY.</speaker>
-            <l n="34" xml:id="l34">Vos très humbles serviteurs.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="2-5">
-            <speaker>GORGIBUS, <em>seul.</em></speaker>
-            <l n="35" xml:id="l35">Ouais ! il semble qu’ils sortent mal satisfaits d’ici. D’où pourrait venir leur mécontentement ? Il faut savoir un peu ce que c’est. Holà !</l>
-            <l n="36" xml:id="l36"> </l>
-            <l n="37" xml:id="l37"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="38" xml:id="l38"> </l>
-          <sp who="marotte" xml:id="3-1">
-            <speaker>GORGIBUS, MAROTTE</speaker>
-            <l n="39" xml:id="l39"> </l>
-          </sp>
-          <sp who="marotte" xml:id="3-2">
-            <speaker>MAROTTE.</speaker>
-            <l n="40" xml:id="l40">Que désirez-vous, monsieur ?</l>
-          </sp>
-          <sp who="gorgibus" xml:id="3-3">
-            <speaker>GORGIBUS.</speaker>
-            <l n="41" xml:id="l41">Où sont vos maîtresses ?</l>
-          </sp>
-          <sp who="marotte" xml:id="3-4">
-            <speaker>MAROTTE.</speaker>
-            <l n="42" xml:id="l42">Dans leur cabinet.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="3-5">
-            <speaker>GORGIBUS.</speaker>
-            <l n="43" xml:id="l43">Que font-elles ?</l>
-          </sp>
-          <sp who="marotte" xml:id="3-6">
-            <speaker>MAROTTE.</speaker>
-            <l n="44" xml:id="l44">De la pommade pour les lèvres.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="3-7">
-            <speaker>GORGIBUS.</speaker>
-            <l n="45" xml:id="l45">C’est trop pommadé ; dites-leur qu’elles descendent.</l>
-            <l n="46" xml:id="l46"> </l>
-            <l n="47" xml:id="l47"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="48" xml:id="l48"> </l>
-          <sp who="gorgibus" xml:id="4-1">
-            <speaker>GORGIBUS, <em>seul</em></speaker>
-            <l n="49" xml:id="l49"> </l>
-            <l n="50" xml:id="l50">Ces pendardes-là, avec leur pommade, ont, je pense, envie de me ruiner. Je ne vois partout que blancs d’œufs, lait virginal, et mille autres brimborions que je ne connais point. Elles ont usé, depuis que nous sommes ici, le lard d’une douzaine de cochons pour le moins ; et quatre valets vivraient tous les jours des pieds de mouton qu’elles emploient.</l>
-            <l n="51" xml:id="l51"> </l>
-            <l n="52" xml:id="l52"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="53" xml:id="l53"> </l>
-          <sp who="cathos" xml:id="5-1">
-            <speaker>MADELON, CATHOS, GORGIBUS</speaker>
-            <l n="54" xml:id="l54"> </l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-2">
-            <speaker>GORGIBUS.</speaker>
-            <l n="55" xml:id="l55">Il est bien nécessaire vraiment de faire tant de dépense pour vous graisser le museau ! Dites-moi un peu ce que vous avez fait à ces messieurs, que je les vois sortir avec tant de froideur ? Vous avais-je pas commandé de les recevoir comme des personnes que je voulais vous donner pour maris ?</l>
-          </sp>
-          <sp who="madelon" xml:id="5-3">
-            <speaker>MADELON.</speaker>
-            <l n="56" xml:id="l56">Et quelle estime, mon père, voulez-vous que nous fassions du procédé irrégulier de ces gens-là ?</l>
-          </sp>
-          <sp who="cathos" xml:id="5-4">
-            <speaker>CATHOS.</speaker>
-            <l n="57" xml:id="l57">Le moyen, mon oncle, qu’une fille un peu raisonnable se pût accommoder de leur personne ?</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-5">
-            <speaker>GORGIBUS.</speaker>
-            <l n="58" xml:id="l58">Et qu’y trouvez-vous à redire ?</l>
-          </sp>
-          <sp who="madelon" xml:id="5-6">
-            <speaker>MADELON.</speaker>
-            <l n="59" xml:id="l59">La belle galanterie que la leur ! Quoi ! débuter d’abord par le mariage ?</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-7">
-            <speaker>GORGIBUS.</speaker>
-            <l n="60" xml:id="l60">Et par où veux-tu donc qu’ils débutent ? par le concubinage ? N’est-ce pas un procédé dont vous avez sujet de vous louer toutes deux aussi bien que moi ? Est-il rien de plus obligeant que cela ? Et ce lien sacré où ils aspirent n’est-il pas un témoignage de l’honnêteté de leurs intentions ?</l>
-          </sp>
-          <sp who="madelon" xml:id="5-8">
-            <speaker>MADELON.</speaker>
-            <l n="61" xml:id="l61">Ah ! mon père, ce que vous dites là est du dernier bourgeois. Cela me fait honte de vous ouïr parler de la sorte, et vous devriez un peu vous faire apprendre le bel air des choses.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-9">
-            <speaker>GORGIBUS.</speaker>
-            <l n="62" xml:id="l62">Je n’ai que faire ni d’air ni de chanson. Je te dis que le mariage est une chose sainte et sacrée, et que c’est faire en honnêtes gens que de débuter par là.</l>
-          </sp>
-          <sp who="madelon" xml:id="5-10">
-            <speaker>MADELON.</speaker>
-            <l n="63" xml:id="l63">Mon Dieu ! que, si tout le monde vous ressemblait, un roman serait bientôt fini ! La belle chose que ce serait, si d’abord Cyrus épousait Mandane, et qu’Aronce de plain-pied fût marié à Clélie !</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-11">
-            <speaker>GORGIBUS.</speaker>
-            <l n="64" xml:id="l64">Que me vient conter celle-ci ?</l>
-          </sp>
-          <sp who="madelon" xml:id="5-12">
-            <speaker>MADELON.</speaker>
-            <l n="65" xml:id="l65">Mon père, voilà ma cousine qui vous dira aussi bien que moi que le mariage ne doit jamais arriver qu’après les autres aventures. Il faut qu’un amant, pour être agréable, sache débiter les beaux sentiments, pousser le doux, le tendre et le passionné, et que sa recherche soit dans les formes. Premièrement, il doit voir au temple, ou à la promenade, ou dans quelque cérémonie publique, la personne dont il devient amoureux ; ou bien être conduit fatalement chez elle par un parent ou un ami, et sortir de là tout rêveur et mélancolique. Il cache un temps sa passion à l’objet aimé, et cependant lui rend plusieurs visites, où l’on ne manque jamais de mettre sur le tapis une question galante qui exerce les esprits de l’assemblée. Le jour de la déclaration arrive, qui se doit faire ordinairement dans une allée de quelque jardin, tandis que la compagnie s’est un peu éloignée : et cette déclaration est suivie d’un prompt courroux, qui paraît à notre rougeur, et qui, pour un temps, bannit l’amant de notre présence. Ensuite il trouve moyen de nous apaiser, de nous accoutumer insensiblement au discours de sa passion, et de tirer de nous cet aveu qui fait tant de peine. Après cela viennent les aventures, les rivaux qui se jettent à la traverse d’une inclination établie, les persécutions des pères, les jalousies conçues sur de fausses apparences, les plaintes, les désespoirs, les enlèvements, et ce qui s’ensuit. Voilà comme les choses se traitent dans les belles manières ; et ce sont des règles dont, en bonne galanterie, on ne saurait se dispenser. Mais en venir de but en blanc à l’union conjugale, ne faire l’amour qu’en faisant le contrat du mariage, et prendre justement le roman par la queue ; encore un coup mon père, il ne se peut rien de plus marchand que ce procédé ; et j’ai mal au cœur de la seule vision que cela me fait.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-13">
-            <speaker>GORGIBUS.</speaker>
-            <l n="66" xml:id="l66">Quel diable de jargon entends-je ici ? Voici bien du haut style.</l>
-          </sp>
-          <sp who="cathos" xml:id="5-14">
-            <speaker>CATHOS.</speaker>
-            <l n="67" xml:id="l67">En effet, mon oncle, ma cousine donne dans le vrai de la chose. Le moyen de bien recevoir des gens qui sont tout à fait incongrus en galanterie ! Je m’en vais gager qu’ils n’ont jamais vu la carte de Tendre, et que Billets-Doux, Petits-Soins, Billets-Galants et Jolis-Vers, sont des terres inconnues pour eux. Ne voyez-vous pas que toute leur personne marque cela, et qu’ils n’ont point cet air qui donne d’abord bonne opinion des gens ? Venir en visite amoureuse avec une jambe toute unie, un chapeau désarmé de plumes, une tête irrégulière en cheveux, et un habit qui souffre une indigence de rubans ; Mon Dieu ! quels amants sont-ce là ! Quelle frugalité d’ajustement, et quelle sécheresse de conversation ! On n’y dure point, on n’y tient pas. J’ai remarqué encore que leurs rabats ne sont pas de la bonne faiseuse, et qu’il s’en faut plus d’un grand demi-pied que leurs hauts-de-chausses ne soient assez larges.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-15">
-            <speaker>GORGIBUS.</speaker>
-            <l n="68" xml:id="l68">Je pense qu’elles sont folles toutes deux, et je ne puis rien comprendre à ce baragouin. Cathos, et vous, Madelon...</l>
-          </sp>
-          <sp who="madelon" xml:id="5-16">
-            <speaker>MADELON.</speaker>
-            <l n="69" xml:id="l69">Eh ! de grâce, mon père, défaites-vous de ces noms étranges, et nous appelez autrement.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-17">
-            <speaker>GORGIBUS.</speaker>
-            <l n="70" xml:id="l70">Comment, ces noms étranges ? Ne sont-ce pas vos noms de baptême ?</l>
-          </sp>
-          <sp who="madelon" xml:id="5-18">
-            <speaker>MADELON.</speaker>
-            <l n="71" xml:id="l71">Mon Dieu ! que vous êtes vulgaire ! Pour moi, un de mes étonnements, c’est que vous ayez pu faire une fille si spirituelle que moi. A-t-on jamais parlé, dans le beau style, de Cathos ni de Madelon, et ne m’avouerez-vous pas que ce serait assez d’un de ces noms pour décrier le plus beau roman du monde ?</l>
-          </sp>
-          <sp who="cathos" xml:id="5-19">
-            <speaker>CATHOS.</speaker>
-            <l n="72" xml:id="l72">Il est vrai, mon oncle, qu’une oreille un peu délicate pâtit furieusement à entendre prononcer ces mots-là ; et le nom de Polixène que ma cousine a choisi, et celui d’Aminte que je me suis donné, ont une grâce dont il faut que vous demeuriez d’accord.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-20">
-            <speaker>GORGIBUS.</speaker>
-            <l n="73" xml:id="l73">Écoutez : il n’y a qu’un mot qui serve. Je n’entends point que vous ayez d’autres noms que ceux qui vous ont été donnés par vos parrains et marraines ; et pour ces messieurs dont il est question, je connais leurs familles et leurs biens, et je veux résolûment que vous vous disposiez à les recevoir pour maris. Je me lasse de vous avoir sur les bras, et la garde de deux filles est une charge un peu trop pesante pour un homme de mon âge.</l>
-          </sp>
-          <sp who="cathos" xml:id="5-21">
-            <speaker>CATHOS.</speaker>
-            <l n="74" xml:id="l74">Pour moi, mon oncle, tout ce que je vous puis dire, c’est que je trouve le mariage une chose tout à fait choquante. Comment est-ce qu’on peut souffrir la pensée de coucher contre un homme vraiment nu ?</l>
-          </sp>
-          <sp who="madelon" xml:id="5-22">
-            <speaker>MADELON.</speaker>
-            <l n="75" xml:id="l75">Souffrez que nous prenions un peu haleine parmi le beau monde de Paris, où nous ne faisons que d’arriver. Laissez-nous faire à loisir le tissu de notre roman, et n’en pressez point tant la conclusion.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="5-23">
-            <speaker>GORGIBUS, <em>à part.</em></speaker>
-            <l n="76" xml:id="l76">Il n’en faut point douter, elles sont achevées.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="78" xml:id="l78">Encore un coup, je n’entends rien à toutes ces balivernes : je veux être maître absolu ; et, pour trancher toutes sortes de discours, ou vous serez mariées toutes deux avant qu’il soit peu, ou, ma foi, vous serez religieuses ; j’en fais un bon serment.</l>
-            <l n="79" xml:id="l79"> </l>
-            <l n="80" xml:id="l80"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="81" xml:id="l81"> </l>
-          <sp who="cathos" xml:id="6-1">
-            <speaker>CATHOS, MADELON</speaker>
-            <l n="82" xml:id="l82"> </l>
-          </sp>
-          <sp who="cathos" xml:id="6-2">
-            <speaker>CATHOS.</speaker>
-            <l n="83" xml:id="l83">Mon Dieu, ma chère, que ton père a la forme enfoncée dans la matière ! que son intelligence est épaisse, et qu’il fait sombre dans son âme !</l>
-          </sp>
-          <sp who="madelon" xml:id="6-3">
-            <speaker>MADELON.</speaker>
-            <l n="84" xml:id="l84">Que veux-tu, ma chère ? j’en suis en confusion pour lui. J’ai peine à me persuader que je puisse être véritablement sa fille, et je crois que quelque aventure un jour me viendra développer une naissance plus illustre.</l>
-          </sp>
-          <sp who="cathos" xml:id="6-4">
-            <speaker>CATHOS.</speaker>
-            <l n="85" xml:id="l85">Je le croirais bien ; oui, il y a toutes les apparences du monde ; et , pour moi, quand je me regarde aussi...</l>
-            <l n="86" xml:id="l86"> </l>
-            <l n="87" xml:id="l87"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="88" xml:id="l88"> </l>
-          <sp who="marotte" xml:id="7-1">
-            <speaker>CATHOS, MADELON, MAROTTE</speaker>
-            <l n="89" xml:id="l89"> </l>
-          </sp>
-          <sp who="marotte" xml:id="7-2">
-            <speaker>MAROTTE.</speaker>
-            <l n="90" xml:id="l90">Voilà un laquais qui demande si vous êtes au logis, et dit que son maître vous veut venir voir.</l>
-          </sp>
-          <sp who="madelon" xml:id="7-3">
-            <speaker>MADELON.</speaker>
-            <l n="91" xml:id="l91">Apprenez, sotte, à vous énoncer moins vulgairement. Dites : Voilà un nécessaire qui demande si vous êtes en commodité d’être visibles.</l>
-          </sp>
-          <sp who="marotte" xml:id="7-4">
-            <speaker>MAROTTE.</speaker>
-            <l n="92" xml:id="l92">Dame ! je n’entends point le latin ; et je n’ai pas appris, comme vous, la filofie dans le grand Cyre.</l>
-          </sp>
-          <sp who="madelon" xml:id="7-5">
-            <speaker>MADELON.</speaker>
-            <l n="93" xml:id="l93">L’impertinente ! Le moyen de souffrir cela ! Et qui est-il, le maître de ce laquais ?</l>
-          </sp>
-          <sp who="marotte" xml:id="7-6">
-            <speaker>MAROTTE.</speaker>
-            <l n="94" xml:id="l94">Il me l’a nommé le marquis de Mascarille.</l>
-          </sp>
-          <sp who="madelon" xml:id="7-7">
-            <speaker>MADELON.</speaker>
-            <l n="95" xml:id="l95">Ah ! ma chère, un marquis !<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a> Oui, allez dire qu’on nous peut voir. C’est sans doute un bel esprit qui aura ouï parler de nous.<a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2">[2]</a></l>
-          </sp>
-          <sp who="cathos" xml:id="7-8">
-            <speaker>CATHOS.</speaker>
-            <l n="96" xml:id="l96">Assurément, ma chère.</l>
-          </sp>
-          <sp who="madelon" xml:id="7-9">
-            <speaker>MADELON.</speaker>
-            <l n="97" xml:id="l97">Il faut le recevoir dans cette salle basse, plutôt qu’en notre chambre. Ajustons un peu nos cheveux au moins, et soutenons notre réputation. Vite, venez nous tendre ici dedans le conseiller des grâces.</l>
-          </sp>
-          <sp who="marotte" xml:id="7-10">
-            <speaker>MAROTTE.</speaker>
-            <l n="98" xml:id="l98">Par ma foi, je ne sais point quelle bête c’est là ; il faut parler chrétien, si vous voulez que je vous entende.</l>
-          </sp>
-          <sp who="cathos" xml:id="7-11">
-            <speaker>CATHOS.</speaker>
-            <l n="99" xml:id="l99">Apportez-nous le miroir, ignorante que vous êtes, et gardez-vous bien d’en salir la glace par la communication de votre image.</l>
-            <stage><hi rend="italic"><em>Elles sortent.</em></hi></stage>
-            <l n="101" xml:id="l101"> </l>
-            <l n="102" xml:id="l102"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="103" xml:id="l103"> </l>
-          <sp who="mascarille" xml:id="8-1">
-            <speaker>MASCARILLE, DEUX PORTEURS</speaker>
-            <l n="104" xml:id="l104"> </l>
-          </sp>
-          <sp who="mascarille" xml:id="8-2">
-            <speaker>MASCARILLE.</speaker>
-            <l n="105" xml:id="l105">Holà ! porteurs, holà ! Là, là, là, là, là, là. Je pense que ces marauds-là ont dessein de me briser, à force de heurter contre les murailles et les pavés.</l>
-          </sp>
-          <sp who="premier-porteur" xml:id="8-3">
-            <speaker>PREMIER PORTEUR.</speaker>
-            <l n="106" xml:id="l106">Dame ! c’est que la porte est étroite. Vous avez voulu aussi que nous soyons entrés jusqu’ici.</l>
-          </sp>
-          <sp who="mascarille" xml:id="8-4">
-            <speaker>MASCARILLE.</speaker>
-            <l n="107" xml:id="l107">Je le crois bien. Voudriez-vous, faquins, que j’exposasse l’embonpoint de mes plumes aux inclémences de la saison pluvieuse, et que j’allasse imprimer mes souliers en boue ? Allez, ôtez votre chaise d’ici.</l>
-          </sp>
-          <sp who="deuxième-porteur" xml:id="8-5">
-            <speaker>DEUXIÈME PORTEUR.</speaker>
-            <l n="108" xml:id="l108">Payez-nous donc, s’il vous plaît, monsieur.</l>
-          </sp>
-          <sp who="mascarille" xml:id="8-6">
-            <speaker>MASCARILLE.</speaker>
-            <l n="109" xml:id="l109">Hem ?</l>
-          </sp>
-          <sp who="deuxième-porteur" xml:id="8-7">
-            <speaker>DEUXIÈME PORTEUR.</speaker>
-            <l n="110" xml:id="l110">Je dis, monsieur, que vous nous donniez de l’argent, s’il vous plaît.</l>
-          </sp>
-          <sp who="mascarille" xml:id="8-8">
-            <speaker>MASCARILLE, <em>lui donnant un soufflet.</em></speaker>
-            <l n="111" xml:id="l111">Comment, coquin, demander de l’argent à une personne de ma qualité !</l>
-          </sp>
-          <sp who="deuxième-porteur" xml:id="8-9">
-            <speaker>DEUXIÈME PORTEUR.</speaker>
-            <l n="112" xml:id="l112">Est-ce ainsi qu’on paye les pauvres gens ? et votre qualité nous donne-t-elle à dîner ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="8-10">
-            <speaker>MASCARILLE.</speaker>
-            <l n="113" xml:id="l113">Ah ! ah ! ah ! je vous apprendrai à vous connaître ! Ces canailles-là s’osent jouer à moi !</l>
-          </sp>
-          <sp who="premier-porteur" xml:id="8-11">
-            <speaker>PREMIER PORTEUR, <em>prenant un des bâtons de sa chaise.</em></speaker>
-            <l n="114" xml:id="l114">Çà, payez-nous vitement.</l>
-          </sp>
-          <sp who="mascarille" xml:id="8-12">
-            <speaker>MASCARILLE.</speaker>
-            <l n="115" xml:id="l115">Quoi ?</l>
-          </sp>
-          <sp who="premier-porteur" xml:id="8-13">
-            <speaker>PREMIER PORTEUR.</speaker>
-            <l n="116" xml:id="l116">Je dis que je veux avoir de l’argent tout à l’heure.</l>
-          </sp>
-          <sp who="mascarille" xml:id="8-14">
-            <speaker>MASCARILLE.</speaker>
-            <l n="117" xml:id="l117">Il est raisonnable.<a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3">[3]</a></l>
-          </sp>
-          <sp who="premier-porteur" xml:id="8-15">
-            <speaker>PREMIER PORTEUR.</speaker>
-            <l n="118" xml:id="l118">Vite donc !</l>
-          </sp>
-          <sp who="mascarille" xml:id="8-16">
-            <speaker>MASCARILLE.</speaker>
-            <l n="119" xml:id="l119">Oui-da ! tu parles comme il faut, toi ; mais l’autre est un coquin qui ne sait ce qu’il dit. Tiens : es-tu content ?</l>
-          </sp>
-          <sp who="premier-porteur" xml:id="8-17">
-            <speaker>PREMIER PORTEUR.</speaker>
-            <l n="120" xml:id="l120">Non, je ne suis pas content ; vous avez donné un soufflet à mon camarade, et...</l>
-            <stage><hi rend="italic"><em>Levant son bâton.</em></hi></stage>
-          </sp>
-          <sp who="mascarille" xml:id="8-18">
-            <speaker>MASCARILLE.</speaker>
-            <l n="122" xml:id="l122">Doucement ; tiens, voilà pour le soufflet. On obtient tout de moi quand on s’y prend de la bonne façon. Allez, venez me reprendre tantôt pour aller au Louvre, au petit coucher.</l>
-            <l n="123" xml:id="l123"> </l>
-            <l n="124" xml:id="l124"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="125" xml:id="l125"> </l>
-          <sp who="marotte" xml:id="9-1">
-            <speaker>MAROTTE, MASCARILLE</speaker>
-            <l n="126" xml:id="l126"> </l>
-          </sp>
-          <sp who="marotte" xml:id="9-2">
-            <speaker>MAROTTE.</speaker>
-            <l n="127" xml:id="l127">Monsieur, voilà mes maîtresses qui vont venir tout à l’heure.</l>
-          </sp>
-          <sp who="mascarille" xml:id="9-3">
-            <speaker>MASCARILLE.</speaker>
-            <l n="128" xml:id="l128">Qu’elles ne se pressent point ; je suis ici posté commodément pour attendre.</l>
-          </sp>
-          <sp who="marotte" xml:id="9-4">
-            <speaker>MAROTTE.</speaker>
-            <l n="129" xml:id="l129">Les voici.</l>
-            <l n="130" xml:id="l130"> </l>
-            <l n="131" xml:id="l131"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="132" xml:id="l132"> </l>
-          <sp who="almanzor" xml:id="10-1">
-            <speaker>MADELON, CATHOS, MASCARILLE, ALMANZOR</speaker>
-            <l n="133" xml:id="l133"> </l>
-          </sp>
-          <sp who="mascarille" xml:id="10-2">
-            <speaker>MASCARILLE, <em>après avoir salué.</em></speaker>
-            <l n="134" xml:id="l134">Mesdames, vous serez surprises sans doute de l’audace de ma visite ; mais votre réputation vous attire cette méchante affaire, et le mérite a pour moi des charmes si puissants que je cours partout après lui.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-3">
-            <speaker>MADELON.</speaker>
-            <l n="135" xml:id="l135">Si vous poursuivez le mérite, ce n’est pas sur nos terres que vous devez chasser.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-4">
-            <speaker>CATHOS.</speaker>
-            <l n="136" xml:id="l136">Pour voir chez nous le mérite, il a fallu que vous l’y ayez amené.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-5">
-            <speaker>MASCARILLE.</speaker>
-            <l n="137" xml:id="l137">Ah ! je m’inscris en faux contre vos paroles. La renommée accuse juste en contant ce que vous valez ; et vous allez faire pic, repic et capot tout ce qu’il y a de galant dans Paris.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-6">
-            <speaker>MADELON.</speaker>
-            <l n="138" xml:id="l138">Votre complaisance pousse un peu trop avant la libéralité de ses louanges ; et nous n’avons garde, ma cousine et moi, de donner de notre sérieux dans le doux de votre flatterie.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-7">
-            <speaker>CATHOS.</speaker>
-            <l n="139" xml:id="l139">Ma chère, il faudrait faire donner des sièges.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-8">
-            <speaker>MADELON.</speaker>
-            <l n="140" xml:id="l140">Holà, Almanzor !</l>
-          </sp>
-          <sp who="almanzor" xml:id="10-9">
-            <speaker>ALMANZOR.</speaker>
-            <l n="141" xml:id="l141">Madame.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-10">
-            <speaker>MADELON.</speaker>
-            <l n="142" xml:id="l142">Vite, voiturez-nous ici les commodités de la conversation.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-11">
-            <speaker>MASCARILLE.</speaker>
-            <l n="143" xml:id="l143">Mais, au moins, y a-t-il sûreté ici pour moi ?</l>
-            <stage><hi rend="italic"><em>Almanzor sort.</em></hi></stage>
-          </sp>
-          <sp who="cathos" xml:id="10-12">
-            <speaker>CATHOS.</speaker>
-            <l n="145" xml:id="l145">Que craignez-vous ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-13">
-            <speaker>MASCARILLE.</speaker>
-            <l n="146" xml:id="l146">Quelque vol de mon cœur, quelque assassinat de ma franchise. Je vois ici des yeux<a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4">[4]</a> qui ont la mine d’être de fort mauvais garçons, de faire insulte aux libertés, et de traiter une âme de Turc à More. Comment diable ! D’abord qu’on les approche, ils se mettent sur leur garde meurtrière. Ah ! par ma foi, je m’en défie ! et je m’en vais gagner au pied, ou je veux caution bourgeoise qu’ils ne me feront point de mal.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-14">
-            <speaker>MADELON.</speaker>
-            <l n="147" xml:id="l147">Ma chère, c’est le caractère enjoué.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-15">
-            <speaker>CATHOS.</speaker>
-            <l n="148" xml:id="l148">Je vois bien que c’est un Amilcar.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-16">
-            <speaker>MADELON.</speaker>
-            <l n="149" xml:id="l149">Ne craignez rien : nos yeux n’ont point de mauvais desseins, et votre cœur peut dormir en assurance sur leur prud’homie.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-17">
-            <speaker>CATHOS.</speaker>
-            <l n="150" xml:id="l150">Mais, de grâce, monsieur, ne soyez pas inexorable à ce fauteuil qui vous tend les bras il y a un quart d’heure : contentez un peu l’envie qu’il a de vous embrasser.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-18">
-            <speaker>MASCARILLE, <em>après s’être peigné et avoir ajusté ses canons.</em></speaker>
-            <l n="151" xml:id="l151">Eh bien ! mesdames, que dites-vous de Paris ?</l>
-          </sp>
-          <sp who="madelon" xml:id="10-19">
-            <speaker>MADELON.</speaker>
-            <l n="152" xml:id="l152">Hélas ! qu’en pourrions-nous dire ? Il faudrait être l’antipode de la raison, pour ne pas confesser que Paris est le grand bureau des merveilles, le centre du bon goût, du bel esprit et de la galanterie.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-20">
-            <speaker>MASCARILLE.</speaker>
-            <l n="153" xml:id="l153">Pour moi, je tiens que hors de Paris il n’y a point de salut pour les honnêtes gens.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-21">
-            <speaker>CATHOS.</speaker>
-            <l n="154" xml:id="l154">C’est une vérité incontestable.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-22">
-            <speaker>MASCARILLE.</speaker>
-            <l n="155" xml:id="l155">Il y fait un peu crotté ; mais nous avons la chaise.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-23">
-            <speaker>MADELON.</speaker>
-            <l n="156" xml:id="l156">Il est vrai que la chaise est un retranchement merveilleux contre les insultes de la boue et du mauvais temps.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-24">
-            <speaker>MASCARILLE.</speaker>
-            <l n="157" xml:id="l157">Vous recevez beaucoup de visites ? Quel bel esprit est des vôtres ?</l>
-          </sp>
-          <sp who="madelon" xml:id="10-25">
-            <speaker>MADELON.</speaker>
-            <l n="158" xml:id="l158">Hélas ! nous ne sommes pas encore connues ; mais nous sommes en passe de l’être ; et nous avons une amie particulière qui nous a promis d’amener ici tous ces messieurs du Recueil des pièces choisies.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-26">
-            <speaker>CATHOS.</speaker>
-            <l n="159" xml:id="l159">Et certains autres qu’on nous a nommés aussi pour être les arbitres souverains des belles choses.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-27">
-            <speaker>MASCARILLE.</speaker>
-            <l n="160" xml:id="l160">C’est moi qui ferai votre affaire mieux que personne ; ils me rendent tous visite, et je puis dire que je ne me lève jamais sans une demi-douzaine de beaux esprits.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-28">
-            <speaker>MADELON.</speaker>
-            <l n="161" xml:id="l161">Hé ! mon Dieu ! nous vous serons obligées de la dernière obligation si vous nous faites cette amitié ; car enfin il faut avoir la connaissance de tous ces messieurs-là si l’on veut être du beau monde. Ce sont eux qui donnent<a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5">[5]</a> le branle à la réputation dans Paris ; et vous savez qu’il y en a tel dont il ne faut que la seule fréquentation pour vous donner bruit de connaisseuse, quand il n’y aurait rien autre chose que cela. Mais, pour moi, ce que je considère particulièrement, c’est que, par le moyen de ces visites spirituelles, on est instruite de cent choses qu’il faut savoir de nécessité, et qui sont de l’essence d’un bel esprit. On apprend par là chaque jour les petites nouvelles galantes, les jolis commerces de prose et de vers.<a href="#_ftn6" name="_ftnref6" title="" id="_ftnref6">[6]</a> On sait à point nommé : un tel a composé la plus jolie pièce du monde sur un tel sujet ; une telle a fait des paroles sur un tel air ; celui-ci a fait un madrigal sur une jouissance ; celui-là a composé des stances sur une infidélité ; monsieur un tel écrivit hier au soir un sixain à mademoiselle une telle, dont elle lui a envoyé la réponse ce matin sur les huit heures ; un tel auteur a fait un tel dessein ; celui-là en est<a href="#_ftn7" name="_ftnref7" title="" id="_ftnref7">[7]</a> à la troisième partie de son roman ; cet autre met ses ouvrages sous la presse. C’est là ce qui vous fait valoir dans les compagnies ; et si l’on ignore ces choses, je ne donnerais pas un clou de tout l’esprit qu’on peut avoir.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-29">
-            <speaker>CATHOS.</speaker>
-            <l n="162" xml:id="l162">En effet, je trouve que c’est renchérir sur le ridicule, qu’une personne se pique d’esprit, et ne sache pas jusqu’au moindre petit quatrain qui se fait chaque jour ; et, pour moi, j’aurais toutes les hontes du monde s’il fallait qu’on vînt à me demander si j’aurais vu quelque chose de nouveau que je n’aurais pas vu.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-30">
-            <speaker>MASCARILLE.</speaker>
-            <l n="163" xml:id="l163">Il est vrai qu’il est honteux de n’avoir pas des premiers tout ce qui se fait ; mais ne vous mettez pas en peine : je veux établir chez vous une académie de beaux esprits, et je vous promets qu’il ne se fera pas un bout de vers dans Paris que vous ne sachiez par cœur avant tous les autres. Pour moi, tel que vous me voyez, je m’en escrime un peu quand je veux ; et vous verrez courir de ma façon, dans les belles ruelles de Paris, deux cents chansons, autant de sonnets, quatre cents épigrammes, et plus de mille madrigaux, sans compter les énigmes et les portraits.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-31">
-            <speaker>MADELON.</speaker>
-            <l n="164" xml:id="l164">Je vous avoue que je suis furieusement pour les portraits : je ne vois rien de si galant que cela.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-32">
-            <speaker>MASCARILLE.</speaker>
-            <l n="165" xml:id="l165">Les portraits sont difficiles, et demandent un esprit profond : vous en verrez de ma manière qui ne vous déplairont pas.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-33">
-            <speaker>CATHOS.</speaker>
-            <l n="166" xml:id="l166">Pour moi, j’aime terriblement les énigmes.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-34">
-            <speaker>MASCARILLE.</speaker>
-            <l n="167" xml:id="l167">Cela exerce l’esprit, et j’en ai fait quatre encore ce matin, que je vous donnerai à deviner.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-35">
-            <speaker>MADELON.</speaker>
-            <l n="168" xml:id="l168">Les madrigaux sont agréables, quand ils sont bien tournés.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-36">
-            <speaker>MASCARILLE.</speaker>
-            <l n="169" xml:id="l169">C’est mon talent particulier ; et je travaille à mettre en madrigaux toute l’histoire romaine.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-37">
-            <speaker>MADELON.</speaker>
-            <l n="170" xml:id="l170">Ah ! certes, cela sera du dernier beau ; j’en retiens un exemplaire au moins, si vous le faites imprimer.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-38">
-            <speaker>MASCARILLE.</speaker>
-            <l n="171" xml:id="l171">Je vous en promets à chacune un, et des mieux reliés. Cela est au-dessous de ma condition ; mais je le fais seulement pour donner à gagner aux libraires, qui me persécutent.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-39">
-            <speaker>MADELON.</speaker>
-            <l n="172" xml:id="l172">Je m’imagine que le plaisir est grand de se voir imprimé.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-40">
-            <speaker>MASCARILLE.</speaker>
-            <l n="173" xml:id="l173">Sans doute. Mais, à propos, il faut que je vous dise un impromptu que je fis hier chez une duchesse de mes amies que je fus visiter : car je suis diablement fort sur les impromptus.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-41">
-            <speaker>CATHOS.</speaker>
-            <l n="174" xml:id="l174">L’impromptu est justement la pierre de touche de l’esprit.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-42">
-            <speaker>MASCARILLE.</speaker>
-            <l n="175" xml:id="l175">Écoutez donc.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-43">
-            <speaker>MADELON.</speaker>
-            <l n="176" xml:id="l176">Nous y sommes de toutes nos oreilles.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-44">
-            <speaker>MASCARILLE.</speaker>
-            <stage><hi rend="italic"><em>Oh ! oh ! je n’y prenais pas garde :</em></hi></stage>
-          </sp>
-          <sp who="cathos" xml:id="10-45">
-            <speaker>CATHOS.</speaker>
-            <l n="178" xml:id="l178">Ah ! mon Dieu ! voilà qui est poussé dans le dernier galant.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-46">
-            <speaker>MASCARILLE.</speaker>
-            <l n="179" xml:id="l179">Tout ce que je fais a l’air cavalier ; cela ne sent point le pédant.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-47">
-            <speaker>MADELON.</speaker>
-            <l n="180" xml:id="l180">Il en est éloigné de plus de deux mille lieues.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-48">
-            <speaker>MASCARILLE.</speaker>
-            <stage><hi rend="italic">Avez-vous remarqué ce commencement ? <em>Oh ! oh !</em> Voilà qui est extraordinaire, <em>oh ! oh !</em> Comme un homme qui s’avise tout d’un coup, <em>oh ! oh !</em> La surprise, <em>oh ! oh !</em></hi></stage>
-          </sp>
-          <sp who="madelon" xml:id="10-49">
-            <speaker>MADELON.</speaker>
-            <stage><hi rend="italic">Oui, je trouve ce <em>oh ! oh !</em> admirable.</hi></stage>
-          </sp>
-          <sp who="mascarille" xml:id="10-50">
-            <speaker>MASCARILLE.</speaker>
-            <l n="183" xml:id="l183">Il semble que cela ne soit rien.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-51">
-            <speaker>CATHOS.</speaker>
-            <l n="184" xml:id="l184">Ah ! mon Dieu ! que dites-vous ? Ce sont là de ces sortes de choses<a href="#_ftn8" name="_ftnref8" title="" id="_ftnref8">[8]</a> qui ne se peuvent payer.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-52">
-            <speaker>MADELON.</speaker>
-            <stage><hi rend="italic">Sans doute ; et j’aimerais mieux avoir fait ce <em>oh ! oh !</em> qu’un poème épique.</hi></stage>
-          </sp>
-          <sp who="mascarille" xml:id="10-53">
-            <speaker>MASCARILLE.</speaker>
-            <l n="186" xml:id="l186">Tudieu ! vous avez le goût bon.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-54">
-            <speaker>MADELON.</speaker>
-            <l n="187" xml:id="l187">Eh ! je ne l’ai pas tout à fait mauvais.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-55">
-            <speaker>MASCARILLE.</speaker>
-            <stage><hi rend="italic">Mais n’admirez-vous pas aussi <em>je n’y prenais pas garde ? Je n’y prenais pas garde</em>, je ne m’apercevais pas de cela ; façon de parler naturelle, <em>je n’y prenais pas garde. Tandis que, sans songer à mal</em>, tandis qu’innocemment, sans malice, comme un pauvre mouton, <em>je vous regarde</em>, c’est-à-dire je m’amuse à vous considérer, je vous observe, je vous contemple ; <em>votre œil en tapinois</em>... Que vous semble de ce mot <em>tapinois</em><em> ?</em> n’est-il pas bien choisi ?</hi></stage>
-          </sp>
-          <sp who="cathos" xml:id="10-56">
-            <speaker>CATHOS.</speaker>
-            <l n="189" xml:id="l189">Tout à fait bien.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-57">
-            <speaker>MASCARILLE.</speaker>
-            <stage><hi rend="italic"><em>Tapinois</em>, en cachette ; il semble que ce soit un chat qui vienne de prendre une souris, <em>tapinois</em>.</hi></stage>
-          </sp>
-          <sp who="madelon" xml:id="10-58">
-            <speaker>MADELON.</speaker>
-            <l n="191" xml:id="l191">Il ne se peut rien de mieux.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-59">
-            <speaker>MASCARILLE.</speaker>
-            <stage><hi rend="italic"><em>Me dérobe mon cœur</em>, me l’emporte, me le ravit. <em>Au voleur ! au voleur ! au voleur ! au voleur !</em> Ne diriez-vous pas que c’est un homme qui crie et court après un voleur pour le faire arrêter ? <em>Au voleur ! au voleur ! au voleur ! au voleur !</em></hi></stage>
-          </sp>
-          <sp who="madelon" xml:id="10-60">
-            <speaker>MADELON.</speaker>
-            <l n="193" xml:id="l193">Il faut avouer que cela a un tour spirituel et galant.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-61">
-            <speaker>MASCARILLE.</speaker>
-            <l n="194" xml:id="l194">Je veux vous dire l’air que j’ai fait dessus.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-62">
-            <speaker>CATHOS.</speaker>
-            <l n="195" xml:id="l195">Vous avez appris la musique ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-63">
-            <speaker>MASCARILLE.</speaker>
-            <l n="196" xml:id="l196">Moi ? point du tout.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-64">
-            <speaker>CATHOS.</speaker>
-            <l n="197" xml:id="l197">Et comment donc cela se peut-il ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-65">
-            <speaker>MASCARILLE.</speaker>
-            <l n="198" xml:id="l198">Les gens de qualité savent tout sans avoir jamais rien appris.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-66">
-            <speaker>MADELON.</speaker>
-            <l n="199" xml:id="l199">Assurément, ma chère.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-67">
-            <speaker>MASCARILLE.</speaker>
-            <stage><hi rend="italic">Écoutez si vous trouverez l’air à votre goût. <em>Hem, hem. La, la, la, la, la</em>. La brutalité de la saison a furieusement outragé la délicatesse de ma voix ; mais il n’importe, c’est à la cavalière.</hi></stage>
-            <stage><hi rend="italic"><em>Il chante.</em></hi></stage>
-            <stage><hi rend="italic"><em>Oh ! oh ! je n’y prenais pas...</em></hi></stage>
-          </sp>
-          <sp who="cathos" xml:id="10-68">
-            <speaker>CATHOS.</speaker>
-            <l n="203" xml:id="l203">Ah ! que voilà un air qui est passionné ! Est-ce qu’on n’en meurt point ?</l>
-          </sp>
-          <sp who="madelon" xml:id="10-69">
-            <speaker>MADELON.</speaker>
-            <l n="204" xml:id="l204">Il y a de la chromatique là dedans.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-70">
-            <speaker>MASCARILLE.</speaker>
-            <stage><hi rend="italic">Ne trouvez-vous pas la pensée bien exprimée dans le chant ? <em>Au voleur !...<a href="#_ftn9" name="_ftnref9" title="" id="_ftnref9"><strong>[9]</strong></a></em> Et puis, comme si l’on criait bien fort, <em>au, au, au, au, au, au voleur ! </em>Et tout d’un coup, comme une personne essoufflée, <em>au voleur !</em></hi></stage>
-          </sp>
-          <sp who="madelon" xml:id="10-71">
-            <speaker>MADELON.</speaker>
-            <l n="206" xml:id="l206">C’est là savoir le fin des choses, le grand fin, le fin du fin. Tout est merveilleux, je vous assure ; je suis enthousiasmée de l’air et des paroles.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-72">
-            <speaker>CATHOS.</speaker>
-            <l n="207" xml:id="l207">Je n’ai encore rien vu de cette force-là.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-73">
-            <speaker>MASCARILLE.</speaker>
-            <l n="208" xml:id="l208">Tout ce que je fais me vient naturellement, c’est sans étude.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-74">
-            <speaker>MADELON.</speaker>
-            <l n="209" xml:id="l209">La nature vous a traité en vraie mère passionnée, et vous en êtes l’enfant gâté.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-75">
-            <speaker>MASCARILLE.</speaker>
-            <l n="210" xml:id="l210">À quoi donc passez-vous le temps ?<a href="#_ftn10" name="_ftnref10" title="" id="_ftnref10">[10]</a></l>
-          </sp>
-          <sp who="cathos" xml:id="10-76">
-            <speaker>CATHOS.</speaker>
-            <l n="211" xml:id="l211">À rien du tout.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-77">
-            <speaker>MADELON.</speaker>
-            <l n="212" xml:id="l212">Nous avons été jusqu’ici dans un jeûne effroyable de divertissements.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-78">
-            <speaker>MASCARILLE.</speaker>
-            <l n="213" xml:id="l213">Je m’offre à vous mener l’un de ces jours à la comédie, si vous voulez ; aussi bien on en doit jouer une nouvelle que je serai bien aise que nous voyions ensemble.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-79">
-            <speaker>MADELON.</speaker>
-            <l n="214" xml:id="l214">Cela n’est pas de refus.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-80">
-            <speaker>MASCARILLE.</speaker>
-            <l n="215" xml:id="l215">Mais je vous demande d’applaudir comme il faut, quand nous serons là : car je me suis engagé de faire valoir la pièce, et l’auteur m’en est venu prier encore ce matin. C’est la coutume ici, qu’à nous autres, gens de condition, les auteurs viennent lire leurs pièces nouvelles, pour nous engager à les trouver belles et leur donner de la réputation ; et je vous laisse à penser si, quand nous disons quelque chose, le parterre ose nous contredire ! Pour moi, j’y suis fort exact ; et quand j’ai promis à quelque poète, je crie toujours : Voilà qui est beau ! devant que les chandelles soient allumées.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-81">
-            <speaker>MADELON.</speaker>
-            <l n="216" xml:id="l216">Ne m’en parlez point : c’est un admirable lieu que Paris ; il s’y passe cent choses, tous les jours, qu’on ignore dans les provinces, quelque spirituelle qu’on puisse être.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-82">
-            <speaker>CATHOS.</speaker>
-            <l n="217" xml:id="l217">C’est assez ; puisque nous sommes instruites, nous ferons notre devoir de nous écrier comme il faut sur tout ce qu’on dira.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-83">
-            <speaker>MASCARILLE.</speaker>
-            <l n="218" xml:id="l218">Je ne sais si je me trompe ; mais vous avez toute la mine d’avoir fait quelque comédie.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-84">
-            <speaker>MADELON.</speaker>
-            <l n="219" xml:id="l219">Eh ! il pourrait être quelque chose de ce que vous dites.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-85">
-            <speaker>MASCARILLE.</speaker>
-            <l n="220" xml:id="l220">Ah ! ma foi, il faudra que nous la voyions. Entre nous, j’en ai composé une que je veux faire représenter.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-86">
-            <speaker>CATHOS.</speaker>
-            <l n="221" xml:id="l221">Hé, à quels comédiens la donnerez-vous ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-87">
-            <speaker>MASCARILLE.</speaker>
-            <l n="222" xml:id="l222">Belle demande ! Aux grands comédiens :<a href="#_ftn11" name="_ftnref11" title="" id="_ftnref11">[11]</a> il n’y a qu’eux qui soient capables de faire valoir les choses ; les autres sont des ignorants qui récitent comme l’on parle ; ils ne savent pas faire ronfler les vers et s’arrêter au bel endroit ; et le moyen de connaître où est le beau vers, si le comédien ne s’y arrête et ne vous avertit par là qu’il faut faire le brouhaha ?</l>
-          </sp>
-          <sp who="cathos" xml:id="10-88">
-            <speaker>CATHOS.</speaker>
-            <l n="223" xml:id="l223">En effet, il y a manière de faire sentir aux auditeurs les beautés d’un ouvrage ; et les choses ne valent que ce qu’on les fait valoir.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-89">
-            <speaker>MASCARILLE.</speaker>
-            <l n="224" xml:id="l224">Que vous semble de ma petite oie ? La trouvez-vous congruente à l’habit ?</l>
-          </sp>
-          <sp who="cathos" xml:id="10-90">
-            <speaker>CATHOS.</speaker>
-            <l n="225" xml:id="l225">Tout à fait.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-91">
-            <speaker>MASCARILLE.</speaker>
-            <l n="226" xml:id="l226">Le ruban est bien choisi.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-92">
-            <speaker>MADELON.</speaker>
-            <l n="227" xml:id="l227">Furieusement bien. C’est Perdrigeon tout pur.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-93">
-            <speaker>MASCARILLE.</speaker>
-            <l n="228" xml:id="l228">Que dites-vous de mes canons ?</l>
-          </sp>
-          <sp who="madelon" xml:id="10-94">
-            <speaker>MADELON.</speaker>
-            <l n="229" xml:id="l229">Ils ont tout à fait bon air.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-95">
-            <speaker>MASCARILLE.</speaker>
-            <l n="230" xml:id="l230">Je puis me vanter au moins qu’ils ont un grand quartier plus que tous ceux qu’on fait.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-96">
-            <speaker>MADELON.</speaker>
-            <l n="231" xml:id="l231">Il faut avouer que je n’ai jamais vu porter si haut l’élégance de l’ajustement.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-97">
-            <speaker>MASCARILLE.</speaker>
-            <l n="232" xml:id="l232">Attachez un peu sur ces gants la réflexion de votre odorat.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-98">
-            <speaker>MADELON.</speaker>
-            <l n="233" xml:id="l233">Ils sentent terriblement bon.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-99">
-            <speaker>CATHOS.</speaker>
-            <l n="234" xml:id="l234">Je n’ai jamais respiré une odeur mieux conditionnée.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-100">
-            <speaker>MASCARILLE.</speaker>
-            <l n="235" xml:id="l235">Et celle-là ?</l>
-            <stage><hi rend="italic"><em>Il donne à sentir les cheveux poudrés de sa perruque.</em></hi></stage>
-          </sp>
-          <sp who="madelon" xml:id="10-101">
-            <speaker>MADELON.</speaker>
-            <l n="237" xml:id="l237">Elle est tout à fait de qualité ; le sublime en est touché délicieusement.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-102">
-            <speaker>MASCARILLE.</speaker>
-            <l n="238" xml:id="l238">Vous ne me dites rien de mes plumes, comment les trouvez-vous ?</l>
-          </sp>
-          <sp who="cathos" xml:id="10-103">
-            <speaker>CATHOS.</speaker>
-            <l n="239" xml:id="l239">Effroyablement belles.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-104">
-            <speaker>MASCARILLE.</speaker>
-            <l n="240" xml:id="l240">Savez-vous que le brin me coûte un louis d’or ? Pour moi, j’ai cette manie de vouloir donner généralement sur tout ce qu’il y a de plus beau.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-105">
-            <speaker>MADELON.</speaker>
-            <l n="241" xml:id="l241">Je vous assure, que nous sympathisons, vous et moi. J’ai une délicatesse furieuse pour tout ce que je porte ; et jusqu’à mes chaussettes, je ne puis rien souffrir qui ne soit de la bonne ouvrière.<a href="#_ftn12" name="_ftnref12" title="" id="_ftnref12">[12]</a></l>
-          </sp>
-          <sp who="mascarille" xml:id="10-106">
-            <speaker>MASCARILLE, <em>s’écriant brusquement.</em></speaker>
-            <l n="242" xml:id="l242">Ahi ! ahi ! ahi ! doucement. Dieu me damne, mesdames, c’est fort mal en user ; j’ai à me plaindre de votre procédé, cela n’est pas honnête.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-107">
-            <speaker>CATHOS.</speaker>
-            <l n="243" xml:id="l243">Qu’est-ce donc ? qu’avez-vous ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-108">
-            <speaker>MASCARILLE.</speaker>
-            <l n="244" xml:id="l244">Quoi ! toutes deux contre mon cœur en même temps ! M’attaquer<a href="#_ftn13" name="_ftnref13" title="" id="_ftnref13">[13]</a> à droit et à gauche ! ah ! c’est contre le droit des gens : la partie n’est pas égale, et je m’en vais crier au meurtre.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-109">
-            <speaker>CATHOS.</speaker>
-            <l n="245" xml:id="l245">Il faut avouer qu’il dit les choses d’une manière particulière.</l>
-          </sp>
-          <sp who="madelon" xml:id="10-110">
-            <speaker>MADELON.</speaker>
-            <l n="246" xml:id="l246">Il a un tour admirable dans l’esprit.</l>
-          </sp>
-          <sp who="cathos" xml:id="10-111">
-            <speaker>CATHOS.</speaker>
-            <l n="247" xml:id="l247">Vous avez plus de peur que de mal, et votre cœur crie avant qu’on l’écorche.</l>
-          </sp>
-          <sp who="mascarille" xml:id="10-112">
-            <speaker>MASCARILLE.</speaker>
-            <l n="248" xml:id="l248">Comment diable ! il est écorché depuis la tête jusqu’aux pieds.</l>
-            <l n="249" xml:id="l249"> </l>
-            <l n="250" xml:id="l250"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="251" xml:id="l251"> </l>
-          <sp who="marotte" xml:id="11-1">
-            <speaker>CATHOS, MADELON, MASCARILLE, MAROTTE</speaker>
-            <l n="252" xml:id="l252"> </l>
-          </sp>
-          <sp who="marotte" xml:id="11-2">
-            <speaker>MAROTTE.</speaker>
-            <l n="253" xml:id="l253">Madame, on demande à vous voir.</l>
-          </sp>
-          <sp who="madelon" xml:id="11-3">
-            <speaker>MADELON.</speaker>
-            <l n="254" xml:id="l254">Qui ?</l>
-          </sp>
-          <sp who="marotte" xml:id="11-4">
-            <speaker>MAROTTE.</speaker>
-            <l n="255" xml:id="l255">Le vicomte de Jodelet.</l>
-          </sp>
-          <sp who="mascarille" xml:id="11-5">
-            <speaker>MASCARILLE.</speaker>
-            <l n="256" xml:id="l256">Le vicomte de Jodelet ?</l>
-          </sp>
-          <sp who="marotte" xml:id="11-6">
-            <speaker>MAROTTE.</speaker>
-            <l n="257" xml:id="l257">Oui, monsieur.</l>
-          </sp>
-          <sp who="cathos" xml:id="11-7">
-            <speaker>CATHOS.</speaker>
-            <l n="258" xml:id="l258">Le connaissez-vous ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="11-8">
-            <speaker>MASCARILLE.</speaker>
-            <l n="259" xml:id="l259">C’est mon meilleur ami.</l>
-          </sp>
-          <sp who="madelon" xml:id="11-9">
-            <speaker>MADELON.</speaker>
-            <l n="260" xml:id="l260">Faites entrer vitement.</l>
-          </sp>
-          <sp who="mascarille" xml:id="11-10">
-            <speaker>MASCARILLE.</speaker>
-            <l n="261" xml:id="l261">Il y a quelque temps que nous ne nous sommes vus, et je suis ravi de cette aventure.</l>
-          </sp>
-          <sp who="cathos" xml:id="11-11">
-            <speaker>CATHOS.</speaker>
-            <l n="262" xml:id="l262">Le voici.</l>
-            <l n="263" xml:id="l263"> </l>
-            <l n="264" xml:id="l264"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="265" xml:id="l265"> </l>
-          <sp who="almanzor" xml:id="12-1">
-            <speaker>CATHOS, MADELON, JODELET, MASCARILLE, MAROTTE, ALMANZOR</speaker>
-            <l n="266" xml:id="l266"> </l>
-          </sp>
-          <sp who="mascarille" xml:id="12-2">
-            <speaker>MASCARILLE.</speaker>
-            <l n="267" xml:id="l267">Ah ! Vicomte !</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-3">
-            <speaker>JODELET, <em>s’embrassant l’un l’autre.</em></speaker>
-            <l n="268" xml:id="l268">Ah ! Marquis !</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-4">
-            <speaker>MASCARILLE.</speaker>
-            <l n="269" xml:id="l269">Que je suis aise de te rencontrer !</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-5">
-            <speaker>JODELET.</speaker>
-            <l n="270" xml:id="l270">Que j’ai de joie de te voir ici !</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-6">
-            <speaker>MASCARILLE.</speaker>
-            <l n="271" xml:id="l271">Baise-moi donc, encore un peu, je te prie.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-7">
-            <speaker>MADELON.</speaker>
-            <l n="272" xml:id="l272">Ma toute bonne, nous commençons d’être connues ; voilà le beau monde qui prend le chemin de nous venir voir.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-8">
-            <speaker>MASCARILLE.</speaker>
-            <l n="273" xml:id="l273">Mesdames, agréez que je vous présente ce gentilhomme-ci : sur ma parole, il est digne d’être connu de vous.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-9">
-            <speaker>JODELET.</speaker>
-            <l n="274" xml:id="l274">Il est juste de venir vous rendre ce qu’on vous doit ; et vos attraits exigent leurs droits seigneuriaux sur toutes sortes de personnes.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-10">
-            <speaker>MADELON.</speaker>
-            <l n="275" xml:id="l275">C’est pousser vos civilités jusqu’aux derniers confins de la flatterie.<a href="#_ftn14" name="_ftnref14" title="" id="_ftnref14">[14]</a></l>
-          </sp>
-          <sp who="cathos" xml:id="12-11">
-            <speaker>CATHOS.</speaker>
-            <l n="276" xml:id="l276">Cette journée doit être marquée dans notre almanach comme une journée bienheureuse.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-12">
-            <speaker>MADELON.</speaker>
-            <l n="277" xml:id="l277">Allons, petit garçon, faut-il toujours vous répéter les choses ? Voyez-vous pas qu’il faut le surcroît d’un fauteuil ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-13">
-            <speaker>MASCARILLE.</speaker>
-            <l n="278" xml:id="l278">Ne vous étonnez pas de voir le vicomte de la sorte ; il ne fait que sortir d’une maladie qui lui a rendu le visage pâle comme vous le voyez.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-14">
-            <speaker>JODELET.</speaker>
-            <l n="279" xml:id="l279">Ce sont fruits des veilles de la cour et des fatigues de la guerre.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-15">
-            <speaker>MASCARILLE.</speaker>
-            <l n="280" xml:id="l280">Savez-vous, mesdames, que vous voyez dans le vicomte un des vaillants hommes du siècle ? C’est un brave à trois poils.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-16">
-            <speaker>JODELET.</speaker>
-            <l n="281" xml:id="l281">Vous ne m’en devez rien, marquis, et nous savons ce que vous savez faire aussi.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-17">
-            <speaker>MASCARILLE.</speaker>
-            <l n="282" xml:id="l282">Il est vrai que nous nous sommes vus tous deux dans l’occasion.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-18">
-            <speaker>JODELET.</speaker>
-            <l n="283" xml:id="l283">Et dans des lieux où il faisait fort chaud.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-19">
-            <speaker>MASCARILLE, <em>les regardant toutes deux.</em></speaker>
-            <l n="284" xml:id="l284">Oui, mais non pas si chaud qu’ici. Hai, hai, hai !</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-20">
-            <speaker>JODELET.</speaker>
-            <l n="285" xml:id="l285">Notre connaissance s’est faite à l’armée, et la première fois que nous nous vîmes, il commandait un régiment de cavalerie sur les galères de Malte.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-21">
-            <speaker>MASCARILLE.</speaker>
-            <l n="286" xml:id="l286">Il est vrai ; mais vous étiez pourtant dans l’emploi avant que j’y fusse, et je me souviens que je n’étais que petit officier encore, que vous commandiez deux mille chevaux.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-22">
-            <speaker>JODELET.</speaker>
-            <l n="287" xml:id="l287">La guerre est une belle chose ; mais, ma foi, la cour récompense bien mal aujourd’hui les gens de service comme nous.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-23">
-            <speaker>MASCARILLE.</speaker>
-            <l n="288" xml:id="l288">C’est ce qui fait que je veux pendre l’épée au croc.</l>
-          </sp>
-          <sp who="cathos" xml:id="12-24">
-            <speaker>CATHOS.</speaker>
-            <l n="289" xml:id="l289">Pour moi, j’ai un furieux tendre pour les hommes d’épée.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-25">
-            <speaker>MADELON.</speaker>
-            <l n="290" xml:id="l290">Je les aime aussi ; mais je veux que l’esprit assaisonne la bravoure.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-26">
-            <speaker>MASCARILLE.</speaker>
-            <l n="291" xml:id="l291">Te souvient-il, vicomte, de cette demi-lune que nous emportâmes sur les ennemis au siège d’Arras ?</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-27">
-            <speaker>JODELET.</speaker>
-            <l n="292" xml:id="l292">Que veux-tu dire, avec ta demi-lune ? C’était bien une lune tout entière.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-28">
-            <speaker>MASCARILLE.</speaker>
-            <l n="293" xml:id="l293">Je pense que tu as raison.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-29">
-            <speaker>JODELET.</speaker>
-            <l n="294" xml:id="l294">Il m’en doit bien souvenir, ma foi ! j’y fus blessé à la jambe d’un coup de grenade dont je porte encore les marques. Tâtez un peu, de grâce : vous sentirez quelque coup c’était là.</l>
-          </sp>
-          <sp who="cathos" xml:id="12-30">
-            <speaker>CATHOS, <em>après avoir touché l’endroit.</em></speaker>
-            <l n="295" xml:id="l295">Il est vrai que la cicatrice est grande.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-31">
-            <speaker>MASCARILLE.</speaker>
-            <l n="296" xml:id="l296">Donnez-moi un peu votre main, et tâtez celui-ci, là, justement au derrière de la tête. Y êtes-vous ?</l>
-          </sp>
-          <sp who="madelon" xml:id="12-32">
-            <speaker>MADELON.</speaker>
-            <l n="297" xml:id="l297">Oui, je sens quelque chose.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-33">
-            <speaker>MASCARILLE.</speaker>
-            <l n="298" xml:id="l298">C’est un coup de mousquet que je reçus, la dernière campagne que j’ai faite.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-34">
-            <speaker>JODELET.</speaker>
-            <l n="299" xml:id="l299">Voici un autre coup qui me perça de part en part à l’attaque de Gravelines.</l>
-          <stage>MASCARILLE,</stage>
-          </sp>
-          <sp who="em>mettant-la-main-sur-le-bouton-de-son-haut-de-chausses" xml:id="12-35">
-            <speaker><em>mettant la main sur le bouton de son haut-de-chausses.</em></speaker>
-            <l n="300" xml:id="l300">Je vais vous montrer une furieuse plaie.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-36">
-            <speaker>MADELON.</speaker>
-            <l n="301" xml:id="l301">Il n’est pas nécessaire : nous le croyons sans y regarder.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-37">
-            <speaker>MASCARILLE.</speaker>
-            <l n="302" xml:id="l302">Ce sont des marques honorables qui font voir ce qu’on est.</l>
-          </sp>
-          <sp who="cathos" xml:id="12-38">
-            <speaker>CATHOS.</speaker>
-            <l n="303" xml:id="l303">Nous ne doutons point de ce que vous êtes.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-39">
-            <speaker>MASCARILLE.</speaker>
-            <l n="304" xml:id="l304">Vicomte, as-tu là ton carrosse ?</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-40">
-            <speaker>JODELET.</speaker>
-            <l n="305" xml:id="l305">Pourquoi ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-41">
-            <speaker>MASCARILLE.</speaker>
-            <l n="306" xml:id="l306">Nous mènerions promener ces dames hors des portes, et leur donnerions un cadeau.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-42">
-            <speaker>MADELON.</speaker>
-            <l n="307" xml:id="l307">Nous ne saurions sortir aujourd’hui.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-43">
-            <speaker>MASCARILLE.</speaker>
-            <l n="308" xml:id="l308">Ayons donc les violons pour danser.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-44">
-            <speaker>JODELET.</speaker>
-            <l n="309" xml:id="l309">Ma foi ! c’est bien avisé.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-45">
-            <speaker>MADELON.</speaker>
-            <l n="310" xml:id="l310">Pour cela, nous y consentons ; mais il faut donc quelque surcroît de compagnie.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-46">
-            <speaker>MASCARILLE.</speaker>
-            <l n="311" xml:id="l311">Holà ! Champagne, Picard, Bourguignon, Cascaret, Basque, La Verdure, Lorrain, Provençal, La Violette ! Au diable soient tous les laquais ! Je ne pense pas qu’il y ait gentilhomme en France plus mal servi que moi. Ces canailles me laissent toujours seul.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-47">
-            <speaker>MADELON.</speaker>
-            <l n="312" xml:id="l312">Almanzor, dites aux gens de monsieur<a href="#_ftn15" name="_ftnref15" title="" id="_ftnref15">[15]</a> qu’ils aillent quérir des violons, et nous faites venir ces messieurs et ces dames d’ici près, pour peupler la solitude de notre bal.</l>
-            <stage><hi rend="italic"><em>Almanzor sort.</em></hi></stage>
-          </sp>
-          <sp who="mascarille" xml:id="12-48">
-            <speaker>MASCARILLE.</speaker>
-            <l n="314" xml:id="l314">Vicomte, que dis-tu de ces yeux ?</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-49">
-            <speaker>JODELET.</speaker>
-            <l n="315" xml:id="l315">Mais toi-même, marquis, que t’en semble ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-50">
-            <speaker>MASCARILLE.</speaker>
-            <l n="316" xml:id="l316">Moi, je dis que nos libertés auront peine à sortir d’ici les braies nettes. Au moins, pour moi, je reçois d’étranges secousses, et mon cœur ne tient plus qu’à un filet.<a href="#_ftn16" name="_ftnref16" title="" id="_ftnref16">[16]</a></l>
-          </sp>
-          <sp who="madelon" xml:id="12-51">
-            <speaker>MADELON.</speaker>
-            <l n="317" xml:id="l317">Que tout ce qu’il dit est naturel ! Il tourne les choses le plus agréablement du monde.</l>
-          </sp>
-          <sp who="cathos" xml:id="12-52">
-            <speaker>CATHOS.</speaker>
-            <l n="318" xml:id="l318">Il est vrai qu’il fait une furieuse dépense en esprit.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-53">
-            <speaker>MASCARILLE.</speaker>
-            <l n="319" xml:id="l319">Pour vous montrer que je suis véritable, je veux faire un impromptu là-dessus.</l>
-            <stage><hi rend="italic"><em>Il médite.</em></hi></stage>
-          </sp>
-          <sp who="cathos" xml:id="12-54">
-            <speaker>CATHOS.</speaker>
-            <l n="321" xml:id="l321">Eh ! je vous en conjure de toute la dévotion de mon cœur, que nous oyions quelque chose<a href="#_ftn17" name="_ftnref17" title="" id="_ftnref17">[17]</a> qu’on ait fait pour nous.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-55">
-            <speaker>JODELET.</speaker>
-            <l n="322" xml:id="l322">J’aurais envie d’en faire autant ; mais je me trouve un peu incommodé de la veine poétique, pour la quantité des saignées que j’y ai faites ces jours passés.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-56">
-            <speaker>MASCARILLE.</speaker>
-            <l n="323" xml:id="l323">Que diable est cela ?<a href="#_ftn18" name="_ftnref18" title="" id="_ftnref18">[18]</a> Je fais toujours bien le premier vers ; mais j’ai peine à faire les autres. Ma foi, ceci est un peu trop pressé ; je vous ferai un impromptu à loisir, que vous trouverez le plus beau du monde.</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-57">
-            <speaker>JODELET.</speaker>
-            <l n="324" xml:id="l324">Il a de l’esprit comme un démon.</l>
-          </sp>
-          <sp who="madelon" xml:id="12-58">
-            <speaker>MADELON.</speaker>
-            <l n="325" xml:id="l325">Et du galant, et du bien tourné.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-59">
-            <speaker>MASCARILLE.</speaker>
-            <l n="326" xml:id="l326">Vicomte, dis-moi un peu : y a-t-il longtemps que tu n’as vu la comtesse ?</l>
-          </sp>
-          <sp who="jodelet" xml:id="12-60">
-            <speaker>JODELET.</speaker>
-            <l n="327" xml:id="l327">Il y a plus de trois semaines que je ne lui ai rendu visite.</l>
-          </sp>
-          <sp who="mascarille" xml:id="12-61">
-            <speaker>MASCARILLE.</speaker>
-            <l n="328" xml:id="l328">Sais-tu bien que le duc m’est venu voir ce matin, et m’a voulu mener à la campagne courir un cerf avec lui ?</l>
-          </sp>
-          <sp who="madelon" xml:id="12-62">
-            <speaker>MADELON.</speaker>
-            <l n="329" xml:id="l329">Voici nos amies qui viennent.</l>
-            <l n="330" xml:id="l330"> </l>
-            <l n="331" xml:id="l331"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="332" xml:id="l332"> </l>
-          <sp who="violons" xml:id="13-1">
-            <speaker>LUCILE, CÉLIMÈNE, CATHOS, MADELON, MASCARILLE, JODELET, MAROTTE, ALMANZOR, VIOLONS</speaker>
-            <l n="333" xml:id="l333"> </l>
-          </sp>
-          <sp who="madelon" xml:id="13-2">
-            <speaker>MADELON.</speaker>
-            <l n="334" xml:id="l334">Mon Dieu ! mes chères, nous vous demandons pardon. Ces Messieurs ont eu fantaisie de nous donner les âmes des pieds ; et nous vous avons envoyé quérir pour remplir les vides de notre assemblée.</l>
-          </sp>
-          <sp who="lucile" xml:id="13-3">
-            <speaker>LUCILE.</speaker>
-            <l n="335" xml:id="l335">Vous nous avez obligées sans doute.</l>
-          </sp>
-          <sp who="mascarille" xml:id="13-4">
-            <speaker>MASCARILLE.</speaker>
-            <l n="336" xml:id="l336">Ce n’est ici qu’un bal à la hâte ; mais, l’un de ces jours, nous vous en donnerons un dans les formes. Les violons sont-ils venus ?</l>
-          </sp>
-          <sp who="almanzor" xml:id="13-5">
-            <speaker>ALMANZOR.</speaker>
-            <l n="337" xml:id="l337">Oui, monsieur ; ils sont ici.</l>
-          </sp>
-          <sp who="cathos" xml:id="13-6">
-            <speaker>CATHOS.</speaker>
-            <l n="338" xml:id="l338">Allons donc, mes chères, prenez place.</l>
-          </sp>
-          <sp who="mascarille" xml:id="13-7">
-            <speaker>MASCARILLE, <em>dansant lui seul comme par prélude.</em></speaker>
-            <l n="339" xml:id="l339">La, la, la, la, la, la, la, la.</l>
-          </sp>
-          <sp who="madelon" xml:id="13-8">
-            <speaker>MADELON.</speaker>
-            <l n="340" xml:id="l340">Il a tout à fait la taille élégante.<a href="#_ftn19" name="_ftnref19" title="" id="_ftnref19">[19]</a></l>
-          </sp>
-          <sp who="cathos" xml:id="13-9">
-            <speaker>CATHOS.</speaker>
-            <l n="341" xml:id="l341">Et a la mine de danser proprement.</l>
-          </sp>
-          <sp who="madelon" xml:id="13-10">
-            <speaker>MASCARILLE, <em>ayant pris Madelon pour danser.</em></speaker>
-            <l n="342" xml:id="l342">Ma franchise va danser la courante aussi bien que mes pieds. En cadence, violons ; en cadence. Oh ! quels ignorants ! il n’y a pas moyen de danser avec eux. Le diable vous emporte ! ne sauriez-vous jouer en mesure ? La, la, la, la, la, la, la. Ferme. Ô violons de village !</l>
-          </sp>
-          <sp who="jodelet" xml:id="13-11">
-            <speaker>JODELET, <em>dansant ensuite.</em></speaker>
-            <l n="343" xml:id="l343">Holà ! ne pressez pas si fort la cadence : je ne fais que sortir de maladie.</l>
-            <l n="344" xml:id="l344"> </l>
-            <l n="345" xml:id="l345"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="346" xml:id="l346"> </l>
-          <sp who="violons" xml:id="14-1">
-            <speaker>DU CROISY, LA GRANGE, CATHOS, MADELON, LUCILE, CÉLIMÈNE, JODELET, MASCARILLE, MAROTTE, VIOLONS</speaker>
-            <l n="347" xml:id="l347"> </l>
-          </sp>
-          <sp who="la-grange" xml:id="14-2">
-            <speaker>LA GRANGE, <em>un bâton à la main.</em></speaker>
-            <l n="348" xml:id="l348">Ah ! ah ! coquins ! que faites-vous ici ? il y a trois heures que nous vous cherchons.</l>
-          </sp>
-          <sp who="mascarille" xml:id="14-3">
-            <speaker>MASCARILLE, <em>se sentant battre.</em></speaker>
-            <l n="349" xml:id="l349">Ahi ! ahi ! ahi ! vous ne m’aviez pas dit que les coups en seraient aussi.</l>
-          </sp>
-          <sp who="jodelet" xml:id="14-4">
-            <speaker>JODELET.</speaker>
-            <l n="350" xml:id="l350">Ahi ! ahi ! ahi !</l>
-          </sp>
-          <sp who="la-grange" xml:id="14-5">
-            <speaker>LA GRANGE.</speaker>
-            <l n="351" xml:id="l351">C’est bien à vous, infâme que vous êtes, à vouloir faire l’homme d’importance !</l>
-          </sp>
-          <sp who="du-croisy" xml:id="14-6">
-            <speaker>DU CROISY.</speaker>
-            <l n="352" xml:id="l352">Voilà qui vous apprendra à vous connaître.</l>
-            <l n="353" xml:id="l353"> </l>
-            <l n="354" xml:id="l354"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="355" xml:id="l355"> </l>
-          <sp who="violons" xml:id="15-1">
-            <speaker>CATHOS, MADELON, LUCILE, CÉLIMÈNE, MASCARILLE, JODELET, MAROTTE, VIOLONS</speaker>
-            <l n="356" xml:id="l356"> </l>
-          </sp>
-          <sp who="madelon" xml:id="15-2">
-            <speaker>MADELON.</speaker>
-            <l n="357" xml:id="l357">Que veut donc dire ceci ?</l>
-          </sp>
-          <sp who="jodelet" xml:id="15-3">
-            <speaker>JODELET.</speaker>
-            <l n="358" xml:id="l358">C’est une gageure.</l>
-          </sp>
-          <sp who="cathos" xml:id="15-4">
-            <speaker>CATHOS.</speaker>
-            <l n="359" xml:id="l359">Quoi ! vous laisser battre de la sorte !</l>
-          </sp>
-          <sp who="mascarille" xml:id="15-5">
-            <speaker>MASCARILLE.</speaker>
-            <l n="360" xml:id="l360">Mon Dieu ! je n’ai pas voulu faire semblant de rien : car je suis violent, et je me serais emporté.</l>
-          </sp>
-          <sp who="madelon" xml:id="15-6">
-            <speaker>MADELON.</speaker>
-            <l n="361" xml:id="l361">Endurer un affront comme celui-là, en notre présence !</l>
-          </sp>
-          <sp who="mascarille" xml:id="15-7">
-            <speaker>MASCARILLE.</speaker>
-            <l n="362" xml:id="l362">Ce n’est rien : ne laissons pas d’achever. Nous nous connaissons il y a longtemps ; et, entre amis, on ne va pas se piquer pour si peu de chose.</l>
-            <l n="363" xml:id="l363"> </l>
-            <l n="364" xml:id="l364"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="365" xml:id="l365"> </l>
-          <sp who="violons" xml:id="16-1">
-            <speaker>DU CROISY, LA GRANGE, MADELON, CATHOS, CÉLIMÈNE, LUCILE, MASCARILLE, JODELET, MAROTTE, VIOLONS</speaker>
-            <l n="366" xml:id="l366"> </l>
-          </sp>
-          <sp who="la-grange" xml:id="16-2">
-            <speaker>LA GRANGE.</speaker>
-            <l n="367" xml:id="l367">Ma foi, marauds, vous ne vous rirez pas de nous, je vous promets. Entrez, vous autres.</l>
-            <stage><hi rend="italic"><em>                Trois ou quatre spadassins entrent.</em></hi></stage>
-          </sp>
-          <sp who="madelon" xml:id="16-3">
-            <speaker>MADELON.</speaker>
-            <l n="369" xml:id="l369">Quelle est donc cette audace, de venir nous troubler de la sorte dans notre maison ?</l>
-          </sp>
-          <sp who="du-croisy" xml:id="16-4">
-            <speaker>DU CROISY.</speaker>
-            <l n="370" xml:id="l370">Comment, mesdames ! nous endurerons que nos laquais soient mieux reçus que nous ; qu’ils viennent vous faire l’amour à nos dépens, et vous donnent le bal ?</l>
-          </sp>
-          <sp who="madelon" xml:id="16-5">
-            <speaker>MADELON.</speaker>
-            <l n="371" xml:id="l371">Vos laquais !</l>
-          </sp>
-          <sp who="la-grange" xml:id="16-6">
-            <speaker>LA GRANGE.</speaker>
-            <l n="372" xml:id="l372">Oui, nos laquais : et cela n’est ni beau ni honnête de nous les débaucher comme vous faites.</l>
-          </sp>
-          <sp who="madelon" xml:id="16-7">
-            <speaker>MADELON.</speaker>
-            <l n="373" xml:id="l373">Ô ciel ! quelle insolence !</l>
-          </sp>
-          <sp who="la-grange" xml:id="16-8">
-            <speaker>LA GRANGE.</speaker>
-            <l n="374" xml:id="l374">Mais ils n’auront pas l’avantage de se servir de nos habits pour vous donner dans la vue ; et si vous les voulez aimer, ce sera, ma foi, pour leurs beaux yeux. Vite, qu’on les dépouille sur-le-champ.</l>
-          </sp>
-          <sp who="jodelet" xml:id="16-9">
-            <speaker>JODELET.</speaker>
-            <l n="375" xml:id="l375">Adieu notre braverie.</l>
-          </sp>
-          <sp who="mascarille" xml:id="16-10">
-            <speaker>MASCARILLE.</speaker>
-            <l n="376" xml:id="l376">Voilà le marquisat et la vicomté à bas.</l>
-          </sp>
-          <sp who="du-croisy" xml:id="16-11">
-            <speaker>DU CROISY.</speaker>
-            <l n="377" xml:id="l377">Ah ! ah ! coquins, vous avez l’audace d’aller sur nos brisées ! Vous irez chercher autre part de quoi vous rendre agréables aux yeux de vos belles, je vous en assure.</l>
-          </sp>
-          <sp who="la-grange" xml:id="16-12">
-            <speaker>LA GRANGE.</speaker>
-            <l n="378" xml:id="l378">C’est trop que de nous supplanter, et de nous supplanter avec nos propres habits.</l>
-          </sp>
-          <sp who="mascarille" xml:id="16-13">
-            <speaker>MASCARILLE.</speaker>
-            <l n="379" xml:id="l379">Ô fortune ! quelle est ton inconstance !</l>
-          </sp>
-          <sp who="du-croisy" xml:id="16-14">
-            <speaker>DU CROISY.</speaker>
-            <l n="380" xml:id="l380">Vite, qu’on leur ôte jusqu’à la moindre chose.</l>
-          </sp>
-          <sp who="la-grange" xml:id="16-15">
-            <speaker>LA GRANGE.</speaker>
-            <l n="381" xml:id="l381">Qu’on emporte toutes ces hardes, dépêchez. Maintenant, mesdames, en l’état qu’ils sont, vous pouvez continuer vos amours avec eux tant qu’il vous plaira ; nous vous laissons<a href="#_ftn20" name="_ftnref20" title="" id="_ftnref20">[20]</a> toute sorte de liberté pour cela, et nous vous protestons, monsieur et moi, que nous n’en serons<a href="#_ftn21" name="_ftnref21" title="" id="_ftnref21">[21]</a> aucunement jaloux.</l>
-            <l n="382" xml:id="l382"> </l>
-            <l n="383" xml:id="l383"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="384" xml:id="l384"> </l>
-          <sp who="violons" xml:id="17-1">
-            <speaker>MADELON, CATHOS, JODELET, MASCARILLE, VIOLONS</speaker>
-            <l n="385" xml:id="l385"> </l>
-          </sp>
-          <sp who="cathos" xml:id="17-2">
-            <speaker>CATHOS.</speaker>
-            <l n="386" xml:id="l386">Ah ! quelle confusion !</l>
-          </sp>
-          <sp who="madelon" xml:id="17-3">
-            <speaker>MADELON.</speaker>
-            <l n="387" xml:id="l387">Je crève de dépit.</l>
-          </sp>
-          <sp who="violons" xml:id="17-4">
-            <speaker>UN DES VIOLONS, <em>au marquis.</em></speaker>
-            <l n="388" xml:id="l388">Qu’est-ce donc que ceci ? Qui nous payera, nous autres ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="17-5">
-            <speaker>MASCARILLE.</speaker>
-            <l n="389" xml:id="l389">Demandez à monsieur le  vicomte.</l>
-          </sp>
-          <sp who="violons" xml:id="17-6">
-            <speaker>UN DES VIOLONS, <em>à Jodelet.</em></speaker>
-            <l n="390" xml:id="l390">Qui est-ce qui nous donnera de l’argent ?</l>
-          </sp>
-          <sp who="jodelet" xml:id="17-7">
-            <speaker>JODELET.</speaker>
-            <l n="391" xml:id="l391">Demandez à monsieur le marquis.</l>
-            <l n="392" xml:id="l392"> </l>
-            <l n="393" xml:id="l393"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="394" xml:id="l394"> </l>
-          <sp who="violons" xml:id="18-1">
-            <speaker>GORGIBUS, MADELON, CATHOS, JODELET, MASCARILLE, VIOLONS</speaker>
-            <l n="395" xml:id="l395"> </l>
-          </sp>
-          <sp who="gorgibus" xml:id="18-2">
-            <speaker>GORGIBUS.</speaker>
-            <l n="396" xml:id="l396">Ah ! coquines que vous êtes, vous nous mettez dans de beaux draps blancs, à ce que je vois ; et je viens d’apprendre de belles affaires, vraiment, de ces messieurs qui sortent !<a href="#_ftn22" name="_ftnref22" title="" id="_ftnref22">[22]</a></l>
-          </sp>
-          <sp who="madelon" xml:id="18-3">
-            <speaker>MADELON.</speaker>
-            <l n="397" xml:id="l397">Ah ! mon père, c’est une pièce sanglante qu’ils nous ont faite.</l>
-          </sp>
-          <sp who="gorgibus" xml:id="18-4">
-            <speaker>GORGIBUS.</speaker>
-            <l n="398" xml:id="l398">Oui, c’est une pièce sanglante, mais qui est un effet de votre impertinence, infâmes ! Ils se sont ressentis du traitement que vous leur avez fait, et cependant, malheureux que je suis, il faut que je boive l’affront.</l>
-          </sp>
-          <sp who="madelon" xml:id="18-5">
-            <speaker>MADELON.</speaker>
-            <l n="399" xml:id="l399">Ah ! je jure que nous en serons vengées, ou que je mourrai en la peine. Et vous, marauds, osez-vous vous tenir ici après votre insolence ?</l>
-          </sp>
-          <sp who="mascarille" xml:id="18-6">
-            <speaker>MASCARILLE.</speaker>
-            <l n="400" xml:id="l400">Traiter comme cela un marquis ! Voilà ce que c’est que du monde ! la moindre disgrâce nous fait mépriser de ceux qui nous chérissaient. Allons, camarade, allons chercher fortune autre part ; je vois bien qu’on n’aime ici que la vaine apparence, et qu’on n’y considère point la vertu toute nue.</l>
-            <stage><hi rend="italic"><em>Ils sortent tous deux.</em></hi></stage>
-            <l n="402" xml:id="l402"> </l>
-            <l n="403" xml:id="l403"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="404" xml:id="l404"> </l>
-          <stage>GORGIBUS, MADELON, CATHOS, VIOLONS</stage>
-          <sp who="" xml:id="19-1">
-            <speaker> </speaker>
-            <l n="405" xml:id="l405">Monsieur, nous entendons que vous nous contentiez, à leur défaut, pour ce que nous avons joué ici.</l>
-          <stage>UN DES VIOLONS.</stage>
-          </sp>
-          <sp who="gorgibus" xml:id="19-2">
-            <speaker>GORGIBUS, <em>les battant.</em></speaker>
-            <l n="406" xml:id="l406">Oui, oui, je vous vais contenter ; et voici la monnaie dont je vous veux payer. Et vous, pendardes, je ne sais qui me tient que je ne vous en fasse autant. Nous allons servir de fable et de risée à tout le monde ; et voilà ce que vous vous êtes attiré par vos extravagances. Allez vous cacher vilaines ; allez vous cacher pour jamais.</l>
-            <stage><hi rend="italic"><em>Seul.</em></hi></stage>
-            <l n="408" xml:id="l408">Et vous, qui êtes cause de leur folie, sottes billevesées, pernicieux amusements des esprits oisifs, romans, vers, chansons, sonnets et sonnettes, puissiez-vous être à tous les diables !</l>
-            <stage><hi rend="italic"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> Var. <em>Ah ! ma chère, un marquis ! un marquis !</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2">[2]</a> Var. <em>Qui aurait ouï parler de nous</em> (1673).</hi></stage>
-            <stage><hi rend="italic">            <em>Qui a ouï parler de nous</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3">[3]</a> Var. <em>Il est raisonnable celui-là</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref4" name="_ftn4" title="" id="_ftn4">[4]</a> Var. <em>Je vois ici deux yeux</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref5" name="_ftn5" title="" id="_ftn5">[5]</a> Var. <em>Ce sont eux qui donnent</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref6" name="_ftn6" title="" id="_ftn6">[6]</a> Var. <em>Les jolis commerces de prose et de vers</em> (1673, 1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref7" name="_ftn7" title="" id="_ftn7">[7]</a> Var. <em>Celui-là est</em> (1673).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref8" name="_ftn8" title="" id="_ftn8">[8]</a> Var. <em>Que dites-vous là ? Ce sont de ces sortes de choses</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref9" name="_ftn9" title="" id="_ftn9">[9]</a> Var. <em>Au voleur ! au voleur !</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref10" name="_ftn10" title="" id="_ftn10">[10]</a> Var. <em>À quoi donc passez-vous le temps, mesdames ?</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref11" name="_ftn11" title="" id="_ftn11">[11]</a> Var. <em>Aux comédiens de l’hôtel de Bourgogne</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref12" name="_ftn12" title="" id="_ftn12">[12]</a> Var. <em>Qui ne soit de la bonne faiseuse</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref13" name="_ftn13" title="" id="_ftn13">[13]</a> Var. <em>M’attaquant </em>(1673).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref14" name="_ftn14" title="" id="_ftn14">[14]</a> Var. <em>Jusqu’aux derniers confins de flatterie</em> (1673, 1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref15" name="_ftn15" title="" id="_ftn15">[15]</a> Var. <em>Dites aux gens de monsieur le marquis</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref16" name="_ftn16" title="" id="_ftn16">[16]</a> Var. <em>Ne tient qu’à un filet</em> (1673, 1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref17" name="_ftn17" title="" id="_ftn17">[17]</a> Var. <em>Que nous oyons quelque chose</em> (1673).</hi></stage>
-            <stage><hi rend="italic">            <em>Que nous oyions quelque chose</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref18" name="_ftn18" title="" id="_ftn18">[18]</a> Var. <em>Que diable est-ce là ?</em> (1673, 1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref19" name="_ftn19" title="" id="_ftn19">[19]</a> Var. <em>Il a la taille tout à fait élégante</em> (1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref20" name="_ftn20" title="" id="_ftn20">[20]</a> Var. <em>Nous vous laisserons</em> (1673, 1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref21" name="_ftn21" title="" id="_ftn21">[21]</a> Var. <em>Que nous ne serons</em> (1673, 1682).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref22" name="_ftn22" title="" id="_ftn22">[22]</a> Var. <em>Et je viens d’apprendre de belles affaires, vraiment, de ces messieurs et de ces dames qui sortent</em> (1682).</hi></stage>
-            <l n="433" xml:id="l433"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="1">Seigneur La Grange.</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="2">Quoi ?</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="3">Regardez-moi un peu sans rire.</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="4">Eh bien !</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="5">Que dites-vous de notre visite ? en êtes-vous fort satisfait ?</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="6">À votre avis, avons-nous sujet de l’être tous deux ?</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="7">Pas tout à fait, à dire vrai.</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="8">Pour moi, je vous avoue que j’en suis tout scandalisé. A-t-on jamais vu, dites-moi, deux pecques provinciales faire plus les renchéries que celles-là, et deux hommes traités avec plus de mépris que nous ? À peine ont-elles pu se résoudre à nous faire donner des sièges. Je n’ai jamais vu tant parler à l’oreille qu’elles ont fait entre elles, tant bâiller, tant se frotter les yeux, et demander tant de fois : Quelle heure est-il ? Ont-elles répondu que oui et non à tout ce que nous avons pu leur dire ? et ne m’avouerez-vous pas enfin que, quand nous aurions été les dernières personnes du monde, on ne pouvait nous faire pis qu’elles ont fait ?</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="9">Il me semble que vous prenez la chose fort à cœur.</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="10">Sans doute, je l’y prends, et de telle façon que je veux me venger de cette impertinence. Je connais ce qui nous a fait mépriser. L’air précieux n’a pas seulement infecté Paris, il s’est aussi répandu dans les provinces, et nos donzelles ridicules en ont humé leur bonne part. En un mot, c’est un ambigu de précieuse et de coquette que leur personne. Je vois ce qu’il faut être pour en être bien reçu ; et, si vous m’en croyez, nous leur jouerons tous deux une pièce qui leur fera voir leur sottise, et pourra leur apprendre à connaître un peu mieux leur monde.</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="11">Et comment encore ?</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="12">J’ai un certain valet, nommé Mascarille, qui passe, au sentiment de beaucoup de gens, pour une manière de bel esprit : car il n’y a rien à meilleur marché que le bel esprit maintenant. C’est un extravagant qui s’est mis dans la tête de vouloir faire l’homme de condition. Il se pique ordinairement de galanterie et de vers, et dédaigne les autres valets, jusqu’à les appeler brutaux.</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="13">Eh bien ! qu’en prétendez-vous faire ?</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="14">Ce que j’en prétends faire ? Il faut... mais sortons d’ici auparavant.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="15">Hé bien ! vous avez vu ma nièce et ma fille ? les affaires iront-elles bien ? quel est le résultat de cette visite ?</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="16">C’est une chose que vous pourrez mieux apprendre d’elles que de nous. Tout ce que nous pouvons vous dire, c’est que nous vous rendons grâce de la faveur que vous nous avez faite, et demeurons vos très humbles serviteurs.</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="17">Vos très humbles serviteurs.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS, seul.</speaker>
+          <l n="18">Ouais ! il semble qu’ils sortent mal satisfaits d’ici. D’où pourrait venir leur mécontentement ? Il faut savoir un peu ce que c’est. Holà !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="19">Que désirez-vous, monsieur ?</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="20">Où sont vos maîtresses ?</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="21">Dans leur cabinet.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="22">Que font-elles ?</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="23">De la pommade pour les lèvres.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="24">C’est trop pommadé ; dites-leur qu’elles descendent.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS, seul</speaker>
+          <l n="25">Ces pendardes-là, avec leur pommade, ont, je pense, envie de me ruiner. Je ne vois partout que blancs d’œufs, lait virginal, et mille autres brimborions que je ne connais point. Elles ont usé, depuis que nous sommes ici, le lard d’une douzaine de cochons pour le moins ; et quatre valets vivraient tous les jours des pieds de mouton qu’elles emploient.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="26">Il est bien nécessaire vraiment de faire tant de dépense pour vous graisser le museau ! Dites-moi un peu ce que vous avez fait à ces messieurs, que je les vois sortir avec tant de froideur ? Vous avais-je pas commandé de les recevoir comme des personnes que je voulais vous donner pour maris ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="27">Et quelle estime, mon père, voulez-vous que nous fassions du procédé irrégulier de ces gens-là ?</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="28">Le moyen, mon oncle, qu’une fille un peu raisonnable se pût accommoder de leur personne ?</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="29">Et qu’y trouvez-vous à redire ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="30">La belle galanterie que la leur ! Quoi ! débuter d’abord par le mariage ?</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="31">Et par où veux-tu donc qu’ils débutent ? par le concubinage ? N’est-ce pas un procédé dont vous avez sujet de vous louer toutes deux aussi bien que moi ? Est-il rien de plus obligeant que cela ? Et ce lien sacré où ils aspirent n’est-il pas un témoignage de l’honnêteté de leurs intentions ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="32">Ah ! mon père, ce que vous dites là est du dernier bourgeois. Cela me fait honte de vous ouïr parler de la sorte, et vous devriez un peu vous faire apprendre le bel air des choses.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="33">Je n’ai que faire ni d’air ni de chanson. Je te dis que le mariage est une chose sainte et sacrée, et que c’est faire en honnêtes gens que de débuter par là.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="34">Mon Dieu ! que, si tout le monde vous ressemblait, un roman serait bientôt fini ! La belle chose que ce serait, si d’abord Cyrus épousait Mandane, et qu’Aronce de plain-pied fût marié à Clélie !</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="35">Que me vient conter celle-ci ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="36">Mon père, voilà ma cousine qui vous dira aussi bien que moi que le mariage ne doit jamais arriver qu’après les autres aventures. Il faut qu’un amant, pour être agréable, sache débiter les beaux sentiments, pousser le doux, le tendre et le passionné, et que sa recherche soit dans les formes. Premièrement, il doit voir au temple, ou à la promenade, ou dans quelque cérémonie publique, la personne dont il devient amoureux ; ou bien être conduit fatalement chez elle par un parent ou un ami, et sortir de là tout rêveur et mélancolique. Il cache un temps sa passion à l’objet aimé, et cependant lui rend plusieurs visites, où l’on ne manque jamais de mettre sur le tapis une question galante qui exerce les esprits de l’assemblée. Le jour de la déclaration arrive, qui se doit faire ordinairement dans une allée de quelque jardin, tandis que la compagnie s’est un peu éloignée : et cette déclaration est suivie d’un prompt courroux, qui paraît à notre rougeur, et qui, pour un temps, bannit l’amant de notre présence. Ensuite il trouve moyen de nous apaiser, de nous accoutumer insensiblement au discours de sa passion, et de tirer de nous cet aveu qui fait tant de peine. Après cela viennent les aventures, les rivaux qui se jettent à la traverse d’une inclination établie, les persécutions des pères, les jalousies conçues sur de fausses apparences, les plaintes, les désespoirs, les enlèvements, et ce qui s’ensuit. Voilà comme les choses se traitent dans les belles manières ; et ce sont des règles dont, en bonne galanterie, on ne saurait se dispenser. Mais en venir de but en blanc à l’union conjugale, ne faire l’amour qu’en faisant le contrat du mariage, et prendre justement le roman par la queue ; encore un coup mon père, il ne se peut rien de plus marchand que ce procédé ; et j’ai mal au cœur de la seule vision que cela me fait.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="37">Quel diable de jargon entends-je ici ? Voici bien du haut style.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="38">En effet, mon oncle, ma cousine donne dans le vrai de la chose. Le moyen de bien recevoir des gens qui sont tout à fait incongrus en galanterie ! Je m’en vais gager qu’ils n’ont jamais vu la carte de Tendre, et que Billets-Doux, Petits-Soins, Billets-Galants et Jolis-Vers, sont des terres inconnues pour eux. Ne voyez-vous pas que toute leur personne marque cela, et qu’ils n’ont point cet air qui donne d’abord bonne opinion des gens ? Venir en visite amoureuse avec une jambe toute unie, un chapeau désarmé de plumes, une tête irrégulière en cheveux, et un habit qui souffre une indigence de rubans ; Mon Dieu ! quels amants sont-ce là ! Quelle frugalité d’ajustement, et quelle sécheresse de conversation ! On n’y dure point, on n’y tient pas. J’ai remarqué encore que leurs rabats ne sont pas de la bonne faiseuse, et qu’il s’en faut plus d’un grand demi-pied que leurs hauts-de-chausses ne soient assez larges.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="39">Je pense qu’elles sont folles toutes deux, et je ne puis rien comprendre à ce baragouin. Cathos, et vous, Madelon...</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="40">Eh ! de grâce, mon père, défaites-vous de ces noms étranges, et nous appelez autrement.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="41">Comment, ces noms étranges ? Ne sont-ce pas vos noms de baptême ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="42">Mon Dieu ! que vous êtes vulgaire ! Pour moi, un de mes étonnements, c’est que vous ayez pu faire une fille si spirituelle que moi. A-t-on jamais parlé, dans le beau style, de Cathos ni de Madelon, et ne m’avouerez-vous pas que ce serait assez d’un de ces noms pour décrier le plus beau roman du monde ?</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="43">Il est vrai, mon oncle, qu’une oreille un peu délicate pâtit furieusement à entendre prononcer ces mots-là ; et le nom de Polixène que ma cousine a choisi, et celui d’Aminte que je me suis donné, ont une grâce dont il faut que vous demeuriez d’accord.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="44">Écoutez : il n’y a qu’un mot qui serve. Je n’entends point que vous ayez d’autres noms que ceux qui vous ont été donnés par vos parrains et marraines ; et pour ces messieurs dont il est question, je connais leurs familles et leurs biens, et je veux résolûment que vous vous disposiez à les recevoir pour maris. Je me lasse de vous avoir sur les bras, et la garde de deux filles est une charge un peu trop pesante pour un homme de mon âge.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="45">Pour moi, mon oncle, tout ce que je vous puis dire, c’est que je trouve le mariage une chose tout à fait choquante. Comment est-ce qu’on peut souffrir la pensée de coucher contre un homme vraiment nu ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="46">Souffrez que nous prenions un peu haleine parmi le beau monde de Paris, où nous ne faisons que d’arriver. Laissez-nous faire à loisir le tissu de notre roman, et n’en pressez point tant la conclusion.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS, à part.</speaker>
+          <l n="47">Il n’en faut point douter, elles sont achevées.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="48">Encore un coup, je n’entends rien à toutes ces balivernes : je veux être maître absolu ; et, pour trancher toutes sortes de discours, ou vous serez mariées toutes deux avant qu’il soit peu, ou, ma foi, vous serez religieuses ; j’en fais un bon serment.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="49">Mon Dieu, ma chère, que ton père a la forme enfoncée dans la matière ! que son intelligence est épaisse, et qu’il fait sombre dans son âme !</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="50">Que veux-tu, ma chère ? j’en suis en confusion pour lui. J’ai peine à me persuader que je puisse être véritablement sa fille, et je crois que quelque aventure un jour me viendra développer une naissance plus illustre.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="51">Je le croirais bien ; oui, il y a toutes les apparences du monde ; et , pour moi, quand je me regarde aussi...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="52">Voilà un laquais qui demande si vous êtes au logis, et dit que son maître vous veut venir voir.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="53">Apprenez, sotte, à vous énoncer moins vulgairement. Dites : Voilà un nécessaire qui demande si vous êtes en commodité d’être visibles.</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="54">Dame ! je n’entends point le latin ; et je n’ai pas appris, comme vous, la filofie dans le grand Cyre.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="55">L’impertinente ! Le moyen de souffrir cela ! Et qui est-il, le maître de ce laquais ?</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="56">Il me l’a nommé le marquis de Mascarille.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="57">Ah ! ma chère, un marquis ![1] Oui, allez dire qu’on nous peut voir. C’est sans doute un bel esprit qui aura ouï parler de nous.[2]</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="58">Assurément, ma chère.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="59">Il faut le recevoir dans cette salle basse, plutôt qu’en notre chambre. Ajustons un peu nos cheveux au moins, et soutenons notre réputation. Vite, venez nous tendre ici dedans le conseiller des grâces.</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="60">Par ma foi, je ne sais point quelle bête c’est là ; il faut parler chrétien, si vous voulez que je vous entende.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="61">Apportez-nous le miroir, ignorante que vous êtes, et gardez-vous bien d’en salir la glace par la communication de votre image.</l>
+          <stage>&lt;em&gt;Elles sortent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="62">Holà ! porteurs, holà ! Là, là, là, là, là, là. Je pense que ces marauds-là ont dessein de me briser, à force de heurter contre les murailles et les pavés.</l>
+        </sp>
+        <sp who="#premier-porteur">
+          <speaker>PREMIER PORTEUR.</speaker>
+          <l n="63">Dame ! c’est que la porte est étroite. Vous avez voulu aussi que nous soyons entrés jusqu’ici.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="64">Je le crois bien. Voudriez-vous, faquins, que j’exposasse l’embonpoint de mes plumes aux inclémences de la saison pluvieuse, et que j’allasse imprimer mes souliers en boue ? Allez, ôtez votre chaise d’ici.</l>
+        </sp>
+        <sp who="#deuxième-porteur">
+          <speaker>DEUXIÈME PORTEUR.</speaker>
+          <l n="65">Payez-nous donc, s’il vous plaît, monsieur.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="66">Hem ?</l>
+        </sp>
+        <sp who="#deuxième-porteur">
+          <speaker>DEUXIÈME PORTEUR.</speaker>
+          <l n="67">Je dis, monsieur, que vous nous donniez de l’argent, s’il vous plaît.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, lui donnant un soufflet.</speaker>
+          <l n="68">Comment, coquin, demander de l’argent à une personne de ma qualité !</l>
+        </sp>
+        <sp who="#deuxième-porteur">
+          <speaker>DEUXIÈME PORTEUR.</speaker>
+          <l n="69">Est-ce ainsi qu’on paye les pauvres gens ? et votre qualité nous donne-t-elle à dîner ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="70">Ah ! ah ! ah ! je vous apprendrai à vous connaître ! Ces canailles-là s’osent jouer à moi !</l>
+        </sp>
+        <sp who="#premier-porteur">
+          <speaker>PREMIER PORTEUR, prenant un des bâtons de sa chaise.</speaker>
+          <l n="71">Çà, payez-nous vitement.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="72">Quoi ?</l>
+        </sp>
+        <sp who="#premier-porteur">
+          <speaker>PREMIER PORTEUR.</speaker>
+          <l n="73">Je dis que je veux avoir de l’argent tout à l’heure.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="74">Il est raisonnable.[3]</l>
+        </sp>
+        <sp who="#premier-porteur">
+          <speaker>PREMIER PORTEUR.</speaker>
+          <l n="75">Vite donc !</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="76">Oui-da ! tu parles comme il faut, toi ; mais l’autre est un coquin qui ne sait ce qu’il dit. Tiens : es-tu content ?</l>
+        </sp>
+        <sp who="#premier-porteur">
+          <speaker>PREMIER PORTEUR.</speaker>
+          <l n="77">Non, je ne suis pas content ; vous avez donné un soufflet à mon camarade, et...</l>
+          <stage>&lt;em&gt;Levant son bâton.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="78">Doucement ; tiens, voilà pour le soufflet. On obtient tout de moi quand on s’y prend de la bonne façon. Allez, venez me reprendre tantôt pour aller au Louvre, au petit coucher.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="79">Monsieur, voilà mes maîtresses qui vont venir tout à l’heure.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="80">Qu’elles ne se pressent point ; je suis ici posté commodément pour attendre.</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="81">Les voici.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, après avoir salué.</speaker>
+          <l n="82">Mesdames, vous serez surprises sans doute de l’audace de ma visite ; mais votre réputation vous attire cette méchante affaire, et le mérite a pour moi des charmes si puissants que je cours partout après lui.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="83">Si vous poursuivez le mérite, ce n’est pas sur nos terres que vous devez chasser.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="84">Pour voir chez nous le mérite, il a fallu que vous l’y ayez amené.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="85">Ah ! je m’inscris en faux contre vos paroles. La renommée accuse juste en contant ce que vous valez ; et vous allez faire pic, repic et capot tout ce qu’il y a de galant dans Paris.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="86">Votre complaisance pousse un peu trop avant la libéralité de ses louanges ; et nous n’avons garde, ma cousine et moi, de donner de notre sérieux dans le doux de votre flatterie.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="87">Ma chère, il faudrait faire donner des sièges.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="88">Holà, Almanzor !</l>
+        </sp>
+        <sp who="#almanzor">
+          <speaker>ALMANZOR.</speaker>
+          <l n="89">Madame.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="90">Vite, voiturez-nous ici les commodités de la conversation.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="91">Mais, au moins, y a-t-il sûreté ici pour moi ?</l>
+          <stage>&lt;em&gt;Almanzor sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="92">Que craignez-vous ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="93">Quelque vol de mon cœur, quelque assassinat de ma franchise. Je vois ici des yeux[4] qui ont la mine d’être de fort mauvais garçons, de faire insulte aux libertés, et de traiter une âme de Turc à More. Comment diable ! D’abord qu’on les approche, ils se mettent sur leur garde meurtrière. Ah ! par ma foi, je m’en défie ! et je m’en vais gagner au pied, ou je veux caution bourgeoise qu’ils ne me feront point de mal.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="94">Ma chère, c’est le caractère enjoué.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="95">Je vois bien que c’est un Amilcar.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="96">Ne craignez rien : nos yeux n’ont point de mauvais desseins, et votre cœur peut dormir en assurance sur leur prud’homie.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="97">Mais, de grâce, monsieur, ne soyez pas inexorable à ce fauteuil qui vous tend les bras il y a un quart d’heure : contentez un peu l’envie qu’il a de vous embrasser.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, après s’être peigné et avoir ajusté ses canons.</speaker>
+          <l n="98">Eh bien ! mesdames, que dites-vous de Paris ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="99">Hélas ! qu’en pourrions-nous dire ? Il faudrait être l’antipode de la raison, pour ne pas confesser que Paris est le grand bureau des merveilles, le centre du bon goût, du bel esprit et de la galanterie.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="100">Pour moi, je tiens que hors de Paris il n’y a point de salut pour les honnêtes gens.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="101">C’est une vérité incontestable.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="102">Il y fait un peu crotté ; mais nous avons la chaise.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="103">Il est vrai que la chaise est un retranchement merveilleux contre les insultes de la boue et du mauvais temps.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="104">Vous recevez beaucoup de visites ? Quel bel esprit est des vôtres ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="105">Hélas ! nous ne sommes pas encore connues ; mais nous sommes en passe de l’être ; et nous avons une amie particulière qui nous a promis d’amener ici tous ces messieurs du Recueil des pièces choisies.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="106">Et certains autres qu’on nous a nommés aussi pour être les arbitres souverains des belles choses.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="107">C’est moi qui ferai votre affaire mieux que personne ; ils me rendent tous visite, et je puis dire que je ne me lève jamais sans une demi-douzaine de beaux esprits.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="108">Hé ! mon Dieu ! nous vous serons obligées de la dernière obligation si vous nous faites cette amitié ; car enfin il faut avoir la connaissance de tous ces messieurs-là si l’on veut être du beau monde. Ce sont eux qui donnent[5] le branle à la réputation dans Paris ; et vous savez qu’il y en a tel dont il ne faut que la seule fréquentation pour vous donner bruit de connaisseuse, quand il n’y aurait rien autre chose que cela. Mais, pour moi, ce que je considère particulièrement, c’est que, par le moyen de ces visites spirituelles, on est instruite de cent choses qu’il faut savoir de nécessité, et qui sont de l’essence d’un bel esprit. On apprend par là chaque jour les petites nouvelles galantes, les jolis commerces de prose et de vers.[6] On sait à point nommé : un tel a composé la plus jolie pièce du monde sur un tel sujet ; une telle a fait des paroles sur un tel air ; celui-ci a fait un madrigal sur une jouissance ; celui-là a composé des stances sur une infidélité ; monsieur un tel écrivit hier au soir un sixain à mademoiselle une telle, dont elle lui a envoyé la réponse ce matin sur les huit heures ; un tel auteur a fait un tel dessein ; celui-là en est[7] à la troisième partie de son roman ; cet autre met ses ouvrages sous la presse. C’est là ce qui vous fait valoir dans les compagnies ; et si l’on ignore ces choses, je ne donnerais pas un clou de tout l’esprit qu’on peut avoir.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="109">En effet, je trouve que c’est renchérir sur le ridicule, qu’une personne se pique d’esprit, et ne sache pas jusqu’au moindre petit quatrain qui se fait chaque jour ; et, pour moi, j’aurais toutes les hontes du monde s’il fallait qu’on vînt à me demander si j’aurais vu quelque chose de nouveau que je n’aurais pas vu.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="110">Il est vrai qu’il est honteux de n’avoir pas des premiers tout ce qui se fait ; mais ne vous mettez pas en peine : je veux établir chez vous une académie de beaux esprits, et je vous promets qu’il ne se fera pas un bout de vers dans Paris que vous ne sachiez par cœur avant tous les autres. Pour moi, tel que vous me voyez, je m’en escrime un peu quand je veux ; et vous verrez courir de ma façon, dans les belles ruelles de Paris, deux cents chansons, autant de sonnets, quatre cents épigrammes, et plus de mille madrigaux, sans compter les énigmes et les portraits.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="111">Je vous avoue que je suis furieusement pour les portraits : je ne vois rien de si galant que cela.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="112">Les portraits sont difficiles, et demandent un esprit profond : vous en verrez de ma manière qui ne vous déplairont pas.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="113">Pour moi, j’aime terriblement les énigmes.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="114">Cela exerce l’esprit, et j’en ai fait quatre encore ce matin, que je vous donnerai à deviner.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="115">Les madrigaux sont agréables, quand ils sont bien tournés.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="116">C’est mon talent particulier ; et je travaille à mettre en madrigaux toute l’histoire romaine.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="117">Ah ! certes, cela sera du dernier beau ; j’en retiens un exemplaire au moins, si vous le faites imprimer.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="118">Je vous en promets à chacune un, et des mieux reliés. Cela est au-dessous de ma condition ; mais je le fais seulement pour donner à gagner aux libraires, qui me persécutent.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="119">Je m’imagine que le plaisir est grand de se voir imprimé.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="120">Sans doute. Mais, à propos, il faut que je vous dise un impromptu que je fis hier chez une duchesse de mes amies que je fus visiter : car je suis diablement fort sur les impromptus.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="121">L’impromptu est justement la pierre de touche de l’esprit.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="122">Écoutez donc.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="123">Nous y sommes de toutes nos oreilles.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <stage>&lt;em&gt;Oh ! oh ! je n’y prenais pas garde :&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Tandis que, sans songer à mal, je vous regarde,&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Votre œil en tapinois me dérobe mon cœur !&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Au voleur ! au voleur ! au voleur ! au voleur !&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="124">Ah ! mon Dieu ! voilà qui est poussé dans le dernier galant.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="125">Tout ce que je fais a l’air cavalier ; cela ne sent point le pédant.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="126">Il en est éloigné de plus de deux mille lieues.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <stage>Avez-vous remarqué ce commencement ? &lt;em&gt;Oh ! oh !&lt;/em&gt; Voilà qui est extraordinaire, &lt;em&gt;oh ! oh !&lt;/em&gt; Comme un homme qui s’avise tout d’un coup, &lt;em&gt;oh ! oh !&lt;/em&gt; La surprise, &lt;em&gt;oh ! oh !&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <stage>Oui, je trouve ce &lt;em&gt;oh ! oh !&lt;/em&gt; admirable.</stage>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="127">Il semble que cela ne soit rien.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="128">Ah ! mon Dieu ! que dites-vous ? Ce sont là de ces sortes de choses[8] qui ne se peuvent payer.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <stage>Sans doute ; et j’aimerais mieux avoir fait ce &lt;em&gt;oh ! oh !&lt;/em&gt; qu’un poème épique.</stage>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="129">Tudieu ! vous avez le goût bon.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="130">Eh ! je ne l’ai pas tout à fait mauvais.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <stage>Mais n’admirez-vous pas aussi &lt;em&gt;je n’y prenais pas garde ? Je n’y prenais pas garde&lt;/em&gt;, je ne m’apercevais pas de cela ; façon de parler naturelle, &lt;em&gt;je n’y prenais pas garde. Tandis que, sans songer à mal&lt;/em&gt;, tandis qu’innocemment, sans malice, comme un pauvre mouton, &lt;em&gt;je vous regarde&lt;/em&gt;, c’est-à-dire je m’amuse à vous considérer, je vous observe, je vous contemple ; &lt;em&gt;votre œil en tapinois&lt;/em&gt;... Que vous semble de ce mot &lt;em&gt;tapinois&lt;/em&gt;&lt;em&gt; ?&lt;/em&gt; n’est-il pas bien choisi ?</stage>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="131">Tout à fait bien.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <stage>&lt;em&gt;Tapinois&lt;/em&gt;, en cachette ; il semble que ce soit un chat qui vienne de prendre une souris, &lt;em&gt;tapinois&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="132">Il ne se peut rien de mieux.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <stage>&lt;em&gt;Me dérobe mon cœur&lt;/em&gt;, me l’emporte, me le ravit. &lt;em&gt;Au voleur ! au voleur ! au voleur ! au voleur !&lt;/em&gt; Ne diriez-vous pas que c’est un homme qui crie et court après un voleur pour le faire arrêter ? &lt;em&gt;Au voleur ! au voleur ! au voleur ! au voleur !&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="133">Il faut avouer que cela a un tour spirituel et galant.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="134">Je veux vous dire l’air que j’ai fait dessus.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="135">Vous avez appris la musique ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="136">Moi ? point du tout.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="137">Et comment donc cela se peut-il ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="138">Les gens de qualité savent tout sans avoir jamais rien appris.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="139">Assurément, ma chère.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <stage>Écoutez si vous trouverez l’air à votre goût. &lt;em&gt;Hem, hem. La, la, la, la, la&lt;/em&gt;. La brutalité de la saison a furieusement outragé la délicatesse de ma voix ; mais il n’importe, c’est à la cavalière.</stage>
+          <stage>&lt;em&gt;Il chante.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Oh ! oh ! je n’y prenais pas...&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="140">Ah ! que voilà un air qui est passionné ! Est-ce qu’on n’en meurt point ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="141">Il y a de la chromatique là dedans.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <stage>Ne trouvez-vous pas la pensée bien exprimée dans le chant ? &lt;em&gt;Au voleur !...&lt;a href="#_ftn9" name="_ftnref9" title="" id="_ftnref9"&gt;&lt;strong&gt;[9]&lt;/strong&gt;&lt;/a&gt;&lt;/em&gt; Et puis, comme si l’on criait bien fort, &lt;em&gt;au, au, au, au, au, au voleur ! &lt;/em&gt;Et tout d’un coup, comme une personne essoufflée, &lt;em&gt;au voleur !&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="142">C’est là savoir le fin des choses, le grand fin, le fin du fin. Tout est merveilleux, je vous assure ; je suis enthousiasmée de l’air et des paroles.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="143">Je n’ai encore rien vu de cette force-là.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="144">Tout ce que je fais me vient naturellement, c’est sans étude.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="145">La nature vous a traité en vraie mère passionnée, et vous en êtes l’enfant gâté.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="146">À quoi donc passez-vous le temps ?[10]</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="147">À rien du tout.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="148">Nous avons été jusqu’ici dans un jeûne effroyable de divertissements.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="149">Je m’offre à vous mener l’un de ces jours à la comédie, si vous voulez ; aussi bien on en doit jouer une nouvelle que je serai bien aise que nous voyions ensemble.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="150">Cela n’est pas de refus.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="151">Mais je vous demande d’applaudir comme il faut, quand nous serons là : car je me suis engagé de faire valoir la pièce, et l’auteur m’en est venu prier encore ce matin. C’est la coutume ici, qu’à nous autres, gens de condition, les auteurs viennent lire leurs pièces nouvelles, pour nous engager à les trouver belles et leur donner de la réputation ; et je vous laisse à penser si, quand nous disons quelque chose, le parterre ose nous contredire ! Pour moi, j’y suis fort exact ; et quand j’ai promis à quelque poète, je crie toujours : Voilà qui est beau ! devant que les chandelles soient allumées.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="152">Ne m’en parlez point : c’est un admirable lieu que Paris ; il s’y passe cent choses, tous les jours, qu’on ignore dans les provinces, quelque spirituelle qu’on puisse être.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="153">C’est assez ; puisque nous sommes instruites, nous ferons notre devoir de nous écrier comme il faut sur tout ce qu’on dira.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="154">Je ne sais si je me trompe ; mais vous avez toute la mine d’avoir fait quelque comédie.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="155">Eh ! il pourrait être quelque chose de ce que vous dites.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="156">Ah ! ma foi, il faudra que nous la voyions. Entre nous, j’en ai composé une que je veux faire représenter.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="157">Hé, à quels comédiens la donnerez-vous ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="158">Belle demande ! Aux grands comédiens :[11] il n’y a qu’eux qui soient capables de faire valoir les choses ; les autres sont des ignorants qui récitent comme l’on parle ; ils ne savent pas faire ronfler les vers et s’arrêter au bel endroit ; et le moyen de connaître où est le beau vers, si le comédien ne s’y arrête et ne vous avertit par là qu’il faut faire le brouhaha ?</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="159">En effet, il y a manière de faire sentir aux auditeurs les beautés d’un ouvrage ; et les choses ne valent que ce qu’on les fait valoir.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="160">Que vous semble de ma petite oie ? La trouvez-vous congruente à l’habit ?</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="161">Tout à fait.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="162">Le ruban est bien choisi.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="163">Furieusement bien. C’est Perdrigeon tout pur.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="164">Que dites-vous de mes canons ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="165">Ils ont tout à fait bon air.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="166">Je puis me vanter au moins qu’ils ont un grand quartier plus que tous ceux qu’on fait.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="167">Il faut avouer que je n’ai jamais vu porter si haut l’élégance de l’ajustement.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="168">Attachez un peu sur ces gants la réflexion de votre odorat.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="169">Ils sentent terriblement bon.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="170">Je n’ai jamais respiré une odeur mieux conditionnée.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="171">Et celle-là ?</l>
+          <stage>&lt;em&gt;Il donne à sentir les cheveux poudrés de sa perruque.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="172">Elle est tout à fait de qualité ; le sublime en est touché délicieusement.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="173">Vous ne me dites rien de mes plumes, comment les trouvez-vous ?</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="174">Effroyablement belles.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="175">Savez-vous que le brin me coûte un louis d’or ? Pour moi, j’ai cette manie de vouloir donner généralement sur tout ce qu’il y a de plus beau.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="176">Je vous assure, que nous sympathisons, vous et moi. J’ai une délicatesse furieuse pour tout ce que je porte ; et jusqu’à mes chaussettes, je ne puis rien souffrir qui ne soit de la bonne ouvrière.[12]</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, s’écriant brusquement.</speaker>
+          <l n="177">Ahi ! ahi ! ahi ! doucement. Dieu me damne, mesdames, c’est fort mal en user ; j’ai à me plaindre de votre procédé, cela n’est pas honnête.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="178">Qu’est-ce donc ? qu’avez-vous ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="179">Quoi ! toutes deux contre mon cœur en même temps ! M’attaquer[13] à droit et à gauche ! ah ! c’est contre le droit des gens : la partie n’est pas égale, et je m’en vais crier au meurtre.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="180">Il faut avouer qu’il dit les choses d’une manière particulière.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="181">Il a un tour admirable dans l’esprit.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="182">Vous avez plus de peur que de mal, et votre cœur crie avant qu’on l’écorche.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="183">Comment diable ! il est écorché depuis la tête jusqu’aux pieds.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="184">Madame, on demande à vous voir.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="185">Qui ?</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="186">Le vicomte de Jodelet.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="187">Le vicomte de Jodelet ?</l>
+        </sp>
+        <sp who="#marotte">
+          <speaker>MAROTTE.</speaker>
+          <l n="188">Oui, monsieur.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="189">Le connaissez-vous ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="190">C’est mon meilleur ami.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="191">Faites entrer vitement.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="192">Il y a quelque temps que nous ne nous sommes vus, et je suis ravi de cette aventure.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="193">Le voici.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="194">Ah ! Vicomte !</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET, s’embrassant l’un l’autre.</speaker>
+          <l n="195">Ah ! Marquis !</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="196">Que je suis aise de te rencontrer !</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="197">Que j’ai de joie de te voir ici !</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="198">Baise-moi donc, encore un peu, je te prie.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="199">Ma toute bonne, nous commençons d’être connues ; voilà le beau monde qui prend le chemin de nous venir voir.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="200">Mesdames, agréez que je vous présente ce gentilhomme-ci : sur ma parole, il est digne d’être connu de vous.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="201">Il est juste de venir vous rendre ce qu’on vous doit ; et vos attraits exigent leurs droits seigneuriaux sur toutes sortes de personnes.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="202">C’est pousser vos civilités jusqu’aux derniers confins de la flatterie.[14]</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="203">Cette journée doit être marquée dans notre almanach comme une journée bienheureuse.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="204">Allons, petit garçon, faut-il toujours vous répéter les choses ? Voyez-vous pas qu’il faut le surcroît d’un fauteuil ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="205">Ne vous étonnez pas de voir le vicomte de la sorte ; il ne fait que sortir d’une maladie qui lui a rendu le visage pâle comme vous le voyez.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="206">Ce sont fruits des veilles de la cour et des fatigues de la guerre.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="207">Savez-vous, mesdames, que vous voyez dans le vicomte un des vaillants hommes du siècle ? C’est un brave à trois poils.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="208">Vous ne m’en devez rien, marquis, et nous savons ce que vous savez faire aussi.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="209">Il est vrai que nous nous sommes vus tous deux dans l’occasion.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="210">Et dans des lieux où il faisait fort chaud.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, les regardant toutes deux.</speaker>
+          <l n="211">Oui, mais non pas si chaud qu’ici. Hai, hai, hai !</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="212">Notre connaissance s’est faite à l’armée, et la première fois que nous nous vîmes, il commandait un régiment de cavalerie sur les galères de Malte.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="213">Il est vrai ; mais vous étiez pourtant dans l’emploi avant que j’y fusse, et je me souviens que je n’étais que petit officier encore, que vous commandiez deux mille chevaux.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="214">La guerre est une belle chose ; mais, ma foi, la cour récompense bien mal aujourd’hui les gens de service comme nous.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="215">C’est ce qui fait que je veux pendre l’épée au croc.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="216">Pour moi, j’ai un furieux tendre pour les hommes d’épée.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="217">Je les aime aussi ; mais je veux que l’esprit assaisonne la bravoure.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="218">Te souvient-il, vicomte, de cette demi-lune que nous emportâmes sur les ennemis au siège d’Arras ?</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="219">Que veux-tu dire, avec ta demi-lune ? C’était bien une lune tout entière.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="220">Je pense que tu as raison.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="221">Il m’en doit bien souvenir, ma foi ! j’y fus blessé à la jambe d’un coup de grenade dont je porte encore les marques. Tâtez un peu, de grâce : vous sentirez quelque coup c’était là.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS, après avoir touché l’endroit.</speaker>
+          <l n="222">Il est vrai que la cicatrice est grande.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="223">Donnez-moi un peu votre main, et tâtez celui-ci, là, justement au derrière de la tête. Y êtes-vous ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="224">Oui, je sens quelque chose.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="225">C’est un coup de mousquet que je reçus, la dernière campagne que j’ai faite.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="226">Voici un autre coup qui me perça de part en part à l’attaque de Gravelines.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE,</speaker>
+          <stage>mettant la main sur le bouton de son haut-de-chausses.</stage>
+          <stage>&lt;em&gt;mettant la main sur le bouton de son haut-de-chausses.&lt;/em&gt;</stage>
+          <l n="227">Je vais vous montrer une furieuse plaie.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="228">Il n’est pas nécessaire : nous le croyons sans y regarder.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="229">Ce sont des marques honorables qui font voir ce qu’on est.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="230">Nous ne doutons point de ce que vous êtes.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="231">Vicomte, as-tu là ton carrosse ?</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="232">Pourquoi ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="233">Nous mènerions promener ces dames hors des portes, et leur donnerions un cadeau.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="234">Nous ne saurions sortir aujourd’hui.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="235">Ayons donc les violons pour danser.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="236">Ma foi ! c’est bien avisé.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="237">Pour cela, nous y consentons ; mais il faut donc quelque surcroît de compagnie.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="238">Holà ! Champagne, Picard, Bourguignon, Cascaret, Basque, La Verdure, Lorrain, Provençal, La Violette ! Au diable soient tous les laquais ! Je ne pense pas qu’il y ait gentilhomme en France plus mal servi que moi. Ces canailles me laissent toujours seul.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="239">Almanzor, dites aux gens de monsieur[15] qu’ils aillent quérir des violons, et nous faites venir ces messieurs et ces dames d’ici près, pour peupler la solitude de notre bal.</l>
+          <stage>&lt;em&gt;Almanzor sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="240">Vicomte, que dis-tu de ces yeux ?</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="241">Mais toi-même, marquis, que t’en semble ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="242">Moi, je dis que nos libertés auront peine à sortir d’ici les braies nettes. Au moins, pour moi, je reçois d’étranges secousses, et mon cœur ne tient plus qu’à un filet.[16]</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="243">Que tout ce qu’il dit est naturel ! Il tourne les choses le plus agréablement du monde.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="244">Il est vrai qu’il fait une furieuse dépense en esprit.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="245">Pour vous montrer que je suis véritable, je veux faire un impromptu là-dessus.</l>
+          <stage>&lt;em&gt;Il médite.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="246">Eh ! je vous en conjure de toute la dévotion de mon cœur, que nous oyions quelque chose[17] qu’on ait fait pour nous.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="247">J’aurais envie d’en faire autant ; mais je me trouve un peu incommodé de la veine poétique, pour la quantité des saignées que j’y ai faites ces jours passés.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="248">Que diable est cela ?[18] Je fais toujours bien le premier vers ; mais j’ai peine à faire les autres. Ma foi, ceci est un peu trop pressé ; je vous ferai un impromptu à loisir, que vous trouverez le plus beau du monde.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="249">Il a de l’esprit comme un démon.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="250">Et du galant, et du bien tourné.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="251">Vicomte, dis-moi un peu : y a-t-il longtemps que tu n’as vu la comtesse ?</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="252">Il y a plus de trois semaines que je ne lui ai rendu visite.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="253">Sais-tu bien que le duc m’est venu voir ce matin, et m’a voulu mener à la campagne courir un cerf avec lui ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="254">Voici nos amies qui viennent.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="255">Mon Dieu ! mes chères, nous vous demandons pardon. Ces Messieurs ont eu fantaisie de nous donner les âmes des pieds ; et nous vous avons envoyé quérir pour remplir les vides de notre assemblée.</l>
+        </sp>
+        <sp who="#lucile">
+          <speaker>LUCILE.</speaker>
+          <l n="256">Vous nous avez obligées sans doute.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="257">Ce n’est ici qu’un bal à la hâte ; mais, l’un de ces jours, nous vous en donnerons un dans les formes. Les violons sont-ils venus ?</l>
+        </sp>
+        <sp who="#almanzor">
+          <speaker>ALMANZOR.</speaker>
+          <l n="258">Oui, monsieur ; ils sont ici.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="259">Allons donc, mes chères, prenez place.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, dansant lui seul comme par prélude.</speaker>
+          <l n="260">La, la, la, la, la, la, la, la.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="261">Il a tout à fait la taille élégante.[19]</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="262">Et a la mine de danser proprement.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, ayant pris Madelon pour danser.</speaker>
+          <l n="263">Ma franchise va danser la courante aussi bien que mes pieds. En cadence, violons ; en cadence. Oh ! quels ignorants ! il n’y a pas moyen de danser avec eux. Le diable vous emporte ! ne sauriez-vous jouer en mesure ? La, la, la, la, la, la, la. Ferme. Ô violons de village !</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET, dansant ensuite.</speaker>
+          <l n="264">Holà ! ne pressez pas si fort la cadence : je ne fais que sortir de maladie.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE, un bâton à la main.</speaker>
+          <l n="265">Ah ! ah ! coquins ! que faites-vous ici ? il y a trois heures que nous vous cherchons.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE, se sentant battre.</speaker>
+          <l n="266">Ahi ! ahi ! ahi ! vous ne m’aviez pas dit que les coups en seraient aussi.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="267">Ahi ! ahi ! ahi !</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="268">C’est bien à vous, infâme que vous êtes, à vouloir faire l’homme d’importance !</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="269">Voilà qui vous apprendra à vous connaître.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="270">Que veut donc dire ceci ?</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="271">C’est une gageure.</l>
+        </sp>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="272">Quoi ! vous laisser battre de la sorte !</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="273">Mon Dieu ! je n’ai pas voulu faire semblant de rien : car je suis violent, et je me serais emporté.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="274">Endurer un affront comme celui-là, en notre présence !</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="275">Ce n’est rien : ne laissons pas d’achever. Nous nous connaissons il y a longtemps ; et, entre amis, on ne va pas se piquer pour si peu de chose.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="276">Ma foi, marauds, vous ne vous rirez pas de nous, je vous promets. Entrez, vous autres.</l>
+          <stage>&lt;em&gt;                Trois ou quatre spadassins entrent.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="277">Quelle est donc cette audace, de venir nous troubler de la sorte dans notre maison ?</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="278">Comment, mesdames ! nous endurerons que nos laquais soient mieux reçus que nous ; qu’ils viennent vous faire l’amour à nos dépens, et vous donnent le bal ?</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="279">Vos laquais !</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="280">Oui, nos laquais : et cela n’est ni beau ni honnête de nous les débaucher comme vous faites.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="281">Ô ciel ! quelle insolence !</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="282">Mais ils n’auront pas l’avantage de se servir de nos habits pour vous donner dans la vue ; et si vous les voulez aimer, ce sera, ma foi, pour leurs beaux yeux. Vite, qu’on les dépouille sur-le-champ.</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="283">Adieu notre braverie.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="284">Voilà le marquisat et la vicomté à bas.</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="285">Ah ! ah ! coquins, vous avez l’audace d’aller sur nos brisées ! Vous irez chercher autre part de quoi vous rendre agréables aux yeux de vos belles, je vous en assure.</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="286">C’est trop que de nous supplanter, et de nous supplanter avec nos propres habits.</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="287">Ô fortune ! quelle est ton inconstance !</l>
+        </sp>
+        <sp who="#du-croisy">
+          <speaker>DU CROISY.</speaker>
+          <l n="288">Vite, qu’on leur ôte jusqu’à la moindre chose.</l>
+        </sp>
+        <sp who="#la-grange">
+          <speaker>LA GRANGE.</speaker>
+          <l n="289">Qu’on emporte toutes ces hardes, dépêchez. Maintenant, mesdames, en l’état qu’ils sont, vous pouvez continuer vos amours avec eux tant qu’il vous plaira ; nous vous laissons[20] toute sorte de liberté pour cela, et nous vous protestons, monsieur et moi, que nous n’en serons[21] aucunement jaloux.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#cathos">
+          <speaker>CATHOS.</speaker>
+          <l n="290">Ah ! quelle confusion !</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="291">Je crève de dépit.</l>
+        </sp>
+        <sp who="#violons">
+          <speaker>UN DES VIOLONS, au marquis.</speaker>
+          <l n="292">Qu’est-ce donc que ceci ? Qui nous payera, nous autres ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="293">Demandez à monsieur le  vicomte.</l>
+        </sp>
+        <sp who="#violons">
+          <speaker>UN DES VIOLONS, à Jodelet.</speaker>
+          <l n="294">Qui est-ce qui nous donnera de l’argent ?</l>
+        </sp>
+        <sp who="#le-vicomte-de-jodelet">
+          <speaker>JODELET.</speaker>
+          <l n="295">Demandez à monsieur le marquis.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="296">Ah ! coquines que vous êtes, vous nous mettez dans de beaux draps blancs, à ce que je vois ; et je viens d’apprendre de belles affaires, vraiment, de ces messieurs qui sortent ![22]</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="297">Ah ! mon père, c’est une pièce sanglante qu’ils nous ont faite.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS.</speaker>
+          <l n="298">Oui, c’est une pièce sanglante, mais qui est un effet de votre impertinence, infâmes ! Ils se sont ressentis du traitement que vous leur avez fait, et cependant, malheureux que je suis, il faut que je boive l’affront.</l>
+        </sp>
+        <sp who="#madelon">
+          <speaker>MADELON.</speaker>
+          <l n="299">Ah ! je jure que nous en serons vengées, ou que je mourrai en la peine. Et vous, marauds, osez-vous vous tenir ici après votre insolence ?</l>
+        </sp>
+        <sp who="#le-marquis-de-mascarille">
+          <speaker>MASCARILLE.</speaker>
+          <l n="300">Traiter comme cela un marquis ! Voilà ce que c’est que du monde ! la moindre disgrâce nous fait mépriser de ceux qui nous chérissaient. Allons, camarade, allons chercher fortune autre part ; je vois bien qu’on n’aime ici que la vaine apparence, et qu’on n’y considère point la vertu toute nue.</l>
+          <stage>&lt;em&gt;Ils sortent tous deux.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#violons">
+          <speaker>UN DES VIOLONS.</speaker>
+          <l n="301">Monsieur, nous entendons que vous nous contentiez, à leur défaut, pour ce que nous avons joué ici.</l>
+        </sp>
+        <sp who="#gorgibus">
+          <speaker>GORGIBUS, les battant.</speaker>
+          <l n="302">Oui, oui, je vous vais contenter ; et voici la monnaie dont je vous veux payer. Et vous, pendardes, je ne sais qui me tient que je ne vous en fasse autant. Nous allons servir de fable et de risée à tout le monde ; et voilà ce que vous vous êtes attiré par vos extravagances. Allez vous cacher vilaines ; allez vous cacher pour jamais.</l>
+          <stage>&lt;em&gt;Seul.&lt;/em&gt;</stage>
+          <l n="303">Et vous, qui êtes cause de leur folie, sottes billevesées, pernicieux amusements des esprits oisifs, romans, vers, chansons, sonnets et sonnettes, puissiez-vous être à tous les diables !</l>
+          <stage>&lt;a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"&gt;[1]&lt;/a&gt; Var. &lt;em&gt;Ah ! ma chère, un marquis ! un marquis !&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref2" name="_ftn2" title="" id="_ftn2"&gt;[2]&lt;/a&gt; Var. &lt;em&gt;Qui aurait ouï parler de nous&lt;/em&gt; (1673).</stage>
+          <stage>            &lt;em&gt;Qui a ouï parler de nous&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref3" name="_ftn3" title="" id="_ftn3"&gt;[3]&lt;/a&gt; Var. &lt;em&gt;Il est raisonnable celui-là&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref4" name="_ftn4" title="" id="_ftn4"&gt;[4]&lt;/a&gt; Var. &lt;em&gt;Je vois ici deux yeux&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref5" name="_ftn5" title="" id="_ftn5"&gt;[5]&lt;/a&gt; Var. &lt;em&gt;Ce sont eux qui donnent&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref6" name="_ftn6" title="" id="_ftn6"&gt;[6]&lt;/a&gt; Var. &lt;em&gt;Les jolis commerces de prose et de vers&lt;/em&gt; (1673, 1682).</stage>
+          <stage>&lt;a href="#_ftnref7" name="_ftn7" title="" id="_ftn7"&gt;[7]&lt;/a&gt; Var. &lt;em&gt;Celui-là est&lt;/em&gt; (1673).</stage>
+          <stage>&lt;a href="#_ftnref8" name="_ftn8" title="" id="_ftn8"&gt;[8]&lt;/a&gt; Var. &lt;em&gt;Que dites-vous là ? Ce sont de ces sortes de choses&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref9" name="_ftn9" title="" id="_ftn9"&gt;[9]&lt;/a&gt; Var. &lt;em&gt;Au voleur ! au voleur !&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref10" name="_ftn10" title="" id="_ftn10"&gt;[10]&lt;/a&gt; Var. &lt;em&gt;À quoi donc passez-vous le temps, mesdames ?&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref11" name="_ftn11" title="" id="_ftn11"&gt;[11]&lt;/a&gt; Var. &lt;em&gt;Aux comédiens de l’hôtel de Bourgogne&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref12" name="_ftn12" title="" id="_ftn12"&gt;[12]&lt;/a&gt; Var. &lt;em&gt;Qui ne soit de la bonne faiseuse&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref13" name="_ftn13" title="" id="_ftn13"&gt;[13]&lt;/a&gt; Var. &lt;em&gt;M’attaquant &lt;/em&gt;(1673).</stage>
+          <stage>&lt;a href="#_ftnref14" name="_ftn14" title="" id="_ftn14"&gt;[14]&lt;/a&gt; Var. &lt;em&gt;Jusqu’aux derniers confins de flatterie&lt;/em&gt; (1673, 1682).</stage>
+          <stage>&lt;a href="#_ftnref15" name="_ftn15" title="" id="_ftn15"&gt;[15]&lt;/a&gt; Var. &lt;em&gt;Dites aux gens de monsieur le marquis&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref16" name="_ftn16" title="" id="_ftn16"&gt;[16]&lt;/a&gt; Var. &lt;em&gt;Ne tient qu’à un filet&lt;/em&gt; (1673, 1682).</stage>
+          <stage>&lt;a href="#_ftnref17" name="_ftn17" title="" id="_ftn17"&gt;[17]&lt;/a&gt; Var. &lt;em&gt;Que nous oyons quelque chose&lt;/em&gt; (1673).</stage>
+          <stage>            &lt;em&gt;Que nous oyions quelque chose&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref18" name="_ftn18" title="" id="_ftn18"&gt;[18]&lt;/a&gt; Var. &lt;em&gt;Que diable est-ce là ?&lt;/em&gt; (1673, 1682).</stage>
+          <stage>&lt;a href="#_ftnref19" name="_ftn19" title="" id="_ftn19"&gt;[19]&lt;/a&gt; Var. &lt;em&gt;Il a la taille tout à fait élégante&lt;/em&gt; (1682).</stage>
+          <stage>&lt;a href="#_ftnref20" name="_ftn20" title="" id="_ftn20"&gt;[20]&lt;/a&gt; Var. &lt;em&gt;Nous vous laisserons&lt;/em&gt; (1673, 1682).</stage>
+          <stage>&lt;a href="#_ftnref21" name="_ftn21" title="" id="_ftn21"&gt;[21]&lt;/a&gt; Var. &lt;em&gt;Que nous ne serons&lt;/em&gt; (1673, 1682).</stage>
+          <stage>&lt;a href="#_ftnref22" name="_ftn22" title="" id="_ftn22"&gt;[22]&lt;/a&gt; Var. &lt;em&gt;Et je viens d’apprendre de belles affaires, vraiment, de ces messieurs et de ces dames qui sortent&lt;/em&gt; (1682).</stage>
+          <l n="304" />
+          <l n="305" />
+        </sp>
       </div>
     </body>
   </text>

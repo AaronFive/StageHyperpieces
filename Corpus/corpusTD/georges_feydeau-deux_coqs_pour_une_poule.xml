@@ -1,1230 +1,1266 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Deux Coqs pour une poule</title>
-        <author key="Georges FEYDEAU | (naissance-mort)">Georges FEYDEAU |</author>
+        <title type="main" />
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/532</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Georges FEYDEAU |</author>. <title>Deux Coqs pour une poule</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/532</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="comtesse-cora-rower" sex="SEX">
+            <persName>COMTESSE CORA ROWER</persName>
+          </person>
+          <person xml:id="roger-de-lérigny" sex="SEX">
+            <persName>ROGER DE LÉRIGNY</persName>
+          </person>
+          <person xml:id="robert-tristan" sex="SEX">
+            <persName>ROBERT TRISTAN</persName>
+          </person>
+          <person xml:id="joseph" sex="SEX">
+            <persName>JOSEPH</persName>
+          </person>
+          <person xml:id="le-petit-william" sex="SEX">
+            <persName>LE PETIT WILLIAM</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>[indéfini]</term>
+          <term>[indéfini]</term>
         </keywords>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="[vide]" location="unknown">[vide]</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Deux Coqs pour une poule</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <castItem>
-              <role rend="male/female" xml:id="comtesse-cora-rower">COMTESSE CORA ROWER</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="roger-de-lérigny">ROGER DE LÉRIGNY</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="robert-tristan">ROBERT TRISTAN</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="joseph">JOSEPH</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-petit-william">LE PETIT WILLIAM</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <l n="1" xml:id="l1"> </l>
-            <l n="2" xml:id="l2"> </l>
-          </sp>
-          <sp who="joseph" xml:id="0-2">
-            <speaker>CORA, JOSEPH, <em>puis</em> ROGER</speaker>
-            <l n="3" xml:id="l3"> </l>
-            <stage><hi rend="italic"><em>À la campagne, dans la propriété de Cora. Un salon donnant sur une terrasse ; mobilier très élégant, objets excentriques. Des fleurets sont sur des chaises. À droite, une table recouverte d’un tapis ; sur cette table des papiers en désordre, un album de photographies ; un volume de « NANA »... Chaises, divan, cheminée, etc. </em></hi></stage>
-            <stage><hi rend="italic"><em>Au lever du rideau, Cora est dans le fond sur la terrasse, elle tire au pistolet. Un domestique lui présente un pistolet chargé, chaque fois qu’elle a tiré ; elle est en amazone.</em></hi></stage>
-          </sp>
-          <sp who="cora" xml:id="0-3">
-            <speaker>CORA, <em>tirant.</em></speaker>
-            <l n="6" xml:id="l6">Manqué... oh ! je suis d’une maladresse, ce matin... Dites-moi, Joseph, il n’est venu personne pendant ma promenade à cheval ?</l>
-          </sp>
-          <sp who="joseph" xml:id="0-4">
-            <speaker>JOSEPH, <em>lui présentant un pistolet.</em></speaker>
-            <l n="7" xml:id="l7">Le professeur d’escrime est venu apporter une paire de fleurets pour Madame.</l>
-          </sp>
-          <sp who="cora" xml:id="0-5">
-            <speaker>CORA, <em>tirant.</em></speaker>
-            <l n="8" xml:id="l8">Ah ! oui, je sais... encore manqué, je n’y comprends rien... Eh bien ! Joseph ! Dépêchez-vous ! vous ne voyez pas que j’attends ?</l>
-          </sp>
-          <sp who="joseph" xml:id="0-6">
-            <speaker>JOSEPH, <em>lui présentant le pistolet.</em></speaker>
-            <l n="9" xml:id="l9">Voici, madame.</l>
-          </sp>
-          <sp who="cora" xml:id="0-7">
-            <speaker>CORA, <em>même jeu.</em></speaker>
-            <l n="10" xml:id="l10">Paf !... Touché !... enfin !</l>
-          </sp>
-          <sp who="roger" xml:id="0-8">
-            <speaker>ROGER, <em>arrivant, il est en habit noir.</em></speaker>
-            <l n="11" xml:id="l11">Bravo !</l>
-          </sp>
-          <sp who="cora" xml:id="0-9">
-            <speaker>CORA, <em>étonnée.</em></speaker>
-            <l n="12" xml:id="l12">Monsieur de Lérigny !... Oh ! Je suis enchantée de vous voir ! nous allons tirer ensemble, voulez-vous ? Avez-vous vu mon dernier coup ?... Hein, qu’en dites-vous ?... Allons, prenez un pistolet !</l>
-          </sp>
-          <sp who="roger" xml:id="0-10">
-            <speaker>ROGER.</speaker>
-            <l n="13" xml:id="l13">Madame, je viens ici pour... vous parler sérieusement.</l>
-          </sp>
-          <sp who="cora" xml:id="0-11">
-            <speaker>CORA.</speaker>
-            <l n="14" xml:id="l14">Oh !... Eh bien, vous me direz cela... tout en tirant.</l>
-          </sp>
-          <sp who="roger" xml:id="0-12">
-            <speaker>ROGER.</speaker>
-            <l n="15" xml:id="l15">Pardon, mais si j’ai endossé cet habit noir, ce n’est pas pour...</l>
-          </sp>
-          <sp who="cora" xml:id="0-13">
-            <speaker>CORA, <em>riant.</em></speaker>
-            <l n="16" xml:id="l16">Tiens, c’est vrai, vous êtes en habit noir... vraiment, vous êtes drôle, monsieur de Lérigny</l>
-          </sp>
-          <sp who="roger" xml:id="0-14">
-            <speaker>ROGER, <em>prenant le pistolet.</em></speaker>
-            <l n="17" xml:id="l17">Vous souvenez-vous, Cora, de ce que vous m’avez dit l’autre jour ?...</l>
-          </sp>
-          <sp who="cora" xml:id="0-15">
-            <speaker>CORA.</speaker>
-            <l n="18" xml:id="l18">Non... mais ça m’est égal... tirez !</l>
-            <l n="19" xml:id="l19">Manqué... ce n’est pas étonnant, vous ne visez pas... allons, à mon tour !</l>
-          </sp>
-          <sp who="roger" xml:id="0-16">
-            <speaker>ROGER.</speaker>
-            <l n="20" xml:id="l20">Je vous en prie, Cora, écoutez-moi sérieusement !</l>
-          </sp>
-          <sp who="cora" xml:id="0-17">
-            <speaker>CORA.</speaker>
-            <l n="21" xml:id="l21">Mais il me semble...</l>
-          </sp>
-          <sp who="roger" xml:id="0-18">
-            <speaker>ROGER.</speaker>
-            <l n="22" xml:id="l22">Non, pas comme cela... entrons dans ce salon.</l>
-            <l n="23" xml:id="l23">Asseyez-vous là, sur ce divan, et accordez-moi votre attention !</l>
-          </sp>
-          <sp who="cora" xml:id="0-19">
-            <speaker>CORA.</speaker>
-            <l n="24" xml:id="l24">Oh ! Que vous êtes ennuyeux, monsieur de Lérigny. Voyons, que voulez-vous ?...</l>
-          </sp>
-          <sp who="roger" xml:id="0-20">
-            <speaker>ROGER.</speaker>
-            <l n="25" xml:id="l25">Vous souvenez-vous, Cora, du jour où nous avons fait connaissance, chez la Comtesse de Pradel, à son dernier bal ? Vous étiez là, noyée dans des flots de dentelle, votre figure charmante émergeant au milieu de tout cela, comme un doux rayon de soleil. Oh ! Cora, que vous étiez belle ainsi ! je ne pouvais détacher mes yeux de votre image charmante ; je ne voyais que vous. Enfin je vous fus présenté et ce soir-là... nous dansâmes plus d’une fois ensemble.</l>
-          </sp>
-          <sp who="cora" xml:id="0-21">
-            <speaker>CORA.</speaker>
-            <l n="26" xml:id="l26">Eh bien ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-22">
-            <speaker>ROGER.</speaker>
-            <l n="27" xml:id="l27">Eh bien, vous savez le reste... J’obtins de vous rendre visite, et j’abusai de la permission... Depuis, j’ai passé bien des journées, bien des soirées, même, en tête-à-tête avec vous, et chaque fois que je vous quittais, je vous adorais davantage, et votre charmant souvenir me poursuivait la nuit, jusque dans mes rêves ; oui, tout me plaît en vous, tout, votre grâce, vos manières, et jusqu’à, ce caractère insouciant et capricieux qui vous fait ressembler...</l>
-          </sp>
-          <sp who="cora" xml:id="0-23">
-            <speaker>CORA.</speaker>
-            <l n="28" xml:id="l28">À un papillon ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-24">
-            <speaker>ROGER.</speaker>
-            <l n="29" xml:id="l29">J’allais le dire !</l>
-          </sp>
-          <sp who="cora" xml:id="0-25">
-            <speaker>CORA.</speaker>
-            <l n="30" xml:id="l30">Savez-vous, monsieur de Lérigny, que vous êtes très romanesque ; répétez-moi donc, je vous prie, la tirade que vous venez de me débiter ; je la placerai, si vous le permettez, dans le roman que je suis en train d’écrire ; elle y fera merveille.</l>
-          </sp>
-          <sp who="roger" xml:id="0-26">
-            <speaker>ROGER.</speaker>
-            <l n="31" xml:id="l31">Hein !</l>
-          </sp>
-          <sp who="cora" xml:id="0-27">
-            <speaker>CORA, <em>elle prend un carnet.</em></speaker>
-            <l n="32" xml:id="l32">Allez ! Cher ! je prends des notes...</l>
-          </sp>
-          <sp who="roger" xml:id="0-28">
-            <speaker>ROGER.</speaker>
-            <l n="33" xml:id="l33">Quoi, vous voulez ?...</l>
-            <l n="34" xml:id="l34">Non ! ma parole, je n’en reviens pas. Comment ! je fais une demande en mariage et l’on me fait tirer au pistolet, et l’on me force à dicter une scène d’amour !</l>
-          </sp>
-          <sp who="cora" xml:id="0-29">
-            <speaker>CORA.</speaker>
-            <l n="35" xml:id="l35">Je vous attends, monsieur de Lérigny !</l>
-          </sp>
-          <sp who="roger" xml:id="0-30">
-            <speaker>ROGER.</speaker>
-            <l n="36" xml:id="l36">Non madame, ce que je vous dis là est sérieux je vous prie de m’écouter sans rire et de me permettre d’achever.</l>
-          </sp>
-          <sp who="cora" xml:id="0-31">
-            <speaker>CORA, <em>soupire.</em></speaker>
-            <l n="37" xml:id="l37">Allons...</l>
-          </sp>
-          <sp who="roger" xml:id="0-32">
-            <speaker>ROGER.</speaker>
-            <l n="38" xml:id="l38">L’autre jour, madame, vous m’avez fait comprendre que mes visites devenaient trop fréquentes et pouvaient vous compromettre ; que nos relations ne devaient pas durer plus longtemps dans des conditions pareilles et que si je voulais rester près de vous, il allait que ce fût en qualité d’époux.</l>
-          </sp>
-          <sp who="cora" xml:id="0-33">
-            <speaker>CORA.</speaker>
-            <l n="39" xml:id="l39">Oui, je sais, eh bien ?...</l>
-          </sp>
-          <sp who="roger" xml:id="0-34">
-            <speaker>ROGER.</speaker>
-            <l n="40" xml:id="l40">Eh bien, vous devez me comprendre !</l>
-          </sp>
-          <sp who="cora" xml:id="0-35">
-            <speaker>CORA.</speaker>
-            <l n="41" xml:id="l41">Quoi !</l>
-          </sp>
-          <sp who="roger" xml:id="0-36">
-            <speaker>ROGER.</speaker>
-            <l n="42" xml:id="l42">Comment, vous ne saisissez pas... voyons... cet habit noir... ces gants blancs... il me semble que c’est clair.</l>
-          </sp>
-          <sp who="cora" xml:id="0-37">
-            <speaker>CORA.</speaker>
-            <l n="43" xml:id="l43">Quoi, ce serait pour demander ma main ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-38">
-            <speaker>ROGER.</speaker>
-            <l n="44" xml:id="l44">Dame ! À moins que ce ne soit pour tirer au pistolet ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-39">
-            <speaker>CORA.</speaker>
-            <l n="45" xml:id="l45">Parlez-vous sérieusement, Monsieur de Lérigny ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-40">
-            <speaker>ROGER.</speaker>
-            <l n="46" xml:id="l46">Avouez, Madame, qu’ici la plaisanterie serait de mauvaise grâce !</l>
-          </sp>
-          <sp who="cora" xml:id="0-41">
-            <speaker>CORA, <em>après une pause.</em></speaker>
-            <l n="47" xml:id="l47">Ainsi, c’est sans rougir que vous me verrez partager votre nom, que vous m’appellerez votre femme, mais êtes-vous sûr que vous ne vous repentirez pas un jour de m’avoir épousée, moi, un être volage, insouciant, capricieux, un papillon comme vous dites... avez-vous bien réfléchi à tout cela ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-42">
-            <speaker>ROGER, <em>d’un ton de reproche.</em></speaker>
-            <l n="48" xml:id="l48">Cora !</l>
-          </sp>
-          <sp who="cora" xml:id="0-43">
-            <speaker>CORA.</speaker>
-            <l n="49" xml:id="l49">Avez-vous pensé aussi aux ennuis que vous occasionnera un pareil mariage ? qui sait si, en voyant les mépris dont les autres m’accablent, vous ne me mépriserez pas vous aussi, à votre tour ? Songez-y, je suis américaine, et en France, ce mot est synonyme de déclassée. Parce que nous ne savons pas baisser les yeux comme vos jeunes filles de France et que nos manières sont un peu cavalières, toute femme comme il faut évite notre contact ; notre présence ferait une tache dans leurs salons et la plupart des hommes croiraient se mésallier en épousant une fille comme nous.</l>
-          </sp>
-          <sp who="roger" xml:id="0-44">
-            <speaker>ROGER.</speaker>
-            <l n="50" xml:id="l50">Ah ! Cora, il faut que vous ayez une bien mauvaise opinion de moi pour me croire capable de m’arrêter à de tels préjugés.</l>
-          </sp>
-          <sp who="cora" xml:id="0-45">
-            <speaker>CORA.</speaker>
-            <l n="51" xml:id="l51">Monsieur de Lérigny, vous êtes un gentleman... vous n’êtes pas de ceux qui m’admirent tout en me méprisant et vous savez rester au dessus du qu’en dira-t-on... je vous en remercie... Allez, malgré mon insouciance, il est des moments où je sais être sérieuse.</l>
-            <l n="52" xml:id="l52">Ah ! ah ! ah ! ah ! ah ! Que dira madame de Géran quand elle saura... Elle qui disait l’autre jour à Madame de Nerval qui s’est empressée de me le rapporter que j’étais de ces femmes qu’on n’épousait pas. Ah ! ah ! ah ! ah ! ah ! je suis contente, monsieur de Lérigny !</l>
-          </sp>
-          <sp who="roger" xml:id="0-46">
-            <speaker>ROGER.</speaker>
-            <l n="53" xml:id="l53">Alors, vous consentez...</l>
-          </sp>
-          <sp who="cora" xml:id="0-47">
-            <speaker>CORA.</speaker>
-            <l n="54" xml:id="l54">À me marier... plutôt deux fois qu’une !</l>
-          </sp>
-          <sp who="roger" xml:id="0-48">
-            <speaker>ROGER, <em>interdit.</em></speaker>
-            <l n="55" xml:id="l55">Je ne vous en demande pas tant... vous exagérez !</l>
-          </sp>
-          <sp who="cora" xml:id="0-49">
-            <speaker>CORA.</speaker>
-            <l n="56" xml:id="l56">Que voulez-vous, monsieur de Lérigny, je suis franche, aussi ; c’est comme cela qu’on nous élève en Amérique et cette éducation en vaut bien une autre... Depuis le jour où l’on m’a rapporté les propos de madame de Géran, je me suis décidée à me marier pour faire taire cette mauvaise langue... j’ai fait connaître qu’avant mon mariage aucun homme n’entrerait plus dans ma maison, à moins que ce ne fût pour le on motif. Presque tous ont cédé ; je ne les ai plus revus.</l>
-            <l n="57" xml:id="l57">Devenir l’époux d’une américaine, ah ! fi ! quelle honte !... Ils ont tous déserté : seuls, vous et le baron Tristan vous avez continué vos visites ; l’idée d’une mésalliance, aux yeux des parisiens, du moins, ne vous a pas effrayés ; vous m’êtes restés fidèles, je vous en remercie... mais je vous l’ai dit, vous avez un rival en monsieur Tristan... lui aussi, il m’aime, lui aussi compte m’épouser. D’un moment à l’autre, il peut venir me faire sa demande... n’ayant de préférence ni pour l’un ni pour l’autre j’aurais consenti à devenir sa femme, mais vous l’avez devancé, voici ma main... Dès à présent, Roger, vous êtes le maître ici...</l>
-          </sp>
-          <sp who="roger" xml:id="0-50">
-            <speaker>ROGER, <em>la prend dans ses bras et l’embrasse.</em></speaker>
-            <l n="58" xml:id="l58">Ma femme !</l>
-          </sp>
-          <sp who="cora" xml:id="0-51">
-            <speaker>CORA.</speaker>
-            <l n="59" xml:id="l59">Monsieur, vous vous oubliez !</l>
-          </sp>
-          <sp who="roger" xml:id="0-52">
-            <speaker>ROGER, <em>tendrement.</em></speaker>
-            <l n="60" xml:id="l60">Oui, je m’oublie... dans les bras de ma femme !</l>
-          </sp>
-          <sp who="cora" xml:id="0-53">
-            <speaker>CORA.</speaker>
-            <l n="61" xml:id="l61">Allons, finissez ! vous voyez bien que vous chiffonnez mon amazone... Tenez, vous n’êtes pas raisonnable, je vous quitte... je vais me faire belle pour plaire à mon mari... Lorsque monsieur Tristan viendra, ce sera vous qui le recevrez, n’est-ce pas, vous lui ferez connaître ma décision, mais je vous en prie, faites-le avec ménagement... ne lui apprenez pas cela trop brusquement... Allons, au revoir Roger... à tout à l’heure.</l>
-            <l n="62" xml:id="l62">Ah ! madame de Géran, l’on n’épouse pas des femmes comme moi !...</l>
-            <l n="63" xml:id="l63"> </l>
-            <l n="64" xml:id="l64"> </l>
-            <l n="65" xml:id="l65"> </l>
-          </sp>
-          <sp who="roger" xml:id="0-54">
-            <speaker>ROGER, <em>seul</em></speaker>
-            <l n="66" xml:id="l66"> </l>
-            <l n="67" xml:id="l67">Eh bien, c’est fait, il n’y a plus à y revenir... c’est elle qui sera ma femme... cela va me brouiller avec toute ma famille, mais, ma foi, tant pis, je ne vois pas pourquoi je contraindrais mon inclination, parce que mes parents... après tout, elle est charmante... On voit bien qu’ils ne la connaissent pas... parce qu’elle est un peu excentrique, ils se figurent tout de suite que j’épouse une déclassée... allons donc, elle, une... oh ! non, c’est impossible... Elle est bien un peu... un peu comme ça... oui, mais voilà tout... ça ne va pas plus loin... sous ces allures cavalières, sous ce dehors un peu masculin se cache une âme vraiment honnête... Et, avec cela, quelle noblesse de sentiments, quelle dignité... Est-ce qu’une fille parlerait jamais de la sorte ? Allons donc... Il n’y a qu’une chose que je lui reproche... je la trouve un peu trop... trop indifférente à mon égard... oui, je... enfin, elle ne paraît pas avoir plus d’inclination pour moi que pour ce petit imbécile de Tristan qui fait tant le fat parce qu’il est lieutenant aux chasseurs d’Afrique... Et si je l’épouse... ce n’est pas parce que je suis monsieur de Lérigny, parce que je suis mieux fait qu’un autre - oui, on dit que je suis assez bien fait - parce que je lui plais, enfin, non c’est parce que je suis arrivé une demi-heure plus tôt que le baron Tristan...</l>
-            <l n="68" xml:id="l68">Tenez, vous allez dire que ça n’a pas de rapport, mais... je ne sais pas pourquoi... ça me fait penser aux omnibus où le premier venu peut prendre place... Le tout c’est d’arriver à temps... tant pis pour les retardataires... quand il n’y a plus de place, on vous crie : « complet », et l’on vous envoie promener... Eh bien ! oui... je sais bien que ça n’a pas de rapport... mais que voulez-vous, c’est malgré moi... c’est égal je crois qu’au fond, elle doit me préférer à lui... oui... c’est évident... seulement comme elle est très froide et... Tenez, j’aime presque autant la voir ainsi. Avec un caractère aussi indifférent que le sien, au moins je pourrai être sûr de ne pas être trompé.</l>
-            <l n="69" xml:id="l69"> </l>
-            <l n="70" xml:id="l70"> </l>
-            <l n="71" xml:id="l71"> </l>
-          </sp>
-          <sp who="roger" xml:id="0-55">
-            <speaker>ROGER, WILLIAM</speaker>
-            <l n="72" xml:id="l72"> </l>
-          </sp>
-          <sp who="william" xml:id="0-56">
-            <speaker>WILLIAM.</speaker>
-            <l n="73" xml:id="l73">Dis donc, monsieur, tu ne sais pas où est tante Cora ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-57">
-            <speaker>ROGER.</speaker>
-            <l n="74" xml:id="l74">Tiens ! voilà mon petit William ! Allons, hop ! sur mes genoux... Eh bien, on ne m’embrasse pas ?</l>
-          </sp>
-          <sp who="william" xml:id="0-58">
-            <speaker>WILLIAM, <em>l’embrassant.</em></speaker>
-            <l n="75" xml:id="l75">Je cherche tante.</l>
-          </sp>
-          <sp who="roger" xml:id="0-59">
-            <speaker>ROGER.</speaker>
-            <l n="76" xml:id="l76">Qu’est-ce que tu lui veux ?</l>
-          </sp>
-          <sp who="william" xml:id="0-60">
-            <speaker>WILLIAM.</speaker>
-            <l n="77" xml:id="l77">Je veux lui demander un chocolat parce que miss a dit que j’avais bien fait ma page d’écriture.</l>
-          </sp>
-          <sp who="roger" xml:id="0-61">
-            <speaker>ROGER.</speaker>
-            <l n="78" xml:id="l78">Ah ! C’est très bien ça, je vois que tu veux devenir un homme !</l>
-          </sp>
-          <sp who="william" xml:id="0-62">
-            <speaker>WILLIAM.</speaker>
-            <l n="79" xml:id="l79">Oh ! oui, pour avoir de vrais enfants !</l>
-          </sp>
-          <sp who="roger" xml:id="0-63">
-            <speaker>ROGER, <em>stupéfait.</em></speaker>
-            <l n="80" xml:id="l80">Hein !...</l>
-          </sp>
-          <sp who="william" xml:id="0-64">
-            <speaker>WILLIAM.</speaker>
-            <l n="81" xml:id="l81">Oui... ma tante me donne bien ses poupées mais elles disent seulement « papa » et « maman », et puis, voilà tout.</l>
-          </sp>
-          <sp who="roger" xml:id="0-65">
-            <speaker>ROGER, <em>s’amusant de la naïveté de William.</em></speaker>
-            <l n="82" xml:id="l82">Alors, tu te marieras plus tard ?</l>
-          </sp>
-          <sp who="william" xml:id="0-66">
-            <speaker>WILLIAM, <em>paraît embarrassé, puis, soudain.</em></speaker>
-            <l n="83" xml:id="l83">J’sais pas, mais je veux des petits enfants... Dis donc sais-tu où qu’on les achète ?... ma tante n’a pas voulu me le dire...</l>
-          </sp>
-          <sp who="roger" xml:id="0-67">
-            <speaker>ROGER.</speaker>
-            <l n="84" xml:id="l84">Ah ! Je ne sais pas ! moi non plus, elle n’a pas voulu me le dire encore.</l>
-          </sp>
-          <sp who="william" xml:id="0-68">
-            <speaker>WILLIAM, <em>subitement.</em></speaker>
-            <l n="85" xml:id="l85">Est-ce que tu aimes le chocolat ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-69">
-            <speaker>ROGER.</speaker>
-            <l n="86" xml:id="l86">Oui, assez ! Tu veux me donner le tien ?</l>
-          </sp>
-          <sp who="william" xml:id="0-70">
-            <speaker>WILLIAM, <em>naïvement.</em></speaker>
-            <l n="87" xml:id="l87">Non, mais si tu veux, j’en demanderai un aussi pour toi à ma tante et... tu me le donneras, dis ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-71">
-            <speaker>ROGER, <em>riant.</em></speaker>
-            <l n="88" xml:id="l88">Gros gourmand !</l>
-            <l n="89" xml:id="l89">Allons, va !</l>
-            <l n="90" xml:id="l90"> </l>
-            <l n="91" xml:id="l91"> </l>
-            <l n="92" xml:id="l92"> </l>
-          </sp>
-          <sp who="roger" xml:id="0-72">
-            <speaker>ROGER, <em>le regardant partir</em></speaker>
-            <l n="93" xml:id="l93"> </l>
-            <l n="94" xml:id="l94">Est-il gentil, ce galopin-là...</l>
-            <l n="95" xml:id="l95">Quand j’en aurai un comme ça, moi aussi ? Car j’espère bien en avoir un... pour commencer. C’est étrange tout de même, l’effet que ça me fait ! Penser que bientôt, un petit être comme celui-là m’appellera papa. Rien qu’à cette idée ! Ah !</l>
-            <l n="96" xml:id="l96">« Ah ! Quel plaisir ! Ah ! Quel plaisir ! Ah ! quel plaisir d’être papa... » allons, je dis des bêtises, à présent... c’est ce petit bambin qui m’a mis ces idées-là dans la tête ; tiens, mais, au fait, c’est mon neveu à présent... mais oui... puisque Cora est sa tante... encore une preuve de générosité et de grandeur d’âme ! Vous avez vu cet enfant-là. Eh bien ! sans Cora, peut-être en ce moment serait-il en train de mourir de faim, oui... de mourir de faim ! C’est le fils d’une sœur qu’elle avait en Amérique. Un beau jour, cette sœur mourut laissant ce pauvre petit être seul et sans secours au monde... Eh bien ! Cora n’hésita pas un instant... elle adopta l’enfant... et ne cessa de lui prodiguer les soins les plus maternels. Ma parole d’honneur ! vous pouvez m’en croire. C’est elle-même qui me l’a raconté ! Eh bien ! Est-ce que ce n’est pas beau ? Est-ce qu’une autre ferait jamais cela ?... Ah ! bien oui... allons, allons, elle sera ma femme en dépit de tout le monde, mes parents se fâcheront, je le sais, mais je réponds bien qu’après mon mariage, lorsqu’ils connaîtront mieux ma femme, ils me tendront la main et seront les premiers à me féliciter.</l>
-            <l n="97" xml:id="l97">Ouf, le petit baron !</l>
-            <l n="98" xml:id="l98"> </l>
-            <l n="99" xml:id="l99"> </l>
-            <l n="100" xml:id="l100"> </l>
-          </sp>
-          <sp who="joseph" xml:id="0-73">
-            <speaker>ROGER, <em>puis</em> JOSEPH, <em>suivi de </em>TRISTAN, <em>en uniforme</em></speaker>
-            <l n="101" xml:id="l101"> </l>
-          </sp>
-          <sp who="joseph" xml:id="0-74">
-            <speaker>JOSEPH.</speaker>
-            <l n="102" xml:id="l102">Par ici, monsieur !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-75">
-            <speaker>TRISTAN.</speaker>
-            <l n="103" xml:id="l103">Annoncez monsieur le baron Tristan.</l>
-          </sp>
-          <sp who="roger" xml:id="0-76">
-            <speaker>ROGER, <em>sans regarder Tristan, en lançant une bouffée de fumée en l’air.</em></speaker>
-            <l n="104" xml:id="l104">C’est inutile, Joseph !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-77">
-            <speaker>TRISTAN.</speaker>
-            <l n="105" xml:id="l105">Plaît-il monsieur ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-78">
-            <speaker>ROGER, <em>très aimable.</em></speaker>
-            <l n="106" xml:id="l106">Je dis, monsieur, que c’est inutile...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-79">
-            <speaker>TRISTAN.</speaker>
-            <l n="107" xml:id="l107">Comment cela ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-80">
-            <speaker>ROGER, <em>sans répondre à sa question.</em></speaker>
-            <l n="108" xml:id="l108">Vous allez le savoir. Asseyez-vous donc, monsieur le baron... Tristan.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-81">
-            <speaker>TRISTAN.</speaker>
-            <l n="109" xml:id="l109">Merci, je suis bien debout.</l>
-          </sp>
-          <sp who="roger" xml:id="0-82">
-            <speaker>ROGER.</speaker>
-            <l n="110" xml:id="l110">Libre à vous, cher monsieur, libre à vous, mais vous trouverez bon que j’en use autrement parce que, voyez-vous, il n’y a rien de tel au monde que de rester assis quand on est fatigué !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-83">
-            <speaker>TRISTAN, <em>à part.</em></speaker>
-            <l n="111" xml:id="l111">Ah ! mais il m’agace !</l>
-            <l n="112" xml:id="l112">Ah çà, monsieur, pourriez-vous me dire ce que signifie...</l>
-          </sp>
-          <sp who="roger" xml:id="0-84">
-            <speaker>ROGER, <em>très sérieux.</em></speaker>
-            <l n="113" xml:id="l113">Mais très volontiers, monsieur... avez-vous vu jouer Les Brigands ?</l>
-          </sp>
-          <sp who="tristan" xml:id="0-85">
-            <speaker>TRISTAN, <em>bourru.</em></speaker>
-            <l n="114" xml:id="l114">Plaît-il ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-86">
-            <speaker>ROGER, <em>très sérieux.</em></speaker>
-            <l n="115" xml:id="l115">Je vous demande si vous avez vu jouer Les Brigands ? L’opérette de Meilhac et Halévy...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-87">
-            <speaker>TRISTAN, <em>bourru.</em></speaker>
-            <l n="116" xml:id="l116">Oui, je l’ai vue, après ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-88">
-            <speaker>ROGER, <em>même jeu.</em></speaker>
-            <l n="117" xml:id="l117">Vraiment ! Eh bien, que pensez-vous de la chanson des carabiniers ?</l>
-          </sp>
-          <sp who="tristan" xml:id="0-89">
-            <speaker>TRISTAN, <em>même jeu.</em></speaker>
-            <l n="118" xml:id="l118">Monsieur... je...</l>
-          </sp>
-          <sp who="roger" xml:id="0-90">
-            <speaker>ROGER, <em>en appuyant sur les mots.</em></speaker>
-            <l n="119" xml:id="l119">Ne trouvez-vous pas comme moi que sous ce dehors bouffon, elle contient une épigramme très fine qui pourrait s’appliquer à bien des gens... méditez les derniers vers, cher monsieur !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-91">
-            <speaker>TRISTAN, <em>éclatant.</em></speaker>
-            <l n="120" xml:id="l120">Monsieur je suis patient mais je vous avertis que cette plaisanterie commence à me lasser... Domestique, je vous ordonne de m’annoncer.</l>
-          </sp>
-          <sp who="roger" xml:id="0-92">
-            <speaker>ROGER.</speaker>
-            <l n="121" xml:id="l121">Et moi je vous le défends !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-93">
-            <speaker>TRISTAN, <em>moqueur.</em></speaker>
-            <l n="122" xml:id="l122">Vraiment monsieur, et de quel droit s’il vous plaît ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-94">
-            <speaker>ROGER.</speaker>
-            <l n="123" xml:id="l123">De quel droit ?... Depuis aujourd’hui, monsieur, je suis le maître ici !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-95">
-            <speaker>TRISTAN, <em>stupéfait.</em></speaker>
-            <l n="124" xml:id="l124">Hein !</l>
-          </sp>
-          <sp who="roger" xml:id="0-96">
-            <speaker>ROGER.</speaker>
-            <l n="125" xml:id="l125">Oui ! Voilà ce que cherchais à vous faire comprendre tout à l’heure. Vous avouerez du moins, monsieur, que j’y apportais tous les ménagements désirables, mais au lieu de me savoir gré, des détours et des circonlocutions dont j’usais pour amortir un peu le coup que ne manquerait pas de vous donner une nouvelle si inattendue, vous avez pris la mouche... il a donc fallu vous faire connaître la vérité d’une façon plus brutale... Croyez bien, cher monsieur, que je suis désolé...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-97">
-            <speaker>TRISTAN, <em>furieux.</em></speaker>
-            <l n="126" xml:id="l126">Savez-vous bien, monsieur, que ce que vous faites là est une indignité...</l>
-          </sp>
-          <sp who="roger" xml:id="0-98">
-            <speaker>ROGER, <em>s’emportant.</em></speaker>
-            <l n="127" xml:id="l127">Monsieur !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-99">
-            <speaker>TRISTAN.</speaker>
-            <l n="128" xml:id="l128">Savez-vous bien que la Comtesse a sept millions monsieur ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-100">
-            <speaker>ROGER, <em>plus calme.</em></speaker>
-            <l n="129" xml:id="l129">Vraiment, je l’ignorais... mais alors je regrette d’autant plus de vous faire manquer un si beau mariage d’amour.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-101">
-            <speaker>TRISTAN.</speaker>
-            <l n="130" xml:id="l130">Vous raillez, je crois...</l>
-          </sp>
-          <sp who="roger" xml:id="0-102">
-            <speaker>ROGER, <em>moqueur.</em></speaker>
-            <l n="131" xml:id="l131">Moi ! Oh ! mais au contraire, je vous plains du fond du cœur... mon cher baron... car enfin il s’en est fallu de bien peu que ce ne fût vous... Si seulement vous étiez arrivé une heure plus tôt... la Comtesse n’avait de préférence ni pour l’un ni pour l’autre vous aviez autant de chances que moi...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-103">
-            <speaker>TRISTAN, <em>exaspéré.</em></speaker>
-            <l n="132" xml:id="l132">Monsieur... Je vous défends... Je suis lieutenant aux Chasseurs d’Afrique moi... monsieur !</l>
-          </sp>
-          <sp who="roger" xml:id="0-104">
-            <speaker>ROGER.</speaker>
-            <l n="133" xml:id="l133">Eh ! bien, ce que vous avez de mieux à faire, monsieur le lieutenant, c’est de gagner au plus vite votre régiment... Vous y trouverez des distractions qui...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-105">
-            <speaker>TRISTAN.</speaker>
-            <l n="134" xml:id="l134">Ah ! mais monsieur cela ne se passera pas ainsi... vous m’en rendrez raison... Je renonce moins que jamais a ce mariage... et comme vous êtes seul à l’entraver, je n’ai qu’un moyen, c’est de vous supprimer.</l>
-          </sp>
-          <sp who="roger" xml:id="0-106">
-            <speaker>ROGER.</speaker>
-            <l n="135" xml:id="l135">À moins que ce ne soit moi qui vous fasse passer l’arme à gauche, monsieur le militaire.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-107">
-            <speaker>TRISTAN.</speaker>
-            <l n="136" xml:id="l136">On voit bien, monsieur, que vous ne me connaissez pas...</l>
-          </sp>
-          <sp who="roger" xml:id="0-108">
-            <speaker>ROGER.</speaker>
-            <l n="137" xml:id="l137">Peut-être, mais je puis vous certifier qu’il est des gens en France qui vous peuvent valoir...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-109">
-            <speaker>TRISTAN.</speaker>
-            <l n="138" xml:id="l138">Nous verrons bien... Demain, monsieur j’aurai l’honneur de vous envoyer mes témoins.</l>
-          </sp>
-          <sp who="roger" xml:id="0-110">
-            <speaker>ROGER.</speaker>
-            <l n="139" xml:id="l139">Je suis à vos ordres, monsieur...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-111">
-            <speaker>TRISTAN, <em>saluant comme pour sortir.</em></speaker>
-            <l n="140" xml:id="l140">Monsieur...</l>
-          </sp>
-          <sp who="roger" xml:id="0-112">
-            <speaker>ROGER, <em>saluant.</em></speaker>
-            <l n="141" xml:id="l141">Monsieur... Ah ! à propos, avec quelle arme aurai-je l’honneur de vous... futt.</l>
-            <stage><hi rend="italic"><em>Il passe rapidement sa main devant sa bouche pour faire comprendre à Tristan qu’il compte le supprimer.</em></hi></stage>
-          </sp>
-          <sp who="tristan" xml:id="0-113">
-            <speaker>TRISTAN, <em>narquois.</em></speaker>
-            <l n="143" xml:id="l143">Vous conservez toujours le mot pour rire monsieur de Lérigny... Si vous le voulez bien, nous choisirons le pistolet.</l>
-          </sp>
-          <sp who="roger" xml:id="0-114">
-            <speaker>ROGER.</speaker>
-            <l n="144" xml:id="l144">Le pistolet, soit, j’y suis très fort ; et comme c’est vous qui m’avez provoqué c’est moi qui aurai l’honneur de tirer le premier... Or je vous avertis que je ne manque jamais mon but.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-115">
-            <speaker>TRISTAN, <em>d’un air de doute.</em></speaker>
-            <l n="145" xml:id="l145">Jamais !</l>
-          </sp>
-          <sp who="roger" xml:id="0-116">
-            <speaker>ROGER.</speaker>
-            <l n="146" xml:id="l146">Vous dites ?...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-117">
-            <speaker>TRISTAN.</speaker>
-            <l n="147" xml:id="l147">Je dis : « Jamais ! »</l>
-          </sp>
-          <sp who="roger" xml:id="0-118">
-            <speaker>ROGER.</speaker>
-            <l n="148" xml:id="l148">Vous en doutez ? vous allez voir.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-119">
-            <speaker>TRISTAN, <em>à part.</em></speaker>
-            <l n="149" xml:id="l149">Eh ! bien, que fait-il ?</l>
-          </sp>
-          <sp who="joseph" xml:id="0-120">
-            <speaker>JOSEPH, <em>entrant.</em></speaker>
-            <l n="150" xml:id="l150">Monsieur a sonné ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-121">
-            <speaker>ROGER.</speaker>
-            <l n="151" xml:id="l151">Oui... Apportez les pistolets dans ce salon...</l>
-            <l n="152" xml:id="l152">Bien !... Maintenant allumez cette bougie !</l>
-          </sp>
-          <sp who="joseph" xml:id="0-122">
-            <speaker>JOSEPH, <em>étonné.</em></speaker>
-            <l n="153" xml:id="l153">Monsieur !...</l>
-          </sp>
-          <sp who="roger" xml:id="0-123">
-            <speaker>ROGER.</speaker>
-            <l n="154" xml:id="l154">Je vous dis d’allumer cette bougie.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-124">
-            <speaker>TRISTAN, <em>à part.</em></speaker>
-            <l n="155" xml:id="l155">Ah çà ! où veut-il en venir ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-125">
-            <speaker>ROGER.</speaker>
-            <l n="156" xml:id="l156">Posez-la là, sur cette cheminée... Très bien... et maintenant laissez-nous...</l>
-            <l n="157" xml:id="l157">Lorsque tout à l’heure j’ai eu l’honneur de vous dire que je ne manquais jamais mon but, vous avez laissé échapper un sourire incrédule... Or, monsieur, je tiens à ce que vous sachiez que je ne suis pas un Gascon, moi ! Je suis Corse et voici un petit jeu d’adresse en usage dans mon pays, petit jeu dont vous me direz des nouvelles. Vous voyez cette bougie, regardez... Une... deux... trois...</l>
-            <l n="158" xml:id="l158">Voilà.</l>
-            <l n="159" xml:id="l159">À bon entendeur, salut !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-126">
-            <speaker>TRISTAN.</speaker>
-            <l n="160" xml:id="l160">Hein !</l>
-          </sp>
-          <sp who="roger" xml:id="0-127">
-            <speaker>ROGER.</speaker>
-            <l n="161" xml:id="l161">Maintenant, monsieur, j’attends vos témoins.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-128">
-            <speaker>TRISTAN, <em>furieux.</em></speaker>
-            <l n="162" xml:id="l162">Mais... c’est un assassinat !</l>
-          </sp>
-          <sp who="roger" xml:id="0-129">
-            <speaker>ROGER.</speaker>
-            <l n="163" xml:id="l163">Que voulez-vous... c’est votre faute... c’est vous qui m’avez provoqué !... Dieu sait si je n’en avais pas l’intention... Mais... maintenant que le mal est fait, il faut nous battre, à moins cependant que vous ne préfériez me faire des excuses bien plates.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-130">
-            <speaker>TRISTAN.</speaker>
-            <l n="164" xml:id="l164">Des excuses, moi... un officier de Chasseurs d’Afrique !... Jamais !</l>
-          </sp>
-          <sp who="roger" xml:id="0-131">
-            <speaker>ROGER.</speaker>
-            <l n="165" xml:id="l165">Dans ce cas monsieur, je suis désolé, mais...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-132">
-            <speaker>TRISTAN.</speaker>
-            <l n="166" xml:id="l166">C’est bien, monsieur, nous nous battrons.</l>
-            <l n="167" xml:id="l167">Monsieur !...</l>
-          </sp>
-          <sp who="roger" xml:id="0-133">
-            <speaker>ROGER, <em>saluant.</em></speaker>
-            <l n="168" xml:id="l168">Monsieur...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-134">
-            <speaker>TRISTAN, <em>à part.</em></speaker>
-            <l n="169" xml:id="l169">Décidément j’ai eu tort de le provoquer... J’ai envie d’aller prévenir la police...</l>
-            <l n="170" xml:id="l170"> </l>
-            <l n="171" xml:id="l171"> </l>
-            <l n="172" xml:id="l172"> </l>
-          </sp>
-          <sp who="roger" xml:id="0-135">
-            <speaker>ROGER, <em>seul</em></speaker>
-            <l n="173" xml:id="l173"> </l>
-            <l n="174" xml:id="l174">Eh ! mais... voilà ce qu’on peut appeler une journée bien remplie. Dans l’espace d’une heure, prendre possession d’une femme, de sept millions et... d’un duel, c’est une jolie entrée en matière</l>
-            <l n="175" xml:id="l175">Et dire qu’avant même d’être marié, je me bats déjà pour ma femme ! Cela promet... Il est vrai que l’adversaire n’est pas bien dangereux... Ce pauvre petit baron... il suffira de lui montrer le canon de mon pistolet pour le faire détaler au plus vite et, ma foi, je me contenterai de lui loger une balle... dans... dans la figure qu’il me présentera... Vraiment je me ferais un scrupule de le tuer, cet imbécile... pourvu que j’épouse Cora, que m’importe le reste !...</l>
-            <l n="176" xml:id="l176"> </l>
-            <l n="177" xml:id="l177"> </l>
-            <l n="178" xml:id="l178"> </l>
-          </sp>
-          <sp who="joseph" xml:id="0-136">
-            <speaker>ROGER, CORA, <em>en peignoir de satin blanc, puis</em> JOSEPH</speaker>
-            <l n="179" xml:id="l179"> </l>
-          </sp>
-          <sp who="cora" xml:id="0-137">
-            <speaker>CORA.</speaker>
-            <l n="180" xml:id="l180">Me voici, est-ce que j’ai été longue ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-138">
-            <speaker>ROGER, <em>tendrement.</em></speaker>
-            <l n="181" xml:id="l181">Toujours trop, à mon gré, vilaine !</l>
-          </sp>
-          <sp who="cora" xml:id="0-139">
-            <speaker>CORA, <em>riant, elle s’assied sur une chaise.</em></speaker>
-            <l n="182" xml:id="l182">Que vous êtes drôle, monsieur de Lérigny ! Mais, en Amérique lorsque les messieurs nous font la cour... ils ne parlent pas du tout comme cela.</l>
-          </sp>
-          <sp who="roger" xml:id="0-140">
-            <speaker>ROGER, <em>inquiet.</em></speaker>
-            <l n="183" xml:id="l183">Hein !</l>
-          </sp>
-          <sp who="cora" xml:id="0-141">
-            <speaker>CORA.</speaker>
-            <l n="184" xml:id="l184">Je vous l’assure... Quand nous plaisons à un américain, il nous dit tout simplement : « Miss ! You are very pretty, I’love you... » Et cela suffit.</l>
-          </sp>
-          <sp who="roger" xml:id="0-142">
-            <speaker>ROGER.</speaker>
-            <l n="185" xml:id="l185">Ah !... c’est comme cela que... Eh bien ! Je vous remercie de la leçon !</l>
-          </sp>
-          <sp who="cora" xml:id="0-143">
-            <speaker>CORA.</speaker>
-            <l n="186" xml:id="l186">À propos... Et le baron Tristan ?... Est-il parti ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-144">
-            <speaker>ROGER.</speaker>
-            <l n="187" xml:id="l187">Oui !</l>
-          </sp>
-          <sp who="cora" xml:id="0-145">
-            <speaker>CORA.</speaker>
-            <l n="188" xml:id="l188">Avez-vous fait ce que je vous avais recommandé ? Avez-vous pris des ménagements ?...</l>
-          </sp>
-          <sp who="roger" xml:id="0-146">
-            <speaker>ROGER.</speaker>
-            <l n="189" xml:id="l189">Oh ! pour cela, on ne peut rien me reprocher...</l>
-          </sp>
-          <sp who="cora" xml:id="0-147">
-            <speaker>CORA.</speaker>
-            <l n="190" xml:id="l190">Enfin que lui avez vous dit ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-148">
-            <speaker>ROGER, <em>étourdiment.</em></speaker>
-            <l n="191" xml:id="l191">Je lui ai dit que c’était complet.</l>
-          </sp>
-          <sp who="cora" xml:id="0-149">
-            <speaker>CORA.</speaker>
-            <l n="192" xml:id="l192">Hein !</l>
-          </sp>
-          <sp who="roger" xml:id="0-150">
-            <speaker>ROGER.</speaker>
-            <l n="193" xml:id="l193">Ah ! pardon, je pensais à autre chose... Eh ! bien, je lui ai fait part de notre mariage comme vous me l’aviez dit... voilà.</l>
-          </sp>
-          <sp who="cora" xml:id="0-151">
-            <speaker>CORA.</speaker>
-            <l n="194" xml:id="l194">Et il a bien pris la chose ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-152">
-            <speaker>ROGER.</speaker>
-            <l n="195" xml:id="l195">Oh ! Le mieux du monde !</l>
-          </sp>
-          <sp who="cora" xml:id="0-153">
-            <speaker>CORA.</speaker>
-            <l n="196" xml:id="l196">Il n’a pas été blessé ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-154">
-            <speaker>ROGER.</speaker>
-            <l n="197" xml:id="l197">Non... pas pour le moment !</l>
-          </sp>
-          <sp who="cora" xml:id="0-155">
-            <speaker>CORA.</speaker>
-            <l n="198" xml:id="l198">Tant mieux...</l>
-          </sp>
-          <sp who="roger" xml:id="0-156">
-            <speaker>ROGER, <em>subitement.</em></speaker>
-            <l n="199" xml:id="l199">Cora !</l>
-          </sp>
-          <sp who="cora" xml:id="0-157">
-            <speaker>CORA.</speaker>
-            <l n="200" xml:id="l200">Monsieur de Lérigny ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-158">
-            <speaker>ROGER.</speaker>
-            <l n="201" xml:id="l201">D’abord je vous prie de ne plus m’appeler monsieur de Lérigny... Je suis votre mari maintenant... Appelez-moi Roger !</l>
-          </sp>
-          <sp who="cora" xml:id="0-159">
-            <speaker>CORA, <em>ennuyée.</em></speaker>
-            <l n="202" xml:id="l202">Eh ! bien, Roger !... que voulez-vous ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-160">
-            <speaker>ROGER.</speaker>
-            <l n="203" xml:id="l203">Oh ! vous n’avez pas bien dit cela, voyons ; venez vous asseoir là près de moi... sur ce divan... Vous ne voulez pas... Voyons, Cora, tu ne veux pas... Allons viens... viens donc, voyons...</l>
-            <l n="204" xml:id="l204">À la bonne heure... là... encore plus près...</l>
-          </sp>
-          <sp who="cora" xml:id="0-161">
-            <speaker>CORA, <em>le repoussant un peu.</em></speaker>
-            <l n="205" xml:id="l205">Oh !</l>
-          </sp>
-          <sp who="roger" xml:id="0-162">
-            <speaker>ROGER.</speaker>
-            <l n="206" xml:id="l206">Quoi ! tu ne veux pas...</l>
-          </sp>
-          <sp who="cora" xml:id="0-163">
-            <speaker>CORA, <em>mollement.</em></speaker>
-            <l n="207" xml:id="l207">Si, mon ami... tout ce que vous voulez, mais si vous saviez comme ça m’ennuie !</l>
-          </sp>
-          <sp who="roger" xml:id="0-164">
-            <speaker>ROGER.</speaker>
-            <l n="208" xml:id="l208">Que tu es vilaine... va !</l>
-            <l n="209" xml:id="l209">Voyons qu’allons nous faire... quand nous serons mariés ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-165">
-            <speaker>CORA, <em>gaiement.</em></speaker>
-            <l n="210" xml:id="l210">Ah ! oui, qu’allons nous faire ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-166">
-            <speaker>ROGER, <em>se rapprochant encore plus près d’elle et la tenant par la taille.</em></speaker>
-            <l n="211" xml:id="l211">Cherchons ensemble !</l>
-          </sp>
-          <sp who="cora" xml:id="0-167">
-            <speaker>CORA.</speaker>
-            <l n="212" xml:id="l212">D’abord, cela va sans dire, nous ferons un voyage de noces...</l>
-          </sp>
-          <sp who="roger" xml:id="0-168">
-            <speaker>ROGER.</speaker>
-            <l n="213" xml:id="l213">Ah ! tu crois... on dit pourtant que ça a de grands inconvénients...</l>
-          </sp>
-          <sp who="cora" xml:id="0-169">
-            <speaker>CORA.</speaker>
-            <l n="214" xml:id="l214">Mais mon ami, c’est la mode !</l>
-          </sp>
-          <sp who="roger" xml:id="0-170">
-            <speaker>ROGER.</speaker>
-            <l n="215" xml:id="l215">Oh ! alors !</l>
-          </sp>
-          <sp who="cora" xml:id="0-171">
-            <speaker>CORA.</speaker>
-            <l n="216" xml:id="l216">Nous disons donc le voyage de noces... Bon ! Maintenant, le voyage terminé, eh ! bien... eh ! bien, nous reviendrons vivre paisiblement à Paris, comme deux bons bourgeois, avec nos enfants.</l>
-          </sp>
-          <sp who="roger" xml:id="0-172">
-            <speaker>ROGER.</speaker>
-            <l n="217" xml:id="l217">Nos enfants ! Comme elle y va !</l>
-          </sp>
-          <sp who="cora" xml:id="0-173">
-            <speaker>CORA, <em>prenant un carnet et écrivant.</em></speaker>
-            <l n="218" xml:id="l218">Voici à peu près comment nous disposerons de nos journées : Le matin promenade à cheval...</l>
-          </sp>
-          <sp who="roger" xml:id="0-174">
-            <speaker>ROGER.</speaker>
-            <l n="219" xml:id="l219">Ça fait maigrir !</l>
-          </sp>
-          <sp who="cora" xml:id="0-175">
-            <speaker>CORA.</speaker>
-            <l n="220" xml:id="l220">Mon médecin me les a ordonnées pour me faire engraisser.</l>
-          </sp>
-          <sp who="roger" xml:id="0-176">
-            <speaker>ROGER,<em> riant.</em></speaker>
-            <l n="221" xml:id="l221">Ah !</l>
-          </sp>
-          <sp who="cora" xml:id="0-177">
-            <speaker>CORA.</speaker>
-            <l n="222" xml:id="l222">Donc promenade à cheval le matin, à midi le déjeuner ; dans l’après-midi courses ou skating.</l>
-          </sp>
-          <sp who="roger" xml:id="0-178">
-            <speaker>ROGER.</speaker>
-            <l n="223" xml:id="l223">Hein ! au skating... jamais de la vie par exemple ! Ma femme au skating avec des... Il ne manquerait plus que cela... Non, non, rayons cet exercice du programme !</l>
-          </sp>
-          <sp who="cora" xml:id="0-179">
-            <speaker>CORA.</speaker>
-            <l n="224" xml:id="l224">Oh ! c’est si hygiénique !</l>
-          </sp>
-          <sp who="roger" xml:id="0-180">
-            <speaker>ROGER.</speaker>
-            <l n="225" xml:id="l225">Eh ! bien, vous patinerez dans le vestibule... il est assez grand et ce sera moins compromettant.</l>
-          </sp>
-          <sp who="cora" xml:id="0-181">
-            <speaker>CORA.</speaker>
-            <l n="226" xml:id="l226">Soit, passons... À six heures et demie le dîner, le soir, bal ou théâtre, la nuit...</l>
-          </sp>
-          <sp who="roger" xml:id="0-182">
-            <speaker>ROGER.</speaker>
-            <l n="227" xml:id="l227">Tout beau ! la nuit, cela me regarde... Mettez un point d’interrogation !</l>
-          </sp>
-          <sp who="cora" xml:id="0-183">
-            <speaker>CORA.</speaker>
-            <l n="228" xml:id="l228">Voilà à peu près le programme ; maintenant, pendant nos moments perdus...</l>
-          </sp>
-          <sp who="roger" xml:id="0-184">
-            <speaker>ROGER.</speaker>
-            <l n="229" xml:id="l229">Comment, « nos moments perdus » ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-185">
-            <speaker>CORA.</speaker>
-            <l n="230" xml:id="l230">Eh ! Oui... par exemple lorsqu’il pleuvra et que nous ne pourrons pas faire notre promenade, nous ferons de l’escrime, de la musique, de la peinture, de la sculpture, que sais-je, moi... ou bien encore je continuerai mon roman... pendant que vous me corrigerez les fautes d’orthographe...</l>
-          </sp>
-          <sp who="roger" xml:id="0-186">
-            <speaker>ROGER.</speaker>
-            <l n="231" xml:id="l231">Ah ! c’est moi qui...</l>
-          </sp>
-          <sp who="cora" xml:id="0-187">
-            <speaker>CORA.</speaker>
-            <l n="232" xml:id="l232">Oui !... Cela vous va-t-il ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-188">
-            <speaker>ROGER.</speaker>
-            <l n="233" xml:id="l233">Parfaitement.</l>
-          </sp>
-          <sp who="cora" xml:id="0-189">
-            <speaker>CORA.</speaker>
-            <l n="234" xml:id="l234">Ah ! et puis j’oubliais... de temps en temps nous jouerons la comédie... je déclame très bien, moi... Figurez-vous qu’autrefois je voulais me mettre dans le théâtre...</l>
-          </sp>
-          <sp who="roger" xml:id="0-190">
-            <speaker>ROGER.</speaker>
-            <l n="235" xml:id="l235">Quoi... avec votre accent américain ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-191">
-            <speaker>CORA.</speaker>
-            <l n="236" xml:id="l236">Et pourquoi pas ?... Il y a bien des grandes actrices qui se donnent cet accent et qui pourtant ne sont pas d’Amérique...</l>
-          </sp>
-          <sp who="joseph" xml:id="0-192">
-            <speaker>JOSEPH, <em>entrant.</em></speaker>
-            <l n="237" xml:id="l237">Le courrier de madame la Comtesse.</l>
-          </sp>
-          <sp who="cora" xml:id="0-193">
-            <speaker>CORA.</speaker>
-            <l n="238" xml:id="l238">Donnez...</l>
-          </sp>
-          <sp who="roger" xml:id="0-194">
-            <speaker>ROGER, <em>l’arrêtant.</em></speaker>
-            <l n="239" xml:id="l239">Pardon... c’est moi maintenant que cela regarde.</l>
-          </sp>
-          <sp who="cora" xml:id="0-195">
-            <speaker>CORA.</speaker>
-            <l n="240" xml:id="l240">Comment, je n’ai pas le droit de lire mes lettres ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-196">
-            <speaker>ROGER.</speaker>
-            <l n="241" xml:id="l241">Permettez... pas avant que je n’en aie pris connaissance...</l>
-          </sp>
-          <sp who="cora" xml:id="0-197">
-            <speaker>CORA.</speaker>
-            <l n="242" xml:id="l242">Oh ! mais, je ne suis pas habituée à cela, vous savez... En Amérique...</l>
-          </sp>
-          <sp who="roger" xml:id="0-198">
-            <speaker>ROGER.</speaker>
-            <l n="243" xml:id="l243">Je vous en prie, ma chère... L’Amérique n’a rien à faire dans tout ceci. Dorénavant Joseph devra m’apporter toutes les lettres qui vous seront adressées.</l>
-            <stage><hi rend="italic"><em>Il prend une des lettres et l’ouvre... Cora pousse un soupir... Moment de silence.</em></hi></stage>
-          </sp>
-          <sp who="roger" xml:id="0-199">
-            <speaker>ROGER, <em>après avoir lu la lettre, la lui tendant avec une colère retenue.</em></speaker>
-            <l n="245" xml:id="l245">Pourriez-vous me dire, madame, ce que signifie cette lettre ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-200">
-            <speaker>CORA.</speaker>
-            <l n="246" xml:id="l246">Oh ! mon ami, est-ce que vous seriez jaloux ? Fi ! ce sentiment est du dernier vulgaire !</l>
-          </sp>
-          <sp who="roger" xml:id="0-201">
-            <speaker>ROGER, <em>brusquement.</em></speaker>
-            <l n="247" xml:id="l247">Je ne suis pas jaloux... je me rends compte seulement... Voyons Madame, je vous prie de me dire quel est ce monsieur de Brindargent qui vous invite à souper chez Brébant... Est-ce que vous croyez que je vous permettrai...</l>
-          </sp>
-          <sp who="cora" xml:id="0-202">
-            <speaker>CORA, <em>riant.</em></speaker>
-            <l n="248" xml:id="l248">De quoi vous mettez-vous en peine !... Monsieur de Brindargent est mon cousin.</l>
-          </sp>
-          <sp who="roger" xml:id="0-203">
-            <speaker>ROGER, <em>incrédule.</em></speaker>
-            <l n="249" xml:id="l249">Ah !... Et c’est votre cousin qui vous écrit : « ma jolie poulette... »</l>
-          </sp>
-          <sp who="cora" xml:id="0-204">
-            <speaker>CORA.</speaker>
-            <l n="250" xml:id="l250">Mais oui... où est le mal ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-205">
-            <speaker>ROGER.</speaker>
-            <l n="251" xml:id="l251">Il y en a beaucoup... On ne doit pas avoir de cousins qui vous écrivent : « ma jolie poulette... » C’est très grave, tout ce qu’il y a de plus grave et je ne veux pas que vous ayez des cousins comme cela... vous m’entendez !...</l>
-            <l n="252" xml:id="l252">« Ma jolie poulette... »</l>
-          </sp>
-          <sp who="cora" xml:id="0-206">
-            <speaker>CORA.</speaker>
-            <l n="253" xml:id="l253">Ah ! mais, monsieur, c’est de la tyrannie !</l>
-          </sp>
-          <sp who="roger" xml:id="0-207">
-            <speaker>ROGER, <em>sentencieusement.</em></speaker>
-            <l n="254" xml:id="l254">La femme doit obéissance à son mari... c’est dans le code.</l>
-          </sp>
-          <sp who="cora" xml:id="0-208">
-            <speaker>CORA.</speaker>
-            <l n="255" xml:id="l255">Dans le code Français, c’est possible... mais en Amérique...</l>
-          </sp>
-          <sp who="roger" xml:id="0-209">
-            <speaker>ROGER.</speaker>
-            <l n="256" xml:id="l256">Encore l’Amérique ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-210">
-            <speaker>CORA, <em>à part.</em></speaker>
-            <l n="257" xml:id="l257">Oh ! mais il commence à m’agacer.</l>
-          </sp>
-          <sp who="roger" xml:id="0-211">
-            <speaker>ROGER, <em>lisant une autre lettre.</em></speaker>
-            <l n="258" xml:id="l258">Allons bon ! des vers à présent !</l>
-            <l n="259" xml:id="l259">Eh ! bien voilà qui va fort bien !... et c’est qu’il y en a long... Voyons un peu comment finit le poulet...</l>
-            <l n="260" xml:id="l260">Signé : Christophe Bonnet, tapissier, rue Lafayette, 79. » Mes félicitations, ma chère ! si vous recrutez vos conquêtes jusque dans les tapissiers...</l>
-          </sp>
-          <sp who="cora" xml:id="0-212">
-            <speaker>CORA, <em>impatientée.</em></speaker>
-            <l n="261" xml:id="l261">Que voulez-vous, ce n’est pas ma faute...</l>
-          </sp>
-          <sp who="roger" xml:id="0-213">
-            <speaker>ROGER, <em>sévèrement.</em></speaker>
-            <l n="262" xml:id="l262">Pourquoi lui avez-vous souri... je vous défends de sourire aux tapissiers.</l>
-          </sp>
-          <sp who="cora" xml:id="0-214">
-            <speaker>CORA, <em>impatiente.</em></speaker>
-            <l n="263" xml:id="l263">Ah ! tenez, je ne sais ce que vous avez, mais depuis une demi-heure vous êtes insupportable !</l>
-          </sp>
-          <sp who="roger" xml:id="0-215">
-            <speaker>ROGER.</speaker>
-            <l n="264" xml:id="l264">Moi ? Oh ! voyons Cora !</l>
-          </sp>
-          <sp who="cora" xml:id="0-216">
-            <speaker>CORA.</speaker>
-            <l n="265" xml:id="l265">Laissez-moi, monsieur... J’ai mes nerfs.</l>
-            <stage><hi rend="italic"><em>Elle va prendre le volume de Nana puis s’étend sur le canapé et lit. Un moment de silence.</em></hi></stage>
-          </sp>
-          <sp who="roger" xml:id="0-217">
-            <speaker>ROGER.</speaker>
-            <l n="267" xml:id="l267">Non ! non ! ça ne peut pas durer... Quel caractère, mon Dieu ! Ah ! je ne la savais pas comme cela ! Enfin, qu’est-ce que je lui ai dit, après tout ? Pourquoi se met-elle en colère ?... Parce que je ne veux pas qu’elle aille souper chez Brébant avec son cousin... Eh bien ! il me semble que c’est bien naturel. Un mari n’aurait plus le droit de faire une observation à sa femme à présent... Oh ! je ne sais pas, mais tout cela ne me présage rien de bon... Est-ce que mes parents auraient raison par hasard ?</l>
-            <l n="268" xml:id="l268">Quel est ce livre que vous lisez avec tant d’attention ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-218">
-            <speaker>CORA, <em>sèchement.</em></speaker>
-            <l n="269" xml:id="l269">Nana !</l>
-          </sp>
-          <sp who="roger" xml:id="0-219">
-            <speaker>ROGER, <em>bondissant.</em></speaker>
-            <l n="270" xml:id="l270">Hein !... mais je ne vous permets pas de lire un pareil roman !</l>
-          </sp>
-          <sp who="cora" xml:id="0-220">
-            <speaker>CORA.</speaker>
-            <l n="271" xml:id="l271">Comment ? Mais c’est vous-même qui me l’avez apporté !</l>
-          </sp>
-          <sp who="roger" xml:id="0-221">
-            <speaker>ROGER.</speaker>
-            <l n="272" xml:id="l272">Autrefois... oui... c’est possible... parce que je ne me doutais pas, alors, que plus tard... mais maintenant c’est autre chose... Je confisque le livre.</l>
-          </sp>
-          <sp who="cora" xml:id="0-222">
-            <speaker>CORA, <em>à part.</em></speaker>
-            <l n="273" xml:id="l273">Oh ! quel homme, mon Dieu !...</l>
-          </sp>
-          <sp who="roger" xml:id="0-223">
-            <speaker>ROGER, <em>après un moment de silence ouvre l’album de photographies, puis après l’avoir regardé un instant, il s’écrie avec colère.</em></speaker>
-            <l n="274" xml:id="l274">Qu’est-ce que je vois là encore ?... Capoul, Léotard, Bichofsheim... Mais c’est un album de cocotte, cela...</l>
-          </sp>
-          <sp who="cora" xml:id="0-224">
-            <speaker>CORA, <em>furieuse.</em></speaker>
-            <l n="275" xml:id="l275">Un pareil acte de violence chez moi... Sortez monsieur... Je vous rends votre parole.</l>
-          </sp>
-          <sp who="roger" xml:id="0-225">
-            <speaker>ROGER, <em>froidement.</em></speaker>
-            <l n="276" xml:id="l276">J’allais vous le demander, Madame...</l>
-            <l n="277" xml:id="l277">Mais avant de vous quitter, permettez-moi de former des vœux pour votre bonheur... Epousez monsieur le baron Tristan... C’est le mari qui vous convient. Ainsi vous n’aurez pas de regrets à avoir, vous serez vengée de madame de Géran.</l>
-          </sp>
-          <sp who="cora" xml:id="0-226">
-            <speaker>CORA.</speaker>
-            <l n="278" xml:id="l278">Monsieur !</l>
-          </sp>
-          <sp who="roger" xml:id="0-227">
-            <speaker>ROGER.</speaker>
-            <l n="279" xml:id="l279">Seulement madame, je crains bien que ce mariage ne puisse se faire tout de suite... car il est plus que probable que monsieur Tristan sera retenu au lit pendant quelque temps.</l>
-          </sp>
-          <sp who="cora" xml:id="0-228">
-            <speaker>CORA, <em>inquiète.</em></speaker>
-            <l n="280" xml:id="l280">Que voulez-vous dire, monsieur ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-229">
-            <speaker>ROGER.</speaker>
-            <l n="281" xml:id="l281">Que monsieur Tristan m’a provoqué ce matin... je me bats avec lui... et comme je tire le premier, je compte lui faire dans le bas des reins une blessure... honorable. Ce sera sans doute la seule qu’il recevra durant toute sa carrière militaire.</l>
-          </sp>
-          <sp who="cora" xml:id="0-230">
-            <speaker>CORA.</speaker>
-            <l n="282" xml:id="l282">Et c’est à cause de moi qu’il vous a provoqué... Oh ! c’est bien cela...</l>
-            <l n="283" xml:id="l283">Un duel !... Je pourrai dire qu’on s’est battu pour moi... et l’on en parlera dans les journaux, et l’on citera mon nom... Oh ! madame de Géran en crèvera de dépit !</l>
-          </sp>
-          <sp who="roger" xml:id="0-231">
-            <speaker>ROGER, <em>à part.</em></speaker>
-            <l n="284" xml:id="l284">Allons, décidément, c’en est une... Oh ! mes parents, combien vous aviez raison !</l>
-          </sp>
-          <sp who="joseph" xml:id="0-232">
-            <speaker>JOSEPH, <em>entre en portant une lettre sur un plateau.</em></speaker>
-            <l n="285" xml:id="l285">Un domestique en livrée apporte cette lettre pour monsieur de Lérigny.</l>
-          </sp>
-          <sp who="roger" xml:id="0-233">
-            <speaker>ROGER, <em>étonné.</em></speaker>
-            <l n="286" xml:id="l286">Pour moi ! Tiens, de qui cela peut-il être ?... Donnez... L’écriture de mon oncle... C’est la dixième que je reçois de lui depuis deux jours... Ah ! il lutte avec énergie contre ce mariage... mais il a gagné son procès... Voyons, que peut-il en me dire encore ?</l>
-            <l n="287" xml:id="l287">Vous permettez, Madame ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-234">
-            <speaker>ROGER, <em>lisant à part.</em></speaker>
-            <l n="288" xml:id="l288">« Mon neveu... Si tous mes efforts pour vous empêcher de faire une folie ont été vains jusqu’à présent, j’espère du moins que ce dernier coup fera son effet. Voyant votre assiduité pour la comtesse et prévoyant le dénouement inévitable d’un tel amour, j’ai écrit en Amérique pour avoir des informations sur elle. Ah ! j’en ai appris de belles sur celle dont vous voulez faire votre femme ! Sachez que cet enfant qu’elle fait passer pour son neveu n’est autre chose que le fruit d’un amour illicite... »</l>
-            <l n="289" xml:id="l289">Est-il possible !</l>
-            <l n="290" xml:id="l290">Ah ! madame...</l>
-          </sp>
-          <sp who="cora" xml:id="0-235">
-            <speaker>CORA.</speaker>
-            <l n="291" xml:id="l291">Qu’avez-vous ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-236">
-            <speaker>ROGER.</speaker>
-            <l n="292" xml:id="l292">Je dis, madame, que c’est une indignité ! m’avoir trompé de la sorte !</l>
-          </sp>
-          <sp who="cora" xml:id="0-237">
-            <speaker>CORA.</speaker>
-            <l n="293" xml:id="l293">Comment cela ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-238">
-            <speaker>ROGER.</speaker>
-            <l n="294" xml:id="l294">Lisez-ceci !</l>
-          </sp>
-          <sp who="cora" xml:id="0-239">
-            <speaker>CORA, <em>après avoir lu.</em></speaker>
-            <l n="295" xml:id="l295">Ciel !</l>
-          </sp>
-          <sp who="roger" xml:id="0-240">
-            <speaker>ROGER, <em>avec indignation.</em></speaker>
-            <l n="296" xml:id="l296">Ainsi tout cela est vrai... Et vous ne rougissiez pas tout à l’heure en m’accordant cette main qu’un autre avait flétrie, en abandonnant à mes caresses ce corps qu’un autre avait pressé avant moi... Quoi ! tandis que je vous sacrifiais naïvement les affections les plus chères, tandis que je vous apportais tout !... mon amour, mon bonheur, ma vie, vous ne me donniez en échange que la honte et le déshonneur ! tandis que je vous respectais comme le plus pur des sanctuaires, un autre vous avait profanée, et je n’avais que ses restes ! Ah ! je vous le répète, madame, cette conduite est indigne !</l>
-          </sp>
-          <sp who="cora" xml:id="0-241">
-            <speaker>CORA.</speaker>
-            <l n="297" xml:id="l297">Je n’essaierai pas de nier, monsieur ce que mon trouble vous a assez prouvé... Oui ! cet enfant est mon fils... Oui j’ai été séduite !... Trop confiante dans les promesses mensongères, je me suis livrée un jour au plus perfide des amants... Insensée que j’étais, je pense pouvoir croire alors, à la parole d’un homme ! Combien je me trompais ! Une fois son crime accompli, le traître m’abandonna à ma honte et à mon déshonneur ! En vain je le suppliai... en vain je lui rappelai ses promesses, rien ne put l’attendrir !... C’est alors que je compris toute ma folie... Mais il était trop tard ! le mal était fait ! Maintenant, monsieur, vous savez mon secret... J’espérais pouvoir le cacher toute ma vie, vous l’avez découvert... faites-en ce que vous voulez !</l>
-          </sp>
-          <sp who="roger" xml:id="0-242">
-            <speaker>ROGER.</speaker>
-            <l n="298" xml:id="l298">Je connais mes devoirs de galant homme, madame ; et je vous jure que jamais il ne sortira de ma bouche !</l>
-            <l n="299" xml:id="l299"> </l>
-            <l n="300" xml:id="l300"> </l>
-            <l n="301" xml:id="l301"> </l>
-          </sp>
-          <sp who="joseph" xml:id="0-243">
-            <speaker>CORA, ROGER, JOSEPH, <em>puis </em>TRISTAN</speaker>
-            <l n="302" xml:id="l302"> </l>
-          </sp>
-          <sp who="joseph" xml:id="0-244">
-            <speaker>JOSEPH, <em>annonçant.</em></speaker>
-            <l n="303" xml:id="l303">Monsieur le baron Tristan.</l>
-          </sp>
-          <sp who="roger" xml:id="0-245">
-            <speaker>ROGER, <em>à part.</em></speaker>
-            <l n="304" xml:id="l304">Lui ! Parbleu ; il arrive à propos.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-246">
-            <speaker>TRISTAN, <em>arrivant en se parlant à lui-même.</em></speaker>
-            <l n="305" xml:id="l305">Enfin !... De deux choses l’une... Si je cède... il l’épouse ! maintenant si nous nous battons... c’est clair... mon affaire est faite... et il l’épouse tout de même... Je crois donc que dans ce cas, l’on pourrait très bien... sans que l’honneur en souffrît...</l>
-            <l n="306" xml:id="l306">Oh ! je ne lui ferai pas d’excuses... non !... seulement je lui ferai comprendre que... oui ! c’est cela...</l>
-            <l n="307" xml:id="l307">Madame ! Monsieur !...</l>
-            <l n="308" xml:id="l308">Pardon, monsieur, pourrai-je avoir un moment d’entretien avec vous ?...</l>
-          </sp>
-          <sp who="cora" xml:id="0-247">
-            <speaker>CORA, <em>sournoisement.</em></speaker>
-            <l n="309" xml:id="l309">Non, c’est inutile, je sais tout. Je connais votre noble conduite, monsieur Tristan ; je sais que vous avez voulu vous battre pour moi... Je vous en remercie... Mais il est temps que cette comédie finisse... tout cela n’était qu’une épreuve !</l>
-          </sp>
-          <sp who="roger" xml:id="0-248">
-            <speaker>ROGER.</speaker>
-            <l n="310" xml:id="l310">Comment une épreuve ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-249">
-            <speaker>CORA, <em>bas.</em></speaker>
-            <l n="311" xml:id="l311">Chut ! laissez-moi faire !</l>
-            <l n="312" xml:id="l312">Oui, monsieur Tristan... tout cela n’était qu’une épreuve... je voulais voir si vous m’aimiez véritablement, si vous étiez capable de vous battre pour moi. Vous m’en avez donné la preuve, je ne l’oublierai pas ! Quant à monsieur de Lérigny, il n’a jamais été votre rival... Permettez-moi de vous présenter mon cousin.</l>
-          </sp>
-          <sp who="roger" xml:id="0-250">
-            <speaker>ROGER, <em>stupéfait et bas à Cora.</em></speaker>
-            <l n="313" xml:id="l313">Hein ! qui ça, votre cousin ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-251">
-            <speaker>CORA, <em>bas.</em></speaker>
-            <l n="314" xml:id="l314">Mais ! vous !</l>
-          </sp>
-          <sp who="roger" xml:id="0-252">
-            <speaker>ROGER.</speaker>
-            <l n="315" xml:id="l315">Ah ! je !... Comme Brindargent alors !</l>
-            <l n="316" xml:id="l316">Monsieur !</l>
-          </sp>
-          <sp who="tristan" xml:id="0-253">
-            <speaker>TRISTAN, <em>saluant.</em></speaker>
-            <l n="317" xml:id="l317">Monsieur !</l>
-            <l n="318" xml:id="l318">Ah ! ma parole je n’en reviens pas ! Comment ! tout cela n’était pas vrai. Et moi qui allais presque faire des excuses !</l>
-            <l n="319" xml:id="l319">Mais alors, monsieur, si vous n’êtes pas... je puis toujours espérer...</l>
-          </sp>
-          <sp who="roger" xml:id="0-254">
-            <speaker>ROGER.</speaker>
-            <l n="320" xml:id="l320">Ah ! ça ! Demandez à ma cousine.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-255">
-            <speaker>TRISTAN, <em>à Cora.</em></speaker>
-            <l n="321" xml:id="l321">Madame ?</l>
-          </sp>
-          <sp who="cora" xml:id="0-256">
-            <speaker>CORA.</speaker>
-            <l n="322" xml:id="l322">M. Tristan, voici ma main.</l>
-          </sp>
-          <sp who="tristan" xml:id="0-257">
-            <speaker>TRISTAN, <em>à ses genoux.</em></speaker>
-            <l n="323" xml:id="l323">Ah ! Madame !...</l>
-          </sp>
-          <sp who="roger" xml:id="0-258">
-            <speaker>ROGER, <em>à part.</em></speaker>
-            <l n="324" xml:id="l324">Et dire que j’ai été aussi bête que cela, moi ! Bah ! chacun son tour...</l>
-          </sp>
-          <sp who="tristan" xml:id="0-259">
-            <speaker>TRISTAN, <em>à Roger.</em></speaker>
-            <l n="325" xml:id="l325">Ah ! monsieur, combien je suis aise que vous soyez le cousin de ma femme !</l>
-          </sp>
-          <sp who="roger" xml:id="0-260">
-            <speaker>ROGER.</speaker>
-            <l n="326" xml:id="l326">Vous êtes bien bon, monsieur !</l>
-          </sp>
-          <sp who="cora" xml:id="0-261">
-            <speaker>CORA, <em>bas à Roger.</em></speaker>
-            <l n="327" xml:id="l327">Eh bien ! qu’en dites-vous ?</l>
-          </sp>
-          <sp who="roger" xml:id="0-262">
-            <speaker>ROGER, <em>bas à Cora.</em></speaker>
-            <l n="328" xml:id="l328">Je dis madame que vous étiez née pour être comédienne !</l>
-            <l n="329" xml:id="l329">Ah ! à propos, voici Nana... quand vous l’aurez fini, je vous apporterai autre chose.</l>
-          </sp>
-          <sp who="cora" xml:id="0-263">
-            <speaker>CORA, <em>riant.</em></speaker>
-            <l n="330" xml:id="l330">Merci !</l>
-            <l n="331" xml:id="l331"> </l>
-            <l n="332" xml:id="l332"> </l>
-            <l n="333" xml:id="l333"> </l>
-          </sp>
-          <sp who="joseph" xml:id="0-264">
-            <speaker>CORA, ROGER, JOSEPH, TRISTAN, WILLIAM</speaker>
-            <l n="334" xml:id="l334"> </l>
-          </sp>
-          <sp who="william" xml:id="0-265">
-            <speaker>WILLIAM.</speaker>
-            <l n="335" xml:id="l335">Tante ! tante !</l>
-          </sp>
-          <sp who="cora" xml:id="0-266">
-            <speaker>CORA.</speaker>
-            <l n="336" xml:id="l336">Ah ! William... viens ici, mon chéri !</l>
-            <l n="337" xml:id="l337">Tiens, tu vois ce monsieur, c’est lui qui sera ton oncle à présent.</l>
-          </sp>
-          <sp who="william" xml:id="0-267">
-            <speaker>WILLIAM.</speaker>
-            <l n="338" xml:id="l338">Ah !... ça m’est bien égal !</l>
-          </sp>
-          <sp who="roger" xml:id="0-268">
-            <speaker>ROGER, <em>à part.</em></speaker>
-            <l n="339" xml:id="l339">Ah ! quelle indifférence... tout le portrait de Cora. Allons, c’est bien le fils de sa tante !</l>
-            <l n="340" xml:id="l340"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, tirant.</speaker>
+          <l n="1">Manqué... oh ! je suis d’une maladresse, ce matin... Dites-moi, Joseph, il n’est venu personne pendant ma promenade à cheval ?</l>
+        </sp>
+        <sp who="#joseph">
+          <speaker>JOSEPH, lui présentant un pistolet.</speaker>
+          <l n="2">Le professeur d’escrime est venu apporter une paire de fleurets pour Madame.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, tirant.</speaker>
+          <l n="3">Ah ! oui, je sais... encore manqué, je n’y comprends rien... Eh bien ! Joseph ! Dépêchez-vous ! vous ne voyez pas que j’attends ?</l>
+        </sp>
+        <sp who="#joseph">
+          <speaker>JOSEPH, lui présentant le pistolet.</speaker>
+          <l n="4">Voici, madame.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, même jeu.</speaker>
+          <l n="5">Paf !... Touché !... enfin !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, arrivant, il est en habit noir.</speaker>
+          <l n="6">Bravo !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, étonnée.</speaker>
+          <l n="7">Monsieur de Lérigny !... Oh ! Je suis enchantée de vous voir ! nous allons tirer ensemble, voulez-vous ? Avez-vous vu mon dernier coup ?... Hein, qu’en dites-vous ?... Allons, prenez un pistolet !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="8">Madame, je viens ici pour... vous parler sérieusement.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="9">Oh !... Eh bien, vous me direz cela... tout en tirant.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="10">Pardon, mais si j’ai endossé cet habit noir, ce n’est pas pour...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, riant.</speaker>
+          <l n="11">Tiens, c’est vrai, vous êtes en habit noir... vraiment, vous êtes drôle, monsieur de Lérigny</l>
+          <stage>&lt;em&gt;Elle lui donne un pistolet.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, prenant le pistolet.</speaker>
+          <l n="12">Vous souvenez-vous, Cora, de ce que vous m’avez dit l’autre jour ?...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="13">Non... mais ça m’est égal... tirez !</l>
+          <stage>&lt;em&gt;Roger pousse un soupir et tire sans regarder le but.&lt;/em&gt;</stage>
+          <l n="14">Manqué... ce n’est pas étonnant, vous ne visez pas... allons, à mon tour !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="15">Je vous en prie, Cora, écoutez-moi sérieusement !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="16">Mais il me semble...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="17">Non, pas comme cela... entrons dans ce salon.</l>
+          <stage>&lt;em&gt;Ils entrent.&lt;/em&gt;</stage>
+          <l n="18">Asseyez-vous là, sur ce divan, et accordez-moi votre attention !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="19">Oh ! Que vous êtes ennuyeux, monsieur de Lérigny. Voyons, que voulez-vous ?...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="20">Vous souvenez-vous, Cora, du jour où nous avons fait connaissance, chez la Comtesse de Pradel, à son dernier bal ? Vous étiez là, noyée dans des flots de dentelle, votre figure charmante émergeant au milieu de tout cela, comme un doux rayon de soleil. Oh ! Cora, que vous étiez belle ainsi ! je ne pouvais détacher mes yeux de votre image charmante ; je ne voyais que vous. Enfin je vous fus présenté et ce soir-là... nous dansâmes plus d’une fois ensemble.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="21">Eh bien ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="22">Eh bien, vous savez le reste... J’obtins de vous rendre visite, et j’abusai de la permission... Depuis, j’ai passé bien des journées, bien des soirées, même, en tête-à-tête avec vous, et chaque fois que je vous quittais, je vous adorais davantage, et votre charmant souvenir me poursuivait la nuit, jusque dans mes rêves ; oui, tout me plaît en vous, tout, votre grâce, vos manières, et jusqu’à, ce caractère insouciant et capricieux qui vous fait ressembler...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="23">À un papillon ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="24">J’allais le dire !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="25">Savez-vous, monsieur de Lérigny, que vous êtes très romanesque ; répétez-moi donc, je vous prie, la tirade que vous venez de me débiter ; je la placerai, si vous le permettez, dans le roman que je suis en train d’écrire ; elle y fera merveille.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="26">Hein !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, elle prend un carnet.</speaker>
+          <l n="27">Allez ! Cher ! je prends des notes...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="28">Quoi, vous voulez ?...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="29">Non ! ma parole, je n’en reviens pas. Comment ! je fais une demande en mariage et l’on me fait tirer au pistolet, et l’on me force à dicter une scène d’amour !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="30">Je vous attends, monsieur de Lérigny !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="31">Non madame, ce que je vous dis là est sérieux je vous prie de m’écouter sans rire et de me permettre d’achever.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, soupire.</speaker>
+          <l n="32">Allons...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="33">L’autre jour, madame, vous m’avez fait comprendre que mes visites devenaient trop fréquentes et pouvaient vous compromettre ; que nos relations ne devaient pas durer plus longtemps dans des conditions pareilles et que si je voulais rester près de vous, il allait que ce fût en qualité d’époux.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="34">Oui, je sais, eh bien ?...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="35">Eh bien, vous devez me comprendre !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="36">Quoi !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="37">Comment, vous ne saisissez pas... voyons... cet habit noir... ces gants blancs... il me semble que c’est clair.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="38">Quoi, ce serait pour demander ma main ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="39">Dame ! À moins que ce ne soit pour tirer au pistolet ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="40">Parlez-vous sérieusement, Monsieur de Lérigny ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="41">Avouez, Madame, qu’ici la plaisanterie serait de mauvaise grâce !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, après une pause.</speaker>
+          <l n="42">Ainsi, c’est sans rougir que vous me verrez partager votre nom, que vous m’appellerez votre femme, mais êtes-vous sûr que vous ne vous repentirez pas un jour de m’avoir épousée, moi, un être volage, insouciant, capricieux, un papillon comme vous dites... avez-vous bien réfléchi à tout cela ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, d’un ton de reproche.</speaker>
+          <l n="43">Cora !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="44">Avez-vous pensé aussi aux ennuis que vous occasionnera un pareil mariage ? qui sait si, en voyant les mépris dont les autres m’accablent, vous ne me mépriserez pas vous aussi, à votre tour ? Songez-y, je suis américaine, et en France, ce mot est synonyme de déclassée. Parce que nous ne savons pas baisser les yeux comme vos jeunes filles de France et que nos manières sont un peu cavalières, toute femme comme il faut évite notre contact ; notre présence ferait une tache dans leurs salons et la plupart des hommes croiraient se mésallier en épousant une fille comme nous.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="45">Ah ! Cora, il faut que vous ayez une bien mauvaise opinion de moi pour me croire capable de m’arrêter à de tels préjugés.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="46">Monsieur de Lérigny, vous êtes un gentleman... vous n’êtes pas de ceux qui m’admirent tout en me méprisant et vous savez rester au dessus du qu’en dira-t-on... je vous en remercie... Allez, malgré mon insouciance, il est des moments où je sais être sérieuse.</l>
+          <stage>&lt;em&gt;Elle reste un moment rêveuse puis part d’un grand éclat de rire.&lt;/em&gt;</stage>
+          <l n="47">Ah ! ah ! ah ! ah ! ah ! Que dira madame de Géran quand elle saura... Elle qui disait l’autre jour à Madame de Nerval qui s’est empressée de me le rapporter que j’étais de ces femmes qu’on n’épousait pas. Ah ! ah ! ah ! ah ! ah ! je suis contente, monsieur de Lérigny !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="48">Alors, vous consentez...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="49">À me marier... plutôt deux fois qu’une !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, interdit.</speaker>
+          <l n="50">Je ne vous en demande pas tant... vous exagérez !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="51">Que voulez-vous, monsieur de Lérigny, je suis franche, aussi ; c’est comme cela qu’on nous élève en Amérique et cette éducation en vaut bien une autre... Depuis le jour où l’on m’a rapporté les propos de madame de Géran, je me suis décidée à me marier pour faire taire cette mauvaise langue... j’ai fait connaître qu’avant mon mariage aucun homme n’entrerait plus dans ma maison, à moins que ce ne fût pour le on motif. Presque tous ont cédé ; je ne les ai plus revus.</l>
+          <stage>&lt;em&gt;Amèrement.&lt;/em&gt;</stage>
+          <l n="52">Devenir l’époux d’une américaine, ah ! fi ! quelle honte !... Ils ont tous déserté : seuls, vous et le baron Tristan vous avez continué vos visites ; l’idée d’une mésalliance, aux yeux des parisiens, du moins, ne vous a pas effrayés ; vous m’êtes restés fidèles, je vous en remercie... mais je vous l’ai dit, vous avez un rival en monsieur Tristan... lui aussi, il m’aime, lui aussi compte m’épouser. D’un moment à l’autre, il peut venir me faire sa demande... n’ayant de préférence ni pour l’un ni pour l’autre j’aurais consenti à devenir sa femme, mais vous l’avez devancé, voici ma main... Dès à présent, Roger, vous êtes le maître ici...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, la prend dans ses bras et l’embrasse.</speaker>
+          <l n="53">Ma femme !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="54">Monsieur, vous vous oubliez !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, tendrement.</speaker>
+          <l n="55">Oui, je m’oublie... dans les bras de ma femme !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="56">Allons, finissez ! vous voyez bien que vous chiffonnez mon amazone... Tenez, vous n’êtes pas raisonnable, je vous quitte... je vais me faire belle pour plaire à mon mari... Lorsque monsieur Tristan viendra, ce sera vous qui le recevrez, n’est-ce pas, vous lui ferez connaître ma décision, mais je vous en prie, faites-le avec ménagement... ne lui apprenez pas cela trop brusquement... Allons, au revoir Roger... à tout à l’heure.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="57">Ah ! madame de Géran, l’on n’épouse pas des femmes comme moi !...</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, seul</speaker>
+          <l n="58">Eh bien, c’est fait, il n’y a plus à y revenir... c’est elle qui sera ma femme... cela va me brouiller avec toute ma famille, mais, ma foi, tant pis, je ne vois pas pourquoi je contraindrais mon inclination, parce que mes parents... après tout, elle est charmante... On voit bien qu’ils ne la connaissent pas... parce qu’elle est un peu excentrique, ils se figurent tout de suite que j’épouse une déclassée... allons donc, elle, une... oh ! non, c’est impossible... Elle est bien un peu... un peu comme ça... oui, mais voilà tout... ça ne va pas plus loin... sous ces allures cavalières, sous ce dehors un peu masculin se cache une âme vraiment honnête... Et, avec cela, quelle noblesse de sentiments, quelle dignité... Est-ce qu’une fille parlerait jamais de la sorte ? Allons donc... Il n’y a qu’une chose que je lui reproche... je la trouve un peu trop... trop indifférente à mon égard... oui, je... enfin, elle ne paraît pas avoir plus d’inclination pour moi que pour ce petit imbécile de Tristan qui fait tant le fat parce qu’il est lieutenant aux chasseurs d’Afrique... Et si je l’épouse... ce n’est pas parce que je suis monsieur de Lérigny, parce que je suis mieux fait qu’un autre - oui, on dit que je suis assez bien fait - parce que je lui plais, enfin, non c’est parce que je suis arrivé une demi-heure plus tôt que le baron Tristan...</l>
+          <stage>&lt;em&gt;Il se met à rire. &lt;/em&gt;</stage>
+          <l n="59">Tenez, vous allez dire que ça n’a pas de rapport, mais... je ne sais pas pourquoi... ça me fait penser aux omnibus où le premier venu peut prendre place... Le tout c’est d’arriver à temps... tant pis pour les retardataires... quand il n’y a plus de place, on vous crie : « complet », et l’on vous envoie promener... Eh bien ! oui... je sais bien que ça n’a pas de rapport... mais que voulez-vous, c’est malgré moi... c’est égal je crois qu’au fond, elle doit me préférer à lui... oui... c’est évident... seulement comme elle est très froide et... Tenez, j’aime presque autant la voir ainsi. Avec un caractère aussi indifférent que le sien, au moins je pourrai être sûr de ne pas être trompé.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM.</speaker>
+          <l n="60">Dis donc, monsieur, tu ne sais pas où est tante Cora ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="61">Tiens ! voilà mon petit William ! Allons, hop ! sur mes genoux... Eh bien, on ne m’embrasse pas ?</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM, l’embrassant.</speaker>
+          <l n="62">Je cherche tante.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="63">Qu’est-ce que tu lui veux ?</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM.</speaker>
+          <l n="64">Je veux lui demander un chocolat parce que miss a dit que j’avais bien fait ma page d’écriture.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="65">Ah ! C’est très bien ça, je vois que tu veux devenir un homme !</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM.</speaker>
+          <l n="66">Oh ! oui, pour avoir de vrais enfants !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, stupéfait.</speaker>
+          <l n="67">Hein !...</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM.</speaker>
+          <l n="68">Oui... ma tante me donne bien ses poupées mais elles disent seulement « papa » et « maman », et puis, voilà tout.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, s’amusant de la naïveté de William.</speaker>
+          <l n="69">Alors, tu te marieras plus tard ?</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM, paraît embarrassé, puis, soudain.</speaker>
+          <l n="70">J’sais pas, mais je veux des petits enfants... Dis donc sais-tu où qu’on les achète ?... ma tante n’a pas voulu me le dire...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="71">Ah ! Je ne sais pas ! moi non plus, elle n’a pas voulu me le dire encore.</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM, subitement.</speaker>
+          <l n="72">Est-ce que tu aimes le chocolat ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="73">Oui, assez ! Tu veux me donner le tien ?</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM, naïvement.</speaker>
+          <l n="74">Non, mais si tu veux, j’en demanderai un aussi pour toi à ma tante et... tu me le donneras, dis ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, riant.</speaker>
+          <l n="75">Gros gourmand !</l>
+          <stage>&lt;em&gt;Il le soulève en l’air et l’embrasse.&lt;/em&gt;</stage>
+          <l n="76">Allons, va !</l>
+          <stage>&lt;em&gt;William sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, le regardant partir</speaker>
+          <l n="77">Est-il gentil, ce galopin-là...</l>
+          <stage>&lt;em&gt;Après un moment de silence où il reprend en souriant malicieusement.&lt;/em&gt;</stage>
+          <l n="78">Quand j’en aurai un comme ça, moi aussi ? Car j’espère bien en avoir un... pour commencer. C’est étrange tout de même, l’effet que ça me fait ! Penser que bientôt, un petit être comme celui-là m’appellera papa. Rien qu’à cette idée ! Ah !</l>
+          <stage>&lt;em&gt;Il chante, sur l’air de la « Dame blanche. »&lt;/em&gt;</stage>
+          <l n="79">« Ah ! Quel plaisir ! Ah ! Quel plaisir ! Ah ! quel plaisir d’être papa... » allons, je dis des bêtises, à présent... c’est ce petit bambin qui m’a mis ces idées-là dans la tête ; tiens, mais, au fait, c’est mon neveu à présent... mais oui... puisque Cora est sa tante... encore une preuve de générosité et de grandeur d’âme ! Vous avez vu cet enfant-là. Eh bien ! sans Cora, peut-être en ce moment serait-il en train de mourir de faim, oui... de mourir de faim ! C’est le fils d’une sœur qu’elle avait en Amérique. Un beau jour, cette sœur mourut laissant ce pauvre petit être seul et sans secours au monde... Eh bien ! Cora n’hésita pas un instant... elle adopta l’enfant... et ne cessa de lui prodiguer les soins les plus maternels. Ma parole d’honneur ! vous pouvez m’en croire. C’est elle-même qui me l’a raconté ! Eh bien ! Est-ce que ce n’est pas beau ? Est-ce qu’une autre ferait jamais cela ?... Ah ! bien oui... allons, allons, elle sera ma femme en dépit de tout le monde, mes parents se fâcheront, je le sais, mais je réponds bien qu’après mon mariage, lorsqu’ils connaîtront mieux ma femme, ils me tendront la main et seront les premiers à me féliciter.</l>
+          <stage>&lt;em&gt;Il aperçoit Tristan qui arrive.&lt;/em&gt;</stage>
+          <l n="80">Ouf, le petit baron !</l>
+          <stage>&lt;em&gt;Il s’assoit avec affectation dans un fauteuil, allume une cigarette.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#joseph">
+          <speaker>JOSEPH.</speaker>
+          <l n="81">Par ici, monsieur !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="82">Annoncez monsieur le baron Tristan.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, sans regarder Tristan, en lançant une bouffée de fumée en l’air.</speaker>
+          <l n="83">C’est inutile, Joseph !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="84">Plaît-il monsieur ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, très aimable.</speaker>
+          <l n="85">Je dis, monsieur, que c’est inutile...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="86">Comment cela ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, sans répondre à sa question.</speaker>
+          <l n="87">Vous allez le savoir. Asseyez-vous donc, monsieur le baron... Tristan.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="88">Merci, je suis bien debout.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="89">Libre à vous, cher monsieur, libre à vous, mais vous trouverez bon que j’en use autrement parce que, voyez-vous, il n’y a rien de tel au monde que de rester assis quand on est fatigué !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, à part.</speaker>
+          <l n="90">Ah ! mais il m’agace !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="91">Ah çà, monsieur, pourriez-vous me dire ce que signifie...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, très sérieux.</speaker>
+          <l n="92">Mais très volontiers, monsieur... avez-vous vu jouer Les Brigands ?</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, bourru.</speaker>
+          <l n="93">Plaît-il ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, très sérieux.</speaker>
+          <l n="94">Je vous demande si vous avez vu jouer Les Brigands ? L’opérette de Meilhac et Halévy...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, bourru.</speaker>
+          <l n="95">Oui, je l’ai vue, après ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, même jeu.</speaker>
+          <l n="96">Vraiment ! Eh bien, que pensez-vous de la chanson des carabiniers ?</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, même jeu.</speaker>
+          <l n="97">Monsieur... je...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, en appuyant sur les mots.</speaker>
+          <l n="98">Ne trouvez-vous pas comme moi que sous ce dehors bouffon, elle contient une épigramme très fine qui pourrait s’appliquer à bien des gens... méditez les derniers vers, cher monsieur !</l>
+          <stage>&lt;em&gt;Chantant. &lt;/em&gt;</stage>
+          <l n="99">Et par un malheureux hasard.</l>
+          <l n="100">Nous arrivons toujours trop tard.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, éclatant.</speaker>
+          <l n="101">Monsieur je suis patient mais je vous avertis que cette plaisanterie commence à me lasser... Domestique, je vous ordonne de m’annoncer.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="102">Et moi je vous le défends !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, moqueur.</speaker>
+          <l n="103">Vraiment monsieur, et de quel droit s’il vous plaît ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="104">De quel droit ?... Depuis aujourd’hui, monsieur, je suis le maître ici !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, stupéfait.</speaker>
+          <l n="105">Hein !</l>
+          <stage>&lt;em&gt;Le domestique sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="106">Oui ! Voilà ce que cherchais à vous faire comprendre tout à l’heure. Vous avouerez du moins, monsieur, que j’y apportais tous les ménagements désirables, mais au lieu de me savoir gré, des détours et des circonlocutions dont j’usais pour amortir un peu le coup que ne manquerait pas de vous donner une nouvelle si inattendue, vous avez pris la mouche... il a donc fallu vous faire connaître la vérité d’une façon plus brutale... Croyez bien, cher monsieur, que je suis désolé...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, furieux.</speaker>
+          <l n="107">Savez-vous bien, monsieur, que ce que vous faites là est une indignité...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, s’emportant.</speaker>
+          <l n="108">Monsieur !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="109">Savez-vous bien que la Comtesse a sept millions monsieur ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, plus calme.</speaker>
+          <l n="110">Vraiment, je l’ignorais... mais alors je regrette d’autant plus de vous faire manquer un si beau mariage d’amour.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="111">Vous raillez, je crois...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, moqueur.</speaker>
+          <l n="112">Moi ! Oh ! mais au contraire, je vous plains du fond du cœur... mon cher baron... car enfin il s’en est fallu de bien peu que ce ne fût vous... Si seulement vous étiez arrivé une heure plus tôt... la Comtesse n’avait de préférence ni pour l’un ni pour l’autre vous aviez autant de chances que moi...</l>
+          <stage>&lt;em&gt;Chantant.&lt;/em&gt;</stage>
+          <l n="113">Mais par un malheureux hasard,</l>
+          <l n="114">Quand vous voulez vous marier</l>
+          <l n="115">Vous arrivez, vous arrivez, vous arrivez</l>
+          <l n="116">Un peu trop tard.</l>
+          <stage>&lt;em&gt;Il part d’un grand éclat de rire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, exaspéré.</speaker>
+          <l n="117">Monsieur... Je vous défends... Je suis lieutenant aux Chasseurs d’Afrique moi... monsieur !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="118">Eh ! bien, ce que vous avez de mieux à faire, monsieur le lieutenant, c’est de gagner au plus vite votre régiment... Vous y trouverez des distractions qui...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="119">Ah ! mais monsieur cela ne se passera pas ainsi... vous m’en rendrez raison... Je renonce moins que jamais a ce mariage... et comme vous êtes seul à l’entraver, je n’ai qu’un moyen, c’est de vous supprimer.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="120">À moins que ce ne soit moi qui vous fasse passer l’arme à gauche, monsieur le militaire.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="121">On voit bien, monsieur, que vous ne me connaissez pas...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="122">Peut-être, mais je puis vous certifier qu’il est des gens en France qui vous peuvent valoir...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="123">Nous verrons bien... Demain, monsieur j’aurai l’honneur de vous envoyer mes témoins.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="124">Je suis à vos ordres, monsieur...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, saluant comme pour sortir.</speaker>
+          <l n="125">Monsieur...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, saluant.</speaker>
+          <l n="126">Monsieur... Ah ! à propos, avec quelle arme aurai-je l’honneur de vous... futt.</l>
+          <stage>&lt;em&gt;Il passe rapidement sa main devant sa bouche pour faire comprendre à Tristan qu’il compte le supprimer.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, narquois.</speaker>
+          <l n="127">Vous conservez toujours le mot pour rire monsieur de Lérigny... Si vous le voulez bien, nous choisirons le pistolet.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="128">Le pistolet, soit, j’y suis très fort ; et comme c’est vous qui m’avez provoqué c’est moi qui aurai l’honneur de tirer le premier... Or je vous avertis que je ne manque jamais mon but.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, d’un air de doute.</speaker>
+          <l n="129">Jamais !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="130">Vous dites ?...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="131">Je dis : « Jamais ! »</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="132">Vous en doutez ? vous allez voir.</l>
+          <stage>&lt;em&gt;Il sonne.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, à part.</speaker>
+          <l n="133">Eh ! bien, que fait-il ?</l>
+        </sp>
+        <sp who="#joseph">
+          <speaker>JOSEPH, entrant.</speaker>
+          <l n="134">Monsieur a sonné ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="135">Oui... Apportez les pistolets dans ce salon...</l>
+          <stage>&lt;em&gt;Joseph obéit.&lt;/em&gt;</stage>
+          <l n="136">Bien !... Maintenant allumez cette bougie !</l>
+        </sp>
+        <sp who="#joseph">
+          <speaker>JOSEPH, étonné.</speaker>
+          <l n="137">Monsieur !...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="138">Je vous dis d’allumer cette bougie.</l>
+          <stage>&lt;em&gt;Joseph obéit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, à part.</speaker>
+          <l n="139">Ah çà ! où veut-il en venir ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="140">Posez-la là, sur cette cheminée... Très bien... et maintenant laissez-nous...</l>
+          <stage>&lt;em&gt;Joseph sort. À Tristan.&lt;/em&gt;</stage>
+          <l n="141">Lorsque tout à l’heure j’ai eu l’honneur de vous dire que je ne manquais jamais mon but, vous avez laissé échapper un sourire incrédule... Or, monsieur, je tiens à ce que vous sachiez que je ne suis pas un Gascon, moi ! Je suis Corse et voici un petit jeu d’adresse en usage dans mon pays, petit jeu dont vous me direz des nouvelles. Vous voyez cette bougie, regardez... Une... deux... trois...</l>
+          <stage>&lt;em&gt;Il tire et éteint la bougie.&lt;/em&gt;</stage>
+          <l n="142">Voilà.</l>
+          <stage>&lt;em&gt;Très courtois.&lt;/em&gt;</stage>
+          <l n="143">À bon entendeur, salut !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="144">Hein !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="145">Maintenant, monsieur, j’attends vos témoins.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, furieux.</speaker>
+          <l n="146">Mais... c’est un assassinat !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="147">Que voulez-vous... c’est votre faute... c’est vous qui m’avez provoqué !... Dieu sait si je n’en avais pas l’intention... Mais... maintenant que le mal est fait, il faut nous battre, à moins cependant que vous ne préfériez me faire des excuses bien plates.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="148">Des excuses, moi... un officier de Chasseurs d’Afrique !... Jamais !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="149">Dans ce cas monsieur, je suis désolé, mais...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN.</speaker>
+          <l n="150">C’est bien, monsieur, nous nous battrons.</l>
+          <stage>&lt;em&gt;Saluant.&lt;/em&gt;</stage>
+          <l n="151">Monsieur !...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, saluant.</speaker>
+          <l n="152">Monsieur...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, à part.</speaker>
+          <l n="153">Décidément j’ai eu tort de le provoquer... J’ai envie d’aller prévenir la police...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, seul</speaker>
+          <l n="154">Eh ! mais... voilà ce qu’on peut appeler une journée bien remplie. Dans l’espace d’une heure, prendre possession d’une femme, de sept millions et... d’un duel, c’est une jolie entrée en matière</l>
+          <stage>&lt;em&gt;Riant. &lt;/em&gt;</stage>
+          <l n="155">Et dire qu’avant même d’être marié, je me bats déjà pour ma femme ! Cela promet... Il est vrai que l’adversaire n’est pas bien dangereux... Ce pauvre petit baron... il suffira de lui montrer le canon de mon pistolet pour le faire détaler au plus vite et, ma foi, je me contenterai de lui loger une balle... dans... dans la figure qu’il me présentera... Vraiment je me ferais un scrupule de le tuer, cet imbécile... pourvu que j’épouse Cora, que m’importe le reste !...</l>
+          <stage>&lt;em&gt;Il s’assoit sur le divan. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="156">Me voici, est-ce que j’ai été longue ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, tendrement.</speaker>
+          <l n="157">Toujours trop, à mon gré, vilaine !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, riant, elle s’assied sur une chaise.</speaker>
+          <l n="158">Que vous êtes drôle, monsieur de Lérigny ! Mais, en Amérique lorsque les messieurs nous font la cour... ils ne parlent pas du tout comme cela.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, inquiet.</speaker>
+          <l n="159">Hein !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="160">Je vous l’assure... Quand nous plaisons à un américain, il nous dit tout simplement : « Miss ! You are very pretty, I’love you... » Et cela suffit.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="161">Ah !... c’est comme cela que... Eh bien ! Je vous remercie de la leçon !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="162">À propos... Et le baron Tristan ?... Est-il parti ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="163">Oui !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="164">Avez-vous fait ce que je vous avais recommandé ? Avez-vous pris des ménagements ?...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="165">Oh ! pour cela, on ne peut rien me reprocher...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="166">Enfin que lui avez vous dit ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, étourdiment.</speaker>
+          <l n="167">Je lui ai dit que c’était complet.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="168">Hein !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="169">Ah ! pardon, je pensais à autre chose... Eh ! bien, je lui ai fait part de notre mariage comme vous me l’aviez dit... voilà.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="170">Et il a bien pris la chose ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="171">Oh ! Le mieux du monde !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="172">Il n’a pas été blessé ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="173">Non... pas pour le moment !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="174">Tant mieux...</l>
+          <stage>&lt;em&gt;Un instant de silence.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, subitement.</speaker>
+          <l n="175">Cora !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="176">Monsieur de Lérigny ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="177">D’abord je vous prie de ne plus m’appeler monsieur de Lérigny... Je suis votre mari maintenant... Appelez-moi Roger !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, ennuyée.</speaker>
+          <l n="178">Eh ! bien, Roger !... que voulez-vous ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="179">Oh ! vous n’avez pas bien dit cela, voyons ; venez vous asseoir là près de moi... sur ce divan... Vous ne voulez pas... Voyons, Cora, tu ne veux pas... Allons viens... viens donc, voyons...</l>
+          <stage>&lt;em&gt;Cora pousse un soupir et s’assoit à côté, de lui.&lt;/em&gt;</stage>
+          <l n="180">À la bonne heure... là... encore plus près...</l>
+          <stage>&lt;em&gt;Il la prend dans ses bras et veut l’embrasser. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, le repoussant un peu.</speaker>
+          <l n="181">Oh !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="182">Quoi ! tu ne veux pas...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, mollement.</speaker>
+          <l n="183">Si, mon ami... tout ce que vous voulez, mais si vous saviez comme ça m’ennuie !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="184">Que tu es vilaine... va !</l>
+          <stage>&lt;em&gt;Il l’embrasse.&lt;/em&gt;</stage>
+          <l n="185">Voyons qu’allons nous faire... quand nous serons mariés ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, gaiement.</speaker>
+          <l n="186">Ah ! oui, qu’allons nous faire ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, se rapprochant encore plus près d’elle et la tenant par la taille.</speaker>
+          <l n="187">Cherchons ensemble !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="188">D’abord, cela va sans dire, nous ferons un voyage de noces...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="189">Ah ! tu crois... on dit pourtant que ça a de grands inconvénients...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="190">Mais mon ami, c’est la mode !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="191">Oh ! alors !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="192">Nous disons donc le voyage de noces... Bon ! Maintenant, le voyage terminé, eh ! bien... eh ! bien, nous reviendrons vivre paisiblement à Paris, comme deux bons bourgeois, avec nos enfants.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="193">Nos enfants ! Comme elle y va !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, prenant un carnet et écrivant.</speaker>
+          <l n="194">Voici à peu près comment nous disposerons de nos journées : Le matin promenade à cheval...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="195">Ça fait maigrir !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="196">Mon médecin me les a ordonnées pour me faire engraisser.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, riant.</speaker>
+          <l n="197">Ah !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="198">Donc promenade à cheval le matin, à midi le déjeuner ; dans l’après-midi courses ou skating.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="199">Hein ! au skating... jamais de la vie par exemple ! Ma femme au skating avec des... Il ne manquerait plus que cela... Non, non, rayons cet exercice du programme !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="200">Oh ! c’est si hygiénique !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="201">Eh ! bien, vous patinerez dans le vestibule... il est assez grand et ce sera moins compromettant.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="202">Soit, passons... À six heures et demie le dîner, le soir, bal ou théâtre, la nuit...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="203">Tout beau ! la nuit, cela me regarde... Mettez un point d’interrogation !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="204">Voilà à peu près le programme ; maintenant, pendant nos moments perdus...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="205">Comment, « nos moments perdus » ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="206">Eh ! Oui... par exemple lorsqu’il pleuvra et que nous ne pourrons pas faire notre promenade, nous ferons de l’escrime, de la musique, de la peinture, de la sculpture, que sais-je, moi... ou bien encore je continuerai mon roman... pendant que vous me corrigerez les fautes d’orthographe...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="207">Ah ! c’est moi qui...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="208">Oui !... Cela vous va-t-il ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="209">Parfaitement.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="210">Ah ! et puis j’oubliais... de temps en temps nous jouerons la comédie... je déclame très bien, moi... Figurez-vous qu’autrefois je voulais me mettre dans le théâtre...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="211">Quoi... avec votre accent américain ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="212">Et pourquoi pas ?... Il y a bien des grandes actrices qui se donnent cet accent et qui pourtant ne sont pas d’Amérique...</l>
+        </sp>
+        <sp who="#joseph">
+          <speaker>JOSEPH, entrant.</speaker>
+          <l n="213">Le courrier de madame la Comtesse.</l>
+          <stage>&lt;em&gt;Il lui présente un plateau contenant des lettres.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="214">Donnez...</l>
+          <stage>&lt;em&gt;Joseph sort. Cora se dispose à ouvrir les lettres.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, l’arrêtant.</speaker>
+          <l n="215">Pardon... c’est moi maintenant que cela regarde.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="216">Comment, je n’ai pas le droit de lire mes lettres ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="217">Permettez... pas avant que je n’en aie pris connaissance...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="218">Oh ! mais, je ne suis pas habituée à cela, vous savez... En Amérique...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="219">Je vous en prie, ma chère... L’Amérique n’a rien à faire dans tout ceci. Dorénavant Joseph devra m’apporter toutes les lettres qui vous seront adressées.</l>
+          <stage>&lt;em&gt;Il prend une des lettres et l’ouvre... Cora pousse un soupir... Moment de silence.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, après avoir lu la lettre, la lui tendant avec une colère retenue.</speaker>
+          <l n="220">Pourriez-vous me dire, madame, ce que signifie cette lettre ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="221">Oh ! mon ami, est-ce que vous seriez jaloux ? Fi ! ce sentiment est du dernier vulgaire !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, brusquement.</speaker>
+          <l n="222">Je ne suis pas jaloux... je me rends compte seulement... Voyons Madame, je vous prie de me dire quel est ce monsieur de Brindargent qui vous invite à souper chez Brébant... Est-ce que vous croyez que je vous permettrai...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, riant.</speaker>
+          <l n="223">De quoi vous mettez-vous en peine !... Monsieur de Brindargent est mon cousin.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, incrédule.</speaker>
+          <l n="224">Ah !... Et c’est votre cousin qui vous écrit : « ma jolie poulette... »</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="225">Mais oui... où est le mal ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="226">Il y en a beaucoup... On ne doit pas avoir de cousins qui vous écrivent : « ma jolie poulette... » C’est très grave, tout ce qu’il y a de plus grave et je ne veux pas que vous ayez des cousins comme cela... vous m’entendez !...</l>
+          <stage>&lt;em&gt;Avec dépit.&lt;/em&gt;</stage>
+          <l n="227">« Ma jolie poulette... »</l>
+          <stage>&lt;em&gt;Il hausse les épaules.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="228">Ah ! mais, monsieur, c’est de la tyrannie !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, sentencieusement.</speaker>
+          <l n="229">La femme doit obéissance à son mari... c’est dans le code.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="230">Dans le code Français, c’est possible... mais en Amérique...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="231">Encore l’Amérique ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, à part.</speaker>
+          <l n="232">Oh ! mais il commence à m’agacer.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, lisant une autre lettre.</speaker>
+          <l n="233">Allons bon ! des vers à présent !</l>
+          <stage>&lt;em&gt;À haute voix.&lt;/em&gt;</stage>
+          <l n="234">« L’autre jour vous m’avez souri</l>
+          <l n="235">Tout en m’achetant une table</l>
+          <l n="236">Depuis ce temps, ô ma houri</l>
+          <l n="237">Vous me paraissez adorable...</l>
+          <stage>&lt;em&gt;Avec dépit.&lt;/em&gt;</stage>
+          <l n="238">Eh ! bien voilà qui va fort bien !... et c’est qu’il y en a long... Voyons un peu comment finit le poulet...</l>
+          <stage>&lt;em&gt;Il regarde la fin.&lt;/em&gt;</stage>
+          <l n="239">Je ne veux point de votre argent</l>
+          <l n="240">Ne me soldez pas ma facture</l>
+          <l n="241">Mais faisant de moi votre amant</l>
+          <l n="242">Payez-moi plutôt en nature.</l>
+          <l n="243">Signé : Christophe Bonnet, tapissier, rue Lafayette, 79. » Mes félicitations, ma chère ! si vous recrutez vos conquêtes jusque dans les tapissiers...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, impatientée.</speaker>
+          <l n="244">Que voulez-vous, ce n’est pas ma faute...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, sévèrement.</speaker>
+          <l n="245">Pourquoi lui avez-vous souri... je vous défends de sourire aux tapissiers.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, impatiente.</speaker>
+          <l n="246">Ah ! tenez, je ne sais ce que vous avez, mais depuis une demi-heure vous êtes insupportable !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="247">Moi ? Oh ! voyons Cora !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="248">Laissez-moi, monsieur... J’ai mes nerfs.</l>
+          <stage>&lt;em&gt;Elle va prendre le volume de Nana puis s’étend sur le canapé et lit. Un moment de silence.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="249">Non ! non ! ça ne peut pas durer... Quel caractère, mon Dieu ! Ah ! je ne la savais pas comme cela ! Enfin, qu’est-ce que je lui ai dit, après tout ? Pourquoi se met-elle en colère ?... Parce que je ne veux pas qu’elle aille souper chez Brébant avec son cousin... Eh bien ! il me semble que c’est bien naturel. Un mari n’aurait plus le droit de faire une observation à sa femme à présent... Oh ! je ne sais pas, mais tout cela ne me présage rien de bon... Est-ce que mes parents auraient raison par hasard ?</l>
+          <stage>&lt;em&gt;Haut et d’un air assez aimable.&lt;/em&gt;</stage>
+          <l n="250">Quel est ce livre que vous lisez avec tant d’attention ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, sèchement.</speaker>
+          <l n="251">Nana !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, bondissant.</speaker>
+          <l n="252">Hein !... mais je ne vous permets pas de lire un pareil roman !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="253">Comment ? Mais c’est vous-même qui me l’avez apporté !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="254">Autrefois... oui... c’est possible... parce que je ne me doutais pas, alors, que plus tard... mais maintenant c’est autre chose... Je confisque le livre.</l>
+          <stage>&lt;em&gt;Il prend le volume et le met dans sa poche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, à part.</speaker>
+          <l n="255">Oh ! quel homme, mon Dieu !...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, après un moment de silence ouvre l’album de photographies, puis après l’avoir regardé un instant, il s’écrie avec colère.</speaker>
+          <l n="256">Qu’est-ce que je vois là encore ?... Capoul, Léotard, Bichofsheim... Mais c’est un album de cocotte, cela...</l>
+          <stage>&lt;em&gt;Il retire les photographies avec fureur et les jette derrière lui.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, furieuse.</speaker>
+          <l n="257">Un pareil acte de violence chez moi... Sortez monsieur... Je vous rends votre parole.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, froidement.</speaker>
+          <l n="258">J’allais vous le demander, Madame...</l>
+          <stage>&lt;em&gt;Fausse sortie.&lt;/em&gt;</stage>
+          <l n="259">Mais avant de vous quitter, permettez-moi de former des vœux pour votre bonheur... Epousez monsieur le baron Tristan... C’est le mari qui vous convient. Ainsi vous n’aurez pas de regrets à avoir, vous serez vengée de madame de Géran.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="260">Monsieur !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="261">Seulement madame, je crains bien que ce mariage ne puisse se faire tout de suite... car il est plus que probable que monsieur Tristan sera retenu au lit pendant quelque temps.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, inquiète.</speaker>
+          <l n="262">Que voulez-vous dire, monsieur ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="263">Que monsieur Tristan m’a provoqué ce matin... je me bats avec lui... et comme je tire le premier, je compte lui faire dans le bas des reins une blessure... honorable. Ce sera sans doute la seule qu’il recevra durant toute sa carrière militaire.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="264">Et c’est à cause de moi qu’il vous a provoqué... Oh ! c’est bien cela...</l>
+          <stage>&lt;em&gt;Avec joie.&lt;/em&gt;</stage>
+          <l n="265">Un duel !... Je pourrai dire qu’on s’est battu pour moi... et l’on en parlera dans les journaux, et l’on citera mon nom... Oh ! madame de Géran en crèvera de dépit !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, à part.</speaker>
+          <l n="266">Allons, décidément, c’en est une... Oh ! mes parents, combien vous aviez raison !</l>
+        </sp>
+        <sp who="#joseph">
+          <speaker>JOSEPH, entre en portant une lettre sur un plateau.</speaker>
+          <l n="267">Un domestique en livrée apporte cette lettre pour monsieur de Lérigny.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, étonné.</speaker>
+          <l n="268">Pour moi ! Tiens, de qui cela peut-il être ?... Donnez... L’écriture de mon oncle... C’est la dixième que je reçois de lui depuis deux jours... Ah ! il lutte avec énergie contre ce mariage... mais il a gagné son procès... Voyons, que peut-il en me dire encore ?</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="269">Vous permettez, Madame ?</l>
+          <stage>&lt;em&gt;Cora fait signe que oui et Roger ouvre la lettre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, lisant à part.</speaker>
+          <l n="270">« Mon neveu... Si tous mes efforts pour vous empêcher de faire une folie ont été vains jusqu’à présent, j’espère du moins que ce dernier coup fera son effet. Voyant votre assiduité pour la comtesse et prévoyant le dénouement inévitable d’un tel amour, j’ai écrit en Amérique pour avoir des informations sur elle. Ah ! j’en ai appris de belles sur celle dont vous voulez faire votre femme ! Sachez que cet enfant qu’elle fait passer pour son neveu n’est autre chose que le fruit d’un amour illicite... »</l>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="271">Est-il possible !</l>
+          <stage>&lt;em&gt;À Cora. &lt;/em&gt;</stage>
+          <l n="272">Ah ! madame...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="273">Qu’avez-vous ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="274">Je dis, madame, que c’est une indignité ! m’avoir trompé de la sorte !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="275">Comment cela ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="276">Lisez-ceci !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, après avoir lu.</speaker>
+          <l n="277">Ciel !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, avec indignation.</speaker>
+          <l n="278">Ainsi tout cela est vrai... Et vous ne rougissiez pas tout à l’heure en m’accordant cette main qu’un autre avait flétrie, en abandonnant à mes caresses ce corps qu’un autre avait pressé avant moi... Quoi ! tandis que je vous sacrifiais naïvement les affections les plus chères, tandis que je vous apportais tout !... mon amour, mon bonheur, ma vie, vous ne me donniez en échange que la honte et le déshonneur ! tandis que je vous respectais comme le plus pur des sanctuaires, un autre vous avait profanée, et je n’avais que ses restes ! Ah ! je vous le répète, madame, cette conduite est indigne !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="279">Je n’essaierai pas de nier, monsieur ce que mon trouble vous a assez prouvé... Oui ! cet enfant est mon fils... Oui j’ai été séduite !... Trop confiante dans les promesses mensongères, je me suis livrée un jour au plus perfide des amants... Insensée que j’étais, je pense pouvoir croire alors, à la parole d’un homme ! Combien je me trompais ! Une fois son crime accompli, le traître m’abandonna à ma honte et à mon déshonneur ! En vain je le suppliai... en vain je lui rappelai ses promesses, rien ne put l’attendrir !... C’est alors que je compris toute ma folie... Mais il était trop tard ! le mal était fait ! Maintenant, monsieur, vous savez mon secret... J’espérais pouvoir le cacher toute ma vie, vous l’avez découvert... faites-en ce que vous voulez !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="280">Je connais mes devoirs de galant homme, madame ; et je vous jure que jamais il ne sortira de ma bouche !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#joseph">
+          <speaker>JOSEPH, annonçant.</speaker>
+          <l n="281">Monsieur le baron Tristan.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, à part.</speaker>
+          <l n="282">Lui ! Parbleu ; il arrive à propos.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, arrivant en se parlant à lui-même.</speaker>
+          <l n="283">Enfin !... De deux choses l’une... Si je cède... il l’épouse ! maintenant si nous nous battons... c’est clair... mon affaire est faite... et il l’épouse tout de même... Je crois donc que dans ce cas, l’on pourrait très bien... sans que l’honneur en souffrît...</l>
+          <stage>&lt;em&gt;Vivement.&lt;/em&gt;</stage>
+          <l n="284">Oh ! je ne lui ferai pas d’excuses... non !... seulement je lui ferai comprendre que... oui ! c’est cela...</l>
+          <stage>&lt;em&gt;Il s’avance et salue.&lt;/em&gt;</stage>
+          <l n="285">Madame ! Monsieur !...</l>
+          <stage>&lt;em&gt;Roger et Cora saluent.&lt;/em&gt;</stage>
+          <l n="286">Pardon, monsieur, pourrai-je avoir un moment d’entretien avec vous ?...</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, sournoisement.</speaker>
+          <l n="287">Non, c’est inutile, je sais tout. Je connais votre noble conduite, monsieur Tristan ; je sais que vous avez voulu vous battre pour moi... Je vous en remercie... Mais il est temps que cette comédie finisse... tout cela n’était qu’une épreuve !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="288">Comment une épreuve ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, bas.</speaker>
+          <l n="289">Chut ! laissez-moi faire !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="290">Oui, monsieur Tristan... tout cela n’était qu’une épreuve... je voulais voir si vous m’aimiez véritablement, si vous étiez capable de vous battre pour moi. Vous m’en avez donné la preuve, je ne l’oublierai pas ! Quant à monsieur de Lérigny, il n’a jamais été votre rival... Permettez-moi de vous présenter mon cousin.</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, stupéfait et bas à Cora.</speaker>
+          <l n="291">Hein ! qui ça, votre cousin ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, bas.</speaker>
+          <l n="292">Mais ! vous !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="293">Ah ! je !... Comme Brindargent alors !</l>
+          <stage>&lt;em&gt;Haut et saluant.&lt;/em&gt;</stage>
+          <l n="294">Monsieur !</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, saluant.</speaker>
+          <l n="295">Monsieur !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="296">Ah ! ma parole je n’en reviens pas ! Comment ! tout cela n’était pas vrai. Et moi qui allais presque faire des excuses !</l>
+          <stage>&lt;em&gt;À Roger.&lt;/em&gt;</stage>
+          <l n="297">Mais alors, monsieur, si vous n’êtes pas... je puis toujours espérer...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="298">Ah ! ça ! Demandez à ma cousine.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, à Cora.</speaker>
+          <l n="299">Madame ?</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="300">M. Tristan, voici ma main.</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, à ses genoux.</speaker>
+          <l n="301">Ah ! Madame !...</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, à part.</speaker>
+          <l n="302">Et dire que j’ai été aussi bête que cela, moi ! Bah ! chacun son tour...</l>
+        </sp>
+        <sp who="#robert-tristan">
+          <speaker>TRISTAN, à Roger.</speaker>
+          <l n="303">Ah ! monsieur, combien je suis aise que vous soyez le cousin de ma femme !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER.</speaker>
+          <l n="304">Vous êtes bien bon, monsieur !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, bas à Roger.</speaker>
+          <l n="305">Eh bien ! qu’en dites-vous ?</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, bas à Cora.</speaker>
+          <l n="306">Je dis madame que vous étiez née pour être comédienne !</l>
+          <stage>&lt;em&gt;Tirant le volume qu’il avait dans sa poche.&lt;/em&gt;</stage>
+          <l n="307">Ah ! à propos, voici Nana... quand vous l’aurez fini, je vous apporterai autre chose.</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA, riant.</speaker>
+          <l n="308">Merci !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM.</speaker>
+          <l n="309">Tante ! tante !</l>
+        </sp>
+        <sp who="#comtesse-cora-rower">
+          <speaker>CORA.</speaker>
+          <l n="310">Ah ! William... viens ici, mon chéri !</l>
+          <stage>&lt;em&gt;Elle le prend dans ses bras et lui montrant Tristan.&lt;/em&gt;</stage>
+          <l n="311">Tiens, tu vois ce monsieur, c’est lui qui sera ton oncle à présent.</l>
+        </sp>
+        <sp who="#le-petit-william">
+          <speaker>WILLIAM.</speaker>
+          <l n="312">Ah !... ça m’est bien égal !</l>
+        </sp>
+        <sp who="#roger-de-lérigny">
+          <speaker>ROGER, à part.</speaker>
+          <l n="313">Ah ! quelle indifférence... tout le portrait de Cora. Allons, c’est bien le fils de sa tante !</l>
+          <l n="314" />
+          <l n="315" />
+        </sp>
       </div>
     </body>
   </text>

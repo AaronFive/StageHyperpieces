@@ -1,109 +1,91 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Madame de Linan</title>
-        <author key="Denis DIDEROT | (naissance-mort)">Denis DIDEROT |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/430</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Denis DIDEROT |</author>. <title>Madame de Linan</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/430</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="madame-de-linan" sex="SEX">
+            <persName>MADAME DE LINAN</persName>
+          </person>
+          <person xml:id="monsieur-de-linan" sex="SEX">
+            <persName>MONSIEUR DE LINAN</persName>
+          </person>
+          <person xml:id="mademoiselle-de-linan" sex="SEX">
+            <persName>MADEMOISELLE DE LINAN</persName>
+          </person>
+          <person xml:id="son-amant" sex="SEX">
+            <persName>SON AMANT</persName>
+          </person>
+          <person xml:id="un-faux-ami-de-monsieur-de-linan" sex="SEX">
+            <persName>UN FAUX AMI DE MONSIEUR DE LINAN</persName>
+          </person>
+          <person xml:id="une-fausse-amie-de-madame" sex="SEX">
+            <persName>UNE FAUSSE AMIE DE MADAME</persName>
+          </person>
+          <person xml:id="un-ami-vrai-de-la-maison" sex="SEX">
+            <persName>UN AMI VRAI DE LA MAISON</persName>
+          </person>
+          <person xml:id="une-femme-de-chambre" sex="SEX">
+            <persName>UNE FEMME DE CHAMBRE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
-    <body>
-      <head>Madame de Linan</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Plan d’une Comédie, inédit.</l>
-            <l n="2" xml:id="l2"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="madame-de-linan">MADAME DE LINAN</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="monsieur-de-linan">MONSIEUR DE LINAN</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mademoiselle-de-linan">MADEMOISELLE DE LINAN</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="son-amant">SON AMANT</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-faux-ami-de-monsieur-de-linan">UN FAUX AMI DE MONSIEUR DE LINAN</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="une-fausse-amie-de-madame">UNE FAUSSE AMIE DE MADAME</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-ami-vrai-de-la-maison">UN AMI VRAI DE LA MAISON</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="une-femme-de-chambre">UNE FEMME DE CHAMBRE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <l n="3" xml:id="l3"> </l>
-            <l n="4" xml:id="l4"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
-      </div>
-    </body>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="[vide]" location="unknown">[vide]</ab>
+      </performance>
+      <castList />
+    </front>
+    <body />
   </text>
 </TEI>

@@ -37,13 +37,12 @@ import editdistance as editdistance
 # containing plays downloaded from théâtre-documentation.com
 
 # TODO : detection of privilege, acheve_imprime, printer_text, performance, signed. For now these are never done
-# TODO : Add <signed>
 # TODO: Add writing of "actStageIndication"
 # Get the current folder
 folder = abspath(dirname(sys.argv[0]))
 root_folder = abspath(join(folder, pardir))
 html_folder = abspath(join(root_folder, "cleanHTML_TD_normalized"))
-Dracor_Folder = abspath(join(root_folder, "test_corpusTD_v2"))
+Dracor_Folder = abspath(join(root_folder, "corpusTD_v2"))
 clean_Dracor_Folder = abspath(join(root_folder, "corpusTD_cast_ok"))
 
 if not exists(Dracor_Folder):
@@ -1049,7 +1048,7 @@ if __name__ == "__main__":
     # Generate an XML-TEI file for every HTML file of the corpus
     default = (None, None, [])
     for file in list(map(lambda f: join(html_folder, f), next(walk(html_folder), default)[2])):
-        notify_file(file)
+        #notify_file(file)
 
         # Find source
         fileName = basename(file)
@@ -1134,6 +1133,10 @@ if __name__ == "__main__":
                     inDedicace = find_dedicace_or_preface_content(line, "dedicace")
                     if not inDedicace:  # If we have finished reading the dedicace
                         counters["dedicaceFinished"] = True
+                        last_dedicace_line = metadata["dedicace"][-1] # Checking if the last line is a signature
+                        if last_dedicace_line.isupper():
+                            metadata["dedicace"].pop()
+                            metadata["signed_text"] = last_dedicace_line
                 else:
                     inDedicace = find_dedicace_or_preface_start(line, inDedicace, "dedicaceHeader")
 

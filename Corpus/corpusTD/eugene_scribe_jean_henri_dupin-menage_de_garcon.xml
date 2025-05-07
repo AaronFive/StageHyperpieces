@@ -1,1545 +1,1516 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le ménage  de Garçon</title>
-        <author key="Eugène SCRIBE - Jean-Henri DUPIN | (naissance-mort)">Eugène SCRIBE - Jean-Henri DUPIN |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/818</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène SCRIBE - Jean-Henri DUPIN |</author>. <title>Le ménage  de Garçon</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/818</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1821-04-27">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 27 avril 1821.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="m.-dubocage" sex="SEX">
+            <persName>M. DUBOCAGE</persName>
+          </person>
+          <person xml:id="prosper" sex="SEX">
+            <persName>PROSPER</persName>
+          </person>
+          <person xml:id="hubert" sex="SEX">
+            <persName>HUBERT</persName>
+          </person>
+          <person xml:id="guillemain" sex="SEX">
+            <persName>GUILLEMAIN</persName>
+          </person>
+          <person xml:id="un-commissionnaire" sex="SEX">
+            <persName>UN COMMISSIONNAIRE</persName>
+          </person>
+          <person xml:id="madame-dubocage" sex="SEX">
+            <persName>MADAME DUBOCAGE</persName>
+          </person>
+          <person xml:id="ernestine" sex="SEX">
+            <persName>ERNESTINE</persName>
+          </person>
+          <person xml:id="trois-créanciers" sex="SEX">
+            <persName>TROIS CRÉANCIERS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1821-04-27" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 27 avril 1821.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le ménage  de Garçon</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie-vaudeville en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 27 avril 1821.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="m.-dubocage">M. DUBOCAGE</role>
-              <roleDesc>, <em>président</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="prosper">PROSPER</role>
-              <roleDesc>, <em>étudiant en droit</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="hubert">HUBERT</role>
-              <roleDesc>, <em>propriétaire</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="guillemain">GUILLEMAIN</role>
-              <roleDesc>, <em>usurier</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-commissionnaire">UN COMMISSIONNAIRE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-dubocage">MADAME DUBOCAGE</role>
-              <roleDesc>, <em>femme du président (45 ans) </em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="ernestine">ERNESTINE</role>
-              <roleDesc>, <em>nièce de madame Dubocage </em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="trois-créanciers">TROIS CRÉANCIERS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>À Paris, dans la maison de M. Hubert. </em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Une chambre fermée. À droite, une porte qui communique dans une autre pièce ; à gauche, une porte d’entrée ; dans le fond, une petite porte vitrée, qui est censée être celle de l’alcôve ; au-dessus, une petite lucarne avec un rideau vert. Un secrétaire, une table, cheminée avec une tasse, etc. </em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="hubert" xml:id="1-1">
-            <speaker>HUBERT, <em>seul</em></speaker>
-            <l n="10" xml:id="l10"> </l>
-            <l n="11" xml:id="l11">Ma foi, arrivera ce qu’il pourra, cette dame m’a toujours donné le denier à Dieu et la voilà installée. C’est agréable d’être à la fois propriétaire et portier de sa maison : on touche les loyers et l’on reçoit les pourboires ; il n’y a rien de perdu, quand on sait faire son état ; car ce n’est pas aisé.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de L’Avare et son Ami.</em></hi></stage>
-            <l n="13" xml:id="l13">Mais si M. Prosper revenait... son terme n’expire qu’après-demain ! et lui, qui est vif en diable... aussi pourquoi ne prévient-il pas ? on dit : Monsieur Hubert, je ne dois pas rentrer ; on glisse le pourboire au portier, et le propriétaire n’en sait rien. Mais point du tout ! Monsieur emporte la clef dans sa poche, et voilà huit jours de suite qu’il ne rentre pas ; quel scandale ! et tous les matins... drelin, drelin ; les créanciers, qui font aller la sonnette !... passe encore si c’était un artiste, on y est fait ; dans les maisons on sait bien que ça ne peut pas être autrement ; mais un étudiant en droit !...</l>
-            <stage><hi rend="italic"><em>On sonne.</em></hi></stage>
-            <l n="15" xml:id="l15">Allons, qui est-ce qui vient là ? je suis sûr que c’est pour louer.</l>
-            <l n="16" xml:id="l16"> </l>
-            <l n="17" xml:id="l17"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="18" xml:id="l18"> </l>
-          <sp who="hubert" xml:id="2-1">
-            <speaker>HUBERT, M. DUBOCAGE</speaker>
-            <l n="19" xml:id="l19"> </l>
-          </sp>
-          <sp who="m" xml:id="2-2">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="20" xml:id="l20">N’est-ce pas ici madame Florbel ?</l>
-          </sp>
-          <sp who="hubert" xml:id="2-3">
-            <speaker>HUBERT.</speaker>
-            <l n="21" xml:id="l21">Madame Florbel ! ah ! oui, c’est le nom de cette dame qui vient de me donner le denier à Dieu : elle est là dans l’autre pièce avec sa nièce ou sa fille, une jeune personne...</l>
-          </sp>
-          <sp who="m" xml:id="2-4">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="22" xml:id="l22">C’est bon, mon ami ; voulez-vous m’indiquer le portier ?</l>
-          </sp>
-          <sp who="hubert" xml:id="2-5">
-            <speaker>HUBERT.</speaker>
-            <l n="23" xml:id="l23">Voilà, monsieur.</l>
-          </sp>
-          <sp who="m" xml:id="2-6">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="24" xml:id="l24">Ah ! c’est toi ; eh bien, mène-moi chez le propriétaire.</l>
-          </sp>
-          <sp who="hubert" xml:id="2-7">
-            <speaker>HUBERT.</speaker>
-            <l n="25" xml:id="l25">Voilà, monsieur.</l>
-          </sp>
-          <sp who="m" xml:id="2-8">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="26" xml:id="l26">Ah ! c’est vous !</l>
-          </sp>
-          <sp who="hubert" xml:id="2-9">
-            <speaker>HUBERT.</speaker>
-            <l n="27" xml:id="l27">Oui, monsieur ; une jolie propriété que j’ai là, le fruit de mes économies ; le pavillon que vous voyez, et une boutique qui en dépend, au coin du boulevard, rue du Pas-de-la-Mule, le cœur du Marais ; vous ne croiriez pas, monsieur, que cela rapporte huit cents francs de loyers et deux cent soixante francs d’impositions.</l>
-          </sp>
-          <sp who="m" xml:id="2-10">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="28" xml:id="l28">Deux cent soixante !...</l>
-          </sp>
-          <sp who="hubert" xml:id="2-11">
-            <speaker>HUBERT.</speaker>
-            <l n="29" xml:id="l29">Oui, monsieur, je m’en vante ; quarante francs de plus, j’étais électeur ; mais j’espère bien me faire augmenter.</l>
-          </sp>
-          <sp who="m" xml:id="2-12">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="30" xml:id="l30">Et le loyer de cet appartement ? car je viens vous payer le premier terme.</l>
-          </sp>
-          <sp who="hubert" xml:id="2-13">
-            <speaker>HUBERT.</speaker>
-            <l n="31" xml:id="l31">Ah ! je comprends, monsieur loge aussi chez moi ?</l>
-          </sp>
-          <sp who="m" xml:id="2-14">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="32" xml:id="l32">Non, mon cher, je n’y logerai pas ; mais n’importe, c’est moi qui suis chargé...</l>
-          </sp>
-          <sp who="hubert" xml:id="2-15">
-            <speaker>HUBERT.</speaker>
-            <l n="33" xml:id="l33">Je comprends ; monsieur est...</l>
-          </sp>
-          <sp who="m" xml:id="2-16">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="34" xml:id="l34">L’homme d’affaires de ces dames.</l>
-          </sp>
-          <sp who="hubert" xml:id="2-17">
-            <speaker>HUBERT.</speaker>
-            <l n="35" xml:id="l35">Je comprends, vous dis-je ; je vous en fais mon compliment.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="37" xml:id="l37">Je peux hausser le loyer.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="39" xml:id="l39">Monsieur...</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Catinat à Saint-Gratien.</em></hi></stage>
-          <stage>M. DUBOCAGE.</stage>
-          </sp>
-          <sp who="hubert" xml:id="2-18">
-            <speaker>HUBERT.</speaker>
-            <l n="41" xml:id="l41">D’ailleurs, monsieur, toutes les convenances possibles ; deux entrées : l’une par le boulevard, et l’autre par une rue déserte ; une maison tranquille, des portiers fort honnêtes.</l>
-          </sp>
-          <sp who="m" xml:id="2-19">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="42" xml:id="l42">Oui, je m’en aperçois. Allons, je paie d’avance le premier terme, cent soixante-deux francs cinquante centimes ; ces meubles-là en dépendent ?</l>
-          </sp>
-          <sp who="hubert" xml:id="2-20">
-            <speaker>HUBERT.</speaker>
-            <l n="43" xml:id="l43">Oui, monsieur, et vous pouvez être sûr que les soins, les attentions, la discrétion...</l>
-          </sp>
-          <sp who="m" xml:id="2-21">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="44" xml:id="l44">C’est bon, je m’installe ici ; vous pouvez me laisser.</l>
-            <stage><hi rend="italic"><em>Hubert sort.</em></hi></stage>
-            <l n="46" xml:id="l46"> </l>
-            <l n="47" xml:id="l47"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="48" xml:id="l48"> </l>
-          <sp who="m" xml:id="3-1">
-            <speaker>M. DUBOCAGE, <em>seul</em></speaker>
-            <l n="49" xml:id="l49"> </l>
-            <l n="50" xml:id="l50">Diable ! je n’aurais jamais cru qu’au Marais les loyers fussent si chers ! aussi je ne conçois pas ma femme, madame Dubocage, avec ses idées de mystère, d’incognito ; à Paris, on vous fait payer tout cela.</l>
-            <l n="51" xml:id="l51"> </l>
-            <l n="52" xml:id="l52"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="53" xml:id="l53"> </l>
-          <sp who="m" xml:id="4-1">
-            <speaker>M. DUBOCAGE, MADAME DUBOGAGE</speaker>
-            <l n="54" xml:id="l54"> </l>
-          </sp>
-          <sp who="m" xml:id="4-2">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="55" xml:id="l55">Ah ! vous voilà donc enfin, madame !</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-3">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <stage><hi rend="italic">Oui, mais parlez plus bas. Il y a une heure que nous sommes arrivées de Versailles, par les <em>Parisiennes</em>.</hi></stage>
-          </sp>
-          <sp who="m" xml:id="4-4">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="57" xml:id="l57">Et vous n’avez pas versé ?</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-5">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="58" xml:id="l58">Mais non.</l>
-          </sp>
-          <sp who="m" xml:id="4-6">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="59" xml:id="l59">Par exemple, c’est jouer de bonheur ! aussi je suis enchanté, ma chère amie.</l>
-            <stage><hi rend="italic"><em>Il veut lui baiser la main.</em></hi></stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-7">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="61" xml:id="l61">Monsieur Dubocage, monsieur Dubocage, ma nièce est là ; et les convenances...</l>
-          </sp>
-          <sp who="m" xml:id="4-8">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="62" xml:id="l62">Les convenances n’ont pas le sens commun ; vous êtes veuve, c’est fort bien ; vous jurez tout haut de ne jamais vous remarier... aussi qu’arrive-t-il cinq mois après ?...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-9">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="63" xml:id="l63">Cinq mois et demi, monsieur.</l>
-          </sp>
-          <sp who="m" xml:id="4-10">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="64" xml:id="l64">Cinq mois et demi ! je le veux bien ; certaines raisons d’affaires, d’intérêt, et, si j’ose le dire, un peu d’inclination réciproque vous forcent à recevoir ma main. Eh bien ! morbleu ! depuis que vous êtes ma femme...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-11">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="65" xml:id="l65">Je vous ai dit, monsieur Dubocage, de ne jamais prononcer ce mot-là ; que voulez-vous que pense ma nièce ? que pense le monde, qui depuis longtemps connaît la rigidité de mes principes, et qui, vous le savez, n’est que trop disposé à se moquer des veuves trop pressées de se remarier ?... Attendez au moins l’année de rigueur, et alors...</l>
-          </sp>
-          <sp who="m" xml:id="4-12">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="66" xml:id="l66">Et jusque-là, moi, faut-il que je sèche de jalousie ? car apprenez, madame, que lorsque vous étiez à Versailles, je n’y tenais pas, je ne dormais plus, pas même à l’audience.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-13">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="67" xml:id="l67">Je vous demande cependant quel sujet vous avez d’être jaloux ? Pour me rapprocher de vous, j’abandonne Versailles et ma cour, et me voilà installée au fond du Marais, sous un nom supposé, avec ma nièce.</l>
-          </sp>
-          <sp who="m" xml:id="4-14">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="68" xml:id="l68">À la bonne heure ! mais cette petite Ernestine, qui ne vous quitte pas, c’est très incommode ; et il vaudrait mieux trouver quelque moyen pour qu’elle ne s’étonnât pas de mes visites.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-15">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="69" xml:id="l69">Soyez tranquille, je m’en charge ; mais c’était ma nièce, ma pupille, je ne pouvais pas m’en séparer ; et encore moins, à son âge, lui confier un secret de cette importance. D’ailleurs je n’étais pas tachée de l’éloigner de Versailles ; il y avait là quelque galant que je n’ai pu découvrir.</l>
-          </sp>
-          <sp who="m" xml:id="4-16">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="70" xml:id="l70">Savez-vous ce qu’il faut faire ? il faut la marier.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-17">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="71" xml:id="l71">C’est bien mon intention ; on m’a même parlé du fils d’un négociant de Marseille, le jeune Saint-Elme, avocat très distingué ; le connaissez-vous ?</l>
-          </sp>
-          <sp who="m" xml:id="4-18">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="72" xml:id="l72">Le jeune Saint-Elme, avocat à Paris ? Non, je ne connais pas ; mais je vous promets de prendre des informations. Adieu, adieu. Je lâcherai, si mes affaires me le permettent, de revenir vous voir aujourd’hui ; c’est qu’il y a si loin du Marais au faubourg Saint-Germain ! je me perds toujours dans ce maudit quartier dont je ne connais pas une rue... Ah ! mon Dieu ! j’oubliais ;</l>
-            <stage><hi rend="italic"><em>Ouvrant le secrétaire.</em></hi></stage>
-            <l n="74" xml:id="l74">vous aurez sans doute besoin d’argent, et je vous apportais là quelques rouleaux...</l>
-            <stage><hi rend="italic"><em>Il va pour les poser sur des papiers.</em></hi></stage>
-            <l n="76" xml:id="l76">Qu’est-ce que c’est que cela ?</l>
-            <stage><hi rend="italic"><em>Lisant.</em></hi></stage>
-            <stage><hi rend="italic">« État de mes dettes : petits dîners particuliers au <em>Cadran bleu</em> ; livres de droit, vingt-deux francs ; cachemires, six cents francs. » Et ce gros cahier ? « <em>Cicéron</em>, tragédie en cinq actes et en vers, par un étudiant en droit... »</hi></stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-19">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="79" xml:id="l79">Comment ! des vers ! qu’est-ce que ça signifie ?</l>
-          </sp>
-          <sp who="m" xml:id="4-20">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="80" xml:id="l80">N’allez-vous pas vous fâcher ! Ces papiers appartenaient sans doute à la personne qui habitait avant nous ce garni : et si j’osais risquer une comparaison...</l>
-            <stage><hi rend="italic"><em>Air : L’Amour a gagné sa cause.</em></hi></stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-21">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="82" xml:id="l82">Monsieur Dubocage !...</l>
-          </sp>
-          <sp who="m" xml:id="4-22">
-            <speaker>M. DUBOCAGE.</speaker>
-            <stage><hi rend="italic"><em>Suite de l’air.</em></hi></stage>
-            <stage><hi rend="italic"><em>Tirant sa montre.</em></hi></stage>
-            <l n="85" xml:id="l85">Déjà !</l>
-            <stage><hi rend="italic"><em>Air : Allons, donnez-moi.</em></hi></stage>
-          <stage>MADAME DUBOCAGE.</stage>
-          </sp>
-          <sp who="m" xml:id="4-23">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="87" xml:id="l87">Quelle attention délicate !</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-24">
-            <speaker>MADAME DUBOCAGE, <em>tendrement.</em></speaker>
-            <stage><hi rend="italic"><em>Ensemble. </em></hi></stage>
-          <stage>M. DUBOCAGE.</stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="4-25">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <stage><hi rend="italic"><em>M. Dubocage sort.</em></hi></stage>
-            <l n="90" xml:id="l90"> </l>
-            <l n="91" xml:id="l91"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="92" xml:id="l92"> </l>
-          <sp who="ernestine" xml:id="5-1">
-            <speaker>MADAME DUBOCAGE, ERNESTINE</speaker>
-            <l n="93" xml:id="l93"> </l>
-          </sp>
-          <sp who="ernestine" xml:id="5-2">
-            <speaker>ERNESTINE, <em>entrant.</em></speaker>
-            <l n="94" xml:id="l94">Eh ! mais, ma tante, vous me laissez bien seule, et je trouve ce quartier, cet appartement d’une tristesse !... j’aimais encore mieux Versailles.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="5-3">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="95" xml:id="l95">Je m’en doute bien ; vous croyez peut-être que je n’ai pas remarqué votre air rêveur, vos distractions ? Ce n’est pas moi que l’on trompe, mademoiselle ; je sais tout, et quoique je ne connaisse ni la personne, ni son nom, ni son état...</l>
-          </sp>
-          <sp who="ernestine" xml:id="5-4">
-            <speaker>ERNESTINE.</speaker>
-            <l n="96" xml:id="l96">Eh ! mon Dieu, ma tante, ni moi non plus ; il m’a dit seulement qu’il était de Paris, qu’il venait pour moi à Versailles.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="5-5">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="97" xml:id="l97">Qu’est-ce que c’est que cela ? Une pareille inclination ne saurait être convenable. D’ailleurs j’ai d’autres projets sur vous : on nous a parlé du fils d’un ancien ami, M. de Saint-Elme, un avocat dont on dit beaucoup de bien, et qui... mais nous causerons de cela ; rentrons.</l>
-          </sp>
-          <sp who="ernestine" xml:id="5-6">
-            <speaker>ERNESTINE.</speaker>
-            <l n="98" xml:id="l98">Comment ! ma tante, nous resterons donc ici toutes seules ?</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="5-7">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="99" xml:id="l99">Oui, mademoiselle ; est-ce que cela vous contrarie ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="5-8">
-            <speaker>ERNESTINE.</speaker>
-            <l n="100" xml:id="l100">Non, ma tante ; mais je pensais que vous alliez bien vous ennuyer... Et nous ne recevrons pas de visites ?</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="5-9">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="101" xml:id="l101">Personne, excepté cependant un monsieur qui, je crois, viendra même assez souvent.</l>
-          </sp>
-          <sp who="ernestine" xml:id="5-10">
-            <speaker>ERNESTINE, <em>vivement.</em></speaker>
-            <l n="102" xml:id="l102">Un monsieur, jeune ?</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="5-11">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="103" xml:id="l103">Mais oui, jeune encore ; c’est lui qui est chargé de suivre mon procès, et il faudra que chaque jour il me rende compte.</l>
-          </sp>
-          <sp who="ernestine" xml:id="5-12">
-            <speaker>ERNESTINE.</speaker>
-            <l n="104" xml:id="l104">J’y suis, un avoué ! Comme c’est gai, la société de ma tante ! un avoué tous les jours et un avocat en perspective.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="5-13">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="105" xml:id="l105">Quoi qu’il en soit, je vous engage à le recevoir de votre mieux.</l>
-          </sp>
-          <sp who="ernestine" xml:id="5-14">
-            <speaker>ERNESTINE.</speaker>
-            <l n="106" xml:id="l106">Oui, ma tante.</l>
-            <stage><hi rend="italic"><em>Air : On m’avait vanté la guinguette. (Gilles en deuil.)</em></hi></stage>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-          <stage>MADAME DUBOCAGE.</stage>
-          </sp>
-          <sp who="ernestine" xml:id="5-15">
-            <speaker>ERNESTINE.</speaker>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <stage><hi rend="italic"><em>Ensemble. </em></hi></stage>
-          <stage>MADAME DUBOCAGE.</stage>
-          </sp>
-          <sp who="ernestine" xml:id="5-16">
-            <speaker>ERNESTINE.</speaker>
-            <stage><hi rend="italic"><em>Elles rentrent toutes les deux dans la pièce à gauche. On entend le bruit d’une clef dans la serrure.</em></hi></stage>
-            <l n="112" xml:id="l112"> </l>
-            <l n="113" xml:id="l113"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="114" xml:id="l114"> </l>
-          <sp who="prosper" xml:id="6-1">
-            <speaker>PROSPER, <em>seul, les bottes couvertes de poussière et une badine à la main</em></speaker>
-            <l n="115" xml:id="l115"> </l>
-            <l n="116" xml:id="l116">Cet imbécile d’Hubert n’est jamais dans sa loge ! je n’aurais pas été fâché de prendre en montant mes lettres, mes journaux et mes assignations ; car je suis sûr qu’il y en a.</l>
-            <stage><hi rend="italic"><em>S’essuyant.</em></hi></stage>
-            <l n="118" xml:id="l118">Ouf ! je n’en puis plus ; mais c’est égal, après huit jours d’absence, on n’est pas fâché de se retrouver chez soi ; j’aime mon appartement.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville du Petit Courrier.</em></hi></stage>
-            <stage><hi rend="italic"><em>Il ôte son chapeau et défait sa cravate.</em></hi></stage>
-            <stage><hi rend="italic">C’est charmant d’être garçon : on n’a de compte à rendre à personne ; il vous prend une idée de campagne, on met sa clef dans son gousset, une chemise dans sa poche, et l’on rentre dans son appartement sans que personne se soit aperçu de votre absence. Ma foi, je me suis amusé ; mon ami Derval est un homme de mérite, riche à millions, et toujours en dispute avec ses voisins. Si jamais je deviens avocat, c’est une connaissance à cultiver ; en outre un château superbe à quatre lieues de Paris, bals, spectacles, concerts et un parc qui donne sur les bois de Satory, et dans ces bois de Satory on fait souvent des rencontres... Je vous demande si ça n’est pas jouer de malheur : je vais passer huit jours à la campagne pour m’amuser, et je deviens amoureux d’une manière inquiétante ; car enfin, dans ma position, on ne peut pas trop demander une demoiselle en mariage : voilà trois ans que je suis à Paris pour faire mon droit et je n’ai encore pris que mes inscriptions ; mon père, d’après mes lettres, me croit déjà un avocat très occupé ; c’est une imprudence que j’ai faite, car depuis ce moment-là il ne m’envoie plus d’argent. Ça coûte cher une réputation, surtout une réputation usurpée ; et quand il saura qu’au lieu de faire mon droit, j’ai fait des dettes !... des dettes, les grands-parents n’ont que cela à vous dire. Eh bien ! qu’est-ce que ça prouve ? que j’ai du crédit ; ce qui doit nécessairement arriver, quand on a, comme moi, deux cordes à son arc : d’un côté mon état d’étudiant en droit, de l’autre ma tragédie de <em>Cicéron</em> ! je ne crois pas qu’il y ait beaucoup de jeunes gens dans une plus belle passe.</hi></stage>
-            <stage><hi rend="italic"><em>Air du Pot de Fleurs.</em></hi></stage>
-            <l n="123" xml:id="l123">Mais où diable vais-je dîner aujourd’hui ? car la route m’a donné un appétit !... Je suis venu à pied ; moi, je ne suis pas fier ; d’ailleurs quand on n’a pas de paquet,</l>
-            <stage><hi rend="italic"><em>Montrant son gousset.</em></hi></stage>
-            <l n="125" xml:id="l125">rien sur soi, je ne vois pas la nécessité de prendre une voiture... Hein ? qu’est-ce qui vient là ?... Ah ! mon Dieu ! j’ai laissé la clef à la porte, et ce sera sans doute quelques-uns de ces messieurs, qui, informés de mon arrivée... aussi je m’étonnais bien de ne pas les voir encore.</l>
-            <l n="126" xml:id="l126"> </l>
-            <l n="127" xml:id="l127"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="128" xml:id="l128"> </l>
-          <sp who="prosper" xml:id="7-1">
-            <speaker>PROSPER, UN COMMISSIONNAIRE, <em>avec une plaque</em></speaker>
-            <l n="129" xml:id="l129"> </l>
-          </sp>
-          <sp who="prosper" xml:id="7-2">
-            <speaker>PROSPER.</speaker>
-            <l n="130" xml:id="l130">Eh ! Dieu me pardonne ! je crois que ce sont des vivres ?</l>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-3">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="131" xml:id="l131">Monsieur, voici un pâté de foies gras, et six bouteilles de vin de Pommard.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-4">
-            <speaker>PROSPER.</speaker>
-            <l n="132" xml:id="l132">Que tu apportes ici ?</l>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-5">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="133" xml:id="l133">Oui, monsieur.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-6">
-            <speaker>PROSPER.</speaker>
-            <l n="134" xml:id="l134">Ah çà, tu ne te trompes pas ?</l>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-7">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="135" xml:id="l135">Non, monsieur, rue du Pas-de-la-Mule, au second.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-8">
-            <speaker>PROSPER.</speaker>
-            <l n="136" xml:id="l136">D’où ça vient-il ?</l>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-9">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="137" xml:id="l137">Ça vient de l’hôtel des Américains.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-10">
-            <speaker>PROSPER.</speaker>
-            <l n="138" xml:id="l138">Et de quelle part ?</l>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-11">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="139" xml:id="l139">De la part de la personne que vous savez bien ; voilà tout ce qu’on m’a chargé de dire.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-12">
-            <speaker>PROSPER.</speaker>
-            <l n="140" xml:id="l140">Diable m’emporte si...</l>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-13">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="141" xml:id="l141">V’là ma commission faite, et on m’a même recommandé de ne rien accepter.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-14">
-            <speaker>PROSPER.</speaker>
-            <l n="142" xml:id="l142">Oh ! sois tranquille...</l>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-15">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="143" xml:id="l143">Mais c’est égal, si malgré cela...</l>
-          </sp>
-          <sp who="prosper" xml:id="7-16">
-            <speaker>PROSPER.</speaker>
-            <l n="144" xml:id="l144">Non pas, non pas ; il faut remplir ses commissions à la lettre.</l>
-            <stage><hi rend="italic"><em>Air : Voulant par ses œuvres complètes. (Voltaire chez Ninon.)</em></hi></stage>
-            <stage><hi rend="italic"><em>Lui donnant une bouteille.</em></hi></stage>
-          </sp>
-          <sp who="le-commissionnaire" xml:id="7-17">
-            <speaker>LE COMMISSIONNAIRE.</speaker>
-            <l n="147" xml:id="l147">Alors, monsieur, je vous salue bien.</l>
-            <l n="148" xml:id="l148"> </l>
-            <l n="149" xml:id="l149"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="150" xml:id="l150"> </l>
-          <sp who="prosper" xml:id="8-1">
-            <speaker>PROSPER, <em>seul</em></speaker>
-            <l n="151" xml:id="l151"> </l>
-            <stage><hi rend="italic">Cela ne pouvait arriver plus à propos... Eh ! j’y suis, c’est la femme de ce banquier pour qui j’ai fait des couplets de fête ; il faut être juste, ils ne valaient pas cela ; allons, je comptais dîner en ville ; mais, ma foi, quand on a son repas chez soi, cela dérange moins ; je travaillerai à mon autre tragédie de <em>Démosthène</em>. Allons, allons, mettons le couvert.</hi></stage>
-            <stage><hi rend="italic"><em>Il met le pâté et une bouteille de vin sur sa table, apporte du sel dans du papier et prend une tasse sur la cheminée à défaut de verre.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air du vaudeville de Turenne.</em></hi></stage>
-            <stage><hi rend="italic"><em>Flairant le pâté.</em></hi></stage>
-            <stage><hi rend="italic"><em>On sonne.</em></hi></stage>
-            <l n="157" xml:id="l157">Hein !...</l>
-            <stage><hi rend="italic"><em>Ouvrant la porte.</em></hi></stage>
-            <l n="159" xml:id="l159">Est-ce encore du pommard ?</l>
-            <l n="160" xml:id="l160"> </l>
-            <l n="161" xml:id="l161"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="162" xml:id="l162"> </l>
-          <sp who="guillemain" xml:id="9-1">
-            <speaker>PROSPER, GUILLEMAIN, TROIS CRÉANCIERS</speaker>
-            <l n="163" xml:id="l163"> </l>
-          </sp>
-          <sp who="les-créanciers" xml:id="9-2">
-            <speaker>LES CRÉANCIERS.</speaker>
-            <stage><hi rend="italic"><em>Air de La Cosaque.</em></hi></stage>
-          <stage>PROSPER, <em>à table.</em></stage>
-          </sp>
-          <sp who="les-créanciers" xml:id="9-3">
-            <speaker>LES CRÉANCIERS.</speaker>
-            <l n="165" xml:id="l165">Monsieur, il ne s’agit pas de cela, il faut nous payer.</l>
-          <stage>GUILLEMAIN.</stage>
-          </sp>
-          <sp who="prosper" xml:id="9-4">
-            <speaker>PROSPER.</speaker>
-            <l n="166" xml:id="l166">Oh ! je n’aime pas les criailleries, père Guillemain, arrangez cela avec ces messieurs, vous qui êtes le plus fort ; j’aime autant ne devoir qu’à un.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-5">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="167" xml:id="l167">Monsieur, monsieur ! point de mauvaises plaisanteries ; mes moments sont comptés.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-6">
-            <speaker>PROSPER.</speaker>
-            <l n="168" xml:id="l168">Eh bien ! votre argent ne l’est pas.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-7">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="169" xml:id="l169">Alors, monsieur, nous saisirons le mobilier.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-8">
-            <speaker>PROSPER.</speaker>
-            <stage><hi rend="italic">Saisissez !... qu’est-ce que ça me fait ? je loge en garni, et l’on est obligé de me fournir ; mais, tenez, quand on a des affaires un peu embrouillées, il faut se décider à des sacrifices, et je vous abandonne ma tragédie de <em>Cicéron</em>.</hi></stage>
-          </sp>
-          <sp who="guillemain" xml:id="9-9">
-            <speaker>GUILLEMAIN, <em>aux autres créanciers.</em></speaker>
-            <l n="171" xml:id="l171">Bah ! bah ! inventorions toujours ; d’abord, ouvrons le secrétaire.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-10">
-            <speaker>PROSPER, <em>toujours mangeant.</em></speaker>
-            <l n="172" xml:id="l172">C’est là que vous le trouverez, un ouvrage sublime ! c’est de l’or en barre.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-11">
-            <speaker>GUILLEMAIN, <em>prenant le rouleau et avec surprise.</em></speaker>
-            <l n="173" xml:id="l173">C’est de l’or !</l>
-          </sp>
-          <sp who="tous" xml:id="9-12">
-            <speaker>TOUS, <em>regardant.</em></speaker>
-            <l n="174" xml:id="l174">De l’or !</l>
-          </sp>
-          <sp who="prosper" xml:id="9-13">
-            <speaker>PROSPER, <em>continuant de manger et sans se détourner.</em></speaker>
-            <l n="175" xml:id="l175">Eh ! oui, je vous le disais bien, et pourtant je vous le cède, je vous l’abandonne ; je suis sur que pour vous cela vaut mille écus, pour le moins.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-14">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="176" xml:id="l176">Pas tout à fait ; mais enfin, tel que cela est, nous nous en contenterons.</l>
-            <stage><hi rend="italic"><em>Bas aux autres créanciers.</em></hi></stage>
-            <l n="178" xml:id="l178">Dites donc, vous autres, trois rouleaux, quinze cents francs, nous pouvons, sans y perdre, n’en prendre que moitié.</l>
-          </sp>
-          <sp who="premier-créancier" xml:id="9-15">
-            <speaker>PREMIER CRÉANCIER.</speaker>
-            <l n="179" xml:id="l179">Mais oui.</l>
-          </sp>
-          <sp who="deuxième-créancier" xml:id="9-16">
-            <speaker>DEUXIÈME CRÉANCIER.</speaker>
-            <l n="180" xml:id="l180">C’est aussi mon avis.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-17">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="181" xml:id="l181">C’est bon, c’est bon. Je suis charge par M. Prosper de régler les comptes.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-18">
-            <speaker>LES CRÉANCIERS, <em>ensemble, à Prosper.</em></speaker>
-            <l n="182" xml:id="l182">Monsieur, voici nos quittances.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-19">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="183" xml:id="l183">Voici la mienne aussi.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-20">
-            <speaker>PROSPER, <em>les regardant.</em></speaker>
-            <l n="184" xml:id="l184">Comment ! il serait possible ? eh bien ! je ne l’aurais pas cru, et voilà un trait qui fait honneur au corps des usuriers.</l>
-            <stage><hi rend="italic"><em>Prenant les quittances.</em></hi></stage>
-            <l n="186" xml:id="l186">Ah çà ! monsieur Guillemain, vous aimez donc la littérature ?</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-21">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="187" xml:id="l187">Mais dame ! monsieur, qu’est-ce que vous appelez la littérature ?</l>
-          </sp>
-          <sp who="prosper" xml:id="9-22">
-            <speaker>PROSPER.</speaker>
-            <l n="188" xml:id="l188">J’entends que vous êtes capable d’apprécier un pareil trésor.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-23">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="189" xml:id="l189">Parbleu ! je ne connais pas de meilleure valeur, quand les pièces sont bonnes.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-24">
-            <speaker>PROSPER.</speaker>
-            <l n="190" xml:id="l190">Excellente, celle-là, excellente, je vous en réponds ; c’était ma fortune ! mais heureusement, je ne suis pas encore épuisé ! et j’aurai longtemps des ressources de ce genre-là.</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-25">
-            <speaker>GUILLEMAIN, <em>vivement.</em></speaker>
-            <l n="191" xml:id="l191">J’espère conserver la pratique de monsieur, et mes magasins...</l>
-          </sp>
-          <sp who="premier-créancier" xml:id="9-26">
-            <speaker>PREMIER CRÉANCIER.</speaker>
-            <l n="192" xml:id="l192">Mon restaurant...</l>
-          </sp>
-          <sp who="deuxième-créancier" xml:id="9-27">
-            <speaker>DEUXIÈME CRÉANCIER.</speaker>
-            <l n="193" xml:id="l193">Ma bourse...</l>
-          </sp>
-          <sp who="tous" xml:id="9-28">
-            <speaker>TOUS.</speaker>
-            <l n="194" xml:id="l194">Sont au service de monsieur.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-29">
-            <speaker>PROSPER.</speaker>
-            <l n="195" xml:id="l195">Ô Cicéron ! voilà de tes prodiges ! vois ces modernes Catilina confondus à ton aspect !</l>
-          </sp>
-          <sp who="guillemain" xml:id="9-30">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="196" xml:id="l196">Catilina... vous êtes bien bon ; la vérité est que monsieur est toujours sûr de nous trouver.</l>
-            <stage><hi rend="italic"><em>Air : Le magistrat irréprochable. (Monsieur Guillaume.)</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="9-31">
-            <speaker>PROSPER.</speaker>
-            <l n="198" xml:id="l198">Mes amis, j’accepte.</l>
-            <stage><hi rend="italic"><em>À Guillemain.</em></hi></stage>
-            <l n="200" xml:id="l200">Il me faudra un habillement complet, plus une redingote très élégante, pour la ville, et une robe de chambre pour rester chez moi.</l>
-            <stage><hi rend="italic"><em>Au premier créancier.</em></hi></stage>
-            <l n="202" xml:id="l202">Il me faudra aussi des meubles ; car je suis las de loger en garni.</l>
-            <stage><hi rend="italic"><em>Au deuxième.</em></hi></stage>
-            <l n="204" xml:id="l204">Et vous...</l>
-            <stage><hi rend="italic"><em>Comme une idée qui lui vient.</em></hi></stage>
-            <l n="206" xml:id="l206">parbleu ! il me faut ce soir le plus joli petit souper, des vins fins, une chère exquise, et qu’à neuf heures tout soit ici. Je veux inviter deux ou trois amis pour rire avec eux de l’aventure.</l>
-            <stage><hi rend="italic"><em>À Guillemain.</em></hi></stage>
-            <l n="208" xml:id="l208">Tu passeras chez Saint-Charles, Ernest et les deux Senneville, leur dire que je les attends.</l>
-          </sp>
-          <sp who="prosper" xml:id="9-32">
-            <speaker>LES CRÉANCIERS, <em>entourant Prosper.</em></speaker>
-            <stage><hi rend="italic"><em>Air connu.</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="9-33">
-            <speaker>PROSPER.</speaker>
-            <stage><hi rend="italic"><em>Les créanciers sortent.</em></hi></stage>
-            <l n="211" xml:id="l211"> </l>
-            <l n="212" xml:id="l212"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="213" xml:id="l213"> </l>
-          <sp who="prosper" xml:id="10-1">
-            <speaker>PROSPER, <em>seul</em></speaker>
-            <l n="214" xml:id="l214"> </l>
-            <l n="215" xml:id="l215">Comment ! ce n’est point un rêve ! voilà toutes mes dettes acquittées ?</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Turenne.</em></hi></stage>
-            <l n="217" xml:id="l217"> </l>
-            <l n="218" xml:id="l218"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="219" xml:id="l219"> </l>
-          <sp who="hubert" xml:id="11-1">
-            <speaker>PROSPER, HUBERT</speaker>
-            <l n="220" xml:id="l220"> </l>
-          </sp>
-          <sp who="hubert" xml:id="11-2">
-            <speaker>HUBERT.</speaker>
-            <l n="221" xml:id="l221">Qu’est-ce que je vois là ?</l>
-          </sp>
-          <sp who="prosper" xml:id="11-3">
-            <speaker>PROSPER.</speaker>
-            <l n="222" xml:id="l222">C’est toi, maître Hubert ?</l>
-          </sp>
-          <sp who="hubert" xml:id="11-4">
-            <speaker>HUBERT.</speaker>
-            <l n="223" xml:id="l223">Oui, monsieur, mais par où êtes-vous donc rentré ? je ne vous ai pas aperçu.</l>
-          </sp>
-          <sp who="prosper" xml:id="11-5">
-            <speaker>PROSPER.</speaker>
-            <l n="224" xml:id="l224">Voilà ce que c’est que de ne pas être dans sa loge ; je parie que tu étais chez le portier du n° 12, à faire de la politique.</l>
-          </sp>
-          <sp who="hubert" xml:id="11-6">
-            <speaker>HUBERT, <em>troublé.</em></speaker>
-            <l n="225" xml:id="l225">Oui, monsieur, c’était son jour de recevoir.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="227" xml:id="l227">Eh bien ! par exemple, me voilà dans de beaux draps.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="229" xml:id="l229">Vous savez que c’est après-demain le terme.</l>
-          </sp>
-          <sp who="prosper" xml:id="11-7">
-            <speaker>PROSPER, <em>élevant la voix.</em></speaker>
-            <l n="230" xml:id="l230">Eh bien ! ne t’ai-je pas payé d’avance, le jour où j’ai gagné ces cinquante écus à l’écarté ?</l>
-          </sp>
-          <sp who="hubert" xml:id="11-8">
-            <speaker>HUBERT.</speaker>
-            <l n="231" xml:id="l231">Mon Dieu ! je sais bien, il n’est pas nécessaire de parler si haut ; je voulais vous dire qu’ignorant si vous vouliez renouveler...</l>
-          </sp>
-          <sp who="prosper" xml:id="11-9">
-            <speaker>PROSPER.</speaker>
-            <l n="232" xml:id="l232">Ah ! bien oui, un juif, un arabe tel que toi ! je suis seulement fâché de ne pas pouvoir te jouer quelque tour avant de nous séparer.</l>
-          </sp>
-          <sp who="hubert" xml:id="11-10">
-            <speaker>HUBERT.</speaker>
-            <l n="233" xml:id="l233">Vous ne m’en avez pas assez joué, peut-être ?</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Partie carrée.</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="11-11">
-            <speaker>PROSPER.</speaker>
-            <l n="235" xml:id="l235">Dès demain je te quitte : je ne veux plus d’hôtel garni, je me mets dans mes meubles.</l>
-          </sp>
-          <sp who="hubert" xml:id="11-12">
-            <speaker>HUBERT, <em>à part.</em></speaker>
-            <l n="236" xml:id="l236">Demain... si cette idée-là avait pu lui prendre aujourd’hui !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="238" xml:id="l238">Vous ne savez donc pas, monsieur, qu’il y a ce soir une première représentation à l’Ambigu-Comique ? j’en ai entendu parler. Un ouvrage qui a été refusé au Théâtre-Français.</l>
-          </sp>
-          <sp who="prosper" xml:id="11-13">
-            <speaker>PROSPER.</speaker>
-            <l n="239" xml:id="l239">Diable ! mais cela pourrait être bon ; n’importe, je ne puis : je donne ce soir à souper à une demi-douzaine de mes amis.</l>
-          </sp>
-          <sp who="hubert" xml:id="11-14">
-            <speaker>HUBERT.</speaker>
-            <l n="240" xml:id="l240">Comment, monsieur ?... Jésus-Maria ! c’est fait de nous !</l>
-          </sp>
-          <sp who="prosper" xml:id="11-15">
-            <speaker>PROSPER.</speaker>
-            <l n="241" xml:id="l241">Ah çà ! qu’est-ce que tu as donc, depuis une heure ? je te trouve un air tout extraordinaire, une physionomie renversée.</l>
-          </sp>
-          <sp who="hubert" xml:id="11-16">
-            <speaker>HUBERT.</speaker>
-            <l n="242" xml:id="l242">Ce n’est pas sans raison ; imaginez-vous, monsieur, que pendant votre absence, il est venu ici très souvent cette plaideuse que vous ne vouliez pas voir.</l>
-          </sp>
-          <sp who="prosper" xml:id="11-17">
-            <speaker>PROSPER.</speaker>
-            <l n="243" xml:id="l243">Serait-ce cette dame de province, que mon père m’a recommandée dans ses dernières lettres ? depuis qu’il me croit avocat, il m’envoie des affaires tous les mois. J’espère bien que tu as toujours dit que j’étais à la campagne ?</l>
-          </sp>
-          <sp who="hubert" xml:id="11-18">
-            <speaker>HUBERT.</speaker>
-            <l n="244" xml:id="l244">Oui, monsieur ; mais je ne sais pas qui lui a dit que vous deviez revenir aujourd’hui ; elle fait antichambre ici à côté avec sa nièce, bien décidée à attendre votre retour.</l>
-          </sp>
-          <sp who="prosper" xml:id="11-19">
-            <speaker>PROSPER.</speaker>
-            <l n="245" xml:id="l245">Il paraît que mon père a soigné ma réputation. Parbleu ! elle m’attendra longtemps, car je me sauve ; donne-moi mon chapeau.</l>
-          </sp>
-          <sp who="hubert" xml:id="11-20">
-            <speaker>HUBERT, <em>à part.</em></speaker>
-            <l n="246" xml:id="l246">Bravo ! le voilà dehors.</l>
-            <l n="247" xml:id="l247"> </l>
-            <l n="248" xml:id="l248"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="249" xml:id="l249"> </l>
-          <sp who="ernestine" xml:id="12-1">
-            <speaker>PROSPER, HUBERT, ERNESTINE</speaker>
-            <l n="250" xml:id="l250"> </l>
-          </sp>
-          <sp who="ernestine" xml:id="12-2">
-            <speaker>ERNESTINE, <em>à la cantonade.</em></speaker>
-            <l n="251" xml:id="l251">Oui, ma tante, je reviens.</l>
-          </sp>
-          <sp who="prosper" xml:id="12-3">
-            <speaker>PROSPER.</speaker>
-            <l n="252" xml:id="l252">Grands dieux !... Hubert, mon cher Hubert, regarde donc.</l>
-          </sp>
-          <sp who="hubert" xml:id="12-4">
-            <speaker>HUBERT.</speaker>
-            <l n="253" xml:id="l253">Qu’est-ce qui lui prend donc ?</l>
-          </sp>
-          <sp who="prosper" xml:id="12-5">
-            <speaker>PROSPER, <em>le chapeau à la main.</em></speaker>
-            <l n="254" xml:id="l254">Comment, mademoiselle, c’est vous qui êtes ici avec madame votre tante ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="12-6">
-            <speaker>ERNESTINE.</speaker>
-            <l n="255" xml:id="l255">Oui, monsieur.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="257" xml:id="l257">Ah ! mon Dieu ! je ne me serais jamais doutée...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="259" xml:id="l259">Comment ! vous êtes celui que ma tante attendait avec tant d’impatience ! je cours la prévenir.</l>
-          </sp>
-          <sp who="prosper" xml:id="12-7">
-            <speaker>PROSPER.</speaker>
-            <l n="260" xml:id="l260">Non, il n’est pas nécessaire... un instant, je vous en supplie.</l>
-          </sp>
-          <sp who="hubert" xml:id="12-8">
-            <speaker>HUBERT, <em>à part.</em></speaker>
-            <l n="261" xml:id="l261">Ah çà ! qu’est-ce qu’ils ont donc ? est-ce que j’aurais rencontré juste sans m’en douter ?</l>
-          </sp>
-          <sp who="prosper" xml:id="12-9">
-            <speaker>PROSPER.</speaker>
-            <l n="262" xml:id="l262">Hubert, laisse-nous.</l>
-          </sp>
-          <sp who="hubert" xml:id="12-10">
-            <speaker>HUBERT.</speaker>
-            <l n="263" xml:id="l263">Comment, monsieur !</l>
-          </sp>
-          <sp who="prosper" xml:id="12-11">
-            <speaker>PROSPER.</speaker>
-            <l n="264" xml:id="l264">Sortez, vous dis-je.</l>
-          </sp>
-          <sp who="hubert" xml:id="12-12">
-            <speaker>HUBERT, <em>en s’en allant.</em></speaker>
-            <l n="265" xml:id="l265">Ma foi, je n’y conçois rien ; mais je n’y saurais que faire... que cela s’arrange maintenant comme ça pourra.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="267" xml:id="l267"> </l>
-            <l n="268" xml:id="l268"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="269" xml:id="l269"> </l>
-          <sp who="ernestine" xml:id="13-1">
-            <speaker>PROSPER <em>et</em> ERNESTINE</speaker>
-            <l n="270" xml:id="l270"> </l>
-          </sp>
-          <sp who="prosper" xml:id="13-2">
-            <speaker>PROSPER.</speaker>
-            <l n="271" xml:id="l271">Que j’étais loin de m’attendre à un pareil bonheur !</l>
-          </sp>
-          <sp who="ernestine" xml:id="13-3">
-            <speaker>ERNESTINE.</speaker>
-            <l n="272" xml:id="l272">Certainement, monsieur, je n’aurais jamais pensé que vous fussiez l’homme d’affaires de ma tante.</l>
-          </sp>
-          <sp who="prosper" xml:id="13-4">
-            <speaker>PROSPER, <em>posant son chapeau et ses gants sur un meuble.</em></speaker>
-            <l n="273" xml:id="l273">Je tâcherai de mériter sa confiance.</l>
-          </sp>
-          <sp who="ernestine" xml:id="13-5">
-            <speaker>ERNESTINE.</speaker>
-            <l n="274" xml:id="l274">Ça n’est pas nécessaire, vous l’avez déjà ; si vous saviez combien elle a pour vous d’affection, d’estime ! elle parle avec tant d’éloges de votre personne et de vos talents !</l>
-          </sp>
-          <sp who="prosper" xml:id="13-6">
-            <speaker>PROSPER, <em>à part.</em></speaker>
-            <l n="275" xml:id="l275">Par exemple, je ne me serais jamais cru une pareille réputation.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="277" xml:id="l277">Et puis-je espérer que vous partagez un peu la bonne opinion qu’elle a de moi ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="13-7">
-            <speaker>ERNESTINE.</speaker>
-            <l n="278" xml:id="l278">Il le faut bien.</l>
-          </sp>
-          <sp who="prosper" xml:id="13-8">
-            <speaker>PROSPER.</speaker>
-            <l n="279" xml:id="l279">Comment ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="13-9">
-            <speaker>ERNESTINE.</speaker>
-            <l n="280" xml:id="l280">Puisque ma tante m’a recommandé de vous traiter comme ami de la maison... Voilà ses propres paroles.</l>
-          </sp>
-          <sp who="prosper" xml:id="13-10">
-            <speaker>PROSPER.</speaker>
-            <l n="281" xml:id="l281">Vraiment ?.... Voilà qui est charmant !</l>
-            <stage><hi rend="italic"><em>Air de M. Aymon.</em></hi></stage>
-            <stage><hi rend="italic"><em>Premier couplet.</em></hi></stage>
-          </sp>
-          <sp who="ernestine" xml:id="13-11">
-            <speaker>ERNESTINE.</speaker>
-            <stage><hi rend="italic"><em>Deuxième couplet.</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="13-12">
-            <speaker>PROSPER.</speaker>
-            <stage><hi rend="italic"><em>Il lui baise la main.</em></hi></stage>
-          <stage>ERNESTINE.</stage>
-          </sp>
-          <sp who="prosper" xml:id="13-13">
-            <speaker>PROSPER.</speaker>
-            <l n="286" xml:id="l286">Ainsi vous me permettrez de vous aimer, de vous le dire...</l>
-          </sp>
-          <sp who="ernestine" xml:id="13-14">
-            <speaker>ERNESTINE.</speaker>
-            <l n="287" xml:id="l287">Oui, si ma tante l’ordonne... mais vous oubliez qu’elle vous attend.</l>
-          </sp>
-          <sp who="prosper" xml:id="13-15">
-            <speaker>PROSPER.</speaker>
-            <l n="288" xml:id="l288">Ah ! laissez-moi prolonger des instants aussi doux... songez donc que, dès que nous serons dans les procès et les affaires... Et dites-moi, savez-vous où votre tante compte aller ce soir ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="13-16">
-            <speaker>ERNESTINE.</speaker>
-            <l n="289" xml:id="l289">Mais pas autre part qu’ici, du moins je le pense... à Versailles, ce n’est pas comme à Paris, on a l’habitude de souper...</l>
-          </sp>
-          <sp who="prosper" xml:id="13-17">
-            <speaker>PROSPER, <em>vivement.</em></speaker>
-            <l n="290" xml:id="l290">Et elle comptait peut-être souper ici ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="13-18">
-            <speaker>ERNESTINE, <em>froidement.</em></speaker>
-            <l n="291" xml:id="l291">Mais probablement.</l>
-          </sp>
-          <sp who="prosper" xml:id="13-19">
-            <speaker>PROSPER.</speaker>
-            <l n="292" xml:id="l292">Ah ! que c’est heureux !</l>
-            <stage><hi rend="italic"><em>À Ernestine.</em></hi></stage>
-            <l n="294" xml:id="l294">Combien je suis flatté !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="296" xml:id="l296">Par exemple ! elle joue de bonheur : tomber sur un jour où le traiteur me fait crédit, justement, un repas superbe.</l>
-            <stage><hi rend="italic"><em>Se frappant la tête.</em></hi></stage>
-            <l n="298" xml:id="l298">Ah ! mon Dieu ! et les deux ou trois mauvais sujets que j’ai fait inviter... Il est temps encore... Je cours donner contre-ordre.</l>
-            <stage><hi rend="italic"><em>À Ernestine.</em></hi></stage>
-            <l n="300" xml:id="l300">Mademoiselle, croyez certainement... la joie... l’ivresse... je suis le plus heureux des hommes. Mais daignez prier madame votre tante d’excuser mon impolitesse... dans un instant je suis à vous... je suis à elle... c’est l’affaire d’une minute...</l>
-            <stage><hi rend="italic"><em>Il prend son chapeau, et sort précipitamment.</em></hi></stage>
-            <l n="302" xml:id="l302"> </l>
-            <l n="303" xml:id="l303"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="304" xml:id="l304"> </l>
-          <sp who="ernestine" xml:id="14-1">
-            <speaker>ERNESTINE, <em>puis</em> MADAME DUBOCAGE</speaker>
-            <l n="305" xml:id="l305"> </l>
-          </sp>
-          <sp who="ernestine" xml:id="14-2">
-            <speaker>ERNESTINE.</speaker>
-            <l n="306" xml:id="l306">Eh bien ! qu’y a-t-il donc ?... et d’où vient ce départ subit ?</l>
-            <stage><hi rend="italic"><em>Appelant à la porte de la chambre.</em></hi></stage>
-            <l n="308" xml:id="l308">Ma tante... ma tante, arrivez donc ! vous ne savez pas... ce monsieur dont vous m’avez parlé...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-3">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="309" xml:id="l309">Eh bien !</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-4">
-            <speaker>ERNESTINE.</speaker>
-            <l n="310" xml:id="l310">Il sort d’ici.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-5">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="311" xml:id="l311">Sans demander à me voir ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-6">
-            <speaker>ERNESTINE.</speaker>
-            <l n="312" xml:id="l312">Si, vraiment !... mais je crois qu’il a la tête là... un peu... comment vous dirai-je ?</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-7">
-            <speaker>MADAME DUBOCAGE, <em>sévèrement.</em></speaker>
-            <l n="313" xml:id="l313">Qu’est-ce que c’est, mademoiselle ? que prétendez-vous dire de sa tête ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-8">
-            <speaker>ERNESTINE.</speaker>
-            <l n="314" xml:id="l314">Dame ! il venait de causer avec moi d’une manière certainement très raisonnable... et quand je lui ai dit que probablement vous souperiez ici... il a pris son chapeau et est sorti comme un fou, en criant qu’il allait revenir...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-9">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="315" xml:id="l315">Il avait sans doute oublié quelque chose... mais à cela près, comment le trouvez-vous ?...</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-10">
-            <speaker>ERNESTINE.</speaker>
-            <l n="316" xml:id="l316">Oh ! ma tante... je n’ose pas vous dire... je l’ai trouvé plus galant et plus aimable que jamais.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-11">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="317" xml:id="l317">Comment ! plus aimable que jamais ?... Vous avez donc eu déjà des preuves de son amabilité ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-12">
-            <speaker>ERNESTINE.</speaker>
-            <l n="318" xml:id="l318">Mais oui... ma tante... C’est que, si je vous dis ce qui en est, vous allez vous fâcher.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-13">
-            <speaker>MADAME DUBOCAGE, <em>à part.</em></speaker>
-            <l n="319" xml:id="l319">Ah ! mon Dieu ! il me prend une palpitation...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="321" xml:id="l321">Parlez, mademoiselle, parlez ! vous voyez bien que je vous écoute...</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-14">
-            <speaker>ERNESTINE.</speaker>
-            <l n="322" xml:id="l322">Mais vous auriez bien tort de croire que c’est une inclination suspecte ; car il m’a dit qu’il me trouvait charmante et qu’il m’aimait.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-15">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="323" xml:id="l323">Qu’il vous aimait ?</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="325" xml:id="l325">Ah ! monsieur Dubocage !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="327" xml:id="l327">Mais comment est-il possible... que vous, qu’il connaît à peine ?...</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-16">
-            <speaker>ERNESTINE.</speaker>
-            <l n="328" xml:id="l328">Mais du tout... puisque c’est lui...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-17">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="329" xml:id="l329">Comment, lui !...</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-18">
-            <speaker>ERNESTINE.</speaker>
-            <l n="330" xml:id="l330">Eh bien ! oui... lui, dont je vous parlais tantôt... c’est à Versailles que cela a commencé.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-19">
-            <speaker>MADAME DUBOCAGE, <em>à part.</em></speaker>
-            <l n="331" xml:id="l331">Voilà donc pourquoi il y venait si souvent et incognito !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="333" xml:id="l333">Et c’est là qu’il vous faisait les yeux doux ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-20">
-            <speaker>ERNESTINE.</speaker>
-            <l n="334" xml:id="l334">Oui, quand vous ne regardiez pas...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-21">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="335" xml:id="l335">Laissez-moi, mademoiselle !</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-22">
-            <speaker>ERNESTINE.</speaker>
-            <l n="336" xml:id="l336">Eh ! mon Dieu ! qu’avez-vous ?</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="14-23">
-            <speaker>MADAME DUBOCAGE, <em>avec dignité.</em></speaker>
-            <l n="337" xml:id="l337">Laissez-moi, mademoiselle, laissez-moi ! et rentrez dans votre chambre.</l>
-          </sp>
-          <sp who="ernestine" xml:id="14-24">
-            <speaker>ERNESTINE.</speaker>
-            <l n="338" xml:id="l338">Oh ! je m’en vais... Mais il reviendra, n’est-ce pas ?... vous me le promettez...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="340" xml:id="l340">Par exemple, je ne sais pas ce qu’a ma tante.</l>
-            <stage><hi rend="italic"><em>Elle rentre.</em></hi></stage>
-            <l n="342" xml:id="l342"> </l>
-            <l n="343" xml:id="l343"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="344" xml:id="l344"> </l>
-          <sp who="madame-dubocage" xml:id="15-1">
-            <speaker>MADAME DUBOCAGE, <em>seule</em></speaker>
-            <l n="345" xml:id="l345"> </l>
-            <l n="346" xml:id="l346">Je vous le demande ! à qui se fier ?... qui aurait jamais cru que M. Dubocage, un homme respectable... un président... lui, dont j’aurais répondu comme de moi... je ne puis croire encore... Hein ! qui sonne là ?</l>
-            <l n="347" xml:id="l347"> </l>
-            <l n="348" xml:id="l348"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="349" xml:id="l349"> </l>
-          <sp who="guillemain" xml:id="16-1">
-            <speaker>MADAME DUBOCAGE, GUILLEMAIN, PLUSIEURS GARÇONS TRAITEURS</speaker>
-            <l n="350" xml:id="l350"> </l>
-          </sp>
-          <sp who="guillemain" xml:id="16-2">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="351" xml:id="l351">Mille pardons, madame...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="353" xml:id="l353">Il paraît que c’est une nouvelle...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="355" xml:id="l355">Je vois... je vois qu’en l’absence de monsieur, c’est vous qui êtes la maîtresse de céans.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="357" xml:id="l357">Par exemple, il a là un drôle de goût.</l>
-          </sp>
-          <sp who="madame-bubocage" xml:id="16-3">
-            <speaker>MADAME BUBOCAGE.</speaker>
-            <l n="358" xml:id="l358">Oui, monsieur... finissons : qu’y a-t-il pour votre service ?</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-4">
-            <speaker>GUILLEMAIN, <em>à part.</em></speaker>
-            <l n="359" xml:id="l359">Diable ! celle-là n’est pas de bonne humeur...</l>
-            <stage><hi rend="italic"><em>Aux garçons.</em></hi></stage>
-            <l n="361" xml:id="l361">Dépêchez-vous, vous autres, et disposez là le souper que monsieur a commandé.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-5">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="362" xml:id="l362">Comment ! il a commandé...</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-6">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="363" xml:id="l363">Oui, un petit repas... pour lui et deux ou trois de ses amis... et je devine sans peine qui doit en faire les honneurs.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-7">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="364" xml:id="l364">Deux ou trois de ses amis à une pareille heure ?... mais c’est d’une indiscrétion... Mais êtes-vous bien sûr ?...</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-8">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="365" xml:id="l365">C’est M. Prosper qui m’a dit lui-même...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-9">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="366" xml:id="l366">M. Prosper... vous voulez dire M. Dubocage.</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-10">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="367" xml:id="l367">Est-ce Dubocage ? je le veux bien... le mois dernier il s’appelait Belval : Prosper ou Dubocage, le nom ne fait rien à la chose.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-11">
-            <speaker>MADAME DUBOCAGE, <em>à part.</em></speaker>
-            <l n="368" xml:id="l368">Qu’est-ce que j’apprends là ?...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="370" xml:id="l370">Comment ! dès le mois dernier il occupait cet appartement sous un nom supposé ?</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-12">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="371" xml:id="l371">Le mois dernier... parbleu ! en voilà plus de six que monsieur l’a loué.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-13">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="372" xml:id="l372">Comment !...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="374" xml:id="l374">Mais au fait il vaut mieux se taire et confondre le perfide...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="376" xml:id="l376">Et sans doute il recevait des visites ?</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-14">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="377" xml:id="l377">Beaucoup, c’est un homme très répandu.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-15">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <stage><hi rend="italic"><em>Air : Ces postillons sont d’une maladresse.</em></hi></stage>
-          <stage>GUILLEMAIN.</stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-16">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="379" xml:id="l379">Au surplus, cela ne nous regarde pas, pourvu que nos fournitures soient payées.</l>
-          <stage>GUILLEMAIN.</stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-17">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="380" xml:id="l380">Monsieur est...</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-18">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="381" xml:id="l381">Dans le commerce, madame ; je lui prête de l’argent.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-19">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="382" xml:id="l382">Est-ce qu’il en a besoin ?</l>
-          </sp>
-          <sp who="guillemain" xml:id="16-20">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="383" xml:id="l383">Souvent ; mais il paraît qu’il veut se ranger ; et cela ne m’étonne pas, depuis que j’ai vu madame... il n’a jamais fait un choix plus sage, plus raisonnable ; et cela annonce une maturité de raisonnement dont je ne l’aurais jamais cru capable.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="16-21">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="384" xml:id="l384">C’est bon... sortez.</l>
-            <stage><hi rend="italic"><em>Guillemain et les garçons traiteurs sortent.</em></hi></stage>
-            <l n="386" xml:id="l386"> </l>
-            <l n="387" xml:id="l387"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="388" xml:id="l388"> </l>
-          <sp who="madame-dubocage" xml:id="17-1">
-            <speaker>MADAME DUBOCAGE, <em>seule</em></speaker>
-            <l n="389" xml:id="l389"> </l>
-            <l n="390" xml:id="l390">Allons ! il n’y a plus de doute...</l>
-            <stage><hi rend="italic"><em>Air : De sommeiller encor, ma chère. (Fanchon la vielleuse.)</em></hi></stage>
-            <l n="392" xml:id="l392">Allons tout confier à ma nièce... lui dire que le perfide qui voulait la séduire est mon mari, et nous préparer toutes les deux à le traiter comme il le mérite.</l>
-            <stage><hi rend="italic"><em>Elle emporte un des flambeaux qui sont sur la table et sort par l’appartement à droite : il fait nuit.</em></hi></stage>
-            <l n="394" xml:id="l394"> </l>
-            <l n="395" xml:id="l395"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="396" xml:id="l396"> </l>
-          <sp who="prosper" xml:id="18-1">
-            <speaker>PROSPER, <em>tenant</em> M. DUBOCAGE <em>par la main</em></speaker>
-            <l n="397" xml:id="l397"> </l>
-            <stage><hi rend="italic"><em>M. Dubocage est sans chapeau et un peu en désordre. </em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="18-2">
-            <speaker>PROSPER.</speaker>
-            <l n="399" xml:id="l399">Ne craignez rien, monsieur, et suivez-moi. On n’y voit goutte, mais je connais si bien l’escalier !</l>
-          </sp>
-          <sp who="m" xml:id="18-3">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="400" xml:id="l400">Ma foi, monsieur, je vous remercie ; je m’étais égaré dans ces rues que je ne connais pas ; et sans vous, ces deux coquins m’auraient fait un mauvais parti ; j’avais beau crier...</l>
-          </sp>
-          <sp who="prosper" xml:id="18-4">
-            <speaker>PROSPER.</speaker>
-            <l n="401" xml:id="l401">Oui, c’est un avantage du quartier : à neuf heures, tout le monde est endormi ; seulement nous avons quelques personnes qui se couchent un peu tard, et qui s’amusent à vous demander la bourse ; par exemple, ils ne se sont jamais adressés à moi ; il faut qu’ils me connaissent.</l>
-          </sp>
-          <sp who="m" xml:id="18-5">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="402" xml:id="l402">Puis-je demander où je suis ?</l>
-          </sp>
-          <sp who="prosper" xml:id="18-6">
-            <speaker>PROSPER.</speaker>
-            <l n="403" xml:id="l403">Chez moi, monsieur. Je vous disais bien que, par ma petite porte, et en traversant le jardin, nous serions arrivés tout de suite.</l>
-          </sp>
-          <sp who="m" xml:id="18-7">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="404" xml:id="l404">Et à qui dois-je cet important service ?</l>
-          </sp>
-          <sp who="prosper" xml:id="18-8">
-            <speaker>PROSPER.</speaker>
-            <l n="405" xml:id="l405">À M. Prosper, étudiant en droit.</l>
-          </sp>
-          <sp who="m" xml:id="18-9">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="406" xml:id="l406">Diable ! vous êtes un peu loin de l’école.</l>
-          </sp>
-          <sp who="prosper" xml:id="18-10">
-            <speaker>PROSPER.</speaker>
-            <l n="407" xml:id="l407">Ça m’est égal, je n’y vais jamais ; mais je vous demande mille pardons de vous laisser dans l’obscurité, je cherche mon briquet phosphorique.</l>
-          </sp>
-          <sp who="m" xml:id="18-11">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="408" xml:id="l408">Ne vous inquiétez pas, je vais trouver un siège.</l>
-            <stage><hi rend="italic"><em>En se reculant il rencontre la table.</em></hi></stage>
-            <l n="410" xml:id="l410">Eh ! mon Dieu ! qu’est-ce que je sens là ? c’est un couvert qui est tout dressé.</l>
-          </sp>
-          <sp who="prosper" xml:id="18-12">
-            <speaker>PROSPER.</speaker>
-            <l n="411" xml:id="l411">Ah ! ah ! ils ont servi ; parbleu ! monsieur, j’espère que vous me ferez l’honneur de partager... Ah ! voilà mon briquet.</l>
-          </sp>
-          <sp who="m" xml:id="18-13">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="412" xml:id="l412">Ma foi, avec plaisir ; à cette heure-ci, on ne m’attendra pas.</l>
-          </sp>
-          <sp who="prosper" xml:id="18-14">
-            <speaker>PROSPER, <em>brisant plusieurs allumettes.</em></speaker>
-            <l n="413" xml:id="l413">C’est-à-dire, je vous invite, là, comme un étourdi... j’oubliais de vous dire que j’ai des dames ; elles sont là à côté ; parce que vous entendez bien qu’un garçon...</l>
-          </sp>
-          <sp who="m" xml:id="18-15">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="414" xml:id="l414">C’est trop juste.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="416" xml:id="l416">Allons, me voilà en partie fine.</l>
-          </sp>
-          <sp who="prosper" xml:id="18-16">
-            <speaker>PROSPER.</speaker>
-            <l n="417" xml:id="l417">Mais il faut que je leur demande la permission de leur présenter un étranger.</l>
-          </sp>
-          <sp who="m" xml:id="18-17">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="418" xml:id="l418">Comment donc ! je serais désolé de vous gêner ; je passerai dans un autre appartement, et traitez-moi en garçon.</l>
-          </sp>
-          <sp who="prosper" xml:id="18-18">
-            <speaker>PROSPER, <em>allumant les bougies.</em></speaker>
-            <l n="419" xml:id="l419">Du tout, je suis sûr que ces dames seront enchantées d’avoir un pareil convive.</l>
-          </sp>
-          <sp who="m" xml:id="18-19">
-            <speaker>M. DUBOCAGE, <em>qui a regardé autour de lui.</em></speaker>
-            <l n="420" xml:id="l420">Ah ! mon Dieu !</l>
-          </sp>
-          <sp who="prosper" xml:id="18-20">
-            <speaker>PROSPER.</speaker>
-            <l n="421" xml:id="l421">Eh bien ! qu’est-ce que vous avez donc ?</l>
-          </sp>
-          <sp who="m" xml:id="18-21">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="422" xml:id="l422">Rien : c’est l’éclat subit de la lumière.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="424" xml:id="l424">Je ne me trompe pas...</l>
-          </sp>
-          <sp who="prosper" xml:id="18-22">
-            <speaker>PROSPER.</speaker>
-            <l n="425" xml:id="l425">Eh bien ! vous ne vous asseyez pas ? Vous avez tort ; mettez-vous à votre aise.</l>
-            <stage><hi rend="italic"><em>Il ôte son chapeau, son habit et met une redingote.</em></hi></stage>
-          </sp>
-          <sp who="m" xml:id="18-23">
-            <speaker>M. DUBOCAGE, <em>à part.</em></speaker>
-            <l n="427" xml:id="l427">Il est tout à fait chez lui. Morbleu ! qu’est-ce que cela signifie ?</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="429" xml:id="l429">Comment, monsieur, c’est ici votre appartement ?</l>
-          </sp>
-          <sp who="prosper" xml:id="18-24">
-            <speaker>PROSPER.</speaker>
-            <l n="430" xml:id="l430">Comme vous voyez.</l>
-          </sp>
-          <sp who="m" xml:id="18-25">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="431" xml:id="l431">Et c’est ici que vous allez passer la nuit ?</l>
-          </sp>
-          <sp who="prosper" xml:id="18-26">
-            <speaker>PROSPER.</speaker>
-            <l n="432" xml:id="l432">Apparemment, je n’ai pas envie d’aller coucher à la belle étoile, en héros espagnol... Eh bien ! qu’avez-vous donc ? vous changez de couleur !</l>
-          </sp>
-          <sp who="m" xml:id="18-27">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="433" xml:id="l433">Je vous avoue que l’émotion, la surprise...</l>
-          </sp>
-          <sp who="prosper" xml:id="18-28">
-            <speaker>PROSPER.</speaker>
-            <l n="434" xml:id="l434">Bah ! vous allez vous remettre en soupant.</l>
-          </sp>
-          <sp who="m" xml:id="18-29">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="435" xml:id="l435">Ah ! sans doute... mais ces dames dont vous parliez tout à l’heure ?</l>
-          </sp>
-          <sp who="prosper" xml:id="18-30">
-            <speaker>PROSPER.</speaker>
-            <l n="436" xml:id="l436">Elles arrivent de province, de Versailles, c’est tout comme ; vous en serez content.</l>
-          </sp>
-          <sp who="m" xml:id="18-31">
-            <speaker>M. DUBOCAGE, <em>à part.</em></speaker>
-            <l n="437" xml:id="l437">Non : j’avais tort d’être jaloux ; mais, morbleu !...</l>
-            <stage><hi rend="italic"><em>Se reprenant.</em></hi></stage>
-            <l n="439" xml:id="l439">Et, sans doute, ces dames vous voient d’assez bon œil ?</l>
-          </sp>
-          <sp who="prosper" xml:id="18-32">
-            <speaker>PROSPER.</speaker>
-            <l n="440" xml:id="l440">Vous sentez bien que là-dessus, je ne peux pas vous dire... mais, modestie à part, je ne me crois pas mal avec elles. Tenez, je les entends, et si vous voulez avoir la bonté d’attendre un instant, je vais demander la permission de vous présenter.</l>
-            <stage><hi rend="italic"><em>Regardant autour de lui.</em></hi></stage>
-            <l n="442" xml:id="l442">C’est que je n’ai ni salon ni antichambre.</l>
-          </sp>
-          <sp who="m" xml:id="18-33">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="443" xml:id="l443">Eh ! parbleu ! ce cabinet...</l>
-            <stage><hi rend="italic"><em>Montrant la porte qui fait face au public et qui a une lucarne avec un rideau de taffetas.</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="18-34">
-            <speaker>PROSPER.</speaker>
-            <l n="445" xml:id="l445">Je vous demande mille pardons.</l>
-            <stage><hi rend="italic"><em>M. Dubocage entre dans le cabinet.</em></hi></stage>
-            <l n="447" xml:id="l447"> </l>
-            <l n="448" xml:id="l448"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="449" xml:id="l449"> </l>
-          <sp who="ernestine" xml:id="19-1">
-            <speaker>PROSPER, ERNESTINE, DUBOGAGE, <em>dans le cabinet</em></speaker>
-            <l n="450" xml:id="l450"> </l>
-          </sp>
-          <sp who="prosper" xml:id="19-2">
-            <speaker>PROSPER.</speaker>
-            <l n="451" xml:id="l451">Eh bien ! madame votre tante a-t-elle eu la bonté de m’excuser ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="19-3">
-            <speaker>ERNESTINE, <em>très froidement et très sévèrement.</em></speaker>
-            <l n="452" xml:id="l452">Oui, monsieur, elle vous attend pour vous parler.</l>
-          </sp>
-          <sp who="prosper" xml:id="19-4">
-            <speaker>PROSPER.</speaker>
-            <l n="453" xml:id="l453">Ah ! mon Dieu ! quel air froid et solennel !</l>
-          </sp>
-          <sp who="ernestine" xml:id="19-5">
-            <speaker>ERNESTINE.</speaker>
-            <l n="454" xml:id="l454">C’est le seul qui me convienne, monsieur ; ma tante m’a chargée, en outre, de vous dire qu’elle était indisposée, et qu’elle vous priait qu’on voulût bien souper dans l’autre pièce, au coin du feu.</l>
-          </sp>
-          <sp who="m" xml:id="19-6">
-            <speaker>M. DUBOGAGE, <em>toussant.</em></speaker>
-            <l n="455" xml:id="l455">Hum ! hum !</l>
-          </sp>
-          <sp who="prosper" xml:id="19-7">
-            <speaker>PROSPER.</speaker>
-            <l n="456" xml:id="l456">Je suis à vos ordres ; mais daignez m’expliquer d’où vient le changement que je remarque dans vos manières ? moi qui comptais que nous allions faire un repas charmant, et qui voulais vous demander la permission d’amener un ami !</l>
-          </sp>
-          <sp who="ernestine" xml:id="19-8">
-            <speaker>ERNESTINE.</speaker>
-            <l n="457" xml:id="l457">Justement ma tante ne veut recevoir personne que vous, monsieur.</l>
-          </sp>
-          <sp who="m" xml:id="19-9">
-            <speaker>M. DUBOGAGE, <em>toussant.</em></speaker>
-            <l n="458" xml:id="l458">Hum ! hum !</l>
-          </sp>
-          <sp who="prosper" xml:id="19-10">
-            <speaker>PROSPER.</speaker>
-            <l n="459" xml:id="l459">Ah ! diable ! je suis désolé.</l>
-          </sp>
-          <sp who="ernestine" xml:id="19-11">
-            <speaker>ERNESTINE.</speaker>
-            <l n="460" xml:id="l460">Elle vous prie de congédier les deux ou trois amis que vous avez eu la délicatesse d’inviter.</l>
-          </sp>
-          <sp who="prosper" xml:id="19-12">
-            <speaker>PROSPER.</speaker>
-            <l n="461" xml:id="l461">Ah ! mon Dieu ! n’est-ce que cela qui vous fâche ?</l>
-          </sp>
-          <sp who="ernestine" xml:id="19-13">
-            <speaker>ERNESTINE.</speaker>
-            <l n="462" xml:id="l462">Je sais tout, ma tante m’a tout confié, jusqu’aux liens qui vous unissent.</l>
-          </sp>
-          <sp who="m" xml:id="19-14">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="463" xml:id="l463">Morbleu !</l>
-          </sp>
-          <sp who="prosper" xml:id="19-15">
-            <speaker>PROSPER.</speaker>
-            <l n="464" xml:id="l464">Les liens qui m’unissent à elle !... Il y a ici quelque méprise que je veux éclaircir, et je vole auprès d’elle.</l>
-          </sp>
-          <sp who="m" xml:id="19-16">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="465" xml:id="l465">Ah ! c’en est trop !... Monsieur, vous m’avez enfermé.</l>
-          </sp>
-          <sp who="prosper" xml:id="19-17">
-            <speaker>PROSPER, <em>allant au fond et criant.</em></speaker>
-            <l n="466" xml:id="l466">C’est sans le vouloir ; attendez un instant, je suis à vous.</l>
-          </sp>
-          <sp who="m" xml:id="19-18">
-            <speaker>M. DUBOCAGE, <em>frappant à la porte.</em></speaker>
-            <stage><hi rend="italic"><em>Air du Château de mon oncle.</em></hi></stage>
-            <l n="468" xml:id="l468"> </l>
-            <l n="469" xml:id="l469"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="20">
-          <head>Scène XX</head>
-            <l n="470" xml:id="l470"> </l>
-          <sp who="ernestine" xml:id="20-1">
-            <speaker>PROSPER, ERNESTINE, DUBOGAGE, <em>dans le cabinet</em>, MADAME DUBOCAGE, <em>entrant d’un côté</em>, HUBERT, GUILLEMAIN, <em>et</em> LES CRÉANCIERS, <em>entrant de l’autre</em></speaker>
-            <l n="471" xml:id="l471"> </l>
-            <stage><hi rend="italic"><em>Suite de l’air. </em></hi></stage>
-          <stage>MADAME DUBOCAGE, HUBERT, GUILLEMAIN.</stage>
-          </sp>
-          <sp who="m" xml:id="20-2">
-            <speaker>M. DUBOCAGE, <em>par la lucarne.</em></speaker>
-            <stage><hi rend="italic"><em>Ensemble. </em></hi></stage>
-          <stage>MADAME DUBOCAGE.</stage>
-          </sp>
-          <sp who="m" xml:id="20-3">
-            <speaker>M. DUBOCAGE.</speaker>
-            <stage><hi rend="italic"><em>Pendant le refrain on a été ouvrir à M. Dubocage.</em></hi></stage>
-          <stage>ERNESTINE.</stage>
-          </sp>
-          <sp who="m" xml:id="20-4">
-            <speaker>M. DUBOCAGE.</speaker>
-            <stage><hi rend="italic"><em>Deuxième reprise de l’air. </em></hi></stage>
-          <stage>GUILLEMAIN, PROSPER, MADAME DUBOCAGE, HUBERT, ERNESTINE.</stage>
-          </sp>
-          <sp who="m" xml:id="20-5">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="476" xml:id="l476">Vous voyez toute l’injustice de vos soupçons, et pour vous prouver que je n’eus jamais de coupables projets sur madame, si elle me permet d’aspirer à la main de son aimable nièce, vous pouvez vous informer de M. Prosper Saint-Elme, jeune avocat, ou peu s’en faut : une famille distinguée, des espérances superbes, une conduite irréprochable.</l>
-          <stage>PROSPER.</stage>
-          </sp>
-          <sp who="hubert" xml:id="20-6">
-            <speaker>M. DUBOCAGE, PROSPER, <em>prenant tous deux Hubert au collet.</em></speaker>
-            <l n="477" xml:id="l477">Saint-Elme... comment ! vous seriez M. Saint-Elme, de Marseille, le fils du négociant ?</l>
-          <stage>HUBERT.</stage>
-          </sp>
-          <sp who="prosper" xml:id="20-7">
-            <speaker>M. DUBOCAGE <em>et</em> PROSPER.</speaker>
-            <l n="478" xml:id="l478">Ah ! ma tante, celui dont vous me parliez ce matin...</l>
-          <stage>TOUS.</stage>
-          </sp>
-          <sp who="prosper" xml:id="20-8">
-            <speaker>PROSPER <em>et</em> M. DUBOCAGE, <em>se faisant des politesses.</em></speaker>
-            <l n="479" xml:id="l479">C’est monsieur sur qui vous m’avez chargé de prendre des informations ?</l>
-          <stage>PROSPER, <em>à M. Dubocage.</em></stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="20-9">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="480" xml:id="l480">J’ose espérer qu’elles seront à mon avantage, et que ma sagesse, ma raison...</l>
-          <stage>ERNESTINE.</stage>
-          </sp>
-          <sp who="m" xml:id="20-10">
-            <speaker>M. DUBOCAGE, <em>à sa femme.</em></speaker>
-            <l n="481" xml:id="l481">Un instant... Prosper, c’est lui dont monsieur...</l>
-          <stage>PROSPER.</stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="20-11">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <stage><hi rend="italic"><em>Montrant Guillemain.</em></hi></stage>
-            <l n="483" xml:id="l483">me parlait tout à l’heure : des créanciers, des dettes...</l>
-          </sp>
-          <sp who="prosper" xml:id="20-12">
-            <speaker>PROSPER.</speaker>
-            <l n="484" xml:id="l484">Moi ! des créanciers, des dettes ?... c’est ainsi que la vertu est toujours calomniée ; voyez plutôt.</l>
-            <stage><hi rend="italic"><em>Lui donnant des quittances.</em></hi></stage>
-          </sp>
-          <sp who="madame-dubocage" xml:id="20-13">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="486" xml:id="l486">Comment ! il serait possible...</l>
-            <stage><hi rend="italic"><em>Regardant les quittances. À Guillemain.</em></hi></stage>
-            <l n="488" xml:id="l488">Est-ce bien là, monsieur, votre signature ?</l>
-          </sp>
-          <sp who="guillemain" xml:id="20-14">
-            <speaker>GUILLEMAIN.</speaker>
-            <l n="489" xml:id="l489">Oui, madame, nous avons trouvé ce matin, dans le secrétaire de monsieur, de quoi solder nos créances.</l>
-          </sp>
-          <sp who="m" xml:id="20-15">
-            <speaker>M. DUBOCAGE.</speaker>
-            <l n="490" xml:id="l490">Comment ! dans ce secrétaire ; parbleu ! je le crois bien, c’est moi qui avais mis...</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="20-16">
-            <speaker>MADAME DUBOCAGE, <em>à part.</em></speaker>
-            <l n="491" xml:id="l491">Mes quinze cents francs !</l>
-          </sp>
-          <sp who="prosper" xml:id="20-17">
-            <speaker>PROSPER, <em>avec transport.</em></speaker>
-            <l n="492" xml:id="l492">C’était une méprise,</l>
-            <stage><hi rend="italic"><em>À M. Dubocage.</em></hi></stage>
-            <l n="494" xml:id="l494">mais... je suis enchanté de vous avoir pour créancier.</l>
-          </sp>
-          <sp who="madame-dubocage" xml:id="20-18">
-            <speaker>MADAME DUBOCAGE.</speaker>
-            <l n="495" xml:id="l495">Du tout, monsieur, les quinze cents francs m’appartenaient.</l>
-          </sp>
-          <sp who="prosper" xml:id="20-19">
-            <speaker>PROSPER.</speaker>
-            <l n="496" xml:id="l496">Comment ! c’est à vous, madame ? quelle bonté, quelle générosité ! marier votre nièce, et lui donner un présent de noces.</l>
-            <stage><hi rend="italic"><em>Froidement aux créanciers.</em></hi></stage>
-            <l n="498" xml:id="l498">N’importe, messieurs, je ne m’en dédis pas : j’emploie les cadeaux qu’on me l’ait à payer mes dettes.</l>
-            <stage><hi rend="italic"><em>À monsieur et madame Dubocage.</em></hi></stage>
-            <l n="500" xml:id="l500">J’espère qu’un pareil exemple de sagesse doit vous rassurer pour l’avenir.</l>
-            <stage><hi rend="italic"><em>Air : J’en guette un petit de mon âge. (Les Scythes et les Amazones.)</em></hi></stage>
-          </sp>
-          <sp who="ernestine" xml:id="20-20">
-            <speaker>ERNESTINE, <em>au public.</em></speaker>
-            <l n="502" xml:id="l502"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#hubert">
+          <speaker>HUBERT, seul</speaker>
+          <l n="1">Ma foi, arrivera ce qu’il pourra, cette dame m’a toujours donné le denier à Dieu et la voilà installée. C’est agréable d’être à la fois propriétaire et portier de sa maison : on touche les loyers et l’on reçoit les pourboires ; il n’y a rien de perdu, quand on sait faire son état ; car ce n’est pas aisé.</l>
+          <stage>&lt;em&gt;Air du vaudeville de L’Avare et son Ami.&lt;/em&gt;</stage>
+          <l n="2">On croit que notre seul office</l>
+          <l n="3">Mais si M. Prosper revenait... son terme n’expire qu’après-demain ! et lui, qui est vif en diable... aussi pourquoi ne prévient-il pas ? on dit : Monsieur Hubert, je ne dois pas rentrer ; on glisse le pourboire au portier, et le propriétaire n’en sait rien. Mais point du tout ! Monsieur emporte la clef dans sa poche, et voilà huit jours de suite qu’il ne rentre pas ; quel scandale ! et tous les matins... drelin, drelin ; les créanciers, qui font aller la sonnette !... passe encore si c’était un artiste, on y est fait ; dans les maisons on sait bien que ça ne peut pas être autrement ; mais un étudiant en droit !...</l>
+          <stage>&lt;em&gt;On sonne.&lt;/em&gt;</stage>
+          <l n="4">Allons, qui est-ce qui vient là ? je suis sûr que c’est pour louer.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="5">N’est-ce pas ici madame Florbel ?</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="6">Madame Florbel ! ah ! oui, c’est le nom de cette dame qui vient de me donner le denier à Dieu : elle est là dans l’autre pièce avec sa nièce ou sa fille, une jeune personne...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="7">C’est bon, mon ami ; voulez-vous m’indiquer le portier ?</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="8">Voilà, monsieur.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="9">Ah ! c’est toi ; eh bien, mène-moi chez le propriétaire.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="10">Voilà, monsieur.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="11">Ah ! c’est vous !</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="12">Oui, monsieur ; une jolie propriété que j’ai là, le fruit de mes économies ; le pavillon que vous voyez, et une boutique qui en dépend, au coin du boulevard, rue du Pas-de-la-Mule, le cœur du Marais ; vous ne croiriez pas, monsieur, que cela rapporte huit cents francs de loyers et deux cent soixante francs d’impositions.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="13">Deux cent soixante !...</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="14">Oui, monsieur, je m’en vante ; quarante francs de plus, j’étais électeur ; mais j’espère bien me faire augmenter.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="15">Et le loyer de cet appartement ? car je viens vous payer le premier terme.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="16">Ah ! je comprends, monsieur loge aussi chez moi ?</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="17">Non, mon cher, je n’y logerai pas ; mais n’importe, c’est moi qui suis chargé...</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="18">Je comprends ; monsieur est...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="19">L’homme d’affaires de ces dames.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="20">Je comprends, vous dis-je ; je vous en fais mon compliment.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="21">Je peux hausser le loyer.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="22">Monsieur...</l>
+          <stage>&lt;em&gt;Air du vaudeville de Catinat à Saint-Gratien.&lt;/em&gt;</stage>
+          <l n="23">C’est six cents francs pour le loyer,</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="24">Comment ! six cents francs, ces deux pièces ?</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="25">C’est l’usage</l>
+          <l n="26">D’ailleurs, monsieur, toutes les convenances possibles ; deux entrées : l’une par le boulevard, et l’autre par une rue déserte ; une maison tranquille, des portiers fort honnêtes.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="27">Oui, je m’en aperçois. Allons, je paie d’avance le premier terme, cent soixante-deux francs cinquante centimes ; ces meubles-là en dépendent ?</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="28">Oui, monsieur, et vous pouvez être sûr que les soins, les attentions, la discrétion...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="29">C’est bon, je m’installe ici ; vous pouvez me laisser.</l>
+          <stage>&lt;em&gt;Hubert sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, seul</speaker>
+          <l n="30">Diable ! je n’aurais jamais cru qu’au Marais les loyers fussent si chers ! aussi je ne conçois pas ma femme, madame Dubocage, avec ses idées de mystère, d’incognito ; à Paris, on vous fait payer tout cela.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="31">Ah ! vous voilà donc enfin, madame !</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <stage>Oui, mais parlez plus bas. Il y a une heure que nous sommes arrivées de Versailles, par les &lt;em&gt;Parisiennes&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="32">Et vous n’avez pas versé ?</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="33">Mais non.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="34">Par exemple, c’est jouer de bonheur ! aussi je suis enchanté, ma chère amie.</l>
+          <stage>&lt;em&gt;Il veut lui baiser la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="35">Monsieur Dubocage, monsieur Dubocage, ma nièce est là ; et les convenances...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="36">Les convenances n’ont pas le sens commun ; vous êtes veuve, c’est fort bien ; vous jurez tout haut de ne jamais vous remarier... aussi qu’arrive-t-il cinq mois après ?...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="37">Cinq mois et demi, monsieur.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="38">Cinq mois et demi ! je le veux bien ; certaines raisons d’affaires, d’intérêt, et, si j’ose le dire, un peu d’inclination réciproque vous forcent à recevoir ma main. Eh bien ! morbleu ! depuis que vous êtes ma femme...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="39">Je vous ai dit, monsieur Dubocage, de ne jamais prononcer ce mot-là ; que voulez-vous que pense ma nièce ? que pense le monde, qui depuis longtemps connaît la rigidité de mes principes, et qui, vous le savez, n’est que trop disposé à se moquer des veuves trop pressées de se remarier ?... Attendez au moins l’année de rigueur, et alors...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="40">Et jusque-là, moi, faut-il que je sèche de jalousie ? car apprenez, madame, que lorsque vous étiez à Versailles, je n’y tenais pas, je ne dormais plus, pas même à l’audience.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="41">Je vous demande cependant quel sujet vous avez d’être jaloux ? Pour me rapprocher de vous, j’abandonne Versailles et ma cour, et me voilà installée au fond du Marais, sous un nom supposé, avec ma nièce.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="42">À la bonne heure ! mais cette petite Ernestine, qui ne vous quitte pas, c’est très incommode ; et il vaudrait mieux trouver quelque moyen pour qu’elle ne s’étonnât pas de mes visites.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="43">Soyez tranquille, je m’en charge ; mais c’était ma nièce, ma pupille, je ne pouvais pas m’en séparer ; et encore moins, à son âge, lui confier un secret de cette importance. D’ailleurs je n’étais pas tachée de l’éloigner de Versailles ; il y avait là quelque galant que je n’ai pu découvrir.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="44">Savez-vous ce qu’il faut faire ? il faut la marier.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="45">C’est bien mon intention ; on m’a même parlé du fils d’un négociant de Marseille, le jeune Saint-Elme, avocat très distingué ; le connaissez-vous ?</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="46">Le jeune Saint-Elme, avocat à Paris ? Non, je ne connais pas ; mais je vous promets de prendre des informations. Adieu, adieu. Je lâcherai, si mes affaires me le permettent, de revenir vous voir aujourd’hui ; c’est qu’il y a si loin du Marais au faubourg Saint-Germain ! je me perds toujours dans ce maudit quartier dont je ne connais pas une rue... Ah ! mon Dieu ! j’oubliais ;</l>
+          <stage>&lt;em&gt;Ouvrant le secrétaire.&lt;/em&gt;</stage>
+          <l n="47">vous aurez sans doute besoin d’argent, et je vous apportais là quelques rouleaux...</l>
+          <stage>&lt;em&gt;Il va pour les poser sur des papiers.&lt;/em&gt;</stage>
+          <l n="48">Qu’est-ce que c’est que cela ?</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <stage>« État de mes dettes : petits dîners particuliers au &lt;em&gt;Cadran bleu&lt;/em&gt; ; livres de droit, vingt-deux francs ; cachemires, six cents francs. » Et ce gros cahier ? « &lt;em&gt;Cicéron&lt;/em&gt;, tragédie en cinq actes et en vers, par un étudiant en droit... »</stage>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="49">Comment ! des vers ! qu’est-ce que ça signifie ?</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="50">N’allez-vous pas vous fâcher ! Ces papiers appartenaient sans doute à la personne qui habitait avant nous ce garni : et si j’osais risquer une comparaison...</l>
+          <stage>&lt;em&gt;Air : L’Amour a gagné sa cause.&lt;/em&gt;</stage>
+          <l n="51">Daignez me la permettre ici ;</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="52">Monsieur Dubocage !...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <stage>&lt;em&gt;Suite de l’air.&lt;/em&gt;</stage>
+          <l n="53">Ce cœur où l’on veut s’établir,</l>
+          <stage>&lt;em&gt;Tirant sa montre.&lt;/em&gt;</stage>
+          <l n="54">Déjà !</l>
+          <stage>&lt;em&gt;Air : Allons, donnez-moi.&lt;/em&gt;</stage>
+          <l n="55">Adieu, je reviens bientôt</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="56">Adieu, revenez bientôt ;</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="57">De l’hôtel des Américains,</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, tendrement.</speaker>
+          <l n="58">Quelle attention délicate !</l>
+          <stage>&lt;em&gt;Ensemble. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <stage>Adieu, je reviens bientôt, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <stage>Adieu, revenez, bientôt, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;M. Dubocage sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE, entrant.</speaker>
+          <l n="59">Eh ! mais, ma tante, vous me laissez bien seule, et je trouve ce quartier, cet appartement d’une tristesse !... j’aimais encore mieux Versailles.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="60">Je m’en doute bien ; vous croyez peut-être que je n’ai pas remarqué votre air rêveur, vos distractions ? Ce n’est pas moi que l’on trompe, mademoiselle ; je sais tout, et quoique je ne connaisse ni la personne, ni son nom, ni son état...</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="61">Eh ! mon Dieu, ma tante, ni moi non plus ; il m’a dit seulement qu’il était de Paris, qu’il venait pour moi à Versailles.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="62">Qu’est-ce que c’est que cela ? Une pareille inclination ne saurait être convenable. D’ailleurs j’ai d’autres projets sur vous : on nous a parlé du fils d’un ancien ami, M. de Saint-Elme, un avocat dont on dit beaucoup de bien, et qui... mais nous causerons de cela ; rentrons.</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="63">Comment ! ma tante, nous resterons donc ici toutes seules ?</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="64">Oui, mademoiselle ; est-ce que cela vous contrarie ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="65">Non, ma tante ; mais je pensais que vous alliez bien vous ennuyer... Et nous ne recevrons pas de visites ?</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="66">Personne, excepté cependant un monsieur qui, je crois, viendra même assez souvent.</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE, vivement.</speaker>
+          <l n="67">Un monsieur, jeune ?</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="68">Mais oui, jeune encore ; c’est lui qui est chargé de suivre mon procès, et il faudra que chaque jour il me rende compte.</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="69">J’y suis, un avoué ! Comme c’est gai, la société de ma tante ! un avoué tous les jours et un avocat en perspective.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="70">Quoi qu’il en soit, je vous engage à le recevoir de votre mieux.</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="71">Oui, ma tante.</l>
+          <stage>&lt;em&gt;Air : On m’avait vanté la guinguette. (Gilles en deuil.)&lt;/em&gt;</stage>
+          <l n="72">À vos ordres je vais souscrire,</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="73">C’est-à-dire</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="74">Allons, rentrez, ne vous déplaise,</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="75">Comment ! déjà ?</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="76">Je n’y peux penser à mon aise</l>
+          <stage>&lt;em&gt;Ensemble. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="77">À mes ordres il faut souscrire ;</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <stage>À vos ordres, je vais souscrire, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Elles rentrent toutes les deux dans la pièce à gauche. On entend le bruit d’une clef dans la serrure.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#prosper">
+          <speaker>PROSPER, seul, les bottes couvertes de poussière et une badine à la main</speaker>
+          <l n="78">Cet imbécile d’Hubert n’est jamais dans sa loge ! je n’aurais pas été fâché de prendre en montant mes lettres, mes journaux et mes assignations ; car je suis sûr qu’il y en a.</l>
+          <stage>&lt;em&gt;S’essuyant.&lt;/em&gt;</stage>
+          <l n="79">Ouf ! je n’en puis plus ; mais c’est égal, après huit jours d’absence, on n’est pas fâché de se retrouver chez soi ; j’aime mon appartement.</l>
+          <stage>&lt;em&gt;Air du vaudeville du Petit Courrier.&lt;/em&gt;</stage>
+          <l n="80">Oui, je préfère cet endroit</l>
+          <stage>&lt;em&gt;Il ôte son chapeau et défait sa cravate.&lt;/em&gt;</stage>
+          <stage>C’est charmant d’être garçon : on n’a de compte à rendre à personne ; il vous prend une idée de campagne, on met sa clef dans son gousset, une chemise dans sa poche, et l’on rentre dans son appartement sans que personne se soit aperçu de votre absence. Ma foi, je me suis amusé ; mon ami Derval est un homme de mérite, riche à millions, et toujours en dispute avec ses voisins. Si jamais je deviens avocat, c’est une connaissance à cultiver ; en outre un château superbe à quatre lieues de Paris, bals, spectacles, concerts et un parc qui donne sur les bois de Satory, et dans ces bois de Satory on fait souvent des rencontres... Je vous demande si ça n’est pas jouer de malheur : je vais passer huit jours à la campagne pour m’amuser, et je deviens amoureux d’une manière inquiétante ; car enfin, dans ma position, on ne peut pas trop demander une demoiselle en mariage : voilà trois ans que je suis à Paris pour faire mon droit et je n’ai encore pris que mes inscriptions ; mon père, d’après mes lettres, me croit déjà un avocat très occupé ; c’est une imprudence que j’ai faite, car depuis ce moment-là il ne m’envoie plus d’argent. Ça coûte cher une réputation, surtout une réputation usurpée ; et quand il saura qu’au lieu de faire mon droit, j’ai fait des dettes !... des dettes, les grands-parents n’ont que cela à vous dire. Eh bien ! qu’est-ce que ça prouve ? que j’ai du crédit ; ce qui doit nécessairement arriver, quand on a, comme moi, deux cordes à son arc : d’un côté mon état d’étudiant en droit, de l’autre ma tragédie de &lt;em&gt;Cicéron&lt;/em&gt; ! je ne crois pas qu’il y ait beaucoup de jeunes gens dans une plus belle passe.</stage>
+          <stage>&lt;em&gt;Air du Pot de Fleurs.&lt;/em&gt;</stage>
+          <l n="81">Suivant les élans du génie,</l>
+          <l n="82">Mais où diable vais-je dîner aujourd’hui ? car la route m’a donné un appétit !... Je suis venu à pied ; moi, je ne suis pas fier ; d’ailleurs quand on n’a pas de paquet,</l>
+          <stage>&lt;em&gt;Montrant son gousset.&lt;/em&gt;</stage>
+          <l n="83">rien sur soi, je ne vois pas la nécessité de prendre une voiture... Hein ? qu’est-ce qui vient là ?... Ah ! mon Dieu ! j’ai laissé la clef à la porte, et ce sera sans doute quelques-uns de ces messieurs, qui, informés de mon arrivée... aussi je m’étonnais bien de ne pas les voir encore.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="84">Eh ! Dieu me pardonne ! je crois que ce sont des vivres ?</l>
+        </sp>
+        <sp who="#le-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="85">Monsieur, voici un pâté de foies gras, et six bouteilles de vin de Pommard.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="86">Que tu apportes ici ?</l>
+        </sp>
+        <sp who="#un-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="87">Oui, monsieur.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="88">Ah çà, tu ne te trompes pas ?</l>
+        </sp>
+        <sp who="#un-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="89">Non, monsieur, rue du Pas-de-la-Mule, au second.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="90">D’où ça vient-il ?</l>
+        </sp>
+        <sp who="#un-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="91">Ça vient de l’hôtel des Américains.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="92">Et de quelle part ?</l>
+        </sp>
+        <sp who="#un-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="93">De la part de la personne que vous savez bien ; voilà tout ce qu’on m’a chargé de dire.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="94">Diable m’emporte si...</l>
+        </sp>
+        <sp who="#un-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="95">V’là ma commission faite, et on m’a même recommandé de ne rien accepter.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="96">Oh ! sois tranquille...</l>
+        </sp>
+        <sp who="#un-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="97">Mais c’est égal, si malgré cela...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="98">Non pas, non pas ; il faut remplir ses commissions à la lettre.</l>
+          <stage>&lt;em&gt;Air : Voulant par ses œuvres complètes. (Voltaire chez Ninon.)&lt;/em&gt;</stage>
+          <l n="99">Il faut suivre en tout la formule ;</l>
+          <stage>&lt;em&gt;Lui donnant une bouteille.&lt;/em&gt;</stage>
+          <l n="100">Mais, tiens, pour te dédommager,</l>
+        </sp>
+        <sp who="#un-commissionnaire">
+          <speaker>LE COMMISSIONNAIRE.</speaker>
+          <l n="101">Alors, monsieur, je vous salue bien.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#prosper">
+          <speaker>PROSPER, seul</speaker>
+          <stage>Cela ne pouvait arriver plus à propos... Eh ! j’y suis, c’est la femme de ce banquier pour qui j’ai fait des couplets de fête ; il faut être juste, ils ne valaient pas cela ; allons, je comptais dîner en ville ; mais, ma foi, quand on a son repas chez soi, cela dérange moins ; je travaillerai à mon autre tragédie de &lt;em&gt;Démosthène&lt;/em&gt;. Allons, allons, mettons le couvert.</stage>
+          <stage>&lt;em&gt;Il met le pâté et une bouteille de vin sur sa table, apporte du sel dans du papier et prend une tasse sur la cheminée à défaut de verre.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air du vaudeville de Turenne.&lt;/em&gt;</stage>
+          <l n="102">Mets succulents, ô divine ambroisie,</l>
+          <stage>&lt;em&gt;Flairant le pâté.&lt;/em&gt;</stage>
+          <l n="103">Il est aux truffes, je le sens.</l>
+          <stage>&lt;em&gt;On sonne.&lt;/em&gt;</stage>
+          <l n="104">Hein !...</l>
+          <stage>&lt;em&gt;Ouvrant la porte.&lt;/em&gt;</stage>
+          <l n="105">Est-ce encore du pommard ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#les-créanciers">
+          <speaker>LES CRÉANCIERS.</speaker>
+          <stage>&lt;em&gt;Air de La Cosaque.&lt;/em&gt;</stage>
+          <l n="106">Oui, sans façons,</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, à table.</speaker>
+          <l n="107">Sans façon, un verre ou deux ?</l>
+        </sp>
+        <sp who="#trois-créanciers">
+          <speaker>LES CRÉANCIERS.</speaker>
+          <stage>Oui, sans façons, &lt;em&gt;etc. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="108">Monsieur, il ne s’agit pas de cela, il faut nous payer.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="109">Oh ! je n’aime pas les criailleries, père Guillemain, arrangez cela avec ces messieurs, vous qui êtes le plus fort ; j’aime autant ne devoir qu’à un.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="110">Monsieur, monsieur ! point de mauvaises plaisanteries ; mes moments sont comptés.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="111">Eh bien ! votre argent ne l’est pas.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="112">Alors, monsieur, nous saisirons le mobilier.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <stage>Saisissez !... qu’est-ce que ça me fait ? je loge en garni, et l’on est obligé de me fournir ; mais, tenez, quand on a des affaires un peu embrouillées, il faut se décider à des sacrifices, et je vous abandonne ma tragédie de &lt;em&gt;Cicéron&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN, aux autres créanciers.</speaker>
+          <l n="113">Bah ! bah ! inventorions toujours ; d’abord, ouvrons le secrétaire.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, toujours mangeant.</speaker>
+          <l n="114">C’est là que vous le trouverez, un ouvrage sublime ! c’est de l’or en barre.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN, prenant le rouleau et avec surprise.</speaker>
+          <l n="115">C’est de l’or !</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS, regardant.</speaker>
+          <l n="116">De l’or !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, continuant de manger et sans se détourner.</speaker>
+          <l n="117">Eh ! oui, je vous le disais bien, et pourtant je vous le cède, je vous l’abandonne ; je suis sur que pour vous cela vaut mille écus, pour le moins.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="118">Pas tout à fait ; mais enfin, tel que cela est, nous nous en contenterons.</l>
+          <stage>&lt;em&gt;Bas aux autres créanciers.&lt;/em&gt;</stage>
+          <l n="119">Dites donc, vous autres, trois rouleaux, quinze cents francs, nous pouvons, sans y perdre, n’en prendre que moitié.</l>
+        </sp>
+        <sp who="#premier-créancier">
+          <speaker>PREMIER CRÉANCIER.</speaker>
+          <l n="120">Mais oui.</l>
+        </sp>
+        <sp who="#deuxième-créancier">
+          <speaker>DEUXIÈME CRÉANCIER.</speaker>
+          <l n="121">C’est aussi mon avis.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="122">C’est bon, c’est bon. Je suis charge par M. Prosper de régler les comptes.</l>
+        </sp>
+        <sp who="#trois-créanciers">
+          <speaker>LES CRÉANCIERS, ensemble, à Prosper.</speaker>
+          <l n="123">Monsieur, voici nos quittances.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="124">Voici la mienne aussi.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, les regardant.</speaker>
+          <l n="125">Comment ! il serait possible ? eh bien ! je ne l’aurais pas cru, et voilà un trait qui fait honneur au corps des usuriers.</l>
+          <stage>&lt;em&gt;Prenant les quittances.&lt;/em&gt;</stage>
+          <l n="126">Ah çà ! monsieur Guillemain, vous aimez donc la littérature ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="127">Mais dame ! monsieur, qu’est-ce que vous appelez la littérature ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="128">J’entends que vous êtes capable d’apprécier un pareil trésor.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="129">Parbleu ! je ne connais pas de meilleure valeur, quand les pièces sont bonnes.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="130">Excellente, celle-là, excellente, je vous en réponds ; c’était ma fortune ! mais heureusement, je ne suis pas encore épuisé ! et j’aurai longtemps des ressources de ce genre-là.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN, vivement.</speaker>
+          <l n="131">J’espère conserver la pratique de monsieur, et mes magasins...</l>
+        </sp>
+        <sp who="#premier-créancier">
+          <speaker>PREMIER CRÉANCIER.</speaker>
+          <l n="132">Mon restaurant...</l>
+        </sp>
+        <sp who="#deuxième-créancier">
+          <speaker>DEUXIÈME CRÉANCIER.</speaker>
+          <l n="133">Ma bourse...</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="134">Sont au service de monsieur.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="135">Ô Cicéron ! voilà de tes prodiges ! vois ces modernes Catilina confondus à ton aspect !</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="136">Catilina... vous êtes bien bon ; la vérité est que monsieur est toujours sûr de nous trouver.</l>
+          <stage>&lt;em&gt;Air : Le magistrat irréprochable. (Monsieur Guillaume.)&lt;/em&gt;</stage>
+          <l n="137">Je crois connaître un peu les hommes ;</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="138">Mes amis, j’accepte.</l>
+          <stage>&lt;em&gt;À Guillemain.&lt;/em&gt;</stage>
+          <l n="139">Il me faudra un habillement complet, plus une redingote très élégante, pour la ville, et une robe de chambre pour rester chez moi.</l>
+          <stage>&lt;em&gt;Au premier créancier.&lt;/em&gt;</stage>
+          <l n="140">Il me faudra aussi des meubles ; car je suis las de loger en garni.</l>
+          <stage>&lt;em&gt;Au deuxième.&lt;/em&gt;</stage>
+          <l n="141">Et vous...</l>
+          <stage>&lt;em&gt;Comme une idée qui lui vient.&lt;/em&gt;</stage>
+          <l n="142">parbleu ! il me faut ce soir le plus joli petit souper, des vins fins, une chère exquise, et qu’à neuf heures tout soit ici. Je veux inviter deux ou trois amis pour rire avec eux de l’aventure.</l>
+          <stage>&lt;em&gt;À Guillemain.&lt;/em&gt;</stage>
+          <l n="143">Tu passeras chez Saint-Charles, Ernest et les deux Senneville, leur dire que je les attends.</l>
+        </sp>
+        <sp who="#trois-créanciers">
+          <speaker>LES CRÉANCIERS, entourant Prosper.</speaker>
+          <stage>&lt;em&gt;Air connu.&lt;/em&gt;</stage>
+          <l n="144">Nous vous nourrirons,</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="145">Ah ! père Guillemain !</l>
+          <stage>&lt;em&gt;Les créanciers sortent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#prosper">
+          <speaker>PROSPER, seul</speaker>
+          <l n="146">Comment ! ce n’est point un rêve ! voilà toutes mes dettes acquittées ?</l>
+          <stage>&lt;em&gt;Air du vaudeville de Turenne.&lt;/em&gt;</stage>
+          <l n="147">Ô Cicéron, rien ne manque à ta gloire :</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="148">Qu’est-ce que je vois là ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="149">C’est toi, maître Hubert ?</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="150">Oui, monsieur, mais par où êtes-vous donc rentré ? je ne vous ai pas aperçu.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="151">Voilà ce que c’est que de ne pas être dans sa loge ; je parie que tu étais chez le portier du n° 12, à faire de la politique.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT, troublé.</speaker>
+          <l n="152">Oui, monsieur, c’était son jour de recevoir.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="153">Eh bien ! par exemple, me voilà dans de beaux draps.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="154">Vous savez que c’est après-demain le terme.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, élevant la voix.</speaker>
+          <l n="155">Eh bien ! ne t’ai-je pas payé d’avance, le jour où j’ai gagné ces cinquante écus à l’écarté ?</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="156">Mon Dieu ! je sais bien, il n’est pas nécessaire de parler si haut ; je voulais vous dire qu’ignorant si vous vouliez renouveler...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="157">Ah ! bien oui, un juif, un arabe tel que toi ! je suis seulement fâché de ne pas pouvoir te jouer quelque tour avant de nous séparer.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="158">Vous ne m’en avez pas assez joué, peut-être ?</l>
+          <stage>&lt;em&gt;Air du vaudeville de Partie carrée.&lt;/em&gt;</stage>
+          <l n="159">Avec vous jamais je ne gagne,</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="160">Dès demain je te quitte : je ne veux plus d’hôtel garni, je me mets dans mes meubles.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT, à part.</speaker>
+          <l n="161">Demain... si cette idée-là avait pu lui prendre aujourd’hui !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="162">Vous ne savez donc pas, monsieur, qu’il y a ce soir une première représentation à l’Ambigu-Comique ? j’en ai entendu parler. Un ouvrage qui a été refusé au Théâtre-Français.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="163">Diable ! mais cela pourrait être bon ; n’importe, je ne puis : je donne ce soir à souper à une demi-douzaine de mes amis.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="164">Comment, monsieur ?... Jésus-Maria ! c’est fait de nous !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="165">Ah çà ! qu’est-ce que tu as donc, depuis une heure ? je te trouve un air tout extraordinaire, une physionomie renversée.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="166">Ce n’est pas sans raison ; imaginez-vous, monsieur, que pendant votre absence, il est venu ici très souvent cette plaideuse que vous ne vouliez pas voir.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="167">Serait-ce cette dame de province, que mon père m’a recommandée dans ses dernières lettres ? depuis qu’il me croit avocat, il m’envoie des affaires tous les mois. J’espère bien que tu as toujours dit que j’étais à la campagne ?</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="168">Oui, monsieur ; mais je ne sais pas qui lui a dit que vous deviez revenir aujourd’hui ; elle fait antichambre ici à côté avec sa nièce, bien décidée à attendre votre retour.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="169">Il paraît que mon père a soigné ma réputation. Parbleu ! elle m’attendra longtemps, car je me sauve ; donne-moi mon chapeau.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT, à part.</speaker>
+          <l n="170">Bravo ! le voilà dehors.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE, à la cantonade.</speaker>
+          <l n="171">Oui, ma tante, je reviens.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="172">Grands dieux !... Hubert, mon cher Hubert, regarde donc.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="173">Qu’est-ce qui lui prend donc ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, le chapeau à la main.</speaker>
+          <l n="174">Comment, mademoiselle, c’est vous qui êtes ici avec madame votre tante ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="175">Oui, monsieur.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="176">Ah ! mon Dieu ! je ne me serais jamais doutée...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="177">Comment ! vous êtes celui que ma tante attendait avec tant d’impatience ! je cours la prévenir.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="178">Non, il n’est pas nécessaire... un instant, je vous en supplie.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT, à part.</speaker>
+          <l n="179">Ah çà ! qu’est-ce qu’ils ont donc ? est-ce que j’aurais rencontré juste sans m’en douter ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="180">Hubert, laisse-nous.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="181">Comment, monsieur !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="182">Sortez, vous dis-je.</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT, en s’en allant.</speaker>
+          <l n="183">Ma foi, je n’y conçois rien ; mais je n’y saurais que faire... que cela s’arrange maintenant comme ça pourra.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="184">Que j’étais loin de m’attendre à un pareil bonheur !</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="185">Certainement, monsieur, je n’aurais jamais pensé que vous fussiez l’homme d’affaires de ma tante.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, posant son chapeau et ses gants sur un meuble.</speaker>
+          <l n="186">Je tâcherai de mériter sa confiance.</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="187">Ça n’est pas nécessaire, vous l’avez déjà ; si vous saviez combien elle a pour vous d’affection, d’estime ! elle parle avec tant d’éloges de votre personne et de vos talents !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, à part.</speaker>
+          <l n="188">Par exemple, je ne me serais jamais cru une pareille réputation.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="189">Et puis-je espérer que vous partagez un peu la bonne opinion qu’elle a de moi ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="190">Il le faut bien.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="191">Comment ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="192">Puisque ma tante m’a recommandé de vous traiter comme ami de la maison... Voilà ses propres paroles.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="193">Vraiment ?.... Voilà qui est charmant !</l>
+          <stage>&lt;em&gt;Air de M. Aymon.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Premier couplet.&lt;/em&gt;</stage>
+          <l n="194">De cet accueil plein d’amitié</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="195">Sur un tel chapitre, je crois,</l>
+          <stage>&lt;em&gt;Deuxième couplet.&lt;/em&gt;</stage>
+          <l n="196">Elle m’a commandé tantôt</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="197">Puis-je à cette sévère loi</l>
+          <stage>&lt;em&gt;Il lui baise la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="198">Il le faut bien, monsieur, je doi</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="199">Ainsi vous me permettrez de vous aimer, de vous le dire...</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="200">Oui, si ma tante l’ordonne... mais vous oubliez qu’elle vous attend.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="201">Ah ! laissez-moi prolonger des instants aussi doux... songez donc que, dès que nous serons dans les procès et les affaires... Et dites-moi, savez-vous où votre tante compte aller ce soir ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="202">Mais pas autre part qu’ici, du moins je le pense... à Versailles, ce n’est pas comme à Paris, on a l’habitude de souper...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, vivement.</speaker>
+          <l n="203">Et elle comptait peut-être souper ici ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE, froidement.</speaker>
+          <l n="204">Mais probablement.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="205">Ah ! que c’est heureux !</l>
+          <stage>&lt;em&gt;À Ernestine.&lt;/em&gt;</stage>
+          <l n="206">Combien je suis flatté !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="207">Par exemple ! elle joue de bonheur : tomber sur un jour où le traiteur me fait crédit, justement, un repas superbe.</l>
+          <stage>&lt;em&gt;Se frappant la tête.&lt;/em&gt;</stage>
+          <l n="208">Ah ! mon Dieu ! et les deux ou trois mauvais sujets que j’ai fait inviter... Il est temps encore... Je cours donner contre-ordre.</l>
+          <stage>&lt;em&gt;À Ernestine.&lt;/em&gt;</stage>
+          <l n="209">Mademoiselle, croyez certainement... la joie... l’ivresse... je suis le plus heureux des hommes. Mais daignez prier madame votre tante d’excuser mon impolitesse... dans un instant je suis à vous... je suis à elle... c’est l’affaire d’une minute...</l>
+          <stage>&lt;em&gt;Il prend son chapeau, et sort précipitamment.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="210">Eh bien ! qu’y a-t-il donc ?... et d’où vient ce départ subit ?</l>
+          <stage>&lt;em&gt;Appelant à la porte de la chambre.&lt;/em&gt;</stage>
+          <l n="211">Ma tante... ma tante, arrivez donc ! vous ne savez pas... ce monsieur dont vous m’avez parlé...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="212">Eh bien !</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="213">Il sort d’ici.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="214">Sans demander à me voir ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="215">Si, vraiment !... mais je crois qu’il a la tête là... un peu... comment vous dirai-je ?</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, sévèrement.</speaker>
+          <l n="216">Qu’est-ce que c’est, mademoiselle ? que prétendez-vous dire de sa tête ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="217">Dame ! il venait de causer avec moi d’une manière certainement très raisonnable... et quand je lui ai dit que probablement vous souperiez ici... il a pris son chapeau et est sorti comme un fou, en criant qu’il allait revenir...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="218">Il avait sans doute oublié quelque chose... mais à cela près, comment le trouvez-vous ?...</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="219">Oh ! ma tante... je n’ose pas vous dire... je l’ai trouvé plus galant et plus aimable que jamais.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="220">Comment ! plus aimable que jamais ?... Vous avez donc eu déjà des preuves de son amabilité ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="221">Mais oui... ma tante... C’est que, si je vous dis ce qui en est, vous allez vous fâcher.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, à part.</speaker>
+          <l n="222">Ah ! mon Dieu ! il me prend une palpitation...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="223">Parlez, mademoiselle, parlez ! vous voyez bien que je vous écoute...</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="224">Mais vous auriez bien tort de croire que c’est une inclination suspecte ; car il m’a dit qu’il me trouvait charmante et qu’il m’aimait.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="225">Qu’il vous aimait ?</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="226">Ah ! monsieur Dubocage !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="227">Mais comment est-il possible... que vous, qu’il connaît à peine ?...</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="228">Mais du tout... puisque c’est lui...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="229">Comment, lui !...</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="230">Eh bien ! oui... lui, dont je vous parlais tantôt... c’est à Versailles que cela a commencé.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, à part.</speaker>
+          <l n="231">Voilà donc pourquoi il y venait si souvent et incognito !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="232">Et c’est là qu’il vous faisait les yeux doux ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="233">Oui, quand vous ne regardiez pas...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="234">Laissez-moi, mademoiselle !</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="235">Eh ! mon Dieu ! qu’avez-vous ?</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, avec dignité.</speaker>
+          <l n="236">Laissez-moi, mademoiselle, laissez-moi ! et rentrez dans votre chambre.</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="237">Oh ! je m’en vais... Mais il reviendra, n’est-ce pas ?... vous me le promettez...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="238">Par exemple, je ne sais pas ce qu’a ma tante.</l>
+          <stage>&lt;em&gt;Elle rentre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, seule</speaker>
+          <l n="239">Je vous le demande ! à qui se fier ?... qui aurait jamais cru que M. Dubocage, un homme respectable... un président... lui, dont j’aurais répondu comme de moi... je ne puis croire encore... Hein ! qui sonne là ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="240">Mille pardons, madame...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="241">Il paraît que c’est une nouvelle...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="242">Je vois... je vois qu’en l’absence de monsieur, c’est vous qui êtes la maîtresse de céans.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="243">Par exemple, il a là un drôle de goût.</l>
+        </sp>
+        <sp who="#madame-bubocage">
+          <speaker>MADAME BUBOCAGE.</speaker>
+          <l n="244">Oui, monsieur... finissons : qu’y a-t-il pour votre service ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN, à part.</speaker>
+          <l n="245">Diable ! celle-là n’est pas de bonne humeur...</l>
+          <stage>&lt;em&gt;Aux garçons.&lt;/em&gt;</stage>
+          <l n="246">Dépêchez-vous, vous autres, et disposez là le souper que monsieur a commandé.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="247">Comment ! il a commandé...</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="248">Oui, un petit repas... pour lui et deux ou trois de ses amis... et je devine sans peine qui doit en faire les honneurs.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="249">Deux ou trois de ses amis à une pareille heure ?... mais c’est d’une indiscrétion... Mais êtes-vous bien sûr ?...</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="250">C’est M. Prosper qui m’a dit lui-même...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="251">M. Prosper... vous voulez dire M. Dubocage.</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="252">Est-ce Dubocage ? je le veux bien... le mois dernier il s’appelait Belval : Prosper ou Dubocage, le nom ne fait rien à la chose.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, à part.</speaker>
+          <l n="253">Qu’est-ce que j’apprends là ?...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="254">Comment ! dès le mois dernier il occupait cet appartement sous un nom supposé ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="255">Le mois dernier... parbleu ! en voilà plus de six que monsieur l’a loué.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="256">Comment !...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="257">Mais au fait il vaut mieux se taire et confondre le perfide...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="258">Et sans doute il recevait des visites ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="259">Beaucoup, c’est un homme très répandu.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <stage>&lt;em&gt;Air : Ces postillons sont d’une maladresse.&lt;/em&gt;</stage>
+          <l n="260">Il recevait donc ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="261">Oui, des diables :</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="262">Et des dames ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="263">De fort aimables,</l>
+          <l n="264">Au surplus, cela ne nous regarde pas, pourvu que nos fournitures soient payées.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="265">Monsieur est...</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="266">Dans le commerce, madame ; je lui prête de l’argent.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="267">Est-ce qu’il en a besoin ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="268">Souvent ; mais il paraît qu’il veut se ranger ; et cela ne m’étonne pas, depuis que j’ai vu madame... il n’a jamais fait un choix plus sage, plus raisonnable ; et cela annonce une maturité de raisonnement dont je ne l’aurais jamais cru capable.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="269">C’est bon... sortez.</l>
+          <stage>&lt;em&gt;Guillemain et les garçons traiteurs sortent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, seule</speaker>
+          <l n="270">Allons ! il n’y a plus de doute...</l>
+          <stage>&lt;em&gt;Air : De sommeiller encor, ma chère. (Fanchon la vielleuse.)&lt;/em&gt;</stage>
+          <l n="271">Rarement on trouve au jeune âge,</l>
+          <l n="272">Allons tout confier à ma nièce... lui dire que le perfide qui voulait la séduire est mon mari, et nous préparer toutes les deux à le traiter comme il le mérite.</l>
+          <stage>&lt;em&gt;Elle emporte un des flambeaux qui sont sur la table et sort par l’appartement à droite : il fait nuit.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#prosper">
+          <speaker>PROSPER, tenant M. DUBOCAGE par la main</speaker>
+          <stage>&lt;em&gt;M. Dubocage est sans chapeau et un peu en désordre. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="273">Ne craignez rien, monsieur, et suivez-moi. On n’y voit goutte, mais je connais si bien l’escalier !</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="274">Ma foi, monsieur, je vous remercie ; je m’étais égaré dans ces rues que je ne connais pas ; et sans vous, ces deux coquins m’auraient fait un mauvais parti ; j’avais beau crier...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="275">Oui, c’est un avantage du quartier : à neuf heures, tout le monde est endormi ; seulement nous avons quelques personnes qui se couchent un peu tard, et qui s’amusent à vous demander la bourse ; par exemple, ils ne se sont jamais adressés à moi ; il faut qu’ils me connaissent.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="276">Puis-je demander où je suis ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="277">Chez moi, monsieur. Je vous disais bien que, par ma petite porte, et en traversant le jardin, nous serions arrivés tout de suite.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="278">Et à qui dois-je cet important service ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="279">À M. Prosper, étudiant en droit.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="280">Diable ! vous êtes un peu loin de l’école.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="281">Ça m’est égal, je n’y vais jamais ; mais je vous demande mille pardons de vous laisser dans l’obscurité, je cherche mon briquet phosphorique.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="282">Ne vous inquiétez pas, je vais trouver un siège.</l>
+          <stage>&lt;em&gt;En se reculant il rencontre la table.&lt;/em&gt;</stage>
+          <l n="283">Eh ! mon Dieu ! qu’est-ce que je sens là ? c’est un couvert qui est tout dressé.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="284">Ah ! ah ! ils ont servi ; parbleu ! monsieur, j’espère que vous me ferez l’honneur de partager... Ah ! voilà mon briquet.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="285">Ma foi, avec plaisir ; à cette heure-ci, on ne m’attendra pas.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, brisant plusieurs allumettes.</speaker>
+          <l n="286">C’est-à-dire, je vous invite, là, comme un étourdi... j’oubliais de vous dire que j’ai des dames ; elles sont là à côté ; parce que vous entendez bien qu’un garçon...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="287">C’est trop juste.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="288">Allons, me voilà en partie fine.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="289">Mais il faut que je leur demande la permission de leur présenter un étranger.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="290">Comment donc ! je serais désolé de vous gêner ; je passerai dans un autre appartement, et traitez-moi en garçon.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, allumant les bougies.</speaker>
+          <l n="291">Du tout, je suis sûr que ces dames seront enchantées d’avoir un pareil convive.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, qui a regardé autour de lui.</speaker>
+          <l n="292">Ah ! mon Dieu !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="293">Eh bien ! qu’est-ce que vous avez donc ?</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="294">Rien : c’est l’éclat subit de la lumière.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="295">Je ne me trompe pas...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="296">Eh bien ! vous ne vous asseyez pas ? Vous avez tort ; mettez-vous à votre aise.</l>
+          <stage>&lt;em&gt;Il ôte son chapeau, son habit et met une redingote.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, à part.</speaker>
+          <l n="297">Il est tout à fait chez lui. Morbleu ! qu’est-ce que cela signifie ?</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="298">Comment, monsieur, c’est ici votre appartement ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="299">Comme vous voyez.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="300">Et c’est ici que vous allez passer la nuit ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="301">Apparemment, je n’ai pas envie d’aller coucher à la belle étoile, en héros espagnol... Eh bien ! qu’avez-vous donc ? vous changez de couleur !</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="302">Je vous avoue que l’émotion, la surprise...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="303">Bah ! vous allez vous remettre en soupant.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="304">Ah ! sans doute... mais ces dames dont vous parliez tout à l’heure ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="305">Elles arrivent de province, de Versailles, c’est tout comme ; vous en serez content.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, à part.</speaker>
+          <l n="306">Non : j’avais tort d’être jaloux ; mais, morbleu !...</l>
+          <stage>&lt;em&gt;Se reprenant.&lt;/em&gt;</stage>
+          <l n="307">Et, sans doute, ces dames vous voient d’assez bon œil ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="308">Vous sentez bien que là-dessus, je ne peux pas vous dire... mais, modestie à part, je ne me crois pas mal avec elles. Tenez, je les entends, et si vous voulez avoir la bonté d’attendre un instant, je vais demander la permission de vous présenter.</l>
+          <stage>&lt;em&gt;Regardant autour de lui.&lt;/em&gt;</stage>
+          <l n="309">C’est que je n’ai ni salon ni antichambre.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="310">Eh ! parbleu ! ce cabinet...</l>
+          <stage>&lt;em&gt;Montrant la porte qui fait face au public et qui a une lucarne avec un rideau de taffetas.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="311">Je vous demande mille pardons.</l>
+          <stage>&lt;em&gt;M. Dubocage entre dans le cabinet.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="312">Eh bien ! madame votre tante a-t-elle eu la bonté de m’excuser ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE, très froidement et très sévèrement.</speaker>
+          <l n="313">Oui, monsieur, elle vous attend pour vous parler.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="314">Ah ! mon Dieu ! quel air froid et solennel !</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="315">C’est le seul qui me convienne, monsieur ; ma tante m’a chargée, en outre, de vous dire qu’elle était indisposée, et qu’elle vous priait qu’on voulût bien souper dans l’autre pièce, au coin du feu.</l>
+        </sp>
+        <sp who="#m.-dubogage">
+          <speaker>M. DUBOGAGE, toussant.</speaker>
+          <l n="316">Hum ! hum !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="317">Je suis à vos ordres ; mais daignez m’expliquer d’où vient le changement que je remarque dans vos manières ? moi qui comptais que nous allions faire un repas charmant, et qui voulais vous demander la permission d’amener un ami !</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="318">Justement ma tante ne veut recevoir personne que vous, monsieur.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOGAGE, toussant.</speaker>
+          <l n="319">Hum ! hum !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="320">Ah ! diable ! je suis désolé.</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="321">Elle vous prie de congédier les deux ou trois amis que vous avez eu la délicatesse d’inviter.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="322">Ah ! mon Dieu ! n’est-ce que cela qui vous fâche ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="323">Je sais tout, ma tante m’a tout confié, jusqu’aux liens qui vous unissent.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="324">Morbleu !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="325">Les liens qui m’unissent à elle !... Il y a ici quelque méprise que je veux éclaircir, et je vole auprès d’elle.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="326">Ah ! c’en est trop !... Monsieur, vous m’avez enfermé.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, allant au fond et criant.</speaker>
+          <l n="327">C’est sans le vouloir ; attendez un instant, je suis à vous.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, frappant à la porte.</speaker>
+          <stage>&lt;em&gt;Air du Château de mon oncle.&lt;/em&gt;</stage>
+          <l n="328">Depuis trop longtemps je voi</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XX">
+        <head>Scène XX</head>
+        <sp who="#prosper">
+          <speaker>PROSPER, ERNESTINE, DUBOGAGE, dans le cabinet, MADAME DUBOCAGE, entrant d’un côté, HUBERT, GUILLEMAIN, et LES CRÉANCIERS, entrant de l’autre</speaker>
+          <stage>&lt;em&gt;Suite de l’air. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, HUBERT, GUILLEMAIN.</speaker>
+          <l n="329">De grâce, pourquoi fait-on</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, par la lucarne.</speaker>
+          <l n="330">Qu’on m’ouvre la porte !</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="331">Ciel ! que vois-je ? mon époux !...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="332">Oui, femme imprudente !</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="333">Quoi ! c’est là, ma tante,</l>
+          <stage>&lt;em&gt;Ensemble. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <stage>Depuis trop longtemps je voi, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN, PROSPER, MADAME DUBOCAGE, HUBERT, ERNESTINE.</speaker>
+          <stage>De grâce, pourquoi fait-on, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Pendant le refrain on a été ouvrir à M. Dubocage.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Deuxième reprise de l’air. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="334">Oui, je suis chez moi, peut-être !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="335">Non, c’est moi qui suis le maître.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, PROSPER, prenant tous deux Hubert au collet.</speaker>
+          <l n="336">Réponds, traître !</l>
+        </sp>
+        <sp who="#hubert">
+          <speaker>HUBERT.</speaker>
+          <l n="337">Calmez ce courroux !</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE et PROSPER.</speaker>
+          <l n="338">Quoi ! vous nous faites payer</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="339">Quoi ! vous leur faites payer</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER et M. DUBOCAGE, se faisant des politesses.</speaker>
+          <l n="340">On avait su m’abuser,</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, à M. Dubocage.</speaker>
+          <l n="341">Vous voyez toute l’injustice de vos soupçons, et pour vous prouver que je n’eus jamais de coupables projets sur madame, si elle me permet d’aspirer à la main de son aimable nièce, vous pouvez vous informer de M. Prosper Saint-Elme, jeune avocat, ou peu s’en faut : une famille distinguée, des espérances superbes, une conduite irréprochable.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="342">Saint-Elme... comment ! vous seriez M. Saint-Elme, de Marseille, le fils du négociant ?</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE.</speaker>
+          <l n="343">Ah ! ma tante, celui dont vous me parliez ce matin...</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE, à sa femme.</speaker>
+          <l n="344">C’est monsieur sur qui vous m’avez chargé de prendre des informations ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="345">J’ose espérer qu’elles seront à mon avantage, et que ma sagesse, ma raison...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="346">Un instant... Prosper, c’est lui dont monsieur...</l>
+          <stage>&lt;em&gt;Montrant Guillemain.&lt;/em&gt;</stage>
+          <l n="347">me parlait tout à l’heure : des créanciers, des dettes...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="348">Moi ! des créanciers, des dettes ?... c’est ainsi que la vertu est toujours calomniée ; voyez plutôt.</l>
+          <stage>&lt;em&gt;Lui donnant des quittances.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="349">Comment ! il serait possible...</l>
+          <stage>&lt;em&gt;Regardant les quittances. À Guillemain.&lt;/em&gt;</stage>
+          <l n="350">Est-ce bien là, monsieur, votre signature ?</l>
+        </sp>
+        <sp who="#guillemain">
+          <speaker>GUILLEMAIN.</speaker>
+          <l n="351">Oui, madame, nous avons trouvé ce matin, dans le secrétaire de monsieur, de quoi solder nos créances.</l>
+        </sp>
+        <sp who="#m.-dubocage">
+          <speaker>M. DUBOCAGE.</speaker>
+          <l n="352">Comment ! dans ce secrétaire ; parbleu ! je le crois bien, c’est moi qui avais mis...</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE, à part.</speaker>
+          <l n="353">Mes quinze cents francs !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, avec transport.</speaker>
+          <l n="354">C’était une méprise,</l>
+          <stage>&lt;em&gt;À M. Dubocage.&lt;/em&gt;</stage>
+          <l n="355">mais... je suis enchanté de vous avoir pour créancier.</l>
+        </sp>
+        <sp who="#madame-dubocage">
+          <speaker>MADAME DUBOCAGE.</speaker>
+          <l n="356">Du tout, monsieur, les quinze cents francs m’appartenaient.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="357">Comment ! c’est à vous, madame ? quelle bonté, quelle générosité ! marier votre nièce, et lui donner un présent de noces.</l>
+          <stage>&lt;em&gt;Froidement aux créanciers.&lt;/em&gt;</stage>
+          <l n="358">N’importe, messieurs, je ne m’en dédis pas : j’emploie les cadeaux qu’on me l’ait à payer mes dettes.</l>
+          <stage>&lt;em&gt;À monsieur et madame Dubocage.&lt;/em&gt;</stage>
+          <l n="359">J’espère qu’un pareil exemple de sagesse doit vous rassurer pour l’avenir.</l>
+          <stage>&lt;em&gt;Air : J’en guette un petit de mon âge. (Les Scythes et les Amazones.)&lt;/em&gt;</stage>
+          <l n="360">D’ailleurs, Thémis à Melpomène unie</l>
+        </sp>
+        <sp who="#ernestine">
+          <speaker>ERNESTINE, au public.</speaker>
+          <l n="361">De vos arrêts redoutant la justice,</l>
+          <l n="362" />
+          <l n="363" />
+        </sp>
       </div>
     </body>
   </text>

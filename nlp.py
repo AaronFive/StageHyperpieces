@@ -1,16 +1,16 @@
 """Functions for the simple NLP comparisons.
 Raw text extraction, vectorization of plays into a single word, and comparisons"""
 
-#from sklearn.feature_extraction.text import CountVectorizer
-import spacy
-from xml.dom import minidom
 import os
-import play_parsing
 import pickle
-from scipy.spatial.distance import cosine
-import csv
-import numpy as np
+from xml.dom import minidom
+
+# from sklearn.feature_extraction.text import CountVectorizer
+import spacy
 from nltk.corpus import PlaintextCorpusReader
+from scipy.spatial.distance import cosine
+
+import play_parsing
 
 # nltk has an XML corpus reader accessible here :
 # 'https://www.nltk.org/_modules/nltk/corpus/reader/xmldocs.html#XMLCorpusReader' but it seems too basic Hence I'll
@@ -55,7 +55,8 @@ def extract_texts_corpus(corpus):
         print(title)
         d_text = play_parsing.get_full_text(d_doc)
         d_text = ' '.join([f'{remove_point(t[0])}:{t[1]}' for t in d_text])
-        translation_dict = {'\x81': None, '\x84':None,'\x85': '...', '\x91': '\'', '\x93': '\"','\x95' :'•', '\x96': '-', '\uff0c': ',','\u0144':'ń', '\u0173':'ų',
+        translation_dict = {'\x81': None, '\x84': None, '\x85': '...', '\x91': '\'', '\x93': '\"', '\x95': '•',
+                            '\x96': '-', '\uff0c': ',', '\u0144': 'ń', '\u0173': 'ų',
                             '\u2015': '―'}
         d_text = d_text.translate(str.maketrans(translation_dict))
         raw_filename = d.replace('.xml', '')
@@ -66,6 +67,7 @@ def extract_texts_corpus(corpus):
             failed.write(f'{title} : {e} \n')
             print('Fail')
         saved_d_file.close()
+
 
 def extract_text_per_speaker(corpus):
     failed = open('failed_encodings.txt', 'w')
@@ -89,12 +91,11 @@ def extract_text_per_speaker(corpus):
         pickle_filename = d.replace('.xml', '.pkl')
         saved_d_file = open(os.path.join('Textes par locuteur Dracor', f'{pickle_filename}'), 'wb')
         try:
-            pickle.dump(text_by_speaker,saved_d_file)
+            pickle.dump(text_by_speaker, saved_d_file)
         except UnicodeEncodeError as e:
             failed.write(f'{title} : {e} \n')
             print('Fail')
         saved_d_file.close()
-
 
 
 # def compute_doc_value(cp):
@@ -123,7 +124,7 @@ def not_stop(tok, stopword_list=None):
 
 def average_tokens(l):
     n = len(l)
-    return sum([token.vector.reshape(-1) for token in l])/n
+    return sum([token.vector.reshape(-1) for token in l]) / n
 
 
 def vectorize_without_stopwords(corpus, stopwords):
@@ -152,12 +153,13 @@ def vectorize_without_stopwords(corpus, stopwords):
 def generate_two_words_resumes(d):
     i = 0
     for x in d:
-        i+=1
+        i += 1
         vect_x = d[x]['Spacy']
-        words = nlp_fr.vocab.vectors.most_similar(vect_x.reshape(1,-1), n=3)
+        words = nlp_fr.vocab.vectors.most_similar(vect_x.reshape(1, -1), n=3)
         print(words)
         three_words = [nlp_fr.vocab[word[0][0]] for word in words]
         print(x, three_words)
+
 
 def compute_distances(d):
     distance_dict = dict()
@@ -186,8 +188,6 @@ def denoise_title(s):
     return t1, t2
 
 
-
-
 if __name__ == "__main__":
     # cp = 'Textes par locuteur Dracor'
     # f = os.listdir(cp)[1]
@@ -199,7 +199,7 @@ if __name__ == "__main__":
     extract_text_per_speaker(corpus)
     # d = pickle.load(open('vectorized_texts.pkl','rb'))
     # generate_two_words_resumes(d)
-    #extract_texts_corpus(corpus)
+    # extract_texts_corpus(corpus)
     # vectorize_without_stopwords(corpusraw, stopwords)
     # d = pickle.load(open('vectorized_texts.pkl', 'rb'))
     # compute_distances(d)
@@ -235,5 +235,5 @@ if __name__ == "__main__":
     #         overall_dict[(p1, p2)] = {'Distance_spacy': None, 'Distance_manual': distance_manual}
     # print('dicts done')
     # for (p1, p2) in overall_dict:
-    #     row = {'Play 1': p1, 'Play 2': p2, 'Distance_spacy': overall_dict[(p1,p2)]['Distance_spacy'], 'Distance_manual':overall_dict[(p1,p2)]['Distance_manual']}
-    #     gwriter.writerow(row)
+    #     row_to_merge = {'Play 1': p1, 'Play 2': p2, 'Distance_spacy': overall_dict[(p1,p2)]['Distance_spacy'], 'Distance_manual':overall_dict[(p1,p2)]['Distance_manual']}
+    #     gwriter.writerow(row_to_merge)

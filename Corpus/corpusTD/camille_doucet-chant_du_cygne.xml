@@ -1,327 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Chant du cygne</title>
-        <author key="Camille DOUCET | (naissance-mort)">Camille DOUCET |</author>
+        <title type="main" />
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/le-chant-du-cygne-camille-doucet</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Camille DOUCET |</author>. <title>Le Chant du cygne</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/le-chant-du-cygne-camille-doucet</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1843-02-20">Représentée pour la première fois, à Paris, sur le Théâtre de l’Odéon, le 20 février 1843.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="raphaël" sex="SEX">
+            <persName>RAPHAËL</persName>
+          </person>
+          <person xml:id="giacomo" sex="SEX">
+            <persName>GIACOMO</persName>
+          </person>
+          <person xml:id="un-gondolier" sex="SEX">
+            <persName>UN GONDOLIER</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>[indéfini]</term>
+          <term>vers</term>
         </keywords>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
-    <body>
-      <head>Le Chant du cygne</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Scène héroïque en vers.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de l’Odéon, le 20 février 1843.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="raphaël">RAPHAËL</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="giacomo">GIACOMO</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-gondolier">UN GONDOLIER</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène se passe à Venise dans un palais, à la fin du XVIe siècle. </em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-            <stage><hi rend="italic"><em>Une grande fenêtre à droite ; à gauche, une statuette de la Vierge ; une lampe allumée au-dessous. Table, fauteuils.</em></hi></stage>
-          </sp>
-          <sp who="raphaël" xml:id="0-2">
-            <speaker>RAPHAËL, <em>entrant par la fenêtre.</em></speaker>
-            <l n="8" xml:id="l8">M’y voici donc !... enfin !... – l’échelle à la fenêtre,</l>
-            <l n="9" xml:id="l9">Et la lampe ici... bien !...</l>
-            <stage><hi rend="italic"><em>Il va à la croisée.</em></hi></stage>
-            <l n="11" xml:id="l11">Giacomo !...</l>
-          </sp>
-          <sp who="giacomo" xml:id="0-3">
-            <speaker>GIACOMO, <em>en dehors.</em></speaker>
-            <l n="12" xml:id="l12">Plaît-il, maître...</l>
-          </sp>
-          <sp who="raphaël" xml:id="0-4">
-            <speaker>RAPHAËL.</speaker>
-            <l n="13" xml:id="l13">Écoute... attache, ami, la barque auprès du bord,</l>
-            <l n="14" xml:id="l14">Et couche-toi dedans, comme un homme qui dort.</l>
-            <l n="15" xml:id="l15">– Ah !... si des inconnus, passant dans leur gondole,</l>
-            <l n="16" xml:id="l16">Étonnés de te voir, t’adressent la parole,</l>
-            <l n="17" xml:id="l17">Tu répondras : « Je suis un enfant de la mer ;</l>
-            <l n="18" xml:id="l18">– Gloire au procurateur de Saint-Marc, Badoër !... »</l>
-          </sp>
-          <sp who="giacomo" xml:id="0-5">
-            <speaker>GIACOMO.</speaker>
-            <l n="19" xml:id="l19">Vous voulez... ?</l>
-          </sp>
-          <sp who="raphaël" xml:id="0-6">
-            <speaker>RAPHAËL.</speaker>
-            <l n="20" xml:id="l20">Il le faut !... patience et courage !...</l>
-            <l n="21" xml:id="l21">Mais, si quelque ouvrier de notre grand ouvrage,</l>
-            <l n="22" xml:id="l22">En disant : « Rialto ! » venait de ce côté ;</l>
-            <l n="23" xml:id="l23">Ami, tu répondrais : « Venise et Liberté ! »</l>
-          </sp>
-          <sp who="giacomo" xml:id="0-7">
-            <speaker>GIACOMO.</speaker>
-            <l n="24" xml:id="l24">Oui, maître.</l>
-          </sp>
-          <sp who="raphaël" xml:id="0-8">
-            <speaker>RAPHAËL, <em>aux pieds de la statuette.</em></speaker>
-            <l n="25" xml:id="l25">Vierge sainte, en qui le faible espère,</l>
-            <l n="26" xml:id="l26">Merci !... soyez bénie au ciel et sur la terre...</l>
-            <l n="27" xml:id="l27">Votre inspiration, dans l’ombre du tombeau,</l>
-            <l n="28" xml:id="l28">A marché devant moi, comme un divin flambeau ;</l>
-            <l n="29" xml:id="l29">Merci !... je mets en vous toute mon espérance...</l>
-            <l n="30" xml:id="l30">Faites de cette nuit la nuit de délivrance ;</l>
-            <l n="31" xml:id="l31">Fortifiez mon bras, fortifiez mon cœur ;</l>
-            <l n="32" xml:id="l32">Protégez avec moi, contre le déshonneur,</l>
-            <l n="33" xml:id="l33">Ces deux saintes pour qui je combats et je prie,</l>
-            <l n="34" xml:id="l34">Léonora ma sœur... Venise ma patrie !</l>
-            <l n="35" xml:id="l35">– Ma patrie et ma sœur !... Oh ! dans un même sort,</l>
-            <l n="36" xml:id="l36">Le malheur les confond pour la honte et la mort !</l>
-            <l n="37" xml:id="l37">Le même ravisseur, qui devait les défendre,</l>
-            <l n="38" xml:id="l38">Dans leur lit virginal, toutes deux vint les prendre...</l>
-            <l n="39" xml:id="l39">Toutes deux... inclinant leur tête sous sa main,</l>
-            <l n="40" xml:id="l40">Attendent un arrêt, qu’il peut rendre demain.</l>
-            <l n="41" xml:id="l41">– Demain ne viendra pas !... Procurateur inique,</l>
-            <l n="42" xml:id="l42">Enfant dégénéré de notre république,</l>
-            <l n="43" xml:id="l43">Sans pitié, sur Venise et ma sœur, des deux bras</l>
-            <l n="44" xml:id="l44">Tu frapperais demain... demain ne viendra pas !</l>
-            <stage><hi rend="italic"><em>Il tire de son pourpoint une lettre qu’il lit.</em></hi></stage>
-            <l n="46" xml:id="l46">« Ce soir, cher Raphaël, une échelle de cordes sera placée à la grande fenêtre de la tour neuve, qui donne sur les lagunes ; viens sans crainte ; j’ai trouvé parmi les serviteurs du palais Badoër, un ancien ami de notre père... Paolo... il protégera ma fuite... Le fatal amour du procurateur irait bientôt jusqu’à la violence, et j’aimerais mieux mourir... Entre minuit et une heure, frère, je t’aurai rejoint... bientôt, nous embrasserons notre mère... S’il n’y a rien à craindre, une lampe brûlera vis-à-vis de la fenêtre, sous une statue de la Vierge, ma patronne... Bon courage, frère !... LÉONORA. »</l>
-            <l n="47" xml:id="l47">Eh bien, Jean Badoër, voici donc enfin l’heure</l>
-            <l n="48" xml:id="l48">Où le ciel permettra que l’un de nous deux meure...</l>
-            <l n="49" xml:id="l49">Depuis près de trente ans, sans cesse, il nous poursuit ;</l>
-            <l n="50" xml:id="l50">Mais sa dernière voix va parler cette nuit !</l>
-            <l n="51" xml:id="l51">Je ne puis davantage attendre sa réponse,</l>
-            <l n="52" xml:id="l52">Entre Jean Badoër et moi, qu’il se prononce !</l>
-            <l n="53" xml:id="l53">Nous verrons qui des deux aura tort ou raison ;</l>
-            <l n="54" xml:id="l54">S’il est pour la justice, ou pour la trahison !</l>
-            <stage><hi rend="italic"><em>On entend une symphonie pendant les stances suivantes.</em></hi></stage>
-            <stage><hi rend="italic"><em>Minuit sonne.</em></hi></stage>
-            <l n="57" xml:id="l57">Minuit !... plus bas, Saint-Marc !... nos victimes sommeillent</l>
-            <l n="58" xml:id="l58">Plus bas... il n’est pas temps encor qu’elles s’éveillent.</l>
-            <l n="59" xml:id="l59">Pour la seconde fois, lorsque tu sonneras,</l>
-            <l n="60" xml:id="l60">Tout sera consommé... mais jusque-là... plus bas !</l>
-            <stage><hi rend="italic"><em>Silence.</em></hi></stage>
-            <l n="62" xml:id="l62">Quelle fatalité, que je ne puis comprendre,</l>
-            <l n="63" xml:id="l63">Dans mon pauvre berceau vous a donc fait descendre,</l>
-            <l n="64" xml:id="l64">Monseigneur ?... je n’étais qu’un pêcheur en naissant,</l>
-            <l n="65" xml:id="l65">Vous, vous étiez déjà noble, riche... puissant !</l>
-            <l n="66" xml:id="l66">Mon père à Rialto n’avait qu’une gondole</l>
-            <l n="67" xml:id="l67">Dans laquelle il chantait le soir sa barcarolle ;</l>
-            <l n="68" xml:id="l68">Des anciens Badoër héritier orgueilleux,</l>
-            <l n="69" xml:id="l69">Vous, vous comptiez déjà quatre siècles d’aïeux.</l>
-            <l n="70" xml:id="l70">Pourquoi donc avez-vous pris dans ma coupe amère</l>
-            <l n="71" xml:id="l71">Une moitié du lait que me donnait ma mère ?</l>
-            <l n="72" xml:id="l72">Pourquoi m’avez-vous fait le dangereux honneur</l>
-            <l n="73" xml:id="l73">D’être, pendant un an, le frère du pêcheur ?...</l>
-            <l n="74" xml:id="l74">Ma mère, hélas ! croyait, en devenant la vôtre,</l>
-            <l n="75" xml:id="l75">Par des nœuds d’amitié nous lier l’un à l’autre ;</l>
-            <l n="76" xml:id="l76">Mais, dès les premiers jours qui devaient nous unir,</l>
-            <l n="77" xml:id="l77">La haine entre nous deux décida l’avenir !...</l>
-            <l n="78" xml:id="l78">Cette haine instinctive, à chaque pas croissante,</l>
-            <l n="79" xml:id="l79">Si vous l’aviez voulu, fut restée innocente...</l>
-            <l n="80" xml:id="l80">Mais non !... Procurateur de Saint-Marc, grâce à toi,</l>
-            <l n="81" xml:id="l81">Venise a tant souffert qu’elle est venue à moi ;</l>
-            <l n="82" xml:id="l82">À moi, fils du pêcheur, à moi, pauvre poète,</l>
-            <l n="83" xml:id="l83">Cygne du Rialto, dont la lyre muette</l>
-            <l n="84" xml:id="l84">Dormait, en attendant qu’un jour longtemps rêvé</l>
-            <l n="85" xml:id="l85">La réveillât enfin... Ce jour est arrivé !</l>
-            <l n="86" xml:id="l86">De Venise à mes pieds j’ai vu couler les larmes ;</l>
-            <l n="87" xml:id="l87">Alors, j’ai pris ma lyre et préparé mes armes ;</l>
-            <l n="88" xml:id="l88">Dans chaque carrefour de la vieille cité,</l>
-            <l n="89" xml:id="l89">Pour ranimer les cœurs, en pleurant j’ai chanté !...</l>
-            <l n="90" xml:id="l90">Tous les cœurs ont compris ma chanson fraternelle ;</l>
-            <l n="91" xml:id="l91">Venise a retrouvé des enfants dignes d’elle !</l>
-            <l n="92" xml:id="l92">Ils m’ont nommé leur chef !... mais, prêt à vous frapper,</l>
-            <l n="93" xml:id="l93">Monseigneur, j’ai senti ma haine m’échapper...</l>
-            <l n="94" xml:id="l94">Je me suis souvenu que, dans notre chaumière</l>
-            <l n="95" xml:id="l95">Jadis, quoiqu’à regret, je vous nommais mon frère ;</l>
-            <l n="96" xml:id="l96">Aussi, croyant que Dieu se plaçait entre nous,</l>
-            <l n="97" xml:id="l97">J’ai voulu résigner l’honneur des premiers coups ;</l>
-            <l n="98" xml:id="l98">Mais vous avez bientôt dégagé mes scrupules ;</l>
-            <l n="99" xml:id="l99">Vous n’êtes pas, seigneur, de ces esprits crédules</l>
-            <l n="100" xml:id="l100">Qu’un préjugé retient... Quand j’épargnais vos jours,</l>
-            <l n="101" xml:id="l101">Vous m’avez enlevé ma sœur... pour vos amours !</l>
-            <l n="102" xml:id="l102">Ah ! je vous reconnais, et ce juste salaire</l>
-            <l n="103" xml:id="l103">Devait payer le lait et les pleurs de ma mère.</l>
-            <l n="104" xml:id="l104">– Ma mère, en m’embrassant au seuil de la maison,</l>
-            <l n="105" xml:id="l105">A remis dans mes mains ce fer et ce poison...</l>
-            <l n="106" xml:id="l106">Alors, je suis parti pour ma double vengeance,</l>
-            <l n="107" xml:id="l107">Et vous allez bientôt frémir de ma présence !...</l>
-            <l n="108" xml:id="l108">– Dès que le ciel m’aura rendu Léonora,</l>
-            <l n="109" xml:id="l109">La Mort, que je retiens, sur vous s’élancera !...</l>
-            <l n="110" xml:id="l110">Avec moi, va surgir du milieu des ténèbres,</l>
-            <l n="111" xml:id="l111">Tout un peuple poussant des hurlements funèbres ;</l>
-            <l n="112" xml:id="l112">Et ce cri, le premier, retentira dans l’air :</l>
-            <l n="113" xml:id="l113">« Mort au procurateur de Saint-Marc... Badoër !... »</l>
-            <l n="114" xml:id="l114">– Oh ! nous te préparons une superbe fête,</l>
-            <l n="115" xml:id="l115">Pauvre ville qui dors... Dors !... demain, sur ta tête</l>
-            <l n="116" xml:id="l116">Tu verras resplendir, à côté du soleil,</l>
-            <l n="117" xml:id="l117">Ta vieille liberté, Venise... quel réveil !</l>
-            <l n="118" xml:id="l118">...</l>
-            <l n="119" xml:id="l119">Rien encore !... mon Dieu, que les heures sont lentes...</l>
-            <l n="120" xml:id="l120">L’impatience bout dans mes veines brûlantes...</l>
-            <l n="121" xml:id="l121">Marche donc... marche donc, horloge de Saint-Marc !...</l>
-            <l n="122" xml:id="l122">Léonora devrait arriver... quel retard !...</l>
-            <l n="123" xml:id="l123">J’ai peur... Non... elle aura, sans doute, par prudence,</l>
-            <l n="124" xml:id="l124">Attendu qu’au palais tout fût dans le silence...</l>
-            <l n="125" xml:id="l125">C’est cela... cependant... on vient... non... juste ciel !</l>
-            <l n="126" xml:id="l126">Sauvez Léonora, mon Dieu !...</l>
-            <stage><hi rend="italic"><em>Il tombe assis dans un fauteuil près d’une table à gauche, et, sur cette table, il voit une lettre à son adresse. Il lit.</em></hi></stage>
-            <l n="128" xml:id="l128">« Pour Raphaël... »</l>
-            <l n="129" xml:id="l129">– Pour Raphaël !... lisons... lisons...</l>
-            <stage><hi rend="italic"><em>Il l’ouvre.</em></hi></stage>
-            <l n="131" xml:id="l131">Miséricorde !...</l>
-            <stage><hi rend="italic"><em>Il lit tout haut.</em></hi></stage>
-            <l n="133" xml:id="l133">« Tout est perdu !... Paolo nous a trahis !... si tu trouves ce billet, sauve-toi, mon Raphaël !... d’une chambre voisine, j’ai entendu le procurateur donner des ordres à son premier bourreau, Manoël Broggi, le chef des sbires... On te laissera venir pour s’emparer de toi... l’échelle sera suspendue à la fenêtre... mais ce n’est pas moi qui l’aurai attachée... la lampe brûlera sous l’image de la Vierge... mais ce n’est pas moi qui l’aurai allumée... toute communication sera interceptée par l’intérieur du palais... des soldats envahiront le bas de la tour, par terre et par mer... Hâte-toi donc de fuir avant leur arrivée... on laissera éclater la conspiration pour massacrer les conspirateurs... nous sommes tous condamnés, Raphaël !... à l’heure où je devais te rejoindre, on me transportera dans une gondole à la villa Badoër... mais je n’y arriverai pas !... quand la première heure sonnera, les flots de l’Adriatique m’engloutiront... Tu me l’as dit souvent, frère... la mort vaut mieux que le déshonneur... »</l>
-            <l n="134" xml:id="l134">Voilà donc !... voilà donc ce que Dieu nous accorde !...</l>
-            <l n="135" xml:id="l135">Oh ! sans perdre de temps, je veux... je dois... je cours...</l>
-            <l n="136" xml:id="l136">– Giacomo !... vite en mer !</l>
-          </sp>
-          <sp who="giacomo" xml:id="0-9">
-            <speaker>GIACOMO, <em>en dehors.</em></speaker>
-            <l n="137" xml:id="l137">Au secours !... au secours !...</l>
-          </sp>
-          <sp who="raphaël" xml:id="0-10">
-            <speaker>RAPHAËL, <em>à la fenêtre.</em></speaker>
-            <l n="138" xml:id="l138">Des soldats !</l>
-          </sp>
-          <sp who="giacomo" xml:id="0-11">
-            <speaker>GIACOMO, <em>en dehors.</em></speaker>
-            <l n="139" xml:id="l139">Au secours !...</l>
-            <stage><hi rend="italic"><em>Mourant.</em></hi></stage>
-            <l n="141" xml:id="l141">Ah !...</l>
-          </sp>
-          <sp who="raphaël" xml:id="0-12">
-            <speaker>RAPHAËL.</speaker>
-            <l n="142" xml:id="l142">Lâches !... une armée !...</l>
-            <l n="143" xml:id="l143">Vingt contre un !... comment fuir ?... cette porte... fermée !</l>
-            <l n="144" xml:id="l144">– Au bas de la fenêtre ils m’attendent... Grand Dieu,</l>
-            <l n="145" xml:id="l145">Mon pauvre Giacomo... ma pauvre sœur... adieu !</l>
-            <stage><hi rend="italic"><em>Il va à la fenêtre.</em></hi></stage>
-            <l n="147" xml:id="l147">Que vois-je !... ce sont eux !... oh ! vengeance, vengeance !...</l>
-            <l n="148" xml:id="l148">– Vous venez, imprudents, vous mettre en ma puissance...</l>
-            <l n="149" xml:id="l149">Je serai bien cruel, puisque vous m’y forcez...</l>
-            <l n="150" xml:id="l150">Montez... montez toujours... montez encore... assez !...</l>
-            <stage><hi rend="italic"><em>Il coupe l’échelle de cordes avec son poignard. Les soldats tombent en poussant des cris ; puis silence.</em></hi></stage>
-            <l n="152" xml:id="l152">– Morts !... et moi prisonnier... oui, désormais la fuite</l>
-            <l n="153" xml:id="l153">Est impossible... eh bien, tuez-moi tout de suite !...</l>
-            <l n="154" xml:id="l154">– Mais ma sœur, pauvre enfant... pauvre Léonora !...</l>
-            <l n="155" xml:id="l155">Que faire ?... morte, hélas ! quand l’heure sonnera...</l>
-            <l n="156" xml:id="l156">– Du secours !... du secours !... sainte vierge Marie,</l>
-            <l n="157" xml:id="l157">Par pitié, sauvez-la... ne prenez que ma vie !...</l>
-            <l n="158" xml:id="l158">– N’ai-je pas entendu ?... non...</l>
-            <stage><hi rend="italic"><em>Il court à la fenêtre.</em></hi></stage>
-            <l n="160" xml:id="l160">Si fait !... dans la nuit,</l>
-            <l n="161" xml:id="l161">Je vois une gondole... Au secours !... Elle fuit !...</l>
-            <l n="162" xml:id="l162">Non... non... Elle s’arrête... Au secours !... Vers la rive</l>
-            <l n="163" xml:id="l163">Elle s’est retournée... Au secours !... Elle arrive !...</l>
-          <stage>UN GONDOLIER.</stage>
-          </sp>
-          <sp who="raphaël" xml:id="0-13">
-            <speaker>RAPHAËL.</speaker>
-            <l n="164" xml:id="l164">Mes amis !... écoutez... le tyran de Saint Marc...</l>
-            <l n="165" xml:id="l165">Là-bas... vers sa villa... courez... courez !...</l>
-            <stage><hi rend="italic"><em>L’heure sonne.</em></hi></stage>
-            <l n="167" xml:id="l167">Trop tard !...</l>
-            <stage><hi rend="italic"><em>Il tombe évanoui.</em></hi></stage>
-          <stage>LE GONDOLIER, <em>chantant.</em></stage>
-          </sp>
-          <sp who="raphaël" xml:id="0-14">
-            <speaker>RAPHAËL, <em>à genoux, relisant la lettre de Léonora.</em></speaker>
-            <l n="169" xml:id="l169">« Quand la première heure sonnera, les flots de l’Adriatique m’engloutiront... »</l>
-            <l n="170" xml:id="l170">Morte !... morte à seize ans...pauvre innocente fille !...</l>
-            <l n="171" xml:id="l171">L’espérance... l’orgueil... l’amour de sa famille.</l>
-            <l n="172" xml:id="l172">Plutôt qu’au déshonneur son front pur fût livré,</l>
-            <l n="173" xml:id="l173">Seigneur... elle a voulu, comme un dépôt sacré</l>
-            <l n="174" xml:id="l174">Remettre entre vos mains la blancheur de son âme ;</l>
-            <l n="175" xml:id="l175">– Pardonnez-lui, Seigneur... l’ange a tué la femme !</l>
-            <stage><hi rend="italic"><em>Il se relève.</em></hi></stage>
-            <l n="177" xml:id="l177">Puisque mes bras captifs n’ont pu la secourir,</l>
-            <l n="178" xml:id="l178">Comme elle, maintenant, je n’ai plus qu’à mourir...</l>
-            <l n="179" xml:id="l179">Ma mère, en nous voyant tous deux tombés en route,</l>
-            <l n="180" xml:id="l180">Pour nous rejoindre au ciel, demain, mourra sans doute...</l>
-            <l n="181" xml:id="l181">– C’est bien !... au revoir, mère !... – Adieu, Venise, adieu !</l>
-            <l n="182" xml:id="l182">Je ne puis plus pour toi faire qu’un dernier vœu...</l>
-            <l n="183" xml:id="l183">– Notre œuvre est commencée... il faut qu’elle s’achève.</l>
-            <l n="184" xml:id="l184">– Que sur ta liberté, bientôt le jour se lève...</l>
-            <l n="185" xml:id="l185">Et qu’avec lui ce cri retentisse dans l’air :</l>
-            <l n="186" xml:id="l186">« Mort au procurateur de Saint-Marc... Badoër !... »</l>
-            <stage><hi rend="italic"><em>Cris au dehors : « Mort a Badoër... mort ! »</em></hi></stage>
-            <l n="188" xml:id="l188">– Le voilà !... le voilà !... ce cri de délivrance !...</l>
-            <l n="189" xml:id="l189">Cri de deuil !... cri de mort perdu pour la vengeance !...</l>
-            <l n="190" xml:id="l190">– De notre cher pays, généreux défenseurs,</l>
-            <l n="191" xml:id="l191">Pour de meilleurs moments réservez vos grands cœurs !...</l>
-            <l n="192" xml:id="l192">Attendez !... aujourd’hui, la lutte est inutile !</l>
-            <stage><hi rend="italic"><em>Bruit de cloches... cris... coups de feu.</em></hi></stage>
-            <l n="194" xml:id="l194">Dieu !... voici ton courroux qui passe sur la ville !</l>
-            <l n="195" xml:id="l195">Malheur !... malheur !... et moi, vous m’oubliez donc, moi ?</l>
-            <l n="196" xml:id="l196">– Lâche procurateur, je n’ai pas peur de toi !...</l>
-            <l n="197" xml:id="l197">Jusqu’au dernier moment, je te hais et te brave...</l>
-            <l n="198" xml:id="l198">Je suis ton prisonnier... mais non pas ton esclave !</l>
-            <l n="199" xml:id="l199">Quand de pièges, vingt fois, tu m’as enveloppé,</l>
-            <l n="200" xml:id="l200">Tu me croyais vaincu... vingt fois tu t’es trompé</l>
-            <l n="201" xml:id="l201">Mais pour ma liberté je ne puis plus rien faire ;</l>
-            <l n="202" xml:id="l202">Le cygne a succombé sous le vautour son frère...</l>
-            <l n="203" xml:id="l203">Donc... tu crois me tenir... tu te trompes encor !...</l>
-            <stage><hi rend="italic"><em>Symphonie.</em></hi></stage>
-            <stage><hi rend="italic"><em>Il boit le poison.</em></hi></stage>
-            <stage><hi rend="italic"><em>Il tombe et meurt.</em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
-      </div>
-    </body>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1843-02-20" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de l’Odéon, le 20 février 1843.</ab>
+      </performance>
+      <castList />
+    </front>
+    <body />
   </text>
 </TEI>

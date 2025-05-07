@@ -1,1219 +1,1212 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Les Courtisans</title>
-        <author key="Thomas SAUVAGE - Jean-Henri DUPIN | (naissance-mort)">Thomas SAUVAGE - Jean-Henri DUPIN |</author>
+        <title type="main" />
+        <title type="sub">Vaudeville</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/les-courtisans-thomas-sauvage-jean-henri-dupin</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Thomas SAUVAGE - Jean-Henri DUPIN |</author>. <title>Les Courtisans</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/les-courtisans-thomas-sauvage-jean-henri-dupin</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1821-11-28">Représenté pour la première fis, à Paris, sur le Théâtre de la Porte Saint-Martin, le 28 novembre 1821.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="françois-ier" sex="SEX">
+            <persName>FRANÇOIS Ier</persName>
+          </person>
+          <person xml:id="jean-bouchet" sex="SEX">
+            <persName>JEAN BOUCHET</persName>
+          </person>
+          <person xml:id="charles" sex="SEX">
+            <persName>CHARLES</persName>
+          </person>
+          <person xml:id="de-richesource" sex="SEX">
+            <persName>DE RICHESOURCE</persName>
+          </person>
+          <person xml:id="valentine" sex="SEX">
+            <persName>VALENTINE</persName>
+          </person>
+          <person xml:id="saint-gelais" sex="SEX">
+            <persName>SAINT GELAIS</persName>
+          </person>
+          <person xml:id="le-capitaine-polin" sex="SEX">
+            <persName>LE CAPITAINE POLIN</persName>
+          </person>
+          <person xml:id="le-marquis" sex="SEX">
+            <persName>LE MARQUIS</persName>
+          </person>
+          <person xml:id="le-président" sex="SEX">
+            <persName>LE PRÉSIDENT</persName>
+          </person>
+          <person xml:id="un-soldat-suisse" sex="SEX">
+            <persName>UN SOLDAT SUISSE</persName>
+          </person>
+          <person xml:id="un-huissier" sex="SEX">
+            <persName>UN HUISSIER</persName>
+          </person>
+          <person xml:id="un-inspecteur-des-bâtiments-du-roi" sex="SEX">
+            <persName>UN INSPECTEUR des bâtiments du Roi</persName>
+          </person>
+          <person xml:id="courtisans" sex="SEX">
+            <persName>COURTISANS</persName>
+          </person>
+          <person xml:id="pages" sex="SEX">
+            <persName>PAGES</persName>
+          </person>
+          <person xml:id="soldats" sex="SEX">
+            <persName>SOLDATS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Vaudeville</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q186286</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1821-11-28" location="unknown">Représenté pour la première fis, à Paris, sur le Théâtre de la Porte Saint-Martin, le 28 novembre 1821.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Les Courtisans</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Vaudeville anecdote en un acte.</l>
-            <l n="2" xml:id="l2">Représenté pour la première fis, à Paris, sur le Théâtre de la Porte Saint-Martin, le 28 novembre 1821.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="françois-i<sup>er</sup>">FRANÇOIS I<sup>er</sup></role>
-              <roleDesc>, <em>Roi de France</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="jean-bouchet">JEAN BOUCHET</role>
-              <roleDesc>, <em>homme de Lettres</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="charles">CHARLES</role>
-              <roleDesc>, <em>son fils</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="de-richesource">DE RICHESOURCE</role>
-              <roleDesc>, <em>intendant des bâtiments du Roi</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="valentine">VALENTINE</role>
-              <roleDesc>, <em>sa fille</em> </roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="saint-gelais">SAINT GELAIS</role>
-              <roleDesc>, <em>poète gascon</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-capitaine-polin">LE CAPITAINE POLIN</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-marquis">LE MARQUIS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-président">LE PRÉSIDENT</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-soldat-suisse">UN SOLDAT SUISSE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-huissier">UN HUISSIER</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-inspecteur-<em>des-bâtiments-du-roi</em>">UN INSPECTEUR <em>des bâtiments du Roi</em></role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="courtisans">COURTISANS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="pages">PAGES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="soldats">SOLDATS</role>
-              <roleDesc>, <em>etc.</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La Scène est à Fontainebleau. </em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Le Théâtre représente une galerie du château de Fontainebleau ; de chaque côté du Théâtre une table et des sièges. </em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9"> </l>
-            <l n="10" xml:id="l10">Quelques-uns des personnages, que nous avons fait figurer dans cette petite Pièce, étant, quoique historiques, très peu connus, nous avons cru devoir faire précéder notre Ouvrage d’une courte Notice sur chacun d’eux.</l>
-            <stage><hi rend="italic">JEAN BOUCHET naquit à Poitiers en 1476. Quoique passionné pour les Lettres, il prit, dans sa ville natale, l’état de procureur, qu’avait exercé son père. Chargé des affaires du seigneur de la Trémouille, ses talents aimables et ses qualités solides le firent bientôt regarder, dans cette illustre famille, comme l’ami de la maison. Enfin, la confiance qu’il inspira fut telle, qu’on le chargea de l’éducation du Prince de Talmont. Ce jeune homme partagea les sentiments de ses parents pour <em>Bouchet</em>. Il l’aurait comblé de bienfaits, si, à peine âgé de trente ans, il n’eût pas trouvé la mort dans les combats. Le seigneur de la Trémouille remplit généreuse ment les intentions de son fils, et bientôt <em>Bouchet</em> put se livrer entièrement à son goût pour les Lettres. Il publia plusieurs ouvrages en prose ou en vers, qui eurent beaucoup de succès. Dans quelques-uns, il s’éleva avec force contre les deux principales opérations politiques du règne de François I<sup>er</sup>, <em>le concordat et la vénalité des charges</em>. <em>Bouchet</em> eut huit enfants, dont quelques uns furent placés par François I<sup>er</sup>. L’époque de sa mort n’est pas bien déterminée : on la place généralement en 1550.</hi></stage>
-            <stage><hi rend="italic">ANTOINE ISCALIN DES AYMARES, Baron de la Garde, et Marquis de Brigançon, connu d’abord sous le nom de <em>Capitaine Polin</em>, naquit au village de la Garde, en Dauphiné, d’une famille pauvre et obscure. D’abord valet de soldat, puis soldat, enseigne, lieutenant et capitaine, toujours supérieur par son activité et son intelligence aux emplois qu’on lui confiait, il ne dut son élévation qu’à son courage et à son esprit. François I<sup>er</sup> l’envoya, en 1541, en ambassade à Constantinople, vers Soliman II ; mais il abandonna bientôt la carrière diplomatique pour s’attacher au service de mer. Il devint, sous le nom de <em>Baron de la Garde</em>, général des galères de France, et se fit, comme marin, une grande réputation. Il mourut d’hydropisie, à quatre-vingts ans, en 1578, laissant plus de gloire que de richesses.</hi></stage>
-            <stage><hi rend="italic">MELIN DE SAINT GELAIS, fils naturel, à ce que prétendent presque tous les biographes, d’Octavien de Saint Gelais, naquit l’an 1490. Ses poésies le firent surnommer l’<em>Ovide français</em>. Ses talents lui procurèrent accès à la cour ; des places et des honneurs récompensèrent ses travaux. On croit que c’est lui qui fit passer le <em>Sonnet</em> d’Italie en France. Son caractère railleur, le succès de ses épigrammes, genre de poésie dans lequel on le met au-dessus de <em>Marot</em> et <em>Du Bellay</em>, lui firent beaucoup d’ennemis, et donnèrent lieu à l’ancien proverbe : « <em>Gare à la tenaille de Saint Gelais</em>. » Il mourut à Paris en 1559, à 69 ans.</hi></stage>
-            <l n="14" xml:id="l14"> </l>
-            <l n="15" xml:id="l15"> </l>
-        <div type="scene" xml:id="1">
+      <div type="act" n="1">
+        <head>NOTICE SUR QUELQUES PERSONNAGES</head>
+        <div type="scene" xml:id="première">
           <head>Scène première</head>
-            <l n="16" xml:id="l16"> </l>
-          <sp who="charles" xml:id="1-1">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET, CHARLES</speaker>
-            <l n="17" xml:id="l17"> </l>
-            <stage><hi rend="italic"><em>Ils entrent ensemble par le fond. </em></hi></stage>
+            <stage>&lt;em&gt;Ils entrent ensemble par le fond. &lt;/em&gt;</stage>
           </sp>
-          <sp who="charles" xml:id="1-2">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="19" xml:id="l19">Ma surprise égale mon bonheur ! quoi ! vous, mon père ! vous, à Fontainebleau !</l>
+            <l n="1">Ma surprise égale mon bonheur ! quoi ! vous, mon père ! vous, à Fontainebleau !</l>
           </sp>
-          <sp who="bouchet" xml:id="1-3">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="20" xml:id="l20">Oui, mon ami ; je sois parti il y a trois jours de Poitiers, et j’arrive à l’instant : je compte passer deux jours en ces lieux.</l>
-            <stage><hi rend="italic"><em>Air : Dans un castel dame de haut lignage. (De M. Blanchard.) </em></hi></stage>
-            <l n="22" xml:id="l22">Il s’agit de la veuve et du fils de Bernard, mon ancien ami. Je viens solliciter : tu pourras m’être utile dans cette affaire ; car, moi, je suis un véritable provincial ; je n’entends rien aux usages, aux cérémonies, à l’étiquette de ce pays-ci... Je n’y connais personne.</l>
+            <l n="2">Oui, mon ami ; je sois parti il y a trois jours de Poitiers, et j’arrive à l’instant : je compte passer deux jours en ces lieux.</l>
+            <stage>&lt;em&gt;Air : Dans un castel dame de haut lignage. (De M. Blanchard.) &lt;/em&gt;</stage>
+            <l n="3">De peur d’accident à mon âge,</l>
+            <l n="4">Il s’agit de la veuve et du fils de Bernard, mon ancien ami. Je viens solliciter : tu pourras m’être utile dans cette affaire ; car, moi, je suis un véritable provincial ; je n’entends rien aux usages, aux cérémonies, à l’étiquette de ce pays-ci... Je n’y connais personne.</l>
           </sp>
-          <sp who="charles" xml:id="1-4">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="23" xml:id="l23">Je puis vous présenter à M. de Richesource ; il est Intendant des bâtiments du Roi, et ne laisse pas que d’avoir quelque crédit à la cour : il est logé dans ce palais avec sa fille.</l>
+            <l n="5">Je puis vous présenter à M. de Richesource ; il est Intendant des bâtiments du Roi, et ne laisse pas que d’avoir quelque crédit à la cour : il est logé dans ce palais avec sa fille.</l>
           </sp>
-          <sp who="bouchet" xml:id="1-5">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="24" xml:id="l24">Alors, c’est ici que l’on te trouve.</l>
+            <l n="6">Alors, c’est ici que l’on te trouve.</l>
           </sp>
-          <sp who="charles" xml:id="1-6">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="25" xml:id="l25">Ah ! mon père, si vous connaissiez Valentine ! si vous pouviez vous douter...</l>
+            <l n="7">Ah ! mon père, si vous connaissiez Valentine ! si vous pouviez vous douter...</l>
           </sp>
-          <sp who="bouchet" xml:id="1-7">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="26" xml:id="l26">Je me doute bien de quelques petites choses... dans toutes tes lettres tu m’en parles, tu m’en fais un portrait...</l>
+            <l n="8">Je me doute bien de quelques petites choses... dans toutes tes lettres tu m’en parles, tu m’en fais un portrait...</l>
           </sp>
-          <sp who="charles" xml:id="1-8">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="27" xml:id="l27">Il est encore bien au-dessous de la vérité.</l>
+            <l n="9">Il est encore bien au-dessous de la vérité.</l>
           </sp>
-          <sp who="bouchet" xml:id="1-9">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="28" xml:id="l28">Voilà comme vous êtes tous.</l>
-            <stage><hi rend="italic"><em>Air : Vaudeville de M. Guillaume. </em></hi></stage>
-            <l n="30" xml:id="l30">Allons, allons, il est temps de mettre un terme à cet amour là... car, il doit te faire un peu négliger la sculpture : les Pallas et les Vénus antiques sont, je le gage, souvent abandonnées... pour mademoiselle Valentine.</l>
+            <l n="10">Voilà comme vous êtes tous.</l>
+            <stage>&lt;em&gt;Air : Vaudeville de M. Guillaume. &lt;/em&gt;</stage>
+            <l n="11">Un amant, dans une maîtresse,</l>
+            <l n="12">Allons, allons, il est temps de mettre un terme à cet amour là... car, il doit te faire un peu négliger la sculpture : les Pallas et les Vénus antiques sont, je le gage, souvent abandonnées... pour mademoiselle Valentine.</l>
           </sp>
-          <sp who="charles" xml:id="1-10">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="31" xml:id="l31">La voici, mon père.</l>
-            <l n="32" xml:id="l32"> </l>
-            <l n="33" xml:id="l33"> </l>
+            <l n="13">La voici, mon père.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="2">
+        <div type="scene" xml:id="II">
           <head>Scène II</head>
-            <l n="34" xml:id="l34"> </l>
-          <sp who="valentine" xml:id="2-1">
-            <speaker>BOUCHET, CHARLES, VALENTINE</speaker>
-            <l n="35" xml:id="l35"> </l>
-          </sp>
-          <sp who="bouchet" xml:id="2-2">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="36" xml:id="l36">Mademoiselle, je me suis toujours défié des descriptions que nous font les amants et les poètes de leurs héros, de leurs maîtresses ; mais, ici, j’avoue que l’enthousiasme de mon fils ne l’a pas emporté trop loin ; et quelque bien que tu m’aies dit de mademoiselle, je n’y trouve rien d’exagéré.</l>
+            <l n="14">Mademoiselle, je me suis toujours défié des descriptions que nous font les amants et les poètes de leurs héros, de leurs maîtresses ; mais, ici, j’avoue que l’enthousiasme de mon fils ne l’a pas emporté trop loin ; et quelque bien que tu m’aies dit de mademoiselle, je n’y trouve rien d’exagéré.</l>
           </sp>
-          <sp who="valentine" xml:id="2-3">
+          <sp who="#valentine">
             <speaker>VALENTINE.</speaker>
-            <l n="37" xml:id="l37">Monsieur...</l>
+            <l n="15">Monsieur...</l>
           </sp>
-          <sp who="bouchet" xml:id="2-4">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="38" xml:id="l38">Ah ça, comment es tu avec le papa ?</l>
+            <l n="16">Ah ça, comment es tu avec le papa ?</l>
           </sp>
-          <sp who="charles" xml:id="2-5">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="39" xml:id="l39">Il n’est sortes d’égards qu’il n’ait pour moi depuis le jour où l’un de mes ouvrages, exposé dans l’atelier de Jean Cousin, mon maître, eut le bonheur d’attirer les regards de Sa Majesté François I<sup>er</sup>.</l>
+            <l n="17">Il n’est sortes d’égards qu’il n’ait pour moi depuis le jour où l’un de mes ouvrages, exposé dans l’atelier de Jean Cousin, mon maître, eut le bonheur d’attirer les regards de Sa Majesté François Ier.</l>
           </sp>
-          <sp who="valentine" xml:id="2-6">
+          <sp who="#valentine">
             <speaker>VALENTINE.</speaker>
-            <l n="40" xml:id="l40">Oui, depuis que le Roi a distingué votre fils, il se fait un devoir de l’accueillir, de le protéger. C’est à lui que M. Charles doit d’être employé dans ce château. Cependant, la place que mon père occupe, ses rapports fréquents avec le Monarque...</l>
-            <stage><hi rend="italic"><em>Air : Vent brûlant d’Arabie.</em></hi></stage>
-          <stage>BOUCHET.</stage>
+            <l n="18">Oui, depuis que le Roi a distingué votre fils, il se fait un devoir de l’accueillir, de le protéger. C’est à lui que M. Charles doit d’être employé dans ce château. Cependant, la place que mon père occupe, ses rapports fréquents avec le Monarque...</l>
+            <stage>&lt;em&gt;Air : Vent brûlant d’Arabie.&lt;/em&gt;</stage>
+            <l n="19">De la cour les suffrages,</l>
           </sp>
-          <sp who="valentine" xml:id="2-7">
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET.</speaker>
+            <l n="20">Dès qu’on vous voit paraitre,</l>
+          </sp>
+          <sp who="#valentine">
             <speaker>VALENTINE.</speaker>
-            <l n="42" xml:id="l42">Je vous avouerai, monsieur, que j’éprouve quelque crainte.</l>
+            <l n="21">Je vous avouerai, monsieur, que j’éprouve quelque crainte.</l>
           </sp>
-          <sp who="bouchet" xml:id="2-8">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="43" xml:id="l43">Pourquoi donc ça ? Vous vous aimez. Il est bon père, sans doute ; il veut le bonheur de sa fille... Allons, je ter minerai cette affaire-ci avant l’autre... Ainsi, mes enfants...</l>
-            <stage><hi rend="italic"><em>Air : Vaudeville de la Bella au bois dormant. </em></hi></stage>
-          <stage>VALENTINE.</stage>
+            <l n="22">Pourquoi donc ça ? Vous vous aimez. Il est bon père, sans doute ; il veut le bonheur de sa fille... Allons, je ter minerai cette affaire-ci avant l’autre... Ainsi, mes enfants...</l>
+            <stage>&lt;em&gt;Air : Vaudeville de la Bella au bois dormant. &lt;/em&gt;</stage>
+            <l n="23">Plus de défiance ;</l>
           </sp>
-          <sp who="bouchet" xml:id="2-9">
+          <sp who="#valentine">
+            <speaker>VALENTINE.</speaker>
+            <l n="24">Toute ma crainte, dans ce jour,</l>
+          </sp>
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
+            <l n="25">L’amant, l’artiste dans la vie</l>
+            <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+            <stage>Plus de défiance, &lt;em&gt;etc.&lt;/em&gt;</stage>
           </sp>
-          <sp who="valentine" xml:id="2-10">
+          <sp who="#charles">
             <speaker>CHARLES, VALENTINE.</speaker>
-            <l n="46" xml:id="l46"> </l>
-            <l n="47" xml:id="l47"> </l>
+            <stage>Plus de défiance, &lt;em&gt;etc.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="3">
+        <div type="scene" xml:id="III">
           <head>Scène III</head>
-            <l n="48" xml:id="l48"> </l>
-          <sp who="valentine" xml:id="3-1">
-            <speaker>BOUCHET, CHARLES, VALENTINE, RICHESOURCE</speaker>
-            <l n="49" xml:id="l49"> </l>
+          <sp who="#de-richesource">
+            <speaker>RICHESOURCE, à la cantonade.</speaker>
+            <l n="26">Si l’on me demandait, je suis au parc, au grand bassin, où le Roi m’a donné rendez-vous. Il s’agit d’un modèle pour la tête de son Neptune... Il lui faut une tête excessivement noble... Il a déjà passé en revue toute la cour : je ne vois plus maintenant que Monseigneur le Chancelier Duprat... Ma foi, s’il refuse, celui-là...</l>
           </sp>
-          <sp who="richesource" xml:id="3-2">
-            <speaker>RICHESOURCE, <em>à la cantonade.</em></speaker>
-            <l n="50" xml:id="l50">Si l’on me demandait, je suis au parc, au grand bassin, où le Roi m’a donné rendez-vous. Il s’agit d’un modèle pour la tête de son Neptune... Il lui faut une tête excessivement noble... Il a déjà passé en revue toute la cour : je ne vois plus maintenant que Monseigneur le Chancelier Duprat... Ma foi, s’il refuse, celui-là...</l>
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, à Charles.</speaker>
+            <l n="27">Quel est cet original ?</l>
           </sp>
-          <sp who="charles" xml:id="3-3">
-            <speaker>BOUCHET, <em>à Charles.</em></speaker>
-            <l n="51" xml:id="l51">Quel est cet original ?</l>
-          </sp>
-          <sp who="charler" xml:id="3-4">
+          <sp who="#charler">
             <speaker>CHARLER.</speaker>
-            <l n="52" xml:id="l52">Le père de Valentine.</l>
+            <l n="28">Le père de Valentine.</l>
           </sp>
-          <sp who="richesource" xml:id="3-5">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="53" xml:id="l53">Ah ! c’est vous, Charles... Bonjour, mon ami.</l>
+            <l n="29">Ah ! c’est vous, Charles... Bonjour, mon ami.</l>
           </sp>
-          <sp who="charles" xml:id="3-6">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="54" xml:id="l54">J’ai l’honneur de vous présenter mon père.</l>
+            <l n="30">J’ai l’honneur de vous présenter mon père.</l>
           </sp>
-          <sp who="richesource" xml:id="3-7">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="55" xml:id="l55">Ah ! monsieur est votre père... Eh bien, monsieur, je vous fais compliment de votre fils... C’est un charmant sujet, un jeune homme plein de talent.</l>
+            <l n="31">Ah ! monsieur est votre père... Eh bien, monsieur, je vous fais compliment de votre fils... C’est un charmant sujet, un jeune homme plein de talent.</l>
           </sp>
-          <sp who="charles" xml:id="3-8">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="56" xml:id="l56">Monsieur, je vous prie, épargnez...</l>
+            <l n="32">Monsieur, je vous prie, épargnez...</l>
           </sp>
-          <sp who="richesource" xml:id="3-9">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="57" xml:id="l57">C’est la vérité, mon cher ami : le Roi vous a distingué, et je ne saurais dire trop de bien de vous.</l>
+            <l n="33">C’est la vérité, mon cher ami : le Roi vous a distingué, et je ne saurais dire trop de bien de vous.</l>
           </sp>
-          <sp who="bouchet" xml:id="3-10">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="58" xml:id="l58">Eh bien, monsieur, mon fils vous rend la pareille : il m’a fait de vous un éloge si complet, que je n’hésite pas à vous demander pour lui la main de mademoiselle votre fille.</l>
+            <l n="34">Eh bien, monsieur, mon fils vous rend la pareille : il m’a fait de vous un éloge si complet, que je n’hésite pas à vous demander pour lui la main de mademoiselle votre fille.</l>
           </sp>
-          <sp who="richesource" xml:id="3-11">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="59" xml:id="l59">La main de ma fille !</l>
+            <l n="35">La main de ma fille !</l>
           </sp>
-          <sp who="bouchet" xml:id="3-12">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="60" xml:id="l60">Oui, monsieur ; ces jeunes gens s’aiment, ils s’adorent, marions-les, et tout de suite ; parce qu’il est toujours prudent de terminer ces sortes d’affaires le plus promptement possible.</l>
+            <l n="36">Oui, monsieur ; ces jeunes gens s’aiment, ils s’adorent, marions-les, et tout de suite ; parce qu’il est toujours prudent de terminer ces sortes d’affaires le plus promptement possible.</l>
           </sp>
-          <sp who="richesource" xml:id="3-13">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="61" xml:id="l61">Mais, monsieur...</l>
+            <l n="37">Mais, monsieur...</l>
           </sp>
-          <sp who="bouchet" xml:id="3-14">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="62" xml:id="l62">Après cela je réclamerai votre obligeance, votre protection pour quelques affaires qui m’amènent à la cour.</l>
+            <l n="38">Après cela je réclamerai votre obligeance, votre protection pour quelques affaires qui m’amènent à la cour.</l>
           </sp>
-          <sp who="richesource" xml:id="3-15">
-            <speaker>RICHESOURCE, <em>à part.</em></speaker>
-            <l n="63" xml:id="l63">Cet homme a une assurance qui m’impose. À coup sûr il faut qu’il soit bien riche ou bien en faveur.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="65" xml:id="l65">Monsieur, ne pourriez-vous m’apprendre à qui j’ai l’honneur de parler ?</l>
+          <sp who="#de-richesource">
+            <speaker>RICHESOURCE, à part.</speaker>
+            <l n="39">Cet homme a une assurance qui m’impose. À coup sûr il faut qu’il soit bien riche ou bien en faveur.</l>
+            <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+            <l n="40">Monsieur, ne pourriez-vous m’apprendre à qui j’ai l’honneur de parler ?</l>
           </sp>
-          <sp who="bouchet" xml:id="3-16">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="66" xml:id="l66">Le chapitre des renseignements... c’est trop juste.iee Monsieur, on me nomme Jean Bouchet.</l>
-            <stage><hi rend="italic"><em>Air : Des deux Sœurs. </em></hi></stage>
+            <l n="41">Le chapitre des renseignements... c’est trop juste.iee Monsieur, on me nomme Jean Bouchet.</l>
+            <stage>&lt;em&gt;Air : Des deux Sœurs. &lt;/em&gt;</stage>
+            <l n="42">Je fus toujours cité pour ma franchise,</l>
+            <l n="43">Dès mon printemps, le cœur rempli d’audace,</l>
+            <l n="44">Dans mon pays que la haine s’allume,</l>
+            <l n="45">Mais approuvant mainte illustre conquête,</l>
+            <l n="46">Je voulus faire à mon tour un voyage</l>
+            <l n="47">Que manque-t-il enfin à ma tendresse ?</l>
+            <l n="48">Contre mon sort Plutus en vain conspire,</l>
+            <l n="49">Pour achever en deux mots mon histoire,</l>
           </sp>
-          <sp who="richesource" xml:id="3-17">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="68" xml:id="l68">Je vois, monsieur, que, vous êtes poète, historien, et même philosophe. Mais quels sont vos honoraires pour toutes ces charges-là ?</l>
+            <l n="50">Je vois, monsieur, que, vous êtes poète, historien, et même philosophe. Mais quels sont vos honoraires pour toutes ces charges-là ?</l>
           </sp>
-          <sp who="bouchet" xml:id="3-18">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="69" xml:id="l69">Je vous l’ai dit, un peu de gloire.</l>
+            <l n="51">Je vous l’ai dit, un peu de gloire.</l>
           </sp>
-          <sp who="richesource" xml:id="3-19">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="70" xml:id="l70">La gloire ! Vous y joignez probablement un revenu considérable, des pensions, des bienfaits du Roi ?</l>
+            <l n="52">La gloire ! Vous y joignez probablement un revenu considérable, des pensions, des bienfaits du Roi ?</l>
           </sp>
-          <sp who="bouchet" xml:id="3-20">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="71" xml:id="l71">Du Roi !... Non, car je n’ai jamais vu Sa Majesté.</l>
+            <l n="53">Du Roi !... Non, car je n’ai jamais vu Sa Majesté.</l>
           </sp>
-          <sp who="richesource" xml:id="3-21">
-            <speaker>RICHESOURCE, <em>à part.</em></speaker>
-            <l n="72" xml:id="l72">Ô ciel ! un homme qui n’a pas vu le Roi, demander ma fille !</l>
+          <sp who="#de-richesource">
+            <speaker>RICHESOURCE, à part.</speaker>
+            <l n="54">Ô ciel ! un homme qui n’a pas vu le Roi, demander ma fille !</l>
           </sp>
-          <sp who="bouchet" xml:id="3-22">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="73" xml:id="l73">Je vis, à Poitiers, du modique revenu d’un patrimoine que je n’ai ni diminué ni augmenté, et que je compte laisser à mes enfants tel que je l’ai reçu de mes ancêtres.</l>
+            <l n="55">Je vis, à Poitiers, du modique revenu d’un patrimoine que je n’ai ni diminué ni augmenté, et que je compte laisser à mes enfants tel que je l’ai reçu de mes ancêtres.</l>
           </sp>
-          <sp who="richesource" xml:id="3-23">
-            <speaker>RICHESOURCE, <em>froidement.</em></speaker>
-            <l n="74" xml:id="l74">Je suis désespéré, monsieur, de ne pouvoir m’allier avec un homme d’un aussi grand mérite ; mais des engagements antérieurs... Croyez que, sans cela, j’aurais tenu à grand honneur...</l>
-            <stage><hi rend="italic"><em>À part. </em></hi></stage>
-            <l n="76" xml:id="l76">Un homme qui n’est pas connu du Roi ! Suivez-moi, Valentine.</l>
-            <stage><hi rend="italic"><em>Il salue et sort.</em></hi></stage>
-            <l n="78" xml:id="l78"> </l>
-            <l n="79" xml:id="l79"> </l>
+          <sp who="#de-richesource">
+            <speaker>RICHESOURCE, froidement.</speaker>
+            <l n="56">Je suis désespéré, monsieur, de ne pouvoir m’allier avec un homme d’un aussi grand mérite ; mais des engagements antérieurs... Croyez que, sans cela, j’aurais tenu à grand honneur...</l>
+            <stage>&lt;em&gt;À part. &lt;/em&gt;</stage>
+            <l n="57">Un homme qui n’est pas connu du Roi ! Suivez-moi, Valentine.</l>
+            <stage>&lt;em&gt;Il salue et sort.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="4">
+        <div type="scene" xml:id="IV">
           <head>Scène IV</head>
-            <l n="80" xml:id="l80"> </l>
-          <sp who="charles" xml:id="4-1">
-            <speaker>BOUCHET, CHARLES</speaker>
-            <l n="81" xml:id="l81"> </l>
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, stupéfait.</speaker>
+            <l n="58">Ah !... Au fait, tu ne m’avais pas dit qu’il avait des engagements antérieurs...</l>
           </sp>
-          <sp who="bouchet" xml:id="4-2">
-            <speaker>BOUCHET, <em>stupéfait.</em></speaker>
-            <l n="82" xml:id="l82">Ah !... Au fait, tu ne m’avais pas dit qu’il avait des engagements antérieurs...</l>
-          </sp>
-          <sp who="charles" xml:id="4-3">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="83" xml:id="l83">Pouvez-vous vous laisser abuser ainsi, mon père ?</l>
+            <l n="59">Pouvez-vous vous laisser abuser ainsi, mon père ?</l>
           </sp>
-          <sp who="bouchet" xml:id="4-4">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="84" xml:id="l84">Tiens, c’est un ambitieux que ton M. de Richesource : il n’est point honnête, et je commence à croire qu’il s’est moqué de moi... Après tout, ce n’est pas la première fois que ça m’arrive. Je ne m’en fâche pas... je suis un bon homme.</l>
+            <l n="60">Tiens, c’est un ambitieux que ton M. de Richesource : il n’est point honnête, et je commence à croire qu’il s’est moqué de moi... Après tout, ce n’est pas la première fois que ça m’arrive. Je ne m’en fâche pas... je suis un bon homme.</l>
           </sp>
-          <sp who="charles" xml:id="4-5">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="85" xml:id="l85">Faire le malheur de sa fille et le mien !</l>
-            <stage><hi rend="italic"><em>Air : Ami jamais le chagrin ne m’approche. </em></hi></stage>
+            <l n="61">Faire le malheur de sa fille et le mien !</l>
+            <stage>&lt;em&gt;Air : Ami jamais le chagrin ne m’approche. &lt;/em&gt;</stage>
+            <l n="62">Quoi ! rejeter notre alliance,</l>
           </sp>
-          <sp who="bouchet" xml:id="4-6">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="87" xml:id="l87">Patience, mon ami, patience. J’ai dans ce moment-ci un ouvrage en tête qui fera ma fortune ; et alors nous verrons... Mais pourquoi tout ce monde que je vois là-bas ?</l>
+            <l n="63">En écoutant le courroux qui t’anime,</l>
+            <l n="64">Patience, mon ami, patience. J’ai dans ce moment-ci un ouvrage en tête qui fera ma fortune ; et alors nous verrons... Mais pourquoi tout ce monde que je vois là-bas ?</l>
           </sp>
-          <sp who="charles" xml:id="4-7">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="88" xml:id="l88">Ce sont les personnes qui se rendent au lever du Roi.</l>
+            <l n="65">Ce sont les personnes qui se rendent au lever du Roi.</l>
           </sp>
-          <sp who="bouchet" xml:id="4-8">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="89" xml:id="l89">À propos, tu as vu tout à l’heure combien j’ai paru ridicule lorsque j’ai dit que je ne l’avais jamais vu : il faut que je me procure cette satisfaction aujourd’hui même.</l>
+            <l n="66">À propos, tu as vu tout à l’heure combien j’ai paru ridicule lorsque j’ai dit que je ne l’avais jamais vu : il faut que je me procure cette satisfaction aujourd’hui même.</l>
           </sp>
-          <sp who="charles" xml:id="4-9">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="90" xml:id="l90">Sa Majesté traverse tous les jours cette salle en se rendant au conseil.</l>
+            <l n="67">Sa Majesté traverse tous les jours cette salle en se rendant au conseil.</l>
           </sp>
-          <sp who="bouchet" xml:id="4-10">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="91" xml:id="l91">Vrai Dieu ! j’en profiterai... Allons, console-toi, mon pauvre Charles, tout n’est peut être pas encore désespéré. Le temps adoucira ce terrible M. de Richesource. Viens avec moi, je vais à mon auberge donner quelques ordres, el je reviendrai en ces lieux satisfaire mon cour et ma curiosité.</l>
-            <stage><hi rend="italic"><em>Ils sortent.</em></hi></stage>
-            <l n="93" xml:id="l93"> </l>
-            <l n="94" xml:id="l94"> </l>
+            <l n="68">Vrai Dieu ! j’en profiterai... Allons, console-toi, mon pauvre Charles, tout n’est peut être pas encore désespéré. Le temps adoucira ce terrible M. de Richesource. Viens avec moi, je vais à mon auberge donner quelques ordres, el je reviendrai en ces lieux satisfaire mon cour et ma curiosité.</l>
+            <stage>&lt;em&gt;Ils sortent.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="5">
+        <div type="scene" xml:id="V">
           <head>Scène V</head>
-            <l n="95" xml:id="l95"> </l>
-          <sp who="courtisans" xml:id="5-1">
-            <speaker>LE CAPITAINE POLIN, LE PRÉSIDENT, SAINT GELAIS, LE MARQUIS, COURTISANS</speaker>
-            <l n="96" xml:id="l96"> </l>
-          </sp>
-          <sp who="chœur" xml:id="5-2">
+          <sp who="#chœur">
             <speaker>CHŒUR.</speaker>
-            <stage><hi rend="italic"><em>Air : de Joconde. (Final du 2<sup>e</sup> acte.) </em></hi></stage>
+            <stage>&lt;em&gt;Air : de Joconde. (Final du 2&lt;sup&gt;e&lt;/sup&gt; acte.) &lt;/em&gt;</stage>
+            <l n="69">Accourons, mes amis, l’heure s’avance</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-3">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="98" xml:id="l98">Ah ! vous voilà, Saint Gelais ! il y a des siècles que vous n’avez paru ici.</l>
+            <l n="70">Ah ! vous voilà, Saint Gelais ! il y a des siècles que vous n’avez paru ici.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="5-4">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="99" xml:id="l99">Vous savez, moussu le Marquis que les Muses aiment la solitude... J’ai un grand ouvrage qui m’occupe dans ce moment.</l>
+            <l n="71">Vous savez, moussu le Marquis que les Muses aiment la solitude... J’ai un grand ouvrage qui m’occupe dans ce moment.</l>
           </sp>
-          <sp who="le-président" xml:id="5-5">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="100" xml:id="l100">Ah ! ah ! quelque poème épique ?</l>
+            <l n="72">Ah ! ah ! quelque poème épique ?</l>
           </sp>
-          <sp who="saint-gelais" xml:id="5-6">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="101" xml:id="l101">Non, moussu le Président, un rondeau.</l>
+            <l n="73">Non, moussu le Président, un rondeau.</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-7">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="102" xml:id="l102">C’est un homme charmant, que Saint Gelais, messieurs ; c’est un petit Homère que nous avons élevé pour chanter nos exploits.</l>
+            <l n="74">C’est un homme charmant, que Saint Gelais, messieurs ; c’est un petit Homère que nous avons élevé pour chanter nos exploits.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="5-8">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="103" xml:id="l103">À propos, Marquis, savez-vous la nouvelle ?</l>
+            <l n="75">À propos, Marquis, savez-vous la nouvelle ?</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-9">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="104" xml:id="l104">Oui, la disgrâce du Chancelier Duprat.</l>
+            <l n="76">Oui, la disgrâce du Chancelier Duprat.</l>
           </sp>
-          <sp who="polin" xml:id="5-10">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="105" xml:id="l105">Du Chancelier Duprat ! Je ne le crois pas.</l>
+            <l n="77">Du Chancelier Duprat ! Je ne le crois pas.</l>
           </sp>
-          <sp who="le-président" xml:id="5-11">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="106" xml:id="l106">Mais, c’est officiel... Au surplus, il mérite bien son sort... Un homme dont on ne pouvait rien obtenir.</l>
+            <l n="78">Mais, c’est officiel... Au surplus, il mérite bien son sort... Un homme dont on ne pouvait rien obtenir.</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-12">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="107" xml:id="l107">Sans égard pour la naissance !... J’espère bien que celui qui va le remplacer... Et, qui désigne-t-on ?</l>
+            <l n="79">Sans égard pour la naissance !... J’espère bien que celui qui va le remplacer... Et, qui désigne-t-on ?</l>
           </sp>
-          <sp who="saint-gelais" xml:id="5-13">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="108" xml:id="l108">Personne encore : le Roi ne s’est pas prononcé ; mais, je sais de bonne part que son choix est fait, et qu’il est des plus bizarres. De plus, on ajoute que le nouveau Chancelier, qui est totalement étranger à la cour, est en ce moment en route pour s’y rendre.</l>
+            <l n="80">Personne encore : le Roi ne s’est pas prononcé ; mais, je sais de bonne part que son choix est fait, et qu’il est des plus bizarres. De plus, on ajoute que le nouveau Chancelier, qui est totalement étranger à la cour, est en ce moment en route pour s’y rendre.</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-14">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="109" xml:id="l109">Vous devez savoir ça, vous, Capitaine Polin.</l>
+            <l n="81">Vous devez savoir ça, vous, Capitaine Polin.</l>
           </sp>
-          <sp who="polin" xml:id="5-15">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="110" xml:id="l110">Non, monsieur le Marquis.</l>
+            <l n="82">Non, monsieur le Marquis.</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-16">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="111" xml:id="l111">Ah ça, Capitaine, dites-moi alors un peu ‘ ce que vous venez faire à la cour ?</l>
+            <l n="83">Ah ça, Capitaine, dites-moi alors un peu ‘ ce que vous venez faire à la cour ?</l>
           </sp>
-          <sp who="polin" xml:id="5-17">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="112" xml:id="l112">Je suis de service, monsieur le Marquis.</l>
+            <l n="84">Je suis de service, monsieur le Marquis.</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-18">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="113" xml:id="l113">À la bonne heure, car vous n’avez rien à solliciter, vous ; le Roi vous poursuit de ses bienfaits.</l>
+            <l n="85">À la bonne heure, car vous n’avez rien à solliciter, vous ; le Roi vous poursuit de ses bienfaits.</l>
           </sp>
-          <sp who="polin" xml:id="5-19">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="114" xml:id="l114">C’est qu’il croit que je les mérite.</l>
+            <l n="86">C’est qu’il croit que je les mérite.</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-20">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="115" xml:id="l115">Et moi qui suis l’âme de ses fêtes, de ses bals ; dont on distingue toujours la mise élégante et riche, qui me ruine à son service... qui suis colonel de naissance, je ne puis rien obtenir ? Il devrait pourtant avoir égard à mon rang...</l>
+            <l n="87">Et moi qui suis l’âme de ses fêtes, de ses bals ; dont on distingue toujours la mise élégante et riche, qui me ruine à son service... qui suis colonel de naissance, je ne puis rien obtenir ? Il devrait pourtant avoir égard à mon rang...</l>
           </sp>
-          <sp who="polin" xml:id="5-21">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="116" xml:id="l116">Il veut bien faire attention à mes services.</l>
+            <l n="88">Il veut bien faire attention à mes services.</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-22">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="117" xml:id="l117">Songer à ma naissance.</l>
-            <stage><hi rend="italic"><em>Air : Je suis colère et boudeuse. </em></hi></stage>
-          <stage>POLIN.</stage>
+            <l n="89">Songer à ma naissance.</l>
+            <stage>&lt;em&gt;Air : Je suis colère et boudeuse. &lt;/em&gt;</stage>
+            <l n="90">À la première croisade,</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-23">
+          <sp who="#le-capitaine-polin">
+            <speaker>POLIN.</speaker>
+            <l n="91">En Navarre, sans bravade,</l>
+          </sp>
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="119" xml:id="l119">Ah ça, je vous fais compliment, Capitaine, le Roi vous a fait gentilhomme.</l>
-          <stage>POLIN.</stage>
+            <l n="92">De je ne sais quelle ville,</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-24">
+          <sp who="#le-capitaine-polin">
+            <speaker>POLIN.</speaker>
+            <l n="93">Je pris d’assaut Thionville,</l>
+          </sp>
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="120" xml:id="l120">Il faut vous marier maintenant.</l>
-          <stage>POLIN.</stage>
+            <l n="94">Mon grand oncle à deux batailles !</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-25">
+          <sp who="#le-capitaine-polin">
+            <speaker>POLIN.</speaker>
+            <l n="95">À Hesdin, sur les murailles,</l>
+          </sp>
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="121" xml:id="l121">Sans doute, mais j’ai fait une réflexion...</l>
-          <stage>POLIN.</stage>
+            <l n="96">Un grand cousin de mon père,</l>
           </sp>
-          <sp who="le-marquis" xml:id="5-26">
+          <sp who="#le-capitaine-polin">
+            <speaker>POLIN.</speaker>
+            <l n="97">À la voix de la patrie,</l>
+          </sp>
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="122" xml:id="l122">Ne pouvez-vous nous en faire part ?</l>
-          <stage>POLIN.</stage>
+            <l n="98">D’aïeux connus dans l’histoire,</l>
           </sp>
-          <sp who="saint-gelais" xml:id="5-27">
+          <sp who="#le-capitaine-polin">
+            <speaker>POLIN.</speaker>
+            <l n="99">À moi seul je dois ma gloire,</l>
+          </sp>
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <stage><hi rend="italic"><em>Air : Quand l’Amour naquit à Cythère. </em></hi></stage>
-          <stage>LE PRÉSIDENT.</stage>
+            <l n="100">Ah ça, je vous fais compliment, Capitaine, le Roi vous a fait gentilhomme.</l>
           </sp>
-          <sp who="polin" xml:id="5-28">
-            <speaker>POLIN.</speaker>
-            <l n="124" xml:id="l124"> </l>
-          <stage>LE MARQUIS.</stage>
+          <sp who="#le-président">
+            <speaker>LE PRÉSIDENT.</speaker>
+            <l n="101">Il faut vous marier maintenant.</l>
           </sp>
-          <sp who="polin" xml:id="5-29">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="125" xml:id="l125"> </l>
+            <l n="102">Sans doute, mais j’ai fait une réflexion...</l>
+          </sp>
+          <sp who="#le-marquis">
+            <speaker>LE MARQUIS.</speaker>
+            <l n="103">Ne pouvez-vous nous en faire part ?</l>
+          </sp>
+          <sp who="#le-capitaine-polin">
+            <speaker>POLIN.</speaker>
+            <stage>&lt;em&gt;Air : Quand l’Amour naquit à Cythère. &lt;/em&gt;</stage>
+            <l n="104">Oui, je vais vous faire connaître,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="6">
+        <div type="scene" xml:id="VI">
           <head>Scène VI</head>
-            <l n="126" xml:id="l126"> </l>
-          <sp who="courtisans" xml:id="6-1">
+          <sp who="#le-baron">
             <speaker>LE BARON, LE MARQUIS, POLIN, SAINT GELAIS, BOUCHET, COURTISANS, GARDES</speaker>
-            <l n="127" xml:id="l127"> </l>
-            <stage><hi rend="italic"><em>Bouchet entre doucement par le fond.</em></hi></stage>
+            <stage>&lt;em&gt;Bouchet entre doucement par le fond.&lt;/em&gt;</stage>
           </sp>
-          <sp who="bouchet" xml:id="6-2">
-            <speaker>BOUCHET, <em>à part.</em></speaker>
-            <l n="129" xml:id="l129">Sa Majesté va sans doute bientôt passer, car voici beaucoup de monde... Je verrai parfaitement, ici.</l>
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, à part.</speaker>
+            <l n="105">Sa Majesté va sans doute bientôt passer, car voici beaucoup de monde... Je verrai parfaitement, ici.</l>
           </sp>
-          <sp who="un-suisse" xml:id="6-3">
+          <sp who="#un-suisse">
             <speaker>UN SUISSE.</speaker>
-            <l n="130" xml:id="l130">Monsir, le Roi aller passir...</l>
+            <l n="106">Monsir, le Roi aller passir...</l>
           </sp>
-          <sp who="bouchet" xml:id="6-4">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="131" xml:id="l131">Je le sais, et je l’attends.</l>
+            <l n="107">Je le sais, et je l’attends.</l>
           </sp>
-          <sp who="le-suisse" xml:id="6-5">
+          <sp who="#le-suisse">
             <speaker>LE SUISSE.</speaker>
-            <l n="132" xml:id="l132">Qui êtes fous, avec fotre rope noire, pour fouloir restir ?</l>
+            <l n="108">Qui êtes fous, avec fotre rope noire, pour fouloir restir ?</l>
           </sp>
-          <sp who="bouchet" xml:id="6-6">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="133" xml:id="l133">Je suis Jean Bouchet, homme de lettres, qui viens solliciter...</l>
+            <l n="109">Je suis Jean Bouchet, homme de lettres, qui viens solliciter...</l>
           </sp>
-          <sp who="le-marquis" xml:id="6-7">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="134" xml:id="l134">Jean Bouchet ! Qu’est-ce que c’est que ça, Saint Gelais ?</l>
+            <l n="110">Jean Bouchet ! Qu’est-ce que c’est que ça, Saint Gelais ?</l>
           </sp>
-          <sp who="saint-gelais" xml:id="6-8">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="135" xml:id="l135">Quelque savant de provincé. Je n’ai aucun rapport avec ces gens-là.</l>
+            <l n="111">Quelque savant de provincé. Je n’ai aucun rapport avec ces gens-là.</l>
           </sp>
-          <sp who="tous" xml:id="6-9">
+          <sp who="#tous">
             <speaker>TOUS.</speaker>
-            <stage><hi rend="italic"><em>Air : Pas des trois cousines (Dansomanie). </em></hi></stage>
-          <stage>BOUCHET.</stage>
+            <stage>&lt;em&gt;Air : Pas des trois cousines (Dansomanie). &lt;/em&gt;</stage>
+            <l n="112">Ah ! la singulière figure !</l>
           </sp>
-          <sp who="tous" xml:id="6-10">
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET.</speaker>
+            <l n="113">Un vieillard aurait dû, je pense,</l>
+          </sp>
+          <sp who="#tous">
             <speaker>TOUS.</speaker>
-            <stage><hi rend="italic">Ah ! la singulière figure ! <em>etc.</em></hi></stage>
+            <stage>Ah ! la singulière figure ! &lt;em&gt;etc.&lt;/em&gt;</stage>
           </sp>
-          <sp who="le-suisse" xml:id="6-11">
+          <sp who="#le-suisse">
             <speaker>LE SUISSE.</speaker>
-            <l n="138" xml:id="l138">Sortir fous, pour mon consigne.</l>
+            <l n="114">Sortir fous, pour mon consigne.</l>
           </sp>
-          <sp who="bouchet" xml:id="6-12">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="139" xml:id="l139">M. le Suisse, je suis Français ; j’aime le Roi : je veux le voir. Je n’aurai pas fait soixante-dix lieues sans m’être procuré ce bonheur.</l>
+            <l n="115">M. le Suisse, je suis Français ; j’aime le Roi : je veux le voir. Je n’aurai pas fait soixante-dix lieues sans m’être procuré ce bonheur.</l>
           </sp>
-          <sp who="polin" xml:id="6-13">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="140" xml:id="l140">Laissez, sentinelle.</l>
-            <stage><hi rend="italic"><em>À Bouchet. </em></hi></stage>
-            <l n="142" xml:id="l142">Restez, monsieur ; vous n’aurez pas perdu vos pas. Votre curiosité est trop légitime pour qu’on ne s’empresse pas de la satisfaire.</l>
+            <l n="116">Laissez, sentinelle.</l>
+            <stage>&lt;em&gt;À Bouchet. &lt;/em&gt;</stage>
+            <l n="117">Restez, monsieur ; vous n’aurez pas perdu vos pas. Votre curiosité est trop légitime pour qu’on ne s’empresse pas de la satisfaire.</l>
           </sp>
-          <sp who="bouchet" xml:id="6-14">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="143" xml:id="l143">Grand merci, monsieur.</l>
+            <l n="118">Grand merci, monsieur.</l>
           </sp>
-          <sp who="le-président" xml:id="6-15">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="144" xml:id="l144">Je ne sais pas pourquoi l’on a la faiblesse de laisser entrer ces petits importants lettrés qui viennent solliciter des pensions.</l>
+            <l n="119">Je ne sais pas pourquoi l’on a la faiblesse de laisser entrer ces petits importants lettrés qui viennent solliciter des pensions.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="6-16">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="145" xml:id="l145">Jé mé flatté qué vous faites quelques exceptions. Moi, par exemple, qui fais vos chansons de table, des épigrammes contre vos ennemis, des madrigaux pour vos maîtresses, et des couplets pour toutes les circonstances.</l>
+            <l n="120">Jé mé flatté qué vous faites quelques exceptions. Moi, par exemple, qui fais vos chansons de table, des épigrammes contre vos ennemis, des madrigaux pour vos maîtresses, et des couplets pour toutes les circonstances.</l>
           </sp>
-          <sp who="le-président" xml:id="6-17">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="146" xml:id="l146">Ah ! je me rappellerai toujours celui que lu fis pour la naissance de mon fils.</l>
+            <l n="121">Ah ! je me rappellerai toujours celui que lu fis pour la naissance de mon fils.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="6-18">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="147" xml:id="l147">Sandieu ! il était joli, que je crois !</l>
-            <stage><hi rend="italic"><em>Air : Contentons-nous d’une simple bouteille. </em></hi></stage>
-          <stage>BOUCHET, <em>sur le côté, de manière à être entendu.</em></stage>
+            <l n="122">Sandieu ! il était joli, que je crois !</l>
+            <stage>&lt;em&gt;Air : Contentons-nous d’une simple bouteille. &lt;/em&gt;</stage>
+            <l n="123">Moi qui ne fais, dit-on, que l’épigramme,</l>
           </sp>
-          <sp who="le-président" xml:id="6-19">
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, sur le côté, de manière à être entendu.</speaker>
+            <l n="124">Pour compléter l’aimable allégorie,</l>
+          </sp>
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="149" xml:id="l149">Hein ! je crois qu’il se permet... </l>
+            <l n="125">Hein ! je crois qu’il se permet... </l>
           </sp>
-          <sp who="un-nuissier" xml:id="6-20">
+          <sp who="#un-nuissier">
             <speaker>UN NUISSIER.</speaker>
-            <l n="150" xml:id="l150">Le Roi !</l>
+            <l n="126">Le Roi !</l>
           </sp>
-          <sp who="le-président" xml:id="6-21">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="151" xml:id="l151">A-t-on prévenu Sa Majesté que M. Bouchet venait la visiter ?</l>
+            <l n="127">A-t-on prévenu Sa Majesté que M. Bouchet venait la visiter ?</l>
           </sp>
-          <sp who="le-marquis" xml:id="6-22">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="152" xml:id="l152">Oh ! sans doute, et vous verrez que le Roi ne s’occupera que de lui.</l>
-            <l n="153" xml:id="l153"> </l>
-            <l n="154" xml:id="l154"> </l>
+            <l n="128">Oh ! sans doute, et vous verrez que le Roi ne s’occupera que de lui.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="7">
+        <div type="scene" xml:id="VII">
           <head>Scène VII</head>
-            <l n="155" xml:id="l155"> </l>
-          <sp who="les-précédents" xml:id="7-1">
-            <speaker>LES PRÉCÉDENTS, LE ROI, UN INSPECTEUR DES BÂTIMENTS, SUITE</speaker>
-            <l n="156" xml:id="l156"> </l>
-          </sp>
-          <sp who="chœur" xml:id="7-2">
+          <sp who="#chœur">
             <speaker>CHŒUR.</speaker>
-            <stage><hi rend="italic"><em>Air : De maître Jean (de Jean de Paris). </em></hi></stage>
+            <stage>&lt;em&gt;Air : De maître Jean (de Jean de Paris). &lt;/em&gt;</stage>
+            <l n="129">Oui, c’est le Roi !</l>
           </sp>
-          <sp who="le-roi" xml:id="7-3">
-            <speaker>LE ROI, <em>à l’inspecteur qui le suit un plan à la main.</em></speaker>
-            <l n="158" xml:id="l158">Non, non, monsieur, je ne puis adopter ce plan... Je sais que quelques personnes n’approuvent pas le luxe de ma cour : laissons-les dire. Tout doit respirer la grandeur chez un Roi de France.</l>
-            <stage><hi rend="italic"><em>Air : À soixante ans il faut plier bagage. </em></hi></stage>
-            <l n="160" xml:id="l160">Quant à Duprat, je ne veux plus en entendre parler... Ce n’est pas la tête qu’il me faut.</l>
+          <sp who="#le-roi">
+            <speaker>LE ROI, à l’inspecteur qui le suit un plan à la main.</speaker>
+            <l n="130">Non, non, monsieur, je ne puis adopter ce plan... Je sais que quelques personnes n’approuvent pas le luxe de ma cour : laissons-les dire. Tout doit respirer la grandeur chez un Roi de France.</l>
+            <stage>&lt;em&gt;Air : À soixante ans il faut plier bagage. &lt;/em&gt;</stage>
+            <l n="131">Si jusqu’aux rives du Bosphore,</l>
+            <l n="132">Quant à Duprat, je ne veux plus en entendre parler... Ce n’est pas la tête qu’il me faut.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="7-4">
-            <speaker>SAINT GELAIS, <em>bas aux autres.</em></speaker>
-            <l n="161" xml:id="l161">Quand je vous le disais.</l>
+          <sp who="#saint-gelais">
+            <speaker>SAINT GELAIS, bas aux autres.</speaker>
+            <l n="133">Quand je vous le disais.</l>
           </sp>
-          <sp who="le-roi" xml:id="7-5">
-            <speaker>LE ROI, <em>passant successivement devant les personnages auxquels il adresse la parole.</em></speaker>
-            <l n="162" xml:id="l162">Bonjour, Président... Saint Gelais, votre derrière épigramme est assez bien ; mais vous êtes trop méchant ; cela vous jouera quelque mauvais tour... Ah ! Marquis, vous avez aujourd’hui un habit charmant. Et... vous voilà, Polin ; j’ai à vous parler : je vous envoie en ambassade.</l>
+          <sp who="#le-roi">
+            <speaker>LE ROI, passant successivement devant les personnages auxquels il adresse la parole.</speaker>
+            <l n="134">Bonjour, Président... Saint Gelais, votre derrière épigramme est assez bien ; mais vous êtes trop méchant ; cela vous jouera quelque mauvais tour... Ah ! Marquis, vous avez aujourd’hui un habit charmant. Et... vous voilà, Polin ; j’ai à vous parler : je vous envoie en ambassade.</l>
           </sp>
-          <sp who="le-président" xml:id="7-6">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT, LE MARQUIS.</speaker>
-            <l n="163" xml:id="l163">Est-il possible ?</l>
+            <l n="135">Est-il possible ?</l>
           </sp>
-          <sp who="le-roi" xml:id="7-7">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="164" xml:id="l164">Messieurs !</l>
-            <stage><hi rend="italic"><em>Air : De votre bonté généreuse. (de Fanchon.) </em></hi></stage>
+            <l n="136">Messieurs !</l>
+            <stage>&lt;em&gt;Air : De votre bonté généreuse. (de Fanchon.) &lt;/em&gt;</stage>
+            <l n="137">S’il obtient une récompense,</l>
           </sp>
-          <sp who="polin" xml:id="7-8">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="166" xml:id="l166">Quoi ! Sire... vous voulez...</l>
+            <l n="138">Quoi ! Sire... vous voulez...</l>
           </sp>
-          <sp who="le-roi" xml:id="7-9">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="167" xml:id="l167">Vive Dieu ! je me rappellerai toujours combien vous vous êtes exposé à Marignan.</l>
+            <l n="139">Vive Dieu ! je me rappellerai toujours combien vous vous êtes exposé à Marignan.</l>
           </sp>
-          <sp who="polin" xml:id="7-10">
+          <sp who="#le-capitaine-polin">
             <speaker>POLIN.</speaker>
-            <l n="168" xml:id="l168">Sire, j’étais à vos côtés.</l>
+            <l n="140">Sire, j’étais à vos côtés.</l>
           </sp>
-          <sp who="le-roi" xml:id="7-11">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <stage><hi rend="italic"><em>Air : De M. Piccini. </em></hi></stage>
-            <l n="170" xml:id="l170">Suivez-moi.</l>
-            <stage><hi rend="italic"><em>Le Roi fait quelques pas pour sortir ; il aperçoit Bouchet, s’arrête devant lui, le regarde avec attention, mais avec bonté.</em></hi></stage>
-            <l n="172" xml:id="l172">Vive Dieu ! voilà l’homme que je cherchais ! C’est là ce qu’il me faut ! je m’en tiendrai à celui-là.</l>
+            <stage>&lt;em&gt;Air : De M. Piccini. &lt;/em&gt;</stage>
+            <l n="141">Oui, je dois enchainer ce bras</l>
+            <l n="142">Suivez-moi.</l>
+            <stage>&lt;em&gt;Le Roi fait quelques pas pour sortir ; il aperçoit Bouchet, s’arrête devant lui, le regarde avec attention, mais avec bonté.&lt;/em&gt;</stage>
+            <l n="143">Vive Dieu ! voilà l’homme que je cherchais ! C’est là ce qu’il me faut ! je m’en tiendrai à celui-là.</l>
           </sp>
-          <sp who="tous" xml:id="7-12">
+          <sp who="#tous">
             <speaker>TOUS.</speaker>
-            <l n="173" xml:id="l173">Que veut-il dire ?</l>
+            <l n="144">Que veut-il dire ?</l>
           </sp>
-          <sp who="le-marquis" xml:id="7-13">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="174" xml:id="l174">Serait-ce celui que l’on attendait ?</l>
+            <l n="145">Serait-ce celui que l’on attendait ?</l>
           </sp>
-          <sp who="le-roi" xml:id="7-14">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="175" xml:id="l175">Il y a bien des choses dans cette tête-là ! Cet homme vaut beaucoup mieux que Duprat, beaucoup mieux, On ne peut pas les comparer.</l>
+            <l n="146">Il y a bien des choses dans cette tête-là ! Cet homme vaut beaucoup mieux que Duprat, beaucoup mieux, On ne peut pas les comparer.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="7-15">
-            <speaker>SAINT GELAIS, <em>bas aux autres.</em></speaker>
-            <l n="176" xml:id="l176">C’est lui qui remplace...</l>
+          <sp who="#saint-gelais">
+            <speaker>SAINT GELAIS, bas aux autres.</speaker>
+            <l n="147">C’est lui qui remplace...</l>
           </sp>
-          <sp who="le-roi" xml:id="7-16">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="177" xml:id="l177">Cette main-là tiendra bien le gouvernail !</l>
+            <l n="148">Cette main-là tiendra bien le gouvernail !</l>
           </sp>
-          <sp who="le-président" xml:id="7-17">
-            <speaker>LE PRÉSIDENT, <em>bas.</em></speaker>
-            <l n="178" xml:id="l178">Le gouvernail de l’état.</l>
+          <sp who="#le-président">
+            <speaker>LE PRÉSIDENT, bas.</speaker>
+            <l n="149">Le gouvernail de l’état.</l>
           </sp>
-          <sp who="le-roi" xml:id="7-18">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="179" xml:id="l179">Je vais au conseil ; mais rendez-vous dans une heure à mon cabinet, on vous y introduira, et là je vous expliquerai mes intentions.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="181" xml:id="l181"> </l>
-            <l n="182" xml:id="l182"> </l>
+            <l n="150">Je vais au conseil ; mais rendez-vous dans une heure à mon cabinet, on vous y introduira, et là je vous expliquerai mes intentions.</l>
+            <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="8">
+        <div type="scene" xml:id="VIII">
           <head>Scène VIII</head>
-            <l n="183" xml:id="l183"> </l>
-          <sp who="bouchet" xml:id="8-1">
-            <speaker>BOUCHET, LE PRÉSIDENT, LE MARQUIS, SAINT GELAIS</speaker>
-            <l n="184" xml:id="l184"> </l>
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, à part.</speaker>
+            <l n="151">Que signifie ce discours ?</l>
           </sp>
-          <sp who="bouchet" xml:id="8-2">
-            <speaker>BOUCHET, <em>à part.</em></speaker>
-            <l n="185" xml:id="l185">Que signifie ce discours ?</l>
+          <sp who="#courtisans">
+            <speaker>LES COURTISANS, à part.</speaker>
+            <stage>&lt;em&gt;Air : Vaudeville de Folie et Raison. &lt;/em&gt;</stage>
+            <l n="152">Ciel ! quel coup de fortune !</l>
           </sp>
-          <sp who="courtisans" xml:id="8-3">
-            <speaker>LES COURTISANS, <em>à part.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Vaudeville de Folie et Raison. </em></hi></stage>
-          </sp>
-          <sp who="le-président" xml:id="8-4">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="187" xml:id="l187">Polin était au fait.</l>
+            <l n="153">Polin était au fait.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-5">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="188" xml:id="l188">C’est une mystification.</l>
+            <l n="154">C’est une mystification.</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-6">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="189" xml:id="l189">Où diable le Roi va-t-il choisir... ?</l>
+            <l n="155">Où diable le Roi va-t-il choisir... ?</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-7">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="190" xml:id="l190">Je vous l’avais bien dit.</l>
+            <l n="156">Je vous l’avais bien dit.</l>
           </sp>
-          <sp who="le-président" xml:id="8-8">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="191" xml:id="l191">Il n’a plus en tête que ses gens de lettres.</l>
+            <l n="157">Il n’a plus en tête que ses gens de lettres.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-9">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="192" xml:id="l192">Nous sommes perdus !</l>
+            <l n="158">Nous sommes perdus !</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-10">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="193" xml:id="l193">Non, non ; prenons les devants : commençons les compliments ; la flatterie est un moyen qui réussit toujours.</l>
-            <stage><hi rend="italic"><em>Ils s’approchent tous de Bouchet, en lui faisant de grandes salutations.</em></hi></stage>
+            <l n="159">Non, non ; prenons les devants : commençons les compliments ; la flatterie est un moyen qui réussit toujours.</l>
+            <stage>&lt;em&gt;Ils s’approchent tous de Bouchet, en lui faisant de grandes salutations.&lt;/em&gt;</stage>
           </sp>
-          <sp who="le-marquis" xml:id="8-11">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <stage><hi rend="italic"><em>Air : J’ons un curé patriote. </em></hi></stage>
-          <stage>SAINT GELAIS.</stage>
+            <stage>&lt;em&gt;Air : J’ons un curé patriote. &lt;/em&gt;</stage>
+            <l n="160">Ah ! combien je suis coupable !</l>
           </sp>
-          <sp who="le-président" xml:id="8-12">
+          <sp who="#saint-gelais">
+            <speaker>SAINT GELAIS.</speaker>
+            <l n="161">Vous mé voyez tout confus.</l>
+          </sp>
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="196" xml:id="l196">Monseigneur... à moi !</l>
-          <stage>BOUCHET.</stage>
+            <l n="162">Ma conduite est condamnable.</l>
           </sp>
-          <sp who="tous" xml:id="8-13">
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET.</speaker>
+            <l n="163">Je n’y songe déjà plus.</l>
+          </sp>
+          <sp who="#tous">
             <speaker>TOUS.</speaker>
-            <stage><hi rend="italic"><em>Air : Vaudeville des Limites. </em></hi></stage>
-          <stage>BOUCHET, <em>à part.</em></stage>
+            <l n="164">Quel honneur !</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-14">
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, à part.</speaker>
+            <l n="165">Monseigneur... à moi !</l>
+            <stage>&lt;em&gt;Air : Vaudeville des Limites. &lt;/em&gt;</stage>
+            <l n="166">Me voilà donc dans les grandeurs !</l>
+          </sp>
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="198" xml:id="l198">Convenez que le piège était perfide.</l>
+            <l n="167">Convenez que le piège était perfide.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-15">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="199" xml:id="l199">Ou plutôt la plaisanterie était charmante.</l>
+            <l n="168">Ou plutôt la plaisanterie était charmante.</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-16">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="200" xml:id="l200">Vous présenter humblement comme un obscur solliciteur !...</l>
+            <l n="169">Vous présenter humblement comme un obscur solliciteur !...</l>
           </sp>
-          <sp who="bouchet" xml:id="8-17">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="201" xml:id="l201">Parbleu ! vous me faites songer, messieurs, que j’ai en effet à solliciter.</l>
+            <l n="170">Parbleu ! vous me faites songer, messieurs, que j’ai en effet à solliciter.</l>
           </sp>
-          <sp who="le-président" xml:id="8-18">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="202" xml:id="l202">Vous, Monseigneur ! solliciter !</l>
+            <l n="171">Vous, Monseigneur ! solliciter !</l>
           </sp>
-          <sp who="bouchet" xml:id="8-19">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="203" xml:id="l203">Quand je dis solliciter... ce n’est pas le mot, à présent que je suis...</l>
-            <stage><hi rend="italic"><em>À part. </em></hi></stage>
-            <l n="205" xml:id="l205">Je ne sais pas trop ce que je suis.</l>
+            <l n="172">Quand je dis solliciter... ce n’est pas le mot, à présent que je suis...</l>
+            <stage>&lt;em&gt;À part. &lt;/em&gt;</stage>
+            <l n="173">Je ne sais pas trop ce que je suis.</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-20">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="206" xml:id="l206">Vous n’avez plus qu’à donner des ordres, Monseigneur, et si par bonheur ils nous concernaient...</l>
+            <l n="174">Vous n’avez plus qu’à donner des ordres, Monseigneur, et si par bonheur ils nous concernaient...</l>
           </sp>
-          <sp who="bouchet" xml:id="8-21">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="207" xml:id="l207">Eh ! mais... j’aurai peut-être besoin de vous.</l>
+            <l n="175">Eh ! mais... j’aurai peut-être besoin de vous.</l>
           </sp>
-          <sp who="le-président" xml:id="8-22">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="208" xml:id="l208">Comptez sur notre zèle, notre empressement.</l>
+            <l n="176">Comptez sur notre zèle, notre empressement.</l>
           </sp>
-          <sp who="bouchet" xml:id="8-23">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="209" xml:id="l209">Tenez, voici ce dont il s’agit, messieurs. J’ai eu le malheur de perdre, il y a deux ans, mon dernier ami de collège : en mourant il a laissé une femme et un fils, que je regarde comme ma famille. Eh bien, jugez de mon chagrin, tous les deux sont sur le point d’être ruinés.</l>
+            <l n="177">Tenez, voici ce dont il s’agit, messieurs. J’ai eu le malheur de perdre, il y a deux ans, mon dernier ami de collège : en mourant il a laissé une femme et un fils, que je regarde comme ma famille. Eh bien, jugez de mon chagrin, tous les deux sont sur le point d’être ruinés.</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-24">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="210" xml:id="l210">Comment cela, Monseigneur ?</l>
+            <l n="178">Comment cela, Monseigneur ?</l>
           </sp>
-          <sp who="bouchet" xml:id="8-25">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="211" xml:id="l211">Un maudit chicaneur, assez puissant à Poitiers, notre ville, intente un procès à la mère : il est probable qu’elle le perdra.</l>
+            <l n="179">Un maudit chicaneur, assez puissant à Poitiers, notre ville, intente un procès à la mère : il est probable qu’elle le perdra.</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-26">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="212" xml:id="l212">Et le jeune homme ?</l>
+            <l n="180">Et le jeune homme ?</l>
           </sp>
-          <sp who="bouchet" xml:id="8-27">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="213" xml:id="l213">Il est au service ; ça a vingt ans : c’est brave, impétueux... Il a eu querelle avec un autre officier ; il s’est battu : bref, il a été obligé de quitter son corps.</l>
+            <l n="181">Il est au service ; ça a vingt ans : c’est brave, impétueux... Il a eu querelle avec un autre officier ; il s’est battu : bref, il a été obligé de quitter son corps.</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-28">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="214" xml:id="l214">La discipline est sévère : il ne peut y rentrer ; mais vous pouvez, Monseigneur, le faire passer dans un autre.</l>
+            <l n="182">La discipline est sévère : il ne peut y rentrer ; mais vous pouvez, Monseigneur, le faire passer dans un autre.</l>
           </sp>
-          <sp who="bouchet" xml:id="8-29">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="215" xml:id="l215">Vous croyez ?</l>
+            <l n="183">Vous croyez ?</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-30">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="216" xml:id="l216">Attendez ; mais moi-même... Vous dites qu’il est brave ? ça suffit.</l>
-            <stage><hi rend="italic"><em>Il s’éloigne, et va vers la table.</em></hi></stage>
+            <l n="184">Attendez ; mais moi-même... Vous dites qu’il est brave ? ça suffit.</l>
+            <stage>&lt;em&gt;Il s’éloigne, et va vers la table.&lt;/em&gt;</stage>
           </sp>
-          <sp who="le-président" xml:id="8-31">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="218" xml:id="l218">D’un mot, Monseigneur pourrait décider le procès en faveur de la personne qu’il protège.</l>
+            <l n="185">D’un mot, Monseigneur pourrait décider le procès en faveur de la personne qu’il protège.</l>
           </sp>
-          <sp who="bouchet" xml:id="8-32">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="219" xml:id="l219">Je le sais bien ; mais...</l>
+            <l n="186">Je le sais bien ; mais...</l>
           </sp>
-          <sp who="le-président" xml:id="8-33">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="220" xml:id="l220">Peut-être Monseigneur ne veut-il pas influencer les juges. En ce cas, je vais écrire une lettre pour l’avocat général de Poitiers : c’est moi qui l’ai fait nommer ; et que la cause de votre amie soit juste ou non, elle aura la justice pour elle.</l>
-            <stage><hi rend="italic"><em>Il se met à la table, et écrit.</em></hi></stage>
+            <l n="187">Peut-être Monseigneur ne veut-il pas influencer les juges. En ce cas, je vais écrire une lettre pour l’avocat général de Poitiers : c’est moi qui l’ai fait nommer ; et que la cause de votre amie soit juste ou non, elle aura la justice pour elle.</l>
+            <stage>&lt;em&gt;Il se met à la table, et écrit.&lt;/em&gt;</stage>
           </sp>
-          <sp who="le-marquis" xml:id="8-34">
-            <speaker>LE MARQUIS, <em>un parchemin à la main.</em></speaker>
-            <l n="222" xml:id="l222">Monseigneur, voici une commission dans ma compagnie ; le nom est en blanc : M. le vicomte des Tournelles me l’avait demandée ; mais il sera infiniment flatté de la préférence que j’accorde à Monseigneur.</l>
+          <sp who="#le-marquis">
+            <speaker>LE MARQUIS, un parchemin à la main.</speaker>
+            <l n="188">Monseigneur, voici une commission dans ma compagnie ; le nom est en blanc : M. le vicomte des Tournelles me l’avait demandée ; mais il sera infiniment flatté de la préférence que j’accorde à Monseigneur.</l>
           </sp>
-          <sp who="le-président" xml:id="8-35">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="223" xml:id="l223">Monseigneur, voici la lettre.</l>
+            <l n="189">Monseigneur, voici la lettre.</l>
           </sp>
-          <sp who="bouchet" xml:id="8-36">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="224" xml:id="l224">Quelque chose qu’il arrive, j’accepte. M. le Président n’aura jamais à se repentir d’avoir fait une bonne action ; et vous, monsieur le Marquis, vous me remercierez de l’officier que je vous donne.</l>
+            <l n="190">Quelque chose qu’il arrive, j’accepte. M. le Président n’aura jamais à se repentir d’avoir fait une bonne action ; et vous, monsieur le Marquis, vous me remercierez de l’officier que je vous donne.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-37">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="225" xml:id="l225">Monseigneur veut-il me permettre de lui lire quelques vers que je viens de composer à l’instant ?</l>
+            <l n="191">Monseigneur veut-il me permettre de lui lire quelques vers que je viens de composer à l’instant ?</l>
           </sp>
-          <sp who="bouchet" xml:id="8-38">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="226" xml:id="l226">Je ne puis pas vous en empêcher.</l>
+            <l n="192">Je ne puis pas vous en empêcher.</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-39">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS, LE PRÉSIDENT.</speaker>
-            <l n="227" xml:id="l227">Écoutons.</l>
+            <l n="193">Écoutons.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-40">
-            <speaker>SAINT GELAIS, <em>lisant sur ses tablettes.</em></speaker>
-            <l n="228" xml:id="l228">Vers à M. Jean Bouchet, sur sa nomination.</l>
-            <stage><hi rend="italic"><em>Air : Du vaudeville de la Petite sœur. </em></hi></stage>
+          <sp who="#saint-gelais">
+            <speaker>SAINT GELAIS, lisant sur ses tablettes.</speaker>
+            <l n="194">Vers à M. Jean Bouchet, sur sa nomination.</l>
+            <stage>&lt;em&gt;Air : Du vaudeville de la Petite sœur. &lt;/em&gt;</stage>
+            <l n="195">Bouchet nommé ! d’un choix si beau</l>
           </sp>
-          <sp who="bouchet" xml:id="8-41">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="230" xml:id="l230">Charmant, charmant, monsieur !</l>
+            <l n="196">Charmant, charmant, monsieur !</l>
           </sp>
-          <sp who="le-président" xml:id="8-42">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="231" xml:id="l231">Saint Gelais, voilà ce que vous avez fait de mieux,</l>
+            <l n="197">Saint Gelais, voilà ce que vous avez fait de mieux,</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-43">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="232" xml:id="l232">L’impromptu du cœur !... Si vous vouliez le permettre, je vous dédierais ma tragédie en prose de Sophonisbe, moussu le Chancelier.</l>
+            <l n="198">L’impromptu du cœur !... Si vous vouliez le permettre, je vous dédierais ma tragédie en prose de Sophonisbe, moussu le Chancelier.</l>
           </sp>
-          <sp who="bouchet" xml:id="8-44">
-            <speaker>BOUCHET, <em>à part.</em></speaker>
-            <l n="233" xml:id="l233">Ah ! je suis Chancelier.</l>
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, à part.</speaker>
+            <l n="199">Ah ! je suis Chancelier.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-45">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <stage><hi rend="italic"><em>Même Air. </em></hi></stage>
+            <stage>&lt;em&gt;Même Air. &lt;/em&gt;</stage>
+            <l n="200">Comme un simple et modeste auteur,</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-46">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="235" xml:id="l235">J’ose espérer que Monseigneur aura plus d’égards pour moi que Duprat... Je sollicite un gouvernement.</l>
+            <l n="201">J’ose espérer que Monseigneur aura plus d’égards pour moi que Duprat... Je sollicite un gouvernement.</l>
           </sp>
-          <sp who="le-président" xml:id="8-47">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="236" xml:id="l236">Croiriez-vous, Monseigneur, que mon fils n’est pas encore Maître des requêtes ?</l>
+            <l n="202">Croiriez-vous, Monseigneur, que mon fils n’est pas encore Maître des requêtes ?</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-48">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="237" xml:id="l237">Que dites-vous de ce faquin de Duprat, qui me promet depuis deux ans la place de Surintendant des fêtes de Sa Majesté ?</l>
+            <l n="203">Que dites-vous de ce faquin de Duprat, qui me promet depuis deux ans la place de Surintendant des fêtes de Sa Majesté ?</l>
           </sp>
-          <sp who="bouchet" xml:id="8-49">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="238" xml:id="l238">Ah ça, toutes ces places que vous demandez sont vacantes, sans doute ?</l>
+            <l n="204">Ah ça, toutes ces places que vous demandez sont vacantes, sans doute ?</l>
           </sp>
-          <sp who="le-marquis" xml:id="8-50">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="239" xml:id="l239">Non, Monseigneur ; mais, vous le savez...</l>
-            <stage><hi rend="italic"><em>Air : Du Vaudeville de la Robe et les Bottes. </em></hi></stage>
+            <l n="205">Non, Monseigneur ; mais, vous le savez...</l>
+            <stage>&lt;em&gt;Air : Du Vaudeville de la Robe et les Bottes. &lt;/em&gt;</stage>
+            <l n="206">À la faveur, guerrier, amant, poète,</l>
           </sp>
-          <sp who="saint-gelais" xml:id="8-51">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="241" xml:id="l241">Avec votre protection, Monseigneur, il n’est point d’individu que je ne sois en état de culbuter.</l>
-            <l n="242" xml:id="l242"> </l>
-            <l n="243" xml:id="l243"> </l>
+            <l n="207">Avec votre protection, Monseigneur, il n’est point d’individu que je ne sois en état de culbuter.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="9">
+        <div type="scene" xml:id="IX">
           <head>Scène IX</head>
-            <l n="244" xml:id="l244"> </l>
-          <sp who="bouchet" xml:id="9-1">
-            <speaker>BOUCHET, LE PRÉSIDENT, LE MARQUIS, SAINT GELAIS, RICHESOURCE</speaker>
-            <l n="245" xml:id="l245"> </l>
+          <sp who="#de-richesource">
+            <speaker>RICHESOURCE, à la cantonade.</speaker>
+            <l n="208">Oui, monsieur, faites-lui vos adieux, si vous voulez ; mais que ce soit la dernière fois que je vous retrouve auprès de ma fille.</l>
           </sp>
-          <sp who="richesource" xml:id="9-2">
-            <speaker>RICHESOURCE, <em>à la cantonade.</em></speaker>
-            <l n="246" xml:id="l246">Oui, monsieur, faites-lui vos adieux, si vous voulez ; mais que ce soit la dernière fois que je vous retrouve auprès de ma fille.</l>
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, à part.</speaker>
+            <l n="209">Il arrive vraiment à propos.</l>
           </sp>
-          <sp who="bouchet" xml:id="9-3">
-            <speaker>BOUCHET, <em>à part.</em></speaker>
-            <l n="247" xml:id="l247">Il arrive vraiment à propos.</l>
-          </sp>
-          <sp who="richesource" xml:id="9-4">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="248" xml:id="l248">Ah ! messieurs, j’ai bien l’honneur de vous saluer... Eh bien, le Roi vient de me dire qu’il avait enfin trouvé son Neptune. Ce n’est vraiment pas malheureux...</l>
-            <stage><hi rend="italic"><em>À Bouchet. </em></hi></stage>
-            <l n="250" xml:id="l250">Ah ! vous êtes encore ici, monsieur ?</l>
+            <l n="210">Ah ! messieurs, j’ai bien l’honneur de vous saluer... Eh bien, le Roi vient de me dire qu’il avait enfin trouvé son Neptune. Ce n’est vraiment pas malheureux...</l>
+            <stage>&lt;em&gt;À Bouchet. &lt;/em&gt;</stage>
+            <l n="211">Ah ! vous êtes encore ici, monsieur ?</l>
           </sp>
-          <sp who="bouchet" xml:id="9-5">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="251" xml:id="l251">Oui, oui, oui.</l>
+            <l n="212">Oui, oui, oui.</l>
           </sp>
-          <sp who="le-marquis" xml:id="9-6">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="252" xml:id="l252">Quoi ! vous avez le bonheur de connaître Monseigneur ?</l>
+            <l n="213">Quoi ! vous avez le bonheur de connaître Monseigneur ?</l>
           </sp>
-          <sp who="richesource" xml:id="9-7">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="253" xml:id="l253">Monseigneur ! Y pensez-vous ? C’est M. Jean Bouchet, homme de lettres de Poitiers.</l>
+            <l n="214">Monseigneur ! Y pensez-vous ? C’est M. Jean Bouchet, homme de lettres de Poitiers.</l>
           </sp>
-          <sp who="le-président" xml:id="9-8">
+          <sp who="#le-président">
             <speaker>LE PRÉSIDENT.</speaker>
-            <l n="254" xml:id="l254">Oui, mais il paraît que c’est un homme d’un grand talent, car le Roi vient de le nommer Chancelier à la place de Duprat.</l>
+            <l n="215">Oui, mais il paraît que c’est un homme d’un grand talent, car le Roi vient de le nommer Chancelier à la place de Duprat.</l>
           </sp>
-          <sp who="richesource" xml:id="9-9">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="255" xml:id="l255">M. Duprat, disgracié !... Est-ce bien possible !</l>
+            <l n="216">M. Duprat, disgracié !... Est-ce bien possible !</l>
           </sp>
-          <sp who="saint-gelais" xml:id="9-10">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="256" xml:id="l256">Rien de plus vrai.</l>
+            <l n="217">Rien de plus vrai.</l>
           </sp>
-          <sp who="richesource" xml:id="9-11">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="257" xml:id="l257">Laissez donc, monsieur Saint Gelais, c’est une gasconnade.</l>
+            <l n="218">Laissez donc, monsieur Saint Gelais, c’est une gasconnade.</l>
           </sp>
-          <sp who="le-marquis" xml:id="9-12">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="258" xml:id="l258">Nous étions présents.</l>
+            <l n="219">Nous étions présents.</l>
           </sp>
-          <sp who="saint-gelais" xml:id="9-13">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="259" xml:id="l259">Oui, le Roi l’a nommé. Je vous raconterai tantôt les motifs de cette élévation subite qui va étonner bien du monde.</l>
+            <l n="220">Oui, le Roi l’a nommé. Je vous raconterai tantôt les motifs de cette élévation subite qui va étonner bien du monde.</l>
           </sp>
-          <sp who="richesource" xml:id="9-14">
-            <speaker>RICHESOURCE, <em>à part.</em></speaker>
-            <l n="260" xml:id="l260">Réparons ma sottise.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="262" xml:id="l262">Monsieur Bouchet, votre fils et ma fille sont là, dans cette galerie : en les voyant, j’ai réfléchi à l’amour de ces jeunes gens, à la douleur d’une séparation... Mon cœur s’est attendri ; et je viens vous annoncer que je consens à leur union.</l>
+          <sp who="#de-richesource">
+            <speaker>RICHESOURCE, à part.</speaker>
+            <l n="221">Réparons ma sottise.</l>
+            <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+            <l n="222">Monsieur Bouchet, votre fils et ma fille sont là, dans cette galerie : en les voyant, j’ai réfléchi à l’amour de ces jeunes gens, à la douleur d’une séparation... Mon cœur s’est attendri ; et je viens vous annoncer que je consens à leur union.</l>
           </sp>
-          <sp who="bouchet" xml:id="9-15">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="263" xml:id="l263">J’apprécie, monsieur, comme je le dois, une si noble résolution ; mais la position dans laquelle je me trouve m’oblige à vous refuser.</l>
+            <l n="223">J’apprécie, monsieur, comme je le dois, une si noble résolution ; mais la position dans laquelle je me trouve m’oblige à vous refuser.</l>
           </sp>
-          <sp who="richesource" xml:id="9-16">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="264" xml:id="l264">Quoi ! vous me refusez !</l>
+            <l n="224">Quoi ! vous me refusez !</l>
           </sp>
-          <sp who="le-marquis" xml:id="9-17">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="265" xml:id="l265">Monseigneur a raison, mon cher Richesource : songez donc à la distance...</l>
+            <l n="225">Monseigneur a raison, mon cher Richesource : songez donc à la distance...</l>
           </sp>
-          <sp who="richesource" xml:id="9-18">
-            <speaker>RICHESOURCE, <em>à part.</em></speaker>
-            <l n="266" xml:id="l266">Les maudits courtisans !</l>
+          <sp who="#de-richesource">
+            <speaker>RICHESOURCE, à part.</speaker>
+            <l n="226">Les maudits courtisans !</l>
           </sp>
-          <sp who="saint-gelais" xml:id="9-19">
+          <sp who="#saint-gelais">
             <speaker>SAINT GELAIS.</speaker>
-            <l n="267" xml:id="l267">Le fils de Monseigneur... il peut prétendre à tout, maintenant ; à tout.</l>
+            <l n="227">Le fils de Monseigneur... il peut prétendre à tout, maintenant ; à tout.</l>
           </sp>
-          <sp who="le-marquis" xml:id="9-20">
+          <sp who="#le-marquis">
             <speaker>LE MARQUIS.</speaker>
-            <l n="268" xml:id="l268">Je connais nombre de familles de la première noblesse qui se tiendront très honorées...</l>
+            <l n="228">Je connais nombre de familles de la première noblesse qui se tiendront très honorées...</l>
           </sp>
-          <sp who="richesource" xml:id="9-21">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="269" xml:id="l269">J’avoue, Monseigneur, que j’ai pu avoir des torts envers vous, ce matin ; mais devez-vous en punir ces jeunes gens ? Ah ! les voilà... Venez, mes enfants...</l>
-            <l n="270" xml:id="l270"> </l>
-            <l n="271" xml:id="l271"> </l>
+            <l n="229">J’avoue, Monseigneur, que j’ai pu avoir des torts envers vous, ce matin ; mais devez-vous en punir ces jeunes gens ? Ah ! les voilà... Venez, mes enfants...</l>
           </sp>
         </div>
-        <div type="scene" xml:id="10">
+        <div type="scene" xml:id="X">
           <head>Scène X</head>
-            <l n="272" xml:id="l272"> </l>
-          <sp who="valentine" xml:id="10-1">
-            <speaker>BOUCHET, LE PRÉSIDENT, LE MARQUIS, SAINT GELAIS, RICHESOURCE, CHARLES, VALENTINE</speaker>
-            <l n="273" xml:id="l273"> </l>
-          </sp>
-          <sp who="richesource" xml:id="10-2">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="274" xml:id="l274">Venez, tâchez de fléchir un homme sans pitié.</l>
+            <l n="230">Venez, tâchez de fléchir un homme sans pitié.</l>
           </sp>
-          <sp who="valentine" xml:id="10-3">
+          <sp who="#valentine">
             <speaker>VALENTINE.</speaker>
-            <l n="275" xml:id="l275">Que voulez-vous dire, mon père ?</l>
+            <l n="231">Que voulez-vous dire, mon père ?</l>
           </sp>
-          <sp who="richesource" xml:id="10-4">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="276" xml:id="l276">Il ne veut pas consentir à votre bonheur.</l>
+            <l n="232">Il ne veut pas consentir à votre bonheur.</l>
           </sp>
-          <sp who="charles" xml:id="10-5">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="277" xml:id="l277">Vous savez bien, monsieur, que mon père n’y met point d’obstacle, et que c’est vous seul...</l>
+            <l n="233">Vous savez bien, monsieur, que mon père n’y met point d’obstacle, et que c’est vous seul...</l>
           </sp>
-          <sp who="richesource" xml:id="10-6">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="278" xml:id="l278">Eh ! non, vraiment, puisque je suis prêt à signer, moi.</l>
+            <l n="234">Eh ! non, vraiment, puisque je suis prêt à signer, moi.</l>
           </sp>
-          <sp who="charles" xml:id="10-7">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="279" xml:id="l279">Se pourrait-il !... Alors notre union est certaine.</l>
+            <l n="235">Se pourrait-il !... Alors notre union est certaine.</l>
           </sp>
-          <sp who="bouchet" xml:id="10-8">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="280" xml:id="l280">Non, mon fils, je vous détenus de songer à mademoiselle.</l>
+            <l n="236">Non, mon fils, je vous détenus de songer à mademoiselle.</l>
           </sp>
-          <sp who="richesource" xml:id="10-9">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="281" xml:id="l281">Vous persistez encore, père cruel ! Eh bien, voici une personne que vous ne refuserez peut-être pas.</l>
-            <l n="282" xml:id="l282"> </l>
-            <l n="283" xml:id="l283"> </l>
+            <l n="237">Vous persistez encore, père cruel ! Eh bien, voici une personne que vous ne refuserez peut-être pas.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="11">
+        <div type="scene" xml:id="XI">
           <head>Scène XI</head>
-            <l n="284" xml:id="l284"> </l>
-          <sp who="valentine" xml:id="11-1">
-            <speaker>BOUCHET, LE PRÉSIDENT, LE MARQUIS, SAINT GELAIS, RICHESOURCE, CHARLES, VALENTINE, LE ROI, POLIN, SUITE</speaker>
-            <l n="285" xml:id="l285"> </l>
-          </sp>
-          <sp who="richesource" xml:id="11-2">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="286" xml:id="l286">Sire, j’implore Votre Majesté.</l>
+            <l n="238">Sire, j’implore Votre Majesté.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-3">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="287" xml:id="l287">Comment, Richesource ? Vous voilà bien ému.</l>
+            <l n="239">Comment, Richesource ? Vous voilà bien ému.</l>
           </sp>
-          <sp who="richesource" xml:id="11-4">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="288" xml:id="l288">Ah ! Sire, le sentiment... l’amour paternel.</l>
+            <l n="240">Ah ! Sire, le sentiment... l’amour paternel.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-5">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="289" xml:id="l289">Voyons ; de quoi s’agit-il ?</l>
+            <l n="241">Voyons ; de quoi s’agit-il ?</l>
           </sp>
-          <sp who="richesource" xml:id="11-6">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="290" xml:id="l290">Sire, ma fille et ce jeune homme s’aiment éperdument.</l>
+            <l n="242">Sire, ma fille et ce jeune homme s’aiment éperdument.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-7">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="291" xml:id="l291">C’est l’artiste que vous m’avez présenté dernièrement : cette union est bien assortie.</l>
+            <l n="243">C’est l’artiste que vous m’avez présenté dernièrement : cette union est bien assortie.</l>
           </sp>
-          <sp who="richesource" xml:id="11-8">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="292" xml:id="l292">Oui, Sire ; mais le père de Charles, Monseigneur, refuse d’y consentir.</l>
+            <l n="244">Oui, Sire ; mais le père de Charles, Monseigneur, refuse d’y consentir.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-9">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="293" xml:id="l293">Qui ? Monseigneur...</l>
+            <l n="245">Qui ? Monseigneur...</l>
           </sp>
-          <sp who="richesource" xml:id="11-10">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="294" xml:id="l294">Monseigneur le Chancelier que voilà.</l>
+            <l n="246">Monseigneur le Chancelier que voilà.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-11">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="295" xml:id="l295">Eh ! c’est mon Neptune !</l>
+            <l n="247">Eh ! c’est mon Neptune !</l>
           </sp>
-          <sp who="tous" xml:id="11-12">
+          <sp who="#tous">
             <speaker>TOUS.</speaker>
-            <l n="296" xml:id="l296">Son Neptune !</l>
+            <l n="248">Son Neptune !</l>
           </sp>
-          <sp who="richesource" xml:id="11-13">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="297" xml:id="l297">Quoi ! Sire, monsieur est...</l>
+            <l n="249">Quoi ! Sire, monsieur est...</l>
           </sp>
-          <sp who="le-roi" xml:id="11-14">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="298" xml:id="l298">Le modèle dont je vous ai parlé, qui doit servir pour la statue du Dieu des eaux... Voyez cette barbe... elle vaut dix fois mieux que celle de Duprat... Qu’en dites-vous ?</l>
+            <l n="250">Le modèle dont je vous ai parlé, qui doit servir pour la statue du Dieu des eaux... Voyez cette barbe... elle vaut dix fois mieux que celle de Duprat... Qu’en dites-vous ?</l>
           </sp>
-          <sp who="richesource" xml:id="11-15">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="299" xml:id="l299">Ah ! ciel !</l>
+            <l n="251">Ah ! ciel !</l>
           </sp>
-          <sp who="courtisans" xml:id="11-16">
-            <speaker>BOUCHET, <em>aux courtisans.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Ce mouchoir belle Raimonde. </em></hi></stage>
+          <sp who="#jean-bouchet">
+            <speaker>BOUCHET, aux courtisans.</speaker>
+            <stage>&lt;em&gt;Air : Ce mouchoir belle Raimonde. &lt;/em&gt;</stage>
+            <l n="252">Acceptez, je vous en prie,</l>
           </sp>
-          <sp who="le-roi" xml:id="11-17">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="301" xml:id="l301">Au moins, messieurs vous voudrez bien me mettre au fait.</l>
+            <l n="253">Au moins, messieurs vous voudrez bien me mettre au fait.</l>
           </sp>
-          <sp who="bouchet" xml:id="11-18">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="302" xml:id="l302">C’est moi, Sire, qui vais tout vous expliquer. Trompés, je ne sais comment, sur le sens des paroles que votre Majesté a daigné m’adresser ce matin, ces messieurs m’ont cru Chancelier.</l>
+            <l n="254">C’est moi, Sire, qui vais tout vous expliquer. Trompés, je ne sais comment, sur le sens des paroles que votre Majesté a daigné m’adresser ce matin, ces messieurs m’ont cru Chancelier.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-19">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="303" xml:id="l303">Chancelier ! Et ce pauvre. Duprat ?</l>
+            <l n="255">Chancelier ! Et ce pauvre. Duprat ?</l>
           </sp>
-          <sp who="bouchet" xml:id="11-20">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="304" xml:id="l304">Monsieur de Richesource, j’ai bien pu faire le Chancelier pour prendre ma revanche avec ces messieurs, mais non pour surprendre votre consentement ; je l’ai refusé tant que j’ai cru que vous ne l’accordiez qu’à un titre qui ne m’appartenait pas. Maintenant, si vous persistez, je suis prêt...</l>
+            <l n="256">Monsieur de Richesource, j’ai bien pu faire le Chancelier pour prendre ma revanche avec ces messieurs, mais non pour surprendre votre consentement ; je l’ai refusé tant que j’ai cru que vous ne l’accordiez qu’à un titre qui ne m’appartenait pas. Maintenant, si vous persistez, je suis prêt...</l>
           </sp>
-          <sp who="richesource" xml:id="11-21">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="305" xml:id="l305">Ah ! mon dieu, si ça vous contrarie, monsieur Bouchet.</l>
+            <l n="257">Ah ! mon dieu, si ça vous contrarie, monsieur Bouchet.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-22">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="306" xml:id="l306">Bouchet ! Seriez-vous l’historien, le poète dont les ouvrages ont si agréablement occupé mes loisirs ?</l>
+            <l n="258">Bouchet ! Seriez-vous l’historien, le poète dont les ouvrages ont si agréablement occupé mes loisirs ?</l>
           </sp>
-          <sp who="charles" xml:id="11-23">
+          <sp who="#charles">
             <speaker>CHARLES.</speaker>
-            <l n="307" xml:id="l307">Oui, Sire.</l>
+            <l n="259">Oui, Sire.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-24">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="308" xml:id="l308">Je suis charmé de vous avoir vu ; mais surtout de la noble délicatesse avec laquelle vous en avez agi envers Richesource.</l>
+            <l n="260">Je suis charmé de vous avoir vu ; mais surtout de la noble délicatesse avec laquelle vous en avez agi envers Richesource.</l>
           </sp>
-          <sp who="richesource" xml:id="11-25">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="309" xml:id="l309">Je l’apprécie aussi, certainement... Mais...</l>
+            <l n="261">Je l’apprécie aussi, certainement... Mais...</l>
           </sp>
-          <sp who="le-roi" xml:id="11-26">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="310" xml:id="l310">La fortune de M. Bouchet ne répond peut-être pas à son mérite : je m’en charge, et je prétends le fixer à ma cour.</l>
+            <l n="262">La fortune de M. Bouchet ne répond peut-être pas à son mérite : je m’en charge, et je prétends le fixer à ma cour.</l>
           </sp>
-          <sp who="bouchet" xml:id="11-27">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <l n="311" xml:id="l311">Ah ! Sire, que de bontés ! Mais permettez-moi de refuser cette dernière faveur.</l>
-            <stage><hi rend="italic"><em>Air : Le choix que fait tout le village. </em></hi></stage>
+            <l n="263">Ah ! Sire, que de bontés ! Mais permettez-moi de refuser cette dernière faveur.</l>
+            <stage>&lt;em&gt;Air : Le choix que fait tout le village. &lt;/em&gt;</stage>
+            <l n="264">Le souvenir de cet heureux voyage</l>
           </sp>
-          <sp who="le-roi" xml:id="11-28">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="313" xml:id="l313">Oui, retournez dans votre retraite ; ne restez pas plus longtemps à la cour, vous y perdriez cette candeur qui m’enchante : mes bienfaits retomberont sur votre fils... Continuez, Charles, à vous distinguer dans la carrière des beaux-arts, et vous me trouverez dans l’occasion.</l>
+            <l n="265">Oui, retournez dans votre retraite ; ne restez pas plus longtemps à la cour, vous y perdriez cette candeur qui m’enchante : mes bienfaits retomberont sur votre fils... Continuez, Charles, à vous distinguer dans la carrière des beaux-arts, et vous me trouverez dans l’occasion.</l>
           </sp>
-          <sp who="richesource" xml:id="11-29">
+          <sp who="#de-richesource">
             <speaker>RICHESOURCE.</speaker>
-            <l n="314" xml:id="l314">Le Roi le protège...</l>
-            <stage><hi rend="italic"><em>À Charles.</em></hi></stage>
-            <l n="316" xml:id="l316">Mon ami, ma fille est à vous.</l>
+            <l n="266">Le Roi le protège...</l>
+            <stage>&lt;em&gt;À Charles.&lt;/em&gt;</stage>
+            <l n="267">Mon ami, ma fille est à vous.</l>
           </sp>
-          <sp who="le-roi" xml:id="11-30">
+          <sp who="#le-roi">
             <speaker>LE ROI.</speaker>
-            <l n="317" xml:id="l317">Quant à vous, messieurs, traitez Bouchet avec les égards dus à son mérite, et n’oubliez pas que le titre dont François I<sup>er</sup> s’honore le plus est celui de PÈRE DES LETTRES.</l>
+            <l n="268">Quant à vous, messieurs, traitez Bouchet avec les égards dus à son mérite, et n’oubliez pas que le titre dont François Ier s’honore le plus est celui de PÈRE DES LETTRES.</l>
           </sp>
-          <sp who="chœur" xml:id="11-31">
+          <sp who="#chœur">
             <speaker>CHŒUR.</speaker>
-            <stage><hi rend="italic"><em>Air : De M. Piccini. </em></hi></stage>
-            <stage><hi rend="italic"><em>Le roi sort.</em></hi></stage>
-            <l n="320" xml:id="l320"> </l>
-            <l n="321" xml:id="l321"> </l>
+            <stage>&lt;em&gt;Air : De M. Piccini. &lt;/em&gt;</stage>
+            <l n="269">Vive le Roi de France !</l>
+            <stage>&lt;em&gt;Le roi sort.&lt;/em&gt;</stage>
           </sp>
         </div>
-        <div type="scene" xml:id="12">
+        <div type="scene" xml:id="XII">
           <head>Scène XII</head>
-            <l n="322" xml:id="l322"> </l>
-          <sp who="saint-gelais" xml:id="12-1">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET, CHARLES, VALENTINE, RICHESOURCE, POLIN, SAINT-GELAIS, LE MARQUIS, LE PRÉSIDENT</speaker>
-            <l n="323" xml:id="l323"> </l>
-            <stage><hi rend="italic"><em>Vaudeville. </em></hi></stage>
+            <stage>&lt;em&gt;Vaudeville. &lt;/em&gt;</stage>
           </sp>
-          <sp who="bouchet" xml:id="12-2">
+          <sp who="#jean-bouchet">
             <speaker>BOUCHET.</speaker>
-            <stage><hi rend="italic"><em>Air : Vaudeville de l’Homme Vert. </em></hi></stage>
+            <stage>&lt;em&gt;Air : Vaudeville de l’Homme Vert. &lt;/em&gt;</stage>
+            <l n="270">J’allais, hélas !mon pauvre Charles,</l>
           </sp>
-          <p>FIN</p>
+          <sp who="#le-capitaine-polin">
+            <speaker>POLIN.</speaker>
+            <l n="271">Un vrai guerrier, dès son aurore,</l>
+          </sp>
+          <sp who="#saint-gelais">
+            <speaker>SAINT GELAIS.</speaker>
+            <l n="272">Dans maint quatrain, mainte épigrammé</l>
+          </sp>
+          <sp who="#charles">
+            <speaker>CHARLES.</speaker>
+            <l n="273">Un guerrier défend sa patrie,</l>
+          </sp>
+          <sp who="#le-président">
+            <speaker>LE PRÉSIDENT.</speaker>
+            <l n="274">À la cour il faut que je brille,</l>
+          </sp>
+          <sp who="#valentine">
+            <speaker>VALENTINE, au public.</speaker>
+            <l n="275">Ce soir cette esquisse légère,</l>
+            <l n="276" />
+          </sp>
         </div>
       </div>
     </body>

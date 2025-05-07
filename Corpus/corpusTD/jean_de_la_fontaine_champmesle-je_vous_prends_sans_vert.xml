@@ -1,1257 +1,1118 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Je vous prends  sans vert</title>
-        <author key="Jean de LA FONTAINE - CHAMPMESLÉ | (naissance-mort)">Jean de LA FONTAINE - CHAMPMESLÉ |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/je-vous-prends-sans-vert-jean-de-la-fontaine-champmeslé</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Jean de LA FONTAINE - CHAMPMESLÉ |</author>. <title>Je vous prends  sans vert</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/je-vous-prends-sans-vert-jean-de-la-fontaine-champmeslé</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1693-05-01">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 1er mai 1693.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="saint-amant" sex="SEX">
+            <persName>SAINT-AMANT</persName>
+          </person>
+          <person xml:id="julie" sex="SEX">
+            <persName>JULIE</persName>
+          </person>
+          <person xml:id="dorame" sex="SEX">
+            <persName>DORAME</persName>
+          </person>
+          <person xml:id="montreuil" sex="SEX">
+            <persName>MONTREUIL</persName>
+          </person>
+          <person xml:id="céliane" sex="SEX">
+            <persName>CÉLIANE</persName>
+          </person>
+          <person xml:id="toinon" sex="SEX">
+            <persName>TOINON</persName>
+          </person>
+          <person xml:id="lubin" sex="SEX">
+            <persName>LUBIN</persName>
+          </person>
+          <person xml:id="troupe-de-paysans" sex="SEX">
+            <persName>TROUPE DE PAYSANS</persName>
+          </person>
+          <person xml:id="troupe-de-paysannes" sex="SEX">
+            <persName>TROUPE DE PAYSANNES</persName>
+          </person>
+          <person xml:id="bergers" sex="SEX">
+            <persName>BERGERS</persName>
+          </person>
+          <person xml:id="bergères" sex="SEX">
+            <persName>BERGÈRES</persName>
+          </person>
+          <person xml:id="flore" sex="SEX">
+            <persName>FLORE</persName>
+          </person>
+          <person xml:id="deux-nymphes-des-fleurs" sex="SEX">
+            <persName>DEUX NYMPHES DES FLEURS</persName>
+          </person>
+          <person xml:id="deux-zéphyrs" sex="SEX">
+            <persName>DEUX ZÉPHYRS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1693-05-01" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 1er mai 1693.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Je vous prends  sans vert</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte.<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a></l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 1<sup>er</sup> mai 1693.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="saint-amant">SAINT-AMANT</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="julie">JULIE</role>
-              <roleDesc>, <em>sa femme</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="dorame">DORAME</role>
-              <roleDesc>, <em>père de Julie</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="montreuil">MONTREUIL</role>
-              <roleDesc>, <em>neveu de Saint-Amant</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="céliane">CÉLIANE</role>
-              <roleDesc>, <em>cousine de Julie</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="toinon">TOINON</role>
-              <roleDesc>, <em>suivante de Julie</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lubin">LUBIN</role>
-              <roleDesc>, <em>fermier de Saint-Amant</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-paysans">TROUPE DE PAYSANS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-paysannes">TROUPE DE PAYSANNES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="bergers">BERGERS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="bergères">BERGÈRES</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="flore">FLORE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="deux-nymphes-des-fleurs">DEUX NYMPHES DES FLEURS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="deux-zéphyrs">DEUX ZÉPHYRS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène est dans un jardin qui regarde le château de Saint-Amant. </em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="7" xml:id="l7"> </l>
-          <sp who="lubin" xml:id="1-1">
-            <speaker>SAINT-AMANT, LUBIN</speaker>
-            <l n="8" xml:id="l8"> </l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-2">
-            <speaker>SAINT-AMANT, <em>lui donnant de l’argent.</em></speaker>
-            <l n="9" xml:id="l9">Je ne suis nullement en doute de ta foi ;</l>
-            <l n="10" xml:id="l10">Mais prends, Lubin.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-3">
-            <speaker>LUBIN.</speaker>
-            <l n="11" xml:id="l11">Monsieur...</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-4">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="12" xml:id="l12">Prends, dis-je, oblige-moi.</l>
-            <l n="13" xml:id="l13">De ce qu’on fait ici donne-moi connaissance.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-5">
-            <speaker>LUBIN.</speaker>
-            <l n="14" xml:id="l14">Monsieur le colonel, parlez en conscience.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-6">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="15" xml:id="l15">Quoi ?</l>
-          </sp>
-          <sp who="lubin" xml:id="1-7">
-            <speaker>LUBIN.</speaker>
-            <l n="16" xml:id="l16">N’êtes-vous point mort ?</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-8">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="17" xml:id="l17">Tu le vois.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-9">
-            <speaker>LUBIN.</speaker>
-            <l n="18" xml:id="l18">Tout de bon,</l>
-            <l n="19" xml:id="l19">Ne revenez-vous point de l’autre monde ?</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-10">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="20" xml:id="l20">Non,</l>
-            <l n="21" xml:id="l21">Je te l’ai déjà dit, c’est pour tromper ma femme ;</l>
-            <l n="22" xml:id="l22">C’est pour mettre en plein jour tout ce qu’elle a dans l’âme</l>
-            <l n="23" xml:id="l23">Que j’ai fait publier le faux bruit de ma mort.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-11">
-            <speaker>LUBIN.</speaker>
-            <l n="24" xml:id="l24">Que vous l’allez, monsieur, surprendre à votre abord !</l>
-            <l n="25" xml:id="l25">Elle ne s’attend pas à ce retour funeste,</l>
-            <l n="26" xml:id="l26">Et son cœur bonnement vous croit mort, et le reste.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-12">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="27" xml:id="l27">Non, je n’ai pas dessein sitôt de l’affliger ;</l>
-            <l n="28" xml:id="l28">Je veux dans les plaisirs la laisser engager,</l>
-            <l n="29" xml:id="l29">Et faire voir à tous, par ses réjouissances,</l>
-            <l n="30" xml:id="l30">Un bon certificat de ses extravagances.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-13">
-            <speaker>LUBIN.</speaker>
-            <l n="31" xml:id="l31">Je suis ravi de voir que vous avez du cœur.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-14">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="32" xml:id="l32">Jusqu’ici je n’ai pu de sa mauvaise humeur</l>
-            <l n="33" xml:id="l33">Aux yeux de ses parents dévoiler la malice :</l>
-            <l n="34" xml:id="l34">Elle a su me confondre avec tant d’artifice,</l>
-            <l n="35" xml:id="l35">Qu’elle m’a fait partout passer pour un bourru ;</l>
-            <l n="36" xml:id="l36">Mais, grâce à sa folie, enfin je serai cru.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-15">
-            <speaker>LUBIN.</speaker>
-            <l n="37" xml:id="l37">Tant mieux, la joie en moi fait ce que fit sur elle</l>
-            <l n="38" xml:id="l38">De votre feinte mort la première nouvelle.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-16">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="39" xml:id="l39">D’où le sais-tu ?</l>
-          </sp>
-          <sp who="lubin" xml:id="1-17">
-            <speaker>LUBIN.</speaker>
-            <l n="40" xml:id="l40">J’étais dans un grand cabinet,</l>
-            <l n="41" xml:id="l41">Quand votre courrier vint de Flandre. À lansquenet<a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2">[2]</a></l>
-            <l n="42" xml:id="l42">Elle avait tout perdu : qu’elle était désolée !</l>
-            <l n="43" xml:id="l43">Mais par votre trépas elle fut consolée.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-18">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="44" xml:id="l44">Quelle âme ! chez son père elle fut tout en pleurs,</l>
-            <l n="45" xml:id="l45">Signaler son devoir par de fausses clameurs ;</l>
-            <l n="46" xml:id="l46">Voulant quitter le monde, et cherchant la retraite,</l>
-            <l n="47" xml:id="l47">Pour de mon souvenir n’être jamais distraite :</l>
-            <l n="48" xml:id="l48">Le bonhomme ébloui donna dans le panneau,</l>
-            <l n="49" xml:id="l49">À ses pieux désirs accorda ce château,</l>
-            <l n="50" xml:id="l50">Lui donnant seulement Toinon pour compagnie.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-19">
-            <speaker>LUBIN.</speaker>
-            <l n="51" xml:id="l51">Depuis qu’elles y sont, monsieur. Dieu sait la vie !</l>
-            <l n="52" xml:id="l52">Elle appela d’abord, pour se donner beau jeu,</l>
-            <l n="53" xml:id="l53">La jeune Céliane avec votre neveu.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-20">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="54" xml:id="l54">Montreuil ?</l>
-          </sp>
-          <sp who="lubin" xml:id="1-21">
-            <speaker>LUBIN.</speaker>
-            <l n="55" xml:id="l55">Oui, ce beau fils, ce tourneur de prunelle.</l>
-            <l n="56" xml:id="l56">Qui la lorgnait, dit-on, et qu’elle lorgnait, elle.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-22">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="57" xml:id="l57">Que font-ils en ces lieux, Lubin ?</l>
-          </sp>
-          <sp who="lubin" xml:id="1-23">
-            <speaker>LUBIN.</speaker>
-            <l n="58" xml:id="l58">Je ne sais pas,</l>
-            <l n="59" xml:id="l59">Et je sais seulement que de votre trépas</l>
-            <l n="60" xml:id="l60">Elle ne leur a fait aucune confidence ;</l>
-            <l n="61" xml:id="l61">On ne parle que joie et que réjouissance.</l>
-            <l n="62" xml:id="l62">Tous les jours ce ne sont que plaisirs bout à bout,</l>
-            <l n="63" xml:id="l63">Promenades ici, ménétriers partout,</l>
-            <l n="64" xml:id="l64">Petits jeux, cotte verte, allégresse, ripailles,</l>
-            <l n="65" xml:id="l65">Sérénades, concerts, charivaris, crevailles.</l>
-            <l n="66" xml:id="l66">Vous croyant<a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3">[3]</a> tout de bon gisé dans le cercueil ;</l>
-            <l n="67" xml:id="l67">Et c’est de la façon qu’elle en porte le deuil.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="1-24">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="68" xml:id="l68">À se perdre elle-même elle s’est engagée ;</l>
-            <l n="69" xml:id="l69">Son père qui la croit fortement affligée,</l>
-            <l n="70" xml:id="l70">Et que je détrompai cinq ou six jours après,</l>
-            <l n="71" xml:id="l71">Avec moi dans ces lieux est venu tout exprès :</l>
-            <l n="72" xml:id="l72">Témoin de son désordre, il n’aura pas la force,</l>
-            <l n="73" xml:id="l73">Entre sa fille et moi, d’empêcher le divorce.</l>
-          </sp>
-          <sp who="lubin" xml:id="1-25">
-            <speaker>LUBIN.</speaker>
-            <l n="74" xml:id="l74">Vous ne pouviez venir plus à propos tous deux.</l>
-            <l n="75" xml:id="l75">Du premier jour de mai renouvelant les jeux,</l>
-            <l n="76" xml:id="l76">On ne va voir ici que fêtes bocagères,</l>
-            <l n="77" xml:id="l77">Printemps, Flore, Zéphyrs, et bergers et bergères,</l>
-            <l n="78" xml:id="l78">Pour prendre des plaisirs de toutes les façons,</l>
-            <l n="79" xml:id="l79">Mêlant à leurs concerts nos rustiques chansons ;</l>
-            <l n="80" xml:id="l80">Nous avons ordre exprès de venir en personne...</l>
-            <l n="81" xml:id="l81">Entendez-vous déjà comme l’air en résonne ?</l>
-            <l n="82" xml:id="l82"> </l>
-            <l n="83" xml:id="l83"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="84" xml:id="l84"> </l>
-          <sp who="lubin" xml:id="2-1">
-            <speaker>DORAME, SAINT-AMANT, LUBIN</speaker>
-            <l n="85" xml:id="l85"> </l>
-          </sp>
-          <sp who="saint-amant" xml:id="2-2">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="86" xml:id="l86">Pour tout voir, mon beau-père, approchez promptement.</l>
-          </sp>
-          <sp who="dorame" xml:id="2-3">
-            <speaker>DORAME.</speaker>
-            <l n="87" xml:id="l87">J’en sais plus qu’il ne faut, monsieur de Saint-Amant.</l>
-            <l n="88" xml:id="l88">Il suffit.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="2-4">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="89" xml:id="l89">Non, je veux vous la faire connaître...</l>
-            <l n="90" xml:id="l90">Où nous cacheras-tu, Lubin ?</l>
-          </sp>
-          <sp who="lubin" xml:id="2-5">
-            <speaker>LUBIN.</speaker>
-            <l n="91" xml:id="l91">Cette fenêtre</l>
-            <l n="92" xml:id="l92">Pour voir et pour entendre est un endroit certain ;</l>
-            <l n="93" xml:id="l93">Vous n’avez qu’à monter.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="2-6">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="94" xml:id="l94">J’en sais bien le chemin ;</l>
-            <l n="95" xml:id="l95">Mais, chut !</l>
-          </sp>
-          <sp who="lubin" xml:id="2-7">
-            <speaker>LUBIN.</speaker>
-            <l n="96" xml:id="l96">Allez, je vais chanter à pleine tête,</l>
-            <l n="97" xml:id="l97">Sans faire aucun semblant, car je suis de la fête.</l>
-            <stage><hi rend="italic"><em>Saint-Amant et Dorame sortent. </em></hi></stage>
-            <l n="99" xml:id="l99"> </l>
-            <l n="100" xml:id="l100"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="101" xml:id="l101"> </l>
-          <sp who="lubin" xml:id="3-1">
-            <speaker>LUBIN, TROUPE DE PAYSANS</speaker>
-            <l n="102" xml:id="l102"> </l>
-          </sp>
-          <sp who="lubin" xml:id="3-2">
-            <speaker>LUBIN.</speaker>
-            <l n="103" xml:id="l103">Allons, courage, enfants, fredonnons ce beau mois ;</l>
-            <l n="104" xml:id="l104">Ménétriers, ronflez ; Lucas, joignons nos voix :</l>
-            <l n="105" xml:id="l105">Chantons le vert printemps, nos plaisirs et nos flammes...</l>
-            <l n="106" xml:id="l106">Échos, répondez-nous, et réveillez ces dames.</l>
-            <stage><hi rend="italic"><em>Il chante. </em></hi></stage>
-            <l n="108" xml:id="l108">Vive le printemps,</l>
-            <l n="109" xml:id="l109">Il rend le cœur gai.</l>
-            <l n="110" xml:id="l110">Le mois des amants</l>
-            <l n="111" xml:id="l111">Est le mois de mai.</l>
-            <l n="112" xml:id="l112">Badinant sur la fougère,</l>
-            <l n="113" xml:id="l113">Nos plaisirs retentissent partout,</l>
-            <l n="114" xml:id="l114">Et si l’on entend crier la bergère,</l>
-            <l n="115" xml:id="l115">Ce n’est pas au loup.</l>
-          </sp>
-          <sp who="lucas" xml:id="3-3">
-            <speaker>LUCAS, <em>chantant.</em></speaker>
-            <l n="116" xml:id="l116">Allons planter le mai, l’amour nous y convie.</l>
-            <l n="117" xml:id="l117">Pour voir de nos bergers l’agréable folie,</l>
-            <l n="118" xml:id="l118">Bergères, soyez au gai :</l>
-            <l n="119" xml:id="l119">Heureux amants... Plus heureuses amantes,</l>
-            <l n="120" xml:id="l120">Ô combien vous seriez contentes,</l>
-            <l n="121" xml:id="l121">S’il était tous les jours le premier jour de mai !</l>
-          </sp>
-          <sp who="lubin" xml:id="3-4">
-            <speaker>LUBIN.</speaker>
-            <l n="122" xml:id="l122">Pour chanter vos plaisirs et les entretenir,</l>
-            <l n="123" xml:id="l123">Madame, avec le mai nous allons revenir.</l>
-            <stage><hi rend="italic"><em>Lubin et les paysans s’en vont. </em></hi></stage>
-            <l n="125" xml:id="l125"> </l>
-            <l n="126" xml:id="l126"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="127" xml:id="l127"> </l>
-          <sp who="céliane" xml:id="4-1">
-            <speaker>JULIE, CÉLIANE, MONTREUIL</speaker>
-            <l n="128" xml:id="l128"> </l>
-          </sp>
-          <sp who="julie" xml:id="4-2">
-            <speaker>JULIE.</speaker>
-            <l n="129" xml:id="l129">Plus agréablement peut-on être éveillée ?</l>
-          </sp>
-          <sp who="céliane" xml:id="4-3">
-            <speaker>CÉLIANE.</speaker>
-            <l n="130" xml:id="l130">Et plus commodément, madame, être habillée ?</l>
-          </sp>
-          <sp who="montreuil" xml:id="4-4">
-            <speaker>MONTREUIL.</speaker>
-            <l n="131" xml:id="l131">Tout s’empresse en ces lieux pour vous faire la cour</l>
-            <l n="132" xml:id="l132">L’air est serein, le ciel nous promet un beau jour.</l>
-            <l n="133" xml:id="l133"> </l>
-            <l n="134" xml:id="l134"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="135" xml:id="l135"> </l>
-          <sp who="céliane" xml:id="5-1">
-            <speaker>JULIE, CÉLIANE, MONTREUIL, SAINT-AMANT, DORAME, <em>à la fenêtre</em></speaker>
-            <l n="136" xml:id="l136"> </l>
-          </sp>
-          <sp who="saint-amant" xml:id="5-2">
-            <speaker>SAINT-AMANT, <em>à Dorine.</em></speaker>
-            <l n="137" xml:id="l137">Voilà son deuil, par là jugez de sa conduite.</l>
-          </sp>
-          <sp who="dorame" xml:id="5-3">
-            <speaker>DORAME.</speaker>
-            <l n="138" xml:id="l138">Peut-être est-il au cœur ?</l>
-          </sp>
-          <sp who="saint-amant" xml:id="5-4">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="139" xml:id="l139">Nous verrons dans la suite.</l>
-          </sp>
-          <sp who="julie" xml:id="5-5">
-            <speaker>JULIE.</speaker>
-            <l n="140" xml:id="l140">À trouver des plaisirs appliquons nos esprits ;</l>
-            <l n="141" xml:id="l141">En attendant le mai, j’ai quelques manuscrits</l>
-            <l n="142" xml:id="l142">Qu’on vient de m’envoyer sur différents chapitres.</l>
-            <l n="143" xml:id="l143">Pour nous désennuyer, Montreuil, lisez les titres.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-6">
-            <speaker>MONTREUIL <em>lit.</em></speaker>
-            <l n="144" xml:id="l144">« La pierre philosophale, ou l’art de se faire aimer de sa femme. »</l>
-            <l n="145" xml:id="l145">Beau secret !</l>
-          </sp>
-          <sp who="julie" xml:id="5-7">
-            <speaker>JULIE.</speaker>
-            <l n="146" xml:id="l146">Il est rare.</l>
-          </sp>
-          <sp who="céliane" xml:id="5-8">
-            <speaker>CÉLIANE.</speaker>
-            <l n="147" xml:id="l147">Il pourrait avoir cours,</l>
-            <l n="148" xml:id="l148">Si l’hymen s’alliait avecque les amours.</l>
-          </sp>
-          <sp who="julie" xml:id="5-9">
-            <speaker>JULIE.</speaker>
-            <l n="149" xml:id="l149">Abus ! l’hymen ternit l’amant le plus aimable,</l>
-            <l n="150" xml:id="l150">Et dès qu’il est époux, il devient haïssable.</l>
-          </sp>
-          <sp who="dorame" xml:id="5-10">
-            <speaker>SAINT-AMANT, <em>à Dorame.</em></speaker>
-            <l n="151" xml:id="l151">Beau-père...</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-11">
-            <speaker>MONTREUIL <em>lit.</em></speaker>
-            <l n="152" xml:id="l152">« Dialogue de deux fiancées sur les mystères du lit nuptial, par un jeune abbé ; dédié aux vraiment filles. »</l>
-          </sp>
-          <sp who="julie" xml:id="5-12">
-            <speaker>JULIE.</speaker>
-            <l n="153" xml:id="l153">L’entretien devait être ingénu.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-13">
-            <speaker>MONTREUIL.</speaker>
-            <l n="154" xml:id="l154">J’aurais voulu l’entendre, et ne pas être vu.</l>
-          </sp>
-          <sp who="céliane" xml:id="5-14">
-            <speaker>CÉLIANE.</speaker>
-            <l n="155" xml:id="l155">Les abbés entrent-ils dans un secret semblable ?</l>
-          </sp>
-          <sp who="julie" xml:id="5-15">
-            <speaker>JULIE.</speaker>
-            <l n="156" xml:id="l156">Il n’est rien en amour pour eux d’impénétrable ;</l>
-            <l n="157" xml:id="l157">Le siècle a peu d’intrigue où ne perce la leur,</l>
-            <l n="158" xml:id="l158">Et comme au lansquenet, ils y prennent couleur.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-16">
-            <speaker>MONTREUIL <em>lit.</em></speaker>
-            <l n="159" xml:id="l159">« Éloges des dames galantes, conçus et dirigés et mis en lumière chez l’Ami.<a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4">[4]</a> »</l>
-          </sp>
-          <sp who="céliane" xml:id="5-17">
-            <speaker>CÉLIANE.</speaker>
-            <l n="160" xml:id="l160">Malheur à qui verra son nom dans cet ouvrage !</l>
-          </sp>
-          <sp who="julie" xml:id="5-18">
-            <speaker>JULIE.</speaker>
-            <l n="161" xml:id="l161">Pour mettre ces portraits dans tout leur étalage,</l>
-            <l n="162" xml:id="l162">On n’aura pas, je pense, épargné les couleurs.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-19">
-            <speaker>MONTREUIL.</speaker>
-            <l n="163" xml:id="l163">Chez l’Ami, c’est un lieu fertile en blasonneurs.</l>
-            <stage><hi rend="italic"><em>Il lit. </em></hi></stage>
-            <l n="165" xml:id="l165">« La pompe funèbre d’un mari, et la manière d’en porter le deuil ; par une veuve de fraîche date. »</l>
-          </sp>
-          <sp who="céliane" xml:id="5-20">
-            <speaker>CÉLIANE.</speaker>
-            <l n="166" xml:id="l166">On crie, on prend le noir ; est-il un autre usage ?</l>
-          </sp>
-          <sp who="julie" xml:id="5-21">
-            <speaker>JULIE.</speaker>
-            <l n="167" xml:id="l167">Oui, selon comme vit et meurt le personnage ;</l>
-            <l n="168" xml:id="l168">Il faut battre des mains, on doit chanter son sort</l>
-            <l n="169" xml:id="l169">Quand il perd noblement la vie, et qu’il est mort</l>
-            <l n="170" xml:id="l170">De l’approbation du monde et de sa femme.</l>
-          </sp>
-          <sp who="dorame" xml:id="5-22">
-            <speaker>SAINT-AMANT, <em>à Dorame.</em></speaker>
-            <l n="171" xml:id="l171">Le livre est de son cru : par là jugez de l’âme.</l>
-          </sp>
-          <sp who="dorame" xml:id="5-23">
-            <speaker>DORAME.</speaker>
-            <l n="172" xml:id="l172">Elle n’écrit jamais.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-24">
-            <speaker>MONTREUIL <em>lit.</em></speaker>
-            <l n="173" xml:id="l173">« L’heure du berger brusquée par un petit-maître entre deux vins. »</l>
-            <l n="174" xml:id="l174">L’ouvrage est singulier.</l>
-          </sp>
-          <sp who="céliane" xml:id="5-25">
-            <speaker>CÉLIANE.</speaker>
-            <l n="175" xml:id="l175">Et l’ouvrage et l’auteur, j’en crois tout cavalier.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-26">
-            <speaker>MONTREUIL.</speaker>
-            <l n="176" xml:id="l176">Voilà tout.</l>
-          </sp>
-          <sp who="céliane" xml:id="5-27">
-            <speaker>CÉLIANE.</speaker>
-            <l n="177" xml:id="l177">Vous rêvez ?</l>
-          </sp>
-          <sp who="julie" xml:id="5-28">
-            <speaker>JULIE.</speaker>
-            <l n="178" xml:id="l178">Il me vient en pensée</l>
-            <l n="179" xml:id="l179">De rappeler du mois la coutume passée :</l>
-            <l n="180" xml:id="l180">Jouons ensemble au vert ?</l>
-          </sp>
-          <sp who="céliane" xml:id="5-29">
-            <speaker>CÉLIANE.</speaker>
-            <l n="181" xml:id="l181">Je le veux.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-30">
-            <speaker>MONTREUIL.</speaker>
-            <l n="182" xml:id="l182">J’y consens.</l>
-          </sp>
-          <sp who="julie" xml:id="5-31">
-            <speaker>JULIE.</speaker>
-            <l n="183" xml:id="l183">Si le jeu n’est pas noble, il est divertissant ;</l>
-            <l n="184" xml:id="l184">Le premier qui de nous se laissera surprendre,</l>
-            <l n="185" xml:id="l185">D’obéir au vainqueur ne pourra se défendre :</l>
-            <l n="186" xml:id="l186">Je jure, je promets d’en observer la loi.</l>
-          </sp>
-          <sp who="céliane" xml:id="5-32">
-            <speaker>CÉLIANE.</speaker>
-            <l n="187" xml:id="l187">À ces conditions je me soumets.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-33">
-            <speaker>MONTREUIL.</speaker>
-            <l n="188" xml:id="l188">Et moi.</l>
-          </sp>
-          <sp who="julie" xml:id="5-34">
-            <speaker>JULIE.</speaker>
-            <l n="189" xml:id="l189">Allez, pour commencer ces guerres intestines,</l>
-            <l n="190" xml:id="l190">Cueillir du rosier : prenez garde aux épines.</l>
-          </sp>
-          <sp who="céliane" xml:id="5-35">
-            <speaker>CÉLIANE.</speaker>
-            <l n="191" xml:id="l191">Nous n’irons point au bois qu’avec précaution.</l>
-          </sp>
-          <sp who="montreuil" xml:id="5-36">
-            <speaker>MONTREUIL.</speaker>
-            <l n="192" xml:id="l192">Et vous ?</l>
-          </sp>
-          <sp who="julie" xml:id="5-37">
-            <speaker>JULIE.</speaker>
-            <l n="193" xml:id="l193">J’en ai déjà fait ma provision.</l>
-            <stage><hi rend="italic"><em>Céliane et Montreuil sortent. </em></hi></stage>
-            <l n="195" xml:id="l195"> </l>
-            <l n="196" xml:id="l196"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="197" xml:id="l197"> </l>
-          <sp who="toinon" xml:id="6-1">
-            <speaker>TOINON, JULIE, SAINT-AMANT, DORAME <em>à la fenêtre</em></speaker>
-            <l n="198" xml:id="l198"> </l>
-          </sp>
-          <sp who="toinon" xml:id="6-2">
-            <speaker>TOINON.</speaker>
-            <l n="199" xml:id="l199">Quel veuvage ! pour moi, madame, je l’admire !</l>
-            <l n="200" xml:id="l200">Quoi ! pleurer un époux en s’étouffant de rire</l>
-            <l n="201" xml:id="l201">La mode en est jolie, et pourra faire bruit.</l>
-          </sp>
-          <sp who="julie" xml:id="6-3">
-            <speaker>JULIE.</speaker>
-            <l n="202" xml:id="l202">De cette mort, Toinon, cueillons, goûtons le fruit :</l>
-            <l n="203" xml:id="l203">Jouissons du bonheur que le ciel nous envoie ;</l>
-            <l n="204" xml:id="l204">Je n’ai plus de mari ! quel plaisir ! quelle joie !</l>
-            <l n="205" xml:id="l205">Célébrons à jamais le jour de son trépas :</l>
-            <l n="206" xml:id="l206">Quoi qu’on dise, Toinon, la guerre a ses appas,</l>
-            <l n="207" xml:id="l207">Ses heures d’agrément, comme ses douloureuses :</l>
-            <l n="208" xml:id="l208">Que d’héritiers contents, que de veuves heureuses !</l>
-          </sp>
-          <sp who="dorame" xml:id="6-4">
-            <speaker>SAINT-AMANT, <em>à Dorame.</em></speaker>
-            <l n="209" xml:id="l209">C’est trop tôt triompher.</l>
-          </sp>
-          <sp who="toinon" xml:id="6-5">
-            <speaker>TOINON.</speaker>
-            <l n="210" xml:id="l210">Mais on se contrefait,</l>
-            <l n="211" xml:id="l211">Seulement pour la forme.</l>
-          </sp>
-          <sp who="julie" xml:id="6-6">
-            <speaker>JULIE.</speaker>
-            <l n="212" xml:id="l212">Eh ! ne l’ai-je pas fait ?</l>
-            <l n="213" xml:id="l213">Pour dérober ma joie à la commune envie,</l>
-            <l n="214" xml:id="l214">Je m’enferme au désert : vois quelle modestie !<a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5">[5]</a></l>
-          </sp>
-          <sp who="toinon" xml:id="6-7">
-            <speaker>TOINON.</speaker>
-            <l n="215" xml:id="l215">Mais il faut à Paris retourner une fois.</l>
-          </sp>
-          <sp who="julie" xml:id="6-8">
-            <speaker>JULIE.</speaker>
-            <l n="216" xml:id="l216">Laissez-moi divertir tout le reste du mois ;</l>
-            <l n="217" xml:id="l217">Ennuyée à peu près de ces réjouissances,</l>
-            <l n="218" xml:id="l218">J’irai me délasser parmi les bienséances,</l>
-            <l n="219" xml:id="l219">Briller au plus profond d’un noir appartement,</l>
-            <l n="220" xml:id="l220">Me parer de l’éclat d’un lugubre ornement,</l>
-            <l n="221" xml:id="l221">Promener en spectacle un deuil en grand volume,</l>
-            <l n="222" xml:id="l222">Et donner en public des pleurs à la coutume.</l>
-          </sp>
-          <sp who="toinon" xml:id="6-9">
-            <speaker>TOINON.</speaker>
-            <l n="223" xml:id="l223">Mais, voulant tout le mois déguiser votre deuil,</l>
-            <l n="224" xml:id="l224">Pourquoi faire venir Céliane et Montreuil ?</l>
-          </sp>
-          <sp who="julie" xml:id="6-10">
-            <speaker>JULIE.</speaker>
-            <l n="225" xml:id="l225">Il faut dans le plaisir un peu de compagnie :</l>
-            <l n="226" xml:id="l226">On le respire mieux, et sans elle il ennuie.</l>
-            <l n="227" xml:id="l227">Outre un dessein que j’ai, que tu n’as pu prévoir,</l>
-            <l n="228" xml:id="l228">Ils s’aiment : on le dit ; et je veux le savoir,</l>
-            <l n="229" xml:id="l229">En être convaincue, et les brouiller ensemble,</l>
-            <l n="230" xml:id="l230">Toinon.</l>
-          </sp>
-          <sp who="toinon" xml:id="6-11">
-            <speaker>TOINON.</speaker>
-            <l n="231" xml:id="l231">Dans ce dessein j’entrevois, ce me semble :</l>
-            <l n="232" xml:id="l232">Vous voulez pour époux vous donner Montreuil ?</l>
-          </sp>
-          <sp who="julie" xml:id="6-12">
-            <speaker>JULIE.</speaker>
-            <l n="233" xml:id="l233">Moi !</l>
-            <l n="234" xml:id="l234">D’un mari, d’un bourru, je reprendrais la loi ?</l>
-            <l n="235" xml:id="l235">On peut par des raisons du monde et de famille,</l>
-            <l n="236" xml:id="l236">Par de certains désirs, et pour sortir de fille.</l>
-            <l n="237" xml:id="l237">Une fois en sa vie arborer ce lien ;</l>
-            <l n="238" xml:id="l238">Mais aller jusqu’à deux, je m’en garderai bien.</l>
-          </sp>
-          <sp who="toinon" xml:id="6-13">
-            <speaker>TOINON.</speaker>
-            <l n="239" xml:id="l239">Ma foi ! vous ferez bien de garder le veuvage ;</l>
-            <l n="240" xml:id="l240">Car si, par cas fortuit, dans le cours de votre âge,</l>
-            <l n="241" xml:id="l241">Vous alliez en pleurer un ou deux seulement,</l>
-            <l n="242" xml:id="l242">Comme vous avez fait monsieur de Saint-Amant,</l>
-            <l n="243" xml:id="l243">Et rendre vos douleurs encore aussi célèbres,</l>
-            <l n="244" xml:id="l244">Vous vous ruineriez en dépenses funèbres.</l>
-          </sp>
-          <sp who="julie" xml:id="6-14">
-            <speaker>JULIE.</speaker>
-            <l n="245" xml:id="l245">Fi des maris, Toinon ! des amis, des amis !</l>
-            <l n="246" xml:id="l246">À vous plaire, à votre ordre, ils sont toujours soumis.</l>
-            <l n="247" xml:id="l247">On sait s’approprier leurs divers caractères ;</l>
-            <l n="248" xml:id="l248">Le conseiller se rend utile à vos affaires,</l>
-            <l n="249" xml:id="l249">On compte au lansquenet le riche financier,</l>
-            <l n="250" xml:id="l250">Le partisan commode est un bon dépensier,</l>
-            <l n="251" xml:id="l251">Le courtisan grossit la foule aux Tuileries,</l>
-            <l n="252" xml:id="l252">L’abbé nous divertit par ses minauderies,</l>
-            <l n="253" xml:id="l253">Le bel esprit en vers distingue du commun,<a href="#_ftn6" name="_ftnref6" title="" id="_ftnref6">[6]</a></l>
-            <l n="254" xml:id="l254">Et, parmi ce ramas, le cœur<a href="#_ftn7" name="_ftnref7" title="" id="_ftnref7">[7]</a> en regarde un.</l>
-          </sp>
-          <sp who="toinon" xml:id="6-15">
-            <speaker>TOINON.</speaker>
-            <l n="255" xml:id="l255">J’entends, je vois, madame, où l’estime vous mène.</l>
-            <l n="256" xml:id="l256">Et Montreuil d’un clin d’œil tout contraire à la haine</l>
-            <l n="257" xml:id="l257">Sera le regardé, n’est-ce pas ?</l>
-          </sp>
-          <sp who="julie" xml:id="6-16">
-            <speaker>JULIE.</speaker>
-            <l n="258" xml:id="l258">Nous verrons,</l>
-            <l n="259" xml:id="l259">S’il répond à mes vœux, ce que nous en ferons.</l>
-          </sp>
-          <sp who="dorame" xml:id="6-17">
-            <speaker>SAINT-AMANT, <em>à Dorame.</em></speaker>
-            <l n="260" xml:id="l260">Vous pouvez deviner ce qu’elle en voudra faire.</l>
-          </sp>
-          <sp who="dorame" xml:id="6-18">
-            <speaker>DORAME.</speaker>
-            <l n="261" xml:id="l261">Eh ! c’est un jeu.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="6-19">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="262" xml:id="l262">Quel jeu !</l>
-          </sp>
-          <sp who="julie" xml:id="6-20">
-            <speaker>JULIE.</speaker>
-            <l n="263" xml:id="l263">Voilà tout le mystère.</l>
-            <l n="264" xml:id="l264">Pour voir de ces amants le cœur à découvert,</l>
-            <l n="265" xml:id="l265">Je leur viens d’inspirer exprès le jeu du vert :</l>
-            <l n="266" xml:id="l266">C’est dans ce dessein même, et pour le voir éclore,</l>
-            <l n="267" xml:id="l267">Que j’emprunte la voix du Printemps et de Flore ;</l>
-            <l n="268" xml:id="l268">Et, sous l’appas brillant des jeux et des plaisirs,</l>
-            <l n="269" xml:id="l269">Je vais adroitement pénétrer leurs désirs,</l>
-            <l n="270" xml:id="l270">Et satisfaire aux miens.</l>
-          </sp>
-          <sp who="dorame" xml:id="6-21">
-            <speaker>DORAME, <em>à Saint-Amant.</em></speaker>
-            <l n="271" xml:id="l271">C’est assez vous complaire ;</l>
-            <l n="272" xml:id="l272">Descendons.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="6-22">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="273" xml:id="l273">Non, il faut en voir la fin, beau-père.</l>
-          </sp>
-          <sp who="julie" xml:id="6-23">
-            <speaker>JULIE.</speaker>
-            <l n="274" xml:id="l274">Lubin, pendant les jeux, avec moi de concert,</l>
-            <l n="275" xml:id="l275">Feignant de badiner, prendra leur boîte au vert...</l>
-            <l n="276" xml:id="l276">Il vient.</l>
-            <l n="277" xml:id="l277"> </l>
-            <l n="278" xml:id="l278"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="279" xml:id="l279"> </l>
-          <sp who="lubin" xml:id="7-1">
-            <speaker>JULIE, LUBIN, TROUPE DE PAYSANS, DORAME, SAINT-AMANT, <em>à la fenêtre</em></speaker>
-            <l n="280" xml:id="l280"> </l>
-          </sp>
-          <sp who="lubin" xml:id="7-2">
-            <speaker>LUBIN.</speaker>
-            <l n="281" xml:id="l281">Voici le mai ; rangez-vous, place, place !</l>
-            <l n="282" xml:id="l282">Beau, grand, droit, vert, il vient ombrager cette place.</l>
-            <stage><hi rend="italic"><em>Des paysans, en dansant, font avancer le mai jusqu’au milieu du théâtre.</em></hi></stage>
-            <l n="284" xml:id="l284"> </l>
-            <l n="285" xml:id="l285"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="286" xml:id="l286"> </l>
-          <sp who="lubin" xml:id="8-1">
-            <speaker>JULIE, MONTREUIL, CÉLIANE, LUBIN, PAYSANS, SAINT-AMANT, DORAME, <em>à la fenêtre</em></speaker>
-            <l n="287" xml:id="l287"> </l>
-          </sp>
-          <sp who="montreuil" xml:id="8-2">
-            <speaker>MONTREUIL.</speaker>
-            <l n="288" xml:id="l288">Nous venons près de vous entendre le concert.</l>
-          </sp>
-          <sp who="céliane" xml:id="8-3">
-            <speaker>CÉLIANE.</speaker>
-            <l n="289" xml:id="l289">Ce mai nous avertit qu’il faut songer au vert.</l>
-          </sp>
-          <sp who="lubin" xml:id="8-4">
-            <speaker>LUBIN.</speaker>
-            <l n="290" xml:id="l290">Vous y jouez donc ?</l>
-          </sp>
-          <sp who="céliane" xml:id="8-5">
-            <speaker>CÉLIANE.</speaker>
-            <l n="291" xml:id="l291">Oui.</l>
-          </sp>
-          <sp who="lubin" xml:id="8-6">
-            <speaker>LUBIN.</speaker>
-            <l n="292" xml:id="l292">Gardez d’être attrapée !</l>
-          </sp>
-          <sp who="julie" xml:id="8-7">
-            <speaker>JULIE.</speaker>
-            <l n="293" xml:id="l293">Pour moi, si l’on m’y prend, je serai bien trompée.</l>
-          </sp>
-          <sp who="lubin" xml:id="8-8">
-            <speaker>LUBIN <em>chante.</em></speaker>
-            <l n="294" xml:id="l294">Dans ces verts ébats,</l>
-            <l n="295" xml:id="l295">Craignez la surprise :</l>
-            <l n="296" xml:id="l296">Telle est souvent prise,</l>
-            <l n="297" xml:id="l297">Qui n’y pense pas.</l>
-          </sp>
-          <sp who="julie" xml:id="8-9">
-            <speaker>JULIE.</speaker>
-            <l n="298" xml:id="l298">Je suis en sûreté, quoi qu’on puisse entreprendre.</l>
-          </sp>
-          <sp who="lubin" xml:id="8-10">
-            <speaker>LUBIN.</speaker>
-            <l n="299" xml:id="l299">Souvent brebis fringante au loup se laisse prendre.</l>
-          </sp>
-          <sp who="céliane" xml:id="8-11">
-            <speaker>CÉLIANE.</speaker>
-            <l n="300" xml:id="l300">Qui se garde de tout ne peut être attrapé.</l>
-          </sp>
-          <sp who="lubin" xml:id="8-12">
-            <speaker>LUBIN.</speaker>
-            <l n="301" xml:id="l301">L’on prend au trébuchet l’oiseau le plus huppé.</l>
-            <stage><hi rend="italic"><em>Il chante. </em></hi></stage>
-            <l n="303" xml:id="l303">Pour dénicher une fauvette,</l>
-            <l n="304" xml:id="l304">Lucas dit à Catin : Follette,</l>
-            <l n="305" xml:id="l305">J’irai t’appeler demain,</l>
-            <l n="306" xml:id="l306">Du matin.</l>
-            <l n="307" xml:id="l307">Si je te trouve au lit dormeuse,</l>
-            <l n="308" xml:id="l308">Ma bouche à baiser ton sein</l>
-            <l n="309" xml:id="l309">Ne sera pas paresseuse.</l>
-            <l n="310" xml:id="l310">À ces menaces, Catin</l>
-            <l n="311" xml:id="l311">N’en fut pas plus matineuse ;</l>
-            <l n="312" xml:id="l312">Lucas trouva l’huis ouvert :</l>
-            <l n="313" xml:id="l313">Catin fut prise sans vert.</l>
-          </sp>
-          <sp who="julie" xml:id="8-13">
-            <speaker>JULIE.</speaker>
-            <l n="314" xml:id="l314">Catin se devait bien tenir encourtinée.</l>
-          </sp>
-          <sp who="lubin" xml:id="8-14">
-            <speaker>LUBIN.</speaker>
-            <l n="315" xml:id="l315">Elle aimait à dormir la grasse matinée :</l>
-            <l n="316" xml:id="l316">Pour surprendre les gens, il est plus d’un Lucas...</l>
-            <l n="317" xml:id="l317">Mais Flore vient ici avec tous ses appas.<a href="#_ftn8" name="_ftnref8" title="" id="_ftnref8">[8]</a></l>
-            <l n="318" xml:id="l318"> </l>
-            <l n="319" xml:id="l319"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="320" xml:id="l320"> </l>
-          <sp who="flore" xml:id="9-1">
-            <speaker>JULIE, MONTREUIL, CÉLIANE, LUBIN <em>et</em> LES PAYSANS, FLORE, DEUX ZÉPHYRS, DEUX NYMPHES DES FLEURS, SAINT-AMANT <em>et</em> DORAME, <em>à la fenêtre</em></speaker>
-            <l n="321" xml:id="l321"> </l>
-          </sp>
-          <sp who="flore" xml:id="9-2">
-            <speaker>FLORE <em>chante.</em></speaker>
-            <l n="322" xml:id="l322">Sur la fougère, au pied des hêtres,</l>
-            <l n="323" xml:id="l323">Jouissez des plaisirs champêtres ;</l>
-            <l n="324" xml:id="l324">Le printemps vient ranimer vos ardeurs,</l>
-            <l n="325" xml:id="l325">Flore amène à vos yeux les zéphyrs et les fleurs :</l>
-            <l n="326" xml:id="l326">Que les Amours soient toujours de vos fêtes.</l>
-            <l n="327" xml:id="l327">Les belles conquêtes</l>
-            <l n="328" xml:id="l328">Sont celles des cœurs.</l>
-            <l n="329" xml:id="l329">Nymphes, jeunes fleurs naissantes,</l>
-            <l n="330" xml:id="l330">Parfumez ces beaux lieux de vos odeurs charmantes.</l>
-            <l n="331" xml:id="l331">Et vous, Zéphyrs, en ce jour,</l>
-            <l n="332" xml:id="l332">De la fraîcheur de vos ailes</l>
-            <l n="333" xml:id="l333">Éventez le sein des belles,</l>
-            <l n="334" xml:id="l334">Et n’en chassez pas l’Amour.</l>
-            <stage><hi rend="italic"><em>Les Zéphyrs et les Nymphes des fleurs font une entrée, et prennent en dansant les boîtes de Céliane et de Montreuil, qu’ils emportent. </em></hi></stage>
-            <l n="336" xml:id="l336">Tout renouvelle</l>
-            <l n="337" xml:id="l337">Dans ce beau mois ;</l>
-            <l n="338" xml:id="l338">La plus cruelle</l>
-            <l n="339" xml:id="l339">Respire un choix :</l>
-            <l n="340" xml:id="l340">Fière fillette,</l>
-            <l n="341" xml:id="l341">Timide amant,</l>
-            <l n="342" xml:id="l342">À la rangette,</l>
-            <l n="343" xml:id="l343">L’Amour les prend,</l>
-            <l n="344" xml:id="l344">Dans une plaine,</l>
-            <l n="345" xml:id="l345">Sous un couvert.</l>
-            <l n="346" xml:id="l346">L’un sans mitaine,</l>
-            <l n="347" xml:id="l347">L’autre sans vert.</l>
-            <stage><hi rend="italic"><em>Flore et sa suite, Lubin et les paysans s’en vont. </em></hi></stage>
-            <l n="349" xml:id="l349"> </l>
-            <l n="350" xml:id="l350"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="351" xml:id="l351"> </l>
-          <sp who="céliane" xml:id="10-1">
-            <speaker>ULIE, MONTREUIL, CÉLIANE,SAINT-AMANT <em>et</em> DORAME, <em>à la fenêtre</em></speaker>
-            <l n="352" xml:id="l352"> </l>
-          </sp>
-          <sp who="dorame" xml:id="10-2">
-            <speaker>SAINT-AMANT, <em>à Dorame.</em></speaker>
-            <l n="353" xml:id="l353">Beau-père, on ne saurait mieux pleurer un époux !</l>
-          </sp>
-          <sp who="céliane" xml:id="10-3">
-            <speaker>JULIE, <em>à Montreuil et à Céliane.</em></speaker>
-            <l n="354" xml:id="l354">Tout nous dit de songer au vert, en avez-vous ?</l>
-            <l n="355" xml:id="l355">Je vous y prends, montrez.</l>
-          </sp>
-          <sp who="céliane" xml:id="10-4">
-            <speaker>CÉLIANE.</speaker>
-            <l n="356" xml:id="l356">Oh ! qu’à cela ne tienne !</l>
-            <l n="357" xml:id="l357">Ma boîte est perdue, ah !</l>
-          </sp>
-          <sp who="montreuil" xml:id="10-5">
-            <speaker>MONTREUIL.</speaker>
-            <l n="358" xml:id="l358">Le diable a pris la mienne.</l>
-          </sp>
-          <sp who="julie" xml:id="10-6">
-            <speaker>JULIE.</speaker>
-            <l n="359" xml:id="l359">À nos conventions je vous soumets tous deux.</l>
-            <l n="360" xml:id="l360">Céliane, ouvrez-moi votre cœur, je le veux ;</l>
-            <l n="361" xml:id="l361">Mais sans fard : de l’amour l’avez-vous su défendre ?</l>
-            <l n="362" xml:id="l362">N’est-il point quelque amant qui s’y soit fait entendre ?</l>
-          </sp>
-          <sp who="céliane" xml:id="10-7">
-            <speaker>CÉLIANE.</speaker>
-            <l n="363" xml:id="l363">Jusqu’à ce jour il est de si peu de valeur,</l>
-            <l n="364" xml:id="l364">Qu’aucun ne s’est offert pour y prendre couleur.</l>
-          </sp>
-          <sp who="julie" xml:id="10-8">
-            <speaker>JULIE.</speaker>
-            <l n="365" xml:id="l365">Vous mentez : j’en sais un, vous le savez de même,</l>
-            <l n="366" xml:id="l366">Qui montre avoir pour vous une tendresse extrême ;</l>
-            <l n="367" xml:id="l367">Il brûle de vous faire entendre ses amours.</l>
-          </sp>
-          <sp who="céliane" xml:id="10-9">
-            <speaker>CÉLIANE.</speaker>
-            <l n="368" xml:id="l368">Je vais, pour m’en défendre, appeler du secours.</l>
-            <stage><hi rend="italic"><em>Elle sort. </em></hi></stage>
-            <l n="370" xml:id="l370"> </l>
-            <l n="371" xml:id="l371"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="372" xml:id="l372"> </l>
-          <sp who="montreuil" xml:id="11-1">
-            <speaker>JULIE, MONTREUIL, SAINT-AMANT, DORAME, <em>à la fenêtre</em></speaker>
-            <l n="373" xml:id="l373"> </l>
-          </sp>
-          <sp who="julie" xml:id="11-2">
-            <speaker>JULIE.</speaker>
-            <l n="374" xml:id="l374">Vous ne la suivez pas, Montreuil ?</l>
-          </sp>
-          <sp who="montreuil" xml:id="11-3">
-            <speaker>MONTREUIL.</speaker>
-            <l n="375" xml:id="l375">Qui ! moi, madame ?</l>
-          </sp>
-          <sp who="julie" xml:id="11-4">
-            <speaker>JULIE.</speaker>
-            <l n="376" xml:id="l376">Il faut, à votre tour, me découvrir votre âme.</l>
-            <l n="377" xml:id="l377">Je m’en vais exposer une fable à vos yeux :</l>
-            <l n="378" xml:id="l378">Si vous n’en devinez le sens mystérieux.</l>
-            <l n="379" xml:id="l379">Vous me ferez, Montreuil, une sensible offense ;</l>
-            <l n="380" xml:id="l380">Si vous le concevez, redoutez ma vengeance.</l>
-            <l n="381" xml:id="l381">Pour peu que vous soyez rebelle à ses clartés.</l>
-          </sp>
-          <sp who="montreuil" xml:id="11-5">
-            <speaker>MONTREUIL.</speaker>
-            <l n="382" xml:id="l382">Il faut savoir.</l>
-          </sp>
-          <sp who="julie" xml:id="11-6">
-            <speaker>JULIE.</speaker>
-            <l n="383" xml:id="l383">Je vais vous la dire : écoutez.</l>
-            <l n="384" xml:id="l384"> </l>
-            <l n="385" xml:id="l385">Une aimable tourterelle</l>
-            <l n="386" xml:id="l386">Fut le partage d’un hibou :</l>
-            <l n="387" xml:id="l387">Jamais paix, toujours querelle :</l>
-            <l n="388" xml:id="l388">Il n’est pas malaisé de deviner par où.</l>
-            <l n="389" xml:id="l389">Hibou mourut : la veuve, en ces alarmes,</l>
-            <l n="390" xml:id="l390">N’étala point des clameurs et des larmes</l>
-            <l n="391" xml:id="l391">Le fastueux charivari.</l>
-            <l n="392" xml:id="l392">Larme enlaidit, douleur est folle ;</l>
-            <l n="393" xml:id="l393">Et puis, grâces aux mœurs du siècle, on se console</l>
-            <l n="394" xml:id="l394">D’un amant tendrement chéri :</l>
-            <l n="395" xml:id="l395">Que ne fait-on point d’un mari ?</l>
-            <l n="396" xml:id="l396">Tourterelle à l’amour rarement est rebelle.</l>
-            <l n="397" xml:id="l397">Sa tendresse envisage un moineau digne d’elle.</l>
-            <l n="398" xml:id="l398">Pour s’expliquer, regards, discours mystérieux,</l>
-            <l n="399" xml:id="l399">Sont par elle mis en usage :</l>
-            <l n="400" xml:id="l400">Elle craint, elle n’ose en dire davantage.</l>
-            <l n="401" xml:id="l401">C’est au moineau, s’il a des yeux,</l>
-            <l n="402" xml:id="l402">À deviner ce langage.</l>
-            <l n="403" xml:id="l403"> </l>
-            <l n="404" xml:id="l404">Vous entendez, Montreuil ; le comprenez-vous bien ?</l>
-            <l n="405" xml:id="l405">Parlez sincèrement.</l>
-          </sp>
-          <sp who="montreuil" xml:id="11-7">
-            <speaker>MONTREUIL.</speaker>
-            <l n="406" xml:id="l406">À ne déguiser rien,</l>
-            <l n="407" xml:id="l407">Si certain homme était dans la nuit éternelle,</l>
-            <l n="408" xml:id="l408">Je croirais deviner quelle est la tourterelle ;</l>
-            <l n="409" xml:id="l409">Son joug a fait gémir mon cœur plus d’une fois.</l>
-            <l n="410" xml:id="l410">Quant à l’heureux moineau, seul digue de son choix,</l>
-            <l n="411" xml:id="l411">Son bonheur me fait peine à le pouvoir connaître ;</l>
-            <l n="412" xml:id="l412">Mais ce que je sais bien, c’est que je voudrais l’être.</l>
-          </sp>
-          <sp who="julie" xml:id="11-8">
-            <speaker>JULIE.</speaker>
-            <l n="413" xml:id="l413">Soyez-le, on y consent : le champ vous est ouvert ;</l>
-            <l n="414" xml:id="l414">Croyez tout, espérez, et...</l>
-          </sp>
-          <sp who="saint-amant" xml:id="11-9">
-            <speaker>SAINT-AMANT, <em>descendu de la fenêtre.</em></speaker>
-            <l n="415" xml:id="l415">Je vous prends sans vert.</l>
-          </sp>
-          <sp who="montreuil" xml:id="11-10">
-            <speaker>MONTREUIL, <em>s’enfuyant.</em></speaker>
-            <l n="416" xml:id="l416">Mon oncle !</l>
-          </sp>
-          <sp who="julie" xml:id="11-11">
-            <speaker>JULIE.</speaker>
-            <l n="417" xml:id="l417">Mon époux !</l>
-            <l n="418" xml:id="l418"> </l>
-            <l n="419" xml:id="l419"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="420" xml:id="l420"> </l>
-          <sp who="dorame" xml:id="12-1">
-            <speaker>SAINT-AMANT, JULIE, DORAME</speaker>
-            <l n="421" xml:id="l421"> </l>
-          </sp>
-          <sp who="saint-amant" xml:id="12-2">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="422" xml:id="l422">Approchez, mon beau-père</l>
-            <l n="423" xml:id="l423">Votre fille est d’un prix trop extraordinaire ;</l>
-            <l n="424" xml:id="l424">Je m’en sens désormais indigne, et vous la rends.</l>
-            <l n="425" xml:id="l425">Adieu !</l>
-          </sp>
-          <sp who="dorame" xml:id="12-3">
-            <speaker>DORAME.</speaker>
-            <l n="426" xml:id="l426">Tout doux ! il est des accommodements.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="12-4">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="427" xml:id="l427">Vous prétendez, voyant l’humeur qui la possède...</l>
-          </sp>
-          <sp who="dorame" xml:id="12-5">
-            <speaker>DORAME.</speaker>
-            <l n="428" xml:id="l428">Elle a tort ; mais le mal trouvera son remède.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="12-6">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="429" xml:id="l429">Et quel remède, après tout ce que devant vous...</l>
-          </sp>
-          <sp who="dorame" xml:id="12-7">
-            <speaker>DORAME.</speaker>
-            <l n="430" xml:id="l430">D’accord, son procédé choque ; mais, entre nous,</l>
-            <l n="431" xml:id="l431">À l’intention près, c’est une bagatelle.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="12-8">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="432" xml:id="l432">Comment ! vous...</l>
-          </sp>
-          <sp who="julie" xml:id="12-9">
-            <speaker>JULIE.</speaker>
-            <l n="433" xml:id="l433">Eh ! quoi donc ! suis-je si criminelle</l>
-            <l n="434" xml:id="l434">D’un mari que l’on aime on apprend le trépas ;</l>
-            <l n="435" xml:id="l435">Les premiers mouvements sont de suivre ses pas.</l>
-            <l n="436" xml:id="l436">À ce dessein s’oppose un devoir de famille :</l>
-            <l n="437" xml:id="l437">Des fruits de cet hymen reste une seule fille ;</l>
-            <l n="438" xml:id="l438">Il faut vivre pour elle ; on restreint ses désirs</l>
-            <l n="439" xml:id="l439">À chercher sa santé dans d’innocents plaisirs.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="12-10">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="440" xml:id="l440">Morbleu ! l’excuse encore est pire que l’offense.</l>
-          </sp>
-          <sp who="dorame" xml:id="12-11">
-            <speaker>DORAME, <em>à Julie.</em></speaker>
-            <l n="441" xml:id="l441">Sortez... j’adoucirai son cœur en votre absence.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="12-12">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="442" xml:id="l442">Un cloître punira cette insolence-là.</l>
-          </sp>
-          <sp who="julie" xml:id="12-13">
-            <speaker>JULIE.</speaker>
-            <l n="443" xml:id="l443">Mon père...</l>
-          </sp>
-          <sp who="dorame" xml:id="12-14">
-            <speaker>DORAME.</speaker>
-            <l n="444" xml:id="l444">Laissez-moi raccommoder cela.</l>
-            <stage><hi rend="italic"><em>Julie sort. </em></hi></stage>
-            <l n="446" xml:id="l446"> </l>
-            <l n="447" xml:id="l447"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="448" xml:id="l448"> </l>
-          <sp who="dorame" xml:id="13-1">
-            <speaker>SAINT-AMANT, DORAME</speaker>
-            <l n="449" xml:id="l449"> </l>
-          </sp>
-          <sp who="saint-amant" xml:id="13-2">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="450" xml:id="l450">Non, non.</l>
-          </sp>
-          <sp who="dorame" xml:id="13-3">
-            <speaker>DORAME.</speaker>
-            <l n="451" xml:id="l451">Écoutez-moi.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="13-4">
-            <speaker>SAINT-AMANT.</speaker>
-            <l n="452" xml:id="l452">Si jamais je m’oblige</l>
-            <l n="453" xml:id="l453">À revoir votre fille...</l>
-          </sp>
-          <sp who="dorame" xml:id="13-5">
-            <speaker>DORAME.</speaker>
-            <l n="454" xml:id="l454">Écoutez-moi, vous dis-je.</l>
-            <l n="455" xml:id="l455">Comme vous je pris femme, et fus gendre autrefois.</l>
-            <l n="456" xml:id="l456">Tout ce qui peut réduire un esprit aux abois,</l>
-            <l n="457" xml:id="l457">Tout ce qu’un mari craint se trouva dans ma femme.</l>
-            <l n="458" xml:id="l458">Elle... Elle est au tombeau ; Dieu veuille avoir son âme !</l>
-            <l n="459" xml:id="l459">Je criai, j’y voulus renoncer comme vous.</l>
-            <l n="460" xml:id="l460">Mon beau-père, honnête homme, esprit commode et doux,</l>
-            <l n="461" xml:id="l461">Me donna, pour calmer ma fureur violente,</l>
-            <l n="462" xml:id="l462">Un bon contrat valant deux mille écus de rente,</l>
-            <l n="463" xml:id="l463">Que jadis son beau-père, en pareilles douleurs,</l>
-            <l n="464" xml:id="l464">Lui mit entre les mains. Je cessai mes clameurs.</l>
-            <l n="465" xml:id="l465">Mon gendre, le voilà. Je vous remets ce gage :</l>
-            <l n="466" xml:id="l466">Il peut dans la famille être d’un bon usage ;</l>
-            <l n="467" xml:id="l467">Vous avez une fille : elle a tout votre soin ;</l>
-            <l n="468" xml:id="l468">Si vous la mariez, vous en aurez besoin.</l>
-            <l n="469" xml:id="l469">Croyez-moi, comme nous ayez de la prudence.</l>
-            <l n="470" xml:id="l470">Tout ceci, grâce au ciel, s’est fait dans le silence :</l>
-            <l n="471" xml:id="l471">Il est certains secrets fâcheux à révéler,</l>
-            <l n="472" xml:id="l472">Et qui de rien ne sait, de rien ne peut parler.</l>
-          </sp>
-          <sp who="saint-amant" xml:id="13-6">
-            <speaker>SAINT-AMANT, <em>regardant le contrat.</em></speaker>
-            <l n="473" xml:id="l473">Écueil de tout le monde, or, quelle est ta puissance !</l>
-          </sp>
-          <sp who="dorame" xml:id="13-7">
-            <speaker>DORAME.</speaker>
-            <l n="474" xml:id="l474">Il faut, mon gendre, il faut tous prendre patience.</l>
-            <l n="475" xml:id="l475">Beaucoup d’honnêtes gens sont dans le même cas,</l>
-            <l n="476" xml:id="l476">Qu’on ne console point avec de bons contrats :</l>
-            <l n="477" xml:id="l477">Reprenez la douceur : c’est la plus belle voie.</l>
-            <l n="478" xml:id="l478"> </l>
-            <l n="479" xml:id="l479"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="480" xml:id="l480"> </l>
-          <sp who="lubin" xml:id="14-1">
-            <speaker>SAINT-AMANT, DORAME, LUBIN</speaker>
-            <l n="481" xml:id="l481"> </l>
-          </sp>
-          <sp who="lubin" xml:id="14-2">
-            <speaker>LUBIN.</speaker>
-            <l n="482" xml:id="l482">Qu’est-ce donc ? voici bien, monsieur, du rabat-joie :</l>
-            <l n="483" xml:id="l483">Est-ce que nos plaisirs s’en iront à vau-l’eau ?</l>
-            <l n="484" xml:id="l484">Nous sommes attroupés tretous dessous l’ormeau,</l>
-            <l n="485" xml:id="l485">N’attendant qu’un signal pour faire ici gambade ;</l>
-            <l n="486" xml:id="l486">Et vous venez, dit-on, désaccorder l’aubade ?</l>
-            <l n="487" xml:id="l487">Madame votre fille est pleurante en un coin ;</l>
-            <l n="488" xml:id="l488">Monsieur votre neveu grommelle sur du foin,</l>
-            <l n="489" xml:id="l489">Camus en chien d’Artois d’avoir compté sans hôte.</l>
-            <l n="490" xml:id="l490">Quel revers ! qui l’aurait pensé ? c’est votre faute ;</l>
-            <l n="491" xml:id="l491">Tout franc, ce procédé crie, et vous avez tort,</l>
-            <l n="492" xml:id="l492">Après l’avoir mandé, de ne pas être mort.</l>
-          </sp>
-          <sp who="dorame" xml:id="14-3">
-            <speaker>DORAME.</speaker>
-            <l n="493" xml:id="l493">Qu’est-ce à dire ? Non, non, qu’on chante, que l’on danse :<a href="#_ftn9" name="_ftnref9" title="" id="_ftnref9">[9]</a></l>
-            <l n="494" xml:id="l494">Nous venons prendre part à la réjouissance.</l>
-            <l n="495" xml:id="l495">Bergères et bergers, que tout se rende ici,</l>
-            <l n="496" xml:id="l496">Et ma fille, et Montreuil, et Céliane aussi.</l>
-            <l n="497" xml:id="l497">Reprenez un air gai, voici la compagnie.</l>
-            <l n="498" xml:id="l498"> </l>
-            <l n="499" xml:id="l499"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="500" xml:id="l500"> </l>
-          <sp who="lubin" xml:id="15-1">
-            <speaker>DORAME, SAINT-AMANT, JULIE, CÉLIANE, MONTREUIL, LUBIN</speaker>
-            <l n="501" xml:id="l501"> </l>
-          </sp>
-          <sp who="dorame" xml:id="15-2">
-            <speaker>DORAME.</speaker>
-            <l n="502" xml:id="l502">Allons, ma fille, allons, menez joyeuse vie ;</l>
-            <l n="503" xml:id="l503">Votre mari va voir vos plaisirs d’un bon œil.</l>
-            <l n="504" xml:id="l504">Ma nièce Céliane et le galant Montreuil</l>
-            <l n="505" xml:id="l505">Seront demain unis par un doux hyménée :</l>
-            <l n="506" xml:id="l506">Aujourd’hui dans la joie achevons la journée.</l>
-            <l n="507" xml:id="l507"> </l>
-            <l n="508" xml:id="l508"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="509" xml:id="l509"> </l>
-          <sp who="flore" xml:id="16-1">
-            <speaker>DORAME, SAINT-AMANT, JULIE, CÉLIANE, MONTREUIL, FLORE, NYMPHES DES FLEURS, ZÉPHIRS, TROUPE DE BERGERS, DE BERGÈRES, DE PAYSANS <em>et</em> DE PAYSANNES</speaker>
-            <l n="510" xml:id="l510"> </l>
-          </sp>
-          <sp who="flore" xml:id="16-2">
-            <speaker>FLORE <em>chante.</em></speaker>
-            <l n="511" xml:id="l511">Fuyez l’embarras des amours,</l>
-            <l n="512" xml:id="l512">Suivez les folles amourettes :</l>
-            <l n="513" xml:id="l513">Les jeux, les plaisirs, les beaux jours,</l>
-            <l n="514" xml:id="l514">Ne sont que parmi les fleurettes.</l>
-            <l n="515" xml:id="l515">Pour folâtrer avec les ris,</l>
-            <l n="516" xml:id="l516">Et des noirs chagrins se défendre,</l>
-            <l n="517" xml:id="l517">Jeunes cœurs, songez à prendre,</l>
-            <l n="518" xml:id="l518">Et jamais à n’être pris.</l>
-            <stage><hi rend="italic"><em>Les Nymphes des fleurs et les Zéphyrs dansent. </em></hi></stage>
-          </sp>
-          <sp who="lubin" xml:id="16-3">
-            <speaker>LUBIN <em>chante.</em></speaker>
-            <l n="520" xml:id="l520">Pour jouer sûrement au vert,</l>
-            <l n="521" xml:id="l521">Beautés, mettez-vous à couvert</l>
-            <l n="522" xml:id="l522">D’un curieux désagréable :</l>
-            <l n="523" xml:id="l523">La surprise du favori</l>
-            <l n="524" xml:id="l524">Est aimable ;</l>
-            <l n="525" xml:id="l525">Mais celle du mari,</l>
-            <l n="526" xml:id="l526">C’est le diable.</l>
-            <stage><hi rend="italic"><em>Entrée de paysans. </em></hi></stage>
-          </sp>
-          <sp who="flore" xml:id="16-4">
-            <speaker>FLORE <em>et</em> LUBIN, <em>ensemble.</em></speaker>
-            <l n="528" xml:id="l528">Voulez-vous bannir vos alarmes</l>
-            <l n="529" xml:id="l529">Et goûter un hymen plein de charmes ?</l>
-            <l n="530" xml:id="l530">Faites, époux, pour finir vos débats,</l>
-            <l n="531" xml:id="l531">Tout ce que vous ne faites pas.</l>
-          </sp>
-          <sp who="flore" xml:id="16-5">
-            <speaker>FLORE.</speaker>
-            <l n="532" xml:id="l532">Soyez-vous apparemment fidèles.</l>
-          </sp>
-          <sp who="lubin" xml:id="16-6">
-            <speaker>LUBIN.</speaker>
-            <l n="533" xml:id="l533">Ne vous empressez point à voir</l>
-            <l n="534" xml:id="l534">Ce qu’il ne faut jamais savoir.</l>
-          </sp>
-          <sp who="flore" xml:id="16-7">
-            <speaker>FLORE.</speaker>
-            <l n="535" xml:id="l535">Passez-vous vos bagatelles.</l>
-          </sp>
-          <sp who="ensemble" xml:id="16-8">
-            <speaker>ENSEMBLE.</speaker>
-            <l n="536" xml:id="l536">Douce union, charmante paix,</l>
-            <l n="537" xml:id="l537">Repos des cœurs et du ménage</l>
-            <l n="538" xml:id="l538">Félicité du mariage,</l>
-            <l n="539" xml:id="l539">Quand ici-bas vous verrons-nous ? jamais.</l>
-            <stage><hi rend="italic"><em>Entrée de Flore et de Lubin, grande entrée de tous les personnages dansant de la comédie. </em></hi></stage>
-          </sp>
-          <sp who="lubin" xml:id="16-9">
-            <speaker>LUBIN, <em>aux spectateurs.</em></speaker>
-            <l n="541" xml:id="l541">À venir voir nos jeux soyez plus de concert ;</l>
-            <l n="542" xml:id="l542">Plus vous viendrez, et moins vous nous prendrez sans vert.</l>
-            <stage><hi rend="italic"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> <em>Je vous prends sans vert</em> est un ancien jeu ou divertissement de société, auquel on se livrait surtout pendant les premiers jours de mai. Il fallait, pendant un temps désigné, porter toujours sur soi un brin de verdure. Si l’on était pris sans cela, on donnait tel gage convenu, on subissait telle pénitence indiquée. Il s’agissait, par conséquent, de surprendre la personne avec qui l’on jouait, dans les circonstances les plus propres à lui faire oublier son vert.</hi></stage>
-            <l n="544" xml:id="l544">Ce jeu introduisit dans le langage l’expression « prendre sans vert, » ayant le sens de prendre au dépourvu :</l>
-            <l n="545" xml:id="l545">C’est ce qui fait toujours que je suis pris sans vert.</l>
-            <stage><hi rend="italic">(Molière, <em>l’Étourdi</em>, acte III, scène V.</hi></stage>
-            <l n="547" xml:id="l547">Pour cette heure, monsieur, vous m’avez pris sans vert.</l>
-            <stage><hi rend="italic">(Quinault, <em>l’Amant indiscret</em>, acte I, scène III.)</hi></stage>
-            <stage><hi rend="italic">C’est le jeu galant qui a fourni le titre de la petite pièce que nous publions. Ce jeu, on l’a pu voir par deux scènes de <em>Ragotin</em>, était encore en usage au XVII<sup>e</sup> siècle, quoiqu’il ne fût plus de bon ton, comme le fait observer Julie (scène V).</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2">[2]</a> Ainsi dans les éditions originales ; <em>au lansquenet</em>, dans les éditions modernes.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3">[3]</a> Les premières éditions portent à tort : <em>vous voyant</em>. Les <em>Œuvres diverses</em> de 1729 donnent la bonne leçon : <em>vous croyant</em>.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref4" name="_ftn4" title="" id="_ftn4">[4]</a> Var. <em>Œuvres diverses</em> de 1729 : conçus, dirigés et mis en lumière chez l’Ami.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref5" name="_ftn5" title="" id="_ftn5">[5]</a> Ainsi dans les éditions de 1702 et de 1729. L’édition de 1699 porte <em>voyez quelle modestie</em>. Les <em>Œuvres de Champmeslé</em> de 1735 donnent : <em>voyez la modestie</em>.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref6" name="_ftn6" title="" id="_ftn6">[6]</a> Ainsi dans les <em>Œuvres diverses</em> de 1729. Les premières éditions portent à tort : <em>distingue le commun</em>.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref7" name="_ftn7" title="" id="_ftn7">[7]</a> Les éditions de 1699 et de 1702 donnent à tort : <em>l’esprit</em>.</hi></stage>
-            <stage><hi rend="italic"><a href="#_ftnref8" name="_ftn8" title="" id="_ftn8">[8]</a> Ce vers manque dans les premières éditions. On le trouve dans les <em>Œuvres de Monsieur de Champmeslé</em>, 1735. Les éditions modernes portent :</hi></stage>
-            <l n="557" xml:id="l557">Mais Flore se présente avec tous ses appas.</l>
-            <stage><hi rend="italic"><a href="#_ftnref9" name="_ftn9" title="" id="_ftn9">[9]</a> Ainsi dans les éditions de 1702 et de 1729. L’édition de 1699 porte : <em>que l’on chante, que l’on danse</em>. Les éditions modernes donnent : <em>qu’on chante et que l’on danse</em>.</hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, lui donnant de l’argent.</speaker>
+          <l n="1">Je ne suis nullement en doute de ta foi ;</l>
+          <l n="2">Mais prends, Lubin.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="3">Monsieur...</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="4">Prends, dis-je, oblige-moi.</l>
+          <l n="5">De ce qu’on fait ici donne-moi connaissance.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="6">Monsieur le colonel, parlez en conscience.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="7">Quoi ?</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="8">N’êtes-vous point mort ?</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="9">Tu le vois.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="10">Tout de bon,</l>
+          <l n="11">Ne revenez-vous point de l’autre monde ?</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="12">Non,</l>
+          <l n="13">Je te l’ai déjà dit, c’est pour tromper ma femme ;</l>
+          <l n="14">C’est pour mettre en plein jour tout ce qu’elle a dans l’âme</l>
+          <l n="15">Que j’ai fait publier le faux bruit de ma mort.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="16">Que vous l’allez, monsieur, surprendre à votre abord !</l>
+          <l n="17">Elle ne s’attend pas à ce retour funeste,</l>
+          <l n="18">Et son cœur bonnement vous croit mort, et le reste.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="19">Non, je n’ai pas dessein sitôt de l’affliger ;</l>
+          <l n="20">Je veux dans les plaisirs la laisser engager,</l>
+          <l n="21">Et faire voir à tous, par ses réjouissances,</l>
+          <l n="22">Un bon certificat de ses extravagances.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="23">Je suis ravi de voir que vous avez du cœur.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="24">Jusqu’ici je n’ai pu de sa mauvaise humeur</l>
+          <l n="25">Aux yeux de ses parents dévoiler la malice :</l>
+          <l n="26">Elle a su me confondre avec tant d’artifice,</l>
+          <l n="27">Qu’elle m’a fait partout passer pour un bourru ;</l>
+          <l n="28">Mais, grâce à sa folie, enfin je serai cru.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="29">Tant mieux, la joie en moi fait ce que fit sur elle</l>
+          <l n="30">De votre feinte mort la première nouvelle.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="31">D’où le sais-tu ?</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="32">J’étais dans un grand cabinet,</l>
+          <l n="33">Quand votre courrier vint de Flandre. À lansquenet[2]</l>
+          <l n="34">Elle avait tout perdu : qu’elle était désolée !</l>
+          <l n="35">Mais par votre trépas elle fut consolée.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="36">Quelle âme ! chez son père elle fut tout en pleurs,</l>
+          <l n="37">Signaler son devoir par de fausses clameurs ;</l>
+          <l n="38">Voulant quitter le monde, et cherchant la retraite,</l>
+          <l n="39">Pour de mon souvenir n’être jamais distraite :</l>
+          <l n="40">Le bonhomme ébloui donna dans le panneau,</l>
+          <l n="41">À ses pieux désirs accorda ce château,</l>
+          <l n="42">Lui donnant seulement Toinon pour compagnie.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="43">Depuis qu’elles y sont, monsieur. Dieu sait la vie !</l>
+          <l n="44">Elle appela d’abord, pour se donner beau jeu,</l>
+          <l n="45">La jeune Céliane avec votre neveu.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="46">Montreuil ?</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="47">Oui, ce beau fils, ce tourneur de prunelle.</l>
+          <l n="48">Qui la lorgnait, dit-on, et qu’elle lorgnait, elle.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="49">Que font-ils en ces lieux, Lubin ?</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="50">Je ne sais pas,</l>
+          <l n="51">Et je sais seulement que de votre trépas</l>
+          <l n="52">Elle ne leur a fait aucune confidence ;</l>
+          <l n="53">On ne parle que joie et que réjouissance.</l>
+          <l n="54">Tous les jours ce ne sont que plaisirs bout à bout,</l>
+          <l n="55">Promenades ici, ménétriers partout,</l>
+          <l n="56">Petits jeux, cotte verte, allégresse, ripailles,</l>
+          <l n="57">Sérénades, concerts, charivaris, crevailles.</l>
+          <l n="58">Vous croyant[3] tout de bon gisé dans le cercueil ;</l>
+          <l n="59">Et c’est de la façon qu’elle en porte le deuil.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="60">À se perdre elle-même elle s’est engagée ;</l>
+          <l n="61">Son père qui la croit fortement affligée,</l>
+          <l n="62">Et que je détrompai cinq ou six jours après,</l>
+          <l n="63">Avec moi dans ces lieux est venu tout exprès :</l>
+          <l n="64">Témoin de son désordre, il n’aura pas la force,</l>
+          <l n="65">Entre sa fille et moi, d’empêcher le divorce.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="66">Vous ne pouviez venir plus à propos tous deux.</l>
+          <l n="67">Du premier jour de mai renouvelant les jeux,</l>
+          <l n="68">On ne va voir ici que fêtes bocagères,</l>
+          <l n="69">Printemps, Flore, Zéphyrs, et bergers et bergères,</l>
+          <l n="70">Pour prendre des plaisirs de toutes les façons,</l>
+          <l n="71">Mêlant à leurs concerts nos rustiques chansons ;</l>
+          <l n="72">Nous avons ordre exprès de venir en personne...</l>
+          <l n="73">Entendez-vous déjà comme l’air en résonne ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="74">Pour tout voir, mon beau-père, approchez promptement.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="75">J’en sais plus qu’il ne faut, monsieur de Saint-Amant.</l>
+          <l n="76">Il suffit.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="77">Non, je veux vous la faire connaître...</l>
+          <l n="78">Où nous cacheras-tu, Lubin ?</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="79">Cette fenêtre</l>
+          <l n="80">Pour voir et pour entendre est un endroit certain ;</l>
+          <l n="81">Vous n’avez qu’à monter.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="82">J’en sais bien le chemin ;</l>
+          <l n="83">Mais, chut !</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="84">Allez, je vais chanter à pleine tête,</l>
+          <l n="85">Sans faire aucun semblant, car je suis de la fête.</l>
+          <stage>&lt;em&gt;Saint-Amant et Dorame sortent. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="86">Allons, courage, enfants, fredonnons ce beau mois ;</l>
+          <l n="87">Ménétriers, ronflez ; Lucas, joignons nos voix :</l>
+          <l n="88">Chantons le vert printemps, nos plaisirs et nos flammes...</l>
+          <l n="89">Échos, répondez-nous, et réveillez ces dames.</l>
+          <stage>&lt;em&gt;Il chante. &lt;/em&gt;</stage>
+          <l n="90">Vive le printemps,</l>
+          <l n="91">Il rend le cœur gai.</l>
+          <l n="92">Le mois des amants</l>
+          <l n="93">Est le mois de mai.</l>
+          <l n="94">Badinant sur la fougère,</l>
+          <l n="95">Nos plaisirs retentissent partout,</l>
+          <l n="96">Et si l’on entend crier la bergère,</l>
+          <l n="97">Ce n’est pas au loup.</l>
+        </sp>
+        <sp who="#lucas">
+          <speaker>LUCAS, chantant.</speaker>
+          <l n="98">Allons planter le mai, l’amour nous y convie.</l>
+          <l n="99">Pour voir de nos bergers l’agréable folie,</l>
+          <l n="100">Bergères, soyez au gai :</l>
+          <l n="101">Heureux amants... Plus heureuses amantes,</l>
+          <l n="102">Ô combien vous seriez contentes,</l>
+          <l n="103">S’il était tous les jours le premier jour de mai !</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="104">Pour chanter vos plaisirs et les entretenir,</l>
+          <l n="105">Madame, avec le mai nous allons revenir.</l>
+          <stage>&lt;em&gt;Lubin et les paysans s’en vont. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="106">Plus agréablement peut-on être éveillée ?</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="107">Et plus commodément, madame, être habillée ?</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="108">Tout s’empresse en ces lieux pour vous faire la cour</l>
+          <l n="109">L’air est serein, le ciel nous promet un beau jour.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, à Dorine.</speaker>
+          <l n="110">Voilà son deuil, par là jugez de sa conduite.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="111">Peut-être est-il au cœur ?</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="112">Nous verrons dans la suite.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="113">À trouver des plaisirs appliquons nos esprits ;</l>
+          <l n="114">En attendant le mai, j’ai quelques manuscrits</l>
+          <l n="115">Qu’on vient de m’envoyer sur différents chapitres.</l>
+          <l n="116">Pour nous désennuyer, Montreuil, lisez les titres.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL lit.</speaker>
+          <l n="117">« La pierre philosophale, ou l’art de se faire aimer de sa femme. »</l>
+          <l n="118">Beau secret !</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="119">Il est rare.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="120">Il pourrait avoir cours,</l>
+          <l n="121">Si l’hymen s’alliait avecque les amours.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="122">Abus ! l’hymen ternit l’amant le plus aimable,</l>
+          <l n="123">Et dès qu’il est époux, il devient haïssable.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, à Dorame.</speaker>
+          <l n="124">Beau-père...</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL lit.</speaker>
+          <l n="125">« Dialogue de deux fiancées sur les mystères du lit nuptial, par un jeune abbé ; dédié aux vraiment filles. »</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="126">L’entretien devait être ingénu.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="127">J’aurais voulu l’entendre, et ne pas être vu.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="128">Les abbés entrent-ils dans un secret semblable ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="129">Il n’est rien en amour pour eux d’impénétrable ;</l>
+          <l n="130">Le siècle a peu d’intrigue où ne perce la leur,</l>
+          <l n="131">Et comme au lansquenet, ils y prennent couleur.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL lit.</speaker>
+          <l n="132">« Éloges des dames galantes, conçus et dirigés et mis en lumière chez l’Ami.[4] »</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="133">Malheur à qui verra son nom dans cet ouvrage !</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="134">Pour mettre ces portraits dans tout leur étalage,</l>
+          <l n="135">On n’aura pas, je pense, épargné les couleurs.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="136">Chez l’Ami, c’est un lieu fertile en blasonneurs.</l>
+          <stage>&lt;em&gt;Il lit. &lt;/em&gt;</stage>
+          <l n="137">« La pompe funèbre d’un mari, et la manière d’en porter le deuil ; par une veuve de fraîche date. »</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="138">On crie, on prend le noir ; est-il un autre usage ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="139">Oui, selon comme vit et meurt le personnage ;</l>
+          <l n="140">Il faut battre des mains, on doit chanter son sort</l>
+          <l n="141">Quand il perd noblement la vie, et qu’il est mort</l>
+          <l n="142">De l’approbation du monde et de sa femme.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, à Dorame.</speaker>
+          <l n="143">Le livre est de son cru : par là jugez de l’âme.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="144">Elle n’écrit jamais.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL lit.</speaker>
+          <l n="145">« L’heure du berger brusquée par un petit-maître entre deux vins. »</l>
+          <l n="146">L’ouvrage est singulier.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="147">Et l’ouvrage et l’auteur, j’en crois tout cavalier.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="148">Voilà tout.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="149">Vous rêvez ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="150">Il me vient en pensée</l>
+          <l n="151">De rappeler du mois la coutume passée :</l>
+          <l n="152">Jouons ensemble au vert ?</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="153">Je le veux.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="154">J’y consens.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="155">Si le jeu n’est pas noble, il est divertissant ;</l>
+          <l n="156">Le premier qui de nous se laissera surprendre,</l>
+          <l n="157">D’obéir au vainqueur ne pourra se défendre :</l>
+          <l n="158">Je jure, je promets d’en observer la loi.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="159">À ces conditions je me soumets.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="160">Et moi.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="161">Allez, pour commencer ces guerres intestines,</l>
+          <l n="162">Cueillir du rosier : prenez garde aux épines.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="163">Nous n’irons point au bois qu’avec précaution.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="164">Et vous ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="165">J’en ai déjà fait ma provision.</l>
+          <stage>&lt;em&gt;Céliane et Montreuil sortent. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#toinon">
+          <speaker>TOINON.</speaker>
+          <l n="166">Quel veuvage ! pour moi, madame, je l’admire !</l>
+          <l n="167">Quoi ! pleurer un époux en s’étouffant de rire</l>
+          <l n="168">La mode en est jolie, et pourra faire bruit.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="169">De cette mort, Toinon, cueillons, goûtons le fruit :</l>
+          <l n="170">Jouissons du bonheur que le ciel nous envoie ;</l>
+          <l n="171">Je n’ai plus de mari ! quel plaisir ! quelle joie !</l>
+          <l n="172">Célébrons à jamais le jour de son trépas :</l>
+          <l n="173">Quoi qu’on dise, Toinon, la guerre a ses appas,</l>
+          <l n="174">Ses heures d’agrément, comme ses douloureuses :</l>
+          <l n="175">Que d’héritiers contents, que de veuves heureuses !</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, à Dorame.</speaker>
+          <l n="176">C’est trop tôt triompher.</l>
+        </sp>
+        <sp who="#toinon">
+          <speaker>TOINON.</speaker>
+          <l n="177">Mais on se contrefait,</l>
+          <l n="178">Seulement pour la forme.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="179">Eh ! ne l’ai-je pas fait ?</l>
+          <l n="180">Pour dérober ma joie à la commune envie,</l>
+          <l n="181">Je m’enferme au désert : vois quelle modestie ![5]</l>
+        </sp>
+        <sp who="#toinon">
+          <speaker>TOINON.</speaker>
+          <l n="182">Mais il faut à Paris retourner une fois.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="183">Laissez-moi divertir tout le reste du mois ;</l>
+          <l n="184">Ennuyée à peu près de ces réjouissances,</l>
+          <l n="185">J’irai me délasser parmi les bienséances,</l>
+          <l n="186">Briller au plus profond d’un noir appartement,</l>
+          <l n="187">Me parer de l’éclat d’un lugubre ornement,</l>
+          <l n="188">Promener en spectacle un deuil en grand volume,</l>
+          <l n="189">Et donner en public des pleurs à la coutume.</l>
+        </sp>
+        <sp who="#toinon">
+          <speaker>TOINON.</speaker>
+          <l n="190">Mais, voulant tout le mois déguiser votre deuil,</l>
+          <l n="191">Pourquoi faire venir Céliane et Montreuil ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="192">Il faut dans le plaisir un peu de compagnie :</l>
+          <l n="193">On le respire mieux, et sans elle il ennuie.</l>
+          <l n="194">Outre un dessein que j’ai, que tu n’as pu prévoir,</l>
+          <l n="195">Ils s’aiment : on le dit ; et je veux le savoir,</l>
+          <l n="196">En être convaincue, et les brouiller ensemble,</l>
+          <l n="197">Toinon.</l>
+        </sp>
+        <sp who="#toinon">
+          <speaker>TOINON.</speaker>
+          <l n="198">Dans ce dessein j’entrevois, ce me semble :</l>
+          <l n="199">Vous voulez pour époux vous donner Montreuil ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="200">Moi !</l>
+          <l n="201">D’un mari, d’un bourru, je reprendrais la loi ?</l>
+          <l n="202">On peut par des raisons du monde et de famille,</l>
+          <l n="203">Par de certains désirs, et pour sortir de fille.</l>
+          <l n="204">Une fois en sa vie arborer ce lien ;</l>
+          <l n="205">Mais aller jusqu’à deux, je m’en garderai bien.</l>
+        </sp>
+        <sp who="#toinon">
+          <speaker>TOINON.</speaker>
+          <l n="206">Ma foi ! vous ferez bien de garder le veuvage ;</l>
+          <l n="207">Car si, par cas fortuit, dans le cours de votre âge,</l>
+          <l n="208">Vous alliez en pleurer un ou deux seulement,</l>
+          <l n="209">Comme vous avez fait monsieur de Saint-Amant,</l>
+          <l n="210">Et rendre vos douleurs encore aussi célèbres,</l>
+          <l n="211">Vous vous ruineriez en dépenses funèbres.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="212">Fi des maris, Toinon ! des amis, des amis !</l>
+          <l n="213">À vous plaire, à votre ordre, ils sont toujours soumis.</l>
+          <l n="214">On sait s’approprier leurs divers caractères ;</l>
+          <l n="215">Le conseiller se rend utile à vos affaires,</l>
+          <l n="216">On compte au lansquenet le riche financier,</l>
+          <l n="217">Le partisan commode est un bon dépensier,</l>
+          <l n="218">Le courtisan grossit la foule aux Tuileries,</l>
+          <l n="219">L’abbé nous divertit par ses minauderies,</l>
+          <l n="220">Le bel esprit en vers distingue du commun,[6]</l>
+          <l n="221">Et, parmi ce ramas, le cœur[7] en regarde un.</l>
+        </sp>
+        <sp who="#toinon">
+          <speaker>TOINON.</speaker>
+          <l n="222">J’entends, je vois, madame, où l’estime vous mène.</l>
+          <l n="223">Et Montreuil d’un clin d’œil tout contraire à la haine</l>
+          <l n="224">Sera le regardé, n’est-ce pas ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="225">Nous verrons,</l>
+          <l n="226">S’il répond à mes vœux, ce que nous en ferons.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, à Dorame.</speaker>
+          <l n="227">Vous pouvez deviner ce qu’elle en voudra faire.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="228">Eh ! c’est un jeu.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="229">Quel jeu !</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="230">Voilà tout le mystère.</l>
+          <l n="231">Pour voir de ces amants le cœur à découvert,</l>
+          <l n="232">Je leur viens d’inspirer exprès le jeu du vert :</l>
+          <l n="233">C’est dans ce dessein même, et pour le voir éclore,</l>
+          <l n="234">Que j’emprunte la voix du Printemps et de Flore ;</l>
+          <l n="235">Et, sous l’appas brillant des jeux et des plaisirs,</l>
+          <l n="236">Je vais adroitement pénétrer leurs désirs,</l>
+          <l n="237">Et satisfaire aux miens.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME, à Saint-Amant.</speaker>
+          <l n="238">C’est assez vous complaire ;</l>
+          <l n="239">Descendons.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="240">Non, il faut en voir la fin, beau-père.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="241">Lubin, pendant les jeux, avec moi de concert,</l>
+          <l n="242">Feignant de badiner, prendra leur boîte au vert...</l>
+          <l n="243">Il vient.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="244">Voici le mai ; rangez-vous, place, place !</l>
+          <l n="245">Beau, grand, droit, vert, il vient ombrager cette place.</l>
+          <stage>&lt;em&gt;Des paysans, en dansant, font avancer le mai jusqu’au milieu du théâtre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="246">Nous venons près de vous entendre le concert.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="247">Ce mai nous avertit qu’il faut songer au vert.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="248">Vous y jouez donc ?</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="249">Oui.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="250">Gardez d’être attrapée !</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="251">Pour moi, si l’on m’y prend, je serai bien trompée.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN chante.</speaker>
+          <l n="252">Dans ces verts ébats,</l>
+          <l n="253">Craignez la surprise :</l>
+          <l n="254">Telle est souvent prise,</l>
+          <l n="255">Qui n’y pense pas.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="256">Je suis en sûreté, quoi qu’on puisse entreprendre.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="257">Souvent brebis fringante au loup se laisse prendre.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="258">Qui se garde de tout ne peut être attrapé.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="259">L’on prend au trébuchet l’oiseau le plus huppé.</l>
+          <stage>&lt;em&gt;Il chante. &lt;/em&gt;</stage>
+          <l n="260">Pour dénicher une fauvette,</l>
+          <l n="261">Lucas dit à Catin : Follette,</l>
+          <l n="262">J’irai t’appeler demain,</l>
+          <l n="263">Du matin.</l>
+          <l n="264">Si je te trouve au lit dormeuse,</l>
+          <l n="265">Ma bouche à baiser ton sein</l>
+          <l n="266">Ne sera pas paresseuse.</l>
+          <l n="267">À ces menaces, Catin</l>
+          <l n="268">N’en fut pas plus matineuse ;</l>
+          <l n="269">Lucas trouva l’huis ouvert :</l>
+          <l n="270">Catin fut prise sans vert.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="271">Catin se devait bien tenir encourtinée.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="272">Elle aimait à dormir la grasse matinée :</l>
+          <l n="273">Pour surprendre les gens, il est plus d’un Lucas...</l>
+          <l n="274">Mais Flore vient ici avec tous ses appas.[8]</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#flore">
+          <speaker>FLORE chante.</speaker>
+          <l n="275">Sur la fougère, au pied des hêtres,</l>
+          <l n="276">Jouissez des plaisirs champêtres ;</l>
+          <l n="277">Le printemps vient ranimer vos ardeurs,</l>
+          <l n="278">Flore amène à vos yeux les zéphyrs et les fleurs :</l>
+          <l n="279">Que les Amours soient toujours de vos fêtes.</l>
+          <l n="280">Les belles conquêtes</l>
+          <l n="281">Sont celles des cœurs.</l>
+          <l n="282">Nymphes, jeunes fleurs naissantes,</l>
+          <l n="283">Parfumez ces beaux lieux de vos odeurs charmantes.</l>
+          <l n="284">Et vous, Zéphyrs, en ce jour,</l>
+          <l n="285">De la fraîcheur de vos ailes</l>
+          <l n="286">Éventez le sein des belles,</l>
+          <l n="287">Et n’en chassez pas l’Amour.</l>
+          <stage>&lt;em&gt;Les Zéphyrs et les Nymphes des fleurs font une entrée, et prennent en dansant les boîtes de Céliane et de Montreuil, qu’ils emportent. &lt;/em&gt;</stage>
+          <l n="288">Tout renouvelle</l>
+          <l n="289">Dans ce beau mois ;</l>
+          <l n="290">La plus cruelle</l>
+          <l n="291">Respire un choix :</l>
+          <l n="292">Fière fillette,</l>
+          <l n="293">Timide amant,</l>
+          <l n="294">À la rangette,</l>
+          <l n="295">L’Amour les prend,</l>
+          <l n="296">Dans une plaine,</l>
+          <l n="297">Sous un couvert.</l>
+          <l n="298">L’un sans mitaine,</l>
+          <l n="299">L’autre sans vert.</l>
+          <stage>&lt;em&gt;Flore et sa suite, Lubin et les paysans s’en vont. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, à Dorame.</speaker>
+          <l n="300">Beau-père, on ne saurait mieux pleurer un époux !</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE, à Montreuil et à Céliane.</speaker>
+          <l n="301">Tout nous dit de songer au vert, en avez-vous ?</l>
+          <l n="302">Je vous y prends, montrez.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="303">Oh ! qu’à cela ne tienne !</l>
+          <l n="304">Ma boîte est perdue, ah !</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="305">Le diable a pris la mienne.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="306">À nos conventions je vous soumets tous deux.</l>
+          <l n="307">Céliane, ouvrez-moi votre cœur, je le veux ;</l>
+          <l n="308">Mais sans fard : de l’amour l’avez-vous su défendre ?</l>
+          <l n="309">N’est-il point quelque amant qui s’y soit fait entendre ?</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="310">Jusqu’à ce jour il est de si peu de valeur,</l>
+          <l n="311">Qu’aucun ne s’est offert pour y prendre couleur.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="312">Vous mentez : j’en sais un, vous le savez de même,</l>
+          <l n="313">Qui montre avoir pour vous une tendresse extrême ;</l>
+          <l n="314">Il brûle de vous faire entendre ses amours.</l>
+        </sp>
+        <sp who="#céliane">
+          <speaker>CÉLIANE.</speaker>
+          <l n="315">Je vais, pour m’en défendre, appeler du secours.</l>
+          <stage>&lt;em&gt;Elle sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="316">Vous ne la suivez pas, Montreuil ?</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="317">Qui ! moi, madame ?</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="318">Il faut, à votre tour, me découvrir votre âme.</l>
+          <l n="319">Je m’en vais exposer une fable à vos yeux :</l>
+          <l n="320">Si vous n’en devinez le sens mystérieux.</l>
+          <l n="321">Vous me ferez, Montreuil, une sensible offense ;</l>
+          <l n="322">Si vous le concevez, redoutez ma vengeance.</l>
+          <l n="323">Pour peu que vous soyez rebelle à ses clartés.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="324">Il faut savoir.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="325">Je vais vous la dire : écoutez.</l>
+          <l n="326">Une aimable tourterelle</l>
+          <l n="327">Fut le partage d’un hibou :</l>
+          <l n="328">Jamais paix, toujours querelle :</l>
+          <l n="329">Il n’est pas malaisé de deviner par où.</l>
+          <l n="330">Hibou mourut : la veuve, en ces alarmes,</l>
+          <l n="331">N’étala point des clameurs et des larmes</l>
+          <l n="332">Le fastueux charivari.</l>
+          <l n="333">Larme enlaidit, douleur est folle ;</l>
+          <l n="334">Et puis, grâces aux mœurs du siècle, on se console</l>
+          <l n="335">D’un amant tendrement chéri :</l>
+          <l n="336">Que ne fait-on point d’un mari ?</l>
+          <l n="337">Tourterelle à l’amour rarement est rebelle.</l>
+          <l n="338">Sa tendresse envisage un moineau digne d’elle.</l>
+          <l n="339">Pour s’expliquer, regards, discours mystérieux,</l>
+          <l n="340">Sont par elle mis en usage :</l>
+          <l n="341">Elle craint, elle n’ose en dire davantage.</l>
+          <l n="342">C’est au moineau, s’il a des yeux,</l>
+          <l n="343">À deviner ce langage.</l>
+          <l n="344">Vous entendez, Montreuil ; le comprenez-vous bien ?</l>
+          <l n="345">Parlez sincèrement.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL.</speaker>
+          <l n="346">À ne déguiser rien,</l>
+          <l n="347">Si certain homme était dans la nuit éternelle,</l>
+          <l n="348">Je croirais deviner quelle est la tourterelle ;</l>
+          <l n="349">Son joug a fait gémir mon cœur plus d’une fois.</l>
+          <l n="350">Quant à l’heureux moineau, seul digue de son choix,</l>
+          <l n="351">Son bonheur me fait peine à le pouvoir connaître ;</l>
+          <l n="352">Mais ce que je sais bien, c’est que je voudrais l’être.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="353">Soyez-le, on y consent : le champ vous est ouvert ;</l>
+          <l n="354">Croyez tout, espérez, et...</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, descendu de la fenêtre.</speaker>
+          <l n="355">Je vous prends sans vert.</l>
+        </sp>
+        <sp who="#montreuil">
+          <speaker>MONTREUIL, s’enfuyant.</speaker>
+          <l n="356">Mon oncle !</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="357">Mon époux !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="358">Approchez, mon beau-père</l>
+          <l n="359">Votre fille est d’un prix trop extraordinaire ;</l>
+          <l n="360">Je m’en sens désormais indigne, et vous la rends.</l>
+          <l n="361">Adieu !</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="362">Tout doux ! il est des accommodements.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="363">Vous prétendez, voyant l’humeur qui la possède...</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="364">Elle a tort ; mais le mal trouvera son remède.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="365">Et quel remède, après tout ce que devant vous...</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="366">D’accord, son procédé choque ; mais, entre nous,</l>
+          <l n="367">À l’intention près, c’est une bagatelle.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="368">Comment ! vous...</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="369">Eh ! quoi donc ! suis-je si criminelle</l>
+          <l n="370">D’un mari que l’on aime on apprend le trépas ;</l>
+          <l n="371">Les premiers mouvements sont de suivre ses pas.</l>
+          <l n="372">À ce dessein s’oppose un devoir de famille :</l>
+          <l n="373">Des fruits de cet hymen reste une seule fille ;</l>
+          <l n="374">Il faut vivre pour elle ; on restreint ses désirs</l>
+          <l n="375">À chercher sa santé dans d’innocents plaisirs.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="376">Morbleu ! l’excuse encore est pire que l’offense.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME, à Julie.</speaker>
+          <l n="377">Sortez... j’adoucirai son cœur en votre absence.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="378">Un cloître punira cette insolence-là.</l>
+        </sp>
+        <sp who="#julie">
+          <speaker>JULIE.</speaker>
+          <l n="379">Mon père...</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="380">Laissez-moi raccommoder cela.</l>
+          <stage>&lt;em&gt;Julie sort. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="381">Non, non.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="382">Écoutez-moi.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT.</speaker>
+          <l n="383">Si jamais je m’oblige</l>
+          <l n="384">À revoir votre fille...</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="385">Écoutez-moi, vous dis-je.</l>
+          <l n="386">Comme vous je pris femme, et fus gendre autrefois.</l>
+          <l n="387">Tout ce qui peut réduire un esprit aux abois,</l>
+          <l n="388">Tout ce qu’un mari craint se trouva dans ma femme.</l>
+          <l n="389">Elle... Elle est au tombeau ; Dieu veuille avoir son âme !</l>
+          <l n="390">Je criai, j’y voulus renoncer comme vous.</l>
+          <l n="391">Mon beau-père, honnête homme, esprit commode et doux,</l>
+          <l n="392">Me donna, pour calmer ma fureur violente,</l>
+          <l n="393">Un bon contrat valant deux mille écus de rente,</l>
+          <l n="394">Que jadis son beau-père, en pareilles douleurs,</l>
+          <l n="395">Lui mit entre les mains. Je cessai mes clameurs.</l>
+          <l n="396">Mon gendre, le voilà. Je vous remets ce gage :</l>
+          <l n="397">Il peut dans la famille être d’un bon usage ;</l>
+          <l n="398">Vous avez une fille : elle a tout votre soin ;</l>
+          <l n="399">Si vous la mariez, vous en aurez besoin.</l>
+          <l n="400">Croyez-moi, comme nous ayez de la prudence.</l>
+          <l n="401">Tout ceci, grâce au ciel, s’est fait dans le silence :</l>
+          <l n="402">Il est certains secrets fâcheux à révéler,</l>
+          <l n="403">Et qui de rien ne sait, de rien ne peut parler.</l>
+        </sp>
+        <sp who="#saint-amant">
+          <speaker>SAINT-AMANT, regardant le contrat.</speaker>
+          <l n="404">Écueil de tout le monde, or, quelle est ta puissance !</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="405">Il faut, mon gendre, il faut tous prendre patience.</l>
+          <l n="406">Beaucoup d’honnêtes gens sont dans le même cas,</l>
+          <l n="407">Qu’on ne console point avec de bons contrats :</l>
+          <l n="408">Reprenez la douceur : c’est la plus belle voie.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="409">Qu’est-ce donc ? voici bien, monsieur, du rabat-joie :</l>
+          <l n="410">Est-ce que nos plaisirs s’en iront à vau-l’eau ?</l>
+          <l n="411">Nous sommes attroupés tretous dessous l’ormeau,</l>
+          <l n="412">N’attendant qu’un signal pour faire ici gambade ;</l>
+          <l n="413">Et vous venez, dit-on, désaccorder l’aubade ?</l>
+          <l n="414">Madame votre fille est pleurante en un coin ;</l>
+          <l n="415">Monsieur votre neveu grommelle sur du foin,</l>
+          <l n="416">Camus en chien d’Artois d’avoir compté sans hôte.</l>
+          <l n="417">Quel revers ! qui l’aurait pensé ? c’est votre faute ;</l>
+          <l n="418">Tout franc, ce procédé crie, et vous avez tort,</l>
+          <l n="419">Après l’avoir mandé, de ne pas être mort.</l>
+        </sp>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="420">Qu’est-ce à dire ? Non, non, qu’on chante, que l’on danse :[9]</l>
+          <l n="421">Nous venons prendre part à la réjouissance.</l>
+          <l n="422">Bergères et bergers, que tout se rende ici,</l>
+          <l n="423">Et ma fille, et Montreuil, et Céliane aussi.</l>
+          <l n="424">Reprenez un air gai, voici la compagnie.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#dorame">
+          <speaker>DORAME.</speaker>
+          <l n="425">Allons, ma fille, allons, menez joyeuse vie ;</l>
+          <l n="426">Votre mari va voir vos plaisirs d’un bon œil.</l>
+          <l n="427">Ma nièce Céliane et le galant Montreuil</l>
+          <l n="428">Seront demain unis par un doux hyménée :</l>
+          <l n="429">Aujourd’hui dans la joie achevons la journée.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#flore">
+          <speaker>FLORE chante.</speaker>
+          <l n="430">Fuyez l’embarras des amours,</l>
+          <l n="431">Suivez les folles amourettes :</l>
+          <l n="432">Les jeux, les plaisirs, les beaux jours,</l>
+          <l n="433">Ne sont que parmi les fleurettes.</l>
+          <l n="434">Pour folâtrer avec les ris,</l>
+          <l n="435">Et des noirs chagrins se défendre,</l>
+          <l n="436">Jeunes cœurs, songez à prendre,</l>
+          <l n="437">Et jamais à n’être pris.</l>
+          <stage>&lt;em&gt;Les Nymphes des fleurs et les Zéphyrs dansent. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN chante.</speaker>
+          <l n="438">Pour jouer sûrement au vert,</l>
+          <l n="439">Beautés, mettez-vous à couvert</l>
+          <l n="440">D’un curieux désagréable :</l>
+          <l n="441">La surprise du favori</l>
+          <l n="442">Est aimable ;</l>
+          <l n="443">Mais celle du mari,</l>
+          <l n="444">C’est le diable.</l>
+          <stage>&lt;em&gt;Entrée de paysans. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#flore">
+          <speaker>FLORE et LUBIN, ensemble.</speaker>
+          <l n="445">Voulez-vous bannir vos alarmes</l>
+          <l n="446">Et goûter un hymen plein de charmes ?</l>
+          <l n="447">Faites, époux, pour finir vos débats,</l>
+          <l n="448">Tout ce que vous ne faites pas.</l>
+        </sp>
+        <sp who="#flore">
+          <speaker>FLORE.</speaker>
+          <l n="449">Soyez-vous apparemment fidèles.</l>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN.</speaker>
+          <l n="450">Ne vous empressez point à voir</l>
+          <l n="451">Ce qu’il ne faut jamais savoir.</l>
+        </sp>
+        <sp who="#flore">
+          <speaker>FLORE.</speaker>
+          <l n="452">Passez-vous vos bagatelles.</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <l n="453">Douce union, charmante paix,</l>
+          <l n="454">Repos des cœurs et du ménage</l>
+          <l n="455">Félicité du mariage,</l>
+          <l n="456">Quand ici-bas vous verrons-nous ? jamais.</l>
+          <stage>&lt;em&gt;Entrée de Flore et de Lubin, grande entrée de tous les personnages dansant de la comédie. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lubin">
+          <speaker>LUBIN, aux spectateurs.</speaker>
+          <l n="457">À venir voir nos jeux soyez plus de concert ;</l>
+          <l n="458">Plus vous viendrez, et moins vous nous prendrez sans vert.</l>
+          <stage>&lt;a href="#_ftnref1" name="_ftn1" title="" id="_ftn1"&gt;[1]&lt;/a&gt; &lt;em&gt;Je vous prends sans vert&lt;/em&gt; est un ancien jeu ou divertissement de société, auquel on se livrait surtout pendant les premiers jours de mai. Il fallait, pendant un temps désigné, porter toujours sur soi un brin de verdure. Si l’on était pris sans cela, on donnait tel gage convenu, on subissait telle pénitence indiquée. Il s’agissait, par conséquent, de surprendre la personne avec qui l’on jouait, dans les circonstances les plus propres à lui faire oublier son vert.</stage>
+          <l n="459">Ce jeu introduisit dans le langage l’expression « prendre sans vert, » ayant le sens de prendre au dépourvu :</l>
+          <l n="460">C’est ce qui fait toujours que je suis pris sans vert.</l>
+          <stage>(Molière, &lt;em&gt;l’Étourdi&lt;/em&gt;, acte III, scène V.</stage>
+          <l n="461">Pour cette heure, monsieur, vous m’avez pris sans vert.</l>
+          <stage>(Quinault, &lt;em&gt;l’Amant indiscret&lt;/em&gt;, acte I, scène III.)</stage>
+          <stage>C’est le jeu galant qui a fourni le titre de la petite pièce que nous publions. Ce jeu, on l’a pu voir par deux scènes de &lt;em&gt;Ragotin&lt;/em&gt;, était encore en usage au XVII&lt;sup&gt;e&lt;/sup&gt; siècle, quoiqu’il ne fût plus de bon ton, comme le fait observer Julie (scène V).</stage>
+          <stage>&lt;a href="#_ftnref2" name="_ftn2" title="" id="_ftn2"&gt;[2]&lt;/a&gt; Ainsi dans les éditions originales ; &lt;em&gt;au lansquenet&lt;/em&gt;, dans les éditions modernes.</stage>
+          <stage>&lt;a href="#_ftnref3" name="_ftn3" title="" id="_ftn3"&gt;[3]&lt;/a&gt; Les premières éditions portent à tort : &lt;em&gt;vous voyant&lt;/em&gt;. Les &lt;em&gt;Œuvres diverses&lt;/em&gt; de 1729 donnent la bonne leçon : &lt;em&gt;vous croyant&lt;/em&gt;.</stage>
+          <stage>&lt;a href="#_ftnref4" name="_ftn4" title="" id="_ftn4"&gt;[4]&lt;/a&gt; Var. &lt;em&gt;Œuvres diverses&lt;/em&gt; de 1729 : conçus, dirigés et mis en lumière chez l’Ami.</stage>
+          <stage>&lt;a href="#_ftnref5" name="_ftn5" title="" id="_ftn5"&gt;[5]&lt;/a&gt; Ainsi dans les éditions de 1702 et de 1729. L’édition de 1699 porte &lt;em&gt;voyez quelle modestie&lt;/em&gt;. Les &lt;em&gt;Œuvres de Champmeslé&lt;/em&gt; de 1735 donnent : &lt;em&gt;voyez la modestie&lt;/em&gt;.</stage>
+          <stage>&lt;a href="#_ftnref6" name="_ftn6" title="" id="_ftn6"&gt;[6]&lt;/a&gt; Ainsi dans les &lt;em&gt;Œuvres diverses&lt;/em&gt; de 1729. Les premières éditions portent à tort : &lt;em&gt;distingue le commun&lt;/em&gt;.</stage>
+          <stage>&lt;a href="#_ftnref7" name="_ftn7" title="" id="_ftn7"&gt;[7]&lt;/a&gt; Les éditions de 1699 et de 1702 donnent à tort : &lt;em&gt;l’esprit&lt;/em&gt;.</stage>
+          <stage>&lt;a href="#_ftnref8" name="_ftn8" title="" id="_ftn8"&gt;[8]&lt;/a&gt; Ce vers manque dans les premières éditions. On le trouve dans les &lt;em&gt;Œuvres de Monsieur de Champmeslé&lt;/em&gt;, 1735. Les éditions modernes portent :</stage>
+          <l n="462">Mais Flore se présente avec tous ses appas.</l>
+          <stage>&lt;a href="#_ftnref9" name="_ftn9" title="" id="_ftn9"&gt;[9]&lt;/a&gt; Ainsi dans les éditions de 1702 et de 1729. L’édition de 1699 porte : &lt;em&gt;que l’on chante, que l’on danse&lt;/em&gt;. Les éditions modernes donnent : &lt;em&gt;qu’on chante et que l’on danse&lt;/em&gt;.</stage>
+          <l n="463" />
+        </sp>
       </div>
     </body>
   </text>

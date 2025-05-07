@@ -1,7 +1,10 @@
+import itertools
 import os
 import pickle
 import random
 import re
+import time
+from collections import defaultdict
 from heapq import nlargest
 
 import matplotlib.pyplot as plt
@@ -14,7 +17,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from transformers import BertTokenizer
 
 from basic_utilities import pickle_file, OUTPUT_DIR
-from pickled_data import get_title_dict, get_full_text_corpus
+from pickled_data import get_full_text_corpus
 from play_parsing import get_play_from_file, get_dracor_id, get_title, get_full_text
 
 # import nltk
@@ -374,31 +377,24 @@ def compare_vectorized_plays(play1, play2):
     return distance, alignment
 
 
-def compare_vectorized_corpus(vectorized_corpus, cutoff):
-    seen_plays = set()
-    distances = dict()
-    alignments = dict()
-    for dracor_id1 in vectorized_corpus:
-        print(dracor_id1)
-        seen_plays.add(dracor_id1)
-        distances[dracor_id1] = dict()
-        alignments[dracor_id1] = dict()
-        inner_seen_play = 0
-        for dracor_id2 in vectorized_corpus:
-            if dracor_id2 not in seen_plays:
-                inner_seen_play += 1
-                print(f'Computing distance with {dracor_id2}')
-                play1, play2 = vectorized_corpus[dracor_id1], vectorized_corpus[dracor_id2]
-                similarity, alignment = compare_vectorized_plays(play1, play2)
-                if similarity == -1:
-                    similarity = None
-                else:
-                    similarity = similarity / max(len(play1), len(play2))  # Normalizing the similarity
-                distances[dracor_id1][dracor_id2] = similarity
-                alignments[dracor_id1][dracor_id2] = alignment
-                if inner_seen_play >= cutoff:
-                    break
-        if len(seen_plays) >= cutoff:
+def compare_vectorized_corpus(vectorized_corpus, cutoff=1000):
+    distances = defaultdict(dict)
+    alignments = defaultdict(dict)
+    iterations = 0
+    for dracor_id1, dracor_id2 in itertools.combinations(vectorized_corpus, 2):
+        print(dracor_id1, dracor_id2)
+        play1, play2 = vectorized_corpus[dracor_id1], vectorized_corpus[dracor_id2]
+        similarity, alignment = compare_vectorized_plays(play1, play2)
+        if similarity == -1:
+            similarity = None
+        else:
+            similarity = similarity / max(len(play1), len(play2))  # Normalizing the similarity
+        distances[dracor_id1][dracor_id2] = similarity
+        distances[dracor_id2][dracor_id1] = similarity
+        alignments[dracor_id1][dracor_id2] = alignment
+        alignments[dracor_id2][dracor_id1] = alignment
+        iterations += 1
+        if iterations > cutoff:
             break
     return distances, alignments
 
@@ -420,7 +416,7 @@ def compare_embeddings(embeddings1, embeddings2):
     return similarity_score.item()
 
 
-# Result is 0.8335
+# Result is 0.19828132870063347
 def get_average_distance(vectorized_corpus, n, bins_number=20):
     """Approximate the average distances between two random lines in the corpus and makes a graph of the distribution of distances.
 
@@ -440,11 +436,11 @@ def get_average_distance(vectorized_corpus, n, bins_number=20):
         p1, p2 = vectorized_corpus[i1], vectorized_corpus[i2]
         index1, index2 = random.randint(0, len(p1) - 1), random.randint(0, len(p2) - 1)
         random_line1, random_line2 = p1[index1][1], p2[index2][1]
-        #TMP : filtre pour garder uniquement des phrases un peu longues
+        # TMP : filtre pour garder uniquement des phrases un peu longues
         sentence_1, sentence_2 = full_text_dict[i1][index1][1], full_text_dict[i2][index2][1]
         if len(sentence_1) > 5 and len(sentence_2) > 5:
             sim = compare_sentence_embeddings(random_line1, random_line2)
-            sim = max(0,sim)
+            sim = max(0, sim)
             if sim > 0.9:
                 print('Ces deux répliques sont similaires :')
                 print(full_text_dict[i1][index1])
@@ -480,7 +476,7 @@ def remove_empty_plays_from_corpus(vectorized_plays):
     return vectorized_plays_cleaned
 
 
-def similarity_to_levenshtein_cost(similarity, max_cutoff=1, min_cutoff=0):
+def similarity_to_levenshtein_cost(similarity, max_cutoff=1.0, min_cutoff=0.0):
     """ Transforms a similarity score into a substitution cost, to be used for a levenshtein distance computation.
 
     Uses a piecewise linear interpolation : extreme values before and after the cutoffs, and linear in between """
@@ -493,7 +489,7 @@ def similarity_to_levenshtein_cost(similarity, max_cutoff=1, min_cutoff=0):
                 max_cutoff - min_cutoff)  # Linear interpolation between min and max cutoff
 
 
-def substitution_cost_levenshtein(embedding1, embedding2, max_cutoff=1, min_cutoff=0, sentence=True):
+def substitution_cost_levenshtein(embedding1, embedding2, max_cutoff=0.65, min_cutoff=0.1, sentence=True):
     """ Given two embeddings, compute the substitution cost to transform one into the other"""
     if sentence:
         similarity = sentence_model.similarity(embedding1, embedding2).item()
@@ -503,7 +499,7 @@ def substitution_cost_levenshtein(embedding1, embedding2, max_cutoff=1, min_cuto
     return cost
 
 
-def levenshtein_distance_and_alignment(seq1, seq2, max_distance=20, /, insertion_cost=(lambda x: 1),
+def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, insertion_cost=(lambda x: 1),
                                        deletion_cost=(lambda x: 1),
                                        substitution_cost=substitution_cost_levenshtein):
     """
@@ -531,17 +527,20 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=20, /, insertion
         dist[0][j] = dist[0][j - 1] + 1  # insertion_cost(seq2[j - 1])
 
     print('computing distance...')
-
+    total_time = 0
     # Compute distances
     for i in range(1, len1 + 1):
         for j in range(1, len2 + 1):
             embedding_1, embedding_2 = seq1[i - 1], seq2[j - 1]
+            t0 = time.time()
             dist[i][j] = min(
                 dist[i - 1][j] + 1,
                 # deletion_cost(embedding_1),  # Deletion TODO: put back parametrization, done to try speeding the process up
                 dist[i][j - 1] + 1,  # insertion_cost(embedding_2),  # Insertion
                 dist[i - 1][j - 1] + substitution_cost(embedding_1, embedding_2)  # Substitution
             )
+            t1 = time.time()
+            total_time += t1 - t0
         current_max_distance = min(dist[i])
         if max_distance is not None and current_max_distance >= max_distance:
             return -1, None
@@ -549,6 +548,8 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=20, /, insertion
     # Backtrack to find the alignment
     i, j = len1, len2
     alignment = []
+    print(f'total time of Levensthein operations : {total_time}')
+    print(f'On average per operation: {total_time / (len1 * len2)}')
 
     print("computing alignment")
     while i > 0 or j > 0:
@@ -601,25 +602,84 @@ def visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1
     visualization.to_csv(f'Outputs/Alignements/alignement_{play_1_title}_{play_2_title}.csv')
 
 
-def compare_play_from_files(file1, file2):
-    play1, play2 = get_play_from_file(file1), get_play_from_file(file2)
-    title1, title2 = get_title(play1), get_title(play2)
-    full_text_1, full_text_2 = get_full_text(play1), get_full_text(play2)
+def compare_from_full_text(full_text_1, full_text_2, title1='Title1', title2='Title2'):
+    print("Vectorizing ...")
+    t1 = time.time()
     vec_1, vec_2 = vectorize_sentence_play(full_text_1), vectorize_sentence_play(full_text_2)
+    print(f"Vectorizing done in {time.time() - t1}")
     dist, alignement = compare_vectorized_plays(vec_1, vec_2)
     print(f'Distance: {dist}')
     visualize_levenshtein_alignement(alignement, full_text_1, full_text_2, title1, title2)
 
 
+def compare_play_from_files(file1, file2):
+    play1, play2 = get_play_from_file(file1), get_play_from_file(file2)
+    title1, title2 = get_title(play1), get_title(play2)
+    full_text_1, full_text_2 = get_full_text(play1), get_full_text(play2)
+    compare_from_full_text(full_text_1, full_text_2, title1, title2)
+
+
 if __name__ == "__main__":
-    title_dict = get_title_dict()
-    # print(title_dict['fre000144  '])
-    # Testing the code on the close plays corpus
+
+    # TMP, can delete
+    sentence1 = vectorize_sentence("Précieuse vraiment, ce beau nom t'est bien du, Qui de la chose en soi témoignage a rendu ; Précieuse vraiment, qui de valeur effaces Qui remporte le prix des beautés et des grâces, Mais fille l'avouer, vu l'inégalité De l'âge, causerait une incrédulité.")
+    sentence2 = vectorize_sentence("Dans quelque étonnement que ce discours te plonge, Crois qu'il est véritable, et de plus...")
+    sentence3 = vectorize_sentence("Précieuse vraiment, ce beau nom t'est bien du, qui de la chose en soi témoignage a rendu ; Précieuse vraiment, qui de valeur effaces qui remporte le prix des beautés et des grâces, mais fille l'avouer, vu l'inégalité de l'âge, causerait une incrédulité.")
+    print(compare_sentence_embeddings(sentence1, sentence2))
+    print(compare_sentence_embeddings(sentence1, sentence3))
+    print(compare_sentence_embeddings(sentence2, sentence3))
+    # pass
+    #
+    # Getting the dama text
+
+    # # Replace 'your_file.csv' with the path to your CSV file
+    # csv_file_path = 'Imitation, création au théâtre - DamaDuende-Alignement.csv'
+    #
+    # # Load the CSV into a pandas DataFrame
+    # df = pd.read_csv(csv_file_path)
+    #
+    # # Specify the column name
+    # target_column = 'Traduction automatique Google Traduction en gardant les | 2024-01-19'
+    #
+    # # Ensure the column exists in the CSV
+    # if target_column in df.columns:
+    #     tuples_list = []
+    #
+    #     # Process each cell in the column
+    #     for cell in df[target_column].dropna():
+    #         # Remove '|' symbols
+    #         cleaned_cell = cell.replace('|', '')
+    #
+    #         # Match the fully uppercase character name and the rest of the text
+    #         match = re.match(r'(\b[A-Z]+\b)(.*)', cleaned_cell)
+    #         if match:
+    #             character_name = match.group(1).strip()
+    #             rest_of_cell = match.group(2).strip()
+    #             tuples_list.append((character_name, rest_of_cell))
+    #
+    # dama_duende_full_text = tuples_list
+    # corpus_dir = os.path.join(os.getcwd(), 'Corpus')
+    # esprit_folet_file = os.path.join(corpus_dir, '1- ouville_espritfolet.xml')
+    # esprit_folet = get_play_from_file(esprit_folet_file)
+    # esprit_folet_text = get_full_text(esprit_folet)
+    # compare_from_full_text(dama_duende_full_text, esprit_folet_text, 'La Dama Duende', 'L Esprit Follet')
+
+    # # Quick and dirty way to test pairs of plays in Corpus Piece Tres Proches
     # closePlaysFolder = os.path.join(os.getcwd(), 'Corpus', 'Corpus pieces tres proches')
     # corpus = dict()
     # full_text_dict = get_full_text_corpus()
+    # play_names = os.listdir(closePlaysFolder)
+    # for number in range(1, len(play_names)):
+    #     plays_to_compare = [os.path.join(os.getcwd(), 'Corpus', 'Corpus pieces tres proches', plays) for plays in
+    #                         play_names if plays[0] == str(number)]
+    #     if plays_to_compare:
+    #         play_1, play_2 = plays_to_compare
+    #         compare_play_from_files(play_1, play_2)
+
+    # # Testing the code on the close plays corpus
+    # # For all possible pairs in the test corpus (trying to do it quickly)
     # for file in os.listdir(closePlaysFolder):
-    #     play = get_play_from_file(os.path.join(closePlaysFolder,file))
+    #     play = get_play_from_file(os.path.join(closePlaysFolder, file))
     #     id = get_dracor_id(play)
     #     if id not in full_text_dict:
     #         text = get_full_text(play)
@@ -630,23 +690,23 @@ if __name__ == "__main__":
     # distances, alignments = compare_vectorized_corpus(close_vectorized_plays)
     # df = pd.DataFrame(distances)
     # new_column_names = {dracor_id: title_dict[dracor_id] for dracor_id in df.columns}
-    # df.rename(columns = new_column_names, index = new_column_names, inplace=True)
+    # df.rename(columns=new_column_names, index=new_column_names, inplace=True)
     # df.to_csv('close_plays_distances.csv')
     # df = pd.DataFrame(alignments)
     # df.rename(columns=new_column_names, index=new_column_names, inplace=True)
     # df.to_csv('close_plays_alignments.csv')
 
     # Code to generate average_distance
-    vec_corpus_path = 'sentence_vectorized_corpus.pkl'
-    print('Opening...')
-    file = open(vec_corpus_path, 'rb')
-    print('Loading ...')
-    vectorized_corpus = pickle.load(file)
-    print('Loaded.')
-    vectorized_corpus = remove_empty_plays_from_corpus(vectorized_corpus)
-    vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
-    print(len(vectorized_corpus_cleaned))
-    get_average_distance(vectorized_corpus_cleaned, 100000)
+    # vec_corpus_path = 'sentence_vectorized_corpus.pkl'
+    # print('Opening...')
+    # file = open(vec_corpus_path, 'rb')
+    # print('Loading ...')
+    # vectorized_corpus = pickle.load(file)
+    # print('Loaded.')
+    # vectorized_corpus = remove_empty_plays_from_corpus(vectorized_corpus)
+    # vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
+    # print(len(vectorized_corpus_cleaned))
+    # get_average_distance(vectorized_corpus_cleaned, 500000)
     #
     # # Running Levensthein corpus comparison
     # cutoff = 100

@@ -1,482 +1,1109 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Molière et Mignard à Avignon</title>
-        <author key="Eugène DE PRADEL | (naissance-mort)">Eugène DE PRADEL |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/molière-et-mignard-à-avignon-eugène-de-pradel</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène DE PRADEL |</author>. <title>Molière et Mignard à Avignon</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/molière-et-mignard-à-avignon-eugène-de-pradel</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1829-06-04">Représentée sur le Théâtre d’Avignon, le 4 juin 1829.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="molière" sex="SEX">
+            <persName>MOLIÈRE</persName>
+          </person>
+          <person xml:id="mignard" sex="SEX">
+            <persName>MIGNARD</persName>
+          </person>
+          <person xml:id="belton" sex="SEX">
+            <persName>BELTON</persName>
+          </person>
+          <person xml:id="bridois" sex="SEX">
+            <persName>BRIDOIS</persName>
+          </person>
+          <person xml:id="valaurier" sex="SEX">
+            <persName>VALAURIER</persName>
+          </person>
+          <person xml:id="mademoiselle-béjart" sex="SEX">
+            <persName>MADEMOISELLE BÉJART</persName>
+          </person>
+          <person xml:id="madame-la-marquise-d’ampouf" sex="SEX">
+            <persName>MADAME LA MARQUISE D’AMPOUF</persName>
+          </person>
+          <person xml:id="laforest" sex="SEX">
+            <persName>LAFOREST</persName>
+          </person>
+          <person xml:id="armantine" sex="SEX">
+            <persName>ARMANTINE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1829-06-04" location="unknown">Représentée sur le Théâtre d’Avignon, le 4 juin 1829.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Molière et Mignard à Avignon</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1"><span style="letter-spacing:-.3pt">Comédie-Vaudeville en un acte, composée cinq heure dix minutes, dans la grande Salle de l’Hôtel-de-Ville d’Avignon, sur un sujet fourni par le public, distribué le même jour, 3 juin, à MM. les acteurs.</span></l>
-            <l n="2" xml:id="l2"><span style="letter-spacing:-.3pt">Représentée sur le Théâtre d’Avignon, le 4 juin 1829.</span></l>
-            <l n="3" xml:id="l3"> </l>
-            <l n="4" xml:id="l4"> </l>
-            <l n="5" xml:id="l5"><span style="letter-spacing:-.3pt">MOLIÈRE</span></l>
-            <l n="6" xml:id="l6"><span style="letter-spacing:-.3pt">MIGNARD</span></l>
-            <l n="7" xml:id="l7"><span style="letter-spacing:-.3pt">BELTON</span></l>
-            <l n="8" xml:id="l8"><span style="letter-spacing:-.3pt">BRIDOIS, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">conducteur de voitures</span></span></i></l>
-            <l n="9" xml:id="l9"><span style="letter-spacing:-.3pt">VALAURIER, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Grenadier</span></span></i></l>
-            <l n="10" xml:id="l10"><span style="letter-spacing:-.3pt">MADEMOISELLE BÉJART</span></l>
-            <l n="11" xml:id="l11"><span style="letter-spacing:-.3pt">MADAME LA MARQUISE D’AMPOUF</span></l>
-            <l n="12" xml:id="l12"><span style="letter-spacing:-.3pt">LAFOREST, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">servante de Molière</span></span></i></l>
-            <l n="13" xml:id="l13"><span style="letter-spacing:-.3pt">ARMANTINE, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">tragédienne</span></span></i></l>
-            <l n="14" xml:id="l14"> </l>
-            <l n="15" xml:id="l15"><i><span style="letter-spacing:-.3pt">La Scène se passe à Avignon, dans la Salle commune d’un hôtel garni.</span></i></l>
-            <l n="16" xml:id="l16"> </l>
-            <l n="17" xml:id="l17"> </l>
-            <l n="18" xml:id="l18"> </l>
-            <l n="19" xml:id="l19"><span style="letter-spacing:-.3pt">J’ai cru devoir reproduire ici textuellement le bulletin qui dans la réunion formée pour déterminer le sujet du présent Vaudeville, a obtenu le plus grand nombre de suffrages.</span></l>
-            <l n="20" xml:id="l20"><span style="letter-spacing:-.3pt">« Après avoir fait quelque séjour a Béziers et à Pézenas, où le prince de Conti le retenait par des caresses, Molière continua encore pendant trois ou quatre années ses courses dans le midi de la France. En 1657, se trouvant à Avignon, il y rencontra Mignard, qui revenait d’Italie, où il avait demeuré vingt-deux ans, et qui était alors occupé à dessiner les antiquités du Comtat Venaissin. Ils conçurent l’un pour l’autre un attachement qui dura toute leur vie, et dont ils ne cessèrent de se donner des preuves. Mignard fit plusieurs fois le portrait de Molière ; et Molière, dans son poème du Val-de-Grace, vante le génie et le caractère de Mignard. »</span></l>
-            <l n="21" xml:id="l21"><span style="letter-spacing:-.3pt">Cette note ne représentant qu’une donnée très circonscrite, il a fallu adjoindre a Molière et à Mignard d’autres personnages, pour amener quelques situations. L’histoire indiquait naturellement la Béjart, qui déjà avait formé en 1653, une troupe avec Molière, pour jouer la comédie à Lyon. C’est par un anachronisme plus sensible, que la servante Laforest figuré aussi au nombre de mes personnages ; mais dans un Vaudeville, on n’y doit pas regarder de si près. Celui d’Armantine purement épisodique, a été indiqué afin de mettre en scène Madame Guérin, tragédienne, qui s’est fait remarquer, il y a quelques années, au premier et au second théâtre Français, et qui se trouve dans ce moment à Avignon.</span></l>
-            <l n="22" xml:id="l22"><span style="letter-spacing:-.3pt">Je ne puis que rendre hommage au zèle de MM. les artistes ; quoique l’ensemble de la représentation ait laissé quelque chose à désirer, l’ouvrage a marché jusqu’au bout, non seulement sans encombre, mais souvent accompagné de nombreuses marques d’approbation. Le public a su tenir compte aux acteurs d’un effort de mémoire si extraordinaire.</span></l>
-            <l n="23" xml:id="l23"> </l>
-            <l n="24" xml:id="l24"> </l>
-        <div type="scene" xml:id="1">
+      <div type="act" n="1">
+        <head>AVIS AU LECTEUR</head>
+        <div type="scene" xml:id="première">
           <head>Scène première</head>
-            <l n="25" xml:id="l25"> </l>
-            <l n="26" xml:id="l26"> </l>
-            <l n="27" xml:id="l27"><span style="letter-spacing:-.3pt">Pardon, Madame : n’est-ce pas ici que demeure monsieur Molière ?</span></l>
-            <l n="28" xml:id="l28"><span style="letter-spacing:-.3pt">Oui, monsieur, et je suis sa servante ; mais mon maître est occupé, il ne peut recevoir personne.</span></l>
-            <l n="29" xml:id="l29"><span style="letter-spacing:-.3pt">Cependant, madame, j’ai besoin de le voir.</span></l>
-            <l n="30" xml:id="l30"><span style="letter-spacing:-.3pt">Cependant, monsieur, il a besoin d’être seul.</span></l>
-            <l n="31" xml:id="l31"><span style="letter-spacing:-.3pt">On m’a assuré que monsieur Molière allait former une nouvelle troupe pour Son Altesse Sérénissime le Prince de Conti, et je venais m’offrir...</span></l>
-            <l n="32" xml:id="l32"><span style="letter-spacing:-.3pt">Vous, Monsieur ? et pour quels emplois ?</span></l>
-            <l n="33" xml:id="l33"><span style="letter-spacing:-.3pt">Pour les rôles d’amoureux.</span></l>
-            <l n="34" xml:id="l34"><span style="letter-spacing:-.3pt">À merveille. Je pourrais vous servir...</span></l>
-            <l n="35" xml:id="l35"><span style="letter-spacing:-.3pt">Madame...</span></l>
-            <l n="36" xml:id="l36"><span style="letter-spacing:-.3pt">Vous protéger...</span></l>
-            <l n="37" xml:id="l37"><span style="letter-spacing:-.3pt">Madame, que de bonté !</span></l>
-            <l n="38" xml:id="l38"><span style="letter-spacing:-.3pt">Mais comme tous les instants de Molière sont précieux, je ne veux pas qu’il les perde à écouter le premier venu. Avez-vous du talent ?</span></l>
-            <l n="39" xml:id="l39"><span style="letter-spacing:-.3pt">Comment, madame...</span></l>
-            <l n="40" xml:id="l40"><span style="letter-spacing:-.3pt">Je sais que tous les comédiens croient en avoir ; mais cela ne suffit point. Répétez une scène devant moi : si vous êtes de mon goût, vous serez reçu.</span></l>
-            <l n="41" xml:id="l41"><span style="letter-spacing:-.3pt">Madame !</span></l>
-            <l n="42" xml:id="l42"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : J’ai pris goût à la république.</span></span></i></l>
-            <l n="43" xml:id="l43"><span style="letter-spacing:-.3pt">Ordonnez, madame ; que voulez-vous que je fasse ?</span></l>
-            <l n="44" xml:id="l44"><span style="letter-spacing:-.3pt">Je veux que vous me fassiez une déclaration.</span></l>
-            <l n="45" xml:id="l45"><span style="letter-spacing:-.3pt">Une... J’entends.</span></l>
-            <l n="46" xml:id="l46"><span style="letter-spacing:-.3pt">Supposez que je suis l’aimable objet de toutes vos pensées, et débites-moi une tirade brûlante.</span></l>
-            <l n="47" xml:id="l47"><span style="letter-spacing:-.3pt">Allons, j’y souscris, </span></l>
-            <l n="48" xml:id="l48"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">À part.</span></span></i></l>
-            <l n="49" xml:id="l49"><span style="letter-spacing:-.3pt">Supposons donc que c’est la dame de mes pensées, ma charmante Sophie.</span></l>
-            <l n="50" xml:id="l50"><span style="letter-spacing:-.3pt">Y êtes-vous, monsieur ?</span></l>
-            <l n="51" xml:id="l51"><span style="letter-spacing:-.3pt">J’y suis... Plaçons-nous. </span></l>
-            <l n="52" xml:id="l52"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ils se placent.</span></span></i></l>
-            <l n="53" xml:id="l53"><span style="letter-spacing:-.3pt">« Se peut-il, ingrate Isabelle, que vous rejetiez les vœux, les hommages de l’amant le plus tendre ! »</span></l>
-            <l n="54" xml:id="l54"><span style="letter-spacing:-.3pt">Pas mal... Animez-vous, monsieur.</span></l>
-            <l n="55" xml:id="l55"><span style="letter-spacing:-.3pt">« Depuis trois ans que je soupire pour vous, auriez-vous juré de me réduire au désespoir, de me faire mourir d’amour ! Mes nuits sont sans repos, mes jours sans plaisirs ; ma vie s’écoule dans  les larmes. Ah ! femme adorée ; montrez-vous sensible à ma tendresse, à mes tourments. »</span></l>
-            <l n="56" xml:id="l56"><span style="letter-spacing:-.3pt">Chauffez, chauffez, monsieur !</span></l>
-            <l n="57" xml:id="l57"><span style="letter-spacing:-.3pt">« Si vous vous obstinez à repousser mes soupirs ; si vous avez juré ma perte, je vais me punir de ma flamme ; je me soumets à mon sort affreux... Mais non, vos traits enchanteurs se parent d’une grâce nouvelle ; vous rougissez, vous vous attendrissez ; vous acceptez mon hommage, et je jure à vos pieds de vous consacrer ma vie ! »</span></l>
-            <l n="58" xml:id="l58"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il tombe à ses pieds.</span></span></i></l>
-            <l n="59" xml:id="l59"> </l>
-            <l n="60" xml:id="l60"> </l>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="1">Pardon, Madame : n’est-ce pas ici que demeure monsieur Molière ?</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="2">Oui, monsieur, et je suis sa servante ; mais mon maître est occupé, il ne peut recevoir personne.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="3">Cependant, madame, j’ai besoin de le voir.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="4">Cependant, monsieur, il a besoin d’être seul.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="5">On m’a assuré que monsieur Molière allait former une nouvelle troupe pour Son Altesse Sérénissime le Prince de Conti, et je venais m’offrir...</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST, le toisant.</speaker>
+            <l n="6">Vous, Monsieur ? et pour quels emplois ?</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="7">Pour les rôles d’amoureux.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="8">À merveille. Je pourrais vous servir...</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="9">Madame...</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="10">Vous protéger...</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="11">Madame, que de bonté !</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="12">Mais comme tous les instants de Molière sont précieux, je ne veux pas qu’il les perde à écouter le premier venu. Avez-vous du talent ?</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="13">Comment, madame...</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="14">Je sais que tous les comédiens croient en avoir ; mais cela ne suffit point. Répétez une scène devant moi : si vous êtes de mon goût, vous serez reçu.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="15">Madame !</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="16">Air : J’ai pris goût à la république.</l>
+            <l n="17">Ne méprisez pas mon suffrage,</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="18">Ordonnez, madame ; que voulez-vous que je fasse ?</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="19">Je veux que vous me fassiez une déclaration.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="20">Une... J’entends.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="21">Supposez que je suis l’aimable objet de toutes vos pensées, et débites-moi une tirade brûlante.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="22">Allons, j’y souscris, </l>
+            <l n="23">À part.</l>
+            <l n="24">Supposons donc que c’est la dame de mes pensées, ma charmante Sophie.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="25">Y êtes-vous, monsieur ?</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="26">J’y suis... Plaçons-nous. </l>
+            <l n="27">Ils se placent.</l>
+            <l n="28">« Se peut-il, ingrate Isabelle, que vous rejetiez les vœux, les hommages de l’amant le plus tendre ! »</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="29">Pas mal... Animez-vous, monsieur.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="30">« Depuis trois ans que je soupire pour vous, auriez-vous juré de me réduire au désespoir, de me faire mourir d’amour ! Mes nuits sont sans repos, mes jours sans plaisirs ; ma vie s’écoule dans  les larmes. Ah ! femme adorée ; montrez-vous sensible à ma tendresse, à mes tourments. »</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="31">Chauffez, chauffez, monsieur !</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="32">« Si vous vous obstinez à repousser mes soupirs ; si vous avez juré ma perte, je vais me punir de ma flamme ; je me soumets à mon sort affreux... Mais non, vos traits enchanteurs se parent d’une grâce nouvelle ; vous rougissez, vous vous attendrissez ; vous acceptez mon hommage, et je jure à vos pieds de vous consacrer ma vie ! »</l>
+            <l n="33">Il tombe à ses pieds.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="2">
+        <div type="scene" xml:id="II">
           <head>Scène II</head>
-            <l n="61" xml:id="l61"> </l>
-            <l n="62" xml:id="l62"> </l>
-            <l n="63" xml:id="l63"><span style="letter-spacing:-.3pt">Dieu ! que vois-je ?</span></l>
-            <l n="64" xml:id="l64"><span style="letter-spacing:-.3pt">Vous venez à propos, monsieur...</span></l>
-            <l n="65" xml:id="l65"><span style="letter-spacing:-.3pt">C’est monsieur Molière ?</span></l>
-            <l n="66" xml:id="l66"><span style="letter-spacing:-.3pt">Je me retire ; je ne veux pas vous déranger.</span></l>
-            <l n="67" xml:id="l67"><span style="letter-spacing:-.3pt">Restez, restez. J’ai fait pour vous une excellente acquisition.</span></l>
-            <l n="68" xml:id="l68"><span style="letter-spacing:-.3pt">C’est pour vous, que vous voulez dire.</span></l>
-            <l n="69" xml:id="l69"><span style="letter-spacing:-.3pt">Non, mon digne maître ; je ne pense qu’à vos intérêts.</span></l>
-            <l n="70" xml:id="l70"><span style="letter-spacing:-.3pt">Je ne m’en serais pas douté. Je vois ce que c’est.</span></l>
-            <l n="71" xml:id="l71"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : L’Ermite du hameau voisin.</span></span></i></l>
-            <l n="72" xml:id="l72"><span style="letter-spacing:-.3pt">Il a de l’esprit... Jeune homme, que voulez-vous de moi ?</span></l>
-            <l n="73" xml:id="l73"><span style="letter-spacing:-.3pt">Entrer dans la troupe que vous devez former.</span></l>
-            <l n="74" xml:id="l74"><span style="letter-spacing:-.3pt">Il a du bon, Monsieur ; je vous le recommande.</span></l>
-            <l n="75" xml:id="l75"><span style="letter-spacing:-.3pt">Il suffit. C’est qu’elle s’y connaît. Les femmes ont un tact, une finesse...</span></l>
-            <l n="76" xml:id="l76"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Pégase est un cheval qui porte.</span></span></i></l>
-            <l n="77" xml:id="l77"><span style="letter-spacing:-.3pt">Mais entrez chez moi, Monsieur, et je vais m’entendre... On vous nomme ?...</span></l>
-            <l n="78" xml:id="l78"><span style="letter-spacing:-.3pt">Belton.</span></l>
-            <l n="79" xml:id="l79"><span style="letter-spacing:-.3pt">Madame Laforest, ayez soin de monsieur Belton. Je vais vous rejoindre.</span></l>
-            <l n="80" xml:id="l80"><span style="letter-spacing:-.3pt">Je crois que c’est une bonne affaire.</span></l>
-            <l n="81" xml:id="l81"><span style="letter-spacing:-.3pt">Que de bontés !</span></l>
-            <l n="82" xml:id="l82"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort avec Laforest.</span></span></i></l>
-            <l n="83" xml:id="l83"> </l>
-            <l n="84" xml:id="l84"> </l>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="34">Dieu ! que vois-je ?</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="35">Vous venez à propos, monsieur...</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="36">C’est monsieur Molière ?</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="37">Je me retire ; je ne veux pas vous déranger.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="38">Restez, restez. J’ai fait pour vous une excellente acquisition.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="39">C’est pour vous, que vous voulez dire.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="40">Non, mon digne maître ; je ne pense qu’à vos intérêts.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="41">Je ne m’en serais pas douté. Je vois ce que c’est.</l>
+            <l n="42">Air : L’Ermite du hameau voisin.</l>
+            <l n="43">Oui, je devine à ses regards,</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="44">Quand Molière est dans la maison,</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="45">Il a de l’esprit... Jeune homme, que voulez-vous de moi ?</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="46">Entrer dans la troupe que vous devez former.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="47">Il a du bon, Monsieur ; je vous le recommande.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="48">Il suffit. C’est qu’elle s’y connaît. Les femmes ont un tact, une finesse...</l>
+            <l n="49">Air : Pégase est un cheval qui porte.</l>
+            <l n="50">Avec l’esprit d’un sexe aimable</l>
+            <l n="51">Mais entrez chez moi, Monsieur, et je vais m’entendre... On vous nomme ?...</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="52">Belton.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="53">Madame Laforest, ayez soin de monsieur Belton. Je vais vous rejoindre.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="54">Je crois que c’est une bonne affaire.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="55">Que de bontés !</l>
+            <l n="56">Il sort avec Laforest.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="3">
+        <div type="scene" xml:id="III">
           <head>Scène III</head>
-            <l n="85" xml:id="l85"> </l>
-            <l n="86" xml:id="l86"> </l>
-            <l n="87" xml:id="l87"><span style="letter-spacing:-.3pt">Je me venge quelquefois sur les femmes, des chagrins qu’elles m’ont causés ; et pourtant je les aime toujours... Ah ! Sophie, Sophie, combien je vous dois de plaisirs et de tourments !...</span></l>
-            <l n="88" xml:id="l88"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Mon galoubet.</span></span></i></l>
-            <l n="89" xml:id="l89"><span style="letter-spacing:-.3pt">N’importe, si je n’ai pu être heureux à la Cour du Prince, je puis le devenir dans les murs d’Avignon. Par un heureux destin, j’ai trouvé la mère de Sophie sensible à mes offres brillantes : engagée dans ma troupe, elle reste, elle est près de moi, et l’occasion de l’entretenir de ma tendresse doit bientôt se présenter. Il est impossible que Sophie demeure longtemps étrangère, insensible à tant d’amour.</span></l>
-            <l n="90" xml:id="l90"> </l>
-            <l n="91" xml:id="l91"> </l>
+          <sp who="#molière">
+            <speaker>MOLIÈRE, seul</speaker>
+            <l n="57">Je me venge quelquefois sur les femmes, des chagrins qu’elles m’ont causés ; et pourtant je les aime toujours... Ah ! Sophie, Sophie, combien je vous dois de plaisirs et de tourments !...</l>
+            <l n="58">Air : Mon galoubet.</l>
+            <l n="59">À Pézenas, à Pézenas,</l>
+            <l n="60">À Pézenas, à Pézenas,</l>
+            <l n="61">N’importe, si je n’ai pu être heureux à la Cour du Prince, je puis le devenir dans les murs d’Avignon. Par un heureux destin, j’ai trouvé la mère de Sophie sensible à mes offres brillantes : engagée dans ma troupe, elle reste, elle est près de moi, et l’occasion de l’entretenir de ma tendresse doit bientôt se présenter. Il est impossible que Sophie demeure longtemps étrangère, insensible à tant d’amour.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="4">
+        <div type="scene" xml:id="IV">
           <head>Scène IV</head>
-            <l n="92" xml:id="l92"> </l>
-            <l n="93" xml:id="l93"> </l>
-            <l n="94" xml:id="l94"><span style="letter-spacing:-.3pt">Pardon, Monsieur, j’arrive à l’instant dans cette ville ; on m’indique cette auberge comme la meilleure ; et mon intention étant de m’arrêter dans ces contrées, je voudrais savoir si l’on est bien ici ?</span></l>
-            <l n="95" xml:id="l95"><span style="letter-spacing:-.3pt">C’est la meilleure d’Avignon. Monsieur est peintre, dessinateur ?</span></l>
-            <l n="96" xml:id="l96"><span style="letter-spacing:-.3pt">Oui, Monsieur. Après un séjour de vingt ans en Italie, riche d’un portefeuille bien garni, je viens offrir à ma patrie le fruit de mes travaux. Mais, je n’ai pas voulu rentrer à Paris, sans m’arrêter dans le Comtat Vénaissin ; la patrie de Pétrarque et de Laure est féconde en sites heureux, en nobles et touchants souvenirs.</span></l>
-            <l n="97" xml:id="l97"><span style="letter-spacing:-.3pt">Je vous connais, Monsieur...</span></l>
-            <l n="98" xml:id="l98"><span style="letter-spacing:-.3pt">Vous me connaissez !</span></l>
-            <l n="99" xml:id="l99"><span style="letter-spacing:-.3pt">Sans vous avoir jamais vu.</span></l>
-            <l n="100" xml:id="l100"><span style="letter-spacing:-.3pt">C’est un peu fort !</span></l>
-            <l n="101" xml:id="l101"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Faut l’oublier.</span></span></i></l>
-            <l n="102" xml:id="l102"><span style="letter-spacing:-.3pt">Eh quoi ! Vous saisissez au premier aspect... Mais vous, Monsieur, vous qui, lisant si bien dans mon âme, devinez qui je suis ! quel homme, quel génie peut posséder à ce point une telle puissance d’observation ?... Non, je ne me trompe pas ; la proximité des lieux, l’élan inspirateur qui vous anime... Je sais qui vous êtes.</span></l>
-            <l n="103" xml:id="l103"><span style="letter-spacing:-.3pt">Impossible !</span></l>
-            <l n="104" xml:id="l104"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Je mentirai toute ma vie.</span></span></i></l>
-            <l n="105" xml:id="l105"><span style="letter-spacing:-.3pt">Ah ! c’en est trop !... Nous nous connaissons, nous nous estimons...</span></l>
-            <l n="106" xml:id="l106"><span style="letter-spacing:-.3pt">Et...</span></l>
-            <l n="107" xml:id="l107"><span style="letter-spacing:-.3pt">Achevez...</span></l>
-            <l n="108" xml:id="l108"><span style="letter-spacing:-.3pt">Nous nous aimons !</span></l>
-            <l n="109" xml:id="l109"><span style="letter-spacing:-.3pt">Pour la vie.</span></l>
-            <l n="110" xml:id="l110"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ils s’embrassent.</span></span></i></l>
-            <l n="111" xml:id="l111"><span style="letter-spacing:-.3pt">Cette amitié sera durable.</span></l>
-            <l n="112" xml:id="l112"><span style="letter-spacing:-.3pt">Quoiqu’improvisée.</span></l>
-            <l n="113" xml:id="l113"><span style="letter-spacing:-.3pt">Je ne te quitte plus.</span></l>
-            <l n="114" xml:id="l114"><span style="letter-spacing:-.3pt">À la vie, à la mort !</span></l>
-            <l n="115" xml:id="l115"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Le Magistrat irréprochable.</span></span></i></l>
-            <l n="116" xml:id="l116"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ils se serrent la main.</span></span></i></l>
-            <l n="117" xml:id="l117"> </l>
-            <l n="118" xml:id="l118"> </l>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="62">Pardon, Monsieur, j’arrive à l’instant dans cette ville ; on m’indique cette auberge comme la meilleure ; et mon intention étant de m’arrêter dans ces contrées, je voudrais savoir si l’on est bien ici ?</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="63">C’est la meilleure d’Avignon. Monsieur est peintre, dessinateur ?</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="64">Oui, Monsieur. Après un séjour de vingt ans en Italie, riche d’un portefeuille bien garni, je viens offrir à ma patrie le fruit de mes travaux. Mais, je n’ai pas voulu rentrer à Paris, sans m’arrêter dans le Comtat Vénaissin ; la patrie de Pétrarque et de Laure est féconde en sites heureux, en nobles et touchants souvenirs.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="65">Je vous connais, Monsieur...</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="66">Vous me connaissez !</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="67">Sans vous avoir jamais vu.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="68">C’est un peu fort !</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="69">Air : Faut l’oublier.</l>
+            <l n="70">Ce feu sacré qui vous inspire,</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="71">Eh quoi ! Vous saisissez au premier aspect... Mais vous, Monsieur, vous qui, lisant si bien dans mon âme, devinez qui je suis ! quel homme, quel génie peut posséder à ce point une telle puissance d’observation ?... Non, je ne me trompe pas ; la proximité des lieux, l’élan inspirateur qui vous anime... Je sais qui vous êtes.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="72">Impossible !</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="73">Air : Je mentirai toute ma vie.</l>
+            <l n="74">À ce regard observateur,</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="75">Ah ! c’en est trop !... Nous nous connaissons, nous nous estimons...</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="76">Et...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="77">Achevez...</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="78">Nous nous aimons !</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="79">Pour la vie.</l>
+            <l n="80">Ils s’embrassent.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="81">Cette amitié sera durable.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="82">Quoiqu’improvisée.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="83">Je ne te quitte plus.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="84">À la vie, à la mort !</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="85">Air : Le Magistrat irréprochable.</l>
+            <l n="86">On l’a dit : les talents sont frères ;</l>
+            <l n="87">Ils se serrent la main.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="5">
+        <div type="scene" xml:id="V">
           <head>Scène V</head>
-            <l n="119" xml:id="l119"> </l>
-            <l n="120" xml:id="l120"> </l>
-            <l n="121" xml:id="l121"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Vaudeville de Jean Monnet.</span></span></i></l>
-            <l n="122" xml:id="l122"><span style="letter-spacing:-.3pt">Molière ! Et que diable nous veut cette femme-là ?</span></l>
-            <l n="123" xml:id="l123"><span style="letter-spacing:-.3pt">Une femme qui te demande, qui te poursuit... C’est charmant ! </span></l>
-            <l n="124" xml:id="l124"><span style="letter-spacing:-.3pt">Oui, mais c’est la plus fameuse caricature ; foi de Bridois.</span></l>
-            <l n="125" xml:id="l125"><span style="letter-spacing:-.3pt">Où l’as-tu donc dénichée ?</span></l>
-            <l n="126" xml:id="l126"><span style="letter-spacing:-.3pt">À Vaucluse. J’étais allé conduire une famille étrangère, quand je rencontre cette vieille folle.</span></l>
-            <l n="127" xml:id="l127"><span style="letter-spacing:-.3pt">Eh bien ?</span></l>
-            <l n="128" xml:id="l128"><span style="letter-spacing:-.3pt">Elle me demande si Monsieur Molière n’est pas dans Avignon. Je lui réponds, oui. Alors cette dame me dit : Combien est-ce qu’on te donne pour ce voyage ? Dame, que je lui réponds, c’est une famille anglaise qui me donne vingt francs pour la conduire à Vaucluse et la ramener à Avignon. Vingt francs ? reprend-elle ; eh bien, moi je t’en donne cent. Cent livres ! ai-je dit... Mais songez que cette famille anglaise va rester en plan à Vaucluse, en attendant une autre voiture. N’importe encore, a-t-elle ajouté ; je te donne deux cents livres...</span></l>
-            <l n="129" xml:id="l129"><span style="letter-spacing:-.3pt">Et pour deux cents livres...</span></l>
-            <l n="130" xml:id="l130"><span style="letter-spacing:-.3pt">J’ai topé.</span></l>
-            <l n="131" xml:id="l131"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : V’là c’que c’est que l’exactitude.</span></span></i></l>
-            <l n="132" xml:id="l132"><span style="letter-spacing:-.3pt">Mais quelle est cette dame, cette vieille Dulcinée la connais-tu ?</span></l>
-            <l n="133" xml:id="l133"><span style="letter-spacing:-.3pt">Tout ce que je sais, c’est qu’elle n’a jamais vu Monsieur Molière ; et rien que sur sa réputation, elle est folle de lui.</span></l>
-            <l n="134" xml:id="l134"><span style="letter-spacing:-.3pt">C’est charmant !</span></l>
-            <l n="135" xml:id="l135"><span style="letter-spacing:-.3pt">C’est juste. Mais que sais-tu davantage ?</span></l>
-            <l n="136" xml:id="l136"><span style="letter-spacing:-.3pt">Je sais qu’elle est riche et marquise.</span></l>
-            <l n="137" xml:id="l137"><span style="letter-spacing:-.3pt">Une nouvelle d’Escarbagnas.</span></l>
-            <l n="138" xml:id="l138"><span style="letter-spacing:-.3pt">Non, elle se nomme la marquise d’Ampouf.</span></l>
-            <l n="139" xml:id="l139"><span style="letter-spacing:-.3pt">D’Ampouf ! C’est délicieux.</span></l>
-            <l n="140" xml:id="l140"><span style="letter-spacing:-.3pt">Elle m’attend là-bas... Je vais la chercher.</span></l>
-            <l n="141" xml:id="l141"><span style="letter-spacing:-.3pt">Je frémis...</span></l>
-            <l n="142" xml:id="l142"><span style="letter-spacing:-.3pt">Voyons-là ; nous rirons.</span></l>
-            <l n="143" xml:id="l143"><span style="letter-spacing:-.3pt">Je m’esquive.</span></l>
-            <l n="144" xml:id="l144"><span style="letter-spacing:-.3pt">Puisque l’un de vous deux est Monsieur Molière, je vais la quérir... Vous ferez le bonheur d’une femme sensible qui a des écus.</span></l>
-            <l n="145" xml:id="l145"><span style="letter-spacing:-.3pt">Et soixante ans.</span></l>
-            <l n="146" xml:id="l146"><span style="letter-spacing:-.3pt">Cinquante-cinq au plus. Elle est bien farce, allez.</span></l>
-            <l n="147" xml:id="l147"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Souvenez-vous en.</span></span></i></l>
-            <l n="148" xml:id="l148"> </l>
-            <l n="149" xml:id="l149"> </l>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="88">Air : Vaudeville de Jean Monnet.</l>
+            <l n="89">Je vous amène en patache</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="90">Molière ! Et que diable nous veut cette femme-là ?</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="91">Une femme qui te demande, qui te poursuit... C’est charmant ! </l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="92">Oui, mais c’est la plus fameuse caricature ; foi de Bridois.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="93">Où l’as-tu donc dénichée ?</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="94">À Vaucluse. J’étais allé conduire une famille étrangère, quand je rencontre cette vieille folle.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="95">Eh bien ?</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="96">Elle me demande si Monsieur Molière n’est pas dans Avignon. Je lui réponds, oui. Alors cette dame me dit : Combien est-ce qu’on te donne pour ce voyage ? Dame, que je lui réponds, c’est une famille anglaise qui me donne vingt francs pour la conduire à Vaucluse et la ramener à Avignon. Vingt francs ? reprend-elle ; eh bien, moi je t’en donne cent. Cent livres ! ai-je dit... Mais songez que cette famille anglaise va rester en plan à Vaucluse, en attendant une autre voiture. N’importe encore, a-t-elle ajouté ; je te donne deux cents livres...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="97">Et pour deux cents livres...</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="98">J’ai topé.</l>
+            <l n="99">Air : V’là c’que c’est que l’exactitude.</l>
+            <l n="100">Je sais fort bien qu’à ces Anglais</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="101">Mais quelle est cette dame, cette vieille Dulcinée la connais-tu ?</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="102">Tout ce que je sais, c’est qu’elle n’a jamais vu Monsieur Molière ; et rien que sur sa réputation, elle est folle de lui.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="103">C’est charmant !</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="104">C’est juste. Mais que sais-tu davantage ?</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="105">Je sais qu’elle est riche et marquise.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="106">Une nouvelle d’Escarbagnas.</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="107">Non, elle se nomme la marquise d’Ampouf.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="108">D’Ampouf ! C’est délicieux.</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="109">Elle m’attend là-bas... Je vais la chercher.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="110">Je frémis...</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="111">Voyons-là ; nous rirons.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="112">Je m’esquive.</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="113">Puisque l’un de vous deux est Monsieur Molière, je vais la quérir... Vous ferez le bonheur d’une femme sensible qui a des écus.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="114">Et soixante ans.</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="115">Cinquante-cinq au plus. Elle est bien farce, allez.</l>
+            <l n="116">Air : Souvenez-vous en.</l>
+            <l n="117">Je vais vite vous chercher</l>
           </sp>
         </div>
-        <div type="scene" xml:id="6">
+        <div type="scene" xml:id="VI">
           <head>Scène VI</head>
-            <l n="150" xml:id="l150"> </l>
-            <l n="151" xml:id="l151"> </l>
-            <l n="152" xml:id="l152"><span style="letter-spacing:-.3pt">Demeure, nous nous amuserons.</span></l>
-            <l n="153" xml:id="l153"><span style="letter-spacing:-.3pt">Je suis, forcé de te quitter ; on m’attend. Un jeune amoureux...</span></l>
-            <l n="154" xml:id="l154"><span style="letter-spacing:-.3pt">Un amoureux... Bon, c’est un remplaçant dans les moments difficiles.</span></l>
-            <l n="155" xml:id="l155"><span style="letter-spacing:-.3pt">Bonne idée ! Reçois la vieille marquise en attendant.</span></l>
-            <l n="156" xml:id="l156"><span style="letter-spacing:-.3pt">Je la recevrai... L’amitié va faire une corvée.</span></l>
-            <l n="157" xml:id="l157"><span style="letter-spacing:-.3pt">À charge de revanche.</span></l>
-            <l n="158" xml:id="l158"> </l>
-            <l n="159" xml:id="l159"> </l>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="118">Demeure, nous nous amuserons.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="119">Je suis, forcé de te quitter ; on m’attend. Un jeune amoureux...</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="120">Un amoureux... Bon, c’est un remplaçant dans les moments difficiles.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="121">Bonne idée ! Reçois la vieille marquise en attendant.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="122">Je la recevrai... L’amitié va faire une corvée.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE, sortant.</speaker>
+            <l n="123">À charge de revanche.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="7">
+        <div type="scene" xml:id="VII">
           <head>Scène VII</head>
-            <l n="160" xml:id="l160"> </l>
-            <l n="161" xml:id="l161"> </l>
-            <l n="162" xml:id="l162"><span style="letter-spacing:-.3pt">Il y a dans toute association humaine, l’article pertes et bénéfices. On peut bien commencer par l’article pertes, quand c’est avec Molière qu’on s’associe d’amitié.</span></l>
-            <l n="163" xml:id="l163"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il feuillette ses dessins.</span></span></i></l>
-            <l n="164" xml:id="l164"> </l>
-            <l n="165" xml:id="l165"> </l>
+          <sp who="#mignard">
+            <speaker>MIGNARD, seul</speaker>
+            <l n="124">Il y a dans toute association humaine, l’article pertes et bénéfices. On peut bien commencer par l’article pertes, quand c’est avec Molière qu’on s’associe d’amitié.</l>
+            <l n="125">Il feuillette ses dessins.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="8">
+        <div type="scene" xml:id="VIII">
           <head>Scène VIII</head>
-            <l n="166" xml:id="l166"> </l>
-            <l n="167" xml:id="l167"> </l>
-            <l n="168" xml:id="l168"><span style="letter-spacing:-.3pt">Le voilà ; c’est lui ! N’interrompons pas ce grand homme dans ses méditations. Mon cœur trop sensible a palpité d’amour à la lecture de ses ouvrages... il n’est pas surprenant que je me sente comme anéantie à l’aspect de ce génie immortel !... Au milieu de cent mille hommes, je l’aurais d’abord reconnu... Ses traits sont empreints d’une couleur de génie incomparable... Ah ! Molière, divin Molière, je t’aimais avant de t’avoir vu ; je t’adore maintenant ; et simple mortelle, je viens, embrasée d’un feu pur, me prosterner devant ton talent sublime !</span></l>
-            <l n="169" xml:id="l169"><span style="letter-spacing:-.3pt">Ah ! Madame, excusez-moi ; je n’avais pas eu l’honneur de vous voir.</span></l>
-            <l n="170" xml:id="l170"><span style="letter-spacing:-.3pt">Divin Molière, ne vous étonnez pas, vous, homme extraordinaire, de ma démarche extraordinaire.</span></l>
-            <l n="171" xml:id="l171"><span style="letter-spacing:-.3pt">Mais, Madame...</span></l>
-            <l n="172" xml:id="l172"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : À l’âge heureux de quatorze ans.</span></span></i></l>
-            <l n="173" xml:id="l173"><span style="letter-spacing:-.3pt">Permettez, Madame ; que je mette un terme à l’erreur...</span></l>
-            <l n="174" xml:id="l174"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : J’ai vu partout dans mes voyages.</span></span></i></l>
-            <l n="175" xml:id="l175"><span style="letter-spacing:-.3pt">Souffrez que je vous le dise, madame ; vous confondez...</span></l>
-            <l n="176" xml:id="l176"><span style="letter-spacing:-.3pt">Je confonds, Monsieur ! non, je ne confonds rien... C’est vous, cœur froid et muet, qui n’entendez pas la voix éloquente de la passion...</span></l>
-            <l n="177" xml:id="l177"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Bouton de rose.</span></span></i></l>
-            <l n="178" xml:id="l178"><span style="letter-spacing:-.3pt">Madame, je ne puis abuser plus longtemps de cette position...</span></l>
-            <l n="179" xml:id="l179"><span style="letter-spacing:-.3pt">Subterfuges inutiles ; vous ne sentez pas, non, Monsieur, vous ne connaissez pas tout le prix d’une illustre conquête.</span></l>
-            <l n="180" xml:id="l180"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Même air.</span></span></i></l>
-            <l n="181" xml:id="l181"> </l>
-            <l n="182" xml:id="l182"> </l>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF, à part.</speaker>
+            <l n="126">Le voilà ; c’est lui ! N’interrompons pas ce grand homme dans ses méditations. Mon cœur trop sensible a palpité d’amour à la lecture de ses ouvrages... il n’est pas surprenant que je me sente comme anéantie à l’aspect de ce génie immortel !... Au milieu de cent mille hommes, je l’aurais d’abord reconnu... Ses traits sont empreints d’une couleur de génie incomparable... Ah ! Molière, divin Molière, je t’aimais avant de t’avoir vu ; je t’adore maintenant ; et simple mortelle, je viens, embrasée d’un feu pur, me prosterner devant ton talent sublime !</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="127">Ah ! Madame, excusez-moi ; je n’avais pas eu l’honneur de vous voir.</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="128">Divin Molière, ne vous étonnez pas, vous, homme extraordinaire, de ma démarche extraordinaire.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="129">Mais, Madame...</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="130">Air : À l’âge heureux de quatorze ans.</l>
+            <l n="131">À l’âge heureux de cinquante ans,</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="132">Permettez, Madame ; que je mette un terme à l’erreur...</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="133">Air : J’ai vu partout dans mes voyages.</l>
+            <l n="134">Je veux embellir ma carrière,</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="135">Souffrez que je vous le dise, madame ; vous confondez...</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="136">Je confonds, Monsieur ! non, je ne confonds rien... C’est vous, cœur froid et muet, qui n’entendez pas la voix éloquente de la passion...</l>
+            <l n="137">Air : Bouton de rose.</l>
+            <l n="138">Un cœur sensible</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="139">Madame, je ne puis abuser plus longtemps de cette position...</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="140">Subterfuges inutiles ; vous ne sentez pas, non, Monsieur, vous ne connaissez pas tout le prix d’une illustre conquête.</l>
+            <l n="141">Même air.</l>
+            <l n="142">Un cœur sensible</l>
+            <l n="143">En vain s’élance sur vos pas,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="9">
+        <div type="scene" xml:id="IX">
           <head>Scène IX</head>
-            <l n="183" xml:id="l183"> </l>
-            <l n="184" xml:id="l184"> </l>
-            <l n="185" xml:id="l185"><span style="letter-spacing:-.3pt">C’est Monsieur Molière à qui j’ai l’honneur de parler ?</span></l>
-            <l n="186" xml:id="l186"><span style="letter-spacing:-.3pt">Oui, Madame. Mais, que dis-je ? vous le savez mieux que moi.</span></l>
-            <l n="187" xml:id="l187"><span style="letter-spacing:-.3pt">Qu’Armantine est heureuse de le rencontrer !</span></l>
-            <l n="188" xml:id="l188"><span style="letter-spacing:-.3pt">Heureuse ! C’est cela... j’avais une rivale.</span></l>
-            <l n="189" xml:id="l189"><span style="letter-spacing:-.3pt">Monsieur, je brûlais du désir...</span></l>
-            <l n="190" xml:id="l190"><span style="letter-spacing:-.3pt">Monsieur, je brûle pour vous depuis que j’ai vu la première représentation des Précieuses ridicules.</span></l>
-            <l n="191" xml:id="l191"><span style="letter-spacing:-.3pt">J’ai fait des études...</span></l>
-            <l n="192" xml:id="l192"><span style="letter-spacing:-.3pt">J’ai fait deux cents lieues pour vous prouver mon amour... Mais vous regardez Madame avec des yeux... J’en ai vu assez ; vous l’aimez, vous soupirez... vous...</span></l>
-            <l n="193" xml:id="l193"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Depuis longtemps j’aimais Adèle.</span></span></i></l>
-            <l n="194" xml:id="l194"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Elle sort.</span></span></i></l>
-            <l n="195" xml:id="l195"> </l>
-            <l n="196" xml:id="l196"> </l>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="144">C’est Monsieur Molière à qui j’ai l’honneur de parler ?</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="145">Oui, Madame. Mais, que dis-je ? vous le savez mieux que moi.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="146">Qu’Armantine est heureuse de le rencontrer !</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="147">Heureuse ! C’est cela... j’avais une rivale.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE, à Mignard.</speaker>
+            <l n="148">Monsieur, je brûlais du désir...</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="149">Monsieur, je brûle pour vous depuis que j’ai vu la première représentation des Précieuses ridicules.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="150">J’ai fait des études...</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="151">J’ai fait deux cents lieues pour vous prouver mon amour... Mais vous regardez Madame avec des yeux... J’en ai vu assez ; vous l’aimez, vous soupirez... vous...</l>
+            <l n="152">Air : Depuis longtemps j’aimais Adèle.</l>
+            <l n="153">Ma rivale a de la jeunesse ;</l>
+            <l n="154">Elle sort.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="10">
+        <div type="scene" xml:id="X">
           <head>Scène X</head>
-            <l n="197" xml:id="l197"> </l>
-            <l n="198" xml:id="l198"> </l>
-            <l n="199" xml:id="l199"><span style="letter-spacing:-.3pt">La vieille folle veut absolument que je sois Molière... C’est Molière que vous demandez, Madame ?</span></l>
-            <l n="200" xml:id="l200"><span style="letter-spacing:-.3pt">C’est lui.</span></l>
-            <l n="201" xml:id="l201"><span style="letter-spacing:-.3pt">Il va bientôt sortir de son appartement.</span></l>
-            <l n="202" xml:id="l202"><span style="letter-spacing:-.3pt">Me destinant au théâtre, j’ai senti le besoin de le consulter.</span></l>
-            <l n="203" xml:id="l203"><span style="letter-spacing:-.3pt">Il ne vous refusera pas ses conseils.</span></l>
-            <l n="204" xml:id="l204"><span style="letter-spacing:-.3pt">Je n’osais l’espérer. Je m’essaie dans la tragédie.</span></l>
-            <l n="205" xml:id="l205"><span style="letter-spacing:-.3pt">N’importe.</span></l>
-            <l n="206" xml:id="l206"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Sur des fleurs fraîchement écloses.</span></span></i></l>
-            <l n="207" xml:id="l207"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il sort.</span></span></i></l>
-            <l n="208" xml:id="l208"> </l>
-            <l n="209" xml:id="l209"> </l>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="155">La vieille folle veut absolument que je sois Molière... C’est Molière que vous demandez, Madame ?</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="156">C’est lui.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="157">Il va bientôt sortir de son appartement.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="158">Me destinant au théâtre, j’ai senti le besoin de le consulter.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="159">Il ne vous refusera pas ses conseils.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="160">Je n’osais l’espérer. Je m’essaie dans la tragédie.</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="161">N’importe.</l>
+            <l n="162">Air : Sur des fleurs fraîchement écloses.</l>
+            <l n="163">Tous les arts ornent son domaine ;</l>
+            <l n="164">Il sort.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="11">
+        <div type="scene" xml:id="XI">
           <head>Scène XI</head>
-            <l n="210" xml:id="l210"> </l>
-            <l n="211" xml:id="l211"> </l>
-            <l n="212" xml:id="l212"><span style="letter-spacing:-.3pt">Madame, est-ce moi que vous demandez ?</span></l>
-            <l n="213" xml:id="l213"><span style="letter-spacing:-.3pt">Je demande les conseils de Monsieur Molière.</span></l>
-            <l n="214" xml:id="l214"><span style="letter-spacing:-.3pt">Madame se destine au théâtre ?</span></l>
-            <l n="215" xml:id="l215"><span style="letter-spacing:-.3pt">On m’a dit que vous formiez, pour Monseigneur le Prince de Conti, une troupe de comédie et de tragédie ?</span></l>
-            <l n="216" xml:id="l216"><span style="letter-spacing:-.3pt">C’est vrai.</span></l>
-            <l n="217" xml:id="l217"><span style="letter-spacing:-.3pt">J’ai déjà joué la tragédie... mais hélas ! les peines du cœur...</span></l>
-            <l n="218" xml:id="l218"><span style="letter-spacing:-.3pt">Sont profondes... Auriez-vous trouvé un infidèle ? j’ai peine à le croire.</span></l>
-            <l n="219" xml:id="l219"><span style="letter-spacing:-.3pt">Vous êtes trop bon... Mais j’eus le malheur d’écouter un jeune homme fort aimable ; on le nomme Belton.</span></l>
-            <l n="220" xml:id="l220"><span style="letter-spacing:-.3pt">Belton !</span></l>
-            <l n="221" xml:id="l221"><span style="letter-spacing:-.3pt">Le perfide s’est éloigné !...</span></l>
-            <l n="222" xml:id="l222"><span style="letter-spacing:-.3pt">Vous le retrouverez.</span></l>
-            <l n="223" xml:id="l223"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Car ça ferait de la peine à maman.</span></span></i></l>
-            <l n="224" xml:id="l224"><span style="letter-spacing:-.3pt">Vous consentez donc à me prendre à l’essai ?</span></l>
-            <l n="225" xml:id="l225"><span style="letter-spacing:-.3pt">J’y consens de tout mon cœur. Récitez quelques vers, Madame, et vous n’aurez plus rien à désirer.</span></l>
-            <l n="226" xml:id="l226"><span style="letter-spacing:-.3pt">En voici, Monsieur ; ils sont d’une tragédie nouvelle dont la scène se passe à Avignon.</span></l>
-            <l n="227" xml:id="l227"><span style="letter-spacing:-.3pt">À Avignon ! n’importe ; et le titre ?</span></l>
-            <l n="228" xml:id="l228"><span style="letter-spacing:-.3pt">Pétrarque.</span></l>
-            <l n="229" xml:id="l229"><span style="letter-spacing:-.3pt">Va pour Pétrarque... J’écoute.</span></l>
-            <l n="230" xml:id="l230"><span style="letter-spacing:-.3pt">Je commence :</span></l>
-            <l n="231" xml:id="l231"><span style="letter-spacing:-.3pt">« Il m’aime, et je ne puis accepter son amour.</span></l>
-            <l n="232" xml:id="l232"><span style="letter-spacing:-.3pt">« Je pars demain ; demain avant la fin du jour,</span></l>
-            <l n="233" xml:id="l233"><span style="letter-spacing:-.3pt">« Je quitterai ces lieux, cette douce retraite</span></l>
-            <l n="234" xml:id="l234"><span style="letter-spacing:-.3pt">« Où soupira longtemps l’amante du Poète ;</span></l>
-            <l n="235" xml:id="l235"><span style="letter-spacing:-.3pt">« L’impérieux devoir, prompt à me censurer,</span></l>
-            <l n="236" xml:id="l236"><span style="letter-spacing:-.3pt">« Me défend de le plaindre, et lui laisse ignorer</span></l>
-            <l n="237" xml:id="l237"><span style="letter-spacing:-.3pt">« Les feux que dans mon cœur alluma sa tendresse.</span></l>
-            <l n="238" xml:id="l238"><span style="letter-spacing:-.3pt">« Ah ! du plus noble amour j’ai pu rêver l’ivresse ;</span></l>
-            <l n="239" xml:id="l239"><span style="letter-spacing:-.3pt">« Mais cet amour cruel qui promit le bonheur,</span></l>
-            <l n="240" xml:id="l240"><span style="letter-spacing:-.3pt">« Laure, en le chérissant, l’étouffé dans son cœur.</span></l>
-            <l n="241" xml:id="l241"><span style="letter-spacing:-.3pt">« Qu’ai-je dit ? Vains efforts ; non, mon cœur brûle encore.</span></l>
-            <l n="242" xml:id="l242"><span style="letter-spacing:-.3pt">« Oublier mon amant ! Je sens que je l’adore.</span></l>
-            <l n="243" xml:id="l243"><span style="letter-spacing:-.3pt">« En sons harmonieux il exprimait si bien</span></l>
-            <l n="244" xml:id="l244"><span style="letter-spacing:-.3pt">« Cette ardeur dont le charme unit mon cœur au sien !</span></l>
-            <l n="245" xml:id="l245"><span style="letter-spacing:-.3pt">« Par l’hymen à ses vœux je puis être ravie,</span></l>
-            <l n="246" xml:id="l246"><span style="letter-spacing:-.3pt">« Mais c’est pour l’adorer que je tiens à la vie. »</span></l>
-            <l n="247" xml:id="l247"><span style="letter-spacing:-.3pt">Fort bien, Madame ; il y a du nerf, beau coup de nerf dans votre diction ; mais je crois que Laure fait place à la charmante Armantine, et qu’Armantine pense moins à Pétrarque qu’à Belton.</span></l>
-            <l n="248" xml:id="l248"><span style="letter-spacing:-.3pt">Je continue :</span></l>
-            <l n="249" xml:id="l249"><span style="letter-spacing:-.3pt">« Puisqu’il faut renoncer à l’amour, au bonheur,</span></l>
-            <l n="250" xml:id="l250"><span style="letter-spacing:-.3pt">« Et puisque le silence est fixé sur mon cœur,</span></l>
-            <l n="251" xml:id="l251"><span style="letter-spacing:-.3pt">« Je me tairai : je dois, souffrante et solitaire,</span></l>
-            <l n="252" xml:id="l252"><span style="letter-spacing:-.3pt">« D’un amour malheureux accepter le mystère ;</span></l>
-            <l n="253" xml:id="l253"><span style="letter-spacing:-.3pt">« Mais, du moins, je pourrai d’un sentiment discret</span></l>
-            <l n="254" xml:id="l254"><span style="letter-spacing:-.3pt">« Nourrir ma solitude à l’abri du secret.</span></l>
-            <l n="255" xml:id="l255"><span style="letter-spacing:-.3pt">« Là d’un bonheur perdu j’invoquerai les charmes,</span></l>
-            <l n="256" xml:id="l256"><span style="letter-spacing:-.3pt">« Et les feux de mon cœur s’éteindront dans les larmes ! »</span></l>
-            <l n="257" xml:id="l257"><span style="letter-spacing:-.3pt">Parfait ! admirable ! Je vous reçois, Madame, sans autre examen.</span></l>
-            <l n="258" xml:id="l258"> </l>
-            <l n="259" xml:id="l259"> </l>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="165">Madame, est-ce moi que vous demandez ?</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="166">Je demande les conseils de Monsieur Molière.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="167">Madame se destine au théâtre ?</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="168">On m’a dit que vous formiez, pour Monseigneur le Prince de Conti, une troupe de comédie et de tragédie ?</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="169">C’est vrai.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="170">J’ai déjà joué la tragédie... mais hélas ! les peines du cœur...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="171">Sont profondes... Auriez-vous trouvé un infidèle ? j’ai peine à le croire.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="172">Vous êtes trop bon... Mais j’eus le malheur d’écouter un jeune homme fort aimable ; on le nomme Belton.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="173">Belton !</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="174">Le perfide s’est éloigné !...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="175">Vous le retrouverez.</l>
+            <l n="176">Air : Car ça ferait de la peine à maman.</l>
+            <l n="177">Auprès de vous peut-on être infidèle ?</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="178">Vous consentez donc à me prendre à l’essai ?</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="179">J’y consens de tout mon cœur. Récitez quelques vers, Madame, et vous n’aurez plus rien à désirer.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="180">En voici, Monsieur ; ils sont d’une tragédie nouvelle dont la scène se passe à Avignon.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="181">À Avignon ! n’importe ; et le titre ?</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="182">Pétrarque.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="183">Va pour Pétrarque... J’écoute.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="184">Je commence :</l>
+            <l n="185">« Il m’aime, et je ne puis accepter son amour.</l>
+            <l n="186">« Je pars demain ; demain avant la fin du jour,</l>
+            <l n="187">« Je quitterai ces lieux, cette douce retraite</l>
+            <l n="188">« Où soupira longtemps l’amante du Poète ;</l>
+            <l n="189">« L’impérieux devoir, prompt à me censurer,</l>
+            <l n="190">« Me défend de le plaindre, et lui laisse ignorer</l>
+            <l n="191">« Les feux que dans mon cœur alluma sa tendresse.</l>
+            <l n="192">« Ah ! du plus noble amour j’ai pu rêver l’ivresse ;</l>
+            <l n="193">« Mais cet amour cruel qui promit le bonheur,</l>
+            <l n="194">« Laure, en le chérissant, l’étouffé dans son cœur.</l>
+            <l n="195">« Qu’ai-je dit ? Vains efforts ; non, mon cœur brûle encore.</l>
+            <l n="196">« Oublier mon amant ! Je sens que je l’adore.</l>
+            <l n="197">« En sons harmonieux il exprimait si bien</l>
+            <l n="198">« Cette ardeur dont le charme unit mon cœur au sien !</l>
+            <l n="199">« Par l’hymen à ses vœux je puis être ravie,</l>
+            <l n="200">« Mais c’est pour l’adorer que je tiens à la vie. »</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="201">Fort bien, Madame ; il y a du nerf, beau coup de nerf dans votre diction ; mais je crois que Laure fait place à la charmante Armantine, et qu’Armantine pense moins à Pétrarque qu’à Belton.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="202">Je continue :</l>
+            <l n="203">« Puisqu’il faut renoncer à l’amour, au bonheur,</l>
+            <l n="204">« Et puisque le silence est fixé sur mon cœur,</l>
+            <l n="205">« Je me tairai : je dois, souffrante et solitaire,</l>
+            <l n="206">« D’un amour malheureux accepter le mystère ;</l>
+            <l n="207">« Mais, du moins, je pourrai d’un sentiment discret</l>
+            <l n="208">« Nourrir ma solitude à l’abri du secret.</l>
+            <l n="209">« Là d’un bonheur perdu j’invoquerai les charmes,</l>
+            <l n="210">« Et les feux de mon cœur s’éteindront dans les larmes ! »</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="211">Parfait ! admirable ! Je vous reçois, Madame, sans autre examen.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="12">
+        <div type="scene" xml:id="XII">
           <head>Scène XII</head>
-            <l n="260" xml:id="l260"> </l>
-            <l n="261" xml:id="l261"> </l>
-            <l n="262" xml:id="l262"><span style="letter-spacing:-.3pt">Ô ciel ! Armantine !</span></l>
-            <l n="263" xml:id="l263"><span style="letter-spacing:-.3pt">C’est Belton !</span></l>
-            <l n="264" xml:id="l264"><span style="letter-spacing:-.3pt">Vous le voyez, l’amour a d’heureuses rencontres. Je vous l’ai dit, belle Armantine : je vous rends votre infidèle.</span></l>
-            <l n="265" xml:id="l265"><span style="letter-spacing:-.3pt">Il ne me convient pas de descendre dans son cœur ; je ne veux point d’un amour que rappellerait la contrainte ; je m’en rapporte à votre prudence, Monsieur, à votre connaissance du cœur humain... et s’il ne m’aime plus, je vais m’ensevelir dans un désert...</span></l>
-            <l n="266" xml:id="l266"><span style="letter-spacing:-.3pt">« Là d’un bonheur perdu j’invoquerai les charmes,</span></l>
-            <l n="267" xml:id="l267"><span style="letter-spacing:-.3pt">« Et les feux de mon cœur s’éteindront dans les larmes ! »</span></l>
-            <l n="268" xml:id="l268"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Elle sort.</span></span></i></l>
-            <l n="269" xml:id="l269"> </l>
-            <l n="270" xml:id="l270"> </l>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="212">Ô ciel ! Armantine !</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="213">C’est Belton !</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="214">Vous le voyez, l’amour a d’heureuses rencontres. Je vous l’ai dit, belle Armantine : je vous rends votre infidèle.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE, à Molière.</speaker>
+            <l n="215">Il ne me convient pas de descendre dans son cœur ; je ne veux point d’un amour que rappellerait la contrainte ; je m’en rapporte à votre prudence, Monsieur, à votre connaissance du cœur humain... et s’il ne m’aime plus, je vais m’ensevelir dans un désert...</l>
+            <l n="216">« Là d’un bonheur perdu j’invoquerai les charmes,</l>
+            <l n="217">« Et les feux de mon cœur s’éteindront dans les larmes ! »</l>
+            <l n="218">Elle sort.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="13">
+        <div type="scene" xml:id="XIII">
           <head>Scène XIII</head>
-            <l n="271" xml:id="l271"> </l>
-            <l n="272" xml:id="l272"> </l>
-            <l n="273" xml:id="l273"><span style="letter-spacing:-.3pt">Me voici dans une position difficile. Allons, Belton, parlez-moi franchement. Aimez-vous Armantine ?</span></l>
-            <l n="274" xml:id="l274"><span style="letter-spacing:-.3pt">Monsieur Molière, je suis incapable de manquer à tant de confiance : Armantine a des talents, des qualités estimables, et je me suis senti pour elle certain penchant...</span></l>
-            <l n="275" xml:id="l275"><span style="letter-spacing:-.3pt">Vous l’aimez donc ?</span></l>
-            <l n="276" xml:id="l276"><span style="letter-spacing:-.3pt">J’ai cru que je l’aimais... C’était une aimable illusion... et depuis...</span></l>
-            <l n="277" xml:id="l277"><span style="letter-spacing:-.3pt">Expliquez-vous.</span></l>
-            <l n="278" xml:id="l278"><span style="letter-spacing:-.3pt">Depuis, j’en ai vu une autre...</span></l>
-            <l n="279" xml:id="l279"><span style="letter-spacing:-.3pt">Vous êtes volage.</span></l>
-            <l n="280" xml:id="l280"><span style="letter-spacing:-.3pt">Je m’étais trompé... Mais quand vous connaîtrez celle que je chéris, que j’adore, vous approuverez un sentiment inexprimable...</span></l>
-            <l n="281" xml:id="l281"><span style="letter-spacing:-.3pt">Je dois compatir à vos faiblesses ; je connais les hommes, je me connais, et j’ai aussi les miennes.</span></l>
-            <l n="282" xml:id="l282"><span style="letter-spacing:-.3pt">Vous aimez...</span></l>
-            <l n="283" xml:id="l283"><span style="letter-spacing:-.3pt">La plus séduisante des femmes.</span></l>
-            <l n="284" xml:id="l284"><span style="letter-spacing:-.3pt">C’est comme la mienne.</span></l>
-            <l n="285" xml:id="l285"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : De la prison de Pélagie,</span></span></i></l>
-            <l n="286" xml:id="l286"> </l>
-            <l n="287" xml:id="l287"> </l>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="219">Me voici dans une position difficile. Allons, Belton, parlez-moi franchement. Aimez-vous Armantine ?</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="220">Monsieur Molière, je suis incapable de manquer à tant de confiance : Armantine a des talents, des qualités estimables, et je me suis senti pour elle certain penchant...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="221">Vous l’aimez donc ?</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="222">J’ai cru que je l’aimais... C’était une aimable illusion... et depuis...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="223">Expliquez-vous.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="224">Depuis, j’en ai vu une autre...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="225">Vous êtes volage.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="226">Je m’étais trompé... Mais quand vous connaîtrez celle que je chéris, que j’adore, vous approuverez un sentiment inexprimable...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="227">Je dois compatir à vos faiblesses ; je connais les hommes, je me connais, et j’ai aussi les miennes.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="228">Vous aimez...</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="229">La plus séduisante des femmes.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="230">C’est comme la mienne.</l>
+            <l n="231">Air : De la prison de Pélagie,</l>
+            <l n="232">Elle est douce, elle est bienfaisante,</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="233">Pleine de bonté, de candeur.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="234">On vante sa grâce touchante.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="235">Et son esprit et sa pudeur.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="236">Elle est moins belle que jolie.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="237">D’un regard elle sait charmer.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="238">Et qui pourrait ne pas l’aimer ?</l>
+          </sp>
+          <sp who="#ensemble">
+            <speaker>ENSEMBLE.</speaker>
+            <l n="239">Vous venez de peindre Sophie.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="14">
+        <div type="scene" xml:id="XIV">
           <head>Scène XIV</head>
-            <l n="288" xml:id="l288"> </l>
-            <l n="289" xml:id="l289"> </l>
-            <l n="290" xml:id="l290"><span style="letter-spacing:-.3pt">Je crois qu’on vient de me nommer.</span></l>
-            <l n="291" xml:id="l291"><span style="letter-spacing:-.3pt">C’est elle !</span></l>
-            <l n="292" xml:id="l292"><span style="letter-spacing:-.3pt">C’est Sophie !</span></l>
-            <l n="293" xml:id="l293"><span style="letter-spacing:-.3pt">Que signifie ce langage ?</span></l>
-            <l n="294" xml:id="l294"><span style="letter-spacing:-.3pt">Je ne le vois que trop bien ; vous connaissez mes sentiments, Sophie ; j’ai un rival ; Belton vous aime.</span></l>
-            <l n="295" xml:id="l295"><span style="letter-spacing:-.3pt">Je conçois qu’on puisse m’aimer ; mais je n’approuve pas ces indiscrètes confidences.</span></l>
-            <l n="296" xml:id="l296"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Ce que j’éprouve en vous voyant.</span></span></i></l>
-            <l n="297" xml:id="l297"><span style="letter-spacing:-.3pt">Nous avons tort, tous deux tort, je l’avoue.</span></l>
-            <l n="298" xml:id="l298"><span style="letter-spacing:-.3pt">Mais vous êtes aussi indulgente que jolie.</span></l>
-            <l n="299" xml:id="l299"><span style="letter-spacing:-.3pt">J’en conviens ; cependant, je ne puis aimer que, l’un de vous.</span></l>
-            <l n="300" xml:id="l300"><span style="letter-spacing:-.3pt">C’est juste.</span></l>
-            <l n="301" xml:id="l301"><span style="letter-spacing:-.3pt">Eh bien, prononcez, et que celui qui n’aura pas eu le bonheur de vous plaire, s’éloigne sans murmurer.</span></l>
-            <l n="302" xml:id="l302"><span style="letter-spacing:-.3pt">J’y souscris.</span></l>
-            <l n="303" xml:id="l303"><span style="letter-spacing:-.3pt">Puisqu’il le faut, et quoiqu’il m’en coûte, je vais me prononcer.</span></l>
-            <l n="304" xml:id="l304"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : C’est à mon maître en l’art de plaire.</span></span></i></l>
-            <l n="305" xml:id="l305"><span style="letter-spacing:-.3pt">Et moi, j’ai mon congé !</span></l>
-            <l n="306" xml:id="l306"><span style="letter-spacing:-.3pt">Que de bonheur !... Belton, vous revenez à votre Armantine ?</span></l>
-            <l n="307" xml:id="l307"><span style="letter-spacing:-.3pt">Non... Je resterai garçon.</span></l>
-            <l n="308" xml:id="l308"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Dis-moi donc, mon cher Hypolite.</span></span></i></l>
-            <l n="309" xml:id="l309"> </l>
-            <l n="310" xml:id="l310"> </l>
+          <sp who="#sophie">
+            <speaker>SOPHIE.</speaker>
+            <l n="240">Je crois qu’on vient de me nommer.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="241">C’est elle !</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="242">C’est Sophie !</l>
+          </sp>
+          <sp who="#sophie">
+            <speaker>SOPHIE.</speaker>
+            <l n="243">Que signifie ce langage ?</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="244">Je ne le vois que trop bien ; vous connaissez mes sentiments, Sophie ; j’ai un rival ; Belton vous aime.</l>
+          </sp>
+          <sp who="#sophie">
+            <speaker>SOPHIE.</speaker>
+            <l n="245">Je conçois qu’on puisse m’aimer ; mais je n’approuve pas ces indiscrètes confidences.</l>
+            <l n="246">Air : Ce que j’éprouve en vous voyant.</l>
+            <l n="247">Dix mortels peuvent m’adorer,</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="248">Nous avons tort, tous deux tort, je l’avoue.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="249">Mais vous êtes aussi indulgente que jolie.</l>
+          </sp>
+          <sp who="#sophie">
+            <speaker>SOPHIE.</speaker>
+            <l n="250">J’en conviens ; cependant, je ne puis aimer que, l’un de vous.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="251">C’est juste.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="252">Eh bien, prononcez, et que celui qui n’aura pas eu le bonheur de vous plaire, s’éloigne sans murmurer.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="253">J’y souscris.</l>
+          </sp>
+          <sp who="#sophie">
+            <speaker>SOPHIE.</speaker>
+            <l n="254">Puisqu’il le faut, et quoiqu’il m’en coûte, je vais me prononcer.</l>
+            <l n="255">Air : C’est à mon maître en l’art de plaire.</l>
+            <l n="256">C’est à celui dont les ouvrages.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="257">Et moi, j’ai mon congé !</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="258">Que de bonheur !... Belton, vous revenez à votre Armantine ?</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="259">Non... Je resterai garçon.</l>
+            <l n="260">Air : Dis-moi donc, mon cher Hypolite.</l>
+            <l n="261">Je me résigne avec courage,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="15">
+        <div type="scene" xml:id="XV">
           <head>Scène XV</head>
-            <l n="311" xml:id="l311"> </l>
-            <l n="312" xml:id="l312"> </l>
-            <l n="313" xml:id="l313"><span style="letter-spacing:-.3pt">Messieurs, permettez-moi de vous présenter mon frère, le courageux Valaurier ; il revient de l’armée d’Italie.</span></l>
-            <l n="314" xml:id="l314"><span style="letter-spacing:-.3pt">Un grenadier français ! c’est un brave.</span></l>
-            <l n="315" xml:id="l315"><span style="letter-spacing:-.3pt">Qu’il soit le bienvenu... Et toi, Belton, amende ton cœur.</span></l>
-            <l n="316" xml:id="l316"><span style="letter-spacing:-.3pt">Vous le voulez, Monsieur Molière ; allons, je me rends ! Armantine...</span></l>
-            <l n="317" xml:id="l317"><span style="letter-spacing:-.3pt">Ingrat !</span></l>
-            <l n="318" xml:id="l318"><span style="letter-spacing:-.3pt">Je reviens à vous pour jamais.</span></l>
-            <l n="319" xml:id="l319"><span style="letter-spacing:-.3pt">Je vous pardonne... Valaurier, voici mon époux, votre frère.</span></l>
-            <l n="320" xml:id="l320"><span style="letter-spacing:-.3pt">Mon frère ! de tout mon cœur. </span></l>
-            <l n="321" xml:id="l321"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il lui prend la main.</span></span></i></l>
-            <l n="322" xml:id="l322"><span style="letter-spacing:-.3pt">Vous allez vous fixer dans cette ville ?</span></l>
-            <l n="323" xml:id="l323"><span style="letter-spacing:-.3pt">Sans doute.</span></l>
-            <l n="324" xml:id="l324"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Puisque nous avons les rayons.</span></span></i></l>
-            <l n="325" xml:id="l325"> </l>
-            <l n="326" xml:id="l326"> </l>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="262">Messieurs, permettez-moi de vous présenter mon frère, le courageux Valaurier ; il revient de l’armée d’Italie.</l>
+          </sp>
+          <sp who="#sophie">
+            <speaker>SOPHIE.</speaker>
+            <l n="263">Un grenadier français ! c’est un brave.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="264">Qu’il soit le bienvenu... Et toi, Belton, amende ton cœur.</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="265">Vous le voulez, Monsieur Molière ; allons, je me rends ! Armantine...</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="266">Ingrat !</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="267">Je reviens à vous pour jamais.</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="268">Je vous pardonne... Valaurier, voici mon époux, votre frère.</l>
+          </sp>
+          <sp who="#valaurier">
+            <speaker>VALAURIER.</speaker>
+            <l n="269">Mon frère ! de tout mon cœur. </l>
+            <l n="270">Il lui prend la main.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="271">Vous allez vous fixer dans cette ville ?</l>
+          </sp>
+          <sp who="#valaurier">
+            <speaker>VALAURIER.</speaker>
+            <l n="272">Sans doute.</l>
+            <l n="273">Air : Puisque nous avons les rayons.</l>
+            <l n="274">Je veux demeurer dans ces lieux,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="16">
+        <div type="scene" xml:id="XVI">
           <head>Scène XVI</head>
-            <l n="327" xml:id="l327"> </l>
-            <l n="328" xml:id="l328"> </l>
-            <l n="329" xml:id="l329"><span style="letter-spacing:-.3pt">Eh bien, Monsieur, avez-vous engagé définitivement cet excellent jeune homme ?</span></l>
-            <l n="330" xml:id="l330"><span style="letter-spacing:-.3pt">Il est des nôtres.</span></l>
-            <l n="331" xml:id="l331"><span style="letter-spacing:-.3pt">Tant mieux !</span></l>
-            <l n="332" xml:id="l332"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Les cancans.</span></span></i></l>
-            <l n="333" xml:id="l333"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Parlant.</span></span></i></l>
-            <l n="334" xml:id="l334"><span style="letter-spacing:-.3pt">Non, Messieurs, car je ne les aime pas ; Monsieur Molière le sait mieux que personne... Si l’on parle d’une jeune fille du quartier qui a eu une petite faiblesse ; de la femme d’un de nos acteurs qui se soit oubliée un instant, cela ne me regarde pas, je ne dis rien. Mais quand on m’intéresse comme ce jeune homme, cet aimable Belton, il m’est bien permis de dire.</span></l>
-            <l n="335" xml:id="l335"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Achevant l’air.</span></span></i></l>
-            <l n="336" xml:id="l336"> </l>
-            <l n="337" xml:id="l337"> </l>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="275">Eh bien, Monsieur, avez-vous engagé définitivement cet excellent jeune homme ?</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="276">Il est des nôtres.</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="277">Tant mieux !</l>
+            <l n="278">Air : Les cancans.</l>
+            <l n="279">L’amoureux, l’amoureux,</l>
+            <l n="280">Parlant.</l>
+            <l n="281">Non, Messieurs, car je ne les aime pas ; Monsieur Molière le sait mieux que personne... Si l’on parle d’une jeune fille du quartier qui a eu une petite faiblesse ; de la femme d’un de nos acteurs qui se soit oubliée un instant, cela ne me regarde pas, je ne dis rien. Mais quand on m’intéresse comme ce jeune homme, cet aimable Belton, il m’est bien permis de dire.</l>
+            <l n="282">Achevant l’air.</l>
+            <l n="283">L’amoureux, l’amoureux,</l>
           </sp>
         </div>
-        <div type="scene" xml:id="17">
+        <div type="scene" xml:id="XVII">
           <head>Scène XVII</head>
-            <l n="338" xml:id="l338"> </l>
-            <l n="339" xml:id="l339"> </l>
-            <l n="340" xml:id="l340"><span style="letter-spacing:-.3pt">Voici la Marquise, Messieurs ; elle a fait une conquête !</span></l>
-            <l n="341" xml:id="l341"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air de Marianne.</span></span></i></l>
-            <l n="342" xml:id="l342"><span style="letter-spacing:-.3pt">Messieurs, j’ai retenu tous les équipages de Bridois, et je vous propose une partie à Vaucluse.</span></l>
-            <l n="343" xml:id="l343"><span style="letter-spacing:-.3pt">J’accepte ; et toi Mignard ?</span></l>
-            <l n="344" xml:id="l344"><span style="letter-spacing:-.3pt">Je suis prêt ; j’ai mes crayons.</span></l>
-            <l n="345" xml:id="l345"><span style="letter-spacing:-.3pt">Et mon amour.</span></l>
-            <l n="346" xml:id="l346"><span style="letter-spacing:-.3pt">Sophie vient avec nous ?</span></l>
-            <l n="347" xml:id="l347"><span style="letter-spacing:-.3pt">Je ne vous quitte plus.</span></l>
-            <l n="348" xml:id="l348"><span style="letter-spacing:-.3pt">Qu’il sera doux de voyager entre l’amour et l’amitié !</span></l>
-            <l n="349" xml:id="l349"><span style="letter-spacing:-.3pt">Armantine...</span></l>
-            <l n="350" xml:id="l350"><span style="letter-spacing:-.3pt">Méchant !... Nous sommes du voyage.</span></l>
-            <l n="351" xml:id="l351"><span style="letter-spacing:-.3pt">Je vous suivrai.</span></l>
-            <l n="352" xml:id="l352"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : Prenons d’abord l’air bien méchant.</span></span></i></l>
-            <l n="353" xml:id="l353"><span style="letter-spacing:-.3pt">Les voitures sont prêtes ; partons pour la Fontaine de Vaucluse.</span></l>
-            <l n="354" xml:id="l354"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Vaudeville.</span></span></i></l>
-            <l n="355" xml:id="l355"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Air : V’là c’ que c’est qu’ l’exactitude.</span></span></i></l>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="284">Voici la Marquise, Messieurs ; elle a fait une conquête !</l>
+            <l n="285">Air de Marianne.</l>
+            <l n="286">De Mignard la place est conquise :</l>
           </sp>
-          <p>FIN</p>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="287">Messieurs, j’ai retenu tous les équipages de Bridois, et je vous propose une partie à Vaucluse.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="288">J’accepte ; et toi Mignard ?</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="289">Je suis prêt ; j’ai mes crayons.</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="290">Et mon amour.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="291">Sophie vient avec nous ?</l>
+          </sp>
+          <sp who="#sophie">
+            <speaker>SOPHIE.</speaker>
+            <l n="292">Je ne vous quitte plus.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="293">Qu’il sera doux de voyager entre l’amour et l’amitié !</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="294">Armantine...</l>
+          </sp>
+          <sp who="#armantine">
+            <speaker>ARMANTINE.</speaker>
+            <l n="295">Méchant !... Nous sommes du voyage.</l>
+          </sp>
+          <sp who="#valaurier">
+            <speaker>VALAURIER.</speaker>
+            <l n="296">Je vous suivrai.</l>
+            <l n="297">Air : Prenons d’abord l’air bien méchant.</l>
+            <l n="298">Avec vous je vais voyager ;</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="299">Les voitures sont prêtes ; partons pour la Fontaine de Vaucluse.</l>
+            <l n="300">Vaudeville.</l>
+            <l n="301">Air : V’là c’ que c’est qu’ l’exactitude.</l>
+          </sp>
+          <sp who="#molière">
+            <speaker>MOLIÈRE.</speaker>
+            <l n="302">Toi qui des bons Avignonnais</l>
+          </sp>
+          <sp who="#madame-d’ampouf">
+            <speaker>MADAME D’AMPOUF.</speaker>
+            <l n="303">Tes gazons, tes sites charmants,</l>
+          </sp>
+          <sp who="#belton">
+            <speaker>BELTON.</speaker>
+            <l n="304">Vaucluse aux amants de nos jours</l>
+          </sp>
+          <sp who="#mignard">
+            <speaker>MIGNARD.</speaker>
+            <l n="305">À cette source où l’amitié</l>
+          </sp>
+          <sp who="#bridois">
+            <speaker>BRIDOIS.</speaker>
+            <l n="306">Je n’ai jamais trouvé rien d’ beau</l>
+          </sp>
+          <sp who="#laforest">
+            <speaker>LAFOREST.</speaker>
+            <l n="307">Cette fontaine est à vos yeux</l>
+          </sp>
+          <sp who="#valaurier">
+            <speaker>VALAURIER.</speaker>
+            <l n="308">Il paraît que les Troubadours</l>
+          </sp>
+          <sp who="#sophie">
+            <speaker>SOPHIE, au public.</speaker>
+            <l n="309">Malgré le souvenir flatteur</l>
+            <l n="310" />
+          </sp>
         </div>
       </div>
     </body>

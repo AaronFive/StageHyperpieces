@@ -1,1546 +1,1533 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Une visite à Bedlam</title>
-        <author key="Eugène SCRIBE - Charles-Gaspard DELESTRE-POIRSON | (naissance-mort)">Eugène SCRIBE - Charles-Gaspard DELESTRE-POIRSON |</author>
+        <title type="main" />
+        <title type="sub">Vaudeville</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/940</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène SCRIBE - Charles-Gaspard DELESTRE-POIRSON |</author>. <title>Une visite à Bedlam</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/940</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1818-04-24">Représentée pour la première fois, à Paris, sur le Théâtre du Vaudeville, le 24 avril 1818.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="alfred-de-roseval" sex="SEX">
+            <persName>ALFRED DE ROSEVAL</persName>
+          </person>
+          <person xml:id="amélie" sex="SEX">
+            <persName>AMÉLIE</persName>
+          </person>
+          <person xml:id="le-baron-de-saint-elme" sex="SEX">
+            <persName>LE BARON DE SAINT-ELME</persName>
+          </person>
+          <person xml:id="crescendo" sex="SEX">
+            <persName>CRESCENDO</persName>
+          </person>
+          <person xml:id="tomy" sex="SEX">
+            <persName>TOMY</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Vaudeville</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q186286</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1818-04-24" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre du Vaudeville, le 24 avril 1818.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Une visite à Bedlam</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte, mêlée de vaudevilles.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre du Vaudeville, le 24 avril 1818.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="alfred-de-roseval">ALFRED DE ROSEVAL</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="amélie">AMÉLIE</role>
-              <roleDesc>, <em>sa femme</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-baron-de-saint-elme">LE BARON DE SAINT-ELME</role>
-              <roleDesc>, <em>son oncle</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="crescendo">CRESCENDO</role>
-              <roleDesc>, <em>compositeur italien</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="tomy">TOMY</role>
-              <roleDesc>, <em>jardinier du baron</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène se passe auprès de la nouvelle maison de fous de Bedlam, aux portes de Londres.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Le théâtre représente un parc à l’anglaise fort élégant, orné de statues et d’arbres exotiques ; dans le fond, un jardin fermé d’un grillage, avec une porte également en treillage ; à gauche, sur le premier plan, un pavillon ; au troisième plan, l’entrée du parc ; sur le devant du théâtre, à droite, un saule pleureur, avec un banc de gazon au pied.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="crescendo" xml:id="1-1">
-            <speaker>LE BARON, AMÉLIE, CRESCENDO</speaker>
-            <l n="10" xml:id="l10"> </l>
-          </sp>
-          <sp who="crescendo" xml:id="1-2">
-            <speaker>CRESCENDO.</speaker>
-            <l n="11" xml:id="l11">Oui, signora, de l’ame, dou sentiment, de la méthode et de la voix ; voilà tout ce qu’il faut pour la mousique italienne, et vous possédez tout cela dans la perfection.</l>
-          </sp>
-          <sp who="amélie" xml:id="1-3">
-            <speaker>AMÉLIE.</speaker>
-            <l n="12" xml:id="l12">Je crains que votre écolière ne vous fasse pas honneur.</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-4">
-            <speaker>CRESCENDO.</speaker>
-            <l n="13" xml:id="l13">Point du tout. Il n’y a pas à dix lieues à la ronde oune de nos ledys qui puisse soutenir la comparaison.</l>
-          </sp>
-          <sp who="le-baron" xml:id="1-5">
-            <speaker>LE BARON.</speaker>
-            <l n="14" xml:id="l14">Savez-vous, signor Crescendo, que je m’étonne toujours de voir un talent tel que le vôtre rester en Angleterre.</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-6">
-            <speaker>CRESCENDO.</speaker>
-            <l n="15" xml:id="l15">Que voulez-vous ?</l>
-            <stage><hi rend="italic"><em>Air : Un homme pour faire un tableau.</em></hi></stage>
-            <l n="17" xml:id="l17">D’ailleurs, le grand homme est de tous les pays... Je vous réserve aujourd’hui un petit air d’opéra que j’achève en ce moment.</l>
-            <l n="18" xml:id="l18">Car je compose, tel que vous me voyez ; ce qui ne m’empêche point d’aller à droite et à gauche donner des leçons dans les châteaux voisins.</l>
-          </sp>
-          <sp who="le-baron" xml:id="1-7">
-            <speaker>LE BARON.</speaker>
-            <stage><hi rend="italic">J’entends : <em>I virtuosi ambulanti</em>.</hi></stage>
-          </sp>
-          <sp who="crescendo" xml:id="1-8">
-            <speaker>CRESCENDO.</speaker>
-            <l n="20" xml:id="l20">C’est cela même. Je déjeûne le matin à Bedlam, je dîne à Southwarck, et je soupe à Tudor-Hall : le génie mange partout. Moi, je ne suis pas fier, et j’affectionne surtout votre château, monsou le baron. Quoique Français, vous savez apprécier le macaroni ; et l’on trouve ici les égards, les attentions, une voix délicieuse, une couisine française et une mousique italienne. C’est un séjour enchanté !</l>
-          </sp>
-          <sp who="le-baron" xml:id="1-9">
-            <speaker>LE BARON.</speaker>
-            <l n="21" xml:id="l21">Je suis charmé qu’il vous plaise. Mais est-ce que nous ne continuons pas la leçon ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-10">
-            <speaker>CRESCENDO.</speaker>
-            <l n="22" xml:id="l22">La signora a l’air fatigué. Je vais avant le dîner revoir la romance que votre charmante nièce m’a permis de loui dédier. Un mot encore : comment mettrai-je pour la gravoure ? À madame, ou à madamigelle ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="1-11">
-            <speaker>LE BARON.</speaker>
-            <l n="23" xml:id="l23">Qu’est-ce que cela fait ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-12">
-            <speaker>CRESCENDO.</speaker>
-            <l n="24" xml:id="l24">Oh ! c’est très essentiel. Voyez-vous en gros caractères : Dédié par son très humble serviteur Crescendo... à et cætera, et caetera.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville du Printemps.</em></hi></stage>
-          <stage>AMÉLIE.</stage>
-          </sp>
-          <sp who="crescendo" xml:id="1-13">
-            <speaker>CRESCENDO.</speaker>
-            <l n="26" xml:id="l26">Mais il y a une difficoulté : c’est que depuis un mois que je donne des leçons à la signora, je n’ai pas encore pu savoir si elle était madame ou madamigelle.</l>
-          </sp>
-          <sp who="le-baron" xml:id="1-14">
-            <speaker>LE BARON.</speaker>
-            <l n="27" xml:id="l27">Était-ce bien nécessaire à connaître pour lui enseigner des roulades et des cadences ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-15">
-            <speaker>CRESCENDO.</speaker>
-            <l n="28" xml:id="l28">Noullement, et je vous prie d’excouser mon indiscrétion.</l>
-          </sp>
-          <sp who="le-baron" xml:id="1-16">
-            <speaker>LE BARON.</speaker>
-            <l n="29" xml:id="l29">Ce n’en est pas une ; et vous pouvez mettre hardiment...</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-17">
-            <speaker>CRESCENDO.</speaker>
-            <l n="30" xml:id="l30">À madamigelle.</l>
-          </sp>
-          <sp who="le-baron" xml:id="1-18">
-            <speaker>LE BARON.</speaker>
-            <l n="31" xml:id="l31">Au contraire : à madame, madame la comtesse Amélie.</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-19">
-            <speaker>CRESCENDO.</speaker>
-            <l n="32" xml:id="l32">Ah ! madame ! c’est différent. Je m’en étais toujours douté. C’est qu’il est étonnant que nous n’ayons pas encore vou monsieur le comte. Il doit s’estimer bien heureux, monsieur le comte ; et il faut que madame se soit mariée bien jeune... Mais, pardon ; c’est que, voyez-vous, l’amour et la jeunesse...</l>
-            <l n="33" xml:id="l33">J’ai un rondeau là-dessus.</l>
-            <stage><hi rend="italic"><em>Se frappant le front.</em></hi></stage>
-            <l n="35" xml:id="l35">Attendez : c’est la fin de mon grand air. Depuis deux jours je la guettais :</l>
-            <l n="36" xml:id="l36">Crudel tyran !... ah ! ah ! ah ! ah !</l>
-            <l n="37" xml:id="l37">J’y suis ; je cours profiter de l’inspiration.</l>
-          </sp>
-          <sp who="amélie" xml:id="1-20">
-            <speaker>AMÉLIE.</speaker>
-            <l n="38" xml:id="l38">Prenez garde qu’elle ne vous mène trop loin.</l>
-          </sp>
-          <sp who="crescendo" xml:id="1-21">
-            <speaker>CRESCENDO.</speaker>
-            <l n="39" xml:id="l39">Soyez tranquille, je ne passerai pas l’heure du dîner.</l>
-            <stage><hi rend="italic"><em>Il sort en chantant et en gesticulant.</em></hi></stage>
-            <l n="41" xml:id="l41"> </l>
-            <l n="42" xml:id="l42"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène  II</head>
-            <l n="43" xml:id="l43"> </l>
-          <sp who="amélie" xml:id="2-1">
-            <speaker>LE BARON, AMÉLIE</speaker>
-            <l n="44" xml:id="l44"> </l>
-          </sp>
-          <sp who="amélie" xml:id="2-2">
-            <speaker>AMÉLIE.</speaker>
-            <l n="45" xml:id="l45">Allons, et lui aussi va faire des commentaires sur la conduite de mon mari, s’étonner de ce que monsieur le comte...</l>
-          </sp>
-          <sp who="le-baron" xml:id="2-3">
-            <speaker>LE BARON.</speaker>
-            <l n="46" xml:id="l46">C’est qu’en effet il y a de quoi s’étonner.</l>
-          </sp>
-          <sp who="amélie" xml:id="2-4">
-            <speaker>AMÉLIE.</speaker>
-            <l n="47" xml:id="l47">Eh ! pourquoi donc, mon oncle ? Je trouve tout naturel qu’un mari reste éloigné de sa femme.</l>
-          </sp>
-          <sp who="le-baron" xml:id="2-5">
-            <speaker>LE BARON.</speaker>
-            <l n="48" xml:id="l48">Oui, mais qu’il y reste pendant huit ou dix mois ! On m’a assuré cependant qu’il t’aimait éperdument.</l>
-          </sp>
-          <sp who="amélie" xml:id="2-6">
-            <speaker>AMÉLIE.</speaker>
-            <l n="49" xml:id="l49">Mon oncle, vous n’étiez pas à Paris lorsqu’on m’unit à monsieur Alfred de Roseval, ainsi vous ne pouvez pas savoir...</l>
-          </sp>
-          <sp who="le-baron" xml:id="2-7">
-            <speaker>LE BARON.</speaker>
-            <l n="50" xml:id="l50">Non ; mais sans le connaître, je sais que c’est le plus étourdi, le plus aimable et le plus brave de tous les officiers français.</l>
-          </sp>
-          <sp who="amélie" xml:id="2-8">
-            <speaker>AMÉLIE.</speaker>
-            <l n="51" xml:id="l51">Un véritable enfant, qui se croyait le plus heureux des hommes quand il était paré de son grand uniforme, ou qu’il montait son cheval de bataille ; et qui aurait tout sacrifié au bonheur de passer son régiment en revue !</l>
-          </sp>
-          <sp who="le-baron" xml:id="2-9">
-            <speaker>LE BARON.</speaker>
-            <l n="52" xml:id="l52">Vrai ? Eh bien ! il me semble impossible qu’un homme comme celui-là ne soit pas charmant.</l>
-          </sp>
-          <sp who="amélie" xml:id="2-10">
-            <speaker>AMÉLIE.</speaker>
-            <l n="53" xml:id="l53">En vérité, mon oncle, vous me donneriez de l’humeur !</l>
-          </sp>
-          <sp who="le-baron" xml:id="2-11">
-            <speaker>LE BARON.</speaker>
-            <l n="54" xml:id="l54">Non ; mais avec un tel caractère, on doit être gai, franc, incapable de tromper ; on doit aimer sa femme, et quoique tu en dises, il faut qu’il y ait un peu de ta faute, et tu ne m’as pas tout avoué.</l>
-          </sp>
-          <sp who="amélie" xml:id="2-12">
-            <speaker>AMÉLIE.</speaker>
-            <l n="55" xml:id="l55">Moi, mon oncle ! Grand dieu ! si on peut dire... Soyez notre juge : on nous maria ; il disait qu’il m’aimait, je voulus bien le croire : ils le disent tous, et l’on est convenu de ne pas disputer là dessus. Pendant huit jours, je dois pourtant lui rendre cette justice, il parut beaucoup plus occupé de moi que de ses chevaux, et même de son uniforme ! Il fallut partir pour une mission importante ; il en fut désolé, rien n’égala sa douleur ; moi-même, par compassion, je daignai en être touchée ! Au bout de huit jours, il devait m’écrire, quinze se passent ! Enfin la lettre arrive : elle a été retardée par une foule d’événements plus ou moins extraordinaires ; vous sentez qu’on n’est pas dupe de tout cela. Je réponds très froidement. On me récrit, mais d’un ton, vous en auriez été indigné ! Je ne réponds pas, comme vous vous en doutez bien : j’attends qu’on me fasse des excuses, qu’on me demande pardon ; eh bien ! point ! Un mois, deux mois se passent, aucunes nouvelles ! Vous sentez que, ma vie en eût-elle dépendu, je ne serais point revenue la première. À cette époque vous passez en France ; vous me proposez de quitter Paris, dont le séjour me paraissait insipide, de venir habiter avec vous un château que vous avez au bord de la Tamise, près du nouvel établissement de Bedlam. J’accepte avec joie, et c’est dans cet asile enchanteur, au sein des arts et de l’amitié, que vous croyez que je puis conserver quelques regrets ou former quelques désirs ! Non, mon oncle, rassurez-vous, je ne regrette rien ; je n’aime rien que vous seul, et je jouis, grâce au ciel, d’une tranquillité et d’une indifférence que rien ne pourra troubler.</l>
-          </sp>
-          <sp who="le-baron" xml:id="2-13">
-            <speaker>LE BARON.</speaker>
-            <l n="56" xml:id="l56">Le ton dont tu me le dis me persuade, et je ne conserve plus aucun doute. Il y a bien dans ton récit quelques petits détails que tu ne m’avais pas racontés ; mais c’est égal, tu as raison, complètement raison. Et que fait Alfred maintenant ?</l>
-          </sp>
-          <sp who="amélie" xml:id="2-14">
-            <speaker>AMÉLIE.</speaker>
-            <l n="57" xml:id="l57">J’ai appris indirectement que sa mission était terminée, et qu’il voyageait pour son plaisir.</l>
-            <stage><hi rend="italic"><em>Air de la Robe et des Bottes.</em></hi></stage>
-          <stage>LE BARON.</stage>
-          </sp>
-          <sp who="amélie" xml:id="2-15">
-            <speaker>AMÉLIE.</speaker>
-            <l n="59" xml:id="l59">Lui ! Quelle idée ! En tous cas ce serait inutile, car mon parti est pris ; je vous le dis sans humeur, sans colère : je ne le reverrai jamais ! Jamais je ne rendrai ma tendresse ni mon estime à quelqu’un qui, volontairement, a pu vivre une année entière éloigné de moi !</l>
-            <l n="60" xml:id="l60"> </l>
-            <l n="61" xml:id="l61"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="62" xml:id="l62"> </l>
-          <sp who="tomy" xml:id="3-1">
-            <speaker>LE BARON, AMÉLIE, TOMY</speaker>
-            <l n="63" xml:id="l63"> </l>
-          </sp>
-          <sp who="le-baron" xml:id="3-2">
-            <speaker>LE BARON.</speaker>
-            <l n="64" xml:id="l64">Eh bien ! que nous veut Tomy ?</l>
-          </sp>
-          <sp who="tomy" xml:id="3-3">
-            <speaker>TOMY.</speaker>
-            <l n="65" xml:id="l65">Ah ! c’est vous, not’ maître ? tant pire.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-4">
-            <speaker>LE BARON.</speaker>
-            <l n="66" xml:id="l66">Pourquoi tant pire ?</l>
-          </sp>
-          <sp who="tomy" xml:id="3-5">
-            <speaker>TOMY.</speaker>
-            <l n="67" xml:id="l67">C’est que j’ai quelque chose à vous demander.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-6">
-            <speaker>LE BARON.</speaker>
-            <l n="68" xml:id="l68">Eh bien ! imbécile ?</l>
-          </sp>
-          <sp who="tomy" xml:id="3-7">
-            <speaker>TOMY.</speaker>
-            <l n="69" xml:id="l69">Pas tant... Dans le fond, c’est bien à vous ; mais je m’entends : c’est à madame que je voulais d’abord m’adresser, parce que quand c’est madame qui parle, on est toujours sûr d’obtenir.</l>
-          </sp>
-          <sp who="amélie" xml:id="3-8">
-            <speaker>AMÉLIE.</speaker>
-            <l n="70" xml:id="l70">Vraiment ! je ne me croyais pas tant de crédit.</l>
-          </sp>
-          <sp who="tomy" xml:id="3-9">
-            <speaker>TOMY.</speaker>
-            <l n="71" xml:id="l71">Oh ! tout le monde ici le sait bien, allez.</l>
-          </sp>
-          <sp who="amélie" xml:id="3-10">
-            <speaker>AMÉLIE.</speaker>
-            <l n="72" xml:id="l72">Eh bien ! voyons donc, monsieur Tomy ?</l>
-          </sp>
-          <sp who="tomy" xml:id="3-11">
-            <speaker>TOMY.</speaker>
-            <l n="73" xml:id="l73">Madame, c’est que je viens de la taverne du Grand-Amiral.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-12">
-            <speaker>LE BARON.</speaker>
-            <l n="74" xml:id="l74">J’aurais dû m’en douter !</l>
-          </sp>
-          <sp who="tomy" xml:id="3-13">
-            <speaker>TOMY.</speaker>
-            <l n="75" xml:id="l75">Imaginez-vous que je trouve là un beau jeune homme qui arrivait en poste ; six chevaux, trois postillons ; clic, clac : tout était sens dessus dessous pour le recevoir... « Holà ! la fille, les garçons, toute la maison ; qu’on me donne à déjeûner ! » On voulait lui servir de ce bon porter que j’aime tant ! car il y en a d’excellent à la taverne de l’Amiral. Ah bien ! oui : du Champagne, du bordeaux, du vin de France ; vive la France ! Aussi faut-il lui rendre justice, il les a traités en compatriotes. Vous voyez que je ne vous passe rien.</l>
-          </sp>
-          <sp who="amélie" xml:id="3-14">
-            <speaker>AMÉLIE.</speaker>
-            <l n="76" xml:id="l76">Oh ! Tomy conte bien.</l>
-          </sp>
-          <sp who="tomy" xml:id="3-15">
-            <speaker>TOMY.</speaker>
-            <l n="77" xml:id="l77">Ah çà , pendant qu’il déjeunait et qu’il avait derrière lui deux grands laquais... « Madame l’hôtesse, est-il possible de visiter la nouvelle maison royale de Bedlam ? Je suis étranger, et je voudrais voir en détail ce bel établissement. » On lui dit alors que ça n’est pas public, et qu’à moins d’un mot de recommandation d’un des propriétaires des environs... « Eh ! qui diable voulez-vous qui me recommande ? je ne connais personne. » Alors, monsieur, je me suis avancé : je lui ai dit que s’il voulait permettre j’allais m’adresser à mon maître...</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-16">
-            <speaker>LE BARON.</speaker>
-            <l n="78" xml:id="l78">Ah ! nous y voilà !</l>
-          </sp>
-          <sp who="tomy" xml:id="3-17">
-            <speaker>TOMY.</speaker>
-            <l n="79" xml:id="l79">Qui était un riche et brave seigneur.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-18">
-            <speaker>LE BARON.</speaker>
-            <l n="80" xml:id="l80">Et tu lui as promis ta recommandation auprès de moi ?</l>
-          </sp>
-          <sp who="tomy" xml:id="3-19">
-            <speaker>TOMY.</speaker>
-            <l n="81" xml:id="l81">Dam, oui, monsieur : le désir d’obliger, vu surtout qu’il m’a donné une pièce d’or, et que je suis sûr qu’il m’en donnera encore autant. Vous ne voudriez pas me faire perdre cela ?</l>
-          </sp>
-          <sp who="amélie" xml:id="3-20">
-            <speaker>AMÉLIE.</speaker>
-            <l n="82" xml:id="l82">D’ailleurs il ne faut pas compromettre le crédit de M. Tomy !</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-21">
-            <speaker>LE BARON.</speaker>
-            <l n="83" xml:id="l83">Je vois qu’il a eu raison de compter sur ta protection.</l>
-            <stage><hi rend="italic"><em>Il ouvre la porte du pavillon, et écrit. </em></hi></stage>
-          </sp>
-          <sp who="tomy" xml:id="3-22">
-            <speaker>TOMY.</speaker>
-            <l n="85" xml:id="l85">D’autant plus que monsieur connaît le directeur de la maison des fous, et qu’ainsi il n’y a besoin que d’ griffonner un mot.</l>
-            <stage><hi rend="italic"><em>À Amélie, pendant que le baron écrit. </em></hi></stage>
-            <l n="87" xml:id="l87">Pour en revenir à not’ jeune seigneur, je l’ai laissé arrangeant sa cravate devant une glace, et cajolant miss Jenny, cette jolie petite fille...</l>
-          </sp>
-          <sp who="amélie" xml:id="3-23">
-            <speaker>AMÉLIE.</speaker>
-            <l n="88" xml:id="l88">C’est bon, c’est bon.</l>
-          </sp>
-          <sp who="tomy" xml:id="3-24">
-            <speaker>TOMY.</speaker>
-            <stage><hi rend="italic"><em>Air du ballet des Pierrots.</em></hi></stage>
-          </sp>
-          <sp who="le-baron" xml:id="3-25">
-            <speaker>LE BARON, <em>ayant achevé d’écrire.</em></speaker>
-            <l n="90" xml:id="l90">Eh ! sait-on quel est cet original ?</l>
-          </sp>
-          <sp who="tomy" xml:id="3-26">
-            <speaker>TOMY.</speaker>
-            <l n="91" xml:id="l91">Ma fine, oui, car un de ses gens l’a nommé devant moi, et je crois qu’il a dit le comte de... de Roseval.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-27">
-            <speaker>LE BARON.</speaker>
-            <l n="92" xml:id="l92">Roseval !</l>
-          </sp>
-          <sp who="amélie" xml:id="3-28">
-            <speaker>AMÉLIE.</speaker>
-            <l n="93" xml:id="l93">Alfred ! grands dieux !</l>
-            <stage><hi rend="italic"><em>Elle court vers le côté par où Tomy est entré.</em></hi></stage>
-          </sp>
-          <sp who="le-baron" xml:id="3-29">
-            <speaker>LE BARON.</speaker>
-            <l n="95" xml:id="l95">Eh bien ! où vas-tu ?</l>
-          </sp>
-          <sp who="amélie" xml:id="3-30">
-            <speaker>AMÉLIE, <em>revenant.</em></speaker>
-            <l n="96" xml:id="l96">Mon oncle, je ne reste pas ici : je ne veux pas m’ exposer à le rencontrer.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-31">
-            <speaker>LE BARON.</speaker>
-            <l n="97" xml:id="l97">Bon ! quel enfantillage ! je ne vois rien là dedans qui puisse t’effrayer : ce n’est pas ici qu’il vient.</l>
-          </sp>
-          <sp who="amélie" xml:id="3-32">
-            <speaker>AMÉLIE, <em>cherchant à se remettre.</em></speaker>
-            <l n="98" xml:id="l98">Vous avez raison, ce n’est qu’une aventure fort ordinaire.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-33">
-            <speaker>LE BARON.</speaker>
-            <l n="99" xml:id="l99">Oh ! fort ordinaire !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="101" xml:id="l101">Quel événement ! Alfred dans ce pays ! Alfred si près de nous ! ne laissons point échapper cette occasion ! mais par quel moyen ? Eh ! sans doute !</l>
-            <stage><hi rend="italic"><em>À Tomy.</em></hi></stage>
-            <l n="103" xml:id="l103">Tiens, porte-lui cette lettre ; propose-lui de le conduire toi-même à Bedlam.</l>
-          </sp>
-          <sp who="tomy" xml:id="3-34">
-            <speaker>TOMY.</speaker>
-            <l n="104" xml:id="l104">Pardin’ ! je sais bien où c’est ; la maison des fous, à deux pas d’ici.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-35">
-            <speaker>LE BARON.</speaker>
-            <l n="105" xml:id="l105">Oui, mais alors...</l>
-            <stage><hi rend="italic"><em>Il lui parle bas à l’oreille.</em></hi></stage>
-          </sp>
-          <sp who="tomy" xml:id="3-36">
-            <speaker>TOMY.</speaker>
-            <l n="107" xml:id="l107">Comment, monsieur ? mais il n’y a pas de conscience.</l>
-          </sp>
-          <sp who="le-baron" xml:id="3-37">
-            <speaker>LE BARON.</speaker>
-            <l n="108" xml:id="l108">Fais ce que je te dis, et surtout...</l>
-          </sp>
-          <sp who="tomy" xml:id="3-38">
-            <speaker>TOMY.</speaker>
-            <l n="109" xml:id="l109">Ah ! soyez tranquille... ma foi, ça sera drôle ; car je n’y comprends rien.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="111" xml:id="l111"> </l>
-            <l n="112" xml:id="l112"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="113" xml:id="l113"> </l>
-          <sp who="amélie" xml:id="4-1">
-            <speaker>LE BARON, AMÉLIE</speaker>
-            <l n="114" xml:id="l114"> </l>
-          </sp>
-          <sp who="amélie" xml:id="4-2">
-            <speaker>AMÉLIE.</speaker>
-            <l n="115" xml:id="l115">Mais, mon oncle, quel est votre dessein ? et que prétendez-vous faire ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="4-3">
-            <speaker>LE BARON.</speaker>
-            <l n="116" xml:id="l116">Ne t’inquiète pas.</l>
-          </sp>
-          <sp who="amélie" xml:id="4-4">
-            <speaker>AMÉLIE.</speaker>
-            <l n="117" xml:id="l117">Je vous l’ai dit ; vous savez ce que je pense, ce que j’ai juré ; je ne le verrai pas ; je ne le verrai jamais.</l>
-          </sp>
-          <sp who="le-baron" xml:id="4-5">
-            <speaker>LE BARON.</speaker>
-            <l n="118" xml:id="l118">À la bonne heure ; toi, tu ne peux pas seulement l’envisager, c’est trop juste ; mais moi, je n’ai pas fait de serment ; et la tendresse qu’on doit à sa famille...</l>
-            <stage><hi rend="italic"><em>Air : Tenez, moi, je suis un bon homme.</em></hi></stage>
-          </sp>
-          <sp who="amélie" xml:id="4-6">
-            <speaker>AMÉLIE.</speaker>
-            <l n="120" xml:id="l120">Ah ! quel plaisir j’aurais à le voir à mes pieds, et à le désespérer !</l>
-          </sp>
-          <sp who="le-baron" xml:id="4-7">
-            <speaker>LE BARON.</speaker>
-            <l n="121" xml:id="l121">Eh bien ! tout cela est très possible.</l>
-          </sp>
-          <sp who="amélie" xml:id="4-8">
-            <speaker>AMÉLIE.</speaker>
-            <l n="122" xml:id="l122">Comment ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="4-9">
-            <speaker>LE BARON.</speaker>
-            <l n="123" xml:id="l123">Rentre au château : je vais aller te rejoindre et t’expliquer mon projet.</l>
-          </sp>
-          <sp who="amélie" xml:id="4-10">
-            <speaker>AMÉLIE.</speaker>
-            <l n="124" xml:id="l124">Vous ne tarderez pas, n’est-ce pas, mon oncle ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="4-11">
-            <speaker>LE BARON.</speaker>
-            <l n="125" xml:id="l125">Donne-moi au moins le temps de le recevoir.</l>
-          </sp>
-          <sp who="amélie" xml:id="4-12">
-            <speaker>AMÉLIE.</speaker>
-            <l n="126" xml:id="l126">Si vous me le disiez tout de suite ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="4-13">
-            <speaker>LE BARON.</speaker>
-            <l n="127" xml:id="l127">On vient...</l>
-          </sp>
-          <sp who="amélie" xml:id="4-14">
-            <speaker>AMÉLIE.</speaker>
-            <l n="128" xml:id="l128">Non, mon oncle ; je vous assure que ce n’est personne.</l>
-          </sp>
-          <sp who="le-baron" xml:id="4-15">
-            <speaker>LE BARON.</speaker>
-            <l n="129" xml:id="l129">Et si vraiment, te dis-je !</l>
-          </sp>
-          <sp who="amélie" xml:id="4-16">
-            <speaker>AMÉLIE.</speaker>
-            <l n="130" xml:id="l130">Mon Dieu ! que c’est impatientant ! Me voilà maintenant d’une inquiétude ! on avait bien besoin de recevoir ici ce mauvais sujet !</l>
-            <stage><hi rend="italic"><em>Elle sort en regardant plusieurs fois le côté par lequel Alfred doit venir.</em></hi></stage>
-            <l n="132" xml:id="l132"> </l>
-            <l n="133" xml:id="l133"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="134" xml:id="l134"> </l>
-          <sp who="tomy" xml:id="5-1">
-            <speaker>LE BARON, ALFRED, <em>conduit par</em> TOMY</speaker>
-            <l n="135" xml:id="l135"> </l>
-          </sp>
-          <sp who="tomy" xml:id="5-2">
-            <speaker>TOMY.</speaker>
-            <l n="136" xml:id="l136">Par ici, monsieur, par ici.</l>
-          </sp>
-          <sp who="alfred" xml:id="5-3">
-            <speaker>ALFRED, <em>dans le fond.</em></speaker>
-            <l n="137" xml:id="l137">L’entrée est fort bien, c’est un séjour fort agréable que Bedlam ; on ne se douterait jamais qu’on est dans une maison de fous !</l>
-            <stage><hi rend="italic"><em>Montrant le baron.</em></hi></stage>
-            <l n="139" xml:id="l139">C’en est un que j’aperçois ?</l>
-          </sp>
-          <sp who="tomy" xml:id="5-4">
-            <speaker>TOMY.</speaker>
-            <l n="140" xml:id="l140">Non, monsieur, c’est le maître de la maison.</l>
-          </sp>
-          <sp who="alfred" xml:id="5-5">
-            <speaker>ALFRED.</speaker>
-            <l n="141" xml:id="l141">Ah ! oui, le directeur... C’est bon, laisse-moi. Tiens, voilà pour boire à ma santé ; je te remercie de m’avoir conduit à Bedlam.</l>
-          </sp>
-          <sp who="tomy" xml:id="5-6">
-            <speaker>TOMY.</speaker>
-            <l n="142" xml:id="l142">Il n’y a pas de quoi, monsieur.</l>
-          </sp>
-          <sp who="alfred" xml:id="5-7">
-            <speaker>ALFRED.</speaker>
-            <l n="143" xml:id="l143">Dis à ton maître que le comte de Roseval demande la permission de lui présenter ses respects avant de quitter ce pays.</l>
-          </sp>
-          <sp who="tomy" xml:id="5-8">
-            <speaker>TOMY.</speaker>
-            <l n="144" xml:id="l144">Oui, monsieur...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="146" xml:id="l146">V’là d’ l’argent bien gagné !...</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="148" xml:id="l148"> </l>
-            <l n="149" xml:id="l149"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="150" xml:id="l150"> </l>
-          <sp who="le-baron" xml:id="6-1">
-            <speaker>LE BARON, ALFRED</speaker>
-            <l n="151" xml:id="l151"> </l>
-          </sp>
-          <sp who="le-baron" xml:id="6-2">
-            <speaker>LE BARON, <em>à part.</em></speaker>
-            <l n="152" xml:id="l152">Ses respects ! c’est un garçon fort honnête que mon neveu.</l>
-          </sp>
-          <sp who="alfred" xml:id="6-3">
-            <speaker>ALFRED.</speaker>
-            <l n="153" xml:id="l153">C’est au docteur Willis que j’ai l’honneur de parler ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-4">
-            <speaker>LE BARON.</speaker>
-            <l n="154" xml:id="l154">Monsieur...</l>
-          </sp>
-          <sp who="alfred" xml:id="6-5">
-            <speaker>ALFRED.</speaker>
-            <l n="155" xml:id="l155">Voici une lettre qui vous est adressée ; daignez, je vous prie, en prendre connaissance.</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-6">
-            <speaker>LE BARON, <em>à part.</em></speaker>
-            <l n="156" xml:id="l156">Je pourrais m’en dispenser.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="158" xml:id="l158">Hum ! hum ! On m’engage à vous faire voir l’intérieur de la nouvelle maison de Bedlam. Monsieur, vous n’aviez pas besoin de recommandation ; un gentilhomme tel que vous est toujours sûr d’être bien reçu. Je suis fâché cependant que vous veniez aujourd’hui : nous avons plusieurs parties de l’établissement qui ne sont pas visibles ; et je ne puis même que dans un instant vous conduire dans l’intérieur de la maison.</l>
-          </sp>
-          <sp who="alfred" xml:id="6-7">
-            <speaker>ALFRED.</speaker>
-            <l n="159" xml:id="l159">Comment donc, monsieur, je suis à vos ordres, et j’attendrai tant qu’il vous plaira. Vos jardins seuls méritent d’être vus ; il y règne un goût, une variété... en honneur, j’en connais peu d’aussi beaux.</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-8">
-            <speaker>LE BARON, <em>à part.</em></speaker>
-            <l n="160" xml:id="l160">S’entendre dire cela à soi-même ! un propriétaire !... c’est charmant !</l>
-          </sp>
-          <sp who="alfred" xml:id="6-9">
-            <speaker>ALFRED.</speaker>
-            <stage><hi rend="italic"><em>Air du Verre.</em></hi></stage>
-            <l n="162" xml:id="l162">On doit se trouver trop heureux de passer sa vie dans un séjour semblable. Parbleu ! vous devriez bien me permettre de m’y établir.</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-10">
-            <speaker>LE BARON.</speaker>
-            <l n="163" xml:id="l163">Y pensez-vous ? nous n’avons ici que des gens dont la tête...</l>
-          </sp>
-          <sp who="alfred" xml:id="6-11">
-            <speaker>ALFRED.</speaker>
-            <l n="164" xml:id="l164">Eh bien ! justement : je vous jure que je n’y serais pas plus déplacé que beaucoup d’autres.</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-12">
-            <speaker>LE BARON.</speaker>
-            <l n="165" xml:id="l165">Auriez-vous par hasard quelques chagrins ?</l>
-          </sp>
-          <sp who="alfred" xml:id="6-13">
-            <speaker>ALFRED.</speaker>
-            <l n="166" xml:id="l166">C’est selon, voyez-vous ; si j’y pensais, j’en aurais de très grands... Tel que vous me voyez, je suis marié ; vous ne vous en douteriez pas, ni moi non plus. Une femme charmante qui m’aurait fait mourir de douleur, si je n’y avais pris garde.</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-14">
-            <speaker>LE BARON.</speaker>
-            <l n="167" xml:id="l167">Vraiment ! et où est-elle en ce moment ?</l>
-          </sp>
-          <sp who="alfred" xml:id="6-15">
-            <speaker>ALFRED.</speaker>
-            <l n="168" xml:id="l168">Vous allez rire ; vrai, je n’en sais rien. Je présume cependant qu’elle est à Paris, au milieu des plaisirs et des adorateurs ; nous sommes brouillés à mort. Une légèreté, un caprice, ce serait trop long à vous raconter. D’ailleurs, tout est fini ; je l’ai juré !</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-16">
-            <speaker>LE BARON.</speaker>
-            <l n="169" xml:id="l169">Vous l’avez juré !</l>
-          </sp>
-          <sp who="alfred" xml:id="6-17">
-            <speaker>ALFRED.</speaker>
-            <l n="170" xml:id="l170">Oui, monsieur. Cependant j’ai fait les avances ; j’ai écrit, on ne m’a pas répondu, ma conscience est tranquille.</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-18">
-            <speaker>LE BARON.</speaker>
-            <l n="171" xml:id="l171">Et vous ne fîtes pas de reproches ?</l>
-          </sp>
-          <sp who="alfred" xml:id="6-19">
-            <speaker>ALFRED.</speaker>
-            <l n="172" xml:id="l172">J’en eus d’abord envie, mais c’est déjà si singulier d’être mari ! et puis un mari qui se plaint, comprenez-vous, on en voit partout : soit dépit, soit amour-propre, je préférai une vengeance plus digne de moi. J’allai au bal, je me lançai dans toutes les sociétés ; il faut bien se faire une raison ! C’est ce que je me dis depuis un an ! aussi les voyages, les bals, les concerts, les spectacles, je ne sors pas de là. Enfin, monsieur, vous voyez l’homme le plus malheureux !</l>
-          </sp>
-          <sp who="le-baron" xml:id="6-20">
-            <speaker>LE BARON.</speaker>
-            <l n="173" xml:id="l173">Croyez, monsieur, que je compatis bien sincèrement...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="175" xml:id="l175">Allons, je m’en doutais, ce n’est qu’un étourdi.</l>
-            <l n="176" xml:id="l176"> </l>
-            <l n="177" xml:id="l177"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="178" xml:id="l178"> </l>
-          <sp who="tomy" xml:id="7-1">
-            <speaker>LE BARON, ALFRED, TOMY, <em>paraissant et appelant par signes le Baron</em></speaker>
-            <l n="179" xml:id="l179"> </l>
-          </sp>
-          <sp who="tomy" xml:id="7-2">
-            <speaker>TOMY.</speaker>
-            <l n="180" xml:id="l180">St, st, st, monsieur le baron !</l>
-          </sp>
-          <sp who="le-baron" xml:id="7-3">
-            <speaker>LE BARON, <em>à part.</em></speaker>
-            <l n="181" xml:id="l181">Diable ! il faudrait prévenir ma nièce.</l>
-            <stage><hi rend="italic"><em>Tomy sort. </em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="7-4">
-            <speaker>ALFRED.</speaker>
-            <l n="183" xml:id="l183">Eh bien ! qu’attendons-nous pour commencer notre visite ?</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de l’Écu de six francs.</em></hi></stage>
-          <stage>LE BARON.</stage>
-          </sp>
-          <sp who="alfred" xml:id="7-5">
-            <speaker>ALFRED.</speaker>
-            <l n="185" xml:id="l185"> </l>
-            <l n="186" xml:id="l186"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="187" xml:id="l187"> </l>
-          <sp who="tomy" xml:id="8-1">
-            <speaker>LE BARON, ALFRED, TOMY, CRESCENDO</speaker>
-            <l n="188" xml:id="l188"> </l>
-          </sp>
-          <sp who="crescendo" xml:id="8-2">
-            <speaker>CRESCENDO, <em>tout hors de lui.</em></speaker>
-            <l n="189" xml:id="l189">Monsu le baron, monsu le baron, mon air est achevé...</l>
-            <l n="190" xml:id="l190">Crudel tyran... ah ! ah !</l>
-          </sp>
-          <sp who="le-baron" xml:id="8-3">
-            <speaker>LE BARON, <em>à part.</em></speaker>
-            <l n="191" xml:id="l191">Ah ! diable ! notre musicien ! je n’y avais pas songé.</l>
-          </sp>
-          <sp who="alfred" xml:id="8-4">
-            <speaker>ALFRED.</speaker>
-            <l n="192" xml:id="l192">Quel est cet homme ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="8-5">
-            <speaker>LE BARON, <em>bas à Alfred.</em></speaker>
-            <l n="193" xml:id="l193">C’est un fou, mais de ceux qui ne sont pas dangereux, et à qui on laisse la liberté. Vous ne croiriez jamais ? c’est un grand personnage, un chancelier de l’échiquier, qui a la manie de se croire un grand compositeur, et qui ne parle que musique. Tenez, regardez-le. Il voit partout des protecteurs, et, moi-même, il me prend pour un baron à qui il veut dédier un opéra.</l>
-          </sp>
-          <sp who="alfred" xml:id="8-6">
-            <speaker>ALFRED.</speaker>
-            <l n="194" xml:id="l194">Ah ! ah ! ah ! le pauvre homme !</l>
-          </sp>
-          <sp who="crescendo" xml:id="8-7">
-            <speaker>LE BARON, <em>bas à Crescendo.</em></speaker>
-            <l n="195" xml:id="l195">C’est un prince russe, grand protecteur des beaux-arts, et qui raffole de la musique italienne.</l>
-          </sp>
-          <sp who="crescendo" xml:id="8-8">
-            <speaker>CRESCENDO.</speaker>
-            <l n="196" xml:id="l196">Che gusto !</l>
-          </sp>
-          <sp who="le-baron" xml:id="8-9">
-            <speaker>LE BARON, <em>à Alfred.</em></speaker>
-            <l n="197" xml:id="l197">Je vous demande encore un instant.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="199" xml:id="l199">Allons retrouver ma nièce. Je reviens au plus vite.</l>
-            <l n="200" xml:id="l200"> </l>
-            <l n="201" xml:id="l201"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="202" xml:id="l202"> </l>
-          <sp who="crescendo" xml:id="9-1">
-            <speaker>ALFRED, CRESCENDO</speaker>
-            <l n="203" xml:id="l203"> </l>
-          </sp>
-          <sp who="crescendo" xml:id="9-2">
-            <speaker>CRESCENDO.</speaker>
-            <l n="204" xml:id="l204">Me sera-t-il permis de vous présenter mes respects ? Combien nous devons nous tenir honorés d’oune semblable visite !</l>
-          </sp>
-          <sp who="alfred" xml:id="9-3">
-            <speaker>ALFRED, <em>le regardant.</em></speaker>
-            <l n="205" xml:id="l205">Voilà bien la figure la plus originale ! Qui diable reconnaîtrait là un chancelier ?</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="207" xml:id="l207">C’est moi, monsieur, qui suis trop heureux de faire connaissance avec un aussi grand talent. Vous dites que vous vous appelez ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="9-4">
-            <speaker>CRESCENDO.</speaker>
-            <l n="208" xml:id="l208">Il signor Crescendo.</l>
-          </sp>
-          <sp who="alfred" xml:id="9-5">
-            <speaker>ALFRED.</speaker>
-            <l n="209" xml:id="l209">Ma foi, signor Crescendo, je trouve bien étonnant que l’amour de la composition vous ait fait tout-à-fait oublier vos anciennes fonctions.</l>
-          </sp>
-          <sp who="crescendo" xml:id="9-6">
-            <speaker>CRESCENDO.</speaker>
-            <l n="210" xml:id="l210">Non pas. Je me rappelle, j’ai été chef d’orchestre à Turin et maître de chapelle à Florence ; mais l’intrigue, la cabale. Bah ! à quoi bon les places ? Vive le vrai compositor ! l’artiste indépendant qui n’obéit qu’à son génie.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville du Jaloux malade.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="9-7">
-            <speaker>ALFRED.</speaker>
-            <l n="212" xml:id="l212">Ah ! ah ! ma foi, il est très amusant.</l>
-          </sp>
-          <sp who="crescendo" xml:id="9-8">
-            <speaker>CRESCENDO.</speaker>
-            <l n="213" xml:id="l213">À propos de cela, mon prince...</l>
-          </sp>
-          <sp who="alfred" xml:id="9-9">
-            <speaker>ALFRED.</speaker>
-            <l n="214" xml:id="l214">Me voilà prince, à présent.</l>
-          </sp>
-          <sp who="crescendo" xml:id="9-10">
-            <speaker>CRESCENDO.</speaker>
-            <l n="215" xml:id="l215">J’oubliais de vous chanter mon grand air :</l>
-            <l n="216" xml:id="l216">Crudel tyran... ah ! ah ! ah !</l>
-            <l n="217" xml:id="l217">Mettez-vous dans la situation. C’est le jeune héros qui marche au supplice, et qui, avant de monter à l’échafaud, commence en mi bémol...</l>
-          </sp>
-          <sp who="alfred" xml:id="9-11">
-            <speaker>ALFRED.</speaker>
-            <l n="218" xml:id="l218">Le morceau me paraît déjà bien placé.</l>
-          </sp>
-          <sp who="crescendo" xml:id="9-12">
-            <speaker>CRESCENDO.</speaker>
-            <l n="219" xml:id="l219">C’est que je vois que vous ne connaissez pas mon opéra. Que c’est heureux pour vous ! je m’en vais vous le chanter. Il est en répétition dans ce moment au grand théâtre de Londres. Ce n’est pas sans peine ! des passe-droits, des injustices, quinze mois à l’étoude, ça ne serait pas pire à l’Opéra de Paris. L’ouvertoure, maestoso !</l>
-            <l n="220" xml:id="l220">Et l’oboé qui se fait entendre :</l>
-            <l n="221" xml:id="l221">Mais quand j’y pense... quelle idée ! ah ! mon prince ! si ce n’était pas abuser des bontés de Votre Altesse, je lui demanderais...</l>
-          </sp>
-          <sp who="alfred" xml:id="9-13">
-            <speaker>ALFRED.</speaker>
-            <l n="222" xml:id="l222">Vous n’avez qu’à parler.</l>
-          </sp>
-          <sp who="crescendo" xml:id="9-14">
-            <speaker>CRESCENDO.</speaker>
-            <l n="223" xml:id="l223">D’accepter la dédicace de mon opéra.</l>
-          </sp>
-          <sp who="alfred" xml:id="9-15">
-            <speaker>ALFRED.</speaker>
-            <l n="224" xml:id="l224">Avec plaisir. C’est servir la cause des beaux-arts que d’être utile à un compositeur aussi distingué.</l>
-          </sp>
-          <sp who="crescendo" xml:id="9-16">
-            <speaker>CRESCENDO.</speaker>
-            <l n="225" xml:id="l225">Ma fortune est faite !</l>
-            <l n="226" xml:id="l226"> </l>
-            <l n="227" xml:id="l227"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="228" xml:id="l228"> </l>
-          <sp who="crescendo" xml:id="10-1">
-            <speaker>ALFRED, CRESCENDO, LE BARON</speaker>
-            <l n="229" xml:id="l229"> </l>
-          </sp>
-          <sp who="crescendo" xml:id="10-2">
-            <speaker>CRESCENDO, <em>au baron qui arrive.</em></speaker>
-            <l n="230" xml:id="l230">Ah ! monsou le baron ! il est enchanté de mon opéra ; il ne l’a pas entendu ; mais il en a accepté la dédicace : me voilà connu à Saint-Pétersbourg ! Je cours écrire mon grand air, et nous l’exécuterons après le dîner. Votre Altesse, monsou le baron, croyez que jamais je n’oublierai... Récitatif...</l>
-            <stage><hi rend="italic"><em>Il sort en chantant et en gesticulant.</em></hi></stage>
-            <l n="232" xml:id="l232"> </l>
-            <l n="233" xml:id="l233"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="234" xml:id="l234"> </l>
-          <sp who="alfred" xml:id="11-1">
-            <speaker>ALFRED, LE BARON</speaker>
-            <l n="235" xml:id="l235"> </l>
-          </sp>
-          <sp who="alfred" xml:id="11-2">
-            <speaker>ALFRED.</speaker>
-            <l n="236" xml:id="l236">Ah ! ah ! ah ! j’avoue d’abord que je le plaignais ; mais ma foi, je n’ai pu y résister. Ce pauvre chancelier ! savez-vous que c’est un fou très divertissant ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="11-3">
-            <speaker>LE BARON.</speaker>
-            <l n="237" xml:id="l237">Vous allez en voir bien d’autres : venez.</l>
-            <stage><hi rend="italic"><em>On entend un prélude.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="11-4">
-            <speaker>ALFRED.</speaker>
-            <l n="239" xml:id="l239">Écoutez donc.</l>
-          </sp>
-          <sp who="amélie" xml:id="11-5">
-            <speaker>AMÉLIE, <em>en dehors.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Combien j’ai douce souvenance.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="11-6">
-            <speaker>ALFRED, <em>avec émotion.</em></speaker>
-            <l n="241" xml:id="l241">Quelle jolie voix !</l>
-          </sp>
-          <sp who="le-baron" xml:id="11-7">
-            <speaker>LE BARON.</speaker>
-            <l n="242" xml:id="l242">Chut ! c’est notre jeune comtesse. Venez de ce côté ; gardons-nous de la troubler.</l>
-          </sp>
-          <sp who="alfred" xml:id="11-8">
-            <speaker>ALFRED.</speaker>
-            <l n="243" xml:id="l243">Un instant, je vous prie.</l>
-          </sp>
-          <sp who="le-baron" xml:id="11-9">
-            <speaker>LE BARON.</speaker>
-            <l n="244" xml:id="l244">Non pas ; c’est l’heure de sa promenade. Elle aime à être seule, et nous respectons sa douleur.</l>
-          </sp>
-          <sp who="alfred" xml:id="11-10">
-            <speaker>ALFRED, <em>regardant vers la droite.</em></speaker>
-            <l n="245" xml:id="l245">Oui, elle s’avance dans cette allée, elle s’arrête ; à sa démarche et à sa taille, je parierais qu’elle est charmante.</l>
-          </sp>
-          <sp who="le-baron" xml:id="11-11">
-            <speaker>LE BARON.</speaker>
-            <l n="246" xml:id="l246">C’est le mot. Une femme bien estimable et bien à plaindre, qui a eu le malheur d’épouser un mauvais sujet.</l>
-          </sp>
-          <sp who="alfred" xml:id="11-12">
-            <speaker>ALFRED.</speaker>
-            <l n="247" xml:id="l247">Voyez-vous cela !</l>
-          </sp>
-          <sp who="le-baron" xml:id="11-13">
-            <speaker>LE BARON.</speaker>
-            <l n="248" xml:id="l248">Et à qui la mauvaise conduite de son mari a fait perdre la raison.</l>
-          </sp>
-          <sp who="alfred" xml:id="11-14">
-            <speaker>ALFRED.</speaker>
-            <l n="249" xml:id="l249">Vous m’avouerez que c’est indigne.</l>
-          </sp>
-          <sp who="le-baron" xml:id="11-15">
-            <speaker>LE BARON.</speaker>
-            <l n="250" xml:id="l250">Oui, monsieur, elle est folle d’amour.</l>
-          </sp>
-          <sp who="alfred" xml:id="11-16">
-            <speaker>ALFRED.</speaker>
-            <l n="251" xml:id="l251">Ah ! pas possible !</l>
-            <stage><hi rend="italic"><em>Dans ce moment, Amélie parait dans le jardin du fond ; elle ouvre la grille, et vient s’asseoir sous le saule. </em></hi></stage>
-            <l n="253" xml:id="l253">Je vous en supplie laissez-moi lui parler. Pauvre petite ! folle d’amour ! Et vous dites qu’elle est jolie ! Je ne la dérangerai pas de sa promenade ; mais permettez-moi de la voir.</l>
-          </sp>
-          <sp who="le-baron" xml:id="11-17">
-            <speaker>LE BARON.</speaker>
-            <l n="254" xml:id="l254">Songez donc que mon devoir me réclame.</l>
-          </sp>
-          <sp who="alfred" xml:id="11-18">
-            <speaker>ALFRED.</speaker>
-            <l n="255" xml:id="l255">Eh bien ! cher docteur, ne vous gênez pas ; faites vos affaires, je vous rejoins dans l’instant.</l>
-            <stage><hi rend="italic"><em>Il pousse le baron dehors par la gauche. </em></hi></stage>
-            <l n="257" xml:id="l257"> </l>
-            <l n="258" xml:id="l258"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="259" xml:id="l259"> </l>
-          <sp who="amélie" xml:id="12-1">
-            <speaker>ALFRED, AMÉLIE</speaker>
-            <l n="260" xml:id="l260"> </l>
-          </sp>
-          <sp who="amélie" xml:id="12-2">
-            <speaker>AMÉLIE, <em>la tête couverte d’un grand chapeau à la Paméla.</em></speaker>
-            <stage><hi rend="italic"><em>Deuxième couplet.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="12-3">
-            <speaker>ALFRED.</speaker>
-            <l n="262" xml:id="l262">Cette voix ! quelle illusion ! Mais non, c’est impossible.</l>
-          </sp>
-          <sp who="amélie" xml:id="12-4">
-            <speaker>AMÉLIE.</speaker>
-            <l n="263" xml:id="l263">Enfin, me voilà seule.</l>
-            <stage><hi rend="italic"><em>Ôtant son chapeau.</em></hi></stage>
-            <l n="265" xml:id="l265">Oui, seule ici, seule dans le monde.</l>
-          </sp>
-          <sp who="alfred" xml:id="12-5">
-            <speaker>ALFRED, <em>qui s’est approché.</em></speaker>
-            <l n="266" xml:id="l266">Ciel ! c’est elle !... Quel changement dans ses traits ! Mais c’est bien elle, c’est Amélie, plus jolie que jamais.</l>
-          </sp>
-          <sp who="amélie" xml:id="12-6">
-            <speaker>AMÉLIE.</speaker>
-            <l n="267" xml:id="l267">Amélie !... Qui m’a appelée ? que veut cet étranger ?</l>
-          </sp>
-          <sp who="alfred" xml:id="12-7">
-            <speaker>ALFRED.</speaker>
-            <l n="268" xml:id="l268">Elle ne me reconnaît pas !... Amélie !</l>
-            <stage><hi rend="italic"><em>Il lui prend la main.</em></hi></stage>
-          </sp>
-          <sp who="amélie" xml:id="12-8">
-            <speaker>AMÉLIE.</speaker>
-            <l n="270" xml:id="l270">Laissez-moi ; votre vue me fait mal.</l>
-          </sp>
-          <sp who="alfred" xml:id="12-9">
-            <speaker>ALFRED.</speaker>
-            <l n="271" xml:id="l271">Et c’est moi qui suis la cause...</l>
-          </sp>
-          <sp who="amélie" xml:id="12-10">
-            <speaker>AMÉLIE.</speaker>
-            <l n="272" xml:id="l272">Non, ne t’éloigne pas ; tu pleures, tu as du chagrin... Écoute : est-ce que tu as été trahi, abandonné ?</l>
-          </sp>
-          <sp who="alfred" xml:id="12-11">
-            <speaker>ALFRED.</speaker>
-            <l n="273" xml:id="l273">J’ai perdu tout ce que j’aimais.</l>
-          </sp>
-          <sp who="amélie" xml:id="12-12">
-            <speaker>AMÉLIE.</speaker>
-            <l n="274" xml:id="l274">Reste alors, reste en ces lieux. Et moi aussi, j’ai tout perdu... Tu ne sais donc pas... Il est parti, il s’est éloigné.</l>
-          </sp>
-          <sp who="alfred" xml:id="12-13">
-            <speaker>ALFRED.</speaker>
-            <l n="275" xml:id="l275">Comment se peut-il que sa raison se soit ainsi... Amélie ! reviens à toi, reconnais-moi, je suis Alfred.</l>
-          </sp>
-          <sp who="amélie" xml:id="12-14">
-            <speaker>AMÉLIE.</speaker>
-            <l n="276" xml:id="l276">Alfred, dites-vous ?... Oui, Alfred, c’était son nom... Où est-il ?</l>
-          </sp>
-          <sp who="alfred" xml:id="12-15">
-            <speaker>ALFRED.</speaker>
-            <l n="277" xml:id="l277">Auprès de toi.</l>
-          </sp>
-          <sp who="amélie" xml:id="12-16">
-            <speaker>AMÉLIE.</speaker>
-            <stage><hi rend="italic"><em>Air de M. Frédéric Kreubé.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="12-17">
-            <speaker>ALFRED.</speaker>
-            <stage><hi rend="italic"><em>Même air.</em></hi></stage>
-          <stage>AMÉLIE.</stage>
-          </sp>
-          <sp who="alfred" xml:id="12-18">
-            <speaker>ALFRED.</speaker>
-            <stage><hi rend="italic"><em>Douloureusement.</em></hi></stage>
-          <stage>AMÉLIE.</stage>
-          </sp>
-          <sp who="alfred" xml:id="12-19">
-            <speaker>ALFRED.</speaker>
-            <l n="281" xml:id="l281">Je savais bien que vous me trompiez. Alfred ne doit pas revenir. Mais c’est lui que je plains ; oui, monsieur, je le plains.</l>
-          </sp>
-          <sp who="amélie" xml:id="12-20">
-            <speaker>AMÉLIE.</speaker>
-            <stage><hi rend="italic"><em>Air : À Paris et loin de sa mère.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="12-21">
-            <speaker>ALFRED.</speaker>
-            <l n="283" xml:id="l283">C’est qu’en effet elle est charmante !</l>
-          </sp>
-          <sp who="amélie" xml:id="12-22">
-            <speaker>AMÉLIE.</speaker>
-            <l n="284" xml:id="l284">Et puis...</l>
-            <stage><hi rend="italic"><em>Mystérieusement.</em></hi></stage>
-            <l n="286" xml:id="l286">c’est un secret au moins, il ne faut pas lui en parler !... à son retour, je voulais le surprendre par mes progrès. Avec quel plaisir j’étudiais !... c’était pour lui !...</l>
-            <stage><hi rend="italic"><em>Avec gaîté.</em></hi></stage>
-            <l n="288" xml:id="l288">Vous ne savez pas ?... j’ai fait son portrait... si j’étais sûre que vous ne lui dissiez point, je vous le montrerais...</l>
-            <stage><hi rend="italic"><em>Regardant autour d’elle.</em></hi></stage>
-            <l n="290" xml:id="l290">Tenez, regardez vite ; n’est-il pas ressemblant ?...</l>
-          </sp>
-          <sp who="alfred" xml:id="12-23">
-            <speaker>ALFRED.</speaker>
-            <l n="291" xml:id="l291">Ah ! je n’y tiens plus ; j’en mourrai de douleur !</l>
-          </sp>
-          <sp who="amélie" xml:id="12-24">
-            <speaker>AMÉLIE.</speaker>
-            <l n="292" xml:id="l292">Je ne vous parle pas de ma harpe, de mon piano !... mais vous savez comme il aimait la valse ?... eh bien ! monsieur, je valse à ravir.</l>
-          </sp>
-          <sp who="alfred" xml:id="12-25">
-            <speaker>ALFRED.</speaker>
-            <l n="293" xml:id="l293">Elle valse à ravir ! est-on plus malheureux ! Quelle femme j’avais là !</l>
-            <stage><hi rend="italic"><em>Air de M. Doche.</em></hi></stage>
-            <stage><hi rend="italic"><em>Amélie fait quelques pas de valse sur la ritournelle.</em></hi></stage>
-            <stage><hi rend="italic"><em>Amélie s’arrête et le regarde.</em></hi></stage>
-          <stage>AMÉLIE, <em>le regarde tendrement et recommence à valser.</em></stage>
-          </sp>
-          <sp who="alfred" xml:id="12-26">
-            <speaker>ALFRED, <em>tombant à ses genoux.</em></speaker>
-            <l n="297" xml:id="l297">C’est Alfred... c’est ton époux, qui n’a jamais cessé de t’aimer.</l>
-            <l n="298" xml:id="l298"> </l>
-            <l n="299" xml:id="l299"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="300" xml:id="l300"> </l>
-          <sp who="crescendo" xml:id="13-1">
-            <speaker>ALFRED, AMÉLIE, CRESCENDO</speaker>
-            <l n="301" xml:id="l301"> </l>
-          <stage>CRESCENDO, <em>paraissant dans le fond, un papier de musique à la main.</em></stage>
-          </sp>
-          <sp who="crescendo" xml:id="13-2">
-            <speaker>AMÉLIE, <em>qui était prête à se trahir, aperçoit Crescendo, pousse un grand cri, et s’enfuit en fermant la grille sur elle.</em></speaker>
-            <l n="302" xml:id="l302">Ah !</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-3">
-            <speaker>CRESCENDO.</speaker>
-            <l n="303" xml:id="l303">Son Altesse aux pieds de mon écolière !</l>
-          </sp>
-          <sp who="alfred" xml:id="13-4">
-            <speaker>ALFRED.</speaker>
-            <l n="304" xml:id="l304">Elle a disparu !</l>
-            <stage><hi rend="italic"><em>Prenant Crescendo au collet.</em></hi></stage>
-            <l n="306" xml:id="l306">Malheureux ! c’est ta présence qui l’a fait fuir !... où est-elle, dis-moi, tu m’en répondras ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-5">
-            <speaker>CRESCENDO.</speaker>
-            <l n="307" xml:id="l307">Mon prince...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="309" xml:id="l309">À qui en a-t-il ?</l>
-          </sp>
-          <sp who="alfred" xml:id="13-6">
-            <speaker>ALFRED.</speaker>
-            <l n="310" xml:id="l310">Eh bien ! que fais-je ?... je suis aussi insensé que lui ; mais vit-on jamais un malheur égal au mien ?</l>
-            <stage><hi rend="italic"><em>Regardant le portrait.</em></hi></stage>
-            <l n="312" xml:id="l312">Amélie ! bonne Amélie !</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-7">
-            <speaker>CRESCENDO.</speaker>
-            <l n="313" xml:id="l313">Mon prince... c’est ce fameux air en mi bémol.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-8">
-            <speaker>ALFRED.</speaker>
-            <l n="314" xml:id="l314">Eh ! laisse-moi tranquille... Dis-moi plutôt... connais-tu cette jeune dame qui, tout à l’heure ?...</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-9">
-            <speaker>CRESCENDO.</speaker>
-            <l n="315" xml:id="l315">Sans doute.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-10">
-            <speaker>ALFRED, <em>avec feu.</em></speaker>
-            <l n="316" xml:id="l316">Tu la connais, tu la vois souvent ? Ah ! je t’en prie, parle-moi d’elle.</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-11">
-            <speaker>CRESCENDO.</speaker>
-            <l n="317" xml:id="l317">C’est la comtesse Amélie.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-12">
-            <speaker>ALFRED.</speaker>
-            <l n="318" xml:id="l318">Oui...</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-13">
-            <speaker>CRESCENDO.</speaker>
-            <l n="319" xml:id="l319">C’est la nièce de M. le baron, du maître de ce château, du possesseur de cette maison de plaisance... de celui que vous avez vu.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-14">
-            <speaker>ALFRED.</speaker>
-            <l n="320" xml:id="l320">Allons, le château, le baron... Voilà sa tête qui se perd... Aussi, où m’avisais-je d’aller lui demander des renseignements ?...</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-15">
-            <speaker>CRESCENDO.</speaker>
-            <l n="321" xml:id="l321">C’est mon écolière : c’est moi qui lui montre la musique... et une voix !... une méthode !...</l>
-          </sp>
-          <sp who="alfred" xml:id="13-16">
-            <speaker>ALFRED.</speaker>
-            <l n="322" xml:id="l322">Eh ! au nom du ciel, laissons là la musique ! Rappelez-vous que vous n’êtes pas plus musicien que moi.</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-17">
-            <speaker>CRESCENDO.</speaker>
-            <l n="323" xml:id="l323">Comment ! pas musicien ?</l>
-          </sp>
-          <sp who="alfred" xml:id="13-18">
-            <speaker>ALFRED.</speaker>
-            <l n="324" xml:id="l324">Eh ! non, M. le chancelier.</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-19">
-            <speaker>CRESCENDO.</speaker>
-            <l n="325" xml:id="l325">Moi, chancelier !... rabaisser ainsi un compositeur distingué !...</l>
-          </sp>
-          <sp who="alfred" xml:id="13-20">
-            <speaker>ALFRED.</speaker>
-            <l n="326" xml:id="l326">Allons, je ne m’en tirerai pas !... Morbleu ! laissez-moi.</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-21">
-            <speaker>CRESCENDO.</speaker>
-            <l n="327" xml:id="l327">Non... l’on a abusé Votre Altesse ; mais elle va connaître il signor Crescendo ! Voici les lettres les piou flatteuses qui m’ont été adressées par des princes et des directeurs de spectacles ; voici des lettres de recommandation pour les piou grands personnages qui doivent être en ce moment en Angleterre ; pour M. l’ambassadeur de France, pour M. le marquis de Valmont, M. le comte de Roseval...</l>
-          </sp>
-          <sp who="alfred" xml:id="13-22">
-            <speaker>ALFRED.</speaker>
-            <l n="328" xml:id="l328">De Roseval, dis-tu ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-23">
-            <speaker>CRESCENDO.</speaker>
-            <l n="329" xml:id="l329">Oui, monsieur, lui-même.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-24">
-            <speaker>ALFRED, <em>lui arrachant la lettre, et la décachetant.</em></speaker>
-            <l n="330" xml:id="l330">Qu’est-ce que ça signifie ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-25">
-            <speaker>CRESCENDO.</speaker>
-            <l n="331" xml:id="l331">Monseigneur est sans façons...</l>
-          </sp>
-          <sp who="alfred" xml:id="13-26">
-            <speaker>ALFRED.</speaker>
-            <l n="332" xml:id="l332">Eh ! oui... c’est pour moi ; c’est le chevalier de Forlis, mon ami intime... lisons.</l>
-            <l n="333" xml:id="l333">« D’après ta dernière lettre, tu dois être à Londres dans ce moment. Je t’adresse et te recommande il signor Crescendo, mon maître de musique...</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-27">
-            <speaker>CRESCENDO.</speaker>
-            <l n="334" xml:id="l334">C’est moi.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-28">
-            <speaker>ALFRED, <em>continuant.</em></speaker>
-            <l n="335" xml:id="l335">« Un original.</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-29">
-            <speaker>CRESCENDO.</speaker>
-            <l n="336" xml:id="l336">C’est moi.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-30">
-            <speaker>ALFRED, <em>continuant.</em></speaker>
-            <l n="337" xml:id="l337">« Qui ne manque pas de talent. » C’est daté d’hier... Comment ! il serait vrai... vous seriez réellement... Et ce château... Amélie, le baron...</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-31">
-            <speaker>CRESCENDO.</speaker>
-            <l n="338" xml:id="l338">Sont réellement ce que je vous ai dit.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-32">
-            <speaker>ALFRED, <em>vivement.</em></speaker>
-            <l n="339" xml:id="l339">Quel bonheur ! Oh ! oui, c’est cela... c’est cela même, mon cœur a besoin de le croire... Je cours m’informer, achever de m’éclaircir... cette jolie Amélie !... son oncle... Ah ! vous voulez me donner des leçons !... Morbleu ! je leur rendrai !... Tant d’idées se croisent, se confondent dans ma tête... Mon cher Crescendo !</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-33">
-            <speaker>CRESCENDO.</speaker>
-            <l n="340" xml:id="l340">Monseigneur, vous allez entendre mon grand air ?</l>
-          </sp>
-          <sp who="alfred" xml:id="13-34">
-            <speaker>ALFRED.</speaker>
-            <l n="341" xml:id="l341">Va toujours, je t’écoute.</l>
-          </sp>
-          <sp who="crescendo" xml:id="13-35">
-            <speaker>CRESCENDO.</speaker>
-            <l n="342" xml:id="l342">Tra, la, là , la.</l>
-          </sp>
-          <sp who="alfred" xml:id="13-36">
-            <speaker>ALFRED, <em>à part.</em></speaker>
-            <l n="343" xml:id="l343">Mais j’aperçois Amélie et le baron... Ne perdons. pas de temps.</l>
-            <stage><hi rend="italic"><em>Il s’enfuit par la gauche.</em></hi></stage>
-            <l n="345" xml:id="l345"> </l>
-            <l n="346" xml:id="l346"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="347" xml:id="l347"> </l>
-          <sp who="crescendo" xml:id="14-1">
-            <speaker>CRESCENDO, LE BARON, AMÉLIE, <em>entrant avec précaution par la droite</em></speaker>
-            <l n="348" xml:id="l348"> </l>
-          </sp>
-          <sp who="crescendo" xml:id="14-2">
-            <speaker>CRESCENDO, <em>continuant.</em></speaker>
-            <l n="349" xml:id="l349">Tra, la, la, la... Mille pardons, il y a des notes de passées.</l>
-            <stage><hi rend="italic"><em>Il corrige au crayon.</em></hi></stage>
-          </sp>
-          <sp who="amélie" xml:id="14-3">
-            <speaker>AMÉLIE.</speaker>
-            <l n="351" xml:id="l351">Mon oncle, il n’est plus là !</l>
-          </sp>
-          <sp who="le-baron" xml:id="14-4">
-            <speaker>LE BARON.</speaker>
-            <l n="352" xml:id="l352">Aussi, tu le quittes sans attendre mon arrivée ; ce n’est pas cela dont nous étions convenus.</l>
-          </sp>
-          <sp who="amélie" xml:id="14-5">
-            <speaker>AMÉLIE.</speaker>
-            <l n="353" xml:id="l353">C’est ce Crescendo qui tout à coup m’a effrayée.</l>
-          </sp>
-          <sp who="crescendo" xml:id="14-6">
-            <speaker>CRESCENDO.</speaker>
-            <l n="354" xml:id="l354">Tra, la , la... Votre Altesse, mon prince ! Eh bien ! où est-il donc ?</l>
-          </sp>
-          <sp who="amélie" xml:id="14-7">
-            <speaker>AMÉLIE.</speaker>
-            <l n="355" xml:id="l355">Quel dommage ! si vous aviez vu son trouble, son désespoir, le désordre de ses traits ; c’était charmant !...</l>
-          </sp>
-          <sp who="le-baron" xml:id="14-8">
-            <speaker>LE BARON.</speaker>
-            <l n="356" xml:id="l356">Je vois que tu es moins irritée contre lui.</l>
-          </sp>
-          <sp who="amélie" xml:id="14-9">
-            <speaker>AMÉLIE, <em>sévèrement.</em></speaker>
-            <l n="357" xml:id="l357">Plus que jamais, mon oncle ; comme s’il suffisait d’un instant de repentir pour effacer tous les torts du monde.</l>
-          </sp>
-          <sp who="crescendo" xml:id="14-10">
-            <speaker>CRESCENDO.</speaker>
-            <l n="358" xml:id="l358">Dites-moi, êtes-vous bien sûr que notre prince rousse soit dans son bon sens ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="14-11">
-            <speaker>LE BARON.</speaker>
-            <l n="359" xml:id="l359">Comment ?</l>
-          </sp>
-          <sp who="crescendo" xml:id="14-12">
-            <speaker>CRESCENDO.</speaker>
-            <l n="360" xml:id="l360">Oui, que sa tête ne soit pas... là... un peu. Pendant un quart d’heure, il me parle d’un tas de balivernes où l’on ne conçoit rien ; et, lorsque je veux commencer mon grand air, il part comme un éclair ; zeste !...</l>
-          </sp>
-          <sp who="amélie" xml:id="14-13">
-            <speaker>LE BARON, <em>bas à Amélie.</em></speaker>
-            <l n="361" xml:id="l361">Ça n’est pas si dépourvu de bon sens.</l>
-            <stage><hi rend="italic"><em>On entend du bruit.</em></hi></stage>
-            <l n="363" xml:id="l363"> </l>
-            <l n="364" xml:id="l364"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="365" xml:id="l365"> </l>
-          <sp who="tomy" xml:id="15-1">
-            <speaker>CRESCENDO, LE BARON, AMÉLIE, TOMY, <em>arrivant en désordre</em></speaker>
-            <l n="366" xml:id="l366"> </l>
-          </sp>
-          <sp who="tomy" xml:id="15-2">
-            <speaker>TOMY.</speaker>
-            <l n="367" xml:id="l367">Ah ! madame... ah !... messieurs... qui l’aurait cru... ce pauvre jeune homme !</l>
-          </sp>
-          <sp who="amélie" xml:id="15-3">
-            <speaker>AMÉLIE.</speaker>
-            <l n="368" xml:id="l368">Eh bien ! qu’as-tu donc ? Lui serait-il arrivé quelque chose ?</l>
-          </sp>
-          <sp who="tomy" xml:id="15-4">
-            <speaker>TOMY.</speaker>
-            <l n="369" xml:id="l369">La tête n’y est plus.</l>
-          </sp>
-          <sp who="crescendo" xml:id="15-5">
-            <speaker>CRESCENDO.</speaker>
-            <l n="370" xml:id="l370">Là, quand je vous le disais.</l>
-          </sp>
-          <sp who="tomy" xml:id="15-6">
-            <speaker>TOMY.</speaker>
-            <l n="371" xml:id="l371">Il faut que quelque révolution subite ait partroublé sa cervelle ; mais il est fou... fou à lier !</l>
-          </sp>
-          <sp who="amélie" xml:id="15-7">
-            <speaker>AMÉLIE.</speaker>
-            <l n="372" xml:id="l372">Mon mari... où est-il ? conduis-moi de ce côté.</l>
-          </sp>
-          <sp who="crescendo" xml:id="15-8">
-            <speaker>CRESCENDO.</speaker>
-            <l n="373" xml:id="l373">Son mari ! allons, à l’autre à présent... ah çà, tout le monde perd donc la tête aujourd’hui ?</l>
-          </sp>
-          <sp who="tomy" xml:id="15-9">
-            <speaker>TOMY.</speaker>
-            <l n="374" xml:id="l374">Il est dans une fureur, qu’il a déjà ravagé deux plates-bandes et brisé nos cloches à melons... Il demande sa femme, il la voit partout, il lui demande pardon, il s’accuse, et il casse tout !</l>
-          </sp>
-          <sp who="amélie" xml:id="15-10">
-            <speaker>AMÉLIE.</speaker>
-            <l n="375" xml:id="l375">Mon Dieu ! qu’avons-nous fait là... vous voyez, mon oncle, avec votre stratagème : ce pauvre Alfred ! j’étais bien sûre qu’il m’aimait ! mais en perdre la raison !... Mon oncle, je vous en supplie, envoyez chercher des secours.</l>
-          </sp>
-          <sp who="le-baron" xml:id="15-11">
-            <speaker>LE BARON.</speaker>
-            <l n="376" xml:id="l376">Parbleu ! je vais moi-même voir un peu ce dont il s’agit... Ce pauvre jeune homme !... aussi avec une tête comme la sienne...</l>
-          </sp>
-          <sp who="amélie" xml:id="15-12">
-            <speaker>AMÉLIE.</speaker>
-            <l n="377" xml:id="l377">Eh ! allez donc.</l>
-          </sp>
-          <sp who="le-baron" xml:id="15-13">
-            <speaker>LE BARON.</speaker>
-            <l n="378" xml:id="l378">Je reviens dans l’instant.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="380" xml:id="l380"> </l>
-            <l n="381" xml:id="l381"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="382" xml:id="l382"> </l>
-          <sp who="tomy" xml:id="16-1">
-            <speaker>CRESCENDO, AMÉLIE, TOMY</speaker>
-            <l n="383" xml:id="l383"> </l>
-          </sp>
-          <sp who="tomy" xml:id="16-2">
-            <speaker>TOMY.</speaker>
-            <l n="384" xml:id="l384">Il s’avance de ce côté... retirez-vous, il est furieux !</l>
-          </sp>
-          <sp who="crescendo" xml:id="16-3">
-            <speaker>CRESCENDO.</speaker>
-            <l n="385" xml:id="l385">Ohimè furioso ! Madame, rentrons, je vous le conseille.</l>
-          </sp>
-          <sp who="amélie" xml:id="16-4">
-            <speaker>AMÉLIE.</speaker>
-            <l n="386" xml:id="l386">Non, quel que soit le danger, je reste ici, je ne le quitte plus.</l>
-          </sp>
-          <sp who="crescendo" xml:id="16-5">
-            <speaker>CRESCENDO.</speaker>
-            <l n="387" xml:id="l387">Moi, je me sauve.</l>
-            <stage><hi rend="italic"><em>Il rencontre Alfred, et s’enfuit de l’autre côté.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="16-6">
-            <speaker>ALFRED, <em>dans la coulisse à gauche.</em></speaker>
-            <l n="389" xml:id="l389">Laissez-moi ! laissez-moi !</l>
-            <stage><hi rend="italic"><em>Il entre d’un air égaré ; ses vêtements sont en désordre ; Crescendo, Tomy poussent un grand cri, et se sauvent.</em></hi></stage>
-            <l n="391" xml:id="l391"> </l>
-            <l n="392" xml:id="l392"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="393" xml:id="l393"> </l>
-          <sp who="amélie" xml:id="17-1">
-            <speaker>ALFRED, AMÉLIE</speaker>
-            <l n="394" xml:id="l394"> </l>
-            <stage><hi rend="italic"><em>Alfred parcourt le théâtre en furieux ; Amélie se retire derrière un arbre.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="17-2">
-            <speaker>ALFRED.</speaker>
-            <l n="396" xml:id="l396">Oui, cet Alfred est un monstre ! c’est à lui que j’en veux !</l>
-          </sp>
-          <sp who="amélie" xml:id="17-3">
-            <speaker>AMÉLIE, <em>timidement.</em></speaker>
-            <l n="397" xml:id="l397">Mon Dieu ! qu’il a l’air méchant ! Alfred, c’est moi, ne me faites pas de mal.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-4">
-            <speaker>ALFRED.</speaker>
-            <l n="398" xml:id="l398">Qui êtes-vous ?... approchez.</l>
-          </sp>
-          <sp who="amélie" xml:id="17-5">
-            <speaker>AMÉLIE.</speaker>
-            <l n="399" xml:id="l399">Vous ne me ferez pas de mal ?</l>
-          </sp>
-          <sp who="alfred" xml:id="17-6">
-            <speaker>ALFRED.</speaker>
-            <l n="400" xml:id="l400">Vous le savez bien ; c’est Alfred seul qui mérite ma colère.</l>
-          </sp>
-          <sp who="amélie" xml:id="17-7">
-            <speaker>AMÉLIE.</speaker>
-            <l n="401" xml:id="l401">Il faut dire comme lui pour l’apaiser. Oui, sans doute, c’est un mauvais sujet, un méchant caractère, qui fait de la peine à tout le monde ; mais, si vous m’aimez, faites comme moi, ne lui en voulez plus ; il a pressé ma main sur son cœur !</l>
-          </sp>
-          <sp who="alfred" xml:id="17-8">
-            <speaker>ALFRED.</speaker>
-            <l n="402" xml:id="l402">Connaissez-vous Amélie ?</l>
-          </sp>
-          <sp who="amélie" xml:id="17-9">
-            <speaker>AMÉLIE, <em>timidement.</em></speaker>
-            <l n="403" xml:id="l403">Oui, je la connais.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-10">
-            <speaker>ALFRED, <em>avec feu.</em></speaker>
-            <l n="404" xml:id="l404">Vous la connaissez !</l>
-          </sp>
-          <sp who="amélie" xml:id="17-11">
-            <speaker>AMÉLIE, <em>s’enfuyant.</em></speaker>
-            <l n="405" xml:id="l405">Ah ! mon Dieu !</l>
-            <stage><hi rend="italic"><em>Tremblante.</em></hi></stage>
-            <l n="407" xml:id="l407">Non, monsieur, non, je ne la connais pas. Ah ! mon Dieu ! est-ce qu’il va toujours être comme cela ?</l>
-          </sp>
-          <sp who="alfred" xml:id="17-12">
-            <speaker>ALFRED.</speaker>
-            <l n="408" xml:id="l408">Non, vous ne la connaissez pas ?</l>
-          </sp>
-          <sp who="amélie" xml:id="17-13">
-            <speaker>AMÉLIE, <em>disant comme lui.</em></speaker>
-            <l n="409" xml:id="l409">Non, non, je ne la connais pas.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-14">
-            <speaker>ALFRED.</speaker>
-            <l n="410" xml:id="l410">Si vous la connaissiez, vous l’aimeriez comme moi. Si vous saviez quelle fut ma conduite, surtout depuis que je suis éloigné d’elle ; je veux tout vous raconter.</l>
-          </sp>
-          <sp who="amélie" xml:id="17-15">
-            <speaker>AMÉLIE.</speaker>
-            <l n="411" xml:id="l411">Quelle situation ! une femme écouter les confidences de son mari ! Dieu sait combien je vais en apprendre.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-16">
-            <speaker>ALFRED.</speaker>
-            <l n="412" xml:id="l412">Quand j’arrivai à Vienne, vous savez bien, jamais la cour n’avait été si brillante. Une foule de femmes charmantes...</l>
-          </sp>
-          <sp who="amélie" xml:id="17-17">
-            <speaker>AMÉLIE.</speaker>
-            <l n="413" xml:id="l413">Ah ! mon Dieu !</l>
-          </sp>
-          <sp who="alfred" xml:id="17-18">
-            <speaker>ALFRED.</speaker>
-            <stage><hi rend="italic"><em>Air de M. Mélesville.</em></hi></stage>
-          <stage>AMÉLIE.</stage>
-          </sp>
-          <sp who="alfred" xml:id="17-19">
-            <speaker>ALFRED.</speaker>
-            <l n="415" xml:id="l415">Comment ! monsieur, vous disiez... Mais c’est très bien.</l>
-          <stage>AMÉLIE.</stage>
-          </sp>
-          <sp who="alfred" xml:id="17-20">
-            <speaker>ALFRED.</speaker>
-            <l n="416" xml:id="l416">Oh ! ce n’est pas tout. Vous rappelez-vous, à Berlin, cette jeune et jolie comtesse ; bonne et estimable femme !</l>
-            <stage><hi rend="italic"><em>Même air.</em></hi></stage>
-          <stage>AMÉLIE.</stage>
-          </sp>
-          <sp who="alfred" xml:id="17-21">
-            <speaker>ALFRED, <em>d’un air égaré.</em></speaker>
-            <stage><hi rend="italic"><em>Gaiement.</em></hi></stage>
-          </sp>
-          <sp who="amélie" xml:id="17-22">
-            <speaker>AMÉLIE.</speaker>
-            <l n="419" xml:id="l419">Et moi qui l’accusais ! Mais c’est un modèle de fidélité conjugale.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-23">
-            <speaker>ALFRED.</speaker>
-            <l n="420" xml:id="l420">Et vous-même, vous êtes bien jolie ! je n’ai jamais rencontré rien de plus attrayant ! eh bien ! vous tenteriez en vain de me séduire.</l>
-          </sp>
-          <sp who="amélie" xml:id="17-24">
-            <speaker>AMÉLIE.</speaker>
-            <l n="421" xml:id="l421">J’ai bien envie d’essayer.</l>
-            <stage><hi rend="italic"><em>Tendrement.</em></hi></stage>
-            <l n="423" xml:id="l423">Alfred, si j’avais été abusée ; si, vous retrouvant fidèle, mon cœur vous pardonnait.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-25">
-            <speaker>ALFRED, <em>faisant un mouvement qu’il réprime.</em></speaker>
-            <l n="424" xml:id="l424">Non ! je ne puis vous écouter.</l>
-          </sp>
-          <sp who="amélie" xml:id="17-26">
-            <speaker>AMÉLIE.</speaker>
-            <l n="425" xml:id="l425">Mon Dieu ! il va m’être trop fidèle à présent. Et si j’étais cette Amélie que vous regrettez.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-27">
-            <speaker>ALFRED, <em>avec feu.</em></speaker>
-            <l n="426" xml:id="l426">Amélie, dites-vous ? Êtes-vous bien sûre que ce soit elle ?</l>
-          </sp>
-          <sp who="amélie" xml:id="17-28">
-            <speaker>AMÉLIE.</speaker>
-            <l n="427" xml:id="l427">Je vous jure que c’est moi.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-29">
-            <speaker>ALFRED.</speaker>
-            <l n="428" xml:id="l428">Écoutez ; n’espérez pas m’abuser ; je le saurai bien. Amélie, d’abord, ne m’aurait pas dit : vous.</l>
-          </sp>
-          <sp who="amélie" xml:id="17-30">
-            <speaker>AMÉLIE.</speaker>
-            <l n="429" xml:id="l429">Eh bien ! Alfred, je te le jure.</l>
-          </sp>
-          <sp who="alfred" xml:id="17-31">
-            <speaker>ALFRED.</speaker>
-            <l n="430" xml:id="l430">Amélie me donnait un nom plus doux.</l>
-          </sp>
-          <sp who="amélie" xml:id="17-32">
-            <speaker>AMÉLIE.</speaker>
-            <l n="431" xml:id="l431">Eh bien ! mon ami, mon Alfred !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="433" xml:id="l433">Il faut bien faire tout ce qu’il veut.</l>
-            <stage><hi rend="italic"><em>Air : Quand toi sortir de la case. (Paul et Virginie.)</em></hi></stage>
-          <stage>ALFRED.</stage>
-          </sp>
-          <sp who="amélie" xml:id="17-33">
-            <speaker>AMÉLIE.</speaker>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="17-34">
-            <speaker>ALFRED, <em>la regardant.</em></speaker>
-            <stage><hi rend="italic"><em>Il lui baise la main.</em></hi></stage>
-          </sp>
-          <sp who="amélie" xml:id="17-35">
-            <speaker>AMÉLIE.</speaker>
-            <stage><hi rend="italic"><em>Deuxième couplet.</em></hi></stage>
-          </sp>
-          <sp who="alfred" xml:id="17-36">
-            <speaker>ALFRED.</speaker>
-            <stage><hi rend="italic"><em>Il la serre dans ses bras.</em></hi></stage>
-          <stage>AMÉLIE, <em>émue.</em></stage>
-          </sp>
-          <sp who="alfred" xml:id="17-37">
-            <speaker>ALFRED.</speaker>
-            <stage><hi rend="italic"><em>Il l’embrasse.</em></hi></stage>
-          <stage>AMÉLIE.</stage>
-          </sp>
-          <sp who="alfred" xml:id="17-38">
-            <speaker>ALFRED, <em>vivement.</em></speaker>
-            <stage><hi rend="italic"><em>Alfred tombe à ses genoux.</em></hi></stage>
-          </sp>
-          <sp who="amélie" xml:id="17-39">
-            <speaker>AMÉLIE.</speaker>
-            <l n="441" xml:id="l441"> </l>
-            <l n="442" xml:id="l442"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="443" xml:id="l443"> </l>
-          <sp who="tomy" xml:id="18-1">
-            <speaker>ALFRED, AMÉLIE, LE BARON, CRESCENDO, TOMY <em>dans le fond</em></speaker>
-            <l n="444" xml:id="l444"> </l>
-          </sp>
-          <sp who="amélie" xml:id="18-2">
-            <speaker>AMÉLIE.</speaker>
-            <l n="445" xml:id="l445">Mon oncle ! n’approchez pas ! il n’y a que moi...</l>
-          </sp>
-          <sp who="alfred" xml:id="18-3">
-            <speaker>ALFRED, <em>se relevant.</em></speaker>
-            <l n="446" xml:id="l446">Venez, venez, mon cher oncle.</l>
-            <stage><hi rend="italic"><em>Air du Pot de fleurs.</em></hi></stage>
-            <l n="448" xml:id="l448">Non, vous n’avez plus rien à craindre ;</l>
-            <stage><hi rend="italic"><em>Montrant Amélie.</em></hi></stage>
-          </sp>
-          <sp who="amélie" xml:id="18-4">
-            <speaker>AMÉLIE.</speaker>
-            <l n="450" xml:id="l450">Comment, monsieur !</l>
-          </sp>
-          <sp who="alfred" xml:id="18-5">
-            <speaker>ALFRED.</speaker>
-            <l n="451" xml:id="l451">C’était le seul moyen de te fléchir. M’en veux-tu d’avoir perdu la tête ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="18-6">
-            <speaker>LE BARON.</speaker>
-            <l n="452" xml:id="l452">Bah ! est-ce qu’une femme ne pardonne pas toujours les folies qu’on fait pour elle ! mais ce que je ne te pardonne pas, ce sont mes plates-bandes, et mes cloches de melons.</l>
-          </sp>
-          <sp who="crescendo" xml:id="18-7">
-            <speaker>CRESCENDO.</speaker>
-            <l n="453" xml:id="l453">Ah çà, messieurs, puisque vous avez tous recouvré la raison, si vous entendiez mon air ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="18-8">
-            <speaker>LE BARON.</speaker>
-            <l n="454" xml:id="l454">Après dîner.</l>
-          </sp>
-          <sp who="crescendo" xml:id="18-9">
-            <speaker>CRESCENDO.</speaker>
-            <l n="455" xml:id="l455">Au moins un petit allegro.</l>
-            <stage><hi rend="italic"><em>Vaudeville.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air de M. Mélesville.</em></hi></stage>
-          <stage>CHŒUR.</stage>
-          </sp>
-          <sp who="le-baron" xml:id="18-10">
-            <speaker>LE BARON.</speaker>
-            <l n="458" xml:id="l458"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> Ce couplet fut chanté en 1818, lorsque la France était encore occupée par les armées étrangères.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="1">Oui, signora, de l’ame, dou sentiment, de la méthode et de la voix ; voilà tout ce qu’il faut pour la mousique italienne, et vous possédez tout cela dans la perfection.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="2">Je crains que votre écolière ne vous fasse pas honneur.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="3">Point du tout. Il n’y a pas à dix lieues à la ronde oune de nos ledys qui puisse soutenir la comparaison.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="4">Savez-vous, signor Crescendo, que je m’étonne toujours de voir un talent tel que le vôtre rester en Angleterre.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="5">Que voulez-vous ?</l>
+          <stage>&lt;em&gt;Air : Un homme pour faire un tableau.&lt;/em&gt;</stage>
+          <l n="6">Sur les beaux arts et les talents</l>
+          <l n="7">D’ailleurs, le grand homme est de tous les pays... Je vous réserve aujourd’hui un petit air d’opéra que j’achève en ce moment.</l>
+          <l n="8">Barbar amor ! crudel tyran !</l>
+          <l n="9">Car je compose, tel que vous me voyez ; ce qui ne m’empêche point d’aller à droite et à gauche donner des leçons dans les châteaux voisins.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <stage>J’entends : &lt;em&gt;I virtuosi ambulanti&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="10">C’est cela même. Je déjeûne le matin à Bedlam, je dîne à Southwarck, et je soupe à Tudor-Hall : le génie mange partout. Moi, je ne suis pas fier, et j’affectionne surtout votre château, monsou le baron. Quoique Français, vous savez apprécier le macaroni ; et l’on trouve ici les égards, les attentions, une voix délicieuse, une couisine française et une mousique italienne. C’est un séjour enchanté !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="11">Je suis charmé qu’il vous plaise. Mais est-ce que nous ne continuons pas la leçon ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="12">La signora a l’air fatigué. Je vais avant le dîner revoir la romance que votre charmante nièce m’a permis de loui dédier. Un mot encore : comment mettrai-je pour la gravoure ? À madame, ou à madamigelle ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="13">Qu’est-ce que cela fait ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="14">Oh ! c’est très essentiel. Voyez-vous en gros caractères : Dédié par son très humble serviteur Crescendo... à et cætera, et caetera.</l>
+          <stage>&lt;em&gt;Air du vaudeville du Printemps.&lt;/em&gt;</stage>
+          <l n="15">Que j’inscrive ici votre nom !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="16">C’est l’être à bon compte, en effet.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="17">Eh ! mon Dieu ! que d’autres, je gage,</l>
+          <l n="18">Mais il y a une difficoulté : c’est que depuis un mois que je donne des leçons à la signora, je n’ai pas encore pu savoir si elle était madame ou madamigelle.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="19">Était-ce bien nécessaire à connaître pour lui enseigner des roulades et des cadences ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="20">Noullement, et je vous prie d’excouser mon indiscrétion.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="21">Ce n’en est pas une ; et vous pouvez mettre hardiment...</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="22">À madamigelle.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="23">Au contraire : à madame, madame la comtesse Amélie.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="24">Ah ! madame ! c’est différent. Je m’en étais toujours douté. C’est qu’il est étonnant que nous n’ayons pas encore vou monsieur le comte. Il doit s’estimer bien heureux, monsieur le comte ; et il faut que madame se soit mariée bien jeune... Mais, pardon ; c’est que, voyez-vous, l’amour et la jeunesse...</l>
+          <l n="25">L’amor è la gioventù...</l>
+          <l n="26">J’ai un rondeau là-dessus.</l>
+          <stage>&lt;em&gt;Se frappant le front.&lt;/em&gt;</stage>
+          <l n="27">Attendez : c’est la fin de mon grand air. Depuis deux jours je la guettais :</l>
+          <l n="28">Crudel tyran !... ah ! ah ! ah ! ah !</l>
+          <l n="29">J’y suis ; je cours profiter de l’inspiration.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="30">Prenez garde qu’elle ne vous mène trop loin.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="31">Soyez tranquille, je ne passerai pas l’heure du dîner.</l>
+          <stage>&lt;em&gt;Il sort en chantant et en gesticulant.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="scène -ii">
+        <head>Scène  II</head>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="32">Allons, et lui aussi va faire des commentaires sur la conduite de mon mari, s’étonner de ce que monsieur le comte...</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="33">C’est qu’en effet il y a de quoi s’étonner.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="34">Eh ! pourquoi donc, mon oncle ? Je trouve tout naturel qu’un mari reste éloigné de sa femme.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="35">Oui, mais qu’il y reste pendant huit ou dix mois ! On m’a assuré cependant qu’il t’aimait éperdument.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="36">Mon oncle, vous n’étiez pas à Paris lorsqu’on m’unit à monsieur Alfred de Roseval, ainsi vous ne pouvez pas savoir...</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="37">Non ; mais sans le connaître, je sais que c’est le plus étourdi, le plus aimable et le plus brave de tous les officiers français.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="38">Un véritable enfant, qui se croyait le plus heureux des hommes quand il était paré de son grand uniforme, ou qu’il montait son cheval de bataille ; et qui aurait tout sacrifié au bonheur de passer son régiment en revue !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="39">Vrai ? Eh bien ! il me semble impossible qu’un homme comme celui-là ne soit pas charmant.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="40">En vérité, mon oncle, vous me donneriez de l’humeur !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="41">Non ; mais avec un tel caractère, on doit être gai, franc, incapable de tromper ; on doit aimer sa femme, et quoique tu en dises, il faut qu’il y ait un peu de ta faute, et tu ne m’as pas tout avoué.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="42">Moi, mon oncle ! Grand dieu ! si on peut dire... Soyez notre juge : on nous maria ; il disait qu’il m’aimait, je voulus bien le croire : ils le disent tous, et l’on est convenu de ne pas disputer là dessus. Pendant huit jours, je dois pourtant lui rendre cette justice, il parut beaucoup plus occupé de moi que de ses chevaux, et même de son uniforme ! Il fallut partir pour une mission importante ; il en fut désolé, rien n’égala sa douleur ; moi-même, par compassion, je daignai en être touchée ! Au bout de huit jours, il devait m’écrire, quinze se passent ! Enfin la lettre arrive : elle a été retardée par une foule d’événements plus ou moins extraordinaires ; vous sentez qu’on n’est pas dupe de tout cela. Je réponds très froidement. On me récrit, mais d’un ton, vous en auriez été indigné ! Je ne réponds pas, comme vous vous en doutez bien : j’attends qu’on me fasse des excuses, qu’on me demande pardon ; eh bien ! point ! Un mois, deux mois se passent, aucunes nouvelles ! Vous sentez que, ma vie en eût-elle dépendu, je ne serais point revenue la première. À cette époque vous passez en France ; vous me proposez de quitter Paris, dont le séjour me paraissait insipide, de venir habiter avec vous un château que vous avez au bord de la Tamise, près du nouvel établissement de Bedlam. J’accepte avec joie, et c’est dans cet asile enchanteur, au sein des arts et de l’amitié, que vous croyez que je puis conserver quelques regrets ou former quelques désirs ! Non, mon oncle, rassurez-vous, je ne regrette rien ; je n’aime rien que vous seul, et je jouis, grâce au ciel, d’une tranquillité et d’une indifférence que rien ne pourra troubler.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="43">Le ton dont tu me le dis me persuade, et je ne conserve plus aucun doute. Il y a bien dans ton récit quelques petits détails que tu ne m’avais pas racontés ; mais c’est égal, tu as raison, complètement raison. Et que fait Alfred maintenant ?</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="44">J’ai appris indirectement que sa mission était terminée, et qu’il voyageait pour son plaisir.</l>
+          <stage>&lt;em&gt;Air de la Robe et des Bottes.&lt;/em&gt;</stage>
+          <l n="45">On prétend qu’il parcourt le monde ;</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="46">En tous lieux s’il est infidèle,</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="47">Lui ! Quelle idée ! En tous cas ce serait inutile, car mon parti est pris ; je vous le dis sans humeur, sans colère : je ne le reverrai jamais ! Jamais je ne rendrai ma tendresse ni mon estime à quelqu’un qui, volontairement, a pu vivre une année entière éloigné de moi !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="48">Eh bien ! que nous veut Tomy ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="49">Ah ! c’est vous, not’ maître ? tant pire.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="50">Pourquoi tant pire ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="51">C’est que j’ai quelque chose à vous demander.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="52">Eh bien ! imbécile ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="53">Pas tant... Dans le fond, c’est bien à vous ; mais je m’entends : c’est à madame que je voulais d’abord m’adresser, parce que quand c’est madame qui parle, on est toujours sûr d’obtenir.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="54">Vraiment ! je ne me croyais pas tant de crédit.</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="55">Oh ! tout le monde ici le sait bien, allez.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="56">Eh bien ! voyons donc, monsieur Tomy ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="57">Madame, c’est que je viens de la taverne du Grand-Amiral.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="58">J’aurais dû m’en douter !</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="59">Imaginez-vous que je trouve là un beau jeune homme qui arrivait en poste ; six chevaux, trois postillons ; clic, clac : tout était sens dessus dessous pour le recevoir... « Holà ! la fille, les garçons, toute la maison ; qu’on me donne à déjeûner ! » On voulait lui servir de ce bon porter que j’aime tant ! car il y en a d’excellent à la taverne de l’Amiral. Ah bien ! oui : du Champagne, du bordeaux, du vin de France ; vive la France ! Aussi faut-il lui rendre justice, il les a traités en compatriotes. Vous voyez que je ne vous passe rien.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="60">Oh ! Tomy conte bien.</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="61">Ah çà , pendant qu’il déjeunait et qu’il avait derrière lui deux grands laquais... « Madame l’hôtesse, est-il possible de visiter la nouvelle maison royale de Bedlam ? Je suis étranger, et je voudrais voir en détail ce bel établissement. » On lui dit alors que ça n’est pas public, et qu’à moins d’un mot de recommandation d’un des propriétaires des environs... « Eh ! qui diable voulez-vous qui me recommande ? je ne connais personne. » Alors, monsieur, je me suis avancé : je lui ai dit que s’il voulait permettre j’allais m’adresser à mon maître...</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="62">Ah ! nous y voilà !</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="63">Qui était un riche et brave seigneur.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="64">Et tu lui as promis ta recommandation auprès de moi ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="65">Dam, oui, monsieur : le désir d’obliger, vu surtout qu’il m’a donné une pièce d’or, et que je suis sûr qu’il m’en donnera encore autant. Vous ne voudriez pas me faire perdre cela ?</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="66">D’ailleurs il ne faut pas compromettre le crédit de M. Tomy !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="67">Je vois qu’il a eu raison de compter sur ta protection.</l>
+          <stage>&lt;em&gt;Il ouvre la porte du pavillon, et écrit. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="68">D’autant plus que monsieur connaît le directeur de la maison des fous, et qu’ainsi il n’y a besoin que d’ griffonner un mot.</l>
+          <stage>&lt;em&gt;À Amélie, pendant que le baron écrit. &lt;/em&gt;</stage>
+          <l n="69">Pour en revenir à not’ jeune seigneur, je l’ai laissé arrangeant sa cravate devant une glace, et cajolant miss Jenny, cette jolie petite fille...</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="70">C’est bon, c’est bon.</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <stage>&lt;em&gt;Air du ballet des Pierrots.&lt;/em&gt;</stage>
+          <l n="71">Il d’mand’ son compte ; on l’ lui présente ;</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, ayant achevé d’écrire.</speaker>
+          <l n="72">Eh ! sait-on quel est cet original ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="73">Ma fine, oui, car un de ses gens l’a nommé devant moi, et je crois qu’il a dit le comte de... de Roseval.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="74">Roseval !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="75">Alfred ! grands dieux !</l>
+          <stage>&lt;em&gt;Elle court vers le côté par où Tomy est entré.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="76">Eh bien ! où vas-tu ?</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, revenant.</speaker>
+          <l n="77">Mon oncle, je ne reste pas ici : je ne veux pas m’ exposer à le rencontrer.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="78">Bon ! quel enfantillage ! je ne vois rien là dedans qui puisse t’effrayer : ce n’est pas ici qu’il vient.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, cherchant à se remettre.</speaker>
+          <l n="79">Vous avez raison, ce n’est qu’une aventure fort ordinaire.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="80">Oh ! fort ordinaire !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="81">Quel événement ! Alfred dans ce pays ! Alfred si près de nous ! ne laissons point échapper cette occasion ! mais par quel moyen ? Eh ! sans doute !</l>
+          <stage>&lt;em&gt;À Tomy.&lt;/em&gt;</stage>
+          <l n="82">Tiens, porte-lui cette lettre ; propose-lui de le conduire toi-même à Bedlam.</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="83">Pardin’ ! je sais bien où c’est ; la maison des fous, à deux pas d’ici.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="84">Oui, mais alors...</l>
+          <stage>&lt;em&gt;Il lui parle bas à l’oreille.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="85">Comment, monsieur ? mais il n’y a pas de conscience.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="86">Fais ce que je te dis, et surtout...</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="87">Ah ! soyez tranquille... ma foi, ça sera drôle ; car je n’y comprends rien.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="88">Mais, mon oncle, quel est votre dessein ? et que prétendez-vous faire ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="89">Ne t’inquiète pas.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="90">Je vous l’ai dit ; vous savez ce que je pense, ce que j’ai juré ; je ne le verrai pas ; je ne le verrai jamais.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="91">À la bonne heure ; toi, tu ne peux pas seulement l’envisager, c’est trop juste ; mais moi, je n’ai pas fait de serment ; et la tendresse qu’on doit à sa famille...</l>
+          <stage>&lt;em&gt;Air : Tenez, moi, je suis un bon homme.&lt;/em&gt;</stage>
+          <l n="92">Je dois accueillir sur sa routé</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="93">Ah ! quel plaisir j’aurais à le voir à mes pieds, et à le désespérer !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="94">Eh bien ! tout cela est très possible.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="95">Comment ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="96">Rentre au château : je vais aller te rejoindre et t’expliquer mon projet.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="97">Vous ne tarderez pas, n’est-ce pas, mon oncle ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="98">Donne-moi au moins le temps de le recevoir.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="99">Si vous me le disiez tout de suite ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="100">On vient...</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="101">Non, mon oncle ; je vous assure que ce n’est personne.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="102">Et si vraiment, te dis-je !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="103">Mon Dieu ! que c’est impatientant ! Me voilà maintenant d’une inquiétude ! on avait bien besoin de recevoir ici ce mauvais sujet !</l>
+          <stage>&lt;em&gt;Elle sort en regardant plusieurs fois le côté par lequel Alfred doit venir.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="104">Par ici, monsieur, par ici.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, dans le fond.</speaker>
+          <l n="105">L’entrée est fort bien, c’est un séjour fort agréable que Bedlam ; on ne se douterait jamais qu’on est dans une maison de fous !</l>
+          <stage>&lt;em&gt;Montrant le baron.&lt;/em&gt;</stage>
+          <l n="106">C’en est un que j’aperçois ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="107">Non, monsieur, c’est le maître de la maison.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="108">Ah ! oui, le directeur... C’est bon, laisse-moi. Tiens, voilà pour boire à ma santé ; je te remercie de m’avoir conduit à Bedlam.</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="109">Il n’y a pas de quoi, monsieur.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="110">Dis à ton maître que le comte de Roseval demande la permission de lui présenter ses respects avant de quitter ce pays.</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="111">Oui, monsieur...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="112">V’là d’ l’argent bien gagné !...</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, à part.</speaker>
+          <l n="113">Ses respects ! c’est un garçon fort honnête que mon neveu.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="114">C’est au docteur Willis que j’ai l’honneur de parler ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="115">Monsieur...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="116">Voici une lettre qui vous est adressée ; daignez, je vous prie, en prendre connaissance.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, à part.</speaker>
+          <l n="117">Je pourrais m’en dispenser.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="118">Hum ! hum ! On m’engage à vous faire voir l’intérieur de la nouvelle maison de Bedlam. Monsieur, vous n’aviez pas besoin de recommandation ; un gentilhomme tel que vous est toujours sûr d’être bien reçu. Je suis fâché cependant que vous veniez aujourd’hui : nous avons plusieurs parties de l’établissement qui ne sont pas visibles ; et je ne puis même que dans un instant vous conduire dans l’intérieur de la maison.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="119">Comment donc, monsieur, je suis à vos ordres, et j’attendrai tant qu’il vous plaira. Vos jardins seuls méritent d’être vus ; il y règne un goût, une variété... en honneur, j’en connais peu d’aussi beaux.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, à part.</speaker>
+          <l n="120">S’entendre dire cela à soi-même ! un propriétaire !... c’est charmant !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <stage>&lt;em&gt;Air du Verre.&lt;/em&gt;</stage>
+          <l n="121">À vos fous il ne manque rien,</l>
+          <l n="122">On doit se trouver trop heureux de passer sa vie dans un séjour semblable. Parbleu ! vous devriez bien me permettre de m’y établir.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="123">Y pensez-vous ? nous n’avons ici que des gens dont la tête...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="124">Eh bien ! justement : je vous jure que je n’y serais pas plus déplacé que beaucoup d’autres.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="125">Auriez-vous par hasard quelques chagrins ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="126">C’est selon, voyez-vous ; si j’y pensais, j’en aurais de très grands... Tel que vous me voyez, je suis marié ; vous ne vous en douteriez pas, ni moi non plus. Une femme charmante qui m’aurait fait mourir de douleur, si je n’y avais pris garde.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="127">Vraiment ! et où est-elle en ce moment ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="128">Vous allez rire ; vrai, je n’en sais rien. Je présume cependant qu’elle est à Paris, au milieu des plaisirs et des adorateurs ; nous sommes brouillés à mort. Une légèreté, un caprice, ce serait trop long à vous raconter. D’ailleurs, tout est fini ; je l’ai juré !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="129">Vous l’avez juré !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="130">Oui, monsieur. Cependant j’ai fait les avances ; j’ai écrit, on ne m’a pas répondu, ma conscience est tranquille.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="131">Et vous ne fîtes pas de reproches ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="132">J’en eus d’abord envie, mais c’est déjà si singulier d’être mari ! et puis un mari qui se plaint, comprenez-vous, on en voit partout : soit dépit, soit amour-propre, je préférai une vengeance plus digne de moi. J’allai au bal, je me lançai dans toutes les sociétés ; il faut bien se faire une raison ! C’est ce que je me dis depuis un an ! aussi les voyages, les bals, les concerts, les spectacles, je ne sors pas de là. Enfin, monsieur, vous voyez l’homme le plus malheureux !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="133">Croyez, monsieur, que je compatis bien sincèrement...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="134">Allons, je m’en doutais, ce n’est qu’un étourdi.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="135">St, st, st, monsieur le baron !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, à part.</speaker>
+          <l n="136">Diable ! il faudrait prévenir ma nièce.</l>
+          <stage>&lt;em&gt;Tomy sort. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="137">Eh bien ! qu’attendons-nous pour commencer notre visite ?</l>
+          <stage>&lt;em&gt;Air du vaudeville de l’Écu de six francs.&lt;/em&gt;</stage>
+          <l n="138">Allons, hâtons-nous, je vous prie,</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="139">Vous serez surpris, je parie,</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="140">Parmi tant de monde, je gage,</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO, tout hors de lui.</speaker>
+          <l n="141">Monsu le baron, monsu le baron, mon air est achevé...</l>
+          <l n="142">Crudel tyran... ah ! ah !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, à part.</speaker>
+          <l n="143">Ah ! diable ! notre musicien ! je n’y avais pas songé.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="144">Quel est cet homme ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, bas à Alfred.</speaker>
+          <l n="145">C’est un fou, mais de ceux qui ne sont pas dangereux, et à qui on laisse la liberté. Vous ne croiriez jamais ? c’est un grand personnage, un chancelier de l’échiquier, qui a la manie de se croire un grand compositeur, et qui ne parle que musique. Tenez, regardez-le. Il voit partout des protecteurs, et, moi-même, il me prend pour un baron à qui il veut dédier un opéra.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="146">Ah ! ah ! ah ! le pauvre homme !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, bas à Crescendo.</speaker>
+          <l n="147">C’est un prince russe, grand protecteur des beaux-arts, et qui raffole de la musique italienne.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="148">Che gusto !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, à Alfred.</speaker>
+          <l n="149">Je vous demande encore un instant.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="150">Allons retrouver ma nièce. Je reviens au plus vite.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="151">Me sera-t-il permis de vous présenter mes respects ? Combien nous devons nous tenir honorés d’oune semblable visite !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, le regardant.</speaker>
+          <l n="152">Voilà bien la figure la plus originale ! Qui diable reconnaîtrait là un chancelier ?</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="153">C’est moi, monsieur, qui suis trop heureux de faire connaissance avec un aussi grand talent. Vous dites que vous vous appelez ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="154">Il signor Crescendo.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="155">Ma foi, signor Crescendo, je trouve bien étonnant que l’amour de la composition vous ait fait tout-à-fait oublier vos anciennes fonctions.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="156">Non pas. Je me rappelle, j’ai été chef d’orchestre à Turin et maître de chapelle à Florence ; mais l’intrigue, la cabale. Bah ! à quoi bon les places ? Vive le vrai compositor ! l’artiste indépendant qui n’obéit qu’à son génie.</l>
+          <stage>&lt;em&gt;Air du vaudeville du Jaloux malade.&lt;/em&gt;</stage>
+          <l n="157">Quel art plus noble et plus sublime !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="158">Ah ! ah ! ma foi, il est très amusant.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="159">À propos de cela, mon prince...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="160">Me voilà prince, à présent.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="161">J’oubliais de vous chanter mon grand air :</l>
+          <l n="162">Crudel tyran... ah ! ah ! ah !</l>
+          <l n="163">Mettez-vous dans la situation. C’est le jeune héros qui marche au supplice, et qui, avant de monter à l’échafaud, commence en mi bémol...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="164">Le morceau me paraît déjà bien placé.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="165">C’est que je vois que vous ne connaissez pas mon opéra. Que c’est heureux pour vous ! je m’en vais vous le chanter. Il est en répétition dans ce moment au grand théâtre de Londres. Ce n’est pas sans peine ! des passe-droits, des injustices, quinze mois à l’étoude, ça ne serait pas pire à l’Opéra de Paris. L’ouvertoure, maestoso !</l>
+          <l n="166">Tra la, la, la, la, tra, la, la, la, la...</l>
+          <l n="167">Et l’oboé qui se fait entendre :</l>
+          <l n="168">Pon, pon, pon, pon, pon, pon...</l>
+          <l n="169">Mais quand j’y pense... quelle idée ! ah ! mon prince ! si ce n’était pas abuser des bontés de Votre Altesse, je lui demanderais...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="170">Vous n’avez qu’à parler.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="171">D’accepter la dédicace de mon opéra.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="172">Avec plaisir. C’est servir la cause des beaux-arts que d’être utile à un compositeur aussi distingué.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="173">Ma fortune est faite !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO, au baron qui arrive.</speaker>
+          <l n="174">Ah ! monsou le baron ! il est enchanté de mon opéra ; il ne l’a pas entendu ; mais il en a accepté la dédicace : me voilà connu à Saint-Pétersbourg ! Je cours écrire mon grand air, et nous l’exécuterons après le dîner. Votre Altesse, monsou le baron, croyez que jamais je n’oublierai... Récitatif...</l>
+          <l n="175">Che veggio... qual spettacolo !</l>
+          <stage>&lt;em&gt;Il sort en chantant et en gesticulant.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="176">Ah ! ah ! ah ! j’avoue d’abord que je le plaignais ; mais ma foi, je n’ai pu y résister. Ce pauvre chancelier ! savez-vous que c’est un fou très divertissant ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="177">Vous allez en voir bien d’autres : venez.</l>
+          <stage>&lt;em&gt;On entend un prélude.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="178">Écoutez donc.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, en dehors.</speaker>
+          <stage>&lt;em&gt;Air : Combien j’ai douce souvenance.&lt;/em&gt;</stage>
+          <l n="179">Il est parti loin de sa mie,</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, avec émotion.</speaker>
+          <l n="180">Quelle jolie voix !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="181">Chut ! c’est notre jeune comtesse. Venez de ce côté ; gardons-nous de la troubler.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="182">Un instant, je vous prie.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="183">Non pas ; c’est l’heure de sa promenade. Elle aime à être seule, et nous respectons sa douleur.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, regardant vers la droite.</speaker>
+          <l n="184">Oui, elle s’avance dans cette allée, elle s’arrête ; à sa démarche et à sa taille, je parierais qu’elle est charmante.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="185">C’est le mot. Une femme bien estimable et bien à plaindre, qui a eu le malheur d’épouser un mauvais sujet.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="186">Voyez-vous cela !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="187">Et à qui la mauvaise conduite de son mari a fait perdre la raison.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="188">Vous m’avouerez que c’est indigne.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="189">Oui, monsieur, elle est folle d’amour.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="190">Ah ! pas possible !</l>
+          <stage>&lt;em&gt;Dans ce moment, Amélie parait dans le jardin du fond ; elle ouvre la grille, et vient s’asseoir sous le saule. &lt;/em&gt;</stage>
+          <l n="191">Je vous en supplie laissez-moi lui parler. Pauvre petite ! folle d’amour ! Et vous dites qu’elle est jolie ! Je ne la dérangerai pas de sa promenade ; mais permettez-moi de la voir.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="192">Songez donc que mon devoir me réclame.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="193">Eh bien ! cher docteur, ne vous gênez pas ; faites vos affaires, je vous rejoins dans l’instant.</l>
+          <stage>&lt;em&gt;Il pousse le baron dehors par la gauche. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, la tête couverte d’un grand chapeau à la Paméla.</speaker>
+          <stage>&lt;em&gt;Deuxième couplet.&lt;/em&gt;</stage>
+          <l n="194">Il est parti l’ami que j’aime !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="195">Cette voix ! quelle illusion ! Mais non, c’est impossible.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="196">Enfin, me voilà seule.</l>
+          <stage>&lt;em&gt;Ôtant son chapeau.&lt;/em&gt;</stage>
+          <l n="197">Oui, seule ici, seule dans le monde.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, qui s’est approché.</speaker>
+          <l n="198">Ciel ! c’est elle !... Quel changement dans ses traits ! Mais c’est bien elle, c’est Amélie, plus jolie que jamais.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="199">Amélie !... Qui m’a appelée ? que veut cet étranger ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="200">Elle ne me reconnaît pas !... Amélie !</l>
+          <stage>&lt;em&gt;Il lui prend la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="201">Laissez-moi ; votre vue me fait mal.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="202">Et c’est moi qui suis la cause...</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="203">Non, ne t’éloigne pas ; tu pleures, tu as du chagrin... Écoute : est-ce que tu as été trahi, abandonné ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="204">J’ai perdu tout ce que j’aimais.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="205">Reste alors, reste en ces lieux. Et moi aussi, j’ai tout perdu... Tu ne sais donc pas... Il est parti, il s’est éloigné.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="206">Comment se peut-il que sa raison se soit ainsi... Amélie ! reviens à toi, reconnais-moi, je suis Alfred.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="207">Alfred, dites-vous ?... Oui, Alfred, c’était son nom... Où est-il ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="208">Auprès de toi.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <stage>&lt;em&gt;Air de M. Frédéric Kreubé.&lt;/em&gt;</stage>
+          <l n="209">Serait-ce l’ami que sans cesse</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <stage>&lt;em&gt;Même air.&lt;/em&gt;</stage>
+          <l n="210">J’avais quitté mon Amélie.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="211">C’est comme lui.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="212">J’avais méconnu mon amie.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="213">C’est comme lui.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="214">Mon cœur n’a brûlé que pour elle :</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="215">Quoi ! ton cœur fut toujours fidèle ?</l>
+          <stage>&lt;em&gt;Douloureusement.&lt;/em&gt;</stage>
+          <l n="216">Ce n’est pas lui !</l>
+          <l n="217">Je savais bien que vous me trompiez. Alfred ne doit pas revenir. Mais c’est lui que je plains ; oui, monsieur, je le plains.</l>
+          <stage>&lt;em&gt;Air : À Paris et loin de sa mère.&lt;/em&gt;</stage>
+          <l n="218">Ce n’est pas par coquetterie,</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="219">C’est qu’en effet elle est charmante !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="220">Et puis...</l>
+          <stage>&lt;em&gt;Mystérieusement.&lt;/em&gt;</stage>
+          <l n="221">c’est un secret au moins, il ne faut pas lui en parler !... à son retour, je voulais le surprendre par mes progrès. Avec quel plaisir j’étudiais !... c’était pour lui !...</l>
+          <stage>&lt;em&gt;Avec gaîté.&lt;/em&gt;</stage>
+          <l n="222">Vous ne savez pas ?... j’ai fait son portrait... si j’étais sûre que vous ne lui dissiez point, je vous le montrerais...</l>
+          <stage>&lt;em&gt;Regardant autour d’elle.&lt;/em&gt;</stage>
+          <l n="223">Tenez, regardez vite ; n’est-il pas ressemblant ?...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="224">Ah ! je n’y tiens plus ; j’en mourrai de douleur !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="225">Je ne vous parle pas de ma harpe, de mon piano !... mais vous savez comme il aimait la valse ?... eh bien ! monsieur, je valse à ravir.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="226">Elle valse à ravir ! est-on plus malheureux ! Quelle femme j’avais là !</l>
+          <stage>&lt;em&gt;Air de M. Doche.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Amélie fait quelques pas de valse sur la ritournelle.&lt;/em&gt;</stage>
+          <l n="227">Quel charme heureux ! quelle grâce légère</l>
+          <stage>&lt;em&gt;Amélie s’arrête et le regarde.&lt;/em&gt;</stage>
+          <l n="228">Daigne un instant écouter ma prière :</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, le regarde tendrement et recommence à valser.</speaker>
+          <l n="229">Tra la, la, la, la, la, la, la, la, la, laire,</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, tombant à ses genoux.</speaker>
+          <l n="230">C’est Alfred... c’est ton époux, qui n’a jamais cessé de t’aimer.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO, paraissant dans le fond, un papier de musique à la main.</speaker>
+          <l n="231">Che veggio ! Quai spettacolo !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, qui était prête à se trahir, aperçoit Crescendo, pousse un grand cri, et s’enfuit en fermant la grille sur elle.</speaker>
+          <l n="232">Ah !</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="233">Son Altesse aux pieds de mon écolière !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="234">Elle a disparu !</l>
+          <stage>&lt;em&gt;Prenant Crescendo au collet.&lt;/em&gt;</stage>
+          <l n="235">Malheureux ! c’est ta présence qui l’a fait fuir !... où est-elle, dis-moi, tu m’en répondras ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="236">Mon prince...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="237">À qui en a-t-il ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="238">Eh bien ! que fais-je ?... je suis aussi insensé que lui ; mais vit-on jamais un malheur égal au mien ?</l>
+          <stage>&lt;em&gt;Regardant le portrait.&lt;/em&gt;</stage>
+          <l n="239">Amélie ! bonne Amélie !</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="240">Mon prince... c’est ce fameux air en mi bémol.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="241">Eh ! laisse-moi tranquille... Dis-moi plutôt... connais-tu cette jeune dame qui, tout à l’heure ?...</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="242">Sans doute.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, avec feu.</speaker>
+          <l n="243">Tu la connais, tu la vois souvent ? Ah ! je t’en prie, parle-moi d’elle.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="244">C’est la comtesse Amélie.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="245">Oui...</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="246">C’est la nièce de M. le baron, du maître de ce château, du possesseur de cette maison de plaisance... de celui que vous avez vu.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="247">Allons, le château, le baron... Voilà sa tête qui se perd... Aussi, où m’avisais-je d’aller lui demander des renseignements ?...</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="248">C’est mon écolière : c’est moi qui lui montre la musique... et une voix !... une méthode !...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="249">Eh ! au nom du ciel, laissons là la musique ! Rappelez-vous que vous n’êtes pas plus musicien que moi.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="250">Comment ! pas musicien ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="251">Eh ! non, M. le chancelier.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="252">Moi, chancelier !... rabaisser ainsi un compositeur distingué !...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="253">Allons, je ne m’en tirerai pas !... Morbleu ! laissez-moi.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="254">Non... l’on a abusé Votre Altesse ; mais elle va connaître il signor Crescendo ! Voici les lettres les piou flatteuses qui m’ont été adressées par des princes et des directeurs de spectacles ; voici des lettres de recommandation pour les piou grands personnages qui doivent être en ce moment en Angleterre ; pour M. l’ambassadeur de France, pour M. le marquis de Valmont, M. le comte de Roseval...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="255">De Roseval, dis-tu ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="256">Oui, monsieur, lui-même.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, lui arrachant la lettre, et la décachetant.</speaker>
+          <l n="257">Qu’est-ce que ça signifie ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="258">Monseigneur est sans façons...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="259">Eh ! oui... c’est pour moi ; c’est le chevalier de Forlis, mon ami intime... lisons.</l>
+          <l n="260">« D’après ta dernière lettre, tu dois être à Londres dans ce moment. Je t’adresse et te recommande il signor Crescendo, mon maître de musique...</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="261">C’est moi.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, continuant.</speaker>
+          <l n="262">« Un original.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="263">C’est moi.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, continuant.</speaker>
+          <l n="264">« Qui ne manque pas de talent. » C’est daté d’hier... Comment ! il serait vrai... vous seriez réellement... Et ce château... Amélie, le baron...</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="265">Sont réellement ce que je vous ai dit.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, vivement.</speaker>
+          <l n="266">Quel bonheur ! Oh ! oui, c’est cela... c’est cela même, mon cœur a besoin de le croire... Je cours m’informer, achever de m’éclaircir... cette jolie Amélie !... son oncle... Ah ! vous voulez me donner des leçons !... Morbleu ! je leur rendrai !... Tant d’idées se croisent, se confondent dans ma tête... Mon cher Crescendo !</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="267">Monseigneur, vous allez entendre mon grand air ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="268">Va toujours, je t’écoute.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="269">Tra, la, là , la.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, à part.</speaker>
+          <l n="270">Mais j’aperçois Amélie et le baron... Ne perdons. pas de temps.</l>
+          <stage>&lt;em&gt;Il s’enfuit par la gauche.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO, continuant.</speaker>
+          <l n="271">Tra, la, la, la... Mille pardons, il y a des notes de passées.</l>
+          <stage>&lt;em&gt;Il corrige au crayon.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="272">Mon oncle, il n’est plus là !</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="273">Aussi, tu le quittes sans attendre mon arrivée ; ce n’est pas cela dont nous étions convenus.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="274">C’est ce Crescendo qui tout à coup m’a effrayée.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="275">Tra, la , la... Votre Altesse, mon prince ! Eh bien ! où est-il donc ?</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="276">Quel dommage ! si vous aviez vu son trouble, son désespoir, le désordre de ses traits ; c’était charmant !...</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="277">Je vois que tu es moins irritée contre lui.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, sévèrement.</speaker>
+          <l n="278">Plus que jamais, mon oncle ; comme s’il suffisait d’un instant de repentir pour effacer tous les torts du monde.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="279">Dites-moi, êtes-vous bien sûr que notre prince rousse soit dans son bon sens ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="280">Comment ?</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="281">Oui, que sa tête ne soit pas... là... un peu. Pendant un quart d’heure, il me parle d’un tas de balivernes où l’on ne conçoit rien ; et, lorsque je veux commencer mon grand air, il part comme un éclair ; zeste !...</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON, bas à Amélie.</speaker>
+          <l n="282">Ça n’est pas si dépourvu de bon sens.</l>
+          <stage>&lt;em&gt;On entend du bruit.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="283">Ah ! madame... ah !... messieurs... qui l’aurait cru... ce pauvre jeune homme !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="284">Eh bien ! qu’as-tu donc ? Lui serait-il arrivé quelque chose ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="285">La tête n’y est plus.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="286">Là, quand je vous le disais.</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="287">Il faut que quelque révolution subite ait partroublé sa cervelle ; mais il est fou... fou à lier !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="288">Mon mari... où est-il ? conduis-moi de ce côté.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="289">Son mari ! allons, à l’autre à présent... ah çà, tout le monde perd donc la tête aujourd’hui ?</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="290">Il est dans une fureur, qu’il a déjà ravagé deux plates-bandes et brisé nos cloches à melons... Il demande sa femme, il la voit partout, il lui demande pardon, il s’accuse, et il casse tout !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="291">Mon Dieu ! qu’avons-nous fait là... vous voyez, mon oncle, avec votre stratagème : ce pauvre Alfred ! j’étais bien sûre qu’il m’aimait ! mais en perdre la raison !... Mon oncle, je vous en supplie, envoyez chercher des secours.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="292">Parbleu ! je vais moi-même voir un peu ce dont il s’agit... Ce pauvre jeune homme !... aussi avec une tête comme la sienne...</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="293">Eh ! allez donc.</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="294">Je reviens dans l’instant.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="295">Il s’avance de ce côté... retirez-vous, il est furieux !</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="296">Ohimè furioso ! Madame, rentrons, je vous le conseille.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="297">Non, quel que soit le danger, je reste ici, je ne le quitte plus.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="298">Moi, je me sauve.</l>
+          <stage>&lt;em&gt;Il rencontre Alfred, et s’enfuit de l’autre côté.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, dans la coulisse à gauche.</speaker>
+          <l n="299">Laissez-moi ! laissez-moi !</l>
+          <stage>&lt;em&gt;Il entre d’un air égaré ; ses vêtements sont en désordre ; Crescendo, Tomy poussent un grand cri, et se sauvent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, AMÉLIE</speaker>
+          <stage>&lt;em&gt;Alfred parcourt le théâtre en furieux ; Amélie se retire derrière un arbre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="300">Oui, cet Alfred est un monstre ! c’est à lui que j’en veux !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, timidement.</speaker>
+          <l n="301">Mon Dieu ! qu’il a l’air méchant ! Alfred, c’est moi, ne me faites pas de mal.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="302">Qui êtes-vous ?... approchez.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="303">Vous ne me ferez pas de mal ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="304">Vous le savez bien ; c’est Alfred seul qui mérite ma colère.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="305">Il faut dire comme lui pour l’apaiser. Oui, sans doute, c’est un mauvais sujet, un méchant caractère, qui fait de la peine à tout le monde ; mais, si vous m’aimez, faites comme moi, ne lui en voulez plus ; il a pressé ma main sur son cœur !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="306">Connaissez-vous Amélie ?</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, timidement.</speaker>
+          <l n="307">Oui, je la connais.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, avec feu.</speaker>
+          <l n="308">Vous la connaissez !</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, s’enfuyant.</speaker>
+          <l n="309">Ah ! mon Dieu !</l>
+          <stage>&lt;em&gt;Tremblante.&lt;/em&gt;</stage>
+          <l n="310">Non, monsieur, non, je ne la connais pas. Ah ! mon Dieu ! est-ce qu’il va toujours être comme cela ?</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="311">Non, vous ne la connaissez pas ?</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, disant comme lui.</speaker>
+          <l n="312">Non, non, je ne la connais pas.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="313">Si vous la connaissiez, vous l’aimeriez comme moi. Si vous saviez quelle fut ma conduite, surtout depuis que je suis éloigné d’elle ; je veux tout vous raconter.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="314">Quelle situation ! une femme écouter les confidences de son mari ! Dieu sait combien je vais en apprendre.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="315">Quand j’arrivai à Vienne, vous savez bien, jamais la cour n’avait été si brillante. Une foule de femmes charmantes...</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="316">Ah ! mon Dieu !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <stage>&lt;em&gt;Air de M. Mélesville.&lt;/em&gt;</stage>
+          <l n="317">Une surtout, fraîche et jolie,</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="318">Et vous disiez à cette belle...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="319">Je disais, en amant fidèle...</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="320">Comment ! monsieur, vous disiez... Mais c’est très bien.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="321">Oh ! ce n’est pas tout. Vous rappelez-vous, à Berlin, cette jeune et jolie comtesse ; bonne et estimable femme !</l>
+          <stage>&lt;em&gt;Même air.&lt;/em&gt;</stage>
+          <l n="322">Aux doux plaisirs ainsi qu’au monde</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="323">Et malgré sa douleur profonde,</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, d’un air égaré.</speaker>
+          <l n="324">Devoirs, égards, dans mon délire,</l>
+          <stage>&lt;em&gt;Gaiement.&lt;/em&gt;</stage>
+          <l n="325">Tra la, tra la,</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="326">Et moi qui l’accusais ! Mais c’est un modèle de fidélité conjugale.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="327">Et vous-même, vous êtes bien jolie ! je n’ai jamais rencontré rien de plus attrayant ! eh bien ! vous tenteriez en vain de me séduire.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="328">J’ai bien envie d’essayer.</l>
+          <stage>&lt;em&gt;Tendrement.&lt;/em&gt;</stage>
+          <l n="329">Alfred, si j’avais été abusée ; si, vous retrouvant fidèle, mon cœur vous pardonnait.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, faisant un mouvement qu’il réprime.</speaker>
+          <l n="330">Non ! je ne puis vous écouter.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="331">Mon Dieu ! il va m’être trop fidèle à présent. Et si j’étais cette Amélie que vous regrettez.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, avec feu.</speaker>
+          <l n="332">Amélie, dites-vous ? Êtes-vous bien sûre que ce soit elle ?</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="333">Je vous jure que c’est moi.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="334">Écoutez ; n’espérez pas m’abuser ; je le saurai bien. Amélie, d’abord, ne m’aurait pas dit : vous.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="335">Eh bien ! Alfred, je te le jure.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="336">Amélie me donnait un nom plus doux.</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="337">Eh bien ! mon ami, mon Alfred !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="338">Il faut bien faire tout ce qu’il veut.</l>
+          <stage>&lt;em&gt;Air : Quand toi sortir de la case. (Paul et Virginie.)&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="339">Amélie, hélas ! moins fière,</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="340">Ai-je donc l’air si sévère ?</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="341">Je crains qu’à chaque moment</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, la regardant.</speaker>
+          <l n="342">Oui, c’est son regard charmant,</l>
+          <stage>&lt;em&gt;Il lui baise la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <stage>Il ne faut pas l’irriter. &lt;em&gt;(bis)&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Deuxième couplet.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="343">Oui, ce moment me rappelle</l>
+          <stage>&lt;em&gt;Il la serre dans ses bras.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, émue.</speaker>
+          <l n="344">Quelle contrainte cruelle !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="345">S’il est vrai que ce soit elle,</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="346">Mais, au fait, c’est mon époux.</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, vivement.</speaker>
+          <l n="347">Non, non, jamais mon Amélie</l>
+          <stage>&lt;em&gt;Il l’embrasse.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <stage>Il ne faut pas l’irriter. &lt;em&gt;(bis)&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Alfred tombe à ses genoux.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="348">Mon oncle ! n’approchez pas ! il n’y a que moi...</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED, se relevant.</speaker>
+          <l n="349">Venez, venez, mon cher oncle.</l>
+          <stage>&lt;em&gt;Air du Pot de fleurs.&lt;/em&gt;</stage>
+          <l n="350">Non, vous n’avez plus rien à craindre ;</l>
+          <stage>&lt;em&gt;Montrant Amélie.&lt;/em&gt;</stage>
+          <l n="351">Son cœur n’étant plus courroucé,</l>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE.</speaker>
+          <l n="352">Comment, monsieur !</l>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="353">C’était le seul moyen de te fléchir. M’en veux-tu d’avoir perdu la tête ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="354">Bah ! est-ce qu’une femme ne pardonne pas toujours les folies qu’on fait pour elle ! mais ce que je ne te pardonne pas, ce sont mes plates-bandes, et mes cloches de melons.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="355">Ah çà, messieurs, puisque vous avez tous recouvré la raison, si vous entendiez mon air ?</l>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="356">Après dîner.</l>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="357">Au moins un petit allegro.</l>
+          <stage>&lt;em&gt;Vaudeville.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air de M. Mélesville.&lt;/em&gt;</stage>
+          <l n="358">Enfin donc un ciel plus doux</l>
+        </sp>
+        <sp who="#chœur">
+          <speaker>CHŒUR.</speaker>
+          <stage>Enfin donc, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-baron-de-saint-elme">
+          <speaker>LE BARON.</speaker>
+          <l n="359">De vos voisins, chaque jour,</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>CHŒUR.</speaker>
+          <stage>Chaque pays a ses goûts, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tomy">
+          <speaker>TOMY.</speaker>
+          <l n="360">Ne courons point le pays ;</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>CHŒUR.</speaker>
+          <stage>Si l’on vous dit, tendre époux, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#alfred-de-roseval">
+          <speaker>ALFRED.</speaker>
+          <l n="361">Étrangers, qu’un sort jaloux</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>CHŒUR.</speaker>
+          <stage>Goûtez le bonheur si doux, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#crescendo">
+          <speaker>CRESCENDO.</speaker>
+          <l n="362">Dans un somptueux hôtel,</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>CHŒUR.</speaker>
+          <stage>Vous, dont les mets sont si doux, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#amélie">
+          <speaker>AMÉLIE, au public.</speaker>
+          <l n="363">Deux époux, que met d’accord</l>
+        </sp>
+        <sp who="#tomy">
+          <speaker>CHŒUR.</speaker>
+          <stage>Messieurs, tournant contre nous, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <l n="364">[1] Ce couplet fut chanté en 1818, lorsque la France était encore occupée par les armées étrangères.</l>
+          <l n="365" />
+        </sp>
       </div>
     </body>
   </text>

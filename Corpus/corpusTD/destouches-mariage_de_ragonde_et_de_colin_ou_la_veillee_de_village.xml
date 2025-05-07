@@ -1,932 +1,314 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Mariage de Ragonde et de Colin</title>
-        <author key="DESTOUCHES | (naissance-mort)">DESTOUCHES |</author>
+        <title type="main" />
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/le-mariage-de-ragonde-et-de-colin-destouches</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>DESTOUCHES |</author>. <title>Le Mariage de Ragonde et de Colin</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/le-mariage-de-ragonde-et-de-colin-destouches</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1714-12-02">Représenté pour la première fois au château de Sceaux, le 2 décembre 1714.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="ragonde" sex="SEX">
+            <persName>RAGONDE</persName>
+          </person>
+          <person xml:id="colette" sex="SEX">
+            <persName>COLETTE</persName>
+          </person>
+          <person xml:id="mathurine" sex="SEX">
+            <persName>MATHURINE</persName>
+          </person>
+          <person xml:id="lucas" sex="SEX">
+            <persName>LUCAS</persName>
+          </person>
+          <person xml:id="colin" sex="SEX">
+            <persName>COLIN</persName>
+          </person>
+          <person xml:id="thibaut" sex="SEX">
+            <persName>THIBAUT</persName>
+          </person>
+          <person xml:id="troupe-de-paysans-et-de-paysannes-qui-dansent" sex="SEX">
+            <persName>TROUPE DE PAYSANS et DE PAYSANNES qui dansent</persName>
+          </person>
+          <person xml:id="troupe-de-lutins" sex="SEX">
+            <persName>TROUPE DE LUTINS</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>[indéfini]</term>
+          <term>[indéfini]</term>
         </keywords>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1714-12-02" location="unknown">Représenté pour la première fois au château de Sceaux, le 2 décembre 1714.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le Mariage de Ragonde et de Colin</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Divertissement en musique.</l>
-            <l n="2" xml:id="l2">Représenté pour la première fois au château de Sceaux, le 2 décembre 1714.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="ragonde">RAGONDE</role>
-              <roleDesc>, <em>vieille paysanne</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="colette">COLETTE</role>
-              <roleDesc>, <em>fille de Ragonde</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mathurine">MATHURINE</role>
-              <roleDesc>, <em>voisine de Ragonde</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lucas">LUCAS</role>
-              <roleDesc>, <em>amant de Colette</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="colin">COLIN</role>
-              <roleDesc>, <em>jeune paysan aimé de Ragonde</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="thibaut">THIBAUT</role>
-              <roleDesc>, <em>magister du village</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-paysans-<em>et</em>-de-paysannes-<em>qui-dansent</em>">TROUPE DE PAYSANS <em>et</em> DE PAYSANNES <em>qui dansent</em></role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="troupe-de-lutins">TROUPE DE LUTINS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène est dans le village de Sceaux.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-            <l n="7" xml:id="l7"> </l>
-            <stage><hi rend="italic">En vérité, Monsieur, vous m’étonnez. Est-il possible qu’on représente les <em>Amours de Ragonde </em>sur le théâtre de l’Opéra, et que cette bagatelle y attire tout Paris ? J’en suis émerveillé, je vous l’avoue. Ce qui redouble ma surprise, c’est que quelques beaux-esprits osent se vanter hautement d’être les auteurs de ce petit poème lyrique ; si peu de gloire ne valait pas la peine de mentir. Mais, si vous m’avez étonné, Monsieur, je vais bien vous surprendre à mon tour. Apprenez que c’est moi qui l’ai composé pour S. A. S. Madame la Duchesse du Maine, et qui l’ai fait représenter à Sceaux dans le mois de décembre 1714. J’ose même ajouter que cette illustre princesse l’honora de ses applaudissements ; et je me flatte qu’elle n’a pas oublié que j’en suis l’auteur, aussi bien que d’un autre divertissement qui avait précédé celui-ci, le 22 novembre de la même année, et qui était intitulé le <em>Mystère</em>, ou les <em>Fêtes de l’Inconnu</em> : ce furent deux espèces d’<em>impromptu</em> ; car, à mesure que je composais les vers, feu Monsieur Mouret les mettait en musique avec une facilité merveilleuse ; en sorte que le poète et le musicien semblaient se disputer à qui aurait plutôt fini sa tâche, pour satisfaire l’impatience d’une princesse à qui nous souhaitions de donner des marques de notre zèle, et de l’ambition que nous avions tous deux de contribuer à ses nobles amusements, et d’y joindre le mérite de la diligence ; mérite qui, dans ces sortes d’occasions, a beaucoup plus d’éclat et de succès, que la parfaite régularité d’un ouvrage qu’on a pris soin de méditer et de corriger longtemps : aussi le public a-t-il dû sentir que les vers et la musique des <em>Amours de Ragonde</em> n’étaient pas la production d’un long travail ; mais peut-être que cette espèce de négligence a je ne sais quoi de facile et de naturel, qui a saisi les spectateurs : car, ordinairement, ce ne sont pas les ouvrages les plus travaillés qui ont les plus grands succès ; et tout ce qui approche le plus de la nature, a presque toujours le bonheur de plaire : c’est à quoi principalement j’attribue le succès de mon petit opéra.</hi></stage>
-            <l n="9" xml:id="l9">Tout négligé qu’il est, néanmoins, il s’en faut bien que je donne mon suffrage à ce qu’on y a retranché ou ajouté, sans avoir eu la précaution de me consulter. Je proteste surtout contre certaines petites maximes que je trouve dans l’exemplaire que vous venez de m’envoyer : ces fadeurs ne me vont point du tout ; et, pour vous convaincre que je n’y ai nulle part, je vous envoie l’ouvrage tel que je l’ai composé, et tel qu’il paraîtra dans le recueil de mes poésies diverses.</l>
-            <l n="10" xml:id="l10"> </l>
-            <l n="11" xml:id="l11"> </l>
-            <l n="12" xml:id="l12"> </l>
-          </sp>
-          <sp who="strong>la-veillée" xml:id="0-2">
-            <speaker><strong>LA VEILLÉE.</strong></speaker>
-            <l n="13" xml:id="l13"> </l>
-            <stage><hi rend="italic"><em>Tous les acteurs et les actrices, avec les danseurs et les danseuses, sont autour d’une table. Les actrices et les danseuses travaillent ; les unes filent à la quenouille, les autres au rouet j quelques-unes tricotent des bas, etc.</em></hi></stage>
-          </sp>
-          <sp who="ragonde" xml:id="0-3">
-            <speaker>RAGONDE.</speaker>
-            <l n="15" xml:id="l15">Allons, mes enfants, à l’ouvrage ;</l>
-            <l n="16" xml:id="l16">Tandis que je travaillerons,</l>
-            <l n="17" xml:id="l17">J’avons ici les garçons du village,</l>
-            <l n="18" xml:id="l18">Qui vont nous divertir par d’aimables chansons.</l>
-          </sp>
-          <sp who="thibaut" xml:id="0-4">
-            <speaker>COLIN, LUCAS <em>et</em> THIBAUT.</speaker>
-            <l n="19" xml:id="l19">Vraiment, j’en avons de nouvelles,</l>
-            <l n="20" xml:id="l20">Que vous trouverez des plus belles,</l>
-          </sp>
-          <sp who="lucas" xml:id="0-5">
-            <speaker>LUCAS.</speaker>
-            <l n="21" xml:id="l21">Notre magister, que voici,</l>
-            <l n="22" xml:id="l22">N’a jamais si bien réussi :</l>
-            <l n="23" xml:id="l23">Il a plus d’esprit, ce me semble,</l>
-            <l n="24" xml:id="l24">Que tout notre village ensemble.</l>
-          </sp>
-          <sp who="thibaut" xml:id="0-6">
-            <speaker>THIBAUT, <em>gravement.</em></speaker>
-            <l n="25" xml:id="l25">Vous me rendez justice, en me traitant ainsi.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-7">
-            <speaker>RAGONDE.</speaker>
-            <l n="26" xml:id="l26">Et les airs sont-ils beaux ?</l>
-          </sp>
-          <sp who="lucas" xml:id="0-8">
-            <speaker>LUCAS.</speaker>
-            <l n="27" xml:id="l27">Oui, pargué ! je m’en pique :</l>
-            <l n="28" xml:id="l28">Car c’est moi, Dieu marci,</l>
-            <l n="29" xml:id="l29">Qui les ai tous mis en musique.</l>
-          </sp>
-          <sp who="thibaut" xml:id="0-9">
-            <speaker>THIBAUT.</speaker>
-            <l n="30" xml:id="l30">Nous sommes habitants de Sceaux :</l>
-            <l n="31" xml:id="l31">Pour combler tous nos vœux, ce bonheur doit suffire.</l>
-            <l n="32" xml:id="l32">Rassemblons-nous ici pour chanter et pour rire :</l>
-            <l n="33" xml:id="l33">L’été, nous danserons à l’ombre des ormeaux.</l>
-            <l n="34" xml:id="l34"> </l>
-            <l n="35" xml:id="l35">Nous sommes habitants de Sceaux ;</l>
-            <l n="36" xml:id="l36">Pour combler tous nos vœux, ce bonheur doit suffire.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-10">
-            <speaker>RAGONDE.</speaker>
-            <l n="37" xml:id="l37">Vous chanterez tous trois à votre tour.</l>
-            <l n="38" xml:id="l38">Mais vos chansons parlent-elles d’amour ?</l>
-            <l n="39" xml:id="l39">Je veux partout de la tendresse ;</l>
-            <l n="40" xml:id="l40">Sans cela, nargue des plaisirs :</l>
-            <l n="41" xml:id="l41">Et je sens les mêmes désirs</l>
-            <l n="42" xml:id="l42">Que je sentais dans ma verte jeunesse.</l>
-          </sp>
-          <sp who="thibaut" xml:id="0-11">
-            <speaker>LUCAS <em>et</em> THIBAUT.</speaker>
-            <l n="43" xml:id="l43">Tatigué ! la belle vieillesse !</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-12">
-            <speaker>RAGONDE.</speaker>
-            <l n="44" xml:id="l44">Vieillesse ! À moi, vieillesse ! Ô les impertinents !</l>
-            <l n="45" xml:id="l45">Je suis un peu moins jeune que ma fille,</l>
-            <l n="46" xml:id="l46">Mais je parois mille fois plus gentille.</l>
-            <l n="47" xml:id="l47">J’ai la vivacité, j’ai tous les agréments</l>
-            <l n="48" xml:id="l48">Qu’on admirait en moi dans mon jeune printemps.</l>
-            <l n="49" xml:id="l49">Pour mes appas, plus d’un amant s’empresse.</l>
-          </sp>
-          <sp who="thibaut" xml:id="0-13">
-            <speaker>LUCAS <em>et</em> THIBAUT.</speaker>
-            <l n="50" xml:id="l50">Tatigué ! la belle vieillesse !</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-14">
-            <speaker>RAGONDE.</speaker>
-            <l n="51" xml:id="l51">Vieillesse ! À moi, vieillesse ! Ô les impertinents !</l>
-            <l n="52" xml:id="l52">Allons, mes enfants, à l’ouvrage :</l>
-            <l n="53" xml:id="l53">Tandis que je travaillerons,</l>
-            <l n="54" xml:id="l54">J’avons ici les garçons du village,</l>
-            <l n="55" xml:id="l55">Qui vont nous amuser par d’aimables chansons.</l>
-            <stage><hi rend="italic"><em>Ritournelle.</em></hi></stage>
-          </sp>
-          <sp who="thibaut" xml:id="0-15">
-            <speaker>THIBAUT.</speaker>
-            <l n="57" xml:id="l57">L’hiver qui commence son cours,</l>
-            <l n="58" xml:id="l58">Nous fait quitter les champs et les bocages.</l>
-            <l n="59" xml:id="l59">Nous attendons dans nos villages,</l>
-            <l n="60" xml:id="l60">Que le zéphyr ramène les beaux jours.</l>
-            <l n="61" xml:id="l61">Nous nous rassemblons fous pendant la nuit obscure.</l>
-            <l n="62" xml:id="l62">Que ces moments ont de douceurs !</l>
-            <l n="63" xml:id="l63">Tout nous porte au plaisir ; et, malgré la froidure,</l>
-            <l n="64" xml:id="l64">L’amour nous fait sentir ses plus vives ardeurs.</l>
-          </sp>
-          <sp who="lucas" xml:id="0-16">
-            <speaker>LUCAS.</speaker>
-            <l n="65" xml:id="l65">Superbes habitants des villes,</l>
-            <l n="66" xml:id="l66">Votre bonheur n’est point l’objet de nos désirs :</l>
-            <l n="67" xml:id="l67">L’abondance et l’éclat règnent dans vos plaisirs.</l>
-            <l n="68" xml:id="l68">Nos jeux sont moins brillants, mais ils sont plus tranquilles.</l>
-            <stage><hi rend="italic"><em>Air de musette.</em></hi></stage>
-          </sp>
-          <sp who="colin" xml:id="0-17">
-            <speaker>COLIN.</speaker>
-            <l n="70" xml:id="l70">Accourez tous, jeunes garçons ;</l>
-            <l n="71" xml:id="l71">Venez aussi, jeunes fillettes ;</l>
-            <l n="72" xml:id="l72">Écoutez nos tendres chansons,</l>
-            <l n="73" xml:id="l73">Et dansons tous ensemble au son de nos musettes.</l>
-            <l n="74" xml:id="l74">De cet hiver faisons un doux printemps ;</l>
-            <l n="75" xml:id="l75">L’Amour l’ordonne, et nous est favorable.</l>
-            <l n="76" xml:id="l76">Quand on sait aux plaisirs donner tous les instants,</l>
-            <l n="77" xml:id="l77">Toute saison est agréable.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-18">
-            <speaker>RAGONDE.</speaker>
-            <l n="78" xml:id="l78">Il chante mieux que vous, mon aimable Colin :</l>
-            <l n="79" xml:id="l79">Je lui veux attacher ce ruban de ma main.</l>
-          </sp>
-          <sp who="colin" xml:id="0-19">
-            <speaker>COLIN.</speaker>
-            <l n="80" xml:id="l80">Laissez, reprenez votre ouvrage.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-20">
-            <speaker>RAGONDE.</speaker>
-            <l n="81" xml:id="l81">Mon cher enfant, reçois cette faveur ;</l>
-            <l n="82" xml:id="l82">C’est un présent de mariage.</l>
-          </sp>
-          <sp who="colin" xml:id="0-21">
-            <speaker>COLIN.</speaker>
-            <l n="83" xml:id="l83">Reprendre un époux à votre âge !</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-22">
-            <speaker>RAGONDE.</speaker>
-            <l n="84" xml:id="l84">Oui, mon poupon ; oui, mon cher cœur.</l>
-            <l n="85" xml:id="l85">N’est-ce donc pas assez que trois mois de veuvage ?</l>
-            <l n="86" xml:id="l86">Je ne puis plus supporter ses ennuis.</l>
-            <l n="87" xml:id="l87">Voici le temps des longues nuits ;</l>
-            <l n="88" xml:id="l88">Et si bientôt je ne m’engage,</l>
-            <l n="89" xml:id="l89">Mon honneur, à la fin, pourra faire naufrage :</l>
-            <l n="90" xml:id="l90">Un plaisir légitime est tout ce que je veux.</l>
-          </sp>
-          <sp who="thibaut" xml:id="0-23">
-            <speaker>LUCAS, THIBAUT, MATHURINE.</speaker>
-            <l n="91" xml:id="l91">Ragonde avec Colin, le charmant assemblage !</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-24">
-            <speaker>RAGONDE.</speaker>
-            <l n="92" xml:id="l92">Que je nous aimerons ! Que je serons heureux !</l>
-          </sp>
-          <sp who="thibaut" xml:id="0-25">
-            <speaker>LUCAS, THIBAUT, MATHURINE.</speaker>
-            <l n="93" xml:id="l93">Ragonde avec Colin, le charmant assemblage !</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-26">
-            <speaker>RAGONDE.</speaker>
-            <l n="94" xml:id="l94">Ah, les jolis enfants que je ferons tous deux !</l>
-            <l n="95" xml:id="l95">Embrasse-moi.</l>
-          </sp>
-          <sp who="colin" xml:id="0-27">
-            <speaker>COLIN.</speaker>
-            <l n="96" xml:id="l96">Laissez, reprenez votre ouvrage.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-28">
-            <speaker>RAGONDE.</speaker>
-            <l n="97" xml:id="l97">Je crois que tu m’aimeras bien.</l>
-          </sp>
-          <sp who="colin" xml:id="0-29">
-            <speaker>COLIN.</speaker>
-            <l n="98" xml:id="l98">Non, morgue ! je n’en ferai rien.</l>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          </sp>
-          <sp who="ragonde" xml:id="0-30">
-            <speaker>RAGONDE.</speaker>
-            <l n="100" xml:id="l100">Je crois que tu m’aimeras bien.</l>
-          </sp>
-          <sp who="colin" xml:id="0-31">
-            <speaker>COLIN.</speaker>
-            <l n="101" xml:id="l101">Non, morguée ! je n’en ferai rien.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-32">
-            <speaker>RAGONDE.</speaker>
-            <l n="102" xml:id="l102">Tu fais le dégoûté ! Mais vois comme je brille !</l>
-            <l n="103" xml:id="l103">À qui donc en veux-tu ?</l>
-          </sp>
-          <sp who="colin" xml:id="0-33">
-            <speaker>COLIN.</speaker>
-            <l n="104" xml:id="l104">J’en veux à votre fille.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-34">
-            <speaker>RAGONDE.</speaker>
-            <l n="105" xml:id="l105">À ma fille ! Merci de moi !</l>
-            <l n="106" xml:id="l106">Je t’étranglerais avec elle,</l>
-            <l n="107" xml:id="l107">Plutôt que de la voir mariée avec toi.</l>
-            <stage><hi rend="italic"><em>Tendrement.</em></hi></stage>
-            <l n="109" xml:id="l109">Veux-tu me voir mourir ?</l>
-          </sp>
-          <sp who="colin" xml:id="0-35">
-            <speaker>COLIN.</speaker>
-            <l n="110" xml:id="l110">C’est une bagatelle.</l>
-            <l n="111" xml:id="l111">Mourez, j’y consens de bon cœur,</l>
-            <l n="112" xml:id="l112">Pourvu que j’épouse Colette.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-36">
-            <speaker>RAGONDE.</speaker>
-            <l n="113" xml:id="l113">C’est donc ainsi que l’on me traite ?</l>
-            <l n="114" xml:id="l114">Traître ! tu sentiras l’effet de ma fureur.</l>
-            <l n="115" xml:id="l115">Veux-tu me voir mourir ?</l>
-          </sp>
-          <sp who="colin" xml:id="0-37">
-            <speaker>COLIN.</speaker>
-            <l n="116" xml:id="l116">J’y consens de bon cœur,</l>
-            <l n="117" xml:id="l117">Pourvu que j’épouse Colette.</l>
-            <stage><hi rend="italic"><em>À Colette.</em></hi></stage>
-            <l n="119" xml:id="l119">Je crois que tu m’aimeras bien.</l>
-          </sp>
-          <sp who="colette" xml:id="0-38">
-            <speaker>COLETTE</speaker>
-            <l n="120" xml:id="l120">Non, Colin, je n’en ferai rien.</l>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          </sp>
-          <sp who="colin" xml:id="0-39">
-            <speaker>COLIN.</speaker>
-            <l n="122" xml:id="l122">Je crois que tu m’aimeras bien.</l>
-          </sp>
-          <sp who="colette" xml:id="0-40">
-            <speaker>COLETTE.</speaker>
-            <l n="123" xml:id="l123">Non, Colin, je n’en ferai rien.</l>
-          </sp>
-          <sp who="mathurine" xml:id="0-41">
-            <speaker>MATHURINE.</speaker>
-            <stage><hi rend="italic"><em>Air.</em></hi></stage>
-            <l n="125" xml:id="l125">Pargué, Colin, tu te moques du monde,</l>
-            <l n="126" xml:id="l126">De refuser dame Ragonde !</l>
-            <l n="127" xml:id="l127">Elle est vieille, il est vrai, je ne l’ignorons pas ;</l>
-            <l n="128" xml:id="l128">Mais elle a des écus : et vivent les appas</l>
-            <l n="129" xml:id="l129">Par qui la cuisine se fonde.</l>
-            <l n="130" xml:id="l130">Aga, quien, mon pauvre Colin,</l>
-            <l n="131" xml:id="l131">Tu seras riche et n’auras point d’ombrage.</l>
-            <l n="132" xml:id="l132">Si tu prends jeune femme en ce siècle malin,</l>
-            <l n="133" xml:id="l133">Bientôt tu verras le voisin</l>
-            <l n="134" xml:id="l134">Partager avec toi les soins de ton ménage.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-42">
-            <speaker>RAGONDE.</speaker>
-            <l n="135" xml:id="l135">Oui, traître ! tu m’épouseras,</l>
-            <l n="136" xml:id="l136">Ou bien tu t’en repentiras.</l>
-            <l n="137" xml:id="l137">Si tu prends une autre pour femme,</l>
-            <l n="138" xml:id="l138">Je vais jeter un sort sur toi ;</l>
-            <l n="139" xml:id="l139">Et je te jure, sur mon âme,</l>
-            <l n="140" xml:id="l140">De te faire mourir, et de crainte, et d’effroi.</l>
-          </sp>
-          <sp who="colin" xml:id="0-43">
-            <speaker>COLIN.</speaker>
-            <l n="141" xml:id="l141">Me croyez-vous assez sot pour vous croire ?</l>
-          </sp>
-          <sp who="mathurine" xml:id="0-44">
-            <speaker>MATHURINE.</speaker>
-            <l n="142" xml:id="l142">Colin se rendra quelque jour.</l>
-            <l n="143" xml:id="l143">Ne parlons plus de votre amour,</l>
-            <l n="144" xml:id="l144">Et que chacun conte une histoire.</l>
-          </sp>
-          <sp who="lucas" xml:id="0-45">
-            <speaker>LUCAS.</speaker>
-            <l n="145" xml:id="l145">J’en sais une, morgué ! qui vous divartira.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-46">
-            <speaker>RAGONDE.</speaker>
-            <l n="146" xml:id="l146">Je vais en dire une charmante.</l>
-          </sp>
-          <sp who="colis" xml:id="0-47">
-            <speaker>COLIS.</speaker>
-            <l n="147" xml:id="l147">Écoutez celle-ci, vous en serez contente.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-48">
-            <speaker>RAGONDE.</speaker>
-            <l n="148" xml:id="l148">Je m’en vais commencer, et Colin me suivra.</l>
-          </sp>
-          <sp who="lucas" xml:id="0-49">
-            <speaker>LUCAS.</speaker>
-            <l n="149" xml:id="l149">Non, morgué !</l>
-          </sp>
-          <sp who="colin" xml:id="0-50">
-            <speaker>COLIN.</speaker>
-            <l n="150" xml:id="l150">C’est à moi.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-51">
-            <speaker>RAGONDE.</speaker>
-            <l n="151" xml:id="l151">Paix. La mienne est plaisante.</l>
-            <stage><hi rend="italic"><em>Tous trois ensemble.</em></hi></stage>
-          </sp>
-          <sp who="luc" xml:id="0-52">
-            <speaker>LUC.</speaker>
-            <l n="153" xml:id="l153">Climène, en son jeune printemps,</l>
-            <l n="154" xml:id="l154">Dansait un jour sur la fougère ;</l>
-            <l n="155" xml:id="l155">Elle agaçait, devant sa mère,</l>
-            <l n="156" xml:id="l156">Un berger qui l’aimait depuis assez longtemps.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-53">
-            <speaker>RAGONDE.</speaker>
-            <l n="157" xml:id="l157">Un jeune berger de vingt ans</l>
-            <l n="158" xml:id="l158">Aimait une jeune bergère ;</l>
-            <l n="159" xml:id="l159">Mais il plaisait fort à la mère,</l>
-            <l n="160" xml:id="l160">Qui voulait l’épouser en dépit de ses dents.</l>
-          </sp>
-          <sp who="colin" xml:id="0-54">
-            <speaker>COLIN.</speaker>
-            <l n="161" xml:id="l161">Une vieille avait quatre dents,</l>
-            <l n="162" xml:id="l162">Qui branlaient, et ne tenaient guère ;</l>
-            <l n="163" xml:id="l163">Elle voulait être encor mère,</l>
-            <l n="164" xml:id="l164">En épousant, par force, un berger de vingt ans.</l>
-          </sp>
-          <sp who="colette" xml:id="0-55">
-            <speaker>COLETTE.</speaker>
-            <l n="165" xml:id="l165">Quoi ! parler tous ensemble ? Eh ! bon dieu ! quelle honte</l>
-            <l n="166" xml:id="l166">Chacun, à votre tour, vous direz votre conte.</l>
-          </sp>
-          <sp who="lucas" xml:id="0-56">
-            <speaker>LUCAS, <em>seul.</em></speaker>
-            <l n="167" xml:id="l167">Climène, en son jeune printemps,</l>
-            <l n="168" xml:id="l168">Dansait un jour sur la fougère ;</l>
-            <l n="169" xml:id="l169">Elle agaçait devant sa mère,</l>
-            <l n="170" xml:id="l170">Un berger qui l’aimait depuis assez longtemps.</l>
-            <l n="171" xml:id="l171"> </l>
-            <l n="172" xml:id="l172">La vieille se mit en colère ;</l>
-            <l n="173" xml:id="l173">Il prit, pour l’adoucir, un ton doux, langoureux :</l>
-            <l n="174" xml:id="l174">Elle l’aima, lit voir bien de l’or à ses yeux ;</l>
-            <l n="175" xml:id="l175">Et, d’amant de Climène, il devint son beau-père.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-57">
-            <speaker>RAGONDE, <em>seule.</em></speaker>
-            <l n="176" xml:id="l176">Un jeune berger de vingt ans</l>
-            <l n="177" xml:id="l177">Aimait une jeune bergère ;</l>
-            <l n="178" xml:id="l178">Mais il plaisait fort à la mère,</l>
-            <l n="179" xml:id="l179">Qui voulait l’épouser, en dépit de ses dents.</l>
-            <l n="180" xml:id="l180"> </l>
-            <l n="181" xml:id="l181">La bonne femme était sorcière.</l>
-            <l n="182" xml:id="l182">Pour punir le berger insensible à ses feux,</l>
-            <l n="183" xml:id="l183">Elle en fit un matou qui devint furieux,</l>
-            <l n="184" xml:id="l184">Et se précipita du haut d’une gouttière.</l>
-          </sp>
-          <sp who="colin" xml:id="0-58">
-            <speaker>COLIN.</speaker>
-            <l n="185" xml:id="l185">Une vieille avait quatre dents,</l>
-            <l n="186" xml:id="l186">Qui branlaient et ne tenaient guère ;</l>
-            <l n="187" xml:id="l187">Elle voulait être encor mère,</l>
-            <l n="188" xml:id="l188">En épousant, par force, un berger de vingt ans.</l>
-            <l n="189" xml:id="l189"> </l>
-            <l n="190" xml:id="l190">Il méprisa cette Mégère :</l>
-            <l n="191" xml:id="l191">Elle voulut punir ce berger dédaigneux ;</l>
-            <l n="192" xml:id="l192">Mais lui, pour prévenir ses desseins dangereux,</l>
-            <l n="193" xml:id="l193">L’envoya soupirer au fond de la rivière.</l>
-          </sp>
-          <sp who="ragonde" xml:id="0-59">
-            <speaker>RAGONDE.</speaker>
-            <l n="194" xml:id="l194">Il suffit : je t’entends, et tu me connaîtras.</l>
-          </sp>
-          <sp who="colette" xml:id="0-60">
-            <speaker>COLETTE, <em>à Ragonde.</em></speaker>
-            <l n="195" xml:id="l195">J’avons, Lucas et moi, concerté la manière</l>
-            <l n="196" xml:id="l196">Dont il faut vous venger : ne vous désolez pas.</l>
-          </sp>
-          <sp who="mathurine" xml:id="0-61">
-            <speaker>MATHURINE.</speaker>
-            <l n="197" xml:id="l197">M’en croirez-vous ? laissons cette matière.</l>
-            <l n="198" xml:id="l198">Dansons, dansons, je ne saurions mieux faire.</l>
-          </sp>
-          <sp who="choeur-de-paysans" xml:id="0-62">
-            <speaker>CHOEUR DE PAYSANS <em>et</em> DE PAYSANNES.</speaker>
-            <l n="199" xml:id="l199">Dansons, dansons ; je ne saurions mieux faire.</l>
-            <stage><hi rend="italic"><em>Ils dansent plusieurs entrées, et l’intermède finit par une contredanse, où tous les acteurs et tontes les actrices se mêlent.</em></hi></stage>
-            <l n="201" xml:id="l201"> </l>
-            <l n="202" xml:id="l202"> </l>
-            <l n="203" xml:id="l203"> </l>
-          </sp>
-          <sp who="strong>les-lutins" xml:id="0-63">
-            <speaker><strong>LES LUTINS.</strong></speaker>
-            <l n="204" xml:id="l204"> </l>
-            <l n="205" xml:id="l205"> </l>
-        <div type="scene" xml:id="1">
+      <div type="act" n="1">
+        <head>PREMIÈRE LETTRE À MONSIEUR TANEVOT</head>
+      </div>
+      <div type="act" n="2">
+        <head>PREMIER INTERMÈDE</head>
+      </div>
+      <div type="act" n="3">
+        <head>SECOND INTERMÈDE</head>
+        <div type="scene" xml:id="première">
           <head>Scène première</head>
-            <l n="206" xml:id="l206"> </l>
-          <sp who="lucas" xml:id="1-1">
-            <speaker>LE MAGISTER, LUCAS</speaker>
-            <l n="207" xml:id="l207"> </l>
-          </sp>
-          <sp who="lucas" xml:id="1-2">
+          <sp who="#lucas">
             <speaker>LUCAS.</speaker>
-            <l n="208" xml:id="l208">Oui, le petit maître d4Amour</l>
-            <l n="209" xml:id="l209">Met tout en feu dans le village :</l>
-            <l n="210" xml:id="l210">Il nous attaque nuit et jour,</l>
-            <l n="211" xml:id="l211">Et veut que j’aimions à tout âge.</l>
-            <l n="212" xml:id="l212">Ragonde, qui devrait se montrer la plus sage,</l>
-            <l n="213" xml:id="l213">Est folle de Colin qui ne veut point l’aimer ;</l>
-            <l n="214" xml:id="l214">Pour Colette sa fille il soupire sans cesse :</l>
-            <l n="215" xml:id="l215">Elle se rit de sa tendresse :</l>
-            <l n="216" xml:id="l216">Colette a su me plaire, et j’ai su la charmer.</l>
+            <l n="1">Oui, le petit maître d4Amour</l>
+            <l n="2">Met tout en feu dans le village :</l>
+            <l n="3">Il nous attaque nuit et jour,</l>
+            <l n="4">Et veut que j’aimions à tout âge.</l>
+            <l n="5">Ragonde, qui devrait se montrer la plus sage,</l>
+            <l n="6">Est folle de Colin qui ne veut point l’aimer ;</l>
+            <l n="7">Pour Colette sa fille il soupire sans cesse :</l>
+            <l n="8">Elle se rit de sa tendresse :</l>
+            <l n="9">Colette a su me plaire, et j’ai su la charmer.</l>
           </sp>
-          <sp who="le-magister" xml:id="1-3">
+          <sp who="#le-magister">
             <speaker>LE MAGISTER.</speaker>
-            <l n="217" xml:id="l217">Ah ! quel charivari !</l>
+            <l n="10">Ah ! quel charivari !</l>
           </sp>
-          <sp who="lucas" xml:id="1-4">
+          <sp who="#lucas">
             <speaker>LUCAS.</speaker>
-            <l n="218" xml:id="l218">Ce qui me désespère,</l>
-            <l n="219" xml:id="l219">C’est que Colette est fille de sa mère.</l>
+            <l n="11">Ce qui me désespère,</l>
+            <l n="12">C’est que Colette est fille de sa mère.</l>
           </sp>
-          <sp who="le-magister" xml:id="1-5">
+          <sp who="#le-magister">
             <speaker>LE MAGISTER.</speaker>
-            <l n="220" xml:id="l220">Comment ! est-elle folle aussi ?</l>
+            <l n="13">Comment ! est-elle folle aussi ?</l>
           </sp>
-          <sp who="lucas" xml:id="1-6">
+          <sp who="#lucas">
             <speaker>LUCAS.</speaker>
-            <l n="221" xml:id="l221">Non, elle est sage, Dieu marci :</l>
-            <l n="222" xml:id="l222">Mais, par un injuste caprice,</l>
-            <l n="223" xml:id="l223">Ragonde ne veut pas que je soyons heureux,</l>
-            <l n="224" xml:id="l224">Si Colin ne consent à contenter ses vœux.</l>
-            <l n="225" xml:id="l225">Voyez quelle injustice !</l>
-            <l n="226" xml:id="l226">Ah ! morgué, queu tempérament !</l>
-            <l n="227" xml:id="l227">À soixante ans être encor tout de flamme !</l>
-            <l n="228" xml:id="l228">C’est un enchantement.</l>
+            <l n="14">Non, elle est sage, Dieu marci :</l>
+            <l n="15">Mais, par un injuste caprice,</l>
+            <l n="16">Ragonde ne veut pas que je soyons heureux,</l>
+            <l n="17">Si Colin ne consent à contenter ses vœux.</l>
+            <l n="18">Voyez quelle injustice !</l>
+            <l n="19">Ah ! morgué, queu tempérament !</l>
+            <l n="20">À soixante ans être encor tout de flamme !</l>
+            <l n="21">C’est un enchantement.</l>
           </sp>
-          <sp who="le-magister" xml:id="1-7">
+          <sp who="#le-magister">
             <speaker>LE MAGISTER.</speaker>
-            <l n="229" xml:id="l229">Elle est amoureuse, elle est femme ;</l>
-            <l n="230" xml:id="l230">Rien ne pourra guérir ce fol entêtement.</l>
-            <l n="231" xml:id="l231">Tu sais dans ses desseins combien je m’intéresse.</l>
-            <l n="232" xml:id="l232">Puisque sur son esprit la raison ne peut rien,</l>
-            <l n="233" xml:id="l233">Pour lui donner Colin il faut user d’adresse.</l>
+            <l n="22">Elle est amoureuse, elle est femme ;</l>
+            <l n="23">Rien ne pourra guérir ce fol entêtement.</l>
+            <l n="24">Tu sais dans ses desseins combien je m’intéresse.</l>
+            <l n="25">Puisque sur son esprit la raison ne peut rien,</l>
+            <l n="26">Pour lui donner Colin il faut user d’adresse.</l>
           </sp>
-          <sp who="lucas" xml:id="1-8">
+          <sp who="#lucas">
             <speaker>LUCAS.</speaker>
-            <l n="234" xml:id="l234">M’y voilà résolu, Colette le veut bien.</l>
-            <l n="235" xml:id="l235">Heureusement pour nous la nuit est fort obscure.</l>
-            <l n="236" xml:id="l236">Sous ce déguisement affreux</l>
-            <l n="237" xml:id="l237">Je prépare à Colin une triste aventure.</l>
-            <l n="238" xml:id="l238">Colette a feint tantôt de se rendre à ses feux,</l>
-            <l n="239" xml:id="l239">Lui jurant de venir le trouver en ces lieux,</l>
-            <l n="240" xml:id="l240">Dès le moment que sa mère endormie</l>
-            <l n="241" xml:id="l241">Lui laisserait le temps d’échapper à ses yeux :</l>
-            <l n="242" xml:id="l242">Colin qui l’aime à la folie,</l>
-            <l n="243" xml:id="l243">Va s’y rendre au plutôt, dans l’espoir d’être heureux.</l>
-            <l n="244" xml:id="l244">J’ai mis dans notre intelligence</l>
-            <l n="245" xml:id="l245">Quelques jeunes garçons déguisés comme moi,</l>
-            <l n="246" xml:id="l246">Et la vieille amoureuse a conçu l’espérance,</l>
-            <l n="247" xml:id="l247">De s’assurer Colin, par la crainte et l’effroi.</l>
-            <l n="248" xml:id="l248">Vous nous seconderez.</l>
+            <l n="27">M’y voilà résolu, Colette le veut bien.</l>
+            <l n="28">Heureusement pour nous la nuit est fort obscure.</l>
+            <l n="29">Sous ce déguisement affreux</l>
+            <l n="30">Je prépare à Colin une triste aventure.</l>
+            <l n="31">Colette a feint tantôt de se rendre à ses feux,</l>
+            <l n="32">Lui jurant de venir le trouver en ces lieux,</l>
+            <l n="33">Dès le moment que sa mère endormie</l>
+            <l n="34">Lui laisserait le temps d’échapper à ses yeux :</l>
+            <l n="35">Colin qui l’aime à la folie,</l>
+            <l n="36">Va s’y rendre au plutôt, dans l’espoir d’être heureux.</l>
+            <l n="37">J’ai mis dans notre intelligence</l>
+            <l n="38">Quelques jeunes garçons déguisés comme moi,</l>
+            <l n="39">Et la vieille amoureuse a conçu l’espérance,</l>
+            <l n="40">De s’assurer Colin, par la crainte et l’effroi.</l>
+            <l n="41">Vous nous seconderez.</l>
           </sp>
-          <sp who="le-magister" xml:id="1-9">
+          <sp who="#le-magister">
             <speaker>LE MAGISTER.</speaker>
-            <l n="249" xml:id="l249">Tu verras des merveilles.</l>
-            <l n="250" xml:id="l250">Quand il s’agit de faire un tour malin,</l>
-            <l n="251" xml:id="l251">Je ne plains point ni mes soins, ni mes veilles.</l>
+            <l n="42">Tu verras des merveilles.</l>
+            <l n="43">Quand il s’agit de faire un tour malin,</l>
+            <l n="44">Je ne plains point ni mes soins, ni mes veilles.</l>
           </sp>
-          <sp who="lucas" xml:id="1-10">
+          <sp who="#lucas">
             <speaker>LUCAS.</speaker>
-            <l n="252" xml:id="l252">Quelque bruit, ce me semble, a frappé mes oreilles,</l>
-            <l n="253" xml:id="l253">Retirons-nous, c’est l’amoureux Colin.</l>
-            <l n="254" xml:id="l254"> </l>
-            <l n="255" xml:id="l255"> </l>
+            <l n="45">Quelque bruit, ce me semble, a frappé mes oreilles,</l>
+            <l n="46">Retirons-nous, c’est l’amoureux Colin.</l>
           </sp>
         </div>
-        <div type="scene" xml:id="2">
+        <div type="scene" xml:id="II">
           <head>Scène II</head>
-            <l n="256" xml:id="l256"> </l>
-          <sp who="colin" xml:id="2-1">
-            <speaker>COLIN, <em>seul</em></speaker>
-            <l n="257" xml:id="l257"> </l>
-            <l n="258" xml:id="l258">Jamais la nuit ne fut si noire ;</l>
-            <l n="259" xml:id="l259">Mais son obscurité favorise mes vœux.</l>
-            <l n="260" xml:id="l260">Colette va venir. Que je serai joyeux !</l>
-            <l n="261" xml:id="l261">Mon bonheur est si grand, que j’ai peine à le croire.</l>
-            <l n="262" xml:id="l262">Hâte-toi de me rendre heureux :</l>
-            <l n="263" xml:id="l263">Accours, mon aimable Colette ;</l>
-            <l n="264" xml:id="l264">La nuit nous cache aux regards curieux.</l>
-            <l n="265" xml:id="l265">Que de moments perdus ! Ah ! que je les regrette !</l>
-            <l n="266" xml:id="l266">Et toi, vieille marâtre, objet trop odieux,</l>
-            <l n="267" xml:id="l267">Qui veux faire adorer tes paupières vermeilles,</l>
-            <l n="268" xml:id="l268">Ah ! puisse le sommeil si bien fermer tes yeux,</l>
-            <l n="269" xml:id="l269">Que jamais tu ne te réveilles.</l>
-            <stage><hi rend="italic"><em>On entend une symphonie lugubre et des voix confuses.</em></hi></stage>
-            <l n="271" xml:id="l271">J’entends un bruit affreux. Il redouble. Quels cris !</l>
+          <sp who="#colin">
+            <speaker>COLIN, seul</speaker>
+            <l n="47">Jamais la nuit ne fut si noire ;</l>
+            <l n="48">Mais son obscurité favorise mes vœux.</l>
+            <l n="49">Colette va venir. Que je serai joyeux !</l>
+            <l n="50">Mon bonheur est si grand, que j’ai peine à le croire.</l>
+            <l n="51">Hâte-toi de me rendre heureux :</l>
+            <l n="52">Accours, mon aimable Colette ;</l>
+            <l n="53">La nuit nous cache aux regards curieux.</l>
+            <l n="54">Que de moments perdus ! Ah ! que je les regrette !</l>
+            <l n="55">Et toi, vieille marâtre, objet trop odieux,</l>
+            <l n="56">Qui veux faire adorer tes paupières vermeilles,</l>
+            <l n="57">Ah ! puisse le sommeil si bien fermer tes yeux,</l>
+            <l n="58">Que jamais tu ne te réveilles.</l>
+            <stage>&lt;em&gt;On entend une symphonie lugubre et des voix confuses.&lt;/em&gt;</stage>
+            <l n="59">J’entends un bruit affreux. Il redouble. Quels cris !</l>
           </sp>
-          <sp who="plusieurs-voix" xml:id="2-2">
-            <speaker>PLUSIEURS VOIX<em> crient de loin d’un ton étouffé.</em></speaker>
-            <l n="272" xml:id="l272">Colin ! Colin ! Colin !</l>
+          <sp who="#plusieurs-voix">
+            <speaker>PLUSIEURS VOIX crient de loin d’un ton étouffé.</speaker>
+            <l n="60">Colin ! Colin ! Colin !</l>
           </sp>
-          <sp who="colin" xml:id="2-3">
+          <sp who="#colin">
             <speaker>COLIN.</speaker>
-            <l n="273" xml:id="l273">Je tremble, je frissonne.</l>
-            <stage><hi rend="italic"><em>Deux Lutins dansent, ou plutôt courent autour de lui, et ils lui soufflent dans le visage.</em></hi></stage>
-            <l n="275" xml:id="l275">On court autour de moi ; je n’entends plus personne.</l>
+            <l n="61">Je tremble, je frissonne.</l>
+            <stage>&lt;em&gt;Deux Lutins dansent, ou plutôt courent autour de lui, et ils lui soufflent dans le visage.&lt;/em&gt;</stage>
+            <l n="62">On court autour de moi ; je n’entends plus personne.</l>
           </sp>
-          <sp who="plusieurs-voix" xml:id="2-4">
-            <speaker>PLUSIEURS VOIX <em>sur le ton marqué ci-dessus.</em></speaker>
-            <l n="276" xml:id="l276">Colin ! Colin ! Colin !</l>
-            <stage><hi rend="italic"><em>Deux autres Lutins dansent une entrée fort vive, et lui donnent des coups de pied.</em></hi></stage>
+          <sp who="#plusieurs-voix">
+            <speaker>PLUSIEURS VOIX sur le ton marqué ci-dessus.</speaker>
+            <l n="63">Colin ! Colin ! Colin !</l>
+            <stage>&lt;em&gt;Deux autres Lutins dansent une entrée fort vive, et lui donnent des coups de pied.&lt;/em&gt;</stage>
           </sp>
-          <sp who="colin" xml:id="2-5">
+          <sp who="#colin">
             <speaker>COLIN.</speaker>
-            <l n="278" xml:id="l278">Ah ! ce sont des Esprits !</l>
-            <l n="279" xml:id="l279">Fuyons. Je ne le puis. La force m’abandonne.</l>
-            <l n="280" xml:id="l280">Hélas ! je craignais que le jour</l>
-            <l n="281" xml:id="l281">Ne vînt trop tôt chasser la nuit obscure :</l>
-            <l n="282" xml:id="l282">Que ne puis-je à présent avancer son retour !</l>
-            <l n="283" xml:id="l283">Maudite nuit ! Maudit amour !</l>
-            <l n="284" xml:id="l284">Mais il faut que je me rassure.</l>
-            <l n="285" xml:id="l285">Peut-être on m’a joué ce tour,</l>
-            <l n="286" xml:id="l286">Ou ma seule frayeur cause cette aventure.</l>
-            <l n="287" xml:id="l287">Allons, ferme, Colin ; faisons bonne figure.</l>
-            <l n="288" xml:id="l288">J’ai ma lanterne, par bonheur ;</l>
-            <l n="289" xml:id="l289">Ouvrons-la. Je me sens revenir le courage.</l>
-            <l n="290" xml:id="l290">Par la mort ! si quelqu’un ose me faire peur,</l>
-            <l n="291" xml:id="l291">Je lui déchirerai les yeux et le visage.</l>
-            <stage><hi rend="italic"><em>Deux Lutins entrent ; l’un lui arrache sa lanterne, et éteint la lumière ; l’autre lui donne un soufflet : le tout se fait en même temps.</em></hi></stage>
-            <l n="293" xml:id="l293">Je suis mort ! Au secours ! Ne puis-je m’en aller ?</l>
+            <l n="64">Ah ! ce sont des Esprits !</l>
+            <l n="65">Fuyons. Je ne le puis. La force m’abandonne.</l>
+            <l n="66">Hélas ! je craignais que le jour</l>
+            <l n="67">Ne vînt trop tôt chasser la nuit obscure :</l>
+            <l n="68">Que ne puis-je à présent avancer son retour !</l>
+            <l n="69">Maudite nuit ! Maudit amour !</l>
+            <l n="70">Mais il faut que je me rassure.</l>
+            <l n="71">Peut-être on m’a joué ce tour,</l>
+            <l n="72">Ou ma seule frayeur cause cette aventure.</l>
+            <l n="73">Allons, ferme, Colin ; faisons bonne figure.</l>
+            <l n="74">J’ai ma lanterne, par bonheur ;</l>
+            <l n="75">Ouvrons-la. Je me sens revenir le courage.</l>
+            <l n="76">Par la mort ! si quelqu’un ose me faire peur,</l>
+            <l n="77">Je lui déchirerai les yeux et le visage.</l>
+            <stage>&lt;em&gt;Deux Lutins entrent ; l’un lui arrache sa lanterne, et éteint la lumière ; l’autre lui donne un soufflet : le tout se fait en même temps.&lt;/em&gt;</stage>
+            <l n="78">Je suis mort ! Au secours ! Ne puis-je m’en aller ?</l>
           </sp>
-          <sp who="deux-autres-lutins" xml:id="2-6">
-            <speaker>DEUX AUTRES LUTINS <em>viennent chacun arec un flambeau allumé, et s’opposent à sa fuite, se présentant toujours devant lui, ensuite ils lui disent.</em></speaker>
-            <l n="294" xml:id="l294">Si tu sors de ta place,</l>
-            <l n="295" xml:id="l295">Nous allons t’étrangler.</l>
+          <sp who="#deux-autres-lutins">
+            <speaker>DEUX AUTRES LUTINS viennent chacun arec un flambeau allumé, et s’opposent à sa fuite, se présentant toujours devant lui, ensuite ils lui disent.</speaker>
+            <l n="79">Si tu sors de ta place,</l>
+            <l n="80">Nous allons t’étrangler.</l>
           </sp>
-          <sp who="colin" xml:id="2-7">
+          <sp who="#colin">
             <speaker>COLIN.</speaker>
-            <l n="296" xml:id="l296">Je crois que le s’abat vient ici s’assembler.</l>
-            <l n="297" xml:id="l297">Eh ! messieurs les sorciers, je vous demande grâce !</l>
+            <l n="81">Je crois que le s’abat vient ici s’assembler.</l>
+            <l n="82">Eh ! messieurs les sorciers, je vous demande grâce !</l>
           </sp>
-          <sp who="trois-lutins" xml:id="2-8">
+          <sp who="#trois-lutins">
             <speaker>TROIS LUTINS.</speaker>
-            <l n="298" xml:id="l298">Si tu sors de ta place,</l>
-            <l n="299" xml:id="l299">Nous allons t’étrangler.</l>
-            <stage><hi rend="italic"><em>Plusieurs Démons viennent danser une entrée, et par leurs geste augmentent sa frayeur.</em></hi></stage>
+            <l n="83">Si tu sors de ta place,</l>
+            <l n="84">Nous allons t’étrangler.</l>
+            <stage>&lt;em&gt;Plusieurs Démons viennent danser une entrée, et par leurs geste augmentent sa frayeur.&lt;/em&gt;</stage>
           </sp>
-          <sp who="trois-lutins" xml:id="2-9">
+          <sp who="#trois-lutins">
             <speaker>TROIS LUTINS.</speaker>
-            <l n="301" xml:id="l301">Nous courons par tout le monde</l>
-            <l n="302" xml:id="l302">Pour tourmenter les humains :</l>
-            <l n="303" xml:id="l303">Ils n’échappent de nos mains</l>
-            <l n="304" xml:id="l304">Que par l’ordre de Ragonde.</l>
+            <l n="85">Nous courons par tout le monde</l>
+            <l n="86">Pour tourmenter les humains :</l>
+            <l n="87">Ils n’échappent de nos mains</l>
+            <l n="88">Que par l’ordre de Ragonde.</l>
           </sp>
-          <sp who="premier-lutin" xml:id="2-10">
+          <sp who="#premier-lutin">
             <speaker>PREMIER LUTIN.</speaker>
-            <l n="305" xml:id="l305">Elle a sur nous un pouvoir absolu.</l>
+            <l n="89">Elle a sur nous un pouvoir absolu.</l>
           </sp>
-          <sp who="deuxième-lutin" xml:id="2-11">
+          <sp who="#deuxième-lutin">
             <speaker>DEUXIÈME LUTIN.</speaker>
-            <l n="306" xml:id="l306">Jusqu’au fond des enfers sa voix se fait entendre.</l>
+            <l n="90">Jusqu’au fond des enfers sa voix se fait entendre.</l>
           </sp>
-          <sp who="troisième-lutin" xml:id="2-12">
+          <sp who="#troisième-lutin">
             <speaker>TROISIÈME LUTIN.</speaker>
-            <l n="307" xml:id="l307">Les Démons, les Sorciers, près d’elle vont se rendre,</l>
-            <l n="308" xml:id="l308">Et font toutes les nuits ce qu’elle a résolu.</l>
+            <l n="91">Les Démons, les Sorciers, près d’elle vont se rendre,</l>
+            <l n="92">Et font toutes les nuits ce qu’elle a résolu.</l>
           </sp>
-          <sp who="chœur-de-lutins" xml:id="2-13">
+          <sp who="#chœur-de-lutins">
             <speaker>CHŒUR DE LUTINS.</speaker>
-            <l n="309" xml:id="l309">Vos secrets et votre puissance,</l>
-            <l n="310" xml:id="l310">Ragonde, inspirent le respect :</l>
-            <l n="311" xml:id="l311">Ministres de votre vengeance,</l>
-            <l n="312" xml:id="l312">Nous frémissons à votre aspect.</l>
-            <stage><hi rend="italic"><em>Entrée de plusieurs Lutins et Démons qui menacent Colin, et qui ensuite le prennent et l’enlèvent.</em></hi></stage>
+            <l n="93">Vos secrets et votre puissance,</l>
+            <l n="94">Ragonde, inspirent le respect :</l>
+            <l n="95">Ministres de votre vengeance,</l>
+            <l n="96">Nous frémissons à votre aspect.</l>
+            <stage>&lt;em&gt;Entrée de plusieurs Lutins et Démons qui menacent Colin, et qui ensuite le prennent et l’enlèvent.&lt;/em&gt;</stage>
           </sp>
-          <sp who="colin" xml:id="2-14">
+          <sp who="#colin">
             <speaker>COLIN.</speaker>
-            <l n="314" xml:id="l314">Au secours ! on m’emporte.</l>
-            <l n="315" xml:id="l315">Ragonde, hélas ! me laissez-vous périr ?</l>
-            <l n="316" xml:id="l316"> </l>
-            <l n="317" xml:id="l317"> </l>
+            <l n="97">Au secours ! on m’emporte.</l>
+            <l n="98">Ragonde, hélas ! me laissez-vous périr ?</l>
           </sp>
         </div>
-        <div type="scene" xml:id="3">
+        <div type="scene" xml:id="III">
           <head>Scène III</head>
-            <l n="318" xml:id="l318"> </l>
-          <sp who="colin" xml:id="3-1">
-            <speaker>RAGONDE, COLIN, LE MAGISTER, LUCAS, TROUPES DE LUTINS <em>et</em> DE DÉMONS</speaker>
-            <l n="319" xml:id="l319"> </l>
-          </sp>
-          <sp who="ragonde" xml:id="3-2">
+          <sp who="#ragonde">
             <speaker>RAGONDE.</speaker>
-            <l n="320" xml:id="l320">Hé bien ! traître, veux-tu mourir,</l>
-            <l n="321" xml:id="l321">Ou contenter l’ardeur qui me transporte ?</l>
-            <l n="322" xml:id="l322">Ces Lutins pour jamais vont se saisir de toi,</l>
-            <l n="323" xml:id="l323">Si tu ne me promets de me donner ta foi.</l>
+            <l n="99">Hé bien ! traître, veux-tu mourir,</l>
+            <l n="100">Ou contenter l’ardeur qui me transporte ?</l>
+            <l n="101">Ces Lutins pour jamais vont se saisir de toi,</l>
+            <l n="102">Si tu ne me promets de me donner ta foi.</l>
           </sp>
-          <sp who="colin" xml:id="3-3">
+          <sp who="#colin">
             <speaker>COLIN.</speaker>
-            <l n="324" xml:id="l324">Ah ! dissipez mes cruelles alarmes,</l>
-            <l n="325" xml:id="l325">Adorable Ragonde ! et je suis tout à vous.</l>
-            <l n="326" xml:id="l326">Oui, c’en est fait, je me livre à vos charmes,</l>
-            <l n="327" xml:id="l327">Je fais de vous aimer mon bonheur le plus doux.</l>
+            <l n="103">Ah ! dissipez mes cruelles alarmes,</l>
+            <l n="104">Adorable Ragonde ! et je suis tout à vous.</l>
+            <l n="105">Oui, c’en est fait, je me livre à vos charmes,</l>
+            <l n="106">Je fais de vous aimer mon bonheur le plus doux.</l>
           </sp>
-          <sp who="ragonde" xml:id="3-4">
+          <sp who="#ragonde">
             <speaker>RAGONDE.</speaker>
-            <l n="328" xml:id="l328">Mais il faut m épouser, c’est un point nécessaire.</l>
+            <l n="107">Mais il faut m épouser, c’est un point nécessaire.</l>
           </sp>
-          <sp who="colin" xml:id="3-5">
+          <sp who="#colin">
             <speaker>COLIN.</speaker>
-            <l n="329" xml:id="l329">Me voilà soumis à vos lois.</l>
-            <l n="330" xml:id="l330">Je vous épouserais cent fois,</l>
-            <l n="331" xml:id="l331">Plutôt que d’attirer sur moi votre colère.</l>
+            <l n="108">Me voilà soumis à vos lois.</l>
+            <l n="109">Je vous épouserais cent fois,</l>
+            <l n="110">Plutôt que d’attirer sur moi votre colère.</l>
           </sp>
-          <sp who="ragonde" xml:id="3-6">
+          <sp who="#ragonde">
             <speaker>RAGONDE.</speaker>
-            <l n="332" xml:id="l332">Puisque mon cher Colin ne songe qu’à me plaire,</l>
-            <l n="333" xml:id="l333">Démons, rentrez dans les enfers.</l>
-            <l n="334" xml:id="l334">Partez, Lutins, volez au bout de l’univers.</l>
-            <l n="335" xml:id="l335"> </l>
-            <l n="336" xml:id="l336"> </l>
-            <l n="337" xml:id="l337"> </l>
+            <l n="111">Puisque mon cher Colin ne songe qu’à me plaire,</l>
+            <l n="112">Démons, rentrez dans les enfers.</l>
+            <l n="113">Partez, Lutins, volez au bout de l’univers.</l>
           </sp>
-          <sp who="strong>la-noce-et-le-charivari" xml:id="3-7">
-            <speaker><strong>LA NOCE ET LE CHARIVARI.</strong></speaker>
-            <l n="338" xml:id="l338"> </l>
-            <stage><hi rend="italic"><em>Marche de Paysans et de Paysannes. Lucas donne la main à Colette ; et Ragonde, couronnée de fleurs et parée ridiculement, est conduite par Colin. Après que la marche est finie, le Magister dit ces paroles.</em></hi></stage>
-          </sp>
-          <sp who="le-magister" xml:id="3-8">
-            <speaker>LE MAGISTER.</speaker>
-            <l n="340" xml:id="l340">À la noce, à la noce ; allons, accourez tous.</l>
-            <l n="341" xml:id="l341">Rions, chantons, dansons, faisons les fous.</l>
-          </sp>
-          <sp who="chœur" xml:id="3-9">
-            <speaker>CHŒUR <em>de paysans et de paysannes.</em></speaker>
-            <l n="342" xml:id="l342">À la noce, à la noce ; allons, accourez tous.</l>
-            <l n="343" xml:id="l343">Rions, chantons, dansons, faisons les fous.</l>
-          </sp>
-          <sp who="le-magister" xml:id="3-10">
-            <speaker>LE MAGISTER.</speaker>
-            <l n="344" xml:id="l344">Pour célébrer un double mariage,</l>
-            <l n="345" xml:id="l345">Nous assemblons tout le village.</l>
-            <l n="346" xml:id="l346">Que Lucas est heureux ! Quels seront ses plaisirs !</l>
-            <l n="347" xml:id="l347">Mais Colin va jouir d’un plus doux avantage :</l>
-            <l n="348" xml:id="l348">Ragonde, objet de ses soupirs,</l>
-            <l n="349" xml:id="l349">Se livrera bientôt à ses brûlants désirs.</l>
-            <l n="350" xml:id="l350">Ô nuit ! viens achever ce charmant assemblage !</l>
-          </sp>
-          <sp who="chœur" xml:id="3-11">
-            <speaker>CHŒUR.</speaker>
-            <l n="351" xml:id="l351">Ô nuit ! viens achever ce charmant assemblage !</l>
-            <l n="352" xml:id="l352">À la noce, à la noce, allons, accourez tous.</l>
-            <l n="353" xml:id="l353">Rions, chantons, dansons, faisons les fous.</l>
-          </sp>
-          <sp who="lucas" xml:id="3-12">
-            <speaker>LUCAS.</speaker>
-            <l n="354" xml:id="l354">J’ai soupiré longtemps pour l’aimable Colette,</l>
-            <l n="355" xml:id="l355">Colette soupirait pour moi :</l>
-            <l n="356" xml:id="l356">J’étions amants, je vivais sous sa loi,</l>
-            <l n="357" xml:id="l357">Et je goûtions tous deux une douceur parfaite.</l>
-            <l n="358" xml:id="l358">Me voilà son époux, et ce lien charmant</l>
-            <l n="359" xml:id="l359">L’oblige à m’obéir ; c’est la loi du village :</l>
-            <l n="360" xml:id="l360">Mais pour faire un bon mariage,</l>
-            <l n="361" xml:id="l361">Colette et moi j’agissons prudemment :</l>
-            <l n="362" xml:id="l362">Je voulons ignorer que je somm’ en ménage.</l>
-            <l n="363" xml:id="l363">Colette est ma maîtresse, et je suis son amant.</l>
-          </sp>
-          <sp who="colette" xml:id="3-13">
-            <speaker>COLETTE.</speaker>
-            <l n="364" xml:id="l364">Lucas, je t’en fais ma promesse,</l>
-            <l n="365" xml:id="l365">Je serai toujours ta maîtresse ;</l>
-            <l n="366" xml:id="l366">Tu seras mon amant, et non pas mon époux ;</l>
-            <l n="367" xml:id="l367">C’est le moyen de nous aimer sans cesse.</l>
-            <l n="368" xml:id="l368">Pour conserver des noms si doux,</l>
-            <l n="369" xml:id="l369">Ne sois jamais querelleur ni jaloux.</l>
-            <l n="370" xml:id="l370">Garde-toi de brûler d’une nouvelle flamme ;</l>
-            <l n="371" xml:id="l371">Si je m’en aperçois, je le dis entre nous,</l>
-            <l n="372" xml:id="l372">Dès le moment je te traite en époux,</l>
-            <l n="373" xml:id="l373">Et je deviens ta femme.</l>
-          </sp>
-          <sp who="le-magister" xml:id="3-14">
-            <speaker>LE MAGISTER.</speaker>
-            <l n="374" xml:id="l374">Chantons, chantons ensemble, et que l’écho répète ;</l>
-            <l n="375" xml:id="l375">Vive Lucas ! vive Colette !</l>
-            <l n="376" xml:id="l376">Ils ont trouvé tous deux</l>
-            <l n="377" xml:id="l377">Le secret d’être heureux.</l>
-          </sp>
-          <sp who="chœur" xml:id="3-15">
-            <speaker>CHŒUR.</speaker>
-            <l n="378" xml:id="l378">Chantons, chantons ensemble, et que l’écho répète :</l>
-            <l n="379" xml:id="l379">Vive Lucas ! vive Colette !</l>
-            <l n="380" xml:id="l380">Ils ont trouvé tous deux</l>
-            <l n="381" xml:id="l381">Le secret d’être heureux.</l>
-            <stage><hi rend="italic"><em>Première entrée.</em></hi></stage>
-          </sp>
-          <sp who="le-magister" xml:id="3-16">
-            <speaker>LE MAGISTER.</speaker>
-            <l n="383" xml:id="l383">Ce n’est que dans notre village,</l>
-            <l n="384" xml:id="l384">Ce n’est que dans ce beau séjour</l>
-            <l n="385" xml:id="l385">Qu’on trouve le secret d’être heureux en ménage :</l>
-            <l n="386" xml:id="l386">Ailleurs, quand on s’engage,</l>
-            <l n="387" xml:id="l387">Le jour du mariage,</l>
-            <l n="388" xml:id="l388">À peine est-il un heureux jour.</l>
-          </sp>
-          <sp who="chœur" xml:id="3-17">
-            <speaker>CHŒUR.</speaker>
-            <l n="389" xml:id="l389">Chantons, chantons ensemble, et que l’écho répète :</l>
-            <l n="390" xml:id="l390">Vive Lucas ! vive Colette !</l>
-            <l n="391" xml:id="l391">Ils ont trouvé tous deux</l>
-            <l n="392" xml:id="l392">Le secret d’être heureux.</l>
-            <stage><hi rend="italic"><em>Seconde entrée.</em></hi></stage>
-          </sp>
-          <sp who="colin" xml:id="3-18">
-            <speaker>RAGONDE, <em>à Colin.</em></speaker>
-            <l n="394" xml:id="l394">On chante Lucas et Colette ;</l>
-            <l n="395" xml:id="l395">Et l’on ne parle point de nous.</l>
-          </sp>
-          <sp who="chœur" xml:id="3-19">
-            <speaker>CHŒUR.</speaker>
-            <l n="396" xml:id="l396">Vivez, vivez, heureux époux,</l>
-            <l n="397" xml:id="l397">Goûtez une douceur parfaite.</l>
-          </sp>
-          <sp who="colin" xml:id="3-20">
-            <speaker>COLIN, <em>en pleurant.</em></speaker>
-            <l n="398" xml:id="l398">Quelle douceur ! hélas !</l>
-          </sp>
-          <sp who="lucas" xml:id="3-21">
-            <speaker>LUCAS.</speaker>
-            <l n="399" xml:id="l399">Quoi ! Colin, tu verses des larmes</l>
-            <l n="400" xml:id="l400">Dans ce moment pour toi si plein de charmes ?</l>
-          </sp>
-          <sp who="colin" xml:id="3-22">
-            <speaker>COLIN.</speaker>
-            <l n="401" xml:id="l401">Je ne pleurerais pas,</l>
-            <l n="402" xml:id="l402">Si Lucas était à ma place,</l>
-            <l n="403" xml:id="l403">Et si j’étais à celle de Lucas.</l>
-          </sp>
-          <sp who="ragonde" xml:id="3-23">
-            <speaker>RAGONDE.</speaker>
-            <l n="404" xml:id="l404">Quoi ! même après l’hymen tu me mépriseras ?</l>
-          </sp>
-          <sp who="colin" xml:id="3-24">
-            <speaker>COLIN.</speaker>
-            <l n="405" xml:id="l405">Que voulez-vous donc que je fasse ?</l>
-            <l n="406" xml:id="l406">Je ne pleurerais pas,</l>
-            <l n="407" xml:id="l407">Si Lucas était à ma place,</l>
-            <l n="408" xml:id="l408">Et si j’étais à celle de Lucas.</l>
-          </sp>
-          <sp who="ragonde" xml:id="3-25">
-            <speaker>RAGONDE.</speaker>
-            <l n="409" xml:id="l409">Tu dois oublier Colette :</l>
-            <l n="410" xml:id="l410">Elle est jeune, elle est follette,</l>
-            <l n="411" xml:id="l411">Elle pourrait trahir tes feux ;</l>
-            <l n="412" xml:id="l412">Mais avec moi tu seras plus heureux.</l>
-            <l n="413" xml:id="l413">Je ne serai volage ni coquette.</l>
-            <l n="414" xml:id="l414">Tu peux compter, sur ma fidélité.</l>
-            <l n="415" xml:id="l415">Pour tout autre que toi tu me verras cruelle.</l>
-          </sp>
-          <sp who="colin" xml:id="3-26">
-            <speaker>COLIN.</speaker>
-            <l n="416" xml:id="l416">Et ! qui diable serait tenté</l>
-            <l n="417" xml:id="l417">De vous rendre infidèle ?</l>
-          </sp>
-          <sp who="ragonde" xml:id="3-27">
-            <speaker>RAGONDE.</speaker>
-            <l n="418" xml:id="l418">Merci de moi !</l>
-            <l n="419" xml:id="l419">Me traiter de la sorte,</l>
-            <l n="420" xml:id="l420">Après m’avoir donné ta foi !</l>
-            <l n="421" xml:id="l421">La fureur me transporte.</l>
-            <l n="422" xml:id="l422">Démons, Lutins, Sorciers, accourez me venger</l>
-            <l n="423" xml:id="l423">D’un mari qui veut m’outrager.</l>
-          </sp>
-          <sp who="colin" xml:id="3-28">
-            <speaker>COLIN, <em>se jetant à ses pieds.</em></speaker>
-            <l n="424" xml:id="l424">Pardon, ma chère épouse !</l>
-            <l n="425" xml:id="l425">Mon amour pour Colette expire à vos genoux.</l>
-          </sp>
-          <sp who="ragonde" xml:id="3-29">
-            <speaker>RAGONDE.</speaker>
-            <l n="426" xml:id="l426">Garde-toi bien de me rendre jalouse,</l>
-            <l n="427" xml:id="l427">Et songe à t’acquitter des devoirs d’un époux.</l>
-            <stage><hi rend="italic"><em>Tous les Paysans et Paysannes qui avoient disparu pendant le dialogue de Ragonde et de Colin, viennent avec les instruments propres pour un charivari.</em></hi></stage>
-          </sp>
-          <sp who="le-magister" xml:id="3-30">
-            <speaker>LE MAGISTER.</speaker>
-            <l n="429" xml:id="l429">Que l’on chante par tout le monde</l>
-            <l n="430" xml:id="l430">Le bonheur de Colin, les plaisirs de Ragonde.</l>
-          </sp>
-          <sp who="chœur" xml:id="3-31">
-            <speaker>CHŒUR.</speaker>
-            <l n="431" xml:id="l431">Que l’on chante par tout le monde</l>
-            <l n="432" xml:id="l432">Le bonheur de Colin, les plaisirs de Ragonde.</l>
-          </sp>
-          <sp who="le-magister" xml:id="3-32">
-            <speaker>LE MAGISTER.</speaker>
-            <l n="433" xml:id="l433">Son cœur sensible à soixante ans</l>
-            <l n="434" xml:id="l434">Ressent les feux les plus ardents :</l>
-            <l n="435" xml:id="l435">Pour contenter sa flamme,</l>
-            <l n="436" xml:id="l436">La bonne femme</l>
-            <l n="437" xml:id="l437">Prend un jeune mari :</l>
-            <l n="438" xml:id="l438">Charivari, charivari, charivari !</l>
-          </sp>
-          <sp who="chœur" xml:id="3-33">
-            <speaker>CHŒUR.</speaker>
-            <l n="439" xml:id="l439">Charivari, charivari, charivari !</l>
-          </sp>
-          <sp who="lucas" xml:id="3-34">
-            <speaker>LUCAS.</speaker>
-            <l n="440" xml:id="l440">Pour éviter la disgrâce ordinaire,</l>
-            <l n="441" xml:id="l441">Colin, délicat et jaloux,</l>
-            <l n="442" xml:id="l442">Ne veut point devenir l’époux</l>
-            <l n="443" xml:id="l443">D’une jeune bergère.</l>
-            <l n="444" xml:id="l444">Colette est, à ses yeux, moins belle que sa mère.</l>
-            <l n="445" xml:id="l445">Suivez, jeunes garçons, l’exemple que voici :</l>
-            <l n="446" xml:id="l446">Charivari, charivari, charivari !</l>
-          </sp>
-          <sp who="chœur" xml:id="3-35">
-            <speaker>CHŒUR.</speaker>
-            <l n="447" xml:id="l447">Charivari, charivari, charivari !</l>
-          </sp>
-          <sp who="lucas" xml:id="3-36">
-            <speaker>LUCAS, LE MAGISTER, RAGONDE.</speaker>
-            <l n="448" xml:id="l448">Que l’on chante par tout le monde</l>
-            <l n="449" xml:id="l449">Le bonheur de Colin, les plaisirs de Ragonde.</l>
-          </sp>
-          <sp who="le-magister" xml:id="3-37">
-            <speaker>LE MAGISTER.</speaker>
-            <l n="450" xml:id="l450">Vive la bonne femme et le jeune mari !</l>
-            <l n="451" xml:id="l451">Charivari, charivari, charivari !</l>
-            <stage><hi rend="italic"><em>On danse, et l’intermède finit par la même marche qui l’a commencé, et par un charivari.</em></hi></stage>
-          </sp>
-          <p>FIN</p>
         </div>
+      </div>
+      <div type="act" n="4">
+        <head>TROISIÈME INTERMÈDE</head>
       </div>
     </body>
   </text>

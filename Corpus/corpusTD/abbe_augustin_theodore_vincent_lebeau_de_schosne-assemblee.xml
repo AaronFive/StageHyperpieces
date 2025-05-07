@@ -1,745 +1,1489 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>L’Assemblée</title>
-        <author key="Abbé Augustin-Théodore-Vincent LEBEAU DE SCHOSNE | (naissance-mort)">Abbé Augustin-Théodore-Vincent LEBEAU DE SCHOSNE |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/l’assemblée-abbé-augustin-théodore-vincent-lebeau-de-schosne</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Abbé Augustin-Théodore-Vincent LEBEAU DE SCHOSNE |</author>. <title>L’Assemblée</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/l’assemblée-abbé-augustin-théodore-vincent-lebeau-de-schosne</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1773-02-17">Représentée pour la première fois, à Paris, sur le Théâtre de la Salle des machines, le 17 février 1773.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="un-poète" sex="SEX">
+            <persName>UN POÈTE</persName>
+          </person>
+          <person xml:id="le-semainier" sex="SEX">
+            <persName>LE SEMAINIER</persName>
+          </person>
+          <person xml:id="robert" sex="SEX">
+            <persName>ROBERT</persName>
+          </person>
+          <person xml:id="madame-armand" sex="SEX">
+            <persName>MADAME ARMAND</persName>
+          </person>
+          <person xml:id="tous-les-acteurs-et-actrices-de-la-comédie-française" sex="SEX">
+            <persName>Tous les ACTEURS et ACTRICES de la Comédie Française</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1773-02-17" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de la Salle des machines, le 17 février 1773.</ab>
+      </performance>
+      <div type="preface">
+        <head>PRÉFACE</head>
+        <p>La révolution du siècle, qui s’est écoulé depuis la mort de Molière, a donné lieu à cette Comédie. Elle a été jouée le jour même du retour séculaire de l’année qui nous a enlevé ce grand homme.</p>
+        <p>Cette représentation fera époque dans les Annales du Théâtre. Elle en fera une autre bien plus durable dans les cœurs qui éprouvent la douce émotion du plaisir au récit des actions honnêtes.</p>
+        <p>Par un sentiment de piété filiale, les Comédiens en ont destiné le produit à l’érection de la statue de leur Fondateur. Je dois le dire pour leur gloire et pour m’honorer moi-même, puisque j’ai fait naître, le premier, l’idée d’une action si louable.</p>
+        <p>Différents plans me sont venus à l’esprit. L’introduction des personnages, que Molière a livrés au ridicule, s’y est d’abord assez naturellement présentée ; mais j’ai rejeté ce dessein déjà exécuté par Brécourt, dans sa pièce intitulée, l’&lt;i&gt;Ombre de Molière&lt;/i&gt;.</p>
+        <p>J’aurais aussi pu faire descendre sur la scène des êtres mythologiques, tels que Thalie, Melpomène, Momus, etc. mais ces vieilles divinités sont une ressource usée, et un moyen contraire à la vraisemblance.</p>
+        <p>Il a donc fallu me borner à l’idée la plus simple, et la plus digne de ceux à qui présentais mon ouvrage. J’ai pensé qu’il était convenable à leur zèle de faire que l’Apothéose de Molière fût une suite naturelle d’une des assemblées de la Comédie Française. </p>
+        <p>Comme on a beaucoup exagéré, au sujet des choses qui m’ont été retranchées, je les rétablis ici, afin qu’on voie, par l’innocence de mon badinage, la pureté de mes intentions.</p>
+        <p>J’aurais été bien maladroit de chercher à offenser les Comédiens, à qui je donnais ma Pièce, et les Auteurs, auxquels je fais gloire d’être associé. </p>
+        <p>À Dieu ne plaise que j’expose jamais, aux outrages amers de la raillerie, ceux qui dédaignent les attraits de la fortune, pour se livrer en paix à la glorieuse culture des dons du génie, et à l’art heureux d’amuser, d’instruire, et de consoler l’humanité. </p>
+      </div>
+      <castList />
+    </front>
     <body>
-      <head>L’Assemblée</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1"><span style="letter-spacing:-.3pt">Comédie en un acte et en vers, avec <i>L’Apothéose de Molière</i>, ballet héroïque.</span></l>
-            <l n="2" xml:id="l2"><span style="letter-spacing:-.3pt">Représentée pour la première fois, à Paris, sur le Théâtre de la Salle des machines, le 17 février 1773.</span></l>
-            <l n="3" xml:id="l3"> </l>
-            <l n="4" xml:id="l4"> </l>
-            <l n="5" xml:id="l5"><span style="letter-spacing:-.3pt">UN POÈTE</span></l>
-            <l n="6" xml:id="l6"><span style="letter-spacing:-.3pt">LE SEMAINIER</span></l>
-            <l n="7" xml:id="l7"><span style="letter-spacing:-.3pt">ROBERT</span></l>
-            <l n="8" xml:id="l8"><span style="letter-spacing:-.3pt">MADAME ARMAND, </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">concierge</span></span></i></l>
-            <l n="9" xml:id="l9"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Tous les</span></span></i><span style="letter-spacing:-.3pt"> ACTEURS </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">et</span></span></i><span style="letter-spacing:-.3pt"> ACTRICES </span><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">de la Comédie Française</span></span></i></l>
-            <l n="10" xml:id="l10"> </l>
-            <l n="11" xml:id="l11"><i><span style="letter-spacing:-.3pt">La scène est sur le Théâtre.</span></i></l>
-            <l n="12" xml:id="l12"> </l>
-            <l n="13" xml:id="l13"> </l>
-            <l n="14" xml:id="l14"> </l>
-            <l n="15" xml:id="l15"><span style="letter-spacing:-.3pt">La révolution du siècle, qui s’est écoulé depuis la mort de Molière, a donné lieu à cette Comédie. Elle a été jouée le jour même du retour séculaire de l’année qui nous a enlevé ce grand homme.</span></l>
-            <l n="16" xml:id="l16"><span style="letter-spacing:-.3pt">Cette représentation fera époque dans les Annales du Théâtre. Elle en fera une autre bien plus durable dans les cœurs qui éprouvent la douce émotion du plaisir au récit des actions honnêtes.</span></l>
-            <l n="17" xml:id="l17"><span style="letter-spacing:-.3pt">Par un sentiment de piété filiale, les Comédiens en ont destiné le produit à l’érection de la statue de leur Fondateur. Je dois le dire pour leur gloire et pour m’honorer moi-même, puisque j’ai fait naître, le premier, l’idée d’une action si louable.</span></l>
-            <l n="18" xml:id="l18"><span style="letter-spacing:-.3pt">Différents plans me sont venus à l’esprit. L’introduction des personnages, que Molière a livrés au ridicule, s’y est d’abord assez naturellement présentée ; mais j’ai rejeté ce dessein déjà exécuté par Brécourt, dans sa pièce intitulée, l’<i>Ombre de Molière</i>.</span></l>
-            <l n="19" xml:id="l19"><span style="letter-spacing:-.3pt">J’aurais aussi pu faire descendre sur la scène des êtres mythologiques, tels que Thalie, Melpomène, Momus, etc. mais ces vieilles divinités sont une ressource usée, et un moyen contraire à la vraisemblance.</span></l>
-            <l n="20" xml:id="l20"><span style="letter-spacing:-.3pt">Il a donc fallu me borner à l’idée la plus simple, et la plus digne de ceux à qui présentais mon ouvrage. J’ai pensé qu’il était convenable à leur zèle de faire que l’Apothéose de Molière fût une suite naturelle d’une des assemblées de la Comédie Française. </span></l>
-            <l n="21" xml:id="l21"><span style="letter-spacing:-.3pt">Comme on a beaucoup exagéré, au sujet des choses qui m’ont été retranchées, je les rétablis ici, afin qu’on voie, par l’innocence de mon badinage, la pureté de mes intentions.</span></l>
-            <l n="22" xml:id="l22"><span style="letter-spacing:-.3pt">J’aurais été bien maladroit de chercher à offenser les Comédiens, à qui je donnais ma Pièce, et les Auteurs, auxquels je fais gloire d’être associé. </span></l>
-            <l n="23" xml:id="l23"><span style="letter-spacing:-.3pt">À Dieu ne plaise que j’expose jamais, aux outrages amers de la raillerie, ceux qui dédaignent les attraits de la fortune, pour se livrer en paix à la glorieuse culture des dons du génie, et à l’art heureux d’amuser, d’instruire, et de consoler l’humanité. </span></l>
-            <l n="24" xml:id="l24"> </l>
-            <l n="25" xml:id="l25"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="26" xml:id="l26"> </l>
-            <l n="27" xml:id="l27"> </l>
-            <l n="28" xml:id="l28"><span style="letter-spacing:-.3pt">Que, parmi nous, l’emploi de Semainier</span></l>
-            <l n="29" xml:id="l29"><span style="letter-spacing:-.3pt">Est bien un triste et fatiguant métier !</span></l>
-            <l n="30" xml:id="l30"><span style="letter-spacing:-.3pt">Si l’on me croit fort flatté de ce titre,</span></l>
-            <l n="31" xml:id="l31"><span style="letter-spacing:-.3pt">On a grand tort. Quoi, toujours être arbitre</span></l>
-            <l n="32" xml:id="l32"><span style="letter-spacing:-.3pt">Des différents d’Actrices et d’Acteurs !</span></l>
-            <l n="33" xml:id="l33"><span style="letter-spacing:-.3pt">Quoi, chaque jour, accueillir des Auteurs,</span></l>
-            <l n="34" xml:id="l34"><span style="letter-spacing:-.3pt">Dont les vers plats mettent à la torture</span></l>
-            <l n="35" xml:id="l35"><span style="letter-spacing:-.3pt">L’Acteur forcé d’en subir la lecture !</span></l>
-            <l n="36" xml:id="l36"><span style="letter-spacing:-.3pt">Prendre, chasser, quereller des valets,</span></l>
-            <l n="37" xml:id="l37"><span style="letter-spacing:-.3pt">Suivre, intenter, terminer des procès !</span></l>
-            <l n="38" xml:id="l38"><span style="letter-spacing:-.3pt">J’ai bien assez de mes propres affaires,</span></l>
-            <l n="39" xml:id="l39"><span style="letter-spacing:-.3pt">Sans en aller débrouiller d’étrangères.</span></l>
-            <l n="40" xml:id="l40"><span style="letter-spacing:-.3pt">Que désormais d’autres prennent ce soin ;</span></l>
-            <l n="41" xml:id="l41"><span style="letter-spacing:-.3pt">Moi, je n’en veux, ni de près, ni de loin.</span></l>
-            <l n="42" xml:id="l42"><span style="letter-spacing:-.3pt">Mais il ne vient personne. Qu’est-ce à dire ?</span></l>
-            <l n="43" xml:id="l43"><span style="letter-spacing:-.3pt">Robert.</span></l>
-            <l n="44" xml:id="l44"> </l>
-            <l n="45" xml:id="l45"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="46" xml:id="l46"> </l>
-            <l n="47" xml:id="l47"> </l>
-            <l n="48" xml:id="l48"><span style="letter-spacing:-.3pt">Tous nos Acteurs ?... </span></l>
-            <l n="49" xml:id="l49"><span style="letter-spacing:-.3pt">Sont mis ainsi dans l’Avertissement :</span></l>
-            <l n="50" xml:id="l50"><span style="letter-spacing:-.3pt">« On traitera d’affaires importantes,</span></l>
-            <l n="51" xml:id="l51"><span style="letter-spacing:-.3pt">« Sur le théâtre, à sept heures sonnantes,</span></l>
-            <l n="52" xml:id="l52"><span style="letter-spacing:-.3pt">« Le Mercredi, dix-septième du mois.</span></l>
-            <l n="53" xml:id="l53"><span style="letter-spacing:-.3pt">Il est le quart.</span></l>
-            <l n="54" xml:id="l54"><span style="letter-spacing:-.3pt">Ou votre montre...</span></l>
-            <l n="55" xml:id="l55"><span style="letter-spacing:-.3pt">Mais n’est-il point venu certain Poète,</span></l>
-            <l n="56" xml:id="l56"><span style="letter-spacing:-.3pt">Vêtu de noir, un homme assez mal mis ?</span></l>
-            <l n="57" xml:id="l57"><span style="letter-spacing:-.3pt">Il va venir : je l’ai connu jadis.</span></l>
-            <l n="58" xml:id="l58"><span style="letter-spacing:-.3pt">Il me demande un appui favorable</span></l>
-            <l n="59" xml:id="l59"><span style="letter-spacing:-.3pt">Auprès de vous. C’est un assez bon diable :</span></l>
-            <l n="60" xml:id="l60"><span style="letter-spacing:-.3pt">Je le protège : ah, protégez-le aussi.</span></l>
-            <l n="61" xml:id="l61"><span style="letter-spacing:-.3pt">Nous recevrons sa pièce.</span></l>
-            <l n="62" xml:id="l62"><span style="letter-spacing:-.3pt">Car, entre nous, il me doit quelque chose.</span></l>
-            <l n="63" xml:id="l63"><span style="letter-spacing:-.3pt">J’ai son billet écrit, non pas en prose,</span></l>
-            <l n="64" xml:id="l64"><span style="letter-spacing:-.3pt">Mais en beaux vers, en vers Alexandrins.</span></l>
-            <l n="65" xml:id="l65"><span style="letter-spacing:-.3pt">Fais-le-moi voir quelqu’un de ces matins,</span></l>
-            <l n="66" xml:id="l66"><span style="letter-spacing:-.3pt">Cela doit faire une pièce comique.</span></l>
-            <l n="67" xml:id="l67"><span style="letter-spacing:-.3pt">Lisez. Le style en est pourtant tragique.</span></l>
-            <l n="68" xml:id="l68"><span style="letter-spacing:-.3pt">« Pour avoir su transcrire élégamment les vers</span></l>
-            <l n="69" xml:id="l69"><span style="letter-spacing:-.3pt">« Qui porteront ma gloire au bout de l’univers ;</span></l>
-            <l n="70" xml:id="l70"><span style="letter-spacing:-.3pt">« Et pour s’être montré domestique fidèle,</span></l>
-            <l n="71" xml:id="l71"><span style="letter-spacing:-.3pt">« En me prêtant souvent son argent avec zèle,</span></l>
-            <l n="72" xml:id="l72"><span style="letter-spacing:-.3pt">« Je promets à Robert, qui m’a servi six ans,</span></l>
-            <l n="73" xml:id="l73"><span style="letter-spacing:-.3pt">« De lui payer un jour la somme de cent francs.</span></l>
-            <l n="74" xml:id="l74"><span style="letter-spacing:-.3pt">Tu n’es pas cher.</span></l>
-            <l n="75" xml:id="l75"><span style="letter-spacing:-.3pt">Dans son métier il tâchait de m’instruire.</span></l>
-            <l n="76" xml:id="l76"><span style="letter-spacing:-.3pt">Je le servais gratis, de mon côté :</span></l>
-            <l n="77" xml:id="l77"><span style="letter-spacing:-.3pt">J’étais laquais par générosité. </span></l>
-            <l n="78" xml:id="l78"><span style="letter-spacing:-.3pt">Tu comptais donc un jour être Poète ?</span></l>
-            <l n="79" xml:id="l79"><span style="letter-spacing:-.3pt">Monsieur, la rime est un grand casse-tête.</span></l>
-            <l n="80" xml:id="l80"><span style="letter-spacing:-.3pt">On la poursuit, on cherche à la saisir ;</span></l>
-            <l n="81" xml:id="l81"><span style="letter-spacing:-.3pt">Elle s’enfuit quand on croit la tenir.</span></l>
-            <l n="82" xml:id="l82"><span style="letter-spacing:-.3pt">On n’y parvient qu’en se donnant au Diable. </span></l>
-            <l n="83" xml:id="l83"><span style="letter-spacing:-.3pt">Eh bien ?</span></l>
-            <l n="84" xml:id="l84"><span style="letter-spacing:-.3pt">Foulant aux pieds les lauriers d’Apollon,</span></l>
-            <l n="85" xml:id="l85"><span style="letter-spacing:-.3pt">J’ai fui la rime, et suivi la raison. </span></l>
-            <l n="86" xml:id="l86"><span style="letter-spacing:-.3pt">Dis-moi, Robert, les traits de ta figure</span></l>
-            <l n="87" xml:id="l87"><span style="letter-spacing:-.3pt">Ne me sont pas nouveaux, je t’en assure ;</span></l>
-            <l n="88" xml:id="l88"><span style="letter-spacing:-.3pt">Dans quel pays puis-je t’avoir connu ? </span></l>
-            <l n="89" xml:id="l89"><span style="letter-spacing:-.3pt">En cent endroits vous pouvez m’avoir vu ;</span></l>
-            <l n="90" xml:id="l90"><span style="letter-spacing:-.3pt">Car l’éléphant, l’ours et le crocodile,</span></l>
-            <l n="91" xml:id="l91"><span style="letter-spacing:-.3pt">Que l’on fait voir partout de ville en ville,</span></l>
-            <l n="92" xml:id="l92"><span style="letter-spacing:-.3pt">N’ont pas des traits connus du spectateur</span></l>
-            <l n="93" xml:id="l93"><span style="letter-spacing:-.3pt">Autant que ceux de votre serviteur.</span></l>
-            <l n="94" xml:id="l94"><span style="letter-spacing:-.3pt">Pourquoi ?</span></l>
-            <l n="95" xml:id="l95"><span style="letter-spacing:-.3pt">Dont on se sert pour les marionnettes. </span></l>
-            <l n="96" xml:id="l96"><span style="letter-spacing:-.3pt">Polichinel, si plaisant pour les sots,</span></l>
-            <l n="97" xml:id="l97"><span style="letter-spacing:-.3pt">Ne dut qu’à moi le sel de ses bons mots.</span></l>
-            <l n="98" xml:id="l98"><span style="letter-spacing:-.3pt">Qu’alors j’étais cher à la populace !</span></l>
-            <l n="99" xml:id="l99"><span style="letter-spacing:-.3pt">L’ambition m’offrit une autre place.</span></l>
-            <l n="100" xml:id="l100"><span style="letter-spacing:-.3pt">Chez des Acteurs, qui n’étaient pas de bois, </span></l>
-            <l n="101" xml:id="l101"><span style="letter-spacing:-.3pt">Je fus moucheur de chandelles... Je crois</span></l>
-            <l n="102" xml:id="l102"><span style="letter-spacing:-.3pt">Que vous riez.</span></l>
-            <l n="103" xml:id="l103"><span style="letter-spacing:-.3pt">N’ont dû pourtant leurs plus grands avantages</span></l>
-            <l n="104" xml:id="l104"><span style="letter-spacing:-.3pt">Qu’aux doigts brillants d’un moucheur ignoré.</span></l>
-            <l n="105" xml:id="l105"><span style="letter-spacing:-.3pt">Quand un théâtre est vraiment éclairé,</span></l>
-            <l n="106" xml:id="l106"><span style="letter-spacing:-.3pt">Cela vous jette un jour sur une pièce</span></l>
-            <l n="107" xml:id="l107"><span style="letter-spacing:-.3pt">On en saisit tout l’esprit, la finesse,</span></l>
-            <l n="108" xml:id="l108"><span style="letter-spacing:-.3pt">Enfin cet art...</span></l>
-            <l n="109" xml:id="l109"><span style="letter-spacing:-.3pt">Je n’ai point là borné tout mon talent ;</span></l>
-            <l n="110" xml:id="l110"><span style="letter-spacing:-.3pt">Ce que j’ai fait est presque un Phénomène.</span></l>
-            <l n="111" xml:id="l111"><span style="letter-spacing:-.3pt">Diable ! </span></l>
-            <l n="112" xml:id="l112"><span style="letter-spacing:-.3pt">M’a vu moucheur, contrôleur, receveur,</span></l>
-            <l n="113" xml:id="l113"><span style="letter-spacing:-.3pt">Décorateur, afficheur et souffleur.</span></l>
-            <l n="114" xml:id="l114"><span style="letter-spacing:-.3pt">Cet assemblage est burlesque.</span></l>
-            <l n="115" xml:id="l115"><span style="letter-spacing:-.3pt">J’ai fait encor de méchants bouts de rôle ;</span></l>
-            <l n="116" xml:id="l116"><span style="letter-spacing:-.3pt">Et qui plus est j’ai, pendant près d’un mois,</span></l>
-            <l n="117" xml:id="l117"><span style="letter-spacing:-.3pt">Par <i>intérim</i>, représenté les Rois.</span></l>
-            <l n="118" xml:id="l118"><span style="letter-spacing:-.3pt">Il fallait voir de quel air despotique </span></l>
-            <l n="119" xml:id="l119"><span style="letter-spacing:-.3pt">Je soutenais ma fierté politique. </span></l>
-            <l n="120" xml:id="l120"><span style="letter-spacing:-.3pt">J’avais un front plein de sérénité </span></l>
-            <l n="121" xml:id="l121"><span style="letter-spacing:-.3pt">Lorsque mon trône était en sûreté.</span></l>
-            <l n="122" xml:id="l122"><span style="letter-spacing:-.3pt">Mais quand l’État penchait vers sa ruine</span></l>
-            <l n="123" xml:id="l123"><span style="letter-spacing:-.3pt">Je me croisais les bras sur la poitrine,</span></l>
-            <l n="124" xml:id="l124"><span style="letter-spacing:-.3pt">Et je poussais d’augustes hurlements</span></l>
-            <l n="125" xml:id="l125"><span style="letter-spacing:-.3pt">Comme un Lion dont on lime les dents.</span></l>
-            <l n="126" xml:id="l126"><span style="letter-spacing:-.3pt">Je n’eus pourtant du parterre indocile</span></l>
-            <l n="127" xml:id="l127"><span style="letter-spacing:-.3pt">Que des sifflets. Je vins en cette ville, </span></l>
-            <l n="128" xml:id="l128"><span style="letter-spacing:-.3pt">Où renonçant à la grandeur des Rois,</span></l>
-            <l n="129" xml:id="l129"><span style="letter-spacing:-.3pt">J’entrai gagiste au théâtre François. </span></l>
-            <l n="130" xml:id="l130"><span style="letter-spacing:-.3pt">Grand Prince, hélas ! la chute est un peu grande.</span></l>
-            <l n="131" xml:id="l131"><span style="letter-spacing:-.3pt">Adieu. Songez que je vous recommande</span></l>
-            <l n="132" xml:id="l132"><span style="letter-spacing:-.3pt">Mon ancien maître et mon vieux débiteur.</span></l>
-            <l n="133" xml:id="l133"><span style="letter-spacing:-.3pt">Va, sois content. Mais quelqu’un vient.</span></l>
-            <l n="134" xml:id="l134"><span style="letter-spacing:-.3pt">C’est la Concierge, et je m’en vais d’avance.</span></l>
-            <l n="135" xml:id="l135"> </l>
-            <l n="136" xml:id="l136"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="137" xml:id="l137"> </l>
-            <l n="138" xml:id="l138"> </l>
-            <l n="139" xml:id="l139"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Pendant le cours de cette scène les Acteurs et Actrices arrivent l’un après l’autre, et se font mutuellement signe de ne point interrompre la conversation de la Concierge.</span></span></i></l>
-            <l n="140" xml:id="l140"><span style="letter-spacing:-.3pt">Tachez, Monsieur, de prendre patience,</span></l>
-            <l n="141" xml:id="l141"><span style="letter-spacing:-.3pt">Nous n’aurons pas nos Acteurs de sitôt.</span></l>
-            <l n="142" xml:id="l142"><span style="letter-spacing:-.3pt">Comment donc ?</span></l>
-            <l n="143" xml:id="l143"><span style="letter-spacing:-.3pt">Pour aller voir l’admirable sculpture</span></l>
-            <l n="144" xml:id="l144"><span style="letter-spacing:-.3pt">Qui de Voltaire exprime la figure.</span></l>
-            <l n="145" xml:id="l145"><span style="letter-spacing:-.3pt">Ils devaient bien choisir d’autres moments.</span></l>
-            <l n="146" xml:id="l146"><span style="letter-spacing:-.3pt">Ce n’était pas ainsi que, de mon temps,</span></l>
-            <l n="147" xml:id="l147"><span style="letter-spacing:-.3pt">Se conduisaient les Acteurs ; mais tout change,</span></l>
-            <l n="148" xml:id="l148"><span style="letter-spacing:-.3pt">Et tout le monde aujourd’hui se dérange.</span></l>
-            <l n="149" xml:id="l149"><span style="letter-spacing:-.3pt">On était donc bien plus parfait jadis !</span></l>
-            <l n="150" xml:id="l150"><span style="letter-spacing:-.3pt">Mon cher Monsieur, c’est moi qui vous le dis,</span></l>
-            <l n="151" xml:id="l151"><span style="letter-spacing:-.3pt">La nature est tellement renversée,</span></l>
-            <l n="152" xml:id="l152"><span style="letter-spacing:-.3pt">Qu’on n’en saurait concevoir la pensée :</span></l>
-            <l n="153" xml:id="l153"><span style="letter-spacing:-.3pt">Les femmes sont sans grâces, sans beauté :</span></l>
-            <l n="154" xml:id="l154"><span style="letter-spacing:-.3pt">Les hommes n’ont ni force, ni santé ;</span></l>
-            <l n="155" xml:id="l155"><span style="letter-spacing:-.3pt">Les champs n’ont plus leur éclat ordinaire ;</span></l>
-            <l n="156" xml:id="l156"><span style="letter-spacing:-.3pt">Les bois n’ont plus leur charme et leur mystère.</span></l>
-            <l n="157" xml:id="l157"><span style="letter-spacing:-.3pt">Tout dépérit, et même j’aperçois</span></l>
-            <l n="158" xml:id="l158"><span style="letter-spacing:-.3pt">Qu’on ne dort plus aussi bien qu’autrefois.</span></l>
-            <l n="159" xml:id="l159"><span style="letter-spacing:-.3pt">Cette remarque est fine autant que sage :</span></l>
-            <l n="160" xml:id="l160"><span style="letter-spacing:-.3pt">Je l’entends faire aux gens du plus grand âge. </span></l>
-            <l n="161" xml:id="l161"><span style="letter-spacing:-.3pt">Quant au génie, à l’esprit, aux talents, </span></l>
-            <l n="162" xml:id="l162"><span style="letter-spacing:-.3pt">On n’en a plus, encor moins de bon sens ;</span></l>
-            <l n="163" xml:id="l163"><span style="letter-spacing:-.3pt">La conduite est bizarre, inconséquente.</span></l>
-            <l n="164" xml:id="l164"><span style="letter-spacing:-.3pt">En voulez-vous une preuve parlante ?</span></l>
-            <l n="165" xml:id="l165"><span style="letter-spacing:-.3pt">Sans aller loin, songez aux changements </span></l>
-            <l n="166" xml:id="l166"><span style="letter-spacing:-.3pt">Faits au théâtre ; ils sont extravagants.</span></l>
-            <l n="167" xml:id="l167"><span style="letter-spacing:-.3pt">Je pleure encor la réforme soudaine</span></l>
-            <l n="168" xml:id="l168"><span style="letter-spacing:-.3pt">De tous ces bancs qui garnissaient la scène,</span></l>
-            <l n="169" xml:id="l169"><span style="letter-spacing:-.3pt">Faisaient briller tous nos jeunes Seigneurs,</span></l>
-            <l n="170" xml:id="l170"><span style="letter-spacing:-.3pt">Et rapportaient tant d’argent aux Acteurs.</span></l>
-            <l n="171" xml:id="l171"><span style="letter-spacing:-.3pt">Ce dernier point...</span></l>
-            <l n="172" xml:id="l172"><span style="letter-spacing:-.3pt">On a proscrit, avec même imprudence,</span></l>
-            <l n="173" xml:id="l173"><span style="letter-spacing:-.3pt">Cette perruque et ces vastes chapeaux,</span></l>
-            <l n="174" xml:id="l174"><span style="letter-spacing:-.3pt">Dont nous ornions les antiques héros :</span></l>
-            <l n="175" xml:id="l175"><span style="letter-spacing:-.3pt">Par un faux goût, par un travers fantasque,</span></l>
-            <l n="176" xml:id="l176"><span style="letter-spacing:-.3pt">On croit devoir coiffer avec un casque</span></l>
-            <l n="177" xml:id="l177"><span style="letter-spacing:-.3pt">Sertorius, César, Brutus, Othon :</span></l>
-            <l n="178" xml:id="l178"><span style="letter-spacing:-.3pt">Monsieur, ce casque est d’un bien mauvais ton.</span></l>
-            <l n="179" xml:id="l179"><span style="letter-spacing:-.3pt">Oui, cela donne une mine sauvage ;</span></l>
-            <l n="180" xml:id="l180"><span style="letter-spacing:-.3pt">L’air de quelqu’un qui veut faire tapage.</span></l>
-            <l n="181" xml:id="l181"><span style="letter-spacing:-.3pt">Vous en parlez fort énergiquement.</span></l>
-            <l n="182" xml:id="l182"><span style="letter-spacing:-.3pt">Mais on a fait un autre changement</span></l>
-            <l n="183" xml:id="l183"><span style="letter-spacing:-.3pt">Qui me révolte encore davantage.</span></l>
-            <l n="184" xml:id="l184"><span style="letter-spacing:-.3pt">C’est des paniers dont vous parlez, je gage.</span></l>
-            <l n="185" xml:id="l185"><span style="letter-spacing:-.3pt">Monsieur, comptez que leur suppression</span></l>
-            <l n="186" xml:id="l186"><span style="letter-spacing:-.3pt">A porté coup à notre nation.</span></l>
-            <l n="187" xml:id="l187"><span style="letter-spacing:-.3pt">Oui, des paniers, l’ample circonférence,</span></l>
-            <l n="188" xml:id="l188"><span style="letter-spacing:-.3pt">Tient beaucoup plus aux mœurs que l’on ne pense.</span></l>
-            <l n="189" xml:id="l189"><span style="letter-spacing:-.3pt">Je le crois fort. Avec un tel secours</span></l>
-            <l n="190" xml:id="l190"><span style="letter-spacing:-.3pt">Vous enchaîniez autrefois les Amours.</span></l>
-            <l n="191" xml:id="l191"><span style="letter-spacing:-.3pt">Vous voulez rire en tenant ce langage ;</span></l>
-            <l n="192" xml:id="l192"><span style="letter-spacing:-.3pt">Mais j’ai valu mon prix dans mon jeune âge.</span></l>
-            <l n="193" xml:id="l193"><span style="letter-spacing:-.3pt">On le voit bien : vos yeux, Madame Armand,</span></l>
-            <l n="194" xml:id="l194"><span style="letter-spacing:-.3pt">Faisaient l’effet de la pierre d’aimant :</span></l>
-            <l n="195" xml:id="l195"><span style="letter-spacing:-.3pt">Vous attiriez les cœurs d’étrange sorte ;</span></l>
-            <l n="196" xml:id="l196"><span style="letter-spacing:-.3pt">Même à présent, où, le diable m’emporte,</span></l>
-            <l n="197" xml:id="l197"><span style="letter-spacing:-.3pt">Vous me plairiez dans de certains moments. </span></l>
-            <l n="198" xml:id="l198"><span style="letter-spacing:-.3pt">Hélas ! hélas, que ne suis-je à vingt ans !</span></l>
-            <l n="199" xml:id="l199"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">On entend rire.</span></span></i></l>
-            <l n="200" xml:id="l200"><span style="letter-spacing:-.3pt">Qu’entends-je ! ici, j’apprête donc à rire. </span></l>
-            <l n="201" xml:id="l201"><span style="letter-spacing:-.3pt">On est venu : Monsieur, je me retire. </span></l>
-            <l n="202" xml:id="l202"> </l>
-            <l n="203" xml:id="l203"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="204" xml:id="l204"> </l>
-            <l n="205" xml:id="l205"> </l>
-            <l n="206" xml:id="l206"><span style="letter-spacing:-.3pt">La bonne femme est folle...</span></l>
-            <l n="207" xml:id="l207"><span style="letter-spacing:-.3pt">Nous voici tous ; et l’Auteur est absent.</span></l>
-            <l n="208" xml:id="l208"><span style="letter-spacing:-.3pt">Va le chercher.</span></l>
-            <l n="209" xml:id="l209"> </l>
-            <l n="210" xml:id="l210"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="211" xml:id="l211"> </l>
-            <l n="212" xml:id="l212"> </l>
-            <l n="213" xml:id="l213"><span style="letter-spacing:-.3pt">Entre vous deux, recevez-moi, de grâce.</span></l>
-            <l n="214" xml:id="l214"><span style="letter-spacing:-.3pt">Moi, je veux être avec vous dans ce coin.</span></l>
-            <l n="215" xml:id="l215"><span style="letter-spacing:-.3pt">Monsieur Brizard, n’allez donc pas si loin.</span></l>
-            <l n="216" xml:id="l216"><span style="letter-spacing:-.3pt">Venez ici.</span></l>
-            <l n="217" xml:id="l217"><span style="letter-spacing:-.3pt">Vous vous trompez, j’ai fort mauvais visage.</span></l>
-            <l n="218" xml:id="l218"><span style="letter-spacing:-.3pt">Croit-elle donc que je l’irai prier ?</span></l>
-            <l n="219" xml:id="l219"><span style="letter-spacing:-.3pt">Je ne suis pas non plus un écolier.</span></l>
-            <l n="220" xml:id="l220"><span style="letter-spacing:-.3pt">Je ne veux pas faire la moindre avance.</span></l>
-            <l n="221" xml:id="l221"><span style="letter-spacing:-.3pt">Je vous dirai, pour moi, ce que j’en pense.</span></l>
-            <l n="222" xml:id="l222"><span style="letter-spacing:-.3pt">Elle se met assez bien.</span></l>
-            <l n="223" xml:id="l223"><span style="letter-spacing:-.3pt">Elle se coiffe un peu trop en devant.</span></l>
-            <l n="224" xml:id="l224"><span style="letter-spacing:-.3pt">Quand on voudra pourtant faire silence,</span></l>
-            <l n="225" xml:id="l225"><span style="letter-spacing:-.3pt">Nous apprendrons l’objet de la séance,</span></l>
-            <l n="226" xml:id="l226"><span style="letter-spacing:-.3pt">Et la raison qui fait que c’est ici, </span></l>
-            <l n="227" xml:id="l227"><span style="letter-spacing:-.3pt">Pour s’assembler, le lieu qu’on a choisi ?</span></l>
-            <l n="228" xml:id="l228"><span style="letter-spacing:-.3pt">Sur tous ces points l’Auteur doit vous instruire. </span></l>
-            <l n="229" xml:id="l229"><span style="letter-spacing:-.3pt">Comment, Messieurs, c’est pour entendre lire</span></l>
-            <l n="230" xml:id="l230"><span style="letter-spacing:-.3pt">Qu’on a choisi ces lieux et ce moment ?</span></l>
-            <l n="231" xml:id="l231"><span style="letter-spacing:-.3pt">L’objet l’exige indispensablement.</span></l>
-            <l n="232" xml:id="l232"><span style="letter-spacing:-.3pt">J’aurais bien fait d’apporter de l’ouvrage.</span></l>
-            <l n="233" xml:id="l233"><span style="letter-spacing:-.3pt">Lorsqu’on me lit des vers c’est mon usage.</span></l>
-            <l n="234" xml:id="l234"><span style="letter-spacing:-.3pt">Oh, quant à moi, pour les trouver plus courts,</span></l>
-            <l n="235" xml:id="l235"><span style="letter-spacing:-.3pt">J’apprends mon rôle, et l’Auteur lit toujours.</span></l>
-            <l n="236" xml:id="l236"><span style="letter-spacing:-.3pt">Mais à propos, Messieurs, je vous déclare,</span></l>
-            <l n="237" xml:id="l237"><span style="letter-spacing:-.3pt">Qu’à mon absence il faut qu’on se prépare ;</span></l>
-            <l n="238" xml:id="l238"><span style="letter-spacing:-.3pt">J’ai mon congé pour le reste du mois. </span></l>
-            <l n="239" xml:id="l239"><span style="letter-spacing:-.3pt">Je prends huit jours.</span></l>
-            <l n="240" xml:id="l240"><span style="letter-spacing:-.3pt">Fort bien. </span></l>
-            <l n="241" xml:id="l241"><span style="letter-spacing:-.3pt">Je ne fais point grâce de ma quinzaine.</span></l>
-            <l n="242" xml:id="l242"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Au Semainier.</span></span></i></l>
-            <l n="243" xml:id="l243"><span style="letter-spacing:-.3pt">Oui, mon ami, tu peux, si tu le veux, </span></l>
-            <l n="244" xml:id="l244"><span style="letter-spacing:-.3pt">Me regarder et faire de gros yeux.</span></l>
-            <l n="245" xml:id="l245"><span style="letter-spacing:-.3pt">En bonne foi, dis-moi... </span></l>
-            <l n="246" xml:id="l246"><span style="letter-spacing:-.3pt">Peut-on jouer quand on est en affaire ?  </span></l>
-            <l n="247" xml:id="l247"><span style="letter-spacing:-.3pt">Premièrement : tiens, vois mon agenda ;</span></l>
-            <l n="248" xml:id="l248"><span style="letter-spacing:-.3pt">J’ai dix soupers sur ces deux pages-là. </span></l>
-            <l n="249" xml:id="l249"><span style="letter-spacing:-.3pt">Ce n’est pas tout ; il faut que je m’apprête</span></l>
-            <l n="250" xml:id="l250"><span style="letter-spacing:-.3pt">À figurer dans la superbe fête</span></l>
-            <l n="251" xml:id="l251"><span style="letter-spacing:-.3pt">Qu’on va donner... Je ne suis pas de fer...          </span></l>
-            <l n="252" xml:id="l252"><span style="letter-spacing:-.3pt">On y jouera, dit-on, un jeu d’enfer...</span></l>
-            <l n="253" xml:id="l253"><span style="letter-spacing:-.3pt">Et... tu m’entends ; je dormirai... peut-être.</span></l>
-            <l n="254" xml:id="l254"><span style="letter-spacing:-.3pt">Quelle raison vous force à disparaître ?</span></l>
-            <l n="255" xml:id="l255"><span style="letter-spacing:-.3pt">Je vais me mettre à la diète.</span></l>
-            <l n="256" xml:id="l256"><span style="letter-spacing:-.3pt">Je vais chasser à la suite du Roi.</span></l>
-            <l n="257" xml:id="l257"><span style="letter-spacing:-.3pt">Moi, j’étudie, et c’est-là mon excuse.</span></l>
-            <l n="258" xml:id="l258"><span style="letter-spacing:-.3pt">Oh moi, voici la mienne, je m’amuse.</span></l>
-            <l n="259" xml:id="l259"><span style="letter-spacing:-.3pt">Et le public, que croit-on qu’il dira ?</span></l>
-            <l n="260" xml:id="l260"><span style="letter-spacing:-.3pt">Rien. Le public jamais n’exigera  </span></l>
-            <l n="261" xml:id="l261"><span style="letter-spacing:-.3pt">Que, pour lui plaire, on s’excède, on s’accable.           </span></l>
-            <l n="262" xml:id="l262"><span style="letter-spacing:-.3pt">Sans contredit : il est trop équitable,</span></l>
-            <l n="263" xml:id="l263"><span style="letter-spacing:-.3pt">J’en suis comblé. S’il était devant nous,</span></l>
-            <l n="264" xml:id="l264"><span style="letter-spacing:-.3pt">Je lui dirais, Messieurs, convenez tous</span></l>
-            <l n="265" xml:id="l265"><span style="letter-spacing:-.3pt">Que du plaisir vous êtes idolâtres ;</span></l>
-            <l n="266" xml:id="l266"><span style="letter-spacing:-.3pt">Vous le cherchez à la ville, aux théâtres,           </span></l>
-            <l n="267" xml:id="l267"><span style="letter-spacing:-.3pt">Enfin partout ; souffrez quelques instants</span></l>
-            <l n="268" xml:id="l268"><span style="letter-spacing:-.3pt">Que votre idole ait part à notre encens.</span></l>
-            <l n="269" xml:id="l269"><span style="letter-spacing:-.3pt">Disant ces mots d’un ton bien pathétique, </span></l>
-            <l n="270" xml:id="l270"><span style="letter-spacing:-.3pt">Je convaincrais, et, pour toute réplique,</span></l>
-            <l n="271" xml:id="l271"><span style="letter-spacing:-.3pt">Le battement des mains du spectateur</span></l>
-            <l n="272" xml:id="l272"><span style="letter-spacing:-.3pt">Couronnerait les désirs de l’acteur.</span></l>
-            <l n="273" xml:id="l273"><span style="letter-spacing:-.3pt">Eh bien, Messieurs, notre pièce nouvelle</span></l>
-            <l n="274" xml:id="l274"><span style="letter-spacing:-.3pt">En reste-là ; quand donc se jouera-t-elle ?</span></l>
-            <l n="275" xml:id="l275"><span style="letter-spacing:-.3pt">Mademoiselle, il faudrait que d’abord,</span></l>
-            <l n="276" xml:id="l276"><span style="letter-spacing:-.3pt">Sur chaque rôle, on fût un peu d’accord.           </span></l>
-            <l n="277" xml:id="l277"><span style="letter-spacing:-.3pt">On l’est assez, si ce n’est qu’on s’obstine </span></l>
-            <l n="278" xml:id="l278"><span style="letter-spacing:-.3pt">À m’enlever celui de l’héroïne ;</span></l>
-            <l n="279" xml:id="l279"><span style="letter-spacing:-.3pt">L’Auteur pourtant me l’avait adjugé.</span></l>
-            <l n="280" xml:id="l280"><span style="letter-spacing:-.3pt">C’est une erreur dont il s’est corrigé.</span></l>
-            <l n="281" xml:id="l281"><span style="letter-spacing:-.3pt">Il a laissé cette importante cause</span></l>
-            <l n="282" xml:id="l282"><span style="letter-spacing:-.3pt">À vos avis, Messieurs ; jugez la chose.</span></l>
-            <l n="283" xml:id="l283"><span style="letter-spacing:-.3pt">Pourquoi juger quand j’ai les plus grands droits ?</span></l>
-            <l n="284" xml:id="l284"><span style="letter-spacing:-.3pt">Pourquoi vouloir ici faire des lois ?</span></l>
-            <l n="285" xml:id="l285"><span style="letter-spacing:-.3pt">Je n’en fais point ; mais convenez vous-même</span></l>
-            <l n="286" xml:id="l286"><span style="letter-spacing:-.3pt">Que la fierté, l’orgueil du rang suprême,</span></l>
-            <l n="287" xml:id="l287"><span style="letter-spacing:-.3pt">Sont dans ce rôle : il est donc fait pour moi :</span></l>
-            <l n="288" xml:id="l288"><span style="letter-spacing:-.3pt">Les Reines font l’objet de mon emploi.</span></l>
-            <l n="289" xml:id="l289"><span style="letter-spacing:-.3pt">Ce rôle a moins d’orgueil que de tendresse :</span></l>
-            <l n="290" xml:id="l290"><span style="letter-spacing:-.3pt">Il tombe donc dans l’emploi de Princesse,</span></l>
-            <l n="291" xml:id="l291"><span style="letter-spacing:-.3pt">Et la tendresse, en effet, est mon lot.</span></l>
-            <l n="292" xml:id="l292"><span style="letter-spacing:-.3pt">Jugez-en tous.</span></l>
-            <l n="293" xml:id="l293"><span style="letter-spacing:-.3pt">Je vais, Messieurs, quitter la Comédie.</span></l>
-            <l n="294" xml:id="l294"><span style="letter-spacing:-.3pt">À vous permis si telle est votre envie.</span></l>
-            <l n="295" xml:id="l295"><span style="letter-spacing:-.3pt">Vous avez bien de la vivacité.</span></l>
-            <l n="296" xml:id="l296"><span style="letter-spacing:-.3pt">On voit chez vous la plus vaine fierté.   </span></l>
-            <l n="297" xml:id="l297"><span style="letter-spacing:-.3pt">Vous m’insultez, je crois, Mademoiselle.</span></l>
-            <l n="298" xml:id="l298"><span style="letter-spacing:-.3pt">C’est plutôt vous. </span></l>
-            <l n="299" xml:id="l299"><span style="letter-spacing:-.3pt">Dont vous pourriez ne vous réjouir pas.</span></l>
-            <l n="300" xml:id="l300"><span style="letter-spacing:-.3pt">De vos grands airs je fais très peu de cas :</span></l>
-            <l n="301" xml:id="l301"><span style="letter-spacing:-.3pt">Trêve d’orgueil, auguste Souveraine ;</span></l>
-            <l n="302" xml:id="l302"><span style="letter-spacing:-.3pt">Vous vous croyez sans doute sur la scène. </span></l>
-            <l n="303" xml:id="l303"><span style="letter-spacing:-.3pt">Je sais d’où part ce langage piquant ; </span></l>
-            <l n="304" xml:id="l304"><span style="letter-spacing:-.3pt">On rabattra votre ton révoltant. </span></l>
-            <l n="305" xml:id="l305"><span style="letter-spacing:-.3pt">Quoi ! vous allez jusques à la menace ?</span></l>
-            <l n="306" xml:id="l306"><span style="letter-spacing:-.3pt">Vous m’effrayez, Reine, faites-moi grâce.</span></l>
-            <l n="307" xml:id="l307"><span style="letter-spacing:-.3pt">Vous plaisantez ?</span></l>
-            <l n="308" xml:id="l308"><span style="letter-spacing:-.3pt">De la douceur.</span></l>
-            <l n="309" xml:id="l309"><span style="letter-spacing:-.3pt">Ma qualité d’arbitre entre les belles</span></l>
-            <l n="310" xml:id="l310"><span style="letter-spacing:-.3pt">Me donne droit d’entrer dans leurs querelles.</span></l>
-            <l n="311" xml:id="l311"><span style="letter-spacing:-.3pt">On ne veut point d’un tel médiateur.</span></l>
-            <l n="312" xml:id="l312"><span style="letter-spacing:-.3pt">Sans employer de conciliateur,</span></l>
-            <l n="313" xml:id="l313"><span style="letter-spacing:-.3pt">J’exposerai ma raison, et, sans peine</span></l>
-            <l n="314" xml:id="l314"><span style="letter-spacing:-.3pt">On s’y rendra.</span></l>
-            <l n="315" xml:id="l315"><span style="letter-spacing:-.3pt">C’est temps perdu ; c’est un méchant esprit.</span></l>
-            <l n="316" xml:id="l316"><span style="letter-spacing:-.3pt">Sur sa raison vous n’aurez nul crédit.</span></l>
-            <l n="317" xml:id="l317"><span style="letter-spacing:-.3pt">Savez-vous bien ce qu’on vient de me dire ?</span></l>
-            <l n="318" xml:id="l318"><span style="letter-spacing:-.3pt">Savez-vous bien ce qu’on cherche à produire ?</span></l>
-            <l n="319" xml:id="l319"><span style="letter-spacing:-.3pt">Mais je croirais qu’on veut nous irriter.</span></l>
-            <l n="320" xml:id="l320"><span style="letter-spacing:-.3pt">Eh bien ; tâchez de vous raccommoder,</span></l>
-            <l n="321" xml:id="l321"><span style="letter-spacing:-.3pt">Vous les rendrez bien sots, sur ma parole.</span></l>
-            <l n="322" xml:id="l322"><span style="letter-spacing:-.3pt">C’est bien pensé, j’abandonne le rôle.</span></l>
-            <l n="323" xml:id="l323"><span style="letter-spacing:-.3pt">Je fais de même, et ne le jouerai pas.</span></l>
-            <l n="324" xml:id="l324"><span style="letter-spacing:-.3pt">Vous nous jetez dans un autre embarras. </span></l>
-            <l n="325" xml:id="l325"><span style="letter-spacing:-.3pt">Vous le jouerez.</span></l>
-            <l n="326" xml:id="l326"><span style="letter-spacing:-.3pt">Non, par ma foi.</span></l>
-            <l n="327" xml:id="l327"><span style="letter-spacing:-.3pt">Que ferons-nous ?</span></l>
-            <l n="328" xml:id="l328"><span style="letter-spacing:-.3pt">J’ai dit mon mot : le jouera qui voudra.</span></l>
-            <l n="329" xml:id="l329"> </l>
-            <l n="330" xml:id="l330"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="331" xml:id="l331"> </l>
-            <l n="332" xml:id="l332"> </l>
-            <l n="333" xml:id="l333"><span style="letter-spacing:-.3pt">Voici l’auteur.</span></l>
-            <l n="334" xml:id="l334"><span style="letter-spacing:-.3pt">Moitié gendarme et moitié pédantesque.</span></l>
-            <l n="335" xml:id="l335"><span style="letter-spacing:-.3pt">Eh, bon jour donc, Monsieur de Songe-Creux.</span></l>
-            <l n="336" xml:id="l336"><span style="letter-spacing:-.3pt">Passez.</span></l>
-            <l n="337" xml:id="l337"><span style="letter-spacing:-.3pt">Nos grands Auteurs tragiques et comiques</span></l>
-            <l n="338" xml:id="l338"><span style="letter-spacing:-.3pt">N’ont remporté les palmes dramatiques</span></l>
-            <l n="339" xml:id="l339"><span style="letter-spacing:-.3pt">Qu’après avoir siégé dans ce fauteuil.</span></l>
-            <l n="340" xml:id="l340"><span style="letter-spacing:-.3pt">À moi, Messieurs, n’appartient tant d’orgueil.</span></l>
-            <l n="341" xml:id="l341"><span style="letter-spacing:-.3pt">Il siérait mal aux colombes timides</span></l>
-            <l n="342" xml:id="l342"><span style="letter-spacing:-.3pt">D’entrer au nid des aigles intrépides ;</span></l>
-            <l n="343" xml:id="l343"><span style="letter-spacing:-.3pt">La moindre place en ces augustes lieux</span></l>
-            <l n="344" xml:id="l344"><span style="letter-spacing:-.3pt">M’honore trop, et surpasse mes vœux.</span></l>
-            <l n="345" xml:id="l345"><span style="letter-spacing:-.3pt">S’il est ainsi, prenez donc cette chaise.</span></l>
-            <l n="346" xml:id="l346"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il y va.</span></span></i></l>
-            <l n="347" xml:id="l347"><span style="letter-spacing:-.3pt">Venez ici, vous serez plus à l’aise.</span></l>
-            <l n="348" xml:id="l348"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il quitte Madame Belcourt pour aller à Mademoiselle Hus.</span></span></i></l>
-            <l n="349" xml:id="l349"><span style="letter-spacing:-.3pt">Oui ; mais par-là nous n’entendrions rien :</span></l>
-            <l n="350" xml:id="l350"><span style="letter-spacing:-.3pt">Approchez-vous, chacun entendra bien.</span></l>
-            <l n="351" xml:id="l351"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il va à Mademoiselle Doligny.</span></span></i></l>
-            <l n="352" xml:id="l352"><span style="letter-spacing:-.3pt">Mettez-vous là, nous nous verrons en face. </span></l>
-            <l n="353" xml:id="l353"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il obéit.</span></span></i></l>
-            <l n="354" xml:id="l354"><span style="letter-spacing:-.3pt">Vous me quittez, c’est de mauvaise grâce ;</span></l>
-            <l n="355" xml:id="l355"><span style="letter-spacing:-.3pt">À cet affront je ne m’attendais pas. </span></l>
-            <l n="356" xml:id="l356"><span style="letter-spacing:-.3pt">Tenez, Monsieur, pour finir ces débats,</span></l>
-            <l n="357" xml:id="l357"><span style="letter-spacing:-.3pt">Placez-vous-là sans plus vous faire attendre.</span></l>
-            <l n="358" xml:id="l358"><span style="letter-spacing:-.3pt">Je ne sais plus vraiment auquel entendre.</span></l>
-            <l n="359" xml:id="l359"><span style="letter-spacing:-.3pt">Je reste ici... Mesdames et Messieurs ;</span></l>
-            <l n="360" xml:id="l360"><span style="letter-spacing:-.3pt">Ou, disons mieux : Reines, Rois, Empereurs,</span></l>
-            <l n="361" xml:id="l361"><span style="letter-spacing:-.3pt">Qui ne tenez la grandeur souveraine</span></l>
-            <l n="362" xml:id="l362"><span style="letter-spacing:-.3pt">Que de votre art et que de Melpomène,</span></l>
-            <l n="363" xml:id="l363"><span style="letter-spacing:-.3pt">Comtes, Marquis, Comtesses et Barons,</span></l>
-            <l n="364" xml:id="l364"><span style="letter-spacing:-.3pt">Qui ne devez vos titres et vos noms</span></l>
-            <l n="365" xml:id="l365"><span style="letter-spacing:-.3pt">Qu’à la faveur de Thalie elle-même,</span></l>
-            <l n="366" xml:id="l366"><span style="letter-spacing:-.3pt">D’un faible Auteur calmez la crainte extrême.</span></l>
-            <l n="367" xml:id="l367"><span style="letter-spacing:-.3pt">Pour un Poète en effet ce moment</span></l>
-            <l n="368" xml:id="l368"><span style="letter-spacing:-.3pt">Est périlleux et très embarrassant.</span></l>
-            <l n="369" xml:id="l369"><span style="letter-spacing:-.3pt">Un Allemand qu’on empêche de boire,</span></l>
-            <l n="370" xml:id="l370"><span style="letter-spacing:-.3pt">Un Charlatan que l’on ne veut pas croire,</span></l>
-            <l n="371" xml:id="l371"><span style="letter-spacing:-.3pt">Un écolier qui sait mal sa leçon,</span></l>
-            <l n="372" xml:id="l372"><span style="letter-spacing:-.3pt">Un Philosophe à l’aspect du canon,</span></l>
-            <l n="373" xml:id="l373"><span style="letter-spacing:-.3pt">Ont moins d’effroi, de trouble et de détresse</span></l>
-            <l n="374" xml:id="l374"><span style="letter-spacing:-.3pt">Qu’un bel esprit qui présente une pièce.</span></l>
-            <l n="375" xml:id="l375"><span style="letter-spacing:-.3pt">Et cependant ce bel-esprit a tort ;</span></l>
-            <l n="376" xml:id="l376"><span style="letter-spacing:-.3pt">Qu’avons-nous donc pour l’effrayer si fort ?</span></l>
-            <l n="377" xml:id="l377"><span style="letter-spacing:-.3pt">Si l’on voulait croire la médisance...</span></l>
-            <l n="378" xml:id="l378"><span style="letter-spacing:-.3pt">Parlez, il faut dire ce que l’on pense. </span></l>
-            <l n="379" xml:id="l379"><span style="letter-spacing:-.3pt">Vous n’avez pas, dit-on, pour les Auteurs,</span></l>
-            <l n="380" xml:id="l380"><span style="letter-spacing:-.3pt">Des sentiments bien doux et bien flatteurs.</span></l>
-            <l n="381" xml:id="l381"><span style="letter-spacing:-.3pt">Mais là-dessus n’entrons point en matière,</span></l>
-            <l n="382" xml:id="l382"><span style="letter-spacing:-.3pt">L’homme prudent sait parler et se taire.</span></l>
-            <l n="383" xml:id="l383"><span style="letter-spacing:-.3pt">Quoi ! se peut-il, Monsieur de Songe-Creux,</span></l>
-            <l n="384" xml:id="l384"><span style="letter-spacing:-.3pt">Que vous donniez dans tous ces contes bleus ?</span></l>
-            <l n="385" xml:id="l385"><span style="letter-spacing:-.3pt">Non, je reçois les faits qu’on m’articule,</span></l>
-            <l n="386" xml:id="l386"><span style="letter-spacing:-.3pt">Mais sans en croire une seule virgule.</span></l>
-            <l n="387" xml:id="l387"><span style="letter-spacing:-.3pt">Sachez, Monsieur, que tous ces méchants bruits</span></l>
-            <l n="388" xml:id="l388"><span style="letter-spacing:-.3pt">Viennent d’Auteurs justement éconduits ;</span></l>
-            <l n="389" xml:id="l389"><span style="letter-spacing:-.3pt">Qui, furieux de voir que leurs ouvrages</span></l>
-            <l n="390" xml:id="l390"><span style="letter-spacing:-.3pt">N’ont jamais pu réunir les suffrages,</span></l>
-            <l n="391" xml:id="l391"><span style="letter-spacing:-.3pt">Vont se venger, par mille faussetés, </span></l>
-            <l n="392" xml:id="l392"><span style="letter-spacing:-.3pt">De nos refus qu’ils ont bien mérités.</span></l>
-            <l n="393" xml:id="l393"><span style="letter-spacing:-.3pt">Voudriez-vous qu’en ce moment critique,</span></l>
-            <l n="394" xml:id="l394"><span style="letter-spacing:-.3pt">Un auteur fit votre panégyrique ?           </span></l>
-            <l n="395" xml:id="l395"><span style="letter-spacing:-.3pt">Non, je ne sais moi-même, en pareil cas,</span></l>
-            <l n="396" xml:id="l396"><span style="letter-spacing:-.3pt">Où la fureur ne me porterait pas.</span></l>
-            <l n="397" xml:id="l397"><span style="letter-spacing:-.3pt">Vous êtes doux ; nous n’aurions rien à craindre.</span></l>
-            <l n="398" xml:id="l398"><span style="letter-spacing:-.3pt">Je crois n’avoir jamais lieu de me plaindre</span></l>
-            <l n="399" xml:id="l399"><span style="letter-spacing:-.3pt">À votre égard, puisqu’infailliblement </span></l>
-            <l n="400" xml:id="l400"><span style="letter-spacing:-.3pt">Vous recevrez mon ouvrage... Oui vraiment.</span></l>
-            <l n="401" xml:id="l401"><span style="letter-spacing:-.3pt">Armez-vous tous exprès pour le combattre ;</span></l>
-            <l n="402" xml:id="l402"><span style="letter-spacing:-.3pt">Unissez-vous, faites le diable à quatre,</span></l>
-            <l n="403" xml:id="l403"><span style="letter-spacing:-.3pt">Il faudra bien qu’à la fin vous cédiez,</span></l>
-            <l n="404" xml:id="l404"><span style="letter-spacing:-.3pt">Et de grand cœur que vous le receviez.</span></l>
-            <l n="405" xml:id="l405"><span style="letter-spacing:-.3pt">Quoi ! vous aurez le pouvoir despotique </span></l>
-            <l n="406" xml:id="l406"><span style="letter-spacing:-.3pt">De nous contraindre ?</span></l>
-            <l n="407" xml:id="l407"><span style="letter-spacing:-.3pt">Absolument par force, j’aurais tort ;</span></l>
-            <l n="408" xml:id="l408"><span style="letter-spacing:-.3pt">Mais par attrait, par pur zèle, très fort ;</span></l>
-            <l n="409" xml:id="l409"><span style="letter-spacing:-.3pt">Vous le devez enfin pour votre gloire.</span></l>
-            <l n="410" xml:id="l410"><span style="letter-spacing:-.3pt">Vous révérez tendrement la mémoire</span></l>
-            <l n="411" xml:id="l411"><span style="letter-spacing:-.3pt">Du bon Molière, heureux restaurateur,</span></l>
-            <l n="412" xml:id="l412"><span style="letter-spacing:-.3pt">Ou, pour parler plus juste, créateur</span></l>
-            <l n="413" xml:id="l413"><span style="letter-spacing:-.3pt">De l’art charmant par qui vous savez plaire.</span></l>
-            <l n="414" xml:id="l414"><span style="letter-spacing:-.3pt">Chacun de nous en lui regrette un père.</span></l>
-            <l n="415" xml:id="l415"><span style="letter-spacing:-.3pt">Si j’élevais à cet homme éminent</span></l>
-            <l n="416" xml:id="l416"><span style="letter-spacing:-.3pt">Par une Pièce un petit monument,</span></l>
-            <l n="417" xml:id="l417"><span style="letter-spacing:-.3pt">Que diriez-vous ?</span></l>
-            <l n="418" xml:id="l418"><span style="letter-spacing:-.3pt">Mon avis est qu’on reçoive l’ouvrage,</span></l>
-            <l n="419" xml:id="l419"><span style="letter-spacing:-.3pt">Pour son objet, avant de l’avoir lu.</span></l>
-            <l n="420" xml:id="l420"><span style="letter-spacing:-.3pt">Monsieur l’Auteur, votre ouvrage est reçu.</span></l>
-            <l n="421" xml:id="l421"><span style="letter-spacing:-.3pt">C’est bientôt dit : il faut voir si le style</span></l>
-            <l n="422" xml:id="l422"><span style="letter-spacing:-.3pt">En est correct, élégant et facile.</span></l>
-            <l n="423" xml:id="l423"><span style="letter-spacing:-.3pt">Fort bien ; le style : on ne veut que cela.</span></l>
-            <l n="424" xml:id="l424"><span style="letter-spacing:-.3pt">Il faut du style : on aime ce mot-là.</span></l>
-            <l n="425" xml:id="l425"><span style="letter-spacing:-.3pt">Mais, pour quelqu’un qui se mêle d’écrire,</span></l>
-            <l n="426" xml:id="l426"><span style="letter-spacing:-.3pt">N’en faut-il pas ?</span></l>
-            <l n="427" xml:id="l427"><span style="letter-spacing:-.3pt">Qu’on doit avoir du style en général ;</span></l>
-            <l n="428" xml:id="l428"><span style="letter-spacing:-.3pt">Mais n’en pas faire un objet principal.</span></l>
-            <l n="429" xml:id="l429"><span style="letter-spacing:-.3pt">Il faut du fond. Un Auteur dramatique,</span></l>
-            <l n="430" xml:id="l430"><span style="letter-spacing:-.3pt">Par le fond seul, gagne la voix publique.</span></l>
-            <l n="431" xml:id="l431"><span style="letter-spacing:-.3pt">Ma Pièce aussi, de l’un à l’autre bout,</span></l>
-            <l n="432" xml:id="l432"><span style="letter-spacing:-.3pt">A bien du fond ; du style, point du tout.</span></l>
-            <l n="433" xml:id="l433"><span style="letter-spacing:-.3pt">Tant pis, vraiment.</span></l>
-            <l n="434" xml:id="l434"><span style="letter-spacing:-.3pt">Si plus au net je ne me fais comprendre.</span></l>
-            <l n="435" xml:id="l435"><span style="letter-spacing:-.3pt">Oui, dans ma pièce on ne trouvera pas</span></l>
-            <l n="436" xml:id="l436"><span style="letter-spacing:-.3pt">De diction : ce n’est qu’un canevas, </span></l>
-            <l n="437" xml:id="l437"><span style="letter-spacing:-.3pt">Rien qu’un croquis ; mais par votre génie</span></l>
-            <l n="438" xml:id="l438"><span style="letter-spacing:-.3pt">Vous y mettrez la grâce et l’harmonie.</span></l>
-            <l n="439" xml:id="l439"><span style="letter-spacing:-.3pt">Comment cela ?</span></l>
-            <l n="440" xml:id="l440"><span style="letter-spacing:-.3pt">À l’<i>impromptu</i> tout ce qui lui viendra. </span></l>
-            <l n="441" xml:id="l441"><span style="letter-spacing:-.3pt">J’étais d’avis que l’on jouât la pièce.</span></l>
-            <l n="442" xml:id="l442"><span style="letter-spacing:-.3pt">Si quelque chose à présent m’intéresse,</span></l>
-            <l n="443" xml:id="l443"><span style="letter-spacing:-.3pt">C’est qu’on renonce à vouloir s’en mêler.</span></l>
-            <l n="444" xml:id="l444"><span style="letter-spacing:-.3pt">Pourquoi cela ?</span></l>
-            <l n="445" xml:id="l445"><span style="letter-spacing:-.3pt">On ne doit rien jouer qu’on ne l’apprenne.</span></l>
-            <l n="446" xml:id="l446"><span style="letter-spacing:-.3pt">Et comment fait la troupe Italienne ?</span></l>
-            <l n="447" xml:id="l447"><span style="letter-spacing:-.3pt">Ils ont cet art. </span></l>
-            <l n="448" xml:id="l448"><span style="letter-spacing:-.3pt">Ce secret-là n’est pas si merveilleux.</span></l>
-            <l n="449" xml:id="l449"><span style="letter-spacing:-.3pt">Mais rien ne peut vous empêcher d’écrire,</span></l>
-            <l n="450" xml:id="l450"><span style="letter-spacing:-.3pt">Comme tous font.</span></l>
-            <l n="451" xml:id="l451"><span style="letter-spacing:-.3pt">Que j’y perdrais ma peine et mon latin ;</span></l>
-            <l n="452" xml:id="l452"><span style="letter-spacing:-.3pt">Mon plan doit être exécuté demain.</span></l>
-            <l n="453" xml:id="l453"><span style="letter-spacing:-.3pt">Demain !</span></l>
-            <l n="454" xml:id="l454"><span style="letter-spacing:-.3pt">Il eut été même plus convenable </span></l>
-            <l n="455" xml:id="l455"><span style="letter-spacing:-.3pt">Que l’on jouât ma pièce dans ce jour ;</span></l>
-            <l n="456" xml:id="l456"><span style="letter-spacing:-.3pt">Puisque je veux célébrer le retour</span></l>
-            <l n="457" xml:id="l457"><span style="letter-spacing:-.3pt">Et de l’année et du jour séculaire</span></l>
-            <l n="458" xml:id="l458"><span style="letter-spacing:-.3pt">Qui vit Molière éclipsé de la terre.</span></l>
-            <l n="459" xml:id="l459"><span style="letter-spacing:-.3pt">Or, d’aujourd’hui, cent ans sont révolus</span></l>
-            <l n="460" xml:id="l460"><span style="letter-spacing:-.3pt">Depuis l’instant que Molière n’est plus.</span></l>
-            <l n="461" xml:id="l461"><span style="letter-spacing:-.3pt">La circonstance est vraiment singulière ;</span></l>
-            <l n="462" xml:id="l462"><span style="letter-spacing:-.3pt">Il faudra faire un effort pour Molière.</span></l>
-            <l n="463" xml:id="l463"><span style="letter-spacing:-.3pt">Très volontiers.</span></l>
-            <l n="464" xml:id="l464"><span style="letter-spacing:-.3pt">Que l’Auteur donc nous dise ses projets. </span></l>
-            <l n="465" xml:id="l465"><span style="letter-spacing:-.3pt">J’ai supposé que l’Art comique, en France,</span></l>
-            <l n="466" xml:id="l466"><span style="letter-spacing:-.3pt">Depuis longtemps était en décadence. </span></l>
-            <l n="467" xml:id="l467"><span style="letter-spacing:-.3pt">Je crois, Messieurs, que, sans prévention,</span></l>
-            <l n="468" xml:id="l468"><span style="letter-spacing:-.3pt">On peut passer la supposition.</span></l>
-            <l n="469" xml:id="l469"><span style="letter-spacing:-.3pt">Pour réparer un si cruel dommage,</span></l>
-            <l n="470" xml:id="l470"><span style="letter-spacing:-.3pt">Les Comédiens ayant mis en usage</span></l>
-            <l n="471" xml:id="l471"><span style="letter-spacing:-.3pt">Tous les moyens qu’ils ont crus les meilleurs,</span></l>
-            <l n="472" xml:id="l472"><span style="letter-spacing:-.3pt">Ayant prié, caressé les Auteurs,</span></l>
-            <l n="473" xml:id="l473"><span style="letter-spacing:-.3pt">Encouragé leur superbe arrogance,</span></l>
-            <l n="474" xml:id="l474"><span style="letter-spacing:-.3pt">Les ayant même enfin payés d’avance,</span></l>
-            <l n="475" xml:id="l475"><span style="letter-spacing:-.3pt">Et tout cela sans avoir réussi,</span></l>
-            <l n="476" xml:id="l476"><span style="letter-spacing:-.3pt">Veulent pourtant prendre un dernier parti ;</span></l>
-            <l n="477" xml:id="l477"><span style="letter-spacing:-.3pt">Et c’est celui du recours au diable,</span></l>
-            <l n="478" xml:id="l478"><span style="letter-spacing:-.3pt">Comme l’on fait toujours en cas semblable.</span></l>
-            <l n="479" xml:id="l479"><span style="letter-spacing:-.3pt">C’est un moyen terrible que cela.</span></l>
-            <l n="480" xml:id="l480"><span style="letter-spacing:-.3pt">Il n’est pourtant pas rare à l’Opéra.</span></l>
-            <l n="481" xml:id="l481"><span style="letter-spacing:-.3pt">Ils font venir une vieille sorcière,</span></l>
-            <l n="482" xml:id="l482"><span style="letter-spacing:-.3pt">Femme savante en plus d’une matière,</span></l>
-            <l n="483" xml:id="l483"><span style="letter-spacing:-.3pt">Qui s’est acquis un crédit sans pareil</span></l>
-            <l n="484" xml:id="l484"><span style="letter-spacing:-.3pt">Près du beau sexe, étant de bon conseil.</span></l>
-            <l n="485" xml:id="l485"><span style="letter-spacing:-.3pt">Qui prendrez-vous pour jouer la sorcière ?</span></l>
-            <l n="486" xml:id="l486"><span style="letter-spacing:-.3pt">Vous-même.</span></l>
-            <l n="487" xml:id="l487"><span style="letter-spacing:-.3pt">Vous avez tant de grâce et de fraîcheur,</span></l>
-            <l n="488" xml:id="l488"><span style="letter-spacing:-.3pt">Que votre jeu n’en sera que meilleur ;</span></l>
-            <l n="489" xml:id="l489"><span style="letter-spacing:-.3pt">Tout s’embellit par votre heureuse adresse, </span></l>
-            <l n="490" xml:id="l490"><span style="letter-spacing:-.3pt">Vous nous ferez adorer la vieillesse.</span></l>
-            <l n="491" xml:id="l491"><span style="letter-spacing:-.3pt">Vous me donnez de si bonnes raisons,</span></l>
-            <l n="492" xml:id="l492"><span style="letter-spacing:-.3pt">Que je serai la vieille.</span></l>
-            <l n="493" xml:id="l493"><span style="letter-spacing:-.3pt">La Magicienne, avec une baguette,</span></l>
-            <l n="494" xml:id="l494"><span style="letter-spacing:-.3pt">Trace un grand cercle, et prend d’une cassette </span></l>
-            <l n="495" xml:id="l495"><span style="letter-spacing:-.3pt">Des os de mort, de l’encens, un crapaud</span></l>
-            <l n="496" xml:id="l496"><span style="letter-spacing:-.3pt">Qu’elle abandonne aux flammes d’un réchaud.</span></l>
-            <l n="497" xml:id="l497"><span style="letter-spacing:-.3pt">Au même instant une fumée épaisse</span></l>
-            <l n="498" xml:id="l498"><span style="letter-spacing:-.3pt">Couvre le corps de la vieille Prêtresse,</span></l>
-            <l n="499" xml:id="l499"><span style="letter-spacing:-.3pt">Qui prononçant des mots mystérieux</span></l>
-            <l n="500" xml:id="l500"><span style="letter-spacing:-.3pt">Fuit, et Molière alors s’offre à vos yeux</span></l>
-            <l n="501" xml:id="l501"><span style="letter-spacing:-.3pt">Oh, j’aurai peur... non, vous ne sauriez croire</span></l>
-            <l n="502" xml:id="l502"><span style="letter-spacing:-.3pt">Tout mon effroi, quand j’entends quelque histoire</span></l>
-            <l n="503" xml:id="l503"><span style="letter-spacing:-.3pt">De revenant ; j’y pense dans mon lit,</span></l>
-            <l n="504" xml:id="l504"><span style="letter-spacing:-.3pt">Je ne saurais fermer l’œil de la nuit.</span></l>
-            <l n="505" xml:id="l505"><span style="letter-spacing:-.3pt">Je vous plains fort. Vous seriez plus hardie,</span></l>
-            <l n="506" xml:id="l506"><span style="letter-spacing:-.3pt">Si vous aviez avec vous compagnie.</span></l>
-            <l n="507" xml:id="l507"><span style="letter-spacing:-.3pt">Nous n’avons pas besoin de vos avis.</span></l>
-            <l n="508" xml:id="l508"><span style="letter-spacing:-.3pt">Monsieur l’Auteur, achevez vos récits.</span></l>
-            <l n="509" xml:id="l509"><span style="letter-spacing:-.3pt">Je continue. À l’aspect de Molière</span></l>
-            <l n="510" xml:id="l510"><span style="letter-spacing:-.3pt">On fera voir, chacun à sa manière,</span></l>
-            <l n="511" xml:id="l511"><span style="letter-spacing:-.3pt">Les sentiments dont on est agité.</span></l>
-            <l n="512" xml:id="l512"><span style="letter-spacing:-.3pt">L’un en montrant un air épouvanté :</span></l>
-            <l n="513" xml:id="l513"><span style="letter-spacing:-.3pt">L’autre en marquant toute sa gratitude,</span></l>
-            <l n="514" xml:id="l514"><span style="letter-spacing:-.3pt">Un autre encor prenant cette attitude ;</span></l>
-            <l n="515" xml:id="l515"><span style="letter-spacing:-.3pt">Celui-ci fait un geste admiratif,</span></l>
-            <l n="516" xml:id="l516"><span style="letter-spacing:-.3pt">Et cet autre ouvre un œil contemplatif.</span></l>
-            <l n="517" xml:id="l517"><span style="letter-spacing:-.3pt">Tous ces tableaux dont on est idolâtre</span></l>
-            <l n="518" xml:id="l518"><span style="letter-spacing:-.3pt">Réussiront à merveille au théâtre.</span></l>
-            <l n="519" xml:id="l519"><span style="letter-spacing:-.3pt">Fort bien.</span></l>
-            <l n="520" xml:id="l520"><span style="letter-spacing:-.3pt">Tend poliment la main à chaque Acteur,</span></l>
-            <l n="521" xml:id="l521"><span style="letter-spacing:-.3pt">Et tendrement embrasse chaque Actrice.</span></l>
-            <l n="522" xml:id="l522"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Il veut embrasser Mademoiselle Fanier.</span></span></i></l>
-            <l n="523" xml:id="l523"><span style="letter-spacing:-.3pt">Oh doucement, n’usons point d’artifice,</span></l>
-            <l n="524" xml:id="l524"><span style="letter-spacing:-.3pt">Vous n’êtes point Molière.</span></l>
-            <l n="525" xml:id="l525"><span style="letter-spacing:-.3pt">Mais à ma place il en ferait autant.</span></l>
-            <l n="526" xml:id="l526"><span style="letter-spacing:-.3pt">Eh bien ensuite ?</span></l>
-            <l n="527" xml:id="l527"><span style="letter-spacing:-.3pt">Un des Acteurs présente sa supplique.</span></l>
-            <l n="528" xml:id="l528"><span style="letter-spacing:-.3pt">Molière écoute, assis dans ce fauteuil ;</span></l>
-            <l n="529" xml:id="l529"><span style="letter-spacing:-.3pt">L’Acteur s’avance et dit la larme à l’œil :</span></l>
-            <l n="530" xml:id="l530"><span style="letter-spacing:-.3pt">Divin Molière, on ne rit plus en France ;</span></l>
-            <l n="531" xml:id="l531"><span style="letter-spacing:-.3pt">Plus de plaisirs, plus de réjouissance.</span></l>
-            <l n="532" xml:id="l532"><span style="letter-spacing:-.3pt">En acquérant un air de dignité,</span></l>
-            <l n="533" xml:id="l533"><span style="letter-spacing:-.3pt">Notre théâtre a perdu sa gaieté.</span></l>
-            <l n="534" xml:id="l534"><span style="letter-spacing:-.3pt">Si vous savez d’où ce malheur procède,</span></l>
-            <l n="535" xml:id="l535"><span style="letter-spacing:-.3pt">Dites-nous-en la cause et le remède.</span></l>
-            <l n="536" xml:id="l536"><span style="letter-spacing:-.3pt">Molière alors vous interrogera </span></l>
-            <l n="537" xml:id="l537"><span style="letter-spacing:-.3pt">Sur le théâtre ; il vous demandera</span></l>
-            <l n="538" xml:id="l538"><span style="letter-spacing:-.3pt">De grands détails sur l’art et la manière</span></l>
-            <l n="539" xml:id="l539"><span style="letter-spacing:-.3pt">Dont les Auteurs fouillent cette carrière.</span></l>
-            <l n="540" xml:id="l540"><span style="letter-spacing:-.3pt">Que dirons-nous pour lors ?</span></l>
-            <l n="541" xml:id="l541"><span style="letter-spacing:-.3pt">Mais pour répondre avec plus de clarté,</span></l>
-            <l n="542" xml:id="l542"><span style="letter-spacing:-.3pt">Vous lui jouerez les scènes les plus belles,</span></l>
-            <l n="543" xml:id="l543"><span style="letter-spacing:-.3pt">Dont chaque genre offrira des modèles ;</span></l>
-            <l n="544" xml:id="l544"><span style="letter-spacing:-.3pt">Et vous plairez beaucoup aux spectateurs,</span></l>
-            <l n="545" xml:id="l545"><span style="letter-spacing:-.3pt">Qui dans un Acte en trouveront plusieurs :</span></l>
-            <l n="546" xml:id="l546"><span style="letter-spacing:-.3pt">Qu’en dites-vous ?</span></l>
-            <l n="547" xml:id="l547"><span style="letter-spacing:-.3pt">L’Acteur chargé du rôle de Molière...</span></l>
-            <l n="548" xml:id="l548"><span style="letter-spacing:-.3pt">Et qui sera celui qui parmi nous</span></l>
-            <l n="549" xml:id="l549"><span style="letter-spacing:-.3pt">Fera ce rôle ?</span></l>
-            <l n="550" xml:id="l550"><span style="letter-spacing:-.3pt">Ne puis-je pas le donner à Préville ?</span></l>
-            <l n="551" xml:id="l551"><span style="letter-spacing:-.3pt">Fort bien, est-il instruit ?</span></l>
-            <l n="552" xml:id="l552"><span style="letter-spacing:-.3pt">Il est au fait ; et je compte, ma foi,</span></l>
-            <l n="553" xml:id="l553"><span style="letter-spacing:-.3pt">Qu’il le rendra tout aussi bien que moi.</span></l>
-            <l n="554" xml:id="l554"><span style="letter-spacing:-.3pt">Préville prenant donc l’esprit du rôle,</span></l>
-            <l n="555" xml:id="l555"><span style="letter-spacing:-.3pt">À l’assemblée adresse la parole,</span></l>
-            <l n="556" xml:id="l556"><span style="letter-spacing:-.3pt">Avec cet air, cet auguste maintien,</span></l>
-            <l n="557" xml:id="l557"><span style="letter-spacing:-.3pt">Qu’en sa personne on remarque si bien.</span></l>
-            <l n="558" xml:id="l558"><span style="letter-spacing:-.3pt">Messieurs, dit-il, les scènes différentes</span></l>
-            <l n="559" xml:id="l559"><span style="letter-spacing:-.3pt">Que votre jeu vient de rendre brillantes,</span></l>
-            <l n="560" xml:id="l560"><span style="letter-spacing:-.3pt">Ont de l’éclat, de la légèreté ;</span></l>
-            <l n="561" xml:id="l561"><span style="letter-spacing:-.3pt">Mais je n’y trouve aucune vérité.</span></l>
-            <l n="562" xml:id="l562"><span style="letter-spacing:-.3pt">Je n’y vois point une fidèle image</span></l>
-            <l n="563" xml:id="l563"><span style="letter-spacing:-.3pt">Des passions de chaque personnage.</span></l>
-            <l n="564" xml:id="l564"><span style="letter-spacing:-.3pt">Je n’y vois point cette naïveté,</span></l>
-            <l n="565" xml:id="l565"><span style="letter-spacing:-.3pt">Source du rire, âme de la gaieté,</span></l>
-            <l n="566" xml:id="l566"><span style="letter-spacing:-.3pt">Et sans laquelle un Auteur dramatique</span></l>
-            <l n="567" xml:id="l567"><span style="letter-spacing:-.3pt">Ne peut jamais être vraiment comique.</span></l>
-            <l n="568" xml:id="l568"><span style="letter-spacing:-.3pt">Pour réussir il n’est qu’un seul secret,</span></l>
-            <l n="569" xml:id="l569"><span style="letter-spacing:-.3pt">C’est de bien peindre ; on dit que je l’ai fait :</span></l>
-            <l n="570" xml:id="l570"><span style="letter-spacing:-.3pt">On a daigné se plaire à ma peinture.</span></l>
-            <l n="571" xml:id="l571"><span style="letter-spacing:-.3pt">J’avais longtemps contemplé la nature</span></l>
-            <l n="572" xml:id="l572"><span style="letter-spacing:-.3pt">Avec des yeux que l’on a cru meilleurs</span></l>
-            <l n="573" xml:id="l573"><span style="letter-spacing:-.3pt">Que ne le sont ceux des autres Auteurs. </span></l>
-            <l n="574" xml:id="l574"><span style="letter-spacing:-.3pt">Mais en cela, comme en bien d’autres choses ;</span></l>
-            <l n="575" xml:id="l575"><span style="letter-spacing:-.3pt">On voit l’effet sans connaître les causes.</span></l>
-            <l n="576" xml:id="l576"><span style="letter-spacing:-.3pt">Il a fallu qu’un diable s’en mêlât,</span></l>
-            <l n="577" xml:id="l577"><span style="letter-spacing:-.3pt">Sans quoi souvent je tombais tout à plat.</span></l>
-            <l n="578" xml:id="l578"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">En s’agitant il fait un faux pas.</span></span></i></l>
-            <l n="579" xml:id="l579"><span style="letter-spacing:-.3pt">Sans ce fauteuil vous en faisiez de même.</span></l>
-            <l n="580" xml:id="l580"><span style="letter-spacing:-.3pt">C’est que je suis d’une faiblesse extrême ;</span></l>
-            <l n="581" xml:id="l581"><span style="letter-spacing:-.3pt">Je vous parois hardi, mais cependant</span></l>
-            <l n="582" xml:id="l582"><span style="letter-spacing:-.3pt">Reposez-vous.</span></l>
-            <l n="583" xml:id="l583"><span style="letter-spacing:-.3pt">Écoutez bien ce grand maître d’école, </span></l>
-            <l n="584" xml:id="l584"><span style="letter-spacing:-.3pt">Molière l’est. Qu’on se garde surtout </span></l>
-            <l n="585" xml:id="l585"><span style="letter-spacing:-.3pt">De me parler que je ne sois au bout.</span></l>
-            <l n="586" xml:id="l586"><span style="letter-spacing:-.3pt">Un vieux démon qui préside au Comique</span></l>
-            <l n="587" xml:id="l587"><span style="letter-spacing:-.3pt">M’offrit, Messieurs, la lorgnette magique</span></l>
-            <l n="588" xml:id="l588"><span style="letter-spacing:-.3pt">Dont se servait Térence l’Africain,</span></l>
-            <l n="589" xml:id="l589"><span style="letter-spacing:-.3pt">Quand il voulait sonder le cœur humain.</span></l>
-            <l n="590" xml:id="l590"><span style="letter-spacing:-.3pt">J’en profitai ; je sus avec finesse,</span></l>
-            <l n="591" xml:id="l591"><span style="letter-spacing:-.3pt">Ainsi que lui, dévoiler la faiblesse,</span></l>
-            <l n="592" xml:id="l592"><span style="letter-spacing:-.3pt">Le ridicule, et les nombreux travers</span></l>
-            <l n="593" xml:id="l593"><span style="letter-spacing:-.3pt">Qu’on voit régner dans ce sot univers.</span></l>
-            <l n="594" xml:id="l594"><span style="letter-spacing:-.3pt">Je la gardai pendant toute ma vie.</span></l>
-            <l n="595" xml:id="l595"><span style="letter-spacing:-.3pt">Quelques Auteurs, inspirés par Thalie,</span></l>
-            <l n="596" xml:id="l596"><span style="letter-spacing:-.3pt">L’eurent depuis, mais pour peu de moments.</span></l>
-            <l n="597" xml:id="l597"><span style="letter-spacing:-.3pt">Je vais partir. J’espère, mes enfants, </span></l>
-            <l n="598" xml:id="l598"><span style="letter-spacing:-.3pt">Vous envoyant ce gage héréditaire</span></l>
-            <l n="599" xml:id="l599"><span style="letter-spacing:-.3pt">Fixer sur vous les faveurs du parterre.</span></l>
-            <l n="600" xml:id="l600"><span style="letter-spacing:-.3pt">Chacun alors embrasse ses genoux.</span></l>
-            <l n="601" xml:id="l601"><span style="letter-spacing:-.3pt">Chacun le veut retenir parmi nous.</span></l>
-            <l n="602" xml:id="l602"><span style="letter-spacing:-.3pt">La foudre gronde ; il échappe à la vue,</span></l>
-            <l n="603" xml:id="l603"><span style="letter-spacing:-.3pt">La scène change et l’on voit la statue.</span></l>
-            <l n="604" xml:id="l604"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Le Théâtre change, la statue de Molière parait posée sur un piédestal, et la décoration représente un magnifique péristyle environné d’un bois de lauriers.</span></span></i></l>
-            <l n="605" xml:id="l605"><span style="letter-spacing:-.3pt">Quel dénouement !</span></l>
-            <l n="606" xml:id="l606"><span style="letter-spacing:-.3pt">Remerciez votre décorateur,</span></l>
-            <l n="607" xml:id="l607"><span style="letter-spacing:-.3pt">Car nous étions d’accord pour vous surprendre.</span></l>
-            <l n="608" xml:id="l608"><span style="letter-spacing:-.3pt">Aucun de nous ne s’y pouvait attendre.</span></l>
-            <l n="609" xml:id="l609"><span style="letter-spacing:-.3pt">Excepté moi ; car j’étais du secret.</span></l>
-            <l n="610" xml:id="l610"><span style="letter-spacing:-.3pt">Allons Monsieur le maître du Ballet,</span></l>
-            <l n="611" xml:id="l611"><span style="letter-spacing:-.3pt">De vos talents faites voir quelque chose,</span></l>
-            <l n="612" xml:id="l612"><span style="letter-spacing:-.3pt">Et que Molière ait une Apothéose.</span></l>
-            <l n="613" xml:id="l613"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">La pièce est terminée par l’Apothéose de Molière, ainsi qu’il suit.</span></span></i></l>
-            <l n="614" xml:id="l614"> </l>
-            <l n="615" xml:id="l615"> </l>
-            <l n="616" xml:id="l616"> </l>
-            <l n="617" xml:id="l617"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ballet héroïque.</span></span></i></l>
-            <l n="618" xml:id="l618"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Le grand Prêtre d’Apollon, la grande Prêtresse et les autres Prêtres et Prêtresses de ce Dieu, avec tous les figurants et figurantes du Ballet, forment une marche au son des instruments.</span></span></i></l>
-            <l n="619" xml:id="l619"><span style="letter-spacing:-.3pt">D’Apollon, en ces lieux, j’exerce la Prêtrise ;</span></l>
-            <l n="620" xml:id="l620"><span style="letter-spacing:-.3pt">L’image de Molière est commise à ma foi :</span></l>
-            <l n="621" xml:id="l621"><span style="letter-spacing:-.3pt">Quand la vertu le divinise,</span></l>
-            <l n="622" xml:id="l622"><span style="letter-spacing:-.3pt">Le soin de ses honneurs ne regarde que moi.</span></l>
-            <l n="623" xml:id="l623"><span style="letter-spacing:-.3pt">L’antiquité mettait jadis au rang des Dieux</span></l>
-            <l n="624" xml:id="l624"><span style="letter-spacing:-.3pt">Ceux qui par leur valeur ont délivré la terre</span></l>
-            <l n="625" xml:id="l625"><span style="letter-spacing:-.3pt">Des monstres, des brigands, des tyrans furieux.</span></l>
-            <l n="626" xml:id="l626"><span style="letter-spacing:-.3pt">Pourquoi ceux qui, comme Molière,</span></l>
-            <l n="627" xml:id="l627"><span style="letter-spacing:-.3pt">Ont terrassé le vice encor plus dangereux,</span></l>
-            <l n="628" xml:id="l628"><span style="letter-spacing:-.3pt">N’auraient-ils pas le droit d’être immortels comme eux ?</span></l>
-            <l n="629" xml:id="l629"><span style="letter-spacing:-.3pt">Qu’un éternel éclat environne Molière,</span></l>
-            <l n="630" xml:id="l630"><span style="letter-spacing:-.3pt">Que son nom glorieux ne périsse jamais.</span></l>
-            <l n="631" xml:id="l631"><span style="letter-spacing:-.3pt">Il corrigea la France entière</span></l>
-            <l n="632" xml:id="l632"><span style="letter-spacing:-.3pt">De ses ridicules excès ;</span></l>
-            <l n="633" xml:id="l633"><span style="letter-spacing:-.3pt">Sur mille différents objets</span></l>
-            <l n="634" xml:id="l634"><span style="letter-spacing:-.3pt">Sa critique savante a porté la lumière.</span></l>
-            <l n="635" xml:id="l635"><span style="letter-spacing:-.3pt">Qu’un éternel éclat environne Molière ;</span></l>
-            <l n="636" xml:id="l636"><span style="letter-spacing:-.3pt">Que son nom glorieux ne périsse jamais :</span></l>
-            <l n="637" xml:id="l637"><span style="letter-spacing:-.3pt">Qu’il vive, que toujours il soit cher aux Français.</span></l>
-            <l n="638" xml:id="l638"><span style="letter-spacing:-.3pt">Que ce laurier sacré dont l’ombre t’environne,</span></l>
-            <l n="639" xml:id="l639"><span style="letter-spacing:-.3pt">Serve, divin Molière, à former ta couronne ;</span></l>
-            <l n="640" xml:id="l640"><span style="letter-spacing:-.3pt">C’est l’arbre qu’Apollon avait daigné choisir :</span></l>
-            <l n="641" xml:id="l641"><span style="letter-spacing:-.3pt">Semblable à tes écrits, rien ne peut le flétrir.</span></l>
-            <l n="642" xml:id="l642"><span style="letter-spacing:-.3pt">Abattez ces rameaux ; vous devez obéir ;</span></l>
-            <l n="643" xml:id="l643"><span style="letter-spacing:-.3pt">Apollon par ma voix l’ordonne ;</span></l>
-            <l n="644" xml:id="l644"><span style="letter-spacing:-.3pt">Pour former à Molière une noble couronne,</span></l>
-            <l n="645" xml:id="l645"><span style="letter-spacing:-.3pt">Ce Dieu permet de les cueillir.</span></l>
-            <l n="646" xml:id="l646"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ils abattent des branches de laurier, et les donnent aux figurantes, qui en forment des guirlandes qu’elles apportent au grand Prêtre.</span></span></i></l>
-            <l n="647" xml:id="l647"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Le Grand Prêtre conduit la Prêtresse au pied de la statue, afin qu’elle la couronne, et il dit en regardant toutes les figurantes.</span></span></i></l>
-            <l n="648" xml:id="l648"><span style="letter-spacing:-.3pt">Sexe enchanteur, c’est pour vous plaire</span></l>
-            <l n="649" xml:id="l649"><span style="letter-spacing:-.3pt">Que ses travaux l’ont mis au-dessus des humains ;</span></l>
-            <l n="650" xml:id="l650"><span style="letter-spacing:-.3pt">Sa récompense la plus chère</span></l>
-            <l n="651" xml:id="l651"><span style="letter-spacing:-.3pt">Sera d’être en ce jour couronné par vos mains.</span></l>
-            <l n="652" xml:id="l652"><span style="letter-spacing:-.3pt">Les autels des Héros que nous vante l’Histoire,</span></l>
-            <l n="653" xml:id="l653"><span style="letter-spacing:-.3pt">Des plus rares parfums répandaient les vapeurs ;</span></l>
-            <l n="654" xml:id="l654"><span style="letter-spacing:-.3pt">Cet encens a péri, mais celui de nos cœurs</span></l>
-            <l n="655" xml:id="l655"><span style="letter-spacing:-.3pt">Est immortel comme ta gloire. </span></l>
-            <l n="656" xml:id="l656"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">Ode au temps prononcée par une Prêtresse d’Apollon.</span></span></i></l>
-            <l n="657" xml:id="l657"><span style="letter-spacing:-.3pt">Qu’on se livre aux transports d’une vive gaieté ;</span></l>
-            <l n="658" xml:id="l658"><span style="letter-spacing:-.3pt">C’est par un aimable délire</span></l>
-            <l n="659" xml:id="l659"><span style="letter-spacing:-.3pt">Que doit être fêté</span></l>
-            <l n="660" xml:id="l660"><span style="letter-spacing:-.3pt">Celui qui sut si bien nous exciter à rire.</span></l>
-            <l n="661" xml:id="l661"><i><span style="font-size:10.0pt"><span style="letter-spacing:-.3pt">On danse.</span></span></i></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER</speaker>
+          <l n="1">Que, parmi nous, l’emploi de Semainier</l>
+          <l n="2">Est bien un triste et fatiguant métier !</l>
+          <l n="3">Si l’on me croit fort flatté de ce titre,</l>
+          <l n="4">On a grand tort. Quoi, toujours être arbitre</l>
+          <l n="5">Des différents d’Actrices et d’Acteurs !</l>
+          <l n="6">Quoi, chaque jour, accueillir des Auteurs,</l>
+          <l n="7">Dont les vers plats mettent à la torture</l>
+          <l n="8">L’Acteur forcé d’en subir la lecture !</l>
+          <l n="9">Prendre, chasser, quereller des valets,</l>
+          <l n="10">Suivre, intenter, terminer des procès !</l>
+          <l n="11">J’ai bien assez de mes propres affaires,</l>
+          <l n="12">Sans en aller débrouiller d’étrangères.</l>
+          <l n="13">Que désormais d’autres prennent ce soin ;</l>
+          <l n="14">Moi, je n’en veux, ni de près, ni de loin.</l>
+          <l n="15">Mais il ne vient personne. Qu’est-ce à dire ?</l>
+          <l n="16">Robert.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="17">Monsieur ? </l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="18">A-t-on pris soin d’instruire</l>
+          <l n="19">Tous nos Acteurs ?... </l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="20">Le jour et le moment</l>
+          <l n="21">Sont mis ainsi dans l’Avertissement :</l>
+          <l n="22">« On traitera d’affaires importantes,</l>
+          <l n="23">« Sur le théâtre, à sept heures sonnantes,</l>
+          <l n="24">« Le Mercredi, dix-septième du mois.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER, tirant sa montre.</speaker>
+          <l n="25">Il est le quart.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="26">Vous vous trompez, je crois.</l>
+          <l n="27">Ou votre montre...</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="28">Oh ! ma montre est parfaite.</l>
+          <l n="29">Mais n’est-il point venu certain Poète,</l>
+          <l n="30">Vêtu de noir, un homme assez mal mis ?</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="31">Il va venir : je l’ai connu jadis.</l>
+          <l n="32">Il me demande un appui favorable</l>
+          <l n="33">Auprès de vous. C’est un assez bon diable :</l>
+          <l n="34">Je le protège : ah, protégez-le aussi.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="35">Nous recevrons sa pièce.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="36">Grand merci ;</l>
+          <l n="37">Car, entre nous, il me doit quelque chose.</l>
+          <l n="38">J’ai son billet écrit, non pas en prose,</l>
+          <l n="39">Mais en beaux vers, en vers Alexandrins.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="40">Fais-le-moi voir quelqu’un de ces matins,</l>
+          <l n="41">Cela doit faire une pièce comique.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT, lui présentant un papier.</speaker>
+          <l n="42">Lisez. Le style en est pourtant tragique.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="43">« Pour avoir su transcrire élégamment les vers</l>
+          <l n="44">« Qui porteront ma gloire au bout de l’univers ;</l>
+          <l n="45">« Et pour s’être montré domestique fidèle,</l>
+          <l n="46">« En me prêtant souvent son argent avec zèle,</l>
+          <l n="47">« Je promets à Robert, qui m’a servi six ans,</l>
+          <l n="48">« De lui payer un jour la somme de cent francs.</l>
+          <l n="49">Tu n’es pas cher.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="50">Non ; mais il faut tout dire :</l>
+          <l n="51">Dans son métier il tâchait de m’instruire.</l>
+          <l n="52">Je le servais gratis, de mon côté :</l>
+          <l n="53">J’étais laquais par générosité. </l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="54">Tu comptais donc un jour être Poète ?</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="55">Monsieur, la rime est un grand casse-tête.</l>
+          <l n="56">On la poursuit, on cherche à la saisir ;</l>
+          <l n="57">Elle s’enfuit quand on croit la tenir.</l>
+          <l n="58">On n’y parvient qu’en se donnant au Diable. </l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="59">Eh bien ?</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="60">Je pris un parti moins damnable,</l>
+          <l n="61">Foulant aux pieds les lauriers d’Apollon,</l>
+          <l n="62">J’ai fui la rime, et suivi la raison. </l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="63">Dis-moi, Robert, les traits de ta figure</l>
+          <l n="64">Ne me sont pas nouveaux, je t’en assure ;</l>
+          <l n="65">Dans quel pays puis-je t’avoir connu ? </l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="66">En cent endroits vous pouvez m’avoir vu ;</l>
+          <l n="67">Car l’éléphant, l’ours et le crocodile,</l>
+          <l n="68">Que l’on fait voir partout de ville en ville,</l>
+          <l n="69">N’ont pas des traits connus du spectateur</l>
+          <l n="70">Autant que ceux de votre serviteur.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="71">Pourquoi ?</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="72">Je fus un de ces interprètes</l>
+          <l n="73">Dont on se sert pour les marionnettes. </l>
+          <l n="74">Polichinel, si plaisant pour les sots,</l>
+          <l n="75">Ne dut qu’à moi le sel de ses bons mots.</l>
+          <l n="76">Qu’alors j’étais cher à la populace !</l>
+          <l n="77">L’ambition m’offrit une autre place.</l>
+          <l n="78">Chez des Acteurs, qui n’étaient pas de bois, </l>
+          <l n="79">Je fus moucheur de chandelles... Je crois</l>
+          <l n="80">Que vous riez.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="81">Mais, oui.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="82">Certains ouvrages</l>
+          <l n="83">N’ont dû pourtant leurs plus grands avantages</l>
+          <l n="84">Qu’aux doigts brillants d’un moucheur ignoré.</l>
+          <l n="85">Quand un théâtre est vraiment éclairé,</l>
+          <l n="86">Cela vous jette un jour sur une pièce</l>
+          <l n="87">On en saisit tout l’esprit, la finesse,</l>
+          <l n="88">Enfin cet art...</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="89">Cet art est surprenant.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="90">Je n’ai point là borné tout mon talent ;</l>
+          <l n="91">Ce que j’ai fait est presque un Phénomène.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="92">Diable ! </l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="93">Monsieur, une même semaine</l>
+          <l n="94">M’a vu moucheur, contrôleur, receveur,</l>
+          <l n="95">Décorateur, afficheur et souffleur.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="96">Cet assemblage est burlesque.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="97">Il est drôle.</l>
+          <l n="98">J’ai fait encor de méchants bouts de rôle ;</l>
+          <l n="99">Et qui plus est j’ai, pendant près d’un mois,</l>
+          <l n="100">Par intérim, représenté les Rois.</l>
+          <l n="101">Il fallait voir de quel air despotique </l>
+          <l n="102">Je soutenais ma fierté politique. </l>
+          <l n="103">J’avais un front plein de sérénité </l>
+          <l n="104">Lorsque mon trône était en sûreté.</l>
+          <l n="105">Mais quand l’État penchait vers sa ruine</l>
+          <l n="106">Je me croisais les bras sur la poitrine,</l>
+          <l n="107">Et je poussais d’augustes hurlements</l>
+          <l n="108">Comme un Lion dont on lime les dents.</l>
+          <l n="109">Je n’eus pourtant du parterre indocile</l>
+          <l n="110">Que des sifflets. Je vins en cette ville, </l>
+          <l n="111">Où renonçant à la grandeur des Rois,</l>
+          <l n="112">J’entrai gagiste au théâtre François. </l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="113">Grand Prince, hélas ! la chute est un peu grande.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="114">Adieu. Songez que je vous recommande</l>
+          <l n="115">Mon ancien maître et mon vieux débiteur.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="116">Va, sois content. Mais quelqu’un vient.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="117">Monsieur</l>
+          <l n="118">C’est la Concierge, et je m’en vais d’avance.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND, LE SEMAINIER</speaker>
+          <l n="119">Pendant le cours de cette scène les Acteurs et Actrices arrivent l’un après l’autre, et se font mutuellement signe de ne point interrompre la conversation de la Concierge.</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="120">Tachez, Monsieur, de prendre patience,</l>
+          <l n="121">Nous n’aurons pas nos Acteurs de sitôt.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="122">Comment donc ?</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="123">Tous se sont donné le mot </l>
+          <l n="124">Pour aller voir l’admirable sculpture</l>
+          <l n="125">Qui de Voltaire exprime la figure.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="126">Ils devaient bien choisir d’autres moments.</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="127">Ce n’était pas ainsi que, de mon temps,</l>
+          <l n="128">Se conduisaient les Acteurs ; mais tout change,</l>
+          <l n="129">Et tout le monde aujourd’hui se dérange.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="130">On était donc bien plus parfait jadis !</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="131">Mon cher Monsieur, c’est moi qui vous le dis,</l>
+          <l n="132">La nature est tellement renversée,</l>
+          <l n="133">Qu’on n’en saurait concevoir la pensée :</l>
+          <l n="134">Les femmes sont sans grâces, sans beauté :</l>
+          <l n="135">Les hommes n’ont ni force, ni santé ;</l>
+          <l n="136">Les champs n’ont plus leur éclat ordinaire ;</l>
+          <l n="137">Les bois n’ont plus leur charme et leur mystère.</l>
+          <l n="138">Tout dépérit, et même j’aperçois</l>
+          <l n="139">Qu’on ne dort plus aussi bien qu’autrefois.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="140">Cette remarque est fine autant que sage :</l>
+          <l n="141">Je l’entends faire aux gens du plus grand âge. </l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="142">Quant au génie, à l’esprit, aux talents, </l>
+          <l n="143">On n’en a plus, encor moins de bon sens ;</l>
+          <l n="144">La conduite est bizarre, inconséquente.</l>
+          <l n="145">En voulez-vous une preuve parlante ?</l>
+          <l n="146">Sans aller loin, songez aux changements </l>
+          <l n="147">Faits au théâtre ; ils sont extravagants.</l>
+          <l n="148">Je pleure encor la réforme soudaine</l>
+          <l n="149">De tous ces bancs qui garnissaient la scène,</l>
+          <l n="150">Faisaient briller tous nos jeunes Seigneurs,</l>
+          <l n="151">Et rapportaient tant d’argent aux Acteurs.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="152">Ce dernier point...</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="153">Est surtout d’importance. </l>
+          <l n="154">On a proscrit, avec même imprudence,</l>
+          <l n="155">Cette perruque et ces vastes chapeaux,</l>
+          <l n="156">Dont nous ornions les antiques héros :</l>
+          <l n="157">Par un faux goût, par un travers fantasque,</l>
+          <l n="158">On croit devoir coiffer avec un casque</l>
+          <l n="159">Sertorius, César, Brutus, Othon :</l>
+          <l n="160">Monsieur, ce casque est d’un bien mauvais ton.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="161">Oui, cela donne une mine sauvage ;</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="162">L’air de quelqu’un qui veut faire tapage.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="163">Vous en parlez fort énergiquement.</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="164">Mais on a fait un autre changement</l>
+          <l n="165">Qui me révolte encore davantage.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="166">C’est des paniers dont vous parlez, je gage.</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="167">Monsieur, comptez que leur suppression</l>
+          <l n="168">A porté coup à notre nation.</l>
+          <l n="169">Oui, des paniers, l’ample circonférence,</l>
+          <l n="170">Tient beaucoup plus aux mœurs que l’on ne pense.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="171">Je le crois fort. Avec un tel secours</l>
+          <l n="172">Vous enchaîniez autrefois les Amours.</l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="173">Vous voulez rire en tenant ce langage ;</l>
+          <l n="174">Mais j’ai valu mon prix dans mon jeune âge.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="175">On le voit bien : vos yeux, Madame Armand,</l>
+          <l n="176">Faisaient l’effet de la pierre d’aimant :</l>
+          <l n="177">Vous attiriez les cœurs d’étrange sorte ;</l>
+          <l n="178">Même à présent, où, le diable m’emporte,</l>
+          <l n="179">Vous me plairiez dans de certains moments. </l>
+        </sp>
+        <sp who="#madame-armand">
+          <speaker>MADAME ARMAND.</speaker>
+          <l n="180">Hélas ! hélas, que ne suis-je à vingt ans !</l>
+          <l n="181">On entend rire.</l>
+          <l n="182">Qu’entends-je ! ici, j’apprête donc à rire. </l>
+          <l n="183">On est venu : Monsieur, je me retire. </l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="184">La bonne femme est folle...</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="185">Enfin pourtant</l>
+          <l n="186">Nous voici tous ; et l’Auteur est absent.</l>
+          <l n="187">Va le chercher.</l>
+        </sp>
+        <sp who="#robert">
+          <speaker>ROBERT.</speaker>
+          <l n="188">J’y vole.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="189">Prenons place.</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ, à deux Actrices.</speaker>
+          <l n="190">Entre vous deux, recevez-moi, de grâce.</l>
+        </sp>
+        <sp who="#monsieur-montvel">
+          <speaker>MONSIEUR MONTVEL, à deux Actrices.</speaker>
+          <l n="191">Moi, je veux être avec vous dans ce coin.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="192">Monsieur Brizard, n’allez donc pas si loin.</l>
+          <l n="193">Venez ici.</l>
+        </sp>
+        <sp who="#mademoiselle-hus">
+          <speaker>MADEMOISELLE HUS, donne un coup d’éventail à un Acteur.</speaker>
+          <l n="194">Finissez. Soyez sage.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER, à un Acteur.</speaker>
+          <l n="195">Vous vous trompez, j’ai fort mauvais visage.</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ, aux femmes qu’il a à ses côtés.</speaker>
+          <l n="196">Croit-elle donc que je l’irai prier ?</l>
+          <l n="197">Je ne suis pas non plus un écolier.</l>
+          <l n="198">Je ne veux pas faire la moindre avance.</l>
+        </sp>
+        <sp who="#mademoiselle-dugazon">
+          <speaker>MADEMOISELLE DUGAZON.</speaker>
+          <l n="199">Je vous dirai, pour moi, ce que j’en pense.</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="200">Elle se met assez bien.</l>
+        </sp>
+        <sp who="#madame-molé">
+          <speaker>MADAME MOLÉ.</speaker>
+          <l n="201">Cependant</l>
+          <l n="202">Elle se coiffe un peu trop en devant.</l>
+        </sp>
+        <sp who="#mademoiselle-dumesnil">
+          <speaker>MADEMOISELLE DUMESNIL.</speaker>
+          <l n="203">Quand on voudra pourtant faire silence,</l>
+          <l n="204">Nous apprendrons l’objet de la séance,</l>
+          <l n="205">Et la raison qui fait que c’est ici, </l>
+          <l n="206">Pour s’assembler, le lieu qu’on a choisi ?</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="207">Sur tous ces points l’Auteur doit vous instruire. </l>
+        </sp>
+        <sp who="#mademoiselle-dumesnil">
+          <speaker>MADEMOISELLE DUMESNIL.</speaker>
+          <l n="208">Comment, Messieurs, c’est pour entendre lire</l>
+          <l n="209">Qu’on a choisi ces lieux et ce moment ?</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="210">L’objet l’exige indispensablement.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="211">J’aurais bien fait d’apporter de l’ouvrage.</l>
+        </sp>
+        <sp who="#madame-molé">
+          <speaker>MADAME MOLÉ.</speaker>
+          <l n="212">Lorsqu’on me lit des vers c’est mon usage.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER.</speaker>
+          <l n="213">Oh, quant à moi, pour les trouver plus courts,</l>
+          <l n="214">J’apprends mon rôle, et l’Auteur lit toujours.</l>
+        </sp>
+        <sp who="#monsieur-bourette">
+          <speaker>MONSIEUR BOURETTE.</speaker>
+          <l n="215">Mais à propos, Messieurs, je vous déclare,</l>
+          <l n="216">Qu’à mon absence il faut qu’on se prépare ;</l>
+          <l n="217">J’ai mon congé pour le reste du mois. </l>
+        </sp>
+        <sp who="#monsieur-belmont">
+          <speaker>MONSIEUR BELMONT.</speaker>
+          <l n="218">Je prends huit jours.</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="219">Moi dix.</l>
+        </sp>
+        <sp who="#mademoiselle-hus">
+          <speaker>MADEMOISELLE HUS.</speaker>
+          <l n="220">Moi cinq. </l>
+        </sp>
+        <sp who="#mademoiselle-dugazon">
+          <speaker>MADEMOISELLE DUGAZON.</speaker>
+          <l n="221">Moi trois.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="222">Fort bien. </l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="223">Je compte aussi sur ma huitaine.</l>
+        </sp>
+        <sp who="#monsieur-belcourt">
+          <speaker>MONSIEUR BELCOURT.</speaker>
+          <l n="224">Je ne fais point grâce de ma quinzaine.</l>
+          <l n="225">Au Semainier.</l>
+          <l n="226">Oui, mon ami, tu peux, si tu le veux, </l>
+          <l n="227">Me regarder et faire de gros yeux.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER, à Monsieur Belcourt.</speaker>
+          <l n="228">En bonne foi, dis-moi... </l>
+        </sp>
+        <sp who="#monsieur-belcourt">
+          <speaker>MONSIEUR BELCOURT.</speaker>
+          <l n="229">Que veux-tu faire ?</l>
+          <l n="230">Peut-on jouer quand on est en affaire ?  </l>
+          <l n="231">Premièrement : tiens, vois mon agenda ;</l>
+          <l n="232">J’ai dix soupers sur ces deux pages-là. </l>
+          <l n="233">Ce n’est pas tout ; il faut que je m’apprête</l>
+          <l n="234">À figurer dans la superbe fête</l>
+          <l n="235">Qu’on va donner... Je ne suis pas de fer...          </l>
+          <l n="236">On y jouera, dit-on, un jeu d’enfer...</l>
+          <l n="237">Et... tu m’entends ; je dormirai... peut-être.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE, à Monsieur Bourette.</speaker>
+          <l n="238">Quelle raison vous force à disparaître ?</l>
+        </sp>
+        <sp who="#monsieur-bourette">
+          <speaker>MONSIEUR BOURETTE.</speaker>
+          <l n="239">Je vais me mettre à la diète.</l>
+        </sp>
+        <sp who="#monsieur-belmont">
+          <speaker>MONSIEUR BELMONT.</speaker>
+          <l n="240">Pour moi,</l>
+          <l n="241">Je vais chasser à la suite du Roi.</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="242">Moi, j’étudie, et c’est-là mon excuse.</l>
+        </sp>
+        <sp who="#mademoiselle-hus">
+          <speaker>MADEMOISELLE HUS.</speaker>
+          <l n="243">Oh moi, voici la mienne, je m’amuse.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="244">Et le public, que croit-on qu’il dira ?</l>
+        </sp>
+        <sp who="#mademoiselle-hus">
+          <speaker>MADEMOISELLE HUS.</speaker>
+          <l n="245">Rien. Le public jamais n’exigera  </l>
+          <l n="246">Que, pour lui plaire, on s’excède, on s’accable.           </l>
+        </sp>
+        <sp who="#monsieur-belcourt">
+          <speaker>MONSIEUR BELCOURT.</speaker>
+          <l n="247">Sans contredit : il est trop équitable,</l>
+          <l n="248">J’en suis comblé. S’il était devant nous,</l>
+          <l n="249">Je lui dirais, Messieurs, convenez tous</l>
+          <l n="250">Que du plaisir vous êtes idolâtres ;</l>
+          <l n="251">Vous le cherchez à la ville, aux théâtres,           </l>
+          <l n="252">Enfin partout ; souffrez quelques instants</l>
+          <l n="253">Que votre idole ait part à notre encens.</l>
+          <l n="254">Disant ces mots d’un ton bien pathétique, </l>
+          <l n="255">Je convaincrais, et, pour toute réplique,</l>
+          <l n="256">Le battement des mains du spectateur</l>
+          <l n="257">Couronnerait les désirs de l’acteur.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="258">Eh bien, Messieurs, notre pièce nouvelle</l>
+          <l n="259">En reste-là ; quand donc se jouera-t-elle ?</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="260">Mademoiselle, il faudrait que d’abord,</l>
+          <l n="261">Sur chaque rôle, on fût un peu d’accord.           </l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="262">On l’est assez, si ce n’est qu’on s’obstine </l>
+          <l n="263">À m’enlever celui de l’héroïne ;</l>
+          <l n="264">L’Auteur pourtant me l’avait adjugé.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="265">C’est une erreur dont il s’est corrigé.</l>
+          <l n="266">Il a laissé cette importante cause</l>
+          <l n="267">À vos avis, Messieurs ; jugez la chose.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="268">Pourquoi juger quand j’ai les plus grands droits ?</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="269">Pourquoi vouloir ici faire des lois ?</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="270">Je n’en fais point ; mais convenez vous-même</l>
+          <l n="271">Que la fierté, l’orgueil du rang suprême,</l>
+          <l n="272">Sont dans ce rôle : il est donc fait pour moi :</l>
+          <l n="273">Les Reines font l’objet de mon emploi.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="274">Ce rôle a moins d’orgueil que de tendresse :</l>
+          <l n="275">Il tombe donc dans l’emploi de Princesse,</l>
+          <l n="276">Et la tendresse, en effet, est mon lot.</l>
+          <l n="277">Jugez-en tous.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="278">Si l’on dit un seul mot,</l>
+          <l n="279">Je vais, Messieurs, quitter la Comédie.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="280">À vous permis si telle est votre envie.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="281">Vous avez bien de la vivacité.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="282">On voit chez vous la plus vaine fierté.   </l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="283">Vous m’insultez, je crois, Mademoiselle.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="284">C’est plutôt vous. </l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="285">Cessez une querelle</l>
+          <l n="286">Dont vous pourriez ne vous réjouir pas.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="287">De vos grands airs je fais très peu de cas :</l>
+          <l n="288">Trêve d’orgueil, auguste Souveraine ;</l>
+          <l n="289">Vous vous croyez sans doute sur la scène. </l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="290">Je sais d’où part ce langage piquant ; </l>
+          <l n="291">On rabattra votre ton révoltant. </l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="292">Quoi ! vous allez jusques à la menace ?</l>
+          <l n="293">Vous m’effrayez, Reine, faites-moi grâce.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="294">Vous plaisantez ?</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ, à Mademoiselle Saint-Val.</speaker>
+          <l n="295">Calmez votre courroux...</l>
+          <l n="296">De la douceur.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL, à Monsieur Molé.</speaker>
+          <l n="297">De quoi vous mêlez-vous ?</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="298">Ma qualité d’arbitre entre les belles</l>
+          <l n="299">Me donne droit d’entrer dans leurs querelles.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="300">On ne veut point d’un tel médiateur.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="301">Sans employer de conciliateur,</l>
+          <l n="302">J’exposerai ma raison, et, sans peine</l>
+          <l n="303">On s’y rendra.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS, à Mademoiselle Saint-Val.</speaker>
+          <l n="304">Je vous dirai la mienne. </l>
+        </sp>
+        <sp who="#monsieur-montvel">
+          <speaker>MONSIEUR MONTVEL, à Mademoiselle Hus.</speaker>
+          <l n="305">C’est temps perdu ; c’est un méchant esprit.</l>
+        </sp>
+        <sp who="#monsieur-pontheuil">
+          <speaker>MONSIEUR PONTHEUIL, à Mademoiselle Saint-Val.</speaker>
+          <l n="306">Sur sa raison vous n’aurez nul crédit.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL, à Madame Vestris.</speaker>
+          <l n="307">Savez-vous bien ce qu’on vient de me dire ?</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="308">Savez-vous bien ce qu’on cherche à produire ?</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="309">Mais je croirais qu’on veut nous irriter.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="310">Eh bien ; tâchez de vous raccommoder,</l>
+          <l n="311">Vous les rendrez bien sots, sur ma parole.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="312">C’est bien pensé, j’abandonne le rôle.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="313">Je fais de même, et ne le jouerai pas.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="314">Vous nous jetez dans un autre embarras. </l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL, à Madame Vestris.</speaker>
+          <l n="315">Vous le jouerez.</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="316">Vous le jouerez vous-même. </l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="317">Non, par ma foi.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="318">Quelle folie extrême !</l>
+          <l n="319">Que ferons-nous ?</l>
+        </sp>
+        <sp who="#madame-vestris">
+          <speaker>MADAME VESTRIS.</speaker>
+          <l n="320">Tout ce qu’il vous plaira.</l>
+          <l n="321">J’ai dit mon mot : le jouera qui voudra.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#un-gagiste">
+          <speaker>UN GAGISTE.</speaker>
+          <l n="322">Voici l’auteur.</l>
+        </sp>
+        <sp who="#madame-belcourt">
+          <speaker>MADAME BELCOURT, voyant l’Auteur qui fait beaucoup de révérences.</speaker>
+          <l n="323">Son maintien est grotesque,</l>
+          <l n="324">Moitié gendarme et moitié pédantesque.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER, à l’Auteur.</speaker>
+          <l n="325">Eh, bon jour donc, Monsieur de Songe-Creux.</l>
+          <l n="326">Passez.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR, hésitant à passer.</speaker>
+          <l n="327">Monsieur...</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="328">Ne soyez point honteux.</l>
+          <l n="329">Nos grands Auteurs tragiques et comiques</l>
+          <l n="330">N’ont remporté les palmes dramatiques</l>
+          <l n="331">Qu’après avoir siégé dans ce fauteuil.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="332">À moi, Messieurs, n’appartient tant d’orgueil.</l>
+          <l n="333">Il siérait mal aux colombes timides</l>
+          <l n="334">D’entrer au nid des aigles intrépides ;</l>
+          <l n="335">La moindre place en ces augustes lieux</l>
+          <l n="336">M’honore trop, et surpasse mes vœux.</l>
+        </sp>
+        <sp who="#madame-belcourt">
+          <speaker>MADAME BELCOURT.</speaker>
+          <l n="337">S’il est ainsi, prenez donc cette chaise.</l>
+          <l n="338">Il y va.</l>
+        </sp>
+        <sp who="#mademoiselle-hus">
+          <speaker>MADEMOISELLE HUS.</speaker>
+          <l n="339">Venez ici, vous serez plus à l’aise.</l>
+          <l n="340">Il quitte Madame Belcourt pour aller à Mademoiselle Hus.</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="341">Oui ; mais par-là nous n’entendrions rien :</l>
+          <l n="342">Approchez-vous, chacun entendra bien.</l>
+          <l n="343">Il va à Mademoiselle Doligny.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="344">Mettez-vous là, nous nous verrons en face. </l>
+          <l n="345">Il obéit.</l>
+        </sp>
+        <sp who="#mademoisellle-doligny">
+          <speaker>MADEMOISELLLE DOLIGNY, à l’Auteur.</speaker>
+          <l n="346">Vous me quittez, c’est de mauvaise grâce ;</l>
+          <l n="347">À cet affront je ne m’attendais pas. </l>
+        </sp>
+        <sp who="#mademoiselle-dumesnil">
+          <speaker>MADEMOISELLE DUMESNIL.</speaker>
+          <l n="348">Tenez, Monsieur, pour finir ces débats,</l>
+          <l n="349">Placez-vous-là sans plus vous faire attendre.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="350">Je ne sais plus vraiment auquel entendre.</l>
+          <l n="351">Je reste ici... Mesdames et Messieurs ;</l>
+          <l n="352">Ou, disons mieux : Reines, Rois, Empereurs,</l>
+          <l n="353">Qui ne tenez la grandeur souveraine</l>
+          <l n="354">Que de votre art et que de Melpomène,</l>
+          <l n="355">Comtes, Marquis, Comtesses et Barons,</l>
+          <l n="356">Qui ne devez vos titres et vos noms</l>
+          <l n="357">Qu’à la faveur de Thalie elle-même,</l>
+          <l n="358">D’un faible Auteur calmez la crainte extrême.</l>
+          <l n="359">Pour un Poète en effet ce moment</l>
+          <l n="360">Est périlleux et très embarrassant.</l>
+          <l n="361">Un Allemand qu’on empêche de boire,</l>
+          <l n="362">Un Charlatan que l’on ne veut pas croire,</l>
+          <l n="363">Un écolier qui sait mal sa leçon,</l>
+          <l n="364">Un Philosophe à l’aspect du canon,</l>
+          <l n="365">Ont moins d’effroi, de trouble et de détresse</l>
+          <l n="366">Qu’un bel esprit qui présente une pièce.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="367">Et cependant ce bel-esprit a tort ;</l>
+          <l n="368">Qu’avons-nous donc pour l’effrayer si fort ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="369">Si l’on voulait croire la médisance...</l>
+        </sp>
+        <sp who="#madame-belcourt">
+          <speaker>MADAME BELCOURT.</speaker>
+          <l n="370">Parlez, il faut dire ce que l’on pense. </l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="371">Vous n’avez pas, dit-on, pour les Auteurs,</l>
+          <l n="372">Des sentiments bien doux et bien flatteurs.</l>
+          <l n="373">Mais là-dessus n’entrons point en matière,</l>
+          <l n="374">L’homme prudent sait parler et se taire.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="375">Quoi ! se peut-il, Monsieur de Songe-Creux,</l>
+          <l n="376">Que vous donniez dans tous ces contes bleus ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="377">Non, je reçois les faits qu’on m’articule,</l>
+          <l n="378">Mais sans en croire une seule virgule.</l>
+        </sp>
+        <sp who="#madame-belcourt">
+          <speaker>MADAME BELCOURT.</speaker>
+          <l n="379">Sachez, Monsieur, que tous ces méchants bruits</l>
+          <l n="380">Viennent d’Auteurs justement éconduits ;</l>
+          <l n="381">Qui, furieux de voir que leurs ouvrages</l>
+          <l n="382">N’ont jamais pu réunir les suffrages,</l>
+          <l n="383">Vont se venger, par mille faussetés, </l>
+          <l n="384">De nos refus qu’ils ont bien mérités.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="385">Voudriez-vous qu’en ce moment critique,</l>
+          <l n="386">Un auteur fit votre panégyrique ?           </l>
+          <l n="387">Non, je ne sais moi-même, en pareil cas,</l>
+          <l n="388">Où la fureur ne me porterait pas.</l>
+        </sp>
+        <sp who="#madame-belcourt">
+          <speaker>MADAME BELCOURT.</speaker>
+          <l n="389">Vous êtes doux ; nous n’aurions rien à craindre.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="390">Je crois n’avoir jamais lieu de me plaindre</l>
+          <l n="391">À votre égard, puisqu’infailliblement </l>
+          <l n="392">Vous recevrez mon ouvrage... Oui vraiment.</l>
+          <l n="393">Armez-vous tous exprès pour le combattre ;</l>
+          <l n="394">Unissez-vous, faites le diable à quatre,</l>
+          <l n="395">Il faudra bien qu’à la fin vous cédiez,</l>
+          <l n="396">Et de grand cœur que vous le receviez.</l>
+        </sp>
+        <sp who="#monsieur-montvel">
+          <speaker>MONSIEUR MONTVEL.</speaker>
+          <l n="397">Quoi ! vous aurez le pouvoir despotique </l>
+          <l n="398">De nous contraindre ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="399">Oui, et non. Je m’explique.</l>
+          <l n="400">Absolument par force, j’aurais tort ;</l>
+          <l n="401">Mais par attrait, par pur zèle, très fort ;</l>
+          <l n="402">Vous le devez enfin pour votre gloire.</l>
+          <l n="403">Vous révérez tendrement la mémoire</l>
+          <l n="404">Du bon Molière, heureux restaurateur,</l>
+          <l n="405">Ou, pour parler plus juste, créateur</l>
+          <l n="406">De l’art charmant par qui vous savez plaire.</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="407">Chacun de nous en lui regrette un père.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="408">Si j’élevais à cet homme éminent</l>
+          <l n="409">Par une Pièce un petit monument,</l>
+          <l n="410">Que diriez-vous ?</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="411">Vous auriez mon suffrage.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="412">Mon avis est qu’on reçoive l’ouvrage,</l>
+          <l n="413">Pour son objet, avant de l’avoir lu.</l>
+        </sp>
+        <sp who="#mademoiselle-saint-val">
+          <speaker>MADEMOISELLE SAINT-VAL.</speaker>
+          <l n="414">Monsieur l’Auteur, votre ouvrage est reçu.</l>
+        </sp>
+        <sp who="#monsieur-montvel">
+          <speaker>MONSIEUR MONTVEL.</speaker>
+          <l n="415">C’est bientôt dit : il faut voir si le style</l>
+          <l n="416">En est correct, élégant et facile.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="417">Fort bien ; le style : on ne veut que cela.</l>
+          <l n="418">Il faut du style : on aime ce mot-là.</l>
+        </sp>
+        <sp who="#monsieur-montvel">
+          <speaker>MONSIEUR MONTVEL.</speaker>
+          <l n="419">Mais, pour quelqu’un qui se mêle d’écrire,</l>
+          <l n="420">N’en faut-il pas ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="421">Oui, et non ; c’est-à-dire,</l>
+          <l n="422">Qu’on doit avoir du style en général ;</l>
+          <l n="423">Mais n’en pas faire un objet principal.</l>
+          <l n="424">Il faut du fond. Un Auteur dramatique,</l>
+          <l n="425">Par le fond seul, gagne la voix publique.</l>
+          <l n="426">Ma Pièce aussi, de l’un à l’autre bout,</l>
+          <l n="427">A bien du fond ; du style, point du tout.</l>
+        </sp>
+        <sp who="#monsieur-montvel">
+          <speaker>MONSIEUR MONTVEL.</speaker>
+          <l n="428">Tant pis, vraiment.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="429">Vous ne pouvez m’entendre,</l>
+          <l n="430">Si plus au net je ne me fais comprendre.</l>
+          <l n="431">Oui, dans ma pièce on ne trouvera pas</l>
+          <l n="432">De diction : ce n’est qu’un canevas, </l>
+          <l n="433">Rien qu’un croquis ; mais par votre génie</l>
+          <l n="434">Vous y mettrez la grâce et l’harmonie.</l>
+        </sp>
+        <sp who="#monsieur-montvel">
+          <speaker>MONSIEUR MONTVEL.</speaker>
+          <l n="435">Comment cela ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="436">Chacun de vous dira</l>
+          <l n="437">À l’impromptu tout ce qui lui viendra. </l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="438">J’étais d’avis que l’on jouât la pièce.</l>
+          <l n="439">Si quelque chose à présent m’intéresse,</l>
+          <l n="440">C’est qu’on renonce à vouloir s’en mêler.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="441">Pourquoi cela ?</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="442">Nous nous ferions siffler.</l>
+          <l n="443">On ne doit rien jouer qu’on ne l’apprenne.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="444">Et comment fait la troupe Italienne ?</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="445">Ils ont cet art. </l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="446">Vous l’entendrez comme eux,</l>
+          <l n="447">Ce secret-là n’est pas si merveilleux.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="448">Mais rien ne peut vous empêcher d’écrire,</l>
+          <l n="449">Comme tous font.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="450">Oui, et non ; je veux dire</l>
+          <l n="451">Que j’y perdrais ma peine et mon latin ;</l>
+          <l n="452">Mon plan doit être exécuté demain.</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="453">Demain !</l>
+        </sp>
+        <sp who="#madame-belcourt">
+          <speaker>MADAME BELCOURT.</speaker>
+          <l n="454">Demain ! la chose est infaisable.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="455">Il eut été même plus convenable </l>
+          <l n="456">Que l’on jouât ma pièce dans ce jour ;</l>
+          <l n="457">Puisque je veux célébrer le retour</l>
+          <l n="458">Et de l’année et du jour séculaire</l>
+          <l n="459">Qui vit Molière éclipsé de la terre.</l>
+          <l n="460">Or, d’aujourd’hui, cent ans sont révolus</l>
+          <l n="461">Depuis l’instant que Molière n’est plus.</l>
+        </sp>
+        <sp who="#monsieur-belcourt">
+          <speaker>MONSIEUR BELCOURT.</speaker>
+          <l n="462">La circonstance est vraiment singulière ;</l>
+          <l n="463">Il faudra faire un effort pour Molière.</l>
+        </sp>
+        <sp who="#madame-préville">
+          <speaker>MADAME PRÉVILLE.</speaker>
+          <l n="464">Très volontiers.</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="465">D’accord.</l>
+        </sp>
+        <sp who="#monsieur-feuilli">
+          <speaker>MONSIEUR FEUILLI.</speaker>
+          <l n="466">Je m’y soumets. </l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="467">Que l’Auteur donc nous dise ses projets. </l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="468">J’ai supposé que l’Art comique, en France,</l>
+          <l n="469">Depuis longtemps était en décadence. </l>
+          <l n="470">Je crois, Messieurs, que, sans prévention,</l>
+          <l n="471">On peut passer la supposition.</l>
+          <l n="472">Pour réparer un si cruel dommage,</l>
+          <l n="473">Les Comédiens ayant mis en usage</l>
+          <l n="474">Tous les moyens qu’ils ont crus les meilleurs,</l>
+          <l n="475">Ayant prié, caressé les Auteurs,</l>
+          <l n="476">Encouragé leur superbe arrogance,</l>
+          <l n="477">Les ayant même enfin payés d’avance,</l>
+          <l n="478">Et tout cela sans avoir réussi,</l>
+          <l n="479">Veulent pourtant prendre un dernier parti ;</l>
+          <l n="480">Et c’est celui du recours au diable,</l>
+          <l n="481">Comme l’on fait toujours en cas semblable.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER.</speaker>
+          <l n="482">C’est un moyen terrible que cela.</l>
+        </sp>
+        <sp who="#madame-drouin">
+          <speaker>MADAME DROUIN.</speaker>
+          <l n="483">Il n’est pourtant pas rare à l’Opéra.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="484">Ils font venir une vieille sorcière,</l>
+          <l n="485">Femme savante en plus d’une matière,</l>
+          <l n="486">Qui s’est acquis un crédit sans pareil</l>
+          <l n="487">Près du beau sexe, étant de bon conseil.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER.</speaker>
+          <l n="488">Qui prendrez-vous pour jouer la sorcière ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="489">Vous-même.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER.</speaker>
+          <l n="490">Moi ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="491">Vous toute la première ;</l>
+          <l n="492">Vous avez tant de grâce et de fraîcheur,</l>
+          <l n="493">Que votre jeu n’en sera que meilleur ;</l>
+          <l n="494">Tout s’embellit par votre heureuse adresse, </l>
+          <l n="495">Vous nous ferez adorer la vieillesse.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER.</speaker>
+          <l n="496">Vous me donnez de si bonnes raisons,</l>
+          <l n="497">Que je serai la vieille.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="498">Poursuivons.</l>
+          <l n="499">La Magicienne, avec une baguette,</l>
+          <l n="500">Trace un grand cercle, et prend d’une cassette </l>
+          <l n="501">Des os de mort, de l’encens, un crapaud</l>
+          <l n="502">Qu’elle abandonne aux flammes d’un réchaud.</l>
+          <l n="503">Au même instant une fumée épaisse</l>
+          <l n="504">Couvre le corps de la vieille Prêtresse,</l>
+          <l n="505">Qui prononçant des mots mystérieux</l>
+          <l n="506">Fuit, et Molière alors s’offre à vos yeux</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="507">Oh, j’aurai peur... non, vous ne sauriez croire</l>
+          <l n="508">Tout mon effroi, quand j’entends quelque histoire</l>
+          <l n="509">De revenant ; j’y pense dans mon lit,</l>
+          <l n="510">Je ne saurais fermer l’œil de la nuit.</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="511">Je vous plains fort. Vous seriez plus hardie,</l>
+          <l n="512">Si vous aviez avec vous compagnie.</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="513">Nous n’avons pas besoin de vos avis.</l>
+          <l n="514">Monsieur l’Auteur, achevez vos récits.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="515">Je continue. À l’aspect de Molière</l>
+          <l n="516">On fera voir, chacun à sa manière,</l>
+          <l n="517">Les sentiments dont on est agité.</l>
+          <l n="518">L’un en montrant un air épouvanté :</l>
+          <l n="519">L’autre en marquant toute sa gratitude,</l>
+          <l n="520">Un autre encor prenant cette attitude ;</l>
+          <l n="521">Celui-ci fait un geste admiratif,</l>
+          <l n="522">Et cet autre ouvre un œil contemplatif.</l>
+          <l n="523">Tous ces tableaux dont on est idolâtre</l>
+          <l n="524">Réussiront à merveille au théâtre.</l>
+        </sp>
+        <sp who="#madame-bellecourt">
+          <speaker>MADAME BELLECOURT.</speaker>
+          <l n="525">Fort bien.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="526">Molière avance avec douceur,</l>
+          <l n="527">Tend poliment la main à chaque Acteur,</l>
+          <l n="528">Et tendrement embrasse chaque Actrice.</l>
+          <l n="529">Il veut embrasser Mademoiselle Fanier.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER.</speaker>
+          <l n="530">Oh doucement, n’usons point d’artifice,</l>
+          <l n="531">Vous n’êtes point Molière.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="532">Non vraiment,</l>
+          <l n="533">Mais à ma place il en ferait autant.</l>
+        </sp>
+        <sp who="#mademoiselle-fanier">
+          <speaker>MADEMOISELLE FANIER.</speaker>
+          <l n="534">Eh bien ensuite ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="535">À ce Dieu du Comique</l>
+          <l n="536">Un des Acteurs présente sa supplique.</l>
+          <l n="537">Molière écoute, assis dans ce fauteuil ;</l>
+          <l n="538">L’Acteur s’avance et dit la larme à l’œil :</l>
+          <l n="539">Divin Molière, on ne rit plus en France ;</l>
+          <l n="540">Plus de plaisirs, plus de réjouissance.</l>
+          <l n="541">En acquérant un air de dignité,</l>
+          <l n="542">Notre théâtre a perdu sa gaieté.</l>
+          <l n="543">Si vous savez d’où ce malheur procède,</l>
+          <l n="544">Dites-nous-en la cause et le remède.</l>
+          <l n="545">Molière alors vous interrogera </l>
+          <l n="546">Sur le théâtre ; il vous demandera</l>
+          <l n="547">De grands détails sur l’art et la manière</l>
+          <l n="548">Dont les Auteurs fouillent cette carrière.</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="549">Que dirons-nous pour lors ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="550">La vérité ;</l>
+          <l n="551">Mais pour répondre avec plus de clarté,</l>
+          <l n="552">Vous lui jouerez les scènes les plus belles,</l>
+          <l n="553">Dont chaque genre offrira des modèles ;</l>
+          <l n="554">Et vous plairez beaucoup aux spectateurs,</l>
+          <l n="555">Qui dans un Acte en trouveront plusieurs :</l>
+          <l n="556">Qu’en dites-vous ?</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="557">L’idée est singulière. </l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="558">L’Acteur chargé du rôle de Molière...</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="559">Et qui sera celui qui parmi nous</l>
+          <l n="560">Fera ce rôle ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="561">Eh, mais, qu’en pensez-vous ?</l>
+          <l n="562">Ne puis-je pas le donner à Préville ?</l>
+        </sp>
+        <sp who="#monsieur-molé">
+          <speaker>MONSIEUR MOLÉ.</speaker>
+          <l n="563">Fort bien, est-il instruit ?</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="564">Soyez tranquille ;</l>
+          <l n="565">Il est au fait ; et je compte, ma foi,</l>
+          <l n="566">Qu’il le rendra tout aussi bien que moi.</l>
+          <l n="567">Préville prenant donc l’esprit du rôle,</l>
+          <l n="568">À l’assemblée adresse la parole,</l>
+          <l n="569">Avec cet air, cet auguste maintien,</l>
+          <l n="570">Qu’en sa personne on remarque si bien.</l>
+          <l n="571">Messieurs, dit-il, les scènes différentes</l>
+          <l n="572">Que votre jeu vient de rendre brillantes,</l>
+          <l n="573">Ont de l’éclat, de la légèreté ;</l>
+          <l n="574">Mais je n’y trouve aucune vérité.</l>
+          <l n="575">Je n’y vois point une fidèle image</l>
+          <l n="576">Des passions de chaque personnage.</l>
+          <l n="577">Je n’y vois point cette naïveté,</l>
+          <l n="578">Source du rire, âme de la gaieté,</l>
+          <l n="579">Et sans laquelle un Auteur dramatique</l>
+          <l n="580">Ne peut jamais être vraiment comique.</l>
+          <l n="581">Pour réussir il n’est qu’un seul secret,</l>
+          <l n="582">C’est de bien peindre ; on dit que je l’ai fait :</l>
+          <l n="583">On a daigné se plaire à ma peinture.</l>
+          <l n="584">J’avais longtemps contemplé la nature</l>
+          <l n="585">Avec des yeux que l’on a cru meilleurs</l>
+          <l n="586">Que ne le sont ceux des autres Auteurs. </l>
+          <l n="587">Mais en cela, comme en bien d’autres choses ;</l>
+          <l n="588">On voit l’effet sans connaître les causes.</l>
+          <l n="589">Il a fallu qu’un diable s’en mêlât,</l>
+          <l n="590">Sans quoi souvent je tombais tout à plat.</l>
+          <l n="591">En s’agitant il fait un faux pas.</l>
+        </sp>
+        <sp who="#monsieur-feuilli">
+          <speaker>MONSIEUR FEUILLI.</speaker>
+          <l n="592">Sans ce fauteuil vous en faisiez de même.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="593">C’est que je suis d’une faiblesse extrême ;</l>
+          <l n="594">Je vous parois hardi, mais cependant</l>
+          <l n="595">J’ai de la crainte intérieurement.</l>
+        </sp>
+        <sp who="#mademoiselle-dumesnil">
+          <speaker>MADEMOISELLE DUMESNIL.</speaker>
+          <l n="596">Reposez-vous.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="597">Je reprends la parole.</l>
+          <l n="598">Écoutez bien ce grand maître d’école, </l>
+          <l n="599">Molière l’est. Qu’on se garde surtout </l>
+          <l n="600">De me parler que je ne sois au bout.</l>
+          <l n="601">Un vieux démon qui préside au Comique</l>
+          <l n="602">M’offrit, Messieurs, la lorgnette magique</l>
+          <l n="603">Dont se servait Térence l’Africain,</l>
+          <l n="604">Quand il voulait sonder le cœur humain.</l>
+          <l n="605">J’en profitai ; je sus avec finesse,</l>
+          <l n="606">Ainsi que lui, dévoiler la faiblesse,</l>
+          <l n="607">Le ridicule, et les nombreux travers</l>
+          <l n="608">Qu’on voit régner dans ce sot univers.</l>
+          <l n="609">Je la gardai pendant toute ma vie.</l>
+          <l n="610">Quelques Auteurs, inspirés par Thalie,</l>
+          <l n="611">L’eurent depuis, mais pour peu de moments.</l>
+          <l n="612">Je vais partir. J’espère, mes enfants, </l>
+          <l n="613">Vous envoyant ce gage héréditaire</l>
+          <l n="614">Fixer sur vous les faveurs du parterre.</l>
+          <l n="615">Chacun alors embrasse ses genoux.</l>
+          <l n="616">Chacun le veut retenir parmi nous.</l>
+          <l n="617">La foudre gronde ; il échappe à la vue,</l>
+          <l n="618">La scène change et l’on voit la statue.</l>
+          <l n="619">Le Théâtre change, la statue de Molière parait posée sur un piédestal, et la décoration représente un magnifique péristyle environné d’un bois de lauriers.</l>
+        </sp>
+        <sp who="#mademoiselle-hus">
+          <speaker>MADEMOISELLE HUS.</speaker>
+          <l n="620">Quel dénouement !</l>
+        </sp>
+        <sp who="#mademoiselle-doligny">
+          <speaker>MADEMOISELLE DOLIGNY.</speaker>
+          <l n="621">Quel spectacle enchanteur !</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="622">Remerciez votre décorateur,</l>
+          <l n="623">Car nous étions d’accord pour vous surprendre.</l>
+        </sp>
+        <sp who="#madame-belcourt">
+          <speaker>MADAME BELCOURT.</speaker>
+          <l n="624">Aucun de nous ne s’y pouvait attendre.</l>
+        </sp>
+        <sp who="#le-semainier">
+          <speaker>LE SEMAINIER.</speaker>
+          <l n="625">Excepté moi ; car j’étais du secret.</l>
+        </sp>
+        <sp who="#l’auteur">
+          <speaker>L’AUTEUR.</speaker>
+          <l n="626">Allons Monsieur le maître du Ballet,</l>
+          <l n="627">De vos talents faites voir quelque chose,</l>
+          <l n="628">Et que Molière ait une Apothéose.</l>
+          <l n="629">La pièce est terminée par l’Apothéose de Molière, ainsi qu’il suit.</l>
+          <l n="630">Ballet héroïque.</l>
+          <l n="631">Le grand Prêtre d’Apollon, la grande Prêtresse et les autres Prêtres et Prêtresses de ce Dieu, avec tous les figurants et figurantes du Ballet, forment une marche au son des instruments.</l>
+        </sp>
+        <sp who="#le-grand-prêtre">
+          <speaker>LE GRAND PRÊTRE.</speaker>
+          <l n="632">D’Apollon, en ces lieux, j’exerce la Prêtrise ;</l>
+          <l n="633">L’image de Molière est commise à ma foi :</l>
+          <l n="634">Quand la vertu le divinise,</l>
+          <l n="635">Le soin de ses honneurs ne regarde que moi.</l>
+        </sp>
+        <sp who="#une-prêtresse">
+          <speaker>UNE PRÊTRESSE.</speaker>
+          <l n="636">L’antiquité mettait jadis au rang des Dieux</l>
+          <l n="637">Ceux qui par leur valeur ont délivré la terre</l>
+          <l n="638">Des monstres, des brigands, des tyrans furieux.</l>
+          <l n="639">Pourquoi ceux qui, comme Molière,</l>
+          <l n="640">Ont terrassé le vice encor plus dangereux,</l>
+          <l n="641">N’auraient-ils pas le droit d’être immortels comme eux ?</l>
+        </sp>
+        <sp who="#la-grande-prêtresse">
+          <speaker>LA GRANDE PRÊTRESSE.</speaker>
+          <l n="642">Qu’un éternel éclat environne Molière,</l>
+          <l n="643">Que son nom glorieux ne périsse jamais.</l>
+          <l n="644">Il corrigea la France entière</l>
+          <l n="645">De ses ridicules excès ;</l>
+          <l n="646">Sur mille différents objets</l>
+          <l n="647">Sa critique savante a porté la lumière.</l>
+          <l n="648">Qu’un éternel éclat environne Molière ;</l>
+          <l n="649">Que son nom glorieux ne périsse jamais :</l>
+          <l n="650">Qu’il vive, que toujours il soit cher aux Français.</l>
+        </sp>
+        <sp who="#une-prêtresse">
+          <speaker>UNE PRÊTRESSE.</speaker>
+          <l n="651">Que ce laurier sacré dont l’ombre t’environne,</l>
+          <l n="652">Serve, divin Molière, à former ta couronne ;</l>
+          <l n="653">C’est l’arbre qu’Apollon avait daigné choisir :</l>
+          <l n="654">Semblable à tes écrits, rien ne peut le flétrir.</l>
+        </sp>
+        <sp who="#le-grand-prêtre">
+          <speaker>LE GRAND PRÊTRE.</speaker>
+          <l n="655">Abattez ces rameaux ; vous devez obéir ;</l>
+          <l n="656">Apollon par ma voix l’ordonne ;</l>
+          <l n="657">Pour former à Molière une noble couronne,</l>
+          <l n="658">Ce Dieu permet de les cueillir.</l>
+          <l n="659">Ils abattent des branches de laurier, et les donnent aux figurantes, qui en forment des guirlandes qu’elles apportent au grand Prêtre.</l>
+          <l n="660">Le Grand Prêtre conduit la Prêtresse au pied de la statue, afin qu’elle la couronne, et il dit en regardant toutes les figurantes.</l>
+          <l n="661">Sexe enchanteur, c’est pour vous plaire</l>
+          <l n="662">Que ses travaux l’ont mis au-dessus des humains ;</l>
+          <l n="663">Sa récompense la plus chère</l>
+          <l n="664">Sera d’être en ce jour couronné par vos mains.</l>
+        </sp>
+        <sp who="#la-grande-prêtresse">
+          <speaker>LA GRANDE PRÊTRESSE, pose la couronne sur la statue ; les figurantes l’entourent de guirlande ; et elle dit ensuite.</speaker>
+          <l n="665">Les autels des Héros que nous vante l’Histoire,</l>
+          <l n="666">Des plus rares parfums répandaient les vapeurs ;</l>
+          <l n="667">Cet encens a péri, mais celui de nos cœurs</l>
+          <l n="668">Est immortel comme ta gloire. </l>
+          <l n="669">Ode au temps prononcée par une Prêtresse d’Apollon.</l>
+          <l n="670">Toi, qui sais étendre l’espace</l>
+          <l n="671">Devant ton tribunal auguste</l>
+          <l n="672">Si pendant le cours trop rapide</l>
+          <l n="673">Molière en offre un grand exemple ;</l>
+          <l n="674">Cette arme souvent dangereuse</l>
+        </sp>
+        <sp who="#le-grand-prêtre-dit">
+          <speaker>LE GRAND PRÊTRE dit.</speaker>
+          <l n="675">Qu’on se livre aux transports d’une vive gaieté ;</l>
+          <l n="676">C’est par un aimable délire</l>
+          <l n="677">Que doit être fêté</l>
+          <l n="678">Celui qui sut si bien nous exciter à rire.</l>
+          <l n="679">On danse.</l>
+          <l n="680" />
+        </sp>
       </div>
     </body>
   </text>

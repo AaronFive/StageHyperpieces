@@ -1,1232 +1,1282 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Mémoires d’un colonel des hussards</title>
-        <author key="Eugène SCRIBE - MÉLESVILLE | (naissance-mort)">Eugène SCRIBE - MÉLESVILLE |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/973</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène SCRIBE - MÉLESVILLE |</author>. <title>Mémoires d’un colonel des hussards</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/973</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1826-02-21">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase-Dramatique, le 21 février 1826.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="gustave-de-montemart" sex="SEX">
+            <persName>GUSTAVE DE MONTEMART</persName>
+          </person>
+          <person xml:id="mathilde" sex="SEX">
+            <persName>MATHILDE</persName>
+          </person>
+          <person xml:id="léon" sex="SEX">
+            <persName>LÉON</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1826-02-21" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase-Dramatique, le 21 février 1826.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Mémoires d’un colonel des hussards</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie-Vaudeville en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase-Dramatique, le 21 février 1826.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="gustave-de-montemart">GUSTAVE DE MONTEMART</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mathilde">MATHILDE</role>
-              <roleDesc>, <em>sa femme</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="léon">LÉON</role>
-              <roleDesc>, <em>sous-lieutenant</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>L’intérieur d’une prison, en forme de tour ronde. Sur le premier plan, à la droite du spectateur, une fenêtre grillée ; sur le second plan, la porte d’entrée ; au fond, une grande fenêtre d’où l’on peut voir la terrasse où se promènent les prisonniers ; à gauche, sur le premier plan, une porte secrète ; sur le second plan, une lucarne élevée, et grillée, et, auprès de la fenêtre du fond, une porte qui conduit à la chambre à coucher de Gustave.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <l n="6" xml:id="l6"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="7" xml:id="l7"> </l>
-          <sp who="gustave" xml:id="1-1">
-            <speaker>GUSTAVE, <em>en négligé de prison, assis devant une table, et regardant sa montre</em></speaker>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9">La journée ne finira pas ! cinq heures viennent à peine de sonner à la grande tour, et moi, qui vais bien, j’ai cinq heures trente-cinq : ces horloges de prison, ça retarde toujours !</l>
-            <stage><hi rend="italic"><em>Il se lève.</em></hi></stage>
-            <l n="11" xml:id="l11">Ma foi, c’est une chose assez ennuyeuse, que d’être en prison ; cela m’a amusé le premier jour, parce qu’un colonel en prison, c’est assez original, mais on se fait à tout... Heureusement me voilà au huitième et dernier jour, c’est demain que je retournerai à Paris ; que je reverrai ma femme ! Ma jolie petite Mathilde, il y a si longtemps que je ne l’ai embrassée. Allons ! allons ! encore un peu de patience.</l>
-            <stage><hi rend="italic"><em>Se promenant.</em></hi></stage>
-            <l n="13" xml:id="l13">Mais qu’est-ce que je vais faire d’ici là ? Je me suis donné tous les divertissements que comportait ma situation ; je me suis méthodiquement promené en long et en large ; j’ai dessiné le plan de la dernière bataille ; j’ai chanté tous mes airs d’opéra-comique ; j’ai pensé à ma femme... il fallait bien s’en occuper ! Mais à présent à qui vais-je penser ?</l>
-            <stage><hi rend="italic"><em>S’approchent de la lucarne à gauche.</em></hi></stage>
-            <l n="15" xml:id="l15">Qu’est-ce que je vois là de mon belvédère ? c’est un uniforme qui est à la croisée en face. Comment diable établir une ligne télégraphique ?</l>
-            <stage><hi rend="italic"><em>Agitant son mouchoir par la croisée.</em></hi></stage>
-            <l n="17" xml:id="l17">Il m’a vu, car il répond à mes signes.</l>
-            <stage><hi rend="italic"><em>Criant.</em></hi></stage>
-            <l n="19" xml:id="l19">Bonjour, camarade ! ça vous va-t-il bien ?</l>
-            <stage><hi rend="italic"><em>Écoutant comme si on lui répondait.</em></hi></stage>
-            <l n="21" xml:id="l21">Ah ! vous vous ennuyez ! moi, c’est différent, je m’amuse beaucoup.</l>
-            <stage><hi rend="italic"><em>Écoutant.</em></hi></stage>
-            <l n="23" xml:id="l23">Qui je suis ?... Gustave de Montemart, colonel du sixième de hussards. Et vous ? Hein !... À peine si on entend. Léon, sous-lieutenant. Mais il s’en va...</l>
-            <stage><hi rend="italic"><em>Quittant la croisée.</em></hi></stage>
-            <l n="25" xml:id="l25">Tiens, Léon ; eh ! nous nous sommes déjà vus... oui, lors de la dernière affaire : un officier de dix-sept ans, qu’on prendrait pour une demoiselle, qui ne boit pas, ne jure jamais, et qui rougit en saluant une dame. Ah ! c’est lui qui est en prison ; à la bonne heure, il commence à se lancer. Ah ! le voilà qui revient.</l>
-            <stage><hi rend="italic"><em>Retournant à la fenêtre et écoutant.</em></hi></stage>
-            <l n="27" xml:id="l27">Hein !... vous voudriez me parler ? et moi aussi. Attendez, j’aperçois M. Doucet, le geôlier, qui se promène dans la cour, la pipe à la bouche.</l>
-            <stage><hi rend="italic"><em>Criant.</em></hi></stage>
-            <l n="29" xml:id="l29">Bonjour, monsieur Doucet !</l>
-            <stage><hi rend="italic"><em>Écoutant.</em></hi></stage>
-            <l n="31" xml:id="l31">Si j’ai été content ? oui, le dîner était bon, mais un peu cher. J’ai</l>
-            <l n="32" xml:id="l32">autre chose à vous demander : voulez-vous que le prisonnier en face vienne me rendre visite ?</l>
-            <stage><hi rend="italic"><em>Écoutant.</em></hi></stage>
-            <l n="34" xml:id="l34">Comment, si on m’entendait !</l>
-            <stage><hi rend="italic"><em>Criant de toutes ses forces.</em></hi></stage>
-            <l n="36" xml:id="l36">Eh ! qui voulez-vous qui m’entende ? votre conscience ?</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="38" xml:id="l38">Oh bien alors, j’y suis.</l>
-            <stage><hi rend="italic"><em>Tirant sa bourse.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air du Bouffe et le Tailleur.</em></hi></stage>
-            <stage><hi rend="italic"><em>Lui jetant la bourse.</em></hi></stage>
-            <l n="42" xml:id="l42">À vous !... c’est ça ; la conscience ne dit plus rien : je savais bien que je la ferais taire.</l>
-            <stage><hi rend="italic"><em>À Léon.</em></hi></stage>
-            <l n="44" xml:id="l44">Camarade, on va vous ouvrir.</l>
-            <stage><hi rend="italic"><em>Revenant sur le devant du théâtre.</em></hi></stage>
-            <l n="46" xml:id="l46">Ma foi, je suis charmé de la rencontre ; je ne passerai pas ma soirée tout seul. Et quant à notre jeune sous-lieutenant, je devine pourquoi il veut me parler, sans doute pour me remercier du service que je lui ai rendu dans la dernière affaire... Je ris encore en y pensant ; je le vois, pendant que les balles sifflaient autour de nous, arrangeant sa cravate et les boucles de ses cheveux ! Un instant après, il était au milieu des ennemis, et au moment du plus grand danger, lorsqu’une vingtaine de sabres le menaçaient... ne voilà-t-il pas qu’il se baisse pour ramasser un flacon d’eau de Cologne qu’il avait laissé tomber... Eh ! le voici.</l>
-            <stage><hi rend="italic"><em>On entend tirer les verrous de la porte à droite.</em></hi></stage>
-            <l n="48" xml:id="l48"> </l>
-            <l n="49" xml:id="l49"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="50" xml:id="l50"> </l>
-          <sp who="léon" xml:id="2-1">
-            <speaker>GUSTAVE, LÉON</speaker>
-            <l n="51" xml:id="l51"> </l>
-          </sp>
-          <sp who="léon" xml:id="2-2">
-            <speaker>LÉON.</speaker>
-            <l n="52" xml:id="l52">Ah ! colonel, que je suis aise de vous voir, après tout ce que je vous dois... On me permet d’habiter jusqu’à demain la même prison que vous !</l>
-          </sp>
-          <sp who="gustave" xml:id="2-3">
-            <speaker>GUSTAVE.</speaker>
-            <l n="53" xml:id="l53">Je n’ai qu’un regret : c’est que vous ne soyez pas venu huit jours plus tôt.</l>
-          </sp>
-          <sp who="léon" xml:id="2-4">
-            <speaker>LÉON.</speaker>
-            <l n="54" xml:id="l54">Je vous remercie de votre obligeance. Comment ! voilà huit jours que vous êtes ici ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-5">
-            <speaker>GUSTAVE.</speaker>
-            <l n="55" xml:id="l55">Ah ! mon Dieu, oui, je ne suis jamais resté aussi longtemps dans le même endroit.</l>
-          </sp>
-          <sp who="léon" xml:id="2-6">
-            <speaker>LÉON.</speaker>
-            <l n="56" xml:id="l56">Vous mettre en prison, après la conduite que vous avez tenue ! lorsque de toute l’armée votre régiment s’est le plus distingué !</l>
-          </sp>
-          <sp who="gustave" xml:id="2-7">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic">N’est-ce pas ? mes hussards allaient joliment. Il est vrai que nous avions reçu l’ordre de rester en réserve, et que nous nous sommes trouvés sur la cavalerie ennemie je ne sais pas trop comment. Ils disent tous que j’ai crié : « <em>En avant !</em> » Le diable m’emporte si je m’en souviens, je crois plutôt que ce sont eux. Mais comme on ne pouvait pas mettre ici tout le régiment, c’est sur moi que cela est tombé : cela m’a valu la croix d’officier, et huit jours de prison.</hi></stage>
-          </sp>
-          <sp who="léon" xml:id="2-8">
-            <speaker>LÉON.</speaker>
-            <l n="58" xml:id="l58">Quand serai-je aussi heureux !</l>
-          </sp>
-          <sp who="gustave" xml:id="2-9">
-            <speaker>GUSTAVE.</speaker>
-            <l n="59" xml:id="l59">Eh mais ! cela commence, vous avez déjà la moitié de mon bonheur, et le reste ne peut manquer de vous arriver, si jamais vous défendez votre drapeau comme vos flacons d’eau de Cologne... Eh bien ! je vous fais rougir, et vous voilà tout déconcerté.</l>
-          </sp>
-          <sp who="léon" xml:id="2-10">
-            <speaker>LÉON.</speaker>
-            <l n="60" xml:id="l60">Oui, colonel ; c’est que... je vous prie de ne me plus parler de cette affaire-là ; c’est déjà elle qui est cause que je suis ici. Depuis ce jour-là on s’égaie à mes dépens ; j’ai entendu hier deux officiers de la compagnie qui faisaient sur moi des plaisanteries, et même des calembours.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-11">
-            <speaker>GUSTAVE.</speaker>
-            <l n="61" xml:id="l61">Des calembours, ah ! c’est trop fort.</l>
-          </sp>
-          <sp who="léon" xml:id="2-12">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic">L’un disait que j’étais un militaire <em>à l’eau rose</em>, et l’autre prétendait que cette action-là me mettait en <em>bonne odeur </em>dans le régiment. Vous concevez comme c’est désagréable.</hi></stage>
-            <stage><hi rend="italic"><em>Air : J’en guette un petit de mon âge.</em></hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="2-13">
-            <speaker>GUSTAVE.</speaker>
-            <l n="64" xml:id="l64">Mais, c’est un diable que ce petit garçon-là. Allons, allons, il ira bien. Ma foi, mon jeune camarade, je vous avoue que je n’y tiens plus ; et au risque de recevoir aussi un coup d’épée qui me blesserait bien fort, il faut que je vous demande d’où vient votre prédilection pour les flacons d’eau de Cologne !</l>
-          </sp>
-          <sp who="léon" xml:id="2-14">
-            <speaker>LÉON.</speaker>
-            <l n="65" xml:id="l65">Oh ! à vous, colonel, c’est différent, je puis vous confier cela... c’est qu’il venait d’une certaine personne...</l>
-          </sp>
-          <sp who="gustave" xml:id="2-15">
-            <speaker>GUSTAVE.</speaker>
-            <l n="66" xml:id="l66">Qui vous l’avait donné.</l>
-          </sp>
-          <sp who="léon" xml:id="2-16">
-            <speaker>LÉON.</speaker>
-            <l n="67" xml:id="l67">À peu près. C’est la seule faveur que j’aie reçue d’elle, et je voulais la conserver pour lui prouver ma constance.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-17">
-            <speaker>GUSTAVE.</speaker>
-            <l n="68" xml:id="l68">De la constance ! qu’est-ce que c’est que cela ? Oh ! je me suis trompé, il n’ira pas.</l>
-          </sp>
-          <sp who="léon" xml:id="2-18">
-            <speaker>LÉON.</speaker>
-            <l n="69" xml:id="l69">J’ai donc eu tort ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-19">
-            <speaker>GUSTAVE.</speaker>
-            <l n="70" xml:id="l70">Parbleu, voilà une question !... Écoutez, voulez-vous me croire ?</l>
-          </sp>
-          <sp who="léon" xml:id="2-20">
-            <speaker>LÉON.</speaker>
-            <l n="71" xml:id="l71">Oh ! oui, colonel, je vous croirai, je ferai tout ce que vous me direz.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-21">
-            <speaker>GUSTAVE.</speaker>
-            <l n="72" xml:id="l72">À la bonne heure !</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="74" xml:id="l74">Au fait, il peut aller ; et ce serait dommage de lui laisser prendre une mauvaise route.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="76" xml:id="l76">Voyez-vous, mon garçon, tout dépend du commencement ; votre coup d’épée d’hier, c’est bien, cela promet, mais il faut vous défaire de vos mauvaises habitudes ; moi, je vous parle comme à mon fils.</l>
-          </sp>
-          <sp who="léon" xml:id="2-22">
-            <speaker>LÉON.</speaker>
-            <l n="77" xml:id="l77">Je comprends bien ; ce n’est pas la bonne volonté qui me manque, c’est que je n’ose pas.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-23">
-            <speaker>GUSTAVE, <em>d’un air de confidence.</em></speaker>
-            <l n="78" xml:id="l78">Elle est donc bien jolie ?</l>
-          </sp>
-          <sp who="léon" xml:id="2-24">
-            <speaker>LÉON.</speaker>
-            <l n="79" xml:id="l79">Si vous l’aviez vue, comme moi ! un son de voix.</l>
-            <stage><hi rend="italic"><em>Mettant la main sur son cœur.</em></hi></stage>
-            <l n="81" xml:id="l81">qui va là... J’ai passé trois soirées avec elle... il y a deux mois, lorsque je me rendais au régiment.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-25">
-            <speaker>GUSTAVE, <em>souriant.</em></speaker>
-            <l n="82" xml:id="l82">Voilà donc à quoi se bornent toutes vos campagnes ? trois soirées, ce n’est pas trop.</l>
-          </sp>
-          <sp who="léon" xml:id="2-26">
-            <speaker>LÉON.</speaker>
-            <l n="83" xml:id="l83">Oui, mais l’une était un bal.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-27">
-            <speaker>GUSTAVE.</speaker>
-            <l n="84" xml:id="l84">C’est juste, cela doit compter double ; et vous avez bien avancé vos affaires ?</l>
-            <l n="85" xml:id="l85"> </l>
-          </sp>
-          <sp who="léon" xml:id="2-28">
-            <speaker>LÉON.</speaker>
-            <l n="86" xml:id="l86">Oh ! oui : ce jour-là j’ai été bien hardi ; je m’étais emparé de son flacon, de ses gants, de son mouchoir, et je les ai embrassés sans qu’elle le vît.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-29">
-            <speaker>GUSTAVE.</speaker>
-            <l n="87" xml:id="l87">Diable ! et vous n’avez pas eu peur de la compromettre ?</l>
-          </sp>
-          <sp who="léon" xml:id="2-30">
-            <speaker>LÉON.</speaker>
-            <l n="88" xml:id="l88">Bien plus, je ne lui ai rendu que les gants et le mouchoir.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-31">
-            <speaker>GUSTAVE.</speaker>
-            <l n="89" xml:id="l89">Je comprends. Voilà l’origine de ce trésor si précieux ; et pendant que vous étiez dans votre jour de hardiesse, vous ne lui avez pas dit que vous l’aimiez ?</l>
-          </sp>
-          <sp who="léon" xml:id="2-32">
-            <speaker>LÉON.</speaker>
-            <l n="90" xml:id="l90">J’ai été bien près, mais je n’ai jamais pu ; elle était si jolie, sa toilette était si brillante... tout cela intimide, et je ne conçois pas comment on peut venir à bout de faire une déclaration en face à une femme ; est-ce que vous avez jamais osé, vous, colonel ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-33">
-            <speaker>GUSTAVE.</speaker>
-            <l n="91" xml:id="l91">Allons, allons, c’est une éducation qui est entièrement à faire. Voyez, pourtant, si j’avais terminé mes Mémoires !</l>
-          </sp>
-          <sp who="léon" xml:id="2-34">
-            <speaker>LÉON.</speaker>
-            <l n="92" xml:id="l92">Comment ! vos Mémoires ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-35">
-            <speaker>GUSTAVE.</speaker>
-            <l n="93" xml:id="l93">Oui, un ouvrage qui manque à la jeunesse actuelle, un ouvrage de mœurs, où je peins les miennes, c’est-à-dire où je mets toujours l’exemple à côté du précepte. Il y a un siècle que j’ai le plan dans ma tête, mais il faut commencer.</l>
-          </sp>
-          <sp who="léon" xml:id="2-36">
-            <speaker>LÉON.</speaker>
-            <l n="94" xml:id="l94">Eh bien ! pendant que vous étiez en prison ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-37">
-            <speaker>GUSTAVE.</speaker>
-            <l n="95" xml:id="l95">Oh ! j’y ai bien pensé, j’avais même déjà écrit le titre.</l>
-            <stage><hi rend="italic"><em>Montrant la table.</em></hi></stage>
-            <stage><hi rend="italic">Vous pouvez voir : <em>Le Mentor de la jeunesse</em>, ou <em>Mémoires d’un colonel de hussards</em>. Mais à chaque instant on est distrait... Eh ! parbleu ! une superbe occasion qui se présente. Pour combien de temps êtes-vous en prison ?</hi></stage>
-          </sp>
-          <sp who="léon" xml:id="2-38">
-            <speaker>LÉON.</speaker>
-            <l n="98" xml:id="l98">Jusqu’à demain au point du jour.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-39">
-            <speaker>GUSTAVE.</speaker>
-            <l n="99" xml:id="l99">À merveille ! vous resterez la nuit ici ; après le souper je fais monter du punch, et nous travaillerons à mes Mémoires ; je dicterai, et vous écrirez, c’est le moyen de vous instruire.</l>
-          </sp>
-          <sp who="léon" xml:id="2-40">
-            <speaker>LÉON.</speaker>
-            <l n="100" xml:id="l100">Mais, colonel...</l>
-          </sp>
-          <sp who="gustave" xml:id="2-41">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic">Le punch vous fait peur, mais c’est égal, pour écrire un ouvrage de mœurs, il n’y a rien de tel que le punch... <em>Castigat bibendo mores... </em>et vous en boirez.</hi></stage>
-          </sp>
-          <sp who="léon" xml:id="2-42">
-            <speaker>LÉON, <em>se mettant à la table.</em></speaker>
-            <l n="102" xml:id="l102">Eh bien ! soit, je me risque ; commençons... moi, j’ai le désir de m’instruire.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-43">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic">Il faut, avant tout, que je vous explique la division générale de l’ouvrage, et la distribution des chapitres. PREMIÈRE PARTIE : <em>Aventures du colonel lorsqu’il est garçon</em>. DEUXIÈME PARTIE : <em>Son mariage</em>. TROISIÈME PARTIE : <em>Après son mariage.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="2-44">
-            <speaker>LÉON.</speaker>
-            <l n="104" xml:id="l104">Permettez donc, colonel ; est-ce que vous êtes marié ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-45">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic">Eh ! sans doute, à cause de mon ouvrage ! il fallait bien un dénouement, et vous verrez celui que j’ai choisi. La plus jolie petite femme, qui m’aimait éperdument, que j’ai presque enlevée... Mais nous verrons plus tard, dans la seconde partie : il ne s’agit pas ici de ma femme. CHAPITRE PREMIER : <em>Des fredaines du colonel et de ses premières inclinations.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="2-46">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic">Vous voulez dire, <em>sa première inclination ?</em> car je suppose que vous avez commencé par une.</hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="2-47">
-            <speaker>GUSTAVE.</speaker>
-            <l n="107" xml:id="l107">Du tout, trois à la fois.</l>
-          </sp>
-          <sp who="léon" xml:id="2-48">
-            <speaker>LÉON.</speaker>
-            <l n="108" xml:id="l108">Ah ! mon Dieu ! qu’est-ce que vous me dites là ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-49">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic">CHAPITRE II : <em>Comment le colonel se débarrasse de ses rivaux.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="2-50">
-            <speaker>LÉON.</speaker>
-            <l n="110" xml:id="l110">Ah ! nous y voilà ! des duels !</l>
-          </sp>
-          <sp who="gustave" xml:id="2-51">
-            <speaker>GUSTAVE.</speaker>
-            <l n="111" xml:id="l111">Laissez donc, je n’avais pas envie d’être toujours l’épée à la main ; d’ailleurs, dans le nombre, il y avait des rivaux légitimes... des maris, par exemple.</l>
-          </sp>
-          <sp who="léon" xml:id="2-52">
-            <speaker>LÉON.</speaker>
-            <l n="112" xml:id="l112">Comment ! Monsieur, il y avait des maris ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-53">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic">Il y en a partout. CHAPITRE III : <em>Des billets doux et des déclarations</em>. CHAPITRE IV ET DERNIER : <em>De la manière de brusquer les dénouements.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="2-54">
-            <speaker>LÉON.</speaker>
-            <l n="114" xml:id="l114">CHAPITRE IV !</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Jadis et aujourd’hui.</em></hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="2-55">
-            <speaker>GUSTAVE, <em>souriant.</em></speaker>
-            <stage><hi rend="italic"><em>On entend sonner une cloche.</em></hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="2-56">
-            <speaker>GUSTAVE.</speaker>
-            <l n="117" xml:id="l117">C’est le souper.</l>
-          </sp>
-          <sp who="léon" xml:id="2-57">
-            <speaker>LÉON.</speaker>
-            <l n="118" xml:id="l118">C’est égal, continuons toujours ; rien que le chapitre IV. Je n’ai pas faim.</l>
-          </sp>
-          <sp who="gustave" xml:id="2-58">
-            <speaker>GUSTAVE.</speaker>
-            <l n="119" xml:id="l119">Oui, mais moi ! L’ordre et l’exactitude, je ne connais que cela ! et je me ferais un scrupule de travailler quand le souper a sonné.</l>
-            <stage><hi rend="italic"><em>On entend ouvrir la porte.</em></hi></stage>
-            <l n="121" xml:id="l121">Permis à vous de nous tenir compagnie, à moins que vous ne préfériez, par ce beau clair de lune, vous promener dans mon parc et mes jardins.</l>
-          </sp>
-          <sp who="léon" xml:id="2-59">
-            <speaker>LÉON.</speaker>
-            <l n="122" xml:id="l122">Comment ! vous avez un jardin ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-60">
-            <speaker>GUSTAVE.</speaker>
-            <l n="123" xml:id="l123">Oui, une terrasse où il m’est permis de prendre l’air... l’espace de dix pieds carrés.</l>
-          </sp>
-          <sp who="léon" xml:id="2-61">
-            <speaker>LÉON, <em>allant à gauche.</em></speaker>
-            <l n="124" xml:id="l124">De ce côté ?</l>
-          </sp>
-          <sp who="gustave" xml:id="2-62">
-            <speaker>GUSTAVE.</speaker>
-            <l n="125" xml:id="l125">Non, ce sont d’autres prisons qui communiquent au logement du concierge. Tenez, par ici, après ma chambre à coucher, vous prenez un escalier tournant, qui conduit à la plate-forme que vous voyez d’ici.</l>
-          </sp>
-          <sp who="léon" xml:id="2-63">
-            <speaker>LÉON.</speaker>
-            <l n="126" xml:id="l126">C’est bon, je vais y réfléchir ; mais vous ne serez pas longtemps, pour que nous puissions reprendre...</l>
-          </sp>
-          <sp who="gustave" xml:id="2-64">
-            <speaker>GUSTAVE.</speaker>
-            <l n="127" xml:id="l127">Soyez tranquille ; en même temps je commanderai le punch.</l>
-            <stage><hi rend="italic"><em>Lui ouvrant la porte du fond.</em></hi></stage>
-            <l n="129" xml:id="l129">Tenez, voilà le chemin du parc. Bien... vous descendez, c’est cela ; prenez garde de vous casser le cou.</l>
-            <l n="130" xml:id="l130"> </l>
-            <l n="131" xml:id="l131"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="132" xml:id="l132"> </l>
-          <sp who="gustave" xml:id="3-1">
-            <speaker>GUSTAVE, <em>seul</em></speaker>
-            <l n="133" xml:id="l133"> </l>
-            <l n="134" xml:id="l134">Je suis très content de mon élève ; un joli sujet qui me fera de l’honneur, et qui en attendant m’aura fait passer gaiement ma dernière soirée.</l>
-          </sp>
-          <sp who="léon" xml:id="3-2">
-            <speaker>LÉON, <em>que l’on voit à travers la croisée passer sur la terrasse.</em></speaker>
-            <l n="135" xml:id="l135">Oh ! le beau clair de lune !</l>
-            <stage><hi rend="italic"><em>À Gustave.</em></hi></stage>
-            <l n="137" xml:id="l137">Vous ne serez pas longtemps ?</l>
-          </sp>
-          <sp who="gustave" xml:id="3-3">
-            <speaker>GUSTAVE.</speaker>
-            <l n="138" xml:id="l138">Je vais boire à votre santé et à vos succès futurs.</l>
-            <stage><hi rend="italic"><em>Air : Dans un castel dame de haut lignage.</em></hi></stage>
-            <stage><hi rend="italic"><em>Il sort en riant par la porte qui se referme sur lui.</em></hi></stage>
-            <l n="141" xml:id="l141"> </l>
-            <l n="142" xml:id="l142"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="143" xml:id="l143"> </l>
-          <sp who="mathilde" xml:id="4-1">
-            <speaker><em>La porte à gauche s’ouvre, et Mathilde paraît.</em> MATHILDE, <em>à sa femme de chambre, qui ne paraît pas</em></speaker>
-            <l n="144" xml:id="l144"> </l>
-            <l n="145" xml:id="l145">N’avance pas, Anna, je l’en prie ; mon mari n’aurait qu’à nous reconnaître, il n’y aurait plus de surprise ; rentre et prépare cette chambre.</l>
-            <stage><hi rend="italic"><em>La porte reste ouverte.</em></hi></stage>
-            <l n="147" xml:id="l147">Pose là mes carions, ma guitare.</l>
-            <stage><hi rend="italic"><em>À elle-même.</em></hi></stage>
-            <l n="149" xml:id="l149">Ce cher Gustave !... Oh ! c’est que j’ai une tête aussi, moi ! et je veux lui prouver que j’étais digne d’être la femme d’un colonel de hussards ! Si je l’avais su plus tôt, je serais venue partager sa captivité ; mais ne pas m’écrire, pas une seule lettre depuis huit jours... il devait bien se douter que je n’y tiendrais pas, que je prendrais la poste, que je viendrais moi-même savoir de ses nouvelles, et j’en ai appris de jolies... en prison depuis huit jours !... Voilà donc son appartement ? Ce n’est pas joli, une prison, cela ne vaut pas notre petit salon de la rue du Helder ! c’est une horreur, une injustice d’y envoyer le plus aimable, le plus joli garçon de l’armée ; et puis enfin, un homme marié... Si j’étais à la place de Gustave, je sais bien ce que je ferais, je demanderais ma retraite, je quitterais le service, et je ne quitterais plus ma femme.</l>
-            <stage><hi rend="italic"><em>Écoutant.</em></hi></stage>
-            <l n="151" xml:id="l151">Hein ! ah ! mon Dieu ! j’ai cru que c’était lui ; non, non, personne. Anna, Anna, tenez, vous donnerez cette bourse à madame Doucet, la femme du concierge ! Cette bonne Marguerite, mon excellente nourrice ! j’étais bien sûre qu’elle me donnerait les moyens de surprendre mon mari. Cette porte dont j’ai seule la clef... c’est charmant, il me croit à quatre-vingts lieues de lui. Aussitôt que tout le monde sera endormi ; au milieu de l’obscurité, j’ouvre la porte secrète, et comme une fée bienfaisante qui prend pitié de sa solitude, je viens le consoler de l’injustice du sort ; et d’abord pour commencer, une musique mystérieuse...</l>
-            <stage><hi rend="italic"><em>Air : Celle que j’aime tant.</em></hi></stage>
-            <l n="153" xml:id="l153">Ah ! ah ! j’oubliais cette fenêtre, si elle pouvait me servir !</l>
-            <stage><hi rend="italic"><em>Elle s’approche.</em></hi></stage>
-            <l n="155" xml:id="l155">elle donne sur une t errasse... ah ! comme c’est triste... Il y a quelqu’un, un officier ; si c’était lui !</l>
-            <stage><hi rend="italic"><em>Elle s’avance davantage.</em></hi></stage>
-            <l n="157" xml:id="l157">Non ; oh ! Gustave est bien mieux, plus grand... Eh mais ! comme il me regarde !</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Turenne.</em></hi></stage>
-            <stage><hi rend="italic"><em>Elle sort par la porte secrète.</em></hi></stage>
-            <l n="160" xml:id="l160"> </l>
-            <l n="161" xml:id="l161"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="162" xml:id="l162"> </l>
-          <stage>LÉON, <em>accourant</em></stage>
-          <sp who="" xml:id="5-1">
-            <speaker> </speaker>
-            <stage><hi rend="italic"><em>Il arrive essoufflé, s’arrête, et regarde de tous les côtés</em></hi></stage>
-            <l n="164" xml:id="l164">Elle était là ! je l’ai vue... oh ! oui, c’était bien elle, je l’ai parfaitement reconnue. Par où s’est-elle échappée ? qui peut l’avoir introduite dans la tour ? qu’est-ce qui l’amène ici ?... Si c’était... oh ! non : par exemple, il y aurait de quoi en perdre la tête de bonheur.</l>
-            <stage><hi rend="italic"><em>On entend sur la guitare, accompagnée par l’orchestre, là ritournelle de l’air suivant.</em></hi></stage>
-            <l n="166" xml:id="l166">Qu’entends-je ? elle est là.</l>
-            <stage><hi rend="italic"><em>Montrant la prison à gauche. Il va écouter à la porte, et témoigne la plus vive émotion.</em></hi></stage>
-            <l n="168" xml:id="l168"> </l>
-            <l n="169" xml:id="l169"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="170" xml:id="l170"> </l>
-          <sp who="léon" xml:id="6-1">
-            <speaker>LÉON, GUSTAVE, <em>un flambeau à la main</em></speaker>
-            <l n="171" xml:id="l171"> </l>
-          </sp>
-          <sp who="gustave" xml:id="6-2">
-            <speaker>GUSTAVE, <em>ayant l’air de saluer d’autres prisonniers.</em></speaker>
-            <l n="172" xml:id="l172">Bonsoir, Messieurs, bonsoir ! ce n’est qu’en prison que l’on boit du bon vin de Champagne.</l>
-          </sp>
-          <sp who="léon" xml:id="6-3">
-            <speaker>LÉON.</speaker>
-            <l n="173" xml:id="l173">Ah ! c’est vous, colonel !</l>
-          </sp>
-          <sp who="gustave" xml:id="6-4">
-            <speaker>GUSTAVE.</speaker>
-            <l n="174" xml:id="l174">Oui ; c’est pour vous que j’en suis resté à ma seconde bouteille.</l>
-          </sp>
-          <sp who="léon" xml:id="6-5">
-            <speaker>LÉON, <em>lui faisant signe de la main.</em></speaker>
-            <l n="175" xml:id="l175">Silence ! ne faites pas de bruit.</l>
-          </sp>
-          <sp who="gustave" xml:id="6-6">
-            <speaker>GUSTAVE.</speaker>
-            <l n="176" xml:id="l176">Qu’est-ce que c’est donc ?</l>
-          </sp>
-          <sp who="léon" xml:id="6-7">
-            <speaker>LÉON.</speaker>
-            <l n="177" xml:id="l177">Imaginez-vous, colonel, imaginez-vous... une femme...</l>
-          </sp>
-          <sp who="gustave" xml:id="6-8">
-            <speaker>GUSTAVE.</speaker>
-            <l n="178" xml:id="l178">Une femme ! eh bien ! ne tremblez donc pas comme cela !</l>
-          </sp>
-          <sp who="léon" xml:id="6-9">
-            <speaker>LÉON.</speaker>
-            <l n="179" xml:id="l179">C’est que je l’ai vue.</l>
-          </sp>
-          <sp who="gustave" xml:id="6-10">
-            <speaker>GUSTAVE.</speaker>
-            <l n="180" xml:id="l180">Où donc ?</l>
-          </sp>
-          <sp who="léon" xml:id="6-11">
-            <speaker>LÉON.</speaker>
-            <l n="181" xml:id="l181">Ici, dans celte chambre ; celle que j’aime...</l>
-          </sp>
-          <sp who="gustave" xml:id="6-12">
-            <speaker>GUSTAVE.</speaker>
-            <l n="182" xml:id="l182">C’est impossible... Il croit voir des femmes partout.</l>
-            <stage><hi rend="italic"><em>On entend un nouveau prélude.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="6-13">
-            <speaker>LÉON.</speaker>
-            <l n="184" xml:id="l184">Écoutez.</l>
-            <stage><hi rend="italic"><em>Même motif que la prélude de guitare.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : La ! j’étais en si doux servage.</em></hi></stage>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>GUSTAVE.</stage>
-          </sp>
-          <sp who="léon" xml:id="6-14">
-            <speaker>LÉON.</speaker>
-            <l n="188" xml:id="l188">Comment ! colonel, vous pensez que ce n’est pas pour moi qu’elle est ici ?</l>
-          <stage>GUSTAVE <em>et</em> LÉON, <em>se regardant l’un et l’autre.</em></stage>
-          </sp>
-          <sp who="léon" xml:id="6-15">
-            <speaker>LÉON.</speaker>
-            <l n="189" xml:id="l189">Il y a de fortes raisons contre ; mais enfin, dans le doute, attaquons toujours, et nous verrons bien... Au plus adroit.</l>
-          <stage>GUSTAVE, <em>prend une chaise et s’asseoit au milieu du théâtre.</em></stage>
-          </sp>
-          <sp who="léon" xml:id="6-16">
-            <speaker>LÉON, <em>debout à la gauche de Gustave.</em></speaker>
-            <l n="190" xml:id="l190">Au plus adroit, cela n’est pas généreux ; comment voulez-vous que moi qui commence...</l>
-          </sp>
-          <sp who="gustave" xml:id="6-17">
-            <speaker>GUSTAVE.</speaker>
-            <l n="191" xml:id="l191">Raison de plus, cette campagne-là vous formera bien mieux que tous les traités élémentaires ; la théorie est très bonne, mais il n’y a rien comme la pratique : vous allez voir.</l>
-          </sp>
-          <sp who="léon" xml:id="6-18">
-            <speaker>LÉON.</speaker>
-            <l n="192" xml:id="l192">À la bonne heure, mais vous devriez me laisser essayer seul, parce que vous qui avez une femme...</l>
-          </sp>
-          <sp who="gustave" xml:id="6-19">
-            <speaker>GUSTAVE.</speaker>
-            <l n="193" xml:id="l193">Mon ami, ce sont des considérations en théorie, mais en pratique ça ne dit rien ; ainsi, attention ! chacun pour soi, la campagne est ouverte.</l>
-          </sp>
-          <sp who="léon" xml:id="6-20">
-            <speaker>LÉON.</speaker>
-            <l n="194" xml:id="l194">Ah ! mon Dieu ! mon Dieu ! colonel, encore un mot. Qu’est-ce que vous me conseillez de faire ?</l>
-          </sp>
-          <sp who="gustave" xml:id="6-21">
-            <speaker>GUSTAVE.</speaker>
-            <l n="195" xml:id="l195">Parbleu ! si je vous le dis, le beau mérite !</l>
-          </sp>
-          <sp who="léon" xml:id="6-22">
-            <speaker>LÉON.</speaker>
-            <l n="196" xml:id="l196">Non, c’est seulement pour commencer, après j’irai tout seul.</l>
-          </sp>
-          <sp who="gustave" xml:id="6-23">
-            <speaker>GUSTAVE.</speaker>
-            <l n="197" xml:id="l197">Je crois que, dans les principes, il faut d’abord sommer la place de se rendre ; vous verrez cela au CHAPITRE TROISIÈME.</l>
-          </sp>
-          <sp who="léon" xml:id="6-24">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic">Oui, au CHAPITRE TROISIÈME, <em>des billets doux et des déclarations.</em></hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="6-25">
-            <speaker>GUSTAVE.</speaker>
-            <l n="199" xml:id="l199">Je suis déjà en train de composer mon manifeste.</l>
-          </sp>
-          <sp who="léon" xml:id="6-26">
-            <speaker>LÉON, <em>se mettant à la table.</em></speaker>
-            <l n="200" xml:id="l200">Eh ! vite, mettons-nous à l’ouvrage.</l>
-            <stage><hi rend="italic"><em>Duo.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Tigre femelle (d’un jour à Paris.)</em></hi></stage>
-          <stage>LÉON.</stage>
-          </sp>
-          <sp who="gustave" xml:id="6-27">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>LÉON.</stage>
-          </sp>
-          <sp who="gustave" xml:id="6-28">
-            <speaker>GUSTAVE.</speaker>
-            <l n="204" xml:id="l204">Maintenant, comment faire parvenir ?... Si je pouvais gagner le geôlier, et l’engager à remettre ce billet ?</l>
-          <stage>LÉON.</stage>
-          </sp>
-          <sp who="gustave" xml:id="6-29">
-            <speaker>GUSTAVE.</speaker>
-            <l n="205" xml:id="l205">Il faut cependant tâcher de m’en débarrasser.</l>
-          <stage>LÉON.</stage>
-          </sp>
-          <sp who="gustave" xml:id="6-30">
-            <speaker>GUSTAVE.</speaker>
-            <l n="206" xml:id="l206">Le plus terrible, c’est qu’il est toujours là ; s’il s’en allait !</l>
-          <stage>LÉON, <em>qui a ployé sa lettre.</em></stage>
-          </sp>
-          <sp who="gustave" xml:id="6-31">
-            <speaker>GUSTAVE, <em>ployant sa lettre, et regardant en dessous.</em></speaker>
-            <l n="207" xml:id="l207">Ah çà ! mon jeune ami, est-ce que nous ne nous couchons pas de bonne heure au régiment ?</l>
-          <stage>LÉON, <em>à part.</em></stage>
-          </sp>
-          <sp who="gustave" xml:id="6-32">
-            <speaker>GUSTAVE, <em>se levant.</em></speaker>
-            <l n="208" xml:id="l208">Si vraiment ; et vous, colonel ?</l>
-          <stage>LÉON, <em>de même.</em></stage>
-          </sp>
-          <sp who="gustave" xml:id="6-33">
-            <speaker>GUSTAVE.</speaker>
-            <l n="209" xml:id="l209">Oh ! moi, non : je ne rentrerai pas encore.</l>
-            <stage><hi rend="italic"><em>Il s’assied sur son fauteuil, auprès de la table.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="6-34">
-            <speaker>LÉON.</speaker>
-            <l n="211" xml:id="l211">Ni moi non plus.</l>
-            <stage><hi rend="italic"><em>Il s’assied aussi sur une chaise de l’autre côté.</em></hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="6-35">
-            <speaker>GUSTAVE.</speaker>
-            <l n="213" xml:id="l213">Une faut pas que ce soit par politesse, ne vous gênez pas, mon lit de camp est là-dedans.</l>
-          </sp>
-          <sp who="léon" xml:id="6-36">
-            <speaker>LÉON.</speaker>
-            <l n="214" xml:id="l214">Non, non, je vous attendrai.</l>
-          </sp>
-          <sp who="gustave" xml:id="6-37">
-            <speaker>GUSTAVE.</speaker>
-            <l n="215" xml:id="l215">Je vois que vous êtes pour la guerre d’observation.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="217" xml:id="l217">Il ne me quittera pas ! Si je pouvais l’endormir avec mes campagnes d’Allemagne...</l>
-          </sp>
-          <sp who="léon" xml:id="6-38">
-            <speaker>LÉON, <em>à part.</em></speaker>
-            <l n="218" xml:id="l218">Oh ! la bonne idée : une fois sur le lit de camp, le vin de Champagne qu’il a bu... ce ne sera pas long, et pendant son sommeil...</l>
-            <stage><hi rend="italic"><em>Haut, il se lève.</em></hi></stage>
-            <l n="220" xml:id="l220">Ma foi, mon général, j’ai beau regarder, l’ennemi ne se montre pas ; je crois qu’il n’y aura rien à faire ce soir.</l>
-          </sp>
-          <sp who="gustave" xml:id="6-39">
-            <speaker>GUSTAVE.</speaker>
-            <l n="221" xml:id="l221">Je le crois aussi. Nous ferons bien de battre en retraite, et de remettre l’attaque à demain matin.</l>
-          </sp>
-          <sp who="léon" xml:id="6-40">
-            <speaker>LÉON.</speaker>
-            <l n="222" xml:id="l222">Ainsi donc, suspension d’armes.</l>
-          </sp>
-          <sp who="gustave" xml:id="6-41">
-            <speaker>GUSTAVE.</speaker>
-            <l n="223" xml:id="l223">Suspension d’armes, et allons nous coucher.</l>
-            <stage><hi rend="italic"><em>Duo.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air nouveau de M. Granier.</em></hi></stage>
-          <stage>LÉON <em>et</em> GUSTAVE.</stage>
-          </sp>
-          <sp who="gustave" xml:id="6-42">
-            <speaker>GUSTAVE, <em>à part, apercevant de la lumière à la lucarne à gauche.</em></speaker>
-            <stage><hi rend="italic"><em>Feignant d’écouter de la fenêtre à droite.</em></hi></stage>
-          <stage>LÉON.</stage>
-          </sp>
-          <sp who="gustave" xml:id="6-43">
-            <speaker>GUSTAVE.</speaker>
-            <stage><hi rend="italic"><em>Léon se précipite vers la fenêtre à droite, et pendant ce temps, Gustave jette son billet par la lucarne à gauche.</em></hi></stage>
-          <stage>LÉON.</stage>
-          </sp>
-          <sp who="léon" xml:id="6-44">
-            <speaker>LÉON, <em>revenant de la croisée.</em></speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>GUSTAVE.</stage>
-          </sp>
-          <sp who="léon" xml:id="6-45">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic"><em>Ils sortent par la porte du fond à gauche.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="6-46">
-            <speaker>LÉON <em>et</em> GUSTAVE.</speaker>
-            <l n="230" xml:id="l230"> </l>
-            <l n="231" xml:id="l231"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="232" xml:id="l232"> </l>
-          <sp who="mathilde" xml:id="7-1">
-            <speaker>MATHILDE, <em>seule</em></speaker>
-            <l n="233" xml:id="l233"> </l>
-            <stage><hi rend="italic"><em>Elle ouvre la porte précipitamment : elle tient la lettre que Gustave a jetée par la lucarne.</em></hi></stage>
-            <l n="235" xml:id="l235">Il n’y est plus, c’est bien heureux, car j’allais me trahir, lui faire une scène affreuse... Oui, oui, c’est bien son écriture. Quelle lettre ! lui que je croyais la fidélité même, il ne sait pas plus tôt qu’il y a une femme près de lui, qu’il lui écrit ; et sans la connaître, sans l’avoir jamais vue, il ose lui demander... Oh ! par exemple, cela me passe : un mari qui demande un rendez-vous à une autre qu’à sa femme ! c’est une horreur, c’est une indignité. Eh bien ! ce rendez-vous, il l’obtiendra, j’y viendrai, et nous verrons...</l>
-            <stage><hi rend="italic"><em>Réfléchissant.</em></hi></stage>
-            <l n="237" xml:id="l237">Mais s’il n’avait voulu que s’amuser ; s’il ne venait pas ! Eh bien ! maintenant j’en serais fâchée ; oui, j’en serais fâchée, parce que cela me laisserait des doutes... Oui, décidément j’irai, et puis sa femme... il n’y a pas de danger. Voilà ma réponse...</l>
-            <stage><hi rend="italic"><em>Relisant la lettre de Gustave.</em></hi></stage>
-            <l n="239" xml:id="l239">« sous mon colback à main droite. » Ah ! le voici, oui, c’est bien son colback, c’est moi qui l’ai brodé ; je n’aurais jamais pensé qu’il dût servir... Je l’entends.</l>
-            <stage><hi rend="italic"><em>Elle place la lettre sous le colback qui se trouve sur une chaise à côté de la porte à gauche.</em></hi></stage>
-            <l n="241" xml:id="l241">Sauvons-nous.</l>
-            <stage><hi rend="italic"><em>Elle sort par la porte secrète à gauche. Ritournelle de l’air suivant.</em></hi></stage>
-            <l n="243" xml:id="l243"> </l>
-            <l n="244" xml:id="l244"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="245" xml:id="l245"> </l>
-          <sp who="léon" xml:id="8-1">
-            <speaker>LÉON, <em>seul, sortant de la chambre du fond, à gauche</em></speaker>
-            <l n="246" xml:id="l246"> </l>
-            <stage><hi rend="italic"><em>Air de Toberne.</em></hi></stage>
-            <stage><hi rend="italic"><em>Se tournant du côté de Gustave.</em></hi></stage>
-            <l n="249" xml:id="l249">Il faisait d’abord semblant, mais à la fin le voilà parti.</l>
-            <stage><hi rend="italic"><em>Regardant la lucarne.</em></hi></stage>
-            <l n="251" xml:id="l251">Si j’appelais, au moindre bruit, le colonel serait sur pied... Ah ! en montant sur celte chaise, je puis atteindre à cette lucarne, la voir, lui parler ; ce sera toujours cela. Le colonel a raison, je crois que je me forme.</l>
-            <stage><hi rend="italic"><em>En ôtant le colback qui est sur la chaise, il voit la lettre de Mathilde.</em></hi></stage>
-            <stage><hi rend="italic">Qu’est-ce que je vois là ? une lettre sous le colback du colonel ! elle n’est pas cachetée, lisons : « <em>Impossible, colonel, de résister à votre style séduisant ; ce soir, à minuit dans cette salle. </em>» Je sens une sueur froide qui me prend, c’est lui qu’on aime, et c’est moi qui suis dédaigné. Elle a raison, je l’aimais réellement, je l’idolâtrais, tandis que lui... Oh ! voilà une bonne leçon : il a réussi, parce qu’il était mauvais sujet ; mais patience, je n’ai encore que dix-huit ans, je parviendrai, et je jure à mon tour de n’épargner personne. Un rendez-vous ! on lui accorde un rendez-vous ! est-il heureux ! Mais comment a-t-il pu faire ? Et quel est donc son ascendant ? il ne l’a pas vue, je n’ai pas quitté cette place, et en moins d’un quart d’heure, il lui écrit, il reçoit une réponse, il obtient un rendez-vous... oh ! j’en conviens, c’est mon maître, et je ne pourrai jamais lutter avec lui... Et pourquoi donc ? il parlait de ruses de guerre : oui... celle-ci peut réussir.</hi></stage>
-            <stage><hi rend="italic"><em>Il déchire le billet, va à la table, en écrit un autre et le remet sous le colback.</em></hi></stage>
-            <l n="255" xml:id="l255">Ce rendez-vous qu’on lui accorde, je l’aurai, et par une perfidie ; c’est cela, c’est bien commencé.</l>
-          </sp>
-          <sp who="gustave" xml:id="8-2">
-            <speaker>GUSTAVE, <em>de sa chambre à coucher.</em></speaker>
-            <l n="256" xml:id="l256">Eh ! camarade...</l>
-          </sp>
-          <sp who="léon" xml:id="8-3">
-            <speaker>LÉON.</speaker>
-            <l n="257" xml:id="l257">C’est lui, je l’entends.</l>
-            <l n="258" xml:id="l258"> </l>
-            <l n="259" xml:id="l259"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="260" xml:id="l260"> </l>
-          <sp who="léon" xml:id="9-1">
-            <speaker>GUSTAVE, LÉON</speaker>
-            <l n="261" xml:id="l261"> </l>
-          </sp>
-          <sp who="gustave" xml:id="9-2">
-            <speaker>GUSTAVE, <em>se frottant les yeux.</em></speaker>
-            <l n="262" xml:id="l262">Dieu me pardonne, en voulant rendormir, je crois que j’ai fait un somme, et voilà que l’ennemi est déjà sur pied. Dites donc, mon jeune ami, est-ce que vous êtes somnambule ?</l>
-          </sp>
-          <sp who="léon" xml:id="9-3">
-            <speaker>LÉON.</speaker>
-            <l n="263" xml:id="l263">Mon Dieu non, c’est qu’il m’était impossible de rester en place.</l>
-          </sp>
-          <sp who="gustave" xml:id="9-4">
-            <speaker>GUSTAVE.</speaker>
-            <l n="264" xml:id="l264">Je conçois ! un début...</l>
-            <stage><hi rend="italic"><em>Air : L’amour qu’Edmond a su me taire.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="9-5">
-            <speaker>LÉON.</speaker>
-            <l n="266" xml:id="l266">L’ennemi, je n’y songe plus ; oh ! mon Dieu, ce n’est pas à un écolier de se mesurer avec son maître. Mais puisque vous dormiez si bien, pourquoi donc êtes-vous venu ici ?</l>
-          </sp>
-          <sp who="gustave" xml:id="9-6">
-            <speaker>GUSTAVE.</speaker>
-            <l n="267" xml:id="l267">Ah ! c’est que... c’est que j’avais oublié mon colback, je ne puis pas dormir sans lui.</l>
-          </sp>
-          <sp who="léon" xml:id="9-7">
-            <speaker>LÉON, <em>à part.</em></speaker>
-            <l n="268" xml:id="l268">C’est bien cela... morbleu !</l>
-          </sp>
-          <sp who="gustave" xml:id="9-8">
-            <speaker>GUSTAVE.</speaker>
-            <l n="269" xml:id="l269">Hein ? il me semble que vous jurez.</l>
-          </sp>
-          <sp who="léon" xml:id="9-9">
-            <speaker>LÉON.</speaker>
-            <l n="270" xml:id="l270">Moi, colonel ?</l>
-          </sp>
-          <sp who="gustave" xml:id="9-10">
-            <speaker>GUSTAVE.</speaker>
-            <l n="271" xml:id="l271">À la bonne heure, au moins... vous vous formez ; j’étais sûr qu’on ferait quelque chose de vous.</l>
-            <stage><hi rend="italic"><em>Prenant le colback, à part.</em></hi></stage>
-            <l n="273" xml:id="l273">Je tiens la réponse.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="275" xml:id="l275">Encore une leçon comme celle-ci, et votre éducation sera bien avancée.</l>
-          </sp>
-          <sp who="léon" xml:id="9-11">
-            <speaker>LÉON, <em>avec malice.</em></speaker>
-            <l n="276" xml:id="l276">Oui ; je crois que je commence.</l>
-            <stage><hi rend="italic"><em>Pendant ce temps, Gustave tourne le dos à Léon, et déroule le billet.</em></hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="9-12">
-            <speaker>GUSTAVE, <em>lisant.</em></speaker>
-            <stage><hi rend="italic">« <em>À minuit, sur la terrasse.</em> »</hi></stage>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="280" xml:id="l280">À merveille ! mais comment pourra-t-elle me rejoindre ? Il y a sans doute quelque escalier secret ; d’ailleurs, l’amour y pourvoira.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="282" xml:id="l282">Ah çà ! camarade,</l>
-            <stage><hi rend="italic"><em>Mettant son colback sur sa tête.</em></hi></stage>
-            <l n="284" xml:id="l284">maintenant que j’ai ce qu’il me faut, je retourne achever mon somme ; quant à vous, je crois que vous serez bien ici.</l>
-          </sp>
-          <sp who="léon" xml:id="9-13">
-            <speaker>LÉON.</speaker>
-            <l n="285" xml:id="l285">Oui, moi qui ai un sommeil agité, je vous empêcherais de dormir.</l>
-          </sp>
-          <sp who="gustave" xml:id="9-14">
-            <speaker>GUSTAVE.</speaker>
-            <l n="286" xml:id="l286">Et moi donc, je ronfle quelquefois !</l>
-          </sp>
-          <sp who="léon" xml:id="9-15">
-            <speaker>LÉON, <em>s’asseyant sur le fauteuil près de la table.</em></speaker>
-            <l n="287" xml:id="l287">Je conçois, nous nous ferions du tort ; ainsi, chacun pour soi.</l>
-            <stage><hi rend="italic"><em>Air : Mais en amour, comme à la guerre. (Fragment des Rendez-vous bourgeois.)</em></hi></stage>
-            <stage><hi rend="italic"><em>Léon s’étend dans un fauteuil.</em></hi></stage>
-          <stage>GUSTAVE.</stage>
-          </sp>
-          <sp who="léon" xml:id="9-16">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>GUSTAVE.</stage>
-          </sp>
-          <sp who="léon" xml:id="9-17">
-            <speaker>LÉON, <em>souriant.</em></speaker>
-            <stage><hi rend="italic"><em>Gustave sort en emportant la bougie, et on entend fermer la porte à double tour.</em></hi></stage>
-          <stage>LÉON.</stage>
-          </sp>
-          <sp who="gustave" xml:id="9-18">
-            <speaker>GUSTAVE.</speaker>
-            <l n="292" xml:id="l292"> </l>
-            <l n="293" xml:id="l293"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="294" xml:id="l294"> </l>
-          <sp who="léon" xml:id="10-1">
-            <speaker>LÉON, <em>seul</em></speaker>
-            <l n="295" xml:id="l295"> </l>
-            <l n="296" xml:id="l296">Eh bien ! il me laisse sans lumière, il m’enferme ; c’est égal, le champ de bataille me reste. Je suis encore tout étonné d’avoir pu le mettre en défaut, j’ose à peine croire à mon triomphe ; oui, il est là-bas à se morfondre, et c’est ici qu’elle va venir ! elle va venir... Oh ! j’ai une peur, et jamais mon cœur n’a battu ainsi. Que vais-je dire ? comment justifier une pareille hardiesse ? Si elle se fâche... Ah ! mon Dieu ! pourquoi ai-je surpris ce rendez-vous ? J’ai envie d’appeler le colonel, de lui tout avouer ; mais c’est pour le coup qu’il m’appellerait un écolier, qu’il rirait de ma faiblesse.</l>
-            <stage><hi rend="italic"><em>Cherchant à s’enhardir.</em></hi></stage>
-            <l n="298" xml:id="l298">Allons, du courage ; oui, tant pis, j’en aurai ; voilà que j’en ai ! Je crois entendre du bruit ; non, non, ce n’est pas encore elle. C’est que c’est terrible ! se trouver ainsi en tête à tête, et pour la première fois de ma vie ! Oh ! si elle pouvait ne pas venir... la porte s’ouvre, c’est fini, je suis perdu.</l>
-            <l n="299" xml:id="l299"> </l>
-            <l n="300" xml:id="l300"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="301" xml:id="l301"> </l>
-          <sp who="léon" xml:id="11-1">
-            <speaker>MATHILDE, <em>entrant par la porte à gauche,</em> LÉON</speaker>
-            <l n="302" xml:id="l302"> </l>
-            <stage><hi rend="italic"><em>Duo.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Ah ! Monseigneur, je suis tremblante. </em></hi></stage>
-          <stage>MATHILDE.</stage>
-          </sp>
-          <sp who="léon" xml:id="11-2">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>MATHILDE.</stage>
-          </sp>
-          <sp who="léon" xml:id="11-3">
-            <speaker>LÉON.</speaker>
-            <l n="306" xml:id="l306">L’obscurité me favorise, et je puis contrefaire ma voix, il ne me reconnaîtra pas. Êtes-vous là ?</l>
-          <stage>MATHILDE.</stage>
-          </sp>
-          <sp who="léon" xml:id="11-4">
-            <speaker>LÉON.</speaker>
-            <l n="307" xml:id="l307">Oui, je vous attendais.</l>
-          </sp>
-          <sp who="mathilde" xml:id="11-5">
-            <speaker>MATHILDE, <em>à part.</em></speaker>
-            <l n="308" xml:id="l308">Comme il est ému ! tant mieux, c’est qu’il pense à moi et qu’il a des remords.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="310" xml:id="l310">Je fais mal en venant ainsi, car je suis sûre que vous me trompez.</l>
-          </sp>
-          <sp who="léon" xml:id="11-6">
-            <speaker>LÉON, <em>à part, et intimidé.</em></speaker>
-            <l n="311" xml:id="l311">Ah ! mon Dieu ? elle se doute de quelque chose.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="313" xml:id="l313">Non, madame, je ne vous trompe pas.</l>
-          </sp>
-          <sp who="mathilde" xml:id="11-7">
-            <speaker>MATHILDE, <em>à part.</em></speaker>
-            <l n="314" xml:id="l314">Il veut aussi déguiser sa voix, mais mon cœur l’a reconnu.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="316" xml:id="l316">Eh bien ! me voilà ; que voulez-vous me dire ?</l>
-          </sp>
-          <sp who="léon" xml:id="11-8">
-            <speaker>LÉON.</speaker>
-            <l n="317" xml:id="l317">Ne le devinez-vous pas ?</l>
-          </sp>
-          <sp who="mathilde" xml:id="11-9">
-            <speaker>MATHILDE.</speaker>
-            <l n="318" xml:id="l318">Non, je veux que vous m’appreniez vous-même... vous hésitez.</l>
-            <stage><hi rend="italic"><em>Lui prenant la main.</em></hi></stage>
-            <l n="320" xml:id="l320">Vous avez raison.</l>
-          </sp>
-          <sp who="léon" xml:id="11-10">
-            <speaker>LÉON.</speaker>
-            <l n="321" xml:id="l321">Vous croyez que j’ai raison ? La jolie main ; il me semble que ma frayeur se dissipe ; oh ! que c’est joli, une femme ?</l>
-          </sp>
-          <sp who="mathilde" xml:id="11-11">
-            <speaker>MATHILDE, <em>à part.</em></speaker>
-            <l n="322" xml:id="l322">Il n’ose parler, sa main tremble dans la mienne ; j’étais bien sûre qu’il ne pourrait se résoudre à me trahir ; voyons encore.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="324" xml:id="l324">Eh bien ! mon ami...</l>
-          </sp>
-          <sp who="léon" xml:id="11-12">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic"><em>Mon ami !</em> Que ce nom-là est doux ! jamais on ne m’appela ainsi.</hi></stage>
-            <stage><hi rend="italic"><em>S’encourageant.</em></hi></stage>
-            <l n="327" xml:id="l327">Oui, c’est le moment ; souvenons-nous des leçons du colonel.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="329" xml:id="l329">Eh bien ! oui, Madame ; oui, je crois que je vous aime.</l>
-          </sp>
-          <sp who="mathilde" xml:id="11-13">
-            <speaker>MATHILDE.</speaker>
-            <l n="330" xml:id="l330">Vous m’aimez ?</l>
-          </sp>
-          <sp who="léon" xml:id="11-14">
-            <speaker>LÉON.</speaker>
-            <l n="331" xml:id="l331">Ah ! ne vous fâchez pas.</l>
-          </sp>
-          <sp who="mathilde" xml:id="11-15">
-            <speaker>MATHILDE, <em>retirant sa main.</em></speaker>
-            <l n="332" xml:id="l332">Le perfide !</l>
-            <stage><hi rend="italic"><em>Air : Ce que j’éprouve en vous voyant.</em></hi></stage>
-            <stage><hi rend="italic"><em>Premier couplet.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="11-16">
-            <speaker>LÉON, <em>lui reprenant la main.</em></speaker>
-            <stage><hi rend="italic"><em>Deuxième couplet.</em></hi></stage>
-            <stage><hi rend="italic"><em>Apercevant l’anneau qui est au doigt de Mathilde.</em></hi></stage>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <stage><hi rend="italic"><em>Mettant l’anneau à son doigt.</em></hi></stage>
-            <stage><hi rend="italic"><em>Il baise la main de Mathilde, et dit à part.</em></hi></stage>
-            <l n="340" xml:id="l340">Allons, montrons-nous digne de notre maître... CHAPITRE IV.</l>
-            <stage><hi rend="italic"><em>On entend à la porte à gauche le bruit des verrous que l’on tire.</em></hi></stage>
-          </sp>
-          <sp who="mathilde" xml:id="11-17">
-            <speaker>MATHILDE, <em>s’enfuyant et rentrant par la porte secrète.</em></speaker>
-            <l n="342" xml:id="l342">Qui peut venir ? fuyons.</l>
-            <l n="343" xml:id="l343"> </l>
-            <l n="344" xml:id="l344"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="345" xml:id="l345"> </l>
-          <sp who="léon" xml:id="12-1">
-            <speaker>GUSTAVE, LÉON</speaker>
-            <l n="346" xml:id="l346"> </l>
-          </sp>
-          <sp who="gustave" xml:id="12-2">
-            <speaker>GUSTAVE, <em>soufflant dans ses doigts et frappant du pied. En entrant, il pose la bougie sur la table.</em></speaker>
-            <l n="347" xml:id="l347">Ouf ! je suis gelé ; une heure de faction par un vent diabolique ! et personne !</l>
-          </sp>
-          <sp who="léon" xml:id="12-3">
-            <speaker>LÉON.</speaker>
-            <l n="348" xml:id="l348">Ah çà ! colonel, est-ce que vous êtes somnambule ?</l>
-          </sp>
-          <sp who="gustave" xml:id="12-4">
-            <speaker>GUSTAVE.</speaker>
-            <l n="349" xml:id="l349">Pourquoi donc ?</l>
-          </sp>
-          <sp who="léon" xml:id="12-5">
-            <speaker>LÉON.</speaker>
-            <l n="350" xml:id="l350">Vous n’avez pas quitté la terrasse de la nuit, cela m’a inquiété pour vous ; heureusement que vous aviez pris votre colback.</l>
-          </sp>
-          <sp who="gustave" xml:id="12-6">
-            <speaker>GUSTAVE, <em>étonné et le regardant.</em></speaker>
-            <l n="351" xml:id="l351">Qu’est-ce qu’il a donc le petit sous-lieutenant ? ses yeux éveillés...</l>
-          </sp>
-          <sp who="léon" xml:id="12-7">
-            <speaker>LÉON.</speaker>
-            <l n="352" xml:id="l352">Colonel, si vous vouliez mon fauteuil ?</l>
-            <stage><hi rend="italic"><em>Appuyant.</em></hi></stage>
-            <l n="354" xml:id="l354">Maintenant que j’ai ce qu’il me faut, je vais achever mon somme.</l>
-          </sp>
-          <sp who="gustave" xml:id="12-8">
-            <speaker>GUSTAVE, <em>l’arrêtant.</em></speaker>
-            <l n="355" xml:id="l355">Un moment, un moment, camarade ; je vois que vous avez deviné ma mésaventure ; eh bien ! je ne suis pas fier, moi, j’en conviens.</l>
-            <stage><hi rend="italic"><em>D’un air de confidence.</em></hi></stage>
-            <l n="357" xml:id="l357">Voilà une heure que j’attends, on m’a manqué de parole.</l>
-            <stage><hi rend="italic"><em>Air : À Paris, et loin de sa mère (du traité nul.)</em></hi></stage>
-            <stage><hi rend="italic"><em>Premier couplet.</em></hi></stage>
-          </sp>
-          <sp who="léon" xml:id="12-9">
-            <speaker>LÉON, <em>avec malice.</em></speaker>
-            <stage><hi rend="italic"><em>Avec un air de triomphe.</em></hi></stage>
-          <stage>GUSTAVE.</stage>
-          </sp>
-          <sp who="léon" xml:id="12-10">
-            <speaker>LÉON, <em>souriant.</em></speaker>
-            <l n="361" xml:id="l361">Voyez-vous, mes élèves ! c’est très bien ; ah çà ! vous n’avez pas fait de gaucheries ?</l>
-          <stage>GUSTAVE, <em>d’un air de satisfaction.</em></stage>
-          </sp>
-          <sp who="léon" xml:id="12-11">
-            <speaker>LÉON.</speaker>
-            <stage><hi rend="italic"><em>Deuxième couplet.</em></hi></stage>
-          <stage>GUSTAVE.</stage>
-          </sp>
-          <sp who="léon" xml:id="12-12">
-            <speaker>LÉON, <em>souriant.</em></speaker>
-            <stage><hi rend="italic"><em>Montrant l’anneau de Mathilde, et le lui passant.</em></hi></stage>
-          <stage>GUSTAVE.</stage>
-          </sp>
-          <sp who="léon" xml:id="12-13">
-            <speaker>LÉON.</speaker>
-            <l n="364" xml:id="l364">Une alliance ! eh ! mais ! mon ami, c’est une femme mariée.</l>
-          <stage>GUSTAVE, <em>regardant l’anneau.</em></stage>
-          </sp>
-          <sp who="léon" xml:id="12-14">
-            <speaker>LÉON, <em>fâché.</em></speaker>
-            <l n="365" xml:id="l365">Laissez donc !</l>
-          </sp>
-          <sp who="gustave" xml:id="12-15">
-            <speaker>GUSTAVE.</speaker>
-            <l n="366" xml:id="l366">C’est bien plus drôle.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="368" xml:id="l368">Parbleu ! je vais voir le nom du mari.</l>
-            <stage><hi rend="italic"><em>Il l’ouvre et reste stupéfait.</em></hi></stage>
-            <l n="370" xml:id="l370">Ah ! mon Dieu !</l>
-          </sp>
-          <sp who="léon" xml:id="12-16">
-            <speaker>LÉON.</speaker>
-            <l n="371" xml:id="l371">Eh bien ! qu’avez-vous donc ?</l>
-          </sp>
-          <sp who="gustave" xml:id="12-17">
-            <speaker>GUSTAVE, <em>troublé.</em></speaker>
-            <l n="372" xml:id="l372">Rien, rien ; c’est que je ne suis pas à mon aise.</l>
-          </sp>
-          <sp who="léon" xml:id="12-18">
-            <speaker>LÉON, <em>tirant son flacon.</em></speaker>
-            <l n="373" xml:id="l373">Voulez-vous mon flacon, colonel ?</l>
-          </sp>
-          <sp who="gustave" xml:id="12-19">
-            <speaker>GUSTAVE, <em>le repoussant.</em></speaker>
-            <l n="374" xml:id="l374">Eh ! non, non, il ne me manquerait plus que cela.</l>
-          </sp>
-          <sp who="léon" xml:id="12-20">
-            <speaker>LÉON, <em>regardant par la fenêtre.</em></speaker>
-            <l n="375" xml:id="l375">Ah ! mon Dieu ! voilà déjà le jour !</l>
-          </sp>
-          <sp who="gustave" xml:id="12-21">
-            <speaker>GUSTAVE.</speaker>
-            <l n="376" xml:id="l376">Eh bien ! faites-moi le plaisir de descendre chez le concierge, pour faire préparer nos laissez-passer.</l>
-          </sp>
-          <sp who="léon" xml:id="12-22">
-            <speaker>LÉON.</speaker>
-            <l n="377" xml:id="l377">Oui, colonel. Ah çà ! et mon anneau ?</l>
-          </sp>
-          <sp who="gustave" xml:id="12-23">
-            <speaker>GUSTAVE.</speaker>
-            <l n="378" xml:id="l378">Je vous le rendrai tout à l’heure ; c’est que j’en ai un presque pareil, et je ne suis pas fâché de comparer.</l>
-            <stage><hi rend="italic"><em>Léon sort.</em></hi></stage>
-            <l n="380" xml:id="l380"> </l>
-            <l n="381" xml:id="l381"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="382" xml:id="l382"> </l>
-          <sp who="gustave" xml:id="13-1">
-            <speaker>GUSTAVE, <em>seul</em></speaker>
-            <l n="383" xml:id="l383"> </l>
-            <l n="384" xml:id="l384">Ah ! par exemple, celui-ci est un peu fort ! voyons donc encore une fois.</l>
-            <stage><hi rend="italic"><em>Il regarde l’anneau.</em></hi></stage>
-            <l n="386" xml:id="l386">MATHILDE, GUSTAVE. C’est bien notre anneau de mariage, et il n’y a que ma femme qui puisse le porter ; si je n’étais pas certain qu’elle ne peut avoir quitté Paris, il y aurait de quoi donner des idées...</l>
-            <stage><hi rend="italic"><em>Il entend ouvrir la porte secrète.</em></hi></stage>
-            <l n="388" xml:id="l388">Quel bruit ? eh mais ! cette porte s’ouvre.</l>
-            <stage><hi rend="italic"><em>Mathilde paraît.</em></hi></stage>
-            <l n="390" xml:id="l390">Ah ! mon Dieu ! ma femme ! Il n’y a plus de doute.</l>
-            <l n="391" xml:id="l391"> </l>
-            <l n="392" xml:id="l392"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="393" xml:id="l393"> </l>
-          <sp who="mathilde" xml:id="14-1">
-            <speaker>MATHILDE, GUSTAVE</speaker>
-            <l n="394" xml:id="l394"> </l>
-          </sp>
-          <sp who="mathilde" xml:id="14-2">
-            <speaker>MATHILDE.</speaker>
-            <l n="395" xml:id="l395">Comment ! Monsieur, voilà l’accueil que vous me faites, moi qui arrive de Paris pour vous délivrer ?</l>
-          </sp>
-          <sp who="gustave" xml:id="14-3">
-            <speaker>GUSTAVE, <em>interdit.</em></speaker>
-            <l n="396" xml:id="l396">Non, non, ma bonne amie. Vous arrivez à l’instant même, n’est-ce pas ?</l>
-          </sp>
-          <sp who="mathilde" xml:id="14-4">
-            <speaker>MATHILDE, <em>lui prenant la main.</em></speaker>
-            <l n="397" xml:id="l397">Pourquoi donc cette question ?</l>
-          </sp>
-          <sp who="gustave" xml:id="14-5">
-            <speaker>GUSTAVE, <em>regardant sa main.</em></speaker>
-            <l n="398" xml:id="l398">Mais pour... Mathilde, où est votre anneau ?</l>
-          </sp>
-          <sp who="mathilde" xml:id="14-6">
-            <speaker>MATHILDE.</speaker>
-            <l n="399" xml:id="l399">Mon ami, est-ce à vous de me le demander.</l>
-          </sp>
-          <sp who="gustave" xml:id="14-7">
-            <speaker>GUSTAVE.</speaker>
-            <l n="400" xml:id="l400">Comment ! Madame, il me semble que c’est assez naturel.</l>
-          </sp>
-          <sp who="mathilde" xml:id="14-8">
-            <speaker>MATHILDE, <em>tendrement.</em></speaker>
-            <l n="401" xml:id="l401">Ingrat ! puisque je ne le porte pas, vous savez bien qu’il n’y a qu’une personne qui puisse l’avoir.</l>
-            <stage><hi rend="italic"><em>Le voyant à sa main.</em></hi></stage>
-            <l n="403" xml:id="l403">Eh ! tenez, le voici.</l>
-          </sp>
-          <sp who="gustave" xml:id="14-9">
-            <speaker>GUSTAVE.</speaker>
-            <l n="404" xml:id="l404">Comment ! Madame, il est donc vrai, c’est vous qui cette nuit...</l>
-          </sp>
-          <sp who="mathilde" xml:id="14-10">
-            <speaker>MATHILDE.</speaker>
-            <l n="405" xml:id="l405">Vous en doutez encore ? oui, Monsieur ; j’étais venue hier au soir, je croyais que vous n’étiez occupé que de votre Mathilde.</l>
-          </sp>
-          <sp who="gustave" xml:id="14-11">
-            <speaker>GUSTAVE.</speaker>
-            <l n="406" xml:id="l406">Ah ! je devine tout.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="408" xml:id="l408">C’est ce petit coquin-là qui ; sans s’en douter... ah ! il a une étoile malheureuse.</l>
-          </sp>
-          <sp who="mathilde" xml:id="14-12">
-            <speaker>MATHILDE, <em>avec bonté.</em></speaker>
-            <l n="409" xml:id="l409">Ne vous désolez pas, mon ami, je ne vous ferai pas de reproches, je sens trop que votre situation mérite des ménagements.</l>
-          </sp>
-          <sp who="gustave" xml:id="14-13">
-            <speaker>GUSTAVE.</speaker>
-            <l n="410" xml:id="l410">Vous êtes trop bonne ; mais moi, je ne me le pardonnerai jamais. Écoutez, Mathilde, je ne vous demande qu’une chose pour ma punition, c’est de me répéter bien exactement tout ce que je vous ai dit cette nuit.</l>
-          </sp>
-          <sp who="mathilde" xml:id="14-14">
-            <speaker>MATHILDE, <em>baissant les yeux.</em></speaker>
-            <l n="411" xml:id="l411">Vous le dire, quand je voudrais l’oublier ?</l>
-          </sp>
-          <sp who="gustave" xml:id="14-15">
-            <speaker>GUSTAVE, <em>à part.</em></speaker>
-            <l n="412" xml:id="l412">Ah ! mon Dieu !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="414" xml:id="l414">Je crois me souvenir d’abord que vous m’avez repoussé.</l>
-          </sp>
-          <sp who="mathilde" xml:id="14-16">
-            <speaker>MATHILDE.</speaker>
-            <l n="415" xml:id="l415">Oh ! non ; quoique je fusse bien en colère.</l>
-            <stage><hi rend="italic"><em>Air : Il n’est pas temps de nous quitter.</em></hi></stage>
-          </sp>
-          <sp who="gustave" xml:id="14-17">
-            <speaker>GUSTAVE, <em>à part, avec joie.</em></speaker>
-            <l n="417" xml:id="l417">J’ai été fidèle !</l>
-          <stage>MATHILDE.</stage>
-          </sp>
-          <sp who="gustave" xml:id="14-18">
-            <speaker>GUSTAVE, <em>transporté.</em></speaker>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <stage><hi rend="italic"><em>Il se jette aux genoux de Mathilde et lui baise la main.</em></hi></stage>
-            <l n="420" xml:id="l420">Ma chère Mathilde ! vous me pardonnez ?</l>
-            <l n="421" xml:id="l421"> </l>
-            <l n="422" xml:id="l422"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="423" xml:id="l423"> </l>
-          <sp who="léon" xml:id="15-1">
-            <speaker>MATHILDE, GUSTAVE, LÉON</speaker>
-            <l n="424" xml:id="l424"> </l>
-          </sp>
-          <sp who="léon" xml:id="15-2">
-            <speaker>LÉON.</speaker>
-            <l n="425" xml:id="l425">Colonel, quand vous voudrez partir ? Eh bien ! qu’est-ce que vous faites donc ? voilà où j’en étais resté.</l>
-          </sp>
-          <sp who="mathilde" xml:id="15-3">
-            <speaker>MATHILDE.</speaker>
-            <l n="426" xml:id="l426">Un officier !</l>
-          </sp>
-          <sp who="gustave" xml:id="15-4">
-            <speaker>GUSTAVE, <em>sans se déranger.</em></speaker>
-            <l n="427" xml:id="l427">Mon cher Léon, c’est ma femme que je vous présente.</l>
-          </sp>
-          <sp who="léon" xml:id="15-5">
-            <speaker>LÉON, <em>confondu.</em></speaker>
-            <l n="428" xml:id="l428">Sa femme !</l>
-            <stage><hi rend="italic"><em>Bas.</em></hi></stage>
-            <l n="430" xml:id="l430">Ah ! colonel, si je l’avais su...</l>
-          </sp>
-          <sp who="gustave" xml:id="15-6">
-            <speaker>GUSTAVE, <em>se levant et lui serrant la main.</em></speaker>
-            <l n="431" xml:id="l431">C’est bon, c’est bon.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="433" xml:id="l433">Ma chère amie, c’est mon compagnon d’infortune, un jeune sous-lieutenant que vous avez vu deux ou trois fois avant notre mariage.</l>
-          </sp>
-          <sp who="mathilde" xml:id="15-7">
-            <speaker>MATHILDE, <em>saluant.</em></speaker>
-            <l n="434" xml:id="l434">Oui, dans un bal, je crois.</l>
-          </sp>
-          <sp who="gustave" xml:id="15-8">
-            <speaker>GUSTAVE, <em>à part.</em></speaker>
-            <l n="435" xml:id="l435">Elle s’en souvient.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="437" xml:id="l437">C’est un jeune homme qui promet, mon élève.</l>
-          </sp>
-          <sp who="léon" xml:id="15-9">
-            <speaker>LÉON, <em>timidement.</em></speaker>
-            <l n="438" xml:id="l438">Qui tâchera du moins, colonel, de vous faire honneur.</l>
-          </sp>
-          <sp who="gustave" xml:id="15-10">
-            <speaker>GUSTAVE, <em>à part.</em></speaker>
-            <l n="439" xml:id="l439">Me faire honneur ! joliment, ça commence bien.</l>
-          </sp>
-          <sp who="léon" xml:id="15-11">
-            <speaker>MATHILDE, <em>à Léon.</em></speaker>
-            <l n="440" xml:id="l440">J’espère que Monsieur n’oubliera pas le colonel, et s’il vient jamais à Paris...</l>
-          </sp>
-          <sp who="gustave" xml:id="15-12">
-            <speaker>GUSTAVE, <em>l’interrompant.</em></speaker>
-            <l n="441" xml:id="l441">Oui, oui, nous songerons à son avancement, je lui ferai avoir une lieutenance, dans quelque garnison... à Perpignan.</l>
-          </sp>
-          <sp who="léon" xml:id="15-13">
-            <speaker>LÉON, <em>soupirant.</em></speaker>
-            <l n="442" xml:id="l442">À Perpignan ! c’est un peu loin ; mais c’est égal.</l>
-            <stage><hi rend="italic"><em>À demi voix, à Gustave.</em></hi></stage>
-            <l n="444" xml:id="l444">Colonel, je vous remercie de la leçon.</l>
-          </sp>
-          <sp who="gustave" xml:id="15-14">
-            <speaker>GUSTAVE.</speaker>
-            <l n="445" xml:id="l445">Je crois bien ; c’est moi qui l’ai payée.</l>
-            <stage><hi rend="italic"><em>Vaudeville.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air du vaudeville du Piège.</em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, en négligé de prison, assis devant une table, et regardant sa montre</speaker>
+          <l n="1">La journée ne finira pas ! cinq heures viennent à peine de sonner à la grande tour, et moi, qui vais bien, j’ai cinq heures trente-cinq : ces horloges de prison, ça retarde toujours !</l>
+          <stage>&lt;em&gt;Il se lève.&lt;/em&gt;</stage>
+          <l n="2">Ma foi, c’est une chose assez ennuyeuse, que d’être en prison ; cela m’a amusé le premier jour, parce qu’un colonel en prison, c’est assez original, mais on se fait à tout... Heureusement me voilà au huitième et dernier jour, c’est demain que je retournerai à Paris ; que je reverrai ma femme ! Ma jolie petite Mathilde, il y a si longtemps que je ne l’ai embrassée. Allons ! allons ! encore un peu de patience.</l>
+          <stage>&lt;em&gt;Se promenant.&lt;/em&gt;</stage>
+          <l n="3">Mais qu’est-ce que je vais faire d’ici là ? Je me suis donné tous les divertissements que comportait ma situation ; je me suis méthodiquement promené en long et en large ; j’ai dessiné le plan de la dernière bataille ; j’ai chanté tous mes airs d’opéra-comique ; j’ai pensé à ma femme... il fallait bien s’en occuper ! Mais à présent à qui vais-je penser ?</l>
+          <stage>&lt;em&gt;S’approchent de la lucarne à gauche.&lt;/em&gt;</stage>
+          <l n="4">Qu’est-ce que je vois là de mon belvédère ? c’est un uniforme qui est à la croisée en face. Comment diable établir une ligne télégraphique ?</l>
+          <stage>&lt;em&gt;Agitant son mouchoir par la croisée.&lt;/em&gt;</stage>
+          <l n="5">Il m’a vu, car il répond à mes signes.</l>
+          <stage>&lt;em&gt;Criant.&lt;/em&gt;</stage>
+          <l n="6">Bonjour, camarade ! ça vous va-t-il bien ?</l>
+          <stage>&lt;em&gt;Écoutant comme si on lui répondait.&lt;/em&gt;</stage>
+          <l n="7">Ah ! vous vous ennuyez ! moi, c’est différent, je m’amuse beaucoup.</l>
+          <stage>&lt;em&gt;Écoutant.&lt;/em&gt;</stage>
+          <l n="8">Qui je suis ?... Gustave de Montemart, colonel du sixième de hussards. Et vous ? Hein !... À peine si on entend. Léon, sous-lieutenant. Mais il s’en va...</l>
+          <stage>&lt;em&gt;Quittant la croisée.&lt;/em&gt;</stage>
+          <l n="9">Tiens, Léon ; eh ! nous nous sommes déjà vus... oui, lors de la dernière affaire : un officier de dix-sept ans, qu’on prendrait pour une demoiselle, qui ne boit pas, ne jure jamais, et qui rougit en saluant une dame. Ah ! c’est lui qui est en prison ; à la bonne heure, il commence à se lancer. Ah ! le voilà qui revient.</l>
+          <stage>&lt;em&gt;Retournant à la fenêtre et écoutant.&lt;/em&gt;</stage>
+          <l n="10">Hein !... vous voudriez me parler ? et moi aussi. Attendez, j’aperçois M. Doucet, le geôlier, qui se promène dans la cour, la pipe à la bouche.</l>
+          <stage>&lt;em&gt;Criant.&lt;/em&gt;</stage>
+          <l n="11">Bonjour, monsieur Doucet !</l>
+          <stage>&lt;em&gt;Écoutant.&lt;/em&gt;</stage>
+          <l n="12">Si j’ai été content ? oui, le dîner était bon, mais un peu cher. J’ai</l>
+          <l n="13">autre chose à vous demander : voulez-vous que le prisonnier en face vienne me rendre visite ?</l>
+          <stage>&lt;em&gt;Écoutant.&lt;/em&gt;</stage>
+          <l n="14">Comment, si on m’entendait !</l>
+          <stage>&lt;em&gt;Criant de toutes ses forces.&lt;/em&gt;</stage>
+          <l n="15">Eh ! qui voulez-vous qui m’entende ? votre conscience ?</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="16">Oh bien alors, j’y suis.</l>
+          <stage>&lt;em&gt;Tirant sa bourse.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air du Bouffe et le Tailleur.&lt;/em&gt;</stage>
+          <l n="17">Allons, la place va se rendre,</l>
+          <stage>&lt;em&gt;Lui jetant la bourse.&lt;/em&gt;</stage>
+          <l n="18">À vous !... c’est ça ; la conscience ne dit plus rien : je savais bien que je la ferais taire.</l>
+          <stage>&lt;em&gt;À Léon.&lt;/em&gt;</stage>
+          <l n="19">Camarade, on va vous ouvrir.</l>
+          <stage>&lt;em&gt;Revenant sur le devant du théâtre.&lt;/em&gt;</stage>
+          <l n="20">Ma foi, je suis charmé de la rencontre ; je ne passerai pas ma soirée tout seul. Et quant à notre jeune sous-lieutenant, je devine pourquoi il veut me parler, sans doute pour me remercier du service que je lui ai rendu dans la dernière affaire... Je ris encore en y pensant ; je le vois, pendant que les balles sifflaient autour de nous, arrangeant sa cravate et les boucles de ses cheveux ! Un instant après, il était au milieu des ennemis, et au moment du plus grand danger, lorsqu’une vingtaine de sabres le menaçaient... ne voilà-t-il pas qu’il se baisse pour ramasser un flacon d’eau de Cologne qu’il avait laissé tomber... Eh ! le voici.</l>
+          <stage>&lt;em&gt;On entend tirer les verrous de la porte à droite.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="21">Ah ! colonel, que je suis aise de vous voir, après tout ce que je vous dois... On me permet d’habiter jusqu’à demain la même prison que vous !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="22">Je n’ai qu’un regret : c’est que vous ne soyez pas venu huit jours plus tôt.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="23">Je vous remercie de votre obligeance. Comment ! voilà huit jours que vous êtes ici ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="24">Ah ! mon Dieu, oui, je ne suis jamais resté aussi longtemps dans le même endroit.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="25">Vous mettre en prison, après la conduite que vous avez tenue ! lorsque de toute l’armée votre régiment s’est le plus distingué !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <stage>N’est-ce pas ? mes hussards allaient joliment. Il est vrai que nous avions reçu l’ordre de rester en réserve, et que nous nous sommes trouvés sur la cavalerie ennemie je ne sais pas trop comment. Ils disent tous que j’ai crié : « &lt;em&gt;En avant !&lt;/em&gt; » Le diable m’emporte si je m’en souviens, je crois plutôt que ce sont eux. Mais comme on ne pouvait pas mettre ici tout le régiment, c’est sur moi que cela est tombé : cela m’a valu la croix d’officier, et huit jours de prison.</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="26">Quand serai-je aussi heureux !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="27">Eh mais ! cela commence, vous avez déjà la moitié de mon bonheur, et le reste ne peut manquer de vous arriver, si jamais vous défendez votre drapeau comme vos flacons d’eau de Cologne... Eh bien ! je vous fais rougir, et vous voilà tout déconcerté.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="28">Oui, colonel ; c’est que... je vous prie de ne me plus parler de cette affaire-là ; c’est déjà elle qui est cause que je suis ici. Depuis ce jour-là on s’égaie à mes dépens ; j’ai entendu hier deux officiers de la compagnie qui faisaient sur moi des plaisanteries, et même des calembours.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="29">Des calembours, ah ! c’est trop fort.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <stage>L’un disait que j’étais un militaire &lt;em&gt;à l’eau rose&lt;/em&gt;, et l’autre prétendait que cette action-là me mettait en &lt;em&gt;bonne odeur &lt;/em&gt;dans le régiment. Vous concevez comme c’est désagréable.</stage>
+          <stage>&lt;em&gt;Air : J’en guette un petit de mon âge.&lt;/em&gt;</stage>
+          <l n="30">Jugez un peu quelle équipée !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="31">Mais, c’est un diable que ce petit garçon-là. Allons, allons, il ira bien. Ma foi, mon jeune camarade, je vous avoue que je n’y tiens plus ; et au risque de recevoir aussi un coup d’épée qui me blesserait bien fort, il faut que je vous demande d’où vient votre prédilection pour les flacons d’eau de Cologne !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="32">Oh ! à vous, colonel, c’est différent, je puis vous confier cela... c’est qu’il venait d’une certaine personne...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="33">Qui vous l’avait donné.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="34">À peu près. C’est la seule faveur que j’aie reçue d’elle, et je voulais la conserver pour lui prouver ma constance.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="35">De la constance ! qu’est-ce que c’est que cela ? Oh ! je me suis trompé, il n’ira pas.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="36">J’ai donc eu tort ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="37">Parbleu, voilà une question !... Écoutez, voulez-vous me croire ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="38">Oh ! oui, colonel, je vous croirai, je ferai tout ce que vous me direz.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="39">À la bonne heure !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="40">Au fait, il peut aller ; et ce serait dommage de lui laisser prendre une mauvaise route.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="41">Voyez-vous, mon garçon, tout dépend du commencement ; votre coup d’épée d’hier, c’est bien, cela promet, mais il faut vous défaire de vos mauvaises habitudes ; moi, je vous parle comme à mon fils.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="42">Je comprends bien ; ce n’est pas la bonne volonté qui me manque, c’est que je n’ose pas.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, d’un air de confidence.</speaker>
+          <l n="43">Elle est donc bien jolie ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="44">Si vous l’aviez vue, comme moi ! un son de voix.</l>
+          <stage>&lt;em&gt;Mettant la main sur son cœur.&lt;/em&gt;</stage>
+          <l n="45">qui va là... J’ai passé trois soirées avec elle... il y a deux mois, lorsque je me rendais au régiment.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, souriant.</speaker>
+          <l n="46">Voilà donc à quoi se bornent toutes vos campagnes ? trois soirées, ce n’est pas trop.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="47">Oui, mais l’une était un bal.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="48">C’est juste, cela doit compter double ; et vous avez bien avancé vos affaires ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="49">Oh ! oui : ce jour-là j’ai été bien hardi ; je m’étais emparé de son flacon, de ses gants, de son mouchoir, et je les ai embrassés sans qu’elle le vît.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="50">Diable ! et vous n’avez pas eu peur de la compromettre ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="51">Bien plus, je ne lui ai rendu que les gants et le mouchoir.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="52">Je comprends. Voilà l’origine de ce trésor si précieux ; et pendant que vous étiez dans votre jour de hardiesse, vous ne lui avez pas dit que vous l’aimiez ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="53">J’ai été bien près, mais je n’ai jamais pu ; elle était si jolie, sa toilette était si brillante... tout cela intimide, et je ne conçois pas comment on peut venir à bout de faire une déclaration en face à une femme ; est-ce que vous avez jamais osé, vous, colonel ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="54">Allons, allons, c’est une éducation qui est entièrement à faire. Voyez, pourtant, si j’avais terminé mes Mémoires !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="55">Comment ! vos Mémoires ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="56">Oui, un ouvrage qui manque à la jeunesse actuelle, un ouvrage de mœurs, où je peins les miennes, c’est-à-dire où je mets toujours l’exemple à côté du précepte. Il y a un siècle que j’ai le plan dans ma tête, mais il faut commencer.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="57">Eh bien ! pendant que vous étiez en prison ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="58">Oh ! j’y ai bien pensé, j’avais même déjà écrit le titre.</l>
+          <stage>&lt;em&gt;Montrant la table.&lt;/em&gt;</stage>
+          <stage>Vous pouvez voir : &lt;em&gt;Le Mentor de la jeunesse&lt;/em&gt;, ou &lt;em&gt;Mémoires d’un colonel de hussards&lt;/em&gt;. Mais à chaque instant on est distrait... Eh ! parbleu ! une superbe occasion qui se présente. Pour combien de temps êtes-vous en prison ?</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="59">Jusqu’à demain au point du jour.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="60">À merveille ! vous resterez la nuit ici ; après le souper je fais monter du punch, et nous travaillerons à mes Mémoires ; je dicterai, et vous écrirez, c’est le moyen de vous instruire.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="61">Mais, colonel...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <stage>Le punch vous fait peur, mais c’est égal, pour écrire un ouvrage de mœurs, il n’y a rien de tel que le punch... &lt;em&gt;Castigat bibendo mores... &lt;/em&gt;et vous en boirez.</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, se mettant à la table.</speaker>
+          <l n="62">Eh bien ! soit, je me risque ; commençons... moi, j’ai le désir de m’instruire.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <stage>Il faut, avant tout, que je vous explique la division générale de l’ouvrage, et la distribution des chapitres. PREMIÈRE PARTIE : &lt;em&gt;Aventures du colonel lorsqu’il est garçon&lt;/em&gt;. DEUXIÈME PARTIE : &lt;em&gt;Son mariage&lt;/em&gt;. TROISIÈME PARTIE : &lt;em&gt;Après son mariage.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="63">Permettez donc, colonel ; est-ce que vous êtes marié ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <stage>Eh ! sans doute, à cause de mon ouvrage ! il fallait bien un dénouement, et vous verrez celui que j’ai choisi. La plus jolie petite femme, qui m’aimait éperdument, que j’ai presque enlevée... Mais nous verrons plus tard, dans la seconde partie : il ne s’agit pas ici de ma femme. CHAPITRE PREMIER : &lt;em&gt;Des fredaines du colonel et de ses premières inclinations.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <stage>Vous voulez dire, &lt;em&gt;sa première inclination ?&lt;/em&gt; car je suppose que vous avez commencé par une.</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="64">Du tout, trois à la fois.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="65">Ah ! mon Dieu ! qu’est-ce que vous me dites là ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <stage>CHAPITRE II : &lt;em&gt;Comment le colonel se débarrasse de ses rivaux.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="66">Ah ! nous y voilà ! des duels !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="67">Laissez donc, je n’avais pas envie d’être toujours l’épée à la main ; d’ailleurs, dans le nombre, il y avait des rivaux légitimes... des maris, par exemple.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="68">Comment ! Monsieur, il y avait des maris ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <stage>Il y en a partout. CHAPITRE III : &lt;em&gt;Des billets doux et des déclarations&lt;/em&gt;. CHAPITRE IV ET DERNIER : &lt;em&gt;De la manière de brusquer les dénouements.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="69">CHAPITRE IV !</l>
+          <stage>&lt;em&gt;Air du vaudeville de Jadis et aujourd’hui.&lt;/em&gt;</stage>
+          <l n="70">Oh ! celui-ci... rien que le titre</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, souriant.</speaker>
+          <l n="71">Autrefois, c’était possible ;</l>
+          <stage>&lt;em&gt;On entend sonner une cloche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="72">C’est le souper.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="73">C’est égal, continuons toujours ; rien que le chapitre IV. Je n’ai pas faim.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="74">Oui, mais moi ! L’ordre et l’exactitude, je ne connais que cela ! et je me ferais un scrupule de travailler quand le souper a sonné.</l>
+          <stage>&lt;em&gt;On entend ouvrir la porte.&lt;/em&gt;</stage>
+          <l n="75">Permis à vous de nous tenir compagnie, à moins que vous ne préfériez, par ce beau clair de lune, vous promener dans mon parc et mes jardins.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="76">Comment ! vous avez un jardin ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="77">Oui, une terrasse où il m’est permis de prendre l’air... l’espace de dix pieds carrés.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, allant à gauche.</speaker>
+          <l n="78">De ce côté ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="79">Non, ce sont d’autres prisons qui communiquent au logement du concierge. Tenez, par ici, après ma chambre à coucher, vous prenez un escalier tournant, qui conduit à la plate-forme que vous voyez d’ici.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="80">C’est bon, je vais y réfléchir ; mais vous ne serez pas longtemps, pour que nous puissions reprendre...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="81">Soyez tranquille ; en même temps je commanderai le punch.</l>
+          <stage>&lt;em&gt;Lui ouvrant la porte du fond.&lt;/em&gt;</stage>
+          <l n="82">Tenez, voilà le chemin du parc. Bien... vous descendez, c’est cela ; prenez garde de vous casser le cou.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, seul</speaker>
+          <l n="83">Je suis très content de mon élève ; un joli sujet qui me fera de l’honneur, et qui en attendant m’aura fait passer gaiement ma dernière soirée.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, que l’on voit à travers la croisée passer sur la terrasse.</speaker>
+          <l n="84">Oh ! le beau clair de lune !</l>
+          <stage>&lt;em&gt;À Gustave.&lt;/em&gt;</stage>
+          <l n="85">Vous ne serez pas longtemps ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="86">Je vais boire à votre santé et à vos succès futurs.</l>
+          <stage>&lt;em&gt;Air : Dans un castel dame de haut lignage.&lt;/em&gt;</stage>
+          <l n="87">Que la folie à table m’accompagne !</l>
+          <stage>&lt;em&gt;Il sort en riant par la porte qui se referme sur lui.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#em&gt;la-porte-à-gauche-s’ouvre">
+          <speaker>La porte à gauche s’ouvre, et Mathilde paraît. MATHILDE, à sa femme de chambre, qui ne paraît pas</speaker>
+          <l n="88">N’avance pas, Anna, je l’en prie ; mon mari n’aurait qu’à nous reconnaître, il n’y aurait plus de surprise ; rentre et prépare cette chambre.</l>
+          <stage>&lt;em&gt;La porte reste ouverte.&lt;/em&gt;</stage>
+          <l n="89">Pose là mes carions, ma guitare.</l>
+          <stage>&lt;em&gt;À elle-même.&lt;/em&gt;</stage>
+          <l n="90">Ce cher Gustave !... Oh ! c’est que j’ai une tête aussi, moi ! et je veux lui prouver que j’étais digne d’être la femme d’un colonel de hussards ! Si je l’avais su plus tôt, je serais venue partager sa captivité ; mais ne pas m’écrire, pas une seule lettre depuis huit jours... il devait bien se douter que je n’y tiendrais pas, que je prendrais la poste, que je viendrais moi-même savoir de ses nouvelles, et j’en ai appris de jolies... en prison depuis huit jours !... Voilà donc son appartement ? Ce n’est pas joli, une prison, cela ne vaut pas notre petit salon de la rue du Helder ! c’est une horreur, une injustice d’y envoyer le plus aimable, le plus joli garçon de l’armée ; et puis enfin, un homme marié... Si j’étais à la place de Gustave, je sais bien ce que je ferais, je demanderais ma retraite, je quitterais le service, et je ne quitterais plus ma femme.</l>
+          <stage>&lt;em&gt;Écoutant.&lt;/em&gt;</stage>
+          <l n="91">Hein ! ah ! mon Dieu ! j’ai cru que c’était lui ; non, non, personne. Anna, Anna, tenez, vous donnerez cette bourse à madame Doucet, la femme du concierge ! Cette bonne Marguerite, mon excellente nourrice ! j’étais bien sûre qu’elle me donnerait les moyens de surprendre mon mari. Cette porte dont j’ai seule la clef... c’est charmant, il me croit à quatre-vingts lieues de lui. Aussitôt que tout le monde sera endormi ; au milieu de l’obscurité, j’ouvre la porte secrète, et comme une fée bienfaisante qui prend pitié de sa solitude, je viens le consoler de l’injustice du sort ; et d’abord pour commencer, une musique mystérieuse...</l>
+          <stage>&lt;em&gt;Air : Celle que j’aime tant.&lt;/em&gt;</stage>
+          <l n="92">Qu’une douce harmonie en cette erreur le plonge !</l>
+          <l n="93">Ah ! ah ! j’oubliais cette fenêtre, si elle pouvait me servir !</l>
+          <stage>&lt;em&gt;Elle s’approche.&lt;/em&gt;</stage>
+          <l n="94">elle donne sur une t errasse... ah ! comme c’est triste... Il y a quelqu’un, un officier ; si c’était lui !</l>
+          <stage>&lt;em&gt;Elle s’avance davantage.&lt;/em&gt;</stage>
+          <l n="95">Non ; oh ! Gustave est bien mieux, plus grand... Eh mais ! comme il me regarde !</l>
+          <stage>&lt;em&gt;Air du vaudeville de Turenne.&lt;/em&gt;</stage>
+          <l n="96">Voyez donc quelle impertinence !</l>
+          <stage>&lt;em&gt;Elle sort par la porte secrète.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#léon">
+          <speaker>LÉON, accourant</speaker>
+          <stage>&lt;em&gt;Il arrive essoufflé, s’arrête, et regarde de tous les côtés&lt;/em&gt;</stage>
+          <l n="97">Elle était là ! je l’ai vue... oh ! oui, c’était bien elle, je l’ai parfaitement reconnue. Par où s’est-elle échappée ? qui peut l’avoir introduite dans la tour ? qu’est-ce qui l’amène ici ?... Si c’était... oh ! non : par exemple, il y aurait de quoi en perdre la tête de bonheur.</l>
+          <stage>&lt;em&gt;On entend sur la guitare, accompagnée par l’orchestre, là ritournelle de l’air suivant.&lt;/em&gt;</stage>
+          <l n="98">Qu’entends-je ? elle est là.</l>
+          <stage>&lt;em&gt;Montrant la prison à gauche. Il va écouter à la porte, et témoigne la plus vive émotion.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, ayant l’air de saluer d’autres prisonniers.</speaker>
+          <l n="99">Bonsoir, Messieurs, bonsoir ! ce n’est qu’en prison que l’on boit du bon vin de Champagne.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="100">Ah ! c’est vous, colonel !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="101">Oui ; c’est pour vous que j’en suis resté à ma seconde bouteille.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, lui faisant signe de la main.</speaker>
+          <l n="102">Silence ! ne faites pas de bruit.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="103">Qu’est-ce que c’est donc ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="104">Imaginez-vous, colonel, imaginez-vous... une femme...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="105">Une femme ! eh bien ! ne tremblez donc pas comme cela !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="106">C’est que je l’ai vue.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="107">Où donc ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="108">Ici, dans celte chambre ; celle que j’aime...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="109">C’est impossible... Il croit voir des femmes partout.</l>
+          <stage>&lt;em&gt;On entend un nouveau prélude.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="110">Écoutez.</l>
+          <stage>&lt;em&gt;Même motif que la prélude de guitare.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : La ! j’étais en si doux servage.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="111">Quelle aventure singulière !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="112">Quelle aventure singulière !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE et LÉON, se regardant l’un et l’autre.</speaker>
+          <stage>Mais il se trompe, je le voi, &lt;em&gt;(bis.)&lt;/em&gt;&lt;br&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="113">Comment ! colonel, vous pensez que ce n’est pas pour moi qu’elle est ici ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, prend une chaise et s’asseoit au milieu du théâtre.</speaker>
+          <l n="114">Il y a de fortes raisons contre ; mais enfin, dans le doute, attaquons toujours, et nous verrons bien... Au plus adroit.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, debout à la gauche de Gustave.</speaker>
+          <l n="115">Au plus adroit, cela n’est pas généreux ; comment voulez-vous que moi qui commence...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="116">Raison de plus, cette campagne-là vous formera bien mieux que tous les traités élémentaires ; la théorie est très bonne, mais il n’y a rien comme la pratique : vous allez voir.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="117">À la bonne heure, mais vous devriez me laisser essayer seul, parce que vous qui avez une femme...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="118">Mon ami, ce sont des considérations en théorie, mais en pratique ça ne dit rien ; ainsi, attention ! chacun pour soi, la campagne est ouverte.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="119">Ah ! mon Dieu ! mon Dieu ! colonel, encore un mot. Qu’est-ce que vous me conseillez de faire ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="120">Parbleu ! si je vous le dis, le beau mérite !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="121">Non, c’est seulement pour commencer, après j’irai tout seul.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="122">Je crois que, dans les principes, il faut d’abord sommer la place de se rendre ; vous verrez cela au CHAPITRE TROISIÈME.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <stage>Oui, au CHAPITRE TROISIÈME, &lt;em&gt;des billets doux et des déclarations.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="123">Je suis déjà en train de composer mon manifeste.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, se mettant à la table.</speaker>
+          <l n="124">Eh ! vite, mettons-nous à l’ouvrage.</l>
+          <stage>&lt;em&gt;Duo.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Tigre femelle (d’un jour à Paris.)&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="125">Belle inconnue,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="126">Beauté tigresse,</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="127">Sans espérance,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="128">Vois un cœur tendre</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="129">Qu’entre nous deux</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="130">Va, ne crains rien,</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="131">Que la réponse</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="132">Dans mon colback,</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, qui a ployé sa lettre.</speaker>
+          <l n="133">Maintenant, comment faire parvenir ?... Si je pouvais gagner le geôlier, et l’engager à remettre ce billet ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, ployant sa lettre, et regardant en dessous.</speaker>
+          <l n="134">Il faut cependant tâcher de m’en débarrasser.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="135">Le plus terrible, c’est qu’il est toujours là ; s’il s’en allait !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, se levant.</speaker>
+          <l n="136">Ah çà ! mon jeune ami, est-ce que nous ne nous couchons pas de bonne heure au régiment ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, de même.</speaker>
+          <l n="137">Si vraiment ; et vous, colonel ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="138">Oh ! moi, non : je ne rentrerai pas encore.</l>
+          <stage>&lt;em&gt;Il s’assied sur son fauteuil, auprès de la table.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="139">Ni moi non plus.</l>
+          <stage>&lt;em&gt;Il s’assied aussi sur une chaise de l’autre côté.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="140">Une faut pas que ce soit par politesse, ne vous gênez pas, mon lit de camp est là-dedans.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="141">Non, non, je vous attendrai.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="142">Je vois que vous êtes pour la guerre d’observation.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="143">Il ne me quittera pas ! Si je pouvais l’endormir avec mes campagnes d’Allemagne...</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="144">Oh ! la bonne idée : une fois sur le lit de camp, le vin de Champagne qu’il a bu... ce ne sera pas long, et pendant son sommeil...</l>
+          <stage>&lt;em&gt;Haut, il se lève.&lt;/em&gt;</stage>
+          <l n="145">Ma foi, mon général, j’ai beau regarder, l’ennemi ne se montre pas ; je crois qu’il n’y aura rien à faire ce soir.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="146">Je le crois aussi. Nous ferons bien de battre en retraite, et de remettre l’attaque à demain matin.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="147">Ainsi donc, suspension d’armes.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="148">Suspension d’armes, et allons nous coucher.</l>
+          <stage>&lt;em&gt;Duo.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air nouveau de M. Granier.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON et GUSTAVE.</speaker>
+          <l n="149">Allons sans défiance</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, à part, apercevant de la lumière à la lucarne à gauche.</speaker>
+          <l n="150">Ciel ! de la lumière ;</l>
+          <stage>&lt;em&gt;Feignant d’écouter de la fenêtre à droite.&lt;/em&gt;</stage>
+          <l n="151">Écoutez.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="152">Quoi donc ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="153">Taisons-nous.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="154">Une guitare...</l>
+          <stage>&lt;em&gt;Léon se précipite vers la fenêtre à droite, et pendant ce temps, Gustave jette son billet par la lucarne à gauche.&lt;/em&gt;</stage>
+          <l n="155">Eh ! non, quelle chimère !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, revenant de la croisée.</speaker>
+          <l n="156">Eh ! non, quelle chimère !</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="157">Il n’a rien vu.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="158">Je n’ai rien vu.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON et GUSTAVE.</speaker>
+          <l n="159">Allons sans défiance</l>
+          <stage>&lt;em&gt;Ils sortent par la porte du fond à gauche.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, seule</speaker>
+          <stage>&lt;em&gt;Elle ouvre la porte précipitamment : elle tient la lettre que Gustave a jetée par la lucarne.&lt;/em&gt;</stage>
+          <l n="160">Il n’y est plus, c’est bien heureux, car j’allais me trahir, lui faire une scène affreuse... Oui, oui, c’est bien son écriture. Quelle lettre ! lui que je croyais la fidélité même, il ne sait pas plus tôt qu’il y a une femme près de lui, qu’il lui écrit ; et sans la connaître, sans l’avoir jamais vue, il ose lui demander... Oh ! par exemple, cela me passe : un mari qui demande un rendez-vous à une autre qu’à sa femme ! c’est une horreur, c’est une indignité. Eh bien ! ce rendez-vous, il l’obtiendra, j’y viendrai, et nous verrons...</l>
+          <stage>&lt;em&gt;Réfléchissant.&lt;/em&gt;</stage>
+          <l n="161">Mais s’il n’avait voulu que s’amuser ; s’il ne venait pas ! Eh bien ! maintenant j’en serais fâchée ; oui, j’en serais fâchée, parce que cela me laisserait des doutes... Oui, décidément j’irai, et puis sa femme... il n’y a pas de danger. Voilà ma réponse...</l>
+          <stage>&lt;em&gt;Relisant la lettre de Gustave.&lt;/em&gt;</stage>
+          <l n="162">« sous mon colback à main droite. » Ah ! le voici, oui, c’est bien son colback, c’est moi qui l’ai brodé ; je n’aurais jamais pensé qu’il dût servir... Je l’entends.</l>
+          <stage>&lt;em&gt;Elle place la lettre sous le colback qui se trouve sur une chaise à côté de la porte à gauche.&lt;/em&gt;</stage>
+          <l n="163">Sauvons-nous.</l>
+          <stage>&lt;em&gt;Elle sort par la porte secrète à gauche. Ritournelle de l’air suivant.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#léon">
+          <speaker>LÉON, seul, sortant de la chambre du fond, à gauche</speaker>
+          <stage>&lt;em&gt;Air de Toberne.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;À voix basse.&lt;/em&gt;&lt;br&gt;</stage>
+          <stage>&lt;em&gt;Se tournant du côté de Gustave.&lt;/em&gt;</stage>
+          <l n="164">Quand il dira qu’il l’aime,</l>
+          <l n="165">Il faisait d’abord semblant, mais à la fin le voilà parti.</l>
+          <stage>&lt;em&gt;Regardant la lucarne.&lt;/em&gt;</stage>
+          <l n="166">Si j’appelais, au moindre bruit, le colonel serait sur pied... Ah ! en montant sur celte chaise, je puis atteindre à cette lucarne, la voir, lui parler ; ce sera toujours cela. Le colonel a raison, je crois que je me forme.</l>
+          <stage>&lt;em&gt;En ôtant le colback qui est sur la chaise, il voit la lettre de Mathilde.&lt;/em&gt;</stage>
+          <stage>Qu’est-ce que je vois là ? une lettre sous le colback du colonel ! elle n’est pas cachetée, lisons : « &lt;em&gt;Impossible, colonel, de résister à votre style séduisant ; ce soir, à minuit dans cette salle. &lt;/em&gt;» Je sens une sueur froide qui me prend, c’est lui qu’on aime, et c’est moi qui suis dédaigné. Elle a raison, je l’aimais réellement, je l’idolâtrais, tandis que lui... Oh ! voilà une bonne leçon : il a réussi, parce qu’il était mauvais sujet ; mais patience, je n’ai encore que dix-huit ans, je parviendrai, et je jure à mon tour de n’épargner personne. Un rendez-vous ! on lui accorde un rendez-vous ! est-il heureux ! Mais comment a-t-il pu faire ? Et quel est donc son ascendant ? il ne l’a pas vue, je n’ai pas quitté cette place, et en moins d’un quart d’heure, il lui écrit, il reçoit une réponse, il obtient un rendez-vous... oh ! j’en conviens, c’est mon maître, et je ne pourrai jamais lutter avec lui... Et pourquoi donc ? il parlait de ruses de guerre : oui... celle-ci peut réussir.</stage>
+          <stage>&lt;em&gt;Il déchire le billet, va à la table, en écrit un autre et le remet sous le colback.&lt;/em&gt;</stage>
+          <l n="167">Ce rendez-vous qu’on lui accorde, je l’aurai, et par une perfidie ; c’est cela, c’est bien commencé.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, de sa chambre à coucher.</speaker>
+          <l n="168">Eh ! camarade...</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="169">C’est lui, je l’entends.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, se frottant les yeux.</speaker>
+          <l n="170">Dieu me pardonne, en voulant rendormir, je crois que j’ai fait un somme, et voilà que l’ennemi est déjà sur pied. Dites donc, mon jeune ami, est-ce que vous êtes somnambule ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="171">Mon Dieu non, c’est qu’il m’était impossible de rester en place.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="172">Je conçois ! un début...</l>
+          <stage>&lt;em&gt;Air : L’amour qu’Edmond a su me taire.&lt;/em&gt;</stage>
+          <l n="173">Si le sommeil fuit sa paupière,</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="174">L’ennemi, je n’y songe plus ; oh ! mon Dieu, ce n’est pas à un écolier de se mesurer avec son maître. Mais puisque vous dormiez si bien, pourquoi donc êtes-vous venu ici ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="175">Ah ! c’est que... c’est que j’avais oublié mon colback, je ne puis pas dormir sans lui.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part.</speaker>
+          <l n="176">C’est bien cela... morbleu !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="177">Hein ? il me semble que vous jurez.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="178">Moi, colonel ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="179">À la bonne heure, au moins... vous vous formez ; j’étais sûr qu’on ferait quelque chose de vous.</l>
+          <stage>&lt;em&gt;Prenant le colback, à part.&lt;/em&gt;</stage>
+          <l n="180">Je tiens la réponse.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="181">Encore une leçon comme celle-ci, et votre éducation sera bien avancée.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, avec malice.</speaker>
+          <l n="182">Oui ; je crois que je commence.</l>
+          <stage>&lt;em&gt;Pendant ce temps, Gustave tourne le dos à Léon, et déroule le billet.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, lisant.</speaker>
+          <stage>« &lt;em&gt;À minuit, sur la terrasse.&lt;/em&gt; »</stage>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="183">À merveille ! mais comment pourra-t-elle me rejoindre ? Il y a sans doute quelque escalier secret ; d’ailleurs, l’amour y pourvoira.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="184">Ah çà ! camarade,</l>
+          <stage>&lt;em&gt;Mettant son colback sur sa tête.&lt;/em&gt;</stage>
+          <l n="185">maintenant que j’ai ce qu’il me faut, je retourne achever mon somme ; quant à vous, je crois que vous serez bien ici.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="186">Oui, moi qui ai un sommeil agité, je vous empêcherais de dormir.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="187">Et moi donc, je ronfle quelquefois !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, s’asseyant sur le fauteuil près de la table.</speaker>
+          <l n="188">Je conçois, nous nous ferions du tort ; ainsi, chacun pour soi.</l>
+          <stage>&lt;em&gt;Air : Mais en amour, comme à la guerre. (Fragment des Rendez-vous bourgeois.)&lt;/em&gt;</stage>
+          <l n="189">Il est dupe de ce mystère.</l>
+          <stage>&lt;em&gt;Léon s’étend dans un fauteuil.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="190">Dormirez-vous bien là ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="191">Mon Dieu, je dors déjà.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="192">Surtout, mon cher élève,</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, souriant.</speaker>
+          <l n="193">Merci de ce zèle ;</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="194">Il est dupe de ce mystère,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="195">Quoique je ne le craigne guère,</l>
+          <stage>&lt;em&gt;Gustave sort en emportant la bougie, et on entend fermer la porte à double tour.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#léon">
+          <speaker>LÉON, seul</speaker>
+          <l n="196">Eh bien ! il me laisse sans lumière, il m’enferme ; c’est égal, le champ de bataille me reste. Je suis encore tout étonné d’avoir pu le mettre en défaut, j’ose à peine croire à mon triomphe ; oui, il est là-bas à se morfondre, et c’est ici qu’elle va venir ! elle va venir... Oh ! j’ai une peur, et jamais mon cœur n’a battu ainsi. Que vais-je dire ? comment justifier une pareille hardiesse ? Si elle se fâche... Ah ! mon Dieu ! pourquoi ai-je surpris ce rendez-vous ? J’ai envie d’appeler le colonel, de lui tout avouer ; mais c’est pour le coup qu’il m’appellerait un écolier, qu’il rirait de ma faiblesse.</l>
+          <stage>&lt;em&gt;Cherchant à s’enhardir.&lt;/em&gt;</stage>
+          <l n="197">Allons, du courage ; oui, tant pis, j’en aurai ; voilà que j’en ai ! Je crois entendre du bruit ; non, non, ce n’est pas encore elle. C’est que c’est terrible ! se trouver ainsi en tête à tête, et pour la première fois de ma vie ! Oh ! si elle pouvait ne pas venir... la porte s’ouvre, c’est fini, je suis perdu.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, entrant par la porte à gauche, LÉON</speaker>
+          <stage>&lt;em&gt;Duo.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Ah ! Monseigneur, je suis tremblante. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="198">Dieu ! quel moment ! mon cœur palpite :</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="199">Dieu ! quel moment ! mon cœur s’agite,</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="200">Dieu ! quel moment ! mon cœur palpite,</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="201">Dieu ! quel moment ! mon cœur s’agite,</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="202">L’obscurité me favorise, et je puis contrefaire ma voix, il ne me reconnaîtra pas. Êtes-vous là ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="203">Oui, je vous attendais.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, à part.</speaker>
+          <l n="204">Comme il est ému ! tant mieux, c’est qu’il pense à moi et qu’il a des remords.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="205">Je fais mal en venant ainsi, car je suis sûre que vous me trompez.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, à part, et intimidé.</speaker>
+          <l n="206">Ah ! mon Dieu ? elle se doute de quelque chose.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="207">Non, madame, je ne vous trompe pas.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, à part.</speaker>
+          <l n="208">Il veut aussi déguiser sa voix, mais mon cœur l’a reconnu.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="209">Eh bien ! me voilà ; que voulez-vous me dire ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="210">Ne le devinez-vous pas ?</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="211">Non, je veux que vous m’appreniez vous-même... vous hésitez.</l>
+          <stage>&lt;em&gt;Lui prenant la main.&lt;/em&gt;</stage>
+          <l n="212">Vous avez raison.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="213">Vous croyez que j’ai raison ? La jolie main ; il me semble que ma frayeur se dissipe ; oh ! que c’est joli, une femme ?</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, à part.</speaker>
+          <l n="214">Il n’ose parler, sa main tremble dans la mienne ; j’étais bien sûre qu’il ne pourrait se résoudre à me trahir ; voyons encore.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="215">Eh bien ! mon ami...</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <stage>&lt;em&gt;Mon ami !&lt;/em&gt; Que ce nom-là est doux ! jamais on ne m’appela ainsi.</stage>
+          <stage>&lt;em&gt;S’encourageant.&lt;/em&gt;</stage>
+          <l n="216">Oui, c’est le moment ; souvenons-nous des leçons du colonel.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="217">Eh bien ! oui, Madame ; oui, je crois que je vous aime.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="218">Vous m’aimez ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="219">Ah ! ne vous fâchez pas.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, retirant sa main.</speaker>
+          <l n="220">Le perfide !</l>
+          <stage>&lt;em&gt;Air : Ce que j’éprouve en vous voyant.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Premier couplet.&lt;/em&gt;</stage>
+          <l n="221">Après celle trahison-là,</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, lui reprenant la main.</speaker>
+          <l n="222">Rendez-moi cette main si chère...</l>
+          <stage>&lt;em&gt;Deuxième couplet.&lt;/em&gt;</stage>
+          <l n="223">Oui, mon cœur bat en ce moment</l>
+          <stage>&lt;em&gt;Apercevant l’anneau qui est au doigt de Mathilde.&lt;/em&gt;</stage>
+          <l n="224">Gage d’amour et de constance,</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="225">À mes vœux loin d’être contraire,</l>
+          <stage>&lt;em&gt;Mettant l’anneau à son doigt.&lt;/em&gt;</stage>
+          <l n="226">Eh mais ! vraiment, elle y consent.</l>
+          <stage>&lt;em&gt;Il baise la main de Mathilde, et dit à part.&lt;/em&gt;</stage>
+          <l n="227">Allons, montrons-nous digne de notre maître... CHAPITRE IV.</l>
+          <stage>&lt;em&gt;On entend à la porte à gauche le bruit des verrous que l’on tire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, s’enfuyant et rentrant par la porte secrète.</speaker>
+          <l n="228">Qui peut venir ? fuyons.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, soufflant dans ses doigts et frappant du pied. En entrant, il pose la bougie sur la table.</speaker>
+          <l n="229">Ouf ! je suis gelé ; une heure de faction par un vent diabolique ! et personne !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="230">Ah çà ! colonel, est-ce que vous êtes somnambule ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="231">Pourquoi donc ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="232">Vous n’avez pas quitté la terrasse de la nuit, cela m’a inquiété pour vous ; heureusement que vous aviez pris votre colback.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, étonné et le regardant.</speaker>
+          <l n="233">Qu’est-ce qu’il a donc le petit sous-lieutenant ? ses yeux éveillés...</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="234">Colonel, si vous vouliez mon fauteuil ?</l>
+          <stage>&lt;em&gt;Appuyant.&lt;/em&gt;</stage>
+          <l n="235">Maintenant que j’ai ce qu’il me faut, je vais achever mon somme.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, l’arrêtant.</speaker>
+          <l n="236">Un moment, un moment, camarade ; je vois que vous avez deviné ma mésaventure ; eh bien ! je ne suis pas fier, moi, j’en conviens.</l>
+          <stage>&lt;em&gt;D’un air de confidence.&lt;/em&gt;</stage>
+          <l n="237">Voilà une heure que j’attends, on m’a manqué de parole.</l>
+          <stage>&lt;em&gt;Air : À Paris, et loin de sa mère (du traité nul.)&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Premier couplet.&lt;/em&gt;</stage>
+          <l n="238">J’ignore d’où vient ce mystère.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, avec malice.</speaker>
+          <l n="239">Quoi ! vraiment vous n’avez rien vu ?</l>
+          <stage>&lt;em&gt;Avec un air de triomphe.&lt;/em&gt;</stage>
+          <l n="240">Quand vous étiez sous la fenêtre,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="241">Quoi ! tout de bon ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, souriant.</speaker>
+          <l n="242">Dites-moi, dites, mon cher maître,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, d’un air de satisfaction.</speaker>
+          <l n="243">Voyez-vous, mes élèves ! c’est très bien ; ah çà ! vous n’avez pas fait de gaucheries ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <stage>&lt;em&gt;Deuxième couplet.&lt;/em&gt;</stage>
+          <l n="244">À votre estime j’ai des titres ;</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="245">Et le dernier ?</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, souriant.</speaker>
+          <l n="246">Je commençais.</l>
+          <stage>&lt;em&gt;Montrant l’anneau de Mathilde, et le lui passant.&lt;/em&gt;</stage>
+          <l n="247">Autant que je puis m’y connaître...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="248">On vous a fait un pareil don !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="249">Voyez vous-même, mon cher maître,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, regardant l’anneau.</speaker>
+          <l n="250">Une alliance ! eh ! mais ! mon ami, c’est une femme mariée.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, fâché.</speaker>
+          <l n="251">Laissez donc !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="252">C’est bien plus drôle.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="253">Parbleu ! je vais voir le nom du mari.</l>
+          <stage>&lt;em&gt;Il l’ouvre et reste stupéfait.&lt;/em&gt;</stage>
+          <l n="254">Ah ! mon Dieu !</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="255">Eh bien ! qu’avez-vous donc ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, troublé.</speaker>
+          <l n="256">Rien, rien ; c’est que je ne suis pas à mon aise.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, tirant son flacon.</speaker>
+          <l n="257">Voulez-vous mon flacon, colonel ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, le repoussant.</speaker>
+          <l n="258">Eh ! non, non, il ne me manquerait plus que cela.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, regardant par la fenêtre.</speaker>
+          <l n="259">Ah ! mon Dieu ! voilà déjà le jour !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="260">Eh bien ! faites-moi le plaisir de descendre chez le concierge, pour faire préparer nos laissez-passer.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="261">Oui, colonel. Ah çà ! et mon anneau ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="262">Je vous le rendrai tout à l’heure ; c’est que j’en ai un presque pareil, et je ne suis pas fâché de comparer.</l>
+          <stage>&lt;em&gt;Léon sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, seul</speaker>
+          <l n="263">Ah ! par exemple, celui-ci est un peu fort ! voyons donc encore une fois.</l>
+          <stage>&lt;em&gt;Il regarde l’anneau.&lt;/em&gt;</stage>
+          <l n="264">MATHILDE, GUSTAVE. C’est bien notre anneau de mariage, et il n’y a que ma femme qui puisse le porter ; si je n’étais pas certain qu’elle ne peut avoir quitté Paris, il y aurait de quoi donner des idées...</l>
+          <stage>&lt;em&gt;Il entend ouvrir la porte secrète.&lt;/em&gt;</stage>
+          <l n="265">Quel bruit ? eh mais ! cette porte s’ouvre.</l>
+          <stage>&lt;em&gt;Mathilde paraît.&lt;/em&gt;</stage>
+          <l n="266">Ah ! mon Dieu ! ma femme ! Il n’y a plus de doute.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="267">Comment ! Monsieur, voilà l’accueil que vous me faites, moi qui arrive de Paris pour vous délivrer ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, interdit.</speaker>
+          <l n="268">Non, non, ma bonne amie. Vous arrivez à l’instant même, n’est-ce pas ?</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, lui prenant la main.</speaker>
+          <l n="269">Pourquoi donc cette question ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, regardant sa main.</speaker>
+          <l n="270">Mais pour... Mathilde, où est votre anneau ?</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="271">Mon ami, est-ce à vous de me le demander.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="272">Comment ! Madame, il me semble que c’est assez naturel.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, tendrement.</speaker>
+          <l n="273">Ingrat ! puisque je ne le porte pas, vous savez bien qu’il n’y a qu’une personne qui puisse l’avoir.</l>
+          <stage>&lt;em&gt;Le voyant à sa main.&lt;/em&gt;</stage>
+          <l n="274">Eh ! tenez, le voici.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="275">Comment ! Madame, il est donc vrai, c’est vous qui cette nuit...</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="276">Vous en doutez encore ? oui, Monsieur ; j’étais venue hier au soir, je croyais que vous n’étiez occupé que de votre Mathilde.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="277">Ah ! je devine tout.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="278">C’est ce petit coquin-là qui ; sans s’en douter... ah ! il a une étoile malheureuse.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, avec bonté.</speaker>
+          <l n="279">Ne vous désolez pas, mon ami, je ne vous ferai pas de reproches, je sens trop que votre situation mérite des ménagements.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="280">Vous êtes trop bonne ; mais moi, je ne me le pardonnerai jamais. Écoutez, Mathilde, je ne vous demande qu’une chose pour ma punition, c’est de me répéter bien exactement tout ce que je vous ai dit cette nuit.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, baissant les yeux.</speaker>
+          <l n="281">Vous le dire, quand je voudrais l’oublier ?</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, à part.</speaker>
+          <l n="282">Ah ! mon Dieu !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="283">Je crois me souvenir d’abord que vous m’avez repoussé.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="284">Oh ! non ; quoique je fusse bien en colère.</l>
+          <stage>&lt;em&gt;Air : Il n’est pas temps de nous quitter.&lt;/em&gt;</stage>
+          <l n="285">Pour moi jugez quelle douleur,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, à part, avec joie.</speaker>
+          <l n="286">J’ai été fidèle !</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="287">Jamais je ne vous aurais vu,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, transporté.</speaker>
+          <l n="288">Ah ! quel bonheur !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="289">J’étais perdu,</l>
+          <stage>&lt;em&gt;Il se jette aux genoux de Mathilde et lui baise la main.&lt;/em&gt;</stage>
+          <l n="290">Ma chère Mathilde ! vous me pardonnez ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="291">Colonel, quand vous voudrez partir ? Eh bien ! qu’est-ce que vous faites donc ? voilà où j’en étais resté.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE.</speaker>
+          <l n="292">Un officier !</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, sans se déranger.</speaker>
+          <l n="293">Mon cher Léon, c’est ma femme que je vous présente.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, confondu.</speaker>
+          <l n="294">Sa femme !</l>
+          <stage>&lt;em&gt;Bas.&lt;/em&gt;</stage>
+          <l n="295">Ah ! colonel, si je l’avais su...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, se levant et lui serrant la main.</speaker>
+          <l n="296">C’est bon, c’est bon.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="297">Ma chère amie, c’est mon compagnon d’infortune, un jeune sous-lieutenant que vous avez vu deux ou trois fois avant notre mariage.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, saluant.</speaker>
+          <l n="298">Oui, dans un bal, je crois.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, à part.</speaker>
+          <l n="299">Elle s’en souvient.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="300">C’est un jeune homme qui promet, mon élève.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, timidement.</speaker>
+          <l n="301">Qui tâchera du moins, colonel, de vous faire honneur.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, à part.</speaker>
+          <l n="302">Me faire honneur ! joliment, ça commence bien.</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, à Léon.</speaker>
+          <l n="303">J’espère que Monsieur n’oubliera pas le colonel, et s’il vient jamais à Paris...</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, l’interrompant.</speaker>
+          <l n="304">Oui, oui, nous songerons à son avancement, je lui ferai avoir une lieutenance, dans quelque garnison... à Perpignan.</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON, soupirant.</speaker>
+          <l n="305">À Perpignan ! c’est un peu loin ; mais c’est égal.</l>
+          <stage>&lt;em&gt;À demi voix, à Gustave.&lt;/em&gt;</stage>
+          <l n="306">Colonel, je vous remercie de la leçon.</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="307">Je crois bien ; c’est moi qui l’ai payée.</l>
+          <stage>&lt;em&gt;Vaudeville.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air du vaudeville du Piège.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE, prenant son manuscrit et le déchirant.</speaker>
+          <l n="308">Oui, je renonce à mes anciens projets ;</l>
+        </sp>
+        <sp who="#léon">
+          <speaker>LÉON.</speaker>
+          <l n="309">Plus d’une femme, au printemps de ses jours,</l>
+        </sp>
+        <sp who="#gustave-de-montemart">
+          <speaker>GUSTAVE.</speaker>
+          <l n="310">Quoique gravés sur l’airain le plus dur,</l>
+        </sp>
+        <sp who="#mathilde">
+          <speaker>MATHILDE, au public.</speaker>
+          <l n="311">Vous devinez, Messieurs, en ce moment</l>
+          <l n="312" />
+        </sp>
       </div>
     </body>
   </text>

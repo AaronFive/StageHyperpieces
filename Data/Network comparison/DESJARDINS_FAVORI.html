@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "MONCADE", "label": "MONCADE", "shape": "dot", "size": 38, "title": "MONCADETop Words: \n (\u0027h\u00e9las\u0027, 0.07843811688275415)\n(\u0027amis\u0027, 0.07815069607380402)\n(\u0027foule\u0027, 0.07692915703886861)\n(\u0027fortune\u0027, 0.07476190913303352)\n(\u0027seigneur\u0027, 0.07085087814931754)\n(\u0027appas\u0027, 0.0708498417124652)\n(\u0027amour\u0027, 0.06798565635437201)\n(\u0027madame\u0027, 0.06696920894441868)\n(\u0027soins\u0027, 0.06406527600324237)\n(\u0027heure\u0027, 0.06308300925871926)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "DON ALVAR", "label": "DON ALVAR", "shape": "dot", "size": 32, "title": "DON ALVARTop Words: \n (\u0027effroi\u0027, 0.13361968485108017)\n(\u0027indiff\u00e9rence\u0027, 0.10780352039990068)\n(\u0027autorit\u00e9\u0027, 0.10780352039990068)\n(\u0027tort\u0027, 0.10780352039990068)\n(\u0027amener\u0027, 0.10780352039990068)\n(\u0027seul\u0027, 0.09856656964076238)\n(\u0027seigneur\u0027, 0.09106746397923181)\n(\u0027roi\u0027, 0.09036408924410796)\n(\u0027vertus\u0027, 0.08840042887865603)\n(\u0027esp\u00e9rer\u0027, 0.08840042887865603)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "CLOTAIRE", "label": "CLOTAIRE", "shape": "dot", "size": 36, "title": "CLOTAIRETop Words: \n (\u0027madame\u0027, 0.1050160933484266)\n(\u0027sujets\u0027, 0.1034059572096129)\n(\u0027devez\u0027, 0.1034059572096129)\n(\u0027d\u00e9sespoir\u0027, 0.10173880461718099)\n(\u0027maison\u0027, 0.10173880461718099)\n(\u0027long\u0027, 0.10173880461718099)\n(\u0027meurs\u0027, 0.10173880461718099)\n(\u0027roi\u0027, 0.08809077617658113)\n(\u0027grande\u0027, 0.08730241445571923)\n(\u0027seigneur\u0027, 0.08594427056181525)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LINDAMIRE", "label": "LINDAMIRE", "shape": "dot", "size": 40, "title": "LINDAMIRETop Words: \n (\u0027l\u00e2chet\u00e9\u0027, 0.0864601559502748)\n(\u0027feux\u0027, 0.08294523199051815)\n(\u0027h\u00e9las\u0027, 0.07752832412584149)\n(\u0027enflammer\u0027, 0.07603686649632567)\n(\u0027ais\u00e9ment\u0027, 0.07603686649632567)\n(\u0027\u00e9clater\u0027, 0.07603686649632567)\n(\u0027univers\u0027, 0.07603686649632567)\n(\u0027seigneur\u0027, 0.07115443985427972)\n(\u0027osez\u0027, 0.07089856470890181)\n(\u0027vu\u0027, 0.06545473846512917)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "LE ROI", "label": "LE ROI", "shape": "dot", "size": 38, "title": "LE ROITop Words: \n (\u0027arr\u00eatez\u0027, 0.11991815459523819)\n(\u0027desseins\u0027, 0.09833460222107736)\n(\u0027demande\u0027, 0.09674921206133721)\n(\u0027secr\u00e8tes\u0027, 0.09674921206133721)\n(\u0027s\u00e9duire\u0027, 0.09674921206133721)\n(\u0027achever\u0027, 0.09674921206133721)\n(\u0027n\u00e9cessaire\u0027, 0.09674921206133721)\n(\u0027ouvrage\u0027, 0.09674921206133721)\n(\u0027souhaits\u0027, 0.09674921206133721)\n(\u0027viens\u0027, 0.08302082810413473)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "DONA ELVIRE", "label": "DONA ELVIRE", "shape": "dot", "size": 36, "title": "DONA ELVIRETop Words: \n (\u0027l\u00e9onor\u0027, 0.08969742516397641)\n(\u0027belle\u0027, 0.08969742516397641)\n(\u0027amante\u0027, 0.0879718634338971)\n(\u0027seigneur\u0027, 0.07484275093786258)\n(\u0027amant\u0027, 0.0732614515529475)\n(\u0027amour\u0027, 0.07239143491122411)\n(\u0027charmes\u0027, 0.07213818647074743)\n(\u0027devient\u0027, 0.07213818647074743)\n(\u0027croit\u0027, 0.07213818647074743)\n(\u0027humeur\u0027, 0.07213818647074743)"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "MONCADE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for MONCADE to  DON ALVAR : \n (\u0027clotaire\u0027, 0.10341352602425406)\n(\u0027flatteurs\u0027, 0.08343338165185928)\n(\u0027vante\u0027, 0.08343338165185928)\n(\u0027loi\u0027, 0.08343338165185928)\n(\u0027voix\u0027, 0.08343338165185928)\n(\u0027don\u0027, 0.08343338165185928)\n(\u0027supr\u00eame\u0027, 0.08343338165185928)\n(\u0027vain\u0027, 0.08343338165185928)\n(\u0027attend\u0027, 0.08343338165185928)\n(\u0027art\u0027, 0.08343338165185928) ", "to": "DON ALVAR", "value": 1.0, "width": 1.0}, {"arrows": "to", "from": "MONCADE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for MONCADE to  CLOTAIRE : \n (\u0027roi\u0027, 0.1457453715975969)\n(\u0027seigneur\u0027, 0.13622717229064343)\n(\u0027amis\u0027, 0.12457783782455865)\n(\u0027destin\u0027, 0.12423144995671362)\n(\u0027coup\u0027, 0.12423144995671362)\n(\u0027t\u00e9moigne\u0027, 0.12423144995671362)\n(\u0027tour\u0027, 0.12423144995671362)\n(\u0027ami\u0027, 0.10955923360252474)\n(\u0027bonheur\u0027, 0.10955923360252474)\n(\u0027gardez\u0027, 0.10955923360252474) ", "to": "CLOTAIRE", "value": 0.351434669196111, "width": 0.351434669196111}, {"arrows": "to", "from": "MONCADE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for MONCADE to  LINDAMIRE : \n (\u0027gloire\u0027, 0.14239925553362004)\n(\u0027amour\u0027, 0.11766090733999315)\n(\u0027douter\u0027, 0.11488682274590155)\n(\u0027rapport\u0027, 0.11488682274590155)\n(\u0027trouve\u0027, 0.11488682274590155)\n(\u0027assurance\u0027, 0.11488682274590155)\n(\u0027espoir\u0027, 0.11488682274590155)\n(\u0027flatter\u0027, 0.11488682274590155)\n(\u0027amoureux\u0027, 0.11488682274590155)\n(\u0027adore\u0027, 0.11488682274590155) ", "to": "LINDAMIRE", "value": 0.5916528337680815, "width": 0.5916528337680815}, {"arrows": "to", "from": "MONCADE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for MONCADE to  LE ROI : \n (\u0027confondre\u0027, 0.15254033833516426)\n(\u0027laissait\u0027, 0.15254033833516426)\n(\u0027agir\u0027, 0.15254033833516426)\n(\u0027seigneur\u0027, 0.14960597233894005)\n(\u0027amour\u0027, 0.12646701807618949)\n(\u0027bont\u00e9s\u0027, 0.12306858449673776)\n(\u0027inspire\u0027, 0.12306858449673776)\n(\u0027coeur\u0027, 0.11202236828109763)\n(\u0027roi\u0027, 0.10244288414554485)\n(\u0027dieux\u0027, 0.10244288414554485) ", "to": "LE ROI", "value": 0.3827365425658051, "width": 0.3827365425658051}, {"arrows": "to", "from": "MONCADE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for MONCADE to  DONA ELVIRE : \n (\u0027roi\u0027, 0.11310090481946362)\n(\u0027voyez\u0027, 0.11006164668993867)\n(\u0027disgr\u00e2ce\u0027, 0.10831939001589591)\n(\u0027voir\u0027, 0.09526083901975581)\n(\u0027doit\u0027, 0.09526083901975581)\n(\u0027sort\u0027, 0.09161584629279741)\n(\u0027amis\u0027, 0.09161584629279741)\n(\u0027amour\u0027, 0.09161584629279741)\n(\u0027dieux\u0027, 0.09161584629279741)\n(\u0027coeur\u0027, 0.09161584629279741) ", "to": "DONA ELVIRE", "value": 0.4994071614892103, "width": 0.4994071614892103}, {"arrows": "to", "from": "DON ALVAR", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for DON ALVAR to  MONCADE : \n (\u0027nom\u0027, 0.11708383054618073)\n(\u0027voit\u0027, 0.11708383054618073)\n(\u0027conna\u00eetre\u0027, 0.11708383054618073)\n(\u0027tort\u0027, 0.11708383054618073)\n(\u0027faveurs\u0027, 0.11708383054618073)\n(\u0027chagrin\u0027, 0.11708383054618073)\n(\u0027bont\u00e9s\u0027, 0.11708383054618073)\n(\u0027crainte\u0027, 0.11708383054618073)\n(\u0027voir\u0027, 0.11708383054618073)\n(\u0027dessein\u0027, 0.11708383054618073) ", "to": "MONCADE", "value": 0.4138012805311833, "width": 0.4138012805311833}, {"arrows": "to", "from": "DON ALVAR", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for DON ALVAR to  LINDAMIRE : \n (\u0027madame\u0027, 0.1992541845321205)\n(\u0027seigneur\u0027, 0.14933329005941534)\n(\u0027moncade\u0027, 0.1276446599086126)\n(\u0027seul\u0027, 0.11225633192267244)\n(\u0027yeux\u0027, 0.11225633192267244)\n(\u0027prince\u0027, 0.11225633192267244)\n(\u0027roi\u0027, 0.10796103579024692)\n(\u0027majest\u00e9\u0027, 0.10766085083238636)\n(\u0027bienfaits\u0027, 0.10766085083238636)\n(\u0027autorit\u00e9\u0027, 0.10766085083238636) ", "to": "LINDAMIRE", "value": 0.288475219350249, "width": 0.288475219350249}, {"arrows": "to", "from": "DON ALVAR", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for DON ALVAR to  CLOTAIRE : \n (\u0027seigneur\u0027, 0.19946545441253757)\n(\u0027prince\u0027, 0.16041793974107116)\n(\u0027majest\u00e9\u0027, 0.15385084819268027)\n(\u0027vois\u0027, 0.13568046596060454)\n(\u0027yeux\u0027, 0.12942418370961156)\n(\u0027moncade\u0027, 0.12942418370961156)\n(\u0027seul\u0027, 0.12942418370961156)\n(\u0027grand\u0027, 0.12942418370961156)\n(\u0027dois\u0027, 0.10946614562333193)\n(\u0027roi\u0027, 0.10946614562333193) ", "to": "CLOTAIRE", "value": 0.20701920796774959, "width": 0.20701920796774959}, {"arrows": "to", "from": "CLOTAIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for CLOTAIRE to  DONA ELVIRE : \n (\u0027exil\u0027, 0.15134519870469249)\n(\u0027lindamire\u0027, 0.14285182986916448)\n(\u0027ose\u0027, 0.12210435336808419)\n(\u0027maison\u0027, 0.12210435336808419)\n(\u0027seigneur\u0027, 0.12017146274738927)\n(\u0027roi\u0027, 0.11114468324844827)\n(\u0027madame\u0027, 0.1056840734227518)\n(\u0027moncade\u0027, 0.1056840734227518)\n(\u0027faveur\u0027, 0.10135764343309905)\n(\u0027amis\u0027, 0.10135764343309905) ", "to": "DONA ELVIRE", "value": 0.35119753379179514, "width": 0.35119753379179514}, {"arrows": "to", "from": "CLOTAIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for CLOTAIRE to  LINDAMIRE : \n (\u0027long\u0027, 0.14185267441423619)\n(\u0027haine\u0027, 0.14185267441423619)\n(\u0027meurs\u0027, 0.14185267441423619)\n(\u0027ardeur\u0027, 0.14185267441423619)\n(\u0027amour\u0027, 0.13389201828230948)\n(\u0027madame\u0027, 0.12316666460168232)\n(\u0027col\u00e8re\u0027, 0.11775053384024349)\n(\u0027crois\u0027, 0.11775053384024349)\n(\u0027devez\u0027, 0.11775053384024349)\n(\u0027coeur\u0027, 0.11760616853939083) ", "to": "LINDAMIRE", "value": 0.36376571022053594, "width": 0.36376571022053594}, {"arrows": "to", "from": "CLOTAIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for CLOTAIRE to  LE ROI : \n (\u0027seigneur\u0027, 0.16208832882515978)\n(\u0027crois\u0027, 0.14484063450719803)\n(\u0027ose\u0027, 0.14077565680020118)\n(\u0027sujets\u0027, 0.12184450790676998)\n(\u0027madame\u0027, 0.12184450790676998)\n(\u0027roi\u0027, 0.11718233665455274)\n(\u0027marque\u0027, 0.11685651192961224)\n(\u0027devez\u0027, 0.11685651192961224)\n(\u0027monarque\u0027, 0.11685651192961224)\n(\u0027col\u00e8re\u0027, 0.11685651192961224) ", "to": "LE ROI", "value": 0.33210813374436804, "width": 0.33210813374436804}, {"arrows": "to", "from": "LINDAMIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LINDAMIRE to  MONCADE : \n (\u0027soins\u0027, 0.1492588125954753)\n(\u0027cesse\u0027, 0.13126476909490445)\n(\u0027h\u00e9las\u0027, 0.12042107019212296)\n(\u0027seigneur\u0027, 0.10625200169539868)\n(\u0027plaisirs\u0027, 0.10590358919557344)\n(\u0027pourra\u0027, 0.10590358919557344)\n(\u0027proprement\u0027, 0.10590358919557344)\n(\u0027perdez\u0027, 0.10590358919557344)\n(\u0027lieu\u0027, 0.10590358919557344)\n(\u0027fortune\u0027, 0.10590358919557344) ", "to": "MONCADE", "value": 0.6215318947118805, "width": 0.6215318947118805}, {"arrows": "to", "from": "LINDAMIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LINDAMIRE to  DON ALVAR : \n (\u0027courons\u0027, 0.0968391086590007)\n(\u0027croire\u0027, 0.0968391086590007)\n(\u0027perdu\u0027, 0.0968391086590007)\n(\u0027esp\u00e8re\u0027, 0.0968391086590007)\n(\u0027sens\u0027, 0.0968391086590007)\n(\u0027esp\u00e9rance\u0027, 0.0968391086590007)\n(\u0027envie\u0027, 0.0968391086590007)\n(\u0027seul\u0027, 0.0968391086590007)\n(\u0027suivre\u0027, 0.0968391086590007)\n(\u0027irrit\u00e9\u0027, 0.0968391086590007) ", "to": "DON ALVAR", "value": 0.7750770690064026, "width": 0.7750770690064026}, {"arrows": "to", "from": "LINDAMIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LINDAMIRE to  CLOTAIRE : \n (\u0027savez\u0027, 0.12627632385562745)\n(\u0027haine\u0027, 0.12627632385562745)\n(\u0027montrer\u0027, 0.12627632385562745)\n(\u0027foi\u0027, 0.1048207558072755)\n(\u0027faisant\u0027, 0.1048207558072755)\n(\u0027moment\u0027, 0.1048207558072755)\n(\u0027l\u00e2chet\u00e9\u0027, 0.1048207558072755)\n(\u0027roi\u0027, 0.10469224275978264)\n(\u0027esprit\u0027, 0.10187894298633014)\n(\u0027destin\u0027, 0.10187894298633014) ", "to": "CLOTAIRE", "value": 0.5888072089162912, "width": 0.5888072089162912}, {"arrows": "to", "from": "LINDAMIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LINDAMIRE to  DONA ELVIRE : \n (\u0027si\u00e8cle\u0027, 0.15677126580669137)\n(\u0027voir\u0027, 0.13013431234748724)\n(\u0027dieux\u0027, 0.13013431234748724)\n(\u0027clotaire\u0027, 0.13013431234748724)\n(\u0027croyais\u0027, 0.1264820701406802)\n(\u0027amis\u0027, 0.1264820701406802)\n(\u0027\u00e2me\u0027, 0.10528428608239858)\n(\u0027seigneur\u0027, 0.10528428608239858)\n(\u0027l\u00e2chet\u00e9\u0027, 0.10499154380969172)\n(\u0027trouver\u0027, 0.10499154380969172) ", "to": "DONA ELVIRE", "value": 0.3921033910362817, "width": 0.3921033910362817}, {"arrows": "to", "from": "LINDAMIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LINDAMIRE to  LE ROI : \n (\u0027faisant\u0027, 0.1436771777890173)\n(\u0027seigneur\u0027, 0.14350102572990808)\n(\u0027roi\u0027, 0.12711080720940637)\n(\u0027vu\u0027, 0.12086577143699495)\n(\u0027majest\u00e9\u0027, 0.12086577143699495)\n(\u0027yeux\u0027, 0.1162410498582285)\n(\u0027victoire\u0027, 0.11591784237510326)\n(\u0027voyez\u0027, 0.11591784237510326)\n(\u0027poursuivez\u0027, 0.11591784237510326)\n(\u0027foi\u0027, 0.11591784237510326) ", "to": "LE ROI", "value": 0.4309935973440835, "width": 0.4309935973440835}, {"arrows": "to", "from": "LE ROI", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LE ROI to  MONCADE : \n (\u0027viens\u0027, 0.1407712964559149)\n(\u0027bonheur\u0027, 0.11357339561247294)\n(\u0027aveu\u0027, 0.11357339561247294)\n(\u0027crime\u0027, 0.11357339561247294)\n(\u0027flamme\u0027, 0.11357339561247294)\n(\u0027parlez\u0027, 0.11357339561247294)\n(\u0027tendresse\u0027, 0.11357339561247294)\n(\u0027souhaits\u0027, 0.11357339561247294)\n(\u0027chagrin\u0027, 0.11357339561247294)\n(\u0027seul\u0027, 0.11357339561247294) ", "to": "MONCADE", "value": 0.543751482096277, "width": 0.543751482096277}, {"arrows": "to", "from": "LE ROI", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LE ROI to  DONA ELVIRE : \n (\u0027lieux\u0027, 0.14373471701395268)\n(\u0027importance\u0027, 0.14373471701395268)\n(\u0027z\u00e8le\u0027, 0.14373471701395268)\n(\u0027moncade\u0027, 0.13083357925956457)\n(\u0027amour\u0027, 0.12440564130018592)\n(\u0027emportement\u0027, 0.11931279920987305)\n(\u0027mod\u00e9rez\u0027, 0.11931279920987305)\n(\u0027vient\u0027, 0.11931279920987305)\n(\u0027voyage\u0027, 0.11931279920987305)\n(\u0027grand\u0027, 0.10522149459706273) ", "to": "DONA ELVIRE", "value": 0.36862698600901117, "width": 0.36862698600901117}, {"arrows": "to", "from": "LE ROI", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LE ROI to  CLOTAIRE : \n (\u0027lieux\u0027, 0.1352793247756847)\n(\u0027z\u00e8le\u0027, 0.1352793247756847)\n(\u0027importance\u0027, 0.1352793247756847)\n(\u0027moncade\u0027, 0.12313711417751512)\n(\u0027courroux\u0027, 0.11708730850140749)\n(\u0027amour\u0027, 0.11708730850140749)\n(\u0027mod\u00e9rez\u0027, 0.112294059845275)\n(\u0027vient\u0027, 0.112294059845275)\n(\u0027emportement\u0027, 0.112294059845275)\n(\u0027voyage\u0027, 0.112294059845275) ", "to": "CLOTAIRE", "value": 0.41012568176428743, "width": 0.41012568176428743}, {"arrows": "to", "from": "LE ROI", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LE ROI to  LINDAMIRE : \n (\u0027arr\u00eatez\u0027, 0.16719468984199945)\n(\u0027courroux\u0027, 0.14471077721439082)\n(\u0027amour\u0027, 0.14471077721439082)\n(\u0027moncade\u0027, 0.13917366736015618)\n(\u0027voyage\u0027, 0.1387866958832154)\n(\u0027part\u0027, 0.1387866958832154)\n(\u0027mod\u00e9rez\u0027, 0.1387866958832154)\n(\u0027vient\u0027, 0.1387866958832154)\n(\u0027carlos\u0027, 0.12239544849947266)\n(\u0027priver\u0027, 0.12239544849947266) ", "to": "LINDAMIRE", "value": 0.3142044107185203, "width": 0.3142044107185203}, {"arrows": "to", "from": "LE ROI", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for LE ROI to  DON ALVAR : \n (\u0027moncade\u0027, 0.17364010993309856)\n(\u0027roi\u0027, 0.17364010993309856)\n(\u0027ardeur\u0027, 0.1656334928409201)\n(\u0027heureux\u0027, 0.14009174736698585)\n(\u0027coupable\u0027, 0.14009174736698585)\n(\u0027sujet\u0027, 0.14009174736698585)\n(\u0027col\u00e8re\u0027, 0.14009174736698585)\n(\u0027bouche\u0027, 0.11628880531997639)\n(\u0027t\u00e2chez\u0027, 0.11628880531997639)\n(\u0027transport\u0027, 0.11628880531997639) ", "to": "DON ALVAR", "value": 0.20393644771164335, "width": 0.20393644771164335}, {"arrows": "to", "from": "DONA ELVIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for DONA ELVIRE to  MONCADE : \n (\u0027voit\u0027, 0.18841607767653357)\n(\u0027armes\u0027, 0.15201290510533078)\n(\u0027attraits\u0027, 0.15201290510533078)\n(\u0027seigneur\u0027, 0.12070163651925143)\n(\u0027amour\u0027, 0.10208867107739483)\n(\u0027jour\u0027, 0.08978127055384409)\n(\u0027grandeurs\u0027, 0.08978127055384409)\n(\u0027grande\u0027, 0.08978127055384409)\n(\u0027glorieux\u0027, 0.08978127055384409)\n(\u0027gens\u0027, 0.08978127055384409) ", "to": "MONCADE", "value": 0.2804126156035096, "width": 0.2804126156035096}, {"arrows": "to", "from": "DONA ELVIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for DONA ELVIRE to  CLOTAIRE : \n (\u0027savez\u0027, 0.16709979554185922)\n(\u0027seigneur\u0027, 0.1637963047176783)\n(\u0027oserait\u0027, 0.13481506289730205)\n(\u0027aime\u0027, 0.13481506289730205)\n(\u0027coeur\u0027, 0.13268096396131193)\n(\u0027amour\u0027, 0.12271452286120377)\n(\u0027grand\u0027, 0.11668547936846521)\n(\u0027gr\u00e2ce\u0027, 0.11190868054772585)\n(\u0027ciel\u0027, 0.11190868054772585)\n(\u0027avis\u0027, 0.11190868054772585) ", "to": "CLOTAIRE", "value": 0.28432534977472135, "width": 0.28432534977472135}, {"arrows": "to", "from": "DONA ELVIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for DONA ELVIRE to  LINDAMIRE : \n (\u0027soins\u0027, 0.1780695882831144)\n(\u0027courroux\u0027, 0.1780695882831144)\n(\u0027premier\u0027, 0.1780695882831144)\n(\u0027tiens\u0027, 0.1780695882831144)\n(\u0027amour\u0027, 0.13077050448442606)\n(\u0027amant\u0027, 0.11925527859457002)\n(\u0027effet\u0027, 0.11925527859457002)\n(\u0027ciel\u0027, 0.11925527859457002)\n(\u0027publique\u0027, 0.10517076738965156)\n(\u0027perdre\u0027, 0.10517076738965156) ", "to": "LINDAMIRE", "value": 0.2144889732036993, "width": 0.2144889732036993}, {"arrows": "to", "from": "DONA ELVIRE", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for DONA ELVIRE to  LE ROI : \n (\u0027seigneur\u0027, 0.18857878851943313)\n(\u0027aime\u0027, 0.16378293862876014)\n(\u0027oserait\u0027, 0.16378293862876014)\n(\u0027coeur\u0027, 0.1611902832714932)\n(\u0027amour\u0027, 0.14908234090981784)\n(\u0027grand\u0027, 0.14175782954484123)\n(\u0027gr\u00e2ce\u0027, 0.13595463418012843)\n(\u0027juge\u0027, 0.0967328419580128)\n(\u0027rocher\u0027, 0.0967328419580128)\n(\u0027col\u00e8re\u0027, 0.0967328419580128) ", "to": "LE ROI", "value": 0.21935024899217453, "width": 0.21935024899217453}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

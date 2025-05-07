@@ -1,1354 +1,1308 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Mon ami Pierre</title>
-        <author key="Adolphe DE LEUVEN - Armand D&#039;ARTOIS - Philippe-Auguste-Alfred PITTAUD DE FORGES | (naissance-mort)">Adolphe DE LEUVEN - Armand D&#039;ARTOIS - Philippe-Auguste-Alfred PITTAUD DE FORGES |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/mon-ami-pierre-adolphe-de-leuven-armand-dartois-philippe-auguste-alfred-pittaud-de-forges</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Adolphe DE LEUVEN - Armand D&#039;ARTOIS - Philippe-Auguste-Alfred PITTAUD DE FORGES |</author>. <title>Mon ami Pierre</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/mon-ami-pierre-adolphe-de-leuven-armand-dartois-philippe-auguste-alfred-pittaud-de-forges</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1827-09-08">Représentée pour la première fois, à Paris, sur le Théâtre des Nouveautés, le 8 septembre 1827.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="le-baron-de-valbert" sex="SEX">
+            <persName>LE BARON DE VALBERT</persName>
+          </person>
+          <person xml:id="cécile-dumont" sex="SEX">
+            <persName>CÉCILE DUMONT</persName>
+          </person>
+          <person xml:id="pierre" sex="SEX">
+            <persName>PIERRE</persName>
+          </person>
+          <person xml:id="vincent" sex="SEX">
+            <persName>VINCENT</persName>
+          </person>
+          <person xml:id="madame-vincent" sex="SEX">
+            <persName>MADAME VINCENT</persName>
+          </person>
+          <person xml:id="auguste" sex="SEX">
+            <persName>AUGUSTE</persName>
+          </person>
+          <person xml:id="amis-du-colonel" sex="SEX">
+            <persName>AMIS du colonel</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1827-09-08" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre des Nouveautés, le 8 septembre 1827.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Mon ami Pierre</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte, mêlée de couplets.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre des Nouveautés, le 8 septembre 1827.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="le-baron-de-valbert">LE BARON DE VALBERT</role>
-              <roleDesc>, <em>colonel de cavalerie</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="cécile-dumont">CÉCILE DUMONT</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="pierre">PIERRE</role>
-              <roleDesc>, <em>jeune fermier</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="vincent">VINCENT</role>
-              <roleDesc>, <em>vieux domestique de confiance du colonel</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-vincent">MADAME VINCENT</role>
-              <roleDesc>, <em>sa femme</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="auguste">AUGUSTE</role>
-              <roleDesc>, <em>valet du baron</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="amis-<em>du-colonel</em>">AMIS <em>du colonel</em></role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène se passe à Paris, dans l’hôtel du baron.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Le théâtre représente un riche salon ; à la droite du spectateur ; la porte d’un appartement qui est censé celui de Cécile : à gauche une autre porte qui donne dans les appartements du Colonel. Sur le premier plan, à gauche, une fenêtre qui s’ouvre. Une table et tout ce qu’il faut pour écrire.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="auguste" xml:id="1-1">
-            <speaker>VINCENT, <em>puis</em> AUGUSTE</speaker>
-            <l n="10" xml:id="l10"> </l>
-            <stage><hi rend="italic"><em>Au lever du rideau, Vincent est en scène, il écoute du côté de la chambre du colonel, dans laquelle on chante le chœur de la Dame Blanche.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="1-2">
-            <speaker>VINCENT.</speaker>
-            <l n="12" xml:id="l12">Ah ! mon Dieu ! quel tapage ! quelle gaieté... c’est pourtant comme ça, toutes les fois que monsieur le colonel donne un déjeuner à ses amis !... des amis !... un jeune homme n’en manque jamais, avec de la fortune, un bon cœur, et des côtelettes...</l>
-            <stage><hi rend="italic"><em>Air : Jadis et aujourd’hui.</em></hi></stage>
-            <stage><hi rend="italic"><em>On entend sonner, et plusieurs voie qui crient.</em></hi></stage>
-            <l n="15" xml:id="l15">Le café ! le café !</l>
-          </sp>
-          <sp who="auguste" xml:id="1-3">
-            <speaker>AUGUSTE, <em>entrant par le fond, en tenant un plateau et des demi-tasses.</em></speaker>
-            <l n="16" xml:id="l16">Voilà ! voilà !</l>
-            <stage><hi rend="italic"><em>Il entre chez Valbert, et laisse la porte ouverte</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="1-4">
-            <speaker>VINCENT.</speaker>
-            <l n="18" xml:id="l18">Ils ne sont pourtant que six à table !... et ils ont bu !...</l>
-            <stage><hi rend="italic"><em>On entend le bruit d’un bouchon de Champagne qui saute, Vincent porte la main à sa tête. </em></hi></stage>
-            <l n="20" xml:id="l20">Ah ! qu’est-ce que c’est que ça ?</l>
-            <stage><hi rend="italic"><em>Tirant un bouchon de ses cheveux. </em></hi></stage>
-            <l n="22" xml:id="l22">c’est le bouchon de Champagne, qui vient de sauter... il m’a attrapé juste dans l’aile de pigeon...</l>
-          </sp>
-          <sp who="auguste" xml:id="1-5">
-            <speaker>AUGUSTE, <em>sortant de chez Valbert.</em></speaker>
-            <l n="23" xml:id="l23">Les voilà au café !...</l>
-          </sp>
-          <sp who="vincent" xml:id="1-6">
-            <speaker>VINCENT.</speaker>
-            <l n="24" xml:id="l24">Dites donc, monsieur Auguste, fermez votre porte, s’il vous plaît... je viens de recevoir un éclat de Champagne.</l>
-          </sp>
-          <sp who="auguste" xml:id="1-7">
-            <speaker>AUGUSTE, <em>riant.</em></speaker>
-            <l n="25" xml:id="l25">Ah ! ah ! c’est qu’ils ont fait un fier feu de file !... et des toasts, en ont-ils portés ? à madame une telle, à la petite brune, à la grande blonde, à la vertu des grisettes, à l’innocence des danseuses... ils confondaient tout !... ça m’amuse, moi... parce qu’il reste toujours quelques fonds de bouteilles...</l>
-          </sp>
-          <sp who="vincent" xml:id="1-8">
-            <speaker>VINCENT.</speaker>
-            <l n="26" xml:id="l26">Mauvais sujet !</l>
-          </sp>
-          <sp who="auguste" xml:id="1-9">
-            <speaker>AUGUSTE.</speaker>
-            <l n="27" xml:id="l27">C’est ça... parce que vous êtes vieux, vous critiquez les jeunes gens... vous avez eu votre temps, monsieur Vincent. Vous avez servi fidèlement le père de monsieur de Valbert, c’est bien... vous vous êtes marié, c’est bon !... vous êtes devenus, vous et madame Vincent, les gens de confiance de notre jeune maître, c’est juste ; mais vous n’aimez pas qu’on s’amuse, et c’est mal... voyez monsieur le colonel, il rit, il chante, il boit,</l>
-            <stage><hi rend="italic"><em>En confiance. </em></hi></stage>
-            <l n="29" xml:id="l29">et il aime ! vous en savez quelque chose...</l>
-          </sp>
-          <sp who="vincent" xml:id="1-10">
-            <speaker>VINCENT.</speaker>
-            <l n="30" xml:id="l30">Comment ?</l>
-          </sp>
-          <sp who="auguste" xml:id="1-11">
-            <speaker>AUGUSTE.</speaker>
-            <l n="31" xml:id="l31">Cette jeune fille, qu’il a mise sous là surveillance de madame Vincent !</l>
-          </sp>
-          <sp who="vincent" xml:id="1-12">
-            <speaker>VINCENT.</speaker>
-            <l n="32" xml:id="l32">C’est une jeune orpheline, qu’il a recueillie, elle a son appartement de ce côté... et ma femme ne la quille pas.</l>
-          </sp>
-          <sp who="auguste" xml:id="1-13">
-            <speaker>AUGUSTE.</speaker>
-            <l n="33" xml:id="l33">C’est bon... une orpheline qu’il n recueillie... qui est arrivée ici, il y a huit mois en paysanne... et qui maintenant... suffit !... enfin, rien de trop beau pour elle, des maîtres de toutes les façons... du reste, elle est jolie, faut en convenir.</l>
-          </sp>
-          <sp who="auguste" xml:id="1-14">
-            <speaker>VINCENT, <em>prenant Auguste par la main.</em></speaker>
-            <l n="34" xml:id="l34">Monsieur Auguste, en ma qualité d’homme de confiance, de monsieur le colonel, j’ai le droit de chasser un domestique bavard et impertinent... vous m’entendez ?...</l>
-          </sp>
-          <sp who="auguste" xml:id="1-15">
-            <speaker>AUGUSTE.</speaker>
-            <l n="35" xml:id="l35">Alors il ne faut donc rien dire ?</l>
-          </sp>
-          <sp who="vincent" xml:id="1-16">
-            <speaker>VINCENT.</speaker>
-            <l n="36" xml:id="l36">Je ne dis pas cela, mais il faut se taire.</l>
-          </sp>
-          <sp who="auguste" xml:id="1-17">
-            <speaker>AUGUSTE.</speaker>
-            <l n="37" xml:id="l37">C’est dit.</l>
-            <stage><hi rend="italic"><em>Air : Faut l’oublier.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="1-18">
-            <speaker>VINCENT.</speaker>
-            <l n="39" xml:id="l39">Silence !... on sort de table.</l>
-            <l n="40" xml:id="l40"> </l>
-            <l n="41" xml:id="l41"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="42" xml:id="l42"> </l>
-          <sp who="auguste" xml:id="2-1">
-            <speaker>VINCENT, AUGUSTE, VALBERT, AMIS</speaker>
-            <l n="43" xml:id="l43"> </l>
-            <stage><hi rend="italic"><em>Ils sortent gaiement en chantant.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : de Fiorella.</em></hi></stage>
-          <stage>VALBERT.</stage>
-          </sp>
-          <sp who="ensemble" xml:id="2-2">
-            <speaker>ENSEMBLE.</speaker>
-            <l n="46" xml:id="l46">Dans une heure, rendez-vous général au tir de Le Page.</l>
-          </sp>
-          <sp who="valbert" xml:id="2-3">
-            <speaker>VALBERT, <em>les reconduisant.</em></speaker>
-            <stage><hi rend="italic"><em>Les amis sortent.</em></hi></stage>
-            <l n="48" xml:id="l48"> </l>
-            <l n="49" xml:id="l49"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="50" xml:id="l50"> </l>
-          <sp who="auguste" xml:id="3-1">
-            <speaker>VALBERT, VINCENT, AUGUSTE</speaker>
-            <l n="51" xml:id="l51"> </l>
-          </sp>
-          <sp who="valbert" xml:id="3-2">
-            <speaker>VALBERT.</speaker>
-            <l n="52" xml:id="l52">Auguste, je vais sortir... mon tilbury et mon cheval anglais... vous viendrez m’avertir.</l>
-            <stage><hi rend="italic"><em>Auguste sort.</em></hi></stage>
-            <l n="54" xml:id="l54">Vincent, a-t-on apporté mon nouvel uniforme ?</l>
-          </sp>
-          <sp who="vincent" xml:id="3-3">
-            <speaker>VINCENT.</speaker>
-            <l n="55" xml:id="l55">Pas encore, Monsieur.</l>
-          </sp>
-          <sp who="valbert" xml:id="3-4">
-            <speaker>VALBERT.</speaker>
-            <l n="56" xml:id="l56">Vous enverrez chez Staub... ces gens-là sont d’une inexactitude !... il me le faut demain avant huit heures... Diable !... une revue au Carrousel...</l>
-            <stage><hi rend="italic"><em>Air : les devoirs de la Chevalerie.</em></hi></stage>
-            <l n="58" xml:id="l58">Cécile n’est pas encore rentrée ?</l>
-          </sp>
-          <sp who="vincent" xml:id="3-5">
-            <speaker>VINCENT.</speaker>
-            <l n="59" xml:id="l59">Non, Monsieur ; elle est sortie de bonne heure avec ma femme : c’est son jour d’équitation.</l>
-            <stage><hi rend="italic"><em>On entend le bruit d’une voiture qui s’arrête. </em></hi></stage>
-            <l n="61" xml:id="l61">Mais j’entends une voiture... ce sont elles, sans doute... je vais à leur rencontre.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="63" xml:id="l63"> </l>
-            <l n="64" xml:id="l64"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="65" xml:id="l65"> </l>
-          <sp who="valbert" xml:id="4-1">
-            <speaker>VALBERT, <em>regardant à la fenêtre au fond</em></speaker>
-            <l n="66" xml:id="l66"> </l>
-            <l n="67" xml:id="l67">Ah ! elle revient du manège... quelle grâce ! quelle aisance qui reconnaîtrait la fille du fermier de Villiers... la petite paysanne ?... il faut avouer que l’air de Paris vous forme bien vite une femme.</l>
-            <stage><hi rend="italic"><em>Il quitte la fenêtre. </em></hi></stage>
-            <l n="69" xml:id="l69">Pauvre Cécile !... puisse-t-elle oublier, au milieu des plaisirs, la promesse que je lui ai faite... je sens qu’il me serait bien pénible de la désabuser... et cependant il le faudra !... le ministre me presse pour fixer le jour qui doit m’unir à la jeune comtesse de Roseval, sa parente, et il attend aujourd’hui même une réponse définitive... que j’épouse cette femme-là, et je suis maréchal-de-camp avant six mois !... oui, mais... ah ! pourquoi Cécile n’est-elle pas comtesse !... la voici !... jamais elle ne m’a paru si jolie !...</l>
-            <l n="70" xml:id="l70"> </l>
-            <l n="71" xml:id="l71"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="72" xml:id="l72"> </l>
-          <sp who="vincent" xml:id="5-1">
-            <speaker>VALBERT, CÉCILE, <em>en amazone, une cravache à la main</em>, MADAME VINCENT, <em>qui reste dans le fond</em></speaker>
-            <l n="73" xml:id="l73"> </l>
-          </sp>
-          <sp who="cécile" xml:id="5-2">
-            <speaker>CÉCILE.</speaker>
-            <stage><hi rend="italic"><em>Air : nouveau de M. Adolphe Adam ou Valse de Léocadie.</em></hi></stage>
-          <stage>ENSEMBLE.</stage>
-          </sp>
-          <sp who="valbert" xml:id="5-3">
-            <speaker>VALBERT.</speaker>
-            <l n="75" xml:id="l75">Chère Cécile !...</l>
-          </sp>
-          <sp who="cécile" xml:id="5-4">
-            <speaker>CÉCILE.</speaker>
-            <l n="76" xml:id="l76">À propos, je croyais que vous receviez ce matin !...</l>
-          </sp>
-          <sp who="valbert" xml:id="5-5">
-            <speaker>VALBERT.</speaker>
-            <l n="77" xml:id="l77">Oui... mais mes convives sont partis.</l>
-          </sp>
-          <sp who="cécile" xml:id="5-6">
-            <speaker>CÉCILE.</speaker>
-            <l n="78" xml:id="l78">Ah !... tant mieux !... Je suis si heureuse quand je me trouve avec vous... Eh bien ! monsieur, vous ne me dites rien ? Vous ne me faites pas compliment sur mon nouveau costume.</l>
-            <stage><hi rend="italic"><em>Elle marche. </em></hi></stage>
-            <l n="80" xml:id="l80">Tenez, qu’en dites-vous ?</l>
-          </sp>
-          <sp who="valbert" xml:id="5-7">
-            <speaker>VALBERT.</speaker>
-            <l n="81" xml:id="l81">Il vous sied à ravir !...</l>
-          </sp>
-          <sp who="cécile" xml:id="5-8">
-            <speaker>CÉCILE.</speaker>
-            <l n="82" xml:id="l82">C’est bien heureux...</l>
-          </sp>
-          <sp who="vincent" xml:id="5-9">
-            <speaker>MADAME VINCENT, <em>à part.</em></speaker>
-            <l n="83" xml:id="l83">Oh ! les jeunes filles !...</l>
-          </sp>
-          <sp who="cécile" xml:id="5-10">
-            <speaker>CÉCILE.</speaker>
-            <l n="84" xml:id="l84">Vous ne savez pas, mon ami ? Je serai bientôt en état de vous accompagner dans vos promenades...</l>
-          </sp>
-          <sp who="valbert" xml:id="5-11">
-            <speaker>VALBERT.</speaker>
-            <l n="85" xml:id="l85">Quoi !... en si peu de temps !...</l>
-          </sp>
-          <sp who="cécile" xml:id="5-12">
-            <speaker>CÉCILE.</speaker>
-            <l n="86" xml:id="l86">Cela vous étonne !... ne m’aviez-vous pas dit que cela vous ferait plaisir ?...</l>
-          </sp>
-          <sp who="valbert" xml:id="5-13">
-            <speaker>VALBERT.</speaker>
-            <l n="87" xml:id="l87">Adorable !...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="89" xml:id="l89">Décidément je ne pourrai jamais me séparer de cette femme-là...</l>
-          </sp>
-          <sp who="vincent" xml:id="5-14">
-            <speaker>MADAME VINCENT, <em>à part.</em></speaker>
-            <l n="90" xml:id="l90">La pauvre petite !</l>
-          </sp>
-          <sp who="valbert" xml:id="5-15">
-            <speaker>VALBERT.</speaker>
-            <l n="91" xml:id="l91">Ah ça ! ma chère Cécile, j’ai cependant un reproche à vous faire...</l>
-          </sp>
-          <sp who="cécile" xml:id="5-16">
-            <speaker>CÉCILE, <em>inquiète.</em></speaker>
-            <l n="92" xml:id="l92">Un reproche ! à moi, mon ami ?</l>
-          </sp>
-          <sp who="valbert" xml:id="5-17">
-            <speaker>VALBERT.</speaker>
-            <l n="93" xml:id="l93">Oui, un reproche... très grave, et je vous préviens que cela ne peut pas durer... Comment ! depuis un siècle, pas un mémoire à payer !... pas de nouvelles parures !... toujours les mêmes cachemires !... mais c’est affreux !</l>
-          </sp>
-          <sp who="vincent" xml:id="5-18">
-            <speaker>MADAME VINCENT, <em>à part.</em></speaker>
-            <l n="94" xml:id="l94">Il lui fera tourner la tête...</l>
-          </sp>
-          <sp who="cécile" xml:id="5-19">
-            <speaker>CÉCILE, <em>rassurée.</em></speaker>
-            <l n="95" xml:id="l95">Ah ! n’est-ce que cela... eh mon dieu ! monsieur, que ne parliez-vous plus tôt ?</l>
-            <stage><hi rend="italic"><em>Air : Vaudeville du Baiser au Porteur.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="5-20">
-            <speaker>MADAME VINCENT, <em>à part.</em></speaker>
-            <l n="97" xml:id="l97">Oh ! la coquetterie !... c’est dans le sang !</l>
-          </sp>
-          <sp who="valbert" xml:id="5-21">
-            <speaker>VALBERT.</speaker>
-            <l n="98" xml:id="l98">À la bonne heure !... je veux que ma Cécile éclipse toutes les femmes par sa beauté ! ce soir, par exemple, une toilette brillante !... nous allons aux bouffes... j’ai enfin trouvé une loge !... ça n’a pas été sans peine... C’est convenu, n’est-ce pas, Cécile ?</l>
-          </sp>
-          <sp who="cécile" xml:id="5-22">
-            <speaker>CÉCILE.</speaker>
-            <l n="99" xml:id="l99">Oui, mon ami...</l>
-          </sp>
-          <sp who="valbert" xml:id="5-23">
-            <speaker>VALBERT.</speaker>
-            <l n="100" xml:id="l100">Madame Vincent vous accompagnera, ça l’amusera...</l>
-          </sp>
-          <sp who="vincent" xml:id="5-24">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="101" xml:id="l101">Oui, monsieur.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="103" xml:id="l103">Je n’entends pas un mot d’italien.</l>
-          </sp>
-          <sp who="valbert" xml:id="5-25">
-            <speaker>VALBERT, <em>regardant sa montre.</em></speaker>
-            <l n="104" xml:id="l104">Deux heures ! étourdi que je suis !... il faut que je vous quitte un instant...</l>
-          </sp>
-          <sp who="cécile" xml:id="5-26">
-            <speaker>CÉCILE.</speaker>
-            <l n="105" xml:id="l105">Déjà !... sans doute une affaire bien importante ?...</l>
-          </sp>
-          <sp who="valbert" xml:id="5-27">
-            <speaker>VALBERT.</speaker>
-            <l n="106" xml:id="l106">Du plus haut intérêt !... Comment donc !... un arabe superbe à essayer !... et un pari chez le Page... à propos d’arabe, mon agent de change m’attend chez Tortoni !... c’est un homme charmant, qui possède tout ce qu’il faut pour inspirer la confiance... il a deux chevaux de race et la plus belle calèche...</l>
-            <stage><hi rend="italic"><em>Il appelle.</em></hi></stage>
-            <l n="108" xml:id="l108">Holà !... quelqu’un !</l>
-            <l n="109" xml:id="l109"> </l>
-            <l n="110" xml:id="l110"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="111" xml:id="l111"> </l>
-          <sp who="auguste" xml:id="6-1">
-            <speaker>VALBERT, CÉCILE, MADAME VINCENT, AUGUSTE</speaker>
-            <l n="112" xml:id="l112"> </l>
-          </sp>
-          <sp who="auguste" xml:id="6-2">
-            <speaker>AUGUSTE.</speaker>
-            <l n="113" xml:id="l113">Monsieur ?...</l>
-          </sp>
-          <sp who="valbert" xml:id="6-3">
-            <speaker>VALBERT.</speaker>
-            <l n="114" xml:id="l114">Mon tilbury est-il là ?</l>
-          </sp>
-          <sp who="auguste" xml:id="6-4">
-            <speaker>AUGUSTE.</speaker>
-            <l n="115" xml:id="l115">Oui, Monsieur.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="valbert" xml:id="6-5">
-            <speaker>VALBERT.</speaker>
-            <l n="117" xml:id="l117">Je suis à vous dans l’instant... le temps est superbe... nous sortirons ensemble...</l>
-          </sp>
-          <sp who="cécile" xml:id="6-6">
-            <speaker>CÉCILE.</speaker>
-            <l n="118" xml:id="l118">Bien, mon ami... je me tiendrai prête.</l>
-          </sp>
-          <sp who="" xml:id="6-7">
-            <speaker>VALBERT</speaker>
-            <l n="119" xml:id="l119">Nous irons an bois dans ma nouvelle voiture... Vous ne la connaissez pas ? oh ! vous n’avez rien vu... un landaulet superbe !... quatre chevaux à grand guides !... c’est moi qui conduirai !... la redingote blanche... tenue de rigueur... ce sera parfait !... vous riez ?... vous ne connaissez donc pas le suprême bon genre ?...</l>
-            <stage><hi rend="italic"><em>Air : Vaudeville du dîner des Garçons.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="6-8">
-            <speaker>MADAME VINCENT, <em>à part.</em></speaker>
-            <l n="121" xml:id="l121">Voilà comme on est ridicule... oh ! de mon temps !...</l>
-          </sp>
-          <sp who="valbert" xml:id="6-9">
-            <speaker>VALBERT.</speaker>
-            <stage><hi rend="italic">Et mon <em>groom</em> ! venez donc le voir !</hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="6-10">
-            <speaker>MADAME VINCENT, <em>à part.</em></speaker>
-            <l n="123" xml:id="l123">Un vrai magot de la Chine !...</l>
-          </sp>
-          <sp who="valbert" xml:id="6-11">
-            <speaker>VALBERT, <em>il la conduit à la fenêtre.</em></speaker>
-            <l n="124" xml:id="l124">Tenez, regardez... c’est le plus petit de Paris... parole d’honneur ! je l’ai gagné hier à l’écarté... je défie bien d’en trouver un pareil...</l>
-            <stage><hi rend="italic"><em>Air : Je loge au quatrième étage.</em></hi></stage>
-            <l n="126" xml:id="l126">Adieu, ma chère Cécile.</l>
-            <stage><hi rend="italic"><em>Il lui baise la main et sort.</em></hi></stage>
-            <l n="128" xml:id="l128"> </l>
-            <l n="129" xml:id="l129"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="130" xml:id="l130"> </l>
-          <sp who="vincent" xml:id="7-1">
-            <speaker>CÉCILE, MADAME VINCENT</speaker>
-            <l n="131" xml:id="l131"> </l>
-          </sp>
-          <sp who="cécile" xml:id="7-2">
-            <speaker>CÉCILE.</speaker>
-            <l n="132" xml:id="l132">Il est parti encore une fois !...</l>
-          </sp>
-          <sp who="vincent" xml:id="7-3">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="133" xml:id="l133">Sans que vous ayez osé lui parler de votre mariage !...</l>
-          </sp>
-          <sp who="cécile" xml:id="7-4">
-            <speaker>CÉCILE.</speaker>
-            <l n="134" xml:id="l134">C’est singulier !... je voudrais toujours lui rappeler sa promesse... et, quand je le vois, je suis si heureuse, si troublée !... j’ai peur qu’il ne me rapproche ma défiance !...</l>
-          </sp>
-          <sp who="vincent" xml:id="7-5">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="135" xml:id="l135">Ah ! Mademoiselle, vous ne connaissez pas les hommes ; on ne saurait trop se défier d’eux !...</l>
-            <stage><hi rend="italic"><em>Air : De M. Amédée de Beauplan.</em></hi></stage>
-          </sp>
-          <sp who="cécile" xml:id="7-6">
-            <speaker>CÉCILE.</speaker>
-            <l n="137" xml:id="l137">Je sais bien que vous n’avez pas tort, ma bonne madame Vincent !... cependant, que pourrais-je craindre de Valbert ?... il m’aime, j’en suis sûre ; il me le jure tous les jours... et puis il est si bon, si généreux ; il ne voudrait pas tromper une jeune fille qui s’est confiée à lui...</l>
-          </sp>
-          <sp who="vincent" xml:id="7-7">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="138" xml:id="l138">Chère enfant !...</l>
-          </sp>
-          <sp who="cécile" xml:id="7-8">
-            <speaker>CÉCILE.</speaker>
-            <l n="139" xml:id="l139">Pourtant je ne suis pas tranquille... quand je pense à mon père... à ce pauvre Pierre qui m’aimait tant !... je les ai abandonnés... quel a dû être leur chagrin !...mais je les reverrai bientôt tous les deux... aussitôt que je serai l’épouse de Valbert...</l>
-            <stage><hi rend="italic"><em>Air : Si tu voyais Rosette. (Journée aux aventures.)</em></hi></stage>
-            <l n="141" xml:id="l141"> </l>
-            <l n="142" xml:id="l142"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="143" xml:id="l143"> </l>
-          <sp who="vincent" xml:id="8-1">
-            <speaker>CÉCILE, MADAME VINCENT, VINCENT</speaker>
-            <l n="144" xml:id="l144"> </l>
-          </sp>
-          <sp who="vincent" xml:id="8-2">
-            <speaker>VINCENT, <em>apportant un rouleau de papier.</em></speaker>
-            <l n="145" xml:id="l145">Mademoiselle, c’est votre maître de musique qui vient de remettre cela pour vous ;  </l>
-            <stage><hi rend="italic"><em>Il remet le rouleau. </em></hi></stage>
-            <l n="147" xml:id="l147">il ne viendra pas vous donner de leçon aujourd’hui, parce qu’il marie sa fille.</l>
-          </sp>
-          <sp who="cécile" xml:id="8-3">
-            <speaker>CÉCILE.</speaker>
-            <l n="148" xml:id="l148">Il marie sa fille !!!</l>
-          </sp>
-          <sp who="vincent" xml:id="8-4">
-            <speaker>VINCENT.</speaker>
-            <l n="149" xml:id="l149">Oh ! la jolie personne !... mais encore moins belle qu’elle n’est bonne... elle ne voulait pas se marier, de peur de quitter son père ; mais tout s’est arrangé, le gendre est un marchand de musique qui prend son beau-père avec lui...</l>
-          </sp>
-          <sp who="cécile" xml:id="8-5">
-            <speaker>CÉCILE, <em>avec un soupir.</em></speaker>
-            <l n="150" xml:id="l150">Qu’ils sont heureux !</l>
-            <stage><hi rend="italic"><em>Elle ouvre le rouleau. </em></hi></stage>
-            <l n="152" xml:id="l152">Ah ! c’est cette romance de mon pays que j’ai fait graver... que de souvenirs elle me rappelle !... Combien de fois avec Pierre !... Écoutez... écoutez, mes amis...</l>
-            <stage><hi rend="italic"><em>Air nouveau, de M. Blanchard.</em></hi></stage>
-            <l n="154" xml:id="l154">Mais j’oubliais... et ma toilette... Allons, ma bonne madame Vincent, Valbert doit venir me chercher, je ne veux pas le faire attendre.</l>
-            <stage><hi rend="italic"><em>Elle rentre avec madame Vincent.</em></hi></stage>
-            <l n="156" xml:id="l156"> </l>
-            <l n="157" xml:id="l157"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="158" xml:id="l158"> </l>
-          <sp who="vincent" xml:id="9-1">
-            <speaker>VINCENT, <em>seul</em></speaker>
-            <l n="159" xml:id="l159"> </l>
-            <l n="160" xml:id="l160">En vérité, ça fend le cœur de voir une jeune fille si innocente, si jolie, au pouvoir d’un jeune homme... Dieux ! çà me rappelle le printemps de madame Vincent... quelle fraîcheur ! quelle candeur !... tandis qu’à présent...</l>
-            <l n="161" xml:id="l161"> </l>
-            <l n="162" xml:id="l162"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="163" xml:id="l163"> </l>
-          <sp who="vincent" xml:id="10-1">
-            <speaker>VINCENT, PIERRE</speaker>
-            <l n="164" xml:id="l164"> </l>
-          </sp>
-          <sp who="pierre" xml:id="10-2">
-            <speaker>PIERRE.</speaker>
-            <l n="165" xml:id="l165">Personne...</l>
-          </sp>
-          <sp who="vincent" xml:id="10-3">
-            <speaker>VINCENT, <em>se retournant.</em></speaker>
-            <l n="166" xml:id="l166">Comment personne !... monsieur, qu’y a-t-il pour votre service ?...</l>
-          </sp>
-          <sp who="pierre" xml:id="10-4">
-            <speaker>PIERRE.</speaker>
-            <l n="167" xml:id="l167">Je voudrais parler au colonel de Valbert !</l>
-          </sp>
-          <sp who="vincent" xml:id="10-5">
-            <speaker>VINCENT.</speaker>
-            <l n="168" xml:id="l168">Il n’y est pas pour l’instant, et si vous voulez repasser...</l>
-          </sp>
-          <sp who="pierre" xml:id="10-6">
-            <speaker>PIERRE <em>s’assoit.</em></speaker>
-            <l n="169" xml:id="l169">Ce n’est pas la peine, je l’attendrai !...</l>
-          </sp>
-          <sp who="vincent" xml:id="10-7">
-            <speaker>VINCENT.</speaker>
-            <l n="170" xml:id="l170">Ah !... mais c’est qu’il sera peut-être longtemps.</l>
-          </sp>
-          <sp who="pierre" xml:id="10-8">
-            <speaker>PIERRE.</speaker>
-            <l n="171" xml:id="l171">Qu’est-ce que cela me fait ? puisque je vous dis que je l’attendrai !</l>
-          </sp>
-          <sp who="vincent" xml:id="10-9">
-            <speaker>VINCENT.</speaker>
-            <l n="172" xml:id="l172">Eh ! bien, à votre aise !... mais je vous demande pardon si je ne cause pas avec vous...</l>
-            <stage><hi rend="italic"><em>Il range des papiers qui se trouvent sur la table.</em></hi></stage>
-          </sp>
-          <sp who="pierre" xml:id="10-10">
-            <speaker>PIERRE.</speaker>
-            <l n="174" xml:id="l174">Oh ! ne vous gênez pas ! faites comme si je n’étais pas là...</l>
-            <stage><hi rend="italic"><em>Il se lève. </em></hi></stage>
-            <l n="176" xml:id="l176">Oui c’est le seul parti qui me reste... la vie m’est à charge ! le spectacle de ma douleur fatiguait ma mère !... J’ai dû m’éloigner...</l>
-            <stage><hi rend="italic"><em>Air : de l’Angélus.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="10-11">
-            <speaker>VINCENT, <em>le regardant.</em></speaker>
-            <l n="178" xml:id="l178">Il a l’air tout drôle ce jeune homme !... Qu’est-ce qu’il a donc à se parler comme ça tout seul... Ah ! je vois ce que c’est !... un petit conscrit... ça veut servir dans la cavalerie... j’en vois souvent comme ça... il faut que je lui demande !... Dites donc, jeune homme, vous êtes donc tombé à la conscription ?...</l>
-          </sp>
-          <sp who="pierre" xml:id="10-12">
-            <speaker>PIERRE.</speaker>
-            <l n="179" xml:id="l179">Je viens m’engager.</l>
-          </sp>
-          <sp who="vincent" xml:id="10-13">
-            <speaker>VINCENT.</speaker>
-            <l n="180" xml:id="l180">Vous engager... Eh ! bien, est-ce que vous êtes fâché de servir ?...</l>
-          </sp>
-          <sp who="pierre" xml:id="10-14">
-            <speaker>PIERRE.</speaker>
-            <l n="181" xml:id="l181">Ça m’est égal...</l>
-          </sp>
-          <sp who="vincent" xml:id="10-15">
-            <speaker>VINCENT.</speaker>
-            <l n="182" xml:id="l182">Est-il étonnant... il dit que ça lui est égal...</l>
-          </sp>
-          <sp who="pierre" xml:id="10-16">
-            <speaker>PIERRE.</speaker>
-            <l n="183" xml:id="l183">J’ai une lettre de recommandation pour le colonel Valbert, et s’il veut me recevoir dans son régiment ?...</l>
-          </sp>
-          <sp who="vincent" xml:id="10-17">
-            <speaker>VINCENT.</speaker>
-            <l n="184" xml:id="l184">Il le voudra ! mon camarade, soyez tranquille, et vous ferez un gentil houzard, oh ! vous serez bien avec mon maître, c’est le plus brave colonel de l’armée... et galant... un vrai démon pour les femmes.</l>
-            <stage><hi rend="italic"><em>On entend préluder dans la chambre de Cécile ; Pierre sort peu à peu de sa rêverie et écoute. Cécile dans sa chambre, répète le refrain de la chanson du village.</em></hi></stage>
-          </sp>
-          <sp who="pierre" xml:id="10-18">
-            <speaker>PIERRE.</speaker>
-            <l n="186" xml:id="l186">Qu’entends-je ?... cette voix !... cette chanson du pays !...</l>
-            <stage><hi rend="italic"><em>Entraîné par ses souvenirs, il répète avec Cécile.</em></hi></stage>
-            <l n="188" xml:id="l188">Plus de doute... c’est elle...</l>
-          </sp>
-          <sp who="vincent" xml:id="10-19">
-            <speaker>VINCENT, <em>qui a regardé Pierre avec beaucoup d’étonnement.</em></speaker>
-            <l n="189" xml:id="l189">Tiens, vous savez la chanson de mademoiselle !...</l>
-          </sp>
-          <sp who="pierre" xml:id="10-20">
-            <speaker>PIERRE, <em>s’élançant vers la porte.</em></speaker>
-            <l n="190" xml:id="l190">Je veux la voir !...</l>
-          </sp>
-          <sp who="vincent" xml:id="10-21">
-            <speaker>VINCENT, <em>l’arrêtant.</em></speaker>
-            <l n="191" xml:id="l191">Un moment, jeune homme !... Décidément il est fou.</l>
-          </sp>
-          <sp who="pierre" xml:id="10-22">
-            <speaker>PIERRE.</speaker>
-            <l n="192" xml:id="l192">Je veux lui parler, vous dis-je... rien ne peut m’en empêcher.</l>
-            <stage><hi rend="italic"><em>Il prend Vincent par un bras, et le fait passer rudement de l’autre côté. </em></hi></stage>
-            <l n="194" xml:id="l194"> </l>
-            <l n="195" xml:id="l195"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="196" xml:id="l196"> </l>
-          <sp who="vincent" xml:id="11-1">
-            <speaker>VINCENT, PIERRE, CÉCILE<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a></speaker>
-            <l n="197" xml:id="l197"> </l>
-          </sp>
-          <sp who="cécile" xml:id="11-2">
-            <speaker>CÉCILE, <em>accourant.</em></speaker>
-            <l n="198" xml:id="l198">Quel est ce bruit ?... Pierre !...</l>
-          </sp>
-          <sp who="pierre" xml:id="11-3">
-            <speaker>PIERRE.</speaker>
-            <l n="199" xml:id="l199">Cécile !</l>
-            <stage><hi rend="italic"><em>Morceau d’ensemble.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air nouveau de M. Adolphe Adam, ou Fragment du quatuor du Calife de Bagdad.</em></hi></stage>
-          <stage>CÉCILE.</stage>
-          </sp>
-          <sp who="pierre" xml:id="11-4">
-            <speaker>PIERRE.</speaker>
-            <l n="202" xml:id="l202">Vincent, laissez-nous.</l>
-          <stage>VINCENT.</stage>
-          </sp>
-          <sp who="pierre" xml:id="11-5">
-            <speaker>PIERRE.</speaker>
-            <l n="203" xml:id="l203">Mademoiselle, je me retire.</l>
-          <stage>CÉCILE.</stage>
-          </sp>
-          <sp who="ensemble" xml:id="11-6">
-            <speaker>ENSEMBLE.</speaker>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-          <stage>PIERRE.</stage>
-          </sp>
-          <sp who="vincent" xml:id="11-7">
-            <speaker>VINCENT.</speaker>
-            <l n="205" xml:id="l205">Seule avec le paysan !... Je m’y perds.</l>
-          <stage>CÉCILE.</stage>
-          </sp>
-          <sp who="vincent" xml:id="11-8">
-            <speaker>VINCENT.</speaker>
-            <l n="206" xml:id="l206"> </l>
-            <l n="207" xml:id="l207"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="208" xml:id="l208"> </l>
-          <sp who="pierre" xml:id="12-1">
-            <speaker>CÉCILE, PIERRE</speaker>
-            <l n="209" xml:id="l209"> </l>
-          </sp>
-          <sp who="pierre" xml:id="12-2">
-            <speaker>PIERRE, <em>à part.</em></speaker>
-            <l n="210" xml:id="l210">Enfin je la revois... mais ce luxe... chez le colonel !... Ce qu’on m’en a dit...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="212" xml:id="l212">Cécile, que faites-vous ici ?...</l>
-          </sp>
-          <sp who="cécile" xml:id="12-3">
-            <speaker>CÉCILE.</speaker>
-            <l n="213" xml:id="l213">Pierre... si vous saviez...</l>
-          </sp>
-          <sp who="pierre" xml:id="12-4">
-            <speaker>PIERRE.</speaker>
-            <l n="214" xml:id="l214">Je sais que rien au monde n’aurait pu me faire oublier l’amie de mon enfance, la fiancée de mon choix.</l>
-          </sp>
-          <sp who="cécile" xml:id="12-5">
-            <speaker>CÉCILE.</speaker>
-            <l n="215" xml:id="l215">Pierre, je ne cherche point à surprendre votre pitié ; mais plus imprudente que coupable...</l>
-          </sp>
-          <sp who="pierre" xml:id="12-6">
-            <speaker>PIERRE.</speaker>
-            <l n="216" xml:id="l216">Imprudente, dites-vous ?</l>
-            <stage><hi rend="italic"><em>Lui prenant la main.</em></hi></stage>
-            <l n="218" xml:id="l218">Écoutez, Cécile... une seule personne au monde était chargée de mon bonheur ; la tâche lui a paru au-dessus de ses forces !... Je n’en murmure pas... Vous êtes perdue pour moi sans retour... je le sais... mais, au moins, le colonel...</l>
-          </sp>
-          <sp who="cécile" xml:id="12-7">
-            <speaker>CÉCILE, <em>troublée.</em></speaker>
-            <l n="219" xml:id="l219">Ne m’interrogez pas !</l>
-          </sp>
-          <sp who="pierre" xml:id="12-8">
-            <speaker>PIERRE.</speaker>
-            <l n="220" xml:id="l220">Répondez... un seul mot, de grâce ! Valbert est-il votre époux ?</l>
-          </sp>
-          <sp who="cécile" xml:id="12-9">
-            <speaker>CÉCILE.</speaker>
-            <l n="221" xml:id="l221">Laissez-moi, Pierre, laissez-moi !...</l>
-          </sp>
-          <sp who="pierre" xml:id="12-10">
-            <speaker>PIERRE.</speaker>
-            <l n="222" xml:id="l222">Comment !... il se pourrait ?... Vous, Cécile !... à la ferme, simple, modeste, vous faisiez la gloire de votre vieux père... Aujourd’hui, dans ce riche salon... Ah ! quelle différence !...</l>
-          </sp>
-          <sp who="cécile" xml:id="12-11">
-            <speaker>CÉCILE.</speaker>
-            <l n="223" xml:id="l223">Grand Dieu...</l>
-          </sp>
-          <sp who="pierre" xml:id="12-12">
-            <speaker>PIERRE.</speaker>
-            <l n="224" xml:id="l224">Vous n’avez donc pas craint de suivre un misérable séducteur ?...</l>
-          </sp>
-          <sp who="cécile" xml:id="12-13">
-            <speaker>CÉCILE.</speaker>
-            <l n="225" xml:id="l225">Arrêtez, Pierre ! cessez de donner à Valbert un nom qu’il ne mérite pas ; il remplira ses promesses ; il me l’a juré.</l>
-          </sp>
-          <sp who="pierre" xml:id="12-14">
-            <speaker>PIERRE.</speaker>
-            <l n="226" xml:id="l226">Des serments... pauvre Cécile !... pour des hommes tels que lui, le parjure est un jeu.</l>
-          </sp>
-          <sp who="cécile" xml:id="12-15">
-            <speaker>CÉCILE, <em>après avoir réfléchi.</em></speaker>
-            <l n="227" xml:id="l227">Valbert m’abandonner ?... non, non, Pierre, c’est impossible !... Sans doute, j’aurais dû ne pas l’écouter...</l>
-            <stage><hi rend="italic"><em>Air.</em></hi></stage>
-          </sp>
-          <sp who="pierre" xml:id="12-16">
-            <speaker>PIERRE.</speaker>
-            <l n="229" xml:id="l229">Eh ! bien, Cécile, puisque vous refusez d’entendre la voix de la raison, puisque votre faiblesse vous empêche de rompre une liaison dont vous ne pouvez que rougir, peut-être votre père aura-t-il plus de pouvoir sur vous ?... tenez.</l>
-            <stage><hi rend="italic"><em>Il lui présente une lettre.</em></hi></stage>
-          </sp>
-          <sp who="cécile" xml:id="12-17">
-            <speaker>CÉCILE.</speaker>
-            <l n="231" xml:id="l231">Que signifie !... je tremble d’ouvrir celle lettre... De grâce, expliquez-vous !</l>
-          </sp>
-          <sp who="pierre" xml:id="12-18">
-            <speaker>PIERRE, <em>pleurant.</em></speaker>
-            <l n="232" xml:id="l232">Lisez ! lisez ! il ne vous a pas maudite...</l>
-          </sp>
-          <sp who="cécile" xml:id="12-19">
-            <speaker>CÉCILE, <em>lisant.</em></speaker>
-            <l n="233" xml:id="l233">Grand Dieu ! ses dernières volontés !... Pierre... achevez... mon père...</l>
-          </sp>
-          <sp who="pierre" xml:id="12-20">
-            <speaker>PIERRE.</speaker>
-            <l n="234" xml:id="l234">Il n’est plus !</l>
-          </sp>
-          <sp who="cécile" xml:id="12-21">
-            <speaker>CÉCILE, <em>tombant dans un fauteuil.</em></speaker>
-            <l n="235" xml:id="l235">Ah !!!</l>
-          </sp>
-          <sp who="pierre" xml:id="12-22">
-            <speaker>PIERRE, <em>courant à elle.</em></speaker>
-            <l n="236" xml:id="l236">Malheureux ! qu’ai-je fait ? Cécile, revenez à vous... écoutez... il me reste un moyen de tout réparer... Je verrai le colonel... je lui parlerai... Si je ne réussis pas, ma famille vous recevra, et la plus profonde retraite vous soustraira à toutes les recherches.</l>
-          </sp>
-          <sp who="cécile" xml:id="12-23">
-            <speaker>CÉCILE.</speaker>
-            <l n="237" xml:id="l237">Mon père !... oui, il le faut ! vous m’avez ouvert les yeux... je m’abandonne à vous ! mais par pitié que je quitte au plus tôt ces lieux !...</l>
-          </sp>
-          <sp who="pierre" xml:id="12-24">
-            <speaker>PIERRE.</speaker>
-            <l n="238" xml:id="l238">J’ai mon projet... il n’est pas temps encore... mais dans une heure, je vous reverrai...</l>
-          </sp>
-          <sp who="cécile" xml:id="12-25">
-            <speaker>CÉCILE.</speaker>
-            <l n="239" xml:id="l239">Je vous attends.</l>
-          </sp>
-          <sp who="pierre" xml:id="12-26">
-            <speaker>PIERRE.</speaker>
-            <stage><hi rend="italic"><em>Air : Il faut quitter le village.</em></hi></stage>
-          <stage>CÉCILE.</stage>
-          </sp>
-          <sp who="pierre" xml:id="12-27">
-            <speaker>PIERRE.</speaker>
-            <l n="241" xml:id="l241"> </l>
-          <stage>PIERRE.</stage>
-          </sp>
-          <sp who="cécile" xml:id="12-28">
-            <speaker>CÉCILE.</speaker>
-            <l n="242" xml:id="l242"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="243" xml:id="l243"> </l>
-          <sp who="cécile" xml:id="13-1">
-            <speaker>CÉCILE, <em>seule</em></speaker>
-            <l n="244" xml:id="l244"> </l>
-            <l n="245" xml:id="l245">De l’espérance !... que veut-il dire ? en est-il encore pour moi ? j’ai trahi mes serments ; j’ai causé la mort de mon père... ah ! du moins, je remplirai ses dernières volontés !... oui, Pierre, je vous suivrai !... mais qui vais-je abandonner !... Valbert !... je l’entends... mon courage m’abandonne ! remettons-nous ! qu’il ne voie pas mes larmes !...</l>
-            <l n="246" xml:id="l246"> </l>
-            <l n="247" xml:id="l247"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="248" xml:id="l248"> </l>
-          <sp who="cécile" xml:id="14-1">
-            <speaker>CÉCILE, VALBERT</speaker>
-            <l n="249" xml:id="l249"> </l>
-          </sp>
-          <sp who="valbert" xml:id="14-2">
-            <speaker>VALBERT.</speaker>
-            <l n="250" xml:id="l250">Enfin, me voici ! vous le voyez, j’ai fait diligence... maintenant je suis tout à vous ;  </l>
-            <stage><hi rend="italic"><em>Avec intérêt. </em></hi></stage>
-            <l n="252" xml:id="l252">mais qu’avez-vous donc, Cécile ? cette pâleur...</l>
-          </sp>
-          <sp who="cécile" xml:id="14-3">
-            <speaker>CÉCILE, <em>s’efforçant de sourire.</em></speaker>
-            <l n="253" xml:id="l253">Moi ?... mon ami, je vous assure...</l>
-          </sp>
-          <sp who="valbert" xml:id="14-4">
-            <speaker>VALBERT.</speaker>
-            <l n="254" xml:id="l254">Je vois ce que c’est ! une migraine, peut-être ?...</l>
-          </sp>
-          <sp who="cécile" xml:id="14-5">
-            <speaker>CÉCILE.</speaker>
-            <l n="255" xml:id="l255">Oui, mon ami, une migraine !</l>
-          </sp>
-          <sp who="valbert" xml:id="14-6">
-            <speaker>VALBERT, <em>riant.</em></speaker>
-            <l n="256" xml:id="l256">Ah ! je comprends...</l>
-            <stage><hi rend="italic"><em>Air : Vaudeville de l’Insouciant.</em></hi></stage>
-            <l n="258" xml:id="l258">Le grand air dissipera cette légère indisposition ; nous allons partir.</l>
-          </sp>
-          <sp who="cécile" xml:id="14-7">
-            <speaker>CÉCILE.</speaker>
-            <l n="259" xml:id="l259">Mon ami, je préférerais ne pas sortir aujourd’hui.</l>
-          </sp>
-          <sp who="valbert" xml:id="14-8">
-            <speaker>VALBERT.</speaker>
-            <l n="260" xml:id="l260">Comment ! c’est donc sérieux ? mais comme vous êtes triste !... vos yeux sont rouges... vous avez pleuré !</l>
-          </sp>
-          <sp who="cécile" xml:id="14-9">
-            <speaker>CÉCILE, <em>s’efforçant de sourire.</em></speaker>
-            <l n="261" xml:id="l261">Moi, pleurer !... quelle idée, mon ami !... une indisposition qui ne sera rien, sans doute... mais j’ai besoin d’un peu de repos... dans un instant je serai mieux... soyez sans inquiétude... au revoir, mon ami !</l>
-            <stage><hi rend="italic"><em>Elle rentre dans son appartement.</em></hi></stage>
-            <l n="263" xml:id="l263"> </l>
-            <l n="264" xml:id="l264"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="265" xml:id="l265"> </l>
-          <sp who="valbert" xml:id="15-1">
-            <speaker>VALBERT, <em>seul</em></speaker>
-            <l n="266" xml:id="l266"> </l>
-            <l n="267" xml:id="l267">Elle a pleuré... j’en suis sûr... mais pourquoi ?</l>
-            <stage><hi rend="italic"><em>Après une pause.</em></hi></stage>
-            <l n="269" xml:id="l269">c’est singulier !... moi, je me sens aussi tout ému... pauvre Cécile !... ah ! je devine ce qui fait couler ses larmes... je pourrais... mais le monde, que dirait-il ? le colonel Valbert.... jeune... un rang... les plus brillantes espérances... épouser une femme sans fortune, sans nom... je serais la fable de tout Paris ; et pourtant, si je n’en croyais que mon cœur... mais chassons ces idées... holà ! quelqu’un !</l>
-            <l n="270" xml:id="l270"> </l>
-            <l n="271" xml:id="l271"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Scène XVI</head>
-            <l n="272" xml:id="l272"> </l>
-          <sp who="pierre" xml:id="16-1">
-            <speaker>VALBERT, PIERRE, <em>au fond</em></speaker>
-            <l n="273" xml:id="l273"> </l>
-          </sp>
-          <sp who="pierre" xml:id="16-2">
-            <speaker>PIERRE, <em>à part.</em></speaker>
-            <l n="274" xml:id="l274">C’est lui !</l>
-          </sp>
-          <sp who="valbert" xml:id="16-3">
-            <speaker>VALBERT.</speaker>
-            <l n="275" xml:id="l275">Vincent !</l>
-            <stage><hi rend="italic"><em>Il se retourne.</em></hi></stage>
-            <l n="277" xml:id="l277">ah ! que demandez-vous ?</l>
-          </sp>
-          <sp who="pierre" xml:id="16-4">
-            <speaker>PIERRE.</speaker>
-            <l n="278" xml:id="l278">C’est une lettre pour le baron de Valbert, colonel de hussards...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-5">
-            <speaker>VALBERT.</speaker>
-            <l n="279" xml:id="l279">C’est moi, donnez !</l>
-            <stage><hi rend="italic"><em>Il lit.</em></hi></stage>
-            <l n="281" xml:id="l281">Ah ! c’est de St.-Ange... « Villiers, ce... je vous recommande le fils d’un de mes anciens fermiers ».</l>
-            <stage><hi rend="italic"><em>Il continue bas, et dit avec intérêt.</em></hi></stage>
-            <l n="283" xml:id="l283">Vous êtes de Villiers ?...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-6">
-            <speaker>PIERRE.</speaker>
-            <l n="284" xml:id="l284">Oui, monsieur le baron...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-7">
-            <speaker>VALBERT.</speaker>
-            <l n="285" xml:id="l285">Et vous voulez vous engager ?</l>
-          </sp>
-          <sp who="pierre" xml:id="16-8">
-            <speaker>PIERRE.</speaker>
-            <l n="286" xml:id="l286">C’était mon intention...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-9">
-            <speaker>VALBERT.</speaker>
-            <l n="287" xml:id="l287">Il faut que des motifs bien graves vous portent à faire une pareille démarche... quels qu’ils soient, confiez-les moi, et si je puis vous être utile...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-10">
-            <speaker>PIERRE.</speaker>
-            <l n="288" xml:id="l288">M’être utile !... vous ?... oh ! non...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-11">
-            <speaker>VALBERT.</speaker>
-            <l n="289" xml:id="l289">Peut-être, si je connaissais vos malheurs ?...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-12">
-            <speaker>PIERRE.</speaker>
-            <l n="290" xml:id="l290">Mes malheurs ? ils sont irréparables !... je vous en fais juge, écoutez : j’aimais une jeune fille ; son père me l’avait promise ; le jour était fixé pour notre union... forcé d’aller recueillir un héritage, je quitte le pays... pendant mon absence, un homme, abusant de sa fortune, éblouit ma fiancée par des promesses trompeuses, et disparait avec elle !... je reviens bientôt, plein d’amour et d’espérance... Là, où j’avais laissé la joie, je ne trouve que la douleur, un vieillard au désespoir, appelant la malédiction sur le ravisseur de sa fille.</l>
-          </sp>
-          <sp who="valbert" xml:id="16-13">
-            <speaker>VALBERT, <em>dont l’émotion va toujours croissant.</em></speaker>
-            <l n="291" xml:id="l291">Grand Dieu ! quel rapport !</l>
-          </sp>
-          <sp who="pierre" xml:id="16-14">
-            <speaker>PIERRE.</speaker>
-            <l n="292" xml:id="l292">Ce n’est pas tout !...</l>
-            <stage><hi rend="italic"><em>Air : merveilleuse par ses vertus. (De la lanterne sourde.)</em></hi></stage>
-          </sp>
-          <sp who="valbert" xml:id="16-15">
-            <speaker>VALBERT, <em>hors de lui.</em></speaker>
-            <l n="294" xml:id="l294">Enfin, vous êtes ?...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-16">
-            <speaker>PIERRE.</speaker>
-            <l n="295" xml:id="l295">Le fiancé de Cécile Dumont !...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-17">
-            <speaker>VALBERT.</speaker>
-            <l n="296" xml:id="l296">Et, quel a été votre projet, en venant ici ?</l>
-          </sp>
-          <sp who="pierre" xml:id="16-18">
-            <speaker>PIERRE.</speaker>
-            <l n="297" xml:id="l297">Je vous l’ai dit... je venais m’engager, maintenant un soin plus important me retient !...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-19">
-            <speaker>VALBERT.</speaker>
-            <l n="298" xml:id="l298">Que prétendez-vous faire ?</l>
-          </sp>
-          <sp who="pierre" xml:id="16-20">
-            <speaker>PIERRE.</speaker>
-            <l n="299" xml:id="l299">J’aime Cécile, depuis mon enfance... j’avais placé mon bonheur dans son amour... vous l’avez détruit !... je ne viens point ici me plaindre, et vous accuser... ami de Cécile, je viens vous adresser une prière...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-21">
-            <speaker>VALBERT.</speaker>
-            <l n="300" xml:id="l300">Une prière ? parlez !...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-22">
-            <speaker>PIERRE.</speaker>
-            <l n="301" xml:id="l301">Vous avez trompé une jeune fille, qui a quitté pour vous, ce qu’elle avait de plus cher au monde... sa famille !... une grande fortune vous rend indépendant... pouvez-vous en faire un plus noble usage, qu’en la consacrant à celle qui vous à tout sacrifié ? vous l’aimez...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-23">
-            <speaker>VALBERT.</speaker>
-            <l n="302" xml:id="l302">Si je l’aime ! mais, mon rang ! cet hymen brillant, que le ministre me propose avec la comtesse de Roseval ! c’est impossible !...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-24">
-            <speaker>PIERRE.</speaker>
-            <l n="303" xml:id="l303">Eh bien ! j’ai ru Cécile ; je lui ai parlé ; elle a pleuré devant moi... et dès aujourd’hui elle veut fuir loin de vous ! Je l’emmène...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-25">
-            <speaker>VALBERT, <em>vivement.</em></speaker>
-            <l n="304" xml:id="l304">L’emmener !... Cécile me quitter !... Elle restera, je le veux !</l>
-          </sp>
-          <sp who="pierre" xml:id="16-26">
-            <speaker>PIERRE.</speaker>
-            <l n="305" xml:id="l305">Vous le voulez ? et quels sont vos droits sur elle ?... êtes-vous son époux ? Ah ! quel serait son sort si elle restait ici !</l>
-          </sp>
-          <sp who="valbert" xml:id="16-27">
-            <speaker>VALBERT, <em>avec fierté.</em></speaker>
-            <l n="306" xml:id="l306">Son sort est assuré !... Moi, l’abandonner ? jamais !... mes bienfaits la suivront partout...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-28">
-            <speaker>PIERRE.</speaker>
-            <l n="307" xml:id="l307">Vos bienfaits !... et vous croirez avoir réparé vos torts ?... De l’or, voilà votre grand mot ! comme si l’or pouvait rendre l’honneur et lé repos qu’on a perdu !</l>
-          </sp>
-          <sp who="valbert" xml:id="16-29">
-            <speaker>VALBERT, <em>vivement.</em></speaker>
-            <l n="308" xml:id="l308">C’en est assez !... Et de quel droit venez-vous m’imposer des conditions ?</l>
-          </sp>
-          <sp who="pierre" xml:id="16-30">
-            <speaker>PIERRE.</speaker>
-            <l n="309" xml:id="l309">Monsieur le colonel !... vous avez une sœur... belle et vertueuse, elle est l’honneur de voire famille !... la guerre vous a éloigné d’elle... si à votre retour vous aviez appris qu’un séducteur...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-31">
-            <speaker>VALBERT.</speaker>
-            <l n="310" xml:id="l310">N’achevez pas !... tout son sang m’aurait fait raison !</l>
-          </sp>
-          <sp who="pierre" xml:id="16-32">
-            <speaker>PIERRE.</speaker>
-            <l n="311" xml:id="l311">Vous me dictez mon devoir !...</l>
-          </sp>
-          <sp who="valbert" xml:id="16-33">
-            <speaker>VALBERT.</speaker>
-            <l n="312" xml:id="l312">Mais vous n’êtes pas ?...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-34">
-            <speaker>PIERRE.</speaker>
-            <l n="313" xml:id="l313">Je suis le frère de Cécile pour la défendre... vous m’entendrez, Colonel ? Vous avez causé la mort d’un vieillard en lui ravissant sa fille... vous m’avez réduit au désespoir en me privant de celle que mon cœur avait choisie ! refuseriez-vous de me rendre raison de tout le mal que vous m’avez fait ?</l>
-            <stage><hi rend="italic"><em>Valbert fait un mouvement.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Ces postillons, etc. </em></hi></stage>
-          </sp>
-          <sp who="valbert" xml:id="16-35">
-            <speaker>VALBERT.</speaker>
-            <l n="316" xml:id="l316">Eh bien ! donc, dans un quart-d’heure... près d’ici, à la porte du bois...</l>
-          </sp>
-          <sp who="pierre" xml:id="16-36">
-            <speaker>PIERRE.</speaker>
-            <l n="317" xml:id="l317">Il suffit ! monsieur le Baron.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-            <l n="319" xml:id="l319"> </l>
-            <l n="320" xml:id="l320"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="17">
-          <head>Scène XVII</head>
-            <l n="321" xml:id="l321"> </l>
-          <sp who="valbert" xml:id="17-1">
-            <speaker>VALBERT, <em>seul</em></speaker>
-            <l n="322" xml:id="l322"> </l>
-            <stage><hi rend="italic"><em>Il se promène à grands pas et paraît fort agité.</em></hi></stage>
-            <l n="324" xml:id="l324">Il a raison, je le sens... et je ne puis lui refuser mon estime... mais Cécile !... quelle femme serait plus digne de mon amour... Si j’accomplissais ma promesse... non !... maintenant c’est impossible... On croirait que j’ai cédé à an sentiment de crainte ; et le Ministre qui m’attend à quatre heures !... ce combat aura lieu... il le faut... mais me battre avec ce jeune homme... un simple villageois !... Eh ! qu’importe !...</l>
-            <stage><hi rend="italic"><em>Rondeau.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air nouveau de M. Blanchard.</em></hi></stage>
-            <l n="327" xml:id="l327">Mais avant de partir, assurons le sort de Cécile.</l>
-            <stage><hi rend="italic"><em>Il se place à une table et écrit. </em></hi></stage>
-            <l n="329" xml:id="l329">Cet ordre à mon banquier sera fidèlement exécuté.</l>
-            <stage><hi rend="italic"><em>Il plie la lettre, puis écrit sur un autre papier.</em></hi></stage>
-            <l n="331" xml:id="l331">Un dernier adieu à Cécile.</l>
-            <stage><hi rend="italic"><em>Finissant d’écrire. </em></hi></stage>
-            <l n="333" xml:id="l333">« Si Pierre revient seul, suivez cet ami... Tout sera fini pour moi. »</l>
-            <stage><hi rend="italic"><em>Il plie la seconde lettre en mettant là première dedans et sonne.</em></hi></stage>
-            <l n="335" xml:id="l335"> </l>
-            <l n="336" xml:id="l336"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="18">
-          <head>Scène XVIII</head>
-            <l n="337" xml:id="l337"> </l>
-          <sp who="vincent" xml:id="18-1">
-            <speaker>VALBERT, VINCENT</speaker>
-            <l n="338" xml:id="l338"> </l>
-          </sp>
-          <sp who="valbert" xml:id="18-2">
-            <speaker>VALBERT, <em>se levant.</em></speaker>
-            <l n="339" xml:id="l339">Vincent !</l>
-          </sp>
-          <sp who="vincent" xml:id="18-3">
-            <speaker>VINCENT.</speaker>
-            <l n="340" xml:id="l340">Monsieur !</l>
-          </sp>
-          <sp who="valbert" xml:id="18-4">
-            <speaker>VALBERT, <em>lui remettant la lettre.</em></speaker>
-            <l n="341" xml:id="l341">Prends cette lettre... il est trois heures... si je ne suis pas rentré dans une heure, tu la remettras à Cécile !</l>
-          </sp>
-          <sp who="vincent" xml:id="18-5">
-            <speaker>VINCENT.</speaker>
-            <l n="342" xml:id="l342">Mais mademoiselle Cécile est là, si vous voulez lui parler...</l>
-          </sp>
-          <sp who="valbert" xml:id="18-6">
-            <speaker>VALBERT.</speaker>
-            <l n="343" xml:id="l343">Non, non, je ne puis... Vincent, je connais ton affection pour moi... tu m’entends, dans une heure...</l>
-            <stage><hi rend="italic"><em>Il sort. Vincent le regarde sortir avec étonnement.</em></hi></stage>
-            <l n="345" xml:id="l345"> </l>
-            <l n="346" xml:id="l346"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="19">
-          <head>Scène XIX</head>
-            <l n="347" xml:id="l347"> </l>
-          <sp who="vincent" xml:id="19-1">
-            <speaker>VINCENT, <em>seul, restant tout étonné, la lettre à la main</em></speaker>
-            <l n="348" xml:id="l348"> </l>
-            <l n="349" xml:id="l349">Quel air sinistre ! il était si gai ce matin !... Pourquoi diable écrit-il à mademoiselle Cécile, quand il ne tient qu’à lui de lui parler ?... Aurait-il un autre amour en tête ? et cette lettre ?... dans une heure !...</l>
-            <stage><hi rend="italic"><em>Il tire sa montre et la met sur la table.</em></hi></stage>
-            <l n="351" xml:id="l351">Il n’y a que quelques minutes de passées... je ne suis pas curieux... mais quand il y a un événement, je n’aime pas à attendre pour le connaître... avec ça que ma montre retarde toujours... à ce que dit ma femme...</l>
-            <l n="352" xml:id="l352"> </l>
-            <l n="353" xml:id="l353"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="20">
-          <head>Scène XX</head>
-            <l n="354" xml:id="l354"> </l>
-          <sp who="vincent" xml:id="20-1">
-            <speaker>VINCENT, MADAME VINCENT</speaker>
-            <l n="355" xml:id="l355"> </l>
-          </sp>
-          <sp who="vincent" xml:id="20-2">
-            <speaker>MADAME VINCENT, <em>sortant de l’appartement de Cécile.</em></speaker>
-            <l n="356" xml:id="l356">Monsieur Vincent, le colonel est-il là ?</l>
-          </sp>
-          <sp who="vincent" xml:id="20-3">
-            <speaker>VINCENT.</speaker>
-            <l n="357" xml:id="l357">Il est sorti à trois heures précises...</l>
-          </sp>
-          <sp who="vincent" xml:id="20-4">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="358" xml:id="l358">Mam’selle Cécile voulait le voir.</l>
-          </sp>
-          <sp who="vincent" xml:id="20-5">
-            <speaker>VINCENT.</speaker>
-            <l n="359" xml:id="l359">Elle ne pourra le voir que dans une heure... encore peut-être...</l>
-          </sp>
-          <sp who="vincent" xml:id="20-6">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="360" xml:id="l360">Pourquoi peut-être ?</l>
-          </sp>
-          <sp who="vincent" xml:id="20-7">
-            <speaker>VINCENT.</speaker>
-            <l n="361" xml:id="l361">Parce que !...</l>
-          </sp>
-          <sp who="vincent" xml:id="20-8">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="362" xml:id="l362">Parce que...</l>
-          </sp>
-          <sp who="vincent" xml:id="20-9">
-            <speaker>VINCENT, <em>montrant la lettre.</em></speaker>
-            <l n="363" xml:id="l363">C’est là dedans qu’est le parce que...</l>
-          </sp>
-          <sp who="vincent" xml:id="20-10">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="364" xml:id="l364">C’est une lettre !...</l>
-          </sp>
-          <sp who="vincent" xml:id="20-11">
-            <speaker>VINCENT.</speaker>
-            <l n="365" xml:id="l365">Pour mademoiselle Cécile... Monsieur le colonel me l’a remise avec un air et un ton !... « Vincent, m’a-t-il dit, je connais ton attachement... si dans une heure je ne suis pas rentré, tu remettras cette lettre à Cécile, tu m’entends, dans une heure !... »</l>
-          </sp>
-          <sp who="vincent" xml:id="20-12">
-            <speaker>MADAME VINCENT, <em>avec effroi.</em></speaker>
-            <l n="366" xml:id="l366">Ah, mon Dieu ! monsieur Vincent, de mon temps les jeunes gens qui se battaient... serait-ce un duel !</l>
-          </sp>
-          <sp who="vincent" xml:id="20-13">
-            <speaker>VINCENT.</speaker>
-            <l n="367" xml:id="l367">Avec qui ?</l>
-          </sp>
-          <sp who="vincent" xml:id="20-14">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="368" xml:id="l368">Je l’ignore !</l>
-          </sp>
-          <sp who="vincent" xml:id="20-15">
-            <speaker>VINCENT.</speaker>
-            <l n="369" xml:id="l369">Pour quel motif ?</l>
-          </sp>
-          <sp who="vincent" xml:id="20-16">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="370" xml:id="l370">On se bat pour si peu, de choses !...</l>
-          </sp>
-          <sp who="vincent" xml:id="20-17">
-            <speaker>VINCENT.</speaker>
-            <l n="371" xml:id="l371">Ah ! vous avez raison.</l>
-            <stage><hi rend="italic"><em>Air : Des Scythes.</em></hi></stage>
-          <stage>MADAME VINCENT.</stage>
-          </sp>
-          <sp who="vincent" xml:id="20-18">
-            <speaker>VINCENT.</speaker>
-            <l n="373" xml:id="l373">Mais c’est bien différent cette fois... et si monsieur de Valbert se bat en duel...</l>
-            <l n="374" xml:id="l374"> </l>
-            <l n="375" xml:id="l375"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="21">
-          <head>Scène XXI</head>
-            <l n="376" xml:id="l376"> </l>
-          <sp who="vincent" xml:id="21-1">
-            <speaker>VINCENT, MADAME VINCENT, CÉCILE</speaker>
-            <l n="377" xml:id="l377"> </l>
-          </sp>
-          <sp who="vincent" xml:id="21-2">
-            <speaker>CÉCILE, <em>arrivant précipitamment, et ayant entendu tes derniers mots de Vincent.</em></speaker>
-            <l n="378" xml:id="l378">Que dites-vous ?</l>
-          </sp>
-          <sp who="vincent" xml:id="21-3">
-            <speaker>VINCENT, <em>faisant signe à sa femme.</em></speaker>
-            <l n="379" xml:id="l379">Rien, rien, mademoiselle...</l>
-          </sp>
-          <sp who="cécile" xml:id="21-4">
-            <speaker>CÉCILE.</speaker>
-            <l n="380" xml:id="l380">J’ai bien entendu ! Valbert se bat en duel !</l>
-          </sp>
-          <sp who="vincent" xml:id="21-5">
-            <speaker>MADAME VINCENT, <em>embarrassée.</em></speaker>
-            <l n="381" xml:id="l381">Rassurez-vous, mademoiselle, ce sont des conjectures que nous faisions...</l>
-          </sp>
-          <sp who="vincent" xml:id="21-6">
-            <speaker>CÉCILE, <em>voyant la lettre que tient Vincent.</em></speaker>
-            <l n="382" xml:id="l382">Pour qui cette lettre ?...</l>
-          </sp>
-          <sp who="vincent" xml:id="21-7">
-            <speaker>VINCENT.</speaker>
-            <l n="383" xml:id="l383">Pardon, mademoiselle ; elle est pour vous, mais je ne dois vous la remettre...</l>
-            <stage><hi rend="italic"><em>Regardant sa montre.</em></hi></stage>
-            <l n="385" xml:id="l385">il n’est pas l’heure !...</l>
-          </sp>
-          <sp who="cécile" xml:id="21-8">
-            <speaker>CÉCILE.</speaker>
-            <l n="386" xml:id="l386">De qui est-elle ?</l>
-          </sp>
-          <sp who="vincent" xml:id="21-9">
-            <speaker>VINCENT.</speaker>
-            <l n="387" xml:id="l387">De monsieur le Colonel !</l>
-          </sp>
-          <sp who="cécile" xml:id="21-10">
-            <speaker>CÉCILE, <em>saisissant la lettre.</em></speaker>
-            <l n="388" xml:id="l388">Le colonel !... donnez...</l>
-            <stage><hi rend="italic"><em>Elle ouvre précipitamment la lettre.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="21-11">
-            <speaker>VINCENT, <em>à part.</em></speaker>
-            <l n="390" xml:id="l390">Ça n’est pas ma faute.</l>
-            <stage><hi rend="italic"><em>Il avance l’aiguille de sa montre.</em></hi></stage>
-          </sp>
-          <sp who="cécile" xml:id="21-12">
-            <speaker>CÉCILE, <em>lisant.</em></speaker>
-            <l n="392" xml:id="l392">Grand Dieu ! me quitter !... peut-être pour toujours, mais elle est adressée à son banquier ;</l>
-            <stage><hi rend="italic"><em>Lisant.</em></hi></stage>
-            <l n="394" xml:id="l394">de l’or pour moi !... son amour... ah ! oui... mais sa fortune... jamais !</l>
-            <stage><hi rend="italic"><em>Elle déchire le billet pour le banquier.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="21-13">
-            <speaker>MADAME VINCENT.</speaker>
-            <l n="396" xml:id="l396">Mademoiselle Cécile !...</l>
-          </sp>
-          <sp who="cécile" xml:id="21-14">
-            <speaker>CÉCILE, <em>lisant la lettre qui est pour elle.</em></speaker>
-            <l n="397" xml:id="l397">Que vois je ?... il se bat !... « Si Pierre, revient seul, suivez cet ami... tout sera fini pour moi ; adieu, Cécile ». Ah ! mes amis, mes chers amis, courez... votre maître...</l>
-            <stage><hi rend="italic"><em>Apercevant Pierre qui entre. </em></hi></stage>
-            <l n="399" xml:id="l399">Pierre ! il est seul !... malheureuse !...</l>
-            <stage><hi rend="italic"><em>Elle se cache la figure avec les mains.</em></hi></stage>
-            <l n="401" xml:id="l401"> </l>
-            <l n="402" xml:id="l402"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="22">
-          <head>Scène XXII</head>
-            <l n="403" xml:id="l403"> </l>
-          <sp who="vincent" xml:id="22-1">
-            <speaker>VINCENT, MADAME VINCENT, CÉCILE, PIERRE</speaker>
-            <l n="404" xml:id="l404"> </l>
-          </sp>
-          <sp who="pierre" xml:id="22-2">
-            <speaker>PIERRE.</speaker>
-            <l n="405" xml:id="l405">Venez, venez, Cécile, vous ne pouvez trop tôt quitter cette maison !</l>
-          </sp>
-          <sp who="cécile" xml:id="22-3">
-            <speaker>CÉCILE, <em>désespérée.</em></speaker>
-            <l n="406" xml:id="l406">Quoi ! Valbert !...</l>
-          </sp>
-          <sp who="pierre" xml:id="22-4">
-            <speaker>PIERRE.</speaker>
-            <l n="407" xml:id="l407">Valbert !... ah ! le sort a trahi mon courage... j’ai fait feu le premier !...</l>
-          </sp>
-          <sp who="cécile" xml:id="22-5">
-            <speaker>CÉCILE, <em>avec joie.</em></speaker>
-            <l n="408" xml:id="l408">Il respire !...</l>
-          </sp>
-          <sp who="pierre" xml:id="22-6">
-            <speaker>PIERRE.</speaker>
-            <l n="409" xml:id="l409">Il est perdu pour tous ! profilant de son avantage, il s’est avancé vers moi, en me disant : « je respecte les jours du frère de Cécile, je suis libre maintenant, et je cours chez la comtesse de Roseval... »</l>
-          </sp>
-          <sp who="cécile" xml:id="22-7">
-            <speaker>CÉCILE.</speaker>
-            <l n="410" xml:id="l410">La comtesse de Roseval !...</l>
-          </sp>
-          <sp who="pierre" xml:id="22-8">
-            <speaker>PIERRE.</speaker>
-            <l n="411" xml:id="l411">Sans doute, il l’épouse aujourd’hui !...</l>
-          </sp>
-          <sp who="tous" xml:id="22-9">
-            <speaker>TOUS.</speaker>
-            <l n="412" xml:id="l412">Ciel !</l>
-            <stage><hi rend="italic"><em>Morceau d’ensemble.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air nouveau de M. Blanchard.</em></hi></stage>
-          <stage>CÉCILE.</stage>
-          </sp>
-          <sp who="vincent" xml:id="22-10">
-            <speaker>VINCENT, MADAME VINCENT.</speaker>
-            <stage><hi rend="italic"><em>L’orchestre reprend l’air de la chanson du village qui doit être chantée tristement et piano.</em></hi></stage>
-          <stage>PIERRE, <em>prenant Cécile par le bras.</em></stage>
-          </sp>
-          <sp who="tous-trois" xml:id="22-11">
-            <speaker>TOUS TROIS, <em>à Cécile.</em></speaker>
-            <l n="416" xml:id="l416"> </l>
-          <stage>PIERRE.</stage>
-          </sp>
-          <sp who="vincent" xml:id="22-12">
-            <speaker>VINCENT <em>et</em> MADAME VINCENT.</speaker>
-            <l n="417" xml:id="l417"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="23">
-          <head>Scène XXIII</head>
-            <l n="418" xml:id="l418"> </l>
-          <sp who="vincent" xml:id="23-1">
-            <speaker>VINCENT, MADAME VINCENT, CÉCILE, PIERRE, VALBERT</speaker>
-            <l n="419" xml:id="l419"> </l>
-          </sp>
-          <sp who="valbert" xml:id="23-2">
-            <speaker>VALBERT, <em>entrant précipitamment.</em></speaker>
-            <l n="420" xml:id="l420">Arrêtez !</l>
-          </sp>
-          <sp who="cécile" xml:id="23-3">
-            <speaker>CÉCILE.</speaker>
-            <l n="421" xml:id="l421">Valbert !</l>
-          </sp>
-          <sp who="valbert" xml:id="23-4">
-            <speaker>VALBERT.</speaker>
-            <l n="422" xml:id="l422">Ma chère Cécile, rassurez-vous, j’ai eu bien des torts, mais je brûle de les réparer.</l>
-          </sp>
-          <sp who="pierre" xml:id="23-5">
-            <speaker>PIERRE, <em>s’avançant.</em></speaker>
-            <l n="423" xml:id="l423">Monsieur le baron !</l>
-          </sp>
-          <sp who="pierre" xml:id="23-6">
-            <speaker>VALBERT, <em>à Pierre.</em></speaker>
-            <l n="424" xml:id="l424">Appelez-moi, votre ami, votre meilleur ami, monsieur Pierre ! et jouissez de votre ouvrage, je ne me suis rendu chez la comtesse que pour dégager ma parole...mon hymen avec elle est rompu, maintenant je suis libre, et c’est en votre présence que je prie Cécile de me pardonner, et d’accepter le titre de mon épouse...</l>
-          </sp>
-          <sp who="cécile" xml:id="23-7">
-            <speaker>CÉCILE.</speaker>
-            <l n="425" xml:id="l425">Votre épouse !... moi, Valbert ! ah ! ne me trompez pas.</l>
-            <stage><hi rend="italic"><em>Valbert lui baise la main.</em></hi></stage>
-          </sp>
-          <sp who="vincent" xml:id="23-8">
-            <speaker>VINCENT, <em>tirant sa montre.</em></speaker>
-            <l n="427" xml:id="l427">Monsieur, il n’est pas quatre heures... nous pouvons bien vite avoir un notaire.</l>
-          </sp>
-          <sp who="valbert" xml:id="23-9">
-            <speaker>VALBERT.</speaker>
-            <l n="428" xml:id="l428">Tu as raison.</l>
-            <stage><hi rend="italic"><em>À Pierre. </em></hi></stage>
-            <l n="430" xml:id="l430">Monsieur Pierre, êtes-vous content de moi ?</l>
-          </sp>
-          <sp who="pierre" xml:id="23-10">
-            <speaker>PIERRE.</speaker>
-            <l n="431" xml:id="l431">Monsieur le baron, vous n’avez jamais tant honoré votre nom qu’aujourd’hui, rendez-la heureuse, ma tâche est remplie...</l>
-            <stage><hi rend="italic"><em>Air : de la Vieille.</em></hi></stage>
-          <stage>VALBERT.</stage>
-          </sp>
-          <sp who="pierre" xml:id="23-11">
-            <speaker>PIERRE, <em>à Valbert.</em></speaker>
-            <l n="433" xml:id="l433"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> Elle a changé de costume, elle est en négligé élégant.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, puis AUGUSTE</speaker>
+          <stage>&lt;em&gt;Au lever du rideau, Vincent est en scène, il écoute du côté de la chambre du colonel, dans laquelle on chante le chœur de la Dame Blanche.&lt;/em&gt;</stage>
+          <l n="1">Il faut rire, il faut boire,</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="2">Ah ! mon Dieu ! quel tapage ! quelle gaieté... c’est pourtant comme ça, toutes les fois que monsieur le colonel donne un déjeuner à ses amis !... des amis !... un jeune homme n’en manque jamais, avec de la fortune, un bon cœur, et des côtelettes...</l>
+          <stage>&lt;em&gt;Air : Jadis et aujourd’hui.&lt;/em&gt;</stage>
+          <l n="3">Dans les salons, les promenades,</l>
+          <stage>&lt;em&gt;On entend sonner, et plusieurs voie qui crient.&lt;/em&gt;</stage>
+          <l n="4">Le café ! le café !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, entrant par le fond, en tenant un plateau et des demi-tasses.</speaker>
+          <l n="5">Voilà ! voilà !</l>
+          <stage>&lt;em&gt;Il entre chez Valbert, et laisse la porte ouverte&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="6">Ils ne sont pourtant que six à table !... et ils ont bu !...</l>
+          <stage>&lt;em&gt;On entend le bruit d’un bouchon de Champagne qui saute, Vincent porte la main à sa tête. &lt;/em&gt;</stage>
+          <l n="7">Ah ! qu’est-ce que c’est que ça ?</l>
+          <stage>&lt;em&gt;Tirant un bouchon de ses cheveux. &lt;/em&gt;</stage>
+          <l n="8">c’est le bouchon de Champagne, qui vient de sauter... il m’a attrapé juste dans l’aile de pigeon...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, sortant de chez Valbert.</speaker>
+          <l n="9">Les voilà au café !...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="10">Dites donc, monsieur Auguste, fermez votre porte, s’il vous plaît... je viens de recevoir un éclat de Champagne.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE, riant.</speaker>
+          <l n="11">Ah ! ah ! c’est qu’ils ont fait un fier feu de file !... et des toasts, en ont-ils portés ? à madame une telle, à la petite brune, à la grande blonde, à la vertu des grisettes, à l’innocence des danseuses... ils confondaient tout !... ça m’amuse, moi... parce qu’il reste toujours quelques fonds de bouteilles...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="12">Mauvais sujet !</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="13">C’est ça... parce que vous êtes vieux, vous critiquez les jeunes gens... vous avez eu votre temps, monsieur Vincent. Vous avez servi fidèlement le père de monsieur de Valbert, c’est bien... vous vous êtes marié, c’est bon !... vous êtes devenus, vous et madame Vincent, les gens de confiance de notre jeune maître, c’est juste ; mais vous n’aimez pas qu’on s’amuse, et c’est mal... voyez monsieur le colonel, il rit, il chante, il boit,</l>
+          <stage>&lt;em&gt;En confiance. &lt;/em&gt;</stage>
+          <l n="14">et il aime ! vous en savez quelque chose...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="15">Comment ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="16">Cette jeune fille, qu’il a mise sous là surveillance de madame Vincent !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="17">C’est une jeune orpheline, qu’il a recueillie, elle a son appartement de ce côté... et ma femme ne la quille pas.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="18">C’est bon... une orpheline qu’il n recueillie... qui est arrivée ici, il y a huit mois en paysanne... et qui maintenant... suffit !... enfin, rien de trop beau pour elle, des maîtres de toutes les façons... du reste, elle est jolie, faut en convenir.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, prenant Auguste par la main.</speaker>
+          <l n="19">Monsieur Auguste, en ma qualité d’homme de confiance, de monsieur le colonel, j’ai le droit de chasser un domestique bavard et impertinent... vous m’entendez ?...</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="20">Alors il ne faut donc rien dire ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="21">Je ne dis pas cela, mais il faut se taire.</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="22">C’est dit.</l>
+          <stage>&lt;em&gt;Air : Faut l’oublier.&lt;/em&gt;</stage>
+          <l n="23">Je n’dirai rien, soyez tranquille ;</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="24">Silence !... on sort de table.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, AUGUSTE, VALBERT, AMIS</speaker>
+          <stage>&lt;em&gt;Ils sortent gaiement en chantant.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : de Fiorella.&lt;/em&gt;</stage>
+          <l n="25">Des amis, en ce jour,</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="26">Lorsqu’en tout lieu le plaisir nous appelle,</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <l n="27">Des amis, en ce jour,</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, les reconduisant.</speaker>
+          <l n="28">Dans une heure, rendez-vous général au tir de Le Page.</l>
+          <stage>&lt;em&gt;Les amis sortent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="29">Auguste, je vais sortir... mon tilbury et mon cheval anglais... vous viendrez m’avertir.</l>
+          <stage>&lt;em&gt;Auguste sort.&lt;/em&gt;</stage>
+          <l n="30">Vincent, a-t-on apporté mon nouvel uniforme ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="31">Pas encore, Monsieur.</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="32">Vous enverrez chez Staub... ces gens-là sont d’une inexactitude !... il me le faut demain avant huit heures... Diable !... une revue au Carrousel...</l>
+          <stage>&lt;em&gt;Air : les devoirs de la Chevalerie.&lt;/em&gt;</stage>
+          <l n="33">Je l’avouerai, c’est peut-être faiblesse,</l>
+          <l n="34">Cécile n’est pas encore rentrée ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="35">Non, Monsieur ; elle est sortie de bonne heure avec ma femme : c’est son jour d’équitation.</l>
+          <stage>&lt;em&gt;On entend le bruit d’une voiture qui s’arrête. &lt;/em&gt;</stage>
+          <l n="36">Mais j’entends une voiture... ce sont elles, sans doute... je vais à leur rencontre.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, regardant à la fenêtre au fond</speaker>
+          <l n="37">Ah ! elle revient du manège... quelle grâce ! quelle aisance qui reconnaîtrait la fille du fermier de Villiers... la petite paysanne ?... il faut avouer que l’air de Paris vous forme bien vite une femme.</l>
+          <stage>&lt;em&gt;Il quitte la fenêtre. &lt;/em&gt;</stage>
+          <l n="38">Pauvre Cécile !... puisse-t-elle oublier, au milieu des plaisirs, la promesse que je lui ai faite... je sens qu’il me serait bien pénible de la désabuser... et cependant il le faudra !... le ministre me presse pour fixer le jour qui doit m’unir à la jeune comtesse de Roseval, sa parente, et il attend aujourd’hui même une réponse définitive... que j’épouse cette femme-là, et je suis maréchal-de-camp avant six mois !... oui, mais... ah ! pourquoi Cécile n’est-elle pas comtesse !... la voici !... jamais elle ne m’a paru si jolie !...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <stage>&lt;em&gt;Air : nouveau de M. Adolphe Adam ou Valse de Léocadie.&lt;/em&gt;</stage>
+          <l n="39">Moments</l>
+          <l n="40">Mon ardeur extrême</l>
+          <l n="41">Oui je veux qu’on vante</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>Moments, &lt;em&gt;etc.&lt;/em&gt;&lt;br&gt;</stage>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="42">Chère Cécile !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="43">À propos, je croyais que vous receviez ce matin !...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="44">Oui... mais mes convives sont partis.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="45">Ah !... tant mieux !... Je suis si heureuse quand je me trouve avec vous... Eh bien ! monsieur, vous ne me dites rien ? Vous ne me faites pas compliment sur mon nouveau costume.</l>
+          <stage>&lt;em&gt;Elle marche. &lt;/em&gt;</stage>
+          <l n="46">Tenez, qu’en dites-vous ?</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="47">Il vous sied à ravir !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="48">C’est bien heureux...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, à part.</speaker>
+          <l n="49">Oh ! les jeunes filles !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="50">Vous ne savez pas, mon ami ? Je serai bientôt en état de vous accompagner dans vos promenades...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="51">Quoi !... en si peu de temps !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="52">Cela vous étonne !... ne m’aviez-vous pas dit que cela vous ferait plaisir ?...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="53">Adorable !...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="54">Décidément je ne pourrai jamais me séparer de cette femme-là...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, à part.</speaker>
+          <l n="55">La pauvre petite !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="56">Ah ça ! ma chère Cécile, j’ai cependant un reproche à vous faire...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, inquiète.</speaker>
+          <l n="57">Un reproche ! à moi, mon ami ?</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="58">Oui, un reproche... très grave, et je vous préviens que cela ne peut pas durer... Comment ! depuis un siècle, pas un mémoire à payer !... pas de nouvelles parures !... toujours les mêmes cachemires !... mais c’est affreux !</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, à part.</speaker>
+          <l n="59">Il lui fera tourner la tête...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, rassurée.</speaker>
+          <l n="60">Ah ! n’est-ce que cela... eh mon dieu ! monsieur, que ne parliez-vous plus tôt ?</l>
+          <stage>&lt;em&gt;Air : Vaudeville du Baiser au Porteur.&lt;/em&gt;</stage>
+          <l n="61">Par mes bijoux, par mes dentelles,</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, à part.</speaker>
+          <l n="62">Oh ! la coquetterie !... c’est dans le sang !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="63">À la bonne heure !... je veux que ma Cécile éclipse toutes les femmes par sa beauté ! ce soir, par exemple, une toilette brillante !... nous allons aux bouffes... j’ai enfin trouvé une loge !... ça n’a pas été sans peine... C’est convenu, n’est-ce pas, Cécile ?</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="64">Oui, mon ami...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="65">Madame Vincent vous accompagnera, ça l’amusera...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="66">Oui, monsieur.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="67">Je n’entends pas un mot d’italien.</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, regardant sa montre.</speaker>
+          <l n="68">Deux heures ! étourdi que je suis !... il faut que je vous quitte un instant...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="69">Déjà !... sans doute une affaire bien importante ?...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="70">Du plus haut intérêt !... Comment donc !... un arabe superbe à essayer !... et un pari chez le Page... à propos d’arabe, mon agent de change m’attend chez Tortoni !... c’est un homme charmant, qui possède tout ce qu’il faut pour inspirer la confiance... il a deux chevaux de race et la plus belle calèche...</l>
+          <stage>&lt;em&gt;Il appelle.&lt;/em&gt;</stage>
+          <l n="71">Holà !... quelqu’un !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="72">Monsieur ?...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="73">Mon tilbury est-il là ?</l>
+        </sp>
+        <sp who="#auguste">
+          <speaker>AUGUSTE.</speaker>
+          <l n="74">Oui, Monsieur.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="75">Je suis à vous dans l’instant... le temps est superbe... nous sortirons ensemble...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="76">Bien, mon ami... je me tiendrai prête.</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT</speaker>
+          <l n="77">Nous irons an bois dans ma nouvelle voiture... Vous ne la connaissez pas ? oh ! vous n’avez rien vu... un landaulet superbe !... quatre chevaux à grand guides !... c’est moi qui conduirai !... la redingote blanche... tenue de rigueur... ce sera parfait !... vous riez ?... vous ne connaissez donc pas le suprême bon genre ?...</l>
+          <stage>&lt;em&gt;Air : Vaudeville du dîner des Garçons.&lt;/em&gt;</stage>
+          <l n="78">Pour singer le système anglais,</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, à part.</speaker>
+          <l n="79">Voilà comme on est ridicule... oh ! de mon temps !...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <stage>Et mon &lt;em&gt;groom&lt;/em&gt; ! venez donc le voir !</stage>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, à part.</speaker>
+          <l n="80">Un vrai magot de la Chine !...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, il la conduit à la fenêtre.</speaker>
+          <l n="81">Tenez, regardez... c’est le plus petit de Paris... parole d’honneur ! je l’ai gagné hier à l’écarté... je défie bien d’en trouver un pareil...</l>
+          <stage>&lt;em&gt;Air : Je loge au quatrième étage.&lt;/em&gt;</stage>
+          <l n="82">Chez nous, par un nouveau caprice,</l>
+          <l n="83">Adieu, ma chère Cécile.</l>
+          <stage>&lt;em&gt;Il lui baise la main et sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="84">Il est parti encore une fois !...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="85">Sans que vous ayez osé lui parler de votre mariage !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="86">C’est singulier !... je voudrais toujours lui rappeler sa promesse... et, quand je le vois, je suis si heureuse, si troublée !... j’ai peur qu’il ne me rapproche ma défiance !...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="87">Ah ! Mademoiselle, vous ne connaissez pas les hommes ; on ne saurait trop se défier d’eux !...</l>
+          <stage>&lt;em&gt;Air : De M. Amédée de Beauplan.&lt;/em&gt;</stage>
+          <l n="88">Chez les amants, combien d’adresse</l>
+          <l n="89">À leurs serments on s’abandonne,</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="90">Je sais bien que vous n’avez pas tort, ma bonne madame Vincent !... cependant, que pourrais-je craindre de Valbert ?... il m’aime, j’en suis sûre ; il me le jure tous les jours... et puis il est si bon, si généreux ; il ne voudrait pas tromper une jeune fille qui s’est confiée à lui...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="91">Chère enfant !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="92">Pourtant je ne suis pas tranquille... quand je pense à mon père... à ce pauvre Pierre qui m’aimait tant !... je les ai abandonnés... quel a dû être leur chagrin !...mais je les reverrai bientôt tous les deux... aussitôt que je serai l’épouse de Valbert...</l>
+          <stage>&lt;em&gt;Air : Si tu voyais Rosette. (Journée aux aventures.)&lt;/em&gt;</stage>
+          <l n="93">Le jour du mariage</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, apportant un rouleau de papier.</speaker>
+          <l n="94">Mademoiselle, c’est votre maître de musique qui vient de remettre cela pour vous ;  </l>
+          <stage>&lt;em&gt;Il remet le rouleau. &lt;/em&gt;</stage>
+          <l n="95">il ne viendra pas vous donner de leçon aujourd’hui, parce qu’il marie sa fille.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="96">Il marie sa fille !!!</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="97">Oh ! la jolie personne !... mais encore moins belle qu’elle n’est bonne... elle ne voulait pas se marier, de peur de quitter son père ; mais tout s’est arrangé, le gendre est un marchand de musique qui prend son beau-père avec lui...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, avec un soupir.</speaker>
+          <l n="98">Qu’ils sont heureux !</l>
+          <stage>&lt;em&gt;Elle ouvre le rouleau. &lt;/em&gt;</stage>
+          <l n="99">Ah ! c’est cette romance de mon pays que j’ai fait graver... que de souvenirs elle me rappelle !... Combien de fois avec Pierre !... Écoutez... écoutez, mes amis...</l>
+          <stage>&lt;em&gt;Air nouveau, de M. Blanchard.&lt;/em&gt;</stage>
+          <l n="100">L’plaisir sous l’ombrage</l>
+          <l n="101">C’est par la jeunesse</l>
+          <l n="102">L’plaisir sous l’ombrage</l>
+          <l n="103">Mais j’oubliais... et ma toilette... Allons, ma bonne madame Vincent, Valbert doit venir me chercher, je ne veux pas le faire attendre.</l>
+          <stage>&lt;em&gt;Elle rentre avec madame Vincent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, seul</speaker>
+          <l n="104">En vérité, ça fend le cœur de voir une jeune fille si innocente, si jolie, au pouvoir d’un jeune homme... Dieux ! çà me rappelle le printemps de madame Vincent... quelle fraîcheur ! quelle candeur !... tandis qu’à présent...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="105">Personne...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, se retournant.</speaker>
+          <l n="106">Comment personne !... monsieur, qu’y a-t-il pour votre service ?...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="107">Je voudrais parler au colonel de Valbert !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="108">Il n’y est pas pour l’instant, et si vous voulez repasser...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE s’assoit.</speaker>
+          <l n="109">Ce n’est pas la peine, je l’attendrai !...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="110">Ah !... mais c’est qu’il sera peut-être longtemps.</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="111">Qu’est-ce que cela me fait ? puisque je vous dis que je l’attendrai !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="112">Eh ! bien, à votre aise !... mais je vous demande pardon si je ne cause pas avec vous...</l>
+          <stage>&lt;em&gt;Il range des papiers qui se trouvent sur la table.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="113">Oh ! ne vous gênez pas ! faites comme si je n’étais pas là...</l>
+          <stage>&lt;em&gt;Il se lève. &lt;/em&gt;</stage>
+          <l n="114">Oui c’est le seul parti qui me reste... la vie m’est à charge ! le spectacle de ma douleur fatiguait ma mère !... J’ai dû m’éloigner...</l>
+          <stage>&lt;em&gt;Air : de l’Angélus.&lt;/em&gt;</stage>
+          <l n="115">Oui, j’ai tout perdu sans retour,</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, le regardant.</speaker>
+          <l n="116">Il a l’air tout drôle ce jeune homme !... Qu’est-ce qu’il a donc à se parler comme ça tout seul... Ah ! je vois ce que c’est !... un petit conscrit... ça veut servir dans la cavalerie... j’en vois souvent comme ça... il faut que je lui demande !... Dites donc, jeune homme, vous êtes donc tombé à la conscription ?...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="117">Je viens m’engager.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="118">Vous engager... Eh ! bien, est-ce que vous êtes fâché de servir ?...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="119">Ça m’est égal...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="120">Est-il étonnant... il dit que ça lui est égal...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="121">J’ai une lettre de recommandation pour le colonel Valbert, et s’il veut me recevoir dans son régiment ?...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="122">Il le voudra ! mon camarade, soyez tranquille, et vous ferez un gentil houzard, oh ! vous serez bien avec mon maître, c’est le plus brave colonel de l’armée... et galant... un vrai démon pour les femmes.</l>
+          <stage>&lt;em&gt;On entend préluder dans la chambre de Cécile ; Pierre sort peu à peu de sa rêverie et écoute. Cécile dans sa chambre, répète le refrain de la chanson du village.&lt;/em&gt;</stage>
+          <l n="123">L’ plaisir sous l’ombrage</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="124">Qu’entends-je ?... cette voix !... cette chanson du pays !...</l>
+          <stage>&lt;em&gt;Entraîné par ses souvenirs, il répète avec Cécile.&lt;/em&gt;</stage>
+          <l n="125">Ce n’est qu’au village</l>
+          <l n="126">Plus de doute... c’est elle...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, qui a regardé Pierre avec beaucoup d’étonnement.</speaker>
+          <l n="127">Tiens, vous savez la chanson de mademoiselle !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE, s’élançant vers la porte.</speaker>
+          <l n="128">Je veux la voir !...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, l’arrêtant.</speaker>
+          <l n="129">Un moment, jeune homme !... Décidément il est fou.</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="130">Je veux lui parler, vous dis-je... rien ne peut m’en empêcher.</l>
+          <stage>&lt;em&gt;Il prend Vincent par un bras, et le fait passer rudement de l’autre côté. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, accourant.</speaker>
+          <l n="131">Quel est ce bruit ?... Pierre !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="132">Cécile !</l>
+          <stage>&lt;em&gt;Morceau d’ensemble.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air nouveau de M. Adolphe Adam, ou Fragment du quatuor du Calife de Bagdad.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="133">Quelle rencontre imprévue !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="134">Quelle rencontre imprévue !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="135">Quelle rencontre imprévue !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="136">Par votre cruelle absence</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="137">Pierre, ah ! la douleur vous égare,</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>Quelle rencontre imprévue, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <stage>Quelle rencontre imprévue, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <stage>Quelle rencontre imprévue, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="138">Vincent, laissez-nous.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="139">Mademoiselle, je me retire.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="140">Seule avec le paysan !... Je m’y perds.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#pierre">
+          <speaker>PIERRE, à part.</speaker>
+          <l n="141">Enfin je la revois... mais ce luxe... chez le colonel !... Ce qu’on m’en a dit...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="142">Cécile, que faites-vous ici ?...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="143">Pierre... si vous saviez...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="144">Je sais que rien au monde n’aurait pu me faire oublier l’amie de mon enfance, la fiancée de mon choix.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="145">Pierre, je ne cherche point à surprendre votre pitié ; mais plus imprudente que coupable...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="146">Imprudente, dites-vous ?</l>
+          <stage>&lt;em&gt;Lui prenant la main.&lt;/em&gt;</stage>
+          <l n="147">Écoutez, Cécile... une seule personne au monde était chargée de mon bonheur ; la tâche lui a paru au-dessus de ses forces !... Je n’en murmure pas... Vous êtes perdue pour moi sans retour... je le sais... mais, au moins, le colonel...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, troublée.</speaker>
+          <l n="148">Ne m’interrogez pas !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="149">Répondez... un seul mot, de grâce ! Valbert est-il votre époux ?</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="150">Laissez-moi, Pierre, laissez-moi !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="151">Comment !... il se pourrait ?... Vous, Cécile !... à la ferme, simple, modeste, vous faisiez la gloire de votre vieux père... Aujourd’hui, dans ce riche salon... Ah ! quelle différence !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="152">Grand Dieu...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="153">Vous n’avez donc pas craint de suivre un misérable séducteur ?...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="154">Arrêtez, Pierre ! cessez de donner à Valbert un nom qu’il ne mérite pas ; il remplira ses promesses ; il me l’a juré.</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="155">Des serments... pauvre Cécile !... pour des hommes tels que lui, le parjure est un jeu.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, après avoir réfléchi.</speaker>
+          <l n="156">Valbert m’abandonner ?... non, non, Pierre, c’est impossible !... Sans doute, j’aurais dû ne pas l’écouter...</l>
+          <stage>&lt;em&gt;Air.&lt;/em&gt;</stage>
+          <l n="157">Mais comment résister... pour guider ma jeunesse,</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="158">Eh ! bien, Cécile, puisque vous refusez d’entendre la voix de la raison, puisque votre faiblesse vous empêche de rompre une liaison dont vous ne pouvez que rougir, peut-être votre père aura-t-il plus de pouvoir sur vous ?... tenez.</l>
+          <stage>&lt;em&gt;Il lui présente une lettre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="159">Que signifie !... je tremble d’ouvrir celle lettre... De grâce, expliquez-vous !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE, pleurant.</speaker>
+          <l n="160">Lisez ! lisez ! il ne vous a pas maudite...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, lisant.</speaker>
+          <l n="161">Grand Dieu ! ses dernières volontés !... Pierre... achevez... mon père...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="162">Il n’est plus !</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, tombant dans un fauteuil.</speaker>
+          <l n="163">Ah !!!</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE, courant à elle.</speaker>
+          <l n="164">Malheureux ! qu’ai-je fait ? Cécile, revenez à vous... écoutez... il me reste un moyen de tout réparer... Je verrai le colonel... je lui parlerai... Si je ne réussis pas, ma famille vous recevra, et la plus profonde retraite vous soustraira à toutes les recherches.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="165">Mon père !... oui, il le faut ! vous m’avez ouvert les yeux... je m’abandonne à vous ! mais par pitié que je quitte au plus tôt ces lieux !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="166">J’ai mon projet... il n’est pas temps encore... mais dans une heure, je vous reverrai...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="167">Je vous attends.</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <stage>&lt;em&gt;Air : Il faut quitter le village.&lt;/em&gt;</stage>
+          <l n="168">Ne perdez pas confiance,</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="169">Quoi ! Pierre, dans ma détresse</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="170">Appui de votre faiblesse,</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="171">Ne perdez pas confiance.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <stage>Ne perdons pas confiance, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, seule</speaker>
+          <l n="172">De l’espérance !... que veut-il dire ? en est-il encore pour moi ? j’ai trahi mes serments ; j’ai causé la mort de mon père... ah ! du moins, je remplirai ses dernières volontés !... oui, Pierre, je vous suivrai !... mais qui vais-je abandonner !... Valbert !... je l’entends... mon courage m’abandonne ! remettons-nous ! qu’il ne voie pas mes larmes !...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="173">Enfin, me voici ! vous le voyez, j’ai fait diligence... maintenant je suis tout à vous ;  </l>
+          <stage>&lt;em&gt;Avec intérêt. &lt;/em&gt;</stage>
+          <l n="174">mais qu’avez-vous donc, Cécile ? cette pâleur...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, s’efforçant de sourire.</speaker>
+          <l n="175">Moi ?... mon ami, je vous assure...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="176">Je vois ce que c’est ! une migraine, peut-être ?...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="177">Oui, mon ami, une migraine !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, riant.</speaker>
+          <l n="178">Ah ! je comprends...</l>
+          <stage>&lt;em&gt;Air : Vaudeville de l’Insouciant.&lt;/em&gt;</stage>
+          <l n="179">D’une grâce toujours nouvelle</l>
+          <l n="180">Le grand air dissipera cette légère indisposition ; nous allons partir.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="181">Mon ami, je préférerais ne pas sortir aujourd’hui.</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="182">Comment ! c’est donc sérieux ? mais comme vous êtes triste !... vos yeux sont rouges... vous avez pleuré !</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, s’efforçant de sourire.</speaker>
+          <l n="183">Moi, pleurer !... quelle idée, mon ami !... une indisposition qui ne sera rien, sans doute... mais j’ai besoin d’un peu de repos... dans un instant je serai mieux... soyez sans inquiétude... au revoir, mon ami !</l>
+          <stage>&lt;em&gt;Elle rentre dans son appartement.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, seul</speaker>
+          <l n="184">Elle a pleuré... j’en suis sûr... mais pourquoi ?</l>
+          <stage>&lt;em&gt;Après une pause.&lt;/em&gt;</stage>
+          <l n="185">c’est singulier !... moi, je me sens aussi tout ému... pauvre Cécile !... ah ! je devine ce qui fait couler ses larmes... je pourrais... mais le monde, que dirait-il ? le colonel Valbert.... jeune... un rang... les plus brillantes espérances... épouser une femme sans fortune, sans nom... je serais la fable de tout Paris ; et pourtant, si je n’en croyais que mon cœur... mais chassons ces idées... holà ! quelqu’un !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#pierre">
+          <speaker>PIERRE, à part.</speaker>
+          <l n="186">C’est lui !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="187">Vincent !</l>
+          <stage>&lt;em&gt;Il se retourne.&lt;/em&gt;</stage>
+          <l n="188">ah ! que demandez-vous ?</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="189">C’est une lettre pour le baron de Valbert, colonel de hussards...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="190">C’est moi, donnez !</l>
+          <stage>&lt;em&gt;Il lit.&lt;/em&gt;</stage>
+          <l n="191">Ah ! c’est de St.-Ange... « Villiers, ce... je vous recommande le fils d’un de mes anciens fermiers ».</l>
+          <stage>&lt;em&gt;Il continue bas, et dit avec intérêt.&lt;/em&gt;</stage>
+          <l n="192">Vous êtes de Villiers ?...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="193">Oui, monsieur le baron...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="194">Et vous voulez vous engager ?</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="195">C’était mon intention...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="196">Il faut que des motifs bien graves vous portent à faire une pareille démarche... quels qu’ils soient, confiez-les moi, et si je puis vous être utile...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="197">M’être utile !... vous ?... oh ! non...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="198">Peut-être, si je connaissais vos malheurs ?...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="199">Mes malheurs ? ils sont irréparables !... je vous en fais juge, écoutez : j’aimais une jeune fille ; son père me l’avait promise ; le jour était fixé pour notre union... forcé d’aller recueillir un héritage, je quitte le pays... pendant mon absence, un homme, abusant de sa fortune, éblouit ma fiancée par des promesses trompeuses, et disparait avec elle !... je reviens bientôt, plein d’amour et d’espérance... Là, où j’avais laissé la joie, je ne trouve que la douleur, un vieillard au désespoir, appelant la malédiction sur le ravisseur de sa fille.</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, dont l’émotion va toujours croissant.</speaker>
+          <l n="200">Grand Dieu ! quel rapport !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="201">Ce n’est pas tout !...</l>
+          <stage>&lt;em&gt;Air : merveilleuse par ses vertus. (De la lanterne sourde.)&lt;/em&gt;</stage>
+          <l n="202">Privé de son unique appui,</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, hors de lui.</speaker>
+          <l n="203">Enfin, vous êtes ?...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="204">Le fiancé de Cécile Dumont !...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="205">Et, quel a été votre projet, en venant ici ?</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="206">Je vous l’ai dit... je venais m’engager, maintenant un soin plus important me retient !...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="207">Que prétendez-vous faire ?</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="208">J’aime Cécile, depuis mon enfance... j’avais placé mon bonheur dans son amour... vous l’avez détruit !... je ne viens point ici me plaindre, et vous accuser... ami de Cécile, je viens vous adresser une prière...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="209">Une prière ? parlez !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="210">Vous avez trompé une jeune fille, qui a quitté pour vous, ce qu’elle avait de plus cher au monde... sa famille !... une grande fortune vous rend indépendant... pouvez-vous en faire un plus noble usage, qu’en la consacrant à celle qui vous à tout sacrifié ? vous l’aimez...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="211">Si je l’aime ! mais, mon rang ! cet hymen brillant, que le ministre me propose avec la comtesse de Roseval ! c’est impossible !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="212">Eh bien ! j’ai ru Cécile ; je lui ai parlé ; elle a pleuré devant moi... et dès aujourd’hui elle veut fuir loin de vous ! Je l’emmène...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, vivement.</speaker>
+          <l n="213">L’emmener !... Cécile me quitter !... Elle restera, je le veux !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="214">Vous le voulez ? et quels sont vos droits sur elle ?... êtes-vous son époux ? Ah ! quel serait son sort si elle restait ici !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, avec fierté.</speaker>
+          <l n="215">Son sort est assuré !... Moi, l’abandonner ? jamais !... mes bienfaits la suivront partout...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="216">Vos bienfaits !... et vous croirez avoir réparé vos torts ?... De l’or, voilà votre grand mot ! comme si l’or pouvait rendre l’honneur et lé repos qu’on a perdu !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, vivement.</speaker>
+          <l n="217">C’en est assez !... Et de quel droit venez-vous m’imposer des conditions ?</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="218">Monsieur le colonel !... vous avez une sœur... belle et vertueuse, elle est l’honneur de voire famille !... la guerre vous a éloigné d’elle... si à votre retour vous aviez appris qu’un séducteur...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="219">N’achevez pas !... tout son sang m’aurait fait raison !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="220">Vous me dictez mon devoir !...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="221">Mais vous n’êtes pas ?...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="222">Je suis le frère de Cécile pour la défendre... vous m’entendrez, Colonel ? Vous avez causé la mort d’un vieillard en lui ravissant sa fille... vous m’avez réduit au désespoir en me privant de celle que mon cœur avait choisie ! refuseriez-vous de me rendre raison de tout le mal que vous m’avez fait ?</l>
+          <stage>&lt;em&gt;Valbert fait un mouvement.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Ces postillons, etc. &lt;/em&gt;</stage>
+          <l n="223">De ce combat, croyez-moi, je suis digne,</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="224">Eh bien ! donc, dans un quart-d’heure... près d’ici, à la porte du bois...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="225">Il suffit ! monsieur le Baron.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, seul</speaker>
+          <stage>&lt;em&gt;Il se promène à grands pas et paraît fort agité.&lt;/em&gt;</stage>
+          <l n="226">Il a raison, je le sens... et je ne puis lui refuser mon estime... mais Cécile !... quelle femme serait plus digne de mon amour... Si j’accomplissais ma promesse... non !... maintenant c’est impossible... On croirait que j’ai cédé à an sentiment de crainte ; et le Ministre qui m’attend à quatre heures !... ce combat aura lieu... il le faut... mais me battre avec ce jeune homme... un simple villageois !... Eh ! qu’importe !...</l>
+          <stage>&lt;em&gt;Rondeau.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air nouveau de M. Blanchard.&lt;/em&gt;</stage>
+          <l n="227">Honorons la vaillance</l>
+          <l n="228">Point de distance au champ d’honneur !</l>
+          <l n="229">Honorons la vaillance</l>
+          <l n="230">Et toi, Cécile, objet de mon hommage,</l>
+          <stage>Honorons, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <l n="231">Mais avant de partir, assurons le sort de Cécile.</l>
+          <stage>&lt;em&gt;Il se place à une table et écrit. &lt;/em&gt;</stage>
+          <l n="232">Cet ordre à mon banquier sera fidèlement exécuté.</l>
+          <stage>&lt;em&gt;Il plie la lettre, puis écrit sur un autre papier.&lt;/em&gt;</stage>
+          <l n="233">Un dernier adieu à Cécile.</l>
+          <stage>&lt;em&gt;Finissant d’écrire. &lt;/em&gt;</stage>
+          <l n="234">« Si Pierre revient seul, suivez cet ami... Tout sera fini pour moi. »</l>
+          <stage>&lt;em&gt;Il plie la seconde lettre en mettant là première dedans et sonne.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, se levant.</speaker>
+          <l n="235">Vincent !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="236">Monsieur !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, lui remettant la lettre.</speaker>
+          <l n="237">Prends cette lettre... il est trois heures... si je ne suis pas rentré dans une heure, tu la remettras à Cécile !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="238">Mais mademoiselle Cécile est là, si vous voulez lui parler...</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="239">Non, non, je ne puis... Vincent, je connais ton affection pour moi... tu m’entends, dans une heure...</l>
+          <stage>&lt;em&gt;Il sort. Vincent le regarde sortir avec étonnement.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#vincent">
+          <speaker>VINCENT, seul, restant tout étonné, la lettre à la main</speaker>
+          <l n="240">Quel air sinistre ! il était si gai ce matin !... Pourquoi diable écrit-il à mademoiselle Cécile, quand il ne tient qu’à lui de lui parler ?... Aurait-il un autre amour en tête ? et cette lettre ?... dans une heure !...</l>
+          <stage>&lt;em&gt;Il tire sa montre et la met sur la table.&lt;/em&gt;</stage>
+          <l n="241">Il n’y a que quelques minutes de passées... je ne suis pas curieux... mais quand il y a un événement, je n’aime pas à attendre pour le connaître... avec ça que ma montre retarde toujours... à ce que dit ma femme...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XX">
+        <head>Scène XX</head>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, sortant de l’appartement de Cécile.</speaker>
+          <l n="242">Monsieur Vincent, le colonel est-il là ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="243">Il est sorti à trois heures précises...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="244">Mam’selle Cécile voulait le voir.</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="245">Elle ne pourra le voir que dans une heure... encore peut-être...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="246">Pourquoi peut-être ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="247">Parce que !...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="248">Parce que...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, montrant la lettre.</speaker>
+          <l n="249">C’est là dedans qu’est le parce que...</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="250">C’est une lettre !...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="251">Pour mademoiselle Cécile... Monsieur le colonel me l’a remise avec un air et un ton !... « Vincent, m’a-t-il dit, je connais ton attachement... si dans une heure je ne suis pas rentré, tu remettras cette lettre à Cécile, tu m’entends, dans une heure !... »</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, avec effroi.</speaker>
+          <l n="252">Ah, mon Dieu ! monsieur Vincent, de mon temps les jeunes gens qui se battaient... serait-ce un duel !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="253">Avec qui ?</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="254">Je l’ignore !</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="255">Pour quel motif ?</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="256">On se bat pour si peu, de choses !...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="257">Ah ! vous avez raison.</l>
+          <stage>&lt;em&gt;Air : Des Scythes.&lt;/em&gt;</stage>
+          <l n="258">Pour un bon mot, souvent pour une femme,</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="259">Vous-même un jour ?...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="260">Autrefois oui, madame.</l>
+          <l n="261">Mais c’est bien différent cette fois... et si monsieur de Valbert se bat en duel...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXI">
+        <head>Scène XXI</head>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, arrivant précipitamment, et ayant entendu tes derniers mots de Vincent.</speaker>
+          <l n="262">Que dites-vous ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, faisant signe à sa femme.</speaker>
+          <l n="263">Rien, rien, mademoiselle...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="264">J’ai bien entendu ! Valbert se bat en duel !</l>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT, embarrassée.</speaker>
+          <l n="265">Rassurez-vous, mademoiselle, ce sont des conjectures que nous faisions...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, voyant la lettre que tient Vincent.</speaker>
+          <l n="266">Pour qui cette lettre ?...</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="267">Pardon, mademoiselle ; elle est pour vous, mais je ne dois vous la remettre...</l>
+          <stage>&lt;em&gt;Regardant sa montre.&lt;/em&gt;</stage>
+          <l n="268">il n’est pas l’heure !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="269">De qui est-elle ?</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT.</speaker>
+          <l n="270">De monsieur le Colonel !</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, saisissant la lettre.</speaker>
+          <l n="271">Le colonel !... donnez...</l>
+          <stage>&lt;em&gt;Elle ouvre précipitamment la lettre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, à part.</speaker>
+          <l n="272">Ça n’est pas ma faute.</l>
+          <stage>&lt;em&gt;Il avance l’aiguille de sa montre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, lisant.</speaker>
+          <l n="273">Grand Dieu ! me quitter !... peut-être pour toujours, mais elle est adressée à son banquier ;</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <l n="274">de l’or pour moi !... son amour... ah ! oui... mais sa fortune... jamais !</l>
+          <stage>&lt;em&gt;Elle déchire le billet pour le banquier.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-vincent">
+          <speaker>MADAME VINCENT.</speaker>
+          <l n="275">Mademoiselle Cécile !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, lisant la lettre qui est pour elle.</speaker>
+          <l n="276">Que vois je ?... il se bat !... « Si Pierre, revient seul, suivez cet ami... tout sera fini pour moi ; adieu, Cécile ». Ah ! mes amis, mes chers amis, courez... votre maître...</l>
+          <stage>&lt;em&gt;Apercevant Pierre qui entre. &lt;/em&gt;</stage>
+          <l n="277">Pierre ! il est seul !... malheureuse !...</l>
+          <stage>&lt;em&gt;Elle se cache la figure avec les mains.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXII">
+        <head>Scène XXII</head>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="278">Venez, venez, Cécile, vous ne pouvez trop tôt quitter cette maison !</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, désespérée.</speaker>
+          <l n="279">Quoi ! Valbert !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="280">Valbert !... ah ! le sort a trahi mon courage... j’ai fait feu le premier !...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, avec joie.</speaker>
+          <l n="281">Il respire !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="282">Il est perdu pour tous ! profilant de son avantage, il s’est avancé vers moi, en me disant : « je respecte les jours du frère de Cécile, je suis libre maintenant, et je cours chez la comtesse de Roseval... »</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="283">La comtesse de Roseval !...</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="284">Sans doute, il l’épouse aujourd’hui !...</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="285">Ciel !</l>
+          <stage>&lt;em&gt;Morceau d’ensemble.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air nouveau de M. Blanchard.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="286">Partons, fuyons cette demeure ;</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, MADAME VINCENT.</speaker>
+          <l n="287">Partez, fuyez cette demeure ;</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE, prenant Cécile par le bras.</speaker>
+          <l n="288">Viens, ma Cécile, viens, ma sœur !</l>
+        </sp>
+        <sp who="#tous-trois">
+          <speaker>TOUS TROIS, à Cécile.</speaker>
+          <l n="289">Du courage !</l>
+          <stage>&lt;em&gt;L’orchestre reprend l’air de la chanson du village qui doit être chantée tristement et piano.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="290">Ce n’est qu’au village</l>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT et MADAME VINCENT.</speaker>
+          <l n="291">Partez, partez !</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE et CÉCILE.</speaker>
+          <l n="292">Parlons, partons !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXIII">
+        <head>Scène XXIII</head>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, entrant précipitamment.</speaker>
+          <l n="293">Arrêtez !</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="294">Valbert !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="295">Ma chère Cécile, rassurez-vous, j’ai eu bien des torts, mais je brûle de les réparer.</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE, s’avançant.</speaker>
+          <l n="296">Monsieur le baron !</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT, à Pierre.</speaker>
+          <l n="297">Appelez-moi, votre ami, votre meilleur ami, monsieur Pierre ! et jouissez de votre ouvrage, je ne me suis rendu chez la comtesse que pour dégager ma parole...mon hymen avec elle est rompu, maintenant je suis libre, et c’est en votre présence que je prie Cécile de me pardonner, et d’accepter le titre de mon épouse...</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="298">Votre épouse !... moi, Valbert ! ah ! ne me trompez pas.</l>
+          <stage>&lt;em&gt;Valbert lui baise la main.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#vincent">
+          <speaker>VINCENT, tirant sa montre.</speaker>
+          <l n="299">Monsieur, il n’est pas quatre heures... nous pouvons bien vite avoir un notaire.</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="300">Tu as raison.</l>
+          <stage>&lt;em&gt;À Pierre. &lt;/em&gt;</stage>
+          <l n="301">Monsieur Pierre, êtes-vous content de moi ?</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE.</speaker>
+          <l n="302">Monsieur le baron, vous n’avez jamais tant honoré votre nom qu’aujourd’hui, rendez-la heureuse, ma tâche est remplie...</l>
+          <stage>&lt;em&gt;Air : de la Vieille.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="303">Ma Cécile, plus de tristesse ;</l>
+        </sp>
+        <sp who="#pierre">
+          <speaker>PIERRE, à Valbert.</speaker>
+          <l n="304">J’en crois ici votre promesse ;</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE, à Pierre.</speaker>
+          <l n="305">Nous vous devons cet avenir prospère.</l>
+        </sp>
+        <sp who="#le-baron-de-valbert">
+          <speaker>VALBERT.</speaker>
+          <l n="306">Soyez toujours notre ami. Monsieur Pierre.</l>
+        </sp>
+        <sp who="#cécile-dumont">
+          <speaker>CÉCILE.</speaker>
+          <l n="307">Soyez toujours notre ami, notre frère !</l>
+        </sp>
+        <sp who="#tous-ensemble">
+          <speaker>TOUS ENSEMBLE.</speaker>
+          <l n="308">Point de chagrin qui ne soit oublié</l>
+          <l n="309">[1] Elle a changé de costume, elle est en négligé élégant.</l>
+          <l n="310" />
+        </sp>
       </div>
     </body>
   </text>

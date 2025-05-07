@@ -1,832 +1,777 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Naufrage de l’amour</title>
-        <author key="DE BEAUNOIR | (naissance-mort)">DE BEAUNOIR |</author>
+        <title type="main" />
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/le-naufrage-de-l’amour-de-beaunoir</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>DE BEAUNOIR |</author>. <title>Le Naufrage de l’amour</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/le-naufrage-de-l’amour-de-beaunoir</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1780-01-15">Représentée pour la première fois, à Paris, sur le Théâtre des Élèves pour la danse de l’Opéra, le 15 janvier 1780.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="églé" sex="SEX">
+            <persName>ÉGLÉ</persName>
+          </person>
+          <person xml:id="aminte" sex="SEX">
+            <persName>AMINTE</persName>
+          </person>
+          <person xml:id="lycidas" sex="SEX">
+            <persName>LYCIDAS</persName>
+          </person>
+          <person xml:id="tircis" sex="SEX">
+            <persName>TIRCIS</persName>
+          </person>
+          <person xml:id="l’amour" sex="SEX">
+            <persName>L’AMOUR</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>[indéfini]</term>
+          <term>[indéfini]</term>
         </keywords>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1780-01-15" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre des Élèves pour la danse de l’Opéra, le 15 janvier 1780.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le Naufrage de l’amour</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1"> </l>
-            <l n="2" xml:id="l2">Comédie en un acte.</l>
-            <l n="3" xml:id="l3">Représentée pour la première fois, à Paris, sur le Théâtre des Élèves pour la danse de l’Opéra, le 15 janvier 1780.</l>
-            <l n="4" xml:id="l4"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="églé">ÉGLÉ</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="aminte">AMINTE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lycidas">LYCIDAS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="tircis">TIRCIS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="l’amour">L’AMOUR</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La Scène est dans une Île. </em></hi></stage>
-            <l n="6" xml:id="l6"> </l>
-            <stage><hi rend="italic"><em>Sur le devant du Théâtre sont quelques arbres plantés ça et là : à gauche est une caverne, dont on voit l’entrée ; cette caverne est masquée par un massif de gros arbres, très près les uns des autres. On aperçoit la mer dans le fond du Théâtre. </em></hi></stage>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="10" xml:id="l10"> </l>
-          <sp who="aminte" xml:id="1-1">
-            <speaker>ÉGLÉ, AMINTE</speaker>
-            <l n="11" xml:id="l11"> </l>
-          </sp>
-          <sp who="églé" xml:id="1-2">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="12" xml:id="l12">Quelle idée de venir te promener, lorsque tout nous annonce un orage prochain ? </l>
-          </sp>
-          <sp who="aminte" xml:id="1-3">
-            <speaker>AMINTE.</speaker>
-            <l n="13" xml:id="l13">L’espérance de voir finir nos malheurs, et de trouver quelque vaisseau qui vienne à notre secours.</l>
-          </sp>
-          <sp who="églé" xml:id="1-4">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="14" xml:id="l14">Mais, Aminte, tu es folle ; pourrions nous jamais être plus heureuses que nous le sommes ?</l>
-          </sp>
-          <sp who="aminte" xml:id="1-5">
-            <speaker>AMINTE.</speaker>
-            <l n="15" xml:id="l15">Oh ! certainement oui.</l>
-          </sp>
-          <sp who="églé" xml:id="1-6">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="16" xml:id="l16">Comment, depuis trois mois que nous avons été abandonnées dans cette île déserte, n’avons nous pas joui de la plus grande tranquillité ?</l>
-          </sp>
-          <sp who="aminte" xml:id="1-7">
-            <speaker>AMINTE.</speaker>
-            <l n="17" xml:id="l17">Il est vrai que jusqu’ici la constante sérénité du ciel, et l’abondance des fruits que nous avons trouvés dans l’île, nous ont empêché de voir toute l’horreur de notre situation ; mais l’hiver approche...</l>
-          </sp>
-          <sp who="églé" xml:id="1-8">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="18" xml:id="l18">L’hiver... tu dormiras : moi, j’irai à la chasse ; ne t’inquiète de rien.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-9">
-            <speaker>AMINTE.</speaker>
-            <l n="19" xml:id="l19">Tu t’abuses, Églé, tes forces trahiront ton courage.</l>
-          </sp>
-          <sp who="églé" xml:id="1-10">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="20" xml:id="l20">Non, non : notre cabane, qui l’a construite ? moi : crois-tu qu’il soit plus difficile de chasser ?</l>
-          </sp>
-          <sp who="aminte" xml:id="1-11">
-            <speaker>AMINTE.</speaker>
-            <l n="21" xml:id="l21">Crois-tu que je puisse toujours dormir ?</l>
-          </sp>
-          <sp who="églé" xml:id="1-12">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="22" xml:id="l22">Ah ! j’entends ; Aminte a peur de s’ennuyer, elle voudrait un peu de compagnie.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-13">
-            <speaker>AMINTE.</speaker>
-            <l n="23" xml:id="l23">Je ne dis pas cela ; mais n’être que deux femmes au milieu d’une grande Île, cela n’est pas bien gai.</l>
-          </sp>
-          <sp who="églé" xml:id="1-14">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="24" xml:id="l24">Vas, vas, ma chère Aminte, il n’y a que les méchants qui n’ont point de plaisirs ;  la promenade, la pêche, la chasse, le repos même nous en procureront de charmants. Ce ne sont pas toujours les plus vifs qui sont les plus vrais.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-15">
-            <speaker>AMINTE.</speaker>
-            <l n="25" xml:id="l25">Je t’avoue, que si Tircis était de la partie, je voudrais passer ainsi toute ma vie...</l>
-          </sp>
-          <sp who="églé" xml:id="1-16">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="26" xml:id="l26">Peux-tu songer encore à un infidèle ? Pour moi il y a longtemps que j’ai oublié Lycidas.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-17">
-            <speaker>AMINTE.</speaker>
-            <l n="27" xml:id="l27">Mais, ma chère amie, s’ils n’étaient pas aussi perfides que nous l’imaginons, si...</l>
-          </sp>
-          <sp who="églé" xml:id="1-18">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="28" xml:id="l28">Autre faiblesse. Comment ? quand nous avons vu nos rivales parées des fleurs et des, rubans, que l’instant d’auparavant nous venions de donner à ces ingrats ; quand on les a entendu leur prodiguer les mêmes serments de fidélité qu’ils venaient de faire à nos pieds...</l>
-          </sp>
-          <sp who="aminte" xml:id="1-19">
-            <speaker>AMINTE.</speaker>
-            <l n="29" xml:id="l29">N’importe : je crois que nous avons eu tort de fuir nos amants, de nous embarquer, et de nous confier au traître, qui, tenté de nos richesses, nous a laissées dans cette Île.</l>
-          </sp>
-          <sp who="églé" xml:id="1-20">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="30" xml:id="l30">C’est vrai ; mais nous autres femmes, nos réflexions viennent toujours trop tard : la faute est faite, il faut songer actuellement aux moyens d’en rendre les suites moins désagréables.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-21">
-            <speaker>AMINTE.</speaker>
-            <l n="31" xml:id="l31">Tu y songeras donc seule ? Je suis peu capable de t’aider.</l>
-          </sp>
-          <sp who="églé" xml:id="1-22">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="32" xml:id="l32">À la bonne heure ; mais promets moi de ne plus aimer Tircis.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-23">
-            <speaker>AMINTE.</speaker>
-            <l n="33" xml:id="l33">Je te le promets.</l>
-          </sp>
-          <sp who="églé" xml:id="1-24">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="34" xml:id="l34">De l’oublier tout-à-fait.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-25">
-            <speaker>AMINTE.</speaker>
-            <l n="35" xml:id="l35">Oui. Je crois même que je ne l’aime plus, mon cœur est plus tranquille. Ah ! Ciel...</l>
-            <stage><hi rend="italic"><em>Elle jette un grand cri, et se précipite dans les bras de son amie. </em></hi></stage>
-          </sp>
-          <sp who="églé" xml:id="1-26">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="37" xml:id="l37">Qu’as-tu, ma chère Aminte ?</l>
-          </sp>
-          <sp who="aminte" xml:id="1-27">
-            <speaker>AMINTE.</speaker>
-            <l n="38" xml:id="l38">Ce n’est rien ; j’ai cru apercevoir sur le sable l’empreinte du pied d’un homme, et ce pied ressemblait à celui de Tircis.</l>
-          </sp>
-          <sp who="églé" xml:id="1-28">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="39" xml:id="l39">Tircis ne sera pas sitôt oublié.</l>
-          </sp>
-          <sp who="aminte" xml:id="1-29">
-            <speaker>AMINTE.</speaker>
-            <l n="40" xml:id="l40">Chère Églé, excuse ma faiblesse ; mais Tircis est si aimable !</l>
-          </sp>
-          <sp who="églé" xml:id="1-30">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="41" xml:id="l41">Dis plutôt était si aimable : il faut tâcher de donner à ton amour un air d’ancienneté, peut-être parviendras-tu plus aisément à n’y plus songer.</l>
-            <stage><hi rend="italic"><em>Le ciel s’obscurcit, le tonnerre gronde. </em></hi></stage>
-          </sp>
-          <sp who="aminte" xml:id="1-31">
-            <speaker>AMINTE.</speaker>
-            <l n="43" xml:id="l43">Quel nuage ! Que je plains les malheureux exposés à la fureur des flots !</l>
-          </sp>
-          <sp who="églé" xml:id="1-32">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="44" xml:id="l44">J’avais prévu cet orage ; allons vite nous retirer dans notre cabane.</l>
-            <stage><hi rend="italic"><em>Elles sortent. </em></hi></stage>
-            <l n="46" xml:id="l46"> </l>
-            <l n="47" xml:id="l47"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="48" xml:id="l48"> </l>
-          <sp who="l’amour" xml:id="2-1">
-            <speaker>LYCIDAS, TIRCIS, L’AMOUR</speaker>
-            <l n="49" xml:id="l49"> </l>
-            <stage><hi rend="italic"><em>On voit dans le lointain un vaisseau, battu par la tempête : après avoir longtemps lutté contre les flots, il s’abime. Aussitôt une petite chaloupe reparaît, montée de trois hommes : elle fait de grands efforts pour aborder l’Île, et y parvient enfin avec beaucoup de peine. </em></hi></stage>
-            <stage><hi rend="italic"><em>L’Amour est habillé en Matelot, il porte d’une main un carquois, un arc, des flèches, et de l’autre des filets.</em></hi></stage>
-          </sp>
-          <sp who="lycidas" xml:id="2-2">
-            <speaker>LYCIDAS.</speaker>
-            <l n="52" xml:id="l52">Quelle horrible tempête ! Seuls échappés au naufrage. Qu’allons-nous devenir ? Pilote ignorant !</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-3">
-            <speaker>L’AMOUR.</speaker>
-            <l n="53" xml:id="l53">Ne craignez rien, je suis avec vous.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-4">
-            <speaker>TIRCIS.</speaker>
-            <l n="54" xml:id="l54">Effectivement tu es bien fait pour rassurer ! /</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-5">
-            <speaker>L’AMOUR.</speaker>
-            <l n="55" xml:id="l55">Mon air en a trompé plus d’un. Croyez que je suis beaucoup plus redoutable que je ne le parais : d’ailleurs j’ai sauvé du naufrage mes flèches et mes filets ; avec cela je ne suis jamais embarrassé.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-6">
-            <speaker>TIRCIS.</speaker>
-            <l n="56" xml:id="l56">Bonne ressource.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-7">
-            <speaker>LYCIDAS.</speaker>
-            <l n="57" xml:id="l57">C’est avec ces armes, n’est-ce pas, que ti nous garantiras de la fureur des cruels habitants de cette Île ? Ou si elle est déserte, que tu sauras nous empêcher de devenir la proie des bêtes féroces ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-8">
-            <speaker>L’AMOUR.</speaker>
-            <l n="58" xml:id="l58">Encore une fois, ne craignez rien : je connais cette Île, les habitants n’en font rien moins que cruels : ce n’est pas leur fureur que vous devez redouter.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-9">
-            <speaker>LYCIDAS.</speaker>
-            <l n="59" xml:id="l59">Eh ! quoi donc ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-10">
-            <speaker>L’AMOUR.</speaker>
-            <l n="60" xml:id="l60">Leur indifférence.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-11">
-            <speaker>TIRCIS.</speaker>
-            <l n="61" xml:id="l61">Comment, leur indifférence ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-12">
-            <speaker>L’AMOUR.</speaker>
-            <l n="62" xml:id="l62">Oui : cette Île n’est habitée que par des femmes. Ainsi vous voyez que le plus grand malheur qui put vous arriver, serait de ne pas leur plaire.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-13">
-            <speaker>LYCIDAS.</speaker>
-            <l n="63" xml:id="l63">Quant à moi, peu m’in porte. Églé ; là cruelle Églé, aura seule mon amour.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-14">
-            <speaker>TIRCIS.</speaker>
-            <l n="64" xml:id="l64">Et sont-elles jolies tes habitantes ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-15">
-            <speaker>L’AMOUR.</speaker>
-            <l n="65" xml:id="l65">Charmantes.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-16">
-            <speaker>TIRCIS.</speaker>
-            <l n="66" xml:id="l66">En ce cas, Lycidas, nous ne sommes pas si à plaindre.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-17">
-            <speaker>LYCIDAS.</speaker>
-            <l n="67" xml:id="l67">Je reconnais bien là ton caractère volage. Et Aminte ?...</l>
-          </sp>
-          <sp who="tircis" xml:id="2-18">
-            <speaker>TIRCIS.</speaker>
-            <l n="68" xml:id="l68">Aminte ?... Je l’oublierai. N’ai-je pas déjà assez fait pour elle ? J’ai quitté Doris, j’ai quitté Glycère ; toutes deux cependant ne demandaient qu’à me consoler de son absence. Je me suis exposé pour la chercher à la fureur des flots. Il y a beaucoup d’amans qui n’en feraient pas autant.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-19">
-            <speaker>LYCIDAS.</speaker>
-            <l n="69" xml:id="l69">Tu es heureux, Tircis, d’avoir une pareille façon de penser, la mienne est bien différente.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-20">
-            <speaker>L’AMOUR.</speaker>
-            <l n="70" xml:id="l70">Allons, paix ; point de querelles. Reposez-vous tous deux sur moi, vous serez contents.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-21">
-            <speaker>LYCIDAS.</speaker>
-            <l n="71" xml:id="l71">Tu m’as bien l’air d’un Enjôleur.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-22">
-            <speaker>L’AMOUR.</speaker>
-            <l n="72" xml:id="l72">Vous n’êtes pas le premier qui vous en soyez douté.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-23">
-            <speaker>LYCIDAS.</speaker>
-            <l n="73" xml:id="l73">Au lieu de plaisanter, tu ferais mieux d’apprendre à conduire ta barque une autre fois.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-24">
-            <speaker>L’AMOUR.</speaker>
-            <l n="74" xml:id="l74">Il faudrait être bien fin pour savoir mieux mener sa barque que moi, j’ai déjà fait mes preuves.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-25">
-            <speaker>TIRCIS.</speaker>
-            <l n="75" xml:id="l75">Mon ami, pourquoi lui en vouloir ? Il ne peut pas empêcher les tempêtes.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-26">
-            <speaker>L’AMOUR.</speaker>
-            <l n="76" xml:id="l76">Mais au moins j’en fais tirer parti.</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-27">
-            <speaker>LYCIDAS.</speaker>
-            <l n="77" xml:id="l77">Oh ! oui : la preuve en est claire, tu nous fais aborder dans une Île inconnue.</l>
-            <stage><hi rend="italic"><em>À part. </em></hi></stage>
-            <l n="79" xml:id="l79">Amour, est-ce ainsi que tu protèges ceux qui suivent tes lois ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-28">
-            <speaker>L’AMOUR.</speaker>
-            <l n="80" xml:id="l80">Ne dites point de mal de l’Amour, il vous sert peut-être plus que vous ne pensez : vous ne connaissez pas toutes ses ressources ; souvent la plus affreuse tempête est pour lui l’aurore d’un beau jour.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-29">
-            <speaker>TIRCIS.</speaker>
-            <l n="81" xml:id="l81">Mais quand nous feras-tu faire connaissance, avec tes jolies insulaires ? Je brûle déjà du désir de les voir.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-30">
-            <speaker>L’AMOUR.</speaker>
-            <l n="82" xml:id="l82">Piano, piano. Vous êtes trop vif. Ne commettons point d’imprudence : il faut toujours commencer par sonder le terrain. Si vous paraissiez tout-à-coup, on s’effaroucherait peut-être ; laissez-moi d’abord reconnaître le pays, et après je vous présenterai.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-31">
-            <speaker>TIRCIS.</speaker>
-            <l n="83" xml:id="l83">Mais tout ce manège est bien long.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-32">
-            <speaker>L’AMOUR.</speaker>
-            <l n="84" xml:id="l84">Le temps n’y fait rien, pourvu qu’on réussite ; c’est mon système.</l>
-          </sp>
-          <sp who="tircis" xml:id="2-33">
-            <speaker>TIRCIS.</speaker>
-            <l n="85" xml:id="l85">En ce cas je m’en rapporte à toi.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-34">
-            <speaker>L’AMOUR.</speaker>
-            <l n="86" xml:id="l86">Et vous, Lycidas ?</l>
-          </sp>
-          <sp who="lycidas" xml:id="2-35">
-            <speaker>LYCIDAS.</speaker>
-            <l n="87" xml:id="l87">Il faut bien consentir à tout, quoique dans le fond je n’aie pas grande foi à tes promesses.</l>
-          </sp>
-          <sp who="l’amour" xml:id="2-36">
-            <speaker>L’AMOUR.</speaker>
-            <l n="88" xml:id="l88">Que vous êtes ingrat ; quand je sue sang et eau pour vous servir, voilà vos remerciements. N’importe : j’espère vous forcer bientôt à la reconnaissance. Voyons où je vous placerai pendant mon absence. Voilà notre affaire : entrez tous les deux au fond de cette grotte, et restez-y jusqu’à ce qu’il soit temps que je vous en fasse sortir.</l>
-            <l n="89" xml:id="l89"> </l>
-            <l n="90" xml:id="l90"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="91" xml:id="l91"> </l>
-          <sp who="l’amour" xml:id="3-1">
-            <speaker>L’AMOUR, <em>seul</em></speaker>
-            <l n="92" xml:id="l92"> </l>
-            <l n="93" xml:id="l93">Jusqu’ici tout va bien. Ah, ah, belles fugitives, vous vouliez vous soustraire à mon empire. Vous aurez beau faire, vous ne m’échapperez plus : il n’est pas aussi aisé de fuir l’Amour que vous l’imaginez... Mais voilà le temps qui s’éclaircit, surement elles ne tarderont pas à revenir de ce côté. La tempête n’aurait qu’à avoir jeté sur l’Île quelque malheureux ; on peut lui sauver la vie, alors on aurait acquis un tiers qui rendrait la solitude plus supportable. Car, quoiqu’elles en aient, les femmes ont toujours-là</l>
-            <stage><hi rend="italic"><em>En montrant son cœur. </em></hi></stage>
-            <l n="95" xml:id="l95">certain petit mouvement qu’elles ne peuvent empêcher. Chut... Je les entends, faisons semblant de dormir. L’Amour endormi n’en est souvent que plus dangereux.</l>
-            <stage><hi rend="italic"><em>Il se couche sur ses filets : son arc et ses flèches sont à ses côtés. </em></hi></stage>
-            <l n="97" xml:id="l97"> </l>
-            <l n="98" xml:id="l98"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="99" xml:id="l99"> </l>
-          <sp who="l’amour" xml:id="4-1">
-            <speaker>ÉGLÉ, AMINTE, <em>elles marchent sans voir l’Amour</em></speaker>
-            <l n="100" xml:id="l100"> </l>
-          </sp>
-          <sp who="églé" xml:id="4-2">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="101" xml:id="l101">Je t’assure que c’est la dernière fois que nous venons promener de ce côté.</l>
-          </sp>
-          <sp who="aminte" xml:id="4-3">
-            <speaker>AMINTE.</speaker>
-            <l n="102" xml:id="l102">Pardonne ; si je n’ai pas encore pu comme toi vaincre mon amour, peut-être avec le temps y parviendrai-je.</l>
-          </sp>
-          <sp who="églé" xml:id="4-4">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="103" xml:id="l103">Je l’espère. Alors tu verras qu’une douce indifférence est bien préférable aux maux qu’on éprouve en aimant.</l>
-          </sp>
-          <sp who="aminte" xml:id="4-5">
-            <speaker>AMINTE.</speaker>
-            <l n="104" xml:id="l104">J’ai peine à le croire, je te l’avoue ; une vie sans amour doit être bien uniforme, et comme tu fais l’ennui naquit un jour de l’uniformité. Mais que vois-je ?...</l>
-            <stage><hi rend="italic"><em>Elle aperçoit l’Amour. </em></hi></stage>
-            <l n="106" xml:id="l106">Le bel enfant ! Églé, regarde donc comme il est joli.</l>
-          </sp>
-          <sp who="églé" xml:id="4-6">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="107" xml:id="l107">Il pourra te désennuyer. Ne ressemble-t-il pas aussi un peu à Tircis ?</l>
-          </sp>
-          <sp who="aminte" xml:id="4-7">
-            <speaker>AMINTE.</speaker>
-            <l n="108" xml:id="l108">Comme il sourit agréablement embrassons-le.</l>
-          </sp>
-          <sp who="églé" xml:id="4-8">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="109" xml:id="l109">Tu peux l’embrasser ; mais moi je n’en ferai rien.</l>
-          </sp>
-          <sp who="aminte" xml:id="4-9">
-            <speaker>AMINTE.</speaker>
-            <l n="110" xml:id="l110">Que crains-tu ?</l>
-            <stage><hi rend="italic"><em>Elle l’embrasse. </em></hi></stage>
-            <l n="112" xml:id="l112">Il est brûlant ! Éveillons-le, l’humidité pourrait lui faire mal.</l>
-          </sp>
-          <sp who="églé" xml:id="4-10">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="113" xml:id="l113">Arrête... Je ne sais... Mais j’ai un pressentiment que ce réveil pourrait nous être funeste ; fuyons plutôt, et enfonçons-nous dans la forêt.</l>
-          </sp>
-          <sp who="aminte" xml:id="4-11">
-            <speaker>AMINTE.</speaker>
-            <l n="114" xml:id="l114">Quoi ! nous serions assez barbares pour laisser sans secours cette innocente créature...</l>
-          </sp>
-          <sp who="églé" xml:id="4-12">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="115" xml:id="l115">Il faut donc te laisser faire, Aminte. Éveillons-le.</l>
-            <stage><hi rend="italic"><em>L’Orchestre joue</em> éveillons-le.</hi></stage>
-            <l n="117" xml:id="l117"> </l>
-            <l n="118" xml:id="l118"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="119" xml:id="l119"> </l>
-          <sp who="l’amour" xml:id="5-1">
-            <speaker>ÉGLÉ, AMINTE, L’AMOUR</speaker>
-            <l n="120" xml:id="l120"> </l>
-          </sp>
-          <sp who="l’amour" xml:id="5-2">
-            <speaker>L’AMOUR, <em>en faisant semblant de s’éveiller avec crainte.</em></speaker>
-            <l n="121" xml:id="l121">Pardonnez, Mesdames, à ma frayeur ; mais...</l>
-          </sp>
-          <sp who="aminte" xml:id="5-3">
-            <speaker>AMINTE.</speaker>
-            <l n="122" xml:id="l122">Ne craignez rien, nous ne voulons vous faire aucun mal.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-4">
-            <speaker>L’AMOUR.</speaker>
-            <l n="123" xml:id="l123">Je le crois, quand on est aussi belles que vous l’êtes, on ne saurait être cruelles.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-5">
-            <speaker>AMINTE.</speaker>
-            <l n="124" xml:id="l124">Églé, il parait bien élevé.</l>
-          </sp>
-          <sp who="églé" xml:id="5-6">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="125" xml:id="l125">Comment êtes-vous venu dans cette Île ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-7">
-            <speaker>L’AMOUR.</speaker>
-            <l n="126" xml:id="l126">Hélas ! Madame, j’étais mousse sur un vaisseau, que la tempête vient d’engloutir il y a quelques heures ; j’ai eu le bonheur de me sauver à la nage : épuisé de fatigue, je m’étais endormi.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-8">
-            <speaker>AMINTE.</speaker>
-            <l n="127" xml:id="l127">Mais, mon petit ami, vous ne me paraissez, pas né pour l’état de matelot. Qui sont vos parents ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-9">
-            <speaker>L’AMOUR.</speaker>
-            <l n="128" xml:id="l128">Je n’ai jamais bien connu mon père ; ma mère, de bonne heure, m’abandonna à moi même, et depuis j’ai fait bien des métiers.</l>
-          </sp>
-          <sp who="églé" xml:id="5-10">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="129" xml:id="l129">On dirait, à vous entendre, que vous êtes déjà bien vieux.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-11">
-            <speaker>L’AMOUR.</speaker>
-            <l n="130" xml:id="l130">Eh ! je ne suis pas aussi jeune que je le parais.</l>
-          </sp>
-          <sp who="églé" xml:id="5-12">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="131" xml:id="l131">Quel métier faisiez-vous avant d’être mousse ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-13">
-            <speaker>L’AMOUR.</speaker>
-            <l n="132" xml:id="l132">Madame, je courais le monde à l’aventure, j’étais frère Quêteur, et je trouvais cet état fort doux.</l>
-          </sp>
-          <sp who="églé" xml:id="5-14">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="133" xml:id="l133">Pourquoi l’avoir quitté ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-15">
-            <speaker>L’AMOUR.</speaker>
-            <l n="134" xml:id="l134">Par inconstance : c’est un peu mon défaut.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-16">
-            <speaker>AMINTE.</speaker>
-            <l n="135" xml:id="l135">Nous ne devons donc pas espérer de vous fixer avec nous ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-17">
-            <speaker>L’AMOUR.</speaker>
-            <l n="136" xml:id="l136">J’y resterai tant que je vous serai nécessaire.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-18">
-            <speaker>AMINTE.</speaker>
-            <l n="137" xml:id="l137">En ce cas vous y resterez toujours...</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-19">
-            <speaker>L’AMOUR.</speaker>
-            <l n="138" xml:id="l138">Non, je finirais par vous gêner.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-20">
-            <speaker>AMINTE.</speaker>
-            <l n="139" xml:id="l139">Nous allons vous conduire dans notre retraite, vous la partagerez avec nous.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-21">
-            <speaker>L’AMOUR.</speaker>
-            <l n="140" xml:id="l140">Je ne sais comment reconnaître tant de bontés.</l>
-          </sp>
-          <sp who="églé" xml:id="5-22">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="141" xml:id="l141">Vous nous aiderez dans nos travaux.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-23">
-            <speaker>L’AMOUR.</speaker>
-            <l n="142" xml:id="l142">De tout mon cœur. Voici des flèches et des filets que j’ai sauvés du naufrage, j’en veux faire usage pour vous.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-24">
-            <speaker>AMINTE.</speaker>
-            <l n="143" xml:id="l143">Vous savez donc chasser ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-25">
-            <speaker>L’AMOUR.</speaker>
-            <l n="144" xml:id="l144">Très bien. Personne ne décoche une flèche plus adroitement que moi.</l>
-          </sp>
-          <sp who="églé" xml:id="5-26">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="145" xml:id="l145">Et les filets, savez-vous les tendre ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-27">
-            <speaker>L’AMOUR.</speaker>
-            <l n="146" xml:id="l146">À qui parlez-vous de cela ? C’est mon sort. J’ai même imaginé une manière assez adroite pour prendre les oiseaux... sans filet.</l>
-          </sp>
-          <sp who="églé" xml:id="5-28">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="147" xml:id="l147">Apprenez moi la donc.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-29">
-            <speaker>L’AMOUR.</speaker>
-            <l n="148" xml:id="l148">Volontiers.</l>
-          <stage>ÉGLÉ, <em>à Aminte.</em></stage>
-          </sp>
-          <sp who="l’amour" xml:id="5-30">
-            <speaker>L’AMOUR.</speaker>
-            <l n="149" xml:id="l149">Non, non, soyez certaine qu’alors ils n’ont plus d’yeux pour voir, plus d’ailes pour voler. Tenez,</l>
-            <stage><hi rend="italic"><em>Il embrasse Églé. </em></hi></stage>
-            <l n="151" xml:id="l151">faites l’essai des plaisirs qu’ils peuvent goûter, et en les imitant apprenez à les surprendre.</l>
-          </sp>
-          <sp who="églé" xml:id="5-31">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="152" xml:id="l152">Quel trouble s’élève dans mon cœur ; vous êtes un petit traître.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-32">
-            <speaker>L’AMOUR.</speaker>
-            <l n="153" xml:id="l153">Je n’ai point eu dessein de vous déplaire.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-33">
-            <speaker>AMINTE.</speaker>
-            <l n="154" xml:id="l154">Pourquoi te fâcher ? C’est un enfant.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-34">
-            <speaker>L’AMOUR.</speaker>
-            <l n="155" xml:id="l155">Eh bien ! que dites-vous de mon secret, n’est-il pas charmant ?</l>
-          </sp>
-          <sp who="aminte" xml:id="5-35">
-            <speaker>AMINTE.</speaker>
-            <l n="156" xml:id="l156">Très joli.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-36">
-            <speaker>L’AMOUR.</speaker>
-            <l n="157" xml:id="l157">Je suis enchanté qu’il vous plaise : mais je fais une réflexion ; vous voulez m’emmener dans votre retraite ; peut-être n’avez-vous de provision que pour vous deux ?</l>
-          </sp>
-          <sp who="églé" xml:id="5-37">
-            <speaker>ÉGLÉ, <em>d’un air fâché.</em></speaker>
-            <l n="158" xml:id="l158">Certainement. Ainsi vous ferez comme vous pourrez.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-38">
-            <speaker>L’AMOUR.</speaker>
-            <l n="159" xml:id="l159">Vous êtes piquée ; mais vous n’en êtes que plus jolie.</l>
-            <stage><hi rend="italic"><em>À Aminte. </em></hi></stage>
-            <l n="161" xml:id="l161">Je vous ai dit que j’étais bon chasseur, je vais vous en donner des preuves. Tenez, je veux que vous fassiez vous-même l’essai de mes armes, et que vous ayez aujourd’hui tout le plaisir de la chasse.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-39">
-            <speaker>AMINTE.</speaker>
-            <l n="162" xml:id="l162">Volontiers.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-40">
-            <speaker>L’AMOUR.</speaker>
-            <l n="163" xml:id="l163">Voilà mes filets, mon arc, mon carquois, mes flèches ; choisissez les armes qui vous plaisent.</l>
-          </sp>
-          <sp who="églé" xml:id="5-41">
-            <speaker>ÉGLÉ, <em>vivement.</em></speaker>
-            <l n="164" xml:id="l164">Moi, je prends l’arc et les flèches.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-42">
-            <speaker>AMINTE.</speaker>
-            <l n="165" xml:id="l165">Nous n’aurons point de querelles ; je préfère les filets, ils font moins de mal.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-43">
-            <speaker>L’AMOUR.</speaker>
-            <l n="166" xml:id="l166">Tout est fort bien arrangé : mais, Églé, prenez garde de vous avec mes flèches, piqûre en est dangereuse, je vous en préviens.</l>
-          </sp>
-          <sp who="églé" xml:id="5-44">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="167" xml:id="l167">Seraient-elles empoisonnées ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-45">
-            <speaker>L’AMOUR.</speaker>
-            <l n="168" xml:id="l168">Oui, et le poison où je les ai trempées est très subtil.</l>
-          </sp>
-          <sp who="églé" xml:id="5-46">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="169" xml:id="l169">J’y prendrai garde. Ah ! ma chère Aminte, viens donc voir ses flèches ; les unes ont la pointe d’or, les autres de diamant, quelques unes n’ont qu’une simple fleur au lieu de pointe.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-47">
-            <speaker>L’AMOUR.</speaker>
-            <l n="170" xml:id="l170">Que cela ne vous surprenne pas ; j’ai une manière de chasser qui n’est qu’à moi. Si je guette une jeune et timide colombe, une simple fleur au bout de mon trait suffit pour l’étourdir ; si j’en veux à un tigre furieux, armée d’un diamant, ma flèche le perce, il tombe sous mes coups. En général cependant les flèches d’or sont celles dont je fais le plus d’usage.</l>
-          </sp>
-          <sp who="aminte" xml:id="5-48">
-            <speaker>AMINTE.</speaker>
-            <l n="171" xml:id="l171">Vous l’entendez fort bien.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-49">
-            <speaker>L’AMOUR.</speaker>
-            <l n="172" xml:id="l172">Pas mal, pas mal. Mais exécutons notre chasse. Je vais vous placer toutes les deux dans une embuscade ; ne faites aucun bruit, et surtout, s’il est possible, ne parlez pas. Moi, je vais faire un circuit, je ferai brou, brou, brou, pour ramener le gibier sur vous, et quand je vous crierai feu, Aminte, vous jetterez votre filets ; Églé, vous lancerez votre traits.</l>
-          </sp>
-          <sp who="églé" xml:id="5-50">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="173" xml:id="l173">Duquel me servirais-je ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-51">
-            <speaker>L’AMOUR.</speaker>
-            <l n="174" xml:id="l174">Dans vos mains, belle Églé, une pointe de fleur suffira.</l>
-          </sp>
-          <sp who="églé" xml:id="5-52">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="175" xml:id="l175">Vous voulez faire votre paix, fripon.</l>
-          </sp>
-          <sp who="l’amour" xml:id="5-53">
-            <speaker>L’AMOUR.</speaker>
-            <l n="176" xml:id="l176">Allons vite, arrangez-vous là... Le filet est bien tendu comme cela, vous n’aurez qu’à lâcher la corde : vous, mettez-vous là, ne vous faites pas trop voir. Bon, il fait déjà un peu nuit ; c’est l’instant où je fais les meilleurs coups.</l>
-            <l n="177" xml:id="l177"> </l>
-            <l n="178" xml:id="l178"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="179" xml:id="l179"> </l>
-          <sp who="l’amour" xml:id="6-1">
-            <speaker>L’AMOUR, <em>seul</em></speaker>
-            <l n="180" xml:id="l180"> </l>
-            <l n="181" xml:id="l181">Oh ! le bon tour.</l>
-            <stage><hi rend="italic"><em>Il va à la grotte et appelle.</em></hi></stage>
-            <l n="183" xml:id="l183">Lycidas, Tircis.</l>
-            <l n="184" xml:id="l184"> </l>
-            <l n="185" xml:id="l185"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="186" xml:id="l186"> </l>
-          <sp who="l’amour" xml:id="7-1">
-            <speaker>LYCIDAS, TIRCIS, L’AMOUR</speaker>
-            <l n="187" xml:id="l187"> </l>
-          </sp>
-          <sp who="tircis" xml:id="7-2">
-            <speaker>TIRCIS, <em>en sortant le premier de la grotte.</em></speaker>
-            <l n="188" xml:id="l188">Eh bien ! avons-nous de bonnes nouvelles ?</l>
-          </sp>
-          <sp who="l’amour" xml:id="7-3">
-            <speaker>L’AMOUR.</speaker>
-            <l n="189" xml:id="l189">Chut, chut ; paix donc, ne parlez pas si haut, les habitantes de l’Île sont en guerre, le pays est plein d’ennemis, vous n’êtes pas bien ici ; suivez-moi, je vais vous conduire en lieu de sureté. Coulez-vous tout doucement le long de ces arbres.</l>
-          </sp>
-          <sp who="tircis" xml:id="7-4">
-            <speaker>TIRCIS.</speaker>
-            <l n="190" xml:id="l190">Adieu nos insulaires.</l>
-          </sp>
-          <sp who="l’amour" xml:id="7-5">
-            <speaker>L’AMOUR.</speaker>
-            <l n="191" xml:id="l191">Taisez-vous donc, pas de bruit, marchez légèrement : là... vous, allez par ici, vous suivez ce petit sentier. En nous séparant on reconnaîtra moins nos traces. Bon ; pas si vite. Feu, feu...</l>
-            <stage><hi rend="italic"><em>Églé lance son trait ; Aminte abaisse son filet ; Tircis s’y trouve prix, et la flèche d’Églé vient frapper Lycidas.</em></hi></stage>
-          </sp>
-          <sp who="tircis" xml:id="7-6">
-            <speaker>LYCIDAS <em>et</em> TIRCIS, <em>ensemble.</em></speaker>
-            <l n="193" xml:id="l193">Ah ! traître.</l>
-          </sp>
-          <sp who="l’amour" xml:id="7-7">
-            <speaker>L’AMOUR, <em>à Aminte et à Églé.</em></speaker>
-            <l n="194" xml:id="l194">Vite, vite, accourez, ils sont pris.</l>
-            <l n="195" xml:id="l195"> </l>
-            <l n="196" xml:id="l196"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="197" xml:id="l197"> </l>
-          <sp who="l’amour" xml:id="8-1">
-            <speaker>AMINTE, ÉGLÉ, LYCIDAS, TIRCIS, L’AMOUR</speaker>
-            <l n="198" xml:id="l198"> </l>
-          </sp>
-          <sp who="tircis" xml:id="8-2">
-            <speaker>AMINTE <em>et</em> ÉGLÉ, <em>ensemble, voyant Lycidas et Tircis.</em></speaker>
-            <l n="199" xml:id="l199">Ah, Ciel !</l>
-          </sp>
-          <sp who="l’amour" xml:id="8-3">
-            <speaker>L’AMOUR.</speaker>
-            <l n="200" xml:id="l200">Eh bien ! avons-nous fait bonne chasse ?</l>
-          </sp>
-          <sp who="églé" xml:id="8-4">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="201" xml:id="l201">C’est Lycidas !</l>
-          </sp>
-          <sp who="aminte" xml:id="8-5">
-            <speaker>AMINTE.</speaker>
-            <l n="202" xml:id="l202">C’est Tircis !</l>
-          </sp>
-          <sp who="lycidas" xml:id="8-6">
-            <speaker>LYCIDAS.</speaker>
-            <l n="203" xml:id="l203">Je n’avais pas besoin de ce nouveau trait, belle Églé, mon cœur n’a jamais changé.</l>
-          </sp>
-          <sp who="églé" xml:id="8-7">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="204" xml:id="l204">Vous êtes un perfide.</l>
-          </sp>
-          <sp who="tircis" xml:id="8-8">
-            <speaker>TIRCIS.</speaker>
-            <l n="205" xml:id="l205">Ma chère Aminte, mon cœur et ma personne, tout est dans vos filets.</l>
-          </sp>
-          <sp who="aminti" xml:id="8-9">
-            <speaker>AMINTI.</speaker>
-            <l n="206" xml:id="l206">Ingrat.</l>
-          </sp>
-          <sp who="l’amour" xml:id="8-10">
-            <speaker>L’AMOUR.</speaker>
-            <l n="207" xml:id="l207">Ce n’est pas pour vous quereller que je vous ai réunis.</l>
-          </sp>
-          <sp who="tircis" xml:id="8-11">
-            <speaker>TIRCIS.</speaker>
-            <l n="208" xml:id="l208">J’espère qu’à présent nous ne nous séparerons plus.</l>
-          </sp>
-          <sp who="aminte" xml:id="8-12">
-            <speaker>AMINTE.</speaker>
-            <l n="209" xml:id="l209">Pourvu que vous n’alliez pas donner à d’autres nos fleurs et nos rubans.</l>
-          </sp>
-          <sp who="tircis" xml:id="8-13">
-            <speaker>TIRCIS.</speaker>
-            <l n="210" xml:id="l210">Revenez, Aminte, d’une erreur qui nous a été si funeste.</l>
-          </sp>
-          <sp who="églé" xml:id="8-14">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="211" xml:id="l211">Comment, d’une erreur ?</l>
-          </sp>
-          <sp who="lycidas" xml:id="8-15">
-            <speaker>LYCIDAS.</speaker>
-            <l n="212" xml:id="l212">Oui : Palemon, le fourbe Palemon, avait seul tramé toute cette noirceur. Jaloux de notre bonheur, il avait imité nos bouquets, il avait imité nos rubans, et sa ruse n’a que trop bien réussi.</l>
-          </sp>
-          <sp who="aminte" xml:id="8-16">
-            <speaker>ÉGLÉ, <em>à Aminte.</em></speaker>
-            <l n="213" xml:id="l213">Les croirons-nous ?</l>
-          </sp>
-          <sp who="aminte" xml:id="8-17">
-            <speaker>AMINTE.</speaker>
-            <l n="214" xml:id="l214">Je te disais bien qu’ils n’étaient pas infidèles.</l>
-            <stage><hi rend="italic"><em>Tircis baise la main d’Aminte ; Lycidas veut baiser celle d’Églé.</em></hi></stage>
-          </sp>
-          <sp who="églé" xml:id="8-18">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="216" xml:id="l216">Oh ! doucement ; je veux vous punir même de mon soupçon : vous ne m’embrasserez pas d’une heure.</l>
-          </sp>
-          <sp who="lycidas" xml:id="8-19">
-            <speaker>LYCIDAS.</speaker>
-            <l n="217" xml:id="l217">Cruelle Églé ! Charmant Matelot, Aminte, Tircis, fléchissez sa colère.</l>
-          </sp>
-          <sp who="tircis" xml:id="8-20">
-            <speaker>TIRCIS.</speaker>
-            <l n="218" xml:id="l218">Votre sévérité est déplacée.</l>
-          </sp>
-          <sp who="aminte" xml:id="8-21">
-            <speaker>AMINTE.</speaker>
-            <l n="219" xml:id="l219">Rends-toi.</l>
-          </sp>
-          <sp who="églé" xml:id="8-22">
-            <speaker>ÉGLÉ, <em>faiblement.</em></speaker>
-            <l n="220" xml:id="l220">Non.</l>
-          </sp>
-          <sp who="l’amour" xml:id="8-23">
-            <speaker>L’AMOUR <em>prend la main d’Églé et donne à Lycidas, qui la baise avec transport.</em></speaker>
-            <l n="221" xml:id="l221">L’heure est passée.</l>
-          </sp>
-          <sp who="églé" xml:id="8-24">
-            <speaker>ÉGLÉ.</speaker>
-            <l n="222" xml:id="l222">Je me doutais bien que ce petit Mousse finie fait par nous jouer quelque tour de Corsaire.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="1">Quelle idée de venir te promener, lorsque tout nous annonce un orage prochain ? </l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="2">L’espérance de voir finir nos malheurs, et de trouver quelque vaisseau qui vienne à notre secours.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="3">Mais, Aminte, tu es folle ; pourrions nous jamais être plus heureuses que nous le sommes ?</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="4">Oh ! certainement oui.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="5">Comment, depuis trois mois que nous avons été abandonnées dans cette île déserte, n’avons nous pas joui de la plus grande tranquillité ?</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="6">Il est vrai que jusqu’ici la constante sérénité du ciel, et l’abondance des fruits que nous avons trouvés dans l’île, nous ont empêché de voir toute l’horreur de notre situation ; mais l’hiver approche...</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="7">L’hiver... tu dormiras : moi, j’irai à la chasse ; ne t’inquiète de rien.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="8">Tu t’abuses, Églé, tes forces trahiront ton courage.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="9">Non, non : notre cabane, qui l’a construite ? moi : crois-tu qu’il soit plus difficile de chasser ?</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="10">Crois-tu que je puisse toujours dormir ?</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="11">Ah ! j’entends ; Aminte a peur de s’ennuyer, elle voudrait un peu de compagnie.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="12">Je ne dis pas cela ; mais n’être que deux femmes au milieu d’une grande Île, cela n’est pas bien gai.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="13">Vas, vas, ma chère Aminte, il n’y a que les méchants qui n’ont point de plaisirs ;  la promenade, la pêche, la chasse, le repos même nous en procureront de charmants. Ce ne sont pas toujours les plus vifs qui sont les plus vrais.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="14">Je t’avoue, que si Tircis était de la partie, je voudrais passer ainsi toute ma vie...</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="15">Peux-tu songer encore à un infidèle ? Pour moi il y a longtemps que j’ai oublié Lycidas.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="16">Mais, ma chère amie, s’ils n’étaient pas aussi perfides que nous l’imaginons, si...</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="17">Autre faiblesse. Comment ? quand nous avons vu nos rivales parées des fleurs et des, rubans, que l’instant d’auparavant nous venions de donner à ces ingrats ; quand on les a entendu leur prodiguer les mêmes serments de fidélité qu’ils venaient de faire à nos pieds...</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="18">N’importe : je crois que nous avons eu tort de fuir nos amants, de nous embarquer, et de nous confier au traître, qui, tenté de nos richesses, nous a laissées dans cette Île.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="19">C’est vrai ; mais nous autres femmes, nos réflexions viennent toujours trop tard : la faute est faite, il faut songer actuellement aux moyens d’en rendre les suites moins désagréables.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="20">Tu y songeras donc seule ? Je suis peu capable de t’aider.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="21">À la bonne heure ; mais promets moi de ne plus aimer Tircis.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="22">Je te le promets.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="23">De l’oublier tout-à-fait.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="24">Oui. Je crois même que je ne l’aime plus, mon cœur est plus tranquille. Ah ! Ciel...</l>
+          <stage>&lt;em&gt;Elle jette un grand cri, et se précipite dans les bras de son amie. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="25">Qu’as-tu, ma chère Aminte ?</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="26">Ce n’est rien ; j’ai cru apercevoir sur le sable l’empreinte du pied d’un homme, et ce pied ressemblait à celui de Tircis.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="27">Tircis ne sera pas sitôt oublié.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="28">Chère Églé, excuse ma faiblesse ; mais Tircis est si aimable !</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="29">Dis plutôt était si aimable : il faut tâcher de donner à ton amour un air d’ancienneté, peut-être parviendras-tu plus aisément à n’y plus songer.</l>
+          <stage>&lt;em&gt;Le ciel s’obscurcit, le tonnerre gronde. &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="30">Quel nuage ! Que je plains les malheureux exposés à la fureur des flots !</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="31">J’avais prévu cet orage ; allons vite nous retirer dans notre cabane.</l>
+          <stage>&lt;em&gt;Elles sortent. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS, TIRCIS, L’AMOUR</speaker>
+          <stage>&lt;em&gt;On voit dans le lointain un vaisseau, battu par la tempête : après avoir longtemps lutté contre les flots, il s’abime. Aussitôt une petite chaloupe reparaît, montée de trois hommes : elle fait de grands efforts pour aborder l’Île, et y parvient enfin avec beaucoup de peine. &lt;/em&gt;</stage>
+          <stage>&lt;em&gt;L’Amour est habillé en Matelot, il porte d’une main un carquois, un arc, des flèches, et de l’autre des filets.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="32">Quelle horrible tempête ! Seuls échappés au naufrage. Qu’allons-nous devenir ? Pilote ignorant !</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="33">Ne craignez rien, je suis avec vous.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="34">Effectivement tu es bien fait pour rassurer ! /</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="35">Mon air en a trompé plus d’un. Croyez que je suis beaucoup plus redoutable que je ne le parais : d’ailleurs j’ai sauvé du naufrage mes flèches et mes filets ; avec cela je ne suis jamais embarrassé.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="36">Bonne ressource.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="37">C’est avec ces armes, n’est-ce pas, que ti nous garantiras de la fureur des cruels habitants de cette Île ? Ou si elle est déserte, que tu sauras nous empêcher de devenir la proie des bêtes féroces ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="38">Encore une fois, ne craignez rien : je connais cette Île, les habitants n’en font rien moins que cruels : ce n’est pas leur fureur que vous devez redouter.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="39">Eh ! quoi donc ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="40">Leur indifférence.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="41">Comment, leur indifférence ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="42">Oui : cette Île n’est habitée que par des femmes. Ainsi vous voyez que le plus grand malheur qui put vous arriver, serait de ne pas leur plaire.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="43">Quant à moi, peu m’in porte. Églé ; là cruelle Églé, aura seule mon amour.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="44">Et sont-elles jolies tes habitantes ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="45">Charmantes.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="46">En ce cas, Lycidas, nous ne sommes pas si à plaindre.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="47">Je reconnais bien là ton caractère volage. Et Aminte ?...</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="48">Aminte ?... Je l’oublierai. N’ai-je pas déjà assez fait pour elle ? J’ai quitté Doris, j’ai quitté Glycère ; toutes deux cependant ne demandaient qu’à me consoler de son absence. Je me suis exposé pour la chercher à la fureur des flots. Il y a beaucoup d’amans qui n’en feraient pas autant.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="49">Tu es heureux, Tircis, d’avoir une pareille façon de penser, la mienne est bien différente.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="50">Allons, paix ; point de querelles. Reposez-vous tous deux sur moi, vous serez contents.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="51">Tu m’as bien l’air d’un Enjôleur.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="52">Vous n’êtes pas le premier qui vous en soyez douté.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="53">Au lieu de plaisanter, tu ferais mieux d’apprendre à conduire ta barque une autre fois.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="54">Il faudrait être bien fin pour savoir mieux mener sa barque que moi, j’ai déjà fait mes preuves.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="55">Mon ami, pourquoi lui en vouloir ? Il ne peut pas empêcher les tempêtes.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="56">Mais au moins j’en fais tirer parti.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="57">Oh ! oui : la preuve en est claire, tu nous fais aborder dans une Île inconnue.</l>
+          <stage>&lt;em&gt;À part. &lt;/em&gt;</stage>
+          <l n="58">Amour, est-ce ainsi que tu protèges ceux qui suivent tes lois ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="59">Ne dites point de mal de l’Amour, il vous sert peut-être plus que vous ne pensez : vous ne connaissez pas toutes ses ressources ; souvent la plus affreuse tempête est pour lui l’aurore d’un beau jour.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="60">Mais quand nous feras-tu faire connaissance, avec tes jolies insulaires ? Je brûle déjà du désir de les voir.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="61">Piano, piano. Vous êtes trop vif. Ne commettons point d’imprudence : il faut toujours commencer par sonder le terrain. Si vous paraissiez tout-à-coup, on s’effaroucherait peut-être ; laissez-moi d’abord reconnaître le pays, et après je vous présenterai.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="62">Mais tout ce manège est bien long.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="63">Le temps n’y fait rien, pourvu qu’on réussite ; c’est mon système.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="64">En ce cas je m’en rapporte à toi.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="65">Et vous, Lycidas ?</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="66">Il faut bien consentir à tout, quoique dans le fond je n’aie pas grande foi à tes promesses.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="67">Que vous êtes ingrat ; quand je sue sang et eau pour vous servir, voilà vos remerciements. N’importe : j’espère vous forcer bientôt à la reconnaissance. Voyons où je vous placerai pendant mon absence. Voilà notre affaire : entrez tous les deux au fond de cette grotte, et restez-y jusqu’à ce qu’il soit temps que je vous en fasse sortir.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, seul</speaker>
+          <l n="68">Jusqu’ici tout va bien. Ah, ah, belles fugitives, vous vouliez vous soustraire à mon empire. Vous aurez beau faire, vous ne m’échapperez plus : il n’est pas aussi aisé de fuir l’Amour que vous l’imaginez... Mais voilà le temps qui s’éclaircit, surement elles ne tarderont pas à revenir de ce côté. La tempête n’aurait qu’à avoir jeté sur l’Île quelque malheureux ; on peut lui sauver la vie, alors on aurait acquis un tiers qui rendrait la solitude plus supportable. Car, quoiqu’elles en aient, les femmes ont toujours-là</l>
+          <stage>&lt;em&gt;En montrant son cœur. &lt;/em&gt;</stage>
+          <l n="69">certain petit mouvement qu’elles ne peuvent empêcher. Chut... Je les entends, faisons semblant de dormir. L’Amour endormi n’en est souvent que plus dangereux.</l>
+          <stage>&lt;em&gt;Il se couche sur ses filets : son arc et ses flèches sont à ses côtés. &lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="70">Je t’assure que c’est la dernière fois que nous venons promener de ce côté.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="71">Pardonne ; si je n’ai pas encore pu comme toi vaincre mon amour, peut-être avec le temps y parviendrai-je.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="72">Je l’espère. Alors tu verras qu’une douce indifférence est bien préférable aux maux qu’on éprouve en aimant.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="73">J’ai peine à le croire, je te l’avoue ; une vie sans amour doit être bien uniforme, et comme tu fais l’ennui naquit un jour de l’uniformité. Mais que vois-je ?...</l>
+          <stage>&lt;em&gt;Elle aperçoit l’Amour. &lt;/em&gt;</stage>
+          <l n="74">Le bel enfant ! Églé, regarde donc comme il est joli.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="75">Il pourra te désennuyer. Ne ressemble-t-il pas aussi un peu à Tircis ?</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="76">Comme il sourit agréablement embrassons-le.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="77">Tu peux l’embrasser ; mais moi je n’en ferai rien.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="78">Que crains-tu ?</l>
+          <stage>&lt;em&gt;Elle l’embrasse. &lt;/em&gt;</stage>
+          <l n="79">Il est brûlant ! Éveillons-le, l’humidité pourrait lui faire mal.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="80">Arrête... Je ne sais... Mais j’ai un pressentiment que ce réveil pourrait nous être funeste ; fuyons plutôt, et enfonçons-nous dans la forêt.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="81">Quoi ! nous serions assez barbares pour laisser sans secours cette innocente créature...</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="82">Il faut donc te laisser faire, Aminte. Éveillons-le.</l>
+          <stage>&lt;em&gt;L’Orchestre joue&lt;/em&gt; éveillons-le.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, en faisant semblant de s’éveiller avec crainte.</speaker>
+          <l n="83">Pardonnez, Mesdames, à ma frayeur ; mais...</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="84">Ne craignez rien, nous ne voulons vous faire aucun mal.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="85">Je le crois, quand on est aussi belles que vous l’êtes, on ne saurait être cruelles.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="86">Églé, il parait bien élevé.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="87">Comment êtes-vous venu dans cette Île ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="88">Hélas ! Madame, j’étais mousse sur un vaisseau, que la tempête vient d’engloutir il y a quelques heures ; j’ai eu le bonheur de me sauver à la nage : épuisé de fatigue, je m’étais endormi.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="89">Mais, mon petit ami, vous ne me paraissez, pas né pour l’état de matelot. Qui sont vos parents ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="90">Je n’ai jamais bien connu mon père ; ma mère, de bonne heure, m’abandonna à moi même, et depuis j’ai fait bien des métiers.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="91">On dirait, à vous entendre, que vous êtes déjà bien vieux.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="92">Eh ! je ne suis pas aussi jeune que je le parais.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="93">Quel métier faisiez-vous avant d’être mousse ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="94">Madame, je courais le monde à l’aventure, j’étais frère Quêteur, et je trouvais cet état fort doux.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="95">Pourquoi l’avoir quitté ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="96">Par inconstance : c’est un peu mon défaut.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="97">Nous ne devons donc pas espérer de vous fixer avec nous ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="98">J’y resterai tant que je vous serai nécessaire.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="99">En ce cas vous y resterez toujours...</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="100">Non, je finirais par vous gêner.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="101">Nous allons vous conduire dans notre retraite, vous la partagerez avec nous.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="102">Je ne sais comment reconnaître tant de bontés.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="103">Vous nous aiderez dans nos travaux.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="104">De tout mon cœur. Voici des flèches et des filets que j’ai sauvés du naufrage, j’en veux faire usage pour vous.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="105">Vous savez donc chasser ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="106">Très bien. Personne ne décoche une flèche plus adroitement que moi.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="107">Et les filets, savez-vous les tendre ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="108">À qui parlez-vous de cela ? C’est mon sort. J’ai même imaginé une manière assez adroite pour prendre les oiseaux... sans filet.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="109">Apprenez moi la donc.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="110">Volontiers.</l>
+          <l n="111">Pour réussir à cette chasse,</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ, à Aminte.</speaker>
+          <l n="112">Bon, Aminte,</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="113">Non, non, soyez certaine qu’alors ils n’ont plus d’yeux pour voir, plus d’ailes pour voler. Tenez,</l>
+          <stage>&lt;em&gt;Il embrasse Églé. &lt;/em&gt;</stage>
+          <l n="114">faites l’essai des plaisirs qu’ils peuvent goûter, et en les imitant apprenez à les surprendre.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="115">Quel trouble s’élève dans mon cœur ; vous êtes un petit traître.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="116">Je n’ai point eu dessein de vous déplaire.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="117">Pourquoi te fâcher ? C’est un enfant.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="118">Eh bien ! que dites-vous de mon secret, n’est-il pas charmant ?</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="119">Très joli.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="120">Je suis enchanté qu’il vous plaise : mais je fais une réflexion ; vous voulez m’emmener dans votre retraite ; peut-être n’avez-vous de provision que pour vous deux ?</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ, d’un air fâché.</speaker>
+          <l n="121">Certainement. Ainsi vous ferez comme vous pourrez.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="122">Vous êtes piquée ; mais vous n’en êtes que plus jolie.</l>
+          <stage>&lt;em&gt;À Aminte. &lt;/em&gt;</stage>
+          <l n="123">Je vous ai dit que j’étais bon chasseur, je vais vous en donner des preuves. Tenez, je veux que vous fassiez vous-même l’essai de mes armes, et que vous ayez aujourd’hui tout le plaisir de la chasse.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="124">Volontiers.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="125">Voilà mes filets, mon arc, mon carquois, mes flèches ; choisissez les armes qui vous plaisent.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ, vivement.</speaker>
+          <l n="126">Moi, je prends l’arc et les flèches.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="127">Nous n’aurons point de querelles ; je préfère les filets, ils font moins de mal.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="128">Tout est fort bien arrangé : mais, Églé, prenez garde de vous avec mes flèches, piqûre en est dangereuse, je vous en préviens.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="129">Seraient-elles empoisonnées ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="130">Oui, et le poison où je les ai trempées est très subtil.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="131">J’y prendrai garde. Ah ! ma chère Aminte, viens donc voir ses flèches ; les unes ont la pointe d’or, les autres de diamant, quelques unes n’ont qu’une simple fleur au lieu de pointe.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="132">Que cela ne vous surprenne pas ; j’ai une manière de chasser qui n’est qu’à moi. Si je guette une jeune et timide colombe, une simple fleur au bout de mon trait suffit pour l’étourdir ; si j’en veux à un tigre furieux, armée d’un diamant, ma flèche le perce, il tombe sous mes coups. En général cependant les flèches d’or sont celles dont je fais le plus d’usage.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="133">Vous l’entendez fort bien.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="134">Pas mal, pas mal. Mais exécutons notre chasse. Je vais vous placer toutes les deux dans une embuscade ; ne faites aucun bruit, et surtout, s’il est possible, ne parlez pas. Moi, je vais faire un circuit, je ferai brou, brou, brou, pour ramener le gibier sur vous, et quand je vous crierai feu, Aminte, vous jetterez votre filets ; Églé, vous lancerez votre traits.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="135">Duquel me servirais-je ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="136">Dans vos mains, belle Églé, une pointe de fleur suffira.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="137">Vous voulez faire votre paix, fripon.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="138">Allons vite, arrangez-vous là... Le filet est bien tendu comme cela, vous n’aurez qu’à lâcher la corde : vous, mettez-vous là, ne vous faites pas trop voir. Bon, il fait déjà un peu nuit ; c’est l’instant où je fais les meilleurs coups.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, seul</speaker>
+          <l n="139">Oh ! le bon tour.</l>
+          <stage>&lt;em&gt;Il va à la grotte et appelle.&lt;/em&gt;</stage>
+          <l n="140">Lycidas, Tircis.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#tircis">
+          <speaker>TIRCIS, en sortant le premier de la grotte.</speaker>
+          <l n="141">Eh bien ! avons-nous de bonnes nouvelles ?</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="142">Chut, chut ; paix donc, ne parlez pas si haut, les habitantes de l’Île sont en guerre, le pays est plein d’ennemis, vous n’êtes pas bien ici ; suivez-moi, je vais vous conduire en lieu de sureté. Coulez-vous tout doucement le long de ces arbres.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="143">Adieu nos insulaires.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="144">Taisez-vous donc, pas de bruit, marchez légèrement : là... vous, allez par ici, vous suivez ce petit sentier. En nous séparant on reconnaîtra moins nos traces. Bon ; pas si vite. Feu, feu...</l>
+          <stage>&lt;em&gt;Églé lance son trait ; Aminte abaisse son filet ; Tircis s’y trouve prix, et la flèche d’Églé vient frapper Lycidas.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS et TIRCIS, ensemble.</speaker>
+          <l n="145">Ah ! traître.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR, à Aminte et à Églé.</speaker>
+          <l n="146">Vite, vite, accourez, ils sont pris.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#aminte">
+          <speaker>AMINTE et ÉGLÉ, ensemble, voyant Lycidas et Tircis.</speaker>
+          <l n="147">Ah, Ciel !</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="148">Eh bien ! avons-nous fait bonne chasse ?</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="149">C’est Lycidas !</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="150">C’est Tircis !</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="151">Je n’avais pas besoin de ce nouveau trait, belle Églé, mon cœur n’a jamais changé.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="152">Vous êtes un perfide.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="153">Ma chère Aminte, mon cœur et ma personne, tout est dans vos filets.</l>
+        </sp>
+        <sp who="#aminti">
+          <speaker>AMINTI.</speaker>
+          <l n="154">Ingrat.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR.</speaker>
+          <l n="155">Ce n’est pas pour vous quereller que je vous ai réunis.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="156">J’espère qu’à présent nous ne nous séparerons plus.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="157">Pourvu que vous n’alliez pas donner à d’autres nos fleurs et nos rubans.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="158">Revenez, Aminte, d’une erreur qui nous a été si funeste.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="159">Comment, d’une erreur ?</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="160">Oui : Palemon, le fourbe Palemon, avait seul tramé toute cette noirceur. Jaloux de notre bonheur, il avait imité nos bouquets, il avait imité nos rubans, et sa ruse n’a que trop bien réussi.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ, à Aminte.</speaker>
+          <l n="161">Les croirons-nous ?</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="162">Je te disais bien qu’ils n’étaient pas infidèles.</l>
+          <stage>&lt;em&gt;Tircis baise la main d’Aminte ; Lycidas veut baiser celle d’Églé.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="163">Oh ! doucement ; je veux vous punir même de mon soupçon : vous ne m’embrasserez pas d’une heure.</l>
+        </sp>
+        <sp who="#lycidas">
+          <speaker>LYCIDAS.</speaker>
+          <l n="164">Cruelle Églé ! Charmant Matelot, Aminte, Tircis, fléchissez sa colère.</l>
+        </sp>
+        <sp who="#tircis">
+          <speaker>TIRCIS.</speaker>
+          <l n="165">Votre sévérité est déplacée.</l>
+        </sp>
+        <sp who="#aminte">
+          <speaker>AMINTE.</speaker>
+          <l n="166">Rends-toi.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ, faiblement.</speaker>
+          <l n="167">Non.</l>
+        </sp>
+        <sp who="#l’amour">
+          <speaker>L’AMOUR prend la main d’Églé et donne à Lycidas, qui la baise avec transport.</speaker>
+          <l n="168">L’heure est passée.</l>
+        </sp>
+        <sp who="#églé">
+          <speaker>ÉGLÉ.</speaker>
+          <l n="169">Je me doutais bien que ce petit Mousse finie fait par nous jouer quelque tour de Corsaire.</l>
+          <l n="170" />
+        </sp>
       </div>
     </body>
   </text>

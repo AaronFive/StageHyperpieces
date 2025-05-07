@@ -1,1664 +1,1766 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Soufflez-moi dans l’œil</title>
-        <author key="Eugène LABICHE - MARC-MICHEL | (naissance-mort)">Eugène LABICHE - MARC-MICHEL |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/1102</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène LABICHE - MARC-MICHEL |</author>. <title>Soufflez-moi dans l’œil</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/1102</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1852-05-01">Représentée pour la première fois, à Paris, sur le Théâtre du Palais-Royal, le 1er mai 1852.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="mouillebouche" sex="SEX">
+            <persName>MOUILLEBOUCHE</persName>
+          </person>
+          <person xml:id="tropical" sex="SEX">
+            <persName>TROPICAL</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1852-05-01" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre du Palais-Royal, le 1er mai 1852.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Soufflez-moi dans l’œil</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie-Vaudeville en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre du Palais-Royal, le 1<sup>er</sup> mai 1852.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="mouillebouche">MOUILLEBOUCHE</role>
-              <roleDesc>, <em>50 ans</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="tropical">TROPICAL</role>
-              <roleDesc>, <em>25 ans</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène se passe dans un pavillon isolé, au milieu d’un bois, à 15 lieues de Paris</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Une salle octogone au premier étage d’un pavillon isolé. À gauche, premier plan, un piano adossé à la cloison ; après le piano, une petite armoire basse sur laquelle sont deux flambeaux, des allumettes, une carafe et un verre. Même côté ; dans le pan coupé, une porte de chambre. Au fond, en face du public, une grande fenêtre ouvrant sur la forêt qui entoure l’habitation. Un fusil de chasse accroché près de la fenêtre. Dans le pan coupé, à droite, la porte principale avec serrure. Même côté, premier plan, une porte de chambre. Un carnier de chasseur près de la porte. Deux fauteuils et deux chaises avec housses. Nuit complète au dehors, pendant toute la pièce.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-            <l n="9" xml:id="l9"> </l>
-            <stage><hi rend="italic"><em>Au lever du rideau, la scène n’est pas éclairée. On entend au dehors un bruit de grelots et de fouet, et le roulement d’une voiture qui arrive et s’arrête. Le bruit cesse. Musique à l’orchestre. Puis on entend dans la coulisse la voix de Mouillebouche.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-2">
-            <speaker>MOUILLEBOUCHE, <em>dans la coulisse.</em></speaker>
-            <l n="11" xml:id="l11">Pas de violence, monsieur, pas de violence ! </l>
-            <stage><hi rend="italic"><em>Laporte de l’angle à droite s’ouvre. Tropical entre ; il est en costume de postillon et tient un pistolet braqué sur Mouillebouche.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-3">
-            <speaker>TROPICAL.</speaker>
-            <l n="13" xml:id="l13">Je vous en prie, monsieur, donnez-vous la peine d’entrer !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-4">
-            <speaker>MOUILLEBOUCHE, <em>entrant très ému.</em></speaker>
-            <l n="14" xml:id="l14">Avec plaisir, postillon !... avec plaisir, postillon ! </l>
-            <stage><hi rend="italic"><em>À part, marchant à tâtons.</em></hi></stage>
-            <l n="16" xml:id="l16">Je suis dans un coupe-gorge ! </l>
-            <stage><hi rend="italic"><em>Mouillebouche est en grande tenue de marié, gants blancs, énorme épingle à son jabot, un bouquet de fleurs d’oranger avec rubans blancs à son habit.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-5">
-            <speaker>TROPICAL.</speaker>
-            <l n="18" xml:id="l18">Mille pardons de vous laisser dans l’obscurité !</l>
-            <stage><hi rend="italic"><em>Il se dirige vers l’armoire.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-6">
-            <speaker>MOUILLEBOUCHE, <em>avec force.</em></speaker>
-            <l n="20" xml:id="l20">Postillon ! je proteste !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-7">
-            <speaker>TROPICAL.</speaker>
-            <l n="21" xml:id="l21">Plaît-il ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-8">
-            <speaker>MOUILLEBOUCHE, <em>radouci.</em></speaker>
-            <l n="22" xml:id="l22">Je n’attaque pas votre moralité !... mais enfin, ce qui m’arrive est bien étrange !... </l>
-            <stage><hi rend="italic"><em>Au public.</em></hi></stage>
-            <l n="24" xml:id="l24">Il n’y a pas quatre heures vingt ? deux minutes j’étais à Paris.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-9">
-            <speaker>TROPICAL, <em>allumant un flambeau. Jour en scène.</em></speaker>
-            <l n="25" xml:id="l25">Continuez... continuez...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-10">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="26" xml:id="l26">Moi, Paul Sésostris Elzéar Mouillebouche... ex-plumassier, je venais de me marier...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-11">
-            <speaker>TROPICAL, <em>allumant un autre flambeau.</em></speaker>
-            <l n="27" xml:id="l27">Continuez... continuez...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-12">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="28" xml:id="l28">Oui, monsieur, je continuerai ! </l>
-            <stage><hi rend="italic"><em>Au public.</em></hi></stage>
-            <l n="30" xml:id="l30">Ma récente épouse, émue et rougissante, recevait dans la sacristie les félicitations du bedeau et de nos dix-neuf témoins... tout à coup. </l>
-          </sp>
-          <sp who="tropical" xml:id="0-13">
-            <speaker>TROPICAL, <em>lui prenant son chapeau sur la tête.</em></speaker>
-            <l n="31" xml:id="l31">Votre chapeau, monsieur ? </l>
-            <stage><hi rend="italic"><em>Il le pose sur le fauteuil à gauche.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-14">
-            <speaker>MOUILLEBOUCHE, <em>machinalement.</em></speaker>
-            <l n="33" xml:id="l33">Merci... il ne me gênait pas !</l>
-            <stage><hi rend="italic"><em>Reprenant.</em></hi></stage>
-            <l n="35" xml:id="l35">Tout à coup, je m’absente un quart de seconde pour m’assurer si la chaise de poste, qui doit nous conduire à Château-Thierry, est ci la porte de l’église... elle arrivait... j’y monte machinalement pour visiter l’intérieur... Aussitôt...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-15">
-            <speaker>TROPICAL, <em>à Mouillebouche qui tout en parlant a ôté ses gants.</em></speaker>
-            <l n="36" xml:id="l36">Vos gants, monsieur ? </l>
-            <stage><hi rend="italic"><em>Il les jette dans le chapeau.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-16">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="38" xml:id="l38">Merci, ils ne me gênaient pas... </l>
-            <stage><hi rend="italic"><em>Reprenant.</em></hi></stage>
-            <l n="40" xml:id="l40">Aussitôt... la portière se referme à clef... et la voiture part au triple galop.</l>
-            <l n="41" xml:id="l41">Et vous me cahotez par des chemins vicinaux jusque dans cet  immeuble inhabité...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-17">
-            <speaker>TROPICAL.</speaker>
-            <l n="42" xml:id="l42">Eh bien ?...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-18">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="43" xml:id="l43">Certainement, je suis loin de vouloir attaquer votre moralité, mais...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-19">
-            <speaker>TROPICAL.</speaker>
-            <l n="44" xml:id="l44">Votre montre, s’il vous plaît ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-20">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="45" xml:id="l45">Comment ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-21">
-            <speaker>TROPICAL, <em>jouant avec son pistolet et très poliment.</em></speaker>
-            <l n="46" xml:id="l46">Je vous en prie... avec les breloques...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-22">
-            <speaker>MOUILLEBOUCHE, <em>s’exécutant.</em></speaker>
-            <l n="47" xml:id="l47">Avec plaisir, postillon ! avec plaisir, postillon !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-23">
-            <speaker>TROPICAL.</speaker>
-            <l n="48" xml:id="l48">Vous avez là une bien jolie épingle...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-24">
-            <speaker>MOUILLEBOUCHE, <em>résistant.</em></speaker>
-            <l n="49" xml:id="l49">Oh ! mais, permettez !... </l>
-            <stage><hi rend="italic"><em>Il s’exécute sur un geste de Tropical.</em></hi></stage>
-            <l n="51" xml:id="l51">Avec plaisir, postillon ! avec plaisir, postillon !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-25">
-            <speaker>TROPICAL.</speaker>
-            <l n="52" xml:id="l52">Vous êtes un homme charmant ! </l>
-            <stage><hi rend="italic"><em>Il met ces divers objets dans le chapeau de Mouillebouche et serre le tout dans l’armoire, après en avoir tiré un paquet.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-26">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="54" xml:id="l54">Je suis fixé... je suis tombé... dans un chef de voleurs... Il est bien meublé, le brigand ! </l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="56" xml:id="l56">Tiens !... un piano !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-27">
-            <speaker>TROPICAL, <em>revenant avec le paquet.</em></speaker>
-            <l n="57" xml:id="l57">J’en touche quelquefois dans mes heures de rêverie.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-28">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="58" xml:id="l58">Vous ? </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="60" xml:id="l60">Comme la civilisation s’infiltre dans toutes les zones sociales... Voilà les voleurs qui ont des heures de rêverie et qui touchent du piano !... Enfin ! </l>
-            <stage><hi rend="italic"><em>Haut. Fausse sortie.</em></hi></stage>
-            <l n="62" xml:id="l62">Monsieur, il ne me reste plus qu’à vous présenter mes devoirs... Enchanté d’avoir fait-votre connaissance... </l>
-            <stage><hi rend="italic"><em>Il porte machinalement la main à sa tête comme pour ôter son chapeau.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-29">
-            <speaker>TROPICAL.</speaker>
-            <l n="64" xml:id="l64">Où allez-vous donc ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-30">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="65" xml:id="l65">Mais, dame !... il me semble que notre conversation </l>
-            <stage><hi rend="italic"><em>Tapant sur son gousset.</em></hi></stage>
-            <l n="67" xml:id="l67">est complètement épuisée.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-31">
-            <speaker>TROPICAL, <em>menaçant.</em></speaker>
-            <l n="68" xml:id="l68">Hein ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-32">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="69" xml:id="l69">Je n’attaque pas votre moralité !... Je veux bien croire que vous n’êtes qu’un postillon... égaré ! Mais songez-y, un rapt... un détournement de majeur... c’est très grave... et... je vous présente mes devoirs... </l>
-            <stage><hi rend="italic"><em>Fausse sortie, et même jeu.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-33">
-            <speaker>TROPICAL, <em>avec mélancolie.</em></speaker>
-            <l n="71" xml:id="l71">Mouillebouche, voulez-vous donc me quitter ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-34">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="72" xml:id="l72">Il est charmant ! il va m’inviter à passer la soirée.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-35">
-            <speaker>TROPICAL.</speaker>
-            <l n="73" xml:id="l73">Si vous avez froid, je vais vous faire du feu.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-36">
-            <speaker>MOUILLEBOUCHE, <em>avec ironie.</em></speaker>
-            <l n="74" xml:id="l74">Et nous prendrons des sandwich... avec du thé ! Merci, mon ami, merci... je n’ai besoin de rien.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-37">
-            <speaker>TROPICAL, <em>lui présentant le paquet.</em></speaker>
-            <l n="75" xml:id="l75">Alors prenez ceci.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-38">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="76" xml:id="l76">Qu’est-ce que c’est que ceci ? </l>
-          </sp>
-          <sp who="tropical" xml:id="0-39">
-            <speaker>TROPICAL.</speaker>
-            <l n="77" xml:id="l77">Un pantalon de nankin et une veste de même étoffe.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-40">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="78" xml:id="l78">Ah !... pourquoi faire ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-41">
-            <speaker>TROPICAL, <em>montrant la chambre à gauche.</em></speaker>
-            <l n="79" xml:id="l79">Entrez dans cette chambre... vous me rapporterez vos habits !... j’y tiens !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-42">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="80" xml:id="l80">Ah ! j’y suis !... c’est pour me pincer mon Elbeuf !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-43">
-            <speaker>TROPICAL, <em>sévèrement.</em></speaker>
-            <l n="81" xml:id="l81">Hein ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-44">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="82" xml:id="l82">Je n’attaque pas votre moralité !... </l>
-            <stage><hi rend="italic"><em>Prenant le paquet.</em></hi></stage>
-            <l n="84" xml:id="l84">Donnez<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>... Dites donc, vous aviez raison... la conversation n’était pas... complètement épuisée.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-45">
-            <speaker>TROPICAL, <em>brusquement.</em></speaker>
-            <l n="85" xml:id="l85">Allons, dépêchons-nous !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-46">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="86" xml:id="l86">Avec plaisir, postillon ! avec plaisir, postillon ! </l>
-            <l n="87" xml:id="l87">Après il me laissera peut-être partir. </l>
-            <l n="88" xml:id="l88">Cependant, je me permettrai de...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-47">
-            <speaker>TROPICAL, <em>brusquement et montrant son pistolet.</em></speaker>
-            <l n="89" xml:id="l89">Morbleu !!!</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-48">
-            <speaker>MOUILLEBOUCHE, <em>très gracieusement.</em></speaker>
-            <l n="90" xml:id="l90">Avec plaisir, postillon ! </l>
-            <stage><hi rend="italic"><em>Il entre dans la chambre à gauche.</em></hi></stage>
-            <l n="92" xml:id="l92"> </l>
-            <l n="93" xml:id="l93"> </l>
-            <l n="94" xml:id="l94"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-49">
-            <speaker>TROPICAL, <em>seul</em></speaker>
-            <l n="95" xml:id="l95"> </l>
-            <l n="96" xml:id="l96">Vieux melon !... le voilà sous cloche !... Enfin je tiens mon rival ! ma parole ! c’est honteux d’avoir une grosse mécanique comme ça pour rival !... Dépouillons d’abord cette défroque de Longjumeau, qui sied très mal à un jeune homme de famille...</l>
-            <stage><hi rend="italic"><em>Il ôte son habit de postillon et endosse une veste de chasse.</em></hi></stage>
-            <l n="98" xml:id="l98">C’est égal... je dis qu’il faut un certain toupet pour enlever un aussi gros... ballon... à la barbe de sa noce !... J’aime !... voilà mon excuse !... L’amour me rend capable des plus gigantesques entreprises !... Il y a une chose qui m’inquiète... J’ai confisqué ce monsieur, c’est très bien !... Mais comment le retenir ? car il ne faut pas qu’il sorte !... Si je lui offrais... mon amitié ?... Je doute qu’il l’accepte !... Il me faudrait un moyen de le clouer ici... comme un papillon sur un bouchon !... Oh ! j’ai mon affaire ! </l>
-            <stage><hi rend="italic"><em>Il ouvre la fenêtre du fond et crie très haut afin d’être entendu par Mouillebouche.</em></hi></stage>
-            <l n="100" xml:id="l100">Holà ! Ravageot ! Lâchez les chiens !... tendez des pièges à loup !... chargez les fusils... et si quelqu’un met le pied dehors... feu sur toute la ligne !</l>
-            <stage><hi rend="italic"><em>Au public, gaiement. </em></hi></stage>
-            <l n="102" xml:id="l102">Remarquez que je n’ai ni Ravageot... ni pièges a loup... ni chiens... je suis seul de mon sexe !... c’est-à-dire... </l>
-            <stage><hi rend="italic"><em>S’approchant de la porte où est Mouillebouche et d’une voix formidable.</em></hi></stage>
-            <l n="104" xml:id="l104">Feu sur toute la ligne, ventrebleu !</l>
-            <l n="105" xml:id="l105"> </l>
-            <l n="106" xml:id="l106"> </l>
-            <l n="107" xml:id="l107"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-50">
-            <speaker>MOUILLEBOUCHE, TROPICAL</speaker>
-            <l n="108" xml:id="l108"> </l>
-            <stage><hi rend="italic"><em>Mouillebouche sort vivement de la chambre en veste et pantalon de nankin, grand chapeau de paille ; il porte ses autres vêtements dans un paquet ; il pose son flambeau sur l’armoire.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-51">
-            <speaker>MOUILLEBOUCHE, <em>à part, très ému.</em></speaker>
-            <l n="110" xml:id="l110">Crédié !... crédié !... crédié !... Il a dit : Feu sur toute la ligne !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-52">
-            <speaker>TROPICAL, <em>à part.</em></speaker>
-            <l n="111" xml:id="l111">Je crois qu’il a saisi quelques mots.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-53">
-            <speaker>MOUILLEBOUCHE, <em>timidement.</em></speaker>
-            <l n="112" xml:id="l112">Monsieur ; j’ai bien l’honneur de vous saluer !... Conformément à vos désirs, me voici transformé en planteur de la Martinique.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-54">
-            <speaker>TROPICAL.</speaker>
-            <l n="113" xml:id="l113">Vous êtes fort gracieux là-dessous.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-55">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="114" xml:id="l114">Trop bon, monsieur ! trop bon !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-56">
-            <speaker>TROPICAL.</speaker>
-            <l n="115" xml:id="l115">Où sont vos habits ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-57">
-            <speaker>MOUILLEBOUCHE, <em>lui remettant le paquet.</em></speaker>
-            <l n="116" xml:id="l116">Voici le baluchon... le petit baluchon.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-58">
-            <speaker>TROPICAL.</speaker>
-            <l n="117" xml:id="l117">Ah ! vous savez l’argot ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-59">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="118" xml:id="l118">Il est sensible à cette politesse ! </l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="120" xml:id="l120">Mais oui... j’en pince quelquefois... j’en pince le plus que je peux... Tiens, vous avez aussi changé de costume ?... celui-ci vous va merveilleusement... Oh ! mais merveilleusement ! </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="122" xml:id="l122">Flattons ce bandit ! </l>
-          </sp>
-          <sp who="tropical" xml:id="0-60">
-            <speaker>TROPICAL.</speaker>
-            <l n="123" xml:id="l123">Vous trouvez ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-61">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <stage><hi rend="italic">Il est extrêmement <em>rup</em> !</hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-62">
-            <speaker>TROPICAL.</speaker>
-            <l n="125" xml:id="l125">Allons ! allons ! parlons de nos affaires... en français... ça vaudra mieux... Asseyons-nous. </l>
-            <stage><hi rend="italic"><em>Il lui offre le fauteuil de droite, va serrer le paquet dans l’armoire, et revient s’asseoir à gauche.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-63">
-            <speaker>MOUILLEBOUCHE, <em>s’asseyant.</em></speaker>
-            <l n="127" xml:id="l127">Avec plaisir, postillon ! </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="129" xml:id="l129">Il va me faire souscrire une lettre de change.<a href="#_ftn2" name="_ftnref2" title="" id="_ftnref2">[2]</a></l>
-          </sp>
-          <sp who="tropical" xml:id="0-64">
-            <speaker>TROPICAL, <em>qui s’est assis près de lui.</em></speaker>
-            <l n="130" xml:id="l130">Permettez-moi d’abord de vous raconter l’histoire de ma jeunesse...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-65">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="131" xml:id="l131">À quoi bon ?... à quoi bon ?... dites-moi tout de suite ; combien ?... je suis pressé.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-66">
-            <speaker>TROPICAL.</speaker>
-            <l n="132" xml:id="l132">Combien ?... pourquoi faire ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-67">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <stage><hi rend="italic">Pour m’<em>esbigner</em>.</hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-68">
-            <speaker>TROPICAL.</speaker>
-            <l n="134" xml:id="l134">De l’argent !... Ah çà, monsieur, me prenez-vous pour un...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-69">
-            <speaker>MOUILLEBOUCHE, <em>vivement.</em></speaker>
-            <l n="135" xml:id="l135">Je n’attaque pas votre moralité !... </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="137" xml:id="l137">Être obligé de prendre des mitaines ! </l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="139" xml:id="l139">C’est la chose du monde la plus simple... vous m’avez promené en chaise de poste... vous m’avez fait faire un voyage... charmant ! Oh ! mais... charmant ! Nous sommes arrivés, et je vous dis : Postillon, que vous dois je ? que vous dois-je, postillon ?... Il n’y a pas de quoi se fâcher... mauvaise tête ! </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="141" xml:id="l141">Gredin !... canaille !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-70">
-            <speaker>TROPICAL.</speaker>
-            <l n="142" xml:id="l142">Mouillebouche... je vais bien vous étonner.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-71">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="143" xml:id="l143">Je ne demande pas mieux... mais étonnez-moi promptement... ma femme m’attend.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-72">
-            <speaker>TROPICAL.</speaker>
-            <l n="144" xml:id="l144">Je me nomme Anastase Tropical...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-73">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="145" xml:id="l145">Oui...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-74">
-            <speaker>TROPICAL.</speaker>
-            <l n="146" xml:id="l146">Ma jeunesse n’eut rien de remarquable...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-75">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="147" xml:id="l147">Oui. </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="149" xml:id="l149">Il est bavard !... c’est une pie... la pie voleuse !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-76">
-            <speaker>TROPICAL.</speaker>
-            <l n="150" xml:id="l150">Il y a deux ans, je tombai amoureux... amoureux d’une femme !...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-77">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="151" xml:id="l151">Jusqu’à présent, vous ne m’étonnez pas... Continuez.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-78">
-            <speaker>TROPICAL.</speaker>
-            <l n="152" xml:id="l152">La voir, l’aimer... fut l’affaire d’un instant.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-79">
-            <speaker>MOUILLEBOUCHE, <em>à part, s’agitant sur sa chaise.</em></speaker>
-            <l n="153" xml:id="l153">Si c’est pour ça qu’il m’a fait habiller en planteur !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-80">
-            <speaker>TROPICAL.</speaker>
-            <l n="154" xml:id="l154">J’allais demander sa main... et j’apprends qu’elle allait se marier ce matin même... avec un autre... Avec un autre !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-81">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="155" xml:id="l155">C’est affreux !... </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <stage><hi rend="italic">Quelle <em>gazza ladra</em> !</hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-82">
-            <speaker>TROPICAL.</speaker>
-            <l n="158" xml:id="l158">Et cet autre... savez-vous qui ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-83">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="159" xml:id="l159">Non.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-84">
-            <speaker>TROPICAL, <em>d’une voix terrible.</em></speaker>
-            <l n="160" xml:id="l160">Savez-vous qui ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-85">
-            <speaker>MOUILLEBOUCHE, <em>tranquillement.</em></speaker>
-            <l n="161" xml:id="l161">Quand on vous dit que non !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-86">
-            <speaker>TROPICAL, <em>se levant.</em></speaker>
-            <l n="162" xml:id="l162">C’est vous !... vous !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-87">
-            <speaker>MOUILLEBOUCHE, <em>se levant.</em></speaker>
-            <l n="163" xml:id="l163">Hein ?... ma femme !!!</l>
-          </sp>
-          <sp who="tropical" xml:id="0-88">
-            <speaker>TROPICAL.</speaker>
-            <l n="164" xml:id="l164">Elle-même... l’ange de mes rêves... Mais je suis arrivé trop tard, elle était mariée.<a href="#_ftn3" name="_ftnref3" title="" id="_ftnref3">[3]</a></l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-89">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="165" xml:id="l165">C’est bien drôle ! je n’aurais jamais cru que la veuve Baltimore pût devenir l’ange du moindre rêve à quelqu’un !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-90">
-            <speaker>TROPICAL, <em>avec agitation, à lui-même.</em></speaker>
-            <l n="166" xml:id="l166">Mais tout n’est pas fini... je n’abandonne pas la partie !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-91">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="167" xml:id="l167">Et notez... notez qu’elle a une verrue sur le nez comme Cicéron !... C’est bien drôle ! c’est bien drôle !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-92">
-            <speaker>TROPICAL.</speaker>
-            <l n="168" xml:id="l168">Je voulais d’abord vous brûler la cervelle.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-93">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="169" xml:id="l169">Hein ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-94">
-            <speaker>TROPICAL.</speaker>
-            <l n="170" xml:id="l170">Mon second mouvement fut de vous enlever...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-95">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="171" xml:id="l171">Monsieur, puisque vous n’êtes pas un voleur, je vous somme de me rendre ma montre, mon épingle, mes breloques et mon costume de marié !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-96">
-            <speaker>TROPICAL.</speaker>
-            <l n="172" xml:id="l172">Pas si bête !... vous pourriez corrompre mes gens et vous échapper.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-97">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="173" xml:id="l173">Voyons, jeune homme, raisonnons un peu... Votre moyen est bête comme un chou !... En admettant que vous puissiez me verrouiller jusqu’à la fin des siècles, cela ne m’empêchera pas d’être le mari de ma femme... et comme elle ne peut pas en avoir deux... le divorce n’existe plus...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-98">
-            <speaker>TROPICAL.</speaker>
-            <l n="174" xml:id="l174">Oui... mais le veuvage ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-99">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="175" xml:id="l175">Hein ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-100">
-            <speaker>TROPICAL.</speaker>
-            <l n="176" xml:id="l176">Le veuvage existe !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-101">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="177" xml:id="l177">Voudriez-vous trancher le fil de mes jours ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-102">
-            <speaker>TROPICAL.</speaker>
-            <l n="178" xml:id="l178">Oh ! Dieu m’en garde !... Mais je dois vous prévenir que ce pavillon de chasse est entouré de marais...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-103">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="179" xml:id="l179">Je n’a pas envie de chasser le canard !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-104">
-            <speaker>TROPICAL.</speaker>
-            <l n="180" xml:id="l180">De marais... très malsains !... nous avons ici l’été des fièvres... extrêmement pernicieuses !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-105">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="181" xml:id="l181">L’été !... mais heureusement que nous sommes en automne...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-106">
-            <speaker>TROPICAL.</speaker>
-            <l n="182" xml:id="l182">C’est vrai... mais l’été reviendra...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-107">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="183" xml:id="l183">Il reviendra... l’année prochaine.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-108">
-            <speaker>TROPICAL.</speaker>
-            <l n="184" xml:id="l184">Que voulez-vous ? j’attendrai... je suis plein de patience.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-109">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="185" xml:id="l185">Comment ! Est-ce que vous comptez me garder ici toute l’année ?...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-110">
-            <speaker>TROPICAL.</speaker>
-            <l n="186" xml:id="l186">Dame !... vous me paraissez robuste...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-111">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="187" xml:id="l187">Mais c’est horrible !... Ma femme m’attend !... Elle ne s’est pas mariée pour ça !... je proteste !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-112">
-            <speaker>TROPICAL.</speaker>
-            <l n="188" xml:id="l188">C’est inutile !... il y a deux lieues de forêt tout autour...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-113">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="189" xml:id="l189">Je me fiche bien de votre forêt !... je vais me gêner pour votre forêt !... je reproteste !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-114">
-            <speaker>TROPICAL.</speaker>
-            <l n="190" xml:id="l190">Raisonnons... Évidemment il faut que l’un de nous deux fasse place à l’autre.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-115">
-            <speaker>MOUILLEBOUCHE, <em>lui montrant gracieusement la porte.</em></speaker>
-            <l n="191" xml:id="l191">Eh bien, monsieur... allez-vous !... allez-vous en !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-116">
-            <speaker>TROPICAL.</speaker>
-            <l n="192" xml:id="l192">Eh ! mon Dieu !... qui sait ?... ce sera peut-être moi ! car je compte me conduire en adversaire loyal... nous nous battrons à armes égales...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-117">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="193" xml:id="l193">D’abord, monsieur... je ne me bats pas !... je suis marié !... c’est-à-dire...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-118">
-            <speaker>TROPICAL.</speaker>
-            <l n="194" xml:id="l194">Voici mon petit plan : nous partagerons la même nourriture... un pain malfaisant.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-119">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="195" xml:id="l195">Pourquoi malfaisant ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-120">
-            <speaker>TROPICAL.</speaker>
-            <l n="196" xml:id="l196">Nous boirons dans le même verre... l’eau stagnante des mares...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-121">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="197" xml:id="l197">Pouah !</l>
-          <stage>TROPICAL.</stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-122">
-            <speaker>MOUILLEBOUCHE, <em>frissonnant.</em></speaker>
-            <l n="198" xml:id="l198">Eh bien ! il est joli votre petit plan !... Mais c’est un assassinat !...</l>
-          <stage>TROPICAL.</stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-123">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="199" xml:id="l199">Non... un duel... un duel à la fièvre !...</l>
-          <stage>TROPICAL.</stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-124">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="200" xml:id="l200">Sapristi ! cette fenêtre ouverte... je sens déjà le frisson.</l>
-            <l n="201" xml:id="l201">Monsieur, auriez-vous l’extrême obligeance de fermer la fenêtre ? </l>
-          </sp>
-          <sp who="tropical" xml:id="0-125">
-            <speaker>TROPICAL.</speaker>
-            <l n="202" xml:id="l202">Si vous le désirez... mais cela va nous retarder...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-126">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="203" xml:id="l203">Oh ! je ne suis pas pressé. </l>
-            <stage><hi rend="italic"><em>Tropical va fermer la fenêtre du fond. Mouillebouche, à part et grelottant.</em></hi></stage>
-            <l n="205" xml:id="l205">Brrr ! je payerais cher un verre de quinine !...<a href="#_ftn4" name="_ftnref4" title="" id="_ftnref4">[4]</a></l>
-          </sp>
-          <sp who="tropical" xml:id="0-127">
-            <speaker>TROPICAL, <em>prenant les deux flambeaux et lui en offrant un.</em></speaker>
-            <l n="206" xml:id="l206">J’ai l’habitude de me retirer de bonne heure. </l>
-            <stage><hi rend="italic"><em>Très poliment.</em></hi></stage>
-            <l n="208" xml:id="l208">Voici deux chambres... toutes doux également humides... également malsaines... faites-moi l’amitié de choisir.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-128">
-            <speaker>MOUILLEBOUCHE, <em>très poliment.</em></speaker>
-            <l n="209" xml:id="l209">Vous êtes trop bon !... je n’en ferai rien ! </l>
-          </sp>
-          <sp who="tropical" xml:id="0-129">
-            <speaker>TROPICAL, <em>de même.</em></speaker>
-            <l n="210" xml:id="l210">Vous êtes mon hôte... à vous l’honneur !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-130">
-            <speaker>MOUILLEBOUCHE, <em>de même.</em></speaker>
-            <l n="211" xml:id="l211">C’est uniquement pour vous obéir... je prends celle-ci. </l>
-            <stage><hi rend="italic"><em>Montrant la porte de gauche.<a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5"><strong>[5]</strong></a></em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-131">
-            <speaker>TROPICAL, <em>de même.</em></speaker>
-            <l n="213" xml:id="l213">Adieu, mon cher.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-132">
-            <speaker>MOUILLEBOUCHE, <em>de même.</em></speaker>
-            <l n="214" xml:id="l214">Adieu, mon bon !...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="216" xml:id="l216">Canaille ! archicanaille !!!</l>
-          <stage>ENSEMBLE.</stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-133">
-            <speaker>MOUILLEBOUCHE, <em>très brusquement.</em></speaker>
-            <l n="217" xml:id="l217">Hein !</l>
-          <stage>TROPICAL, <em>se retournant.</em></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-134">
-            <speaker>MOUILLEBOUCHE, <em>très gracieux.</em></speaker>
-            <l n="218" xml:id="l218">Sans bruit ! </l>
-            <stage><hi rend="italic"><em>Mouillebouche entre à gauche et Tropical à droite, premier plan.</em></hi></stage>
-            <l n="220" xml:id="l220"> </l>
-            <l n="221" xml:id="l221"> </l>
-            <l n="222" xml:id="l222"> </l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-135">
-            <speaker>MOUILLEBOUCHE, <em>seul</em></speaker>
-            <l n="223" xml:id="l223"> </l>
-            <stage><hi rend="italic"><em>La scène reste un moment vide et dans l’obscurité. Musique à l’orchestre. Mouillebouche revient à pas de loup avec son flambeau, qu’il couvre de sa main.  Jour en scène.</em></hi></stage>
-            <l n="225" xml:id="l225">C’est moi !... Décidément, je ne suis pas à mon aise... je grelotte ! et en grelotant, il m’est venu une idée... oh ! mais, une idée neuve... qui n’a jamais pu germer dans le cerveau d’un prisonnier... Et... cette idée neuve... c’est de m’évader ! Tiens ! je ne suis pas forcé d’accepter le duel baroque de ce monsieur... Je parie que c’est un spadassin qui s’est exercé chez Grisier... à avoir la fièvre... Après tout, j’ai le choix des armes... n’est-ce pas ? il est bien évident que j’ai le choix des armes ?... alors, je choisis la fuite ! </l>
-            <l n="226" xml:id="l226">Tout dort dans la nature... </l>
-            <l n="227" xml:id="l227">Tentons une audacieuse gymnastique. Ô Latude!... ô Latude ! je t’invoque en ce péril extrême... en ce moment suprême !</l>
-            <stage><hi rend="italic"><em>Air de Fra Diavolo. </em></hi></stage>
-            <stage><hi rend="italic"><em>La musique continue en sourdine. Il passe une jambe sur le balcon.</em></hi></stage>
-            <l n="230" xml:id="l230"> </l>
-            <l n="231" xml:id="l231"> </l>
-            <l n="232" xml:id="l232"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-136">
-            <speaker>MOUILLEBOUCHE, TROPICAL</speaker>
-            <l n="233" xml:id="l233"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-137">
-            <speaker>TROPICAL, <em>sortant de sa chambre, à part.</em></speaker>
-            <l n="234" xml:id="l234">J’ai entendu remuer...</l>
-            <stage><hi rend="italic"><em>Apercevant Mouillebouche.</em></hi></stage>
-            <l n="236" xml:id="l236">Mon prisonnier ! </l>
-            <stage><hi rend="italic"><em>Il pousse des aboiements furieux en se cachant derrière le battant de la porte.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-138">
-            <speaker>MOUILLEBOUCHE, <em>se retirant du balcon.</em></speaker>
-            <l n="238" xml:id="l238">Bigre !... une meute sous la fenêtre !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-139">
-            <speaker>TROPICAL, <em>se montrant.</em></speaker>
-            <l n="239" xml:id="l239">Que faites-vous donc, voisin ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-140">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="240" xml:id="l240">Moi ?... rien... je respirais la brise embaumée du soir... en murmurant un virelay moderne... </l>
-            <stage><hi rend="italic"><em>Il chantonne la fin de l’air.</em></hi></stage>
-            <stage><hi rend="italic"><em>S’interrompant tout à coup.</em></hi></stage>
-            <l n="243" xml:id="l243">Il paraît que vous avez quelques chiens là-dessous ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-141">
-            <speaker>TROPICAL.</speaker>
-            <l n="244" xml:id="l244">J’en ai trente-deux.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-142">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="245" xml:id="l245">Autant que de dents... c’est charmant !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-143">
-            <speaker>TROPICAL.</speaker>
-            <l n="246" xml:id="l246">Il y a trois jours, ils ont mangé un piqueur.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-144">
-            <speaker>MOUILLEBOUCHE, <em>s’éloignant vivement de la fenêtre.</em></speaker>
-            <l n="247" xml:id="l247">Ah ! c’est charm... </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="249" xml:id="l249">Cristi !... si je pouvais écrire au procureur de la république ! </l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="251" xml:id="l251">Vous n’auriez pas une feuille de papier glacé ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-145">
-            <speaker>TROPICAL.</speaker>
-            <l n="252" xml:id="l252">Pourquoi faire ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-146">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="253" xml:id="l253">Pour y déposer quelques vers !... Les chiens, la campagne, la fièvre... le piqueur mangé... tout cela m’inspire... Bath ! j’ai envie de faire un sonnet.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-147">
-            <speaker>TROPICAL, <em>riant.</em></speaker>
-            <l n="254" xml:id="l254">Un sonnet... pour qui ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-148">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="255" xml:id="l255">Mais... pour cette pauvre veuve Baltimore...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-149">
-            <speaker>TROPICAL.</speaker>
-            <l n="256" xml:id="l256">Qu’est-ce que c’est que ça ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-150">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="257" xml:id="l257">Vous savez bien... ma femme...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-151">
-            <speaker>TROPICAL, <em>le prenant à la gorge.</em></speaker>
-            <l n="258" xml:id="l258">Hein ?... qu’est-ce que vous dites ?... répétez !<a href="#_ftn6" name="_ftnref6" title="" id="_ftnref6">[6]</a></l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-152">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="259" xml:id="l259">Aïe !... ma femme ! elle a une verrue !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-153">
-            <speaker>TROPICAL, <em>le secouant.</em></speaker>
-            <l n="260" xml:id="l260">Elle s’appelle Baltimore ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-154">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="261" xml:id="l261">Comme Cicéron !... Aïe !... lâchez donc ! </l>
-          </sp>
-          <sp who="tropical" xml:id="0-155">
-            <speaker>TROPICAL, <em>furieux.</em></speaker>
-            <l n="262" xml:id="l262">Sapristi ! j’ai pris un marié pour l’autre ! je me suis trompé de Mouillebouche !... il y en a donc deux ?... Répondez !... il y en a donc deux ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-156">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="263" xml:id="l263">Quoi ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-157">
-            <speaker>TROPICAL.</speaker>
-            <l n="264" xml:id="l264">Animal !... Pourquoi vous êtes-vous laisser enlever ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-158">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="265" xml:id="l265">Ah ! il est joli, celui-là !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-159">
-            <speaker>TROPICAL.</speaker>
-            <l n="266" xml:id="l266">C’est vrai ! ça ne se défend pas plus qu’un colis de sucre brut !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-160">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="267" xml:id="l267">Mais vos pistolets ?...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-161">
-            <speaker>TROPICAL.</speaker>
-            <l n="268" xml:id="l268">Qu’importe ! on crie !... on beugle !... on mord... et pendant que je remorquais cette grosse embarcation... le mariage de l’autre se consommait !... Imbécile !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-162">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="269" xml:id="l269">Ah ! mais, monsieur !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-163">
-            <speaker>TROPICAL, <em>à lui-même.</em></speaker>
-            <l n="270" xml:id="l270">Je n’ai pas une minute à perdre !... Je repars.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-164">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="271" xml:id="l271">Et moi ?<a href="#_ftn7" name="_ftnref7" title="" id="_ftnref7">[7]</a></l>
-          </sp>
-          <sp who="tropical" xml:id="0-165">
-            <speaker>TROPICAL.</speaker>
-            <l n="272" xml:id="l272">Est-ce que vous croyez que j’ai envie de vous prendre en pension ?... Allez au diable !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-166">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="273" xml:id="l273">Je ne connais pas les chemins... je ne sais pas où je suis...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-167">
-            <speaker>TROPICAL.</speaker>
-            <l n="274" xml:id="l274">Dans un quart d’heure la voiture sera attelée... et dans deux heures, je serai à Paris... Si vous êtes prêt, je vous charge ! </l>
-            <stage><hi rend="italic"><em>Il remonte.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-168">
-            <speaker>MOUILLEBOUCHE, <em>offensé.</em></speaker>
-            <l n="276" xml:id="l276">Je vous charge !<a href="#_ftn8" name="_ftnref8" title="" id="_ftnref8">[8]</a></l>
-          </sp>
-          <sp who="tropical" xml:id="0-169">
-            <speaker>TROPICAL, <em>ouvrant l’armoire.</em></speaker>
-            <l n="277" xml:id="l277">Tenez, voilà vos habits, votre montre, votre épingle, vos breloques... vous me retrouverez dans la cour.<a href="#_ftn9" name="_ftnref9" title="" id="_ftnref9">[9]</a></l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-170">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="278" xml:id="l278">Bien... Ayez l’obligeance de serrer vos trente-deux chiens !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-171">
-            <speaker>TROPICAL.</speaker>
-            <l n="279" xml:id="l279">Oh ! je, devrais déjà être à Paris ! </l>
-            <l n="280" xml:id="l280">Animal !... brute !... crétin !</l>
-            <l n="281" xml:id="l281"> </l>
-            <l n="282" xml:id="l282"> </l>
-            <l n="283" xml:id="l283"> </l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-172">
-            <speaker>MOUILLEBOUCHE, <em>seul, remettant sa montre et son épingle</em></speaker>
-            <l n="284" xml:id="l284"> </l>
-            <l n="285" xml:id="l285">Animal ! brute ! crétin !</l>
-            <stage><hi rend="italic"><em>À la cantonade.</em></hi></stage>
-            <l n="287" xml:id="l287">Je ne pense pas un mot de ce que tu dis là !... À Paris !... il paraît que nous allons à Paris !... Ce n’est pas mon chemin... je vais à Château-Thierry ; car il n’est pas supposable que la récente madame Mouillebouche m’attende encore dans la sacristie... avec le bedeau et nos dix-neuf témoins... Elle aura filé sur Château-Thierry dans l’espoir d’y retrouver son épouse. Pauvre poule !... Elle doit faire un drôle de nez... avec sa verrue ! – Et cet ex-postillon qui veut me charger pour Paris !... Un éclair !... Si je lui soufflais sa chaise de poste !... c’est-à-dire ma chaise de poste !... Je vais me tapir dans le creux d’un vieil arbre. </l>
-            <stage><hi rend="italic"><em>Avec malice très fine.</em></hi></stage>
-            <stage><hi rend="italic">Et tandis... remarquez bien... tandis qu’il me cherchera... v’lan ! je sors de mon creux... et crac ! je <em>m’enchaise</em> !... C’est incroyable comme il m’arrive quelquefois des fourberies à la Scapin !... Parole d’honneur, je devrais faire des comédies ! </hi></stage>
-            <stage><hi rend="italic"><em>Cherchant à ouvrir la porte.</em></hi></stage>
-            <l n="291" xml:id="l291">Ah ! bigre !... il a fermé la porte !... Il y a bien la fenêtre... c’est que je ne sais pas s’il a pensé à serrer ses trente-deux chiens... Ils n’ont mangé qu’un piqueur depuis trois jours... ils doivent avoir faim.</l>
-            <stage><hi rend="italic"><em>S’approchant de la fenêtre et d’une petite, voix caressante.</em></hi></stage>
-            <l n="293" xml:id="l293">Petits !... petits !... petits !... Oh ! les beaux toutous !... oh ! les beaux toutous ! </l>
-            <stage><hi rend="italic"><em>Au public.</em></hi></stage>
-            <l n="295" xml:id="l295">Je n’entends rien. </l>
-            <stage><hi rend="italic"><em>Les agaçant.</em></hi></stage>
-            <l n="297" xml:id="l297">Xsi !... Xsi !... mords-le !... </l>
-            <l n="298" xml:id="l298">Je n’entends rien... j’ai envie de me risquer. </l>
-            <l n="299" xml:id="l299">Je me risque. </l>
-            <l n="300" xml:id="l300">Oh ! les beaux toutous !... ah ! les beaux toutous !...</l>
-            <l n="301" xml:id="l301"> </l>
-            <l n="302" xml:id="l302"> </l>
-            <l n="303" xml:id="l303"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-173">
-            <speaker>MOUILLEBOUCHE, TROPICAL</speaker>
-            <l n="304" xml:id="l304"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-174">
-            <speaker>TROPICAL, <em>entrant vivement.</em></speaker>
-            <l n="305" xml:id="l305">Eh bien ! est-ce que vous êtes sourd ! voilà un quart d’heure que je vous appelle !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-175">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="306" xml:id="l306">Pincé !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-176">
-            <speaker>TROPICAL.</speaker>
-            <l n="307" xml:id="l307">Qu’est-ce que vous faites là ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-177">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="308" xml:id="l308">Je continuais à respirer la brise embaumée du soir, en terminant mon virelay moderne... </l>
-            <stage><hi rend="italic"><em>Fredonnant.</em></hi></stage>
-            <l n="310" xml:id="l310">Ah ! -a-a-a-ah ! ah ! ah ! ah !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-178">
-            <speaker>TROPICAL, <em>fermant la fenêtre.</em></speaker>
-            <l n="311" xml:id="l311">Allons, en route !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-179">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="312" xml:id="l312">Monsieur, j’ai une prière à vous adresser...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-180">
-            <speaker>TROPICAL.</speaker>
-            <l n="313" xml:id="l313">Quoi ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-181">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="314" xml:id="l314">Ça vous détournerait peut-être d’une petite quinzaine de lieues... Ce serait, en vous en allant à Paris, de me déposer à Château-Thierry.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-182">
-            <speaker>TROPICAL.</speaker>
-            <l n="315" xml:id="l315">Monsieur, vous moquez-vous de moi ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-183">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="316" xml:id="l316">Mais, monsieur, ma famille m’attend... il y a non-seulement ma femme, qui doit faire un nez !... mais mon fils, Mouillebouche fils...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-184">
-            <speaker>TROPICAL.</speaker>
-            <l n="317" xml:id="l317">Qu’est-ce que ça me fait ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-185">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="318" xml:id="l318">Et ma pupille, Bérénice Chandelier...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-186">
-            <speaker>TROPICAL, <em>vivement.</em></speaker>
-            <l n="319" xml:id="l319">Hein ? Bérénice !... c’est votre pupille !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-187">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="320" xml:id="l320">Chandelier, oui, monsieur...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-188">
-            <speaker>TROPICAL, <em>avec transport.</em></speaker>
-            <l n="321" xml:id="l321">Ah ! quel bonheur !... Si vous saviez !...</l>
-            <stage><hi rend="italic"><em>Il ôte son chapeau et met un gant.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-189">
-            <speaker>MOUILLEBOUCHE, <em>intrigué.</em></speaker>
-            <l n="323" xml:id="l323">Qu’est-ce qu’il fait.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-190">
-            <speaker>TROPICAL, <em>avec respect.</em></speaker>
-            <l n="324" xml:id="l324">Monsieur, j’ai l’honneur de vous demander la main de mademoiselle Bérénice, votre pupille.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-191">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="325" xml:id="l325">Vous !... Ah ! par exemple ! un polisson qui m’a enlevé !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-192">
-            <speaker>TROPICAL.</speaker>
-            <l n="326" xml:id="l326">C’est elle que j’aime !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-193">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="327" xml:id="l327">Tant mieux ! tu ne l’auras pas !... Ah ! je suis ravi de cette circonstance ! je la garde pour mon fils, Mouillebouche fils, qui doit l’épouser demain.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-194">
-            <speaker>TROPICAL.</speaker>
-            <l n="328" xml:id="l328">Ah ! c’est lui !... Il ne l’épousera pas !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-195">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="329" xml:id="l329">Pourquoi ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-196">
-            <speaker>TROPICAL.</speaker>
-            <l n="330" xml:id="l330">Pour qu’une pupille se marie, il faut le consentement de son tuteur.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-197">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="331" xml:id="l331">Eh bien, je le donnerai !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-198">
-            <speaker>TROPICAL.</speaker>
-            <l n="332" xml:id="l332">Pour qu’un fils se marie, il faut le consentement de son père !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-199">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="333" xml:id="l333">Je le donnerai, monsieur !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-200">
-            <speaker>TROPICAL, <em>reprenant son pistolet et lui enlevant son chapeau.</em></speaker>
-            <l n="334" xml:id="l334">Monsieur, votre montre, s’il vous plaît ? </l>
-            <stage><hi rend="italic"><em>Il lui présente le chapeau.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-201">
-            <speaker>MOUILLEBOUCHE, <em>jetant les objets dans le chapeau.</em></speaker>
-            <l n="336" xml:id="l336">Nous allons recommencer !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-202">
-            <speaker>TROPICAL.</speaker>
-            <l n="337" xml:id="l337">Votre épingle, vos breloques ! vos habits ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-203">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="338" xml:id="l338">Avec plaisir, postillon !... </l>
-          </sp>
-          <sp who="tropical" xml:id="0-204">
-            <speaker>TROPICAL,<em> serrant les objets dans l’armoire, revenant, et avec respect.<a href="#_ftn10" name="_ftnref10" title="" id="_ftnref10"><strong>[10]</strong></a></em></speaker>
-            <l n="339" xml:id="l339">Monsieur, j’ai l’honneur de vous demander, pour la seconde fois, la main de mademoiselle Bérénice, votre pupille...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-205">
-            <speaker>MOUILLEBOUCHE, <em>hors de lui.</em></speaker>
-            <l n="340" xml:id="l340">Toi !... va te faire poser les sangsues !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-206">
-            <speaker>TROPICAL.</speaker>
-            <l n="341" xml:id="l341">Très bien !...je ferme et reverrouille ! </l>
-            <stage><hi rend="italic"><em>Il ferme la porte et met la clef dans sa poche.<a href="#_ftn11" name="_ftnref11" title="" id="_ftnref11"><strong>[11]</strong></a></em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-207">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="343" xml:id="l343">Ah ! c’est comme çà qu’il crois me faire céder ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-208">
-            <speaker>TROPICAL</speaker>
-            <l n="344" xml:id="l344">Parbleu ! je ne vous garde que pour ça !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-209">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="345" xml:id="l345">Et comment t’y prendras-tu ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-210">
-            <speaker>TROPICAL.</speaker>
-            <l n="346" xml:id="l346">Je n’en sais rien... l’homme est si girouette ! j’attendrai... je suis très patient.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-211">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="347" xml:id="l347">Et moi donc ! Ah ! tu ne me connais pas ! je prends mon parti ! j’accepte mes fers ! j’accepte la fièvre !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-212">
-            <speaker>TROPICAL, <em>le câlinant.</em></speaker>
-            <l n="348" xml:id="l348">Voyons, père Mouillebouche !...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-213">
-            <speaker>MOUILLEBOUCHE, <em>avec dignité.</em></speaker>
-            <l n="349" xml:id="l349">Je ne suis pas père Mouillebouche !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-214">
-            <speaker>TROPICAL.</speaker>
-            <l n="350" xml:id="l350">Puisque vous avez un fils...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-215">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="351" xml:id="l351">Ce n’est pas une raison !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-216">
-            <speaker>TROPICAL.</speaker>
-            <l n="352" xml:id="l352">Faisons la paix ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-217">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="353" xml:id="l353">Jamais !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-218">
-            <speaker>TROPICAL.</speaker>
-            <l n="354" xml:id="l354">Voulez-vous un petit verre de malaga ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-219">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="355" xml:id="l355">Tu m’ennuies !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-220">
-            <speaker>TROPICAL.</speaker>
-            <l n="356" xml:id="l356">Avec un biscuit ?...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-221">
-            <speaker>MOUILLEBOUCHE, <em>avec un profond dédain.</em></speaker>
-            <l n="357" xml:id="l357">Un biscuit !... tu crois que je vais troquer ma pupille contre un biscuit !... Ô trois fois insensé ! je vais me coucher !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-222">
-            <speaker>TROPICAL.</speaker>
-            <l n="358" xml:id="l358">Prenez mon lit... je vais vous faire du feu...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-223">
-            <speaker>MOUILLEBOUCHE, <em>avec dignité.</em></speaker>
-            <l n="359" xml:id="l359">Je ne veux rien !... je préfère frissonner dans mon cachot... Môsieur !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-224">
-            <speaker>TROPICAL.</speaker>
-            <l n="360" xml:id="l360">Père Mouillebouche ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-225">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="361" xml:id="l361">Non ! non ! non !!! Ne m’approche pas, garnement, ne m’approche pas !... </l>
-            <stage><hi rend="italic"><em>Il rentre avec dignité.</em></hi></stage>
-            <l n="363" xml:id="l363"> </l>
-            <l n="364" xml:id="l364"> </l>
-            <l n="365" xml:id="l365"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-226">
-            <speaker>TROPICAL, <em>seul</em></speaker>
-            <l n="366" xml:id="l366"> </l>
-            <l n="367" xml:id="l367">Ça ne prend pas... ce gros mastodonte est têtu comme un mulet... Comment le décider à m’accorder Bérénice ?... car il me la faut !...je la veux ! je m’entête ! </l>
-            <stage><hi rend="italic"><em>Courant à la porte et criant.</em></hi></stage>
-            <l n="369" xml:id="l369">Monsieur !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-227">
-            <speaker>MOUILLEBOUCHE, <em>dans la coulisse.</em></speaker>
-            <l n="370" xml:id="l370">Quoi ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-228">
-            <speaker>TROPICAL.</speaker>
-            <l n="371" xml:id="l371">Pour la troisième fois, j’ai l’honneur de vous demander...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-229">
-            <speaker>MOUILLEBOUCHE, <em>dans la coulisse.</em></speaker>
-            <l n="372" xml:id="l372">Ah !... si tu savais quel zut je t’envoie !!! </l>
-          </sp>
-          <sp who="tropical" xml:id="0-230">
-            <speaker>TROPICAL.</speaker>
-            <l n="373" xml:id="l373">Merci... je m’y attendais. </l>
-            <l n="374" xml:id="l374">Ah ! c’est comme çà ! tu refuses mes câlineries, mon malaga et mes petits soins !... On veut le dorloter, et tu mords ! très bien !... il est des animaux coriaces dont on n’entame l’épiderme qu’avec le canon... Nous allons tirer le canon !</l>
-            <l n="375" xml:id="l375">Hein ?... il dort !... il ronfle !... </l>
-            <l n="376" xml:id="l376">Tu me refuses Bérénice, et tu oses ronfler, homme sans pudeur !</l>
-            <l n="377" xml:id="l377">Oui... oui... je suis à toi, mon bon !... </l>
-            <l n="378" xml:id="l378">Nous allons tirer le canon ! </l>
-            <stage><hi rend="italic"><em>Il tape de toutes ses forces, sur le piano, l’air de : </em>Marie, trempe ton pain, etc., etc.<em> ; et recommence plusieurs fois les mêmes mesures.</em></hi></stage>
-            <l n="380" xml:id="l380"> </l>
-            <l n="381" xml:id="l381"> </l>
-            <l n="382" xml:id="l382"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-231">
-            <speaker>TROPICAL, MOUILLEBOICHE</speaker>
-            <l n="383" xml:id="l383"> </l>
-            <stage><hi rend="italic"><em>Tropical continue à jouer du piano. Mouillebouche entre en caleçon, en bonnet de colon, et vient tout doucement s’asseoir sûr une chaise qu’il apporte de sa chambre, et qu’il place au milieu. Il a un lorgnon suspendu à son cou par un cordon noir.<a href="#_ftn12" name="_ftnref12" title="" id="_ftnref12"><strong>[12]</strong></a></em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-232">
-            <speaker>TROPICAL, <em>à part.</em></speaker>
-            <l n="385" xml:id="l385">Le voici !</l>
-            <stage><hi rend="italic"><em>Il chante à tue-tête, en jouant l’air. </em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-233">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="387" xml:id="l387">Cristi ! que j’ai envie de dormir !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-234">
-            <speaker>TROPICAL, <em>se retournant vers Mouillebouche.</em></speaker>
-            <l n="388" xml:id="l388">Monsieur, pour la quatrième fois, j’ai l’honneur...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-235">
-            <speaker>MOUILLEBOUCHE, <em>d’un ton aimable et le lorgnant.</em></speaker>
-            <l n="389" xml:id="l389">Continuez, jeune homme, j’aime beaucoup cet air-là.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-236">
-            <speaker>TROPICAL.</speaker>
-            <l n="390" xml:id="l390">Ah !... cela vous amuse ?... soit ! </l>
-            <stage><hi rend="italic"><em>Il tape sur le piano avec rage, et chante.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-237">
-            <speaker>MOUILLEBOUCHE, <em>chantant aussi.</em></speaker>
-            <stage><hi rend="italic"><em>Parlé.</em></hi></stage>
-            <l n="393" xml:id="l393">Vous le jouez un peu lentement.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="395" xml:id="l395">Nous avons changé d’armes... c’est un duel au piano... mais je ne céderai pas, morbleu !... Cristi ! que j’ai envie de dormir !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-238">
-            <speaker>TROPICAL.</speaker>
-            <l n="396" xml:id="l396">Vous aimez la musique ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-239">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="397" xml:id="l397">Énormément ! surtout quand elle me réveille en sursaut... Je me disais en m’endormant : Mon Dieu ! mon Dieu ! que je serais donc content si Tropical pouvait me réveiller en sursaut, en jouant la jolie romance de :</l>
-            <l n="398" xml:id="l398">Je ferais des bassesses pour cet air-là ! Voulez-vous le recommencer ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-240">
-            <speaker>TROPICAL, <em>à part, se levant.</em></speaker>
-            <l n="399" xml:id="l399">Le vieux singe se moque de moi ? Au diable !!!</l>
-            <stage><hi rend="italic"><em>Il se promène avec dépit.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-241">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="401" xml:id="l401">Vous ne jouez plus... À mon tour... voulez-vous permettre ?... </l>
-            <stage><hi rend="italic"><em>Il s’assied devant le piano.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-242">
-            <speaker>TROPICAL.</speaker>
-            <l n="403" xml:id="l403">Comment ! vous allez jouer du piano ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-243">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="404" xml:id="l404">Vous avez été si gracieux... je vous dois bien ça...<a href="#_ftn13" name="_ftnref13" title="" id="_ftnref13">[13]</a></l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="406" xml:id="l406">Je le bats à plate couture !... Cristi ! que j’ai envie de dormir !... </l>
-          </sp>
-          <sp who="tropical" xml:id="0-244">
-            <speaker>TROPICAL, <em>à part.</em></speaker>
-            <l n="407" xml:id="l407">Ah ! mais il m’agace !... Qu’est-ce que je pourrais donc lui faire ?... je vais l’enrhumer ! </l>
-            <stage><hi rend="italic"><em>Il ouvre la fenêtre.</em></hi></stage>
-            <l n="409" xml:id="l409">Mouillebouche, devant le piano. Je n’ai qu’un bien faible talent... mais à la campagne !... </l>
-            <stage><hi rend="italic"><em>Il chante en s’accompagnant.</em></hi></stage>
-            <l n="411" xml:id="l411">Tiens ! vous ouvrez la fenêtre ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-245">
-            <speaker>TROPICAL.</speaker>
-            <l n="412" xml:id="l412">Ça vous incommode ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-246">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="413" xml:id="l413">Du tout ! </l>
-            <l n="414" xml:id="l414">J’allais vous en prier... j’adore m’enrhumer du cerveau... ça occupe l’esprit. </l>
-            <l n="415" xml:id="l415">Je ne te céderai pas, gredin. </l>
-          </sp>
-          <sp who="tropical" xml:id="0-247">
-            <speaker>TROPICAL.</speaker>
-            <l n="416" xml:id="l416">Dieu vous bénisse !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-248">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="417" xml:id="l417">Merci !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-249">
-            <speaker>TROPICAL.</speaker>
-            <l n="418" xml:id="l418">Monsieur, pour la cinquième fois, j’ai l’honneur...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-250">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="419" xml:id="l419">Oui, monsieur, je crois que nous aurons énormément d’abricots cette année. </l>
-            <stage><hi rend="italic"><em>Il bâille.</em></hi></stage>
-            <l n="421" xml:id="l421">Cristi ! que j’ai envie de dormir !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-251">
-            <speaker>TROPICAL.</speaker>
-            <l n="422" xml:id="l422">Vous baillez ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-252">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="423" xml:id="l423">C’est déplaisir... </l>
-            <stage><hi rend="italic"><em>En s’assoupissant.</em></hi></stage>
-            <l n="425" xml:id="l425">Je m’amuse prodigieusement... prodigieusement...</l>
-            <stage><hi rend="italic"><em>Il s’endort en fredonnant.</em></hi></stage>
-            <stage><hi rend="italic"><em>Il ronfle.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-253">
-            <speaker>TROPICAL.</speaker>
-            <l n="428" xml:id="l428">Le voilà parti !... Je me suis laissé dire qu’on apprivoisait les rhinocéros en les privant de sommeil... Je suis curieux d’éclaircir ce point d’histoire naturelle. </l>
-            <stage><hi rend="italic"><em>Il prend une corde dans le carnier et l’attache à la jambe gauche de Mouillebouche.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-254">
-            <speaker>MOUILLEBOUCHE, <em>se réveillant.</em></speaker>
-            <l n="430" xml:id="l430">Hein ! quoi ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-255">
-            <speaker>TROPICAL.</speaker>
-            <l n="431" xml:id="l431">Ne vous dérangez pas ?... je vous attache... vous pourriez vous échapper !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-256">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="432" xml:id="l432">Ah ! charmant ! charmant ! il n’y a rien que j’adore pour dormir comme d’avoir une ficelle à la jambe gauche !... j’ai toujours envié le sort des hannetons. </l>
-            <stage><hi rend="italic"><em>Il se rendort.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-257">
-            <speaker>TROPICAL, <em>à part.</em></speaker>
-            <l n="434" xml:id="l434">C’est ce que nous allons voir. </l>
-            <stage><hi rend="italic"><em>Il a été s’asseoir à droite. Il tient l’autre bout de la ficelle.</em></hi></stage>
-            <l n="436" xml:id="l436">Il s’est rendormi... </l>
-            <stage><hi rend="italic"><em>Il tire la ficelle.</em></hi></stage>
-            <l n="438" xml:id="l438">Monsieur ! monsieur !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-258">
-            <speaker>MOUILLEBOUCHE, <em>se réveillant.</em></speaker>
-            <l n="439" xml:id="l439">Délicieux ! délicieux ! </l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="441" xml:id="l441">Nous avons encore changé d’armes... c’est un duel à la ficelle... Polisson ! </l>
-            <stage><hi rend="italic"><em>Il se rendort.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-259">
-            <speaker>TROPICAL, <em>tirant la ficelle.</em></speaker>
-            <l n="443" xml:id="l443">Monsieur !... monsieur !...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-260">
-            <speaker>MOUILLEBOUCHE, <em>se réveillant.</em></speaker>
-            <l n="444" xml:id="l444">Charmante soirée !... charmante soirée !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-261">
-            <speaker>TROPICAL.</speaker>
-            <l n="445" xml:id="l445">Vous ne connaîtriez pas la recette pour conserver les petits pois ?...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-262">
-            <speaker>MOUILLEBOUCHE, <em>à moitié endormi.</em></speaker>
-            <l n="446" xml:id="l446">Parfaitement... parfaitement... Vous les faites bouillir... c’est-à-dire cuire... non bouillir... et... voilà la recette ! </l>
-            <stage><hi rend="italic"><em>Il s’endort. Tropical s’est endormi. Un ronflement de ce dernier réveille Mouillebouche.</em></hi></stage>
-            <l n="448" xml:id="l448">Hein ?... ah ! il est joli celui-là... Il croit que je vais le laisser dormir !... Mon bon ami, tu as tiré le premier... j’ai essuyé ton feu... à mon tour ! </l>
-            <stage><hi rend="italic"><em>Tirant la ficelle.</em></hi></stage>
-            <l n="450" xml:id="l450">Voisin ?... Voisin ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-263">
-            <speaker>TROPICAL, <em>se réveillant.</em></speaker>
-            <l n="451" xml:id="l451">Hein ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-264">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="452" xml:id="l452">Pardon... je crois que j’ai oublié de vous souhaiter le bonsoir ?...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-265">
-            <speaker>TROPICAL.</speaker>
-            <l n="453" xml:id="l453">Bonsoir ! bonsoir ! </l>
-            <stage><hi rend="italic"><em>Il s’endort.</em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-266">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="455" xml:id="l455">Je continue à le battre à plate couture ! Il ronfle comme un buffle !... Parbleu ! je suis bien bête de rester là avec ma ficelle à la patte !... Il me vient encore une fourberie à la Scapin ! </l>
-            <stage><hi rend="italic"><em>Il entonne un ronflement pendant lequel il attache la ficelle au pied de son fauteuil, puis il se dirige vers l’armoire à pas de loup, toujours en ronflant. Musique en sourdine à l’orchestre.</em></hi></stage>
-            <l n="457" xml:id="l457">Mon paquet... mes breloques...</l>
-            <stage><hi rend="italic"><em>Il les prend et s’approche de Tropical en adoucissant son ronflement.</em></hi></stage>
-            <l n="459" xml:id="l459">La clef !...</l>
-            <stage><hi rend="italic"><em>Il la prend dans la poche de Tropical.</em></hi></stage>
-            <l n="461" xml:id="l461">Je la tiens ! </l>
-            <stage><hi rend="italic"><em>Il gagne la porte et l’ouvre, toujours en ronflant.</em></hi></stage>
-            <l n="463" xml:id="l463">Et maintenant, polisson, je vais te chiper ta chaise de poste ! </l>
-            <stage><hi rend="italic"><em>Il pousse un dernier ronflement, et sort en fermant brusquement la porte en dehors.</em></hi></stage>
-            <l n="465" xml:id="l465"> </l>
-            <l n="466" xml:id="l466"> </l>
-            <l n="467" xml:id="l467"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-267">
-            <speaker>TROPICAL, <em>seul, puis la voix de</em> MOUILLEBOUCHE</speaker>
-            <l n="468" xml:id="l468"> </l>
-            <stage><hi rend="italic"><em>Le bruit de la serrure réveille Tropical en sursaut.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-268">
-            <speaker>TROPICAL.</speaker>
-            <l n="470" xml:id="l470">Hein ? Monsieur, pour la sixième fois... </l>
-            <stage><hi rend="italic"><em>Il tire vivement la ficelle, le fauteuil vient à lui.</em></hi></stage>
-            <l n="472" xml:id="l472">Personne !... il s’est échappé !... </l>
-            <stage><hi rend="italic"><em>Il court à la porte.</em></hi></stage>
-            <l n="474" xml:id="l474">Mouillebouche !... père Mouillebouche !... Fermée !... Ma clef !... </l>
-            <l n="475" xml:id="l475">Il l’a volée ! tout est perdu !... </l>
-            <l n="476" xml:id="l476">Le voilà !... sur le marchepied de la chaise de poste !... Monsieur !... Monsieur !...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-269">
-            <speaker><em>Voix de</em> MOUILLEBOUCHE.</speaker>
-            <l n="477" xml:id="l477">Adieu, galopin !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-270">
-            <speaker>TROPICAL.</speaker>
-            <l n="478" xml:id="l478">Ah ! mon Dieu ! que faire ? </l>
-            <l n="479" xml:id="l479">Oh ! </l>
-            <l n="480" xml:id="l480">Arrêtez... ou je tire ! </l>
-            <l n="481" xml:id="l481">Il n’est pas chargé, ça ne fait rien !...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-271">
-            <speaker>MOUILLEBOUCHE, <em>effrayé.</em></speaker>
-            <l n="482" xml:id="l482">Monsieur, pas de bêtises !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-272">
-            <speaker>TROPICAL.</speaker>
-            <l n="483" xml:id="l483">Remonte ou je tire !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-273">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="484" xml:id="l484">Voilà !... Ôtez votre fusil, sacristie !... je vais faire le tour...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-274">
-            <speaker>TROPICAL.</speaker>
-            <l n="485" xml:id="l485">Non... par ici... le long de ce treillage... je ne veux pas te perdre de vue !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-275">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="486" xml:id="l486">Je ne pourrai jamais grimper...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-276">
-            <speaker>TROPICAL, <em>l’ajustant.</em></speaker>
-            <l n="487" xml:id="l487">Grimpe ou je tire.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-277">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="488" xml:id="l488">Voila ! voilà ! </l>
-            <stage><hi rend="italic"><em>Jetant un cri.</em></hi></stage>
-            <l n="490" xml:id="l490">Aïe !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-278">
-            <speaker>TROPICAL.</speaker>
-            <l n="491" xml:id="l491">Quoi donc ?</l>
-            <l n="492" xml:id="l492"> </l>
-            <l n="493" xml:id="l493"> </l>
-            <l n="494" xml:id="l494"> </l>
-          </sp>
-          <sp who="tropical" xml:id="0-279">
-            <speaker>TROPICAL <em>et</em> MOUILLEBOUCHE</speaker>
-            <l n="495" xml:id="l495"> </l>
-            <stage><hi rend="italic"><em>Mouillebouche arrive par le balcon en tenant la main sur ses yeux. Il a son habit couvert de plâtre et est en caleçon.<a href="#_ftn14" name="_ftnref14" title="" id="_ftnref14"><strong>[14]</strong></a></em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-280">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="497" xml:id="l497">Ah ! crédié ! ah ! crédié !... que le diable emporte votre mur !...il m’est tombé du plâtre dans l’œil !...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-281">
-            <speaker>TROPICAL.</speaker>
-            <l n="498" xml:id="l498">Ah ! pauvre bonhomme !... Mouchez-vous !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-282">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="499" xml:id="l499">Je ne peux pas me moucher les yeux, imbécile ! </l>
-            <stage><hi rend="italic"><em>Se frottant.</em></hi></stage>
-            <l n="501" xml:id="l501">Holà... là... là !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-283">
-            <speaker>TROPICAL.</speaker>
-            <l n="502" xml:id="l502">Attendez, je vais vous mettre une clef dans le dos...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-284">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="503" xml:id="l503">Une clef ! c’est pour le hoquet !... Cristi ! cristi !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-285">
-            <speaker>TROPICAL.</speaker>
-            <l n="504" xml:id="l504">Ça vous picote ?... Frottez-vous l’autre ! </l>
-            <stage><hi rend="italic"><em>Apportant un verre d’eau.</em></hi></stage>
-            <l n="506" xml:id="l506">Tenez, un peu d’eau fraîche !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-286">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="507" xml:id="l507">Non !... Tropical... soufflez-moi dans l’œil !... ferme !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-287">
-            <speaker>TROPICAL.</speaker>
-            <l n="508" xml:id="l508">Avec plaisir !... </l>
-            <stage><hi rend="italic"><em>Il gonfle ses joues pour souffler, puis s’arrête tout à coup.</em></hi></stage>
-            <l n="510" xml:id="l510">Un instant ! – Monsieur, pour la septième fois, j’ai l’honneur de vous demander...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-288">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="511" xml:id="l511">Va te coucher ! </l>
-            <stage><hi rend="italic"><em>Il avance la main pour prendre le verre d’eau.</em></hi></stage>
-          </sp>
-          <sp who="tropical" xml:id="0-289">
-            <speaker>TROPICAL.</speaker>
-            <l n="513" xml:id="l513">Ah ! c’est comme ça ! </l>
-            <stage><hi rend="italic"><em>Avalant le verre d’eau.</em></hi></stage>
-            <l n="515" xml:id="l515">À votre santé !...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-290">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="516" xml:id="l516">Polisson ! Tu crois me faire céder !... pour un grain de poussière !... Si je pouvais moi-même ! </l>
-            <stage><hi rend="italic"><em>Il essaye de se souffler dans l’œil.</em></hi></stage>
-            <l n="518" xml:id="l518">Non... ça n’arrive pas...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-291">
-            <speaker>TROPICAL.</speaker>
-            <l n="519" xml:id="l519">J’ai eu ça une fois... ça m’a duré trois jours...</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-292">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="520" xml:id="l520">Trois jours !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-293">
-            <speaker>TROPICAL.</speaker>
-            <l n="521" xml:id="l521">Et trois nuits !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-294">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="522" xml:id="l522">Mais c’est un enfer !... J’ai un cent d’épingles dans chaque orbite... Tropical !... souffle !... au nom de l’amitié qui nous lie... souffle !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-295">
-            <speaker>TROPICAL.</speaker>
-            <l n="523" xml:id="l523">La main de Bérénice ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-296">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="524" xml:id="l524">Jamais !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-297">
-            <speaker>TROPICAL.</speaker>
-            <l n="525" xml:id="l525">Quand vous voudrez !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-298">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="526" xml:id="l526">Ah ! crédié !... ah ! crédié !... Voyons... Tropical ! Au moins, me promets-tu de la rendre heureuse ?... mais bien heureuse ?</l>
-          </sp>
-          <sp who="tropical" xml:id="0-299">
-            <speaker>TROPICAL.</speaker>
-            <l n="527" xml:id="l527">Oh ! comme le poisson dans l’eau !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-300">
-            <speaker>MOUILLEBOUCHE, <em>à part.</em></speaker>
-            <l n="528" xml:id="l528">Cristi ! que je suis poule-mouillée ! mais ça me picote tant !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-301">
-            <speaker>TROPICAL.</speaker>
-            <l n="529" xml:id="l529">Faut-il souffler ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-302">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="530" xml:id="l530">Mais, dame ! </l>
-            <stage><hi rend="italic"><em>Le repoussant tout d’un coup.</em></hi></stage>
-            <l n="532" xml:id="l532">Non !... arrête !... ça s’en va !... c’est parti !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-303">
-            <speaker>TROPICAL, <em>à part.</em></speaker>
-            <l n="533" xml:id="l533">Sacrebleu !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-304">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="534" xml:id="l534">Ah ! galopin !... demande-moi donc a présent la main de ma pupille ?... </l>
-            <stage><hi rend="italic"><em>Il s’essuie les yeux avec sa manche.</em></hi></stage>
-            <l n="536" xml:id="l536">Ah ! mille noms d’un nom !<a href="#_ftn15" name="_ftnref15" title="" id="_ftnref15">[15]</a></l>
-          </sp>
-          <sp who="tropical" xml:id="0-305">
-            <speaker>TROPICAL.</speaker>
-            <l n="537" xml:id="l537">Qui donc ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-306">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="538" xml:id="l538">Je m’en suis remis avec ma manche !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-307">
-            <speaker>TROPICAL.</speaker>
-            <l n="539" xml:id="l539">Bravo !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-308">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="540" xml:id="l540">J’en ai plus qu’avant !... </l>
-            <stage><hi rend="italic"><em>Suppliant.</em></hi></stage>
-            <l n="542" xml:id="l542">Tropical ?... mon petit Tropical ?...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-309">
-            <speaker>TROPICAL.</speaker>
-            <l n="543" xml:id="l543">Bérénice ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-310">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="544" xml:id="l544">Cristi ! que je suis poule-mouillée !... Et quand je pense qu’il y a un Romain qui, autrefois, a mis sa main dans le feu en faisant des mots !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-311">
-            <speaker>TROPICAL.</speaker>
-            <l n="545" xml:id="l545">Oui, mais il ne se serait pas mis le doigt dans l’œil.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-312">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="546" xml:id="l546">C’est vrai !... Ta réflexion me décide.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-313">
-            <speaker>TROPICAL.</speaker>
-            <l n="547" xml:id="l547">Faut-il souffler ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-314">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="548" xml:id="l548">Allons !... souffle !... mais je te déteste !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-315">
-            <speaker>TROPICAL.</speaker>
-            <l n="549" xml:id="l549">Ça m’est égal ! </l>
-            <stage><hi rend="italic"><em>Il se place devant Mouillebouche et lui souffle dans l’œil.</em></hi></stage>
-            <l n="551" xml:id="l551">Ne bougez pas !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-316">
-            <speaker>MOUILLEBOUCHE, <em>se tenant l’œil.</em></speaker>
-            <l n="552" xml:id="l552">Plus haut !... gamin !... polisson !... garnement !... plus fort !... Ah ! si tu savais comme je te déteste !...</l>
-            <stage><hi rend="italic"><em>Tout à coup.</em></hi></stage>
-            <l n="554" xml:id="l554">Tiens !... tiens !... c’est fini !... c’est fini !... Merci, vaurien !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-317">
-            <speaker>TROPICAL.</speaker>
-            <l n="555" xml:id="l555">À quand la noce ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-318">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="556" xml:id="l556">Dans huit jours, paltoquet !... Ah çà, qu’est-ce que je dirai à mon fils... Mouillebouche fils ?...</l>
-          </sp>
-          <sp who="tropical" xml:id="0-319">
-            <speaker>TROPICAL.</speaker>
-            <l n="557" xml:id="l557">Vous lui direz que je lui ai soufflé Bérénice.</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-320">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="558" xml:id="l558">Dans mon œil ! ce mot le fera rire ! </l>
-            <stage><hi rend="italic"><em>Avec mélancolie.</em></hi></stage>
-            <l n="560" xml:id="l560">C’est égal, je suis triste.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-321">
-            <speaker>TROPICAL.</speaker>
-            <l n="561" xml:id="l561">Pourquoi ça ?</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-322">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="562" xml:id="l562">Je pense que si Napoléon, à Marengo, avait eu du plâtre dans l’œil, il eût été diablement gêné pour voir clair à son affaire.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-323">
-            <speaker>TROPICAL.</speaker>
-            <l n="563" xml:id="l563">À quoi tient le sort des empires !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-324">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="564" xml:id="l564">Bah ! je vais remettre mon pantalon de marié... mais avant accompagne-moi... </l>
-            <stage><hi rend="italic"><em>Tropical lui offre le bras.</em></hi></stage>
-            <l n="566" xml:id="l566">Sur ton piano, imbécile ! tu ne vois donc pas que j’ai besoin de chanter !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-325">
-            <speaker>TROPICAL.</speaker>
-            <l n="567" xml:id="l567">Ah !</l>
-            <stage><hi rend="italic"><em>Il se met au piano.<a href="#_ftn16" name="_ftnref16" title="" id="_ftnref16"><strong>[16]</strong></a></em></hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-326">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="569" xml:id="l569">Y es-tu ?... en sol bécarre, s’il te plaît.</l>
-          </sp>
-          <sp who="tropical" xml:id="0-327">
-            <speaker>TROPICAL.</speaker>
-            <l n="570" xml:id="l570">Allez ! </l>
-            <stage><hi rend="italic"><em>Pendant que Mouillebouche chante le couplet au public sur l’air : </em>Amis, voici la riante semaine<em>, Tropical joue l’air : </em>Marie, tremp’ ton pain...</hi></stage>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-328">
-            <speaker>MOUILLEBOUCHE, <em>au public.</em></speaker>
-            <l n="572" xml:id="l572">Un souffle peut emporter le pauvret.</l>
-            <l n="573" xml:id="l573">Mais ce n’est pas ça, animal !... ce n’est pas cet air-là !</l>
-          </sp>
-          <sp who="tropical" xml:id="0-329">
-            <speaker>TROPICAL.</speaker>
-            <l n="574" xml:id="l574">Je ne sais que celui-là !</l>
-          </sp>
-          <sp who="mouillebouche" xml:id="0-330">
-            <speaker>MOUILLEBOUCHE.</speaker>
-            <l n="575" xml:id="l575">Ah ! alors, chantons-le. </l>
-            <stage><hi rend="italic"><em>Au public.</em></hi></stage>
-            <l n="577" xml:id="l577">Il n’est peut-être pas de la première jeunesse... mais, avec de la méthode... une voix pure... et un orchestre très bruyant... on ne l’entendra pas ! </l>
-            <l n="578" xml:id="l578">Allons, ensemble ! </l>
-          <stage>MOUILLEBOUCHE, <em>achevant l’air et très gracieusement.</em></stage>
-          </sp>
-          <sp who="ensemble" xml:id="0-331">
-            <speaker>ENSEMBLE.</speaker>
-            <l n="579" xml:id="l579"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> Mouillebouche, Tropical.</l>
-            <l n="580" xml:id="l580"><a href="#_ftnref2" name="_ftn2" title="" id="_ftn2">[2]</a> Tropical, Mouillebouche.</l>
-            <l n="581" xml:id="l581"><a href="#_ftnref3" name="_ftn3" title="" id="_ftn3">[3]</a> Mouillebouche, Tropical.</l>
-            <l n="582" xml:id="l582"><a href="#_ftnref4" name="_ftn4" title="" id="_ftn4">[4]</a> Tropical, Mouillebouche.</l>
-            <l n="583" xml:id="l583"><a href="#_ftnref5" name="_ftn5" title="" id="_ftn5">[5]</a> Mouillebouche, Tropical.</l>
-            <l n="584" xml:id="l584"><a href="#_ftnref6" name="_ftn6" title="" id="_ftn6">[6]</a> Tropical, Mouillebouche.</l>
-            <l n="585" xml:id="l585"><a href="#_ftnref7" name="_ftn7" title="" id="_ftn7">[7]</a> Mouillebouche, Tropical.</l>
-            <l n="586" xml:id="l586"><a href="#_ftnref8" name="_ftn8" title="" id="_ftn8">[8]</a> Tropical, Mouillebouche.</l>
-            <l n="587" xml:id="l587"><a href="#_ftnref9" name="_ftn9" title="" id="_ftn9">[9]</a> Mouillebouche, Tropical.</l>
-            <l n="588" xml:id="l588"><a href="#_ftnref10" name="_ftn10" title="" id="_ftn10">[10]</a> Tropical, Mouillebouche.</l>
-            <l n="589" xml:id="l589"><a href="#_ftnref11" name="_ftn11" title="" id="_ftn11">[11]</a> Mouillebouche, Tropical.</l>
-            <l n="590" xml:id="l590"><a href="#_ftnref12" name="_ftn12" title="" id="_ftn12">[12]</a> Tropical, Mouillebouche.</l>
-            <l n="591" xml:id="l591"><a href="#_ftnref13" name="_ftn13" title="" id="_ftn13">[13]</a> Mouillebouche, Tropical.</l>
-            <l n="592" xml:id="l592"><a href="#_ftnref14" name="_ftn14" title="" id="_ftn14">[14]</a> Tropical, Mouillebouche.</l>
-            <l n="593" xml:id="l593"><a href="#_ftnref15" name="_ftn15" title="" id="_ftn15">[15]</a> Mouillebouche, Tropical.</l>
-            <l n="594" xml:id="l594"><a href="#_ftnref16" name="_ftn16" title="" id="_ftn16">[16]</a> Tropical, Mouillebouche.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL, MOUILLEBOUCHE</speaker>
+          <stage>&lt;em&gt;Au lever du rideau, la scène n’est pas éclairée. On entend au dehors un bruit de grelots et de fouet, et le roulement d’une voiture qui arrive et s’arrête. Le bruit cesse. Musique à l’orchestre. Puis on entend dans la coulisse la voix de Mouillebouche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, dans la coulisse.</speaker>
+          <l n="1">Pas de violence, monsieur, pas de violence ! </l>
+          <stage>&lt;em&gt;Laporte de l’angle à droite s’ouvre. Tropical entre ; il est en costume de postillon et tient un pistolet braqué sur Mouillebouche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="2">Je vous en prie, monsieur, donnez-vous la peine d’entrer !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, entrant très ému.</speaker>
+          <l n="3">Avec plaisir, postillon !... avec plaisir, postillon ! </l>
+          <stage>&lt;em&gt;À part, marchant à tâtons.&lt;/em&gt;</stage>
+          <l n="4">Je suis dans un coupe-gorge ! </l>
+          <stage>&lt;em&gt;Mouillebouche est en grande tenue de marié, gants blancs, énorme épingle à son jabot, un bouquet de fleurs d’oranger avec rubans blancs à son habit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="5">Mille pardons de vous laisser dans l’obscurité !</l>
+          <stage>&lt;em&gt;Il se dirige vers l’armoire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, avec force.</speaker>
+          <l n="6">Postillon ! je proteste !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="7">Plaît-il ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, radouci.</speaker>
+          <l n="8">Je n’attaque pas votre moralité !... mais enfin, ce qui m’arrive est bien étrange !... </l>
+          <stage>&lt;em&gt;Au public.&lt;/em&gt;</stage>
+          <l n="9">Il n’y a pas quatre heures vingt ? deux minutes j’étais à Paris.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, allumant un flambeau. Jour en scène.</speaker>
+          <l n="10">Continuez... continuez...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="11">Moi, Paul Sésostris Elzéar Mouillebouche... ex-plumassier, je venais de me marier...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, allumant un autre flambeau.</speaker>
+          <l n="12">Continuez... continuez...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="13">Oui, monsieur, je continuerai ! </l>
+          <stage>&lt;em&gt;Au public.&lt;/em&gt;</stage>
+          <l n="14">Ma récente épouse, émue et rougissante, recevait dans la sacristie les félicitations du bedeau et de nos dix-neuf témoins... tout à coup. </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, lui prenant son chapeau sur la tête.</speaker>
+          <l n="15">Votre chapeau, monsieur ? </l>
+          <stage>&lt;em&gt;Il le pose sur le fauteuil à gauche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, machinalement.</speaker>
+          <l n="16">Merci... il ne me gênait pas !</l>
+          <stage>&lt;em&gt;Reprenant.&lt;/em&gt;</stage>
+          <l n="17">Tout à coup, je m’absente un quart de seconde pour m’assurer si la chaise de poste, qui doit nous conduire à Château-Thierry, est ci la porte de l’église... elle arrivait... j’y monte machinalement pour visiter l’intérieur... Aussitôt...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à Mouillebouche qui tout en parlant a ôté ses gants.</speaker>
+          <l n="18">Vos gants, monsieur ? </l>
+          <stage>&lt;em&gt;Il les jette dans le chapeau.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="19">Merci, ils ne me gênaient pas... </l>
+          <stage>&lt;em&gt;Reprenant.&lt;/em&gt;</stage>
+          <l n="20">Aussitôt... la portière se referme à clef... et la voiture part au triple galop.</l>
+          <stage>&lt;em&gt;Air : Connaissez-vous le grand Eugène. &lt;/em&gt;</stage>
+          <l n="21">Ému, perclus, cramoisi de colère,</l>
+          <l n="22">Par la stupeur fortement interdit,</l>
+          <l n="23">Je mets soudain la tête à la portière,</l>
+          <l n="24">Je veux crier... mais ma voix me trahit...</l>
+          <stage>Bien le bonsoir ! &lt;em&gt;Vox faucibus hœsit&lt;/em&gt; !</stage>
+          <l n="25">Je la retrouve auprès du mur d’enceinte...</l>
+          <l n="26">Mais vous braquez sur moi vos pistolets...</l>
+          <stage>Et &lt;em&gt;vox&lt;/em&gt;, ma voix, &lt;em&gt;faucibus&lt;/em&gt;, est r’éteinte</stage>
+          <stage>&lt;em&gt;Hœsit&lt;/em&gt;... encor mieux que jamais...</stage>
+          <stage>&lt;em&gt;Vox faucibus&lt;/em&gt;... encor mieux que jamais...</stage>
+          <l n="27">Et vous me cahotez par des chemins vicinaux jusque dans cet  immeuble inhabité...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="28">Eh bien ?...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="29">Certainement, je suis loin de vouloir attaquer votre moralité, mais...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="30">Votre montre, s’il vous plaît ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="31">Comment ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, jouant avec son pistolet et très poliment.</speaker>
+          <l n="32">Je vous en prie... avec les breloques...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, s’exécutant.</speaker>
+          <l n="33">Avec plaisir, postillon ! avec plaisir, postillon !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="34">Vous avez là une bien jolie épingle...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, résistant.</speaker>
+          <l n="35">Oh ! mais, permettez !... </l>
+          <stage>&lt;em&gt;Il s’exécute sur un geste de Tropical.&lt;/em&gt;</stage>
+          <l n="36">Avec plaisir, postillon ! avec plaisir, postillon !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="37">Vous êtes un homme charmant ! </l>
+          <stage>&lt;em&gt;Il met ces divers objets dans le chapeau de Mouillebouche et serre le tout dans l’armoire, après en avoir tiré un paquet.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="38">Je suis fixé... je suis tombé... dans un chef de voleurs... Il est bien meublé, le brigand ! </l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="39">Tiens !... un piano !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, revenant avec le paquet.</speaker>
+          <l n="40">J’en touche quelquefois dans mes heures de rêverie.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="41">Vous ? </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="42">Comme la civilisation s’infiltre dans toutes les zones sociales... Voilà les voleurs qui ont des heures de rêverie et qui touchent du piano !... Enfin ! </l>
+          <stage>&lt;em&gt;Haut. Fausse sortie.&lt;/em&gt;</stage>
+          <l n="43">Monsieur, il ne me reste plus qu’à vous présenter mes devoirs... Enchanté d’avoir fait-votre connaissance... </l>
+          <stage>&lt;em&gt;Il porte machinalement la main à sa tête comme pour ôter son chapeau.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="44">Où allez-vous donc ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="45">Mais, dame !... il me semble que notre conversation </l>
+          <stage>&lt;em&gt;Tapant sur son gousset.&lt;/em&gt;</stage>
+          <l n="46">est complètement épuisée.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, menaçant.</speaker>
+          <l n="47">Hein ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="48">Je n’attaque pas votre moralité !... Je veux bien croire que vous n’êtes qu’un postillon... égaré ! Mais songez-y, un rapt... un détournement de majeur... c’est très grave... et... je vous présente mes devoirs... </l>
+          <stage>&lt;em&gt;Fausse sortie, et même jeu.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, avec mélancolie.</speaker>
+          <l n="49">Mouillebouche, voulez-vous donc me quitter ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="50">Il est charmant ! il va m’inviter à passer la soirée.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="51">Si vous avez froid, je vais vous faire du feu.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, avec ironie.</speaker>
+          <l n="52">Et nous prendrons des sandwich... avec du thé ! Merci, mon ami, merci... je n’ai besoin de rien.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, lui présentant le paquet.</speaker>
+          <l n="53">Alors prenez ceci.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="54">Qu’est-ce que c’est que ceci ? </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="55">Un pantalon de nankin et une veste de même étoffe.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="56">Ah !... pourquoi faire ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, montrant la chambre à gauche.</speaker>
+          <l n="57">Entrez dans cette chambre... vous me rapporterez vos habits !... j’y tiens !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="58">Ah ! j’y suis !... c’est pour me pincer mon Elbeuf !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, sévèrement.</speaker>
+          <l n="59">Hein ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="60">Je n’attaque pas votre moralité !... </l>
+          <stage>&lt;em&gt;Prenant le paquet.&lt;/em&gt;</stage>
+          <l n="61">Donnez[1]... Dites donc, vous aviez raison... la conversation n’était pas... complètement épuisée.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, brusquement.</speaker>
+          <l n="62">Allons, dépêchons-nous !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="63">Avec plaisir, postillon ! avec plaisir, postillon ! </l>
+          <stage>&lt;em&gt;À part, prenant un flambeau.&lt;/em&gt;</stage>
+          <l n="64">Après il me laissera peut-être partir. </l>
+          <stage>&lt;em&gt;Hésitant et timidement.&lt;/em&gt;</stage>
+          <l n="65">Cependant, je me permettrai de...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, brusquement et montrant son pistolet.</speaker>
+          <l n="66">Morbleu !!!</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, très gracieusement.</speaker>
+          <l n="67">Avec plaisir, postillon ! </l>
+          <stage>&lt;em&gt;Il entre dans la chambre à gauche.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL, seul</speaker>
+          <l n="68">Vieux melon !... le voilà sous cloche !... Enfin je tiens mon rival ! ma parole ! c’est honteux d’avoir une grosse mécanique comme ça pour rival !... Dépouillons d’abord cette défroque de Longjumeau, qui sied très mal à un jeune homme de famille...</l>
+          <stage>&lt;em&gt;Il ôte son habit de postillon et endosse une veste de chasse.&lt;/em&gt;</stage>
+          <l n="69">C’est égal... je dis qu’il faut un certain toupet pour enlever un aussi gros... ballon... à la barbe de sa noce !... J’aime !... voilà mon excuse !... L’amour me rend capable des plus gigantesques entreprises !... Il y a une chose qui m’inquiète... J’ai confisqué ce monsieur, c’est très bien !... Mais comment le retenir ? car il ne faut pas qu’il sorte !... Si je lui offrais... mon amitié ?... Je doute qu’il l’accepte !... Il me faudrait un moyen de le clouer ici... comme un papillon sur un bouchon !... Oh ! j’ai mon affaire ! </l>
+          <stage>&lt;em&gt;Il ouvre la fenêtre du fond et crie très haut afin d’être entendu par Mouillebouche.&lt;/em&gt;</stage>
+          <l n="70">Holà ! Ravageot ! Lâchez les chiens !... tendez des pièges à loup !... chargez les fusils... et si quelqu’un met le pied dehors... feu sur toute la ligne !</l>
+          <stage>&lt;em&gt;Au public, gaiement. &lt;/em&gt;</stage>
+          <l n="71">Remarquez que je n’ai ni Ravageot... ni pièges a loup... ni chiens... je suis seul de mon sexe !... c’est-à-dire... </l>
+          <stage>&lt;em&gt;S’approchant de la porte où est Mouillebouche et d’une voix formidable.&lt;/em&gt;</stage>
+          <l n="72">Feu sur toute la ligne, ventrebleu !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, TROPICAL</speaker>
+          <stage>&lt;em&gt;Mouillebouche sort vivement de la chambre en veste et pantalon de nankin, grand chapeau de paille ; il porte ses autres vêtements dans un paquet ; il pose son flambeau sur l’armoire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part, très ému.</speaker>
+          <l n="73">Crédié !... crédié !... crédié !... Il a dit : Feu sur toute la ligne !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à part.</speaker>
+          <l n="74">Je crois qu’il a saisi quelques mots.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, timidement.</speaker>
+          <l n="75">Monsieur ; j’ai bien l’honneur de vous saluer !... Conformément à vos désirs, me voici transformé en planteur de la Martinique.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="76">Vous êtes fort gracieux là-dessous.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="77">Trop bon, monsieur ! trop bon !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="78">Où sont vos habits ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, lui remettant le paquet.</speaker>
+          <l n="79">Voici le baluchon... le petit baluchon.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="80">Ah ! vous savez l’argot ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="81">Il est sensible à cette politesse ! </l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="82">Mais oui... j’en pince quelquefois... j’en pince le plus que je peux... Tiens, vous avez aussi changé de costume ?... celui-ci vous va merveilleusement... Oh ! mais merveilleusement ! </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="83">Flattons ce bandit ! </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="84">Vous trouvez ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <stage>Il est extrêmement &lt;em&gt;rup&lt;/em&gt; !</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="85">Allons ! allons ! parlons de nos affaires... en français... ça vaudra mieux... Asseyons-nous. </l>
+          <stage>&lt;em&gt;Il lui offre le fauteuil de droite, va serrer le paquet dans l’armoire, et revient s’asseoir à gauche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, s’asseyant.</speaker>
+          <l n="86">Avec plaisir, postillon ! </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="87">Il va me faire souscrire une lettre de change.[2]</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, qui s’est assis près de lui.</speaker>
+          <l n="88">Permettez-moi d’abord de vous raconter l’histoire de ma jeunesse...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="89">À quoi bon ?... à quoi bon ?... dites-moi tout de suite ; combien ?... je suis pressé.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="90">Combien ?... pourquoi faire ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <stage>Pour m’&lt;em&gt;esbigner&lt;/em&gt;.</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="91">De l’argent !... Ah çà, monsieur, me prenez-vous pour un...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, vivement.</speaker>
+          <l n="92">Je n’attaque pas votre moralité !... </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="93">Être obligé de prendre des mitaines ! </l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="94">C’est la chose du monde la plus simple... vous m’avez promené en chaise de poste... vous m’avez fait faire un voyage... charmant ! Oh ! mais... charmant ! Nous sommes arrivés, et je vous dis : Postillon, que vous dois je ? que vous dois-je, postillon ?... Il n’y a pas de quoi se fâcher... mauvaise tête ! </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="95">Gredin !... canaille !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="96">Mouillebouche... je vais bien vous étonner.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="97">Je ne demande pas mieux... mais étonnez-moi promptement... ma femme m’attend.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="98">Je me nomme Anastase Tropical...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="99">Oui...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="100">Ma jeunesse n’eut rien de remarquable...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="101">Oui. </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="102">Il est bavard !... c’est une pie... la pie voleuse !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="103">Il y a deux ans, je tombai amoureux... amoureux d’une femme !...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="104">Jusqu’à présent, vous ne m’étonnez pas... Continuez.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="105">La voir, l’aimer... fut l’affaire d’un instant.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part, s’agitant sur sa chaise.</speaker>
+          <l n="106">Si c’est pour ça qu’il m’a fait habiller en planteur !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="107">J’allais demander sa main... et j’apprends qu’elle allait se marier ce matin même... avec un autre... Avec un autre !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="108">C’est affreux !... </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <stage>Quelle &lt;em&gt;gazza ladra&lt;/em&gt; !</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="109">Et cet autre... savez-vous qui ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="110">Non.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, d’une voix terrible.</speaker>
+          <l n="111">Savez-vous qui ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, tranquillement.</speaker>
+          <l n="112">Quand on vous dit que non !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, se levant.</speaker>
+          <l n="113">C’est vous !... vous !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, se levant.</speaker>
+          <l n="114">Hein ?... ma femme !!!</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="115">Elle-même... l’ange de mes rêves... Mais je suis arrivé trop tard, elle était mariée.[3]</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="116">C’est bien drôle ! je n’aurais jamais cru que la veuve Baltimore pût devenir l’ange du moindre rêve à quelqu’un !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, avec agitation, à lui-même.</speaker>
+          <l n="117">Mais tout n’est pas fini... je n’abandonne pas la partie !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="118">Et notez... notez qu’elle a une verrue sur le nez comme Cicéron !... C’est bien drôle ! c’est bien drôle !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="119">Je voulais d’abord vous brûler la cervelle.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="120">Hein ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="121">Mon second mouvement fut de vous enlever...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="122">Monsieur, puisque vous n’êtes pas un voleur, je vous somme de me rendre ma montre, mon épingle, mes breloques et mon costume de marié !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="123">Pas si bête !... vous pourriez corrompre mes gens et vous échapper.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="124">Voyons, jeune homme, raisonnons un peu... Votre moyen est bête comme un chou !... En admettant que vous puissiez me verrouiller jusqu’à la fin des siècles, cela ne m’empêchera pas d’être le mari de ma femme... et comme elle ne peut pas en avoir deux... le divorce n’existe plus...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="125">Oui... mais le veuvage ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="126">Hein ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="127">Le veuvage existe !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="128">Voudriez-vous trancher le fil de mes jours ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="129">Oh ! Dieu m’en garde !... Mais je dois vous prévenir que ce pavillon de chasse est entouré de marais...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="130">Je n’a pas envie de chasser le canard !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="131">De marais... très malsains !... nous avons ici l’été des fièvres... extrêmement pernicieuses !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="132">L’été !... mais heureusement que nous sommes en automne...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="133">C’est vrai... mais l’été reviendra...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="134">Il reviendra... l’année prochaine.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="135">Que voulez-vous ? j’attendrai... je suis plein de patience.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="136">Comment ! Est-ce que vous comptez me garder ici toute l’année ?...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="137">Dame !... vous me paraissez robuste...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="138">Mais c’est horrible !... Ma femme m’attend !... Elle ne s’est pas mariée pour ça !... je proteste !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="139">C’est inutile !... il y a deux lieues de forêt tout autour...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="140">Je me fiche bien de votre forêt !... je vais me gêner pour votre forêt !... je reproteste !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="141">Raisonnons... Évidemment il faut que l’un de nous deux fasse place à l’autre.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, lui montrant gracieusement la porte.</speaker>
+          <l n="142">Eh bien, monsieur... allez-vous !... allez-vous en !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="143">Eh ! mon Dieu !... qui sait ?... ce sera peut-être moi ! car je compte me conduire en adversaire loyal... nous nous battrons à armes égales...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="144">D’abord, monsieur... je ne me bats pas !... je suis marié !... c’est-à-dire...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="145">Voici mon petit plan : nous partagerons la même nourriture... un pain malfaisant.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="146">Pourquoi malfaisant ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="147">Nous boirons dans le même verre... l’eau stagnante des mares...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="148">Pouah !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <stage>&lt;em&gt;Air : Femmes, voulez-vous éprouver.&lt;/em&gt;</stage>
+          <l n="149">Puis de ces humides forêts,</l>
+          <l n="150">Afin d’avancer nos affaires,</l>
+          <l n="151">Tous deux nous pourrons à longs traits</l>
+          <l n="152">Humer les miasmes délétères,</l>
+          <l n="153">Aux vents glacés chacun s’exposera...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, frissonnant.</speaker>
+          <l n="154">Brrr ! brrr ! j’en frissonne d’avance !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="155">Après quoi la fièvre verra</l>
+          <l n="156">À qui donner la préférence !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="157">Eh bien ! il est joli votre petit plan !... Mais c’est un assassinat !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="158">Non... un duel... un duel à la fièvre !...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="159">Sapristi ! cette fenêtre ouverte... je sens déjà le frisson.</l>
+          <stage>&lt;em&gt;Il relève le collet de son habit. Haut.&lt;/em&gt;</stage>
+          <l n="160">Monsieur, auriez-vous l’extrême obligeance de fermer la fenêtre ? </l>
+          <stage>&lt;em&gt;Il se tâte le pouls.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="161">Si vous le désirez... mais cela va nous retarder...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="162">Oh ! je ne suis pas pressé. </l>
+          <stage>&lt;em&gt;Tropical va fermer la fenêtre du fond. Mouillebouche, à part et grelottant.&lt;/em&gt;</stage>
+          <l n="163">Brrr ! je payerais cher un verre de quinine !...[4]</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, prenant les deux flambeaux et lui en offrant un.</speaker>
+          <l n="164">J’ai l’habitude de me retirer de bonne heure. </l>
+          <stage>&lt;em&gt;Très poliment.&lt;/em&gt;</stage>
+          <l n="165">Voici deux chambres... toutes doux également humides... également malsaines... faites-moi l’amitié de choisir.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, très poliment.</speaker>
+          <l n="166">Vous êtes trop bon !... je n’en ferai rien ! </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, de même.</speaker>
+          <l n="167">Vous êtes mon hôte... à vous l’honneur !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, de même.</speaker>
+          <l n="168">C’est uniquement pour vous obéir... je prends celle-ci. </l>
+          <stage>&lt;em&gt;Montrant la porte de gauche.&lt;a href="#_ftn5" name="_ftnref5" title="" id="_ftnref5"&gt;&lt;strong&gt;[5]&lt;/strong&gt;&lt;/a&gt;&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, de même.</speaker>
+          <l n="169">Adieu, mon cher.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, de même.</speaker>
+          <l n="170">Adieu, mon bon !...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="171">Canaille ! archicanaille !!!</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>&lt;em&gt;Air : Bonne nuit. &lt;/em&gt;</stage>
+          <l n="172">Bonne nuit !</l>
+          <l n="173">Bonne nuit !</l>
+          <l n="174">Allez-vous coucher sans bruit,</l>
+          <l n="175">Dans ce réduit !</l>
+          <l n="176">Bonne nuit !</l>
+          <l n="177">Bonne nuit !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, très brusquement.</speaker>
+          <l n="178">Allez-vous coucher !!!</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, se retournant.</speaker>
+          <l n="179">Hein !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, très gracieux.</speaker>
+          <l n="180">Sans bruit ! </l>
+          <stage>&lt;em&gt;Mouillebouche entre à gauche et Tropical à droite, premier plan.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, seul</speaker>
+          <stage>&lt;em&gt;La scène reste un moment vide et dans l’obscurité. Musique à l’orchestre. Mouillebouche revient à pas de loup avec son flambeau, qu’il couvre de sa main.  Jour en scène.&lt;/em&gt;</stage>
+          <l n="181">C’est moi !... Décidément, je ne suis pas à mon aise... je grelotte ! et en grelotant, il m’est venu une idée... oh ! mais, une idée neuve... qui n’a jamais pu germer dans le cerveau d’un prisonnier... Et... cette idée neuve... c’est de m’évader ! Tiens ! je ne suis pas forcé d’accepter le duel baroque de ce monsieur... Je parie que c’est un spadassin qui s’est exercé chez Grisier... à avoir la fièvre... Après tout, j’ai le choix des armes... n’est-ce pas ? il est bien évident que j’ai le choix des armes ?... alors, je choisis la fuite ! </l>
+          <stage>&lt;em&gt;Il remonte.&lt;/em&gt;</stage>
+          <l n="182">Tout dort dans la nature... </l>
+          <stage>&lt;em&gt;Ouvrant la fenêtre.&lt;/em&gt;</stage>
+          <l n="183">Tentons une audacieuse gymnastique. Ô Latude!... ô Latude ! je t’invoque en ce péril extrême... en ce moment suprême !</l>
+          <stage>&lt;em&gt;Air de Fra Diavolo. &lt;/em&gt;</stage>
+          <l n="184">L’instant est si prospère,</l>
+          <l n="185">Nulle étoile n’éclaire</l>
+          <l n="186">Ma fuite solitaire...</l>
+          <l n="187">Enjambons ce balcon ! </l>
+          <stage>&lt;em&gt;La musique continue en sourdine. Il passe une jambe sur le balcon.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL, sortant de sa chambre, à part.</speaker>
+          <l n="188">J’ai entendu remuer...</l>
+          <stage>&lt;em&gt;Apercevant Mouillebouche.&lt;/em&gt;</stage>
+          <l n="189">Mon prisonnier ! </l>
+          <stage>&lt;em&gt;Il pousse des aboiements furieux en se cachant derrière le battant de la porte.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, se retirant du balcon.</speaker>
+          <l n="190">Bigre !... une meute sous la fenêtre !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, se montrant.</speaker>
+          <l n="191">Que faites-vous donc, voisin ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="192">Moi ?... rien... je respirais la brise embaumée du soir... en murmurant un virelay moderne... </l>
+          <stage>&lt;em&gt;Il chantonne la fin de l’air.&lt;/em&gt;</stage>
+          <l n="193">Ah ! ah ! ah ! ah ! ah !</l>
+          <l n="194">Ah ! ah ! ah !</l>
+          <stage>&lt;em&gt;S’interrompant tout à coup.&lt;/em&gt;</stage>
+          <l n="195">Il paraît que vous avez quelques chiens là-dessous ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="196">J’en ai trente-deux.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="197">Autant que de dents... c’est charmant !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="198">Il y a trois jours, ils ont mangé un piqueur.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, s’éloignant vivement de la fenêtre.</speaker>
+          <l n="199">Ah ! c’est charm... </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="200">Cristi !... si je pouvais écrire au procureur de la république ! </l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="201">Vous n’auriez pas une feuille de papier glacé ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="202">Pourquoi faire ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="203">Pour y déposer quelques vers !... Les chiens, la campagne, la fièvre... le piqueur mangé... tout cela m’inspire... Bath ! j’ai envie de faire un sonnet.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, riant.</speaker>
+          <l n="204">Un sonnet... pour qui ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="205">Mais... pour cette pauvre veuve Baltimore...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="206">Qu’est-ce que c’est que ça ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="207">Vous savez bien... ma femme...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, le prenant à la gorge.</speaker>
+          <l n="208">Hein ?... qu’est-ce que vous dites ?... répétez ![6]</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="209">Aïe !... ma femme ! elle a une verrue !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, le secouant.</speaker>
+          <l n="210">Elle s’appelle Baltimore ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="211">Comme Cicéron !... Aïe !... lâchez donc ! </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, furieux.</speaker>
+          <l n="212">Sapristi ! j’ai pris un marié pour l’autre ! je me suis trompé de Mouillebouche !... il y en a donc deux ?... Répondez !... il y en a donc deux ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="213">Quoi ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="214">Animal !... Pourquoi vous êtes-vous laisser enlever ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="215">Ah ! il est joli, celui-là !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="216">C’est vrai ! ça ne se défend pas plus qu’un colis de sucre brut !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="217">Mais vos pistolets ?...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="218">Qu’importe ! on crie !... on beugle !... on mord... et pendant que je remorquais cette grosse embarcation... le mariage de l’autre se consommait !... Imbécile !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="219">Ah ! mais, monsieur !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à lui-même.</speaker>
+          <l n="220">Je n’ai pas une minute à perdre !... Je repars.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="221">Et moi ?[7]</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="222">Est-ce que vous croyez que j’ai envie de vous prendre en pension ?... Allez au diable !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="223">Je ne connais pas les chemins... je ne sais pas où je suis...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="224">Dans un quart d’heure la voiture sera attelée... et dans deux heures, je serai à Paris... Si vous êtes prêt, je vous charge ! </l>
+          <stage>&lt;em&gt;Il remonte.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, offensé.</speaker>
+          <l n="225">Je vous charge ![8]</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, ouvrant l’armoire.</speaker>
+          <l n="226">Tenez, voilà vos habits, votre montre, votre épingle, vos breloques... vous me retrouverez dans la cour.[9]</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="227">Bien... Ayez l’obligeance de serrer vos trente-deux chiens !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="228">Oh ! je, devrais déjà être à Paris ! </l>
+          <stage>&lt;em&gt;En sortant.&lt;/em&gt;</stage>
+          <l n="229">Animal !... brute !... crétin !</l>
+          <stage>&lt;em&gt;Il sort par la porte principale.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, seul, remettant sa montre et son épingle</speaker>
+          <l n="230">Animal ! brute ! crétin !</l>
+          <stage>&lt;em&gt;À la cantonade.&lt;/em&gt;</stage>
+          <l n="231">Je ne pense pas un mot de ce que tu dis là !... À Paris !... il paraît que nous allons à Paris !... Ce n’est pas mon chemin... je vais à Château-Thierry ; car il n’est pas supposable que la récente madame Mouillebouche m’attende encore dans la sacristie... avec le bedeau et nos dix-neuf témoins... Elle aura filé sur Château-Thierry dans l’espoir d’y retrouver son épouse. Pauvre poule !... Elle doit faire un drôle de nez... avec sa verrue ! – Et cet ex-postillon qui veut me charger pour Paris !... Un éclair !... Si je lui soufflais sa chaise de poste !... c’est-à-dire ma chaise de poste !... Je vais me tapir dans le creux d’un vieil arbre. </l>
+          <stage>&lt;em&gt;Avec malice très fine.&lt;/em&gt;</stage>
+          <stage>Et tandis... remarquez bien... tandis qu’il me cherchera... v’lan ! je sors de mon creux... et crac ! je &lt;em&gt;m’enchaise&lt;/em&gt; !... C’est incroyable comme il m’arrive quelquefois des fourberies à la Scapin !... Parole d’honneur, je devrais faire des comédies ! </stage>
+          <stage>&lt;em&gt;Cherchant à ouvrir la porte.&lt;/em&gt;</stage>
+          <l n="232">Ah ! bigre !... il a fermé la porte !... Il y a bien la fenêtre... c’est que je ne sais pas s’il a pensé à serrer ses trente-deux chiens... Ils n’ont mangé qu’un piqueur depuis trois jours... ils doivent avoir faim.</l>
+          <stage>&lt;em&gt;S’approchant de la fenêtre et d’une petite, voix caressante.&lt;/em&gt;</stage>
+          <l n="233">Petits !... petits !... petits !... Oh ! les beaux toutous !... oh ! les beaux toutous ! </l>
+          <stage>&lt;em&gt;Au public.&lt;/em&gt;</stage>
+          <l n="234">Je n’entends rien. </l>
+          <stage>&lt;em&gt;Les agaçant.&lt;/em&gt;</stage>
+          <l n="235">Xsi !... Xsi !... mords-le !... </l>
+          <stage>&lt;em&gt;Au public.&lt;/em&gt;</stage>
+          <l n="236">Je n’entends rien... j’ai envie de me risquer. </l>
+          <stage>&lt;em&gt;Prenant son paquet.&lt;/em&gt;</stage>
+          <l n="237">Je me risque. </l>
+          <stage>&lt;em&gt;Il enjambe le balcon. &lt;/em&gt;</stage>
+          <l n="238">Oh ! les beaux toutous !... ah ! les beaux toutous !...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL, entrant vivement.</speaker>
+          <l n="239">Eh bien ! est-ce que vous êtes sourd ! voilà un quart d’heure que je vous appelle !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="240">Pincé !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="241">Qu’est-ce que vous faites là ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="242">Je continuais à respirer la brise embaumée du soir, en terminant mon virelay moderne... </l>
+          <stage>&lt;em&gt;Fredonnant.&lt;/em&gt;</stage>
+          <l n="243">Ah ! -a-a-a-ah ! ah ! ah ! ah !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, fermant la fenêtre.</speaker>
+          <l n="244">Allons, en route !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="245">Monsieur, j’ai une prière à vous adresser...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="246">Quoi ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="247">Ça vous détournerait peut-être d’une petite quinzaine de lieues... Ce serait, en vous en allant à Paris, de me déposer à Château-Thierry.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="248">Monsieur, vous moquez-vous de moi ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="249">Mais, monsieur, ma famille m’attend... il y a non-seulement ma femme, qui doit faire un nez !... mais mon fils, Mouillebouche fils...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="250">Qu’est-ce que ça me fait ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="251">Et ma pupille, Bérénice Chandelier...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, vivement.</speaker>
+          <l n="252">Hein ? Bérénice !... c’est votre pupille !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="253">Chandelier, oui, monsieur...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, avec transport.</speaker>
+          <l n="254">Ah ! quel bonheur !... Si vous saviez !...</l>
+          <stage>&lt;em&gt;Il ôte son chapeau et met un gant.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, intrigué.</speaker>
+          <l n="255">Qu’est-ce qu’il fait.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, avec respect.</speaker>
+          <l n="256">Monsieur, j’ai l’honneur de vous demander la main de mademoiselle Bérénice, votre pupille.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="257">Vous !... Ah ! par exemple ! un polisson qui m’a enlevé !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="258">C’est elle que j’aime !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="259">Tant mieux ! tu ne l’auras pas !... Ah ! je suis ravi de cette circonstance ! je la garde pour mon fils, Mouillebouche fils, qui doit l’épouser demain.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="260">Ah ! c’est lui !... Il ne l’épousera pas !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="261">Pourquoi ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="262">Pour qu’une pupille se marie, il faut le consentement de son tuteur.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="263">Eh bien, je le donnerai !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="264">Pour qu’un fils se marie, il faut le consentement de son père !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="265">Je le donnerai, monsieur !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, reprenant son pistolet et lui enlevant son chapeau.</speaker>
+          <l n="266">Monsieur, votre montre, s’il vous plaît ? </l>
+          <stage>&lt;em&gt;Il lui présente le chapeau.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, jetant les objets dans le chapeau.</speaker>
+          <l n="267">Nous allons recommencer !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="268">Votre épingle, vos breloques ! vos habits ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="269">Avec plaisir, postillon !... </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, serrant les objets dans l’armoire, revenant, et avec respect.[10]</speaker>
+          <l n="270">Monsieur, j’ai l’honneur de vous demander, pour la seconde fois, la main de mademoiselle Bérénice, votre pupille...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, hors de lui.</speaker>
+          <l n="271">Toi !... va te faire poser les sangsues !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="272">Très bien !...je ferme et reverrouille ! </l>
+          <stage>&lt;em&gt;Il ferme la porte et met la clef dans sa poche.&lt;a href="#_ftn11" name="_ftnref11" title="" id="_ftnref11"&gt;&lt;strong&gt;[11]&lt;/strong&gt;&lt;/a&gt;&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="273">Ah ! c’est comme çà qu’il crois me faire céder ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL</speaker>
+          <l n="274">Parbleu ! je ne vous garde que pour ça !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="275">Et comment t’y prendras-tu ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="276">Je n’en sais rien... l’homme est si girouette ! j’attendrai... je suis très patient.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="277">Et moi donc ! Ah ! tu ne me connais pas ! je prends mon parti ! j’accepte mes fers ! j’accepte la fièvre !</l>
+          <stage>&lt;em&gt;Air : Le dieu des bonnes gens. &lt;/em&gt;</stage>
+          <l n="278">Sais-tu combien on accorde à la mule</l>
+          <l n="279">De fermeté, de vigueur et d’aplomb ?</l>
+          <l n="280">De cette mule, eh bien ! je suis l’émule !</l>
+          <l n="281">Tu n’auras pas ma pupille ! capon !!!</l>
+          <l n="282">Tiens ! je te nargue ! et dût même la fièvre</l>
+          <l n="283">Pendant trente ans me conduire au trépas,</l>
+          <l n="284">Ces mots, trente ans, tomberont de ma lèvre ;</l>
+          <l n="285">Non ! tu ne l’auras pas !</l>
+          <l n="286">Non ! tu ne l’auras pas !!!</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, le câlinant.</speaker>
+          <l n="287">Voyons, père Mouillebouche !...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, avec dignité.</speaker>
+          <l n="288">Je ne suis pas père Mouillebouche !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="289">Puisque vous avez un fils...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="290">Ce n’est pas une raison !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="291">Faisons la paix ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="292">Jamais !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="293">Voulez-vous un petit verre de malaga ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="294">Tu m’ennuies !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="295">Avec un biscuit ?...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, avec un profond dédain.</speaker>
+          <l n="296">Un biscuit !... tu crois que je vais troquer ma pupille contre un biscuit !... Ô trois fois insensé ! je vais me coucher !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="297">Prenez mon lit... je vais vous faire du feu...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, avec dignité.</speaker>
+          <l n="298">Je ne veux rien !... je préfère frissonner dans mon cachot... Môsieur !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="299">Père Mouillebouche ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="300">Non ! non ! non !!! Ne m’approche pas, garnement, ne m’approche pas !... </l>
+          <stage>&lt;em&gt;Il rentre avec dignité.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL, seul</speaker>
+          <l n="301">Ça ne prend pas... ce gros mastodonte est têtu comme un mulet... Comment le décider à m’accorder Bérénice ?... car il me la faut !...je la veux ! je m’entête ! </l>
+          <stage>&lt;em&gt;Courant à la porte et criant.&lt;/em&gt;</stage>
+          <l n="302">Monsieur !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, dans la coulisse.</speaker>
+          <l n="303">Quoi ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="304">Pour la troisième fois, j’ai l’honneur de vous demander...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, dans la coulisse.</speaker>
+          <l n="305">Ah !... si tu savais quel zut je t’envoie !!! </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="306">Merci... je m’y attendais. </l>
+          <stage>&lt;em&gt;Revenant en scène.&lt;/em&gt;</stage>
+          <l n="307">Ah ! c’est comme çà ! tu refuses mes câlineries, mon malaga et mes petits soins !... On veut le dorloter, et tu mords ! très bien !... il est des animaux coriaces dont on n’entame l’épiderme qu’avec le canon... Nous allons tirer le canon !</l>
+          <stage>&lt;em&gt;On entend un ronflement dans la chambre de Mouillebouche.&lt;/em&gt;</stage>
+          <l n="308">Hein ?... il dort !... il ronfle !... </l>
+          <stage>&lt;em&gt;S’adressant à la porte.&lt;/em&gt;</stage>
+          <l n="309">Tu me refuses Bérénice, et tu oses ronfler, homme sans pudeur !</l>
+          <stage>&lt;em&gt;Nouveau ronflement plus fort.&lt;/em&gt;</stage>
+          <l n="310">Oui... oui... je suis à toi, mon bon !... </l>
+          <stage>&lt;em&gt;Il ouvre le piano.&lt;/em&gt;</stage>
+          <l n="311">Nous allons tirer le canon ! </l>
+          <stage>&lt;em&gt;Il tape de toutes ses forces, sur le piano, l’air de : &lt;/em&gt;Marie, trempe ton pain, etc., etc.&lt;em&gt; ; et recommence plusieurs fois les mêmes mesures.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL, MOUILLEBOICHE</speaker>
+          <stage>&lt;em&gt;Tropical continue à jouer du piano. Mouillebouche entre en caleçon, en bonnet de colon, et vient tout doucement s’asseoir sûr une chaise qu’il apporte de sa chambre, et qu’il place au milieu. Il a un lorgnon suspendu à son cou par un cordon noir.&lt;a href="#_ftn12" name="_ftnref12" title="" id="_ftnref12"&gt;&lt;strong&gt;[12]&lt;/strong&gt;&lt;/a&gt;&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à part.</speaker>
+          <l n="312">Le voici !</l>
+          <stage>&lt;em&gt;Il chante à tue-tête, en jouant l’air. &lt;/em&gt;</stage>
+          <l n="313">Marie, tremp’ ton pain,</l>
+          <l n="314">Marie, tremp’ ton pain,</l>
+          <l n="315">Marie, tremp’ ton pain</l>
+          <l n="316">Dans la sauce !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="317">Cristi ! que j’ai envie de dormir !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, se retournant vers Mouillebouche.</speaker>
+          <l n="318">Monsieur, pour la quatrième fois, j’ai l’honneur...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, d’un ton aimable et le lorgnant.</speaker>
+          <l n="319">Continuez, jeune homme, j’aime beaucoup cet air-là.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="320">Ah !... cela vous amuse ?... soit ! </l>
+          <stage>&lt;em&gt;Il tape sur le piano avec rage, et chante.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, chantant aussi.</speaker>
+          <l n="321">Marie, tremp’ ton pain,</l>
+          <l n="322">Marie, tremp’ ton pain,</l>
+          <l n="323">Marie, tremp’ ton pain</l>
+          <l n="324">Dans le vin !</l>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="325">Vous le jouez un peu lentement.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="326">Nous avons changé d’armes... c’est un duel au piano... mais je ne céderai pas, morbleu !... Cristi ! que j’ai envie de dormir !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="327">Vous aimez la musique ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="328">Énormément ! surtout quand elle me réveille en sursaut... Je me disais en m’endormant : Mon Dieu ! mon Dieu ! que je serais donc content si Tropical pouvait me réveiller en sursaut, en jouant la jolie romance de :</l>
+          <l n="329">Marie, tremp’ ton pain,</l>
+          <l n="330">Marie, tremp’ ton pain...</l>
+          <l n="331">Je ferais des bassesses pour cet air-là ! Voulez-vous le recommencer ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à part, se levant.</speaker>
+          <l n="332">Le vieux singe se moque de moi ? Au diable !!!</l>
+          <stage>&lt;em&gt;Il se promène avec dépit.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="333">Vous ne jouez plus... À mon tour... voulez-vous permettre ?... </l>
+          <stage>&lt;em&gt;Il s’assied devant le piano.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="334">Comment ! vous allez jouer du piano ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="335">Vous avez été si gracieux... je vous dois bien ça...[13]</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="336">Je le bats à plate couture !... Cristi ! que j’ai envie de dormir !... </l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à part.</speaker>
+          <l n="337">Ah ! mais il m’agace !... Qu’est-ce que je pourrais donc lui faire ?... je vais l’enrhumer ! </l>
+          <stage>&lt;em&gt;Il ouvre la fenêtre.&lt;/em&gt;</stage>
+          <l n="338">Mouillebouche, devant le piano. Je n’ai qu’un bien faible talent... mais à la campagne !... </l>
+          <stage>&lt;em&gt;Il chante en s’accompagnant.&lt;/em&gt;</stage>
+          <l n="339">Dodo, l’enfant do,</l>
+          <l n="340">L’enfant dormira tantôt ! </l>
+          <stage>&lt;em&gt;Il éternue.&lt;/em&gt;</stage>
+          <l n="341">Dodo, l’enfant...</l>
+          <stage>&lt;em&gt;Il éternue. &lt;/em&gt;</stage>
+          <l n="342">Tiens ! vous ouvrez la fenêtre ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="343">Ça vous incommode ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="344">Du tout ! </l>
+          <stage>&lt;em&gt;Il éternue.&lt;/em&gt;</stage>
+          <l n="345">J’allais vous en prier... j’adore m’enrhumer du cerveau... ça occupe l’esprit. </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="346">Je ne te céderai pas, gredin. </l>
+          <stage>&lt;em&gt;Il éternue.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="347">Dieu vous bénisse !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="348">Merci !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="349">Monsieur, pour la cinquième fois, j’ai l’honneur...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="350">Oui, monsieur, je crois que nous aurons énormément d’abricots cette année. </l>
+          <stage>&lt;em&gt;Il bâille.&lt;/em&gt;</stage>
+          <l n="351">Cristi ! que j’ai envie de dormir !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="352">Vous baillez ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="353">C’est déplaisir... </l>
+          <stage>&lt;em&gt;En s’assoupissant.&lt;/em&gt;</stage>
+          <l n="354">Je m’amuse prodigieusement... prodigieusement...</l>
+          <stage>&lt;em&gt;Il s’endort en fredonnant.&lt;/em&gt;</stage>
+          <l n="355">Marie, tremp’ ton pain,</l>
+          <l n="356">Marie, tremp’... </l>
+          <stage>&lt;em&gt;Il ronfle.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="357">Le voilà parti !... Je me suis laissé dire qu’on apprivoisait les rhinocéros en les privant de sommeil... Je suis curieux d’éclaircir ce point d’histoire naturelle. </l>
+          <stage>&lt;em&gt;Il prend une corde dans le carnier et l’attache à la jambe gauche de Mouillebouche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, se réveillant.</speaker>
+          <l n="358">Hein ! quoi ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="359">Ne vous dérangez pas ?... je vous attache... vous pourriez vous échapper !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="360">Ah ! charmant ! charmant ! il n’y a rien que j’adore pour dormir comme d’avoir une ficelle à la jambe gauche !... j’ai toujours envié le sort des hannetons. </l>
+          <stage>&lt;em&gt;Il se rendort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à part.</speaker>
+          <l n="361">C’est ce que nous allons voir. </l>
+          <stage>&lt;em&gt;Il a été s’asseoir à droite. Il tient l’autre bout de la ficelle.&lt;/em&gt;</stage>
+          <l n="362">Il s’est rendormi... </l>
+          <stage>&lt;em&gt;Il tire la ficelle.&lt;/em&gt;</stage>
+          <l n="363">Monsieur ! monsieur !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, se réveillant.</speaker>
+          <l n="364">Délicieux ! délicieux ! </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="365">Nous avons encore changé d’armes... c’est un duel à la ficelle... Polisson ! </l>
+          <stage>&lt;em&gt;Il se rendort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, tirant la ficelle.</speaker>
+          <l n="366">Monsieur !... monsieur !...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, se réveillant.</speaker>
+          <l n="367">Charmante soirée !... charmante soirée !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="368">Vous ne connaîtriez pas la recette pour conserver les petits pois ?...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à moitié endormi.</speaker>
+          <l n="369">Parfaitement... parfaitement... Vous les faites bouillir... c’est-à-dire cuire... non bouillir... et... voilà la recette ! </l>
+          <stage>&lt;em&gt;Il s’endort. Tropical s’est endormi. Un ronflement de ce dernier réveille Mouillebouche.&lt;/em&gt;</stage>
+          <l n="370">Hein ?... ah ! il est joli celui-là... Il croit que je vais le laisser dormir !... Mon bon ami, tu as tiré le premier... j’ai essuyé ton feu... à mon tour ! </l>
+          <stage>&lt;em&gt;Tirant la ficelle.&lt;/em&gt;</stage>
+          <l n="371">Voisin ?... Voisin ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, se réveillant.</speaker>
+          <l n="372">Hein ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="373">Pardon... je crois que j’ai oublié de vous souhaiter le bonsoir ?...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="374">Bonsoir ! bonsoir ! </l>
+          <stage>&lt;em&gt;Il s’endort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="375">Je continue à le battre à plate couture ! Il ronfle comme un buffle !... Parbleu ! je suis bien bête de rester là avec ma ficelle à la patte !... Il me vient encore une fourberie à la Scapin ! </l>
+          <stage>&lt;em&gt;Il entonne un ronflement pendant lequel il attache la ficelle au pied de son fauteuil, puis il se dirige vers l’armoire à pas de loup, toujours en ronflant. Musique en sourdine à l’orchestre.&lt;/em&gt;</stage>
+          <l n="376">Mon paquet... mes breloques...</l>
+          <stage>&lt;em&gt;Il les prend et s’approche de Tropical en adoucissant son ronflement.&lt;/em&gt;</stage>
+          <l n="377">La clef !...</l>
+          <stage>&lt;em&gt;Il la prend dans la poche de Tropical.&lt;/em&gt;</stage>
+          <l n="378">Je la tiens ! </l>
+          <stage>&lt;em&gt;Il gagne la porte et l’ouvre, toujours en ronflant.&lt;/em&gt;</stage>
+          <l n="379">Et maintenant, polisson, je vais te chiper ta chaise de poste ! </l>
+          <stage>&lt;em&gt;Il pousse un dernier ronflement, et sort en fermant brusquement la porte en dehors.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL, seul, puis la voix de MOUILLEBOUCHE</speaker>
+          <stage>&lt;em&gt;Le bruit de la serrure réveille Tropical en sursaut.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="380">Hein ? Monsieur, pour la sixième fois... </l>
+          <stage>&lt;em&gt;Il tire vivement la ficelle, le fauteuil vient à lui.&lt;/em&gt;</stage>
+          <l n="381">Personne !... il s’est échappé !... </l>
+          <stage>&lt;em&gt;Il court à la porte.&lt;/em&gt;</stage>
+          <l n="382">Mouillebouche !... père Mouillebouche !... Fermée !... Ma clef !... </l>
+          <stage>&lt;em&gt;Fouillant dans ses poches.&lt;/em&gt;</stage>
+          <l n="383">Il l’a volée ! tout est perdu !... </l>
+          <stage>&lt;em&gt;Il va à la fenêtre.&lt;/em&gt;</stage>
+          <l n="384">Le voilà !... sur le marchepied de la chaise de poste !... Monsieur !... Monsieur !...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>Voix de MOUILLEBOUCHE.</speaker>
+          <l n="385">Adieu, galopin !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="386">Ah ! mon Dieu ! que faire ? </l>
+          <stage>&lt;em&gt;Tout à coup.&lt;/em&gt;</stage>
+          <l n="387">Oh ! </l>
+          <stage>&lt;em&gt;Il prend le fusil de chasse et ajuste Mouillebouche.&lt;/em&gt;</stage>
+          <l n="388">Arrêtez... ou je tire ! </l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="389">Il n’est pas chargé, ça ne fait rien !...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, effrayé.</speaker>
+          <l n="390">Monsieur, pas de bêtises !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="391">Remonte ou je tire !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="392">Voilà !... Ôtez votre fusil, sacristie !... je vais faire le tour...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="393">Non... par ici... le long de ce treillage... je ne veux pas te perdre de vue !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="394">Je ne pourrai jamais grimper...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, l’ajustant.</speaker>
+          <l n="395">Grimpe ou je tire.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="396">Voila ! voilà ! </l>
+          <stage>&lt;em&gt;Jetant un cri.&lt;/em&gt;</stage>
+          <l n="397">Aïe !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="398">Quoi donc ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#tropical">
+          <speaker>TROPICAL et MOUILLEBOUCHE</speaker>
+          <stage>&lt;em&gt;Mouillebouche arrive par le balcon en tenant la main sur ses yeux. Il a son habit couvert de plâtre et est en caleçon.&lt;a href="#_ftn14" name="_ftnref14" title="" id="_ftnref14"&gt;&lt;strong&gt;[14]&lt;/strong&gt;&lt;/a&gt;&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="399">Ah ! crédié ! ah ! crédié !... que le diable emporte votre mur !...il m’est tombé du plâtre dans l’œil !...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="400">Ah ! pauvre bonhomme !... Mouchez-vous !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="401">Je ne peux pas me moucher les yeux, imbécile ! </l>
+          <stage>&lt;em&gt;Se frottant.&lt;/em&gt;</stage>
+          <l n="402">Holà... là... là !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="403">Attendez, je vais vous mettre une clef dans le dos...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="404">Une clef ! c’est pour le hoquet !... Cristi ! cristi !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="405">Ça vous picote ?... Frottez-vous l’autre ! </l>
+          <stage>&lt;em&gt;Apportant un verre d’eau.&lt;/em&gt;</stage>
+          <l n="406">Tenez, un peu d’eau fraîche !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="407">Non !... Tropical... soufflez-moi dans l’œil !... ferme !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="408">Avec plaisir !... </l>
+          <stage>&lt;em&gt;Il gonfle ses joues pour souffler, puis s’arrête tout à coup.&lt;/em&gt;</stage>
+          <l n="409">Un instant ! – Monsieur, pour la septième fois, j’ai l’honneur de vous demander...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="410">Va te coucher ! </l>
+          <stage>&lt;em&gt;Il avance la main pour prendre le verre d’eau.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="411">Ah ! c’est comme ça ! </l>
+          <stage>&lt;em&gt;Avalant le verre d’eau.&lt;/em&gt;</stage>
+          <l n="412">À votre santé !...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="413">Polisson ! Tu crois me faire céder !... pour un grain de poussière !... Si je pouvais moi-même ! </l>
+          <stage>&lt;em&gt;Il essaye de se souffler dans l’œil.&lt;/em&gt;</stage>
+          <l n="414">Non... ça n’arrive pas...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="415">J’ai eu ça une fois... ça m’a duré trois jours...</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="416">Trois jours !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="417">Et trois nuits !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="418">Mais c’est un enfer !... J’ai un cent d’épingles dans chaque orbite... Tropical !... souffle !... au nom de l’amitié qui nous lie... souffle !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="419">La main de Bérénice ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="420">Jamais !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="421">Quand vous voudrez !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="422">Ah ! crédié !... ah ! crédié !... Voyons... Tropical ! Au moins, me promets-tu de la rendre heureuse ?... mais bien heureuse ?</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="423">Oh ! comme le poisson dans l’eau !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, à part.</speaker>
+          <l n="424">Cristi ! que je suis poule-mouillée ! mais ça me picote tant !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="425">Faut-il souffler ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="426">Mais, dame ! </l>
+          <stage>&lt;em&gt;Le repoussant tout d’un coup.&lt;/em&gt;</stage>
+          <l n="427">Non !... arrête !... ça s’en va !... c’est parti !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL, à part.</speaker>
+          <l n="428">Sacrebleu !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="429">Ah ! galopin !... demande-moi donc a présent la main de ma pupille ?... </l>
+          <stage>&lt;em&gt;Il s’essuie les yeux avec sa manche.&lt;/em&gt;</stage>
+          <l n="430">Ah ! mille noms d’un nom ![15]</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="431">Qui donc ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="432">Je m’en suis remis avec ma manche !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="433">Bravo !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="434">J’en ai plus qu’avant !... </l>
+          <stage>&lt;em&gt;Suppliant.&lt;/em&gt;</stage>
+          <l n="435">Tropical ?... mon petit Tropical ?...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="436">Bérénice ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="437">Cristi ! que je suis poule-mouillée !... Et quand je pense qu’il y a un Romain qui, autrefois, a mis sa main dans le feu en faisant des mots !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="438">Oui, mais il ne se serait pas mis le doigt dans l’œil.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="439">C’est vrai !... Ta réflexion me décide.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="440">Faut-il souffler ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="441">Allons !... souffle !... mais je te déteste !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="442">Ça m’est égal ! </l>
+          <stage>&lt;em&gt;Il se place devant Mouillebouche et lui souffle dans l’œil.&lt;/em&gt;</stage>
+          <l n="443">Ne bougez pas !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, se tenant l’œil.</speaker>
+          <l n="444">Plus haut !... gamin !... polisson !... garnement !... plus fort !... Ah ! si tu savais comme je te déteste !...</l>
+          <stage>&lt;em&gt;Tout à coup.&lt;/em&gt;</stage>
+          <l n="445">Tiens !... tiens !... c’est fini !... c’est fini !... Merci, vaurien !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="446">À quand la noce ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="447">Dans huit jours, paltoquet !... Ah çà, qu’est-ce que je dirai à mon fils... Mouillebouche fils ?...</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="448">Vous lui direz que je lui ai soufflé Bérénice.</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="449">Dans mon œil ! ce mot le fera rire ! </l>
+          <stage>&lt;em&gt;Avec mélancolie.&lt;/em&gt;</stage>
+          <l n="450">C’est égal, je suis triste.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="451">Pourquoi ça ?</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="452">Je pense que si Napoléon, à Marengo, avait eu du plâtre dans l’œil, il eût été diablement gêné pour voir clair à son affaire.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="453">À quoi tient le sort des empires !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="454">Bah ! je vais remettre mon pantalon de marié... mais avant accompagne-moi... </l>
+          <stage>&lt;em&gt;Tropical lui offre le bras.&lt;/em&gt;</stage>
+          <l n="455">Sur ton piano, imbécile ! tu ne vois donc pas que j’ai besoin de chanter !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="456">Ah !</l>
+          <stage>&lt;em&gt;Il se met au piano.&lt;a href="#_ftn16" name="_ftnref16" title="" id="_ftnref16"&gt;&lt;strong&gt;[16]&lt;/strong&gt;&lt;/a&gt;&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="457">Y es-tu ?... en sol bécarre, s’il te plaît.</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="458">Allez ! </l>
+          <stage>&lt;em&gt;Pendant que Mouillebouche chante le couplet au public sur l’air : &lt;/em&gt;Amis, voici la riante semaine&lt;em&gt;, Tropical joue l’air : &lt;/em&gt;Marie, tremp’ ton pain...</stage>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, au public.</speaker>
+          <stage>&lt;em&gt;Air : Amis, voici la riante termine. &lt;/em&gt;</stage>
+          <l n="459">Hélas ! messieurs, cet ouvrage éphémère...</l>
+          <stage>&lt;em&gt;Parlé. &lt;/em&gt;</stage>
+          <l n="460">Qu’est-ce qu’il joue là. </l>
+          <stage>&lt;em&gt;Reprenant.&lt;/em&gt;</stage>
+          <l n="461">Est, j’en conviens, un tantinet fluet...</l>
+          <stage>&lt;em&gt;Chantant machinalement l’air qu’il entend.&lt;/em&gt;</stage>
+          <l n="462">Marie, tremp’ ton pain...</l>
+          <stage>&lt;em&gt;Reprenant le couplet.&lt;/em&gt;</stage>
+          <l n="463">Il est bâti sur un grain de poussière...</l>
+          <stage>&lt;em&gt;Même jeu. &lt;/em&gt;</stage>
+          <l n="464">Marie, tremp’ ton pain...</l>
+          <stage>&lt;em&gt;Reprenant le couplet. &lt;/em&gt;</stage>
+          <l n="465">Un souffle peut emporter le pauvret.</l>
+          <stage>&lt;em&gt;Même jeu.&lt;/em&gt;</stage>
+          <l n="466">Marie, tremp’ ton pain dans la sauce !</l>
+          <l n="467">Mais ce n’est pas ça, animal !... ce n’est pas cet air-là !</l>
+        </sp>
+        <sp who="#tropical">
+          <speaker>TROPICAL.</speaker>
+          <l n="468">Je ne sais que celui-là !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE.</speaker>
+          <l n="469">Ah ! alors, chantons-le. </l>
+          <stage>&lt;em&gt;Au public.&lt;/em&gt;</stage>
+          <l n="470">Il n’est peut-être pas de la première jeunesse... mais, avec de la méthode... une voix pure... et un orchestre très bruyant... on ne l’entendra pas ! </l>
+          <stage>&lt;em&gt;À Tropical.&lt;/em&gt;</stage>
+          <l n="471">Allons, ensemble ! </l>
+          <stage>&lt;em&gt;Ils chantent ensemble.&lt;/em&gt;</stage>
+          <stage>Marie, tremp’ ton pain &lt;em&gt;(ter.)&lt;/em&gt;</stage>
+          <l n="472">Dans la sauce !</l>
+        </sp>
+        <sp who="#mouillebouche">
+          <speaker>MOUILLEBOUCHE, achevant l’air et très gracieusement.</speaker>
+          <l n="473">Puisse, sans guignon,</l>
+          <l n="474">La sauce en question’</l>
+          <l n="475">Faire passer notre poisson !         </l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <stage>Marie, tremp’ ton pain, &lt;em&gt;etc.&lt;/em&gt;</stage>
+          <l n="476">[1] Mouillebouche, Tropical.</l>
+          <l n="477">[2] Tropical, Mouillebouche.</l>
+          <l n="478">[3] Mouillebouche, Tropical.</l>
+          <l n="479">[4] Tropical, Mouillebouche.</l>
+          <l n="480">[5] Mouillebouche, Tropical.</l>
+          <l n="481">[6] Tropical, Mouillebouche.</l>
+          <l n="482">[7] Mouillebouche, Tropical.</l>
+          <l n="483">[8] Tropical, Mouillebouche.</l>
+          <l n="484">[9] Mouillebouche, Tropical.</l>
+          <l n="485">[10] Tropical, Mouillebouche.</l>
+          <l n="486">[11] Mouillebouche, Tropical.</l>
+          <l n="487">[12] Tropical, Mouillebouche.</l>
+          <l n="488">[13] Mouillebouche, Tropical.</l>
+          <l n="489">[14] Tropical, Mouillebouche.</l>
+          <l n="490">[15] Mouillebouche, Tropical.</l>
+          <l n="491">[16] Tropical, Mouillebouche.</l>
+          <l n="492" />
+        </sp>
       </div>
     </body>
   </text>

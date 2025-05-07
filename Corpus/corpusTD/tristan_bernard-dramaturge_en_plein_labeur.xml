@@ -1,198 +1,74 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Un Dramaturge en plein labeur</title>
-        <author key="Tristan BERNARD | (naissance-mort)">Tristan BERNARD |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/un-dramaturge-en-plein-labeur-tristan-bernard</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Tristan BERNARD |</author>. <title>Un Dramaturge en plein labeur</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/un-dramaturge-en-plein-labeur-tristan-bernard</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1930-12-05">Représentée pour la première fois, à Paris, sur le Théâtre de la Comédie Française, le 5 décembre 1930.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="l’auteur" sex="SEX">
+            <persName>L’AUTEUR</persName>
+          </person>
+          <person xml:id="le-secrétaire" sex="SEX">
+            <persName>LE SECRÉTAIRE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
-    <body>
-      <head>Un Dramaturge en plein labeur</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Pièce en un acte.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de la Comédie Française, le 5 décembre 1930.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="l’auteur">L’AUTEUR</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-secrétaire">LE SECRÉTAIRE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <l n="4" xml:id="l4"> </l>
-            <stage><hi rend="italic"><em>L’Auteur se promène de long en large dans son cabinet de travail, en robe de chambre. Sonnerie de téléphone.</em></hi></stage>
-          </sp>
-          <sp who="l’auteur" xml:id="0-2">
-            <speaker>L’AUTEUR.</speaker>
-            <l n="6" xml:id="l6">À midi moins un quart ! A-t-on idée de téléphoner à des heures pareilles !... Ils ne respectent pas le repos d’autrui, ces gens-là !</l>
-            <stage><hi rend="italic"><em>Il décroche l’appareil.</em></hi></stage>
-            <l n="8" xml:id="l8">Allo !... Ah ! C’est toi, Albert ? Déjà levé !... C’est vrai que nous avons joué... – toi tu es parti à quatre heures – nous avons joué jusqu’à sept heures et demie, mon vieux ! C’est idiot !... Oh ! ce n’est pas que j’aie perdu... c’est entendu, j’ai perdu ; mais c’est idiot ! Enfin !... C’est imbécile, c’est criminel de se coucher aussi tard !... Avec ça que j’ai promis à Rosenberg de lui donner mon manuscrit aujourd’hui... Les engagements des artistes courent en ce moment... Mais qu’est-œ que je vais lui raconter ! Enfin ! J’aime mieux ne rien préparer de ce que je lui dirai, je suis trop fatigué ; quand il m’interrogera, je verrai ce que je pourrai répondre... Attends un peu... Mon vieux, tu m’excuses, j’entends la porte se refermer, c’est mon secrétaire qui arrive... Oui !... Ben oui ! Il s’amène tranquillement à midi ! Enfin !... Au revoir... Ce soir, un nouveau poker ? Ah ! non, mon vieux, tu ne m’as pas regardé... Hein ?...</l>
-            <stage><hi rend="italic"><em>Énergiquement.</em></hi></stage>
-            <l n="10" xml:id="l10">Oh ! non, recommencer à jouer après une nuit blanche, ah ! non et non !...</l>
-            <stage><hi rend="italic"><em>Fléchissant.</em></hi></stage>
-            <l n="12" xml:id="l12">Enfin, si vous avez besoin de moi... je ne veux pas casser votre partie. Au revoir, mon vieux !</l>
-            <stage><hi rend="italic"><em>Il raccroche. Le secrétaire entre.</em></hi></stage>
-            <l n="14" xml:id="l14">C’est à cette heure-ci que vous vous amenez, vous ?</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-3">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="15" xml:id="l15">Je vous demande pardon, Maître, je suis venu à neuf heures, mais Firmin m ‘a dit que vous dormiez encore, et que vous vous étiez couché très tard...</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-4">
-            <speaker>L’AUTEUR.</speaker>
-            <l n="16" xml:id="l16">Alors, parce que je me repose, c’est une raison pour qu’on ne travaille pas ? Comment se fera la pièce, si personne n’y travaille ? Où en êtes-vous ?</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-5">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="17" xml:id="l17">J’ai à peu près fini le premier acte. J’attendais que vous ayez vu la scène d’Alberte et de Jean pour savoir ce que je devais faire.</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-6">
-            <speaker>L’AUTEUR.</speaker>
-            <l n="18" xml:id="l18">N’attendez pas, mon ami ! Si ce n’est pas bien, on recommencera, on est ici pour travailler.</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-7">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="19" xml:id="l19">Vous avez vu cette scène, Maître ?</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-8">
-            <speaker>L’AUTEUR, <em>hésitant.</em></speaker>
-            <l n="20" xml:id="l20">Je l’ai vue, oui... Enfin, je l’ai parcourue... Enfin, je sais ce qu’il y a dedans !</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-9">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="21" xml:id="l21">C’est le début du II qui est difficile.</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-10">
-            <speaker>L’AUTEUR.</speaker>
-            <l n="22" xml:id="l22">Parce que vous manquez d’audace. Il faut se lancer ! L’important, c’est d’écrire ! C’est d’écrire ! Vous êtes à l’âge où l’on écrit. Il faut que mes deux actes soient remis au copiste mardi. Arrangez-vous pour cela. Rosenberg va me téléphoner. Je lui dirai, évidemment, que la pièce est terminée, mais ce n’est pas cela qui arrangera les choses...</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-11">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="23" xml:id="l23">Je vais travailler d’arrache-pied !</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-12">
-            <speaker>L’AUTEUR.</speaker>
-            <l n="24" xml:id="l24">C’est cela, il le faut. Après, vous vous mettrez à ma pièce du Théâtre de Paris, et après à une autre pièce. Et puis après, ce que je vous ai promis... nous collaborerons.</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-13">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="25" xml:id="l25">Oh ! Maître ! Quel bonheur ce sera pour moi !</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-14">
-            <speaker>L’AUTEUR, <em>vivement.</em></speaker>
-            <l n="26" xml:id="l26">Ce moment n’est pas arrivé. Mais en attendant, travaillons !</l>
-            <stage><hi rend="italic"><em>Le téléphone sonne.</em></hi></stage>
-            <l n="28" xml:id="l28">Ah ! c’est Rosenberg... Comme je suis mal disposé pour lui répondre ! Dites-lui donc que je me suis couché à huit heures, que j’ai travaillé, qu’il faut me laisser travailler dans l’intérêt de tout le monde... Non ! C’est moi qui vais lui parler !</l>
-            <stage><hi rend="italic"><em>Il décroche.</em></hi></stage>
-            <l n="30" xml:id="l30">Allô !... Allo ! C’est toi, Rosenberg ? Comment vas-tu, mon vieux Lucien ?... J’ai l’air fatigué ? Ah... on le serait à moins, va ! Huit heures, mon ami, j’ai travaillé jusqu’à huit heures du matin !... Oh ! Je ne le regrette pas, ça valait la peine... Hein ? Le troisième acte ? Oui, le troisième acte est terminé... Enfin, quand je dis terminé, il manque... trois fois rien, de petits joints à resserrer... Non, mon vieux, je ne te le lirai pas... quand ce sera absolument au point... Oui, oui, je sais que tu es un homme de théâtre... Mais, tout de même, un petit quelque chose qui n’irait pas pourrait te faire mauvaise impression... Tu trouves que je suis en retard ?... Voyons, mon vieux, de quoi te plains-tu ? Je t’avais promis la pièce pour le 5 février ? Eh bien, je t’affirme qu’à midi précis, le 15 mars, je te l’apporterai... Ben quoi ! Cela fait quarante jours... Je suis en avance sur le retard normal !... Tu es extraordinaire ! Tu sais pourtant ce que c’est que d’écrire une pièce ! On ne peut pas commander à ses facultés créatrices !... Mon travail de cette nuit ? Ah ! épatant... Oh ! épatant !... Je crois que nous tenons le gros succès... Oh ! non, ne me passe pas de pommade, tu verras la pièce le 15 mars et tu me diras ce que tu en penses. Aujourd’hui, je t’avoue que je suis un peu claqué... Ce qui se passe au II ? Oh !... oui, je puis très bien te le dire : « Le comte... »</l>
-            <stage><hi rend="italic"><em>À mi-voix au Secrétaire.</em></hi></stage>
-            <l n="32" xml:id="l32">Prenez des notes, ça pourra toujours servir...</l>
-            <stage><hi rend="italic"><em>Au téléphone.</em></hi></stage>
-            <l n="34" xml:id="l34">« ... Le comte, très fatigué, exténué de fatigue... »</l>
-            <stage><hi rend="italic"><em>Le secrétaire fait des signes désespérés pour attirer l’attention de l’Auteur.</em></hi></stage>
-            <l n="36" xml:id="l36">...Qu’est-ce que c’est ? – Je te demande pardon,  Rosenberg... On m’apporte un télégramme.</l>
-            <stage><hi rend="italic"><em>Au Secrétaire.</em></hi></stage>
-            <l n="38" xml:id="l38">Qu’y a-t-il ?</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-15">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="39" xml:id="l39">Le comte est mort à la fin du premier acte !...</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-16">
-            <speaker>L’AUTEUR.</speaker>
-            <l n="40" xml:id="l40">Allo ! Rosenberg ? Je reprends : « Le comte, exténué de fatigue, meurt... » Je crois, d’ailleurs, que je le ferai mourir à la fin du premier acte ! Attends... Je cherche dans des papiers...</l>
-            <stage><hi rend="italic"><em>Il ne cherche pas dans ses papiers et fronce les sourcils douloureusement.</em></hi></stage>
-            <l n="42" xml:id="l42">« Alors, sur ces entrefaites, le minotier, le gros minotier du Midi arrive... »</l>
-            <stage><hi rend="italic"><em>Le Secrétaire fait à nouveau des signes.</em></hi></stage>
-            <l n="44" xml:id="l44">Attends, je te demande pardon, encore un télégramme...</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-17">
-            <speaker>LE SECRÉTAIRE.</speaker>
-            <l n="45" xml:id="l45">Le minotier !... C’est dans votre pièce du Théâtre de Paris.</l>
-            <stage><hi rend="italic"><em>L’Auteur a un geste accablé.</em></hi></stage>
-          </sp>
-          <sp who="l’auteur" xml:id="0-18">
-            <speaker>L’AUTEUR, <em>au téléphone.</em></speaker>
-            <l n="47" xml:id="l47">Allo ! Allo ! C’est toi ? On coupe tout le temps... Écoute, je ne crois pas, d’ailleurs, que j’en ferai un minotier, cela ne va pas avec le milieu, non ! « Là-dessus, intervention du...</l>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-19">
-            <speaker>LE SECRÉTAIRE, <em>vivement.</em></speaker>
-            <l n="48" xml:id="l48">...Notaire ! »</l>
-          </sp>
-          <sp who="l’auteur" xml:id="0-20">
-            <speaker>L’AUTEUR.</speaker>
-            <l n="49" xml:id="l49">...Du notaire... naturellement... Ce qu’il dit ? Eh bien, j’aime mieux ne pas te le dire, tu en auras la surprise. Après cela, c’est la scène entre Signoret et Marnac...</l>
-            <stage><hi rend="italic"><em>Au Secrétaire.</em></hi></stage>
-            <l n="51" xml:id="l51">Je sais que Signoret et Marnac sont engagés...</l>
-            <stage><hi rend="italic"><em>Au téléphone.</em></hi></stage>
-            <l n="53" xml:id="l53">J’aime mieux te dire des noms d’acteurs, tu comprends... Alors, arrive Bélière : scène entre Bélière et Signoret... J’ai écrit là soixante répliques... tu m’en donneras des nouvelles... Puis la fin du II, avec un mouvement de tous les diables !</l>
-            <stage><hi rend="italic"><em>Il écoute.</em></hi></stage>
-            <l n="55" xml:id="l55">Je ne te dis pas grand’chose sur la pièce ? Mais c’est exprès, mon vieux : comprends bien que pour ma lecture définitive, je veux un auditeur frais... Cette pièce est très public ?... oui, oui, sois tranquille... avec, tu sais, des petites choses pour nous, bien entendu... Le III ? Oh ! bien, je te dirai une chose qui va te stupéfier : le III monte sur le II, tu comprends, c’est là la raison de mon retard. J’avais fait un II tellement extraordinaire !... Je me disais : « Jamais le III ne va monter sur le II. » Et cette nuit, j’ai trouvé un rebondissement formidable ! Je te montrerai cela. Tu aurais pu attendre cet acte pendant dix ans... je l’ai trouvé cette nuit... En ce moment, ce que je fais ? Je suis seul et je travaille !</l>
-            <stage><hi rend="italic"><em>À mi-voix, au Secrétaire.</em></hi></stage>
-            <l n="57" xml:id="l57">Je ne veux pas vous découvrir !</l>
-            <stage><hi rend="italic"><em>Au téléphone.</em></hi></stage>
-            <l n="59" xml:id="l59">J’ai eu cette chance miraculeuse de trouver des éléments nouveaux... Je te quitte parce que je vais en mettre un coup sérieux !... Au revoir !... Au revoir !</l>
-            <stage><hi rend="italic"><em>Il raccroche.</em></hi></stage>
-            <l n="61" xml:id="l61">Oh ! Cet homme est fatigant ! Écoutez, mon vieux, vous savez, ne comptez pas sur moi aujourd’hui, vous savez. Installez-vous ici, et puis, du courage ! Je vais me reposer un peu.</l>
-            <stage><hi rend="italic"><em>Il va s’étendre sur un divan, que cache à demi un paravent. On frappe à la porte.</em></hi></stage>
-          </sp>
-          <sp who="le-secrétaire" xml:id="0-21">
-            <speaker>LE SECRÉTAIRE, <em>sur le seuil.</em></speaker>
-            <l n="63" xml:id="l63">C’est vous, Bertin ? Pour votre interview ? Oh ! non, mon cher, pas aujourd’hui, c’est impossible ! Demain, demain ! Il est en plein feu. Il écrit sa pièce...</l>
-          </sp>
-          <p>FIN</p>
-        </div>
-      </div>
-    </body>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1930-12-05" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de la Comédie Française, le 5 décembre 1930.</ab>
+      </performance>
+      <castList />
+    </front>
+    <body />
   </text>
 </TEI>

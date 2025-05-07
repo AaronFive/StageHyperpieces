@@ -1,1276 +1,1210 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>La Nouveauté</title>
-        <author key="Marc-Antoine LEGRAND | (naissance-mort)">Marc-Antoine LEGRAND |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/1170</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Marc-Antoine LEGRAND |</author>. <title>La Nouveauté</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/1170</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1727-01-13">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 13 janvier 1727.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="la-nouveauté" sex="SEX">
+            <persName>LA NOUVEAUTÉ</persName>
+          </person>
+          <person xml:id="le-temps" sex="SEX">
+            <persName>LE TEMPS</persName>
+          </person>
+          <person xml:id="momus" sex="SEX">
+            <persName>MOMUS</persName>
+          </person>
+          <person xml:id="mercure" sex="SEX">
+            <persName>MERCURE</persName>
+          </person>
+          <person xml:id="lisandre" sex="SEX">
+            <persName>LISANDRE</persName>
+          </person>
+          <person xml:id="éliante" sex="SEX">
+            <persName>ÉLIANTE</persName>
+          </person>
+          <person xml:id="un-nouvelliste" sex="SEX">
+            <persName>UN NOUVELLISTE</persName>
+          </person>
+          <person xml:id="claudine" sex="SEX">
+            <persName>CLAUDINE</persName>
+          </person>
+          <person xml:id="un-vieux-baron" sex="SEX">
+            <persName>UN VIEUX BARON</persName>
+          </person>
+          <person xml:id="une-vieille-baronne" sex="SEX">
+            <persName>UNE VIEILLE BARONNE</persName>
+          </person>
+          <person xml:id="un-page-de-la-baronne" sex="SEX">
+            <persName>UN PAGE DE LA BARONNE</persName>
+          </person>
+          <person xml:id="la-cascade" sex="SEX">
+            <persName>LA CASCADE</persName>
+          </person>
+          <person xml:id="la-rimaille" sex="SEX">
+            <persName>LA RIMAILLE</persName>
+          </person>
+          <person xml:id="un-conseiller" sex="SEX">
+            <persName>UN CONSEILLER</persName>
+          </person>
+          <person xml:id="une-marquise" sex="SEX">
+            <persName>UNE MARQUISE</persName>
+          </person>
+          <person xml:id="une-comtesse" sex="SEX">
+            <persName>UNE COMTESSE</persName>
+          </person>
+          <person xml:id="un-bourgeois" sex="SEX">
+            <persName>UN BOURGEOIS</persName>
+          </person>
+          <person xml:id="une-bourgeoise" sex="SEX">
+            <persName>UNE BOURGEOISE</persName>
+          </person>
+          <person xml:id="un-abbé" sex="SEX">
+            <persName>UN ABBÉ</persName>
+          </person>
+          <person xml:id="un-clerc" sex="SEX">
+            <persName>UN CLERC</persName>
+          </person>
+          <person xml:id="un-garçon-marchand" sex="SEX">
+            <persName>UN GARÇON MARCHAND</persName>
+          </person>
+          <person xml:id="un-provincial" sex="SEX">
+            <persName>UN PROVINCIAL</persName>
+          </person>
+          <person xml:id="plusieurs-autres-personnages-amoureux-de-la-nouveauté" sex="SEX">
+            <persName>PLUSIEURS AUTRES PERSONNAGES Amoureux de la Nouveauté</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>prose</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1727-01-13" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 13 janvier 1727.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>La Nouveauté</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte, avec prologue et divertissement, en prose.</l>
-            <l n="2" xml:id="l2">Représentée pour la première fois, à Paris, sur le Théâtre de la rue des Fossés Saint-Germain, le 13 janvier 1727.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="la-nouveauté">LA NOUVEAUTÉ</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="le-temps">LE TEMPS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="momus">MOMUS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mercure">MERCURE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="lisandre">LISANDRE</role>
-              <roleDesc>, <em>Petit-Maître de Robe</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="éliante">ÉLIANTE</role>
-              <roleDesc>, <em>jeune coquette</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-nouvelliste">UN NOUVELLISTE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="claudine">CLAUDINE</role>
-              <roleDesc>, <em>paysanne</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-vieux-baron">UN VIEUX BARON</role>
-              <roleDesc>, <em>vêtu à l’ancienne mode</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="une-vieille-baronne">UNE VIEILLE BARONNE</role>
-              <roleDesc>, <em>vêtu à l’ancienne mode</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-page-de-la-baronne">UN PAGE DE LA BARONNE</role>
-              <roleDesc>, <em>vêtu à l’ancienne mode</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-cascade">LA CASCADE</role>
-              <roleDesc>, <em>Maître de musique</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="la-rimaille">LA RIMAILLE</role>
-              <roleDesc>,<em> Poète</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-conseiller">UN CONSEILLER</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="une-marquise">UNE MARQUISE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="une-comtesse">UNE COMTESSE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-bourgeois">UN BOURGEOIS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="une-bourgeoise">UNE BOURGEOISE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-abbé">UN ABBÉ</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-clerc">UN CLERC</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-garçon-marchand">UN GARÇON MARCHAND</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-provincial">UN PROVINCIAL</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="plusieurs-autres-personnages-<em>amoureux-de-la-nouveauté</em>">PLUSIEURS AUTRES PERSONNAGES <em>Amoureux de la Nouveauté</em></role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène est sur les bords du Fleuve de l’Ennui.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Le théâtre représente un bois de cyprès dépouillés de verdure, au travers duquel passe le Fleuve de L’Ennui dont les Eaux sont noires et bourbeuses. On voit sur ses bords plusieurs personnes de divers caractères qui attendent que le temps vienne les passer, et les tirer de ce triste lieu, et plusieurs images de gens qui s’ennuient.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="le-temps" xml:id="1-1">
-            <speaker>LE TEMPS, <em>une Rame à la main</em></speaker>
-            <l n="10" xml:id="l10"> </l>
-            <stage><hi rend="italic"><em>Chant n° 1.</em></hi></stage>
-            <l n="12" xml:id="l12"> </l>
-            <l n="13" xml:id="l13"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="14" xml:id="l14"> </l>
-          <sp who="momus" xml:id="2-1">
-            <speaker>LE TEMPS, MOMUS</speaker>
-            <l n="15" xml:id="l15"> </l>
-          </sp>
-          <sp who="momus" xml:id="2-2">
-            <speaker>MOMUS.</speaker>
-            <l n="16" xml:id="l16">Holà, bonhomme, ne sauriez-vous m’enseignez le Fleuve de l’Ennui ?</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-3">
-            <speaker>LE TEMPS.</speaker>
-            <l n="17" xml:id="l17">C’est ici, mon enfant ; vous voilà sur ses bords : ne vous en apercevez-vous pas en entendant mes chants lugubres, et en voyant tant de gens assoupis ? Mais me tromperais-je ? ou serait-ce Momus ?</l>
-          </sp>
-          <sp who="momus" xml:id="2-4">
-            <speaker>MOMUS.</speaker>
-            <l n="18" xml:id="l18">C’est le Temps, je pense ? oui, c’est lui-même : Bons Dieux ! que je le trouve changé ! hé ! que faites-vous ici, Père Saturne ?  </l>
-          </sp>
-          <sp who="le-temps" xml:id="2-5">
-            <speaker>LE TEMPS.</speaker>
-            <l n="19" xml:id="l19">Hélas ! mon cher ami, alors que Jupiter nous a tous chassé du Ciel, il m’est arrivé bien des traverses sur la terre ; mais enfin j’ai borné tous mes travaux à m’établir sur ces bords : c’est moi qui passe et repasse tous les mortels de la joie à la tristesse ; et de la tristesse à la joie.</l>
-          </sp>
-          <sp who="momus" xml:id="2-6">
-            <speaker>MOMUS.</speaker>
-            <l n="20" xml:id="l20">Voilà un emploi qui convient parfaitement au Temps.</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-7">
-            <speaker>LE TEMPS.</speaker>
-            <l n="21" xml:id="l21">Oui, mais il est bien fatigant ; le Fleuve de l’Ennui coule bien lentement, et j’ai toutes les peines du monde à amener à bon port ceux qui sont une fois embarqués sur les eaux bourbeuses.</l>
-          </sp>
-          <sp who="momus" xml:id="2-8">
-            <speaker>MOMUS.</speaker>
-            <l n="22" xml:id="l22">Qui sont ces espèces d’Ombres que je vois le long de ces arbres ?</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-9">
-            <speaker>LE TEMPS.</speaker>
-            <l n="23" xml:id="l23">Ce sont les images de ceux qui s’ennuient actuellement dans le monde. Par exemple, une jeune Femme mariée à un Vieillard ; un Écolier de Droit, en attendant l’argent de la Province, s’amuse à lire des Épitaphes ; un Poète qui attend une pension de la Cour, et un Tailleur de l’argent d’un Intendant.  </l>
-          </sp>
-          <sp who="momus" xml:id="2-10">
-            <speaker>MOMUS.</speaker>
-            <l n="24" xml:id="l24">Cela arrivera en même temps.</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-11">
-            <speaker>LE TEMPS.</speaker>
-            <l n="25" xml:id="l25">Ceux que tu vois là endormis, sont deux Petits-Maîtres à qui un Auteur lit une Comédie en cinq Actes écrite en vers sérieux : plus loin ce sont des Coquettes qui ont vieilli, et que la perte de leurs Amants a réduites à se plonger dans le Fleuve de l’Ennui : plus haut, c’est un galant homme qui, depuis une heure, attend qu’un Commis de la Douane daigne lui répondre ; et plus bas un Gascon prié à dîner, à qui un plaideur Manceau conte le fond de son procès. Mais je n’aurais jamais fini si j’entreprenais de t’expliquer tous les sujets que chacun a de s’ennuyer ; je te dirai seulement que ceux que tu vois assoupis autour de moi, sont des curieux de spectacles, qui attendent que les Comédiens, ou l’Opéra donne quelque chose de bon.</l>
-          </sp>
-          <sp who="momus" xml:id="2-12">
-            <speaker>MOMUS.</speaker>
-            <l n="26" xml:id="l26">Oh ! Parbleu, cela vient à merveille, et c’est justement ce que je cherche.</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-13">
-            <speaker>LE TEMPS.</speaker>
-            <l n="27" xml:id="l27">Comment ?</l>
-          </sp>
-          <sp who="momus" xml:id="2-14">
-            <speaker>MOMUS.</speaker>
-            <l n="28" xml:id="l28">Vous ne savez donc pas que, depuis notre disgrâce, je me suis fait Courtier des Théâtres ?</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-15">
-            <speaker>LE TEMPS.</speaker>
-            <l n="29" xml:id="l29">Courtier des Théâtres !</l>
-          </sp>
-          <sp who="momus" xml:id="2-16">
-            <speaker>MOMUS.</speaker>
-            <l n="30" xml:id="l30">Oui... C’est moi qui annonce tous les jours au Public les Pièces qu’on y doit jouer.</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-17">
-            <speaker>LE TEMPS.</speaker>
-            <l n="31" xml:id="l31">Il faut que tes Marchands de paroles n’aient pas vendu de trop bonnes choses depuis un temps ; car, au sortir de chez eux, nous avons vu arriver bien des gens sur nos bords.</l>
-          </sp>
-          <sp who="momus" xml:id="2-18">
-            <speaker>MOMUS.</speaker>
-            <l n="32" xml:id="l32">Ils ont pourtant des magasins remplis des meilleurs marchandises : elles n’ont qu’un défaut, c’est qu’elles sont trop anciennes, et j’ai toutes les peines du monde à en procurer le débit : chacun tombe d’accord qu’elles sont parfaites ; on les a admirés autrefois, et l’on se donne pas seulement la peine de les venir voir aujourd’hui. Je vais pourtant les annoncer encore, pour voir si le goût ne serait point changé.</l>
-          </sp>
-          <sp who="le-temps" xml:id="2-19">
-            <speaker>LE TEMPS.</speaker>
-            <l n="33" xml:id="l33">Annonce tant qu’il te plaira : mais je suis sûr que tu n’étrenneras pas.</l>
-            <l n="34" xml:id="l34"> </l>
-            <l n="35" xml:id="l35"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="36" xml:id="l36"> </l>
-          <sp who="momus" xml:id="3-1">
-            <speaker>MOMUS, LE CONSEILLER, LA COMTESSE, LA MARQUISE, LE BOURGEOIS <em>et</em> PLUSIEURS GENS <em>endormis</em></speaker>
-            <l n="37" xml:id="l37"> </l>
-          </sp>
-          <sp who="momus" xml:id="3-2">
-            <speaker>MOMUS.</speaker>
-            <l n="38" xml:id="l38">L’Académie Royale de Musique représentera aujourd’hui Pyrame et Thisbé.</l>
-          </sp>
-          <sp who="le-conseiller" xml:id="3-3">
-            <speaker>LE CONSEILLER.</speaker>
-            <l n="39" xml:id="l39">Allons, Mesdames ; voici l’heure de l’Opéra, souhaitez-vous que je vous y mène ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="3-4">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="40" xml:id="l40">Pyrame et Thisbé ? ah ! je le sais par cœur.</l>
-          </sp>
-          <sp who="le-conseiller" xml:id="3-5">
-            <speaker>LE CONSEILLER.</speaker>
-            <l n="41" xml:id="l41">Et qu’importe ? c’est toujours de la musique. Pour moi, que l’Opéra joue tout ce qu’il voudra, je n’en manquerais pas une représentation, pendant toute l’année, pour les affaires les plus importantes.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="3-6">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="42" xml:id="l42">Oh ! pour aujourd’hui, Monsieur le Conseiller, vous ne nous quittez point, s’il vous plaît.</l>
-          </sp>
-          <sp who="momus" xml:id="3-7">
-            <speaker>MOMUS.</speaker>
-            <l n="43" xml:id="l43">Les Comédiens Italiens représenteront aujourd’hui Arlequin jouet de la fortune.</l>
-          </sp>
-          <sp who="la-marquise" xml:id="3-8">
-            <speaker>LA MARQUISE.</speaker>
-            <l n="44" xml:id="l44">Ah ! c’est une Pièce toute Italienne, il n’y va jamais personne ; et la plupart de leurs Pièces françaises se ressemblent toutes, elles roulent toujours sur le même pivot ; les amants y parlent sans cesse un langage guindé, aussi obscur pour moi que l’Italien même.</l>
-          </sp>
-          <sp who="momus" xml:id="3-9">
-            <speaker>MOMUS.</speaker>
-            <l n="45" xml:id="l45">Les Comédiens Français représenteront aujourd’hui le Misanthrope ; à demain Tartuffe, en attendant l’Avare.</l>
-          </sp>
-          <sp who="le-bourgeois" xml:id="3-10">
-            <speaker>LE BOURGEOIS.</speaker>
-            <l n="46" xml:id="l46">Et, que diable ! toujours le Misanthrope, Tartuffe ou l’Avare. Est-ce que vous ne donnerez jamais l’École des Femmes ?</l>
-          </sp>
-          <sp who="momus" xml:id="3-11">
-            <speaker>MOMUS.</speaker>
-            <l n="47" xml:id="l47">On la jouait hier.</l>
-          </sp>
-          <sp who="le-bourgeois" xml:id="3-12">
-            <speaker>LE BOURGEOIS.</speaker>
-            <l n="48" xml:id="l48">Cela est fâcheux, car nous l’aurions eu aujourd’hui.</l>
-          </sp>
-          <sp who="momus" xml:id="3-13">
-            <speaker>MOMUS.</speaker>
-            <l n="49" xml:id="l49">Ne vous impatientez pas, on la jouera bientôt...</l>
-            <stage><hi rend="italic"><em>Tous, excepté Momus, se retirent au fond de la Scène.</em></hi></stage>
-            <l n="51" xml:id="l51"> </l>
-            <l n="52" xml:id="l52"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="53" xml:id="l53"> </l>
-          <sp who="mercure" xml:id="4-1">
-            <speaker>MOMUS, MERCURE, <em>et</em> LES AUTRES PERSONNAGES</speaker>
-            <l n="54" xml:id="l54"> </l>
-          </sp>
-          <sp who="momus" xml:id="4-2">
-            <speaker>MOMUS.</speaker>
-            <l n="55" xml:id="l55">Mais où va Mercure si vite ?</l>
-          </sp>
-          <sp who="mercure" xml:id="4-3">
-            <speaker>MERCURE.</speaker>
-            <l n="56" xml:id="l56">Ah ! mon cher Momus, je suis ravi de te trouver ; j’ai à t’apprendre que je suis entré ce matin au service d’une Dame capable d’enrichir les marchands, s’ils ne veulent pas la négliger.</l>
-          </sp>
-          <sp who="momus" xml:id="4-4">
-            <speaker>MOMUS.</speaker>
-            <l n="57" xml:id="l57">Et quelle est-elle ?</l>
-          </sp>
-          <sp who="mercure" xml:id="4-5">
-            <speaker>MERCURE.</speaker>
-            <l n="58" xml:id="l58">C’est une jeune Coquette qui change tous les jours ; elle est tantôt belle, tantôt ridicule, et cependant on court toujours après elle : elle a pour père le Caprice, et pour fille la Curiosité ; en un mot c’est la Nouveauté, dont je suis devenu le coureur.</l>
-          </sp>
-          <sp who="momus" xml:id="4-6">
-            <speaker>MOMUS.</speaker>
-            <l n="59" xml:id="l59">Tu es au service de la Nouveauté ? Ah ! mon cher ami, que tu es heureux ! tu sers pourtant là une grand friponne.</l>
-          </sp>
-          <sp who="mercure" xml:id="4-7">
-            <speaker>MERCURE.</speaker>
-            <l n="60" xml:id="l60">Pourquoi ?</l>
-          </sp>
-          <sp who="momus" xml:id="4-8">
-            <speaker>MOMUS.</speaker>
-            <l n="61" xml:id="l61">C’est qu’elle vole tous les jours les anciennes marchandises de nos magasins, qu’elle déguise le mieux qu’elle peut pour les faire passer ; mais elle a beau faire, on reconnaît toujours ses larcins. Quoi qu’il en soit, que nous viens-tu annoncer de sa part ?</l>
-          </sp>
-          <sp who="mercure" xml:id="4-9">
-            <speaker>MERCURE.</speaker>
-            <l n="62" xml:id="l62">Qu’elle viendra aujourd’hui donner ses Audiences sur le Théâtre de la Comédie : le ridicule des divers originaux qui auront affaire à elle, pourra former une espèce de petite comédie d’un goût nouveau, dont la Nouveauté sera le sujet et le titre.</l>
-          </sp>
-          <sp who="momus" xml:id="4-10">
-            <speaker>MOMUS.</speaker>
-            <l n="63" xml:id="l63">Cette idée ne ma déplaît pas ; mais il faudrait après cela un petit Divertissement à la louange de la Nouveauté, quelques Vaudevilles.</l>
-          </sp>
-          <sp who="mercure" xml:id="4-11">
-            <speaker>MERCURE.</speaker>
-            <l n="64" xml:id="l64">C’est à quoi nous avons pourvu. Annonçons son arrivée comme une Pièce nouvelle. La Nouveauté, Messieurs, la Nouveauté, Pièce nouvelle. Hé bien ! vois-tu comme déjà chacun se réveille ?</l>
-          </sp>
-          <sp who="momus" xml:id="4-12">
-            <speaker>MOMUS.</speaker>
-            <l n="65" xml:id="l65">Oui vraiment, et je vais de ce pas en donner avis à nos gens.</l>
-            <l n="66" xml:id="l66"> </l>
-            <l n="67" xml:id="l67"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="68" xml:id="l68"> </l>
-          <sp who="mercure" xml:id="5-1">
-            <speaker>MERCURE, UN GARÇON MARCHAND, UN CLERS, UN PROVINCIAL, UNE BOURGEOISE, UN ABBÉ</speaker>
-            <l n="69" xml:id="l69"> </l>
-          </sp>
-          <sp who="un-garçon-marchand" xml:id="5-2">
-            <speaker>UN GARÇON MARCHAND.</speaker>
-            <l n="70" xml:id="l70">Une Pièce nouvelle ? Monsieur, est-elle bonne ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-3">
-            <speaker>MERCURE.</speaker>
-            <l n="71" xml:id="l71">C’est ce qu’on ne sait pas encore, Monsieur.</l>
-          </sp>
-          <sp who="un-clerc" xml:id="5-4">
-            <speaker>UN CLERC.</speaker>
-            <l n="72" xml:id="l72">Monsieur, est-elle bien risible ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-5">
-            <speaker>MERCURE.</speaker>
-            <l n="73" xml:id="l73">Vous allez en juger.</l>
-          </sp>
-          <sp who="un-provincial" xml:id="5-6">
-            <speaker>UN PROVINCIAL.</speaker>
-            <l n="74" xml:id="l74">Monsieur, est-elle de Molière ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-7">
-            <speaker>MERCURE.</speaker>
-            <l n="75" xml:id="l75">Une Comédie nouvelle, de Molière ? D’où diable venez-vous ?</l>
-          </sp>
-          <sp who="le-provincial" xml:id="5-8">
-            <speaker>LE PROVINCIAL.</speaker>
-            <l n="76" xml:id="l76">Ah ! je vous demande pardon ; c’est que je croyais que c’était une Tragédie.</l>
-          </sp>
-          <sp who="mercure" xml:id="5-9">
-            <speaker>MERCURE.</speaker>
-            <l n="77" xml:id="l77">En voilà bien d’un autre ! une Tragédie de Molière, en un acte, et intitulée la Nouveauté encore ! Oh ! pour le coup c’est ce qu’on n’a jamais vu, et qu’on ne verra jamais. En un mot, c’est une petite Comédie en Prose.</l>
-          </sp>
-          <sp who="le-provincial" xml:id="5-10">
-            <speaker>LE PROVINCIAL.</speaker>
-            <l n="78" xml:id="l78">Hé ! Monsieur, les Vers sont-ils beaux ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-11">
-            <speaker>MERCURE.</speaker>
-            <l n="79" xml:id="l79">Ah ! je perds patience ! Eh ! l’on vous dit qu’elle est en Prose.</l>
-          </sp>
-          <sp who="le-provincial" xml:id="5-12">
-            <speaker>LE PROVINCIAL.</speaker>
-            <l n="80" xml:id="l80">Le sujet est-il tiré de la Fable ou de la Métamorphose.</l>
-          </sp>
-          <sp who="mercure" xml:id="5-13">
-            <speaker>MERCURE, <em>en riant.</em></speaker>
-            <l n="81" xml:id="l81">Non, c’est de l’Histoire.</l>
-          </sp>
-          <sp who="le-provincial" xml:id="5-14">
-            <speaker>LE PROVINCIAL.</speaker>
-            <l n="82" xml:id="l82">Monsieur, l’a-t-on déjà jouée ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-15">
-            <speaker>MERCURE.</speaker>
-            <l n="83" xml:id="l83">Eh ! non, Monsieur ; on vous dit qu’elle est toute nouvelle.</l>
-          </sp>
-          <sp who="le-provincial" xml:id="5-16">
-            <speaker>LE PROVINCIAL.</speaker>
-            <l n="84" xml:id="l84">Ah ! j’entends bien, toute nouvelle. Et, quand en donnera-t-on une autre ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-17">
-            <speaker>MERCURE.</speaker>
-            <l n="85" xml:id="l85">Hé ! Monsieur, attendez du moins que nous ayons vu un succès de celle-ci.</l>
-          </sp>
-          <sp who="une-bourgeoise" xml:id="5-18">
-            <speaker>UNE BOURGEOISE.</speaker>
-            <l n="86" xml:id="l86">Et sur quel Théâtre, Monsieur, la jouera-t-on ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-19">
-            <speaker>MERCURE.</speaker>
-            <l n="87" xml:id="l87">Sur le Théâtre Français, Madame.</l>
-          </sp>
-          <sp who="la-bourgeoise" xml:id="5-20">
-            <speaker>LA BOURGEOISE.</speaker>
-            <l n="88" xml:id="l88">Ah ! tant mieux ! car, aussi bien, on n’y en joue pas souvent.</l>
-          </sp>
-          <sp who="un-abbé" xml:id="5-21">
-            <speaker>UN ABBÉ.</speaker>
-            <l n="89" xml:id="l89">Et dites-moi, Monsieur, qu’elle est l’intrigue ?</l>
-          </sp>
-          <sp who="mercure" xml:id="5-22">
-            <speaker>MERCURE.</speaker>
-            <l n="90" xml:id="l90">Il n’y en a point, Monsieur ; ce sont toutes Scènes détachées, qui n’ont aucun rapport les unes aux autres, que par les liaisons qu’elles ont avec la Nouveauté : comme elle ne peut pas contenter tout le monde à la fois, les uns viendront lui rendre grâce, et les autres se plaindre d’elle.</l>
-          </sp>
-          <sp who="l’abbé" xml:id="5-23">
-            <speaker>L’ABBÉ.</speaker>
-            <l n="91" xml:id="l91">Une pièce sans intrigue, sur le Théâtre Français ! Il fallait bien plutôt la donner aux Italiens ; il me semble qu’ils ont seuls le privilège d’en jouer de semblables.</l>
-          </sp>
-          <sp who="mercure" xml:id="5-24">
-            <speaker>MERCURE.</speaker>
-            <l n="92" xml:id="l92">Eh ! qu’importe ? ce sera une Nouveauté que d’en jouer une dans ce goût là sur le Théâtre Français ; et cela répondra mieux au titre. Croyez-moi, Messieurs, ne manquez jamais la première représentation d’une Pièce, on n’est jamais sûr d’en avoir une seconde ; et venez tous avec moi condamner ou applaudir la Nouveauté. Mais vous n’aurez pas peine de l’aller chercher à la Comédie, puisque la voilà qui vient ne personne au devant de vous.</l>
-            <stage><hi rend="italic"><em>Le Fleuve de l’Ennui disparaît.</em></hi></stage>
-            <l n="94" xml:id="l94"> </l>
-            <l n="95" xml:id="l95"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="96" xml:id="l96"> </l>
-          <sp who="la-nouveauté" xml:id="6-1">
-            <speaker>LA NOUVEAUTÉ, <em>suivie d’une foule de gens de toutes espèces, chante</em></speaker>
-            <l n="97" xml:id="l97"> </l>
-            <stage><hi rend="italic"><em>Chant n° 2.</em></hi></stage>
-            <l n="99" xml:id="l99"> </l>
-            <l n="100" xml:id="l100"> </l>
-          </sp>
-          <sp who="troupe-de-curieux" xml:id="6-2">
-            <speaker>TROUPE DE CURIEUX, <em>ensemble.</em></speaker>
-            <l n="101" xml:id="l101">Charmante Nouveauté !...</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="6-3">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="102" xml:id="l102">Oh ! doucement : je ne puis pas vous écoutez tous à la fois ; tout ce que je puis faire, c’est de donner audience à chacun à son tour.</l>
-            <l n="103" xml:id="l103"> </l>
-            <l n="104" xml:id="l104"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="105" xml:id="l105"> </l>
-          <sp who="lisandre" xml:id="7-1">
-            <speaker>LA NOUVEAUTÉ, LISANDRE</speaker>
-            <l n="106" xml:id="l106"> </l>
-          </sp>
-          <sp who="lisandre" xml:id="7-2">
-            <speaker>LISANDRE.</speaker>
-            <l n="107" xml:id="l107">Aimable mère de l’inconstance, charmante Nouveauté, vous voyez un Amant qui a soupiré un an auprès de la plus aimable personne du monde, qui n’a pu passer un seul jour sans la voir, qui en a été aimé tendrement et qui cependant se sent aujourd’hui du goût pour vous.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-3">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="108" xml:id="l108">Comment ! Votre Belle vous aurait-elle donné quelque chagrin, quelque jalousie ?</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-4">
-            <speaker>LISANDRE.</speaker>
-            <l n="109" xml:id="l109">Au contraire, et c’est là ce dont je me plains. Ne nous étant jamais brouillés ensemble, nous n’avons jamais pu goûter le plaisir de nous raccommoder.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-5">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="110" xml:id="l110">Vous avez vécu un an ensemble, sans vous brouiller ? Ah ! que vous avez dû vous ennuyer ! Quelques obstacles étrangers n’ont-ils jamais traversé votre amour ?</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-6">
-            <speaker>LISANDRE.</speaker>
-            <l n="111" xml:id="l111">Hélas ! non ; nous ne dépendions que de nous-mêmes, nous avions la liberté de nous voir à toute heure.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-7">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="112" xml:id="l112">Ah ! que cela était triste !</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-8">
-            <speaker>LISANDRE.</speaker>
-            <l n="113" xml:id="l113">Enfin, sur le point de nous marier, nous avons fait réflexion que, notre tendresse étant épuisée, le mariage, à coup sûr, ne la renouvellerait pas.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-9">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="114" xml:id="l114">Et vous avez pensé fort juste.</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-10">
-            <speaker>LISANDRE.</speaker>
-            <l n="115" xml:id="l115">Que vous dirai-je ? nous résolûmes hier de ne nous plus revoir ; et j’ai appris aujourd’hui qu’elle avait déjà formé d’autres nœuds.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-11">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="116" xml:id="l116">Oh ! je ne doute point ; dans une inconstance mutuelle, une Belle n’est jamais la dernière à se pourvoir. Enfin, que me demandez-vous ?</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-12">
-            <speaker>LISANDRE.</speaker>
-            <l n="117" xml:id="l117">Une maîtresse nouvelle ; mais je crois que vous aurez de la peine à m’en offrir une plus belle que celle que je quitte.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-13">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="118" xml:id="l118">Qu’importe ? pourvu qu’elle vous plaise davantage. Comment était faite la vôtre ?</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-14">
-            <speaker>LISANDRE.</speaker>
-            <l n="119" xml:id="l119">La taille superbe ; les cheveux blonds ; et un œil bleu et mourant, le plus tendre du monde.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-15">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="120" xml:id="l120">Hé bien ! pour changer, prenez-moi une brune aux cheveux ébène, qui ait un œil vif et pétillant et des manières gaies et enjouées.</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-16">
-            <speaker>LISANDRE.</speaker>
-            <l n="121" xml:id="l121">Ah ! Je suis charmé du portrait que vous m’en faites.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-17">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="122" xml:id="l122">Tenez ; voilà une personne qui vient à nous, qui en approche assez.</l>
-          </sp>
-          <sp who="lisandre" xml:id="7-18">
-            <speaker>LISANDRE.</speaker>
-            <l n="123" xml:id="l123">Ah ! je la trouve plus aimable que tout ce que j’ai vu dans ma vie.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="7-19">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="124" xml:id="l124">Laissez-moi apprendre ce qu’elle me veut, et vous viendrez dans l’instant nous rejoindre.</l>
-            <l n="125" xml:id="l125"> </l>
-            <l n="126" xml:id="l126"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="127" xml:id="l127"> </l>
-          <sp who="éliante" xml:id="8-1">
-            <speaker>LA NOUVEAUTÉ, ÉLIANTE</speaker>
-            <l n="128" xml:id="l128"> </l>
-          </sp>
-          <sp who="éliante" xml:id="8-2">
-            <speaker>ÉLIANTE.</speaker>
-            <l n="129" xml:id="l129">Bonjour, ma chère Nouveauté. Me reconnaissez-vous ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="8-3">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="130" xml:id="l130">Si je vous reconnais ! je vous vois tous les jours.</l>
-          </sp>
-          <sp who="éliante" xml:id="8-4">
-            <speaker>ÉLIANTE.</speaker>
-            <l n="131" xml:id="l131">Oh ! ne me dites pas cela ; il y a près d’un mois que vous m’avez vue. Je vous dirai que ce blondin, que vous m’aviez fait prendre place de cet homme d’affaire, est absent depuis trois semaines. Nous nous sommes quittés avec les plus belles protestations du monde ; il devait revenir au bout de huit jours, je l’attendais avec impatience, je n’ai vu personnes. Peut-être a-t-il cru, en prolongeant son absence, me donner plu d’ardeur ; il s’est trompé, je me suis habituée insensiblement à ne le plus voir, et à la fin je l’ai oublié entièrement.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="8-5">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="132" xml:id="l132">Il est vrai que l’absence réveille quelquefois les désirs ; mais, quand elle est trop longue, elle les éteint tout-à-fait.</l>
-          </sp>
-          <sp who="éliante" xml:id="8-6">
-            <speaker>ÉLIANTE.</speaker>
-            <l n="133" xml:id="l133">N’y pensons plus, Madame le Nouveauté, n’y pensons plus : je veux désormais des Amants qui ne fassent point de voyages.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="8-7">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="134" xml:id="l134">Si vous vous déclarez pour les sédentaires, j’en ai un à vous offrir, qui, pendant un an, n’a pas quitté sa Maîtresse d’un pas ; il est à présent à louer.</l>
-          </sp>
-          <sp who="éliante" xml:id="8-8">
-            <speaker>ÉLIANTE.</speaker>
-            <l n="135" xml:id="l135">Il faudra tâcher de s’en accommoder. Madame la Nouveauté, faites-nous voir une peu ce phénix-là.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="8-9">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="136" xml:id="l136">Le voici qui vient à nous. Sitôt qu’il vous a vue, il a été charmé de votre personne.</l>
-          </sp>
-          <sp who="éliante" xml:id="8-10">
-            <speaker>ÉLIANTE.</speaker>
-            <l n="137" xml:id="l137">Ah ! C’est un Petit-Maître de Robe. Je n’en ai pas encore eu dans ce goût, et je ne serai pas fâchée que mon cœur contente là-dessus sa curiosité.</l>
-            <l n="138" xml:id="l138"> </l>
-            <l n="139" xml:id="l139"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="140" xml:id="l140"> </l>
-          <sp who="éliante" xml:id="9-1">
-            <speaker>LA NOUVEAUTÉ, LISANDRE, ÉLIANTE</speaker>
-            <l n="141" xml:id="l141"> </l>
-          </sp>
-          <sp who="éliante" xml:id="9-2">
-            <speaker>LISANDRE, <em>à Éliante.</em></speaker>
-            <l n="142" xml:id="l142">Je ne croyais pas, Madame, après le choix que j’avais fait, pouvoir jamais rien trouver qui fût dessus ; mais, en voyant vos appas, je reconnais mon erreur.</l>
-          </sp>
-          <sp who="éliante" xml:id="9-3">
-            <speaker>ÉLIANTE.</speaker>
-            <l n="143" xml:id="l143">Si vous vouliez toujours juger des beautés par comparaison, vous en trouveriez encore beaucoup au-dessus de la mienne ; mais je crois que c’est la Nouveauté qui m’attire aujourd’hui le compliment que vous me faites.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="9-4">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="144" xml:id="l144">Entre nous, je crois y avoir un peu de part ; et je vous avouerai franchement que c’est moi qui vous donne aujourd’hui tant de goût l’un pour l’autre.</l>
-          </sp>
-          <sp who="éliante" xml:id="9-5">
-            <speaker>ÉLIANTE, <em>bas à la Nouveauté.</em></speaker>
-            <l n="145" xml:id="l145">Ah ! Madame, qu’allez-vous lui découvrir ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="9-6">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="146" xml:id="l146">Ce que vos yeux ont déjà commencé à lui faire connaître.</l>
-          </sp>
-          <sp who="lisandre" xml:id="9-7">
-            <speaker>LISANDRE.</speaker>
-            <l n="147" xml:id="l147">Serait-il possible, charmante personne ?...</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="9-8">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="148" xml:id="l148">Oh ! doucement ; je ne suis pas en situation d’entendre tout ce que deux Amants, qui se voient pour la première fois ont à se dire ; cela ne finirait d’aujourd’hui ; et j’ai d’autres audiences à donner. Adieu ; jusqu’au revoir.</l>
-          </sp>
-          <sp who="lisandre" xml:id="9-9">
-            <speaker>LISANDRE.</speaker>
-            <l n="149" xml:id="l149">Comment jusqu’au revoir ! Ah ! Madame la Nouveauté, il suffit que vous m’ayez mis une fois au comble de mes vœux ; content de mon dernier choix, je vous proteste que je n’aurai de ma vie recours à vous.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="9-10">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="150" xml:id="l150">Mille autres avaient promis la même chose, qui ont manqué de parole.</l>
-          </sp>
-          <sp who="éliante" xml:id="9-11">
-            <speaker>ÉLIANTE.</speaker>
-            <l n="151" xml:id="l151">Pour moi, Déesse, je ne jure de rien.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="9-12">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="152" xml:id="l152">Et vous faites bien.</l>
-            <l n="153" xml:id="l153"> </l>
-            <l n="154" xml:id="l154"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="155" xml:id="l155"> </l>
-          <sp who="la-nouveauté" xml:id="10-1">
-            <speaker>LA NOUVEAUTÉ, UN NOUVELLISTE</speaker>
-            <l n="156" xml:id="l156"> </l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-2">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="157" xml:id="l157">Mais quel est cet homme ? Il a tout l’air d’un Nouvelliste.</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-3">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="158" xml:id="l158">Hé bien ! qu’est-ce, Madame la Nouveauté ? quelle nouvelle ? que nous apprendrez-vous d’Espagne, d’Italie, d’Allemagne, de Turquie, d’Arabie, de la Chine, de la Cochinchine, de...</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-4">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="159" xml:id="l159">Le roi d’Éthiopie est fort mal ; et l’on ne croit pas qu’il ne revienne.</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-5">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="160" xml:id="l160">Ah ! que m’apprenez-vous ? Nous allons avoir, à coup sûr, une guerre civile dans ce pays-là.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-6">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="161" xml:id="l161">Cela se pourrait.</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-7">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="162" xml:id="l162">Mais ce qui m’embarrasse le plus, c’est de savoir qui nous mettons sur le Trône. Son Fils aîné est un imbécile, et les cadets ont une ambition démesurée.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-8">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="163" xml:id="l163">Et qu’ils s’accommodent comme ils voudront, de quoi vous embarrassez-vous ?</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-9">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="164" xml:id="l164">De quoi je m’embarrasse ! Et ne savez-vous pas, Madame, que, dans les choses les plus indifférentes, il est bien malaisé de ne pas prendre un parti, ne fût-ce que pour le plaisir de la défendre et d’entrer en dispute avec ceux du parti contraire ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-10">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="165" xml:id="l165">Et que vous en revient-il ?</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-11">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="166" xml:id="l166">Le contentement d’avoir été juste dans mes conjectures.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-12">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="167" xml:id="l167">Et quand vous vous êtes trompé ?</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-13">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="168" xml:id="l168">Ah ! j’en ressens un chagrin mortel. Par exemple, les troubles de Perse m’empêchent toutes les nuits de dormir ; et je me couchai l’autre jour sans souper, lorsque j’eus appris que le Siège d’Ispahan était résolu ; j’avais gagé qu’il ne se ferait pas.  </l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-14">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="169" xml:id="l169">Et qui êtes-vous pour vous intéresser ainsi à tous les événements du monde ?</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-15">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="170" xml:id="l170">Je ne suis rien. J’ai près de cent écus de revenu. Je passe les journées entières au Café à apprendre et à débiter des Nouvelles. Je tire un tribut de la réussite, ou des chutes des Pièces de Théâtre. Voilà tout mon emploi.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-16">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="171" xml:id="l171">Quoi ! vous hantez les Cafés ! et ce sont les lieux où je suis le plus souhaitée ; on m’y attend à toute heure. J’ai beau souvent être accompagnée de tristesse, on a toujours de l’impatience de me voir arriver ; et tel me vient débiter les larmes aux yeux, qui ne laisse pas d’avoir un secret plaisir d’être le premier à m’annoncer. On ne m’y peint pas toujours telle que je suis : chacun me défigure selon ses intérêts, ou ses conjectures : cent mille hommes de plus ou de moins ne coûtent rien à expédier pour cela ; et l’on m’a fait souvent publier la victoire, avant même que la bataille fût donnée.</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-17">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="172" xml:id="l172">Il est vrai ; et c’est pourquoi je m’adresse à vous-même, pour avoir des nouvelles de la première main. Par exemple, on vous a annoncé pour aujourd’hui sur le Théâtre Français, y sera vous bonne ou mauvaise ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-18">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="173" xml:id="l173">Selon. Qu’en pensent vos Messieurs ?</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-19">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="174" xml:id="l174">Ma foi, pas grand chose. Voilà cependant un billet de Parterre que j’ai reçu de la part de vos partisans pour vous applaudir ; mais en voici en même-temps un autre, de la part de la Cabale, pour vous siffler ; j’entrerai à la comédie avec l’un, et je souperai avec l’autre.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-20">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="175" xml:id="l175">Et pour qui vous déclarez-vous !</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-21">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="176" xml:id="l176">Je resterai neutre, comme j’ai fait à l’Opéra dans la dispute des Pélissiens et des Mauriens<a href="#_ftn1" name="_ftnref1" title="" id="_ftnref1">[1]</a>.  </l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-22">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="177" xml:id="l177">C’est tout ce qu’on demande.</l>
-          </sp>
-          <sp who="le-nouvelliste" xml:id="10-23">
-            <speaker>LE NOUVELLISTE.</speaker>
-            <l n="178" xml:id="l178">Adieu, Madame la Nouveauté ; jusqu’au revoir ; je vous souhaite toutes sortes de prospérités. Je vais débiter votre nouvelle d’Éthiopie à nos Nouvellistes, et nous tiendrons tantôt Conseil là-dessus.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="10-24">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="179" xml:id="l179">Fort bien ! cela sera d’une grande importance à l’État !</l>
-            <l n="180" xml:id="l180"> </l>
-            <l n="181" xml:id="l181"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="182" xml:id="l182"> </l>
-          <sp who="claudine" xml:id="11-1">
-            <speaker>LA NOUVEAUTÉ, CLAUDINE</speaker>
-            <l n="183" xml:id="l183"> </l>
-          </sp>
-          <sp who="claudine" xml:id="11-2">
-            <speaker>CLAUDINE.</speaker>
-            <l n="184" xml:id="l184">Bonjour, Madame. N’est-ce pas vous qu’on appelle la Nouveauté ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-3">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="185" xml:id="l185">Oui, ma fille, c’est moi-même.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-4">
-            <speaker>CLAUDINE.</speaker>
-            <l n="186" xml:id="l186">Ah ! Madame, que j’en suis bien aise ! je viens vous prier de me donner un visage nouveau.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-5">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="187" xml:id="l187">Un visage nouveau ? Et le vôtre vous sied si bien, il est si joli.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-6">
-            <speaker>CLAUDINE.</speaker>
-            <l n="188" xml:id="l188">Il est vrai que Colin le trouvait autrefois comme çà ; mais, depuis trois ans que nous sommes mariés, il dit qu’il l’a tant vu, tant vu, qu’il s’ennuie à présent de le trouver toujours de même, et qu’il voudrait qu’il fût fait comme celui de Colette : tout le monde dit pourtant que cette Colette n’est pas si belle que moi, à beaucoup près. Oh ! cela me fâche tant, quand j’y pense !</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-7">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="189" xml:id="l189">Vous aimez donc votre mari apparemment ?</l>
-          </sp>
-          <sp who="claudine" xml:id="11-8">
-            <speaker>CLAUDINE.</speaker>
-            <l n="190" xml:id="l190">Je crois qu’oui : mais je ne serais pourtant pas fâchée, de mon côté, qu’il changeât aussi de figure, et qu’il eût celle du fils du Seigneur de notre village, Monsieur le Chevalier, qui est arrivé depuis huit jours.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-9">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="191" xml:id="l191">Comment ! Aimeriez-vous ce jeune Seigneur ?</l>
-          </sp>
-          <sp who="claudine" xml:id="11-10">
-            <speaker>CLAUDINE.</speaker>
-            <l n="192" xml:id="l192">Oh ! non pas autrement : je n’aime seulement que son visage, sa taille, son esprit et ses manières ; car, pour du reste...</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-11">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="193" xml:id="l193">J’entends votre affaire.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-12">
-            <speaker>CLAUDINE.</speaker>
-            <l n="194" xml:id="l194">Ah ! Madame, que je suis fâchée d’avoir promis à Colin de n’aimer jamais que lui, et de voir qu’il s’ennuie de ma regarder.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-13">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="195" xml:id="l195">Il est un moyen de le désennuyer ; c’est de lui donner de la jalousie, et de lui faire connaître que vous avez du goût pour un autre.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-14">
-            <speaker>CLAUDINE.</speaker>
-            <l n="196" xml:id="l196">Oh ! je n’ai garde, Madame ; cela le fâcherait peut-être.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-15">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="197" xml:id="l197">Et tant mieux : cela renouvellerait son amour pour vous.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-16">
-            <speaker>CLAUDINE.</speaker>
-            <l n="198" xml:id="l198">Comment, Madame, il faut quelquefois fâcher les gens, pour s’en faire aimer davantage ? Cela me paraît assez extraordinaire.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-17">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="199" xml:id="l199">Oh ! ce sont des secrets qui sont inconnus au Village.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-18">
-            <speaker>CLAUDINE.</speaker>
-            <l n="200" xml:id="l200">Hé ! dites-moi, Madame ; en fâchant mon mari, cela me donnera-t-il un autre visage ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-19">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="201" xml:id="l201">Non ; mais cela lui donnera d’autres yeux.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-20">
-            <speaker>CLAUDINE.</speaker>
-            <l n="202" xml:id="l202">Je voudrais bien qu’il eût ceux de Monsieur le Chevalier. Ah ! Madame, qu’ils sont beaux !</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-21">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="203" xml:id="l203">Vous ne m’entendez pas. Je veux dire que votre mari, devenant jaloux, vous trouvera plus belle que jamais.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-22">
-            <speaker>CLAUDINE.</speaker>
-            <l n="204" xml:id="l204">Oh ! j’entends bien à présent, Madame. Mais je voudrais qu’il ne fût pas jaloux de Monsieur le Chevalier ; car il me défendrait peut-être de la regarder, et je crois que cela me fâcherait encore plus que de voir Colin ne me regarder pas.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-23">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="205" xml:id="l205">En ce cas, laissons les choses comme elles sont ; il en arrivera ce qu’il pourra.</l>
-          </sp>
-          <sp who="claudine" xml:id="11-24">
-            <speaker>CLAUDINE.</speaker>
-            <l n="206" xml:id="l206">N’est-il pas vrai ? Mais, Madame, je vous prie, que je ne sois pas venue vous consulter en vain ; et, ne pouvant changer mon visage, donnez-moi du moins quelques nouvelles manières de plaire, que les autres femmes n’aient pas encore inventées ; j’en ai déjà effrayé plusieurs qui m’ont rendu moins belle que je n’étais. Ce que je vous demande, au moins, c’est toujours dans le dessein de plaire à mon mari ; si j’ai le malheur de plaire à quelqu’autre, ce ne sera pas ma faute.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="11-25">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="207" xml:id="l207">Vous me demandez une manière de plaire qui ne soit pas commune ? Restez dans votre naturel, mon enfant ; c’est un secret dont peu de femmes se soient encore avisées, et que les hommes s’attendent depuis longtemps. Adieu.</l>
-            <l n="208" xml:id="l208"> </l>
-            <l n="209" xml:id="l209"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="210" xml:id="l210"> </l>
-          <sp who="la-nouveauté" xml:id="12-1">
-            <speaker>LA NOUVEAUTÉ, UN VIEUX BARON, UNE VIEILLE BARONNE <em>avec</em> UN PAGE, <em>vêtus à l’ancienne mode</em></speaker>
-            <l n="211" xml:id="l211"> </l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-2">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="212" xml:id="l212">Mais d’où sortent ces deux figurent extraordinaires ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-3">
-            <speaker>LE BARON.</speaker>
-            <l n="213" xml:id="l213">Qu’est-ce donc, Madame la Nouveauté ? que veut dire tout ceci ? Vraiment, nous vous avons bien de l’obligation, Madame la Baronne mon épouse, et moi.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-4">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="214" xml:id="l214">Comment donc, Monsieur ! en quoi aurais-je pu vous déplaire ?</l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-5">
-            <speaker>LA BARONNE.</speaker>
-            <l n="215" xml:id="l215">Avec vos changements de mode perpétuels, vous êtes cause que nous venons d’être hués de toute la Cour.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-6">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="216" xml:id="l216">Cela est surprenant ! et contez-moi un peu cela, pour rire.</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-7">
-            <speaker>LE BARON.</speaker>
-            <l n="217" xml:id="l217">Vous saurez, Madame, pour vous dire les choses par ordre...</l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-8">
-            <speaker>LA BARONNE.</speaker>
-            <l n="218" xml:id="l218">Oh ! s’il vous plaît, mon cher époux, laissez-moi parler.</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-9">
-            <speaker>LE BARON.</speaker>
-            <l n="219" xml:id="l219">Je suis plus au fait que vous, m’Amour ; et, avec votre permission, j’expliquerai à Madame...</l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-10">
-            <speaker>LA BARONNE.</speaker>
-            <l n="220" xml:id="l220">Oh ! expliquez donc, et dépêchez-vous.</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-11">
-            <speaker>LE BARON.</speaker>
-            <l n="221" xml:id="l221">Et doucement, mon Cœur ; je m’y prépare.</l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-12">
-            <speaker>LA BARONNE.</speaker>
-            <l n="222" xml:id="l222">Vous vous y préparez ; et moi je commence. Il faut savoir, Madame, qu’ennuyés du grand fracas de la Cour, nous nous étions retirés, il y a environ quarante ans, dans le fond de nos Terres. Ce fut aussi un peu votre jalousie qui en fut cause, Monsieur le Baron.</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-13">
-            <speaker>LE BARON.</speaker>
-            <l n="223" xml:id="l223">Et corbleu ! Madame, point de digression.  </l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-14">
-            <speaker>LA BARONNE.</speaker>
-            <l n="224" xml:id="l224">Ennuyés dans la suite de cette vie champêtre, vous avons eu, au bout de quarante ans, la curiosité de revenir à la Cour ; et, à notre arrivée, nous y venons d’être raillés de tous les Courtisans sur notre ajustement.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-15">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="225" xml:id="l225">Est-il possible ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-16">
-            <speaker>LE BARON.</speaker>
-            <l n="226" xml:id="l226">On y a pris Madame la Baronne, pour une Baronne de Sottenville.  </l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-17">
-            <speaker>LA BARONNE.</speaker>
-            <l n="227" xml:id="l227">Et monsieur le Baron, pour un Baron de la Crasse ; et je crois que, si nous n’avions pas eu un Page, ou nous aurait manqué tout-à-fait de respect.  </l>
-          </sp>
-          <sp who="le-page" xml:id="12-18">
-            <speaker>LE PAGE.</speaker>
-            <l n="228" xml:id="l228">Bon ! Madame, n’ont-ils pas dit aussi que j’avais l’air du Valet de Carreau. Si vous saviez toutes les niches que les autres pages n’ont faites.  </l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-19">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="229" xml:id="l229">Que voulez-vous que je vous dise ? Vous avez l’air un peu antique, au moins ; et, si vous m’aviez consultée avant que d’aller à la Cour, je vous aurais épargné la ridicule d’y paraître dans cet équipage.</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-20">
-            <speaker>LE BARON.</speaker>
-            <l n="230" xml:id="l230">Comment ! on ne reconnaît pas les gens dans ce pays-là au bout de quarante ans !</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-21">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="231" xml:id="l231">Bon ! pas même quelquefois du jour au lendemain.</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-22">
-            <speaker>LE BARON.</speaker>
-            <l n="232" xml:id="l232">Savez-vous bien, Madame, que, lorsque j’en partis, il n’y a avait pas de Seigneur qui se mît plus galamment que moi ; et voilà encore l’habit que je me fis faire à l’arrivée du Doge de Gênes en France.  </l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-23">
-            <speaker>LA BARONNE.</speaker>
-            <l n="233" xml:id="l233">Et celui que vous me voyez, n’est-il pas le même que j’avais le lendemain de nos noces et qui fut admiré de tous les Courtisans ? Je ne l’ai porté qu’une seule fois depuis ce temps-là, et on le trouve aujourd’hui extravagant.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-24">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="234" xml:id="l234">Bon ! j’ai changé cent fois les modes depuis. Mais ne pourriez vous pas donner quelqu’air de nouveauté à vos habits ?</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-25">
-            <speaker>LE BARON.</speaker>
-            <l n="235" xml:id="l235">Hé ! le moyen ? À commencer par les boutons, ceux de la veste sont trois fois trop gros pour le juste-au-corps.</l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-26">
-            <speaker>LA BARONNE.</speaker>
-            <l n="236" xml:id="l236">Et moi, mon cher époux, c’est bine pis ; on me trouve toute d’une venue ; et, pour m’accommoder à la mode, il faut que je me raccourcisse d’un pied par le haut, et que je me grossisse de quatre par le bas : mais je n’en ferai rien, je vous jure.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="12-27">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="237" xml:id="l237">En ce cas, il faudra vous donner patience. Je me répète quelquefois, et vous verrez peut-être, dans peu, ce qu’on admire à présent trouvé aussi ridicule que votre ajustement le paraît aujourd’hui.</l>
-          </sp>
-          <sp who="le-baron" xml:id="12-28">
-            <speaker>LE BARON.</speaker>
-            <l n="238" xml:id="l238">Oh ! parbleu, c’est une curiosité que je veux avoir ; et je ne reviendrai à la Cour que quand mes habit y seront de mode.</l>
-          </sp>
-          <sp who="la-baronne" xml:id="12-29">
-            <speaker>LA BARONNE.</speaker>
-            <l n="239" xml:id="l239">Allons, mon fils, allons ; retournons à notre château. Adieu, Madame la Nouveauté : nous suivrons vos avis quand vous serez devenue plus raisonnable.</l>
-            <l n="240" xml:id="l240"> </l>
-            <l n="241" xml:id="l241"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="242" xml:id="l242"> </l>
-          <sp who="la-nouveauté" xml:id="13-1">
-            <speaker>LA NOUVEAUTÉ, <em>seule</em></speaker>
-            <l n="243" xml:id="l243"> </l>
-            <l n="244" xml:id="l244">Ils ont, après tout, quelque raison ; et il faut avouer que je suis souvent bien extravagante.</l>
-            <l n="245" xml:id="l245"> </l>
-            <l n="246" xml:id="l246"> </l>
-            <l n="247" xml:id="l247"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="248" xml:id="l248"> </l>
-          <sp who="la-nouveauté" xml:id="14-1">
-            <speaker>LA NOUVEAUTÉ, LA CASCADE</speaker>
-            <l n="249" xml:id="l249"> </l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-2">
-            <speaker>LA CASCADE.</speaker>
-            <l n="250" xml:id="l250">Là, là, si, ut, là, ré... Ah ! Madame la Nouveauté, il y a longtemps que je vous cherche sans pouvoir vous trouver.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="14-3">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="251" xml:id="l251">Vous n’êtes pas le seul. Et qui êtes vous ?</l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-4">
-            <speaker>LA CASCADE.</speaker>
-            <l n="252" xml:id="l252">Grand Maître de Musique, grand compositeur d’Opéra : et je me nomme Monsieur de la Cascade.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="14-5">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="253" xml:id="l253">Vous travaillez pour l’Opéra ? ah ! je ne m’étonne plus si vous avez tant de peine à ma rencontrer ; il y a longtemps que j’ai quitté ce pays-là.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-6">
-            <speaker>LA CASCADE.</speaker>
-            <l n="254" xml:id="l254">On disait pourtant que vous vous trouviez quelquefois parmi nos Demoiselles des Chœurs.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="14-7">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="255" xml:id="l255">Bon ! quels contes ! la Nouveauté parmi les Chœurs de l’Opéra ! Après tout vous ne seriez pas le premier qui s’y serait trompé. Mais enfin, que voulez-vous de moi ? En quoi puis-je vous être utile ?</l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-8">
-            <speaker>LA CASCADE.</speaker>
-            <l n="256" xml:id="l256">Je voudrais, Madame, que vous m’aidassiez à faire passer une nouvelle idée qui m’est venue ; je sais qu’on passe bien des choses en faveur de la Nouveauté.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="14-9">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="257" xml:id="l257">Quelquefois. Voyons votre idée.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-10">
-            <speaker>LA CASCADE.</speaker>
-            <l n="258" xml:id="l258">La voici. Comme depuis longtemps on attribue la chute de tous les Opéras nouveaux aux Poèmes, je voudrais les retrancher, et faire représenter un Opéra sans paroles.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="14-11">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="259" xml:id="l259">Comment ! vous croyez qu’on pourrait reste deux heures et demi entières à n’entendre que de la musique ?</l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-12">
-            <speaker>LA CASCADE.</speaker>
-            <l n="260" xml:id="l260">Pourquoi non ? Il y a des gens qui l’aiment assez pour cela.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="14-13">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="261" xml:id="l261">Mais, enfin, que feraient vos Acteurs sur le Théâtre ?</l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-14">
-            <speaker>LA CASCADE.</speaker>
-            <l n="262" xml:id="l262">Ils chanteraient seulement les notes, et gesticuleraient, comme s’ils disaient les plus belles choses du monde ; et cela vaudrait mieux que de mauvaises paroles qu’on n’entend point. Voici un morceau d’Opéra que j’ai composé dans ce goût là. Voulez-vous voir ensemble l’effet que cela pourrait faire ? j’ai, fort à propos, amené avec moi des Violons.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="14-15">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="263" xml:id="l263">Oui dà ; et je n’ai qu’à jeter les yeux là-dessus pour être au fait.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="14-16">
-            <speaker>LA CASCADE.</speaker>
-            <stage><hi rend="italic">Mon sujet est tiré de l’Histoire Romaine. Mon Opéra se nomme Antonin Caracalla ; et voici la Scène où cet Empereur, ayant enlevé une vestale de son Temple, la veut contraindre d’abandonner la culte de ses Dieux pour être Impératrice... Allons, Madame, figures-vous que vous êtes Vestale ; c’est un Rôle qui convient assez à la Nouveauté ; et moi je suis Antonin Caracalla. Un prélude de basse vous annonce mon arrivé ; et je commence par vous déclarer mon amour. Vous êtes fort étonnée, et me répondez avec fierté. Je ne me rebute point, et je reviens à la charge. Vous me dites des injures, je vous menace. Vous vous retranchez toujours sur votre vertu : je vous fais entendre que c’est cette même vertu qui a fait naître mon amour, et je vous débite une Sentence accompagnée de deux dessus de violon, pour vous prouver que la vertu doit céder à l’amour. Vous combattez mon sentiment, je l’appuie ; ce que forme un <em>duo</em> contradictoire qui fera un effet merveilleux.</hi></stage>
-            <stage><hi rend="italic"><em>Ils chantent une Scène en solfiant et gesticulant, comme s’ils chantaient une Scène d’Opéra. N° 3.</em></hi></stage>
-            <l n="266" xml:id="l266"> </l>
-            <l n="267" xml:id="l267"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="268" xml:id="l268"> </l>
-          <sp who="la-nouveauté" xml:id="15-1">
-            <speaker>LA NOUVEAUTÉ, LA CASCADE, LA RIMAILLE</speaker>
-            <l n="269" xml:id="l269"> </l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-2">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="270" xml:id="l270">Comment donc ? que veut dire ceci ? des gens qui se querellent en Musique ? est-ce que nous sommes ici à l’Opéra ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-3">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="271" xml:id="l271">Ah ! c’est vous, Monsieur la Rimaille ? Hé bien ? qu’est-ce ? comment va le Théâtre ? Comment vous portez-vous, depuis votre dernière chute ?</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-4">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="272" xml:id="l272">Si mal, que je ne veux plus rien composer de nouveau. J’ai un Magasin rempli de plus de soixante mille vers de toute espèce ; ceux qui en auront besoin, viendront en acheter chez moi en gros, qu’ils reviendront au Public en détail, à leur risques et fortunes. Mais que faisiez-vous donc-là avec Monsieur de la Cascade ?</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-5">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="273" xml:id="l273">Il me voulait mettre de moitié dans un projet qu’il a formé ; mais l’idée m’en paraît trop extravagante. Il veut donner un Opéra sans paroles.</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-6">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="274" xml:id="l274">Sans paroles ! et plût au Ciel qu’on en pût donner sans musique ! Voilà trois Poèmes tout de suite que les Musiciens m’ont fait tomber.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-7">
-            <speaker>LA CASCADE.</speaker>
-            <l n="275" xml:id="l275">Si vous m’aviez choisi, Monsieur de la Rimaille, cela ne vous serait peut-être pas arrivé.</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-8">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="276" xml:id="l276">Bon ! vous dites, tous cela, vous autres ; et j’ai résolu de na plus rien prendre sur mon compte. Les Musiciens n’auront qu’à inventer ou choisir leur sujet eux-mêmes, en amener les Divertissements à leur fantaisie, et en composer la Musique ; et ils trouveront chez moi des vers tout à faits pour le remplissage : j’en ai d’amour, de haine, de dépit, de vengeance, d’infidélité, de constance ; pour les Dieux, pour les Démons, pour les Rois, pour les Bergers ; enfin on trouvera de tout dans ma boutique, et à juste prix.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-9">
-            <speaker>LA CASCADE.</speaker>
-            <l n="277" xml:id="l277">Parbleu ! Puisque la Nouveauté n’approuve point mon projet, j’ai envie de m’accorder avec vous. J’ai des sujets tout trouvés, de la musique toute faite, il ne manque que des vers. Combien me vendrez-vous la garniture complète d’un Opéra.</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-10">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="278" xml:id="l278">Il faut savoir si vous voulez trier les vers, ou les prendre comme ils viendront ; car vous pourriez m’enlever de mon Magasin tels vers qui vaudraient un écu pièce.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-11">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="279" xml:id="l279">En quelle sorte de vers avez-vous dont qui soient si rares ?</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-12">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="280" xml:id="l280">De ces vers saillants et brillants qui renferment une pointe, une maxime, une sentence ; et dont il ne faut souvent qu’une demi-douzaine pour faire passer un Opéra. Par exemple :</l>
-            <stage><hi rend="italic"><em>Qui n’ose se venger, mérite qu’on l’outrage.</em></hi></stage>
-          </sp>
-          <sp who="la-cascade" xml:id="15-13">
-            <speaker>LA CASCADE.</speaker>
-            <l n="282" xml:id="l282">Eh ! mais cette pensée n’est pas trop nouvelle, et je l’ai vue dans la Tragédie d’Atrée.</l>
-            <stage><hi rend="italic"><em>Qui cède à la pitié, mérite qu’on l’offense.  </em></hi></stage>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-14">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="284" xml:id="l284">Vous avez raison ; et vous pouvez dire qu’elle est encore dans Phocas d’Héraclius.</l>
-            <stage><hi rend="italic"><em>Qui se laisse outrager, mérite qu’on l’outrage.  </em></hi></stage>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-15">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="286" xml:id="l286">Et si vous le prenez par-là, c’est un vieux proverbe.</l>
-            <stage><hi rend="italic"><em>Et qui se fait brebis, souvent le loup le mange.</em></hi></stage>
-            <l n="288" xml:id="l288">Le tout ne consiste qu’à donner aux choses un tour de Nouveauté.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-16">
-            <speaker>LA CASCADE.</speaker>
-            <l n="289" xml:id="l289">Il est vrai. Mais sachons combine vous me vendrez vos vers, le millier, à les prendre au hasard.</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-17">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="290" xml:id="l290">Voulez-vous que je vous parle en conscience ? je ne puis pas vous les donner à moins de cent dix sols, le cent.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-18">
-            <speaker>LA CASCADE.</speaker>
-            <l n="291" xml:id="l291">Ah ! Monsieur de la Rimaille !</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-19">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="292" xml:id="l292">Non, c’est un prix fait ; et vous ne les auriez pas, s’il s’en fallait une obole.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-20">
-            <speaker>LA CASCADE.</speaker>
-            <l n="293" xml:id="l293">Mais, enfin...</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-21">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="294" xml:id="l294">Vous en pouvez trouver autre part à meilleur marché ; mais il y a vers et vers ; et pour ceux que je fais...</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-22">
-            <speaker>LA CASCADE.</speaker>
-            <l n="295" xml:id="l295">Allons, Monsieur de la Rimaille, il se faut mettre à la raison ; songez qu’on ne vous demande que de petits vers.</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-23">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="296" xml:id="l296">Je le crois, parbleu, bien ! s’il vous fallait donner des vers de douze ou treize pieds, je n’y trouverais pas mon compte.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-24">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="297" xml:id="l297">Je vois bien qu’il faut que je vous accompagne ensemble : cela est du ressort de la Nouveauté, de se mêler d’un marché aussi bizarre et aussi nouveau. Oh ! çà, combien faut-il remplir de vers pour remplir le fond d’un Opéra ?</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-25">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="298" xml:id="l298">Il en faut six cent, qui, à les prendre à six pieds l’un portant l’autre, feront cent toises.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-26">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="299" xml:id="l299">Vendre des vers à la toise !</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-27">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="300" xml:id="l300">On y a bien vendu des Bibliothèques.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-28">
-            <speaker>LA CASCADE.</speaker>
-            <l n="301" xml:id="l301">Mais comment ajuster à ma Musique ceux qui sont trop longs ?</l>
-          </sp>
-          <sp who="la-rimaille" xml:id="15-29">
-            <speaker>LA RIMAILLE.</speaker>
-            <l n="302" xml:id="l302">Cela vous sera aisé. Mes vers prêtent ; ils s’allongent et de raccourcissent comme on veut ; et on en peut ôter, ou y ajouter une épithète ou un adverbe, sans qu’il y paraisse. Par exemple :</l>
-            <stage><hi rend="italic"><em>Coulez, ruisseaux, sans murmures.    </em></hi></stage>
-            <l n="304" xml:id="l304">Si ce vers est trop court, vous pouvez l’allonger ainsi :</l>
-            <stage><hi rend="italic"><em>Coulez, coulants ruisseaux ; murmurez sans murmure.</em></hi></stage>
-            <l n="306" xml:id="l306">Et ainsi du reste.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-30">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="307" xml:id="l307">À merveille ! et, sur ce pied-là, je condamne Monsieur de la Cascade à vous donner ce que vous demandez.</l>
-          </sp>
-          <sp who="la-cascade" xml:id="15-31">
-            <speaker>LA CASCADE.</speaker>
-            <l n="308" xml:id="l308">J’y consens.</l>
-          </sp>
-          <sp who="la-nouveauté" xml:id="15-32">
-            <speaker>LA NOUVEAUTÉ.</speaker>
-            <l n="309" xml:id="l309">Allons, Messieurs, puisque vous voilà d’accord, secondez-moi dans l’exécution du petit divertissement que j’ai préparé ; et que tout célèbre le triomphe de la Nouveauté.</l>
-            <l n="310" xml:id="l310"> </l>
-            <l n="311" xml:id="l311"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="16">
-          <head>Divertissement</head>
-            <l n="312" xml:id="l312"> </l>
-            <stage><hi rend="italic"><em>Entrée de toutes sortes de personnes amoureuse de la Nouveauté. Chant n° 4.</em></hi></stage>
-          <stage>DEUX SUIVANTS <em>de la Nouveauté.</em></stage>
-          <sp who="un-suivant" xml:id="16-1">
-            <speaker>UN SUIVANT <em>de la Nouveauté.</em></speaker>
-            <stage><hi rend="italic"><em>Entrée de quatre Âges, et des Soucis qui les troublent et leur font souhaiter la Nouveauté.</em></hi></stage>
-          </sp>
-          <sp who="ensemble" xml:id="16-2">
-            <speaker>ENSEMBLE.</speaker>
-            <stage><hi rend="italic"><em>Menuet, n° 5.</em></hi></stage>
-            <stage><hi rend="italic"><em>Vaudeville.</em></hi></stage>
-            <l n="317" xml:id="l317"> </l>
-            <l n="318" xml:id="l318"> </l>
-            <l n="319" xml:id="l319"> </l>
-            <l n="320" xml:id="l320"> </l>
-            <l n="321" xml:id="l321"> </l>
-            <l n="322" xml:id="l322"> </l>
-            <stage><hi rend="italic"><em>Contre-danse.</em></hi></stage>
-            <l n="324" xml:id="l324"><a href="#_ftnref1" name="_ftn1" title="" id="_ftn1">[1]</a> C’est ainsi qu’on appelait les Partisans de M<sup>lles</sup> Pélissier et le Maur, excellentes Actrices de l’Opéra, lorsqu’elles jouaient le rôle de Thisbé, tour-à-tour.</l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS, une Rame à la main</speaker>
+          <stage>&lt;em&gt;Chant n° 1.&lt;/em&gt;</stage>
+          <l n="1">C’est ici de l’Ennui le Fleuve affreux et sombre ;</l>
+          <l n="2">Les plus heureux Mortels le passent tour-à-tour ;</l>
+          <l n="3">Des plaisirs on n’y voit que l’ombre :</l>
+          <l n="4">Les soucis, les chagrins règnent dans ce séjour.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="5">Holà, bonhomme, ne sauriez-vous m’enseignez le Fleuve de l’Ennui ?</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="6">C’est ici, mon enfant ; vous voilà sur ses bords : ne vous en apercevez-vous pas en entendant mes chants lugubres, et en voyant tant de gens assoupis ? Mais me tromperais-je ? ou serait-ce Momus ?</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="7">C’est le Temps, je pense ? oui, c’est lui-même : Bons Dieux ! que je le trouve changé ! hé ! que faites-vous ici, Père Saturne ?  </l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="8">Hélas ! mon cher ami, alors que Jupiter nous a tous chassé du Ciel, il m’est arrivé bien des traverses sur la terre ; mais enfin j’ai borné tous mes travaux à m’établir sur ces bords : c’est moi qui passe et repasse tous les mortels de la joie à la tristesse ; et de la tristesse à la joie.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="9">Voilà un emploi qui convient parfaitement au Temps.</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="10">Oui, mais il est bien fatigant ; le Fleuve de l’Ennui coule bien lentement, et j’ai toutes les peines du monde à amener à bon port ceux qui sont une fois embarqués sur les eaux bourbeuses.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="11">Qui sont ces espèces d’Ombres que je vois le long de ces arbres ?</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="12">Ce sont les images de ceux qui s’ennuient actuellement dans le monde. Par exemple, une jeune Femme mariée à un Vieillard ; un Écolier de Droit, en attendant l’argent de la Province, s’amuse à lire des Épitaphes ; un Poète qui attend une pension de la Cour, et un Tailleur de l’argent d’un Intendant.  </l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="13">Cela arrivera en même temps.</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="14">Ceux que tu vois là endormis, sont deux Petits-Maîtres à qui un Auteur lit une Comédie en cinq Actes écrite en vers sérieux : plus loin ce sont des Coquettes qui ont vieilli, et que la perte de leurs Amants a réduites à se plonger dans le Fleuve de l’Ennui : plus haut, c’est un galant homme qui, depuis une heure, attend qu’un Commis de la Douane daigne lui répondre ; et plus bas un Gascon prié à dîner, à qui un plaideur Manceau conte le fond de son procès. Mais je n’aurais jamais fini si j’entreprenais de t’expliquer tous les sujets que chacun a de s’ennuyer ; je te dirai seulement que ceux que tu vois assoupis autour de moi, sont des curieux de spectacles, qui attendent que les Comédiens, ou l’Opéra donne quelque chose de bon.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="15">Oh ! Parbleu, cela vient à merveille, et c’est justement ce que je cherche.</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="16">Comment ?</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="17">Vous ne savez donc pas que, depuis notre disgrâce, je me suis fait Courtier des Théâtres ?</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="18">Courtier des Théâtres !</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="19">Oui... C’est moi qui annonce tous les jours au Public les Pièces qu’on y doit jouer.</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="20">Il faut que tes Marchands de paroles n’aient pas vendu de trop bonnes choses depuis un temps ; car, au sortir de chez eux, nous avons vu arriver bien des gens sur nos bords.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="21">Ils ont pourtant des magasins remplis des meilleurs marchandises : elles n’ont qu’un défaut, c’est qu’elles sont trop anciennes, et j’ai toutes les peines du monde à en procurer le débit : chacun tombe d’accord qu’elles sont parfaites ; on les a admirés autrefois, et l’on se donne pas seulement la peine de les venir voir aujourd’hui. Je vais pourtant les annoncer encore, pour voir si le goût ne serait point changé.</l>
+        </sp>
+        <sp who="#le-temps">
+          <speaker>LE TEMPS.</speaker>
+          <l n="22">Annonce tant qu’il te plaira : mais je suis sûr que tu n’étrenneras pas.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="23">L’Académie Royale de Musique représentera aujourd’hui Pyrame et Thisbé.</l>
+        </sp>
+        <sp who="#un-conseiller">
+          <speaker>LE CONSEILLER.</speaker>
+          <l n="24">Allons, Mesdames ; voici l’heure de l’Opéra, souhaitez-vous que je vous y mène ?</l>
+        </sp>
+        <sp who="#une-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="25">Pyrame et Thisbé ? ah ! je le sais par cœur.</l>
+        </sp>
+        <sp who="#un-conseiller">
+          <speaker>LE CONSEILLER.</speaker>
+          <l n="26">Et qu’importe ? c’est toujours de la musique. Pour moi, que l’Opéra joue tout ce qu’il voudra, je n’en manquerais pas une représentation, pendant toute l’année, pour les affaires les plus importantes.</l>
+        </sp>
+        <sp who="#une-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="27">Oh ! pour aujourd’hui, Monsieur le Conseiller, vous ne nous quittez point, s’il vous plaît.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="28">Les Comédiens Italiens représenteront aujourd’hui Arlequin jouet de la fortune.</l>
+        </sp>
+        <sp who="#une-marquise">
+          <speaker>LA MARQUISE.</speaker>
+          <l n="29">Ah ! c’est une Pièce toute Italienne, il n’y va jamais personne ; et la plupart de leurs Pièces françaises se ressemblent toutes, elles roulent toujours sur le même pivot ; les amants y parlent sans cesse un langage guindé, aussi obscur pour moi que l’Italien même.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="30">Les Comédiens Français représenteront aujourd’hui le Misanthrope ; à demain Tartuffe, en attendant l’Avare.</l>
+        </sp>
+        <sp who="#un-bourgeois">
+          <speaker>LE BOURGEOIS.</speaker>
+          <l n="31">Et, que diable ! toujours le Misanthrope, Tartuffe ou l’Avare. Est-ce que vous ne donnerez jamais l’École des Femmes ?</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="32">On la jouait hier.</l>
+        </sp>
+        <sp who="#un-bourgeois">
+          <speaker>LE BOURGEOIS.</speaker>
+          <l n="33">Cela est fâcheux, car nous l’aurions eu aujourd’hui.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="34">Ne vous impatientez pas, on la jouera bientôt...</l>
+          <stage>&lt;em&gt;Tous, excepté Momus, se retirent au fond de la Scène.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="35">Mais où va Mercure si vite ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="36">Ah ! mon cher Momus, je suis ravi de te trouver ; j’ai à t’apprendre que je suis entré ce matin au service d’une Dame capable d’enrichir les marchands, s’ils ne veulent pas la négliger.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="37">Et quelle est-elle ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="38">C’est une jeune Coquette qui change tous les jours ; elle est tantôt belle, tantôt ridicule, et cependant on court toujours après elle : elle a pour père le Caprice, et pour fille la Curiosité ; en un mot c’est la Nouveauté, dont je suis devenu le coureur.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="39">Tu es au service de la Nouveauté ? Ah ! mon cher ami, que tu es heureux ! tu sers pourtant là une grand friponne.</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="40">Pourquoi ?</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="41">C’est qu’elle vole tous les jours les anciennes marchandises de nos magasins, qu’elle déguise le mieux qu’elle peut pour les faire passer ; mais elle a beau faire, on reconnaît toujours ses larcins. Quoi qu’il en soit, que nous viens-tu annoncer de sa part ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="42">Qu’elle viendra aujourd’hui donner ses Audiences sur le Théâtre de la Comédie : le ridicule des divers originaux qui auront affaire à elle, pourra former une espèce de petite comédie d’un goût nouveau, dont la Nouveauté sera le sujet et le titre.</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="43">Cette idée ne ma déplaît pas ; mais il faudrait après cela un petit Divertissement à la louange de la Nouveauté, quelques Vaudevilles.</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="44">C’est à quoi nous avons pourvu. Annonçons son arrivée comme une Pièce nouvelle. La Nouveauté, Messieurs, la Nouveauté, Pièce nouvelle. Hé bien ! vois-tu comme déjà chacun se réveille ?</l>
+        </sp>
+        <sp who="#momus">
+          <speaker>MOMUS.</speaker>
+          <l n="45">Oui vraiment, et je vais de ce pas en donner avis à nos gens.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#un-garçon-marchand">
+          <speaker>UN GARÇON MARCHAND.</speaker>
+          <l n="46">Une Pièce nouvelle ? Monsieur, est-elle bonne ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="47">C’est ce qu’on ne sait pas encore, Monsieur.</l>
+        </sp>
+        <sp who="#un-clerc">
+          <speaker>UN CLERC.</speaker>
+          <l n="48">Monsieur, est-elle bien risible ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="49">Vous allez en juger.</l>
+        </sp>
+        <sp who="#un-provincial">
+          <speaker>UN PROVINCIAL.</speaker>
+          <l n="50">Monsieur, est-elle de Molière ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="51">Une Comédie nouvelle, de Molière ? D’où diable venez-vous ?</l>
+        </sp>
+        <sp who="#le-provincial">
+          <speaker>LE PROVINCIAL.</speaker>
+          <l n="52">Ah ! je vous demande pardon ; c’est que je croyais que c’était une Tragédie.</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="53">En voilà bien d’un autre ! une Tragédie de Molière, en un acte, et intitulée la Nouveauté encore ! Oh ! pour le coup c’est ce qu’on n’a jamais vu, et qu’on ne verra jamais. En un mot, c’est une petite Comédie en Prose.</l>
+        </sp>
+        <sp who="#un-provincial">
+          <speaker>LE PROVINCIAL.</speaker>
+          <l n="54">Hé ! Monsieur, les Vers sont-ils beaux ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="55">Ah ! je perds patience ! Eh ! l’on vous dit qu’elle est en Prose.</l>
+        </sp>
+        <sp who="#un-provincial">
+          <speaker>LE PROVINCIAL.</speaker>
+          <l n="56">Le sujet est-il tiré de la Fable ou de la Métamorphose.</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE, en riant.</speaker>
+          <l n="57">Non, c’est de l’Histoire.</l>
+        </sp>
+        <sp who="#un-provincial">
+          <speaker>LE PROVINCIAL.</speaker>
+          <l n="58">Monsieur, l’a-t-on déjà jouée ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="59">Eh ! non, Monsieur ; on vous dit qu’elle est toute nouvelle.</l>
+        </sp>
+        <sp who="#un-provincial">
+          <speaker>LE PROVINCIAL.</speaker>
+          <l n="60">Ah ! j’entends bien, toute nouvelle. Et, quand en donnera-t-on une autre ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="61">Hé ! Monsieur, attendez du moins que nous ayons vu un succès de celle-ci.</l>
+        </sp>
+        <sp who="#une-bourgeoise">
+          <speaker>UNE BOURGEOISE.</speaker>
+          <l n="62">Et sur quel Théâtre, Monsieur, la jouera-t-on ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="63">Sur le Théâtre Français, Madame.</l>
+        </sp>
+        <sp who="#la-bourgeoise">
+          <speaker>LA BOURGEOISE.</speaker>
+          <l n="64">Ah ! tant mieux ! car, aussi bien, on n’y en joue pas souvent.</l>
+        </sp>
+        <sp who="#un-abbé">
+          <speaker>UN ABBÉ.</speaker>
+          <l n="65">Et dites-moi, Monsieur, qu’elle est l’intrigue ?</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="66">Il n’y en a point, Monsieur ; ce sont toutes Scènes détachées, qui n’ont aucun rapport les unes aux autres, que par les liaisons qu’elles ont avec la Nouveauté : comme elle ne peut pas contenter tout le monde à la fois, les uns viendront lui rendre grâce, et les autres se plaindre d’elle.</l>
+        </sp>
+        <sp who="#l’abbé">
+          <speaker>L’ABBÉ.</speaker>
+          <l n="67">Une pièce sans intrigue, sur le Théâtre Français ! Il fallait bien plutôt la donner aux Italiens ; il me semble qu’ils ont seuls le privilège d’en jouer de semblables.</l>
+        </sp>
+        <sp who="#mercure">
+          <speaker>MERCURE.</speaker>
+          <l n="68">Eh ! qu’importe ? ce sera une Nouveauté que d’en jouer une dans ce goût là sur le Théâtre Français ; et cela répondra mieux au titre. Croyez-moi, Messieurs, ne manquez jamais la première représentation d’une Pièce, on n’est jamais sûr d’en avoir une seconde ; et venez tous avec moi condamner ou applaudir la Nouveauté. Mais vous n’aurez pas peine de l’aller chercher à la Comédie, puisque la voilà qui vient ne personne au devant de vous.</l>
+          <stage>&lt;em&gt;Le Fleuve de l’Ennui disparaît.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ, suivie d’une foule de gens de toutes espèces, chante</speaker>
+          <stage>&lt;em&gt;Chant n° 2.&lt;/em&gt;</stage>
+          <l n="69">La Nouveauté vous appelle :</l>
+          <l n="70">Accourez sur ses pas,</l>
+          <l n="71">Et quittez tout pour elle.</l>
+          <l n="72">Sans être belle,</l>
+          <l n="73">Une bagatelle,</l>
+          <l n="74">Quand elle est nouvelle,</l>
+          <l n="75">A toujours des appas.</l>
+          <l n="76">La Nouveauté vous appelle :</l>
+          <l n="77">Accourez sur ses pas,</l>
+          <l n="78">Et quittez tout pour elle.</l>
+        </sp>
+        <sp who="#troupe-de-curieux">
+          <speaker>TROUPE DE CURIEUX, ensemble.</speaker>
+          <l n="79">Charmante Nouveauté !...</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="80">Oh ! doucement : je ne puis pas vous écoutez tous à la fois ; tout ce que je puis faire, c’est de donner audience à chacun à son tour.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="81">Aimable mère de l’inconstance, charmante Nouveauté, vous voyez un Amant qui a soupiré un an auprès de la plus aimable personne du monde, qui n’a pu passer un seul jour sans la voir, qui en a été aimé tendrement et qui cependant se sent aujourd’hui du goût pour vous.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="82">Comment ! Votre Belle vous aurait-elle donné quelque chagrin, quelque jalousie ?</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="83">Au contraire, et c’est là ce dont je me plains. Ne nous étant jamais brouillés ensemble, nous n’avons jamais pu goûter le plaisir de nous raccommoder.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="84">Vous avez vécu un an ensemble, sans vous brouiller ? Ah ! que vous avez dû vous ennuyer ! Quelques obstacles étrangers n’ont-ils jamais traversé votre amour ?</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="85">Hélas ! non ; nous ne dépendions que de nous-mêmes, nous avions la liberté de nous voir à toute heure.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="86">Ah ! que cela était triste !</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="87">Enfin, sur le point de nous marier, nous avons fait réflexion que, notre tendresse étant épuisée, le mariage, à coup sûr, ne la renouvellerait pas.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="88">Et vous avez pensé fort juste.</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="89">Que vous dirai-je ? nous résolûmes hier de ne nous plus revoir ; et j’ai appris aujourd’hui qu’elle avait déjà formé d’autres nœuds.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="90">Oh ! je ne doute point ; dans une inconstance mutuelle, une Belle n’est jamais la dernière à se pourvoir. Enfin, que me demandez-vous ?</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="91">Une maîtresse nouvelle ; mais je crois que vous aurez de la peine à m’en offrir une plus belle que celle que je quitte.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="92">Qu’importe ? pourvu qu’elle vous plaise davantage. Comment était faite la vôtre ?</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="93">La taille superbe ; les cheveux blonds ; et un œil bleu et mourant, le plus tendre du monde.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="94">Hé bien ! pour changer, prenez-moi une brune aux cheveux ébène, qui ait un œil vif et pétillant et des manières gaies et enjouées.</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="95">Ah ! Je suis charmé du portrait que vous m’en faites.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="96">Tenez ; voilà une personne qui vient à nous, qui en approche assez.</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="97">Ah ! je la trouve plus aimable que tout ce que j’ai vu dans ma vie.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="98">Laissez-moi apprendre ce qu’elle me veut, et vous viendrez dans l’instant nous rejoindre.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="99">Bonjour, ma chère Nouveauté. Me reconnaissez-vous ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="100">Si je vous reconnais ! je vous vois tous les jours.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="101">Oh ! ne me dites pas cela ; il y a près d’un mois que vous m’avez vue. Je vous dirai que ce blondin, que vous m’aviez fait prendre place de cet homme d’affaire, est absent depuis trois semaines. Nous nous sommes quittés avec les plus belles protestations du monde ; il devait revenir au bout de huit jours, je l’attendais avec impatience, je n’ai vu personnes. Peut-être a-t-il cru, en prolongeant son absence, me donner plu d’ardeur ; il s’est trompé, je me suis habituée insensiblement à ne le plus voir, et à la fin je l’ai oublié entièrement.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="102">Il est vrai que l’absence réveille quelquefois les désirs ; mais, quand elle est trop longue, elle les éteint tout-à-fait.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="103">N’y pensons plus, Madame le Nouveauté, n’y pensons plus : je veux désormais des Amants qui ne fassent point de voyages.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="104">Si vous vous déclarez pour les sédentaires, j’en ai un à vous offrir, qui, pendant un an, n’a pas quitté sa Maîtresse d’un pas ; il est à présent à louer.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="105">Il faudra tâcher de s’en accommoder. Madame la Nouveauté, faites-nous voir une peu ce phénix-là.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="106">Le voici qui vient à nous. Sitôt qu’il vous a vue, il a été charmé de votre personne.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="107">Ah ! C’est un Petit-Maître de Robe. Je n’en ai pas encore eu dans ce goût, et je ne serai pas fâchée que mon cœur contente là-dessus sa curiosité.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#lisandre">
+          <speaker>LISANDRE, à Éliante.</speaker>
+          <l n="108">Je ne croyais pas, Madame, après le choix que j’avais fait, pouvoir jamais rien trouver qui fût dessus ; mais, en voyant vos appas, je reconnais mon erreur.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="109">Si vous vouliez toujours juger des beautés par comparaison, vous en trouveriez encore beaucoup au-dessus de la mienne ; mais je crois que c’est la Nouveauté qui m’attire aujourd’hui le compliment que vous me faites.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="110">Entre nous, je crois y avoir un peu de part ; et je vous avouerai franchement que c’est moi qui vous donne aujourd’hui tant de goût l’un pour l’autre.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE, bas à la Nouveauté.</speaker>
+          <l n="111">Ah ! Madame, qu’allez-vous lui découvrir ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="112">Ce que vos yeux ont déjà commencé à lui faire connaître.</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="113">Serait-il possible, charmante personne ?...</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="114">Oh ! doucement ; je ne suis pas en situation d’entendre tout ce que deux Amants, qui se voient pour la première fois ont à se dire ; cela ne finirait d’aujourd’hui ; et j’ai d’autres audiences à donner. Adieu ; jusqu’au revoir.</l>
+        </sp>
+        <sp who="#lisandre">
+          <speaker>LISANDRE.</speaker>
+          <l n="115">Comment jusqu’au revoir ! Ah ! Madame la Nouveauté, il suffit que vous m’ayez mis une fois au comble de mes vœux ; content de mon dernier choix, je vous proteste que je n’aurai de ma vie recours à vous.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="116">Mille autres avaient promis la même chose, qui ont manqué de parole.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="117">Pour moi, Déesse, je ne jure de rien.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="118">Et vous faites bien.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="119">Mais quel est cet homme ? Il a tout l’air d’un Nouvelliste.</l>
+        </sp>
+        <sp who="#le-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="120">Hé bien ! qu’est-ce, Madame la Nouveauté ? quelle nouvelle ? que nous apprendrez-vous d’Espagne, d’Italie, d’Allemagne, de Turquie, d’Arabie, de la Chine, de la Cochinchine, de...</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="121">Le roi d’Éthiopie est fort mal ; et l’on ne croit pas qu’il ne revienne.</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="122">Ah ! que m’apprenez-vous ? Nous allons avoir, à coup sûr, une guerre civile dans ce pays-là.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="123">Cela se pourrait.</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="124">Mais ce qui m’embarrasse le plus, c’est de savoir qui nous mettons sur le Trône. Son Fils aîné est un imbécile, et les cadets ont une ambition démesurée.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="125">Et qu’ils s’accommodent comme ils voudront, de quoi vous embarrassez-vous ?</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="126">De quoi je m’embarrasse ! Et ne savez-vous pas, Madame, que, dans les choses les plus indifférentes, il est bien malaisé de ne pas prendre un parti, ne fût-ce que pour le plaisir de la défendre et d’entrer en dispute avec ceux du parti contraire ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="127">Et que vous en revient-il ?</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="128">Le contentement d’avoir été juste dans mes conjectures.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="129">Et quand vous vous êtes trompé ?</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="130">Ah ! j’en ressens un chagrin mortel. Par exemple, les troubles de Perse m’empêchent toutes les nuits de dormir ; et je me couchai l’autre jour sans souper, lorsque j’eus appris que le Siège d’Ispahan était résolu ; j’avais gagé qu’il ne se ferait pas.  </l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="131">Et qui êtes-vous pour vous intéresser ainsi à tous les événements du monde ?</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="132">Je ne suis rien. J’ai près de cent écus de revenu. Je passe les journées entières au Café à apprendre et à débiter des Nouvelles. Je tire un tribut de la réussite, ou des chutes des Pièces de Théâtre. Voilà tout mon emploi.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="133">Quoi ! vous hantez les Cafés ! et ce sont les lieux où je suis le plus souhaitée ; on m’y attend à toute heure. J’ai beau souvent être accompagnée de tristesse, on a toujours de l’impatience de me voir arriver ; et tel me vient débiter les larmes aux yeux, qui ne laisse pas d’avoir un secret plaisir d’être le premier à m’annoncer. On ne m’y peint pas toujours telle que je suis : chacun me défigure selon ses intérêts, ou ses conjectures : cent mille hommes de plus ou de moins ne coûtent rien à expédier pour cela ; et l’on m’a fait souvent publier la victoire, avant même que la bataille fût donnée.</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="134">Il est vrai ; et c’est pourquoi je m’adresse à vous-même, pour avoir des nouvelles de la première main. Par exemple, on vous a annoncé pour aujourd’hui sur le Théâtre Français, y sera vous bonne ou mauvaise ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="135">Selon. Qu’en pensent vos Messieurs ?</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="136">Ma foi, pas grand chose. Voilà cependant un billet de Parterre que j’ai reçu de la part de vos partisans pour vous applaudir ; mais en voici en même-temps un autre, de la part de la Cabale, pour vous siffler ; j’entrerai à la comédie avec l’un, et je souperai avec l’autre.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="137">Et pour qui vous déclarez-vous !</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="138">Je resterai neutre, comme j’ai fait à l’Opéra dans la dispute des Pélissiens et des Mauriens[1].  </l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="139">C’est tout ce qu’on demande.</l>
+        </sp>
+        <sp who="#un-nouvelliste">
+          <speaker>LE NOUVELLISTE.</speaker>
+          <l n="140">Adieu, Madame la Nouveauté ; jusqu’au revoir ; je vous souhaite toutes sortes de prospérités. Je vais débiter votre nouvelle d’Éthiopie à nos Nouvellistes, et nous tiendrons tantôt Conseil là-dessus.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="141">Fort bien ! cela sera d’une grande importance à l’État !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="142">Bonjour, Madame. N’est-ce pas vous qu’on appelle la Nouveauté ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="143">Oui, ma fille, c’est moi-même.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="144">Ah ! Madame, que j’en suis bien aise ! je viens vous prier de me donner un visage nouveau.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="145">Un visage nouveau ? Et le vôtre vous sied si bien, il est si joli.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="146">Il est vrai que Colin le trouvait autrefois comme çà ; mais, depuis trois ans que nous sommes mariés, il dit qu’il l’a tant vu, tant vu, qu’il s’ennuie à présent de le trouver toujours de même, et qu’il voudrait qu’il fût fait comme celui de Colette : tout le monde dit pourtant que cette Colette n’est pas si belle que moi, à beaucoup près. Oh ! cela me fâche tant, quand j’y pense !</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="147">Vous aimez donc votre mari apparemment ?</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="148">Je crois qu’oui : mais je ne serais pourtant pas fâchée, de mon côté, qu’il changeât aussi de figure, et qu’il eût celle du fils du Seigneur de notre village, Monsieur le Chevalier, qui est arrivé depuis huit jours.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="149">Comment ! Aimeriez-vous ce jeune Seigneur ?</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="150">Oh ! non pas autrement : je n’aime seulement que son visage, sa taille, son esprit et ses manières ; car, pour du reste...</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="151">J’entends votre affaire.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="152">Ah ! Madame, que je suis fâchée d’avoir promis à Colin de n’aimer jamais que lui, et de voir qu’il s’ennuie de ma regarder.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="153">Il est un moyen de le désennuyer ; c’est de lui donner de la jalousie, et de lui faire connaître que vous avez du goût pour un autre.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="154">Oh ! je n’ai garde, Madame ; cela le fâcherait peut-être.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="155">Et tant mieux : cela renouvellerait son amour pour vous.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="156">Comment, Madame, il faut quelquefois fâcher les gens, pour s’en faire aimer davantage ? Cela me paraît assez extraordinaire.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="157">Oh ! ce sont des secrets qui sont inconnus au Village.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="158">Hé ! dites-moi, Madame ; en fâchant mon mari, cela me donnera-t-il un autre visage ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="159">Non ; mais cela lui donnera d’autres yeux.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="160">Je voudrais bien qu’il eût ceux de Monsieur le Chevalier. Ah ! Madame, qu’ils sont beaux !</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="161">Vous ne m’entendez pas. Je veux dire que votre mari, devenant jaloux, vous trouvera plus belle que jamais.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="162">Oh ! j’entends bien à présent, Madame. Mais je voudrais qu’il ne fût pas jaloux de Monsieur le Chevalier ; car il me défendrait peut-être de la regarder, et je crois que cela me fâcherait encore plus que de voir Colin ne me regarder pas.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="163">En ce cas, laissons les choses comme elles sont ; il en arrivera ce qu’il pourra.</l>
+        </sp>
+        <sp who="#claudine">
+          <speaker>CLAUDINE.</speaker>
+          <l n="164">N’est-il pas vrai ? Mais, Madame, je vous prie, que je ne sois pas venue vous consulter en vain ; et, ne pouvant changer mon visage, donnez-moi du moins quelques nouvelles manières de plaire, que les autres femmes n’aient pas encore inventées ; j’en ai déjà effrayé plusieurs qui m’ont rendu moins belle que je n’étais. Ce que je vous demande, au moins, c’est toujours dans le dessein de plaire à mon mari ; si j’ai le malheur de plaire à quelqu’autre, ce ne sera pas ma faute.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="165">Vous me demandez une manière de plaire qui ne soit pas commune ? Restez dans votre naturel, mon enfant ; c’est un secret dont peu de femmes se soient encore avisées, et que les hommes s’attendent depuis longtemps. Adieu.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="166">Mais d’où sortent ces deux figurent extraordinaires ?</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="167">Qu’est-ce donc, Madame la Nouveauté ? que veut dire tout ceci ? Vraiment, nous vous avons bien de l’obligation, Madame la Baronne mon épouse, et moi.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="168">Comment donc, Monsieur ! en quoi aurais-je pu vous déplaire ?</l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="169">Avec vos changements de mode perpétuels, vous êtes cause que nous venons d’être hués de toute la Cour.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="170">Cela est surprenant ! et contez-moi un peu cela, pour rire.</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="171">Vous saurez, Madame, pour vous dire les choses par ordre...</l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="172">Oh ! s’il vous plaît, mon cher époux, laissez-moi parler.</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="173">Je suis plus au fait que vous, m’Amour ; et, avec votre permission, j’expliquerai à Madame...</l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="174">Oh ! expliquez donc, et dépêchez-vous.</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="175">Et doucement, mon Cœur ; je m’y prépare.</l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="176">Vous vous y préparez ; et moi je commence. Il faut savoir, Madame, qu’ennuyés du grand fracas de la Cour, nous nous étions retirés, il y a environ quarante ans, dans le fond de nos Terres. Ce fut aussi un peu votre jalousie qui en fut cause, Monsieur le Baron.</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="177">Et corbleu ! Madame, point de digression.  </l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="178">Ennuyés dans la suite de cette vie champêtre, vous avons eu, au bout de quarante ans, la curiosité de revenir à la Cour ; et, à notre arrivée, nous y venons d’être raillés de tous les Courtisans sur notre ajustement.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="179">Est-il possible ?</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="180">On y a pris Madame la Baronne, pour une Baronne de Sottenville.  </l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="181">Et monsieur le Baron, pour un Baron de la Crasse ; et je crois que, si nous n’avions pas eu un Page, ou nous aurait manqué tout-à-fait de respect.  </l>
+        </sp>
+        <sp who="#le-page">
+          <speaker>LE PAGE.</speaker>
+          <l n="182">Bon ! Madame, n’ont-ils pas dit aussi que j’avais l’air du Valet de Carreau. Si vous saviez toutes les niches que les autres pages n’ont faites.  </l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="183">Que voulez-vous que je vous dise ? Vous avez l’air un peu antique, au moins ; et, si vous m’aviez consultée avant que d’aller à la Cour, je vous aurais épargné la ridicule d’y paraître dans cet équipage.</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="184">Comment ! on ne reconnaît pas les gens dans ce pays-là au bout de quarante ans !</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="185">Bon ! pas même quelquefois du jour au lendemain.</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="186">Savez-vous bien, Madame, que, lorsque j’en partis, il n’y a avait pas de Seigneur qui se mît plus galamment que moi ; et voilà encore l’habit que je me fis faire à l’arrivée du Doge de Gênes en France.  </l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="187">Et celui que vous me voyez, n’est-il pas le même que j’avais le lendemain de nos noces et qui fut admiré de tous les Courtisans ? Je ne l’ai porté qu’une seule fois depuis ce temps-là, et on le trouve aujourd’hui extravagant.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="188">Bon ! j’ai changé cent fois les modes depuis. Mais ne pourriez vous pas donner quelqu’air de nouveauté à vos habits ?</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="189">Hé ! le moyen ? À commencer par les boutons, ceux de la veste sont trois fois trop gros pour le juste-au-corps.</l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="190">Et moi, mon cher époux, c’est bine pis ; on me trouve toute d’une venue ; et, pour m’accommoder à la mode, il faut que je me raccourcisse d’un pied par le haut, et que je me grossisse de quatre par le bas : mais je n’en ferai rien, je vous jure.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="191">En ce cas, il faudra vous donner patience. Je me répète quelquefois, et vous verrez peut-être, dans peu, ce qu’on admire à présent trouvé aussi ridicule que votre ajustement le paraît aujourd’hui.</l>
+        </sp>
+        <sp who="#une-vieille-baronne">
+          <speaker>LE BARON.</speaker>
+          <l n="192">Oh ! parbleu, c’est une curiosité que je veux avoir ; et je ne reviendrai à la Cour que quand mes habit y seront de mode.</l>
+        </sp>
+        <sp who="#un-page-de-la-baronne">
+          <speaker>LA BARONNE.</speaker>
+          <l n="193">Allons, mon fils, allons ; retournons à notre château. Adieu, Madame la Nouveauté : nous suivrons vos avis quand vous serez devenue plus raisonnable.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ, seule</speaker>
+          <l n="194">Ils ont, après tout, quelque raison ; et il faut avouer que je suis souvent bien extravagante.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="195">Là, là, si, ut, là, ré... Ah ! Madame la Nouveauté, il y a longtemps que je vous cherche sans pouvoir vous trouver.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="196">Vous n’êtes pas le seul. Et qui êtes vous ?</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="197">Grand Maître de Musique, grand compositeur d’Opéra : et je me nomme Monsieur de la Cascade.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="198">Vous travaillez pour l’Opéra ? ah ! je ne m’étonne plus si vous avez tant de peine à ma rencontrer ; il y a longtemps que j’ai quitté ce pays-là.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="199">On disait pourtant que vous vous trouviez quelquefois parmi nos Demoiselles des Chœurs.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="200">Bon ! quels contes ! la Nouveauté parmi les Chœurs de l’Opéra ! Après tout vous ne seriez pas le premier qui s’y serait trompé. Mais enfin, que voulez-vous de moi ? En quoi puis-je vous être utile ?</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="201">Je voudrais, Madame, que vous m’aidassiez à faire passer une nouvelle idée qui m’est venue ; je sais qu’on passe bien des choses en faveur de la Nouveauté.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="202">Quelquefois. Voyons votre idée.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="203">La voici. Comme depuis longtemps on attribue la chute de tous les Opéras nouveaux aux Poèmes, je voudrais les retrancher, et faire représenter un Opéra sans paroles.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="204">Comment ! vous croyez qu’on pourrait reste deux heures et demi entières à n’entendre que de la musique ?</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="205">Pourquoi non ? Il y a des gens qui l’aiment assez pour cela.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="206">Mais, enfin, que feraient vos Acteurs sur le Théâtre ?</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="207">Ils chanteraient seulement les notes, et gesticuleraient, comme s’ils disaient les plus belles choses du monde ; et cela vaudrait mieux que de mauvaises paroles qu’on n’entend point. Voici un morceau d’Opéra que j’ai composé dans ce goût là. Voulez-vous voir ensemble l’effet que cela pourrait faire ? j’ai, fort à propos, amené avec moi des Violons.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="208">Oui dà ; et je n’ai qu’à jeter les yeux là-dessus pour être au fait.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <stage>Mon sujet est tiré de l’Histoire Romaine. Mon Opéra se nomme Antonin Caracalla ; et voici la Scène où cet Empereur, ayant enlevé une vestale de son Temple, la veut contraindre d’abandonner la culte de ses Dieux pour être Impératrice... Allons, Madame, figures-vous que vous êtes Vestale ; c’est un Rôle qui convient assez à la Nouveauté ; et moi je suis Antonin Caracalla. Un prélude de basse vous annonce mon arrivé ; et je commence par vous déclarer mon amour. Vous êtes fort étonnée, et me répondez avec fierté. Je ne me rebute point, et je reviens à la charge. Vous me dites des injures, je vous menace. Vous vous retranchez toujours sur votre vertu : je vous fais entendre que c’est cette même vertu qui a fait naître mon amour, et je vous débite une Sentence accompagnée de deux dessus de violon, pour vous prouver que la vertu doit céder à l’amour. Vous combattez mon sentiment, je l’appuie ; ce que forme un &lt;em&gt;duo&lt;/em&gt; contradictoire qui fera un effet merveilleux.</stage>
+          <stage>&lt;em&gt;Ils chantent une Scène en solfiant et gesticulant, comme s’ils chantaient une Scène d’Opéra. N° 3.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="209">Comment donc ? que veut dire ceci ? des gens qui se querellent en Musique ? est-ce que nous sommes ici à l’Opéra ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="210">Ah ! c’est vous, Monsieur la Rimaille ? Hé bien ? qu’est-ce ? comment va le Théâtre ? Comment vous portez-vous, depuis votre dernière chute ?</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="211">Si mal, que je ne veux plus rien composer de nouveau. J’ai un Magasin rempli de plus de soixante mille vers de toute espèce ; ceux qui en auront besoin, viendront en acheter chez moi en gros, qu’ils reviendront au Public en détail, à leur risques et fortunes. Mais que faisiez-vous donc-là avec Monsieur de la Cascade ?</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="212">Il me voulait mettre de moitié dans un projet qu’il a formé ; mais l’idée m’en paraît trop extravagante. Il veut donner un Opéra sans paroles.</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="213">Sans paroles ! et plût au Ciel qu’on en pût donner sans musique ! Voilà trois Poèmes tout de suite que les Musiciens m’ont fait tomber.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="214">Si vous m’aviez choisi, Monsieur de la Rimaille, cela ne vous serait peut-être pas arrivé.</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="215">Bon ! vous dites, tous cela, vous autres ; et j’ai résolu de na plus rien prendre sur mon compte. Les Musiciens n’auront qu’à inventer ou choisir leur sujet eux-mêmes, en amener les Divertissements à leur fantaisie, et en composer la Musique ; et ils trouveront chez moi des vers tout à faits pour le remplissage : j’en ai d’amour, de haine, de dépit, de vengeance, d’infidélité, de constance ; pour les Dieux, pour les Démons, pour les Rois, pour les Bergers ; enfin on trouvera de tout dans ma boutique, et à juste prix.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="216">Parbleu ! Puisque la Nouveauté n’approuve point mon projet, j’ai envie de m’accorder avec vous. J’ai des sujets tout trouvés, de la musique toute faite, il ne manque que des vers. Combien me vendrez-vous la garniture complète d’un Opéra.</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="217">Il faut savoir si vous voulez trier les vers, ou les prendre comme ils viendront ; car vous pourriez m’enlever de mon Magasin tels vers qui vaudraient un écu pièce.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="218">En quelle sorte de vers avez-vous dont qui soient si rares ?</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="219">De ces vers saillants et brillants qui renferment une pointe, une maxime, une sentence ; et dont il ne faut souvent qu’une demi-douzaine pour faire passer un Opéra. Par exemple :</l>
+          <stage>&lt;em&gt;Qui n’ose se venger, mérite qu’on l’outrage.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="220">Eh ! mais cette pensée n’est pas trop nouvelle, et je l’ai vue dans la Tragédie d’Atrée.</l>
+          <stage>&lt;em&gt;Qui cède à la pitié, mérite qu’on l’offense.  &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="221">Vous avez raison ; et vous pouvez dire qu’elle est encore dans Phocas d’Héraclius.</l>
+          <stage>&lt;em&gt;Qui se laisse outrager, mérite qu’on l’outrage.  &lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="222">Et si vous le prenez par-là, c’est un vieux proverbe.</l>
+          <stage>&lt;em&gt;Et qui se fait brebis, souvent le loup le mange.&lt;/em&gt;</stage>
+          <l n="223">Le tout ne consiste qu’à donner aux choses un tour de Nouveauté.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="224">Il est vrai. Mais sachons combine vous me vendrez vos vers, le millier, à les prendre au hasard.</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="225">Voulez-vous que je vous parle en conscience ? je ne puis pas vous les donner à moins de cent dix sols, le cent.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="226">Ah ! Monsieur de la Rimaille !</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="227">Non, c’est un prix fait ; et vous ne les auriez pas, s’il s’en fallait une obole.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="228">Mais, enfin...</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="229">Vous en pouvez trouver autre part à meilleur marché ; mais il y a vers et vers ; et pour ceux que je fais...</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="230">Allons, Monsieur de la Rimaille, il se faut mettre à la raison ; songez qu’on ne vous demande que de petits vers.</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="231">Je le crois, parbleu, bien ! s’il vous fallait donner des vers de douze ou treize pieds, je n’y trouverais pas mon compte.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="232">Je vois bien qu’il faut que je vous accompagne ensemble : cela est du ressort de la Nouveauté, de se mêler d’un marché aussi bizarre et aussi nouveau. Oh ! çà, combien faut-il remplir de vers pour remplir le fond d’un Opéra ?</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="233">Il en faut six cent, qui, à les prendre à six pieds l’un portant l’autre, feront cent toises.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="234">Vendre des vers à la toise !</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="235">On y a bien vendu des Bibliothèques.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="236">Mais comment ajuster à ma Musique ceux qui sont trop longs ?</l>
+        </sp>
+        <sp who="#la-rimaille">
+          <speaker>LA RIMAILLE.</speaker>
+          <l n="237">Cela vous sera aisé. Mes vers prêtent ; ils s’allongent et de raccourcissent comme on veut ; et on en peut ôter, ou y ajouter une épithète ou un adverbe, sans qu’il y paraisse. Par exemple :</l>
+          <stage>&lt;em&gt;Coulez, ruisseaux, sans murmures.    &lt;/em&gt;</stage>
+          <l n="238">Si ce vers est trop court, vous pouvez l’allonger ainsi :</l>
+          <stage>&lt;em&gt;Coulez, coulants ruisseaux ; murmurez sans murmure.&lt;/em&gt;</stage>
+          <l n="239">Et ainsi du reste.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="240">À merveille ! et, sur ce pied-là, je condamne Monsieur de la Cascade à vous donner ce que vous demandez.</l>
+        </sp>
+        <sp who="#la-cascade">
+          <speaker>LA CASCADE.</speaker>
+          <l n="241">J’y consens.</l>
+        </sp>
+        <sp who="#la-nouveauté">
+          <speaker>LA NOUVEAUTÉ.</speaker>
+          <l n="242">Allons, Messieurs, puisque vous voilà d’accord, secondez-moi dans l’exécution du petit divertissement que j’ai préparé ; et que tout célèbre le triomphe de la Nouveauté.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="divertissement">
+        <head>Divertissement</head>
+        <sp who="#deux-suivants">
+          <speaker>DEUX SUIVANTS de la Nouveauté.</speaker>
+          <l n="243">Dans la jeunesse,</l>
+          <l n="244">Dans la vieillesse,</l>
+          <l n="245">Nous aimons la diversité.</l>
+          <l n="246">Dans l’allégresse,</l>
+          <l n="247">Dans la tristesse,</l>
+          <l n="248">Nous cherchons sans cesse,</l>
+          <l n="249">La Nouveauté.</l>
+        </sp>
+        <sp who="#un-suivant">
+          <speaker>UN SUIVANT de la Nouveauté.</speaker>
+          <l n="250">Les plaisirs les plus charmants,</l>
+          <l n="251">Quand ils sont toujours les mêmes,</l>
+          <l n="252">N’ont plus pour nous d’agréments ;</l>
+          <l n="253">Et les changements</l>
+          <l n="254">De tourments</l>
+          <l n="255">Sont souvent, dans les maux extrêmes,</l>
+          <l n="256">Des soulagements.</l>
+        </sp>
+        <sp who="#ensemble">
+          <speaker>ENSEMBLE.</speaker>
+          <l n="257">Dans la jeunesse,</l>
+          <l n="258">Dans la vieillesse,</l>
+          <l n="259">Nous aimons la diversité.</l>
+          <l n="260">Dans l’allégresse,</l>
+          <l n="261">Dans la tristesse,</l>
+          <l n="262">Nous cherchons sans cesse</l>
+          <l n="263">La Nouveauté.</l>
+          <stage>&lt;em&gt;Entrée de quatre Âges, et des Soucis qui les troublent et leur font souhaiter la Nouveauté.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Menuet, n° 5.&lt;/em&gt;</stage>
+          <l n="264">Quand une beauté</l>
+          <l n="265">Cesse d’être inhumaine,</l>
+          <l n="266">Vers l’infidélité</l>
+          <l n="267">Mon cœur est bientôt porté.</l>
+          <l n="268">En formant une nouvelle chaîne,</l>
+          <l n="269">Nouveaux désirs,</l>
+          <l n="270">Nouveaux soupirs,</l>
+          <l n="271">Nouveaux plaisirs.</l>
+          <stage>&lt;em&gt;Entrée des nations amoureuses de la Nouveauté.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Vaudeville.&lt;/em&gt;</stage>
+          <l n="272">Vous qui cherchez à faire emplette</l>
+          <l n="273">De quelque innocente beauté,</l>
+          <l n="274">Au printemps prenez la fillette,</l>
+          <l n="275">N’attendez pas jusqu’à l’été,</l>
+          <l n="276">Si vous aimez riron, rirette,</l>
+          <l n="277">Et le tout pour la nouveauté.</l>
+          <l n="278">Mon cœur abandonne Lisette</l>
+          <l n="279">Dont il fut toujours bine traité,</l>
+          <l n="280">Pour s’attacher à Colinette</l>
+          <l n="281">Qui n’a pour lui que cruauté ;</l>
+          <l n="282">Et le tout pour, riron, rirette,</l>
+          <l n="283">Et le tout pour la Nouveauté.</l>
+          <l n="284">Je vois d’Agnès encor jeunesse</l>
+          <l n="285">Un vieux Philosophe entêté :</l>
+          <l n="286">Elle est sotte, elle est indiscrète,</l>
+          <l n="287">Elle n’a ni grâce ni beauté ;</l>
+          <l n="288">Qu’a-t-elle dont ? riron, rirette,</l>
+          <l n="289">Qu’a-t-elle donc ? la Nouveauté.</l>
+          <l n="290">Laïs, jadis jeune Coquette ;</l>
+          <l n="291">Nous vendis bien cher sa beauté ;</l>
+          <l n="292">Il faut désormais qu’elle achète</l>
+          <l n="293">Et paye autant qu’elle a coûté ;</l>
+          <l n="294">Elle n’a plus, riron, rirette,</l>
+          <l n="295">Elle n’a plus la Nouveauté.</l>
+          <l n="296">D’un époux l’on est satisfaite :</l>
+          <l n="297">Il meurt. Ah ! quelle cruauté !</l>
+          <l n="298">Pendant un temps on le regrette ;</l>
+          <l n="299">Il serait toujours regretté,</l>
+          <l n="300">Sans l’amour de, riron, rirette,</l>
+          <l n="301">Sans l’amour de la Nouveauté.</l>
+          <l n="302">De mes sœurs je suis la cadette ;</l>
+          <l n="303">De la maison l’enfant gâté ;</l>
+          <l n="304">Des joujoux d’enfant qu’on m’achète,</l>
+          <l n="305">Maman croit mon cœur enchanté ;</l>
+          <l n="306">Mais j’aspire à, riron, rirette,</l>
+          <l n="307">Mais j’aspire à la Nouveauté.</l>
+          <l n="308">Puisque aujourd’hui chacun rejette</l>
+          <l n="309">Notre vieux jeu trop répété,</l>
+          <l n="310">Messieurs, du moins, grâce au Poète,</l>
+          <l n="311">Qui de vous plaire s’est flatté,</l>
+          <l n="312">Applaudissez, riron, rirette,,</l>
+          <l n="313">Applaudissez la Nouveauté.</l>
+          <stage>&lt;em&gt;Contre-danse.&lt;/em&gt;</stage>
+          <l n="314">[1] C’est ainsi qu’on appelait les Partisans de Mlles Pélissier et le Maur, excellentes Actrices de l’Opéra, lorsqu’elles jouaient le rôle de Thisbé, tour-à-tour.</l>
+          <l n="315" />
+        </sp>
       </div>
     </body>
   </text>

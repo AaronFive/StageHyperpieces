@@ -1,1259 +1,1241 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>L&#039;Amour de l&#039;art</title>
-        <author key="Eugène LABICHE | (naissance-mort)">Eugène LABICHE |</author>
+        <title type="main" />
+        <title type="sub">Comédie</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/?q=node/508</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène LABICHE |</author>. <title>L&#039;Amour de l&#039;art</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/508</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="la-comtesse" sex="SEX">
+            <persName>LA COMTESSE</persName>
+          </person>
+          <person xml:id="mariette" sex="SEX">
+            <persName>MARIETTE</persName>
+          </person>
+          <person xml:id="antoine" sex="SEX">
+            <persName>ANTOINE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="[vide]" location="unknown">[vide]</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>L&#039;Amour de l&#039;art</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Comédie en un acte.</l>
-            <l n="2" xml:id="l2"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="la-comtesse">LA COMTESSE</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mariette">MARIETTE</role>
-              <roleDesc>, <em>femme de chambre</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="antoine">ANTOINE</role>
-              <roleDesc>, <em>domestique</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>La scène se passe à Paris, de nos jours.</em></hi></stage>
-            <l n="4" xml:id="l4"> </l>
-            <stage><hi rend="italic"><em>Un salon. Une cheminée avec pendule et vases. Une fenêtre. Deux portes. Une table avec ce qu’il faut pour écrire. Chaises, fauteuils. Un coffre à bois.</em></hi></stage>
-            <l n="6" xml:id="l6"> </l>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-          </sp>
-          <sp who="mariette" xml:id="0-2">
-            <speaker>MARIETTE, <em>seule, regardant à la fenêtre</em></speaker>
-            <l n="9" xml:id="l9"> </l>
-            <l n="10" xml:id="l10"> </l>
-            <l n="11" xml:id="l11"> </l>
-            <l n="12" xml:id="l12">Il est superbe, le valet de chambre que Madame a arrêté hier. Quel air noble et distingué !... J’ai du plaisir à le regarder fendre son bois dans la cour... Tiens, il a mis des gants pour fendre... Pauvre garçon ! il a peut-être froid aux mains.</l>
-            <l n="13" xml:id="l13"> </l>
-            <l n="14" xml:id="l14"> </l>
-            <l n="15" xml:id="l15"> </l>
-          </sp>
-          <sp who="mariette" xml:id="0-3">
-            <speaker>MARIETTE, LA COMTESSE</speaker>
-            <l n="16" xml:id="l16"> </l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-4">
-            <speaker>LA COMTESSE, <em>entrant.</em></speaker>
-            <l n="17" xml:id="l17">Eh bien ! Mariette... que fais-tu donc là ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-5">
-            <speaker>MARIETTE, <em>avec aplomb.</em></speaker>
-            <l n="18" xml:id="l18">Je nettoie les carreaux, madame.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-6">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="19" xml:id="l19">A-t-on été chez ma couturière ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-7">
-            <speaker>MARIETTE.</speaker>
-            <l n="20" xml:id="l20">Oui, madame, j’y suis allée moi-même, et je lui ai bien recommandé d’apporter votre robe, ce soir, à quatre heures.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-8">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="21" xml:id="l21">Oui, il me la faut, il me la faut absolument.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-9">
-            <speaker>MARIETTE.</speaker>
-            <l n="22" xml:id="l22">Madame me permettra-t-elle de lui adresser une question ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-10">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="23" xml:id="l23">Parle.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-11">
-            <speaker>MARIETTE.</speaker>
-            <l n="24" xml:id="l24">Pourquoi Madame se fait-elle faire deux robes de bal... pour un seul bal ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-12">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="25" xml:id="l25">Pourquoi ?... c’est une vengeance... un tour que je veux jouer à la petite baronne... elle est insupportable : dès que je commande une toilette... vite, elle court chez ma couturière et se fait faire exactement la même.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-13">
-            <speaker>MARIETTE.</speaker>
-            <l n="26" xml:id="l26">Ah ! ça n’est pas gentil.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-14">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="27" xml:id="l27">C’est agaçant... Si je suis en bleu, elle arrive en bleu ; si je suis en rose, elle arrive en rose... Ne m’a-t-elle pas dit hier que nous avions l’air de deux sœurs... comme c’est agréable ! Je me donne bien du mal pour composer mes toilettes... car je puis dire que je me donne bien du mal...</l>
-          </sp>
-          <sp who="mariette" xml:id="0-15">
-            <speaker>MARIETTE.</speaker>
-            <l n="28" xml:id="l28">Oh ! c’est bien vrai. Madame s’enferme.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-16">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="29" xml:id="l29">Je ne m’enferme pas, je me recueille... enfin, je trouve, j’invente, moi... et la baronne, qui n’a aucune espèce d’idée, se contente de me copier, c’est trop commode... Aussi, voilà ce que j’ai imaginé. Je me suis commandé, il y a trois jours, pour le bal de ce soir, une robe verte et jaune... quelque chose d’horrible... une véritable omelette aux fines herbes... je te la donnerai... Une heure après, la baronne arrivait et se faisait confectionner la pareille.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-17">
-            <speaker>MARIETTE.</speaker>
-            <l n="30" xml:id="l30">Naturellement.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-18">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="31" xml:id="l31">Alors, ce matin, je suis allée secrètement chez une autre couturière et je lui ai donné le plan d’une robe... gorge-de-pigeon blessé... avec des agréments de ma composition... ce sera délicieux... J’arriverai de bonne heure afin de voir l’entrée de la baronne.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-19">
-            <speaker>MARIETTE.</speaker>
-            <l n="32" xml:id="l32">L’entrée de l’omelette !...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-20">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="33" xml:id="l33">Ah ! je crois que je m’amuserai bien ce soir !... Ah çà ! que fait le nouveau valet de chambre... M. Antoine Petit-Gras ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-21">
-            <speaker>MARIETTE.</speaker>
-            <l n="34" xml:id="l34">Il fend du bois dans la cour... Je suis sûre que Madame a eu de bons renseignements sur lui ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-22">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="35" xml:id="l35">Comme ça... Je me présente chez un M. Durand... son ancien maître... Son domestique me fait entrer maladroitement, et je tombe sur un monsieur qui avait les pieds à l’eau.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-23">
-            <speaker>MARIETTE.</speaker>
-            <l n="36" xml:id="l36">Ah !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-24">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="37" xml:id="l37">Heureusement il était enveloppé dans un vaste paravent... Je salue le paravent et je lui dis : « Monsieur, je désirerais avoir des renseignements sur un nommé Antoine Petit-Gras... qui sort de votre service. » Une voix me répond : « Excusez-moi, madame, j’ai le sang à la tête et tous les deux jours je suis obligé de prendre un bain de pieds de quinze minutes, à la moutarde. – Je le regrette, monsieur. – Moi aussi, madame... Les jours où je ne prends pas de bain de pieds, continue la voix, je m’applique un Rigolo derrière la nuque : aujourd’hui c’est le jour du bain de pieds, demain ce sera celui du Rigolo. – Pardon, je suis venue pour vous demander des renseignements... – Sur Antoine Petit-Gras ; c’est un brave garçon... »</l>
-          </sp>
-          <sp who="mariette" xml:id="0-25">
-            <speaker>MARIETTE.</speaker>
-            <l n="38" xml:id="l38">Et distingué !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-26">
-            <speaker>LA COMTESSE, <em>continuant.</em></speaker>
-            <l n="39" xml:id="l39">« Pas intelligent... »</l>
-          </sp>
-          <sp who="mariette" xml:id="0-27">
-            <speaker>MARIETTE.</speaker>
-            <l n="40" xml:id="l40">S’il est possible !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-28">
-            <speaker>LA COMTESSE, <em>continuant.</em></speaker>
-            <l n="41" xml:id="l41">« Pas soigneux, pas adroit, il casse beaucoup... Mais il est conservateur... il vote comme moi... à ce qu’il dit... Son défaut, c’est la boisson... – Comment, il boit ? – Pardon... mes quinze minutes sont expirées, il faut que je me retire, mais je vous écrirai au sujet de Petit-Gras. Je vous enverrai sa photographie.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-29">
-            <speaker>MARIETTE.</speaker>
-            <l n="42" xml:id="l42">Pourquoi sa photographie ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-30">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="43" xml:id="l43">Je n’en sais rien... J’ai salué le paravent et je suis partie... de façon que je ne suis guère renseignée sur mon valet de chambre.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-31">
-            <speaker>MARIETTE.</speaker>
-            <l n="44" xml:id="l44">Je crois que Madame en sera contente... il a une très belle écriture... Ce matin la cuisinière lui a fait écrire sa dépense... il moule !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-32">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="45" xml:id="l45">Tu m’y fais songer...</l>
-            <stage><hi rend="italic"><em>S’approchant de la table.</em></hi></stage>
-            <l n="47" xml:id="l47">Moi aussi j’ai à écrire... à ma tante, madame de Gardenville, qui habite Loudun... il faut que je la remercie, elle m’a envoyé pour ma fête ces deux vases qui sont sur la cheminée... Comment les trouves-tu ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-33">
-            <speaker>MARIETTE.</speaker>
-            <l n="48" xml:id="l48">Charmants !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-34">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="49" xml:id="l49">Ils sont affreux !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-35">
-            <speaker>MARIETTE.</speaker>
-            <l n="50" xml:id="l50">C’est ce que je voulais dire.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-36">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="51" xml:id="l51">Pauvre tante ! elle aura acheté ça chez un faïencier de Loudun... enfin, j’espère qu’on me les cassera un de ces jours, tu sais, ne te gêne pas...</l>
-            <l n="52" xml:id="l52">« Ma bonne tante... J’ai reçu vos deux vases... ils sont ravissants. »</l>
-            <l n="53" xml:id="l53"> </l>
-            <l n="54" xml:id="l54"> </l>
-            <l n="55" xml:id="l55"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-37">
-            <speaker>MARIETTE, LA COMTESSE, ANTOINE</speaker>
-            <l n="56" xml:id="l56"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-38">
-            <speaker>ANTOINE, <em>entre avec un crochet chargé de bois sur le dos. Il est en livrée et porte des moustaches et des gants. À Mariette.</em></speaker>
-            <l n="57" xml:id="l57">Où faut-il mettre ça ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-39">
-            <speaker>MARIETTE.</speaker>
-            <l n="58" xml:id="l58">Dans le coffre à bois... Je vais vous donner un coup de main.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-40">
-            <speaker>ANTOINE.</speaker>
-            <l n="59" xml:id="l59">Dépêchez-vous, j’en ai encore une charge à monter.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-41">
-            <speaker>LA COMTESSE, <em>à elle-même et à haute voix.</em></speaker>
-            <stage><hi rend="italic">Attraper prend-il deux <em>p ?</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-42">
-            <speaker>ANTOINE, <em>s’avançant avec son crochet sur le dos, d’un air gracieux.</em></speaker>
-            <l n="61" xml:id="l61">Un seul, madame la comtesse, un seul... dans attraper la lettre ne se redouble pas.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-43">
-            <speaker>LA COMTESSE, <em>étonnée.</em></speaker>
-            <l n="62" xml:id="l62">Ah ! approchez... Monsieur Petit-Gras, je suis allée hier prendre des renseignements sur vous... ils sont bons... vous êtes un brave garçon... pas intelligent...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-44">
-            <speaker>ANTOINE.</speaker>
-            <l n="63" xml:id="l63">Ah !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-45">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="64" xml:id="l64">Pas soigneux, pas adroit... mais vous avez des opinions conservatrices qui me conviennent.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-46">
-            <speaker>ANTOINE, <em>son crochet sur le dos.</em></speaker>
-            <l n="65" xml:id="l65">J’ai toujours pensé que la France ne reprendrait son rang dans le monde...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-47">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="66" xml:id="l66">C’est bien... assez ! Vous avez un défaut... vous buvez.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-48">
-            <speaker>ANTOINE.</speaker>
-            <l n="67" xml:id="l67">Moi ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-49">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="68" xml:id="l68">Faites-y attention... je n’aime pas ça... Ah ! il faudra couper vos moustaches.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-50">
-            <speaker>ANTOINE.</speaker>
-            <l n="69" xml:id="l69">Madame est bien bonne... mais elles ne me gênent pas.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-51">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="70" xml:id="l70">C’est possible... mais un valet de chambre en moustaches, ce n’est pas convenable... vous les couperez aujourd’hui... ce soir.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-52">
-            <speaker>ANTOINE.</speaker>
-            <l n="71" xml:id="l71">On en fera le sacrifice.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-53">
-            <speaker>MARIETTE, <em>à part.</em></speaker>
-            <l n="72" xml:id="l72">Quel dommage !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-54">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="73" xml:id="l73">Maintenant débarrassez-vous de votre bois et laissez-moi écrire ma lettre...</l>
-            <stage><hi rend="italic"><em>Elle se remet à écrire.</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-55">
-            <speaker>ANTOINE, <em>bas à Mariette qui le débarrasse de son bois.</em></speaker>
-            <l n="75" xml:id="l75">Elle est sévère, Madame.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-56">
-            <speaker>MARIETTE, <em>bas.</em></speaker>
-            <l n="76" xml:id="l76">Pas méchante au fond... Ne dites rien, je tâcherai de faire maintenir vos moustaches.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-57">
-            <speaker>LA COMTESSE, <em>écrivant.</em></speaker>
-            <l n="77" xml:id="l77">« Ma sœur Emma n’est pas encore revenue de Montlhéry... »</l>
-            <stage><hi rend="italic"><em>S’interrompant ; à elle-même.</em></hi></stage>
-            <l n="79" xml:id="l79">De quel département Montlhéry ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-58">
-            <speaker>ANTOINE, <em>s’avançant avec son crochet, gracieux.</em></speaker>
-            <l n="80" xml:id="l80">Seine-et-Oise, madame la comtesse, vingt kilomètres de Corbeil...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-59">
-            <speaker>LA COMTESSE, <em>étonnée.</em></speaker>
-            <l n="81" xml:id="l81">Hein ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-60">
-            <speaker>ANTOINE, <em>continuant.</em></speaker>
-            <l n="82" xml:id="l82">Sa tour fut élevée en 999 par Thibault... Louis VI la prit...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-61">
-            <speaker>LA COMTESSE, <em>au comble de l’étonnement.</em></speaker>
-            <l n="83" xml:id="l83">Qu’est-ce que c’est que ça ?... Comment savez-vous ça ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-62">
-            <speaker>ANTOINE.</speaker>
-            <l n="84" xml:id="l84">J’ai habité Montlhéry... et j’ai servi de guide aux étrangers...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-63">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="85" xml:id="l85">Ah !... c’est différent.</l>
-            <stage><hi rend="italic"><em>Elle continue à écrire.</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-64">
-            <speaker>MARIETTE, <em>à Antoine.</em></speaker>
-            <l n="87" xml:id="l87">Ah ! vous avez habité Montlhéry ?... Est-ce drôle ? Moi, je suis de Bayeux...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-65">
-            <speaker>ANTOINE.</speaker>
-            <l n="88" xml:id="l88">Eh bien ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-66">
-            <speaker>MARIETTE.</speaker>
-            <l n="89" xml:id="l89">Je connais une demoiselle de Bayeux qui a épousé un homme de Montlhéry... avec des moustaches... et ils ont été très heureux.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-67">
-            <speaker>ANTOINE.</speaker>
-            <l n="90" xml:id="l90">Allons ! tant mieux !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-68">
-            <speaker>LA COMTESSE, <em>qui a plié sa lettre.</em></speaker>
-            <l n="91" xml:id="l91">Mettons l’adresse... « Madame de Gardenville... à Loudun... »</l>
-            <stage><hi rend="italic"><em>Cherchant.</em></hi></stage>
-            <l n="93" xml:id="l93">Loudun ?... Indre...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-69">
-            <speaker>ANTOINE, <em>s’avançant avec son crochet, gracieux.</em></speaker>
-            <l n="94" xml:id="l94">J’en demande pardon à madame la comtesse... mais Loudun est du département de la Vienne... cinquante-quatre kilomètres de Poitiers... population...</l>
-          </sp>
-          <sp who="mariette" xml:id="0-70">
-            <speaker>MARIETTE, <em>émerveillée.</em></speaker>
-            <l n="95" xml:id="l95">Il sait tout ! il sait tout !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-71">
-            <speaker>LA COMTESSE, <em>à part.</em></speaker>
-            <l n="96" xml:id="l96">Ce n’est pas un domestique, c’est un dictionnaire de Bouillet !</l>
-            <l n="97" xml:id="l97">C’est bien... allez chercher le reste du bois.</l>
-            <l n="98" xml:id="l98"> </l>
-            <l n="99" xml:id="l99"> </l>
-            <l n="100" xml:id="l100"> </l>
-          </sp>
-          <sp who="mariette" xml:id="0-72">
-            <speaker>LA COMTESSE, MARIETTE</speaker>
-            <l n="101" xml:id="l101"> </l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-73">
-            <speaker>LA COMTESSE, <em>à part, soupçonneuse.</em></speaker>
-            <l n="102" xml:id="l102">Un domestique... c’est étonnant.</l>
-            <l n="103" xml:id="l103">Il est très fort sur la géographie, ce M. Antoine...</l>
-          </sp>
-          <sp who="mariette" xml:id="0-74">
-            <speaker>MARIETTE.</speaker>
-            <l n="104" xml:id="l104">Oui, mais il ne sait pas beaucoup le français.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-75">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="105" xml:id="l105">Comment ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-76">
-            <speaker>MARIETTE.</speaker>
-            <l n="106" xml:id="l106">Ce matin, je l’ai entendu dire au concierge : « Mon ami, il faudrait que vous envoyassiez chercher ma malle... »</l>
-            <l n="107" xml:id="l107">Ah ! envoyassiez !... Il doit être belge !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-77">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="108" xml:id="l108">Voilà qui est singulier... et tu n’as rien remarqué d’extraordinaire dans ses manières, dans sa personne ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-78">
-            <speaker>MARIETTE.</speaker>
-            <l n="109" xml:id="l109">Oh ! si... tout à l’heure sa chambre était ouverte... j’y suis entrée...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-79">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="110" xml:id="l110">Hein ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-80">
-            <speaker>MARIETTE.</speaker>
-            <l n="111" xml:id="l111">Par curiosité seulement... devinez ce que j’ai vu sur la table ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-81">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="112" xml:id="l112">Quoi ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-82">
-            <speaker>MARIETTE.</speaker>
-            <l n="113" xml:id="l113">Une brosse à dents ! un homme !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-83">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="114" xml:id="l114">Mais il me semble...</l>
-          </sp>
-          <sp who="mariette" xml:id="0-84">
-            <speaker>MARIETTE.</speaker>
-            <l n="115" xml:id="l115">Plus fort que ça ! je l’ai entendu qui disait à un commissionnaire de lui faire venir un bain... avec un pédicure.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-85">
-            <speaker>LA COMTESSE, <em>étonnée.</em></speaker>
-            <l n="116" xml:id="l116">Un pédicure !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-86">
-            <speaker>MARIETTE.</speaker>
-            <l n="117" xml:id="l117">Un homme !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-87">
-            <speaker>LA COMTESSE, <em>apercevant Antoine qui rentre avec son crochet chargé de bois.</em></speaker>
-            <l n="118" xml:id="l118">Le voici... Silence !</l>
-            <stage><hi rend="italic"><em>Elle se met à la table et prend un livre.</em></hi></stage>
-            <l n="120" xml:id="l120"> </l>
-            <l n="121" xml:id="l121"> </l>
-            <l n="122" xml:id="l122"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-88">
-            <speaker>LA COMTESSE, MARIETTE, ANTOINE</speaker>
-            <l n="123" xml:id="l123"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-89">
-            <speaker>ANTOINE, <em>entrant, à part.</em></speaker>
-            <l n="124" xml:id="l124">C’est éreintant, ce métier-là !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-90">
-            <speaker>MARIETTE.</speaker>
-            <l n="125" xml:id="l125">Attendez... je vais vous aider.</l>
-            <stage><hi rend="italic"><em>Elle met les bûches dans le coffre à bois.</em></hi></stage>
-            <l n="127" xml:id="l127">Ah ! comme il a chaud !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-91">
-            <speaker>ANTOINE.</speaker>
-            <l n="128" xml:id="l128">J’ai chaud... et soif.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-92">
-            <speaker>MARIETTE, <em>bas.</em></speaker>
-            <l n="129" xml:id="l129">Chut ! il ne faut jamais avoir soif devant Madame.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-93">
-            <speaker>ANTOINE.</speaker>
-            <l n="130" xml:id="l130">Pourquoi ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-94">
-            <speaker>MARIETTE.</speaker>
-            <l n="131" xml:id="l131">Elle n’aime pas ça.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-95">
-            <speaker>LA COMTESSE, <em>à part.</em></speaker>
-            <l n="132" xml:id="l132">Je vais le soumettre à une épreuve.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="134" xml:id="l134">Mariette !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-96">
-            <speaker>MARIETTE.</speaker>
-            <l n="135" xml:id="l135">Madame ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-97">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="136" xml:id="l136">En quelle année est donc mort Mazarin ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-98">
-            <speaker>MARIETTE, <em>étonnée.</em></speaker>
-            <l n="137" xml:id="l137">Mazarin ? qu’est-ce qu’il fait ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-99">
-            <speaker>ANTOINE, <em>gracieux, s’avançant avec son crochet sur le dos.</em></speaker>
-            <l n="138" xml:id="l138">En 1661, madame la comtesse... 1661.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-100">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="139" xml:id="l139">C’est un peu fort.</l>
-            <l n="140" xml:id="l140">Et Dagobert ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-101">
-            <speaker>ANTOINE.</speaker>
-            <l n="141" xml:id="l141">622.</l>
-            <l n="142" xml:id="l142">On ne me colle pas sur les dates !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-102">
-            <speaker>LA COMTESSE, <em>à part.</em></speaker>
-            <l n="143" xml:id="l143">Ça, un domestique... jamais !... mais qui est-ce ? il faut que je le sache ! Je cours chez ce M. Durand... j’espère qu’il n’aura plus les pieds à l’eau. C’est le jour de son Rigolo.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="145" xml:id="l145">Mariette !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-103">
-            <speaker>MARIETTE.</speaker>
-            <l n="146" xml:id="l146">Madame ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-104">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="147" xml:id="l147">Je sors... demande la voiture... tout de suite.</l>
-            <l n="148" xml:id="l148">Vous, frottez ! vous savez frotter ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-105">
-            <speaker>ANTOINE.</speaker>
-            <l n="149" xml:id="l149">Mais... légèrement.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-106">
-            <speaker>LA COMTESSE, <em>à part.</em></speaker>
-            <l n="150" xml:id="l150">Un domestique qui connaît la date de la mort de Dagobert... il y a quelque chose là-dessous.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-107">
-            <speaker>MARIETTE, <em>qui a été prendre dans la coulisse un bâton de frotteur et une brosse, à Antoine.</em></speaker>
-            <l n="151" xml:id="l151">Tenez, voilà le bâton et la brosse.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-108">
-            <speaker>LA COMTESSE, <em>à Mariette.</em></speaker>
-            <l n="152" xml:id="l152">Vite ! la voiture !... je vais prendre mon chapeau.</l>
-            <l n="153" xml:id="l153">Vous, frottez !</l>
-            <l n="154" xml:id="l154"> </l>
-            <l n="155" xml:id="l155"> </l>
-            <l n="156" xml:id="l156"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-109">
-            <speaker>ANTOINE, <em>seul, le bâton à frotter à la main</em></speaker>
-            <l n="157" xml:id="l157"> </l>
-            <l n="158" xml:id="l158">Frotter ! frotter ! mais sapristi ! ce n’est pas mon état... je suis artiste, je suis peintre.</l>
-            <stage><hi rend="italic"><em>Se présentant.</em></hi></stage>
-            <l n="160" xml:id="l160">Eusèbe Boucaruc... lauréat du collège Stanislas... premier prix d’histoire et de chronologie... On ne me colle pas sur les dates ! Comme peintre, je suis connu... je ne vends pas encore... mais je suis connu... de tous mes amis. L’année dernière j’ai exposé au Salon... des invalides une Hérodiade, une tête de saint Jean sur un plat... elle a beaucoup plu... Cette année, j’ai entrepris une grande toile... un sujet historique... qui n’a pas été traité depuis longtemps... Judith et Holopherne !... J’ai choisi le moment où Judith tient à la main la tête d’Holopherne... c’est un pendant à ma tête de saint Jean... Moi, je suis pour les morceaux détachés... Le difficile était de me procurer une Judith... où rencontrer cette tête inspirée, ce profil biblique, cette énergie dans la grâce et dans la pudeur ?... J’ai vainement parcouru tous les bals publics... rien !... rien !... des cocottes ! J’allais renoncer à mon œuvre... lorsqu’il y a trois jours, chez Bourbonneux, un pâtissier, je me trouve en face d’une apparition... qui mangeait un petit pâté chaud, aux crevettes. Ciel ! m’écriai-je... tout bas, c’est elle ! mon idéal ! ma Judith ! Je la suis, j’apprends qu’elle est veuve, comtesse et qu’elle cherche un valet de chambre. Crac ! une inspiration me tombe dans le cerveau... J’achète son certificat à un nommé Antoine Petit-Gras... un vilain nom !... j’endosse une livrée, je me présente comme domestique et l’on m’arrête, et depuis hier je fends du bois, et maintenant je me dispose à frotter... Oh ! l’amour de l’art ! Mais je la vois, je l’étudie, je me la mets dans l’œil.</l>
-            <stage><hi rend="italic"><em>Tirant un album de sa poche.</em></hi></stage>
-            <l n="162" xml:id="l162">J’ai déjà commencé une petite ébauche... quand elle me tourne le dos, je la croque... ce n’est même pas très commode pour saisir la ressemblance... La comtesse a un défaut, elle est trop gracieuse, elle sourit toujours, c’est une affabilité perpétuelle... Moi, ça ne me va pas... que diable ! Quand Judith a procédé à son opération, elle a dû avoir un petit mouvement de sévérité ! Ce n’est rien, ce que je demande... c’est un pli, un froncement de sourcil, un trait !... mais il me le faut !... Oh ! je l’aurai ! Je ferai mettre la comtesse en colère... elle a un perroquet... Si je lui apprenais des inconvenances ?</l>
-            <l n="163" xml:id="l163"> </l>
-            <l n="164" xml:id="l164"> </l>
-            <l n="165" xml:id="l165"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-110">
-            <speaker>ANTOINE, MARIETTE</speaker>
-            <l n="166" xml:id="l166"> </l>
-          </sp>
-          <sp who="mariette" xml:id="0-111">
-            <speaker>MARIETTE, <em>entrant avec une bouteille de vin et un verre qu’elle cache derrière son dos.</em></speaker>
-            <l n="167" xml:id="l167">Chut !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-112">
-            <speaker>ANTOINE.</speaker>
-            <l n="168" xml:id="l168">Quoi ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-113">
-            <speaker>MARIETTE.</speaker>
-            <l n="169" xml:id="l169">Madame n’est pas là... Vite !... buvez !</l>
-            <stage><hi rend="italic"><em>Elle emplit le verre.</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-114">
-            <speaker>ANTOINE, <em>étonné.</em></speaker>
-            <l n="171" xml:id="l171">Du vin !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-115">
-            <speaker>MARIETTE.</speaker>
-            <l n="172" xml:id="l172">On connaît votre faible.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-116">
-            <speaker>ANTOINE.</speaker>
-            <l n="173" xml:id="l173">Comment, mon...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="175" xml:id="l175">Ah ! oui ! celui de Petit-Gras.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-117">
-            <speaker>MARIETTE.</speaker>
-            <l n="176" xml:id="l176">Dépêchez-vous !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-118">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="177" xml:id="l177">Jouons mon rôle.</l>
-            <stage><hi rend="italic"><em>Il avale le verre de vin et fait la grimace.</em></hi></stage>
-          </sp>
-          <sp who="mariette" xml:id="0-119">
-            <speaker>MARIETTE.</speaker>
-            <l n="179" xml:id="l179">Vous préférez peut-être le blanc ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-120">
-            <speaker>ANTOINE.</speaker>
-            <l n="180" xml:id="l180">Oh ! je n’ai pas positivement de préférence !</l>
-            <stage><hi rend="italic"><em>Il lui tend son verre pour le lui rendre.</em></hi></stage>
-          </sp>
-          <sp who="mariette" xml:id="0-121">
-            <speaker>MARIETTE, <em>se méprenant sur son intention.</em></speaker>
-            <l n="182" xml:id="l182">Non !... c’est assez d’un !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-122">
-            <speaker>ANTOINE.</speaker>
-            <l n="183" xml:id="l183">Je n’en redemandais pas !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-123">
-            <speaker>MARIETTE.</speaker>
-            <l n="184" xml:id="l184">Écoutez-moi, monsieur Petit-Gras.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-124">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="185" xml:id="l185">Quel fichu nom !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-125">
-            <speaker>MARIETTE.</speaker>
-            <l n="186" xml:id="l186">Je comprends qu’un homme comme il faut boive un verre de vin pour se distraire... deux même !... Le vin rend l’homme aimable... Mais ce que je n’admets pas... ce que je n’admettrai jamais... c’est qu’une personne distinguée, instruite, élégante... se livre à des excès de boisson...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-126">
-            <speaker>ANTOINE.</speaker>
-            <l n="187" xml:id="l187">Je vous jure !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-127">
-            <speaker>MARIETTE.</speaker>
-            <l n="188" xml:id="l188">Si c’est un serment, je l’accepte...</l>
-            <stage><hi rend="italic"><em>Le regardant avec douceur.</em></hi></stage>
-            <l n="190" xml:id="l190">je saurai le reconnaître...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-128">
-            <speaker>ANTOINE.</speaker>
-            <l n="191" xml:id="l191">Hein ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-129">
-            <speaker>MARIETTE.</speaker>
-            <l n="192" xml:id="l192">Dans la mesure permise !... Monsieur Antoine, je vous remercie de votre sacrifice, j’en suis touchée... et pour vous en récompenser... tenez ! encore un verre.</l>
-            <stage><hi rend="italic"><em>Elle verse.</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-130">
-            <speaker>ANTOINE, <em>vivement.</em></speaker>
-            <l n="194" xml:id="l194">Ah mais non !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-131">
-            <speaker>MARIETTE, <em>lui présentant le verre plein.</em></speaker>
-            <l n="195" xml:id="l195">Je le permets... C’est moi qui vous le demande !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-132">
-            <speaker>ANTOINE, <em>à part, buvant.</em></speaker>
-            <l n="196" xml:id="l196">Sapristi ! est-ce qu’elle va m’entonner du vin comme ça toute la journée ?</l>
-          </sp>
-          <sp who="em>la-voix-de" xml:id="0-133">
-            <speaker><em>La voix de</em> LA COMTESSE, <em>dans la coulisse.</em></speaker>
-            <l n="197" xml:id="l197">Mariette ! Mariette !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-134">
-            <speaker>MARIETTE.</speaker>
-            <l n="198" xml:id="l198">C’est Madame, frottez !</l>
-            <stage><hi rend="italic"><em>Elle cache la bouteille et le verre derrière son dos.</em></hi></stage>
-            <l n="200" xml:id="l200"> </l>
-            <l n="201" xml:id="l201"> </l>
-            <l n="202" xml:id="l202"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-135">
-            <speaker>ANTOINE, MARIETTE, LA COMTESSE</speaker>
-            <l n="203" xml:id="l203"> </l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-136">
-            <speaker>LA COMTESSE, <em>en toilette de visite.</em></speaker>
-            <l n="204" xml:id="l204">Eh bien ! la voiture ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-137">
-            <speaker>MARIETTE.</speaker>
-            <l n="205" xml:id="l205">J’ai dit au cocher d’atteler... Je vais voir.</l>
-            <stage><hi rend="italic"><em>Elle sort.</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-138">
-            <speaker>LA COMTESSE, <em>regardant Antoine qui frotte le parquet près de la cheminée.</em></speaker>
-            <l n="207" xml:id="l207">Comme il frotte gauchement !</l>
-            <stage><hi rend="italic"><em>Respirant.</em></hi></stage>
-            <l n="209" xml:id="l209">Il sent le vin !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-139">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="210" xml:id="l210">C’est peut-être le moment de la faire mettre en colère... Si je cassais quelque chose ?</l>
-            <stage><hi rend="italic"><em>Il pousse avec son bâton un des vases qui est sur la cheminée, le vase se casse.</em></hi></stage>
-            <l n="212" xml:id="l212">Patatras !</l>
-            <stage><hi rend="italic"><em>Il tire vivement son album et regarde la Comtesse.</em></hi></stage>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-140">
-            <speaker>LA COMTESSE, <em>éclatant de rire.</em></speaker>
-            <l n="214" xml:id="l214">Le vase de ma tante ! Ah ! ah ! ah ! c’est charmant ! J’en parlais ce matin.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-141">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="215" xml:id="l215">Elle rit !</l>
-            <stage><hi rend="italic"><em>Il remet son album dans sa poche.</em></hi></stage>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-142">
-            <speaker>LA COMTESSE, <em>gaiement.</em></speaker>
-            <l n="217" xml:id="l217">Il en reste un... ne vous gênez pas.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-143">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="218" xml:id="l218">Elle n’est pas sensible à la casse... il faudra que je trouve autre chose.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-144">
-            <speaker>MARIETTE, <em>entrant.</em></speaker>
-            <l n="219" xml:id="l219">Madame, la voiture est prête.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-145">
-            <speaker>LA COMTESSE, <em>gaiement.</em></speaker>
-            <l n="220" xml:id="l220">Tu ne sais pas... il a cassé le vase !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-146">
-            <speaker>MARIETTE, <em>riant.</em></speaker>
-            <l n="221" xml:id="l221">Il a cassé le vase !... Ah ! elle est bien bonne !</l>
-            <stage><hi rend="italic"><em>Mariette et la Comtesse éclatent de rire.</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-147">
-            <speaker>ANTOINE, <em>riant aussi, sans comprendre.</em></speaker>
-            <l n="223" xml:id="l223">Oui... j’ai cassé le vase !...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="225" xml:id="l225">Il paraît que j’ai fait quelque chose de très drôle !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-148">
-            <speaker>MARIETTE.</speaker>
-            <l n="226" xml:id="l226">Ah ! madame, j’oubliais... une lettre qu’on vient d’apporter pour vous.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-149">
-            <speaker>LA COMTESSE, <em>ouvrant la lettre, à part.</em></speaker>
-            <l n="227" xml:id="l227">Tiens ! de M. Durand... il m’envoie les renseignements que j’allais lui demander.</l>
-            <stage><hi rend="italic"><em>À Mariette.</em></hi></stage>
-            <l n="229" xml:id="l229">Dis au cocher de dételer... je ne sors plus.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-150">
-            <speaker>MARIETTE.</speaker>
-            <l n="230" xml:id="l230">Bien, madame.</l>
-            <l n="231" xml:id="l231">Vous pouvez casser l’autre.</l>
-            <stage><hi rend="italic"><em>Antoine ramasse les morceaux du vase cassé pendant que la Comtesse lit sa lettre.</em></hi></stage>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-151">
-            <speaker>LA COMTESSE, <em>lisant à part.</em></speaker>
-            <stage><hi rend="italic"><em>« </em>Madame, connaissant l’intérêt que vous prenez à ma santé, je vous dirai que je vais mieux. »</hi></stage>
-            <stage><hi rend="italic"><em>Parlé.</em></hi></stage>
-            <l n="235" xml:id="l235">Ça, ça m’est égal.</l>
-            <stage><hi rend="italic"><em>Antoine sort pour porter les morceaux du vase au-dehors. Seule, lisant.</em></hi></stage>
-            <l n="237" xml:id="l237">« Vous trouverez dans cette lettre, sous enveloppe, la photographie d’Antoine Petit-Gras. »</l>
-            <l n="238" xml:id="l238">Qu’est-ce qu’il veut que j’en fasse ?</l>
-            <stage><hi rend="italic"><em>« </em>Ayant pour principe de considérer tous les domestiques comme des voleurs, jusqu’à preuve contraire, j’ai pour habitude, quand un serviteur se présente chez moi, de faire faire douze de ses photographies... Je lui en offre onze... ce qui le flatte... et je garde la douzième pour moi, afin de le faire pincer s’il file avec mon argenterie. »</hi></stage>
-            <l n="240" xml:id="l240">Voilà un original...</l>
-            <l n="241" xml:id="l241">Voyons cette photographie...</l>
-            <l n="242" xml:id="l242">Hein ?... Mais ce n’est pas lui !... ce n’est pas lui du tout ! Mais alors quel est donc cet homme qui s’est introduit chez moi ?... et dans quel but ?... Voilà que j’ai peur... si c’était un voleur... j’ai un moyen de le savoir... je vais lui tendre un piège.</l>
-            <l n="243" xml:id="l243">Cent francs... juste !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-152">
-            <speaker>ANTOINE, <em>paraissant.</em></speaker>
-            <l n="244" xml:id="l244">Madame ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-153">
-            <speaker>LA COMTESSE, <em>à part, regardant Antoine.</em></speaker>
-            <l n="245" xml:id="l245">Oh ! mais ça ne lui ressemble pas du tout !</l>
-            <l n="246" xml:id="l246">Rangez sur cette table... c’est dans un désordre...</l>
-            <l n="247" xml:id="l247"> </l>
-            <l n="248" xml:id="l248"> </l>
-            <l n="249" xml:id="l249"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-154">
-            <speaker>ANTOINE, <em>puis</em> MARIETTE</speaker>
-            <l n="250" xml:id="l250"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-155">
-            <speaker>ANTOINE, <em>seul.</em></speaker>
-            <l n="251" xml:id="l251">Cette pauvre comtesse... Avec tout ça, je lui ai cassé un vase... Honnêtement, je dois le rembourser... Je ne suis pas venu ici pour lui causer du dommage...</l>
-            <l n="252" xml:id="l252">Qu’est-ce que ça peut valoir, ça ? C’est du Creil... pas beau !</l>
-            <l n="253" xml:id="l253">Tiens ! le prix est dessous... soixante francs ! C’est très commode.</l>
-            <l n="254" xml:id="l254">Nous disons trois louis... mais je ne peux pas lui mettre ça dans la main...</l>
-            <l n="255" xml:id="l255">Où diable ?... Ah ! elle a oublié son porte-monnaie.</l>
-            <l n="256" xml:id="l256">Là... c’est fait... voilà une affaire réglée.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-156">
-            <speaker>MARIETTE, <em>entrant avec une bouteille et un verre.</em></speaker>
-            <l n="257" xml:id="l257">Chut !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-157">
-            <speaker>ANTOINE.</speaker>
-            <l n="258" xml:id="l258">Quoi ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-158">
-            <speaker>MARIETTE, <em>lui montrant la bouteille.</em></speaker>
-            <l n="259" xml:id="l259">C’est du blanc !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-159">
-            <speaker>ANTOINE, <em>vivement.</em></speaker>
-            <l n="260" xml:id="l260">Ah ! merci !... je n’ai pas soif !... d’ailleurs j’ai juré, et quand j’ai fait un serment !...</l>
-          </sp>
-          <sp who="mariette" xml:id="0-160">
-            <speaker>MARIETTE.</speaker>
-            <l n="261" xml:id="l261">Ah ! c’est bien ça, monsieur Antoine... Ils sont rares, les hommes qui tiennent leurs serments !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-161">
-            <speaker>ANTOINE.</speaker>
-            <l n="262" xml:id="l262">Moi, je suis comme ça !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-162">
-            <speaker>MARIETTE.</speaker>
-            <l n="263" xml:id="l263">J’ai entrepris de vous réformer...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-163">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="264" xml:id="l264">On ne s’en douterait pas.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-164">
-            <speaker>MARIETTE.</speaker>
-            <l n="265" xml:id="l265">Mais je n’entends pas vous rendre malheureux et vous priver tout d’un coup...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-165">
-            <speaker>ANTOINE.</speaker>
-            <l n="266" xml:id="l266">Vrai ! ça ne me prive pas !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-166">
-            <speaker>MARIETTE.</speaker>
-            <l n="267" xml:id="l267">Oh ! je sais à quoi m’en tenir.</l>
-            <stage><hi rend="italic"><em>Emplissant le verre.</em></hi></stage>
-            <l n="269" xml:id="l269">Allons ! un seul... je le permets.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-167">
-            <speaker>ANTOINE, <em>refusant.</em></speaker>
-            <l n="270" xml:id="l270">Non... merci !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-168">
-            <speaker>MARIETTE.</speaker>
-            <l n="271" xml:id="l271">Puisque c’est du blanc... À ma santé... vous ne refuserez pas.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-169">
-            <speaker>ANTOINE, <em>prenant le verre, à part.</em></speaker>
-            <l n="272" xml:id="l272">Elle est ennuyeuse avec son tic... je ne suis pas habitué à boire du vin comme ça dans le jour.</l>
-            <stage><hi rend="italic"><em>Buvant.</em></hi></stage>
-            <l n="274" xml:id="l274">Il est encore plus mauvais que l’autre.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-170">
-            <speaker>MARIETTE, <em>avec sentiment.</em></speaker>
-            <l n="275" xml:id="l275">C’est du mien !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-171">
-            <speaker>ANTOINE.</speaker>
-            <l n="276" xml:id="l276">Eh bien ! je regrette que vous ayez eu la bonté de vous en priver.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-172">
-            <speaker>MARIETTE.</speaker>
-            <l n="277" xml:id="l277">Chut ! Madame... Frottez !</l>
-            <l n="278" xml:id="l278"> </l>
-            <l n="279" xml:id="l279"> </l>
-            <l n="280" xml:id="l280"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-173">
-            <speaker>ANTOINE, MARIETTE, LA COMTESSE</speaker>
-            <l n="281" xml:id="l281"> </l>
-          </sp>
-          <sp who="mariette" xml:id="0-174">
-            <speaker>LA COMTESSE, <em>entrant, à Mariette.</em></speaker>
-            <l n="282" xml:id="l282">A-t-on prévenu le coiffeur pour ce soir ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-175">
-            <speaker>MARIETTE.</speaker>
-            <l n="283" xml:id="l283">Oui, madame.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-176">
-            <speaker>LA COMTESSE, <em>à part, regardant sur la table.</em></speaker>
-            <l n="284" xml:id="l284">Mon porte-monnaie a été dérangé... c’est assez clair.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="286" xml:id="l286">Mariette.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-177">
-            <speaker>MARIETTE, <em>s’’approchant.</em></speaker>
-            <l n="287" xml:id="l287">Madame ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-178">
-            <speaker>LA COMTESSE, <em>à voix basse.</em></speaker>
-            <l n="288" xml:id="l288">Descends dans la rue et prie un sergent de ville de monter.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-179">
-            <speaker>MARIETTE, <em>étonnée.</em></speaker>
-            <l n="289" xml:id="l289">Comment, madame ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-180">
-            <speaker>LA COMTESSE, <em>bas.</em></speaker>
-            <l n="290" xml:id="l290">Fais ce que je te dis.</l>
-            <stage><hi rend="italic"><em>Mariette sort.</em></hi></stage>
-            <l n="292" xml:id="l292"> </l>
-            <l n="293" xml:id="l293"> </l>
-            <l n="294" xml:id="l294"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-181">
-            <speaker>LA COMTESSE, ANTOINE, <em>puis</em> MARIETTE</speaker>
-            <l n="295" xml:id="l295"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-182">
-            <speaker>ANTOINE, <em>à part, regardant la Comtesse.</em></speaker>
-            <l n="296" xml:id="l296">Toujours calme et souriante... c’est désespérant.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-183">
-            <speaker>LA COMTESSE, <em>prenant son porte-monnaie et comptant en tournant le dos à Antoine, à part.</em></speaker>
-            <l n="297" xml:id="l297">Cent... cent soixante ! Comment !... il en a remis !!!</l>
-            <stage><hi rend="italic"><em>Elle regarde Antoine. Celui-ci frotte avec acharnement.</em></hi></stage>
-            <l n="299" xml:id="l299">Alors ce n’est pas un voleur !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-184">
-            <speaker>MARIETTE, <em>entrant.</em></speaker>
-            <l n="300" xml:id="l300">Madame... la personne est là.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-185">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="301" xml:id="l301">C’est bien... c’est inutile... elle peut se retirer... Cours chez ma couturière pour ma robe... il va être quatre heures.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-186">
-            <speaker>MARIETTE.</speaker>
-            <l n="302" xml:id="l302">Tout de suite, madame.</l>
-            <stage><hi rend="italic"><em>Bas à Antoine, avant de sortir.</em></hi></stage>
-            <l n="304" xml:id="l304">J’ai mis la bouteille et le verre dans la potiche du petit salon.</l>
-            <stage><hi rend="italic"><em>Elle sort.</em></hi></stage>
-            <l n="306" xml:id="l306"> </l>
-            <l n="307" xml:id="l307"> </l>
-            <l n="308" xml:id="l308"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-187">
-            <speaker>LA COMTESSE, ANTOINE</speaker>
-            <l n="309" xml:id="l309"> </l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-188">
-            <speaker>LA COMTESSE, <em>à part.</em></speaker>
-            <l n="310" xml:id="l310">Un homme, qui s’introduit chez une jeune femme sous des habits d’emprunt, et qui n’est pas un voleur, ne peut être qu’un amoureux. S’il est amoureux, il doit être jaloux... Je vais le forcer à se trahir.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="312" xml:id="l312">Antoine !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-189">
-            <speaker>ANTOINE, <em>s’’approchant.</em></speaker>
-            <l n="313" xml:id="l313">Madame la comtesse ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-190">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="314" xml:id="l314">Approchez...</l>
-            <l n="315" xml:id="l315">Il sent toujours le vin.</l>
-            <l n="316" xml:id="l316">Je vous crois un serviteur fidèle, dévoué, et je vais vous donner une preuve de ma confiance...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-191">
-            <speaker>ANTOINE.</speaker>
-            <l n="317" xml:id="l317">On se fera un devoir de la mériter.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-192">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="318" xml:id="l318">J’attends ce soir la visite... d’un jeune homme...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-193">
-            <speaker>ANTOINE, <em>tranquille.</em></speaker>
-            <l n="319" xml:id="l319">Bien, madame.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-194">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="320" xml:id="l320">D’un jeune homme brun... pâle... et distingué...</l>
-            <l n="321" xml:id="l321">Il ne bouge pas...</l>
-            <l n="322" xml:id="l322">C’est le prince de Santo-Negro... un Italien...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-195">
-            <speaker>ANTOINE.</speaker>
-            <l n="323" xml:id="l323">Bien, madame.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-196">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="324" xml:id="l324">Il frappera trois coups à la petite porte du jardin... et vous l’introduirez secrètement et sans bruit... dans mon boudoir... Ça a l’air de vous contrarier ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-197">
-            <speaker>ANTOINE.</speaker>
-            <l n="325" xml:id="l325">Moi ? ça m’est bien égal !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-198">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="326" xml:id="l326">Ah !... Ce prince a un très vif penchant pour moi... nous devons nous marier... De mon côté, je n’ai pu rester insensible à ses attentions... Enfin, je l’aime !</l>
-            <stage><hi rend="italic"><em>Voyant qu’Antoine ne bouge pas.</em></hi></stage>
-            <l n="328" xml:id="l328">Je l’aime !!!</l>
-          </sp>
-          <sp who="antoine" xml:id="0-199">
-            <speaker>ANTOINE, <em>très calme.</em></speaker>
-            <l n="329" xml:id="l329">J’avais bien entendu.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-200">
-            <speaker>LA COMTESSE, <em>à part.</em></speaker>
-            <l n="330" xml:id="l330">Rien ! pas un mouvement !... Ah ! çà, qu’est-ce que c’est que cet animal-là ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-201">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="331" xml:id="l331">Puisqu’elle aime, j’ai un bon moyen de la faire mettre en fureur... J’aurai ma Judith !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="333" xml:id="l333">Madame la comtesse veut-elle me permettre de lui faire respectueusement une observation ?</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-202">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="334" xml:id="l334">À moi ? Parlez !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-203">
-            <speaker>ANTOINE.</speaker>
-            <l n="335" xml:id="l335">Je crains que madame la comtesse ait mal placé... ses inspirations.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-204">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="336" xml:id="l336">Comment !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-205">
-            <speaker>ANTOINE.</speaker>
-            <l n="337" xml:id="l337">Je ne voudrais pas déchirer le cœur de madame la comtesse ; mais, entre nous, le prince de Santo-Negro...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-206">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="338" xml:id="l338">Vous le connaissez ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-207">
-            <speaker>ANTOINE.</speaker>
-            <l n="339" xml:id="l339">À fond !... à fond !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-208">
-            <speaker>LA COMTESSE, <em>à part.</em></speaker>
-            <l n="340" xml:id="l340">C’est un peu fort ! je viens de l’inventer !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-209">
-            <speaker>ANTOINE.</speaker>
-            <l n="341" xml:id="l341">Le prince n’est peut-être pas digne de l’intérêt que lui porte madame la comtesse.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-210">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="342" xml:id="l342">Vraiment ? et pourquoi ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-211">
-            <speaker>ANTOINE.</speaker>
-            <l n="343" xml:id="l343">Je ne sais si je dois... je vais porter un coup à madame la comtesse.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-212">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="344" xml:id="l344">Allez donc !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-213">
-            <speaker>ANTOINE.</speaker>
-            <l n="345" xml:id="l345">Eh bien !... le prince a une intrigue !</l>
-            <stage><hi rend="italic"><em>Voyant que la Comtesse ne bouge pas.</em></hi></stage>
-            <l n="347" xml:id="l347">Il a une intrigue, le prince !!!</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-214">
-            <speaker>LA COMTESSE, <em>froidement.</em></speaker>
-            <l n="348" xml:id="l348">J’avais bien entendu.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-215">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="349" xml:id="l349">Elle ne sourcille pas !</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="351" xml:id="l351">Que dis-je, une intrigue ! il en a deux !... avec trois danseuses... à la fois !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-216">
-            <speaker>LA COMTESSE, <em>souriant.</em></speaker>
-            <l n="352" xml:id="l352">Ah ! bah ! Continuez donc.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-217">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="353" xml:id="l353">Toujours son sourire !</l>
-            <l n="354" xml:id="l354">Il dit qu’il veut vous épouser... c’est faux... Il est marié !</l>
-            <l n="355" xml:id="l355">Il est marié, le prince... À Rome !!!</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-218">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="356" xml:id="l356">Tiens ! tiens ! A-t-il fait un beau mariage ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-219">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="357" xml:id="l357">Ah ! çà, elle est donc en bois ?</l>
-            <stage><hi rend="italic"><em>Haut, s’échauffant.</em></hi></stage>
-            <l n="359" xml:id="l359">Le misérable !... Je le dis respectueusement... c’est un misérable... qui fait miroiter à vos yeux une position qu’il ne peut vous offrir, une fortune qu’il a dissipée dans le désordre et le libertinage !... Il se fait un jeu de l’honneur des femmes ! il brise les cœurs, dessèche les âmes...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-220">
-            <speaker>LA COMTESSE, <em>éclatant de rire.</em></speaker>
-            <l n="360" xml:id="l360">Oh ! Assez ! assez ! ce pauvre prince !</l>
-            <stage><hi rend="italic"><em>Elle tombe dans un fauteuil en éclatant de rire.</em></hi></stage>
-          </sp>
-          <sp who="antoine" xml:id="0-221">
-            <speaker>ANTOINE, <em>à part.</em></speaker>
-            <l n="362" xml:id="l362">Elle rit ! Ah ! j’y renonce, je vais lui demander mon compte !</l>
-            <l n="363" xml:id="l363"> </l>
-            <l n="364" xml:id="l364"> </l>
-            <l n="365" xml:id="l365"> </l>
-          </sp>
-          <sp who="antoine" xml:id="0-222">
-            <speaker>LA COMTESSE, ANTOINE, MARIETTE</speaker>
-            <l n="366" xml:id="l366"> </l>
-          </sp>
-          <sp who="mariette" xml:id="0-223">
-            <speaker>MARIETTE, <em>entrant.</em></speaker>
-            <l n="367" xml:id="l367">Madame, je viens de chez la couturière.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-224">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="368" xml:id="l368">Eh bien ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-225">
-            <speaker>MARIETTE.</speaker>
-            <l n="369" xml:id="l369">La robe ne sera prête que demain.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-226">
-            <speaker>LA COMTESSE, <em>se levant, furieuse.</em></speaker>
-            <l n="370" xml:id="l370">Demain !... demain !... C’est impossible ! Je suis d’une colère !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-227">
-            <speaker>ANTOINE, <em>tirant vivement son album et dessinant.</em></speaker>
-            <l n="371" xml:id="l371">Vous y êtes !... ne bougez pas ! ne bougez pas !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-228">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="372" xml:id="l372">Quoi ?... Qu’est-ce que vous faites là ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-229">
-            <speaker>ANTOINE.</speaker>
-            <l n="373" xml:id="l373">Votre portrait... Je le tiens ! ne bougez pas !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-230">
-            <speaker>LA COMTESSE, <em>s’approchant.</em></speaker>
-            <l n="374" xml:id="l374">Comment, mon portrait ?</l>
-            <stage><hi rend="italic"><em>Regardant l’album.</em></hi></stage>
-            <l n="376" xml:id="l376">Mais c’est celui de Mariette !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-231">
-            <speaker>ANTOINE.</speaker>
-            <l n="377" xml:id="l377">Par exemple !</l>
-          </sp>
-          <sp who="mariette" xml:id="0-232">
-            <speaker>MARIETTE.</speaker>
-            <l n="378" xml:id="l378">Voyons.</l>
-            <stage><hi rend="italic"><em>Regardant l’album.</em></hi></stage>
-            <l n="380" xml:id="l380">Tiens !... ça ressemble à la cuisinière !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-233">
-            <speaker>ANTOINE.</speaker>
-            <l n="381" xml:id="l381">Allons donc !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-234">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="382" xml:id="l382">Enfin, monsieur, qui êtes-vous ? Que voulez-vous ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-235">
-            <speaker>ANTOINE.</speaker>
-            <l n="383" xml:id="l383">Vous allez le savoir... Voici ma carte.</l>
-            <stage><hi rend="italic"><em>Il la lui remet.</em></hi></stage>
-            <l n="385" xml:id="l385">Je suis connu.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-236">
-            <speaker>LA COMTESSE, <em>lisant.</em></speaker>
-            <l n="386" xml:id="l386">« Eusèbe Boucaruc... » Qu’est-ce que c’est que ça ?</l>
-          </sp>
-          <sp who="mariette" xml:id="0-237">
-            <speaker>MARIETTE, <em>à part.</em></speaker>
-            <l n="387" xml:id="l387">Ça doit être un marchand de vin du Midi.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-238">
-            <speaker>ANTOINE.</speaker>
-            <stage><hi rend="italic">Boucaruc... l’auteur de l’<em>Hérodiade </em>exposée l’année dernière.</hi></stage>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-239">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="389" xml:id="l389">Alors vous êtes peintre...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-240">
-            <speaker>ANTOINE.</speaker>
-            <l n="390" xml:id="l390">Peintre de valeur, oui, madame.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-241">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="391" xml:id="l391">Et que venez-vous faire chez moi... sous cette livrée ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-242">
-            <speaker>ANTOINE.</speaker>
-            <l n="392" xml:id="l392">Je ne sais comment me faire pardonner... J’avais besoin d’une Judith pour trancher la tête d’Holopherne... et j’ai pensé à vous.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-243">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="393" xml:id="l393">Merci bien !</l>
-          </sp>
-          <sp who="antoine" xml:id="0-244">
-            <speaker>ANTOINE.</speaker>
-            <l n="394" xml:id="l394">Je vous ai vue chez un pâtissier... Bourbonneux... L’amour de l’art m’a poussé... et j’ai endossé cette livrée pour immortaliser vos traits au Salon prochain.</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-245">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="395" xml:id="l395">Comment, monsieur, vous voulez me mettre à l’exposition ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-246">
-            <speaker>ANTOINE.</speaker>
-            <l n="396" xml:id="l396">Accordez-moi cette grâce... il y va de mon avenir...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-247">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="397" xml:id="l397">Au fait... j’y consens.</l>
-            <l n="398" xml:id="l398">Ça ressemble à Mariette.</l>
-            <l n="399" xml:id="l399">Si toutefois Mariette donne son autorisation.</l>
-          </sp>
-          <sp who="mariette" xml:id="0-248">
-            <speaker>MARIETTE.</speaker>
-            <l n="400" xml:id="l400">Moi, volontiers.</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="402" xml:id="l402">C’est le portrait de la cuisinière.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-249">
-            <speaker>ANTOINE, <em>à la Comtesse.</em></speaker>
-            <l n="403" xml:id="l403">Vous êtes un ange ! et si j’avais à vous peindre, je mettrais sur le livret : Portrait de la comtesse trois étoiles ! la grâce dans un sourire !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-250">
-            <speaker>LA COMTESSE, <em>saluant.</em></speaker>
-            <l n="404" xml:id="l404">Ah !...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="406" xml:id="l406">Il est bête... mais pas méchant.</l>
-          </sp>
-          <sp who="antoine" xml:id="0-251">
-            <speaker>ANTOINE, <em>saluant.</em></speaker>
-            <l n="407" xml:id="l407">Madame... il me reste à vous remercier...</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-252">
-            <speaker>LA COMTESSE, <em>le rappelant.</em></speaker>
-            <l n="408" xml:id="l408">Pardon... Savez-vous peindre les animaux ?</l>
-          </sp>
-          <sp who="antoine" xml:id="0-253">
-            <speaker>ANTOINE.</speaker>
-            <l n="409" xml:id="l409">Je peins tout !... et le reste !</l>
-          </sp>
-          <sp who="la-comtesse" xml:id="0-254">
-            <speaker>LA COMTESSE.</speaker>
-            <l n="410" xml:id="l410">J’ai un singe auquel je suis très attachée...</l>
-          </sp>
-          <sp who="antoine" xml:id="0-255">
-            <speaker>ANTOINE.</speaker>
-            <l n="411" xml:id="l411">Je l’immortaliserai, madame !</l>
-            <l n="412" xml:id="l412">Enfin, j’ai une commande !</l>
-            <l n="413" xml:id="l413">Madame-mademoiselle...</l>
-          </sp>
-          <sp who="mariette" xml:id="0-256">
-            <speaker>LA COMTESSE <em>et</em> MARIETTE.</speaker>
-            <l n="414" xml:id="l414">Monsieur...</l>
-            <l n="415" xml:id="l415"></a></l>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#mariette">
+          <speaker>MARIETTE, seule, regardant à la fenêtre</speaker>
+          <l n="1">Il est superbe, le valet de chambre que Madame a arrêté hier. Quel air noble et distingué !... J’ai du plaisir à le regarder fendre son bois dans la cour... Tiens, il a mis des gants pour fendre... Pauvre garçon ! il a peut-être froid aux mains.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, entrant.</speaker>
+          <l n="2">Eh bien ! Mariette... que fais-tu donc là ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, avec aplomb.</speaker>
+          <l n="3">Je nettoie les carreaux, madame.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="4">A-t-on été chez ma couturière ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="5">Oui, madame, j’y suis allée moi-même, et je lui ai bien recommandé d’apporter votre robe, ce soir, à quatre heures.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="6">Oui, il me la faut, il me la faut absolument.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="7">Madame me permettra-t-elle de lui adresser une question ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="8">Parle.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="9">Pourquoi Madame se fait-elle faire deux robes de bal... pour un seul bal ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="10">Pourquoi ?... c’est une vengeance... un tour que je veux jouer à la petite baronne... elle est insupportable : dès que je commande une toilette... vite, elle court chez ma couturière et se fait faire exactement la même.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="11">Ah ! ça n’est pas gentil.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="12">C’est agaçant... Si je suis en bleu, elle arrive en bleu ; si je suis en rose, elle arrive en rose... Ne m’a-t-elle pas dit hier que nous avions l’air de deux sœurs... comme c’est agréable ! Je me donne bien du mal pour composer mes toilettes... car je puis dire que je me donne bien du mal...</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="13">Oh ! c’est bien vrai. Madame s’enferme.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="14">Je ne m’enferme pas, je me recueille... enfin, je trouve, j’invente, moi... et la baronne, qui n’a aucune espèce d’idée, se contente de me copier, c’est trop commode... Aussi, voilà ce que j’ai imaginé. Je me suis commandé, il y a trois jours, pour le bal de ce soir, une robe verte et jaune... quelque chose d’horrible... une véritable omelette aux fines herbes... je te la donnerai... Une heure après, la baronne arrivait et se faisait confectionner la pareille.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="15">Naturellement.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="16">Alors, ce matin, je suis allée secrètement chez une autre couturière et je lui ai donné le plan d’une robe... gorge-de-pigeon blessé... avec des agréments de ma composition... ce sera délicieux... J’arriverai de bonne heure afin de voir l’entrée de la baronne.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="17">L’entrée de l’omelette !...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="18">Ah ! je crois que je m’amuserai bien ce soir !... Ah çà ! que fait le nouveau valet de chambre... M. Antoine Petit-Gras ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="19">Il fend du bois dans la cour... Je suis sûre que Madame a eu de bons renseignements sur lui ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="20">Comme ça... Je me présente chez un M. Durand... son ancien maître... Son domestique me fait entrer maladroitement, et je tombe sur un monsieur qui avait les pieds à l’eau.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="21">Ah !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="22">Heureusement il était enveloppé dans un vaste paravent... Je salue le paravent et je lui dis : « Monsieur, je désirerais avoir des renseignements sur un nommé Antoine Petit-Gras... qui sort de votre service. » Une voix me répond : « Excusez-moi, madame, j’ai le sang à la tête et tous les deux jours je suis obligé de prendre un bain de pieds de quinze minutes, à la moutarde. – Je le regrette, monsieur. – Moi aussi, madame... Les jours où je ne prends pas de bain de pieds, continue la voix, je m’applique un Rigolo derrière la nuque : aujourd’hui c’est le jour du bain de pieds, demain ce sera celui du Rigolo. – Pardon, je suis venue pour vous demander des renseignements... – Sur Antoine Petit-Gras ; c’est un brave garçon... »</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="23">Et distingué !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, continuant.</speaker>
+          <l n="24">« Pas intelligent... »</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="25">S’il est possible !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, continuant.</speaker>
+          <l n="26">« Pas soigneux, pas adroit, il casse beaucoup... Mais il est conservateur... il vote comme moi... à ce qu’il dit... Son défaut, c’est la boisson... – Comment, il boit ? – Pardon... mes quinze minutes sont expirées, il faut que je me retire, mais je vous écrirai au sujet de Petit-Gras. Je vous enverrai sa photographie.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="27">Pourquoi sa photographie ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="28">Je n’en sais rien... J’ai salué le paravent et je suis partie... de façon que je ne suis guère renseignée sur mon valet de chambre.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="29">Je crois que Madame en sera contente... il a une très belle écriture... Ce matin la cuisinière lui a fait écrire sa dépense... il moule !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="30">Tu m’y fais songer...</l>
+          <stage>&lt;em&gt;S’approchant de la table.&lt;/em&gt;</stage>
+          <l n="31">Moi aussi j’ai à écrire... à ma tante, madame de Gardenville, qui habite Loudun... il faut que je la remercie, elle m’a envoyé pour ma fête ces deux vases qui sont sur la cheminée... Comment les trouves-tu ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="32">Charmants !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="33">Ils sont affreux !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="34">C’est ce que je voulais dire.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="35">Pauvre tante ! elle aura acheté ça chez un faïencier de Loudun... enfin, j’espère qu’on me les cassera un de ces jours, tu sais, ne te gêne pas...</l>
+          <stage>&lt;em&gt;Se mettant à la table et écrivant.&lt;/em&gt;</stage>
+          <l n="36">« Ma bonne tante... J’ai reçu vos deux vases... ils sont ravissants. »</l>
+          <stage>&lt;em&gt;Elle continue à écrire.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#antoine">
+          <speaker>ANTOINE, entre avec un crochet chargé de bois sur le dos. Il est en livrée et porte des moustaches et des gants. À Mariette.</speaker>
+          <l n="37">Où faut-il mettre ça ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="38">Dans le coffre à bois... Je vais vous donner un coup de main.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="39">Dépêchez-vous, j’en ai encore une charge à monter.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à elle-même et à haute voix.</speaker>
+          <stage>Attraper prend-il deux &lt;em&gt;p ?&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, s’avançant avec son crochet sur le dos, d’un air gracieux.</speaker>
+          <l n="40">Un seul, madame la comtesse, un seul... dans attraper la lettre ne se redouble pas.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, étonnée.</speaker>
+          <l n="41">Ah ! approchez... Monsieur Petit-Gras, je suis allée hier prendre des renseignements sur vous... ils sont bons... vous êtes un brave garçon... pas intelligent...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="42">Ah !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="43">Pas soigneux, pas adroit... mais vous avez des opinions conservatrices qui me conviennent.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, son crochet sur le dos.</speaker>
+          <l n="44">J’ai toujours pensé que la France ne reprendrait son rang dans le monde...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="45">C’est bien... assez ! Vous avez un défaut... vous buvez.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="46">Moi ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="47">Faites-y attention... je n’aime pas ça... Ah ! il faudra couper vos moustaches.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="48">Madame est bien bonne... mais elles ne me gênent pas.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="49">C’est possible... mais un valet de chambre en moustaches, ce n’est pas convenable... vous les couperez aujourd’hui... ce soir.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="50">On en fera le sacrifice.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, à part.</speaker>
+          <l n="51">Quel dommage !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="52">Maintenant débarrassez-vous de votre bois et laissez-moi écrire ma lettre...</l>
+          <stage>&lt;em&gt;Elle se remet à écrire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, bas à Mariette qui le débarrasse de son bois.</speaker>
+          <l n="53">Elle est sévère, Madame.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, bas.</speaker>
+          <l n="54">Pas méchante au fond... Ne dites rien, je tâcherai de faire maintenir vos moustaches.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, écrivant.</speaker>
+          <l n="55">« Ma sœur Emma n’est pas encore revenue de Montlhéry... »</l>
+          <stage>&lt;em&gt;S’interrompant ; à elle-même.&lt;/em&gt;</stage>
+          <l n="56">De quel département Montlhéry ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, s’avançant avec son crochet, gracieux.</speaker>
+          <l n="57">Seine-et-Oise, madame la comtesse, vingt kilomètres de Corbeil...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, étonnée.</speaker>
+          <l n="58">Hein ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, continuant.</speaker>
+          <l n="59">Sa tour fut élevée en 999 par Thibault... Louis VI la prit...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, au comble de l’étonnement.</speaker>
+          <l n="60">Qu’est-ce que c’est que ça ?... Comment savez-vous ça ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="61">J’ai habité Montlhéry... et j’ai servi de guide aux étrangers...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="62">Ah !... c’est différent.</l>
+          <stage>&lt;em&gt;Elle continue à écrire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, à Antoine.</speaker>
+          <l n="63">Ah ! vous avez habité Montlhéry ?... Est-ce drôle ? Moi, je suis de Bayeux...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="64">Eh bien ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="65">Je connais une demoiselle de Bayeux qui a épousé un homme de Montlhéry... avec des moustaches... et ils ont été très heureux.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="66">Allons ! tant mieux !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, qui a plié sa lettre.</speaker>
+          <l n="67">Mettons l’adresse... « Madame de Gardenville... à Loudun... »</l>
+          <stage>&lt;em&gt;Cherchant.&lt;/em&gt;</stage>
+          <l n="68">Loudun ?... Indre...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, s’avançant avec son crochet, gracieux.</speaker>
+          <l n="69">J’en demande pardon à madame la comtesse... mais Loudun est du département de la Vienne... cinquante-quatre kilomètres de Poitiers... population...</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, émerveillée.</speaker>
+          <l n="70">Il sait tout ! il sait tout !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part.</speaker>
+          <l n="71">Ce n’est pas un domestique, c’est un dictionnaire de Bouillet !</l>
+          <stage>&lt;em&gt;À Antoine.&lt;/em&gt;</stage>
+          <l n="72">C’est bien... allez chercher le reste du bois.</l>
+          <stage>&lt;em&gt;Antoine sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part, soupçonneuse.</speaker>
+          <l n="73">Un domestique... c’est étonnant.</l>
+          <stage>&lt;em&gt;À Mariette.&lt;/em&gt;</stage>
+          <l n="74">Il est très fort sur la géographie, ce M. Antoine...</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="75">Oui, mais il ne sait pas beaucoup le français.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="76">Comment ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="77">Ce matin, je l’ai entendu dire au concierge : « Mon ami, il faudrait que vous envoyassiez chercher ma malle... »</l>
+          <stage>&lt;em&gt;Riant.&lt;/em&gt;</stage>
+          <l n="78">Ah ! envoyassiez !... Il doit être belge !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="79">Voilà qui est singulier... et tu n’as rien remarqué d’extraordinaire dans ses manières, dans sa personne ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="80">Oh ! si... tout à l’heure sa chambre était ouverte... j’y suis entrée...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="81">Hein ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="82">Par curiosité seulement... devinez ce que j’ai vu sur la table ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="83">Quoi ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="84">Une brosse à dents ! un homme !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="85">Mais il me semble...</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="86">Plus fort que ça ! je l’ai entendu qui disait à un commissionnaire de lui faire venir un bain... avec un pédicure.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, étonnée.</speaker>
+          <l n="87">Un pédicure !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="88">Un homme !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, apercevant Antoine qui rentre avec son crochet chargé de bois.</speaker>
+          <l n="89">Le voici... Silence !</l>
+          <stage>&lt;em&gt;Elle se met à la table et prend un livre.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#antoine">
+          <speaker>ANTOINE, entrant, à part.</speaker>
+          <l n="90">C’est éreintant, ce métier-là !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="91">Attendez... je vais vous aider.</l>
+          <stage>&lt;em&gt;Elle met les bûches dans le coffre à bois.&lt;/em&gt;</stage>
+          <l n="92">Ah ! comme il a chaud !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="93">J’ai chaud... et soif.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, bas.</speaker>
+          <l n="94">Chut ! il ne faut jamais avoir soif devant Madame.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="95">Pourquoi ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="96">Elle n’aime pas ça.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part.</speaker>
+          <l n="97">Je vais le soumettre à une épreuve.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="98">Mariette !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="99">Madame ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="100">En quelle année est donc mort Mazarin ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, étonnée.</speaker>
+          <l n="101">Mazarin ? qu’est-ce qu’il fait ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, gracieux, s’avançant avec son crochet sur le dos.</speaker>
+          <l n="102">En 1661, madame la comtesse... 1661.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="103">C’est un peu fort.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="104">Et Dagobert ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="105">622.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="106">On ne me colle pas sur les dates !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part.</speaker>
+          <l n="107">Ça, un domestique... jamais !... mais qui est-ce ? il faut que je le sache ! Je cours chez ce M. Durand... j’espère qu’il n’aura plus les pieds à l’eau. C’est le jour de son Rigolo.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="108">Mariette !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="109">Madame ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="110">Je sors... demande la voiture... tout de suite.</l>
+          <stage>&lt;em&gt;À Antoine.&lt;/em&gt;</stage>
+          <l n="111">Vous, frottez ! vous savez frotter ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="112">Mais... légèrement.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part.</speaker>
+          <l n="113">Un domestique qui connaît la date de la mort de Dagobert... il y a quelque chose là-dessous.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, qui a été prendre dans la coulisse un bâton de frotteur et une brosse, à Antoine.</speaker>
+          <l n="114">Tenez, voilà le bâton et la brosse.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à Mariette.</speaker>
+          <l n="115">Vite ! la voiture !... je vais prendre mon chapeau.</l>
+          <stage>&lt;em&gt;À Antoine.&lt;/em&gt;</stage>
+          <l n="116">Vous, frottez !</l>
+          <stage>&lt;em&gt;Elle entre à droite et Mariette sort par le fond en emportant le crochet vide.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#antoine">
+          <speaker>ANTOINE, seul, le bâton à frotter à la main</speaker>
+          <l n="117">Frotter ! frotter ! mais sapristi ! ce n’est pas mon état... je suis artiste, je suis peintre.</l>
+          <stage>&lt;em&gt;Se présentant.&lt;/em&gt;</stage>
+          <l n="118">Eusèbe Boucaruc... lauréat du collège Stanislas... premier prix d’histoire et de chronologie... On ne me colle pas sur les dates ! Comme peintre, je suis connu... je ne vends pas encore... mais je suis connu... de tous mes amis. L’année dernière j’ai exposé au Salon... des invalides une Hérodiade, une tête de saint Jean sur un plat... elle a beaucoup plu... Cette année, j’ai entrepris une grande toile... un sujet historique... qui n’a pas été traité depuis longtemps... Judith et Holopherne !... J’ai choisi le moment où Judith tient à la main la tête d’Holopherne... c’est un pendant à ma tête de saint Jean... Moi, je suis pour les morceaux détachés... Le difficile était de me procurer une Judith... où rencontrer cette tête inspirée, ce profil biblique, cette énergie dans la grâce et dans la pudeur ?... J’ai vainement parcouru tous les bals publics... rien !... rien !... des cocottes ! J’allais renoncer à mon œuvre... lorsqu’il y a trois jours, chez Bourbonneux, un pâtissier, je me trouve en face d’une apparition... qui mangeait un petit pâté chaud, aux crevettes. Ciel ! m’écriai-je... tout bas, c’est elle ! mon idéal ! ma Judith ! Je la suis, j’apprends qu’elle est veuve, comtesse et qu’elle cherche un valet de chambre. Crac ! une inspiration me tombe dans le cerveau... J’achète son certificat à un nommé Antoine Petit-Gras... un vilain nom !... j’endosse une livrée, je me présente comme domestique et l’on m’arrête, et depuis hier je fends du bois, et maintenant je me dispose à frotter... Oh ! l’amour de l’art ! Mais je la vois, je l’étudie, je me la mets dans l’œil.</l>
+          <stage>&lt;em&gt;Tirant un album de sa poche.&lt;/em&gt;</stage>
+          <l n="119">J’ai déjà commencé une petite ébauche... quand elle me tourne le dos, je la croque... ce n’est même pas très commode pour saisir la ressemblance... La comtesse a un défaut, elle est trop gracieuse, elle sourit toujours, c’est une affabilité perpétuelle... Moi, ça ne me va pas... que diable ! Quand Judith a procédé à son opération, elle a dû avoir un petit mouvement de sévérité ! Ce n’est rien, ce que je demande... c’est un pli, un froncement de sourcil, un trait !... mais il me le faut !... Oh ! je l’aurai ! Je ferai mettre la comtesse en colère... elle a un perroquet... Si je lui apprenais des inconvenances ?</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#mariette">
+          <speaker>MARIETTE, entrant avec une bouteille de vin et un verre qu’elle cache derrière son dos.</speaker>
+          <l n="120">Chut !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="121">Quoi ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="122">Madame n’est pas là... Vite !... buvez !</l>
+          <stage>&lt;em&gt;Elle emplit le verre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, étonné.</speaker>
+          <l n="123">Du vin !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="124">On connaît votre faible.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="125">Comment, mon...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="126">Ah ! oui ! celui de Petit-Gras.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="127">Dépêchez-vous !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="128">Jouons mon rôle.</l>
+          <stage>&lt;em&gt;Il avale le verre de vin et fait la grimace.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="129">Vous préférez peut-être le blanc ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="130">Oh ! je n’ai pas positivement de préférence !</l>
+          <stage>&lt;em&gt;Il lui tend son verre pour le lui rendre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, se méprenant sur son intention.</speaker>
+          <l n="131">Non !... c’est assez d’un !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="132">Je n’en redemandais pas !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="133">Écoutez-moi, monsieur Petit-Gras.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="134">Quel fichu nom !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="135">Je comprends qu’un homme comme il faut boive un verre de vin pour se distraire... deux même !... Le vin rend l’homme aimable... Mais ce que je n’admets pas... ce que je n’admettrai jamais... c’est qu’une personne distinguée, instruite, élégante... se livre à des excès de boisson...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="136">Je vous jure !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="137">Si c’est un serment, je l’accepte...</l>
+          <stage>&lt;em&gt;Le regardant avec douceur.&lt;/em&gt;</stage>
+          <l n="138">je saurai le reconnaître...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="139">Hein ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="140">Dans la mesure permise !... Monsieur Antoine, je vous remercie de votre sacrifice, j’en suis touchée... et pour vous en récompenser... tenez ! encore un verre.</l>
+          <stage>&lt;em&gt;Elle verse.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, vivement.</speaker>
+          <l n="141">Ah mais non !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, lui présentant le verre plein.</speaker>
+          <l n="142">Je le permets... C’est moi qui vous le demande !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part, buvant.</speaker>
+          <l n="143">Sapristi ! est-ce qu’elle va m’entonner du vin comme ça toute la journée ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>La voix de LA COMTESSE, dans la coulisse.</speaker>
+          <l n="144">Mariette ! Mariette !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="145">C’est Madame, frottez !</l>
+          <stage>&lt;em&gt;Elle cache la bouteille et le verre derrière son dos.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, en toilette de visite.</speaker>
+          <l n="146">Eh bien ! la voiture ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="147">J’ai dit au cocher d’atteler... Je vais voir.</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, regardant Antoine qui frotte le parquet près de la cheminée.</speaker>
+          <l n="148">Comme il frotte gauchement !</l>
+          <stage>&lt;em&gt;Respirant.&lt;/em&gt;</stage>
+          <l n="149">Il sent le vin !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="150">C’est peut-être le moment de la faire mettre en colère... Si je cassais quelque chose ?</l>
+          <stage>&lt;em&gt;Il pousse avec son bâton un des vases qui est sur la cheminée, le vase se casse.&lt;/em&gt;</stage>
+          <l n="151">Patatras !</l>
+          <stage>&lt;em&gt;Il tire vivement son album et regarde la Comtesse.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, éclatant de rire.</speaker>
+          <l n="152">Le vase de ma tante ! Ah ! ah ! ah ! c’est charmant ! J’en parlais ce matin.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="153">Elle rit !</l>
+          <stage>&lt;em&gt;Il remet son album dans sa poche.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, gaiement.</speaker>
+          <l n="154">Il en reste un... ne vous gênez pas.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="155">Elle n’est pas sensible à la casse... il faudra que je trouve autre chose.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, entrant.</speaker>
+          <l n="156">Madame, la voiture est prête.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, gaiement.</speaker>
+          <l n="157">Tu ne sais pas... il a cassé le vase !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, riant.</speaker>
+          <l n="158">Il a cassé le vase !... Ah ! elle est bien bonne !</l>
+          <stage>&lt;em&gt;Mariette et la Comtesse éclatent de rire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, riant aussi, sans comprendre.</speaker>
+          <l n="159">Oui... j’ai cassé le vase !...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="160">Il paraît que j’ai fait quelque chose de très drôle !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="161">Ah ! madame, j’oubliais... une lettre qu’on vient d’apporter pour vous.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, ouvrant la lettre, à part.</speaker>
+          <l n="162">Tiens ! de M. Durand... il m’envoie les renseignements que j’allais lui demander.</l>
+          <stage>&lt;em&gt;À Mariette.&lt;/em&gt;</stage>
+          <l n="163">Dis au cocher de dételer... je ne sors plus.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="164">Bien, madame.</l>
+          <stage>&lt;em&gt;Bas à Antoine, en sortant.&lt;/em&gt;</stage>
+          <l n="165">Vous pouvez casser l’autre.</l>
+          <stage>&lt;em&gt;Elle sort en riant.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Antoine ramasse les morceaux du vase cassé pendant que la Comtesse lit sa lettre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, lisant à part.</speaker>
+          <stage>&lt;em&gt;« &lt;/em&gt;Madame, connaissant l’intérêt que vous prenez à ma santé, je vous dirai que je vais mieux. »</stage>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="166">Ça, ça m’est égal.</l>
+          <stage>&lt;em&gt;Antoine sort pour porter les morceaux du vase au-dehors. Seule, lisant.&lt;/em&gt;</stage>
+          <l n="167">« Vous trouverez dans cette lettre, sous enveloppe, la photographie d’Antoine Petit-Gras. »</l>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="168">Qu’est-ce qu’il veut que j’en fasse ?</l>
+          <stage>&lt;em&gt;Lisant.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;« &lt;/em&gt;Ayant pour principe de considérer tous les domestiques comme des voleurs, jusqu’à preuve contraire, j’ai pour habitude, quand un serviteur se présente chez moi, de faire faire douze de ses photographies... Je lui en offre onze... ce qui le flatte... et je garde la douzième pour moi, afin de le faire pincer s’il file avec mon argenterie. »</stage>
+          <stage>&lt;em&gt;Parlé.&lt;/em&gt;</stage>
+          <l n="169">Voilà un original...</l>
+          <stage>&lt;em&gt;Décachetant la seconde enveloppe.&lt;/em&gt;</stage>
+          <l n="170">Voyons cette photographie...</l>
+          <stage>&lt;em&gt;Regardant.&lt;/em&gt;</stage>
+          <l n="171">Hein ?... Mais ce n’est pas lui !... ce n’est pas lui du tout ! Mais alors quel est donc cet homme qui s’est introduit chez moi ?... et dans quel but ?... Voilà que j’ai peur... si c’était un voleur... j’ai un moyen de le savoir... je vais lui tendre un piège.</l>
+          <stage>&lt;em&gt;Elle tire son porte-monnaie et compte son argent.&lt;/em&gt;</stage>
+          <l n="172">Cent francs... juste !</l>
+          <stage>&lt;em&gt;Elle place son porte-monnaie sur la table et sonne.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, paraissant.</speaker>
+          <l n="173">Madame ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part, regardant Antoine.</speaker>
+          <l n="174">Oh ! mais ça ne lui ressemble pas du tout !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="175">Rangez sur cette table... c’est dans un désordre...</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#antoine">
+          <speaker>ANTOINE, seul.</speaker>
+          <l n="176">Cette pauvre comtesse... Avec tout ça, je lui ai cassé un vase... Honnêtement, je dois le rembourser... Je ne suis pas venu ici pour lui causer du dommage...</l>
+          <stage>&lt;em&gt;Examinant le vase qui reste sur la cheminée.&lt;/em&gt;</stage>
+          <l n="177">Qu’est-ce que ça peut valoir, ça ? C’est du Creil... pas beau !</l>
+          <stage>&lt;em&gt;Retournant le vase.&lt;/em&gt;</stage>
+          <l n="178">Tiens ! le prix est dessous... soixante francs ! C’est très commode.</l>
+          <stage>&lt;em&gt;Il replace le vase, il tire son porte-monnaie.&lt;/em&gt;</stage>
+          <l n="179">Nous disons trois louis... mais je ne peux pas lui mettre ça dans la main...</l>
+          <stage>&lt;em&gt;Cherchant autour de lui.&lt;/em&gt;</stage>
+          <l n="180">Où diable ?... Ah ! elle a oublié son porte-monnaie.</l>
+          <stage>&lt;em&gt;Il le prend, y met les trois louis et le repose sur la table.&lt;/em&gt;</stage>
+          <l n="181">Là... c’est fait... voilà une affaire réglée.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, entrant avec une bouteille et un verre.</speaker>
+          <l n="182">Chut !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="183">Quoi ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, lui montrant la bouteille.</speaker>
+          <l n="184">C’est du blanc !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, vivement.</speaker>
+          <l n="185">Ah ! merci !... je n’ai pas soif !... d’ailleurs j’ai juré, et quand j’ai fait un serment !...</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="186">Ah ! c’est bien ça, monsieur Antoine... Ils sont rares, les hommes qui tiennent leurs serments !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="187">Moi, je suis comme ça !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="188">J’ai entrepris de vous réformer...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="189">On ne s’en douterait pas.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="190">Mais je n’entends pas vous rendre malheureux et vous priver tout d’un coup...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="191">Vrai ! ça ne me prive pas !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="192">Oh ! je sais à quoi m’en tenir.</l>
+          <stage>&lt;em&gt;Emplissant le verre.&lt;/em&gt;</stage>
+          <l n="193">Allons ! un seul... je le permets.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, refusant.</speaker>
+          <l n="194">Non... merci !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="195">Puisque c’est du blanc... À ma santé... vous ne refuserez pas.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, prenant le verre, à part.</speaker>
+          <l n="196">Elle est ennuyeuse avec son tic... je ne suis pas habitué à boire du vin comme ça dans le jour.</l>
+          <stage>&lt;em&gt;Buvant.&lt;/em&gt;</stage>
+          <l n="197">Il est encore plus mauvais que l’autre.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, avec sentiment.</speaker>
+          <l n="198">C’est du mien !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="199">Eh bien ! je regrette que vous ayez eu la bonté de vous en priver.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="200">Chut ! Madame... Frottez !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, entrant, à Mariette.</speaker>
+          <l n="201">A-t-on prévenu le coiffeur pour ce soir ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="202">Oui, madame.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part, regardant sur la table.</speaker>
+          <l n="203">Mon porte-monnaie a été dérangé... c’est assez clair.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="204">Mariette.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, s’’approchant.</speaker>
+          <l n="205">Madame ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à voix basse.</speaker>
+          <l n="206">Descends dans la rue et prie un sergent de ville de monter.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, étonnée.</speaker>
+          <l n="207">Comment, madame ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, bas.</speaker>
+          <l n="208">Fais ce que je te dis.</l>
+          <stage>&lt;em&gt;Mariette sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part, regardant la Comtesse.</speaker>
+          <l n="209">Toujours calme et souriante... c’est désespérant.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, prenant son porte-monnaie et comptant en tournant le dos à Antoine, à part.</speaker>
+          <l n="210">Cent... cent soixante ! Comment !... il en a remis !!!</l>
+          <stage>&lt;em&gt;Elle regarde Antoine. Celui-ci frotte avec acharnement.&lt;/em&gt;</stage>
+          <l n="211">Alors ce n’est pas un voleur !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, entrant.</speaker>
+          <l n="212">Madame... la personne est là.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="213">C’est bien... c’est inutile... elle peut se retirer... Cours chez ma couturière pour ma robe... il va être quatre heures.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="214">Tout de suite, madame.</l>
+          <stage>&lt;em&gt;Bas à Antoine, avant de sortir.&lt;/em&gt;</stage>
+          <l n="215">J’ai mis la bouteille et le verre dans la potiche du petit salon.</l>
+          <stage>&lt;em&gt;Elle sort.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part.</speaker>
+          <l n="216">Un homme, qui s’introduit chez une jeune femme sous des habits d’emprunt, et qui n’est pas un voleur, ne peut être qu’un amoureux. S’il est amoureux, il doit être jaloux... Je vais le forcer à se trahir.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="217">Antoine !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, s’’approchant.</speaker>
+          <l n="218">Madame la comtesse ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="219">Approchez...</l>
+          <stage>&lt;em&gt;Antoine s’approche. À part.&lt;/em&gt;</stage>
+          <l n="220">Il sent toujours le vin.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="221">Je vous crois un serviteur fidèle, dévoué, et je vais vous donner une preuve de ma confiance...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="222">On se fera un devoir de la mériter.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="223">J’attends ce soir la visite... d’un jeune homme...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, tranquille.</speaker>
+          <l n="224">Bien, madame.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="225">D’un jeune homme brun... pâle... et distingué...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="226">Il ne bouge pas...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="227">C’est le prince de Santo-Negro... un Italien...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="228">Bien, madame.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="229">Il frappera trois coups à la petite porte du jardin... et vous l’introduirez secrètement et sans bruit... dans mon boudoir... Ça a l’air de vous contrarier ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="230">Moi ? ça m’est bien égal !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="231">Ah !... Ce prince a un très vif penchant pour moi... nous devons nous marier... De mon côté, je n’ai pu rester insensible à ses attentions... Enfin, je l’aime !</l>
+          <stage>&lt;em&gt;Voyant qu’Antoine ne bouge pas.&lt;/em&gt;</stage>
+          <l n="232">Je l’aime !!!</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, très calme.</speaker>
+          <l n="233">J’avais bien entendu.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part.</speaker>
+          <l n="234">Rien ! pas un mouvement !... Ah ! çà, qu’est-ce que c’est que cet animal-là ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="235">Puisqu’elle aime, j’ai un bon moyen de la faire mettre en fureur... J’aurai ma Judith !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="236">Madame la comtesse veut-elle me permettre de lui faire respectueusement une observation ?</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="237">À moi ? Parlez !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="238">Je crains que madame la comtesse ait mal placé... ses inspirations.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="239">Comment !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="240">Je ne voudrais pas déchirer le cœur de madame la comtesse ; mais, entre nous, le prince de Santo-Negro...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="241">Vous le connaissez ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="242">À fond !... à fond !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, à part.</speaker>
+          <l n="243">C’est un peu fort ! je viens de l’inventer !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="244">Le prince n’est peut-être pas digne de l’intérêt que lui porte madame la comtesse.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="245">Vraiment ? et pourquoi ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="246">Je ne sais si je dois... je vais porter un coup à madame la comtesse.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="247">Allez donc !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="248">Eh bien !... le prince a une intrigue !</l>
+          <stage>&lt;em&gt;Voyant que la Comtesse ne bouge pas.&lt;/em&gt;</stage>
+          <l n="249">Il a une intrigue, le prince !!!</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, froidement.</speaker>
+          <l n="250">J’avais bien entendu.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="251">Elle ne sourcille pas !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="252">Que dis-je, une intrigue ! il en a deux !... avec trois danseuses... à la fois !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, souriant.</speaker>
+          <l n="253">Ah ! bah ! Continuez donc.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="254">Toujours son sourire !</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="255">Il dit qu’il veut vous épouser... c’est faux... Il est marié !</l>
+          <stage>&lt;em&gt;Voyant que la Comtesse reste calme.&lt;/em&gt;</stage>
+          <l n="256">Il est marié, le prince... À Rome !!!</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="257">Tiens ! tiens ! A-t-il fait un beau mariage ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="258">Ah ! çà, elle est donc en bois ?</l>
+          <stage>&lt;em&gt;Haut, s’échauffant.&lt;/em&gt;</stage>
+          <l n="259">Le misérable !... Je le dis respectueusement... c’est un misérable... qui fait miroiter à vos yeux une position qu’il ne peut vous offrir, une fortune qu’il a dissipée dans le désordre et le libertinage !... Il se fait un jeu de l’honneur des femmes ! il brise les cœurs, dessèche les âmes...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, éclatant de rire.</speaker>
+          <l n="260">Oh ! Assez ! assez ! ce pauvre prince !</l>
+          <stage>&lt;em&gt;Elle tombe dans un fauteuil en éclatant de rire.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à part.</speaker>
+          <l n="261">Elle rit ! Ah ! j’y renonce, je vais lui demander mon compte !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#mariette">
+          <speaker>MARIETTE, entrant.</speaker>
+          <l n="262">Madame, je viens de chez la couturière.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="263">Eh bien ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="264">La robe ne sera prête que demain.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, se levant, furieuse.</speaker>
+          <l n="265">Demain !... demain !... C’est impossible ! Je suis d’une colère !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, tirant vivement son album et dessinant.</speaker>
+          <l n="266">Vous y êtes !... ne bougez pas ! ne bougez pas !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="267">Quoi ?... Qu’est-ce que vous faites là ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="268">Votre portrait... Je le tiens ! ne bougez pas !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, s’approchant.</speaker>
+          <l n="269">Comment, mon portrait ?</l>
+          <stage>&lt;em&gt;Regardant l’album.&lt;/em&gt;</stage>
+          <l n="270">Mais c’est celui de Mariette !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="271">Par exemple !</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="272">Voyons.</l>
+          <stage>&lt;em&gt;Regardant l’album.&lt;/em&gt;</stage>
+          <l n="273">Tiens !... ça ressemble à la cuisinière !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="274">Allons donc !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="275">Enfin, monsieur, qui êtes-vous ? Que voulez-vous ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="276">Vous allez le savoir... Voici ma carte.</l>
+          <stage>&lt;em&gt;Il la lui remet.&lt;/em&gt;</stage>
+          <l n="277">Je suis connu.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, lisant.</speaker>
+          <l n="278">« Eusèbe Boucaruc... » Qu’est-ce que c’est que ça ?</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE, à part.</speaker>
+          <l n="279">Ça doit être un marchand de vin du Midi.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <stage>Boucaruc... l’auteur de l’&lt;em&gt;Hérodiade &lt;/em&gt;exposée l’année dernière.</stage>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="280">Alors vous êtes peintre...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="281">Peintre de valeur, oui, madame.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="282">Et que venez-vous faire chez moi... sous cette livrée ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="283">Je ne sais comment me faire pardonner... J’avais besoin d’une Judith pour trancher la tête d’Holopherne... et j’ai pensé à vous.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="284">Merci bien !</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="285">Je vous ai vue chez un pâtissier... Bourbonneux... L’amour de l’art m’a poussé... et j’ai endossé cette livrée pour immortaliser vos traits au Salon prochain.</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="286">Comment, monsieur, vous voulez me mettre à l’exposition ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="287">Accordez-moi cette grâce... il y va de mon avenir...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="288">Au fait... j’y consens.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="289">Ça ressemble à Mariette.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="290">Si toutefois Mariette donne son autorisation.</l>
+        </sp>
+        <sp who="#mariette">
+          <speaker>MARIETTE.</speaker>
+          <l n="291">Moi, volontiers.</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="292">C’est le portrait de la cuisinière.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, à la Comtesse.</speaker>
+          <l n="293">Vous êtes un ange ! et si j’avais à vous peindre, je mettrais sur le livret : Portrait de la comtesse trois étoiles ! la grâce dans un sourire !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, saluant.</speaker>
+          <l n="294">Ah !...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="295">Il est bête... mais pas méchant.</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE, saluant.</speaker>
+          <l n="296">Madame... il me reste à vous remercier...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE, le rappelant.</speaker>
+          <l n="297">Pardon... Savez-vous peindre les animaux ?</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="298">Je peins tout !... et le reste !</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE.</speaker>
+          <l n="299">J’ai un singe auquel je suis très attachée...</l>
+        </sp>
+        <sp who="#antoine">
+          <speaker>ANTOINE.</speaker>
+          <l n="300">Je l’immortaliserai, madame !</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="301">Enfin, j’ai une commande !</l>
+          <stage>&lt;em&gt;Haut. Saluant.&lt;/em&gt;</stage>
+          <l n="302">Madame-mademoiselle...</l>
+        </sp>
+        <sp who="#la-comtesse">
+          <speaker>LA COMTESSE et MARIETTE.</speaker>
+          <l n="303">Monsieur...</l>
+          <l n="304" />
+          <l n="305" />
+        </sp>
       </div>
     </body>
   </text>

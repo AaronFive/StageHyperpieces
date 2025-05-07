@@ -1,1402 +1,1423 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="../Teinte/tei2html.xsl"?>
-<?xml-model href="http://oeuvres.github.io/Teinte/teinte.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="bibdramatique.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xml:lang="fr" xmlns="http://www.tei-c.org/ns/1.0">
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>Le Dîner sur l’herbe</title>
-        <author key="Eugène SCRIBE - MÉLESVILLE | (naissance-mort)">Eugène SCRIBE - MÉLESVILLE |</author>
+        <title type="main" />
+        <title type="sub">Vaudeville</title>
       </titleStmt>
-      <editionStmt>
-        <edition>Edition initialement mise à disposition sur théâtre-documentation.com au format HTML, convertie en XML-TEI dans le cadre de cadre du projet Hyperpièces avec Céline Fournial et du stage de master 2 d'Aaron Boussidan au LIGM.</edition>
-        <respStmt>
-          <name>Michel Capus</name>
-          <resp>Edition de la pièce au format HTML sur théâtre-documentation.com</resp>
-        </respStmt>
-        <respStmt>
-          <name>Philippe Gambette</name>
-          <resp>Conversion du code HTML vers XML/TEI</resp>
-        </respStmt>
-      </editionStmt>
       <publicationStmt>
-        <publisher>LIGM</publisher>
-        <date when="2021"/>
-        <availability status="free">
-          <p>In the public domain</p>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
         </availability>
-        <idno>http://théâtre-documentation.com/content/le-dîner-sur-l’herbe-eugène-scribe-mélesville</idno>
       </publicationStmt>
       <sourceDesc>
-        <bibl><author>Eugène SCRIBE - MÉLESVILLE |</author>. <title>Le Dîner sur l’herbe</title>. </bibl>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/le-dîner-sur-l’herbe-eugène-scribe-mélesville</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1824-07-02">Représenté pour la première fois, à Paris, sur le Théâtre du Gymnase, le 2 juillet 1824.</date>
+        </bibl>
       </sourceDesc>
     </fileDesc>
     <profileDesc>
-      <creation>
-        <date when="[date]">[date]</date>
-      </creation>
-      <langUsage>
-        <language ident="fre"/>
-      </langUsage>
+      <particDesc>
+        <listPerson>
+          <person xml:id="monsieur-deschamps" sex="SEX">
+            <persName>MONSIEUR DESCHAMPS</persName>
+          </person>
+          <person xml:id="brémont" sex="SEX">
+            <persName>BRÉMONT</persName>
+          </person>
+          <person xml:id="monsieur-gimard" sex="SEX">
+            <persName>MONSIEUR GIMARD</persName>
+          </person>
+          <person xml:id="monsieur-griffon" sex="SEX">
+            <persName>MONSIEUR GRIFFON</persName>
+          </person>
+          <person xml:id="monsieur-dussausset" sex="SEX">
+            <persName>MONSIEUR DUSSAUSSET</persName>
+          </person>
+          <person xml:id="prosper" sex="SEX">
+            <persName>PROSPER</persName>
+          </person>
+          <person xml:id="gallardin" sex="SEX">
+            <persName>GALLARDIN</persName>
+          </person>
+          <person xml:id="madame-deschamps" sex="SEX">
+            <persName>MADAME DESCHAMPS</persName>
+          </person>
+          <person xml:id="marianne" sex="SEX">
+            <persName>MARIANNE</persName>
+          </person>
+          <person xml:id="madame-gimard" sex="SEX">
+            <persName>MADAME GIMARD</persName>
+          </person>
+          <person xml:id="mademoiselle-mimi" sex="SEX">
+            <persName>MADEMOISELLE MIMI</persName>
+          </person>
+          <person xml:id="mademoiselle-dussausset" sex="SEX">
+            <persName>MADEMOISELLE DUSSAUSSET</persName>
+          </person>
+          <person xml:id="un-âne" sex="SEX">
+            <persName>UN ÂNE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
       <textClass>
-        <keywords>
-          <term subtype="tragedy" type="genre">Tragédie</term>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Vaudeville</term>
+          <term>[indéfini]</term>
         </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q186286</classCode>
       </textClass>
     </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2024-10-28">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
   </teiHeader>
   <text>
+    <front>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1824-07-02" location="unknown">Représenté pour la première fois, à Paris, sur le Théâtre du Gymnase, le 2 juillet 1824.</ab>
+      </performance>
+      <castList />
+    </front>
     <body>
-      <head>Le Dîner sur l’herbe</head>
-      <div type="set">
-        <div>
-          <head>PERSONNAGES</head>
-          <castList>
-
-            <l n="1" xml:id="l1">Tableau-vaudeville en un acte.</l>
-            <l n="2" xml:id="l2">Représenté pour la première fois, à Paris, sur le Théâtre du Gymnase, le 2 juillet 1824.</l>
-            <l n="3" xml:id="l3"> </l>
-            <castItem>
-              <role rend="male/female" xml:id="monsieur-deschamps">MONSIEUR DESCHAMPS</role>
-              <roleDesc>, <em>marchand de Paris</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="brémont">BRÉMONT</role>
-              <roleDesc>, <em>prétendu de Marianne</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="monsieur-gimard">MONSIEUR GIMARD</role>
-              <roleDesc>, <em>notaire de Bellevue</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="monsieur-griffon">MONSIEUR GRIFFON</role>
-              <roleDesc>, <em>maître-clerc</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="monsieur-dussausset">MONSIEUR DUSSAUSSET</role>
-              <roleDesc>, <em>voisin de Deschamps</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="prosper">PROSPER</role>
-              <roleDesc>, <em>son neveu, commis de Deschamps</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="gallardin">GALLARDIN</role>
-              <roleDesc>, <em>ami de toute la société</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-deschamps">MADAME DESCHAMPS</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="marianne">MARIANNE</role>
-              <roleDesc>, <em>fille de monsieur et madame Deschamps</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="madame-gimard">MADAME GIMARD</role>
-              <roleDesc></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mademoiselle-mimi">MADEMOISELLE MIMI</role>
-              <roleDesc>, <em>fille de monsieur et madame Gimard</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="mademoiselle-dussausset">MADEMOISELLE DUSSAUSSET</role>
-              <roleDesc>, <em>sœur de monsieur Dussausset</em></roleDesc>
-            </castItem>
-
-            <castItem>
-              <role rend="male/female" xml:id="un-âne">UN ÂNE</role>
-              <roleDesc>, <em>personnage muet</em></roleDesc>
-            </castItem>
-
-          <sp who="strong>" xml:id="0-1">
-            <speaker><strong><em>Personnages</em></strong></speaker>
-            <stage><hi rend="italic"><em>Dans le bois de Meudon.</em></hi></stage>
-            <l n="5" xml:id="l5"> </l>
-            <stage><hi rend="italic"><em>Une partie du bois de Meudon, éloignée de toute habitation. À droite, une pelouse, ombragée par un châtaignier. À gauche, un poteau peint en vert, et portant l’indication de différentes routes.</em></hi></stage>
-            <l n="7" xml:id="l7"> </l>
-            <l n="8" xml:id="l8"> </l>
-        <div type="scene" xml:id="1">
-          <head>Scène première</head>
-            <l n="9" xml:id="l9"> </l>
-          <sp who="brémont" xml:id="1-1">
-            <speaker>GAILLARDIN, BRÉMONT</speaker>
-            <l n="10" xml:id="l10"> </l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-2">
-            <speaker>GAILLARDIN, <em>entrant d’abord, et regardant le châtaignier.</em></speaker>
-            <l n="11" xml:id="l11">Au grand châtaignier, vis-à-vis le poteau ; c’est bien ça...</l>
-            <stage><hi rend="italic"><em>À Brémont qu’il appelle.</em></hi></stage>
-            <l n="13" xml:id="l13">Par ici, mon cher Brémont ! Nous sommes les premiers au rendez-vous.</l>
-          </sp>
-          <sp who="brémont" xml:id="1-3">
-            <speaker>BRÉMONT.</speaker>
-            <l n="14" xml:id="l14">Ces dames auront pris un autre chemin... C’est donc ici que nous dînerons ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-4">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="15" xml:id="l15">Est-ce que ce n’est pas une salle à manger charmante ?... Le plus joli côté du bois de Meudon, une vue superbe ; c’est moi qui ai choisi la place. Eh bien ! qu’avez-vous donc, mon jeune ami ?... À une partie de campagne, à un dîner sur l’herbe, il faut être gai...</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Partie carrée.</em></hi></stage>
-            <l n="17" xml:id="l17">Et malgré cela, vous êtes préoccupé ?...</l>
-          </sp>
-          <sp who="brémont" xml:id="1-5">
-            <speaker>BRÉMONT.</speaker>
-            <l n="18" xml:id="l18">Que voulez-vous ?... Peut-être un peu de fatigue... être venu à pied...</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-6">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="19" xml:id="l19">Ah ! c’est que vous êtes un Parisien, et que vous n’avez point les goûts champêtres... Moi, je n’existe que hors barrières. Aussi, dès que ma place de l’enregistrement me laisse un moment de répit, vite une chemise dans ma poche, un bonnet de coton dans l’autre, et me voilà parti... n’importe dans quel endroit, j’aime la campagne en général... Je suis comme ça... aux environs de Paris, l’ami intime de cinq ou six maisons charmantes, où l’on ne pourrait pas vivre sans moi... Je mets en train toutes les parties : promenades sur l’eau, dîners sur l’herbe... Je fais la carambole avec les papas, le boston avec les mamans, des courses d’ânes avec les jeunes personnes ; et avec les petits garçons, j’enlève des cerfs-volants, ou j’attrape des hannetons.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville des Maris ont tort.</em></hi></stage>
-            <l n="21" xml:id="l21">Et je recommence ma vie épicurienne et champêtre.</l>
-          </sp>
-          <sp who="brémont" xml:id="1-7">
-            <speaker>BRÉMONT.</speaker>
-            <l n="22" xml:id="l22">Vous êtes bien heureux.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-8">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="23" xml:id="l23">Et vous donc, monsieur le marié ?... Savez-vous que sans moi ce mariage-là ne se serait jamais fait ? Vous vouliez, vous ne vouliez pas ; et le jour du contrat, j’ai vu le moment où vous alliez refuser de signer. Mais j’étais là en auxiliaire... Ami des deux maisons, lien des deux familles, je parlais à l’un, je parlais à l’autre ; et le notaire et moi, nous faisions tant de bruit, que vous avez tous signé d’étourdissement et de confiance.</l>
-          </sp>
-          <sp who="brémont" xml:id="1-9">
-            <speaker>BRÉMONT.</speaker>
-            <l n="24" xml:id="l24">Oui !... une belle affaire ! un beau-père, négociant dans l’âme, qui marchande tout, jusqu’à son gendre. Une petite fille bien niaise, qui n’a à sa disposition que trois syllabes : « Ah bien oui ! Ah bien non ! » Et souvent, n’a-t-elle pas le bonheur de les placer à propos !</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-10">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="25" xml:id="l25">D’accord !</l>
-            <stage><hi rend="italic"><em>Air : Un homme pour faire un tableau. (Les Hasards de la guerre.)</em></hi></stage>
-          <stage>BRÉMONT.</stage>
-          </sp>
-          <sp who="gaillardin" xml:id="1-11">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="27" xml:id="l27">Je ne dis pas non... mais l’attachement qu’elle a pour vous...</l>
-          </sp>
-          <sp who="brémont" xml:id="1-12">
-            <speaker>BRÉMONT.</speaker>
-            <l n="28" xml:id="l28">Elle me déteste, et je ne peux pas la souffrir.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-13">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="29" xml:id="l29">Écoutez donc, mon cher, vous êtes trop difficile et vous voulez trouver tout réuni...</l>
-          </sp>
-          <sp who="brémont" xml:id="1-14">
-            <speaker>BRÉMONT.</speaker>
-            <l n="30" xml:id="l30">Non... mais je veux tout rompre ; et je compte sur vous pour m’y aider.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-15">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="31" xml:id="l31">Bien obligé... chargez-vous-en vous-même.</l>
-          </sp>
-          <sp who="brémont" xml:id="1-16">
-            <speaker>BRÉMONT.</speaker>
-            <l n="32" xml:id="l32">Je ne le puis : sans cela ce serait déjà fait... J’ai un oncle très riche, qui est ami de monsieur Deschamps... il tient comme un diable à ce mariage... et si je le fais manquer, il me déshérite... Il faudrait donc alors trouver quelque moyen adroit et détourné pour que la rupture vînt de ma prétendue ou de sa famille.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-17">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="33" xml:id="l33">Vous aurez de la peine, car vous êtes un aimable jeune homme, un beau parti... monsieur Deschamps tient beaucoup à vous, et surtout aux soixante mille francs que vous avez eu l’imprudence de placer dans son commerce... Je vous aiderais bien, si je le pouvais sans me compromettre ; mais par goût et par système, j’aime à rester neutre... Je fais des mariages ; mais je n’en défais pas... je dine avec tout le monde et ne me brouille avec personne ; ainsi occupons-nous du repas ; aujourd’hui c’est l’essentiel.</l>
-          </sp>
-          <sp who="brémont" xml:id="1-18">
-            <speaker>BRÉMONT.</speaker>
-            <l n="34" xml:id="l34">S’il pouvait me fournir l’occasion que je cherche... Est-ce que nous serons beaucoup ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-19">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="35" xml:id="l35">Une douzaine de personnes... toute la société de votre beau-père... et vous sentez bien que je n’ai pas oublié monsieur Dussausset et sa sœur, une demoiselle riche, aimable et majeure... sur laquelle j’ai des idées matrimoniales... Vous savez... cette jolie maison à l’entrée de Bellevue ?... voilà trois ans que je lui fais la cour.</l>
-          </sp>
-          <sp who="brémont" xml:id="1-20">
-            <speaker>BRÉMONT.</speaker>
-            <l n="36" xml:id="l36">À la maison ?...</l>
-          </sp>
-          <sp who="gaillardin" xml:id="1-21">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="37" xml:id="l37">Pas mal... c’est dans mon genre... le coup de fouet !... Non, monsieur, pas à la maison, mais à la propriétaire.</l>
-            <stage><hi rend="italic"><em>Air du Ménage de garçon.</em></hi></stage>
-            <l n="39" xml:id="l39">Eh ! tenez, la voici elle-même... c’est l’avant-garde de notre caravane.</l>
-            <l n="40" xml:id="l40"> </l>
-            <l n="41" xml:id="l41"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="2">
-          <head>Scène II</head>
-            <l n="42" xml:id="l42"> </l>
-          <sp who="brémont" xml:id="2-1">
-            <speaker>GAILLARDIN, BRÉMONT, MONSIEUR DUSSAUSSET <em>et</em> MADEMOISELLE DUSSAUSSET</speaker>
-            <l n="43" xml:id="l43"> </l>
-          </sp>
-          <sp who="dussausset" xml:id="2-2">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="44" xml:id="l44">À la fin, nous y voici !</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="2-3">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="45" xml:id="l45">Je n’en puis plus... aussi, monsieur Gaillardin, c’est votre faute ; vous indiquez toujours si mal !</l>
-          </sp>
-          <sp who="gaillardin" xml:id="2-4">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="46" xml:id="l46">Est-ce que je ne vous ai pas dit : au grand châtaignier ?</l>
-          </sp>
-          <sp who="dussausset" xml:id="2-5">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="47" xml:id="l47">Je sais bien... mais c’est qu’il y en a tant !</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="2-6">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="48" xml:id="l48">En effet, à chaque buisson... mon frère me disait : « Voilà le grand châtaignier... » Et nous avons fait ainsi une lieue au soleil et à la poussière.</l>
-          </sp>
-          <sp who="dussausset" xml:id="2-7">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="49" xml:id="l49">Eh bien ! où est le grand mal ?... cela t’a fait voir du pays... Moi, je suis comme Gaillardin, un campagnard déterminé... Je ne vendrais pas ma maison de Bellevue pour un hôtel du faubourg Saint-Germain... Ils ont bâti autour de moi... ils m’ont masqué de tous les côtés ; eh bien ! ça m’est égal... je suis à Bellevue... l’air vient d’en haut... un air pur... délicieux... on sent qu’on existe.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="2-8">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="50" xml:id="l50">Et ici donc !... c’est encore bien mieux... Vous verrez, belle dame... rien n’est divin comme un dîner sur l’herbe... il y règne une gaieté... un désordre... un appétit... et puis, maintenant qu’à Paris les loyers sont si chers...</l>
-            <stage><hi rend="italic"><em>Air : J’ai vu le Parnasse des dames. (Rien de trop.)</em></hi></stage>
-          <stage>DUSSAUSSET, <em>regardant tout à coup.</em></stage>
-          </sp>
-          <sp who="gaillardin" xml:id="2-9">
-            <speaker>GAILLARDIN.</speaker>
-            <stage><hi rend="italic"><em>Bas à Dussausset.</em></hi></stage>
-          </sp>
-          <sp who="dussausset" xml:id="2-10">
-            <speaker>DUSSAUSSET, <em>riant.</em></speaker>
-            <l n="53" xml:id="l53">Ah ! ah !... ma sœur, je te préviens que voilà Gaillardin qui commence.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="2-11">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="54" xml:id="l54">À la campagne, c’est de droit... c’est permis, et puis tantôt à dîner, les coq-à-l’âne, les calembours, et les éclats de rire.</l>
-          </sp>
-          <sp who="dussausset" xml:id="2-12">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="55" xml:id="l55">Et puis au dessert, quand la nappe est levée, les rondes, les petits paquets, et le colin-maillard.</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="2-13">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="56" xml:id="l56">Mais où donc est tout notre monde ?... est-ce que nous sommes les premiers au rendez-vous ?</l>
-          </sp>
-          <sp who="brémont" xml:id="2-14">
-            <speaker>DUSSAUSSET, <em>à Brémont.</em></speaker>
-            <l n="57" xml:id="l57">Comment, monsieur Brémont, vous le gendre futur... n’êtes-vous pas avec ces dames ?</l>
-          </sp>
-          <sp who="brémont" xml:id="2-15">
-            <speaker>BRÉMONT.</speaker>
-            <l n="58" xml:id="l58">N’avaient-elles pas leurs toilettes ?</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="2-16">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="59" xml:id="l59">Comme c’est ridicule, des toilettes pour la campagne... Dieu sait maintenant quand elles arriveront !</l>
-            <stage><hi rend="italic"><em>On entend crier eu dehors et d’un peu loin.</em></hi></stage>
-          </sp>
-          <sp who="gaillardin" xml:id="2-17">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="61" xml:id="l61">Écoutez... j’ai entendu un cri de ralliement...</l>
-            <stage><hi rend="italic"><em>Il met ses deux mains près de sa bouche, pour faire le porte-voix.</em></hi></stage>
-            <l n="63" xml:id="l63">Ohé ! Oh !...</l>
-            <stage><hi rend="italic"><em>On répond de même.</em></hi></stage>
-            <l n="65" xml:id="l65">Voyez-vous, on répond.</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="2-18">
-            <speaker>MADEMOISELLE DUSSAUSSET, <em>à monsieur Dussausset.</em></speaker>
-            <l n="66" xml:id="l66">Je crois que voilà Prosper, votre neveu, le premier garçon de monsieur Deschamps.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="2-19">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="67" xml:id="l67">Oui... le voilà sur un âne... en estafette... et puis, qu’est-ce que je vois donc derrière lui ?... un... deux... trois ânes... ce sont eux... la patrie est sauvée.</l>
-            <stage><hi rend="italic"><em>Il crie.</em></hi></stage>
-            <l n="69" xml:id="l69">Ohé ! ohé !...</l>
-          </sp>
-          <sp who="dussausset" xml:id="2-20">
-            <speaker>DUSSAUSSET, <em>mettant son mouchoir au bout de sa canne.</em></speaker>
-            <l n="70" xml:id="l70">Ohé ! ohé !...</l>
-            <l n="71" xml:id="l71"> </l>
-            <l n="72" xml:id="l72"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="3">
-          <head>Scène III</head>
-            <l n="73" xml:id="l73"> </l>
-          <sp who="prosper" xml:id="3-1">
-            <speaker>GAILLARDIN, BRÉMONT, DUSSAUSSET, MADEMOISELLE DUSSAUSSET, PROSPER</speaker>
-            <l n="74" xml:id="l74"> </l>
-          </sp>
-          <sp who="prosper" xml:id="3-2">
-            <speaker>PROSPER, <em>en dehors.</em></speaker>
-            <l n="75" xml:id="l75">Oh ! les maudites botes !... veux-tu rester là !... venez donc m’aider à les attacher.</l>
-          </sp>
-          <sp who="brémont" xml:id="3-3">
-            <speaker>BRÉMONT, <em>à Gaillardin.</em></speaker>
-            <l n="76" xml:id="l76">Ne vous dérangez pas... je vais à son secours.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="3-4">
-            <speaker>PROSPER, <em>entrant en scène.</em></speaker>
-            <l n="78" xml:id="l78">Je vous remercie, monsieur Brémont...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="80" xml:id="l80">C’est heureux qu’il nous ait séparés : car je suis comme eux... je suis mauvaise tête ; et je ne sais pas comment ça aurait fini...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="82" xml:id="l82">Bonjour, mon oncle et mon tuteur ; bonjour, ma tante, bonjour, monsieur Gaillardin... dites donc, il y a de fameuses nouvelles.</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="3-5">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="83" xml:id="l83">Eh bien ! où donc est tout le monde ?</l>
-          </sp>
-          <sp who="prosper" xml:id="3-6">
-            <speaker>PROSPER.</speaker>
-            <l n="84" xml:id="l84">Ils sont par terre, à une demi-lieue d’ici... Nous avions fait une cavalcade à ânes ; mais celui de monsieur Gimard, le notaire de Bellevue, ne voulait pas marcher... et alors monsieur Griffon, le maître-clerc, qui est toujours pour les farces, s’est mis à le frapper, à ce qu’il disait, comme sur un huissier.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="3-7">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="85" xml:id="l85">Il n’y a que cela... l’empire des gaules !</l>
-          </sp>
-          <sp who="prosper" xml:id="3-8">
-            <speaker>PROSPER.</speaker>
-            <l n="86" xml:id="l86">Ah ! bien oui... cela a joliment réussi... l’âne de mademoiselle Gimard l’a jetée par terre, a pris le mors aux dents, ses autres confrères en ont fait autant... ils s’entendent tous... Au bout de cinq minutes, presque tout le monde était démonté, excepté moi, qui ai pris des leçons de manège... mais qui ne pouvais pas retenir mon coursier... de sorte que je suis arrivé jusqu’ici à bride abattue, avec quatre ânes sans cavalier.</l>
-          </sp>
-          <sp who="dussausset" xml:id="3-9">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="87" xml:id="l87">Ah ! ah !... ce pauvre Deschamps !... lui qui déjà n’aime pas trop la campagne... va-t-il être en colère !...</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="3-10">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="88" xml:id="l88">Et toutes ces dames avec leurs belles toilettes... cela leur apprendra...</l>
-          </sp>
-          <sp who="gaillardin" xml:id="3-11">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="89" xml:id="l89">À merveille... nous allons rire...</l>
-          </sp>
-          <sp who="prosper" xml:id="3-12">
-            <speaker>PROSPER.</speaker>
-            <l n="90" xml:id="l90">Eh ! oui, parce que si à la campagne on ne faisait pas de farces... Dites donc, mon oncle... j’en ai une bonne que j’ai préparée... pendant le dîner, je monterai sur un arbre avec une carafe... et je jetterai de l’eau sur tout le monde... ils croiront que c’est la pluie...</l>
-          </sp>
-          <sp who="dussausset" xml:id="3-13">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="91" xml:id="l91">Ah ! ah !... ce luron a-t-il de l’esprit !...</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="3-14">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="92" xml:id="l92">Oui, pour abimer nos robes... je ne veux pas de ça, moi !</l>
-          </sp>
-          <sp who="prosper" xml:id="3-15">
-            <speaker>PROSPER.</speaker>
-            <l n="93" xml:id="l93">Ne craignez rien... je tâcherai que ça tombe, de préférence, sur monsieur Deschamps, mon bourgeois... je ne l’aime pas, c’est un avare.</l>
-            <stage><hi rend="italic"><em>Air du vaudeville du Petit Courrier.</em></hi></stage>
-          </sp>
-          <sp who="dussausset" xml:id="3-16">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="95" xml:id="l95">Oui, mais je crois que mademoiselle Marianne, leur fille, ne te déplaît pas autant.</l>
-          </sp>
-          <sp who="prosper" xml:id="3-17">
-            <speaker>PROSPER.</speaker>
-            <l n="96" xml:id="l96">Mademoiselle Marianne... Ah bien ! par exemple... c’est elle qui sert à table et qui me donne toujours la plus petite part... ça me l’a fait prendre en grippe... aussi je suis content qu’elle quitte la maison, et qu’elle se marie avec monsieur Brémont.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="3-18">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="97" xml:id="l97">À merveille... en voilà un qui ne songe pas à être amoureux.</l>
-          </sp>
-          <sp who="dussausset" xml:id="3-19">
-            <speaker>DUSSAUSSET, <em>à Gaillardin.</em></speaker>
-            <l n="98" xml:id="l98">Tant pis... tant pis... car la fille de mon ami Deschamps lui aurait joliment convenu... savez-vous que ce petit gaillard-là aura un jour soixante mille francs ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="3-20">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="99" xml:id="l99">Il est bien heureux !</l>
-          </sp>
-          <sp who="prosper" xml:id="3-21">
-            <speaker>PROSPER, <em>regardant du côté de l’avenue.</em></speaker>
-            <l n="100" xml:id="l100">Eh ! les voilà, les voilà !</l>
-          </sp>
-          <sp who="gaillardin" xml:id="3-22">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="101" xml:id="l101">Oui, voilà le reste de la société, tant infanterie que cavalerie... je cours leur tenir l’étrier.</l>
-            <stage><hi rend="italic"><em>Il sort avec Prosper.</em></hi></stage>
-            <l n="103" xml:id="l103"> </l>
-            <l n="104" xml:id="l104"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="4">
-          <head>Scène IV</head>
-            <l n="105" xml:id="l105"> </l>
-          <sp who="dussausset" xml:id="4-1">
-            <speaker>DUSSAUSSET, MADEMOISELLE DUSSAUSSET, MONSIEUR GIMARD <em>et</em> MADAME GIMARD, MADEMOISELLE MIMI, MONSIEUR GRIFFON</speaker>
-            <l n="106" xml:id="l106"> </l>
-          </sp>
-          <sp who="monsieur-gimard" xml:id="4-2">
-            <speaker>MONSIEUR GIMARD, <em>à sa femme qui rit.</em></speaker>
-            <l n="107" xml:id="l107">Oui, riez, riez, madame Gimard : avec tout cela, cet âne a manqué de me noyer.</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="4-3">
-            <speaker>MADEMOISELLE DUSSAUSSET, <em>à son frère.</em></speaker>
-            <stage><hi rend="italic"><em>Air : Tenez, moi, je suis un bon homme. (Ida.)</em></hi></stage>
-          <stage>DUSSAUSSET.</stage>
-          </sp>
-          <sp who="gimard" xml:id="4-4">
-            <speaker>GIMARD.</speaker>
-            <l n="109" xml:id="l109">Maman, quand donc qu’on commencera à s’amuser ?</l>
-          <stage>DUSSAUSSET, <em>bas à sa sœur.</em></stage>
-          </sp>
-          <sp who="mimi" xml:id="4-5">
-            <speaker>MIMI.</speaker>
-            <l n="110" xml:id="l110">Taisez-vous, ma fille.</l>
-          <stage>MADAME GIMARD.</stage>
-          </sp>
-          <sp who="dussausset" xml:id="4-6">
-            <speaker>DUSSAUSSET, <em>apercevant Deschamps et sa femme.</em></speaker>
-            <l n="111" xml:id="l111">Eh ! le voilà, ce cher Deschamps ; arrive donc, lambin !</l>
-            <l n="112" xml:id="l112"> </l>
-            <l n="113" xml:id="l113"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="5">
-          <head>Scène V</head>
-            <l n="114" xml:id="l114"> </l>
-          <sp who="brémont" xml:id="5-1">
-            <speaker>DUSSAUSSET, MADEMOISELLE DUSSAUSSET, MONSIEUR GIMARD, MADAME GIMARD, MADEMOISELLE MIMI, MONSIEUR GRIFFON, MADAME DESCHAMPS <em>monté sur un âne</em>, MADAME DESCHAMPS, BRÉMONT</speaker>
-            <l n="115" xml:id="l115"> </l>
-          </sp>
-          <sp who="deschamps" xml:id="5-2">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="116" xml:id="l116">Eh bien ! vous trouvez ça amusant, vous autres... être jeté à terre par un âne... être rôti par le soleil, s’exténuer de fatigue... pour faire un mauvais dîner ! enfin c’est égal.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="5-3">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="117" xml:id="l117">Un mauvais dîner !... un repas délicieux.</l>
-          </sp>
-          <sp who="dussausset" xml:id="5-4">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="118" xml:id="l118">Au grand air, et avec cette grande vue...</l>
-          </sp>
-          <sp who="griffon" xml:id="5-5">
-            <speaker>GRIFFON.</speaker>
-            <l n="119" xml:id="l119">Mollement étendu, sur la pelouse...</l>
-          </sp>
-          <sp who="deschamps" xml:id="5-6">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="120" xml:id="l120">Certainement, c’est fort agréable ; mais il me semble qu’assis sur une bonne chaise, dans une salle à manger, on dîne tout aussi bien.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="5-7">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="121" xml:id="l121">Non, mon cher, vous ne savez ce que vous dites.</l>
-            <stage><hi rend="italic"><em>Air de Oui et Non.</em></hi></stage>
-          </sp>
-          <sp who="deschamps" xml:id="5-8">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="123" xml:id="l123"> </l>
-            <l n="124" xml:id="l124"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="6">
-          <head>Scène VI</head>
-            <l n="125" xml:id="l125"> </l>
-          <sp who="marianne" xml:id="6-1">
-            <speaker>DUSSAUSSET, MADEMOISELLE DUSSAUSSET, MONSIEUR GIMARD, MADAME GIMARD, MADEMOISELLE MIMI, MONSIEUR GRIFFON, MADAME DESCHAMPS, MADAME DESCHAMPS, BRÉMONT, GAILLARDIN, MARIANNE</speaker>
-            <l n="126" xml:id="l126"> </l>
-          </sp>
-          <sp who="gaillardin" xml:id="6-2">
-            <speaker>GAILLARDIN, <em>à la cantonade.</em></speaker>
-            <l n="127" xml:id="l127">C’est bien ! pendant que les quadrupèdes s’occupent de leur dîner, songeons au nôtre... Défaites les paniers de provisions ; car il faut que je remplisse toutes les fonctions à la fois, maintenant que je suis le pourvoyeur, le maître d’hôtel de ces dames... tout à l’heure, j’étais leur écuyer, et je ne m’en plains pas... Voilà ce que c’est que l’équitation... j’ai vu une jolie jambe.</l>
-            <stage><hi rend="italic"><em>En ce moment, les acteurs doivent être en scène dans l’ordre suivant, le premier à gauche du spectateur : Dussausset, Marianne, Brémont, mademoiselle Dussausset, Griffon, Gaillardin, Deschamps, madame Deschamps, monsieur Gimard, madame Gimard, Mimi.</em></hi></stage>
-          </sp>
-          <sp who="les-dames" xml:id="6-3">
-            <speaker>LES DAMES.</speaker>
-            <l n="129" xml:id="l129">Comment ! monsieur ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="6-4">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="130" xml:id="l130">Je ne dirai pas qui... je ne veux pas dire qui...</l>
-            <stage><hi rend="italic"><em>Bas à Deschamps.</em></hi></stage>
-            <l n="132" xml:id="l132">elles croiront toutes que c’est la leur.</l>
-          </sp>
-          <sp who="deschamps" xml:id="6-5">
-            <speaker>DESCHAMPS, <em>bas à Gaillardin.</em></speaker>
-            <l n="133" xml:id="l133">Vraiment ! est-ce qu’elle était jolie ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="6-6">
-            <speaker>GAILLARDIN, <em>de même.</em></speaker>
-            <l n="134" xml:id="l134">Au contraire... c’était une grosse.</l>
-          </sp>
-          <sp who="deschamps" xml:id="6-7">
-            <speaker>DESCHAMPS, <em>à part.</em></speaker>
-            <l n="135" xml:id="l135">Si c’était celle de ma femme...</l>
-          </sp>
-          <sp who="gaillardin" xml:id="6-8">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="136" xml:id="l136">Ah çà ! mes chers amis, nous voici enfin tous réunis, ce n’est pas sans peine... mais quels plaisirs nous promet une si aimable partie !... lorsque tous, amis et voisins, on n’a qu’une seule idée, qu’un seul désir ; lorsqu’on est tous du même accord, du même avis... celui d’être heureux et de s’amuser.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="6-9">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="137" xml:id="l137">Oh ! c’est bien vrai, c’est charmant.</l>
-          </sp>
-          <sp who="marianne" xml:id="6-10">
-            <speaker>MARIANNE.</speaker>
-            <l n="138" xml:id="l138">Ah bien oui !...</l>
-          </sp>
-          <sp who="brémont" xml:id="6-11">
-            <speaker>BRÉMONT, <em>à part.</em></speaker>
-            <stage><hi rend="italic">Encore son <em>Ah bien oui !</em></hi></stage>
-          </sp>
-          <sp who="deschamps" xml:id="6-12">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="140" xml:id="l140">Mais d’abord, où allons-nous dîner ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="6-13">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="141" xml:id="l141">Il me semble, sans me vanter, que le local est assez bien choisi, et que celte pelouse qui s’étend au pied de cet arbre...</l>
-          </sp>
-          <sp who="madame-gimard" xml:id="6-14">
-            <speaker>MADAME GIMARD.</speaker>
-            <l n="142" xml:id="l142">Fi ! l’horreur... c’est le plus vilain du bois ; c’est trop sombre... tandis que là-bas, du côté de Fleury-sous-Meudon, nous serons bien mieux.</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="6-15">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="143" xml:id="l143">Oui, l’endroit le plus passager ; pour que tout le monde nous voie !</l>
-            <stage><hi rend="italic"><em>Air : Sur tout ce que je vous dirai.</em></hi></stage>
-          <stage>MADAME GIMARD.</stage>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="6-16">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="145" xml:id="l145">Qu’est-ce que c’est, madame ?... Que voulez-vous dire par là ?</l>
-          </sp>
-          <sp who="dussausset" xml:id="6-17">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="146" xml:id="l146">Eh bien ! pour tout terminer, dînons près de la fontaine.</l>
-          </sp>
-          <sp who="deschamps" xml:id="6-18">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="147" xml:id="l147">Du tout... c’est trop humide... et mon rhumatisme !</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="6-19">
-            <speaker>MADEMOISELLE DUSSAUSSET, <em>d’un air piqué.</em></speaker>
-            <l n="148" xml:id="l148">Certainement, je n’y dînerais pas pour tout au monde... j’y ai perdu une robe toute neuve l’année dernière.</l>
-          </sp>
-          <sp who="madame-gimard" xml:id="6-20">
-            <speaker>MADAME GIMARD, <em>à part.</em></speaker>
-            <l n="149" xml:id="l149">Je ne peux pas souffrir celte femme-là... elle n’est jamais de l’avis de personne... Pourquoi l’a-t-on invitée ?</l>
-          </sp>
-          <sp who="les-messieurs" xml:id="6-21">
-            <speaker>LES MESSIEURS.</speaker>
-            <l n="150" xml:id="l150">Et moi, mesdames, pour vous mettre d’accord, je pense...</l>
-          </sp>
-          <sp who="gaillardin" xml:id="6-22">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="151" xml:id="l151">C’est cela... tout le monde à la fois.</l>
-          </sp>
-          <sp who="tous" xml:id="6-23">
-            <speaker>TOUS.</speaker>
-            <stage><hi rend="italic"><em>Air : J’étouffe de colère. (La Neige, Vaudeville.)</em></hi></stage>
-          <stage>GAILLARDIN, <em>aux dames.</em></stage>
-          </sp>
-          <sp who="tous" xml:id="6-24">
-            <speaker>TOUS.</speaker>
-            <l n="153" xml:id="l153">C’est cela... à la bonne heure !</l>
-            <stage><hi rend="italic"><em>Ils sortent de différents côtés ; Brémont reste seul sur la scène.</em></hi></stage>
-            <l n="155" xml:id="l155"> </l>
-            <l n="156" xml:id="l156"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="7">
-          <head>Scène VII</head>
-            <l n="157" xml:id="l157"> </l>
-          <sp who="prosper" xml:id="7-1">
-            <speaker>BRÉMONT, <em>puis</em> PROSPER</speaker>
-            <l n="158" xml:id="l158"> </l>
-          </sp>
-          <sp who="brémont" xml:id="7-2">
-            <speaker>BRÉMONT.</speaker>
-            <l n="159" xml:id="l159">L’aimable partie ! et quel touchant accord règne dans cette réunion de voisins et d’amis !</l>
-          </sp>
-          <sp who="prosper" xml:id="7-3">
-            <speaker>PROSPER, <em>portant un panier.</em></speaker>
-            <l n="160" xml:id="l160">Mettons toujours là ce panier.</l>
-            <stage><hi rend="italic"><em>Il le dépose auprès de l’arbre.</em></hi></stage>
-            <l n="162" xml:id="l162">C’est celui des couteaux et des serviettes... Tiens, il n’y a plus personne... excepté monsieur Brémont, le futur... Où sont-ils donc allés ?</l>
-          </sp>
-          <sp who="brémont" xml:id="7-4">
-            <speaker>BRÉMONT.</speaker>
-            <l n="163" xml:id="l163">On s’est disputé sur le choix d’une salle à manger... et dans ce moment, on parcourt le bois, afin de trouver pour dîner un endroit qui convienne à tout le monde.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-5">
-            <speaker>PROSPER.</speaker>
-            <l n="164" xml:id="l164">Puisque nous voilà seuls... je n’en suis pas fâché... parce que je veux vous consulter sur une surprise que je veux faire à tout le monde, et à vous aussi... Vous savez bien qu’au dessert... il y a toujours des chansons... eh bien ! à cause de la cérémonie de demain, j’en ai fait une sur votre mariage.</l>
-          </sp>
-          <sp who="brémont" xml:id="7-6">
-            <speaker>BRÉMONT.</speaker>
-            <l n="165" xml:id="l165">Sur mon mariage !... je vous suis bien obligé.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-7">
-            <speaker>PROSPER.</speaker>
-            <l n="166" xml:id="l166">Oui, monsieur ; la voilà... Mais vous qui vous y connaissez... je vous prie de me dire si les vers y sont... parce que c’est si difficile dans notre état !</l>
-            <stage><hi rend="italic"><em>Air de Préville et Taconnet.</em></hi></stage>
-          </sp>
-          <sp who="brémont" xml:id="7-8">
-            <speaker>BRÉMONT, <em>après avoir lu.</em></speaker>
-            <l n="168" xml:id="l168">C’est très bien... il y a une fraîcheur dans les idées...</l>
-          </sp>
-          <sp who="prosper" xml:id="7-9">
-            <speaker>PROSPER.</speaker>
-            <l n="169" xml:id="l169">Oui ; vous dites cela à cause de la comparaison de la rose... et celui-ci... c’est un peu gaillard... et ça fera rire ces dames... c’est ce qu’il faut à la campagne.</l>
-            <stage><hi rend="italic"><em>Il lit sur son papier.</em></hi></stage>
-          </sp>
-          <sp who="brémont" xml:id="7-10">
-            <speaker>BRÉMONT.</speaker>
-            <l n="171" xml:id="l171">À la rigueur, ce dernier vers-là serait peut-être un peu long... mais à la campagne !...</l>
-          </sp>
-          <sp who="prosper" xml:id="7-11">
-            <speaker>PROSPER.</speaker>
-            <stage><hi rend="italic">Ah diable ! c’est vrai... « Heureux et prospère. » Eh bien ! en ôtant l’<em>et</em>...</hi></stage>
-            <stage><hi rend="italic">Pour moi quel sort heureux (<em>virgule</em>), prospère !</hi></stage>
-            <l n="174" xml:id="l174">Un point d’admiration.</l>
-          </sp>
-          <sp who="brémont" xml:id="7-12">
-            <speaker>BRÉMONT.</speaker>
-            <l n="175" xml:id="l175">À merveille...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="177" xml:id="l177">Et s’il peut maintenant me laisser tranquille...</l>
-          </sp>
-          <sp who="prosper" xml:id="7-13">
-            <speaker>PROSPER.</speaker>
-            <l n="178" xml:id="l178">Il n’y a plus qu’une difficulté ; c’est qu’il faut les chanter, et je n’ai pas de voix.</l>
-          </sp>
-          <sp who="brémont" xml:id="7-14">
-            <speaker>BRÉMONT.</speaker>
-            <l n="179" xml:id="l179">J’en suis désolé... Mais si vous comptez sur moi...</l>
-          </sp>
-          <sp who="prosper" xml:id="7-15">
-            <speaker>PROSPER.</speaker>
-            <l n="180" xml:id="l180">Ce n’est pas ça. J’ai pensé à une chose ; je vais glisser mes couplets dans la serviette de mademoiselle Marianne, qui chante, comme une fauvette... et puis, quand elle les déploiera, vous ferez l’étonné et vous direz : « Des couplets ! qu’est-ce que ça signifie ? Il faut que ma femme les chante... » Vous comprenez.</l>
-          </sp>
-          <sp who="brémont" xml:id="7-16">
-            <speaker>BRÉMONT.</speaker>
-            <l n="181" xml:id="l181">Oh ! très bien.</l>
-          </sp>
-          <sp who="prosper" xml:id="7-17">
-            <speaker>PROSPER, <em>prenant une serviette.</em></speaker>
-            <l n="182" xml:id="l182">C’est ça ; voici la sienne... le rouleau vert. Et puis, dites donc, pendant les couplets...</l>
-            <stage><hi rend="italic"><em>Air du vaudeville de Voltaire chez Ninon.</em></hi></stage>
-          <stage>BRÉMONT.</stage>
-          </sp>
-          <sp who="prosper" xml:id="7-18">
-            <speaker>PROSPER.</speaker>
-            <l n="184" xml:id="l184">Qu’est-ce qu’il parle donc de Champagne ? ce n’est pas de cela qu’il s’agit. Il faut seulement que vous disiez : « Qui donc a fait ces jolis couplets ? » C’est là le bon ; parce qu’on demandera l’auteur... ah ! ah !... et alors nous ferons la farce.</l>
-          <stage>BRÉMONT.</stage>
-          </sp>
-          <sp who="prosper" xml:id="7-19">
-            <speaker>PROSPER.</speaker>
-            <l n="185" xml:id="l185">Quelle farce ?</l>
-          <stage>BRÉMONT.</stage>
-          </sp>
-          <sp who="prosper" xml:id="7-20">
-            <speaker>PROSPER.</speaker>
-            <l n="186" xml:id="l186">Je tournerai la tête comme ça ; et puis, vous me montrerez aux autres, par derrière, en criant : « Il rougit... voilà le coupable ! » Ça va joliment nous amuser... Je cours rejoindre les autres.</l>
-            <stage><hi rend="italic"><em>Il sort en chantant.</em></hi></stage>
-            <l n="188" xml:id="l188"> </l>
-            <l n="189" xml:id="l189"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="8">
-          <head>Scène VIII</head>
-            <l n="190" xml:id="l190"> </l>
-          <sp who="brémont" xml:id="8-1">
-            <speaker>BRÉMONT, <em>seul</em></speaker>
-            <l n="191" xml:id="l191"> </l>
-            <l n="192" xml:id="l192">Au diable les importuns et les fâcheux !... Jusqu’à monsieur le premier garçon de boutique qui me choisit pour son confident et son compère... Ah ! quelle idée !... si je pouvais... Mon oncle alors n’aurait plus rien à dire, car la rupture ne viendrait pas de moi ; et il me semble, en effet, que monsieur Prosper et mademoiselle Marianne... ça ferait un couple assez bien assorti... Il est vrai qu’aucun d’eux n’y pense ; mais c’est égal.</l>
-            <stage><hi rend="italic"><em>Air de Julie.</em></hi></stage>
-            <l n="194" xml:id="l194">Ah ! voici la famille.</l>
-            <l n="195" xml:id="l195"> </l>
-            <l n="196" xml:id="l196"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="9">
-          <head>Scène IX</head>
-            <l n="197" xml:id="l197"> </l>
-          <sp who="marianne" xml:id="9-1">
-            <speaker>BRÉMONT, MONSIEUR DESCHAMPS, MADAME DESCHAMPS, MARIANNE</speaker>
-            <l n="198" xml:id="l198"> </l>
-          </sp>
-          <sp who="deschamps" xml:id="9-2">
-            <speaker>DESCHAMPS, <em>à sa femme.</em></speaker>
-            <l n="199" xml:id="l199">Vous le voyez... c’était bien la peine de nous faire courir tous les buissons... J’en ai mon habit déchiré et les mains écorchées... Et de tout cela, qu’en est-il résulté ?... c’est qu’après une heure de recherches et de discussions, on est revenu à la première idée, et qu’on dînera ici.</l>
-          </sp>
-          <sp who="brémont" xml:id="9-3">
-            <speaker>BRÉMONT, <em>à part.</em></speaker>
-            <l n="200" xml:id="l200">Allons, commençons.</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="202" xml:id="l202">Oui, ça ne se passera pas ainsi ; et nous verrons...</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-4">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="203" xml:id="l203">À qui en a-t-il, noire gendre ?</l>
-          </sp>
-          <sp who="brémont" xml:id="9-5">
-            <speaker>BRÉMONT.</speaker>
-            <l n="204" xml:id="l204">Ah ! c’est vous, beau-père ?... Oui, morbleu ! nous aurons une explication.</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-6">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="205" xml:id="l205">Qu’est-ce donc ? quelque brouille ?... quelque jalousie ?...</l>
-          </sp>
-          <sp who="brémont" xml:id="9-7">
-            <speaker>BRÉMONT.</speaker>
-            <l n="206" xml:id="l206">Quelque jalousie !...</l>
-            <stage><hi rend="italic"><em>À part.</em></hi></stage>
-            <l n="208" xml:id="l208">Justement nous y voilà...</l>
-            <stage><hi rend="italic"><em>Haut.</em></hi></stage>
-            <l n="210" xml:id="l210">Eh bien ! oui, monsieur... oui, je suis jaloux... c’est la vérité.</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-8">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="211" xml:id="l211">Et de qui, mon ami ?... nous n’avons ici que deux jeunes gens : monsieur Griffon, qui s’occupe de tout le monde ; et Prosper, mon premier garçon, qui ne s’occupe de rien.</l>
-          </sp>
-          <sp who="brémont" xml:id="9-9">
-            <speaker>BRÉMONT.</speaker>
-            <l n="212" xml:id="l212">Prosper !... Eh bien ! précisément c’est lui-même.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="9-10">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="213" xml:id="l213">Comment ! il se pourrait !</l>
-          </sp>
-          <sp who="brémont" xml:id="9-11">
-            <speaker>BRÉMONT, <em>parlant très haut.</em></speaker>
-            <l n="214" xml:id="l214">Oui, madame, il est amoureux de mademoiselle Marianne... de votre fille.</l>
-          </sp>
-          <sp who="marianne" xml:id="9-12">
-            <speaker>MARIANNE.</speaker>
-            <l n="215" xml:id="l215">De moi !... Eh bien ! par exemple ! en voilà la première nouvelle... est-ce drôle !</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="9-13">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="216" xml:id="l216">Taisez-vous, ma fille...</l>
-            <stage><hi rend="italic"><em>À Brémont</em></hi></stage>
-            <l n="218" xml:id="l218">Non, mon gendre, cela n’est pas possible.</l>
-          </sp>
-          <sp who="brémont" xml:id="9-14">
-            <speaker>BRÉMONT.</speaker>
-            <l n="219" xml:id="l219">Cela n’est pas possible !... apprenez que je l’ai vu chercher toutes les occasions de parler à votre fille, et ne pouvant y réussir, il a glissé dans sa serviette un billet doux... vous pouvez vous en convaincre.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="9-15">
-            <speaker>MADAME DESCHAMPS, <em>va au panier, prend la serviette et y trouve le billet.</em></speaker>
-            <l n="220" xml:id="l220">Ah ! mon Dieu !... c’est vrai.</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-16">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="221" xml:id="l221">Eh bien ! madame, je vous le disais... vous voyez à quoi servent ces parties de campagne, ces dîners sur l’herbe... cela fournit des occasions à des jeunes gens qui, sans cela, n’y penseraient pas.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="9-17">
-            <speaker>MADAME DESCHAMPS, <em>ouvrant le billet.</em></speaker>
-            <l n="222" xml:id="l222">Eh ! mais... ce sont des couplets.</l>
-          </sp>
-          <sp who="brémont" xml:id="9-18">
-            <speaker>BRÉMONT.</speaker>
-            <l n="223" xml:id="l223">Raison de plus... déclaration indirecte et détournée... il y parle avec colère de mon mariage... voyez seulement les deux derniers vers... il n’est pas besoin d’autres preuves.</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-19">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="224" xml:id="l224">Prosper !... c’est ma foi vrai... il y a mis son nom !</l>
-          </sp>
-          <sp who="brémont" xml:id="9-20">
-            <speaker>BRÉMONT.</speaker>
-            <l n="225" xml:id="l225">C’est juste... je n’y pensais pas... il l’a signé.</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-21">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="226" xml:id="l226">Il faut convenir, madame Deschamps, que ces couplets sont d’une force...</l>
-          </sp>
-          <sp who="brémont" xml:id="9-22">
-            <speaker>BRÉMONT.</speaker>
-            <l n="227" xml:id="l227">Et vous ne voulez pas que je suppose quelque intelligence...</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-23">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="228" xml:id="l228">Quelque intelligence... je vous atteste, mon ami, que Marianne n’en a pas, et qu’elle n’en a jamais eu... c’est ma fille, je la connais.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="9-24">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="229" xml:id="l229">Oui, mon gendre... on ne négligera rien pour assurer votre tranquillité.</l>
-          </sp>
-          <sp who="deschamps" xml:id="9-25">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="230" xml:id="l230">Certainement... un gendre qui a mis soixante mille francs dans mon commerce ne mérite pas d’être...</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="9-26">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="231" xml:id="l231">Taisez-vous donc, monsieur... voici tout le monde.</l>
-            <l n="232" xml:id="l232"> </l>
-            <l n="233" xml:id="l233"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="10">
-          <head>Scène X</head>
-            <l n="234" xml:id="l234"> </l>
-          <sp who="marianne" xml:id="10-1">
-            <speaker>BRÉMONT, MONSIEUR DESCHAMPS, MADAME DESCHAMPS, MARIANNE, GAILLARDIN, GRIFFON, DOSSAUSSET, MADEMOISELLE DUSSAUSSET, MONSIEUR GIMARD <em>et</em> MADAME GIMARD, MADEMOISELLE MIMI</speaker>
-            <l n="235" xml:id="l235"> </l>
-          </sp>
-          <sp who="tous" xml:id="10-2">
-            <speaker>TOUS.</speaker>
-            <stage><hi rend="italic"><em>Air : Viens, cher Nadir.</em></hi></stage>
-          </sp>
-          <sp who="gaillardin" xml:id="10-3">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="237" xml:id="l237">Je l’avais bien dit... la victoire est à moi ; et la preuve, c’est que voilà les ennemis qui sont restés sur la place... Ah çà ! mes amis, il ne s’agit plus de délibérer... il faut ici des actions, et non pas du dialogue... Messieurs... habits bas... mesdames, ne vous effrayez pas... Messieurs, qui m’aime me suive, pendant que ces dames vont mettre le couvert.</l>
-            <stage><hi rend="italic"><em>Il sort avec Gimard et Griffon. Pendant ce temps tous les hommes quittent leurs habits et les accrochent aux branches des arbres ; les dames se débarrassent de leurs chapeaux et s’occupent de mettre le couvert sur la pelouse.</em></hi></stage>
-          </sp>
-          <sp who="toutes-les-dames" xml:id="10-4">
-            <speaker>TOUTES LES DAMES.</speaker>
-            <l n="239" xml:id="l239">Oui, oui, cela nous regarde.</l>
-          </sp>
-          <sp who="madame-gimard" xml:id="10-5">
-            <speaker>MADAME GIMARD.</speaker>
-            <l n="240" xml:id="l240">Donnez-moi les assiettes.</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="10-6">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="241" xml:id="l241">Et moi, les serviettes.</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="10-7">
-            <speaker>MADAME DESCHAMPS, cherchant dans un panier.</speaker>
-            <l n="242" xml:id="l242">Ah ! mon Dieu !... et mon argenterie ! je ne la vois pas... mes couverts neufs !...</l>
-          </sp>
-          <sp who="marianne" xml:id="10-8">
-            <speaker>MARIANNE.</speaker>
-            <l n="243" xml:id="l243">Mais, maman...</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="10-9">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="244" xml:id="l244">Taisez-vous, mademoiselle, je suis sûre de l’avoir emballée... puisque c’étaient mes couverts neufs.</l>
-          </sp>
-          <sp who="deschamps" xml:id="10-10">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="245" xml:id="l245">Nos couverts à filets ?... Là !... ça vous apprendra... comme si de l’argenterie de ménage était faite pour voyager !</l>
-          </sp>
-          <sp who="brémont" xml:id="10-11">
-            <speaker>BRÉMONT, <em>à part.</em></speaker>
-            <l n="246" xml:id="l246">Allons, achevons notre ouvrage...</l>
-            <stage><hi rend="italic"><em>Arrêtant Dussausset qui va sortir.</em></hi></stage>
-            <l n="248" xml:id="l248">Monsieur... avant le dîner, j’aurais deux mots à vous dire au sujet de monsieur Prosper, votre neveu.</l>
-          </sp>
-          <sp who="dussausset" xml:id="10-12">
-            <speaker>DUSSAUSSET, <em>étonné.</em></speaker>
-            <l n="249" xml:id="l249">De mon neveu !... qu’est-ce que ça peut être ?...</l>
-            <stage><hi rend="italic"><em>À Brémont.</em></hi></stage>
-            <l n="251" xml:id="l251">Monsieur, je suis à vos ordres.</l>
-            <stage><hi rend="italic"><em>Ils sortent par la première coulisse à droite.</em></hi></stage>
-          </sp>
-          <sp who="madame-deschamps" xml:id="10-13">
-            <speaker>MADAME DESCHAMPS, <em>qui a fouillé dans le panier.</em></speaker>
-            <l n="253" xml:id="l253">Les voilà... les voilà, mes six couverts, on les avait mêlés avec ceux de madame Gimard.</l>
-            <stage><hi rend="italic"><em>À monsieur Deschamps qui la regarde les bras croisés.</em></hi></stage>
-            <l n="255" xml:id="l255">Mais allez donc, monsieur, vous ne faites rien... ce n’était pas la peine d’ôter votre habit.</l>
-            <l n="256" xml:id="l256"> </l>
-            <l n="257" xml:id="l257"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="11">
-          <head>Scène XI</head>
-            <l n="258" xml:id="l258"> </l>
-          <sp who="les-mêmes" xml:id="11-1">
-            <speaker>LES MÊMES, GAILLARDIN, <em>revenant</em></speaker>
-            <l n="259" xml:id="l259"> </l>
-            <stage><hi rend="italic"><em>Gaillardin porte deux plats à la main, un grand pain long sous un bras, une bouteille sous l’autre, et trois couronnes de pain sur la tête.</em></hi></stage>
-          </sp>
-          <sp who="gaillardin" xml:id="11-2">
-            <speaker>GAILLARDIN, <em>en chantant.</em></speaker>
-            <l n="261" xml:id="l261">Il est trop dangereux de glisser...</l>
-            <stage><hi rend="italic"><em>Se retournant, et criant.</em></hi></stage>
-            <l n="263" xml:id="l263">Veux-tu bien lâcher, maudit animal !</l>
-          </sp>
-          <sp who="tous" xml:id="11-3">
-            <speaker>TOUS.</speaker>
-            <l n="264" xml:id="l264">Qu’est-ce donc ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="11-4">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="265" xml:id="l265">Cet imbécile d’âne qui prend mon chapeau de paille pour une botte de foin... ah ! ah ! ah !</l>
-          </sp>
-          <sp who="tous" xml:id="11-5">
-            <speaker>TOUS.</speaker>
-            <l n="266" xml:id="l266">Ah ! ah ! ah ! pour une botte de foin !...</l>
-          </sp>
-          <sp who="madame-gimard" xml:id="11-6">
-            <speaker>MADAME GIMARD.</speaker>
-            <l n="267" xml:id="l267">Oh ! oh ! si Gaillardin se met une fois à dire des bêtises, nous allons rire.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="11-7">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="268" xml:id="l268">Après ça, il faut bien que tout le monde vive... À qui la daube ?</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="11-8">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="269" xml:id="l269">À moi... là, au milieu.</l>
-          </sp>
-          <sp who="deschamps" xml:id="11-9">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="270" xml:id="l270">Comment ! au milieu !... où mettra-t-on la soupe ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="11-10">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="271" xml:id="l271">Tiens, la soupe ?... Est-ce qu’il y en a jamais dans un dîner sur l’herbe !</l>
-          </sp>
-          <sp who="deschamps" xml:id="11-11">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="272" xml:id="l272">Pas de soupe !... eh bien ! par exemple ! comment donc ferai-je pour prendre ma rhubarbe ?</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="11-12">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="273" xml:id="l273">Vous la prendrez demain.</l>
-          </sp>
-          <sp who="gimard" xml:id="11-13">
-            <speaker>GIMARD <em>et</em> GRIFFON, <em>rentrant et portant un grand panier.</em></speaker>
-            <l n="274" xml:id="l274">Venez donc à notre aide.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="11-14">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="275" xml:id="l275">C’est juste, c’est juste... Dieu I ce pauvre monsieur Gimard est-il chargé !... c’est le grand panier aux comestibles... toute la boutique de madame Chevet.</l>
-            <stage><hi rend="italic"><em>Le panier est placé sur le devant du théâtre ; Gaillardin en tire les divers mets qu’il remet à Deschamps, qui les fait passer.</em></hi></stage>
-            <l n="277" xml:id="l277">D’abord, le vrai gigot à la braise...</l>
-          </sp>
-          <sp who="deschamps" xml:id="11-15">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="278" xml:id="l278">C’est encore nous qui l’avons apporté...</l>
-          </sp>
-          <sp who="madame-gimard" xml:id="11-16">
-            <speaker>MADAME GIMARD.</speaker>
-            <l n="279" xml:id="l279">Tiens ! j’en ai un aussi.</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="11-17">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="280" xml:id="l280">Et nous aussi...</l>
-          </sp>
-          <sp who="griffon" xml:id="11-18">
-            <speaker>GRIFFON.</speaker>
-            <l n="281" xml:id="l281">Trois gigots !</l>
-          </sp>
-          <sp who="deschamps" xml:id="11-19">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="282" xml:id="l282">La ! voilà ce que c’est que de ne pas s’entendre ! on était convenu d’écrire le menu de chacun.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="11-20">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="283" xml:id="l283">Il paraît qu’on s’est entendu pour apporter des gigots... oh ! oh ! oh !</l>
-          </sp>
-          <sp who="mimi" xml:id="11-21">
-            <speaker>MIMI.</speaker>
-            <l n="284" xml:id="l284">Ah çà ! et vous, monsieur Gaillardin... qu’est-ce donc que vous avez apporté ?</l>
-          </sp>
-          <sp who="gaillardin" xml:id="11-22">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="285" xml:id="l285">Moi... je ne sais plus... c’est mêlé, c’est confondu, une fois que c’est sur la table... on ne reconnaît plus...</l>
-            <stage><hi rend="italic"><em>Brémont et monsieur Dussausset, rentrent ensemble en causant.</em></hi></stage>
-          </sp>
-          <sp who="dussausset" xml:id="11-23">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="287" xml:id="l287">Que m’avez-vous appris !... mademoiselle Marianne l’aimerait !... ce petit Prosper !... mon neveu !... voyez-vous le gaillard... mais je vais lui parler d’importance.</l>
-            <l n="288" xml:id="l288"> </l>
-            <l n="289" xml:id="l289"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="12">
-          <head>Scène XII</head>
-            <l n="290" xml:id="l290"> </l>
-          <sp who="prosper" xml:id="12-1">
-            <speaker>LES MÊMES, PROSPER, <em>tenant à la main une grande feuille pleine de fraises</em></speaker>
-            <l n="291" xml:id="l291"> </l>
-          </sp>
-          <sp who="prosper" xml:id="12-2">
-            <speaker>PROSPER.</speaker>
-            <l n="292" xml:id="l292">Un instant... un instant, ne commencez pas sans moi... j’apporte le dessert... des fraises de bois que j’ai cueillies, et dont je fais hommage à la mariée. Dites donc, mesdames, dites donc, ma tante, écoutez celui-là.</l>
-            <stage><hi rend="italic"><em>Air des Fraises.</em></hi></stage>
-            <l n="294" xml:id="l294">Voilà... Tenez, mademoiselle Marianne.</l>
-          </sp>
-          <sp who="marianne" xml:id="12-3">
-            <speaker>MARIANNE, <em>baissant les yeux.</em></speaker>
-            <l n="295" xml:id="l295">Monsieur... je ne sais... si je dois accepter...</l>
-          </sp>
-          <sp who="prosper" xml:id="12-4">
-            <speaker>PROSPER, <em>étonné.</em></speaker>
-            <l n="296" xml:id="l296">Hein !... qu’est-ce qu’elle a donc ?</l>
-          </sp>
-          <sp who="brémont" xml:id="12-5">
-            <speaker>BRÉMONT, <em>à Deschamps.</em></speaker>
-            <l n="297" xml:id="l297">Vous le voyez, beau-père, des fraises, c’est trop fort !... il va y avoir une scène.</l>
-          </sp>
-          <sp who="deschamps" xml:id="12-6">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="298" xml:id="l298">Du calme, mon ami.</l>
-          </sp>
-          <sp who="brémont" xml:id="12-7">
-            <speaker>DUSSAUSSET, <em>à Brémont.</em></speaker>
-            <l n="299" xml:id="l299">Oui, jeune homme... je vais lui parler.</l>
-          </sp>
-          <sp who="brémont" xml:id="12-8">
-            <speaker>GAILLARDIN, <em>à Brémont, Deschamps et Dussausset, qui sont sur le devant du théâtre.</em></speaker>
-            <l n="300" xml:id="l300">Eh bien ! messieurs, qu’est-ce que vous faites donc là-bas à causer... au lieu de venir nous aider ?... Monsieur Deschamps, venez ici... voilà une place pour vous.</l>
-            <stage><hi rend="italic"><em>Au fond du théâtre, autour du grand châtaignier, on a placé des paniers, d’autres ont étendu leurs mouchoirs à terre. On dispose tout pour s’asseoir.</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="12-9">
-            <speaker>DUSSAUSSET, <em>à Prosper qui est déjà assis.</em></speaker>
-            <l n="302" xml:id="l302">Venez ici, monsieur, j’ai à vous parler.</l>
-            <stage><hi rend="italic"><em>Il le mène à l’autre bout du théâtre.</em></hi></stage>
-          </sp>
-          <sp who="marianne" xml:id="12-10">
-            <speaker>MARIANNE, <em>le regardant</em>.</speaker>
-            <l n="304" xml:id="l304">Ce pauvre garçon !</l>
-          </sp>
-          <sp who="prosper" xml:id="12-11">
-            <speaker>DUSSAUSSET, <em>bas, à Prosper.</em></speaker>
-            <l n="305" xml:id="l305">Il faut, pour la tranquillité publique, que vous partiez à l’instant.</l>
-          </sp>
-          <sp who="prosper" xml:id="12-12">
-            <speaker>PROSPER.</speaker>
-            <l n="306" xml:id="l306">Partir dans ce moment ! avec une faim aussi conditionnée !</l>
-            <stage><hi rend="italic"><em>Regardant du côté du dîner.</em></hi></stage>
-            <l n="308" xml:id="l308">surtout quand il y a là... de si bonnes choses !</l>
-          </sp>
-          <sp who="marianne" xml:id="12-13">
-            <speaker>MARIANNE, <em>à part.</em></speaker>
-            <l n="309" xml:id="l309">Quel regard il a jeté de mon côté !</l>
-          </sp>
-          <sp who="dussausset" xml:id="12-14">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="310" xml:id="l310">Apprenez donc que, si vous restez, le mariage de monsieur Brémont va manquer... parce que mademoiselle Marianne... vous adore.</l>
-          </sp>
-          <sp who="prosper" xml:id="12-15">
-            <speaker>PROSPER.</speaker>
-            <l n="311" xml:id="l311">Laissez donc... pas possible !</l>
-          </sp>
-          <sp who="dussausset" xml:id="12-16">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="312" xml:id="l312">Elle l’a avoué à ses parents... à son prétendu... c’est lui-même qui vient de me le dire... ainsi il n’y a pas de doute.</l>
-          </sp>
-          <sp who="prosper" xml:id="12-17">
-            <speaker>PROSPER.</speaker>
-            <l n="313" xml:id="l313">Cette pauvre petite !... moi qui ce matin en disais du mal... Eh bien ! je ne m’en étais jamais aperçu.</l>
-          </sp>
-          <sp who="dussausset" xml:id="12-18">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="314" xml:id="l314">C’est égal... tu n’en dois pas moins, par délicatesse, t’éloigner sur-le-champ... Tiens, voilà de quoi aller dîner à l’auberge.</l>
-          </sp>
-          <sp who="prosper" xml:id="12-19">
-            <speaker>PROSPER.</speaker>
-            <l n="315" xml:id="l315">Oui, mon oncle... puisque vous le voulez... Est-ce étonnant d’être aimé à ce point-là ?... sans le savoir ! C’est la première fois que ça m’arrive... je n’y pensais pas du tout... eh bien ! ça produit un effet qu’on ne peut pas rendre... Adieu, mon oncle... adieu, mademoiselle Marianne.</l>
-            <stage><hi rend="italic"><em>Il sort.</em></hi></stage>
-          </sp>
-          <sp who="marianne" xml:id="12-20">
-            <speaker>MARIANNE, <em>à part.</em></speaker>
-            <l n="317" xml:id="l317">A-t-il un air malheureux !...</l>
-            <stage><hi rend="italic"><em>Pendant ce temps, tout le monde s’est assis en cercle. On coupe le pain ; on débouche les bouteilles.</em></hi></stage>
-          </sp>
-          <sp who="gaillardin" xml:id="12-21">
-            <speaker>GAILLARDIN, <em>coupant le pâté.</em></speaker>
-            <l n="319" xml:id="l319">Eh bien !... eh bien !... où va donc Prosper ?</l>
-          </sp>
-          <sp who="dussausset" xml:id="12-22">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="320" xml:id="l320">C’est une commission que je lui ai donnée... il va revenir.</l>
-          </sp>
-          <sp who="deschamps" xml:id="12-23">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="321" xml:id="l321">Ah çà ! j’espère que maintenant rien ne troublera plus notre dîner... Nous y voilà donc, ce n’est pas sans peine.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="12-24">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="322" xml:id="l322">Oui, messieurs, procédons par ordre, et ne nous pressons pas, la table n’est pas louée !... Eh ! eh ! eh !...</l>
-          </sp>
-          <sp who="deschamps" xml:id="12-25">
-            <speaker>DESCHAMPS, <em>se donnant un coup de poing sur le front.</em></speaker>
-            <l n="323" xml:id="l323">Coquins de cousins !... et un autre encore sur la jambe !... je suis sûr que j’en aurai des cloches...</l>
-            <stage><hi rend="italic"><em>Regardant en l’air.</em></hi></stage>
-            <l n="325" xml:id="l325">Ah ! en voilà-t-il !... en voilà-t-il !...</l>
-          </sp>
-          <sp who="tous" xml:id="12-26">
-            <speaker>TOUS, <em>regardant de même.</em></speaker>
-            <l n="326" xml:id="l326">Dieux ! comme en voilà !</l>
-          </sp>
-          <sp who="mademoiselle-dussausset" xml:id="12-27">
-            <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
-            <l n="327" xml:id="l327">Nous allons en être dévorés.</l>
-          </sp>
-          <sp who="madame-gimard" xml:id="12-28">
-            <speaker>MADAME GIMARD.</speaker>
-            <l n="328" xml:id="l328">C’est signe de pluie.</l>
-          </sp>
-          <sp who="dussausset" xml:id="12-29">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="329" xml:id="l329">Laissez donc ! j’ai consulté mon baromètre ce matin, il est au beau fixe.</l>
-          </sp>
-          <sp who="gaillardin" xml:id="12-30">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="330" xml:id="l330">Je sens une goutte.</l>
-          </sp>
-          <sp who="brémont" xml:id="12-31">
-            <speaker>BRÉMONT.</speaker>
-            <l n="331" xml:id="l331">Pas possible !</l>
-          </sp>
-          <sp who="dussausset" xml:id="12-32">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="332" xml:id="l332">C’est peut-être mon neveu qui est revenu pour exécuter sa plaisanterie de la carafe.</l>
-            <stage><hi rend="italic"><em>Regardant en l’air.</em></hi></stage>
-            <l n="334" xml:id="l334">Non, ma foi, ça tombe réellement.</l>
-            <stage><hi rend="italic"><em>Air : Jenny, qu’importe cet orage. (Le Roi et le Fermier.)</em></hi></stage>
-          <stage>DESCHAMPS.</stage>
-          </sp>
-          <sp who="gaillardin" xml:id="12-33">
-            <speaker>GAILLARDIN, <em>riant.</em></speaker>
-            <stage><hi rend="italic"><em>La pluie augmente. Demi-jour.</em></hi></stage>
-          <stage>DESCHAMPS <em>et</em> DUSSAUSSET.</stage>
-          </sp>
-          <sp who="brémont" xml:id="12-34">
-            <speaker>BRÉMONT.</speaker>
-            <l n="337" xml:id="l337">Les grands arbres, on dit que cela l’attire... s’il allait tomber ici pour le bouquet...</l>
-          <stage>GAILLARDIN.</stage>
-          </sp>
-          <sp who="madame-deschamps" xml:id="12-35">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <stage><hi rend="italic"><em>Grand coup de tonnerre. Tout le monde jette un cri et se sauve en désordre de différents côtés, pendant que l’orchestre joue quelques mesures de l’orage du Roi et le Fermier.</em></hi></stage>
-          <stage>MADAME GIMARD, <em>effrayée.</em></stage>
-          </sp>
-          <sp who="deschamps" xml:id="12-36">
-            <speaker>DESCHAMPS, <em>parlant.</em></speaker>
-            <l n="339" xml:id="l339">Sauvons-nous !</l>
-          <stage>TOUS, <em>se sauvant.</em></stage>
-          </sp>
-          <sp who="deschamps" xml:id="12-37">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="340" xml:id="l340">Ma femme !</l>
-          </sp>
-          <sp who="madame-deschamps" xml:id="12-38">
-            <speaker>MADAME DESCHAMPS.</speaker>
-            <l n="341" xml:id="l341">Monsieur Deschamps !</l>
-          </sp>
-          <sp who="gaillardin" xml:id="12-39">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="342" xml:id="l342">Par ici.</l>
-          </sp>
-          <sp who="dussausset" xml:id="12-40">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="343" xml:id="l343">Où allez-vous donc ?</l>
-          </sp>
-          <sp who="marianne" xml:id="12-41">
-            <speaker>MARIANNE, <em>reprenant son chapeau et sortant la dernière.</em></speaker>
-            <l n="344" xml:id="l344">Maman... maman, attends-moi donc.</l>
-            <stage><hi rend="italic"><em>Ils disparaissent.</em></hi></stage>
-            <l n="346" xml:id="l346"> </l>
-            <l n="347" xml:id="l347"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="13">
-          <head>Scène XIII</head>
-            <l n="348" xml:id="l348"> </l>
-          <sp who="prosper" xml:id="13-1">
-            <speaker>PROSPER, <em>seul, arrivant du côté opposé, avec un grand parapluie</em></speaker>
-            <l n="349" xml:id="l349"> </l>
-            <l n="350" xml:id="l350">Eh bien ! eh bien ! où sont-ils donc ?... Moi qui, à la première goutte de pluie, ai couru de toutes mes forces pour venir à leur secours... je n’en ai pas achevé mon dîner... il est vrai que je n’y étais guère disposé... c’est drôle, moi qui avais une si belle faim... Ce que mon oncle m’a dit tout à l’heure m’a coupé l’appétit... ça donne des idées... des idées... qui font tout oublier... Eh ! oui, parbleu !... car je suis là à l’averse... avec un parapluie sous le bras.</l>
-            <stage><hi rend="italic"><em>L’ouvrant.</em></hi></stage>
-            <l n="352" xml:id="l352">C’est tout de même bien à la maîtresse de l’auberge de me l’avoir prêté sans me connaître... vous direz à ça, le physique est là qui sert de répondant.</l>
-            <l n="353" xml:id="l353"> </l>
-            <l n="354" xml:id="l354"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="14">
-          <head>Scène XIV</head>
-            <l n="355" xml:id="l355"> </l>
-          <sp who="marianne" xml:id="14-1">
-            <speaker>PROSPER, <em>avec son parapluie</em>, MARIANNE, <em>revenant sur ses pas</em></speaker>
-            <l n="356" xml:id="l356"> </l>
-          </sp>
-          <sp who="marianne" xml:id="14-2">
-            <speaker>MARIANNE.</speaker>
-            <l n="357" xml:id="l357">Maman... maman !... Je ne sais plus de quel côté ils ont pris.</l>
-          </sp>
-          <sp who="prosper" xml:id="14-3">
-            <speaker>PROSPER.</speaker>
-            <l n="358" xml:id="l358">Ah ! mon Dieu ! c’est mam’selle Marianne !</l>
-          </sp>
-          <sp who="marianne" xml:id="14-4">
-            <speaker>MARIANNE.</speaker>
-            <l n="359" xml:id="l359">Monsieur Prosper !</l>
-          </sp>
-          <sp who="prosper" xml:id="14-5">
-            <speaker>PROSPER.</speaker>
-            <l n="360" xml:id="l360">Que c’est heureux !... venez donc là... il y a place pour deux.</l>
-          </sp>
-          <sp who="marianne" xml:id="14-6">
-            <speaker>MARIANNE.</speaker>
-            <l n="361" xml:id="l361">Je vous remercie, monsieur Prosper... c’est seulement pour laisser passer l’orage.</l>
-          </sp>
-          <sp who="prosper" xml:id="14-7">
-            <speaker>PROSPER.</speaker>
-            <l n="362" xml:id="l362">Comme vous êtes déjà mouillée !</l>
-          </sp>
-          <sp who="marianne" xml:id="14-8">
-            <speaker>MARIANNE.</speaker>
-            <l n="363" xml:id="l363">Et vous donc !... vous allez vous enrhumer.</l>
-          </sp>
-          <sp who="prosper" xml:id="14-9">
-            <speaker>PROSPER.</speaker>
-            <l n="364" xml:id="l364">Oh ! un rhume est bientôt passé !... et il y a des choses qui durent plus longtemps... mais vous n’êtes pas là assez à couvert... approchez-vous donc.</l>
-            <stage><hi rend="italic"><em>Ils s’avancent tous les deux ensemble au bord du théâtre, et restent immobiles, couverts par le parapluie.</em></hi></stage>
-          </sp>
-          <sp who="marianne" xml:id="14-10">
-            <speaker>MARIANNE, <em>se serrant contre lui.</em></speaker>
-            <l n="366" xml:id="l366">Ah ! comme ça tombe... ils seront joliment trempés.</l>
-          </sp>
-          <sp who="prosper" xml:id="14-11">
-            <speaker>PROSPER.</speaker>
-            <l n="367" xml:id="l367">Ils ne seront pas si bien que nous... l’un près de l’autre... Tenez, c’est drôle... ça fait juste Paul et Virginie avec un parapluie.</l>
-          </sp>
-          <sp who="marianne" xml:id="14-12">
-            <speaker>MARIANNE.</speaker>
-            <l n="368" xml:id="l368">Paul et Virginie !... eh mais ! j’y pense, monsieur Prosper... je ne devrais pas rester seule avec vous... après ce qu’on m’a dit.</l>
-          </sp>
-          <sp who="prosper" xml:id="14-13">
-            <speaker>PROSPER, <em>très ému.</em></speaker>
-            <l n="369" xml:id="l369">Et qu’est-ce qu’on vous a dit ?</l>
-          </sp>
-          <sp who="marianne" xml:id="14-14">
-            <speaker>MARIANNE.</speaker>
-            <l n="370" xml:id="l370">Ah ! mon Dieu ! comme vous tremblez !</l>
-          </sp>
-          <sp who="prosper" xml:id="14-15">
-            <speaker>PROSPER.</speaker>
-            <l n="371" xml:id="l371">Ce n’est pas de froid, mademoiselle Marianne.</l>
-            <stage><hi rend="italic"><em>Air : Avec vous sous le même toit. (Fanchon la vielleuse.)</em></hi></stage>
-          </sp>
-          <sp who="marianne" xml:id="14-16">
-            <speaker>MARIANNE, <em>à part.</em></speaker>
-            <l n="373" xml:id="l373">Ah ! mon Dieu ! quel regard, et comme il m’a serré la main !</l>
-            <stage><hi rend="italic"><em>Air : Trio du Calife de Bagdad.</em></hi></stage>
-          </sp>
-          <sp who="prosper" xml:id="14-17">
-            <speaker>PROSPER.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>MARIANNE.</stage>
-          </sp>
-          <sp who="prosper" xml:id="14-18">
-            <speaker>PROSPER.</speaker>
-            <stage><hi rend="italic"><em>Ils se retirent vers la gauche du théâtre, et parlent bas, pendant que tout le monde arrive.</em></hi></stage>
-            <l n="377" xml:id="l377"> </l>
-            <l n="378" xml:id="l378"> </l>
-          </sp>
-        </div>
-        <div type="scene" xml:id="15">
-          <head>Scène XV</head>
-            <l n="379" xml:id="l379"> </l>
-          <sp who="marianne" xml:id="15-1">
-            <speaker>MARIANNE <em>et</em> PROSPER, <em>toujours sous le parapluie</em>, GAILLARDIN <em>et</em> BRÉMONT, <em>d’abord seuls, ensuite</em> MONSIEUR DESCHAMPS <em>et</em> MADAME DESCHAMPS, MONSIEUR GIMARD <em>et</em> MADAME GIMARD, MADEMOISELLE MIMI, DUSSAUSSET, GRIFFON</speaker>
-            <l n="380" xml:id="l380"> </l>
-          </sp>
-          <sp who="gaillardin" xml:id="15-2">
-            <speaker>GAILLARDIN, <em>étendant la main.</em></speaker>
-            <stage><hi rend="italic"><em>Suite du trio.</em></hi></stage>
-          <stage>BRÉMONT.</stage>
-          </sp>
-          <sp who="gaillardin" xml:id="15-3">
-            <speaker>GAILLARDIN.</speaker>
-            <stage><hi rend="italic"><em>Tout le monde entre.</em></hi></stage>
-          <stage>PROSPER, <em>à Marianne.</em></stage>
-          </sp>
-          <sp who="marianne" xml:id="15-4">
-            <speaker>MARIANNE.</speaker>
-            <stage><hi rend="italic"><em>Le jour reparaît.</em></hi></stage>
-          <stage>PROSPER.</stage>
-          </sp>
-          <sp who="marianne" xml:id="15-5">
-            <speaker>MARIANNE.</speaker>
-            <stage><hi rend="italic"><em>Ensemble.</em></hi></stage>
-          <stage>BRÉMONT, <em>à haute voix, à monsieur Deschamps.</em></stage>
-          </sp>
-          <sp who="monsieur-deschamps" xml:id="15-6">
-            <speaker>MONSIEUR DESCHAMPS <em>et</em> MADAME DESCHAMPS.</speaker>
-            <stage><hi rend="italic"><em>À la fin de ce morceau les acteurs prennent leur place dans l’ordre suivant, le premier a la gauche du spectateur : Prosper, Dussausset, madame Deschamps, Marianne, Deschamps, Gaillardin, Brémont, mademoiselle Dussausset et Griffon, Mimi, monsieur et madame Gimard.</em></hi></stage>
-          <stage>BRÉMONT, <em>à part.</em></stage>
-          </sp>
-          <sp who="prosper" xml:id="15-7">
-            <speaker>PROSPER.</speaker>
-            <l n="386" xml:id="l386">Voici l’occasion que je désirais.</l>
-          <stage>MARIANNE.</stage>
-          </sp>
-          <sp who="tous-les-autres" xml:id="15-8">
-            <speaker>TOUS LES AUTRES.</speaker>
-            <l n="387" xml:id="l387">Je vous comprends.</l>
-          <stage>BRÉMONT, <em>bas à Gaillardin.</em></stage>
-          </sp>
-          <sp who="gaillardin" xml:id="15-9">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="388" xml:id="l388">Est-ce là les exemples que je vous ai donnés ?</l>
-          <stage>MONSIEUR DESCHAMPS <em>et</em> MADAME DESCHAMPS, <em>aux deux</em> <em>jeunes gens.</em></stage>
-          </sp>
-          <sp who="gaillardin" xml:id="15-10">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="389" xml:id="l389">Arrêtez !... à quoi bon ces déclamations paternelles et intempestives ?... prétendu trahi, père et mère offensés, épargnez-vous des tirades inutiles... le mal est fait... chez moi comme chez vous, le premier moment a été à la surprise... le second à l’indignation... le troisième à la réflexion... je me suis dit : « Ces jeunes gens s’aiment, ils s’adorent... c’est une passion secrète qui est maintenant de notoriété publique... il n’y a donc qu’un parti à prendre, c’est de les unir. »</l>
-            <stage><hi rend="italic"><em>À Brémont qui fait un geste.</em></hi></stage>
-            <l n="391" xml:id="l391">Je vous entends, monsieur Brémont... il en coûte à votre cœur ; mais tous êtes trop généreux pour vous opposer au bonheur de ces amants... il y a un rival préféré, et la véritable délicatesse consiste à céder la place, quand on ne peut pas faire autrement.</l>
-          </sp>
-          <sp who="deschamps" xml:id="15-11">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="392" xml:id="l392">Mais...</l>
-          </sp>
-          <sp who="gaillardin" xml:id="15-12">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="393" xml:id="l393">Je vous comprends, monsieur Deschamps... monsieur Brémont vous apportait soixante mille francs ; monsieur Prosper en a autant... son oncle me le disait ce matin, et il ne demande qu’à l’établir.</l>
-          </sp>
-          <sp who="dussausset" xml:id="15-13">
-            <speaker>DUSSAUSSET.</speaker>
-            <l n="394" xml:id="l394">C’est vrai... je ne m’en dédis pas.</l>
-          </sp>
-          <sp who="deschamps" xml:id="15-14">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="395" xml:id="l395">À la bonne heure !... mais où dînerons-nous maintenant ?</l>
-          </sp>
-          <sp who="tous" xml:id="15-15">
-            <speaker>TOUS.</speaker>
-            <l n="396" xml:id="l396">Oui... où dînerons-nous ?</l>
-          </sp>
-          <sp who="brémont" xml:id="15-16">
-            <speaker>BRÉMONT.</speaker>
-            <l n="397" xml:id="l397">À la première auberge.</l>
-          </sp>
-          <sp who="deschamps" xml:id="15-17">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="398" xml:id="l398">Comme c’est agréable !... vivent les dîners sur l’herbe !</l>
-          </sp>
-          <sp who="gaillardin" xml:id="15-18">
-            <speaker>GAILLARDIN.</speaker>
-            <l n="399" xml:id="l399">Nous nous en dédommagerons, car je vois deux noces en perspective... celle de Prosper...</l>
-            <stage><hi rend="italic"><em>À mademoiselle Dussausset.</em></hi></stage>
-            <l n="401" xml:id="l401">et la nôtre, n’est-il pas vrai ?</l>
-          </sp>
-          <sp who="brémont" xml:id="15-19">
-            <speaker>BRÉMONT.</speaker>
-            <l n="402" xml:id="l402">Oui, mes amis... et pour vous prouver que je n’ai point de rancune, je donne, dans quinze jours, un grand dîner, où j’invite toute la société.</l>
-            <stage><hi rend="italic"><em>Tout le monde salue en acceptant.</em></hi></stage>
-          </sp>
-          <sp who="deschamps" xml:id="15-20">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="404" xml:id="l404">Si c’est ici, je n’en suis pas.</l>
-          </sp>
-          <sp who="brémont" xml:id="15-21">
-            <speaker>BRÉMONT.</speaker>
-            <l n="405" xml:id="l405">Au Palais-Royal, chez Beauvilliers.</l>
-          </sp>
-          <sp who="deschamps" xml:id="15-22">
-            <speaker>DESCHAMPS.</speaker>
-            <l n="406" xml:id="l406">À la bonne heure... non pas que je n’aie aussi des goûts champêtres et des idées pastorales ; mais mon avis est qu’il faut se promener à la campagne et dîner à Paris.</l>
-            <stage><hi rend="italic"><em>Vaudeville.</em></hi></stage>
-            <stage><hi rend="italic"><em>Air : Bon voyage, cher Dumolet. (Le Départ pour Saint-Malo.)</em></hi></stage>
-          </sp>
-          <p>FIN</p>
-        </div>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, entrant d’abord, et regardant le châtaignier.</speaker>
+          <l n="1">Au grand châtaignier, vis-à-vis le poteau ; c’est bien ça...</l>
+          <stage>&lt;em&gt;À Brémont qu’il appelle.&lt;/em&gt;</stage>
+          <l n="2">Par ici, mon cher Brémont ! Nous sommes les premiers au rendez-vous.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="3">Ces dames auront pris un autre chemin... C’est donc ici que nous dînerons ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="4">Est-ce que ce n’est pas une salle à manger charmante ?... Le plus joli côté du bois de Meudon, une vue superbe ; c’est moi qui ai choisi la place. Eh bien ! qu’avez-vous donc, mon jeune ami ?... À une partie de campagne, à un dîner sur l’herbe, il faut être gai...</l>
+          <stage>&lt;em&gt;Air du vaudeville de Partie carrée.&lt;/em&gt;</stage>
+          <l n="5">Pour être heureux et pour rire d’avance,</l>
+          <l n="6">Et malgré cela, vous êtes préoccupé ?...</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="7">Que voulez-vous ?... Peut-être un peu de fatigue... être venu à pied...</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="8">Ah ! c’est que vous êtes un Parisien, et que vous n’avez point les goûts champêtres... Moi, je n’existe que hors barrières. Aussi, dès que ma place de l’enregistrement me laisse un moment de répit, vite une chemise dans ma poche, un bonnet de coton dans l’autre, et me voilà parti... n’importe dans quel endroit, j’aime la campagne en général... Je suis comme ça... aux environs de Paris, l’ami intime de cinq ou six maisons charmantes, où l’on ne pourrait pas vivre sans moi... Je mets en train toutes les parties : promenades sur l’eau, dîners sur l’herbe... Je fais la carambole avec les papas, le boston avec les mamans, des courses d’ânes avec les jeunes personnes ; et avec les petits garçons, j’enlève des cerfs-volants, ou j’attrape des hannetons.</l>
+          <stage>&lt;em&gt;Air du vaudeville des Maris ont tort.&lt;/em&gt;</stage>
+          <l n="9">C’est chaque jour fête nouvelle ;</l>
+          <l n="10">Et je recommence ma vie épicurienne et champêtre.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="11">Vous êtes bien heureux.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="12">Et vous donc, monsieur le marié ?... Savez-vous que sans moi ce mariage-là ne se serait jamais fait ? Vous vouliez, vous ne vouliez pas ; et le jour du contrat, j’ai vu le moment où vous alliez refuser de signer. Mais j’étais là en auxiliaire... Ami des deux maisons, lien des deux familles, je parlais à l’un, je parlais à l’autre ; et le notaire et moi, nous faisions tant de bruit, que vous avez tous signé d’étourdissement et de confiance.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="13">Oui !... une belle affaire ! un beau-père, négociant dans l’âme, qui marchande tout, jusqu’à son gendre. Une petite fille bien niaise, qui n’a à sa disposition que trois syllabes : « Ah bien oui ! Ah bien non ! » Et souvent, n’a-t-elle pas le bonheur de les placer à propos !</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="14">D’accord !</l>
+          <stage>&lt;em&gt;Air : Un homme pour faire un tableau. (Les Hasards de la guerre.)&lt;/em&gt;</stage>
+          <l n="15">Mais il faut, en se mariant,</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="16">Langage ordinaire :</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="17">Je ne dis pas non... mais l’attachement qu’elle a pour vous...</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="18">Elle me déteste, et je ne peux pas la souffrir.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="19">Écoutez donc, mon cher, vous êtes trop difficile et vous voulez trouver tout réuni...</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="20">Non... mais je veux tout rompre ; et je compte sur vous pour m’y aider.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="21">Bien obligé... chargez-vous-en vous-même.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="22">Je ne le puis : sans cela ce serait déjà fait... J’ai un oncle très riche, qui est ami de monsieur Deschamps... il tient comme un diable à ce mariage... et si je le fais manquer, il me déshérite... Il faudrait donc alors trouver quelque moyen adroit et détourné pour que la rupture vînt de ma prétendue ou de sa famille.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="23">Vous aurez de la peine, car vous êtes un aimable jeune homme, un beau parti... monsieur Deschamps tient beaucoup à vous, et surtout aux soixante mille francs que vous avez eu l’imprudence de placer dans son commerce... Je vous aiderais bien, si je le pouvais sans me compromettre ; mais par goût et par système, j’aime à rester neutre... Je fais des mariages ; mais je n’en défais pas... je dine avec tout le monde et ne me brouille avec personne ; ainsi occupons-nous du repas ; aujourd’hui c’est l’essentiel.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="24">S’il pouvait me fournir l’occasion que je cherche... Est-ce que nous serons beaucoup ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="25">Une douzaine de personnes... toute la société de votre beau-père... et vous sentez bien que je n’ai pas oublié monsieur Dussausset et sa sœur, une demoiselle riche, aimable et majeure... sur laquelle j’ai des idées matrimoniales... Vous savez... cette jolie maison à l’entrée de Bellevue ?... voilà trois ans que je lui fais la cour.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="26">À la maison ?...</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="27">Pas mal... c’est dans mon genre... le coup de fouet !... Non, monsieur, pas à la maison, mais à la propriétaire.</l>
+          <stage>&lt;em&gt;Air du Ménage de garçon.&lt;/em&gt;</stage>
+          <l n="28">Des deux bientôt je serai maître,</l>
+          <l n="29">Eh ! tenez, la voici elle-même... c’est l’avant-garde de notre caravane.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="30">À la fin, nous y voici !</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="31">Je n’en puis plus... aussi, monsieur Gaillardin, c’est votre faute ; vous indiquez toujours si mal !</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="32">Est-ce que je ne vous ai pas dit : au grand châtaignier ?</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="33">Je sais bien... mais c’est qu’il y en a tant !</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="34">En effet, à chaque buisson... mon frère me disait : « Voilà le grand châtaignier... » Et nous avons fait ainsi une lieue au soleil et à la poussière.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="35">Eh bien ! où est le grand mal ?... cela t’a fait voir du pays... Moi, je suis comme Gaillardin, un campagnard déterminé... Je ne vendrais pas ma maison de Bellevue pour un hôtel du faubourg Saint-Germain... Ils ont bâti autour de moi... ils m’ont masqué de tous les côtés ; eh bien ! ça m’est égal... je suis à Bellevue... l’air vient d’en haut... un air pur... délicieux... on sent qu’on existe.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="36">Et ici donc !... c’est encore bien mieux... Vous verrez, belle dame... rien n’est divin comme un dîner sur l’herbe... il y règne une gaieté... un désordre... un appétit... et puis, maintenant qu’à Paris les loyers sont si chers...</l>
+          <stage>&lt;em&gt;Air : J’ai vu le Parnasse des dames. (Rien de trop.)&lt;/em&gt;</stage>
+          <l n="37">Là, sur celle pelouse fine,</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, regardant tout à coup.</speaker>
+          <l n="38">En effet, quel bonheur j’éprouve !</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="39">Plus loin, un salon élégant ;</l>
+          <stage>&lt;em&gt;Bas à Dussausset.&lt;/em&gt;</stage>
+          <l n="40">Et quelquefois même on y trouve</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, riant.</speaker>
+          <l n="41">Ah ! ah !... ma sœur, je te préviens que voilà Gaillardin qui commence.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="42">À la campagne, c’est de droit... c’est permis, et puis tantôt à dîner, les coq-à-l’âne, les calembours, et les éclats de rire.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="43">Et puis au dessert, quand la nappe est levée, les rondes, les petits paquets, et le colin-maillard.</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="44">Mais où donc est tout notre monde ?... est-ce que nous sommes les premiers au rendez-vous ?</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, à Brémont.</speaker>
+          <l n="45">Comment, monsieur Brémont, vous le gendre futur... n’êtes-vous pas avec ces dames ?</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="46">N’avaient-elles pas leurs toilettes ?</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="47">Comme c’est ridicule, des toilettes pour la campagne... Dieu sait maintenant quand elles arriveront !</l>
+          <stage>&lt;em&gt;On entend crier eu dehors et d’un peu loin.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="48">Écoutez... j’ai entendu un cri de ralliement...</l>
+          <stage>&lt;em&gt;Il met ses deux mains près de sa bouche, pour faire le porte-voix.&lt;/em&gt;</stage>
+          <l n="49">Ohé ! Oh !...</l>
+          <stage>&lt;em&gt;On répond de même.&lt;/em&gt;</stage>
+          <l n="50">Voyez-vous, on répond.</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET, à monsieur Dussausset.</speaker>
+          <l n="51">Je crois que voilà Prosper, votre neveu, le premier garçon de monsieur Deschamps.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="52">Oui... le voilà sur un âne... en estafette... et puis, qu’est-ce que je vois donc derrière lui ?... un... deux... trois ânes... ce sont eux... la patrie est sauvée.</l>
+          <stage>&lt;em&gt;Il crie.&lt;/em&gt;</stage>
+          <l n="53">Ohé ! ohé !...</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, mettant son mouchoir au bout de sa canne.</speaker>
+          <l n="54">Ohé ! ohé !...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#prosper">
+          <speaker>PROSPER, en dehors.</speaker>
+          <l n="55">Oh ! les maudites botes !... veux-tu rester là !... venez donc m’aider à les attacher.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, à Gaillardin.</speaker>
+          <l n="56">Ne vous dérangez pas... je vais à son secours.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, entrant en scène.</speaker>
+          <l n="57">Je vous remercie, monsieur Brémont...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="58">C’est heureux qu’il nous ait séparés : car je suis comme eux... je suis mauvaise tête ; et je ne sais pas comment ça aurait fini...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="59">Bonjour, mon oncle et mon tuteur ; bonjour, ma tante, bonjour, monsieur Gaillardin... dites donc, il y a de fameuses nouvelles.</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="60">Eh bien ! où donc est tout le monde ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="61">Ils sont par terre, à une demi-lieue d’ici... Nous avions fait une cavalcade à ânes ; mais celui de monsieur Gimard, le notaire de Bellevue, ne voulait pas marcher... et alors monsieur Griffon, le maître-clerc, qui est toujours pour les farces, s’est mis à le frapper, à ce qu’il disait, comme sur un huissier.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="62">Il n’y a que cela... l’empire des gaules !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="63">Ah ! bien oui... cela a joliment réussi... l’âne de mademoiselle Gimard l’a jetée par terre, a pris le mors aux dents, ses autres confrères en ont fait autant... ils s’entendent tous... Au bout de cinq minutes, presque tout le monde était démonté, excepté moi, qui ai pris des leçons de manège... mais qui ne pouvais pas retenir mon coursier... de sorte que je suis arrivé jusqu’ici à bride abattue, avec quatre ânes sans cavalier.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="64">Ah ! ah !... ce pauvre Deschamps !... lui qui déjà n’aime pas trop la campagne... va-t-il être en colère !...</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="65">Et toutes ces dames avec leurs belles toilettes... cela leur apprendra...</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="66">À merveille... nous allons rire...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="67">Eh ! oui, parce que si à la campagne on ne faisait pas de farces... Dites donc, mon oncle... j’en ai une bonne que j’ai préparée... pendant le dîner, je monterai sur un arbre avec une carafe... et je jetterai de l’eau sur tout le monde... ils croiront que c’est la pluie...</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="68">Ah ! ah !... ce luron a-t-il de l’esprit !...</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="69">Oui, pour abimer nos robes... je ne veux pas de ça, moi !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="70">Ne craignez rien... je tâcherai que ça tombe, de préférence, sur monsieur Deschamps, mon bourgeois... je ne l’aime pas, c’est un avare.</l>
+          <stage>&lt;em&gt;Air du vaudeville du Petit Courrier.&lt;/em&gt;</stage>
+          <l n="71">De faim il me laisse mourir.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="72">Oui, mais je crois que mademoiselle Marianne, leur fille, ne te déplaît pas autant.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="73">Mademoiselle Marianne... Ah bien ! par exemple... c’est elle qui sert à table et qui me donne toujours la plus petite part... ça me l’a fait prendre en grippe... aussi je suis content qu’elle quitte la maison, et qu’elle se marie avec monsieur Brémont.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="74">À merveille... en voilà un qui ne songe pas à être amoureux.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, à Gaillardin.</speaker>
+          <l n="75">Tant pis... tant pis... car la fille de mon ami Deschamps lui aurait joliment convenu... savez-vous que ce petit gaillard-là aura un jour soixante mille francs ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="76">Il est bien heureux !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, regardant du côté de l’avenue.</speaker>
+          <l n="77">Eh ! les voilà, les voilà !</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="78">Oui, voilà le reste de la société, tant infanterie que cavalerie... je cours leur tenir l’étrier.</l>
+          <stage>&lt;em&gt;Il sort avec Prosper.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#monsieur-gimard">
+          <speaker>MONSIEUR GIMARD, à sa femme qui rit.</speaker>
+          <l n="79">Oui, riez, riez, madame Gimard : avec tout cela, cet âne a manqué de me noyer.</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET, à son frère.</speaker>
+          <stage>&lt;em&gt;Air : Tenez, moi, je suis un bon homme. (Ida.)&lt;/em&gt;</stage>
+          <l n="80">Dieu ! quelle grotesque ligure !</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="81">À cheval, que ne l’ai-je vu !</l>
+        </sp>
+        <sp who="#monsieur-gimard">
+          <speaker>GIMARD.</speaker>
+          <l n="82">Afin de boire, ma monture</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, bas à sa sœur.</speaker>
+          <l n="83">C’est qu’en buvant dans la fontaine,</l>
+        </sp>
+        <sp who="#mademoiselle-mimi">
+          <speaker>MIMI.</speaker>
+          <l n="84">Maman, quand donc qu’on commencera à s’amuser ?</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD.</speaker>
+          <l n="85">Taisez-vous, ma fille.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, apercevant Deschamps et sa femme.</speaker>
+          <l n="86">Eh ! le voilà, ce cher Deschamps ; arrive donc, lambin !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="87">Eh bien ! vous trouvez ça amusant, vous autres... être jeté à terre par un âne... être rôti par le soleil, s’exténuer de fatigue... pour faire un mauvais dîner ! enfin c’est égal.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="88">Un mauvais dîner !... un repas délicieux.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="89">Au grand air, et avec cette grande vue...</l>
+        </sp>
+        <sp who="#monsieur-griffon">
+          <speaker>GRIFFON.</speaker>
+          <l n="90">Mollement étendu, sur la pelouse...</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="91">Certainement, c’est fort agréable ; mais il me semble qu’assis sur une bonne chaise, dans une salle à manger, on dîne tout aussi bien.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="92">Non, mon cher, vous ne savez ce que vous dites.</l>
+          <stage>&lt;em&gt;Air de Oui et Non.&lt;/em&gt;</stage>
+          <l n="93">Vous qui chérissez les bons mets,</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="94">C’est toujours plus cher qu’on ne pense.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, à la cantonade.</speaker>
+          <l n="95">C’est bien ! pendant que les quadrupèdes s’occupent de leur dîner, songeons au nôtre... Défaites les paniers de provisions ; car il faut que je remplisse toutes les fonctions à la fois, maintenant que je suis le pourvoyeur, le maître d’hôtel de ces dames... tout à l’heure, j’étais leur écuyer, et je ne m’en plains pas... Voilà ce que c’est que l’équitation... j’ai vu une jolie jambe.</l>
+          <stage>&lt;em&gt;En ce moment, les acteurs doivent être en scène dans l’ordre suivant, le premier à gauche du spectateur : Dussausset, Marianne, Brémont, mademoiselle Dussausset, Griffon, Gaillardin, Deschamps, madame Deschamps, monsieur Gimard, madame Gimard, Mimi.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#les-dames">
+          <speaker>LES DAMES.</speaker>
+          <l n="96">Comment ! monsieur ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="97">Je ne dirai pas qui... je ne veux pas dire qui...</l>
+          <stage>&lt;em&gt;Bas à Deschamps.&lt;/em&gt;</stage>
+          <l n="98">elles croiront toutes que c’est la leur.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS, bas à Gaillardin.</speaker>
+          <l n="99">Vraiment ! est-ce qu’elle était jolie ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, de même.</speaker>
+          <l n="100">Au contraire... c’était une grosse.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS, à part.</speaker>
+          <l n="101">Si c’était celle de ma femme...</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="102">Ah çà ! mes chers amis, nous voici enfin tous réunis, ce n’est pas sans peine... mais quels plaisirs nous promet une si aimable partie !... lorsque tous, amis et voisins, on n’a qu’une seule idée, qu’un seul désir ; lorsqu’on est tous du même accord, du même avis... celui d’être heureux et de s’amuser.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="103">Oh ! c’est bien vrai, c’est charmant.</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="104">Ah bien oui !...</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, à part.</speaker>
+          <stage>Encore son &lt;em&gt;Ah bien oui !&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="105">Mais d’abord, où allons-nous dîner ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="106">Il me semble, sans me vanter, que le local est assez bien choisi, et que celte pelouse qui s’étend au pied de cet arbre...</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD.</speaker>
+          <l n="107">Fi ! l’horreur... c’est le plus vilain du bois ; c’est trop sombre... tandis que là-bas, du côté de Fleury-sous-Meudon, nous serons bien mieux.</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="108">Oui, l’endroit le plus passager ; pour que tout le monde nous voie !</l>
+          <stage>&lt;em&gt;Air : Sur tout ce que je vous dirai.&lt;/em&gt;</stage>
+          <l n="109">Moi qui, ce matin, n’ai point fait</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD.</speaker>
+          <l n="110">Et pour mainte raison connue,</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="111">Qu’est-ce que c’est, madame ?... Que voulez-vous dire par là ?</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="112">Eh bien ! pour tout terminer, dînons près de la fontaine.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="113">Du tout... c’est trop humide... et mon rhumatisme !</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET, d’un air piqué.</speaker>
+          <l n="114">Certainement, je n’y dînerais pas pour tout au monde... j’y ai perdu une robe toute neuve l’année dernière.</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD, à part.</speaker>
+          <l n="115">Je ne peux pas souffrir celte femme-là... elle n’est jamais de l’avis de personne... Pourquoi l’a-t-on invitée ?</l>
+        </sp>
+        <sp who="#les-messieurs">
+          <speaker>LES MESSIEURS.</speaker>
+          <l n="116">Et moi, mesdames, pour vous mettre d’accord, je pense...</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="117">C’est cela... tout le monde à la fois.</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <stage>&lt;em&gt;Air : J’étouffe de colère. (La Neige, Vaudeville.)&lt;/em&gt;</stage>
+          <l n="118">Ah ! c’est insupportable,</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, aux dames.</speaker>
+          <l n="119">Pour un dîner fâcheux auspice !</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="120">C’est cela... à la bonne heure !</l>
+          <stage>Il faut de la justice, &lt;em&gt;(Bis.)&lt;/em&gt;&lt;br&gt;</stage>
+          <stage>&lt;em&gt;Ils sortent de différents côtés ; Brémont reste seul sur la scène.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="121">L’aimable partie ! et quel touchant accord règne dans cette réunion de voisins et d’amis !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, portant un panier.</speaker>
+          <l n="122">Mettons toujours là ce panier.</l>
+          <stage>&lt;em&gt;Il le dépose auprès de l’arbre.&lt;/em&gt;</stage>
+          <l n="123">C’est celui des couteaux et des serviettes... Tiens, il n’y a plus personne... excepté monsieur Brémont, le futur... Où sont-ils donc allés ?</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="124">On s’est disputé sur le choix d’une salle à manger... et dans ce moment, on parcourt le bois, afin de trouver pour dîner un endroit qui convienne à tout le monde.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="125">Puisque nous voilà seuls... je n’en suis pas fâché... parce que je veux vous consulter sur une surprise que je veux faire à tout le monde, et à vous aussi... Vous savez bien qu’au dessert... il y a toujours des chansons... eh bien ! à cause de la cérémonie de demain, j’en ai fait une sur votre mariage.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="126">Sur mon mariage !... je vous suis bien obligé.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="127">Oui, monsieur ; la voilà... Mais vous qui vous y connaissez... je vous prie de me dire si les vers y sont... parce que c’est si difficile dans notre état !</l>
+          <stage>&lt;em&gt;Air de Préville et Taconnet.&lt;/em&gt;</stage>
+          <l n="128">On n’ peut trouver la mesure, et pour cause,</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, après avoir lu.</speaker>
+          <l n="129">C’est très bien... il y a une fraîcheur dans les idées...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="130">Oui ; vous dites cela à cause de la comparaison de la rose... et celui-ci... c’est un peu gaillard... et ça fera rire ces dames... c’est ce qu’il faut à la campagne.</l>
+          <stage>&lt;em&gt;Il lit sur son papier.&lt;/em&gt;</stage>
+          <l n="131">Du destin qui va vous lier</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="132">À la rigueur, ce dernier vers-là serait peut-être un peu long... mais à la campagne !...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <stage>Ah diable ! c’est vrai... « Heureux et prospère. » Eh bien ! en ôtant l’&lt;em&gt;et&lt;/em&gt;...</stage>
+          <stage>Pour moi quel sort heureux (&lt;em&gt;virgule&lt;/em&gt;), prospère !</stage>
+          <l n="133">Un point d’admiration.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="134">À merveille...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="135">Et s’il peut maintenant me laisser tranquille...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="136">Il n’y a plus qu’une difficulté ; c’est qu’il faut les chanter, et je n’ai pas de voix.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="137">J’en suis désolé... Mais si vous comptez sur moi...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="138">Ce n’est pas ça. J’ai pensé à une chose ; je vais glisser mes couplets dans la serviette de mademoiselle Marianne, qui chante, comme une fauvette... et puis, quand elle les déploiera, vous ferez l’étonné et vous direz : « Des couplets ! qu’est-ce que ça signifie ? Il faut que ma femme les chante... » Vous comprenez.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="139">Oh ! très bien.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, prenant une serviette.</speaker>
+          <l n="140">C’est ça ; voici la sienne... le rouleau vert. Et puis, dites donc, pendant les couplets...</l>
+          <stage>&lt;em&gt;Air du vaudeville de Voltaire chez Ninon.&lt;/em&gt;</stage>
+          <l n="141">Vous les soutiendrez...</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="142">Volontiers.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="143">Vous crierez : « Ah ! c’est admirable !</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="144">Je doute que l’erreur les gagne ;</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="145">Qu’est-ce qu’il parle donc de Champagne ? ce n’est pas de cela qu’il s’agit. Il faut seulement que vous disiez : « Qui donc a fait ces jolis couplets ? » C’est là le bon ; parce qu’on demandera l’auteur... ah ! ah !... et alors nous ferons la farce.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="146">Quelle farce ?</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="147">Je tournerai la tête comme ça ; et puis, vous me montrerez aux autres, par derrière, en criant : « Il rougit... voilà le coupable ! » Ça va joliment nous amuser... Je cours rejoindre les autres.</l>
+          <stage>&lt;em&gt;Il sort en chantant.&lt;/em&gt;</stage>
+          <l n="148">Ah ! si j’étais le marié !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, seul</speaker>
+          <l n="149">Au diable les importuns et les fâcheux !... Jusqu’à monsieur le premier garçon de boutique qui me choisit pour son confident et son compère... Ah ! quelle idée !... si je pouvais... Mon oncle alors n’aurait plus rien à dire, car la rupture ne viendrait pas de moi ; et il me semble, en effet, que monsieur Prosper et mademoiselle Marianne... ça ferait un couple assez bien assorti... Il est vrai qu’aucun d’eux n’y pense ; mais c’est égal.</l>
+          <stage>&lt;em&gt;Air de Julie.&lt;/em&gt;</stage>
+          <l n="150">Un tel projet me ranime et m’enflamme,</l>
+          <l n="151">Ah ! voici la famille.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS, à sa femme.</speaker>
+          <l n="152">Vous le voyez... c’était bien la peine de nous faire courir tous les buissons... J’en ai mon habit déchiré et les mains écorchées... Et de tout cela, qu’en est-il résulté ?... c’est qu’après une heure de recherches et de discussions, on est revenu à la première idée, et qu’on dînera ici.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, à part.</speaker>
+          <l n="153">Allons, commençons.</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="154">Oui, ça ne se passera pas ainsi ; et nous verrons...</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="155">À qui en a-t-il, noire gendre ?</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="156">Ah ! c’est vous, beau-père ?... Oui, morbleu ! nous aurons une explication.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="157">Qu’est-ce donc ? quelque brouille ?... quelque jalousie ?...</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="158">Quelque jalousie !...</l>
+          <stage>&lt;em&gt;À part.&lt;/em&gt;</stage>
+          <l n="159">Justement nous y voilà...</l>
+          <stage>&lt;em&gt;Haut.&lt;/em&gt;</stage>
+          <l n="160">Eh bien ! oui, monsieur... oui, je suis jaloux... c’est la vérité.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="161">Et de qui, mon ami ?... nous n’avons ici que deux jeunes gens : monsieur Griffon, qui s’occupe de tout le monde ; et Prosper, mon premier garçon, qui ne s’occupe de rien.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="162">Prosper !... Eh bien ! précisément c’est lui-même.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="163">Comment ! il se pourrait !</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, parlant très haut.</speaker>
+          <l n="164">Oui, madame, il est amoureux de mademoiselle Marianne... de votre fille.</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="165">De moi !... Eh bien ! par exemple ! en voilà la première nouvelle... est-ce drôle !</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="166">Taisez-vous, ma fille...</l>
+          <stage>&lt;em&gt;À Brémont&lt;/em&gt;</stage>
+          <l n="167">Non, mon gendre, cela n’est pas possible.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="168">Cela n’est pas possible !... apprenez que je l’ai vu chercher toutes les occasions de parler à votre fille, et ne pouvant y réussir, il a glissé dans sa serviette un billet doux... vous pouvez vous en convaincre.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS, va au panier, prend la serviette et y trouve le billet.</speaker>
+          <l n="169">Ah ! mon Dieu !... c’est vrai.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="170">Eh bien ! madame, je vous le disais... vous voyez à quoi servent ces parties de campagne, ces dîners sur l’herbe... cela fournit des occasions à des jeunes gens qui, sans cela, n’y penseraient pas.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS, ouvrant le billet.</speaker>
+          <l n="171">Eh ! mais... ce sont des couplets.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="172">Raison de plus... déclaration indirecte et détournée... il y parle avec colère de mon mariage... voyez seulement les deux derniers vers... il n’est pas besoin d’autres preuves.</l>
+          <l n="173">« Ah ! si j’étais le marié !</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="174">Prosper !... c’est ma foi vrai... il y a mis son nom !</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="175">C’est juste... je n’y pensais pas... il l’a signé.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="176">Il faut convenir, madame Deschamps, que ces couplets sont d’une force...</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="177">Et vous ne voulez pas que je suppose quelque intelligence...</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="178">Quelque intelligence... je vous atteste, mon ami, que Marianne n’en a pas, et qu’elle n’en a jamais eu... c’est ma fille, je la connais.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="179">Oui, mon gendre... on ne négligera rien pour assurer votre tranquillité.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="180">Certainement... un gendre qui a mis soixante mille francs dans mon commerce ne mérite pas d’être...</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="181">Taisez-vous donc, monsieur... voici tout le monde.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <stage>&lt;em&gt;Air : Viens, cher Nadir.&lt;/em&gt;</stage>
+          <stage>Ah ! quel tourment ! &lt;em&gt;(Bis.)&lt;/em&gt;&lt;br&gt;</stage>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="182">Je l’avais bien dit... la victoire est à moi ; et la preuve, c’est que voilà les ennemis qui sont restés sur la place... Ah çà ! mes amis, il ne s’agit plus de délibérer... il faut ici des actions, et non pas du dialogue... Messieurs... habits bas... mesdames, ne vous effrayez pas... Messieurs, qui m’aime me suive, pendant que ces dames vont mettre le couvert.</l>
+          <stage>&lt;em&gt;Il sort avec Gimard et Griffon. Pendant ce temps tous les hommes quittent leurs habits et les accrochent aux branches des arbres ; les dames se débarrassent de leurs chapeaux et s’occupent de mettre le couvert sur la pelouse.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#toutes-les-dames">
+          <speaker>TOUTES LES DAMES.</speaker>
+          <l n="183">Oui, oui, cela nous regarde.</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD.</speaker>
+          <l n="184">Donnez-moi les assiettes.</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="185">Et moi, les serviettes.</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS, cherchant dans un panier.</speaker>
+          <l n="186">Ah ! mon Dieu !... et mon argenterie ! je ne la vois pas... mes couverts neufs !...</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="187">Mais, maman...</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="188">Taisez-vous, mademoiselle, je suis sûre de l’avoir emballée... puisque c’étaient mes couverts neufs.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="189">Nos couverts à filets ?... Là !... ça vous apprendra... comme si de l’argenterie de ménage était faite pour voyager !</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, à part.</speaker>
+          <l n="190">Allons, achevons notre ouvrage...</l>
+          <stage>&lt;em&gt;Arrêtant Dussausset qui va sortir.&lt;/em&gt;</stage>
+          <l n="191">Monsieur... avant le dîner, j’aurais deux mots à vous dire au sujet de monsieur Prosper, votre neveu.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, étonné.</speaker>
+          <l n="192">De mon neveu !... qu’est-ce que ça peut être ?...</l>
+          <stage>&lt;em&gt;À Brémont.&lt;/em&gt;</stage>
+          <l n="193">Monsieur, je suis à vos ordres.</l>
+          <stage>&lt;em&gt;Ils sortent par la première coulisse à droite.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS, qui a fouillé dans le panier.</speaker>
+          <l n="194">Les voilà... les voilà, mes six couverts, on les avait mêlés avec ceux de madame Gimard.</l>
+          <stage>&lt;em&gt;À monsieur Deschamps qui la regarde les bras croisés.&lt;/em&gt;</stage>
+          <l n="195">Mais allez donc, monsieur, vous ne faites rien... ce n’était pas la peine d’ôter votre habit.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#les-mêmes">
+          <speaker>LES MÊMES, GAILLARDIN, revenant</speaker>
+          <stage>&lt;em&gt;Gaillardin porte deux plats à la main, un grand pain long sous un bras, une bouteille sous l’autre, et trois couronnes de pain sur la tête.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, en chantant.</speaker>
+          <l n="196">Il est trop dangereux de glisser...</l>
+          <stage>&lt;em&gt;Se retournant, et criant.&lt;/em&gt;</stage>
+          <l n="197">Veux-tu bien lâcher, maudit animal !</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="198">Qu’est-ce donc ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="199">Cet imbécile d’âne qui prend mon chapeau de paille pour une botte de foin... ah ! ah ! ah !</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="200">Ah ! ah ! ah ! pour une botte de foin !...</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD.</speaker>
+          <l n="201">Oh ! oh ! si Gaillardin se met une fois à dire des bêtises, nous allons rire.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="202">Après ça, il faut bien que tout le monde vive... À qui la daube ?</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="203">À moi... là, au milieu.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="204">Comment ! au milieu !... où mettra-t-on la soupe ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="205">Tiens, la soupe ?... Est-ce qu’il y en a jamais dans un dîner sur l’herbe !</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="206">Pas de soupe !... eh bien ! par exemple ! comment donc ferai-je pour prendre ma rhubarbe ?</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="207">Vous la prendrez demain.</l>
+        </sp>
+        <sp who="#monsieur-gimard">
+          <speaker>GIMARD et GRIFFON, rentrant et portant un grand panier.</speaker>
+          <l n="208">Venez donc à notre aide.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="209">C’est juste, c’est juste... Dieu I ce pauvre monsieur Gimard est-il chargé !... c’est le grand panier aux comestibles... toute la boutique de madame Chevet.</l>
+          <stage>&lt;em&gt;Le panier est placé sur le devant du théâtre ; Gaillardin en tire les divers mets qu’il remet à Deschamps, qui les fait passer.&lt;/em&gt;</stage>
+          <l n="210">D’abord, le vrai gigot à la braise...</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="211">C’est encore nous qui l’avons apporté...</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD.</speaker>
+          <l n="212">Tiens ! j’en ai un aussi.</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="213">Et nous aussi...</l>
+        </sp>
+        <sp who="#monsieur-griffon">
+          <speaker>GRIFFON.</speaker>
+          <l n="214">Trois gigots !</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="215">La ! voilà ce que c’est que de ne pas s’entendre ! on était convenu d’écrire le menu de chacun.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="216">Il paraît qu’on s’est entendu pour apporter des gigots... oh ! oh ! oh !</l>
+        </sp>
+        <sp who="#mademoiselle-mimi">
+          <speaker>MIMI.</speaker>
+          <l n="217">Ah çà ! et vous, monsieur Gaillardin... qu’est-ce donc que vous avez apporté ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="218">Moi... je ne sais plus... c’est mêlé, c’est confondu, une fois que c’est sur la table... on ne reconnaît plus...</l>
+          <stage>&lt;em&gt;Brémont et monsieur Dussausset, rentrent ensemble en causant.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="219">Que m’avez-vous appris !... mademoiselle Marianne l’aimerait !... ce petit Prosper !... mon neveu !... voyez-vous le gaillard... mais je vais lui parler d’importance.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="220">Un instant... un instant, ne commencez pas sans moi... j’apporte le dessert... des fraises de bois que j’ai cueillies, et dont je fais hommage à la mariée. Dites donc, mesdames, dites donc, ma tante, écoutez celui-là.</l>
+          <stage>&lt;em&gt;Air des Fraises.&lt;/em&gt;</stage>
+          <l n="221">L’époux qu’ici nous voyons</l>
+          <l n="222">Voilà... Tenez, mademoiselle Marianne.</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, baissant les yeux.</speaker>
+          <l n="223">Monsieur... je ne sais... si je dois accepter...</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, étonné.</speaker>
+          <l n="224">Hein !... qu’est-ce qu’elle a donc ?</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, à Deschamps.</speaker>
+          <l n="225">Vous le voyez, beau-père, des fraises, c’est trop fort !... il va y avoir une scène.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="226">Du calme, mon ami.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, à Brémont.</speaker>
+          <l n="227">Oui, jeune homme... je vais lui parler.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, à Brémont, Deschamps et Dussausset, qui sont sur le devant du théâtre.</speaker>
+          <l n="228">Eh bien ! messieurs, qu’est-ce que vous faites donc là-bas à causer... au lieu de venir nous aider ?... Monsieur Deschamps, venez ici... voilà une place pour vous.</l>
+          <stage>&lt;em&gt;Au fond du théâtre, autour du grand châtaignier, on a placé des paniers, d’autres ont étendu leurs mouchoirs à terre. On dispose tout pour s’asseoir.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, à Prosper qui est déjà assis.</speaker>
+          <l n="229">Venez ici, monsieur, j’ai à vous parler.</l>
+          <stage>&lt;em&gt;Il le mène à l’autre bout du théâtre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, le regardant.</speaker>
+          <l n="230">Ce pauvre garçon !</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET, bas, à Prosper.</speaker>
+          <l n="231">Il faut, pour la tranquillité publique, que vous partiez à l’instant.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="232">Partir dans ce moment ! avec une faim aussi conditionnée !</l>
+          <stage>&lt;em&gt;Regardant du côté du dîner.&lt;/em&gt;</stage>
+          <l n="233">surtout quand il y a là... de si bonnes choses !</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, à part.</speaker>
+          <l n="234">Quel regard il a jeté de mon côté !</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="235">Apprenez donc que, si vous restez, le mariage de monsieur Brémont va manquer... parce que mademoiselle Marianne... vous adore.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="236">Laissez donc... pas possible !</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="237">Elle l’a avoué à ses parents... à son prétendu... c’est lui-même qui vient de me le dire... ainsi il n’y a pas de doute.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="238">Cette pauvre petite !... moi qui ce matin en disais du mal... Eh bien ! je ne m’en étais jamais aperçu.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="239">C’est égal... tu n’en dois pas moins, par délicatesse, t’éloigner sur-le-champ... Tiens, voilà de quoi aller dîner à l’auberge.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="240">Oui, mon oncle... puisque vous le voulez... Est-ce étonnant d’être aimé à ce point-là ?... sans le savoir ! C’est la première fois que ça m’arrive... je n’y pensais pas du tout... eh bien ! ça produit un effet qu’on ne peut pas rendre... Adieu, mon oncle... adieu, mademoiselle Marianne.</l>
+          <stage>&lt;em&gt;Il sort.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, à part.</speaker>
+          <l n="241">A-t-il un air malheureux !...</l>
+          <stage>&lt;em&gt;Pendant ce temps, tout le monde s’est assis en cercle. On coupe le pain ; on débouche les bouteilles.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, coupant le pâté.</speaker>
+          <l n="242">Eh bien !... eh bien !... où va donc Prosper ?</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="243">C’est une commission que je lui ai donnée... il va revenir.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="244">Ah çà ! j’espère que maintenant rien ne troublera plus notre dîner... Nous y voilà donc, ce n’est pas sans peine.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="245">Oui, messieurs, procédons par ordre, et ne nous pressons pas, la table n’est pas louée !... Eh ! eh ! eh !...</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS, se donnant un coup de poing sur le front.</speaker>
+          <l n="246">Coquins de cousins !... et un autre encore sur la jambe !... je suis sûr que j’en aurai des cloches...</l>
+          <stage>&lt;em&gt;Regardant en l’air.&lt;/em&gt;</stage>
+          <l n="247">Ah ! en voilà-t-il !... en voilà-t-il !...</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS, regardant de même.</speaker>
+          <l n="248">Dieux ! comme en voilà !</l>
+        </sp>
+        <sp who="#mademoiselle-dussausset">
+          <speaker>MADEMOISELLE DUSSAUSSET.</speaker>
+          <l n="249">Nous allons en être dévorés.</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD.</speaker>
+          <l n="250">C’est signe de pluie.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="251">Laissez donc ! j’ai consulté mon baromètre ce matin, il est au beau fixe.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="252">Je sens une goutte.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="253">Pas possible !</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="254">C’est peut-être mon neveu qui est revenu pour exécuter sa plaisanterie de la carafe.</l>
+          <stage>&lt;em&gt;Regardant en l’air.&lt;/em&gt;</stage>
+          <l n="255">Non, ma foi, ça tombe réellement.</l>
+          <stage>&lt;em&gt;Air : Jenny, qu’importe cet orage. (Le Roi et le Fermier.)&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="256">Allons !... il manquait un orage.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, riant.</speaker>
+          <l n="257">Ce nuage</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS et DUSSAUSSET.</speaker>
+          <l n="258">Ça commence, ah ! nous voilà bien !</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="259">Restez donc... ça ne sera rien.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="260">Comment ! un peu d’eau vous fait peur ?</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="261">Mais entendez-vous le tonnerre ?</l>
+        </sp>
+        <sp who="#madame-gimard">
+          <speaker>MADAME GIMARD, effrayée.</speaker>
+          <l n="262">Le tonnerre !... grand Dieu ! ma chère ;</l>
+          <stage>&lt;em&gt;La pluie augmente. Demi-jour.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS, parlant.</speaker>
+          <l n="263">Les grands arbres, on dit que cela l’attire... s’il allait tomber ici pour le bouquet...</l>
+          <stage>&lt;em&gt;Grand coup de tonnerre. Tout le monde jette un cri et se sauve en désordre de différents côtés, pendant que l’orchestre joue quelques mesures de l’orage du Roi et le Fermier.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS, se sauvant.</speaker>
+          <l n="264">Sauvons-nous !</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="265">Ma femme !</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="266">Monsieur Deschamps !</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="267">Par ici.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="268">Où allez-vous donc ?</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, reprenant son chapeau et sortant la dernière.</speaker>
+          <l n="269">Maman... maman, attends-moi donc.</l>
+          <stage>&lt;em&gt;Ils disparaissent.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#prosper">
+          <speaker>PROSPER, seul, arrivant du côté opposé, avec un grand parapluie</speaker>
+          <l n="270">Eh bien ! eh bien ! où sont-ils donc ?... Moi qui, à la première goutte de pluie, ai couru de toutes mes forces pour venir à leur secours... je n’en ai pas achevé mon dîner... il est vrai que je n’y étais guère disposé... c’est drôle, moi qui avais une si belle faim... Ce que mon oncle m’a dit tout à l’heure m’a coupé l’appétit... ça donne des idées... des idées... qui font tout oublier... Eh ! oui, parbleu !... car je suis là à l’averse... avec un parapluie sous le bras.</l>
+          <stage>&lt;em&gt;L’ouvrant.&lt;/em&gt;</stage>
+          <l n="271">C’est tout de même bien à la maîtresse de l’auberge de me l’avoir prêté sans me connaître... vous direz à ça, le physique est là qui sert de répondant.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="272">Maman... maman !... Je ne sais plus de quel côté ils ont pris.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="273">Ah ! mon Dieu ! c’est mam’selle Marianne !</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="274">Monsieur Prosper !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="275">Que c’est heureux !... venez donc là... il y a place pour deux.</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="276">Je vous remercie, monsieur Prosper... c’est seulement pour laisser passer l’orage.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="277">Comme vous êtes déjà mouillée !</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="278">Et vous donc !... vous allez vous enrhumer.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="279">Oh ! un rhume est bientôt passé !... et il y a des choses qui durent plus longtemps... mais vous n’êtes pas là assez à couvert... approchez-vous donc.</l>
+          <stage>&lt;em&gt;Ils s’avancent tous les deux ensemble au bord du théâtre, et restent immobiles, couverts par le parapluie.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, se serrant contre lui.</speaker>
+          <l n="280">Ah ! comme ça tombe... ils seront joliment trempés.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="281">Ils ne seront pas si bien que nous... l’un près de l’autre... Tenez, c’est drôle... ça fait juste Paul et Virginie avec un parapluie.</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="282">Paul et Virginie !... eh mais ! j’y pense, monsieur Prosper... je ne devrais pas rester seule avec vous... après ce qu’on m’a dit.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, très ému.</speaker>
+          <l n="283">Et qu’est-ce qu’on vous a dit ?</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="284">Ah ! mon Dieu ! comme vous tremblez !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="285">Ce n’est pas de froid, mademoiselle Marianne.</l>
+          <stage>&lt;em&gt;Air : Avec vous sous le même toit. (Fanchon la vielleuse.)&lt;/em&gt;</stage>
+          <l n="286">Avec vous, sous le même toit,</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, à part.</speaker>
+          <l n="287">Ah ! mon Dieu ! quel regard, et comme il m’a serré la main !</l>
+          <stage>&lt;em&gt;Air : Trio du Calife de Bagdad.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="288">Je n’y tiens plus ; ô trouble extrême !</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="289">Ah ! je sens là battre mon cœur !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="290">Oui, je sens là battre mon cœur</l>
+          <stage>&lt;em&gt;Ils se retirent vers la gauche du théâtre, et parlent bas, pendant que tout le monde arrive.&lt;/em&gt;</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN, étendant la main.</speaker>
+          <stage>&lt;em&gt;Suite du trio.&lt;/em&gt;</stage>
+          <l n="291">Je l’ai dit : l’averse est finie.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="292">Pas tout à fait ; car dans ces lieux</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="293">Ils n’entendent rien ; je parie</l>
+          <stage>&lt;em&gt;Tout le monde entre.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER, à Marianne.</speaker>
+          <l n="294">Ô doux langage !</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="295">Sans le savoir, le cœur s’engage.</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="296">Et l’hymen auquel vous cédez ?</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="297">C’est malgré moi.</l>
+          <stage>&lt;em&gt;Le jour reparaît.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, à haute voix, à monsieur Deschamps.</speaker>
+          <l n="298">Vous l’entendez.</l>
+          <stage>&lt;em&gt;Ensemble.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>MONSIEUR DESCHAMPS et MADAME DESCHAMPS.</speaker>
+          <l n="299">Qu’entends-je ! ô ciel ! quoi, c’est ma fille !</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, à part.</speaker>
+          <l n="300">Quel doux espoir à mes yeux brille !</l>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="301">On écoutait, c’est sa famille.</l>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE.</speaker>
+          <l n="302">On écoutait, c’est ma famille.</l>
+        </sp>
+        <sp who="#tous-les-autres">
+          <speaker>TOUS LES AUTRES.</speaker>
+          <l n="303">Qu’entends-je, ô ciel ! quoi, c’est sa fille !</l>
+          <stage>&lt;em&gt;À la fin de ce morceau les acteurs prennent leur place dans l’ordre suivant, le premier a la gauche du spectateur : Prosper, Dussausset, madame Deschamps, Marianne, Deschamps, Gaillardin, Brémont, mademoiselle Dussausset et Griffon, Mimi, monsieur et madame Gimard.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT, bas à Gaillardin.</speaker>
+          <l n="304">Voici l’occasion que je désirais.</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="305">Je vous comprends.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>MONSIEUR DESCHAMPS et MADAME DESCHAMPS, aux deux jeunes gens.</speaker>
+          <l n="306">Est-ce là les exemples que je vous ai donnés ?</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="307">Arrêtez !... à quoi bon ces déclamations paternelles et intempestives ?... prétendu trahi, père et mère offensés, épargnez-vous des tirades inutiles... le mal est fait... chez moi comme chez vous, le premier moment a été à la surprise... le second à l’indignation... le troisième à la réflexion... je me suis dit : « Ces jeunes gens s’aiment, ils s’adorent... c’est une passion secrète qui est maintenant de notoriété publique... il n’y a donc qu’un parti à prendre, c’est de les unir. »</l>
+          <stage>&lt;em&gt;À Brémont qui fait un geste.&lt;/em&gt;</stage>
+          <l n="308">Je vous entends, monsieur Brémont... il en coûte à votre cœur ; mais tous êtes trop généreux pour vous opposer au bonheur de ces amants... il y a un rival préféré, et la véritable délicatesse consiste à céder la place, quand on ne peut pas faire autrement.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="309">Mais...</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="310">Je vous comprends, monsieur Deschamps... monsieur Brémont vous apportait soixante mille francs ; monsieur Prosper en a autant... son oncle me le disait ce matin, et il ne demande qu’à l’établir.</l>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="311">C’est vrai... je ne m’en dédis pas.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="312">À la bonne heure !... mais où dînerons-nous maintenant ?</l>
+        </sp>
+        <sp who="#tous">
+          <speaker>TOUS.</speaker>
+          <l n="313">Oui... où dînerons-nous ?</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="314">À la première auberge.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="315">Comme c’est agréable !... vivent les dîners sur l’herbe !</l>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="316">Nous nous en dédommagerons, car je vois deux noces en perspective... celle de Prosper...</l>
+          <stage>&lt;em&gt;À mademoiselle Dussausset.&lt;/em&gt;</stage>
+          <l n="317">et la nôtre, n’est-il pas vrai ?</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="318">Oui, mes amis... et pour vous prouver que je n’ai point de rancune, je donne, dans quinze jours, un grand dîner, où j’invite toute la société.</l>
+          <stage>&lt;em&gt;Tout le monde salue en acceptant.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="319">Si c’est ici, je n’en suis pas.</l>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="320">Au Palais-Royal, chez Beauvilliers.</l>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="321">À la bonne heure... non pas que je n’aie aussi des goûts champêtres et des idées pastorales ; mais mon avis est qu’il faut se promener à la campagne et dîner à Paris.</l>
+          <stage>&lt;em&gt;Vaudeville.&lt;/em&gt;</stage>
+          <stage>&lt;em&gt;Air : Bon voyage, cher Dumolet. (Le Départ pour Saint-Malo.)&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-deschamps">
+          <speaker>DESCHAMPS.</speaker>
+          <l n="322">Oui, l’on trouve à la campagne</l>
+        </sp>
+        <sp who="#madame-deschamps">
+          <speaker>MADAME DESCHAMPS.</speaker>
+          <l n="323">On dîne ici sur la gerbe ;</l>
+          <stage>C’est à Paris, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#brémont">
+          <speaker>BRÉMONT.</speaker>
+          <l n="324">Rose d’amour, fleur nouvelle,</l>
+          <stage>C’est à Paris, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#madame-g1mard">
+          <speaker>MADAME G1MARD.</speaker>
+          <l n="325">Je crois qu’aux champs mainte femme</l>
+          <stage>C’est à Paris, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#prosper">
+          <speaker>PROSPER.</speaker>
+          <l n="326">En province on est sordide,</l>
+          <stage>C’est à Paris, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#monsieur-dussausset">
+          <speaker>DUSSAUSSET.</speaker>
+          <l n="327">Sur la place d’un village,</l>
+          <stage>C’est à Paris, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#gallardin">
+          <speaker>GAILLARDIN.</speaker>
+          <l n="328">L’herbe ici remplit les hottes,</l>
+          <stage>C’est à Paris, &lt;em&gt;etc.&lt;/em&gt;</stage>
+        </sp>
+        <sp who="#marianne">
+          <speaker>MARIANNE, au public.</speaker>
+          <l n="329">Gourmets d’un goût trop sévère</l>
+          <l n="330" />
+        </sp>
       </div>
     </body>
   </text>
