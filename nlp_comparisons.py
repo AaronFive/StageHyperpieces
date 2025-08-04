@@ -1,4 +1,6 @@
 import itertools
+import json
+import math
 import os
 import pickle
 import random
@@ -8,15 +10,16 @@ from collections import defaultdict
 from heapq import nlargest
 
 import matplotlib.pyplot as plt
+import networkx as nx
 import numpy as np
 import pandas as pd
 import torch
 import torch.nn.functional as F
+from matplotlib.lines import Line2D
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from transformers import BertTokenizer
 
-from basic_utilities import pickle_file, OUTPUT_DIR
+from basic_utilities import pickle_file, OUTPUT_DIR, PICKLE_DIR
 from pickled_data import get_full_text_corpus
 from play_parsing import get_play_from_file, get_dracor_id, get_title, get_full_text
 
@@ -29,11 +32,12 @@ from play_parsing import get_play_from_file, get_dracor_id, get_title, get_full_
 # tokenizer = AutoTokenizer.from_pretrained('camembert-base')
 
 
-print('Loading tokenizer')
-tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
-print('Loading model')
+# print('Loading tokenizer')
+# tokenizer = BertTokenizer.from_pretrained('bert-base-multilingual-cased')
+print('Loading model ...')
 # model = BertModel.from_pretrained('bert-base-multilingual-cased')
 sentence_model = SentenceTransformer("dangvantuan/sentence-camembert-base")
+print('Model loaded')
 
 
 def average_embeddings(embeddings, attention_mask):
@@ -83,7 +87,7 @@ def average_embeddings(embeddings, attention_mask):
 #
 #     return parts
 
-
+## JADT work
 def split_into_parts(s):
     delimiters = r'[\|\.\?!]'
     sentences = r'[^\|\.\?!]+'
@@ -211,15 +215,7 @@ def get_chunk_embedding(chunk, model):
     return embedding
 
 
-def vectorize_sentence(sentence):
-    embedding = sentence_model.encode(sentence)
-    return embedding
-
-
-def vectorize_sentence_play(play):
-    vectorized_play = [(locutor, vectorize_sentence(sentence)) for (locutor, sentence) in play]
-    return vectorized_play
-
+# Using tokenized corpus
 
 def vectorize_tokenized_play(tokenized_play):
     """ Computes embeddings for every line of an already tokenized play.
@@ -327,7 +323,7 @@ def vectorize_tokenized_corpus(tokenized_corpus, save_file, save_every=50):
     try:
         with open(save_file, 'rb') as save:
             vectorized_plays = pickle.load(save)
-    except Exception:
+    except:
         vectorized_plays = dict()
     print(len(vectorized_plays))
     for identifier in tokenized_corpus:
@@ -346,64 +342,6 @@ def vectorize_tokenized_corpus(tokenized_corpus, save_file, save_every=50):
     return vectorized_plays
 
 
-def vectorize_sentence_corpus(corpus, save_file, save_every=10):
-    """Computes the embeddings of each play in the corpus, line by line."""
-    try:
-        with open(save_file, 'rb') as save:
-            vectorized_plays = pickle.load(save)
-    except:
-        vectorized_plays = dict()
-    print(len(vectorized_plays))
-    for identifier in corpus:
-        if identifier not in vectorized_plays:
-            play = corpus[identifier]
-            print(f'{len(vectorized_plays) + 1}/{len(corpus)}')
-            vectorized_play_item = vectorize_sentence_play(play)
-            vectorized_plays[identifier] = vectorized_play_item
-            if len(vectorized_plays) % save_every == 0:
-                with open(save_file, 'wb') as save:
-                    pickle.dump(vectorized_plays, save)
-                print(f"Saved at {len(vectorized_plays)} plays")
-    print("Done, saving...")
-    with open(save_file, 'wb') as save:
-        pickle.dump(vectorized_plays, save)
-    return vectorized_plays
-
-
-def compare_vectorized_plays(play1, play2):
-    embeddings1 = [vector for (locutor, vector) in play1]
-    embeddings2 = [vector for (locutor, vector) in play2]
-    distance, alignment = levenshtein_distance_and_alignment(embeddings1, embeddings2)
-    return distance, alignment
-
-
-def compare_vectorized_corpus(vectorized_corpus, cutoff=1000):
-    distances = defaultdict(dict)
-    alignments = defaultdict(dict)
-    iterations = 0
-    for dracor_id1, dracor_id2 in itertools.combinations(vectorized_corpus, 2):
-        print(dracor_id1, dracor_id2)
-        play1, play2 = vectorized_corpus[dracor_id1], vectorized_corpus[dracor_id2]
-        similarity, alignment = compare_vectorized_plays(play1, play2)
-        if similarity == -1:
-            similarity = None
-        else:
-            similarity = similarity / max(len(play1), len(play2))  # Normalizing the similarity
-        distances[dracor_id1][dracor_id2] = similarity
-        distances[dracor_id2][dracor_id1] = similarity
-        alignments[dracor_id1][dracor_id2] = alignment
-        alignments[dracor_id2][dracor_id1] = alignment
-        iterations += 1
-        if iterations > cutoff:
-            break
-    return distances, alignments
-
-
-def compare_sentence_embeddings(embedding1, embedding2):
-    sim = sentence_model.similarity(embedding1, embedding2)
-    return sim.item()
-
-
 def compare_embeddings(embeddings1, embeddings2):
     """Computes the semantic similarity between two vectors, using a cosine similarity
     Args:
@@ -416,6 +354,205 @@ def compare_embeddings(embeddings1, embeddings2):
     return similarity_score.item()
 
 
+## Using sentenceBert (no tokenization)
+
+# def vectorize_sentence(sentence):
+#     embedding = sentence_model.encode(sentence)
+#     return embedding
+
+
+def vectorize_sentence_play(play):
+    locutors, sentences = [l for (l, _) in play], [s for (_, s) in play]
+    vectorized_sentences = sentence_model.encode(sentences)
+    return [(l, v) for (l, v) in zip(locutors, vectorized_sentences)]  # zip(locutors, vectorized_sentences)
+
+
+def vectorize_sentence_corpus(corpus, save_file, save_every=10):
+    """Computes the embeddings of each play in the corpus, line by line, and saves it"""
+    try:
+        with open(save_file, 'rb') as save:
+            vectorized_plays = pickle.load(save)
+    except:
+        vectorized_plays = dict()
+    print(len(vectorized_plays))
+
+    # Computation time measurements
+    total_time = 0
+    computation_times = dict()
+    save_file_time = open(os.path.join(PICKLE_DIR, 'Computation_times_SBERT_Dracor_vectorization.txt'), 'w')
+    for identifier in corpus:
+        if identifier not in vectorized_plays:
+            play = corpus[identifier]
+            print(f'{len(vectorized_plays) + 1}/{len(corpus)}')
+            t_1 = time.time()
+            vectorized_play_item = vectorize_sentence_play(play)
+            time_to_vectorize = time.time() - t_1
+            computation_times[identifier] = time_to_vectorize
+            total_time += time_to_vectorize
+            vectorized_plays[identifier] = vectorized_play_item
+            if len(vectorized_plays) % save_every == 0:
+                with open(save_file, 'wb') as save:
+                    pickle.dump(vectorized_plays, save)
+                save_file_time.write(
+                    f'Average computation time : {total_time / len(vectorized_plays)} \n {json.dumps(computation_times)}')
+                print(
+                    f"Saved at {len(vectorized_plays)} plays, Average computation time : {total_time / len(vectorized_plays)} ")
+    print("Done, saving...")
+    with open(save_file, 'wb') as save:
+        pickle.dump(vectorized_plays, save)
+        save_file_time.write(
+            f'Average computation time : {total_time / len(vectorized_plays)} \n {json.dumps(computation_times)}')
+        print("Average computation time : {total_time / len(vectorized_plays)} ")
+    return vectorized_plays
+
+
+def compare_vectorized_plays(play1, play2, mode='levensthein', normalizing=True, max_distance=None):
+    """ Given two already vectorized plays, computed the alignment and distance of both plays
+    Args:
+        play1(list): The first play
+        play2(list) : The second play
+    Returns:
+        int: The distance between both plays
+        list: The alignment between both plays"""
+    embeddings1 = [vector for (locutor, vector) in play1]
+    embeddings2 = [vector for (locutor, vector) in play2]
+    total_length = len(embeddings1) + len(embeddings2)
+    if mode == 'levensthein':
+        distance, alignment = levenshtein_distance_and_alignment(embeddings1, embeddings2)
+        if normalizing:
+            distance = distance / total_length
+        return distance, alignment
+    elif mode == 'smith-waterman':
+        alignment, score = smith_waterman_with_model(embeddings1, embeddings2, sentence_model, log_gap_cost)
+        return score, alignment
+
+
+def compare_vectorized_corpus(vectorized_corpus, save_file_permutation=None, save_file_dicts=None, save_every=500):
+    """Compute the distance and alignment of all pairs of plays in the corpus,
+    and find the most similar play for each play, for each of the 4 metrics.
+    Saves progress periodically to allow resumption.
+    """
+
+    def create_empty_results():
+        return {}, {}, {}, {}
+
+    if save_file_dicts is None:
+        match_percentages, average_costs, similarities, renaming_weights = create_empty_results()
+        metric_sums = {'match': 0, 'cost': 0, 'similarity': 0, 'renaming': 0}
+        similarity_count = 0
+    else:
+        with open(save_file_dicts, 'rb') as f:
+            match_percentages, average_costs, similarities, renaming_weights, metric_sums = pickle.load(f)
+
+    if save_file_permutation is None:
+        init_iterations = 0
+        all_ids = list(vectorized_corpus.keys())
+        all_pairs = list(itertools.combinations(all_ids, 2))
+        random.shuffle(all_pairs)
+        nb_pairs = len(all_pairs)
+        similarity_count = 0
+    else:
+        with open(save_file_permutation, 'rb') as f:
+            l = pickle.load(f)
+            init_iterations, nb_pairs, all_pairs = l[:3]
+            similarity_count = l[3] if len(l) > 3 else 0
+            if len(l) == 3:
+                metric_sums['similarity'] = 0
+
+    full_texts = get_full_text_corpus()
+
+    for iterations in range(init_iterations, nb_pairs):
+        dracor_id1, dracor_id2 = all_pairs[iterations]
+        if (iterations + 1) % 500 == 0:
+            print(f'{iterations + 1} / {nb_pairs}')
+
+        play1, play2 = vectorized_corpus[dracor_id1], vectorized_corpus[dracor_id2]
+        if play1 and play2:
+            full_text_play_1 = full_texts[dracor_id1]
+            full_text_play_2 = full_texts[dracor_id2]
+
+            similarity, alignment = compare_vectorized_plays(play1, play2, mode='levensthein', normalizing=True)
+            alignment_df = visualize_levenshtein_alignement(alignment, full_text_play_1, full_text_play_2, save=False)
+            match_percentage, average_cost = evaluate_alignment(alignment_df)
+
+            _, _, _, _, renaming_weight = get_character_renaming_from_alignment(full_text_play_1, full_text_play_2, alignment)
+
+            metric_sums['match'] += match_percentage
+            metric_sums['cost'] += average_cost
+            metric_sums['similarity'] += similarity
+            metric_sums['renaming'] += renaming_weight
+            similarity_count += 1
+
+            for id_a, id_b in [(dracor_id1, dracor_id2), (dracor_id2, dracor_id1)]:
+                if match_percentage > match_percentages.get(id_a, (None, -1))[1]:
+                    match_percentages[id_a] = (id_b, match_percentage)
+                if average_cost < average_costs.get(id_a, (None, float('inf')))[1]:
+                    average_costs[id_a] = (id_b, average_cost)
+                if similarity > similarities.get(id_a, (None, -1))[1]:
+                    similarities[id_a] = (id_b, similarity)
+                if renaming_weight > renaming_weights.get(id_a, (None, -1))[1]:
+                    renaming_weights[id_a] = (id_b, renaming_weight)
+
+        if (iterations + 1) % save_every == 0 or (iterations + 1) == nb_pairs:
+            print(f'Saving at {iterations + 1}...')
+            with open(os.path.join('Data', 'Pickled saves', 'Alignments SBERT on Dracor', 'save_permutation.pkl'), 'wb') as f_perm:
+                pickle.dump([iterations + 1, nb_pairs, all_pairs, similarity_count], f_perm)
+
+            with open(os.path.join('Data', 'Pickled saves', 'Alignments SBERT on Dracor', 'save_dicts.pkl'), 'wb') as f_dict:
+                pickle.dump([match_percentages, average_costs, similarities, renaming_weights, metric_sums], f_dict)
+
+            print("Current averages:")
+            print(f"  Match percentage: {metric_sums['match'] / (iterations + 1):.4f}")
+            print(f"  Average cost: {metric_sums['cost'] / (iterations + 1):.4f}")
+            print(f"  Renaming weight: {metric_sums['renaming'] / (iterations + 1):.4f}")
+            print(f"  Similarity: {metric_sums['similarity'] / similarity_count:.4f} (based on {similarity_count} pairs)")
+            print('Saving done')
+
+    return match_percentages, average_costs, similarities, renaming_weights, metric_sums, similarity_count
+
+
+def save_similarity_summary_to_csv(vectorized_corpus, output_csv='similarity_summary.csv'):
+    """
+    Computes similarity metrics across a corpus and saves a CSV summary.
+
+    Args:
+        vectorized_corpus (dict): A dictionary of play_id -> vectorized play.
+        output_csv (str): Output file path.
+    """
+    match_percentages, average_costs, similarities, renaming_weights = compare_vectorized_corpus(vectorized_corpus)
+
+    rows = []
+    all_play_ids = vectorized_corpus.keys()
+
+    for play_id in all_play_ids:
+        row = {
+            'Play Name': play_id,
+            'Best Match (Match %)': match_percentages[play_id][0],
+            'Match %': round(match_percentages[play_id][1], 3) if match_percentages[play_id][1] is not None else None,
+
+            'Best Match (Avg Cost)': average_costs[play_id][0],
+            'Avg Cost': round(average_costs[play_id][1], 3) if average_costs[play_id][1] is not None else None,
+
+            'Best Match (Similarity)': similarities[play_id][0],
+            'Similarity': round(similarities[play_id][1], 3) if similarities[play_id][1] is not None else None,
+
+            'Best Match (Renaming)': renaming_weights[play_id][0],
+            'Renaming Weight': round(renaming_weights[play_id][1], 3) if renaming_weights[play_id][
+                                                                             1] is not None else None,
+        }
+        rows.append(row)
+
+    df = pd.DataFrame(rows)
+    df.to_csv(output_csv, index=False)
+    print(f"Saved similarity summary to {output_csv}")
+
+
+def compare_sentence_embeddings(embedding1, embedding2):
+    """Given two already encoded sentences, computes their similarity"""
+    sim = sentence_model.similarity(embedding1, embedding2)
+    return sim.item()
+
+
 # Result is 0.19828132870063347
 def get_average_distance(vectorized_corpus, n, bins_number=20):
     """Approximate the average distances between two random lines in the corpus and makes a graph of the distribution of distances.
@@ -424,11 +561,13 @@ def get_average_distance(vectorized_corpus, n, bins_number=20):
     Args:
         vectorized_corpus(dict): The corpus of vectorized plays
         n(int): the number of iterations to do to compute the average
+        bins_number(int):number of categories
     Returns:
         float: the average distance"""
     full_text_dict = get_full_text_corpus()
     keys = list(vectorized_corpus.keys())
     avg_similarity = 0
+    avg_of_squares = 0
     bins = [k * 1 / bins_number for k in range(bins_number)]
     values = [0 for _ in range(len(bins))]
     for _ in range(n):
@@ -438,27 +577,39 @@ def get_average_distance(vectorized_corpus, n, bins_number=20):
         random_line1, random_line2 = p1[index1][1], p2[index2][1]
         # TMP : filtre pour garder uniquement des phrases un peu longues
         sentence_1, sentence_2 = full_text_dict[i1][index1][1], full_text_dict[i2][index2][1]
-        if len(sentence_1) > 5 and len(sentence_2) > 5:
+        if len(sentence_1) > 0 and len(sentence_2) > 0:
             sim = compare_sentence_embeddings(random_line1, random_line2)
             sim = max(0, sim)
             if sim > 0.9:
                 print('Ces deux répliques sont similaires :')
                 print(full_text_dict[i1][index1])
                 print(full_text_dict[i2][index2])
-            slot = int((bins_number - 0.001) * sim)
+            slot = int((bins_number - 0.00001) * sim)
             values[slot] += 1
             avg_similarity += sim
-    print(f"Average similarity {avg_similarity / n}")
+            avg_of_squares += sim ** 2
+    avg_similarity = avg_similarity / n
+    avg_of_squares = avg_of_squares / n
+    print(f"Average similarity {avg_similarity}")
+    print(f"Standard dev : {math.sqrt(avg_of_squares - avg_similarity ** 2)}")
     plt.xlim(0, 1.1)
     values_to_plot = values
     plt.bar(bins, values_to_plot, width=0.9 / bins_number, align='edge')
-    plt.xlabel('Similarity Score')
-    plt.ylabel('Number of line pairs')
-    plt.xticks(np.arange(0, 1, step=2 / bins_number))
-    plt.title(f'Approximation of the density probability of similarity between embeddings, n= {n}')
+    plt.xlabel('Similarity Score', fontsize=22)
+    plt.ylabel('Number of line pairs', fontsize=22)
+    plt.xticks(np.arange(0, 1, step=5 / bins_number), fontsize=18)
+    plt.yticks(fontsize=20)
+    plt.title(f'Approximation of the density probability of similarity between embeddings, n= {n}', fontsize=22)
     plt.savefig(os.path.join(OUTPUT_DIR, 'Density probability of similarity score.png'), format='png', dpi=300)
     plt.show()
     return avg_similarity / n
+
+  # plt.title("Distribution of genre by corpus", fontsize=22)
+  #   plt.xlabel("Genre", fontsize=22)
+  #   plt.ylabel("Number of plays", fontsize=20)
+  #   plt.xticks(rotation=45, fontsize=20)
+  #   plt.yticks(fontsize=20)
+  #   plt.legend(title="Corpus", fontsize=18, title_fontsize=20)
 
 
 # There are 4 empty plays
@@ -476,7 +627,7 @@ def remove_empty_plays_from_corpus(vectorized_plays):
     return vectorized_plays_cleaned
 
 
-def similarity_to_levenshtein_cost(similarity, max_cutoff=1.0, min_cutoff=0.0):
+def similarity_to_levenshtein_cost(similarity, max_cutoff=0.65, min_cutoff=0.1):
     """ Transforms a similarity score into a substitution cost, to be used for a levenshtein distance computation.
 
     Uses a piecewise linear interpolation : extreme values before and after the cutoffs, and linear in between """
@@ -489,19 +640,10 @@ def similarity_to_levenshtein_cost(similarity, max_cutoff=1.0, min_cutoff=0.0):
                 max_cutoff - min_cutoff)  # Linear interpolation between min and max cutoff
 
 
-def substitution_cost_levenshtein(embedding1, embedding2, max_cutoff=0.65, min_cutoff=0.1, sentence=True):
-    """ Given two embeddings, compute the substitution cost to transform one into the other"""
-    if sentence:
-        similarity = sentence_model.similarity(embedding1, embedding2).item()
-    else:
-        similarity = compare_embeddings(embedding1, embedding2)
-    cost = similarity_to_levenshtein_cost(similarity, max_cutoff, min_cutoff)
-    return cost
-
-
+# Base GPT
 def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, insertion_cost=(lambda x: 1),
                                        deletion_cost=(lambda x: 1),
-                                       substitution_cost=substitution_cost_levenshtein):
+                                       substitution_cost=similarity_to_levenshtein_cost):
     """
     Computes the Levenshtein distance and alignment between two iterables.
 
@@ -519,6 +661,12 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, inserti
     len1, len2 = len(seq1), len(seq2)
     dist = [[0] * (len2 + 1) for _ in range(len1 + 1)]
 
+    # Precompute all distances
+    all_similarities = list(
+        sentence_model.similarity(seq1, seq2))  # Compute all pairs of similarities for all embeddings
+    all_similarities = [[substitution_cost(cost.item()) for cost in lines] for lines in
+                        all_similarities]  # Convert them to a substitution cost
+
     # Fill the base cases for deletions/insertions
     for i in range(1, len1 + 1):
         dist[i][0] = dist[i - 1][
@@ -526,32 +674,28 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, inserti
     for j in range(1, len2 + 1):
         dist[0][j] = dist[0][j - 1] + 1  # insertion_cost(seq2[j - 1])
 
-    print('computing distance...')
+    # print('computing distance...')
     total_time = 0
     # Compute distances
     for i in range(1, len1 + 1):
         for j in range(1, len2 + 1):
-            embedding_1, embedding_2 = seq1[i - 1], seq2[j - 1]
-            t0 = time.time()
+            # embedding_1, embedding_2 = seq1[i - 1], seq2[j - 1] # Uncomment to allow parameterization of insertion/deletion cost
             dist[i][j] = min(
                 dist[i - 1][j] + 1,
-                # deletion_cost(embedding_1),  # Deletion TODO: put back parametrization, done to try speeding the process up
-                dist[i][j - 1] + 1,  # insertion_cost(embedding_2),  # Insertion
-                dist[i - 1][j - 1] + substitution_cost(embedding_1, embedding_2)  # Substitution
+                # Deletion. To allow parameterization by deletion cost, replace 1 by deletion_cost(embedding_1)
+                dist[i][j - 1] + 1,
+                # Insertion. To allow parameterization by insertion cost, replace 1 by insertion_cost(embedding_2)
+                dist[i - 1][j - 1] + all_similarities[i - 1][j - 1]  # Substitution
             )
-            t1 = time.time()
-            total_time += t1 - t0
         current_max_distance = min(dist[i])
-        if max_distance is not None and current_max_distance >= max_distance:
+        if max_distance is not None and current_max_distance >= max_distance:  # If the distance goes over the threshold, exit early
             return -1, None
 
     # Backtrack to find the alignment
     i, j = len1, len2
     alignment = []
-    print(f'total time of Levensthein operations : {total_time}')
-    print(f'On average per operation: {total_time / (len1 * len2)}')
 
-    print("computing alignment")
+    # print("computing alignment")
     while i > 0 or j > 0:
         if i > 0 and dist[i][j] == dist[i - 1][j] + deletion_cost(seq1[i - 1]):
             alignment.append((i - 1, '-', deletion_cost(seq1[i - 1])))
@@ -560,7 +704,7 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, inserti
             alignment.append(('-', j - 1, insertion_cost(seq2[j - 1])))
             j -= 1  # Insertion
         else:
-            alignment.append((i - 1, j - 1, substitution_cost(seq1[i - 1], seq2[j - 1])))
+            alignment.append((i - 1, j - 1, all_similarities[i - 1][j - 1]))
             i -= 1
             j -= 1  # Substitution or match
 
@@ -570,7 +714,152 @@ def levenshtein_distance_and_alignment(seq1, seq2, max_distance=None, /, inserti
     return dist[len1][len2], alignment
 
 
-def visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1_title='Play_1', play_2_title='Play_2'):
+# Base with ChatGPT
+def smith_waterman(seq1, seq2, similarity_matrix, gap_cost_fn=None):
+    """
+    Smith-Waterman local alignment algorithm.
+
+    Parameters:
+    - seq1, seq2: sequences to align
+    - similarity_matrix: 2D list of similarity scores [len(seq1)][len(seq2)]
+    - gap_cost_fn: a function f(gap_length) returning cost. For linear, f(x) = x * cost
+
+    Returns:
+    - alignment: list of tuples (i, j) representing aligned positions
+    - max_score: alignment score
+    """
+    len1, len2 = len(seq1), len(seq2)
+    H = [[0] * (len2 + 1) for _ in range(len1 + 1)]  # score matrix
+    traceback = [[None] * (len2 + 1) for _ in range(len1 + 1)]  # backtrack pointers
+
+    max_score = 0
+    max_pos = (0, 0)
+
+    # Fill in the score and traceback matrices
+    for i in range(1, len1 + 1):
+        for j in range(1, len2 + 1):
+            match = H[i - 1][j - 1] + similarity_matrix[i - 1][j - 1]
+            if gap_cost_fn is None:  # Default to linear gap of cost 1 if not provided
+                delete = H[i - 1][j] - 1
+                insert = H[i][j - 1] - 1
+            else:
+                delete = max([H[i - k][j] - gap_cost_fn(k) for k in range(1, i + 1)])
+                insert = max([H[i][j - k] - gap_cost_fn(k) for k in range(1, j + 1)])
+            score = max(0, match, delete, insert)
+
+            H[i][j] = score
+
+            if score == 0:
+                traceback[i][j] = None
+            elif score == match:
+                traceback[i][j] = (i - 1, j - 1, similarity_matrix[i - 1][j - 1])
+            elif score == delete:
+                for k in range(1, i + 1):
+                    if H[i - k][j] - k == score:  # Change to gap_cost_fn(k)
+                        traceback[i][j] = (i - k, j, k)  # Change the k when switching to different gap scores
+                        break
+            else:  # insert
+                for k in range(1, j + 1):
+                    if H[i][j - k] - k == score:  # Change to gap_cost_fn(k)
+                        traceback[i][j] = (i, j - k, k)  # Change the k when switching to different gaps scores
+                        break
+
+            if score > max_score:
+                max_score = score
+                max_pos = (i, j)
+
+    # Traceback
+    alignment = []
+    i, j = max_pos
+    while traceback[i][j] is not None:
+        score = traceback[i][j][2]
+        alignment.append((i - 1, j - 1, score))  # subtract 1 to get original indices
+        i, j, _ = traceback[i][j]
+    alignment.reverse()
+    print(alignment)
+    return alignment, max_score
+
+
+def smith_waterman_with_model(seq1, seq2, sentence_model, gap_cost_fn=None):
+    all_similarities = list(sentence_model.similarity(seq1, seq2))
+    similarity_matrix = [[cost.item() for cost in row] for row in all_similarities]
+    return smith_waterman(seq1, seq2, similarity_matrix, gap_cost_fn)
+
+
+def normalize_charname(charname):
+    """Removes stage indications from charname"""
+    if charname is None:
+        print('Warning : empty charname')
+        return ''
+    charname = re.sub(r',.*', '', charname)
+    charname = re.sub(r'\.', '', charname)
+    charname = re.sub(r'#', '', charname)
+    return charname
+
+
+def log_gap_cost(k):
+    return 0.5 * math.log1p(k)  # log1p(k) = log(1 + k)
+
+
+# GPT
+def get_character_renaming_from_alignment(play_1_text, play_2_text, alignment):
+    """
+    Args:
+        play_1_text (dict): maps line_number -> character_name for play 1
+        play_2_text (dict): maps line_number -> character_name for play 2
+        alignment (list): list of (line_number_1, line_number_2, cost) tuples
+
+    Returns:
+        character_pair_counts (dict): {(char1, char2): count}
+        most_common_for_1 (dict): {char1: char2}
+        most_common_for_2 (dict): {char2: char1}
+        optimal_matching (set): set of (char1, char2) tuples from max weight matching
+    """
+    character_pair_counts = defaultdict(int)
+
+    for play_1_line_number, play_2_line_number, cost in alignment:
+        if '-' not in (play_1_line_number, play_2_line_number):  # it's a match
+            char1 = normalize_charname(play_1_text[play_1_line_number][0]) + '1'
+            char2 = normalize_charname(play_2_text[play_2_line_number][0]) + '2'
+            character_pair_counts[(char1, char2)] += 1
+    # Most frequent match for each character in play 1
+    most_common_for_1 = {}
+    for char1, _ in character_pair_counts:
+        matches = {pair[1]: character_pair_counts[pair] for pair in character_pair_counts if pair[0] == char1}
+        if matches:
+            most_common_for_1[char1] = max(matches.items(), key=lambda x: x[1])[0]
+
+    # 2. Most frequent match for each character in play 2
+    most_common_for_2 = {}
+    for a, char2 in character_pair_counts:
+        matches = {pair[0]: character_pair_counts[pair] for pair in character_pair_counts if pair[1] == char2}
+        if matches:
+            most_common_for_2[char2] = max(matches.items(), key=lambda x: x[1])[0]
+
+    # Optimal bipartite matching
+    G = nx.Graph()
+    characters_play_1, characters_play_2 = {char1 for (char1, _) in character_pair_counts}, {char2 for (_, char2) in
+                                                                                             character_pair_counts}
+    if '' in characters_play_1 or '' in characters_play_2:
+        print('Warning : empty charname')
+    G.add_nodes_from(characters_play_1, bipartite=0)
+    G.add_nodes_from(characters_play_2, bipartite=1)
+    G.add_weighted_edges_from([(char1, char2, weight) for (char1, char2), weight in character_pair_counts.items()])
+    optimal_matching = nx.algorithms.matching.max_weight_matching(G)
+    optimal_matching = {tuple(sorted(c, key=lambda x: x[-1])) for c in
+                        optimal_matching}  # Normalizing to put in char1 : char 2 format
+
+    # The matching weight reflects what percentage of character lines are correctly aligned, according to the matching found
+    total_weight = sum(character_pair_counts.values())
+    matching_weight = sum(character_pair_counts[(char1, char2)] for (char1, char2) in optimal_matching)
+    matching_score = matching_weight / total_weight
+
+    return character_pair_counts, most_common_for_1, most_common_for_2, optimal_matching, matching_score
+
+
+def visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1_title='Play_1', play_2_title='Play_2',
+                                     output_dir='Outputs/Alignements', save=True):
+    """Given an already computed alignement, generate a csv to visualize all operations"""
     rows = []
     for (play_1_element, play_2_element, cost) in alignment:
         operation_type = None
@@ -596,73 +885,330 @@ def visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1
 
         # rows.append({'Play 1': line_1, 'Play2': line_2, 'Operation Type': operation_type})
         # temp :
-        rows.append({'Play 1': line_1, 'Play2': line_2, 'Op symbol1': play_1_element, 'Op symbol2': play_2_element,
-                     'Cost': round(cost, 2), 'Operation Type': operation_type})
+        rows.append(
+            {play_1_title: line_1, play_2_title: line_2, 'Cost': round(cost, 2), 'Operation Type': operation_type})
     visualization = pd.DataFrame(rows)
-    visualization.to_csv(f'Outputs/Alignements/alignement_{play_1_title}_{play_2_title}.csv')
+    if save:
+        visualization.to_csv(f'{output_dir}/alignement_{play_1_title}_{play_2_title}.csv')
+    return visualization
 
 
-def compare_from_full_text(full_text_1, full_text_2, title1='Title1', title2='Title2'):
+def visualize_smith_waterman_alignment(seq1, seq2, alignment, play_1_title, play_2_title,
+                                       output_dir='Outputs/Alignements'):
+    """
+    Save the Smith-Waterman alignment to a CSV file using pandas.
+
+    Parameters:
+    - seq1, seq2: original sequences (strings or list of tokens)
+    - alignment: list of tuples (i, j, score) representing alignment positions and scores
+    - filename: path to the output CSV file
+    """
+    data = []
+    prev_i, prev_j = -1, -1
+
+    for i, j, score in alignment:
+        # Fill vertical (seq1) gaps
+        for gap_i in range(prev_i + 1, i):
+            data.append([seq1[gap_i], '-', 0])
+        # Fill horizontal (seq2) gaps
+        for gap_j in range(prev_j + 1, j):
+            data.append(['-', seq2[gap_j], 0])
+
+        token1 = seq1[i] if i >= 0 else "-"
+        token2 = seq2[j] if j >= 0 else "-"
+        data.append([token1, token2, score])
+        prev_i, prev_j = i, j
+
+    df = pd.DataFrame(data, columns=[play_1_title, play_2_title, "Score"])
+    df.to_csv(f'{output_dir}/SWlogalignement_{play_1_title}_{play_2_title}.csv', index=False)
+    return df
+
+
+def compare_from_full_text(full_text_1, full_text_2, title1='Title1', title2='Title2', mode='levensthein'):
+    """Given the full text of two plays, computes an alignment between both plays, saves it, and returns the associated character renamings.
+
+    Args:
+        full_text_1(list): The first play in format [(locutor, line)]
+        full_text_2(list): The second play in format [(locutor, line)]
+        title1(str): Title of the first play (optional)
+        title2(str): Title of the second play (optional)
+    Returns:
+        dict: The dictionary counting of many times each pairs if characters is aligned between play1 and play2
+        dict: The dictionary giving the renaming obtained by considering the most frequently corresponding character for each character of play 1
+        dict: The dictionary giving the renaming obtained by considering the most frequently corresponding character for each character of play 2
+        dict: The dictionary giving the renaming obtained by computing a maximum matching"""
+    # This is what takes time : if you intend on calling this function often, you should pre-compute the vectorizations once instead
     print("Vectorizing ...")
     t1 = time.time()
     vec_1, vec_2 = vectorize_sentence_play(full_text_1), vectorize_sentence_play(full_text_2)
-    print(f"Vectorizing done in {time.time() - t1}")
-    dist, alignement = compare_vectorized_plays(vec_1, vec_2)
-    print(f'Distance: {dist}')
-    visualize_levenshtein_alignement(alignement, full_text_1, full_text_2, title1, title2)
+    print(f"Vectorizing in {time.time() - t1}")
+
+    # Computing the distance and alignment
+    dist, alignement = compare_vectorized_plays(vec_1, vec_2, mode)
+    if mode == 'levensthein':
+        print(f'Distance: {dist}')
+    else:
+        print(f'Score : {dist}')
+
+    # Computing the associated renaming
+    pairs_occurences, frequency_renaming_1, frequency_renaming_2, matching_renaming, matching_weight = get_character_renaming_from_alignment(
+        full_text_1, full_text_2, alignement)
+
+    # Saving the alignment
+    if mode == "levensthein":
+        alignment = visualize_levenshtein_alignement(alignement, full_text_1, full_text_2, title1, title2)
+    else:
+        alignment = visualize_smith_waterman_alignment(full_text_1, full_text_2, alignement, title1, title2)
+
+    match_percentage, average_cost = evaluate_alignment(alignment)
+
+    output_file = os.path.join('Outputs', 'Alignements', f'{title1}_{title2}_stats.txt')
+    output = open(output_file, 'w')
+    output.write(f"""
+    Normalized Distance : {dist}
+    Renaming : {matching_renaming}
+    With score : {matching_weight}
+    Match percentage : {match_percentage}
+    Average cost : {average_cost}
+    """)
+    return pairs_occurences, frequency_renaming_1, frequency_renaming_2, matching_renaming
 
 
 def compare_play_from_files(file1, file2):
+    """Given two xml files of plays, computes an alignment between them, saves it, and returns associated renamings.
+    Args:
+        file1(str): path of the first play
+        file2(str): path of the second play
+    """
     play1, play2 = get_play_from_file(file1), get_play_from_file(file2)
-    title1, title2 = get_title(play1), get_title(play2)
+    title1, title2 = get_title(play1) + '1', get_title(play2) + '2'
     full_text_1, full_text_2 = get_full_text(play1), get_full_text(play2)
     compare_from_full_text(full_text_1, full_text_2, title1, title2)
 
 
+def get_plays_corpus_from_csv(csv_file, corpus_path):
+    """Given a csv with couples of close plays, generates a dictionnary which keys are play identifiers and values are parsed plays
+    Args:
+        csv_file(str): path of the folder containing the couples of plays
+        corpus_path(str) : the directory in which to find the xml files of the plays
+    Returns:
+        dict: The dictionary containing all parsed plays. Keys are play ID and values are of the form [(locutor, line)]"""
+    close_casts = pd.read_csv(csv_file)
+    resulting_corpus = dict()
+    for _, row in close_casts.iterrows():
+        play_1_file, play_2_file = f"{row['Name']}.xml", f"{row['Name_similar']}.xml"
+        play_1_id, play_2_id = f"{row['id']}.xml", f"{row['id_similar']}.xml"
+        if play_1_id not in resulting_corpus:
+            play_1_path = os.path.join(corpus_path, play_1_file)
+            play_1 = get_play_from_file(play_1_path)
+            resulting_corpus[play_1_id] = get_full_text(play_1)
+        if play_2_id not in resulting_corpus:
+            play_2_path = os.path.join(corpus_path, play_2_file)
+            play_2 = get_play_from_file(play_2_path)
+            resulting_corpus[play_2_id] = get_full_text(play_2)
+    return resulting_corpus
+
+
+def compare_corpus_pairs(csv_file, vectorized_plays, corpus_path, mode='levensthein'):
+    close_casts = pd.read_csv(csv_file)
+    distances, renamings, pairs, matching_weights, match_percentages, avg_costs = [], [], [], [], [], []
+    for _, row in close_casts.iterrows():
+        # Getting the title and text of each play (needed for the alignment visualization
+        play_1_title, play_2_title = row['Name'], row['Name_similar']
+        play_1_file, play_2_file = f"{play_1_title}.xml", f"{play_2_title}.xml"
+
+        print(play_1_title, play_2_title)
+        play_1_path, play_2_path = os.path.join(corpus_path, play_1_file), os.path.join(corpus_path, play_2_file)
+        play_1_text, play_2_text = get_full_text(get_play_from_file(play_1_path)), get_full_text(
+            get_play_from_file(play_2_path))
+
+        # Getting the vectorized plays (pre-computed)
+        play_1_id, play_2_id = f"{row['id']}.xml", f"{row['id_similar']}.xml"
+        vectorized_play_1, vectorized_play_2 = vectorized_plays[play_1_id], vectorized_plays[play_2_id]
+        print(len(vectorized_play_1), len(vectorized_play_2))
+
+        # Computing the alignement, distance, and visualization
+        distance, alignment = compare_vectorized_plays(vectorized_play_1, vectorized_play_2, mode)
+        print(f'Distance {play_1_title} et  {play_2_title} : {distance}')
+        if mode == 'levensthein':
+            alignment_df = visualize_levenshtein_alignement(alignment, play_1_text, play_2_text, play_1_title,
+                                                            play_2_title,
+                                                            'Outputs/Alignements/Close Casts')
+        else:
+            alignment_df = visualize_smith_waterman_alignment(play_1_text, play_2_text, alignment, play_1_title,
+                                                              play_2_title,
+                                                              'Outputs/Alignements/Close Casts')
+        frequencies_pair, _, _, matching_renaming, matching_weight = get_character_renaming_from_alignment(play_1_text,
+                                                                                                           play_2_text,
+                                                                                                           alignment)
+        match_percentage, avg_cost = evaluate_alignment(alignment_df)
+        distances.append(distance)
+        renamings.append(matching_renaming)
+        pairs.append(frequencies_pair)
+        matching_weights.append(matching_weight)
+        match_percentages.append(match_percentage)
+        avg_costs.append(avg_cost)
+
+    close_casts = close_casts[['id', 'Name', 'id_similar', 'Name_similar', 'Intersection']]
+    close_casts['Matching weight'] = matching_weights
+    close_casts["Distances"] = distances
+    close_casts["Renamings"] = renamings
+    close_casts["Percent of matches"] = match_percentages
+    close_casts["Average cost of operations"] = avg_costs
+    # close_casts["Alignment Pair frequencies"] = pairs
+    return close_casts
+
+
+def fix_corpus_speakers(csv, vectorized_plays, corpus_path):
+    """TMP"""
+    close_casts = pd.read_csv(csv)
+    for _, row in close_casts.iterrows():
+        play_1_title, play_2_title = row['Name'], row['Name_similar']
+        play_1_file, play_2_file = f"{play_1_title}.xml", f"{play_2_title}.xml"
+        play_1_id, play_2_id = f"{row['id']}.xml", f"{row['id_similar']}.xml"
+
+        print(play_1_title, play_2_title)
+        play_1_path, play_2_path = os.path.join(corpus_path, play_1_file), os.path.join(corpus_path, play_2_file)
+        play_1_text, play_2_text = get_full_text(get_play_from_file(play_1_path)), get_full_text(
+            get_play_from_file(play_2_path))
+        vectorized_play_1, vectorized_play_2 = vectorized_plays[play_1_id], vectorized_plays[play_2_id]
+        vectorized_play_1 = [(fixed_locutor, vector) for ((fixed_locutor, _), (_, vector)) in
+                             zip(play_1_text, vectorized_play_1)]
+        vectorized_plays[play_1_id] = vectorized_play_1
+        vectorized_play_2 = [(fixed_locutor, vector) for ((fixed_locutor, _), (_, vector)) in
+                             zip(play_2_text, vectorized_play_2)]
+        vectorized_plays[play_2_id] = vectorized_play_2
+    return vectorized_plays
+
+
+def evaluate_alignment(alignment):
+    """Evaluates an alignement by returning the percentage of matches and the average cost of operations"""
+    if type(alignment) is str:
+        df = pd.read_csv(alignment)
+    else:
+        df = alignment
+    total_lines = len(df)
+    # Total number of "Match"
+    match_count = (df['Operation Type'] == 'Match').sum()
+    # Convert 'Cost' to numeric, forcing errors to NaN, and drop those
+    df['Cost'] = pd.to_numeric(df['Cost'], errors='coerce')
+    average_cost = df['Cost'].mean()
+
+    return match_count / total_lines, average_cost
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+def plot_similarity(csv_path):
+    # Load the CSV into a DataFrame
+    df = pd.read_csv(csv_path)
+
+    # Ensure necessary columns exist
+    required_columns = {'line', 'similarity', 'Average Score'}
+    if not required_columns.issubset(df.columns):
+        raise ValueError(f"The CSV must contain columns: {required_columns}")
+
+    # Map similarity to colors: 1 → green, 0 → red
+    color_map = {1: 'green', 0: 'red'}
+    colors = df['similarity'].map(color_map)
+
+    # Plot
+    plt.figure(figsize=(10, 6))
+    plt.scatter(df['line'], df['Average Score'], c=colors)
+    plt.xlabel('Line')
+    plt.ylabel('Average Score')
+    plt.title('Average Score by Line Colored by Similarity')
+    plt.grid(True)
+    plt.show()
+
+
+# TMP : Visualizing dama alignment quality
+def plot_similarity(csv_path):
+    # Load the CSV into a DataFrame
+    df = pd.read_csv(csv_path)
+
+    # Ensure necessary columns exist
+    required_columns = {'Line', 'Marked similar (after algorithm)', 'Average Score'}
+    if not required_columns.issubset(df.columns):
+        raise ValueError(f"The CSV must contain columns: {required_columns}")
+
+    # Replace commas with periods in 'Average Score' and convert to float
+    df['Average Score'] = (
+        df['Average Score']
+        .astype(str)
+        .str.replace(',', '.', regex=False)
+        .astype(float)
+    )
+
+    # Drop rows with missing values in required columns
+    df = df.dropna(subset=['Line', 'Marked similar (after algorithm)', 'Average Score'])
+
+    # Map similarity to colors: 1 → green, 0 → red
+    color_map = {1: 'green', 0: 'red'}
+    colors = df['Marked similar (after algorithm)'].map(color_map)
+
+    # Plot
+    plt.figure(figsize=(10, 6))
+    plt.scatter(df['Line'], df['Average Score'], c=colors)
+    plt.xlabel('Line')
+    plt.ylabel('Token Similarity Score')
+    plt.title('Average token similarity score per line')
+    # legend_elements = [
+    #     Line2D([0], [0], marker='o', color='w', label='Lines marked similar by annotators', markerfacecolor='green', markersize=10),
+    #     Line2D([0], [0], marker='o', color='w', label='Lines not marked similar by annotators', markerfacecolor='red', markersize=10)
+    # ]
+    #
+    # plt.legend(handles=legend_elements, title="Similarity")
+    plt.grid(True)
+    plt.show()
+    plt.savefig('Dama Alignment visualization.png')
+
 if __name__ == "__main__":
 
-    # TMP, can delete
-    sentence1 = vectorize_sentence("Précieuse vraiment, ce beau nom t'est bien du, Qui de la chose en soi témoignage a rendu ; Précieuse vraiment, qui de valeur effaces Qui remporte le prix des beautés et des grâces, Mais fille l'avouer, vu l'inégalité De l'âge, causerait une incrédulité.")
-    sentence2 = vectorize_sentence("Dans quelque étonnement que ce discours te plonge, Crois qu'il est véritable, et de plus...")
-    sentence3 = vectorize_sentence("Précieuse vraiment, ce beau nom t'est bien du, qui de la chose en soi témoignage a rendu ; Précieuse vraiment, qui de valeur effaces qui remporte le prix des beautés et des grâces, mais fille l'avouer, vu l'inégalité de l'âge, causerait une incrédulité.")
-    print(compare_sentence_embeddings(sentence1, sentence2))
-    print(compare_sentence_embeddings(sentence1, sentence3))
-    print(compare_sentence_embeddings(sentence2, sentence3))
-    # pass
+    # csv_file = "Imitation, création au théâtre - Dama Duende - Alignement annoté.csv"
+    # plot_similarity(csv_file)
+    # # Metadata
+    # SBERT_comparison_dir = data_dir = os.path.join('Data', 'NLP Comparisons SBERT')
+    # csv_close_casts = os.path.join(SBERT_comparison_dir, 'plays_with_cast_intersection_atleast6_ngramsimilarity.csv')
+    # dracor_corpus_path = 'Corpus\\CorpusDracor - new'
+    # save_file = os.path.join(PICKLE_DIR, 'SBERT_vectorized_Dracor.pkl')
     #
-    # Getting the dama text
+    # # # To compute the vectorization of all plays in the corpus
+    # # corpus = get_full_text_corpus()
+    # # vectorized_plays = vectorize_sentence_corpus(corpus, save_file, 30)
+    #
+    # # To load the vectorization of all plays, if already computed
+    # print('Loading vectorized corpus ...')
+    # vectorized_plays = pickle.load(open(save_file, 'rb'))
+    # print('Corpus loaded.')
+    #
+    # save_perm = os.path.join('Data', 'Pickled saves', 'Alignments SBERT on Dracor', 'save_permutation.pkl')
+    # save_dict = os.path.join('Data', 'Pickled saves', 'Alignments SBERT on Dracor', 'save_dicts.pkl')
+    #
+    # save_dict_fixed = os.path.join('Data', 'Pickled saves', 'Alignments SBERT on Dracor',
+    #                                'save_dicts_similarity_fixed.pkl')
+    #
+    # compare_vectorized_corpus(vectorized_plays, save_file_permutation=save_perm, save_file_dicts=save_dict,
+    #                           save_every=1000)
 
-    # # Replace 'your_file.csv' with the path to your CSV file
-    # csv_file_path = 'Imitation, création au théâtre - DamaDuende-Alignement.csv'
-    #
-    # # Load the CSV into a pandas DataFrame
-    # df = pd.read_csv(csv_file_path)
-    #
-    # # Specify the column name
-    # target_column = 'Traduction automatique Google Traduction en gardant les | 2024-01-19'
-    #
-    # # Ensure the column exists in the CSV
-    # if target_column in df.columns:
-    #     tuples_list = []
-    #
-    #     # Process each cell in the column
-    #     for cell in df[target_column].dropna():
-    #         # Remove '|' symbols
-    #         cleaned_cell = cell.replace('|', '')
-    #
-    #         # Match the fully uppercase character name and the rest of the text
-    #         match = re.match(r'(\b[A-Z]+\b)(.*)', cleaned_cell)
-    #         if match:
-    #             character_name = match.group(1).strip()
-    #             rest_of_cell = match.group(2).strip()
-    #             tuples_list.append((character_name, rest_of_cell))
-    #
-    # dama_duende_full_text = tuples_list
-    # corpus_dir = os.path.join(os.getcwd(), 'Corpus')
-    # esprit_folet_file = os.path.join(corpus_dir, '1- ouville_espritfolet.xml')
-    # esprit_folet = get_play_from_file(esprit_folet_file)
-    # esprit_folet_text = get_full_text(esprit_folet)
-    # compare_from_full_text(dama_duende_full_text, esprit_folet_text, 'La Dama Duende', 'L Esprit Follet')
+    # # To check the results of the corpus comparison
+    # dicts = pickle.load(open(save_dict, 'rb'))
+    # match_percentages, average_costs, similarities, renaming_weights, metric_sums = dicts
+    # with open(save_perm, 'rb') as f:
+    #     init_iterations, nb_pairs, all_pairs = pickle.load(f)
+    # print(init_iterations)
+    # print(renaming_weights.values())
+
+    # result = compare_corpus_pairs(csv_close_casts, vectorized_plays, dracor_corpus_path, mode='levensthein')
+    # result.to_csv(f'Outputs\\Alignements\\Close Casts\\close_casts_metadata.csv', index=False)
+
+    # To compare two plays directly from their file (no need to pre-vectorize, slow)
+    # data_dir = os.path.join('Data', 'NLP Comparisons SBERT')
+    # play_file_1 = os.path.join(data_dir, 'moliere-precieuses-ridicules.xml')
+    # play_file_2 = os.path.join(data_dir, 'somaize-veritables-precieuses.xml')
+    # compare_play_from_files(play_file_1, play_file_2)
 
     # # Quick and dirty way to test pairs of plays in Corpus Piece Tres Proches
     # closePlaysFolder = os.path.join(os.getcwd(), 'Corpus', 'Corpus pieces tres proches')
@@ -697,16 +1243,16 @@ if __name__ == "__main__":
     # df.to_csv('close_plays_alignments.csv')
 
     # Code to generate average_distance
-    # vec_corpus_path = 'sentence_vectorized_corpus.pkl'
-    # print('Opening...')
-    # file = open(vec_corpus_path, 'rb')
-    # print('Loading ...')
-    # vectorized_corpus = pickle.load(file)
-    # print('Loaded.')
+    vec_corpus_path = os.path.join(PICKLE_DIR, 'SBERT_vectorized_Dracor.pkl')
+    print('Opening...')
+    file = open(vec_corpus_path, 'rb')
+    print('Loading ...')
+    vectorized_corpus = pickle.load(file)
+    print('Loaded.')
     # vectorized_corpus = remove_empty_plays_from_corpus(vectorized_corpus)
-    # vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
-    # print(len(vectorized_corpus_cleaned))
-    # get_average_distance(vectorized_corpus_cleaned, 500000)
+    vectorized_corpus_cleaned = remove_empty_plays_from_corpus(vectorized_corpus)
+    print(len(vectorized_corpus_cleaned))
+    get_average_distance(vectorized_corpus_cleaned, 1000000, bins_number=100)
     #
     # # Running Levensthein corpus comparison
     # cutoff = 100

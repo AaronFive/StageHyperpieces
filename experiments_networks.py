@@ -1,9 +1,13 @@
+"""Functions to generate and compare character networks, enhanced by character vocabularies obtained through TF-IDF"""
+
 import csv
 import json
 import os
 import pickle
+import random
 import re
 from collections import Counter
+from textwrap import dedent
 
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -12,34 +16,30 @@ import unidecode as unidecode
 from pyvis.network import Network
 from sklearn.feature_extraction.text import TfidfVectorizer
 
+import basic_utilities
+import graphing
 import play_parsing
 from corpus_intersection import compare_ngrams_dict
 
-data_dir = 'Data\\Network comparison'
-ngrams_dir = 'Data\\4-gramme Dracor'
+# Constants
+data_dir = 'Data\\Network comparison'  # Repertory for plays
+ngrams_dir = 'Data\\4-gramme Dracor'  # Repertory for pre-computed ngrams
 french_stopwords_file = f'{data_dir}\\StoplistFrench.txt'
 dracor_metadata_path = 'Data\\fredracor-metadata.csv'
 dracor_corpus_path = 'Corpus\\CorpusDracor - new'
-close_cast_csv_path = f'{data_dir}\\plays_with_cast_intersection_atleast6_ngramsimilarity.csv'
+
+close_cast_csv_path = f'{data_dir}\\plays_with_cast_intersection_atleast6_ngramsimilarity.csv'  # CSV for pre-computed list of plays with similar casts
 dracor_metadata = pd.read_csv(dracor_metadata_path)
 with open(french_stopwords_file, 'r') as stopwords_file:
     french_stopwords = stopwords_file.read().splitlines()
-play_file_1 = os.path.join(data_dir, 'DESJARDINS_FAVORI.xml')
+
+# Input, to modify :
+play_file_1 = os.path.join(data_dir, 'moliere-sganarelle.xml')
 play_file_2 = os.path.join(data_dir, '108_JODELLE_DIDON.xml')
 
 name_1 = re.sub(r'.xml', r'.html', play_file_1)
-# test_file = os.path.join(data_dir, 'fre001019-moliere-misanthrope.spoken-text-by-character.json')
 
-# Load the CSV file
-# file_path = os.path.join(data_dir, 'moliere-tartuffe.xml')
-# file_path = os.path.join(data_dir, 'fre001019-moliere-misanthrope.network.csv')
-
-# df = pd.read_csv(file_path, sep=',')  # Use sep=',' if it's comma-separated
-# exclude = ['#l-exempt', '#loyal']
-# # exclude = ['basque', 'dubois', 'garde']
-# # Filter out rows where Source or Target is in the exclude list
-# df = df[~df['Source'].isin(exclude) & ~df['Target'].isin(exclude)]
-
+# Obtain plays
 play_1 = play_parsing.get_play_from_file(play_file_1)
 play_2 = play_parsing.get_play_from_file(play_file_2)
 
@@ -135,13 +135,12 @@ def build_pairwise_texts(play, top_n_characters=None, only_keep=None):
         # Select only the top N characters
         most_common_chars = set(char for char, _ in scene_counter.most_common(top_n_characters))
     elif only_keep is not None:
+        # Or select only the characters listed
         most_common_chars = set([char for char in scene_counter if normalize_charname(char) in only_keep])
     else:
         most_common_chars = set(scene_counter.keys())
     # print(len(most_common_chars))
     # print(most_common_chars)
-    if not most_common_chars:
-        raise ValueError('No most common char')
     for scene in scenes:
         speakers_in_scene = get_speakers_in_scene(scene)
         # Filter speakers to only selected characters
@@ -177,7 +176,7 @@ def compute_tfidf(characters_text, n, printing=False):
         n(int): Number of words to keep for each character
         printing(bool): If True, results are pretty printed
     Returns:
-        dict"""
+        dict: The list of highest scoring words for each character"""
     # Get character names and their texts
     character_names = list(characters_text.keys())
     corpus = list(characters_text.values())
@@ -257,6 +256,8 @@ def create_edges_network_df(pairwise_text, min_weight=0.2):
 def make_graph(df, top_words_per_character, top_words_per_pair):
     """Creates a directed graph, tagged by the top words for each character and each character pair
 
+    The graph can then be displayed by using net.show()
+
     TODO: Set properly the parameters for the visualization"""
     # Create a graph
     G = nx.DiGraph()  # Because it's directed
@@ -324,8 +325,8 @@ def normalize_charname(text):
     return text.strip()
 
 
-def compute_renaming(character_text_1, character_text_2):
-    """Computes a renaming between two lists of characters and returns it
+def compute_simple_renaming(character_text_1, character_text_2):
+    """Computes a renaming based on volume of text between two lists of characters and returns it
 
     The renaming is done by first matching the characters that have the same normalized name
     Then mapping remaining characters by volume of text said.
@@ -388,8 +389,8 @@ def compute_list_intersection(lst1, lst2):
     return size
 
 
-def make_character_play_dict(csvFolder):
-    """Computes the occurrences of each characters in each play, and keeps the display name"""
+def make_character_play_dict(csvFolder, how='csv'):
+    """Computes the occurrences of each character in each play, and keeps the display name"""
     character_play_dict = dict()
     title_play_dict = dict()
     for csv_file in os.listdir(csvFolder):
@@ -399,21 +400,37 @@ def make_character_play_dict(csvFolder):
         play_id, play_name = match.group(1), match.group(2)
         title_play_dict[play_id] = play_name
         csv_path = os.path.join(csvFolder, csv_file)
-        # Load the CSV file into a DataFrame
-        try:
-            characters_df = pd.read_csv(csv_path)
-        except pd.errors.EmptyDataError:
-            continue  # Skip if file is completely empty or invalid
 
-        if characters_df.empty:
-            print(f'Empty play {play_id}')
-            continue  # Skip if the DataFrame is empty (no rows)
-        for _, row in characters_df.iterrows():
-            char_id = normalize_charname(row['id'])
-            display_name = row['name']
-            if char_id not in character_play_dict:
-                character_play_dict[char_id] = []
-            character_play_dict[char_id].append((play_id, display_name))
+        # Getting the character list
+        # If the 'csv' argument is passed, get it from the pre-computed csv containing the list of characters
+        if how == 'csv':
+            # Load the CSV file into a DataFrame
+            try:
+                characters_df = pd.read_csv(csv_path)
+            except pd.errors.EmptyDataError:
+                continue  # Skip if file is completely empty or invalid
+
+            if characters_df.empty:
+                print(f'Empty play {play_id}')
+                continue  # Skip if the DataFrame is empty (no rows)
+            for _, row in characters_df.iterrows():
+                char_id = normalize_charname(row['id'])
+                display_name = row['name']
+                if char_id not in character_play_dict:
+                    character_play_dict[char_id] = []
+                character_play_dict[char_id].append((play_id, display_name))
+        # If the 'play' argument is passed, get it from the play by reading every line
+        elif how == 'play':
+            play_file = os.path.join(dracor_corpus_path, f'{play_name}.csv')
+            play = play_parsing.get_play_from_file(play_file)
+            characters = play_parsing.get_characters_by_bruteforce(play)
+            for char_id in characters:
+                char_id = normalize_charname(char_id)
+                if char_id not in character_play_dict:
+                    character_play_dict[char_id] = []
+                character_play_dict[char_id].append((play_id, char_id))
+                # TODO : get the display name of the character instead of just the id.
+                # For now it doesn't matter because I don't use it later anyways.
 
     return character_play_dict, title_play_dict
 
@@ -423,6 +440,7 @@ def get_title_from_id(dracor_id, title_play_dict):
 
 
 def compare_with_ngrams(playname1, playname2):
+    """Given two names of plays, for which ngrams have been pre-computed, returns the ngram similarity """
     ngrams_1 = pickle.load(open(os.path.join(ngrams_dir, f'{playname1}.pkl'), 'rb'))
     ngrams_2 = pickle.load(open(os.path.join(ngrams_dir, f'{playname2}.pkl'), 'rb'))
     similarity = compare_ngrams_dict(ngrams_1, ngrams_2)
@@ -430,7 +448,7 @@ def compare_with_ngrams(playname1, playname2):
 
 
 def find_plays_with_common_chars(charact_dict, csvFolder, title_play_dict, cutoff=6):
-    """Generate a csv tracking the list of plays that have at least cutoff common characters """
+    """Generate a csv tracking the list of plays that have at least n common characters, where n is given by cutoff """
     seen = set()
     result = []
     for csv_file in os.listdir(csvFolder):
@@ -490,6 +508,9 @@ def make_graph_matching(words_per_character1, words_per_character2):
 
 
 def test_tfidf_on_close_casts(close_cast_csv, corpus_path, n_tfidf):
+    """For all pairs of plays listed in close_cast_csv, compute the optimal renaming based on the n_tfidf best words with highest tfidf score.
+
+    Returns a csv with metadat about each play and the score of the matching"""
     close_casts = pd.read_csv(close_cast_csv)
     matchings = []
     matching_scores = []
@@ -557,17 +578,21 @@ def compare_networks(words_per_char_1, words_per_char_2, words_per_pair_1, words
         print(x, distance_chars[x])
     for x in distance_pairs:
         print(x, distance_pairs[x])
+    # TODO
 
 
 def truncate_tfidf(tfidf_dict, n):
+    """Only keeps the n best tfidf words"""
     return {char: words[:n] for char, words in tfidf_dict.items()}
 
 
-def test_tfidf_on_close_casts_over_n(close_cast_csv, corpus_path, min_n=1, max_n=50, step=1):
+def test_tfidf_on_close_casts_over_n(close_cast_csv, corpus_path, min_n=1, max_n=150, step=1):
+    """For all pairs of plays in close_cast_csv, compute the normalized renaming score obtained for varying values of n, the number of TF-IDF words kept by character"""
     close_casts = pd.read_csv(close_cast_csv)
     summary_scores = {}
-
-    os.makedirs("tf-idf graphs", exist_ok=True)
+    output_dir = "tf-idf graphs"
+    os.makedirs(output_dir, exist_ok=True)
+    total_scores = []
 
     for _, row in close_casts.iterrows():
         play_1_file, play_2_file = f"{row['Name']}.xml", f"{row['Name_similar']}.xml"
@@ -586,7 +611,7 @@ def test_tfidf_on_close_casts_over_n(close_cast_csv, corpus_path, min_n=1, max_n
             print(f'Problem with the couple {play_1_file} and {play_2_file}')
             continue
 
-        # Precompute max TF-IDF (n=50) once
+        # Precompute max TF-IDF once
         tfidf_1_all = compute_tfidf(character_text_1, n=max_n)
         tfidf_2_all = compute_tfidf(character_text_2, n=max_n)
 
@@ -608,6 +633,7 @@ def test_tfidf_on_close_casts_over_n(close_cast_csv, corpus_path, min_n=1, max_n
             scores.append(score)
 
         summary_scores[(row['Name'], row['Name_similar'])] = scores
+        total_scores.append((row["Name"], scores))
 
         # Plot for this pair
         plt.figure()
@@ -617,7 +643,7 @@ def test_tfidf_on_close_casts_over_n(close_cast_csv, corpus_path, min_n=1, max_n
         plt.ylabel("Matching Score")
         plt.ylim(0, 1)
         plt.grid(True)
-        plt.savefig(f"tf-idf graphs/{row['Name']}_vs_{row['Name_similar']}.png")
+        plt.savefig(f"{output_dir}/{row['Name']}_vs_{row['Name_similar']}.png")
         plt.close()
 
     # Compute the average matching score for each n_tfidf value
@@ -636,12 +662,130 @@ def test_tfidf_on_close_casts_over_n(close_cast_csv, corpus_path, min_n=1, max_n
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("tf-idf graphs/_average_summary.png")
+    plt.savefig(f"{output_dir}/_average_summary.png")
+    plt.close()
+
+    # Plot all at once
+    plt.figure(figsize=(10, 6))
+    for s in total_scores:
+        plt.plot(range(min_n, max_n + 1, step), s[1], marker='o', label=f'{s[0]}')
+    plt.title("TF-IDF Matching Score for all plays")  # TODO : temporary
+    plt.xlabel("n_tfidf")
+    plt.ylabel("Matching Score")
+    plt.ylim(0, 1)
+    plt.grid(True)
+    plt.legend()
+    plt.tight_layout()
+    plt.savefig(f"{output_dir}/_overall_graphs.png")
     plt.close()
 
 
+def plot_tfidf_distribution(character_texts, play_name):
+    """
+    Computes top 100 TF-IDF words for each character and plots the distribution
+    of TF-IDF scores per character on the same graph.
+
+    Args:
+        character_texts (dict): Mapping from character names to their spoken text.
+        title (str): Title of the plot.
+    """
+    tfidf_dict = compute_tfidf(character_texts, n=100)
+
+    plt.figure(figsize=(12, 6))
+    for character, word_scores in tfidf_dict.items():
+        scores = [score for _, score in word_scores]
+        plt.plot(range(1, len(scores) + 1), scores, label=character)
+    plt.xticks(range(0, 101, 5))
+    plt.xlabel("Top-N Word Rank")
+    plt.ylabel("TF-IDF Score")
+    plt.title(f"TF-IDF Score Distribution per Character in {play_name}")
+    plt.legend(loc='upper right', bbox_to_anchor=(1.15, 1))
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(os.path.join(data_dir, f'tf_idf_score_distribution_{play_name}.png'))
+    plt.show()
+
+
+### Used only for PhD document redaction
+def tfidf_to_latex_table(tfidf_dict, caption="Top TF-IDF words per character", label="tab:tfidf-vocabulary"):
+    """
+    Convert tf-idf dictionary to a LaTeX table showing top words for each character.
+
+    Args:
+        tfidf_dict (dict): A dict where keys are character names and values are list of (word, score) tuples.
+        caption (str): Caption for the LaTeX table.
+        label (str): Label for the LaTeX table.
+
+    Returns:
+        str: LaTeX table as a string.
+    """
+
+    characters = list(tfidf_dict.keys())
+    max_words = max(len(words) for words in tfidf_dict.values())
+
+    # Prepare header
+    header = " & ".join([f"\\textbf{{{char}}}" for char in characters]) + " \\\\ \\hline"
+
+    # Prepare rows
+    rows = []
+    for i in range(max_words):
+        row = []
+        for char in characters:
+            words = tfidf_dict[char]
+            if i < len(words):
+                row.append(words[i][0])  # only the word, not the score
+            else:
+                row.append("")  # fill with empty cell if shorter
+        rows.append(" & ".join(row) + " \\\\")
+    rows_string = '\n'.join(rows)
+    # Combine everything into LaTeX format
+    latex_table = dedent(f"""\
+    \\begin{{table}}[]
+    \\centering
+    \\begin{{tabular}}{{|{'l|' * len(characters)}}}
+    \\hline
+    {header}
+    {rows_string}
+    \\hline
+    \\end{{tabular}}
+    \\caption{{{caption}}}
+    \\label{{{label}}}
+    \\end{{table}}
+    """)
+
+    return latex_table
+
+
 if __name__ == "__main__":
-    # Finding the plays with common characters
+    ngrams_dir_dracor = 'Data\\4-gramme Dracor'
+    ngrams_dir_bd = 'Data\\4-gramme BD'
+    ngrams_dir_td = 'Data\\4-gramme TD'
+
+    files_dracor = [os.path.join(ngrams_dir_dracor, filename) for filename in os.listdir(ngrams_dir_dracor)]
+    files_bd = [os.path.join(ngrams_dir_bd, filename) for filename in os.listdir(ngrams_dir_bd)]
+    files_td = [os.path.join(ngrams_dir_td, filename) for filename in os.listdir(ngrams_dir_td)]
+
+    files = files_dracor + files_bd + files_td
+    iterations = 10000
+    similarities = []
+    for i in range(iterations):
+        if i%100 == 0:
+            print(i)
+        p1, p2 = random.sample(files, 2)
+        ngrams_1 = pickle.load(open(p1, 'rb'))
+        ngrams_2 = pickle.load(open(p2, 'rb'))
+        try :
+            similarity = compare_ngrams_dict(ngrams_1, ngrams_2)
+        except ZeroDivisionError:
+            print(f'empty ngrams for {p1} and {p2}')
+            continue
+        similarities.append(similarity)
+        if similarity > 0.4:
+            print(p1, p2)
+    graphing.plot_similarities(similarities, bins_number=50, title='Distribution of 4-grams similarities', xlabel='Similarity', ylabel='Number of plays')
+
+    # # Finding the plays with common characters
+    # only_thebaid = os.path.join('Data', 'Network comparison', 'only_thebaide.csv')
     # charac_play_dict, title_dict = make_character_play_dict('dracor_data')
     # find_plays_with_common_chars(charac_play_dict, 'dracor_data', title_dict)
 
@@ -649,14 +793,17 @@ if __name__ == "__main__":
     # test_tfidf_on_close_casts(close_cast_csv_path, dracor_corpus_path, 30)
 
     # Testing for variable values of n
-    # test_tfidf_on_close_casts_over_n(close_cast_csv_path, dracor_corpus_path, min_n=1, max_n=150)
+    # test_tfidf_on_close_casts_over_n(only_thebaid, dracor_corpus_path, min_n=1, max_n=150)
 
-    # Get data for play 1
-    pairwise_text, character_text = build_pairwise_texts(play_1, top_n_characters=6)
-    top_words_per_char = compute_tfidf(character_text, 10)
-    top_words_per_pair = get_top_words_per_pair(pairwise_text, character_text)
-    #
     # # Get data for play 1
+    # top_chars = 8
+    # pairwise_text, character_text = build_pairwise_texts(play_1, top_n_characters=top_chars)
+    # top_words_per_char = compute_tfidf(character_text, 10)
+    # top_words_per_pair = get_top_words_per_pair(pairwise_text, character_text)
+    #
+    # plot_tfidf_distribution(character_text, 'Cocue-imaginaire')
+
+    # # Get data for play 2
     # pairwise_text2, character_text2 = build_pairwise_texts(play_2, 6)
     # top_words_per_char2 = compute_tfidf(character_text2, 10)
     # top_words_per_pair2 = get_top_words_per_pair(pairwise_text2, character_text2)
@@ -666,6 +813,9 @@ if __name__ == "__main__":
     #
     # compare_networks(dict(top_words_per_char), dict(top_words_per_char2), dict(top_words_per_pair), dict(top_words_per_pair2), renaming,compare_dict)
     #
-    network_df = create_edges_network_df(pairwise_text)
-    net = make_graph(network_df, top_words_per_char, top_words_per_pair)
-    net.show(f"{name_1}", notebook=False)
+
+    # network_df = create_edges_network_df(pairwise_text)
+    # net = make_graph(network_df, top_words_per_char, top_words_per_pair)
+    # name_1 = re.sub('.html', '', name_1)
+    # print(tfidf_to_latex_table(top_words_per_char, f"Top Words per character in {name_1}", f"{name_1}-vocabulary"))
+    # net.show(f"{name_1}_{top_chars}_chars.html", notebook=False)

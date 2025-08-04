@@ -1,978 +1,1200 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fre">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title type="main">La Rue Mercière</title>
-                <title type="sub">Comédie</title>
-            <author>
-                <persName>
-                    <forename>Marc-Antoine</forename>
-                    <surname>Legrand</surname>
-                </persName>
-            </author>
-                        <editor>Adrien Roumégous, dans le cadre d'un stage de M1 Informatique encadré par Aaron Boussidan et Philippe Gambette.</editor>
-            </titleStmt>
-            <publicationStmt>
-                <publisher xml:id="dracor">DraCor</publisher>
-                <idno type="URL">https://dracor.org</idno>
-                <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
-                <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
-                <availability>
-                    <licence>
-                        <ab>CC BY-NC-SA 4.0</ab>
-                        <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
-                    </licence>
-                </availability> 
-            </publicationStmt>
-            <sourceDesc>
-                <bibl type="digitalSource">
-                    <name>Théâtre Documentation</name>
-                    <idno type="URL"> http://théâtre-documentation.com/content/?q=node/479 </idno>
-                    <availability>
-                        <licence>
-                            <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
-                            <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
-                        </licence>
-                    </availability>
-                    <bibl type="originalSource">
-                        <date type="premiere" when="1694">Représentée pour la première fois, à Lyon, en 1694.</date>
-                        <idno type="URL"/>
-                    </bibl>
-                </bibl>
-            </sourceDesc>
-        </fileDesc>
-        <profileDesc>
-            <particDesc>
-                <listPerson>
-                        <person xml:id="monsieur-harpin" sex="SEX">
-                            <persName>MONSIEUR HARPIN</persName>
-                        </person>
-                        <person xml:id="monsieur-cornardet" sex="SEX">
-                            <persName>MONSIEUR CORNARDET</persName>
-                        </person>
-                        <person xml:id="éliante" sex="SEX">
-                            <persName>ÉLIANTE</persName>
-                        </person>
-                        <person xml:id="angélique" sex="SEX">
-                            <persName>ANGÉLIQUE</persName>
-                        </person>
-                        <person xml:id="isabelle" sex="SEX">
-                            <persName>ISABELLE</persName>
-                        </person>
-                        <person xml:id="lisimon" sex="SEX">
-                            <persName>LISIMON</persName>
-                        </person>
-                        <person xml:id="le-marquis" sex="SEX">
-                            <persName>LE MARQUIS</persName>
-                        </person>
-                        <person xml:id="lisette" sex="SEX">
-                            <persName>LISETTE</persName>
-                        </person>
-                </listPerson>
-            </particDesc>
-            <textClass>
-            <keywords scheme="http://theatre-documentation.fr"> <!--extracted from "genre" and "type" elements-->
-                    <term> Comédie</term>
-                    <term> vers </term>
-                </keywords>
-                <classCode scheme="http://www.wikidata.org/entity/">[Q40831]</classCode>
-            </textClass>
-        </profileDesc>
-        <revisionDesc>
-            <listChange>
-                <change when="2023-10-03">(mg) file conversion from source</change>
-            </listChange>
-        </revisionDesc>
-   </teiHeader>
-    <text>
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main" />
+        <title type="sub">Comédie</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/?q=node/479</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1694">Représentée pour la première fois, à Lyon, en 1694.</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <listPerson>
+          <person xml:id="monsieur-harpin" sex="SEX">
+            <persName>MONSIEUR HARPIN</persName>
+          </person>
+          <person xml:id="monsieur-cornardet" sex="SEX">
+            <persName>MONSIEUR CORNARDET</persName>
+          </person>
+          <person xml:id="éliante" sex="SEX">
+            <persName>ÉLIANTE</persName>
+          </person>
+          <person xml:id="angélique" sex="SEX">
+            <persName>ANGÉLIQUE</persName>
+          </person>
+          <person xml:id="isabelle" sex="SEX">
+            <persName>ISABELLE</persName>
+          </person>
+          <person xml:id="lisimon" sex="SEX">
+            <persName>LISIMON</persName>
+          </person>
+          <person xml:id="le-marquis" sex="SEX">
+            <persName>LE MARQUIS</persName>
+          </person>
+          <person xml:id="lisette" sex="SEX">
+            <persName>LISETTE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
+      <textClass>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>vers</term>
+        </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2025-07-10">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <text>
     <front>
-        <docTitle>
-            <titlePart type="main">LA RUE MERCIÈRE</titlePart>
-            <titlePart type="sub">COMÉDIE</titlePart>
-        </docTitle>
-        <docDate when="[vide]">[Date Print Line]</docDate>
-        
-        <performance>
-            <ab type="premiere">Représentée pour la première fois, à Lyon, en 1694.</ab><!--@date="1694"-->
-        </performance>
-            <l n="0" xml:id="l0">Comédie en un acte et en vers.</l>
-            <l n="1" xml:id="l1">Représentée pour la première fois, à Lyon, en 1694.</l>
-            <stage>MONSIEUR HARPIN, Marchand de dentelle </stage>
-            <stage>MONSIEUR CORNARDET, Marchand de rubans </stage>
-            <stage>ÉLIANTE, Femme de Monsieur Harpin </stage>
-            <stage>ANGÉLIQUE, Femme de Monsieur Cornardet </stage>
-            <stage>ISABELLE, Fille de Monsieur Harpin </stage>
-            <stage>LISIMON, Amant d’Isabelle </stage>
-            <stage>LE MARQUIS, Gascon </stage>
-            <stage>LISETTE, Suivante d’Isabelle </stage>
-            <stage>La scène est à Lyon, dans la rue Mercière. </stage>
-       </sp>
-       </div>
-           </div>
-           <div type="act" xml:id="préface">
-           <head> PRÉFACE </head>
-            <stage>Je n’aurais jamais songé à faire imprimer cette Pièce, non plus que j’ai fait celles de la Répétition de Thésée et de la Fille Précepteur, que notre Troupe a représentées ci-devant, si le Titre spécieux de la Rue Mercière, n’eût donné envie à un chacun d’en avoir la copie. Plusieurs personnes se sont gendarmés à ses premières représentations, s’imaginant qu’on avait voulu les jouer publiquement, cependant en la composant, je n’ai point eu dessein d’y peindre personne. Mais comme les aventures que j’y ai mises, sont fort communes dans le monde, il était presque impossible qu’elles n’eussent quelque rapport avec quelques-unes arrivées en cette Ville. Certaines personnes l’ont voulut critiquer, mais ils auraient perdu leur temps ; car je suis persuadé qu’elle n’en vaut pas la peine. </stage>
-        <castList>
-                    <head> ACTEURS </head>
-            <castItem>
-                    <role corresp="#monsieur-harpin">MONSIEUR HARPIN </role>, Marchand de dentelle</castItem>
-            <castItem>
-                    <role corresp="#monsieur-cornardet">MONSIEUR CORNARDET </role>, Marchand de rubans</castItem>
-            <castItem>
-                    <role corresp="#éliante">ÉLIANTE </role>, Femme de Monsieur Harpin</castItem>
-            <castItem>
-                    <role corresp="#angélique">ANGÉLIQUE </role>, Femme de Monsieur Cornardet</castItem>
-            <castItem>
-                    <role corresp="#isabelle">ISABELLE </role>, Fille de Monsieur Harpin</castItem>
-            <castItem>
-                    <role corresp="#lisimon">LISIMON </role>, Amant d’Isabelle</castItem>
-            <castItem>
-                    <role corresp="#le-marquis">LE MARQUIS </role>, Gascon</castItem>
-            <castItem>
-                    <role corresp="#lisette">LISETTE </role>, Suivante d’Isabelle</castItem>
-        </castList>
-           </div>
-           <div type="act" xml:id="1">
-           <head> ACTE 1 </head>
-        <div type="scene" xml:id=" préface1 ">
-            <head> Scène 1 </head>
-            <sp who="#m.-harpin" xml:id="préface1-1">
-                <speaker> M. HARPIN. </speaker>
-            <l n="2" xml:id="l2">Si nous sommes cocus, nous en voyons bien d’autres,</l>
-            <l n="3" xml:id="l3">Leurs femmes ne sont pas meilleures que les nôtres.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-2">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="4" xml:id="l4">Ah ! pour la vôtre, bon ; mais j’engage ma foi,</l>
-            <l n="5" xml:id="l5">Que la mienne jamais n’aima d’autre que moi.</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface1-3">
-                <speaker> M. HARPIN. </speaker>
-            <l n="6" xml:id="l6">Quoi ? parce qu’elle est douce et paraît indolente,</l>
-            <l n="7" xml:id="l7">Croyez-vous qu’en intrigue elle soit ignorante ?</l>
-            <l n="8" xml:id="l8">Et que ses yeux baissés, qu’elle affecte mourants,</l>
-            <l n="9" xml:id="l9">Des dangers de l’Hymen vous soient de sûrs garants ?</l>
-            <l n="10" xml:id="l10">Non, non, dans ce quartier les femmes, cher Compère,</l>
-            <l n="11" xml:id="l11">Aussi bien qu’autre part, ne se défendent guère.</l>
-            <l n="12" xml:id="l12">Quand au quart des maris on garderait la foi,</l>
-            <l n="13" xml:id="l13">Nous ne serions compris dans ce quart, vous ni moi.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-4">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="14" xml:id="l14">Vous m’avouerez aussi que quand on est marchande.</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface1-5">
-                <speaker> M. HARPIN. </speaker>
-            <l n="15" xml:id="l15">On ne doit vendre rien que ce qu’il faut qu’on vende ;</l>
-            <l n="16" xml:id="l16">Mais ce n’est plus la mode, et le mari souvent</l>
-            <l n="17" xml:id="l17">De son honneur vendu va recevoir l’argent.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-6">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="18" xml:id="l18">L’hiver, les Officiers s’en viennent chez nous fondre,</l>
-            <l n="19" xml:id="l19">Il faut les écouter.</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface1-7">
-                <speaker> M. HARPIN. </speaker>
-            <l n="20" xml:id="l20">Oui, mais ne rien répondre,</l>
-            <l n="21" xml:id="l21">Qui répond paye. Enfin je n’ai que trop vécu,</l>
-            <l n="22" xml:id="l22">Pour savoir comme on fait à Lyon un cocu.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-8">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="23" xml:id="l23">Quoique vous me disiez, je crois ma femme sage,</l>
-            <l n="24" xml:id="l24">Et la grande pudeur qu’on voit sur son visage,</l>
-            <l n="25" xml:id="l25">D’en rien appréhender m’ôte tout le sujet.</l>
-            <l n="26" xml:id="l26">Mais vous, Monsieur Harpin...</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface1-9">
-                <speaker> M. HARPIN. </speaker>
-            <l n="27" xml:id="l27">Hé ! Monsieur Cornarder,</l>
-            <l n="28" xml:id="l28">Sachez que j’aime mieux de ces femmes galantes,</l>
-            <l n="29" xml:id="l29">Qui disent de bons mots, qui sont toujours riantes,</l>
-            <l n="30" xml:id="l30">Qui sans aucun scrupule et sans s’effaroucher</l>
-            <l n="31" xml:id="l31">Écoutent l’équivoque, et loin de s’en fâcher,</l>
-            <l n="32" xml:id="l32">Y répondent souvent, et même avec finesse,</l>
-            <l n="33" xml:id="l33">Que celle, qu’un seul mot, un regard, un rien blesse,</l>
-            <l n="34" xml:id="l34">Qui d’un conte plaisant faisant d’abord fracas,</l>
-            <l n="35" xml:id="l35">Veulent trouver du mal où l’on n’en pense pas.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-10">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="36" xml:id="l36">Qu’entendez-vous par-là ?</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface1-11">
-                <speaker> M. HARPIN. </speaker>
-            <l n="37" xml:id="l37">J’entends que ces dernières,</l>
-            <l n="38" xml:id="l38">Se laissent plutôt prendre encor que les premières</l>
-            <l n="39" xml:id="l39">Que votre femme étant de ce nombre, je croi</l>
-            <l n="40" xml:id="l40">Que vous êtes encor plutôt cocu que moi.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-12">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="41" xml:id="l41">Et moi, je vous soutiens...</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface1-13">
-                <speaker> M. HARPIN. </speaker>
-            <l n="42" xml:id="l42">Mon Dieu, point de colère,</l>
-            <l n="43" xml:id="l43">Il faut tout doucement éclairer ce mystère,</l>
-            <l n="44" xml:id="l44">Et ne pas faire enfin comme ces ans passes,</l>
-            <l n="45" xml:id="l45">Tit un de nos voisins, que bien vous connaissez,</l>
-            <l n="46" xml:id="l46">Qui malgré qu’on en eût, voulut par son caprice</l>
-            <l n="47" xml:id="l47">Être avéré cocu par Arrêt de Justice ;</l>
-            <l n="48" xml:id="l48">Et même dans Lyon, de l’un à l’autre bout,</l>
-            <l n="49" xml:id="l49">Voulut qu’on publiât son déshonneur partout,</l>
-            <l n="50" xml:id="l50">Il en fut pour ses frais. Mais laissons la satyre,</l>
-            <l n="51" xml:id="l51">Tout le monde en sait plus que je n’en pourrais dire.</l>
-            <l n="52" xml:id="l52">Venons à notre fait. Ces diables d’Officiers</l>
-            <l n="53" xml:id="l53">À faire des cocus sont toujours des premiers.</l>
-            <l n="54" xml:id="l54">Votre femme surtout en paraît entêtée,</l>
-            <l n="55" xml:id="l55">Et la mienne, je croi, n’en est pas moins tentée.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-14">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="56" xml:id="l56">Quel est votre dessein ?</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface1-15">
-                <speaker> M. HARPIN. </speaker>
-            <l n="57" xml:id="l57">D’aller chez les Fripier !</l>
-            <l n="58" xml:id="l58">Louer dès à présent des habits d’Officiers ;</l>
-            <l n="59" xml:id="l59">Nous aurons tous les deux, et je me l’imagine,</l>
-            <l n="60" xml:id="l60">Avec de tels habits assez mauvaise mine ;</l>
-            <l n="61" xml:id="l61">Mais qu’y faire ? Il faudra réparer par argent</l>
-            <l n="62" xml:id="l62">Le mauvais air. Allons sans perdre un seul moment ;</l>
-            <l n="63" xml:id="l63">Et revenons chez nous avec cet équipage.</l>
-            <l n="64" xml:id="l64">Quitte pour différer d’un jour notre voyage.</l>
-      </sp>
-            <sp who="#m.-cornardet" xml:id="préface1-16">
-                <speaker> M. CORNARDET. </speaker>
-            <l n="65" xml:id="l65">Allons, Compère, allons, et feignant de partir</l>
-            <l n="66" xml:id="l66">De notre honneur douteux venons-nous éclaircir.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface2 ">
-            <head> Scène 1 </head>
-            <sp who="#éliante" xml:id="préface2-1">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="67" xml:id="l67">Nos maris sont partis, nous n’avons plus à craindre,</l>
-            <l n="68" xml:id="l68">Il ne faut désormais nullement nous contraindre ;</l>
-            <l n="69" xml:id="l69">Nous avons trop languis pendant leur long séjour</l>
-            <l n="70" xml:id="l70">Il faut nous divertir jusques à leur retour.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface2-2">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="71" xml:id="l71">Avons-nous bien du temps.</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface2-3">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="72" xml:id="l72">Nous avons la semaine.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface2-4">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="73" xml:id="l73">Que tu vas réjouir par-là ton Capitaine !</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface2-5">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="74" xml:id="l74">Et toi ton Avocat !</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface2-6">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="75" xml:id="l75">Bon ; je ne le vois plus,</l>
-            <l n="76" xml:id="l76">J’aime la nouveauté.</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface2-7">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="77" xml:id="l77">Quoi ! les nouveaux venus...</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface2-8">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="78" xml:id="l78">Succèdent aux anciens.</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface2-9">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="79" xml:id="l79">Le joli caractère !</l>
-            <l n="80" xml:id="l80">Je suis bien plus confiante, et suis bien moins légère :</l>
-            <l n="81" xml:id="l81">Hors cinq ou six Amants que je veux m’arrêter,</l>
-            <l n="82" xml:id="l82">J’ai fait vœu désormais de n’en plus écouter.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface2-10">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="83" xml:id="l83">Tu te contrains beaucoup, et c’est bien peu de chose</l>
-            <l n="84" xml:id="l84">Que cinq ou six amants.</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface2-11">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="85" xml:id="l85">C’est de peur qu’on ne cause,</l>
-            <l n="86" xml:id="l86">Quoique nous ne pensions ni l’un ni l’autre à mal,</l>
-            <l n="87" xml:id="l87">Ton époux est jaloux et le mien est brutal.</l>
-            <l n="88" xml:id="l88">Il apprit l’autre jour que malgré sa défense</l>
-            <l n="89" xml:id="l89">J’étais avec Lisandre, il vint en diligence ;</l>
-            <l n="90" xml:id="l90">Dedans le Charbonnier nous sûmes nous cacher,</l>
-            <l n="91" xml:id="l91">Il nous trouva : d’abord il pensa se fâcher.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface2-12">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="92" xml:id="l92">Bon ! tout cela n’est rien ; le mien me désespère,</l>
-            <l n="93" xml:id="l93">Un rien presque suffit pour le mettre en colère ;</l>
-            <l n="94" xml:id="l94">Jusques-là l’autre jour qu’il faisait le jaloux,</l>
-            <l n="95" xml:id="l95">Pour avoir une nuit découché de chez nous,</l>
-            <l n="96" xml:id="l96">J’étais au Bal, lui dis-je.</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface2-13">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="97" xml:id="l97">Hé si ! c’est une honte.</l>
-            <l n="98" xml:id="l98">Est-ce qu’à nos maris nous devons rendre compte ?</l>
-            <l n="99" xml:id="l99">Est-ce à présent la mode, au moins en ce pays ?</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface2-14">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="100" xml:id="l100">Oh ça, pour un moment laissons là nos maris ?</l>
-            <l n="101" xml:id="l101">Aussi bien j’aperçois venir quelque pratique,</l>
-            <l n="102" xml:id="l102">C’est un de tes amants, rentrons dans ta boutique.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface3 ">
-            <head> Scène 1 </head>
-            <sp who="#le-marquis" xml:id="préface3-1">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="103" xml:id="l103">Est-ce là ce quartier dont on fait tant de bruit ?</l>
-            <l n="104" xml:id="l104">Où tous les Officiers...</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-2">
-                <speaker> LISIMON. </speaker>
-            <l n="105" xml:id="l105">Vous êtes mal instruit,</l>
-            <l n="106" xml:id="l106">Sachez que cette rue en butte à la satyre</l>
-            <l n="107" xml:id="l107">Par le nombre de gens que son commerce attire,</l>
-            <l n="108" xml:id="l108">N’est pas assurément telle que vous pensez,</l>
-            <l n="109" xml:id="l109">Je crois depuis deux ans m’en être infirme assez.</l>
-            <l n="110" xml:id="l110">Apprenez qu’on y garde autant de retenue,</l>
-            <l n="111" xml:id="l111">Qu’on y vit aussi bien que dans toute autre rue.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-3">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="112" xml:id="l112">De mes amis pourtant m’en ont fait un rapport...</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-4">
-                <speaker> LISIMON. </speaker>
-            <l n="113" xml:id="l113">Et qui ? Des fanfarons, qui faisant leur effort</l>
-            <l n="114" xml:id="l114">Auprès d’une Marchande, et la trouvant rebelle,</l>
-            <l n="115" xml:id="l115">Vont par tout se vanter d’avoir triomphé d’elle.</l>
-            <l n="116" xml:id="l116">Encore un coup, Marquis, on s’est moqué de toi.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-5">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="117" xml:id="l117">Je veux le croire ainsi ; mais on m’a dit à moi,</l>
-            <l n="118" xml:id="l118">Que Marchande de drap, Gantière, Rubanière,</l>
-            <l n="119" xml:id="l119">Marchande de dentelles, et Guimpière et Lingère</l>
-            <l n="120" xml:id="l120">Souvent il s’en trouvait de ces Marchandes-là,</l>
-            <stage>Qui, quand on les pressait... enfin, et cætera. </stage>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-6">
-                <speaker> LISIMON. </speaker>
-            <l n="121" xml:id="l121">Je ne comprends donc pas comment cela doit être,</l>
-            <l n="122" xml:id="l122">Je puis à dire vrai ne m’y pas bien connaître ;</l>
-            <l n="123" xml:id="l123">Mais je puis bien ici, Marquis, le déclarer,</l>
-            <l n="124" xml:id="l124">Qu’après avoir été deux ans à soupirer,</l>
-            <l n="125" xml:id="l125">Près de cette Marchande, encor que je lui plaise...</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-7">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="126" xml:id="l126">Ah ! vous êtes discret, j’en suis parbleu bien aise.</l>
-            <l n="127" xml:id="l127">Cette Marchande donc ne vous a pas voulu.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-8">
-                <speaker> LISIMON. </speaker>
-            <l n="128" xml:id="l128">Il est si vrai, qu’enfin je me suis résolu</l>
-            <l n="129" xml:id="l129">À l’épouser.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-9">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="130" xml:id="l130">Parbleu ! tu me la donnes belle ;</l>
-            <l n="131" xml:id="l131">Tu veux donc devenir un Marchand de dentelle !</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-10">
-                <speaker> LISIMON. </speaker>
-            <l n="132" xml:id="l132">Pourquoi non ! J’en connais même dans ce quartier,</l>
-            <l n="133" xml:id="l133">Que s’ils ne s’étaient point mêlés d’autre métier,</l>
-            <l n="134" xml:id="l134">N’en auraient que mieux fait.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-11">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="135" xml:id="l135">Je sais qui tu veux dire ;</l>
-            <l n="136" xml:id="l136">Mais tu me viens conter qu’à Lyon on soupire</l>
-            <l n="137" xml:id="l137">Des deux ans sans rien faire et sans avancer rien.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-12">
-                <speaker> LISIMON. </speaker>
-            <l n="138" xml:id="l138">Voilà quel est mon sort, juge à présent du tien.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-13">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="139" xml:id="l139">Selon toi dans Lyon toute fille est pucelle.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-14">
-                <speaker> LISIMON. </speaker>
-            <l n="140" xml:id="l140">La peste, que nenni ; je sais qu’il en est telle,</l>
-            <l n="141" xml:id="l141">Et sans sortir d’ici, qui me démentirait.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-15">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="142" xml:id="l142">À parler autrement chacun te raillerait.</l>
-            <l n="143" xml:id="l143">Mais raisonnons un peu sur ton beau mariage,</l>
-            <l n="144" xml:id="l144">Tu me disais tantôt que celle qui t’engage</l>
-            <l n="145" xml:id="l145">Avait un mari qui...</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-16">
-                <speaker> LISIMON. </speaker>
-            <l n="146" xml:id="l146">Tu ne me comprends pas ?</l>
-            <l n="147" xml:id="l147">Celle en qui j’ai trouve tant de charmants appas,</l>
-            <l n="148" xml:id="l148">À pour notre malheur certaine belle-mère,</l>
-            <l n="149" xml:id="l149">Coquette, et qui d’abord fulmine de colère,</l>
-            <l n="150" xml:id="l150">Aussitôt qu’à sa fille elle voit quelque amant ;</l>
-            <l n="151" xml:id="l151">De sorte que pour voir la fille librement,</l>
-            <l n="152" xml:id="l152">Il faut aimer la mère, ou tout au moins le feindre,</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-17">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="153" xml:id="l153">La belle-mère a-t-elle encor quelque agrément ?</l>
-            <l n="154" xml:id="l154">Est-elle jeune ?</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-18">
-                <speaker> LISIMON. </speaker>
-            <l n="155" xml:id="l155">Oui.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-19">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="156" xml:id="l156">Belle ?</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-20">
-                <speaker> LISIMON. </speaker>
-            <l n="157" xml:id="l157">Passablement.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-21">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="158" xml:id="l158">A-t-elle de l’esprit ?</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-22">
-                <speaker> LISIMON. </speaker>
-            <l n="159" xml:id="l159">Beaucoup.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-23">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="160" xml:id="l160">C’est mon affaire.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-24">
-                <speaker> LISIMON. </speaker>
-            <l n="161" xml:id="l161">Comment ?</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-25">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="162" xml:id="l162">C’est que je veux devenir ton beau-père.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-26">
-                <speaker> LISIMON. </speaker>
-            <l n="163" xml:id="l163">Il n’en est pas besoin ; si tu veux en conter,</l>
-            <l n="164" xml:id="l164">Celle qui vient à nous pourra te contenter,</l>
-            <l n="165" xml:id="l165">C’est sa voisine. Adieu, j’aperçois Isabelle.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-27">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="166" xml:id="l166">Je vais tout doucement m’insinuer près d’elle.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface3-28">
-                <speaker> LISIMON. </speaker>
-            <l n="167" xml:id="l167">Il faudra l’aborder avec un compliment.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface3-29">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="168" xml:id="l168">Je ferai connaissance assez adroitement.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface4 ">
-            <head> Scène 1 </head>
-            <sp who="#le-marquis" xml:id="préface4-1">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="169" xml:id="l169">Je vous aime, ma chère, ou le diable m’emporte.</l>
-            <l n="170" xml:id="l170">Et je n’ai ressenti jamais d’ardeur si forte.</l>
-            <l n="171" xml:id="l171">Je ne puis résister à vos divins appas.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface4-2">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="172" xml:id="l172">Ce discours me surprend, ne vous connaissant pas,</l>
-            <l n="173" xml:id="l173">Mais comme votre abord marque un homme sincère,</l>
-            <l n="174" xml:id="l174">Tout ce que vous direz ne me pourra déplaire.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface4-3">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="175" xml:id="l175">On dit que vous avez un brutal de mari,</l>
-            <l n="176" xml:id="l176">Qui quand on vient chez vous, fait le charivari.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface4-4">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="177" xml:id="l177">Il est à la campagne.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface4-5">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="178" xml:id="l178">Hé bien, qu’il y demeure.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface4-6">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="179" xml:id="l179">Je crois qu’il y sera longtemps.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface4-7">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="180" xml:id="l180">À la bonne heure.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface4-8">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="181" xml:id="l181">Quand il est à Lyon, vraiment je n’ose pas</l>
-            <l n="182" xml:id="l182">Sans sa permission faire le moindre pas.</l>
-            <l n="183" xml:id="l183">Je ne vais nulle part qu’il ne soit à ma suite ;</l>
-            <l n="184" xml:id="l184">Mais quand il est absent aussitôt j’en profite.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface4-9">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="185" xml:id="l185">Mais pourquoi, dites-moi, vous marier si mal ?</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface4-10">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="186" xml:id="l186">Je vis bien, l’épousant, que c’était un brutal ;</l>
-            <l n="187" xml:id="l187">Mais comme mes parents vantaient fort ses richesses,</l>
-            <l n="188" xml:id="l188">Quoique je ne sentisse au fond nulles tendresses,</l>
-            <l n="189" xml:id="l189">Qu’il parût mal bâti, ridicule à mes yeux,</l>
-            <l n="190" xml:id="l190">Je dis, prenons toujours, c’est en attendant mieux.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface5 ">
-            <head> Scène 1 </head>
-            <sp who="#lisimon" xml:id="préface5-1">
-                <speaker> LISIMON. </speaker>
-            <l n="191" xml:id="l191">Hé quoi donc ! vous avez déjà fait connaissance ?</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface5-2">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="192" xml:id="l192">C’est bien moi, qui jamais trouve de résistance ;</l>
-            <l n="193" xml:id="l193">De cent, c’est celle en qui j’en ai trouvé le plus,</l>
-            <l n="194" xml:id="l194">Je ne m’arrête point aux discours superflus.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface6 ">
-            <head> Scène 1 </head>
-            <sp who="#lisette" xml:id="préface6-1">
-                <speaker> LISETTE. </speaker>
-            <l n="195" xml:id="l195">Quel dessein auraient-ils ? Je voudrais le savoir.</l>
-      </sp>
-            <sp who="#angélique" xml:id="préface6-2">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="196" xml:id="l196">Moi, je m’en doute assez ; ils veulent venir voir</l>
-            <l n="197" xml:id="l197">Comme ils seront reçus dedans cet équipage.</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface6-3">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="198" xml:id="l198">Ah, si c’était cela, pour leur donner ombrage,</l>
-            <l n="199" xml:id="l199">J’imagine un moyen qui nous réussirait.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface6-4">
-                <speaker> LISIMON. </speaker>
-            <l n="200" xml:id="l200">Quel moyen, s’il vous plaît ?</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface6-5">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="201" xml:id="l201">Hé ! mais... c’est qu’il faudrait</l>
-            <l n="202" xml:id="l202">Nous envoyer chercher vos habits tout à l’heure.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface6-6">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="203" xml:id="l203">La chose est fort facile, ici près je demeure ;</l>
-            <l n="204" xml:id="l204">Vous les allez avoir dans ce même moment.</l>
-            <stage>Il sort. </stage>
-      </sp>
-            <sp who="#angélique" xml:id="préface6-7">
-                <speaker> ANGÉLIQUE. </speaker>
-            <l n="205" xml:id="l205">Le Carnaval permet un tel déguisement,</l>
-            <l n="206" xml:id="l206">Et c’est ce qui pourra, s’ils découvrent la ruse,</l>
-            <l n="207" xml:id="l207">Nous servir auprès d’eux d’une valable excuse.</l>
-      </sp>
-            <sp who="#éliante" xml:id="préface6-8">
-                <speaker> ÉLIANTE. </speaker>
-            <l n="208" xml:id="l208">Montons donc promptement, pour nous déshabiller.</l>
-            <l n="209" xml:id="l209">Toi Lisette, surtout garde de babiller.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface7 ">
-            <head> Scène 1 </head>
-            <sp who="#lisimon" xml:id="préface7-1">
-                <speaker> LISIMON. </speaker>
-            <l n="210" xml:id="l210">Je respire à la fin, ma charmante Isabelle,</l>
-            <l n="211" xml:id="l211">Jamais occasion ne fut pour nous si belle.</l>
-            <l n="212" xml:id="l212">Enfin c’est en ce jour qu’il me faut éclater,</l>
-            <l n="213" xml:id="l213">Mon amour plus longtemps n’y saurait résister.</l>
-            <l n="214" xml:id="l214">Il faut qu’un nœud charmant pour jamais nous enchaîne.</l>
-            <l n="215" xml:id="l215">Hélas ! si vous saviez quelle cruelle peine,</l>
-            <l n="216" xml:id="l216">Voir d’un côté l’objet qui nous a su charmer,</l>
-            <l n="217" xml:id="l217">N’oser ouvertement lui parler ni l’aimer ;</l>
-            <l n="218" xml:id="l218">Et d’un autre côté voir une Belle-mère</l>
-            <l n="219" xml:id="l219">Par ses contorsions s’efforcer de nous plaire,</l>
-            <l n="220" xml:id="l220">Qui malgré nous, nous tire un aveu plein de fard</l>
-            <l n="221" xml:id="l221">Où le cœur ni l’amour n’eurent jamais de part ;</l>
-            <l n="222" xml:id="l222">Enfin qui nous fatigue à force de caresses,</l>
-            <l n="223" xml:id="l223">Et nous veut maigre nous arracher nos tendresses :</l>
-            <l n="224" xml:id="l224">Voilà, belle Isabelle, en quel affreux tourment</l>
-            <l n="225" xml:id="l225">Languit depuis longtemps un malheureux Amant.</l>
-      </sp>
-            <sp who="#isabelle" xml:id="préface7-2">
-                <speaker> ISABELLE. </speaker>
-            <l n="226" xml:id="l226">Croyez-vous, Lisimon être le seul à plaindre ?</l>
-            <l n="227" xml:id="l227">Ne dois-je pas aussi comme vous me contraindre ?</l>
-            <l n="228" xml:id="l228">Ma mère est ma Rivale, elle reçoit vos yeux,</l>
-            <l n="229" xml:id="l229">Je ne puis faire un pas sans vous trouver tous deux ;</l>
-            <l n="230" xml:id="l230">J’entends tous vos discours, je vois votre tendresse :</l>
-            <l n="231" xml:id="l231">Même le plus souvent, j’en sens quelque tristesse ;</l>
-            <l n="232" xml:id="l232">Mais pour m’en consoler, je me flatte et je croi</l>
-            <l n="233" xml:id="l233">Que tous ces doux propos ne s’adressent qu’à moi.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface7-3">
-                <speaker> LISIMON. </speaker>
-            <l n="234" xml:id="l234">Ah ! vous le pouvez croire ; et parmi ces contraintes.</l>
-            <l n="235" xml:id="l235">Je sens à tout moment de mortelles atteintes.</l>
-      </sp>
-            <sp who="#lisette" xml:id="préface7-4">
-                <speaker> LISETTE. </speaker>
-            <l n="236" xml:id="l236">Brisons là, s’il vous plaît, finissons vos regrets,</l>
-            <l n="237" xml:id="l237">Vous serez aujourd’hui tous les deux satisfaits.</l>
-            <l n="238" xml:id="l238">Est-ce que vous doutez que Monsieur votre Père,</l>
-            <l n="239" xml:id="l239">Irrité du projet de votre Belle-mère,</l>
-            <l n="240" xml:id="l240">Contre elle tout d’abord ne se mette en courroux ?</l>
-            <l n="241" xml:id="l241">Comme depuis deux ans Monsieur l’en rend jaloux ?</l>
-            <l n="242" xml:id="l242">Pour ne lui plus laisser aucun sujet d’ombrage</l>
-            <l n="243" xml:id="l243">Il lui demandera sa fille en mariage.</l>
-      </sp>
-            <sp who="#isabelle" xml:id="préface7-5">
-                <speaker> ISABELLE. </speaker>
-            <l n="244" xml:id="l244">Lisette va bien vite.</l>
-      </sp>
-            <sp who="#lisette" xml:id="préface7-6">
-                <speaker> LISETTE. </speaker>
-            <l n="245" xml:id="l245">Et vous bien lentement :</l>
-            <l n="246" xml:id="l246">Si jamais je suis grande, et que j’aie un amant,</l>
-            <l n="247" xml:id="l247">Vous imaginez-vous, pour peu qu’il soit fidèle,</l>
-            <l n="248" xml:id="l248">Qu’il ait bien longtemps lieu de m’appeler cruelle ?</l>
-            <l n="249" xml:id="l249">Ah ! que non. De l’humeur dont déjà je me sens,</l>
-            <l n="250" xml:id="l250">Il ne languira pas avec moi bien longtemps.</l>
-            <l n="251" xml:id="l251">Je sais sur ce sujet de certaines paroles,</l>
-            <l n="252" xml:id="l252">Où l’on a fait un air ; elles sont assez drôles</l>
-            <l n="253" xml:id="l253">Et si vous voulez bien un moment m’écouter,</l>
-            <l n="254" xml:id="l254">Pour vous désennuyer je vais vous les chanter.</l>
-            <stage>Chanson.  </stage>
-      </sp>
-            <sp who="#isabelle" xml:id="préface7-7">
-                <speaker> ISABELLE. </speaker>
-            <l n="255" xml:id="l255">Lisette laissons-là toutes ces bagatelles :</l>
-            <l n="256" xml:id="l256">Voici notre Marquis.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface8 ">
-            <head> Scène 1 </head>
-            <l n="257" xml:id="l257">Hé bien ! où sont ces belles ?</l>
-            <l n="258" xml:id="l258">Elles auront de quoi s’habiller comme il faut.</l>
-            <sp who="#isabelle" xml:id="préface8-1">
-                <speaker> ISABELLE. </speaker>
-            <l n="259" xml:id="l259">Pour leur aider, Lisette, il faut monter là-haut.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface9 ">
-            <head> Scène 1 </head>
-            <sp who="#le-marquis" xml:id="préface9-1">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="260" xml:id="l260">Nous autres, demeurons ; et si tu veux bien rire,</l>
-            <l n="261" xml:id="l261">Nous attendrons ici ces masques de satyre.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface9-2">
-                <speaker> LISIMON. </speaker>
-            <l n="262" xml:id="l262">Les voici, parle bas.</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface9-3">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="263" xml:id="l263">Il faut les accoster ;</l>
-            <l n="264" xml:id="l264">Il n’est pas encor temps de les laisser monter.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface10 ">
-            <head> Scène 1 </head>
-            <l n="265" xml:id="l265">Apparemment, Messieurs, vous êtes au service.</l>
-            <l n="266" xml:id="l266">Oui, Monsieur, nous servons...</l>
-            <sp who="#le-marquis" xml:id="préface10-1">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="267" xml:id="l267">Où donc ? dans la Milice ?</l>
-            <l n="268" xml:id="l268">Oui, je suis Colonel, et Monsieur Lieutenant.</l>
-            <l n="269" xml:id="l269">Colonel ! ah, Monsieur, et de quel Régiment ?</l>
-            <l n="270" xml:id="l270">Hé... de mon Régiment ?</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface10-2">
-                <speaker> LISIMON. </speaker>
-            <l n="271" xml:id="l271">Cela s’en va sans dire,</l>
-            <l n="272" xml:id="l272">Déjà cet entretien me fait pâmer de rire.</l>
-            <l n="273" xml:id="l273">Je ne sais où j’en suis.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface10-3">
-                <speaker> LISIMON. </speaker>
-            <l n="274" xml:id="l274">Mais, Monsieur, pourrait-on</l>
-            <l n="275" xml:id="l275">De votre Régiment vous demander le nom ?</l>
-            <l n="276" xml:id="l276">À vous dire le vrai...je ne suis pas un homme,</l>
-            <l n="277" xml:id="l277">Qui s’arrête beaucoup... à savoir comme on nomme</l>
-            <l n="278" xml:id="l278">Mon Régiment.</l>
-            <l n="279" xml:id="l279">Monsieur peut-être le saura.</l>
-            <l n="280" xml:id="l280">Ah ! si mon Lieutenant le sait, il le dira.</l>
-            <l n="281" xml:id="l281">Si même un Colonel ne peut vous en instruire,</l>
-            <l n="282" xml:id="l282">Comment un Lieutenant pourra-t-il vous le dire,</l>
-            <l n="283" xml:id="l283">C’est pourquoi, croyez-moi, finirons l’entretien.</l>
-            <l n="284" xml:id="l284">À Lyon, dites-moi, se divertit-on bien ?</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface10-4">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="285" xml:id="l285">On ne peut mieux, sur tout pour la galanterie.</l>
-            <l n="286" xml:id="l286">Pour cela, je le sais, dites-moi, je vous prie,</l>
-            <l n="287" xml:id="l287">Pourrait-on point savoir quelles sont vos amours ?</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface10-5">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="288" xml:id="l288">Oh, quant à moi, ma foi je change tous les jours.</l>
-            <l n="289" xml:id="l289">Ne marchandez-vous point souvent quelque dentelle</l>
-            <l n="290" xml:id="l290">Chez cette Belle-là.</l>
-            <stage>Montrant la boutique de sa femme à Lisimon.  </stage>
-      </sp>
-            <sp who="#lisimon" xml:id="préface10-6">
-                <speaker> LISIMON. </speaker>
-            <l n="291" xml:id="l291">Vous coucherez chez elle,</l>
-            <l n="292" xml:id="l292">Ce soir, si vous voulez.</l>
-            <l n="293" xml:id="l293">Parbleu, je le crois bien,</l>
-            <l n="294" xml:id="l294">Puisque c’est ma maison.</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface10-7">
-                <speaker> LISIMON. </speaker>
-            <l n="295" xml:id="l295">Vous ne répondez rien.</l>
-            <l n="296" xml:id="l296">Je n’en pense pas moins.</l>
-            <l n="297" xml:id="l297">Et cette Rubanière,</l>
-            <l n="298" xml:id="l298">Dites-moi, s’il vous plaît, n’est-elle pas plus fière ?</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface10-8">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="299" xml:id="l299">Non pour vous le prouver, je vous fais de bon cœur</l>
-            <l n="300" xml:id="l300">La même offre qui vient d’être fait à Monsieur ;</l>
-            <l n="301" xml:id="l301">Entre les Officiers cela se fait sans honte.</l>
-            <l n="302" xml:id="l302">Fort bien, nous en avons tous deux pour notre compte.</l>
-            <l n="303" xml:id="l303">C’est sans adieu, Messieurs, nous nous verrons tantôt.</l>
-            <l n="304" xml:id="l304">Parbleu, gaillardement ils vont monter là-haut.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface11 ">
-            <head> Scène 1 </head>
-            <l n="305" xml:id="l305">Lisette vient à nous, qui peut nous reconnaître ;</l>
-            <l n="306" xml:id="l306">Feignons pour l’abuser.</l>
-            <l n="307" xml:id="l307">Bon, voici notre Maître.</l>
-            <l n="308" xml:id="l308">Dis-moi, ma chère enfant, sais-tu qui loge là ?</l>
-            <sp who="#lisette" xml:id="préface11-1">
-                <speaker> LISETTE. </speaker>
-            <l n="309" xml:id="l309">Hé pourquoi, s’il vous plaît, demandez-vous cela ?</l>
-            <l n="310" xml:id="l310">Est-ce que vous voulez acheter des dentelles ?</l>
-            <l n="311" xml:id="l311">Si vous en souhaitez nous en avons de belles.</l>
-            <l n="312" xml:id="l312">Mais je vois à votre air que loin d’en acheter,</l>
-            <l n="313" xml:id="l313">Vous n’y voulez entrer que pour y caqueter,</l>
-            <l n="314" xml:id="l314">Le champ vous est ouvert, entrez sans vous contraindre,</l>
-            <l n="315" xml:id="l315">Les Maris n’y sont pas, vous n’avez rien à craindre.</l>
-      </sp>
-            <sp who="#m.-harpin" xml:id="préface11-2">
-                <speaker> M. HARPIN. </speaker>
-            <l n="316" xml:id="l316">Hé ! quand ils y seraient, que feraient-ils ?</l>
-      </sp>
-            <sp who="#lisette" xml:id="préface11-3">
-                <speaker> LISETTE. </speaker>
-            <l n="317" xml:id="l317">Bon, rien ;</l>
-            <l n="318" xml:id="l318">Car ce sont des benêts, je les connais fort bien.</l>
-            <l n="319" xml:id="l319">Ils peuvent s’assurer que si j’étais leur femme,</l>
-            <l n="320" xml:id="l320">Ils seraient en effet ce qu’ils craignent dans l’âme.</l>
-            <l n="321" xml:id="l321">Le sont-ils, qu’en crois-tu ?</l>
-      </sp>
-            <sp who="#lisette" xml:id="préface11-4">
-                <speaker> LISETTE. </speaker>
-            <l n="322" xml:id="l322">Je n’en répondrais pas ;</l>
-            <l n="323" xml:id="l323">Mais quand cela serait, cela se dit tout bas.</l>
-            <l n="324" xml:id="l324">Et c’est ce qui les peut consoler dans leur peine.</l>
-            <l n="325" xml:id="l325">Aussi bien nous avons une demi-douzaine</l>
-            <l n="326" xml:id="l326">De Voisines, de qui l’esprit est médisant,</l>
-            <l n="327" xml:id="l327">Et donne un coup de langue à chacun en passant.</l>
-            <l n="328" xml:id="l328">Depuis un certain temps, voulant passer pour prudes,</l>
-            <l n="329" xml:id="l329">(Sans l’être cependant,) elles sont leurs études</l>
-            <l n="330" xml:id="l330">À s’instruire de tout, à parler d’un chacun,</l>
-            <l n="331" xml:id="l331">Et dans leur médisance à n’épargner pas un.</l>
-            <l n="332" xml:id="l332">Nous avons bien besoin de toutes ces fadaises,</l>
-            <l n="333" xml:id="l333">Laisse-là ce discours ; mais nous serions bien aises</l>
-            <l n="334" xml:id="l334">Que tu nous fisse entrer un moment là-dedans.</l>
-      </sp>
-            <sp who="#lisette" xml:id="préface11-5">
-                <speaker> LISETTE. </speaker>
-            <l n="335" xml:id="l335">Monsieur, j’y fais entrer tous les honnêtes gens.</l>
-            <l n="336" xml:id="l336">Donnons-lui quelque chose avant de voir ces Dames.</l>
-            <l n="337" xml:id="l337">Quoi ! donner de l’argent pour aller voir nos femmes ?</l>
-            <l n="338" xml:id="l338">Hé morbleu ! taisez-vous, rien ne sera perdu,</l>
-            <l n="339" xml:id="l339">Et plus cher qu’au marché tout nous sera rendu.</l>
-      </sp>
-            <sp who="#lisette" xml:id="préface11-6">
-                <speaker> LISETTE. </speaker>
-            <l n="340" xml:id="l340">Montez donc sans façon.</l>
-            <stage>À part. </stage>
-            <l n="341" xml:id="l341">Pour moi je me retire,</l>
-            <l n="342" xml:id="l342">Je ne pourrais rester sans m’empêcher de rire.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface12 ">
-            <head> Scène 1 </head>
-            <l n="343" xml:id="l343">Comment, morbleu ! Messieurs, que cherchez-vous ici ?</l>
-            <l n="344" xml:id="l344">Hé, vous même ! Messieurs, qui cherchez vous aussi ?</l>
-            <l n="345" xml:id="l345">Ce que nous y cherchons ? par la mort, par le ventre,</l>
-            <l n="346" xml:id="l346">Ce que nous y cherchons ?</l>
-            <l n="347" xml:id="l347">La peste.</l>
-            <sp who="#m.-harpin" xml:id="préface12-1">
-                <speaker> M. HARPIN. </speaker>
-            <l n="348" xml:id="l348">Comment diantre !</l>
-            <l n="349" xml:id="l349">Mon ami, ces Messieurs sont tous deux gens de cœur</l>
-            <l n="350" xml:id="l350">Leur mine le fait voir ; il faut avec douceur</l>
-            <l n="351" xml:id="l351">S’expliquer avec eux.</l>
-            <l n="352" xml:id="l352">Hé bien donc, je m’explique ;</l>
-            <stage>À Cornardet son mari. </stage>
-            <l n="353" xml:id="l353">Si vous entrez jamais dedans cette boutique...</l>
-            <l n="354" xml:id="l354">Et vous dans celle-ci...</l>
-            <l n="355" xml:id="l355">Mais si...</l>
-            <l n="356" xml:id="l356">Point de raison,</l>
-            <l n="357" xml:id="l357">Voyez si le parti vous accommode ou non.</l>
-            <l n="358" xml:id="l358">Quant à moi, nullement.</l>
-            <l n="359" xml:id="l359">Hé bien, il faut se battre.</l>
-            <l n="360" xml:id="l360">Heureusement, ici nous nous prouvons tous quatre.</l>
-            <l n="361" xml:id="l361">Quel diable de bonheur ?</l>
-            <l n="362" xml:id="l362">N’est-ce pas être heureux,</l>
-            <l n="363" xml:id="l363">Ayant un différend, d’être deux contre deux ?</l>
-            <l n="364" xml:id="l364">Monsieur est mon rival, et Monsieur est le vôtre,</l>
-            <l n="365" xml:id="l365">Il entretiendra l’un, moi j’entretiendrai l’autre.</l>
-            <l n="366" xml:id="l366">Monsieur, je n’aime point ces sortes d’entretiens,</l>
-            <l n="367" xml:id="l367">Pourrait-on point trouver quelques plus doux moyens ?</l>
-            <l n="368" xml:id="l368">Non, non, il faut se battre, ou nous quitter la place.</l>
-            <l n="369" xml:id="l369">Je ne pourrai jamais, quelque effort que je fasse,</l>
-            <l n="370" xml:id="l370">M’empêcher de rentrer dedans cette maison.</l>
-            <l n="371" xml:id="l371">Consultons entre nous pour leur rendre raison.</l>
-            <l n="372" xml:id="l372">Hé bien, te sens-tu point un peu de hardiesse ?</l>
-            <l n="373" xml:id="l373">Je ne me battrais pas même pour ma maîtresse ;</l>
-            <l n="374" xml:id="l374">Juge si pour ma femme il me viendra du cœur.</l>
-            <stage>Haut.  </stage>
-            <l n="375" xml:id="l375">Nous vous cédons, Messieurs, ce n’est pas sans douleur.</l>
-            <l n="376" xml:id="l376">Si vous y rentrez plus, vous saurez qui nous sommes.</l>
-            <l n="377" xml:id="l377">Quels petits enragés ! ce ne sont point des hommes,</l>
-            <l n="378" xml:id="l378">Ce sont des diables.</l>
-            <l n="379" xml:id="l379">Quoi ?</l>
-            <l n="380" xml:id="l380">Moi, je ne vous dis rien.</l>
-            <l n="381" xml:id="l381">Je parlais à Monsieur.</l>
-            <l n="382" xml:id="l382">Au moins songez y bien.</l>
-            <l n="383" xml:id="l383">Gardez que l’un de vous entre nos pattes tombe.</l>
-            <l n="384" xml:id="l384">L’homme le plus vaillant auprès de moi succombe.</l>
-            <l n="385" xml:id="l385">Jamais qui que ce soit n’a pu me faire peur.</l>
-            <l n="386" xml:id="l386">Nul d’avec moi jamais n’est sorti le vainqueur.</l>
-            <l n="387" xml:id="l387">Allons, mon cher, rentrons, allons revoir nos belles,</l>
-            <l n="388" xml:id="l388">Et tâchons d’apaiser notre courroux près d’elles.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface13 ">
-            <head> Scène 1 </head>
-            <l n="389" xml:id="l389">Ceci n’est pas mauvais ; nous devons empêcher,</l>
-            <l n="390" xml:id="l390">Comme étant les maris, les galants d’approcher ;</l>
-            <l n="391" xml:id="l391">Et ce sont les galants qui veulent par menace,</l>
-            <l n="392" xml:id="l392">Obliger les maris à leur quitter la place ;</l>
-            <l n="393" xml:id="l393">Le tour est ma foi bon. Mais ils descendent tous,</l>
-            <l n="394" xml:id="l394">Il est temps d’éclater puisqu’ils viennent à nous.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" préface14 ">
-            <head> Scène 1 </head>
-            <l n="395" xml:id="l395">Messieurs, avec le temps nous nous serons connaître.</l>
-            <l n="396" xml:id="l396">Vous n’êtes que des sots, qui que vous puissiez être.</l>
-            <l n="397" xml:id="l397">Vous en pouvez, Messieurs, parler très savamment,</l>
-            <l n="398" xml:id="l398">Car si nous sommes sots, c’est par vous seuls.</l>
-            <l n="399" xml:id="l399">Comment ?</l>
-            <l n="400" xml:id="l400">C’est, puisqu’il faut ici le déclarer, que celles</l>
-            <l n="401" xml:id="l401">Qui logent là-dedans et qui sont nos querelles,</l>
-            <l n="402" xml:id="l402">Et qui sont cause enfin qu’on nous traite si mal,</l>
-            <l n="403" xml:id="l403">Sont attachées à nous par le nœud conjugal,</l>
-            <l n="404" xml:id="l404">Nous sommes les maris.</l>
-            <l n="405" xml:id="l405">Et nous sommes les femmes.</l>
-            <l n="406" xml:id="l406">Les femmes ! oui ma foi, ce sont ces bonnes Dames.</l>
-            <l n="407" xml:id="l407">Mais pourquoi, s’il vous plaît, tous ces déguisements ?</l>
-            <l n="408" xml:id="l408">Hé pourquoi, s’il vous plaît, tous ces ajustements ?</l>
-            <l n="409" xml:id="l409">Nous l’avions pris exprès pour venir vous confondre.</l>
-            <l n="410" xml:id="l410">Et nous, nous l’avions pris pour venir vous répondre.</l>
-            <l n="411" xml:id="l411">Pour vous faire enrager dans vos soupçons jaloux,</l>
-            <l n="412" xml:id="l412">Et montrer qu’on en sait du moins autant que vous.</l>
-            <l n="413" xml:id="l413">Puisque d’un si beau tour, l’une et l’autre est capable,</l>
-            <l n="414" xml:id="l414">Après cette hardiesse il n’est pas incroyable</l>
-            <l n="415" xml:id="l415">Que vous n’ayez été de celles que jadis,</l>
-            <l n="416" xml:id="l416">Avecque leurs Amants furent dans un logis,</l>
-            <l n="417" xml:id="l417">Où Messieurs leurs galants les laissant pour otage,</l>
-            <l n="418" xml:id="l418">Pour payer leur repas, elles mirent en gage</l>
-            <l n="419" xml:id="l419">Une bague, un collier, un cotillon fort beau,</l>
-            <l n="420" xml:id="l420">Ne pouvant pas avoir crédit chez Funerau[1].</l>
-            <l n="421" xml:id="l421">Morbleu ! je n’entends point là-dessus raillerie.</l>
-            <l n="422" xml:id="l422">Mais que faisaient chez vous ces Messieurs, je vous prie ?</l>
-            <sp who="#lisimon" xml:id="préface14-1">
-                <speaker> LISIMON. </speaker>
-            <l n="423" xml:id="l423">Pour vous ôter sujet de rien craindre de moi,</l>
-            <l n="424" xml:id="l424">Je vous avoue ici qu’Isabelle a ma foi,</l>
-            <l n="425" xml:id="l425">Que je l’aime.</l>
-            <l n="426" xml:id="l426">Ma fille !</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface14-2">
-                <speaker> LISIMON. </speaker>
-            <l n="427" xml:id="l427">Oui, Monsieur, votre femme</l>
-            <l n="428" xml:id="l428">N’était qu’un faux prétexte à mieux cacher ma flamme.</l>
-            <l n="429" xml:id="l429">La chose étant ainsi, quel est votre dessein ?</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface14-3">
-                <speaker> LISIMON. </speaker>
-            <l n="430" xml:id="l430">D’épouser votre fille.</l>
-            <l n="431" xml:id="l431">Et quand, Monsieur ?</l>
-      </sp>
-            <sp who="#lisimon" xml:id="préface14-4">
-                <speaker> LISIMON. </speaker>
-            <l n="432" xml:id="l432">Demain.</l>
-            <l n="433" xml:id="l433">Moi qui n’ai point de fille, à quel dessein près d’elle ?...</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface14-5">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="434" xml:id="l434">Moi, je n aime jamais que pour la bagatelle.</l>
-            <l n="435" xml:id="l435">Comment donc, devant moi vous osez l’avouer ?</l>
-      </sp>
-            <sp who="#le-marquis" xml:id="préface14-6">
-                <speaker> LE MARQUIS. </speaker>
-            <l n="436" xml:id="l436">Tu te fâches, mon cher, tu devrais m’en louer ;</l>
-            <l n="437" xml:id="l437">Sans moi ta femme aurait vingt galants à sa suite,</l>
-            <l n="438" xml:id="l438">Mais sachant que j’y suis, ils cessent leur poursuite.</l>
-            <l n="439" xml:id="l439">Vous osez...</l>
-            <l n="440" xml:id="l440">Croyez-moi, ne vous fâchez pas tant,</l>
-            <l n="441" xml:id="l441">Je n’ai non plus que vous sujet d’être content.</l>
-            <l n="442" xml:id="l442">Mais faites comme moi ; ma femme est infidèle,</l>
-            <l n="443" xml:id="l443">Pour la faire enrager je vais faire comme elle.</l>
-            <l n="444" xml:id="l444">Le remède est fort beau : de nous que dira-t-on ?</l>
-            <l n="445" xml:id="l445">Que nous avons suivi l’usage de Lyon.</l>
-        <stage>LISETTE <em>chante à Cornardet.</em></stage>
-      </sp>
-            <sp who="#angélique" xml:id="préface14-7">
-                <speaker> M. HARPIN et ANGÉLIQUE chantent ensemble à Cornardet. </speaker>
-            <l n="446" xml:id="l446">Oui, c’est bien dit, allons, suivons ce noble usage,</l>
-            <l n="447" xml:id="l447">Qui depuis si longtemps règne dans le ménage.</l>
-            <l n="448" xml:id="l448">Soupons ce soir ensemble, et dès demain matin,</l>
-            <l n="449" xml:id="l449">Assistons à la noce, ou du moins au festin.</l>
-            <l n="450" xml:id="l450">[1] Fameux Traiteur de Lyon.</l>
-            <l n="451" xml:id="l451"></l>
-         </sp>
-         <p>FIN</p>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1694" location="unknown">Représentée pour la première fois, à Lyon, en 1694.</ab>
+      </performance>
+      <div type="preface">
+        <head>PRÉFACE</head>
+        <p>Je n’aurais jamais songé à faire imprimer cette Pièce, non plus que j’ai fait celles de la &lt;em&gt;Répétition de Thésée&lt;/em&gt; et de &lt;em&gt;la Fille Précepteur&lt;/em&gt;, que notre Troupe a représentées ci-devant, si le Titre spécieux de &lt;em&gt;la Rue Mercière&lt;/em&gt;, n’eût donné envie à un chacun d’en avoir la copie. Plusieurs personnes se sont gendarmés à ses premières représentations, s’imaginant qu’on avait voulu les jouer publiquement, cependant en la composant, je n’ai point eu dessein d’y peindre personne. Mais comme les aventures que j’y ai mises, sont fort communes dans le monde, il était presque impossible qu’elles n’eussent quelque rapport avec quelques-unes arrivées en cette Ville. Certaines personnes l’ont voulut critiquer, mais ils auraient perdu leur temps ; car je suis persuadé qu’elle n’en vaut pas la peine.</p>
       </div>
+      <castList />
+    </front>
+    <body>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="1">Si nous sommes cocus, nous en voyons bien d’autres,</l>
+          <l n="2">Leurs femmes ne sont pas meilleures que les nôtres.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="3">Ah ! pour la vôtre, bon ; mais j’engage ma foi,</l>
+          <l n="4">Que la mienne jamais n’aima d’autre que moi.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="5">Quoi ? parce qu’elle est douce et paraît indolente,</l>
+          <l n="6">Croyez-vous qu’en intrigue elle soit ignorante ?</l>
+          <l n="7">Et que ses yeux baissés, qu’elle affecte mourants,</l>
+          <l n="8">Des dangers de l’Hymen vous soient de sûrs garants ?</l>
+          <l n="9">Non, non, dans ce quartier les femmes, cher Compère,</l>
+          <l n="10">Aussi bien qu’autre part, ne se défendent guère.</l>
+          <l n="11">Quand au quart des maris on garderait la foi,</l>
+          <l n="12">Nous ne serions compris dans ce quart, vous ni moi.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="13">Vous m’avouerez aussi que quand on est marchande.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="14">On ne doit vendre rien que ce qu’il faut qu’on vende ;</l>
+          <l n="15">Mais ce n’est plus la mode, et le mari souvent</l>
+          <l n="16">De son honneur vendu va recevoir l’argent.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="17">L’hiver, les Officiers s’en viennent chez nous fondre,</l>
+          <l n="18">Il faut les écouter.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="19">Oui, mais ne rien répondre,</l>
+          <l n="20">Qui répond paye. Enfin je n’ai que trop vécu,</l>
+          <l n="21">Pour savoir comme on fait à Lyon un cocu.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="22">Quoique vous me disiez, je crois ma femme sage,</l>
+          <l n="23">Et la grande pudeur qu’on voit sur son visage,</l>
+          <l n="24">D’en rien appréhender m’ôte tout le sujet.</l>
+          <l n="25">Mais vous, Monsieur Harpin...</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="26">Hé ! Monsieur Cornarder,</l>
+          <l n="27">Sachez que j’aime mieux de ces femmes galantes,</l>
+          <l n="28">Qui disent de bons mots, qui sont toujours riantes,</l>
+          <l n="29">Qui sans aucun scrupule et sans s’effaroucher</l>
+          <l n="30">Écoutent l’équivoque, et loin de s’en fâcher,</l>
+          <l n="31">Y répondent souvent, et même avec finesse,</l>
+          <l n="32">Que celle, qu’un seul mot, un regard, un rien blesse,</l>
+          <l n="33">Qui d’un conte plaisant faisant d’abord fracas,</l>
+          <l n="34">Veulent trouver du mal où l’on n’en pense pas.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="35">Qu’entendez-vous par-là ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="36">J’entends que ces dernières,</l>
+          <l n="37">Se laissent plutôt prendre encor que les premières</l>
+          <l n="38">Que votre femme étant de ce nombre, je croi</l>
+          <l n="39">Que vous êtes encor plutôt cocu que moi.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="40">Et moi, je vous soutiens...</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="41">Mon Dieu, point de colère,</l>
+          <l n="42">Il faut tout doucement éclairer ce mystère,</l>
+          <l n="43">Et ne pas faire enfin comme ces ans passes,</l>
+          <l n="44">Tit un de nos voisins, que bien vous connaissez,</l>
+          <l n="45">Qui malgré qu’on en eût, voulut par son caprice</l>
+          <l n="46">Être avéré cocu par Arrêt de Justice ;</l>
+          <l n="47">Et même dans Lyon, de l’un à l’autre bout,</l>
+          <l n="48">Voulut qu’on publiât son déshonneur partout,</l>
+          <l n="49">Il en fut pour ses frais. Mais laissons la satyre,</l>
+          <l n="50">Tout le monde en sait plus que je n’en pourrais dire.</l>
+          <l n="51">Venons à notre fait. Ces diables d’Officiers</l>
+          <l n="52">À faire des cocus sont toujours des premiers.</l>
+          <l n="53">Votre femme surtout en paraît entêtée,</l>
+          <l n="54">Et la mienne, je croi, n’en est pas moins tentée.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="55">Quel est votre dessein ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="56">D’aller chez les Fripier !</l>
+          <l n="57">Louer dès à présent des habits d’Officiers ;</l>
+          <l n="58">Nous aurons tous les deux, et je me l’imagine,</l>
+          <l n="59">Avec de tels habits assez mauvaise mine ;</l>
+          <l n="60">Mais qu’y faire ? Il faudra réparer par argent</l>
+          <l n="61">Le mauvais air. Allons sans perdre un seul moment ;</l>
+          <l n="62">Et revenons chez nous avec cet équipage.</l>
+          <l n="63">Quitte pour différer d’un jour notre voyage.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET.</speaker>
+          <l n="64">Allons, Compère, allons, et feignant de partir</l>
+          <l n="65">De notre honneur douteux venons-nous éclaircir.</l>
+        </sp>
       </div>
-   </body>
-</text>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="66">Nos maris sont partis, nous n’avons plus à craindre,</l>
+          <l n="67">Il ne faut désormais nullement nous contraindre ;</l>
+          <l n="68">Nous avons trop languis pendant leur long séjour</l>
+          <l n="69">Il faut nous divertir jusques à leur retour.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="70">Avons-nous bien du temps.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="71">Nous avons la semaine.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="72">Que tu vas réjouir par-là ton Capitaine !</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="73">Et toi ton Avocat !</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="74">Bon ; je ne le vois plus,</l>
+          <l n="75">J’aime la nouveauté.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="76">Quoi ! les nouveaux venus...</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="77">Succèdent aux anciens.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="78">Le joli caractère !</l>
+          <l n="79">Je suis bien plus confiante, et suis bien moins légère :</l>
+          <l n="80">Hors cinq ou six Amants que je veux m’arrêter,</l>
+          <l n="81">J’ai fait vœu désormais de n’en plus écouter.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="82">Tu te contrains beaucoup, et c’est bien peu de chose</l>
+          <l n="83">Que cinq ou six amants.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="84">C’est de peur qu’on ne cause,</l>
+          <l n="85">Quoique nous ne pensions ni l’un ni l’autre à mal,</l>
+          <l n="86">Ton époux est jaloux et le mien est brutal.</l>
+          <l n="87">Il apprit l’autre jour que malgré sa défense</l>
+          <l n="88">J’étais avec Lisandre, il vint en diligence ;</l>
+          <l n="89">Dedans le Charbonnier nous sûmes nous cacher,</l>
+          <l n="90">Il nous trouva : d’abord il pensa se fâcher.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="91">Bon ! tout cela n’est rien ; le mien me désespère,</l>
+          <l n="92">Un rien presque suffit pour le mettre en colère ;</l>
+          <l n="93">Jusques-là l’autre jour qu’il faisait le jaloux,</l>
+          <l n="94">Pour avoir une nuit découché de chez nous,</l>
+          <l n="95">J’étais au Bal, lui dis-je.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="96">Hé si ! c’est une honte.</l>
+          <l n="97">Est-ce qu’à nos maris nous devons rendre compte ?</l>
+          <l n="98">Est-ce à présent la mode, au moins en ce pays ?</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="99">Oh ça, pour un moment laissons là nos maris ?</l>
+          <l n="100">Aussi bien j’aperçois venir quelque pratique,</l>
+          <l n="101">C’est un de tes amants, rentrons dans ta boutique.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="102">Est-ce là ce quartier dont on fait tant de bruit ?</l>
+          <l n="103">Où tous les Officiers...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="104">Vous êtes mal instruit,</l>
+          <l n="105">Sachez que cette rue en butte à la satyre</l>
+          <l n="106">Par le nombre de gens que son commerce attire,</l>
+          <l n="107">N’est pas assurément telle que vous pensez,</l>
+          <l n="108">Je crois depuis deux ans m’en être infirme assez.</l>
+          <l n="109">Apprenez qu’on y garde autant de retenue,</l>
+          <l n="110">Qu’on y vit aussi bien que dans toute autre rue.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="111">De mes amis pourtant m’en ont fait un rapport...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="112">Et qui ? Des fanfarons, qui faisant leur effort</l>
+          <l n="113">Auprès d’une Marchande, et la trouvant rebelle,</l>
+          <l n="114">Vont par tout se vanter d’avoir triomphé d’elle.</l>
+          <l n="115">Encore un coup, Marquis, on s’est moqué de toi.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="116">Je veux le croire ainsi ; mais on m’a dit à moi,</l>
+          <l n="117">Que Marchande de drap, Gantière, Rubanière,</l>
+          <l n="118">Marchande de dentelles, et Guimpière et Lingère</l>
+          <l n="119">Souvent il s’en trouvait de ces Marchandes-là,</l>
+          <stage>Qui, quand on les pressait... enfin,et cætera.</stage>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="120">Je ne comprends donc pas comment cela doit être,</l>
+          <l n="121">Je puis à dire vrai ne m’y pas bien connaître ;</l>
+          <l n="122">Mais je puis bien ici, Marquis, le déclarer,</l>
+          <l n="123">Qu’après avoir été deux ans à soupirer,</l>
+          <l n="124">Près de cette Marchande, encor que je lui plaise...</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="125">Ah ! vous êtes discret, j’en suis parbleu bien aise.</l>
+          <l n="126">Cette Marchande donc ne vous a pas voulu.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="127">Il est si vrai, qu’enfin je me suis résolu</l>
+          <l n="128">À l’épouser.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="129">Parbleu ! tu me la donnes belle ;</l>
+          <l n="130">Tu veux donc devenir un Marchand de dentelle !</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="131">Pourquoi non ! J’en connais même dans ce quartier,</l>
+          <l n="132">Que s’ils ne s’étaient point mêlés d’autre métier,</l>
+          <l n="133">N’en auraient que mieux fait.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="134">Je sais qui tu veux dire ;</l>
+          <l n="135">Mais tu me viens conter qu’à Lyon on soupire</l>
+          <l n="136">Des deux ans sans rien faire et sans avancer rien.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="137">Voilà quel est mon sort, juge à présent du tien.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="138">Selon toi dans Lyon toute fille est pucelle.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="139">La peste, que nenni ; je sais qu’il en est telle,</l>
+          <l n="140">Et sans sortir d’ici, qui me démentirait.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="141">À parler autrement chacun te raillerait.</l>
+          <l n="142">Mais raisonnons un peu sur ton beau mariage,</l>
+          <l n="143">Tu me disais tantôt que celle qui t’engage</l>
+          <l n="144">Avait un mari qui...</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="145">Tu ne me comprends pas ?</l>
+          <l n="146">Celle en qui j’ai trouve tant de charmants appas,</l>
+          <l n="147">À pour notre malheur certaine belle-mère,</l>
+          <l n="148">Coquette, et qui d’abord fulmine de colère,</l>
+          <l n="149">Aussitôt qu’à sa fille elle voit quelque amant ;</l>
+          <l n="150">De sorte que pour voir la fille librement,</l>
+          <l n="151">Il faut aimer la mère, ou tout au moins le feindre,</l>
+          <l n="152">Et c’est à quoi deux ans il m’a fallu contraindre.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="153">La belle-mère a-t-elle encor quelque agrément ?</l>
+          <l n="154">Est-elle jeune ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="155">Oui.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="156">Belle ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="157">Passablement.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="158">A-t-elle de l’esprit ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="159">Beaucoup.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="160">C’est mon affaire.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="161">Comment ?</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="162">C’est que je veux devenir ton beau-père.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="163">Il n’en est pas besoin ; si tu veux en conter,</l>
+          <l n="164">Celle qui vient à nous pourra te contenter,</l>
+          <l n="165">C’est sa voisine. Adieu, j’aperçois Isabelle.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="166">Je vais tout doucement m’insinuer près d’elle.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="167">Il faudra l’aborder avec un compliment.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="168">Je ferai connaissance assez adroitement.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="169">Je vous aime, ma chère, ou le diable m’emporte.</l>
+          <l n="170">Et je n’ai ressenti jamais d’ardeur si forte.</l>
+          <l n="171">Je ne puis résister à vos divins appas.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="172">Ce discours me surprend, ne vous connaissant pas,</l>
+          <l n="173">Mais comme votre abord marque un homme sincère,</l>
+          <l n="174">Tout ce que vous direz ne me pourra déplaire.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="175">On dit que vous avez un brutal de mari,</l>
+          <l n="176">Qui quand on vient chez vous, fait le charivari.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="177">Il est à la campagne.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="178">Hé bien, qu’il y demeure.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="179">Je crois qu’il y sera longtemps.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="180">À la bonne heure.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="181">Quand il est à Lyon, vraiment je n’ose pas</l>
+          <l n="182">Sans sa permission faire le moindre pas.</l>
+          <l n="183">Je ne vais nulle part qu’il ne soit à ma suite ;</l>
+          <l n="184">Mais quand il est absent aussitôt j’en profite.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="185">Mais pourquoi, dites-moi, vous marier si mal ?</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="186">Je vis bien, l’épousant, que c’était un brutal ;</l>
+          <l n="187">Mais comme mes parents vantaient fort ses richesses,</l>
+          <l n="188">Quoique je ne sentisse au fond nulles tendresses,</l>
+          <l n="189">Qu’il parût mal bâti, ridicule à mes yeux,</l>
+          <l n="190">Je dis, prenons toujours, c’est en attendant mieux.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="191">Hé quoi donc ! vous avez déjà fait connaissance ?</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="192">C’est bien moi, qui jamais trouve de résistance ;</l>
+          <l n="193">De cent, c’est celle en qui j’en ai trouvé le plus,</l>
+          <l n="194">Je ne m’arrête point aux discours superflus.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="195">Quel dessein auraient-ils ? Je voudrais le savoir.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="196">Moi, je m’en doute assez ; ils veulent venir voir</l>
+          <l n="197">Comme ils seront reçus dedans cet équipage.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="198">Ah, si c’était cela, pour leur donner ombrage,</l>
+          <l n="199">J’imagine un moyen qui nous réussirait.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="200">Quel moyen, s’il vous plaît ?</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="201">Hé ! mais... c’est qu’il faudrait</l>
+          <l n="202">Nous envoyer chercher vos habits tout à l’heure.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="203">La chose est fort facile, ici près je demeure ;</l>
+          <l n="204">Vous les allez avoir dans ce même moment.</l>
+          <stage>Il sort.</stage>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE.</speaker>
+          <l n="205">Le Carnaval permet un tel déguisement,</l>
+          <l n="206">Et c’est ce qui pourra, s’ils découvrent la ruse,</l>
+          <l n="207">Nous servir auprès d’eux d’une valable excuse.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE.</speaker>
+          <l n="208">Montons donc promptement, pour nous déshabiller.</l>
+          <l n="209">Toi Lisette, surtout garde de babiller.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="210">Je respire à la fin, ma charmante Isabelle,</l>
+          <l n="211">Jamais occasion ne fut pour nous si belle.</l>
+          <l n="212">Enfin c’est en ce jour qu’il me faut éclater,</l>
+          <l n="213">Mon amour plus longtemps n’y saurait résister.</l>
+          <l n="214">Il faut qu’un nœud charmant pour jamais nous enchaîne.</l>
+          <l n="215">Hélas ! si vous saviez quelle cruelle peine,</l>
+          <l n="216">Voir d’un côté l’objet qui nous a su charmer,</l>
+          <l n="217">N’oser ouvertement lui parler ni l’aimer ;</l>
+          <l n="218">Et d’un autre côté voir une Belle-mère</l>
+          <l n="219">Par ses contorsions s’efforcer de nous plaire,</l>
+          <l n="220">Qui malgré nous, nous tire un aveu plein de fard</l>
+          <l n="221">Où le cœur ni l’amour n’eurent jamais de part ;</l>
+          <l n="222">Enfin qui nous fatigue à force de caresses,</l>
+          <l n="223">Et nous veut maigre nous arracher nos tendresses :</l>
+          <l n="224">Voilà, belle Isabelle, en quel affreux tourment</l>
+          <l n="225">Languit depuis longtemps un malheureux Amant.</l>
+        </sp>
+        <sp who="#isabelle">
+          <speaker>ISABELLE.</speaker>
+          <l n="226">Croyez-vous, Lisimon être le seul à plaindre ?</l>
+          <l n="227">Ne dois-je pas aussi comme vous me contraindre ?</l>
+          <l n="228">Ma mère est ma Rivale, elle reçoit vos yeux,</l>
+          <l n="229">Je ne puis faire un pas sans vous trouver tous deux ;</l>
+          <l n="230">J’entends tous vos discours, je vois votre tendresse :</l>
+          <l n="231">Même le plus souvent, j’en sens quelque tristesse ;</l>
+          <l n="232">Mais pour m’en consoler, je me flatte et je croi</l>
+          <l n="233">Que tous ces doux propos ne s’adressent qu’à moi.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="234">Ah ! vous le pouvez croire ; et parmi ces contraintes.</l>
+          <l n="235">Je sens à tout moment de mortelles atteintes.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="236">Brisons là, s’il vous plaît, finissons vos regrets,</l>
+          <l n="237">Vous serez aujourd’hui tous les deux satisfaits.</l>
+          <l n="238">Est-ce que vous doutez que Monsieur votre Père,</l>
+          <l n="239">Irrité du projet de votre Belle-mère,</l>
+          <l n="240">Contre elle tout d’abord ne se mette en courroux ?</l>
+          <l n="241">Comme depuis deux ans Monsieur l’en rend jaloux ?</l>
+          <l n="242">Pour ne lui plus laisser aucun sujet d’ombrage</l>
+          <l n="243">Il lui demandera sa fille en mariage.</l>
+        </sp>
+        <sp who="#isabelle">
+          <speaker>ISABELLE.</speaker>
+          <l n="244">Lisette va bien vite.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="245">Et vous bien lentement :</l>
+          <l n="246">Si jamais je suis grande, et que j’aie un amant,</l>
+          <l n="247">Vous imaginez-vous, pour peu qu’il soit fidèle,</l>
+          <l n="248">Qu’il ait bien longtemps lieu de m’appeler cruelle ?</l>
+          <l n="249">Ah ! que non. De l’humeur dont déjà je me sens,</l>
+          <l n="250">Il ne languira pas avec moi bien longtemps.</l>
+          <l n="251">Je sais sur ce sujet de certaines paroles,</l>
+          <l n="252">Où l’on a fait un air ; elles sont assez drôles</l>
+          <l n="253">Et si vous voulez bien un moment m’écouter,</l>
+          <l n="254">Pour vous désennuyer je vais vous les chanter.</l>
+          <stage>Chanson.</stage>
+          <l n="255">Un jour dans les transports d’une vive tendresse,</l>
+          <l n="256">Un Amant dit à sa Maîtresse.</l>
+          <l n="257">Pourquoi m’avez-vous fait si longtemps demander</l>
+          <l n="258">Ce que vous vouliez m’accorder ?</l>
+          <l n="259">Elle lui répondit. J’ai feint de m’en descendre,</l>
+          <l n="260">Mais je ne serai plus si sotte à l’avenir,</l>
+          <l n="261">On refuse souvent de prendre,</l>
+          <l n="262">Ce qu’on voudrait déjà tenir.</l>
+        </sp>
+        <sp who="#isabelle">
+          <speaker>ISABELLE.</speaker>
+          <l n="263">Lisette laissons-là toutes ces bagatelles :</l>
+          <l n="264">Voici notre Marquis.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS,faisant apporter deux habits.</speaker>
+          <l n="265">Hé bien ! où sont ces belles ?</l>
+          <l n="266">Elles auront de quoi s’habiller comme il faut.</l>
+        </sp>
+        <sp who="#isabelle">
+          <speaker>ISABELLE.</speaker>
+          <l n="267">Pour leur aider, Lisette, il faut monter là-haut.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="268">Nous autres, demeurons ; et si tu veux bien rire,</l>
+          <l n="269">Nous attendrons ici ces masques de satyre.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="270">Les voici, parle bas.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="271">Il faut les accoster ;</l>
+          <l n="272">Il n’est pas encor temps de les laisser monter.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS,après les avoir salués.</speaker>
+          <l n="273">Apparemment, Messieurs, vous êtes au service.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="274">Oui, Monsieur, nous servons...</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="275">Où donc ? dans la Milice ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="276">Oui, je suis Colonel, et Monsieur Lieutenant.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS,ôtant son Chapeau.</speaker>
+          <l n="277">Colonel ! ah, Monsieur, et de quel Régiment ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="278">Hé... de mon Régiment ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="279">Cela s’en va sans dire,</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS,à Lisimon, bas.</speaker>
+          <l n="280">Déjà cet entretien me fait pâmer de rire.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,bas, à M. Cornardet.</speaker>
+          <l n="281">Je ne sais où j’en suis.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="282">Mais, Monsieur, pourrait-on</l>
+          <l n="283">De votre Régiment vous demander le nom ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,embarrassé.</speaker>
+          <l n="284">À vous dire le vrai...je ne suis pas un homme,</l>
+          <l n="285">Qui s’arrête beaucoup... à savoir comme on nomme</l>
+          <l n="286">Mon Régiment.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON,montrant M. Cornardet.</speaker>
+          <l n="287">Monsieur peut-être le saura.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="288">Ah ! si mon Lieutenant le sait, il le dira.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="289">Si même un Colonel ne peut vous en instruire,</l>
+          <l n="290">Comment un Lieutenant pourra-t-il vous le dire,</l>
+          <l n="291">C’est pourquoi, croyez-moi, finirons l’entretien.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,après avoir rêvé.</speaker>
+          <l n="292">À Lyon, dites-moi, se divertit-on bien ?</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="293">On ne peut mieux, sur tout pour la galanterie.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="294">Pour cela, je le sais, dites-moi, je vous prie,</l>
+          <l n="295">Pourrait-on point savoir quelles sont vos amours ?</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="296">Oh, quant à moi, ma foi je change tous les jours.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier, à Lisimon.</speaker>
+          <l n="297">Ne marchandez-vous point souvent quelque dentelle</l>
+          <l n="298">Chez cette Belle-là.</l>
+          <stage>Montrant la boutique de sa femme à Lisimon.</stage>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="299">Vous coucherez chez elle,</l>
+          <l n="300">Ce soir, si vous voulez.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier, à part.</speaker>
+          <l n="301">Parbleu, je le crois bien,</l>
+          <l n="302">Puisque c’est ma maison.</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="303">Vous ne répondez rien.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="304">Je n’en pense pas moins.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier en montrant aussi la Boutique de sa femme au Marquis.</speaker>
+          <l n="305">Et cette Rubanière,</l>
+          <l n="306">Dites-moi, s’il vous plaît, n’est-elle pas plus fière ?</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="307">Non pour vous le prouver, je vous fais de bon cœur</l>
+          <l n="308">La même offre qui vient d’être fait à Monsieur ;</l>
+          <l n="309">Entre les Officiers cela se fait sans honte.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="310">Fort bien, nous en avons tous deux pour notre compte.</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS,rentrant dans la boutique avec Lisimon.</speaker>
+          <l n="311">C’est sans adieu, Messieurs, nous nous verrons tantôt.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="312">Parbleu, gaillardement ils vont monter là-haut.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="313">Lisette vient à nous, qui peut nous reconnaître ;</l>
+          <l n="314">Feignons pour l’abuser.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE,à part.</speaker>
+          <l n="315">Bon, voici notre Maître.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="316">Dis-moi, ma chère enfant, sais-tu qui loge là ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="317">Hé pourquoi, s’il vous plaît, demandez-vous cela ?</l>
+          <l n="318">Est-ce que vous voulez acheter des dentelles ?</l>
+          <l n="319">Si vous en souhaitez nous en avons de belles.</l>
+          <l n="320">Mais je vois à votre air que loin d’en acheter,</l>
+          <l n="321">Vous n’y voulez entrer que pour y caqueter,</l>
+          <l n="322">Le champ vous est ouvert, entrez sans vous contraindre,</l>
+          <l n="323">Les Maris n’y sont pas, vous n’avez rien à craindre.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="324">Hé ! quand ils y seraient, que feraient-ils ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="325">Bon, rien ;</l>
+          <l n="326">Car ce sont des benêts, je les connais fort bien.</l>
+          <l n="327">Ils peuvent s’assurer que si j’étais leur femme,</l>
+          <l n="328">Ils seraient en effet ce qu’ils craignent dans l’âme.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="329">Le sont-ils, qu’en crois-tu ?</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="330">Je n’en répondrais pas ;</l>
+          <l n="331">Mais quand cela serait, cela se dit tout bas.</l>
+          <l n="332">Et c’est ce qui les peut consoler dans leur peine.</l>
+          <l n="333">Aussi bien nous avons une demi-douzaine</l>
+          <l n="334">De Voisines, de qui l’esprit est médisant,</l>
+          <l n="335">Et donne un coup de langue à chacun en passant.</l>
+          <l n="336">Depuis un certain temps, voulant passer pour prudes,</l>
+          <l n="337">(Sans l’être cependant,) elles sont leurs études</l>
+          <l n="338">À s’instruire de tout, à parler d’un chacun,</l>
+          <l n="339">Et dans leur médisance à n’épargner pas un.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="340">Nous avons bien besoin de toutes ces fadaises,</l>
+          <l n="341">Laisse-là ce discours ; mais nous serions bien aises</l>
+          <l n="342">Que tu nous fisse entrer un moment là-dedans.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="343">Monsieur, j’y fais entrer tous les honnêtes gens.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="344">Donnons-lui quelque chose avant de voir ces Dames.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,bas à Harpin.</speaker>
+          <l n="345">Quoi ! donner de l’argent pour aller voir nos femmes ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier, bas à Cornardet.</speaker>
+          <l n="346">Hé morbleu ! taisez-vous, rien ne sera perdu,</l>
+          <l n="347">Et plus cher qu’au marché tout nous sera rendu.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTE.</speaker>
+          <l n="348">Montez donc sans façon.</l>
+          <stage>À part.</stage>
+          <l n="349">Pour moi je me retire,</l>
+          <l n="350">Je ne pourrais rester sans m’empêcher de rire.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier, faisant sortir M. Harpin et M. Cornardet.</speaker>
+          <l n="351">Comment, morbleu ! Messieurs, que cherchez-vous ici ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier et tremblant de peur.</speaker>
+          <l n="352">Hé, vous même ! Messieurs, qui cherchez vous aussi ?</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier, mettant la main sur la garde de son épée.</speaker>
+          <l n="353">Ce que nous y cherchons ? par la mort, par le ventre,</l>
+          <l n="354">Ce que nous y cherchons ?</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="355">La peste.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN.</speaker>
+          <l n="356">Comment diantre !</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier, à Angélique.</speaker>
+          <l n="357">Mon ami, ces Messieurs sont tous deux gens de cœur</l>
+          <l n="358">Leur mine le fait voir ; il faut avec douceur</l>
+          <l n="359">S’expliquer avec eux.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="360">Hé bien donc, je m’explique ;</l>
+          <stage>À Cornardet son mari.</stage>
+          <l n="361">Si vous entrez jamais dedans cette boutique...</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier, à Harpin son mari.</speaker>
+          <l n="362">Et vous dans celle-ci...</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="363">Mais si...</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="364">Point de raison,</l>
+          <l n="365">Voyez si le parti vous accommode ou non.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="366">Quant à moi, nullement.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="367">Hé bien, il faut se battre.</l>
+          <l n="368">Heureusement, ici nous nous prouvons tous quatre.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="369">Quel diable de bonheur ?</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier.</speaker>
+          <l n="370">N’est-ce pas être heureux,</l>
+          <l n="371">Ayant un différend, d’être deux contre deux ?</l>
+          <l n="372">Monsieur est mon rival, et Monsieur est le vôtre,</l>
+          <l n="373">Il entretiendra l’un, moi j’entretiendrai l’autre.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="374">Monsieur, je n’aime point ces sortes d’entretiens,</l>
+          <l n="375">Pourrait-on point trouver quelques plus doux moyens ?</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="376">Non, non, il faut se battre, ou nous quitter la place.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="377">Je ne pourrai jamais, quelque effort que je fasse,</l>
+          <l n="378">M’empêcher de rentrer dedans cette maison.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier, à Cornardet.</speaker>
+          <l n="379">Consultons entre nous pour leur rendre raison.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier, bas à Harpin.</speaker>
+          <l n="380">Hé bien, te sens-tu point un peu de hardiesse ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,bas à Cornardet.</speaker>
+          <l n="381">Je ne me battrais pas même pour ma maîtresse ;</l>
+          <l n="382">Juge si pour ma femme il me viendra du cœur.</l>
+          <stage>Haut.</stage>
+          <l n="383">Nous vous cédons, Messieurs, ce n’est pas sans douleur.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier.</speaker>
+          <l n="384">Si vous y rentrez plus, vous saurez qui nous sommes.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="385">Quels petits enragés ! ce ne sont point des hommes,</l>
+          <l n="386">Ce sont des diables.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier.</speaker>
+          <l n="387">Quoi ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="388">Moi, je ne vous dis rien.</l>
+          <l n="389">Je parlais à Monsieur.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier.</speaker>
+          <l n="390">Au moins songez y bien.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="391">Gardez que l’un de vous entre nos pattes tombe.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier.</speaker>
+          <l n="392">L’homme le plus vaillant auprès de moi succombe.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="393">Jamais qui que ce soit n’a pu me faire peur.</l>
+        </sp>
+        <sp who="#éliante">
+          <speaker>ÉLIANTE,en Officier.</speaker>
+          <l n="394">Nul d’avec moi jamais n’est sorti le vainqueur.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier, à Éliante.</speaker>
+          <l n="395">Allons, mon cher, rentrons, allons revoir nos belles,</l>
+          <l n="396">Et tâchons d’apaiser notre courroux près d’elles.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="397">Ceci n’est pas mauvais ; nous devons empêcher,</l>
+          <l n="398">Comme étant les maris, les galants d’approcher ;</l>
+          <l n="399">Et ce sont les galants qui veulent par menace,</l>
+          <l n="400">Obliger les maris à leur quitter la place ;</l>
+          <l n="401">Le tour est ma foi bon. Mais ils descendent tous,</l>
+          <l n="402">Il est temps d’éclater puisqu’ils viennent à nous.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="403">Messieurs, avec le temps nous nous serons connaître.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="404">Vous n’êtes que des sots, qui que vous puissiez être.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="405">Vous en pouvez, Messieurs, parler très savamment,</l>
+          <l n="406">Car si nous sommes sots, c’est par vous seuls.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="407">Comment ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="408">C’est, puisqu’il faut ici le déclarer, que celles</l>
+          <l n="409">Qui logent là-dedans et qui sont nos querelles,</l>
+          <l n="410">Et qui sont cause enfin qu’on nous traite si mal,</l>
+          <l n="411">Sont attachées à nous par le nœud conjugal,</l>
+          <l n="412">Nous sommes les maris.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="413">Et nous sommes les femmes.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier, les observant de près.</speaker>
+          <l n="414">Les femmes ! oui ma foi, ce sont ces bonnes Dames.</l>
+          <l n="415">Mais pourquoi, s’il vous plaît, tous ces déguisements ?</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="416">Hé pourquoi, s’il vous plaît, tous ces ajustements ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="417">Nous l’avions pris exprès pour venir vous confondre.</l>
+        </sp>
+        <sp who="#angélique">
+          <speaker>ANGÉLIQUE,en Officier.</speaker>
+          <l n="418">Et nous, nous l’avions pris pour venir vous répondre.</l>
+          <l n="419">Pour vous faire enrager dans vos soupçons jaloux,</l>
+          <l n="420">Et montrer qu’on en sait du moins autant que vous.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="421">Puisque d’un si beau tour, l’une et l’autre est capable,</l>
+          <l n="422">Après cette hardiesse il n’est pas incroyable</l>
+          <l n="423">Que vous n’ayez été de celles que jadis,</l>
+          <l n="424">Avecque leurs Amants furent dans un logis,</l>
+          <l n="425">Où Messieurs leurs galants les laissant pour otage,</l>
+          <l n="426">Pour payer leur repas, elles mirent en gage</l>
+          <l n="427">Une bague, un collier, un cotillon fort beau,</l>
+          <l n="428">Ne pouvant pas avoir crédit chez Funerau[1].</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="429">Morbleu ! je n’entends point là-dessus raillerie.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier, montrant Lisimon et le Marquis.</speaker>
+          <l n="430">Mais que faisaient chez vous ces Messieurs, je vous prie ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="431">Pour vous ôter sujet de rien craindre de moi,</l>
+          <l n="432">Je vous avoue ici qu’Isabelle a ma foi,</l>
+          <l n="433">Que je l’aime.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="434">Ma fille !</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="435">Oui, Monsieur, votre femme</l>
+          <l n="436">N’était qu’un faux prétexte à mieux cacher ma flamme.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="437">La chose étant ainsi, quel est votre dessein ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="438">D’épouser votre fille.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="439">Et quand, Monsieur ?</l>
+        </sp>
+        <sp who="#lisimon">
+          <speaker>LISIMON.</speaker>
+          <l n="440">Demain.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier, au Marquis en lui montrant safemme.</speaker>
+          <l n="441">Moi qui n’ai point de fille, à quel dessein près d’elle ?...</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="442">Moi, je n aime jamais que pour la bagatelle.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier et en colère.</speaker>
+          <l n="443">Comment donc, devant moi vous osez l’avouer ?</l>
+        </sp>
+        <sp who="#le-marquis">
+          <speaker>LE MARQUIS.</speaker>
+          <l n="444">Tu te fâches, mon cher, tu devrais m’en louer ;</l>
+          <l n="445">Sans moi ta femme aurait vingt galants à sa suite,</l>
+          <l n="446">Mais sachant que j’y suis, ils cessent leur poursuite.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier, en colère.</speaker>
+          <l n="447">Vous osez...</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="448">Croyez-moi, ne vous fâchez pas tant,</l>
+          <l n="449">Je n’ai non plus que vous sujet d’être content.</l>
+          <l n="450">Mais faites comme moi ; ma femme est infidèle,</l>
+          <l n="451">Pour la faire enrager je vais faire comme elle.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="452">Le remède est fort beau : de nous que dira-t-on ?</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPIN,en Officier.</speaker>
+          <l n="453">Que nous avons suivi l’usage de Lyon.</l>
+        </sp>
+        <sp who="#lisette">
+          <speaker>LISETTEchante à Cornardet.</speaker>
+          <l n="454">Jaloux de quoi te fâches-tu !</l>
+          <l n="455">Malgré ton amoureuse envie.</l>
+          <l n="456">Ta femme n’a jamais pu faire qu’un Cocu,</l>
+          <l n="457">Et n’en as-ru pas fait plus de trente en ta vie.</l>
+        </sp>
+        <sp who="#m.-harpin">
+          <speaker>M. HARPINetANGÉLIQUEchantent ensemble à Cornardet.</speaker>
+          <l n="458">Pourquoi vous mettre en courroux ?</l>
+          <l n="459">Puisque c’est à Lyon la mode,</l>
+          <l n="460">Que toute femme s’accommode</l>
+          <l n="461">Avec son Époux.</l>
+          <l n="462">Accommodez-vous.</l>
+        </sp>
+        <sp who="#m.-cornardet">
+          <speaker>M. CORNARDET,en Officier.</speaker>
+          <l n="463">Oui, c’est bien dit, allons, suivons ce noble usage,</l>
+          <l n="464">Qui depuis si longtemps règne dans le ménage.</l>
+          <l n="465">Soupons ce soir ensemble, et dès demain matin,</l>
+          <l n="466">Assistons à la noce, ou du moins au festin.</l>
+          <l n="467">[1]Fameux Traiteur de Lyon.</l>
+          <l n="468" />
+          <l n="469" />
+        </sp>
+      </div>
+    </body>
+  </text>
 </TEI>

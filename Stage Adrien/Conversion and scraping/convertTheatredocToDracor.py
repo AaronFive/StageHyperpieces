@@ -6,6 +6,7 @@ import os
 import pickle
 import re
 import sys
+from bs4 import BeautifulSoup
 from datetime import date
 from os import walk, pardir
 from os.path import abspath, dirname, join, basename, exists
@@ -33,6 +34,11 @@ import editdistance as editdistance
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 """
+
+
+# WIP : Class rewriting of parsing program
+
+
 # The folder containing this script must contain a subfolder named corpusTD
 # containing plays downloaded from théâtre-documentation.com
 
@@ -66,7 +72,7 @@ genres = ["tragedie", "comedie", "tragicomedie", "tragi-comedie", "farce", "vaud
           "comedie musicale", "dialogue", "monologue"]
 good_genre = {"tragedie": "Tragédie", "comedie": "Comédie", "tragicomedie": "Tragi-Comédie", "farce": "Farce",
               "vaudeville": "Vaudeville", "proverbe": "Proverbe", "pastorale": "Pastorale", "dialogue": "Dialogue",
-              "comedie musicale": "Comédie Musicale", "dialogue": "Dialogue", "monologue": "Monologue"}
+              "comedie musicale": "Comédie Musicale",  "monologue": "Monologue"}
 
 
 # DEBUG
@@ -146,10 +152,14 @@ def remove_html_tags_and_content(s):
     return re.sub('<[^>]+>', '', s)
 
 
+# def remove_html_tags(s):
+#     s = s.replace(u'\xa0', u' ')
+#     s = re.sub('<[^>]+>|</.*>', '', s)
+#     return
+
 def remove_html_tags(s):
-    s = s.replace(u'\xa0', u' ')
-    s = re.sub('<[^>]+>|</.*>', '', s)
-    return s
+    soup = BeautifulSoup(s, "html.parser")
+    return soup.get_text(strip=True)
 
 
 def min_dict(d):
@@ -531,7 +541,7 @@ def end_character_block(characterBlock, line):
         line (str): line to read.
 
     Returns:
-        tuple: the boolean of all the characters, but also the actual line.
+        tuple: the boolean of all the characters, and the actual line.
     """
     if characterBlock:
         end_block = re.search("<h[1,2]", line)
@@ -573,7 +583,7 @@ def find_scene_list(line, sceneList, inSceneList):
         list: Updated sceneList
         bool: Updated inSceneList"""
     # When inSceneList is true, we are currently reading the list of scenes. It is set at True when the "<div
-    # class='toc-list'>" is found, and then fed forward sceneList is the list of scenes currently constructed
+    # class='toc-list'>" is found, and then fed forward. sceneList is the list of scenes currently constructed
     if line is None and not inSceneList:
         return [], False
     elif line.strip() in [None, ''] and inSceneList:
@@ -763,7 +773,6 @@ def find_character(line, counters, playContent):
     added_character = False
     res = re.search("<p align=.*center[^>]*>(.*)</p>", line)
     character_type = None
-    character_name = None
     if res and res.group(1) != "\xa0" and "Personnages" not in res.group(1):
         character_name = res.group(1)
         special_characters = re.search("(TOUS|TOUTES|ENSEMBLE|CHOEUR|CHŒUR)", character_name)
@@ -848,12 +857,13 @@ def speaker_currently_detected(playContent, alreadyDetected):
 
 
 def find_text(line, counters, playContent, scene):
+    """Extract spoken text and direction from a line, normalize it, and adds it to the scene with its type"""
     res = re.search("<p[^>]*>(.*)</p>", line)
     if res:
         playLine = res.group(1).replace("\xa0", " ")
         if playLine != " ":
             res = re.search("<em>(.*)</em>", playLine)
-            # playLine = remove_html_tags(playLine)
+            playLine = remove_html_tags(playLine)
             new_line = {"content": playLine}
             if res:  # This is stage direction
                 new_line["type"] = "Stage"
@@ -1018,6 +1028,7 @@ def write_play(metadata, playContent, counters, outputFile):
     return output
 
 
+
 if __name__ == "__main__":
     output_csv = open("metadata theatredoc.csv", 'w', encoding='utf8', newline='')
     fieldnames = ["Raw Name", "Title", "Author", "Date impression", "Date premiere", "Date ecriture", "Genre", "Type"]
@@ -1054,6 +1065,7 @@ if __name__ == "__main__":
         fileName = basename(file)
         playText = open(file, "r", encoding="utf-8")
         outputFile = os.path.join(Dracor_Folder, fileName.replace("html", "xml"))
+        print(fileName)
         # reset parameters
         csv_row = dict()
         csv_row["Raw Name"] = fileName.replace(".html", " ")
@@ -1097,7 +1109,7 @@ if __name__ == "__main__":
             # We remember the ending line of the character block for the future
             # We do so by checking if the list of characters grows
             old_nb_char = len(counters["characterFullNameList"])
-            characterBlock, line = end_character_block(characterBlock, line)
+            characterBlock, line = end_character_block(characterBlock, line) # This gathers the name of characters and their roles
             new_nb_char = len(counters["characterFullNameList"])
             if old_nb_char != 0 and new_nb_char == old_nb_char and characterBlockLastLine is None:
                 characterBlockLastLine = index
@@ -1278,161 +1290,3 @@ if __name__ == "__main__":
 #    </sp>
 # </div>""")
 #     write_scene(str(counters["actNb"]) + str(counters["scenesInAct"]), scene, outputFile)
-
-# METADATA ADRIEN (now in function, delete if it works)
-# # get and write title
-# title, forename, surname = get_title_and_author(line)
-# if write_title(outputFile, title):
-#     # get and write type of play:
-#     copy_playtext = open(file, "r", encoding="utf-8")
-#     genre, vers_prose, act_number = get_genre_versification_acts_number(copy_playtext)
-#     if act_number == 1:
-#         counters["oneActPlay"] = True
-#         counters["actsInPlay"] = 1
-#     if act_number != -1:
-#         counters["actsDeclaredNumber"] = act_number
-#     write_type(outputFile, genre)
-#     # get and write author
-#     author = forename, surname
-#     if write_author(outputFile, author):
-#         # get and write source
-#         write_source(outputFile, source)
-#
-#     # get and write date
-#     copy_playtext.close()
-#     copy_playtext = open(file, "r", encoding="utf-8")
-#     date_written, date_print, date_premiere, line_written, line_print, line_premiere = get_dates(
-#         copy_playtext)
-#
-#     write_dates(outputFile, date_written, date_print, date_premiere, line_premiere)
-#
-#     write_end_header(outputFile, genre, vers_prose)
-#     write_start_text(outputFile, title, genre, date_print)
-#
-#     write_performance(outputFile, line_premiere, date_premiere)
-#
-# # try find dedicace in play
-# if not findSummary:
-#     findSummary = find_summary(line, ul)
-# else:
-#     findSummary = extract_from_summary(line, ul)
-#
-# # starting saving lines
-# if not saveBegin:
-#     saveBegin = try_saving_lines(outputFile, line)
-# else:
-#     # find and print dedicace
-#     if counters['dedicace']:
-#         if find_dedicace(line):
-#             copy_playtext.close()
-#             copy_playtext = open(file, "r", encoding="utf-8")
-#             write_dedicace(outputFile, copy_playtext, author)
-
-# def write_text(outputFile, line, counters):
-#     """Write the text from a HTML file's line in the XML associated file.
-#
-#     Args:
-#         outputFile (TextIOWrapper): Output file to generate in XML.
-#         line (str): line to read in the play.
-#         counters (dict): Dictionnary with all the counters of the script.
-#
-#     Returns:
-#         dict: The refreshed counter
-#     """
-#     res = re.search("<p>(.*)</p>", line)
-#     if res and not characterBlock:
-#         playLine = res.group(1).replace("\xa0", " ")
-#         if playLine != " ":
-#             # log('sceneless',counters["scenelessPlay"])
-#             # log("pbg",counters["scenelessPlayBeginningWritten"])
-#             if counters["scenelessPlay"] and not counters["scenelessPlayBeginningWritten"]:
-#                 print('scenelessstart')
-#                 find_begin_scene(outputFile, line, counters)
-#             if len(counters["characterLines"]) > 1:
-#                 character = counters["characterLines"].pop(0)
-#                 outputFile.writelines("""
-#         <stage>""" + character + """</stage>""")
-#             if len(counters["characterLines"]) > 0:
-#                 if counters["repliquesinScene"] > 0:
-#                     outputFile.writelines("""
-#       </sp>""")
-#                 character = counters["characterLines"].pop(0)
-#                 counters["repliquesinScene"] += 1
-#
-#                 # character is the actual character name, from which we strip html tags.
-#                 # clean_character will be used to get the corresponding id
-#                 character = remove_html_tags_and_content(character)
-#                 clean_character = character
-#                 # Checking if the character name is preceded by a comma, indicating an action on stage.
-#                 # Dracor convention seems to be to include it as a content of the speaker tag and not in <stage>,
-#                 # so we follow this rule
-#                 has_stage_direction = re.search("([^,]+),.*", clean_character)
-#                 if has_stage_direction:
-#                     clean_character = has_stage_direction.group(1)
-#                 # Removing ending dot if it exists
-#                 if clean_character[-1] == ".":
-#                     clean_character = clean_character[:-1]
-#                 characterId = normalize_character_name(clean_character)
-#
-#                 # even when normalizing character names, we often find ids that are not declared
-#                 # this part aims at correcting that by checking if the name is part of a known id,
-#                 # or if a known id is part of it
-#                 # If everything fails, (which happens often), we use edit distance to find the closest one
-#                 old_characterId = characterId
-#                 if characterId not in counters['characterIDList']:
-#                     if characterId not in counters["undeclaredCharacterIDs"]:
-#                         # print(f"Warning : unknown character id {characterId}")
-#                         edit_distances = dict()
-#                         for true_id in counters["characterIDList"]:
-#                             if re.search(true_id, characterId) or re.search(characterId, true_id):
-#                                 counters["undeclaredCharacterIDs"][characterId] = true_id
-#                                 characterId = true_id
-#                                 print(f"Guessed {true_id} for {old_characterId}")
-#                                 break
-#                             else:
-#                                 distance = editdistance.eval(characterId, true_id)
-#                                 edit_distances[true_id] = distance
-#                         # characterID has not been guessed with subchains
-#                         if old_characterId not in counters["undeclaredCharacterIDs"]:
-#                             closest_id, closest_distance = min_dict(edit_distances)
-#                             if closest_distance <= 5:
-#                                 print(f"{old_characterId} : Guessed {closest_id}, distance {closest_distance} ")
-#                                 counters["undeclaredCharacterIDs"][characterId] = closest_id
-#                             else:
-#                                 # print(f"Could not guess {characterId} (best guess {closest_id})")
-#                                 counters["undeclaredCharacterIDs"][characterId] = characterId
-#                                 counters["unguessed_id"] = True
-#                     else:
-#                         characterId = counters["undeclaredCharacterIDs"][characterId]
-#
-#                 # if characterId == "":
-#                 #     print(line)
-#                 #     print("entering characterId if")
-#                 #     # print("Character not found: " + character)
-#                 #     res = re.search("([^,.<]+)([.,<].*)", character)
-#                 #     if res:
-#                 #         characterId = res.group(1).lower()
-#                 #         # remove spaces in last position
-#                 #         res = re.search("^(.*[^ ])[ ]+$", characterId)
-#                 #         if res:
-#                 #             characterId = res.group(1)
-#                 #         characterId = characterId.replace(" ", "-")
-#                 #         # print("Chose characterId " + characterId)
-#                 outputFile.writelines(f"""
-#             <sp who=\"#{characterId}\" xml:id=\"{counters["actNb"] + str(counters["scenesInAct"]) + "-" + str(
-#                     counters["repliquesinScene"])}\">
-#                 <speaker> {character} </speaker>""")
-#
-#             # Checking whether this line is dialogue or stage directions
-#             res = re.search("<em>(.*)</em>", playLine)
-#             if res:
-#                 outputFile.writelines(f"""
-#             <stage>{remove_html_tags_and_content(playLine)} </stage>""")
-#             else:
-#                 outputFile.writelines("""
-#             <l n=\"""" + str(counters["linesInPlay"]) + """\" xml:id=\"l""" + str(
-#                     counters["linesInPlay"]) + """\">""" + remove_html_tags_and_content(playLine) + """</l>""")
-#                 counters["linesInPlay"] += 1
-#                 counters["linesInScene"] += 1
-#
-#     return counters

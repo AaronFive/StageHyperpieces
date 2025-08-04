@@ -192,8 +192,8 @@ def compare_heuristics(sources, heuristics, output_name, characters_to_keep=8, t
 
 
 if __name__ == "__main__":
-    heuristics = [successions_heuristic, simple_frequence_heuristic] #greedy_heuristic,
-    compare_heuristics(sources, heuristics, 'heuristic_comparison_test.csv')
-    # f1 = "Corpus\\Corpus Dramacode\\ouville_espritfolet.xml"
-    # f2 = 'cal000025-la-dama-duende.tei.xml'
-    # both_compare_pieces(f1,f2, 'dama_full_text', 0, 600, False)
+    # heuristics = [successions_heuristic, simple_frequence_heuristic] #greedy_heuristic,
+    # compare_heuristics(sources, heuristics, 'heuristic_comparison_test.csv')
+    f1 = "Corpus\\Corpus Dramacode\\ouville_espritfolet.xml"
+    f2 = 'cal000025-la-dama-duende.tei.xml'
+    both_compare_pieces(f1,f2, 'dama_full_text', 0, 600, False)

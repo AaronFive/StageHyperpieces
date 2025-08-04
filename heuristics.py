@@ -221,7 +221,7 @@ def integerListToString(list):
         string += chr(65 + i)
     return string
 
-degreedy_heuristic(a,b):
+def greedy_heuristic(a,b):
     """Greedy heuristic to find an injection between the smallest alphabet of the two input strings to the largest alphabet, hoping to minimize the distance between the two parameterized words, computed with the "alignment" Python library (https://pypi.org/project/alignment/) with match score 2, mismatch score -1, gap opening score -2; aims to find, for each character of the first string, the remaining character of the second string which provides the best mapping with the first one, taking into account previously mapped characters and mapping all remaining characters to a single letter
         Args:
             list(list): a list of integers

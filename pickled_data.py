@@ -1,5 +1,6 @@
 import os
 import pickle
+
 from basic_utilities import PICKLE_DIR, pickle_file
 from play_parsing import get_play_from_file, get_dracor_id, get_full_text
 from utils import get_title
@@ -11,11 +12,13 @@ def get_title_dict():
     title_dict = pickle.load(file)
     return title_dict
 
+
 def get_vectorized_corpus():
     path = os.path.join(PICKLE_DIR, 'vectorized_corpus.pkl')
     file = open(path, 'rb')
     vectorized_corpus = pickle.load(file)
     return vectorized_corpus
+
 
 def get_tokenized_corpus():
     path = os.path.join(PICKLE_DIR, 'tokenized_plays_dracor.pkl')
@@ -23,11 +26,15 @@ def get_tokenized_corpus():
     tokenized_corpus = pickle.load(file)
     return tokenized_corpus
 
+
 def get_full_text_corpus():
-    path = os.path.join(PICKLE_DIR, 'full_plays_dracor.pkl')
+    """Returns the corpus with all plays from Dracor already parsed.
+    Created by play_parsing."""
+    path = os.path.join(PICKLE_DIR, 'full_plays_dracor_new.pkl')
     full_text_file = open(path, 'rb')
     full_text_corpus = pickle.load(full_text_file)
     return full_text_corpus
+
 
 def make_full_text_corpus(corpusFolder):
     full_plays = dict()

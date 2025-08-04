@@ -1,17 +1,28 @@
+""" This file contains functions used in the making of Chapter 1 of the manuscript.
+It contains :
+    - Functions for comparison, based on vectorizations (that did not make it to the final manuscript)
+    - Functions for comparisons based on ngrams
+    - Function to handle the csv files with the metadata abiout corpora
+    - Functions to merge the resulting corpora, and perform sanity checks and annotations on it
+"""
+
 import os
 import pickle
 import re
+import shutil
 import sys
 from collections import defaultdict
 
 import pandas as pd
 from Levenshtein import distance
 
+import graphing
+import play_parsing
 from compare_titles import vectorize, distance_title
-from play_parsing import get_play_from_file, get_full_text, get_author
+from play_parsing import get_play_from_file, get_full_text, get_author, get_dracor_id
 from utils import get_title, normalize_title
 
-corpus_Dracor = None
+corpus_Dracor = "Corpus\\CorpusDracor - new"
 corpus_bibdramatique = "Corpus\\Corpus Bibdramatique"
 corpus_TC = "Corpus\\CorpusTC"
 corpus_TD = "Corpus\\CorpusTD"
@@ -192,10 +203,6 @@ def levensthein_author_and_title(couple1, couple2):
     d_title = title_levensthein(title1, title2)
     d_author = title_levensthein(author1, author2)
     return (0.3 * d_author + 0.7 * d_title)
-
-
-def wikidata_merge(corpus1, corpus2):
-    pass
 
 
 def handle_authors_strings(s):
@@ -420,6 +427,7 @@ def join_dataframes(bd_df, merged_df):
     print(merged_df.columns)
     merged_df.to_csv(os.path.join(DataFolder, 'Supersheet_merged.csv'))
 
+
 def count_year_occurrences(dataframe):
     # Assuming "Genre" is the name of the column containing genre strings
     genre_counts = {}
@@ -433,34 +441,271 @@ def count_year_occurrences(dataframe):
 
     return genre_counts
 
+
+# These functions are used to perform the merging by moving files and around, and standardizing file names
+# It expects a csv with all the metadata for all plays in the merged corpus, which we refer to as the supersheet
+def remove_all_whitespace_from_filenames(directory):
+    for filename in os.listdir(directory):
+        old_path = os.path.join(directory, filename)
+        if os.path.isfile(old_path):
+            # Supprimer tous les caractères d'espacement Unicode
+            new_filename = re.sub(r"\s+", "", filename)
+            new_path = os.path.join(directory, new_filename)
+            if old_path != new_path:
+                print(f"Renaming: {filename} → {new_filename}")
+                os.rename(old_path, new_path)
+
+
+def copy_non_dracor_files(df, df_bd, output_dir):
+    """
+    Copies all files from the merged corpora into a single directory.
+    3 Steps:
+    1. Empty the output_dir folder.
+    2. Copy the Dracor files appearing the supersheet.
+    3. Copy the BD or TD files depending on availability.
+    All files are renamed according to the ‘Raw Name’ column in the supersheet.
+    """
+
+    # Step 1: Empty the output directory if it contains anything (in case several tests are needed)
+    if os.path.exists(output_dir):
+        for file in os.listdir(output_dir):
+            file_path = os.path.join(output_dir, file)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+    else:
+        os.makedirs(output_dir)
+
+    print("Output directory emptied.")
+
+    # Step 2: Copy the Dracor files in the Supersheet
+
+    dracor_new_dir = os.path.join("Corpus", "CorpusDracor - new")
+    dracor_ids_in_df = set(df["in_Dracor"].dropna().astype(str))
+    total_dracor = 0
+
+    for file in os.listdir(dracor_new_dir):
+        src_path = os.path.join(dracor_new_dir, file)
+        if os.path.isfile(src_path):
+            try:
+                play = get_play_from_file(src_path)
+                dracor_id = get_dracor_id(play)
+                if dracor_id and dracor_id in dracor_ids_in_df:
+                    # Find the corresponding Raw Name
+                    row_match = df[df["in_Dracor"] == dracor_id]
+                    if not row_match.empty:
+                        raw_name = str(row_match.iloc[0]["Raw Name"]).strip()
+                        dest_path = os.path.join(output_dir, raw_name + ".xml")
+                        shutil.copyfile(src_path, dest_path)
+                        total_dracor += 1
+                        print(f"Copied Dracor file as: {raw_name}.xml")
+            except Exception as e:
+                print(f"  Error processing Dracor file {file}: {e}")
+                return
+
+    print(f"Total Dracor files copied: {total_dracor}")
+
+    # Step 3: Copy the BD or TD files for plays not originating from Dracor.
+    total_plays = 0
+    for _, row in df.iterrows():
+        in_dracor = pd.notna(row["in_Dracor"]) and row["in_Dracor"] != ""
+        in_bd = pd.notna(row["in_BD"]) and row["in_BD"] != ""
+        in_td = pd.notna(row["in_TD"]) and row["in_TD"] != ""
+
+        if in_dracor:
+            continue
+
+        raw_name = str(row["Raw Name"]).strip()
+
+        if in_bd:
+            bd_id = row["in_BD"]
+            match = df_bd[df_bd["BD id"] == bd_id]
+            if not match.empty:
+                source_name = str(match.iloc[0]["Raw Name"]).strip()
+            else:
+                print(f"  No match found in BD for ID: {bd_id}")
+                return
+            source_path = os.path.join("Corpus", "Corpus Bibdramatique", source_name)
+            dest_path = os.path.join(output_dir, raw_name + ".xml")
+
+        elif in_td:
+            source_name = raw_name + ".xml"
+            source_path = os.path.join("Corpus", "CorpusTD_v2", source_name)
+            dest_path = os.path.join(output_dir, raw_name + ".xml")
+
+        else:
+            continue  # aucun corpus connu
+
+        print(f"Copying: {source_name} -> {raw_name}.xml")
+        try:
+            shutil.copyfile(source_path, dest_path)
+            total_plays += 1
+            print(f"Copied plays (non-Dracor): {total_plays}")
+        except Exception as e:
+            print(f"  Error copying {raw_name}.xml: {e}")
+            return
+
+
+def check_corpus_files_presence(directory, supersheet):
+    """
+    Checks for the presence of all expected files from the spreadsheet in the final directory.
+
+    :param directory: path of the directory to check
+    :param supersheet: Reference DataFrame
+    """
+    missing = 0
+    total = 0
+
+    for _, row in supersheet.iterrows():
+        raw_name = str(row["Raw Name"]).strip()
+        expected_file = raw_name + ".xml"
+        expected_path = os.path.join(directory, expected_file)
+        total += 1
+        if not os.path.isfile(expected_path):
+            print(f"WARNING: Missing file: {expected_file}")
+            missing += 1
+
+    if total != len(os.listdir(directory)):
+        print(
+            "Warning : total number of files does not line up with total number of plays : check for plays with the same name in the spreadsheet. ")
+
+    print(f"\nCheck completed: {missing} missing / {total} expected files.")
+
+
+def check_empty_plays(directory, supersheet):
+    # Initialiser la colonne si elle n'existe pas
+    if "Empty text" not in supersheet.columns:
+        supersheet["Empty text"] = False
+    empty_plays = 0
+    for file in os.listdir(directory):
+        file_path = os.path.join(directory, file)
+        play = get_play_from_file(file_path)
+        txt = get_raw_text(play).strip()
+
+        raw_name = os.path.splitext(file)[0]
+        if not txt:
+            print(f"no text for {file}")
+            empty_plays += 1
+            match = supersheet["Raw Name"].astype(str).str.strip() == raw_name
+            supersheet.loc[match, "Empty text"] = True
+    print(f'Empty plays : {empty_plays}')
+    supersheet.to_csv(
+        os.path.join("Corpus", "Merged corpus", "Corpus Merging Dracor-BD-TD - Supersheet -empty plays.csv"))
+
+
+def plot_number_of_lines(directory, supersheet):
+    nb_lines_dict = defaultdict(int)
+    for file in os.listdir(directory):
+        file_path = os.path.join(directory, file)
+        play = get_play_from_file(file_path)
+        raw_name = os.path.splitext(file)[0]
+        match = supersheet["Raw Name"].astype(str).str.strip() == raw_name
+
+        if match.any():
+            is_empty = supersheet.loc[match, "Empty text"].values[0]
+            if not is_empty:
+                speaker_succession = get_full_text(play)
+                nb_lines = len(speaker_succession)
+                if nb_lines > 2500:
+                    print(f'Long: {file}, speeches  : {nb_lines} ')
+                if nb_lines < 10:
+                    print(f'Short : {file}, speeches : {nb_lines}')
+                nb_lines_dict[raw_name] = nb_lines
+    # pickle.dump(nb_lines_dict, open("zzzz_to_move_number_of_lines_per_play_dict.pkl", "wb")) # To save the dict
+    nb_lines_list = nb_lines_dict.values()
+    graphing.plot_similarities(
+        nb_lines_list,
+        title='Distribution of number of speeches',
+        xlabel='Number of speeches',
+        ylabel='Number of plays',
+        bins_number= 18,
+        max_value= 3600
+    )
+def plot_number_of_characters(directory, supersheet):
+    # nb_lines_dict = defaultdict(int)
+    # for file in os.listdir(directory):
+    #     file_path = os.path.join(directory, file)
+    #     play = get_play_from_file(file_path)
+    #     raw_name = os.path.splitext(file)[0]
+    #     match = supersheet["Raw Name"].astype(str).str.strip() == raw_name
+    #
+    #     if match.any():
+    #         is_empty = supersheet.loc[match, "Empty text"].values[0]
+    #         if not is_empty:
+    #             speaker_succession = play_parsing.get_characters(play)
+    #             nb_char = len(speaker_succession)
+    #             if nb_char > 20:
+    #                 print(f'Long: {file}, char  : {nb_char} ')
+    #             if nb_char==0:
+    #                 print(f'Short : {file}, no char ')
+    #             if nb_char >= 70:
+    #                 nb_lines_dict[raw_name] = nb_char
+    # pickle.dump(nb_lines_dict, open("zzzz_to_move_number_of_characters_per_play_dict.pkl", "wb")) # To save the dict
+    char_dict = pickle.load(open("zzzz_to_move_number_of_characters_per_play_dict.pkl", "rb"))
+    char_dict_filtered = {char : char_dict[char] for char in char_dict if char_dict[char] <= 45}
+    char_dict_excedent = {char: char_dict[char] for char in char_dict if char_dict[char] > 45}
+    print(char_dict_excedent)
+    nb_char_list = list(char_dict_filtered.values())
+    max_nb_char = max(nb_char_list)
+    graphing.plot_similarities(
+        nb_char_list,
+        title='Distribution of number of character (capped at 45)',
+        xlabel='Number of characters',
+        ylabel='Number of plays',
+        bins_number= max_nb_char,
+        max_value= max_nb_char,
+        ticks_every=2
+    )
+
+
 if __name__ == "__main__":
-    import matplotlib.pyplot as plt
+    supersheet_file = os.path.join("Corpus", "Merged corpus", "Corpus Merging Dracor-BD-TD - Supersheet -empty plays.csv")
+    supersheet = pd.read_csv(supersheet_file)
+    d = os.path.join('Corpus', 'Merged Corpus files')
+    plot_number_of_lines(d, supersheet)
 
-    DataFolder = os.path.join('Data', 'Corpus comparison')
-    # reference_dracor = os.path.join(DataFolder, 'Metadata Dracor.csv')
+    # ######## Code to gather all files in one output directory
+    #
+    # # Standardize file names if needed
+    # remove_all_whitespace_from_filenames("Corpus/CorpusTD_v2")
+    #
+    # # Replace by path for corpora if necesary
+    # DataFolder = os.path.join('Data', 'Corpus comparison')
+
     # reference_bd = os.path.join(DataFolder, 'Metadata Bibdramatique.csv')
-    reference_supersheet = os.path.join(DataFolder, 'Supersheet.csv')
-
-    supersheet_df = pd.read_csv(reference_supersheet)
-    # dracor_df = pd.read_csv(reference_dracor)
     # bd_df = pd.read_csv(reference_bd)
+    #
+    # # Moving files
+    # copy_non_dracor_files(supersheet, bd_df, os.path.join('Corpus', 'Merged Corpus files'))
+    #
+    # # Checking
+    # check_corpus_files_presence(os.path.join('Corpus', 'Merged Corpus files'), supersheet)
 
-    dict_years = count_year_occurrences(supersheet_df)
-    print(min(dict_years.keys()))
-    print(max(dict_years.keys()))
-    siecles_dict = dict()
-    pas = 100
-    for siecle in range(1100, 2018, pas):
-        for year in dict_years:
-            if siecle <= year <= siecle + pas -1:
-                siecles_dict[f'{siecle} - {siecle + pas - 1}'] = siecles_dict.get(f'{siecle} - {siecle + pas - 1}',0) + dict_years[year]
-    print(siecles_dict)
-    plt.bar(siecles_dict.keys(), siecles_dict.values())
-    plt.show()
-
-
-
-
+    # DataFolder = os.path.join('Data', 'Corpus comparison')
+    # # reference_dracor = os.path.join(DataFolder, 'Metadata Dracor.csv')
+    # # reference_bd = os.path.join(DataFolder, 'Metadata Bibdramatique.csv')
+    # reference_supersheet = os.path.join(DataFolder, 'Supersheet.csv')
+    #
+    # supersheet_df = pd.read_csv(reference_supersheet)
+    # # dracor_df = pd.read_csv(reference_dracor)
+    # # bd_df = pd.read_csv(reference_bd)
+    #
+    # dict_years = count_year_occurrences(supersheet_df)
+    # print(min(dict_years.keys()))
+    # print(max(dict_years.keys()))
+    # siecles_dict = dict()
+    # pas = 100
+    # for siecle in range(1100, 2018, pas):
+    #     for year in dict_years:
+    #         if siecle <= year <= siecle + pas -1:
+    #             siecles_dict[f'{siecle} - {siecle + pas - 1}'] = siecles_dict.get(f'{siecle} - {siecle + pas - 1}',0) + dict_years[year]
+    # print(siecles_dict)
+    # plt.bar(siecles_dict.keys(), siecles_dict.values())
+    # plt.show()
+    # play1, play2 = os.path.join(corpus_Dracor, "donneau-de-vise-cocue-imaginaire.xml"), os.path.join(corpus_Dracor,
+    #                                                                                                  "moliere-sganarelle.xml")
+    # txt1, txt2 = get_raw_text(get_play_from_file(play1)), get_raw_text(get_play_from_file(play2))
+    # ngrams_1, ngrams_2 = get_n_grams(txt1, 4), get_n_grams(txt2, 4)
+    # print(compare_ngrams_dict(ngrams_1, ngrams_2))
 
     # #### CODE TO MERGE BIBDRAMATIQUE, TD, AND DRACOR :
     #

@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "#emilie", "label": "#emilie", "shape": "dot", "size": 36, "title": "#emilieTop Words: \n (\u0027pleurs\u0027, 0.08844408228406075)\n(\u0027devoir\u0027, 0.07759276687627842)\n(\u0027coeur\u0027, 0.07707778862520648)\n(\u0027vaine\u0027, 0.0711301989814984)\n(\u0027frayeur\u0027, 0.0711301989814984)\n(\u0027donner\u0027, 0.0664079801635011)\n(\u0027fulvie\u0027, 0.06632347238415619)\n(\u0027crois\u0027, 0.06632347238415619)\n(\u0027viens\u0027, 0.06632347238415619)\n(\u0027p\u00e8re\u0027, 0.06190449570491214)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#fulvie", "label": "#fulvie", "shape": "dot", "size": 22, "title": "#fulvieTop Words: \n (\u0027auguste\u0027, 0.1254639847140894)\n(\u0027cause\u0027, 0.10308303647301793)\n(\u0027funeste\u0027, 0.10308303647301793)\n(\u0027mis\u0027, 0.10308303647301793)\n(\u0027venger\u0027, 0.10308303647301793)\n(\u0027vivre\u0027, 0.10308303647301793)\n(\u0027faits\u0027, 0.10262378970458512)\n(\u0027aidez\u0027, 0.10262378970458512)\n(\u0027tibre\u0027, 0.10262378970458512)\n(\u0027conduit\u0027, 0.10262378970458512)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#cinna", "label": "#cinna", "shape": "dot", "size": 32, "title": "#cinnaTop Words: \n (\u0027sein\u0027, 0.062235479527560984)\n(\u0027c\u00e9sar\u0027, 0.05869106008785758)\n(\u0027tyrans\u0027, 0.05817106436559837)\n(\u0027desseins\u0027, 0.05817106436559837)\n(\u0027rendez\u0027, 0.05817106436559837)\n(\u0027citoyens\u0027, 0.05705199364217732)\n(\u0027honneurs\u0027, 0.05705199364217732)\n(\u0027propice\u0027, 0.05705199364217732)\n(\u0027accable\u0027, 0.05705199364217732)\n(\u0027l\u00e2chement\u0027, 0.05705199364217732)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#maxime", "label": "#maxime", "shape": "dot", "size": 32, "title": "#maximeTop Words: \n (\u0027esclave\u0027, 0.08162969842975153)\n(\u0027amants\u0027, 0.08162969842975153)\n(\u0027seigneur\u0027, 0.07912620446320599)\n(\u0027remords\u0027, 0.07536190025347429)\n(\u0027objet\u0027, 0.07536190025347429)\n(\u0027tyran\u0027, 0.07536190025347429)\n(\u0027libert\u00e9\u0027, 0.07290657354404284)\n(\u0027rome\u0027, 0.07262058629573083)\n(\u0027extr\u00eame\u0027, 0.07178874955081103)\n(\u0027\u00e9clater\u0027, 0.07178874955081103)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#livie", "label": "#livie", "shape": "dot", "size": 26, "title": "#livieTop Words: \n (\u0027peines\u0027, 0.14076536546789417)\n(\u0027projets\u0027, 0.14076536546789417)\n(\u0027seigneur\u0027, 0.13769670284391944)\n(\u0027cl\u00e9mence\u0027, 0.11542961336014093)\n(\u0027fasse\u0027, 0.11542961336014093)\n(\u0027bonheur\u0027, 0.10350891467638994)\n(\u0027bas\u0027, 0.09745361116480858)\n(\u0027belle\u0027, 0.09745361116480858)\n(\u0027font\u0027, 0.08351034061578672)\n(\u0027fruit\u0027, 0.08351034061578672)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#auguste", "label": "#auguste", "shape": "dot", "size": 36, "title": "#augusteTop Words: \n (\u0027tiens\u0027, 0.08032872227637626)\n(\u0027meurs\u0027, 0.07115383795143378)\n(\u0027sein\u0027, 0.06506918653494996)\n(\u0027repos\u0027, 0.06506918653494996)\n(\u0027trahis\u0027, 0.06506918653494996)\n(\u0027maxime\u0027, 0.06307358543593988)\n(\u0027sang\u0027, 0.060733779966218884)\n(\u0027cesse\u0027, 0.0600729592238007)\n(\u0027temps\u0027, 0.0600729592238007)\n(\u0027amis\u0027, 0.0600729592238007)"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "#emilie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #emilie to  #fulvie : \n (\u0027aujourd\u0027, 0.12891031674813827)\n(\u0027libert\u00e9\u0027, 0.10400403186703998)\n(\u0027auguste\u0027, 0.10400403186703998)\n(\u0027soupirs\u0027, 0.10400403186703998)\n(\u0027rend\u0027, 0.10400403186703998)\n(\u0027heure\u0027, 0.10400403186703998)\n(\u0027adore\u0027, 0.10400403186703998)\n(\u0027devoir\u0027, 0.10400403186703998)\n(\u0027rome\u0027, 0.10400403186703998)\n(\u0027m\u00e2nes\u0027, 0.10400403186703998) ", "to": "#fulvie", "value": 0.3606222501571339, "width": 0.3606222501571339}, {"arrows": "to", "from": "#emilie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #emilie to  #cinna : \n (\u0027terre\u0027, 0.09676147503795259)\n(\u0027pouvoir\u0027, 0.09676147503795259)\n(\u0027sort\u0027, 0.09676147503795259)\n(\u0027vain\u0027, 0.09676147503795259)\n(\u0027roi\u0027, 0.09676147503795259)\n(\u0027meurs\u0027, 0.09676147503795259)\n(\u0027auguste\u0027, 0.08876807126376886)\n(\u0027romain\u0027, 0.08876807126376886)\n(\u0027main\u0027, 0.08876807126376886)\n(\u0027esprit\u0027, 0.08876807126376886) ", "to": "#cinna", "value": 0.7146448774355751, "width": 0.7146448774355751}, {"arrows": "to", "from": "#emilie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #emilie to  #maxime : \n (\u0027maxime\u0027, 0.19146167434611636)\n(\u0027suivre\u0027, 0.15447007332171414)\n(\u0027apprends\u0027, 0.15447007332171414)\n(\u0027perte\u0027, 0.12462548253328669)\n(\u0027aimer\u0027, 0.12462548253328669)\n(\u0027voir\u0027, 0.12462548253328669)\n(\u0027coeur\u0027, 0.11343952446225956)\n(\u0027vois\u0027, 0.1034504083831338)\n(\u0027vertu\u0027, 0.1034504083831338)\n(\u0027recevoir\u0027, 0.09123251368533061) ", "to": "#maxime", "value": 0.20560967944688874, "width": 0.20560967944688874}, {"arrows": "to", "from": "#emilie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #emilie to  #livie : \n (\u0027seigneur\u0027, 0.16962040226416095)\n(\u0027crime\u0027, 0.1515712258086638)\n(\u0027p\u00e8re\u0027, 0.1449853448749206)\n(\u0027\u00e2mes\u0027, 0.12228671061238586)\n(\u0027coeurs\u0027, 0.12228671061238586)\n(\u0027mienne\u0027, 0.12228671061238586)\n(\u0027honneur\u0027, 0.12228671061238586)\n(\u0027v\u00f4tre\u0027, 0.12228671061238586)\n(\u0027affaiblir\u0027, 0.12228671061238586)\n(\u0027coeur\u0027, 0.10784417552185785) ", "to": "#livie", "value": 0.23648648648648649, "width": 0.23648648648648649}, {"arrows": "to", "from": "#emilie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #emilie to  #auguste : \n (\u0027seigneur\u0027, 0.16962040226416095)\n(\u0027crime\u0027, 0.1515712258086638)\n(\u0027p\u00e8re\u0027, 0.1449853448749206)\n(\u0027\u00e2mes\u0027, 0.12228671061238586)\n(\u0027coeurs\u0027, 0.12228671061238586)\n(\u0027mienne\u0027, 0.12228671061238586)\n(\u0027honneur\u0027, 0.12228671061238586)\n(\u0027v\u00f4tre\u0027, 0.12228671061238586)\n(\u0027affaiblir\u0027, 0.12228671061238586)\n(\u0027coeur\u0027, 0.10784417552185785) ", "to": "#auguste", "value": 0.23648648648648649, "width": 0.23648648648648649}, {"arrows": "to", "from": "#cinna", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cinna to  #emilie : \n (\u0027honneur\u0027, 0.10229716171976237)\n(\u0027vie\u0027, 0.09561643654055946)\n(\u0027ardeur\u0027, 0.09561643654055946)\n(\u0027victime\u0027, 0.07689848751200751)\n(\u0027esprits\u0027, 0.07689848751200751)\n(\u0027belle\u0027, 0.07689848751200751)\n(\u0027int\u00e9r\u00eats\u0027, 0.07689848751200751)\n(\u0027amis\u0027, 0.07689848751200751)\n(\u0027noms\u0027, 0.07689848751200751)\n(\u0027occasion\u0027, 0.07689848751200751) ", "to": "#emilie", "value": 1.0, "width": 1.0}, {"arrows": "to", "from": "#cinna", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cinna to  #maxime : \n (\u0027rome\u0027, 0.09720350656160004)\n(\u0027pr\u00e9sents\u0027, 0.09170794540752651)\n(\u0027c\u00e9sar\u0027, 0.08917927262152521)\n(\u0027remords\u0027, 0.08221512282287505)\n(\u0027faute\u0027, 0.07398939291461247)\n(\u0027appr\u00eate\u0027, 0.07398939291461247)\n(\u0027g\u00eane\u0027, 0.07398939291461247)\n(\u0027retiendrai\u0027, 0.07398939291461247)\n(\u0027repentir\u0027, 0.07398939291461247)\n(\u0027\u00e9couter\u0027, 0.07398939291461247) ", "to": "#maxime", "value": 0.850879949717159, "width": 0.850879949717159}, {"arrows": "to", "from": "#cinna", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cinna to  #auguste : \n (\u0027rome\u0027, 0.11018478993958053)\n(\u0027c\u00e9sar\u0027, 0.10152383203089702)\n(\u0027seigneur\u0027, 0.09818886151012902)\n(\u0027consuls\u0027, 0.0893341745378602)\n(\u0027devez\u0027, 0.0893341745378602)\n(\u0027vrai\u0027, 0.0893341745378602)\n(\u0027guerre\u0027, 0.0893341745378602)\n(\u0027ose\u0027, 0.0822379962852233)\n(\u0027ma\u00eetre\u0027, 0.0822379962852233)\n(\u0027lois\u0027, 0.0822379962852233) ", "to": "#auguste", "value": 0.6634192331866751, "width": 0.6634192331866751}, {"arrows": "to", "from": "#auguste", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #auguste to  #cinna : \n (\u0027tiens\u0027, 0.1091246236361444)\n(\u0027pouvoir\u0027, 0.09204638387991583)\n(\u0027main\u0027, 0.07863417204274419)\n(\u0027cinna\u0027, 0.07207230437990379)\n(\u0027gloire\u0027, 0.07080607205053367)\n(\u0027\u00e9l\u00e8ve\u0027, 0.07080607205053367)\n(\u0027camp\u0027, 0.07080607205053367)\n(\u0027parle\u0027, 0.07080607205053367)\n(\u0027loi\u0027, 0.07080607205053367)\n(\u0027conna\u00eetre\u0027, 0.07080607205053367) ", "to": "#cinna", "value": 0.9598522941546197, "width": 0.9598522941546197}, {"arrows": "to", "from": "#auguste", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #auguste to  #maxime : \n (\u0027pouvoir\u0027, 0.11870495791604393)\n(\u0027cinna\u0027, 0.09769431066389352)\n(\u0027rome\u0027, 0.09610189389170866)\n(\u0027ardeur\u0027, 0.09577041261947074)\n(\u0027souverain\u0027, 0.09577041261947074)\n(\u0027retiendrai\u0027, 0.09577041261947074)\n(\u0027part\u0027, 0.09577041261947074)\n(\u0027citoyen\u0027, 0.09577041261947074)\n(\u0027supr\u00eame\u0027, 0.09577041261947074)\n(\u0027coeurs\u0027, 0.09577041261947074) ", "to": "#maxime", "value": 0.4491671904462602, "width": 0.4491671904462602}, {"arrows": "to", "from": "#auguste", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #auguste to  #livie : \n (\u0027madame\u0027, 0.13407273974102374)\n(\u0027prince\u0027, 0.13407273974102374)\n(\u0027faiblesse\u0027, 0.13407273974102374)\n(\u0027amour\u0027, 0.1078279481693005)\n(\u0027sais\u0027, 0.1057044879881775)\n(\u0027rend\u0027, 0.0986071458000355)\n(\u0027cinna\u0027, 0.0986071458000355)\n(\u0027ciel\u0027, 0.0986071458000355)\n(\u0027bienfaits\u0027, 0.08671946399325446)\n(\u0027cesse\u0027, 0.08671946399325446) ", "to": "#livie", "value": 0.36863607793840353, "width": 0.36863607793840353}, {"arrows": "to", "from": "#auguste", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #auguste to  #emilie : \n (\u0027amour\u0027, 0.15270873337180452)\n(\u0027encor\u0027, 0.13429878126628558)\n(\u0027fille\u0027, 0.13429878126628558)\n(\u0027ciel\u0027, 0.13429878126628558)\n(\u0027bienfaits\u0027, 0.13429878126628558)\n(\u0027unirai\u0027, 0.13252932977713142)\n(\u0027cinna\u0027, 0.10835141111174966)\n(\u0027aime\u0027, 0.10835141111174966)\n(\u0027donn\u00e9e\u0027, 0.10835141111174966)\n(\u0027gr\u00e2ce\u0027, 0.10835141111174966) ", "to": "#emilie", "value": 0.23232243871778754, "width": 0.23232243871778754}, {"arrows": "to", "from": "#maxime", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #maxime to  #cinna : \n (\u0027rome\u0027, 0.135029474957751)\n(\u0027libert\u00e9\u0027, 0.11442043191331985)\n(\u0027tyran\u0027, 0.1046358796929425)\n(\u0027rends\u0027, 0.0941669239155253)\n(\u0027brute\u0027, 0.0941669239155253)\n(\u0027seigneur\u0027, 0.09279304273877942)\n(\u0027main\u0027, 0.09202139792014309)\n(\u0027mort\u0027, 0.09202139792014309)\n(\u0027sang\u0027, 0.09202139792014309)\n(\u0027voulez\u0027, 0.09202139792014309) ", "to": "#cinna", "value": 0.5494186046511628, "width": 0.5494186046511628}, {"arrows": "to", "from": "#maxime", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #maxime to  #auguste : \n (\u0027rome\u0027, 0.14946957453062565)\n(\u0027seigneur\u0027, 0.12121730695855662)\n(\u0027empire\u0027, 0.12020929273590704)\n(\u0027libert\u00e9\u0027, 0.12020929273590704)\n(\u0027ciel\u0027, 0.11066057777558815)\n(\u0027vertu\u0027, 0.09893237987190555)\n(\u0027sien\u0027, 0.09698410048007403)\n(\u0027suivez\u0027, 0.09698410048007403)\n(\u0027fameux\u0027, 0.09698410048007403)\n(\u0027crime\u0027, 0.09698410048007403) ", "to": "#auguste", "value": 0.3855279698302954, "width": 0.3855279698302954}, {"arrows": "to", "from": "#maxime", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #maxime to  #emilie : \n (\u0027rappelez\u0027, 0.15393883163819694)\n(\u0027rend\u0027, 0.15393883163819694)\n(\u0027extr\u00eame\u0027, 0.15393883163819694)\n(\u0027\u00e2me\u0027, 0.11321815937345368)\n(\u0027ami\u0027, 0.09956903240135388)\n(\u0027seigneur\u0027, 0.09956903240135388)\n(\u0027euphorbe\u0027, 0.09956903240135388)\n(\u0027\u00e9milie\u0027, 0.09956903240135388)\n(\u0027amant\u0027, 0.09956903240135388)\n(\u0027ciel\u0027, 0.09825716217442396) ", "to": "#emilie", "value": 0.2231301068510371, "width": 0.2231301068510371}, {"arrows": "to", "from": "#livie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #livie to  #auguste : \n (\u0027cinna\u0027, 0.1354107846607443)\n(\u0027fruit\u0027, 0.1354107846607443)\n(\u0027peines\u0027, 0.1354107846607443)\n(\u0027bas\u0027, 0.1354107846607443)\n(\u0027cl\u00e9mence\u0027, 0.1354107846607443)\n(\u0027seigneur\u0027, 0.11651320307842805)\n(\u0027bonheur\u0027, 0.08758492358228946)\n(\u0027fasse\u0027, 0.08643094979340712)\n(\u0027fureur\u0027, 0.08643094979340712)\n(\u0027jours\u0027, 0.08643094979340712) ", "to": "#auguste", "value": 0.2679132620993086, "width": 0.2679132620993086}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

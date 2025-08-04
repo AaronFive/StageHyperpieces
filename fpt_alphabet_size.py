@@ -1,21 +1,21 @@
-import io, itertools, time
+import csv
+import itertools
 import multiprocessing
 import os
-import csv
 import queue
-from typing import List
-from itertools import count
+import time
 from multiprocessing import Process
 from xml.dom import minidom
-from unidecode import unidecode
-from Levenshtein import distance
+
 from polyleven import levenshtein as bounded_distance
+
+import heuristics
 import sat_instance
+from basic_utilities import characterList, stringToIntegerList
 from play_parsing import get_all_acts_dialogues
-from utils import get_title, normalize_scene
-from sat_instance import encode_scenes,invert_dic
-from quick_comparison import fieldnames
-from basic_utilities import characterList,stringToIntegerList
+from sat_instance import encode_scenes
+from utils import normalize_scene
+
 """
     fpt_alphabet_size v1.0, 2022-12-05
     Solving the parameterized matching problem between two strings,
@@ -35,7 +35,9 @@ from basic_utilities import characterList,stringToIntegerList
     
 """
 
-
+fieldnames = ["Pair name", "Act Number", "Normalized_Distance", "Renaming", "Distance", "Input_1", "Input_2",
+              "Input 1 length",
+              "Input 2 length", "Input 1 renamed", "Letters_play1", "Letters_play2", "Computing time"]
 
 def allPermutationsAfterElement(lst, i):
     """Returns the list of all permutations of lst keeping the i first elements in place.
@@ -99,7 +101,7 @@ def buildString(integerList, characterIntegerList):
 # Complexity if s1 is the size of the smallest alphabet of the two input strings
 # and s2 is the size of the alphabet of the other input strings: 
 # O(s1! * A(s2, s1) * poly(size of input strings)) where A(n,k) is the number of arrangements of k elements among n
-def parameterizedAlignment(a, b, queue, pair_name=None, heuristic=None ):
+def parameterizedAlignment(a, b, queue, pair_name=None, heuristic=None):
     """Returns the Levenshtein parameterized distance between `a` and `b` if the variables are linked by an injection.
     Sends details about the instance up queue to be logged later.
     Args:
@@ -139,12 +141,12 @@ def parameterizedAlignment(a, b, queue, pair_name=None, heuristic=None ):
         bestPerm = []
         bestSubset = []
     else:
-        guessed_distance, guessed_perm = heuristic(a,b)
+        guessed_distance, guessed_perm = heuristic(a, b)
         smallestDistance = guessed_distance
         bestTransformedA = buildString(aIntegerList, guessed_perm)
         bestPerm = guessed_perm
         bestSubset = []
-    for perm in permutations:
+    for (i,perm) in enumerate(permutations):
         transformedA = buildString(aIntegerList, perm)
         for sub in allSubs:
             transformedB = buildString(bIntegerList, sub)
@@ -152,7 +154,7 @@ def parameterizedAlignment(a, b, queue, pair_name=None, heuristic=None ):
             # distance
             # dist = distance(transformedA, transformedB, weights=(1, 1, 1))
             # In this version I used the distance function from polyleven module, that takes into account a potential upper bound for the distance.
-            dist = bounded_distance(transformedA, transformedB,smallestDistance)
+            dist = bounded_distance(transformedA, transformedB, smallestDistance)
             if dist < smallestDistance:
                 smallestDistance = dist
                 bestTransformedA = transformedA
@@ -201,7 +203,7 @@ def keep_most_frequents(l, max_to_keep):
     return [replace_characters(x) for x in l]
 
 
-def compare_pieces_content(acts1, acts2, pair_name, gwriter, timeout=60, fieldnames = fieldnames):
+def compare_pieces_content(acts1, acts2, pair_name, gwriter, timeout=60, fieldnames=fieldnames):
     """Given two plays, compare both plays act by act, and logs the results in a csv file.
     output csv and name of columns are given by gwriter and fieldnames.
     Computation are done with the specified timeout."""
@@ -233,13 +235,13 @@ def compare_pieces_content(acts1, acts2, pair_name, gwriter, timeout=60, fieldna
         p1.join(timeout=timeout)
         # Case 1 : call has timed out, we fill the csv accordingly
         csv_row = {"Pair name": f'{pair_name}', "Act Number": f'{act_number + 1}', "Distance": None,
-                   "Normalized_Distance":None,
+                   "Normalized_Distance": None,
                    "Input_1": normalized_a1,
                    "Input_2": normalized_a2,
                    "Input 1 length": len(normalized_a1),
                    "Input 2 length": len(normalized_a2),
                    "Input 1 renamed": None,
-                   "Letters_play1":d1,
+                   "Letters_play1": d1,
                    "Letters_play2": d2,
                    "Renaming": None}
         renaming = None
@@ -259,17 +261,20 @@ def compare_pieces_content(acts1, acts2, pair_name, gwriter, timeout=60, fieldna
                     csv_row[k] = v
             queue.empty()
         if renaming is not None:
-            renaming = [(sat_instance.invert_dic(d1,chr(x+65)), sat_instance.invert_dic(d2,chr(y+65))) for (x,y) in renaming]
+            renaming = [(sat_instance.invert_dic(d1, chr(x + 65)), sat_instance.invert_dic(d2, chr(y + 65))) for (x, y)
+                        in renaming]
             renaming_string = str(renaming)
             csv_row["Renaming"] = renaming_string
-            size_u,size_v = int(csv_row["Input 1 length"]), int(csv_row["Input 2 length"])
-            csv_row["Normalized_Distance"] = round((int(csv_row["Distance"]) - abs(size_u-size_v) ) / (min(size_u,size_v)),2)
+            size_u, size_v = int(csv_row["Input 1 length"]), int(csv_row["Input 2 length"])
+            csv_row["Normalized_Distance"] = round(
+                (int(csv_row["Distance"]) - abs(size_u - size_v)) / (min(size_u, size_v)), 2)
             print(csv_row["Computing time"])
         gwriter.writerow(csv_row)
         print('written')
         print(f'done for act {act_number + 1}')
 
-def compare_heuristics(acts1, acts2, pair_name,  heuristic, timeout=60):
+
+def compare_heuristics(acts1, acts2, pair_name, heuristic, timeout=60):
     """Given two plays, compare both plays act by act, and logs the results in a csv file.
     output csv and name of columns are given by gwriter and fieldnames.
     Computation are done with the specified timeout."""
@@ -283,10 +288,11 @@ def compare_heuristics(acts1, acts2, pair_name,  heuristic, timeout=60):
         # Encoding the acts as parameterized words
         input_name, d1, d2, normalized_a1, normalized_a2 = encode_scenes(a1, a2)
 
-        #Collecting initial heuristic guess
+        # Collecting initial heuristic guess
         guessed_score, guessed_renaming = heuristic(normalized_a1, normalized_a2)
         # print(guessed_renaming)
-        guessed_renaming = [(sat_instance.invert_dic(d1,x), sat_instance.invert_dic(d2,y)) for (x,y) in guessed_renaming]
+        guessed_renaming = [(sat_instance.invert_dic(d1, x), sat_instance.invert_dic(d2, y)) for (x, y) in
+                            guessed_renaming]
 
         # Now we call the FPT algorithm with a heuristic
         # We execute it with a timeout. To do so, we use the multiprocessing library.
@@ -296,12 +302,13 @@ def compare_heuristics(acts1, acts2, pair_name,  heuristic, timeout=60):
         # in a dictionnary aftewards.
         queue = multiprocessing.Queue()
         p1 = Process(target=parameterizedAlignment,
-                     args=(normalized_a1, normalized_a2, queue,  f'{pair_name}_{act_number + 1}', heuristic),  name='FPTtry')
+                     args=(normalized_a1, normalized_a2, queue, f'{pair_name}_{act_number + 1}', heuristic),
+                     name='FPTtry')
         p1.start()
         p1.join(timeout=timeout)
-        #["True Distance", "True Renaming", "Input_1", "Input_2", "Computing time"]
+        # ["True Distance", "True Renaming", "Input_1", "Input_2", "Computing time"]
         # Case 1 : call has timed out, we fill the csv accordingly
-        true_renaming, true_distance = None,None
+        true_renaming, true_distance = None, None
         if p1.exitcode is None:
             p1.kill()
             computing_time = timeout
@@ -325,15 +332,18 @@ def compare_heuristics(acts1, acts2, pair_name,  heuristic, timeout=60):
                 elif k == "Input 2 length":
                     size_v = v
                 else:
-                    print(k,v)
+                    print(k, v)
             print('for done')
         queue.empty()
         print('done')
         if true_renaming is not None:
-            true_renaming = [(sat_instance.invert_dic(d1,chr(x+65)), sat_instance.invert_dic(d2,chr(y+65))) for (x,y) in true_renaming]
-            normalized_distance = round((int(true_distance) - abs(size_u-size_v) ) / (min(size_u,size_v)),2)
+            true_renaming = [(sat_instance.invert_dic(d1, chr(x + 65)), sat_instance.invert_dic(d2, chr(y + 65))) for
+                             (x, y) in true_renaming]
+            normalized_distance = round((int(true_distance) - abs(size_u - size_v)) / (min(size_u, size_v)), 2)
     return guessed_score, guessed_renaming, computing_time, true_renaming, true_distance, normalized_distance
-def compare_pieces(f1, f2, pair_name, gwriter, timeout=60, split_by_act = True):
+
+
+def compare_pieces(f1, f2, pair_name, gwriter, timeout=60, split_by_act=True):
     """Given two files of plays, run the parameterized matching comparison and logs the results.
     Logs the result in a csv file given by gwriter.
     Args:
@@ -388,6 +398,7 @@ def compare_pieces_corpus(folder, timeout=60, final_output_dir='Resultats FPT'):
 
 # TODO : try heuristics on the whole corpora
 if __name__ == "__main__":
+
     # Parameters
     # corpus_name = 'corpus11paires'
     # timeout = 1200

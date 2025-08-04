@@ -342,12 +342,14 @@ def write_front_content(front_node, metadata, counters):
     # Add dedication (dedicace)
     if counters['dedicaceFound']:
         signed_text = metadata.get('signed_text', None)
-        write_dedicace(front_node, metadata['dedicaceSalute'], metadata['dedicaceHeader'], metadata['dedicace'],
-                       signed_text)
+        salute, header, text = metadata.get('dedicaceSalute', ''), metadata.get('dedicaceHeader', ''), metadata.get(
+            'dedicace', '')
+        write_dedicace(front_node, salute, header, text, signed_text)
 
     # Add preface
     if counters['prefaceFound']:
-        write_preface(front_node, metadata['prefaceHeader'], metadata['preface'])
+        header, preface_text = metadata.get('prefaceHeader', ''), metadata.get('preface', '')
+        write_preface(front_node, header, preface_text)
 
     # Add castList
     write_cast_list(front_node)

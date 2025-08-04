@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "#gorgibus", "label": "#gorgibus", "shape": "dot", "size": 24, "title": "#gorgibusTop Words: \n (\u0027val\u00e8re\u0027, 0.13939617458423767)\n(\u0027fille\u0027, 0.13283946646389133)\n(\u0027\u00e9poux\u0027, 0.1146295602215264)\n(\u0027manquez\u0027, 0.11246395594487513)\n(\u0027sottes\u0027, 0.11246395594487513)\n(\u0027fois\u0027, 0.11246395594487513)\n(\u0027absolu\u0027, 0.11246395594487513)\n(\u0027transporte\u0027, 0.11246395594487513)\n(\u0027droit\u0027, 0.0942535723065076)\n(\u0027jour\u0027, 0.0942535723065076)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#celie", "label": "#celie", "shape": "dot", "size": 34, "title": "#celieTop Words: \n (\u0027tra\u00eetre\u0027, 0.17553464695318427)\n(\u0027yeux\u0027, 0.1293765334237767)\n(\u0027p\u00e8re\u0027, 0.12694535583030458)\n(\u0027l\u00e9lie\u0027, 0.12694535583030458)\n(\u0027constante\u0027, 0.12454707911218892)\n(\u0027amiti\u00e9\u0027, 0.12454707911218892)\n(\u0027perfidie\u0027, 0.12454707911218892)\n(\u0027croire\u0027, 0.10438017254540614)\n(\u0027devoir\u0027, 0.10438017254540614)\n(\u0027l\u00e2che\u0027, 0.10438017254540614)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#lelie", "label": "#lelie", "shape": "dot", "size": 34, "title": "#lelieTop Words: \n (\u0027gage\u0027, 0.1455523675277462)\n(\u0027choix\u0027, 0.12198424359075687)\n(\u0027croire\u0027, 0.12198424359075687)\n(\u0027espoir\u0027, 0.12198424359075687)\n(\u0027\u00e9meut\u0027, 0.11743073364915499)\n(\u0027vivez\u0027, 0.11743073364915499)\n(\u0027bas\u0027, 0.11743073364915499)\n(\u0027bonheur\u0027, 0.11743073364915499)\n(\u0027infid\u00e8le\u0027, 0.11743073364915499)\n(\u0027mains\u0027, 0.10526239354149239)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#la-suivante", "label": "#la-suivante", "shape": "dot", "size": 24, "title": "#la-suivanteTop Words: \n (\u0027ma\u00eetresse\u0027, 0.15506325648618613)\n(\u0027quelqu\u0027, 0.15506325648618613)\n(\u0027changement\u0027, 0.15506325648618613)\n(\u0027vrai\u0027, 0.13899538068833098)\n(\u0027temps\u0027, 0.1299551108131661)\n(\u0027madame\u0027, 0.1218683138442712)\n(\u0027venir\u0027, 0.1121405979532612)\n(\u0027pourrait\u0027, 0.1121405979532612)\n(\u0027dieu\u0027, 0.0983225882642559)\n(\u0027salue\u0027, 0.09158285721794412)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#sganarelle", "label": "#sganarelle", "shape": "dot", "size": 32, "title": "#sganarelleTop Words: \n (\u0027honneur\u0027, 0.1347831434999436)\n(\u0027femme\u0027, 0.1078503168373809)\n(\u0027front\u0027, 0.10555048036537253)\n(\u0027courage\u0027, 0.0986572905642162)\n(\u0027sganarelle\u0027, 0.09022070808235841)\n(\u0027cocu\u0027, 0.09022070808235841)\n(\u0027aller\u0027, 0.08268250917935292)\n(\u0027monde\u0027, 0.07934406155371333)\n(\u0027crier\u0027, 0.07934406155371333)\n(\u0027vaut\u0027, 0.07934406155371333)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#la-femme-sganarelle", "label": "#la-femme-sganarelle", "shape": "dot", "size": 26, "title": "#la-femme-sganarelleTop Words: \n (\u0027nouvelle\u0027, 0.12769424137845026)\n(\u0027faiblesse\u0027, 0.12769424137845026)\n(\u0027poursuis\u0027, 0.12769424137845026)\n(\u0027caresses\u0027, 0.12769424137845026)\n(\u0027crains\u0027, 0.12769424137845026)\n(\u0027passe\u0027, 0.12769424137845026)\n(\u0027bijou\u0027, 0.12769424137845026)\n(\u0027offense\u0027, 0.1144623819614319)\n(\u0027peinture\u0027, 0.10701774014411991)\n(\u0027proc\u00e9d\u00e9\u0027, 0.10701774014411991)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#gros-rene", "label": "#gros-rene", "shape": "dot", "size": 22, "title": "#gros-reneTop Words: \n (\u0027ose\u0027, 0.11770315944239361)\n(\u0027revers\u0027, 0.11770315944239361)\n(\u0027n\u00e9cessaire\u0027, 0.11770315944239361)\n(\u0027viendraient\u0027, 0.11770315944239361)\n(\u0027mazettes\u0027, 0.11770315944239361)\n(\u0027rou\u00e9s\u0027, 0.11770315944239361)\n(\u0027vin\u0027, 0.11770315944239361)\n(\u0027terrasse\u0027, 0.11770315944239361)\n(\u0027entiers\u0027, 0.11770315944239361)\n(\u0027arriv\u00e9\u0027, 0.11770315944239361)"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "#gorgibus", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #gorgibus to  #celie : \n (\u0027h\u00e9las\u0027, 0.13463759612477014)\n(\u0027absolu\u0027, 0.10862476480622318)\n(\u0027belle\u0027, 0.10862476480622318)\n(\u0027manquez\u0027, 0.10862476480622318)\n(\u0027pla\u00eet\u0027, 0.10862476480622318)\n(\u0027heure\u0027, 0.10862476480622318)\n(\u0027pouvoir\u0027, 0.10862476480622318)\n(\u0027fruit\u0027, 0.10862476480622318)\n(\u0027fois\u0027, 0.10862476480622318)\n(\u0027donne\u0027, 0.10862476480622318) ", "to": "#celie", "value": 0.9540748606318025, "width": 0.9540748606318025}, {"arrows": "to", "from": "#gorgibus", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #gorgibus to  #lelie : \n (\u0027monsieur\u0027, 0.2194660756902142)\n(\u0027fille\u0027, 0.21124977181868787)\n(\u0027c\u00e9lie\u0027, 0.1704349857665914)\n(\u0027val\u00e8re\u0027, 0.1704349857665914)\n(\u0027retour\u0027, 0.1704349857665914)\n(\u0027commandements\u0027, 0.12962019971449498)\n(\u0027feux\u0027, 0.12962019971449498)\n(\u0027seigneur\u0027, 0.12962019971449498)\n(\u0027seigneurie\u0027, 0.12962019971449498)\n(\u0027hymen\u0027, 0.12962019971449498) ", "to": "#lelie", "value": 0.22033448367401115, "width": 0.22033448367401115}, {"arrows": "to", "from": "#celie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #celie to  #la-suivante : \n (\u0027vois\u0027, 0.17545067047810803)\n(\u0027l\u00e9lie\u0027, 0.1682681781888039)\n(\u0027\u00e9ternelles\u0027, 0.14839505333377265)\n(\u0027estimeras\u0027, 0.14839505333377265)\n(\u0027repr\u00e9sente\u0027, 0.14839505333377265)\n(\u0027pr\u00e9sage\u0027, 0.14839505333377265)\n(\u0027prendre\u0027, 0.14839505333377265)\n(\u0027motif\u0027, 0.14839505333377265)\n(\u0027menteurs\u0027, 0.14839505333377265)\n(\u0027malfait\u0027, 0.14839505333377265) ", "to": "#la-suivante", "value": 0.3204141226440138, "width": 0.3204141226440138}, {"arrows": "to", "from": "#celie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #celie to  #sganarelle : \n (\u0027l\u00e2che\u0027, 0.1625364999712002)\n(\u0027yeux\u0027, 0.1625364999712002)\n(\u0027tra\u00eetre\u0027, 0.1625364999712002)\n(\u0027retour\u0027, 0.1625364999712002)\n(\u0027\u00e2me\u0027, 0.1625364999712002)\n(\u0027tourne\u0027, 0.13113342476373974)\n(\u0027objet\u0027, 0.13113342476373974)\n(\u0027parle\u0027, 0.13113342476373974)\n(\u0027coeur\u0027, 0.10915609613626788)\n(\u0027moindre\u0027, 0.09599667520779104) ", "to": "#sganarelle", "value": 0.6012742235200425, "width": 0.6012742235200425}, {"arrows": "to", "from": "#celie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #celie to  #lelie : \n (\u0027tra\u00eetre\u0027, 0.2511261996923277)\n(\u0027tourne\u0027, 0.20260703669263688)\n(\u0027yeux\u0027, 0.20260703669263688)\n(\u0027objet\u0027, 0.20260703669263688)\n(\u0027parle\u0027, 0.20260703669263688)\n(\u0027audace\u0027, 0.1483191789678184)\n(\u0027demandes\u0027, 0.1483191789678184)\n(\u0027parler\u0027, 0.1483191789678184)\n(\u0027grand\u0027, 0.1483191789678184)\n(\u0027d\u00e9sir\u0027, 0.1483191789678184) ", "to": "#lelie", "value": 0.33873108574462435, "width": 0.33873108574462435}, {"arrows": "to", "from": "#la-suivante", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #la-suivante to  #celie : \n (\u0027madame\u0027, 0.18744008403080625)\n(\u0027croyez\u0027, 0.15122547957731372)\n(\u0027dieu\u0027, 0.15122547957731372)\n(\u0027pourrait\u0027, 0.15122547957731372)\n(\u0027changement\u0027, 0.15122547957731372)\n(\u0027temps\u0027, 0.15122547957731372)\n(\u0027vrai\u0027, 0.09781401168051762)\n(\u0027\u00e9tonne\u0027, 0.08931620435224155)\n(\u0027grande\u0027, 0.08931620435224155)\n(\u0027heur\u0027, 0.08931620435224155) ", "to": "#celie", "value": 0.585877355986196, "width": 0.585877355986196}, {"arrows": "to", "from": "#sganarelle", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #sganarelle to  #la-femme-sganarelle : \n (\u0027tiens\u0027, 0.16067030650829717)\n(\u0027tort\u0027, 0.12962779162837912)\n(\u0027vaut\u0027, 0.12962779162837912)\n(\u0027honneur\u0027, 0.1112340491153093)\n(\u0027voir\u0027, 0.1112340491153093)\n(\u0027chose\u0027, 0.1112340491153093)\n(\u0027femme\u0027, 0.1083856704542401)\n(\u0027monde\u0027, 0.10629664348653617)\n(\u0027sais\u0027, 0.10629664348653617)\n(\u0027portrait\u0027, 0.10629664348653617) ", "to": "#la-femme-sganarelle", "value": 0.8144411998938147, "width": 0.8144411998938147}, {"arrows": "to", "from": "#sganarelle", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #sganarelle to  #lelie : \n (\u0027mari\u0027, 0.15930463814334944)\n(\u0027courage\u0027, 0.14568185657543203)\n(\u0027femme\u0027, 0.1301139805090637)\n(\u0027coeur\u0027, 0.12811903653902423)\n(\u0027connu\u0027, 0.12605344970370352)\n(\u0027cause\u0027, 0.12605344970370352)\n(\u0027homme\u0027, 0.12605344970370352)\n(\u0027honneur\u0027, 0.10816689414638031)\n(\u0027pr\u00e9sent\u0027, 0.10336563197663212)\n(\u0027guerre\u0027, 0.10336563197663212) ", "to": "#lelie", "value": 1.0, "width": 1.0}, {"arrows": "to", "from": "#sganarelle", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #sganarelle to  #celie : \n (\u0027femme\u0027, 0.1370776420567371)\n(\u0027honneur\u0027, 0.13554993407720095)\n(\u0027courage\u0027, 0.1291230746088905)\n(\u0027coeur\u0027, 0.1291230746088905)\n(\u0027adore\u0027, 0.12704130026642566)\n(\u0027d\u00e9robe\u0027, 0.12704130026642566)\n(\u0027madame\u0027, 0.10901457207587427)\n(\u0027\u00e2me\u0027, 0.10622302773026998)\n(\u0027vrai\u0027, 0.10622302773026998)\n(\u0027carnage\u0027, 0.10417568356946245) ", "to": "#celie", "value": 0.9463764268648792, "width": 0.9463764268648792}, {"arrows": "to", "from": "#la-femme-sganarelle", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #la-femme-sganarelle to  #sganarelle : \n (\u0027offense\u0027, 0.1973390064395143)\n(\u0027mari\u0027, 0.1592118678479755)\n(\u0027poursuis\u0027, 0.1592118678479755)\n(\u0027homme\u0027, 0.1592118678479755)\n(\u0027nouvelle\u0027, 0.1592118678479755)\n(\u0027crois\u0027, 0.1592118678479755)\n(\u0027doit\u0027, 0.10297968004391192)\n(\u0027courroux\u0027, 0.10297968004391192)\n(\u0027mine\u0027, 0.09403309391881814)\n(\u0027grand\u0027, 0.09403309391881814) ", "to": "#sganarelle", "value": 0.5821608707194054, "width": 0.5821608707194054}, {"arrows": "to", "from": "#la-femme-sganarelle", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #la-femme-sganarelle to  #lelie : \n (\u0027monsieur\u0027, 0.21302572194524005)\n(\u0027\u00e9vanouissement\u0027, 0.1945186439718895)\n(\u0027attendant\u0027, 0.1945186439718895)\n(\u0027salle\u0027, 0.1945186439718895)\n(\u0027perfide\u0027, 0.1945186439718895)\n(\u0027entrez\u0027, 0.1945186439718895)\n(\u0027pr\u00eat\u0027, 0.1945186439718895)\n(\u0027tomber\u0027, 0.1945186439718895)\n(\u0027presse\u0027, 0.1945186439718895)\n(\u0027h\u00e9las\u0027, 0.1945186439718895) ", "to": "#lelie", "value": 0.2612158216087072, "width": 0.2612158216087072}, {"arrows": "to", "from": "#gros-rene", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #gros-rene to  #lelie : \n (\u0027monsieur\u0027, 0.1767790282392135)\n(\u0027coeur\u0027, 0.1767790282392135)\n(\u0027\u00e9tude\u0027, 0.10440854183789881)\n(\u0027fortune\u0027, 0.10440854183789881)\n(\u0027endroit\u0027, 0.10440854183789881)\n(\u0027entiers\u0027, 0.10440854183789881)\n(\u0027entourez\u0027, 0.10440854183789881)\n(\u0027entr\u00e9e\u0027, 0.10440854183789881)\n(\u0027faim\u0027, 0.10440854183789881)\n(\u0027ferme\u0027, 0.10440854183789881) ", "to": "#lelie", "value": 0.3668701884788957, "width": 0.3668701884788957}, {"arrows": "to", "from": "#lelie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #lelie to  #sganarelle : \n (\u0027dois\u0027, 0.1711812698996134)\n(\u0027dites\u0027, 0.1684214163516169)\n(\u0027foi\u0027, 0.13810797071008582)\n(\u0027gr\u00e2ce\u0027, 0.13810797071008582)\n(\u0027bonheur\u0027, 0.13810797071008582)\n(\u0027\u00e9meut\u0027, 0.13810797071008582)\n(\u0027mains\u0027, 0.12384522255790549)\n(\u0027portrait\u0027, 0.12384522255790549)\n(\u0027croire\u0027, 0.12384522255790549)\n(\u0027gage\u0027, 0.12384522255790549) ", "to": "#sganarelle", "value": 0.5792407751526414, "width": 0.5792407751526414}, {"arrows": "to", "from": "#lelie", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #lelie to  #celie : \n (\u0027reprocher\u0027, 0.19279651538919304)\n(\u0027vivez\u0027, 0.19279651538919304)\n(\u0027espoir\u0027, 0.15809590061152373)\n(\u0027choix\u0027, 0.15809590061152373)\n(\u0027monsieur\u0027, 0.15809590061152373)\n(\u0027croire\u0027, 0.11437829622486566)\n(\u0027l\u00e9gitime\u0027, 0.1138687277767741)\n(\u0027bravez\u0027, 0.1138687277767741)\n(\u0027place\u0027, 0.1138687277767741)\n(\u0027m\u00e9moire\u0027, 0.1138687277767741) ", "to": "#celie", "value": 0.48579771701619323, "width": 0.48579771701619323}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

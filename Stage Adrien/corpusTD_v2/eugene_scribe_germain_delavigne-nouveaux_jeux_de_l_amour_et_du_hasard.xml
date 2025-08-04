@@ -1,1183 +1,1511 @@
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fre">
-    <teiHeader>
-        <fileDesc>
-            <titleStmt>
-                <title type="main">Les Nouveaux Jeux de l’Amour et du Hasard</title>
-                <title type="sub">Comédie</title>
-            <author>
-                <persName>
-                    <forename>Eugène</forename>
-                    <forename>-</forename>
-                    <forename>Germain</forename>
-                    <surname>Scribe</surname>
-                    <surname>Delavigne</surname>
-                </persName>
-            </author>
-                        <editor>Adrien Roumégous, dans le cadre d'un stage de M1 Informatique encadré par Aaron Boussidan et Philippe Gambette.</editor>
-            </titleStmt>
-            <publicationStmt>
-                <publisher xml:id="dracor">DraCor</publisher>
-                <idno type="URL">https://dracor.org</idno>
-                <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
-                <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
-                <availability>
-                    <licence>
-                        <ab>CC BY-NC-SA 4.0</ab>
-                        <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
-                    </licence>
-                </availability> 
-            </publicationStmt>
-            <sourceDesc>
-                <bibl type="digitalSource">
-                    <name>Théâtre Documentation</name>
-                    <idno type="URL"> http://théâtre-documentation.com/content/les-nouveaux-jeux-de-l’amour-et-du-hasard-eugène-scribe-germain-delavigne </idno>
-                    <availability>
-                        <licence>
-                            <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
-                            <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
-                        </licence>
-                    </availability>
-                    <bibl type="originalSource">
-                        <date type="premiere" when="1822-06-21">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 21 juin 1822.</date>
-                        <idno type="URL"/>
-                    </bibl>
-                </bibl>
-            </sourceDesc>
-        </fileDesc>
-        <profileDesc>
-            <particDesc>
-                <listPerson>
-                        <person xml:id="m.-d’estival" sex="SEX">
-                            <persName>M. D’ESTIVAL</persName>
-                        </person>
-                        <person xml:id="m.-de-beauclair" sex="SEX">
-                            <persName>M. DE BEAUCLAIR</persName>
-                        </person>
-                        <person xml:id="m.-de-senneville" sex="SEX">
-                            <persName>M. DE SENNEVILLE</persName>
-                        </person>
-                        <person xml:id="germain" sex="SEX">
-                            <persName>GERMAIN</persName>
-                        </person>
-                        <person xml:id="un-exempt" sex="SEX">
-                            <persName>UN EXEMPT</persName>
-                        </person>
-                        <person xml:id="lise" sex="SEX">
-                            <persName>LISE</persName>
-                        </person>
-                </listPerson>
-            </particDesc>
-            <textClass>
-            <keywords scheme="http://theatre-documentation.fr"> <!--extracted from "genre" and "type" elements-->
-                    <term> Comédie</term>
-                    <term> [indéfini] </term>
-                </keywords>
-                <classCode scheme="http://www.wikidata.org/entity/">[Q40831]</classCode>
-            </textClass>
-        </profileDesc>
-        <revisionDesc>
-            <listChange>
-                <change when="2023-10-03">(mg) file conversion from source</change>
-            </listChange>
-        </revisionDesc>
-   </teiHeader>
-    <text>
+<?xml version='1.0' encoding='utf-8'?>
+<TEI xml:lang="fre" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main" />
+        <title type="sub">Comédie</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher xml:id="dracor">DraCor</publisher>
+        <idno type="URL">https://dracor.org</idno>
+        <idno type="dracor" xml:base="https://dracor.org/id/">fre[6 chiffres]</idno>
+        <idno type="wikidata" xml:base="http://www.wikidata.org/entity/">Q[id]</idno>
+        <availability>
+          <licence>
+            <ab>CC BY-NC-SA 4.0</ab>
+            <ref target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licence</ref>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl type="digitalSource">
+          <name>Théâtre Documentation</name>
+          <idno type="URL">http://théâtre-documentation.com/content/les-nouveaux-jeux-de-l’amour-et-du-hasard-eugène-scribe-germain-delavigne</idno>
+          <availability>
+            <licence>
+              <ab>loi française n° 92-597 du 1er juillet 1992 et loi n°78-753 du 17 juillet 1978</ab>
+              <ref target="http://théâtre-documentation.com/content/mentions-l%C3%A9gales#Mentions_legales">Mentions légales</ref>
+            </licence>
+          </availability>
+          <date type="premiere" when="1822-06-21">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 21 juin 1822.</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <profileDesc>
+      <particDesc>
+        <listPerson>
+          <person xml:id="m.-d’estival" sex="SEX">
+            <persName>M. D’ESTIVAL</persName>
+          </person>
+          <person xml:id="m.-de-beauclair" sex="SEX">
+            <persName>M. DE BEAUCLAIR</persName>
+          </person>
+          <person xml:id="m.-de-senneville" sex="SEX">
+            <persName>M. DE SENNEVILLE</persName>
+          </person>
+          <person xml:id="germain" sex="SEX">
+            <persName>GERMAIN</persName>
+          </person>
+          <person xml:id="un-exempt" sex="SEX">
+            <persName>UN EXEMPT</persName>
+          </person>
+          <person xml:id="lise" sex="SEX">
+            <persName>LISE</persName>
+          </person>
+        </listPerson>
+      </particDesc>
+      <textClass>
+        <keywords scheme="http://theatre-documentation.fr">
+          <term>Comédie</term>
+          <term>[indéfini]</term>
+        </keywords>
+        <classCode scheme="http://www.wikidata.org/entity/">Q40831</classCode>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <listChange>
+        <change when="2025-07-10">(mg) file conversion from source</change>
+      </listChange>
+    </revisionDesc>
+  </teiHeader>
+  <text>
     <front>
-        <docTitle>
-            <titlePart type="main">LES NOUVEAUX JEUX DE L’AMOUR ET DU HASARD</titlePart>
-            <titlePart type="sub">COMÉDIE</titlePart>
-        </docTitle>
-        <docDate when="[vide]">[Date Print Line]</docDate>
-        
-        <performance>
-            <ab type="premiere">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 21 juin 1822.</ab><!--@date="1822-06-21"-->
-        </performance>
-            <l n="0" xml:id="l0">Comédie-vaudeville en un acte.</l>
-            <l n="1" xml:id="l1">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 21 juin 1822.</l>
-            <l n="2" xml:id="l2">M. D’ESTIVAL</l>
-            <l n="3" xml:id="l3">M. DE BEAUCLAIR</l>
-            <l n="4" xml:id="l4">M. DE SENNEVILLE</l>
-            <stage>GERMAIN, domestique de M. d’Estival </stage>
-            <l n="5" xml:id="l5">UN EXEMPT</l>
-            <stage>LISE, fille de M. d’Estival </stage>
-            <stage>À Strasbourg, chez M. d’Estival. </stage>
-            <stage>Un salon. Deux portes latérales ; une porte au fond qui laisse apercevoir un jardin. </stage>
-        <castList>
-                    <head> ACTEURS </head>
-            <castItem>
-                    <role corresp="#m.-d’estival">M. D’ESTIVAL </role></castItem>
-            <castItem>
-                    <role corresp="#m.-de-beauclair">M. DE BEAUCLAIR </role></castItem>
-            <castItem>
-                    <role corresp="#m.-de-senneville">M. DE SENNEVILLE </role></castItem>
-            <castItem>
-                    <role corresp="#germain">GERMAIN </role>, domestique de M. d’Estival</castItem>
-            <castItem>
-                    <role corresp="#un-exempt">UN EXEMPT </role></castItem>
-            <castItem>
-                    <role corresp="#lise">LISE </role>, fille de M. d’Estival</castItem>
-        </castList>
-           </div>
-           <div type="act" xml:id="1">
-           <head> ACTE 1 </head>
-        <div type="scene" xml:id=" 1 ">
-            <head> Scène 1 </head>
-            <l n="6" xml:id="l6">Relisons la liste de mes commissions : porter des invitations chez le sous-préfet et le receveur des contributions indirectes, pour la signature du contrat ; retenir la musique du régiment pour le jour du bal ; commander à l’imprimeur les billets de faire part, annonçant que mademoiselle Lise d’Estival épouse M. de Beauclair, officier d’artillerie, etc. Le beau-père est expéditif... et n’aime pas à perdre de temps ; aussi tout est prêt, et il ne manque plus rien, que le prétendu. On l’attendait hier... on l’attend aujourd’hui... Un prétendu qu’on fait venir exprès de Paris, comme s’il en manquait à Strasbourg !</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 2 ">
-            <head> Scène 1 </head>
-            <sp who="#lise" xml:id="2-1">
-                <speaker> LISE. </speaker>
-            <l n="7" xml:id="l7">Eh bien ! Germain, vous n’entendez-pas ? Une voiture vient de s’arrêter ; on a sonné à la grille du parc, et vous êtes là d’une tranquillité...</l>
-      </sp>
-            <sp who="#germain" xml:id="2-2">
-                <speaker> GERMAIN. </speaker>
-            <l n="8" xml:id="l8">J’y vais. Enfin, serait-ce M. de Beauclair, le prétendu ?</l>
-      </sp>
-            <sp who="#lise" xml:id="2-3">
-                <speaker> LISE. </speaker>
-            <l n="9" xml:id="l9">Ah ! M. de Beauclair ! lui... un autre... qui sait ?... une visite...</l>
-            <stage>Vivement. </stage>
-            <l n="10" xml:id="l10">Mais allez donc ! Quand ce serait lui, est-ce une raison pour le faire attendre un quart d’heure ?</l>
-      </sp>
-            <sp who="#germain" xml:id="2-4">
-                <speaker> GERMAIN. </speaker>
-            <l n="11" xml:id="l11">Je vais dire à Lafleur d’ouvrir.</l>
-            <stage>Il sort. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 3 ">
-            <head> Scène 1 </head>
-            <l n="12" xml:id="l12">Oui, c’est bien lui, j’en suis sûre, et toute ma frayeur me reprend.</l>
-            <stage>Air du Magicien sans magie. </stage>
-            <l n="13" xml:id="l13">Encore s’il ressemblait à ce jeune officier... si l’on pouvait voir... mon Dieu !... mon père devrait faire élaguer ses tilleuls... Oh ! le voilà... je l’entends, je ne dois pas rester.</l>
-            <stage>Elle sort. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 4 ">
-            <head> Scène 1 </head>
-            <l n="14" xml:id="l14">Voyons un peu ce M. de Beauclair, qui se fait si longtemps attendre !</l>
-            <l n="15" xml:id="l15">Grand merci, mes amis.</l>
-            <stage>Leur donnant de l’argent. </stage>
-            <l n="16" xml:id="l16">Tenez, et buvez à ma santé.</l>
-            <stage>Les domestiques sortent. </stage>
-            <l n="17" xml:id="l17">Il s’annonce bien.</l>
-            <l n="18" xml:id="l18">Voulez-vous prévenir M. d’Estival que M. de Beauclair, son gendre...</l>
-            <l n="19" xml:id="l19">Comment ! ne me trompé-je pas ? M. de Senneville !</l>
-            <l n="20" xml:id="l20">Tais-toi, malheureux ! Qui es-tu ? D’où me connais-tu ?</l>
-            <sp who="#germain" xml:id="4-1">
-                <speaker> GERMAIN. </speaker>
-            <l n="21" xml:id="l21">M. le colonel ne se rappelle pas mes traits ! J’étais portier à Paris, rue du Helder, chez cette jeune comtesse où M. le colonel allait si souvent.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="4-2">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="22" xml:id="l22">Ah ! oui... Germain...</l>
-            <stage>Souriant. </stage>
-            <l n="23" xml:id="l23">Un fripon.</l>
-      </sp>
-            <sp who="#germain" xml:id="4-3">
-                <speaker> GERMAIN. </speaker>
-            <stage>Air : Du partage de la richesse. (Fanchon la vielleuse.) </stage>
-        <stage>SENNEVILLE.</stage>
-      </sp>
-            <sp who="#germain" xml:id="4-4">
-                <speaker> GERMAIN. </speaker>
-            <l n="24" xml:id="l24">Imbécile ! mais c’est égal, tu peux me servir, j’oublie tout.</l>
-        <stage>SENNEVILLE.</stage>
-      </sp>
-            <sp who="#germain" xml:id="4-5">
-                <speaker> GERMAIN. </speaker>
-            <l n="25" xml:id="l25">Monsieur est bien généreux.</l>
-        <stage>SENNEVILLE.</stage>
-      </sp>
-            <sp who="#germain" xml:id="4-6">
-                <speaker> GERMAIN. </speaker>
-            <l n="26" xml:id="l26">J’ai vu Lise avec sa tante, une fois, à Paris, il y a trois mois, au bal de l’ambassadeur... jolie, aimable, modeste, chacun s’empressait autour d’elle ; rien qu’en la voyant danser, je l’adorai ; dès que j’eus causé avec elle, je jurai qu’elle serait ma femme.</l>
-      </sp>
-            <sp who="#germain" xml:id="4-7">
-                <speaker> GERMAIN. </speaker>
-            <l n="27" xml:id="l27">Que ne parliez-vous !... vingt mille écus de rente, colonel, et neveu de ministre...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="4-8">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="28" xml:id="l28">En rentrant chez moi, à quatre heures du matin, je trouve des ordres de mon oncle... Depuis trois mois j’ai parcouru toute la France ; enfin je suis envoyé en mission à Strasbourg ; mission d’ailleurs fort agréable, puisqu’il s’agit d’arrêter les poursuites dirigées contre quelques étourdis compromis dans l’affaire de la marquise d’Arminville.</l>
-      </sp>
-            <sp who="#germain" xml:id="4-9">
-                <speaker> GERMAIN. </speaker>
-            <l n="29" xml:id="l29">Cette affaire dont on a tant parlé ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="4-10">
-                <speaker> SENNEVILLE. </speaker>
-            <stage>Oui, quelques intrigues auxquelles on a attaché plus d’importance quelles n’en méritaient. Je descends ce matin à l’auberge des Trois-Couronnes, et j’apprends par mon hôte que mademoiselle d’Estival doit se marier à M. de Beauclair, jeune officier français ; qu’on n’a jamais vu le futur... mais l’amitié, la parenté, les convenances, que sais-je enfin ?... que tout est d’accord, et qu’on n’attend plus que le prétendu ; je laisse notre hôte au milieu de son récit, je remonte en voiture, j’entre au château, je me présente sous le nom de Beauclair ; tout m’est ouvert, tu m’introduis, et je te dois la réussite de mon projet. </stage>
-      </sp>
-            <sp who="#germain" xml:id="4-11">
-                <speaker> GERMAIN. </speaker>
-            <l n="30" xml:id="l30">Ma foi, monsieur, je n’en ai pas vu de plus extravagant ; à chaque instant notre futur peut arriver, et tout se découvrira.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="4-12">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="31" xml:id="l31">Qu’importe ? je serai le premier venu ; le premier j’aurai dit à Lise que je ne puis vivre sans elle ; que depuis trois mois je l’aime, je l’adore. Me croyant son futur, elle ne s’offensera pas d’un tel aveu. À moins que son cœur n’ait parlé pour un autre, une jeune personne est toujours disposée à voir favorablement celui que ses parents lui destinent ; elle s’efforce de le trouver aimable ; elle cherche à l’aimer... et, songe donc, si Lise pouvait commencer à en prendre l’habitude !... On me découvrira, je le sais ; mais le coup sera porté, l’impression sera produite, et Beauclair arrivera trop tard.</l>
-      </sp>
-            <sp who="#germain" xml:id="4-13">
-                <speaker> GERMAIN. </speaker>
-            <l n="32" xml:id="l32">D’accord ; excepté que cela finira par un coup d’épée, et que M. de Beauclair... Le connaissez-vous ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="4-14">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="33" xml:id="l33">Oui, j’ai connu dans mes campagnes un M. de Beauclair tort aimable ; je me suis même trouvé avec lui dans une situation piquante. Nous étions rivaux sans le savoir, et, comme le chevalier de Grammont, il m’obligea de lui servir de domestique, et de garder son cheval pendant qu’il en contait à ma belle.</l>
-      </sp>
-            <sp who="#germain" xml:id="4-15">
-                <speaker> GERMAIN. </speaker>
-            <l n="34" xml:id="l34">Je vous connais : vous vous êtes fâché !</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="4-16">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="35" xml:id="l35">Point du tout, le tour me parut plaisant.</l>
-            <stage>Air du vaudeville de Voltaire chez Ninon. </stage>
-      </sp>
-            <sp who="#germain" xml:id="4-17">
-                <speaker> GERMAIN. </speaker>
-            <l n="36" xml:id="l36">Voici mademoiselle Lise avec son père.</l>
-            <stage>Germain sort. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 5 ">
-            <head> Scène 1 </head>
-            <l n="37" xml:id="l37">Eh ! que ne le disiez-vous tout de suite ?... ce cher Beauclair, qu’il me tarde de le voir, de l’embrasser ! que je le regarde un peu... oui, c’est lui ; voilà l’idée que je m’en faisais, un beau et brave militaire.</l>
-            <stage>Prenant par la main Lise qui arrive les yeux baissés. </stage>
-            <l n="38" xml:id="l38">Je te présente ma fille... hem ! qu’en dis-tu ? un peu timide ; mais quand on ne se connaît pas...</l>
-            <l n="39" xml:id="l39">Que vois-je !</l>
-            <sp who="#m.-d’estival" xml:id="5-1">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="40" xml:id="l40">Comment ! aurais-tu déjà vu Beauclair ?</l>
-            <l n="41" xml:id="l41">Oui, oui, mon père... beaucoup... une fois, il y a trois mois.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="5-2">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="42" xml:id="l42">Ah ! tu appelles cela beaucoup !</l>
-      </sp>
-            <sp who="#lise" xml:id="5-3">
-                <speaker> LISE. </speaker>
-            <l n="43" xml:id="l43">Ah ! c’est que c’était au bal.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="5-4">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="44" xml:id="l44">C’est juste. C’est bien différent.</l>
-            <stage>Gaiement. </stage>
-            <l n="45" xml:id="l45">Serait-ce par hasard ce cavalier dont tu m’as tant parlé à ton retour de Paris ?</l>
-            <l n="46" xml:id="l46">Quoi ! mademoiselle vous a parlé de moi ?</l>
-            <l n="47" xml:id="l47">Oui, un jeune homme qui n’était jamais à la contredanse, qui se trompait de figures. Comment ! c’était toi ? je ne t’aurais pas cru si gauche. Ah çà ! puisque vous avez dansé ensemble, à demain la noce ! Autrefois, pour faire connaissance avec sa femme, il faillit trois mois de visites à un parloir, et on ne la connaissait pas mieux. Aujourd’hui, il suffit d’une contredanse.</l>
-            <l n="48" xml:id="l48">Mais c’est moins long, et beaucoup plus gai.</l>
-            <l n="49" xml:id="l49">Oui, vraiment. Comme vous le disiez, monsieur, notre siècle en vaut bien un autre : grâce au progrès des lumières, on ne renferme plus les demoiselles au couvent ; mais on les mène au bal. Une mère a-t-elle le désir de pourvoir sa fille, c’est au bal qu’elle découvre le mari qui lui convient. Le militaire vient y faire briller son uniforme ; nos graves magistrats, nos docteurs à la mode y figurent ensemble. Un jeune notaire cherche-t-il une dot ; s’il danse avec grâce, sa charge est payée. La gaieté, l’abandon qui règnent dans ces fêtes brillantes, rendent l’amour moins timide et la surveillance moins attentive. Le nombre même des témoins ajoute à la liberté du tête-à-tête. Sa dame !</l>
-            <stage>Avec expression. </stage>
-            <l n="50" xml:id="l50">qu’on est heureux, qu’on est fier d’appeler ainsi celle dont votre choix vous a rendu le chevalier, hélas ! pour un quart d’heure !... Mais on la quitte ému, agité. Un nouveau monde s’ouvre devant vous, et souvent un regard, un mot, a décidé du destin de la vie...</l>
-            <stage>Gaiement. </stage>
-            <l n="51" xml:id="l51">Vous voyez bien, monsieur, que le bal est le charme de la société, l’école des mœurs et le lien des familles.</l>
-            <l n="52" xml:id="l52">En vérité, il est fort aimable.</l>
-            <l n="53" xml:id="l53">Oui, il a du bon ; s’il danse mal, il raisonne fort bien,</l>
-            <stage>Haut. </stage>
-            <l n="54" xml:id="l54">À demain donc la noce, et un grand bal, cela va sans dire.</l>
-            <stage>Air : Contentons-nous d’une simple bouteille. </stage>
-            <l n="55" xml:id="l55">Mais à propos, tu as donc changé d’idée ?</l>
-            <l n="56" xml:id="l56">Comment ?</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="5-5">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="57" xml:id="l57">Oui, fripon ; ton déguisement... nous savons tout ! je n’ai pas voulu en parler à ma fille ; mais ton père m’a écrit. Il paraît que c’est un goût héréditaire dans la famille... je me souviens d’une mascarade que nous fîmes ensemble...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="5-6">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="58" xml:id="l58">Quoi ! mon père vous a écrit ?</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="5-7">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="59" xml:id="l59">Tiens, voici sa lettre... non, celle-ci. Tu connais son écriture, j’espère.</l>
-            <stage>Mettant ses lunettes. </stage>
-            <stage>Hum !... hum !... « Mon vieux camarade, » ce cher Beauclair... « Mon fils doit se rendre très prochainement à Strasbourg, pour épouser votre aimable fille. Vous saurez qu’il a, comme moi, l’esprit vif et original. Il ne tient point à se marier, mais il tient à être aimé de sa femme ; et je désespérais de l’établir. Il est passionné pour les déguisements ; et comme il a vu dernièrement les Jeux de l’Amour et du Hasard, il s’est mis dans l’idée de se présenter chez vous sous l’habit de son valet, afin de pouvoir étudier à loisir le caractère de sa future épouse. J’ai cru devoir vous prévenir de cette folie : vous ferez de cet avis l’usage qui vous paraîtra convenable. » Ah !... ah ! ah !... Je croyais même que c’était là la cause de ton retard. </stage>
-            <l n="60" xml:id="l60">En voici bien d’une autre !... Où me suis-je fourré ?</l>
-      </sp>
-            <sp who="#lise" xml:id="5-8">
-                <speaker> LISE. </speaker>
-            <l n="61" xml:id="l61">Ah ! monsieur aime les épreuves...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="5-9">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="62" xml:id="l62">Mademoiselle ne doit pas les craindre.</l>
-      </sp>
-            <sp who="#lise" xml:id="5-10">
-                <speaker> LISE. </speaker>
-            <l n="63" xml:id="l63">Quoi qu’il en soit, je trouve plus prudent de ne pas m’y exposer, et je vous remercie d’avoir abandonné ce projet.</l>
-            <stage>Air du vaudeville de La Robe et les Bottes. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 6 ">
-            <head> Scène 1 </head>
-            <sp who="#germain" xml:id="6-1">
-                <speaker> GERMAIN. </speaker>
-            <l n="64" xml:id="l64">Monsieur, un domestique, que nous avons vu de loin descendre d’une chaise de poste, est là, il demande à vous parler.</l>
-            <l n="65" xml:id="l65">Grands dieux !</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="6-2">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="66" xml:id="l66">Que nous veut-il ? faites entrer.</l>
-            <l n="67" xml:id="l67">Par ici, camarade.</l>
-            <stage>En s’en allant. </stage>
-            <l n="68" xml:id="l68">Comme ces laquais de Paris ont un air fier !</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 7 ">
-            <head> Scène 1 </head>
-            <sp who="#m.-de-beauclair" xml:id="7-1">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="69" xml:id="l69">Monsieur, je précède mon maître, M. de Beauclair : il m’a charge de vous annoncer que, retenu chez le baron de Forlis, il ne pourra arriver chez vous que dans quelques jours.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="7-2">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="70" xml:id="l70">Eh ! que dis-tu donc, mon garçon ? il est ici.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-3">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="71" xml:id="l71">Mon maître ! M. de Beauclair ?</l>
-      </sp>
-            <sp who="#lise" xml:id="7-4">
-                <speaker> LISE. </speaker>
-            <l n="72" xml:id="l72">Sans doute.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="7-5">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="73" xml:id="l73">Le voilà.</l>
-            <stage>Beauclair traverse le théâtre, se trouve face à face avec Senneville, s’arrête stupéfait. </stage>
-            <l n="74" xml:id="l74">Eh bien ! Jasmin, qu’y a-t-il donc ?</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-6">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="75" xml:id="l75">Ah ! c’est monsieur qui... que... En vérité... Je ne m’attendais pas...</l>
-            <stage>Bas à Senneville. </stage>
-            <l n="76" xml:id="l76">Ma foi, monsieur de Senneville, ce tour-ci vaut l’autre.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="7-7">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="77" xml:id="l77">Sans doute, vous ne m’attendiez pas ici ; mais je n’ai point trouvé le baron de Forlis, et je suis arrivé ce matin.</l>
-            <stage>Avec intention. </stage>
-            <l n="78" xml:id="l78">On peut bien, quelquefois, arriver avant vous.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-8">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="79" xml:id="l79">C’est ce qui m’a surpris d’abord ; mais j’espère que monsieur ne me retrouvera plus en faute.</l>
-            <stage>Bas à Senneville. </stage>
-            <l n="80" xml:id="l80">Je vous remercie ; mais je ne me tiens pas pour battu.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="7-9">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="81" xml:id="l81">C’est bon : je me charge d’arranger cette affaire. Ce garçon-là me revient assez. Il a de la tournure. T a-t-il longtemps qu’il est à ton service ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="7-10">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="82" xml:id="l82">Non, il vient d’y entrer, et je ne serais pas fâché qu’il y restât. Il se connaît parfaitement en chevaux, il en donnerait à garder au plus habile ; du reste, adroit, intelligent ; et je vous prie de le traiter avec quelques égards. Il n’a pas toujours été valet.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-11">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="83" xml:id="l83">Ah ! mon Dieu, non ; je me suis trouvé domestique sans m’en douter.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="7-12">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="84" xml:id="l84">Par quelle aventure ?</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-13">
-                <speaker> BEAUCLAIR. </speaker>
-            <stage>Air du vaudeville de Turenne. </stage>
-        <stage>SENNEVILLE.</stage>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-14">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="85" xml:id="l85">De l’épigramme ! c’est un garçon précieux ; aussi je mets tous mes soins à lui faire oublier qu’il n’est pas à sa place.</l>
-        <stage>SENNEVILLE.</stage>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="7-15">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="86" xml:id="l86">Bien, mon gendre.</l>
-            <l n="87" xml:id="l87">Comme il est bon avec ses domestiques !</l>
-            <stage>Haut. </stage>
-            <l n="88" xml:id="l88">C’est qu’en effet ce pauvre garçon a une physionomie tout à fait intéressante.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-16">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="89" xml:id="l89">Mademoiselle est bien bonne.</l>
-            <l n="90" xml:id="l90">Allons, allons, donne la main à ma fille ; allons faire un tour de jardin en attendant le déjeuner.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="7-17">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="91" xml:id="l91">En effet, la route m’a donné un appétit assez vif.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="7-18">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="92" xml:id="l92">Eh bien ! mon garçon, ne le gêne pas, passe à l’office.</l>
-            <stage>Ils sortent. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 8 ">
-            <head> Scène 1 </head>
-            <l n="93" xml:id="l93">Je ne m’attendais pas à entrer si vite en condition. À l’office !... Allons, M. de Senneville prend sa revanche ; après tout, c’est en que je désire. Je voulais une épreuve, je ne pouvais pas mieux rencontrer. Un rival redoutable, qui a tous les avantages et qui sait en profiter. Quelle gloire si mon mérite pouvait percer à travers ma livrée !</l>
-            <stage>Gaiement. </stage>
-            <l n="94" xml:id="l94">Chimère des âmes tendres, bonheur d’être aimé pour soi-même, je pourrai donc vous réaliser une fois ; car à coup sûr, si je triomphe, ce ne sera pas à mon habit que je le devrai. D’ailleurs, cette affaire de la marquise d’Arminville ne laisse pas de m’inquiéter... quoique, mes relations avec cette belle dame ne lussent pas des relations suspectes, elles ont pu donner lieu à des soupçons... On m’a même parlé d’un certain ordre rendu contre moi... mon père n’en sait rien ; en tout cas, ce déguisement me servirait encore ; à la moindre nouvelle, je traverse le pont de Kehl, et me trouve en pays étranger. En attendant, préparons-nous à servir mon nouveau maître avec tout le zèle d’un bon domestique.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 9 ">
-            <head> Scène 1 </head>
-            <l n="95" xml:id="l95">Mon gendre avait envie d’éprouver sa future ; moi, je ne serais pas fâché de connaître un peu mon gendre. Si je faisais jaser son domestique ! Mais le drôle me paraît ne pas manquer d’esprit ; il faut s’y prendre avec adresse.</l>
-            <stage>Haut. </stage>
-            <l n="96" xml:id="l96">Tu m’as l’air de le plaire au service de ton maître ?</l>
-            <sp who="#m.-de-beauclair" xml:id="9-1">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="97" xml:id="l97">Peut-il en être autrement ? monsieur est si gai, si spirituel !... D’ailleurs, moi j’aime les jeunes gens.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="9-2">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="98" xml:id="l98">C’est comme moi, j’ai toujours été du parti des fils contre les pères, et je compte bien qu’avec mon gendre nous ferons encore des tours de jeunesse.</l>
-            <stage>Riant et affectant une grande gaieté pendant toute cette scène. </stage>
-            <l n="99" xml:id="l99">Ah ! ah ! ah ! c’est que je m’en suis permis de fort plaisants. Ah ! ah !...</l>
-            <l n="100" xml:id="l100">Ah ! ah !... je vois que monsieur était un rusé compère.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="9-3">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="101" xml:id="l101">Oui, et, quoi qu’il arrivât, je m’en tirais toujours de la façon la plus gaie. Ah ! ah !...</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-4">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="102" xml:id="l102">Et mon maître donc ! Il y a bien peu de temps que je suis à son service, mais j’en ai vu de belles ! Je me rappelle une aventure de créanciers. Ah ! ah...</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="9-5">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="103" xml:id="l103">Ah ! ah ! des créanciers ; j’aime beaucoup les scènes de créanciers ; c’était mon fort. Ah çà ! des créanciers ! Il ne paye donc pas ses dettes ?</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-6">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="104" xml:id="l104">Est-ce que vous prenez mon maître pour un homme sans éducation ? comme si vous-même autrefois... Ah ! ah !...</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="9-7">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="105" xml:id="l105">C’est juste... Ah ! ah ! ah !... J’en faisais bien d’autres, moi. Mais conte-moi son aventure.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-8">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="106" xml:id="l106">M’y voilà... Il revenait du jeu, il avait perdu tout son argent. Non, non, attendez donc... je me trompe, c’est un autre jour, ce jour-hi il avait gagné.</l>
-            <l n="107" xml:id="l107">Ah ! il joue et il gagne... Ah ! ah !...</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-9">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="108" xml:id="l108">Pas souvent ; mais c’est bien plus drôle quand il perd ; il faut entendre alors comme il jure, c’est admirable ; mais ce jour-là donc il était en gain, à telles enseignes qu’il m’avait payé mes gages ; je me le rappelle, parce que c’est la seule fois. Il faut vous dire, pour l’intelligence de l’histoire, que le matin il m’avait chargé de porter un billet chez la comtesse, et que, par erreur, je le remis à la baronne.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="9-10">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="109" xml:id="l109">Comment donc ! une comtesse ! une baronne !...</l>
-            <stage>À part. </stage>
-            <l n="110" xml:id="l110">Morbleu !</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-11">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="111" xml:id="l111">Ah ! ah !... Je gage que dans votre temps vous avez fait aussi plus d’une conquête ?</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="9-12">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="112" xml:id="l112">Oui, oui, je me reconnais là ; mais il est donc généralement aimé ?</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-13">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="113" xml:id="l113">C’est une fureur.</l>
-            <stage>Air du Ménage de Garçon. </stage>
-        <stage>D’ESTIVAL.</stage>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-14">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="114" xml:id="l114">Eh ! parbleu ! j’ai là une lettre d’une femme à laquelle j’étais chargé de répondre ; vous sentez qu’il ne peut pas suffire à tout.</l>
-            <stage>Lui donnant une lettre, et lui faisant lire l’adresse. </stage>
-            <l n="115" xml:id="l115">À monsieur de Beauclair... Quel feu !... Vous verrez le délire de la passion !... le vague du sentiment. Ah ! ah !... vous connaissez cela ?</l>
-            <l n="116" xml:id="l116">Oui, oui, j’en ai reçu plus d’une.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="9-15">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="117" xml:id="l117">Mais l’aventure qui a fait le plus de bruit, et qui va vous faire bien rire, c’est dernièrement ; je vous la dirai, parce que vous connaissez les acteurs... Ah ! ah !... Un de ses amis devait se marier. Il arrive à la place du futur qu’on ne connaissait pas, et séduit la fille en présence même du père.</l>
-            <stage>Cherchant. </stage>
-            <l n="118" xml:id="l118">Un monsieur de... oh ! vous le connaissez, un bon homme, un très bon homme... J’ai là son nom, je le tiens...</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 10 ">
-            <head> Scène 1 </head>
-            <sp who="#lise" xml:id="10-1">
-                <speaker> LISE. </speaker>
-            <l n="119" xml:id="l119">Mon père, je venais vous dire que plusieurs visites...</l>
-            <l n="120" xml:id="l120">Et le plus plaisant, c’est que le jour même...</l>
-            <stage>Feignant d’apercevoir Lise. </stage>
-            <l n="121" xml:id="l121">Pardon !... pardon ! je n’oserais pas devant mademoiselle.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="10-2">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="122" xml:id="l122">Ah ! ah ! j’entends... Va m’attendre à deux pas, ma fille ne doit pas savoir...</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="10-3">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="123" xml:id="l123">Oui, monsieur, je vous suis ; c’est que mon maître m’a donné quelques ordres.</l>
-            <stage>À part. </stage>
-            <l n="124" xml:id="l124">Diable ! j’aime mieux rester avec la fille.</l>
-            <l n="125" xml:id="l125">Quelle adresse à moi de l’avoir fait parler ! Ah ! M. de Beauclair ! qui jamais aurait dit ? Allons... achevons de m’instruire.</l>
-            <stage>À Lise. </stage>
-            <l n="126" xml:id="l126">Reste, reste, mon enfant ! je reviens dans l’instant...</l>
-            <stage>À Beauclair. </stage>
-            <l n="127" xml:id="l127">Ah ! comme nous allons rire !</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="10-4">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="128" xml:id="l128">Oui, monsieur, nous allons rire.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="10-5">
-                <speaker> D’ESTIVAL. </speaker>
-            <stage>Air du vaudeville des Gascons. </stage>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="10-6">
-                <speaker> BEAUCLAIR. </speaker>
-            <stage>Ensemble. </stage>
-        <stage>D’ESTIVAL.</stage>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="10-7">
-                <speaker> BEAUCLAIR. </speaker>
-            <stage>D’Estival s’en va. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 11 ">
-            <head> Scène 1 </head>
-            <l n="129" xml:id="l129">Bon ! que Senneville s’en tire maintenant comme il pourra.</l>
-            <stage>À Lise, qui fait quelques pas pour sortir. </stage>
-            <l n="130" xml:id="l130">Mademoiselle !</l>
-            <sp who="#lise" xml:id="11-1">
-                <speaker> LISE. </speaker>
-            <l n="131" xml:id="l131">Que voulez-vous, Jasmin ?</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="11-2">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="132" xml:id="l132">C’est bien de l’audace à moi de vous demander un moment d’entretien ; mais je ne suis pas aussi indigne de cette faveur que je puis le paraître.</l>
-      </sp>
-            <sp who="#lise" xml:id="11-3">
-                <speaker> LISE. </speaker>
-            <l n="133" xml:id="l133">Oui, votre maître se loue beaucoup de vous.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="11-4">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="134" xml:id="l134">Il a daigné vous dire du bien de moi ?...</l>
-            <stage>À part. </stage>
-            <l n="135" xml:id="l135">C’est un maladroit ; à sa place, je ne l’aurais pas fait.</l>
-            <stage>Haut. </stage>
-            <l n="136" xml:id="l136">L’estime de mademoiselle est une consolation dans mes chagrins.</l>
-      </sp>
-            <sp who="#lise" xml:id="11-5">
-                <speaker> LISE. </speaker>
-            <l n="137" xml:id="l137">Des chagrins... Ah ! j’entends... Il vous est survenu quelque différend avec votre maître, et vous avez besoin de ma médiation. Je crois M. de Beauclair trop bon pour me refuser votre grâce.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="11-6">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="138" xml:id="l138">Ma grâce ?... Non, mademoiselle.</l>
-            <stage>À part. </stage>
-            <l n="139" xml:id="l139">Diable ! nous sommes loin de nous entendre.</l>
-            <stage>Haut. </stage>
-            <l n="140" xml:id="l140">Le hasard m’a placé dans une situation étrange !... Je n’étais pas né pour l’habit que je porte.</l>
-            <l n="141" xml:id="l141">Tous ces gens-là parlent de même ; ils seraient tous grands seigneurs s’ils n’étaient pas valets de chambre.</l>
-            <stage>Haut. </stage>
-            <l n="142" xml:id="l142">Eh bien ! Jasmin, vos malheurs ?...</l>
-            <stage>À part. </stage>
-            <l n="143" xml:id="l143">Car il a sans doute quelque roman.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="11-7">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="144" xml:id="l144">Ah ! mademoiselle, que vous dirai-je ? et qu’allez-vous penser de moi ?... En entrant dans ce château j’ai vu une personne.</l>
-            <l n="145" xml:id="l145">Une personne !... Ah ! mon Dieu ! seriez-vous amoureux, par hasard ?</l>
-            <l n="146" xml:id="l146">Oui, mademoiselle.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 12 ">
-            <head> Scène 1 </head>
-            <l n="147" xml:id="l147">Un tête-à-tête ! J’arrive à temps.</l>
-            <stage>Haut. </stage>
-            <l n="148" xml:id="l148">Eh bien ! Jasmin, que faites-vous donc ? je vous cherchais.</l>
-            <sp who="#lise" xml:id="12-1">
-                <speaker> LISE. </speaker>
-            <l n="149" xml:id="l149">Ah ! laissez-le, de grâce ; un instant plus tard, et j’allais devenir sa confidente.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="12-2">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="150" xml:id="l150">Comment ! il se serait permis ?...</l>
-      </sp>
-            <sp who="#lise" xml:id="12-3">
-                <speaker> LISE. </speaker>
-            <l n="151" xml:id="l151">Je le défends d’abord... il est amoureux... et l’amour ne regarde pas à l’étiquette.</l>
-            <l n="152" xml:id="l152">Ah ! il a parle d’amour ?</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="12-4">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="153" xml:id="l153">Oui, monsieur, j’ai parlé d’amour.</l>
-            <stage>Air du Pot de Fleurs. </stage>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="12-5">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="154" xml:id="l154">J’y suis : quelque passion d’antichambre ! quelque Nérine ! quelque Marton !</l>
-            <stage>Vivement, à Lise. </stage>
-            <l n="155" xml:id="l155">Votre femme de chambre, je parierais ; elle est vraiment jolie !</l>
-      </sp>
-            <sp who="#lise" xml:id="12-6">
-                <speaker> LISE. </speaker>
-            <l n="156" xml:id="l156">Quoi ! ce serait là cette personne qu’il a vue en entrant dans le château... et qui soudain...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="12-7">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="157" xml:id="l157">Justement ; j’avais déjà cru remarquer... Mais pourquoi, Jasmin, ne m’avez-vous pas parlé ? Aviez-vous quelque raison secrète de me cacher vos projets ? Vous deviez être sûr de mon consentement.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="12-8">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="158" xml:id="l158">Trop de bontés !</l>
-            <l n="159" xml:id="l159">Sans doute il venait vous demander la main de celle qu’il aime ; et j’espère que vous ne la lui refuserez pas.</l>
-      </sp>
-            <sp who="#lise" xml:id="12-9">
-                <speaker> LISE. </speaker>
-            <l n="160" xml:id="l160">Non, certainement ; mais j’avoue qu’un amour aussi subit a lieu de m’étonner.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="12-10">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="161" xml:id="l161">Ces amours-là doivent pourtant moins vous étonner que toute autre, mademoiselle. Mais rassurez-vous, mon attachement pour Marton n’est pas aussi extraordinaire que monsieur veut bien le croire.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="12-11">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="162" xml:id="l162">Comment ! vous n’aimez que médiocrement, et vous songez à épouser ?</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="12-12">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="163" xml:id="l163">Mais je ne vois, dans cet établissement, qu’un moyen de rester auprès de madame, et de vous, monsieur. D’ailleurs, comme vous me le disiez encore hier, l’hymen n’est plus un esclavage. Est-on las de vivre garçon, on fait une spéculation conjugale qui vous donne un état, une consistance dans le monde. Qu’on s’aime ou qu’on ne s’aime pas, que les humeurs se conviennent ou qu’elles soient incompatibles, c’est moins que rien ; l’important est de trouver quelques rapports d’intérêt ou de fortune... On se contraint jusqu’à la signature du contrat ; mais, le marché conclu, chacun reprend ses habitudes, chacun vit à sa manière, de son côté... Vous me le disiez, monsieur court les sociétés, les spectacles, les bals ; madame en fait autant, et si le hasard veut que les deux époux se rencontrent, ils se connaissent à peine, leur entrevue a tout le piquant de la nouveauté... On s’aimerait presque, si ce n’était le décorum.</l>
-            <l n="164" xml:id="l164">Comment ! monsieur ?...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="12-13">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="165" xml:id="l165">Moi, mademoiselle, que je meure si jamais j’ai eu cette pensée, et je veux qu’il vous avoue...</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="12-14">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="166" xml:id="l166">Quoi ! ne m’avez-vous pas répété cent fois, hier encore ?...</l>
-            <stage>Voyant Senneville qui le menace. </stage>
-            <l n="167" xml:id="l167">Non, non, vous ne m’avez rien dit ; mademoiselle, il ne m’a rien dit ; c’est moi qui ai tout inventé. Que je suis maladroit !</l>
-            <l n="168" xml:id="l168">Ah ! comme je m’étais trompée !</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="12-15">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="169" xml:id="l169">Non, mademoiselle, gardez-vous de croire...</l>
-            <stage>Voyant venir d’Estival. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 13 ">
-            <head> Scène 1 </head>
-            <sp who="#m.-de-senneville" xml:id="13-1">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="170" xml:id="l170">Ah ! monsieur le baron, venez m’aider à me défendre !</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-2">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="171" xml:id="l171">Moi, monsieur ! je m’en garderai bien ; et c’est déjà beaucoup que je ne vous force pas à rendre compte de votre conduite.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="13-3">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="172" xml:id="l172">Monsieur...</l>
-      </sp>
-            <sp who="#lise" xml:id="13-4">
-                <speaker> LISE. </speaker>
-            <l n="173" xml:id="l173">Quoi ! mon père, vous seriez instruit ?...</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-5">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="174" xml:id="l174">Oui, mon enfant, heureusement pour toi.</l>
-            <stage>À Senneville. </stage>
-            <l n="175" xml:id="l175">C’est en vain que vous m’avez d’abord abusé.</l>
-            <l n="176" xml:id="l176">Serais-je découvert ?</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-6">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="177" xml:id="l177">Je vous connais à présent, je connais vos intrigues, vos aventures de jeux... de créanciers...</l>
-            <l n="178" xml:id="l178">Des créanciers !</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-7">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="179" xml:id="l179">Et vos comtesses et vos baronnes... J’ai là leurs déclarations, deux, trois, quatre intrigues à la fois !</l>
-      </sp>
-            <sp who="#lise" xml:id="13-8">
-                <speaker> LISE. </speaker>
-            <l n="180" xml:id="l180">Ah ! mon Dieu !</l>
-            <l n="181" xml:id="l181">Qui m’a calomnié à ce point ? Je vois que Jasmin ne m’a pas épargné.</l>
-      </sp>
-            <sp who="#lise" xml:id="13-9">
-                <speaker> LISE. </speaker>
-            <l n="182" xml:id="l182">Fort bien ! vous êtes irrité qu’il ait révélé votre conduite à mon père.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="13-10">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="183" xml:id="l183">Eh ! mademoiselle, vous défendez ce domestique avec une chaleur...</l>
-            <l n="184" xml:id="l184">Monsieur, vous ne faites pas attention à vos discours !</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="13-11">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="185" xml:id="l185">Ah ! pardon ! croyez que je n’eus jamais l’intention de vous offenser.</l>
-            <l n="186" xml:id="l186">Vous êtes donc bien maladroit ?</l>
-            <l n="187" xml:id="l187">Oui, oui, je le suis en effet ; mais c’est d’avoir gardé auprès de moi certaine personne...</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="13-12">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="188" xml:id="l188">Je ne vous ai pas forcé de me prendre.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="13-13">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="189" xml:id="l189">Eh bien ! si je vous ai pris, je vous congédie, je vous renvoie, et ne veux plus de vos services.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="13-14">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="190" xml:id="l190">Permettez, monsieur. On donne au moins huit jours.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-15">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="191" xml:id="l191">Sans doute... mais sois tranquille...</l>
-            <stage>Air : Connaissez mieux le grand Eugène. </stage>
-        <stage>LISE.</stage>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-16">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="192" xml:id="l192">C’est cela.</l>
-        <stage>LISE.</stage>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="13-17">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="193" xml:id="l193">Et tu ne nous quitteras plus.</l>
-        <stage>LISE.</stage>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-18">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="194" xml:id="l194">À la bonne heure !</l>
-        <stage>LISE.</stage>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="13-19">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="195" xml:id="l195">Nous ne nous séparerons pas ainsi, monsieur Jasmin. Nous avons ensemble quelques comptes à régler.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="13-20">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="196" xml:id="l196">Quand vous voudrez, monsieur... Quoique je ne sois plus à votre service, je suis à vos ordres.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="13-21">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="197" xml:id="l197">Viens donc, Jasmin.</l>
-            <stage>D’Estival, Lise et Beauclair sortent. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 14 ">
-            <head> Scène 1 </head>
-            <l n="198" xml:id="l198">Allons, c’est lui qui reste !... et c’est moi qu’on renvoie ! Elle ne m’aime pas, elle ne m’a jamais aimé, et la manière dont elle vient de me traiter... Il faudrait que je fusse bien aveugle... C’est qu’aussi il y a quelque chose que je ne puis comprendre... Et moi qui, au lieu d’embarrasser, de déjouer mon rival, m’emporte, m’impatiente ; moi qui lui prends sa place, son nom, sa femme, et qui m’avise encore d’aller lui chercher querelle !</l>
-            <stage>Air : Que d’établissements nouveaux. (L’Opéra-Comique.) </stage>
-            <l n="199" xml:id="l199">Allons, je me suis enferre comme un sot... un déguisement, un amant en valet, en voilà plus qu’il n’en faut pour tourner une jeune tôle... Mon projet était extravagant, et pouvait plaire ; le sien n’a pas le sens commun, on va l’adorer.</l>
-            <stage>Apercevant Germain. </stage>
-            <l n="200" xml:id="l200">Ah ! Germain !...</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 15 ">
-            <head> Scène 1 </head>
-            <sp who="#germain" xml:id="15-1">
-                <speaker> GERMAIN. </speaker>
-            <l n="201" xml:id="l201">Monsieur, je vous fais mon compliment, tout va fort bien, à ce qu’il me paraît.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="15-2">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="202" xml:id="l202">Oui, à merveille ; fais mettre les chevaux à ma voiture ; non, seulement qu’on me selle un cheval, ce sera plus tôt fait.</l>
-      </sp>
-            <sp who="#germain" xml:id="15-3">
-                <speaker> GERMAIN. </speaker>
-            <l n="203" xml:id="l203">Quoi ! monsieur partirait ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="15-4">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="204" xml:id="l204">Non, je ne pars pas ; je... m’éloigne... je reviens.</l>
-            <stage>Avec colère. </stage>
-            <l n="205" xml:id="l205">Ai-je des comptes à te rendre ? Obéis.</l>
-      </sp>
-            <sp who="#germain" xml:id="15-5">
-                <speaker> GERMAIN. </speaker>
-            <l n="206" xml:id="l206">Allons, monsieur, je m’en vais dire à votre domestique de seller un cheval.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="15-6">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="207" xml:id="l207">Eh ! non, garde-t-en bien ; c’est toi, c’est toi-même...</l>
-      </sp>
-            <sp who="#germain" xml:id="15-7">
-                <speaker> GERMAIN. </speaker>
-            <l n="208" xml:id="l208">Mais quand on a un domestique...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="15-8">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="209" xml:id="l209">Je l’ai chassé.</l>
-      </sp>
-            <sp who="#germain" xml:id="15-9">
-                <speaker> GERMAIN. </speaker>
-            <l n="210" xml:id="l210">Ah ! vous l’avez chassé ; ma foi ! tant mieux. Ce drôle-là avait une figure qui vous aurait joué quelque mauvais tour.</l>
-            <stage>En confidence. </stage>
-            <l n="211" xml:id="l211">Je viens de le voir avec mademoiselle Lise... En conscience, on dirait qu’il lui fait la cour. Je vais seller le cheval.</l>
-            <stage>Il sort. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 16 ">
-            <head> Scène 1 </head>
-            <l n="212" xml:id="l212">Ah ! il lui fait la cour... Il ne doute plus du succès, il me regarde déjà comme vaincu. Eh bien ! morbleu ! nous verrons... Non, certainement, je ne partirai pas ; je vais trouver M. d’Estival, je lui découvre tout ; je me nomme, je me propose... J’ai de la fortune, un rang, un nom dans le monde... Beauclair a de l’esprit, si l’on veut ; allons, il en a, c’est vrai. Eli bien ! moi, je suis neveu d’un ministre... Qu’a-t-il à dire ?... Eh quoi ! devoir la préférence à de pareils moyens ? Convenir aux yeux de Lise que j’ai été vaincu ? Non, il vaut mieux partir, m’éloigner sans me faire connaître... Ah ! Lise, je n’ai jamais mieux senti combien je vous aimais !</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 17 ">
-            <head> Scène 1 </head>
-            <sp who="#lise" xml:id="17-1">
-                <speaker> LISE. </speaker>
-            <l n="213" xml:id="l213">Ah ! mon Dieu ! quel événement ! Qui aurait pu s’attendre à cela ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="17-2">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="214" xml:id="l214">Allons, il faut partir.</l>
-      </sp>
-            <sp who="#lise" xml:id="17-3">
-                <speaker> LISE. </speaker>
-            <l n="215" xml:id="l215">Oui, sans doute, il le faut, c’est ce que vous pouvez faire de mieux ; mais de grâce, ne tardez pas. Eh bien ! pourquoi cet air étonne ?</l>
-            <l n="216" xml:id="l216">Vous trouvez que je ne pars pas assez vite ?</l>
-            <l n="217" xml:id="l217">Sans doute... Songez donc qu’un moment de retard peut vous perdre ; que dans un moment on peut vous arrêter.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="17-4">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="218" xml:id="l218">M’arrêter !</l>
-      </sp>
-            <sp who="#lise" xml:id="17-5">
-                <speaker> LISE. </speaker>
-            <l n="219" xml:id="l219">Oui ; mais je croyais que vous le saviez... Je me promenais seule près de la haie du parc ; j’étais bien triste, et pour un rien j’aurais pleuré. Je pleurerais encore... Mais, ce n’est pas cela que je veux vous dire... J’ai entendu plusieurs hommes causer en dehors... « Oui, Beauclair, » disait-on ; on avait prononcé ce nom-là bien bas, et cependant je l’ai entendu sur-le-champ, et le cœur m’a battu comme si je me fusse doutée qu’il s’agissait d’une mauvaise nouvelle ; je voulais m’éloigner, et, sans savoir comment, je me trouvai prêter l’oreille tout près de la haie. On continuait : « Oui, il se nomme Beauclair ; il doit être dans cette maison. Restez là, vous ici ; cernons le parc, et après nous entrerons. »</l>
-            <l n="220" xml:id="l220">M’arrêter pour Beauclair ! Allons, il ne manquait plus que cela ! Comme il rirait, s’il savait...</l>
-      </sp>
-            <sp who="#lise" xml:id="17-6">
-                <speaker> LISE. </speaker>
-            <l n="221" xml:id="l221">Je n’en ai pas entendu davantage : je suis accourue. Mais, au nom du ciel ! partez ; vous n’avez pas de temps à perdre.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="17-7">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="222" xml:id="l222">Moi, vous quitter, renoncer à votre main !</l>
-      </sp>
-            <sp who="#lise" xml:id="17-8">
-                <speaker> LISE. </speaker>
-            <l n="223" xml:id="l223">Il le faut bien, monsieur ; certainement, je n’épouserai jamais un mauvais sujet, un homme que l’on arrête par ordre du ministre ; oui, monsieur, je ne veux plus de mariage, plus de prétendu... quelque autre encore, doux, aimable, spirituel, qu’on estimera du premier coup d’œil et qu’ensuite on sera forcé de mépriser... Arrangez-vous, monsieur, mais cela fait trop de peine, et je n’en veux plus ; je vous en avertis.</l>
-            <l n="224" xml:id="l224">Lise, serait-il vrai ?</l>
-            <l n="225" xml:id="l225">Quel dommage ! un air si bon, si honnête ! Envoyez donc les jeunes gens à Paris ! Votre domestique le disait bien : voilà les suites de votre mauvaise conduite ! C’est un très honnête garçon que votre domestique, qui vous est très attaché ; et, si vous aviez suivi ses conseils...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="17-9">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="226" xml:id="l226">Lise, je ne veux suivre que les vôtres ; je jure de vous consacrer ma vie, de vous obéir toujours.</l>
-      </sp>
-            <sp who="#lise" xml:id="17-10">
-                <speaker> LISE. </speaker>
-            <l n="227" xml:id="l227">Eh bien !...</l>
-            <stage>Air : Colas, Colas, sois-moi fidèle. </stage>
-        <stage>SENNEVILLE.</stage>
-      </sp>
-            <sp who="#lise" xml:id="17-11">
-                <speaker> LISE. </speaker>
-            <l n="228" xml:id="l228">Vous m’aimez, Lise ? vous m’aimez ?</l>
-        <stage>SENNEVILLE.</stage>
-      </sp>
-            <sp who="#lise" xml:id="17-12">
-                <speaker> LISE. </speaker>
-            <l n="229" xml:id="l229">Vous partez, n’est-ce pas ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="17-13">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="230" xml:id="l230">Moi partir ! je ne vous quitte plus, je reste ici, je reste près de vous. Si vous saviez, si vous deviniez combien je suis heureux !... Demain nous allons à Paris ; je vous mène à la cour, je vous présente au ministre, à mon oncle.</l>
-      </sp>
-            <sp who="#lise" xml:id="17-14">
-                <speaker> LISE. </speaker>
-            <l n="231" xml:id="l231">La cour ?... le ministre ?... Paris ? Ah ! mon Dieu ! la tête n’y est plus... la frayeur le fait déraisonner.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 18 ">
-            <head> Scène 1 </head>
-            <l n="232" xml:id="l232">Ah ! Jasmin ! Jasmin ! je vous rencontre à propos ; il faut trouver un moyen d’éloigner votre maître.</l>
-            <l n="233" xml:id="l233">Quoi ! vous voulez que je vous en débarrasse !</l>
-            <l n="234" xml:id="l234">Oui, il faut qu’il parte ; je vous dirai mes raisons. Tenez, prenez ma bourse, et mettez-le dehors ; c’est le plus grand service que vous puissiez me rendre.</l>
-            <l n="235" xml:id="l235">Dès que c’est vous qui m’en priez !</l>
-            <l n="236" xml:id="l236">Et moi, je vais prévenir mon père, empêcher les gens de pénétrer dans le château. Il faut bien qu’on veille pour lui. La ! je vous demande qui m’aurait dit... Ah ! mon Dieu ! le pauvre jeune homme !</l>
-            <stage>Elle sort. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 19 ">
-            <head> Scène 1 </head>
-            <l n="237" xml:id="l237">Allons, le rival est éconduit ; je m’y attendais, mais il est assez plaisant que ce soit moi qui lui donne son congé.</l>
-            <stage>Il s’avance près de Senneville, qu’il salue très respectueusement. </stage>
-            <l n="238" xml:id="l238">Eh bien ! mon ami, je ne peux plus te garder ; c’est là ce qui te chagrine ?</l>
-            <sp who="#m.-de-beauclair" xml:id="19-1">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="239" xml:id="l239">Monsieur se trompe, j’ai bien d’autres raisons d’être triste. C’est moi, monsieur, qui ne peux plus garder mon maître ; je suis obligé de le congédier.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-2">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="240" xml:id="l240">Si ce n’est que cela, console-toi ; c’est moi qui te renvoie.</l>
-            <stage>Il ôte son chapeau et le salue. </stage>
-            <l n="241" xml:id="l241">Je n’oublierai jamais, monsieur, l’honneur que vous m’avez fait en entrant à mon service ; mais je ne veux pas en abuser.</l>
-            <stage>Air du vaudeville de La Robe et les Bottes. </stage>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="19-3">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="242" xml:id="l242">C’est s’en tirer en homme d’esprit, et je suis doublement enchanté d’une plaisanterie à laquelle, monsieur, je dois de renouveler connaissance avec vous ; mais vous sentez qu’auprès de Lise il vous serait pénible de paraître vaincu. Aussi, croyez-moi, cédez la place.</l>
-            <l n="243" xml:id="l243">Mais... je vous donnerai le même conseil.</l>
-            <l n="244" xml:id="l244">Quoi ! vous espérez encore rester ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-4">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="245" xml:id="l245">J’en suis sûr.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="19-5">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="246" xml:id="l246">Malgré moi ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-6">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="247" xml:id="l247">Malgré vous. Songez donc que vous êtes forcé de m’obéir, et que, si je veux, je puis vous envoyer chercher le notaire.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="19-7">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="248" xml:id="l248">Ah ! vous prétendez conserver mon nom !</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-8">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="249" xml:id="l249">Il est trop beau pour le quitter.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="19-9">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="250" xml:id="l250">Il faudra bien y renoncer.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-10">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="251" xml:id="l251">Moins que jamais ; car je vous rends service en le gardant, et je vous forcerai bien à me le laisser.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="19-11">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="252" xml:id="l252">Celui-là est trop fort !</l>
-            <l n="253" xml:id="l253">Consentez-vous que celui qui forcera l’autre à quitter la place renonce à tous ses droits ?</l>
-            <l n="254" xml:id="l254">Oui, sans doute, et je ne prétends plus vous ménager ; car songez que, pour vous faire congédier, je n’ai qu’un mot à dire.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-12">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="255" xml:id="l255">Oui ; mais vous ne le direz pas.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="19-13">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="256" xml:id="l256">Et qui m’en empêchera ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-14">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="257" xml:id="l257">Moi.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="19-15">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="258" xml:id="l258">Vous m’empêcherez de me nommer ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="19-16">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="259" xml:id="l259">Je vous en défie.</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 20 ">
-            <head> Scène 1 </head>
-            <l n="260" xml:id="l260">Ah ! mon Dieu ! il n’est pas encore parti...</l>
-            <l n="261" xml:id="l261">Nous allons voir si je ne me nomme pas...</l>
-            <sp who="#lise" xml:id="20-1">
-                <speaker> LISE. </speaker>
-            <l n="262" xml:id="l262">Ils sont maintenant dans le jardin.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="20-2">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="263" xml:id="l263">Eh ! qui donc ?</l>
-      </sp>
-            <sp who="#lise" xml:id="20-3">
-                <speaker> LISE. </speaker>
-            <l n="264" xml:id="l264">Ceux qui cherchent M. de Beauclair.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="20-4">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="265" xml:id="l265">Que dites-vous ?</l>
-            <l n="266" xml:id="l266">Eh bien ! monsieur, qu’attendez-vous pour vous nommer ?</l>
-            <l n="267" xml:id="l267">Diable ! cela change la thèse ; et si je me nomme, je pars.</l>
-            <l n="268" xml:id="l268">Ils viennent, ils sont au bout de l’allée. Ah ! il me vient une idée... Jasmin, si vous aimez votre maître, M. de Beauclair, si vous voulez le sauver... Ils ne le connaissent pas ; je le parierais à leurs questions. Alors, vous m’entendez...</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="20-5">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="269" xml:id="l269">Non, le diable m’emporte !</l>
-            <l n="270" xml:id="l270">Dites que vous êtes M. de Beauclair, que vous étiez déguisé en domestique. L’on vous arrête pour lui, vous partez.</l>
-            <l n="271" xml:id="l271">Et je reste auprès de vous : l’invention est admirable.</l>
-      </sp>
-            <sp who="#lise" xml:id="20-6">
-                <speaker> LISE. </speaker>
-            <l n="272" xml:id="l272">N’est-ce pas ? Que je suis contente de l’avoir trouvée !</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="20-7">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="273" xml:id="l273">Un instant... Permettez donc !</l>
-      </sp>
-            <sp who="#lise" xml:id="20-8">
-                <speaker> LISE. </speaker>
-            <l n="274" xml:id="l274">Quoi ! vous refusez ? vous que je croyais attaché à votre maître.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="20-9">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="275" xml:id="l275">Je ne dis pas cela ; mais...</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 21 ">
-            <head> Scène 1 </head>
-            <sp who="#l’exempt" xml:id="21-1">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="276" xml:id="l276">Il est ici... que toutes les issues soient bien gardées, et que personne ne puisse sortir.</l>
-      </sp>
-            <sp who="#m.-de-beauclair" xml:id="21-2">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="277" xml:id="l277">Morbleu !...</l>
-      </sp>
-            <sp who="#un-exempt" xml:id="21-3">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="278" xml:id="l278">Il était temps de le joindre, sur la frontière, et à deux pas du pont de Kehl.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="21-4">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="279" xml:id="l279">Ah çà ! messieurs, que signifie ?</l>
-      </sp>
-            <sp who="#un-exempt" xml:id="21-5">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="280" xml:id="l280">Permettez-moi de procéder régulièrement.</l>
-            <stage>Air : Prenons d’abord l’air bien méchant. (Adolphe et Clara.) </stage>
-            <stage>À Beauclair. </stage>
-      </sp>
-            <sp who="#un-exempt" xml:id="21-6">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="281" xml:id="l281">Ma foi, arrivera ce qu’il pourra...</l>
-            <stage>Haut. </stage>
-            <l n="282" xml:id="l282">Jasmin !</l>
-            <l n="283" xml:id="l283">Attendez donc de la générosité d’un valet !</l>
-            <l n="284" xml:id="l284">J’ai gagné.</l>
-            <l n="285" xml:id="l285">Et vous, monsieur ?</l>
-            <l n="286" xml:id="l286">Que va-t-il dire ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="21-7">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="287" xml:id="l287">Le chevalier de Beauclair, officier de cavalerie,</l>
-            <stage>À l’exempt. </stage>
-            <l n="288" xml:id="l288">Je suis prêt à vous suivre ; mais j’ai une grâce à vous demander, quelques arrangements à prendre, et vous me permettrez d’envoyer chercher un notaire.</l>
-      </sp>
-            <sp who="#un-exempt" xml:id="21-8">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="289" xml:id="l289">À la bonne heure. Mais hâtons-nous.</l>
-            <l n="290" xml:id="l290">Jasmin !...</l>
-            <l n="291" xml:id="l291">Monsieur !...</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="21-9">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="292" xml:id="l292">Vous le voyez, les moments sont précieux...</l>
-            <l n="293" xml:id="l293">Diable ! il a raison ; si je sors, je suis sauvé.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="21-10">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="294" xml:id="l294">Eh bien ! Jasmin, allez chercher le notaire.</l>
-            <l n="295" xml:id="l295">Oui, monsieur, j’y vais.</l>
-            <stage>À part. </stage>
-            <l n="296" xml:id="l296">J’ai perdu la partie.</l>
-            <stage>Il sort. </stage>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 22 ">
-            <head> Scène 1 </head>
-            <l n="297" xml:id="l297">Combien je vous remercie, monsieur, de ce léger service !... Si vous pouviez encore m’en rendre un... Ce serait de m’apprendre pourquoi je suis arrêté.</l>
-            <sp who="#un-exempt" xml:id="22-1">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="298" xml:id="l298">Vous le savez bien, monsieur de Beauclair.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="22-2">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="299" xml:id="l299">Sans doute, je le sais ; mais je suis bien aise que vous l’appreniez à mademoiselle et à mon beau-père.</l>
-            <l n="300" xml:id="l300">Comment, votre beau-père !</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="22-3">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="301" xml:id="l301">Oui, monsieur, je veux que vous voyiez qu’il n’y a rien de honteux dans la cause de ma détention.</l>
-            <l n="302" xml:id="l302">Ah ! j’en suis sûre d’avance.</l>
-      </sp>
-            <sp who="#un-exempt" xml:id="22-4">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="303" xml:id="l303">Eh bien, monsieur, vous savez l’éclat causé par la marquise d’Arminville ; et vos liaisons avec cette dame...</l>
-      </sp>
-            <sp who="#lise" xml:id="22-5">
-                <speaker> LISE. </speaker>
-            <l n="304" xml:id="l304">Vos liaisons avec cette dame... C’est indigne !</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="22-6">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="305" xml:id="l305">Il ne manquait plus que cela.</l>
-            <l n="306" xml:id="l306">Comment ! il serait possible... quelle rencontre ! c’est lui sans doute que ce papier concerne. Courez vite après Jasmin, mon domestique ; il ne saurait être loin.</l>
-            <stage>À Germain, en lui donnant un papier. </stage>
-            <l n="307" xml:id="l307">Tiens, qu’il lise, et qu’il ne craigne plus rien.</l>
-      </sp>
-            <sp who="#un-exempt" xml:id="22-7">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="308" xml:id="l308">Que ! est ce papier ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="22-8">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="309" xml:id="l309">L’ordre de cesser les poursuites... La grâce de M. de Beauclair.</l>
-      </sp>
-            <sp who="#un-exempt" xml:id="22-9">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="310" xml:id="l310">Vous avez votre grâce ?</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="22-10">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="311" xml:id="l311">C’est moi qui l’ai apportée, et depuis deux heures j’aurais dû la remettre aux autorités... mais vous sentez bien que je l’ai oublié...</l>
-            <stage>À Lise. </stage>
-            <l n="312" xml:id="l312">le plaisir de vous revoir, de vous retrouver... car rien n’égale mon bonheur, rien ne s’oppose plus à notre union, et Beauclair lui-même ne peut plus se dispenser de donner son consentement.</l>
-      </sp>
-            <sp who="#un-exempt" xml:id="22-11">
-                <speaker> L’EXEMPT. </speaker>
-            <l n="313" xml:id="l313">Comment ! M. de Beauclair... Ah çà ! vous qui parlez, qui donc êtes-vous ?...</l>
-      </sp>
-   </div>
-        <div type="scene" xml:id=" 23 ">
-            <head> Scène 1 </head>
-            <sp who="#m.-de-beauclair" xml:id="23-1">
-                <speaker> BEAUCLAIR. </speaker>
-            <l n="314" xml:id="l314">Monsieur de Senneville, à qui je dois ma liberté... je le sais... mais vous voyez que, de mon côté, je suis de parole... on vous aime, j’ai perdu... je vous amène le notaire, et je demande à signer le premier au contrat.</l>
-            <l n="315" xml:id="l315">Je vous l’avais dit ; et je n’attendais pas moins de votre générosité.</l>
-            <stage>À d’Estival </stage>
-            <l n="316" xml:id="l316">Vous saurez tout, monsieur.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="23-2">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="317" xml:id="l317">Mais il en est temps.</l>
-      </sp>
-            <sp who="#m.-de-senneville" xml:id="23-3">
-                <speaker> SENNEVILLE. </speaker>
-            <l n="318" xml:id="l318">Si je n’ai plus les droits de Beauclair, au moins n’ai-je plus les torts qu’on lui reprochait, et peut-être pardonnerez-vous une supercherie que l’amour seul m’avait inspirée... c’est de vous que j’attends mon bonheur... vous seul pouvez confirmer l’aveu que mademoiselle a daigné me faire, et que peut-être je n’ai dû qu’à la pitié.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="23-4">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="319" xml:id="l319">Comment ! ma fille vous aurait avoué...</l>
-      </sp>
-            <sp who="#lise" xml:id="23-5">
-                <speaker> LISE. </speaker>
-            <l n="320" xml:id="l320">Mon père, il était malheureux ; ce n’était pas le moment de l’accabler.</l>
-      </sp>
-            <sp who="#m.-d’estival" xml:id="23-6">
-                <speaker> D’ESTIVAL. </speaker>
-            <l n="321" xml:id="l321">Ah çà ! décidément quel est le véritable M. de Beauclair ?</l>
-            <l n="322" xml:id="l322">Celui qui a été chercher le notaire.</l>
-            <stage>Vaudeville. </stage>
-            <stage>Air : Le luth galant qui chanta les amours. </stage>
-         </sp>
-         <p>FIN</p>
+      <docTitle>
+        <titlePart type="main" />
+      </docTitle>
+      <docDate when="[vide]">unknown</docDate>
+      <div type="docImprint" />
+      <performance>
+        <ab type="premiere" date="1822-06-21" location="unknown">Représentée pour la première fois, à Paris, sur le Théâtre du Gymnase, le 21 juin 1822.</ab>
+      </performance>
+      <castList />
+    </front>
+    <body>
+      <div type="scene" xml:id="première">
+        <head>Scène première</head>
+        <sp who="#germain">
+          <speaker>GERMAIN,seul, tenant un papier à la main</speaker>
+          <l n="1">Relisons la liste de mes commissions : porter des invitations chez le sous-préfet et le receveur des contributions indirectes, pour la signature du contrat ; retenir la musique du régiment pour le jour du bal ; commander à l’imprimeur les billets de faire part, annonçant que mademoiselle Lise d’Estival épouse M. de Beauclair, officier d’artillerie, etc. Le beau-père est expéditif... et n’aime pas à perdre de temps ; aussi tout est prêt, et il ne manque plus rien, que le prétendu. On l’attendait hier... on l’attend aujourd’hui... Un prétendu qu’on fait venir exprès de Paris, comme s’il en manquait à Strasbourg !</l>
+        </sp>
       </div>
+      <div type="scene" xml:id="II">
+        <head>Scène II</head>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="2">Eh bien ! Germain, vous n’entendez-pas ? Une voiture vient de s’arrêter ; on a sonné à la grille du parc, et vous êtes là d’une tranquillité...</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="3">J’y vais. Enfin, serait-ce M. de Beauclair, le prétendu ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="4">Ah ! M. de Beauclair ! lui... un autre... qui sait ?... une visite...</l>
+          <stage>Vivement.</stage>
+          <l n="5">Mais allez donc ! Quand ce serait lui, est-ce une raison pour le faire attendre un quart d’heure ?</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="6">Je vais dire à Lafleur d’ouvrir.</l>
+          <stage>Il sort.</stage>
+        </sp>
       </div>
-   </body>
-</text>
+      <div type="scene" xml:id="III">
+        <head>Scène III</head>
+        <sp who="#lise">
+          <speaker>LISE,seule</speaker>
+          <l n="7">Oui, c’est bien lui, j’en suis sûre, et toute ma frayeur me reprend.</l>
+          <stage>Air du Magicien sans magie.</stage>
+          <l n="8">Pauvres jeunes filles,</l>
+          <stage>Pauvres jeunes filles,etc.</stage>
+          <l n="9">Si j’en crois mon père,</l>
+          <stage>Pauvres jeunes filles,etc.</stage>
+          <l n="10">Oh ! oui, c’est lui-même,</l>
+          <l n="11">Encore s’il ressemblait à ce jeune officier... si l’on pouvait voir... mon Dieu !... mon père devrait faire élaguer ses tilleuls... Oh ! le voilà... je l’entends, je ne dois pas rester.</l>
+          <stage>Elle sort.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IV">
+        <head>Scène IV</head>
+        <sp who="#germain">
+          <speaker>GERMAIN,entrant le premier.</speaker>
+          <l n="12">Voyons un peu ce M. de Beauclair, qui se fait si longtemps attendre !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,aux domestiques.</speaker>
+          <l n="13">Grand merci, mes amis.</l>
+          <stage>Leur donnant de l’argent.</stage>
+          <l n="14">Tenez, et buvez à ma santé.</l>
+          <stage>Les domestiques sortent.</stage>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN,à part.</speaker>
+          <l n="15">Il s’annonce bien.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à Germain.</speaker>
+          <l n="16">Voulez-vous prévenir M. d’Estival que M. de Beauclair, son gendre...</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN,le regardant.</speaker>
+          <l n="17">Comment ! ne me trompé-je pas ? M. de Senneville !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,vivement et à voix basse.</speaker>
+          <l n="18">Tais-toi, malheureux ! Qui es-tu ? D’où me connais-tu ?</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="19">M. le colonel ne se rappelle pas mes traits ! J’étais portier à Paris, rue du Helder, chez cette jeune comtesse où M. le colonel allait si souvent.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="20">Ah ! oui... Germain...</l>
+          <stage>Souriant.</stage>
+          <l n="21">Un fripon.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <stage>Air : Du partage de la richesse. (Fanchon la vielleuse.)</stage>
+          <l n="22">J’avais l’honneur de vous ouvrir la porte.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="23">Tu ne l’ouvrais pas que pour moi.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="24">Ah ! je vous jure...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="25">Peu m’importe.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="26">Certain soir que j’étais de garde,</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="27">Imbécile ! mais c’est égal, tu peux me servir, j’oublie tout.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="28">Monsieur est bien généreux.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,vivement pendant cette scène.</speaker>
+          <l n="29">J’ai vu Lise avec sa tante, une fois, à Paris, il y a trois mois, au bal de l’ambassadeur... jolie, aimable, modeste, chacun s’empressait autour d’elle ; rien qu’en la voyant danser, je l’adorai ; dès que j’eus causé avec elle, je jurai qu’elle serait ma femme.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="30">Que ne parliez-vous !... vingt mille écus de rente, colonel, et neveu de ministre...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="31">En rentrant chez moi, à quatre heures du matin, je trouve des ordres de mon oncle... Depuis trois mois j’ai parcouru toute la France ; enfin je suis envoyé en mission à Strasbourg ; mission d’ailleurs fort agréable, puisqu’il s’agit d’arrêter les poursuites dirigées contre quelques étourdis compromis dans l’affaire de la marquise d’Arminville.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="32">Cette affaire dont on a tant parlé ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <stage>Oui, quelques intrigues auxquelles on a attaché plus d’importance quelles n’en méritaient. Je descends ce matin à l’auberge desTrois-Couronnes, et j’apprends par mon hôte que mademoiselle d’Estival doit se marier à M. de Beauclair, jeune officier français ; qu’on n’a jamais vu le futur... mais l’amitié, la parenté, les convenances, que sais-je enfin ?... que tout est d’accord, et qu’on n’attend plus que le prétendu ; je laisse notre hôte au milieu de son récit, je remonte en voiture, j’entre au château, je me présente sous le nom de Beauclair ; tout m’est ouvert, tu m’introduis, et je te dois la réussite de mon projet.</stage>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="33">Ma foi, monsieur, je n’en ai pas vu de plus extravagant ; à chaque instant notre futur peut arriver, et tout se découvrira.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="34">Qu’importe ? je serai le premier venu ; le premier j’aurai dit à Lise que je ne puis vivre sans elle ; que depuis trois mois je l’aime, je l’adore. Me croyant son futur, elle ne s’offensera pas d’un tel aveu. À moins que son cœur n’ait parlé pour un autre, une jeune personne est toujours disposée à voir favorablement celui que ses parents lui destinent ; elle s’efforce de le trouver aimable ; elle cherche à l’aimer... et, songe donc, si Lise pouvait commencer à en prendre l’habitude !... On me découvrira, je le sais ; mais le coup sera porté, l’impression sera produite, et Beauclair arrivera trop tard.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="35">D’accord ; excepté que cela finira par un coup d’épée, et que M. de Beauclair... Le connaissez-vous ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="36">Oui, j’ai connu dans mes campagnes un M. de Beauclair tort aimable ; je me suis même trouvé avec lui dans une situation piquante. Nous étions rivaux sans le savoir, et, comme le chevalier de Grammont, il m’obligea de lui servir de domestique, et de garder son cheval pendant qu’il en contait à ma belle.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="37">Je vous connais : vous vous êtes fâché !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="38">Point du tout, le tour me parut plaisant.</l>
+          <stage>Air du vaudeville de Voltaire chez Ninon.</stage>
+          <l n="39">Contre lui loin de m’irriter,</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="40">Vous ne tarderez pas longtemps,</l>
+          <l n="41">Voici mademoiselle Lise avec son père.</l>
+          <stage>Germain sort.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="V">
+        <head>Scène V</head>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,entrant le premier.</speaker>
+          <l n="42">Eh ! que ne le disiez-vous tout de suite ?... ce cher Beauclair, qu’il me tarde de le voir, de l’embrasser ! que je le regarde un peu... oui, c’est lui ; voilà l’idée que je m’en faisais, un beau et brave militaire.</l>
+          <stage>Prenant par la main Lise qui arrive les yeux baissés.</stage>
+          <l n="43">Je te présente ma fille... hem ! qu’en dis-tu ? un peu timide ; mais quand on ne se connaît pas...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,en levant les yeux fait un geste de surprise.</speaker>
+          <l n="44">Que vois-je !</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="45">Comment ! aurais-tu déjà vu Beauclair ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,troublée.</speaker>
+          <l n="46">Oui, oui, mon père... beaucoup... une fois, il y a trois mois.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="47">Ah ! tu appelles cela beaucoup !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="48">Ah ! c’est que c’était au bal.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="49">C’est juste. C’est bien différent.</l>
+          <stage>Gaiement.</stage>
+          <l n="50">Serait-ce par hasard ce cavalier dont tu m’as tant parlé à ton retour de Paris ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,vivement.</speaker>
+          <l n="51">Quoi ! mademoiselle vous a parlé de moi ?</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,froidement.</speaker>
+          <l n="52">Oui, un jeune homme qui n’était jamais à la contredanse, qui se trompait de figures. Comment ! c’était toi ? je ne t’aurais pas cru si gauche. Ah çà ! puisque vous avez dansé ensemble, à demain la noce ! Autrefois, pour faire connaissance avec sa femme, il faillit trois mois de visites à un parloir, et on ne la connaissait pas mieux. Aujourd’hui, il suffit d’une contredanse.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,en souriant.</speaker>
+          <l n="53">Mais c’est moins long, et beaucoup plus gai.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,gaiement.</speaker>
+          <l n="54">Oui, vraiment. Comme vous le disiez, monsieur, notre siècle en vaut bien un autre : grâce au progrès des lumières, on ne renferme plus les demoiselles au couvent ; mais on les mène au bal. Une mère a-t-elle le désir de pourvoir sa fille, c’est au bal qu’elle découvre le mari qui lui convient. Le militaire vient y faire briller son uniforme ; nos graves magistrats, nos docteurs à la mode y figurent ensemble. Un jeune notaire cherche-t-il une dot ; s’il danse avec grâce, sa charge est payée. La gaieté, l’abandon qui règnent dans ces fêtes brillantes, rendent l’amour moins timide et la surveillance moins attentive. Le nombre même des témoins ajoute à la liberté du tête-à-tête. Sa dame !</l>
+          <stage>Avec expression.</stage>
+          <l n="55">qu’on est heureux, qu’on est fier d’appeler ainsi celle dont votre choix vous a rendu le chevalier, hélas ! pour un quart d’heure !... Mais on la quitte ému, agité. Un nouveau monde s’ouvre devant vous, et souvent un regard, un mot, a décidé du destin de la vie...</l>
+          <stage>Gaiement.</stage>
+          <l n="56">Vous voyez bien, monsieur, que le bal est le charme de la société, l’école des mœurs et le lien des familles.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,bas à son père.</speaker>
+          <l n="57">En vérité, il est fort aimable.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,de même.</speaker>
+          <l n="58">Oui, il a du bon ; s’il danse mal, il raisonne fort bien,</l>
+          <stage>Haut.</stage>
+          <l n="59">À demain donc la noce, et un grand bal, cela va sans dire.</l>
+          <stage>Air : Contentons-nous d’une simple bouteille.</stage>
+          <l n="60">Assez souvent la chagrine vieillesse</l>
+          <l n="61">Mais à propos, tu as donc changé d’idée ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,étonné.</speaker>
+          <l n="62">Comment ?</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="63">Oui, fripon ; ton déguisement... nous savons tout ! je n’ai pas voulu en parler à ma fille ; mais ton père m’a écrit. Il paraît que c’est un goût héréditaire dans la famille... je me souviens d’une mascarade que nous fîmes ensemble...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="64">Quoi ! mon père vous a écrit ?</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="65">Tiens, voici sa lettre... non, celle-ci. Tu connais son écriture, j’espère.</l>
+          <stage>Mettant ses lunettes.</stage>
+          <stage>Hum !... hum !... « Mon vieux camarade, » ce cher Beauclair... « Mon fils doit se rendre très prochainement à Strasbourg, pour épouser votre aimable fille. Vous saurez qu’il a, comme moi, l’esprit vif et original. Il ne tient point à se marier, mais il tient à être aimé de sa femme ; et je désespérais de l’établir. Il est passionné pour les déguisements ; et comme il a vu dernièrementles Jeux de l’Amour et du Hasard, il s’est mis dans l’idée de se présenter chez vous sous l’habit de son valet, afin de pouvoir étudier à loisir le caractère de sa future épouse. J’ai cru devoir vous prévenir de cette folie : vous ferez de cet avis l’usage qui vous paraîtra convenable. » Ah !... ah ! ah !... Je croyais même que c’était là la cause de ton retard.</stage>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à part.</speaker>
+          <l n="66">En voici bien d’une autre !... Où me suis-je fourré ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="67">Ah ! monsieur aime les épreuves...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="68">Mademoiselle ne doit pas les craindre.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="69">Quoi qu’il en soit, je trouve plus prudent de ne pas m’y exposer, et je vous remercie d’avoir abandonné ce projet.</l>
+          <stage>Air du vaudeville de La Robe et les Bottes.</stage>
+          <l n="70">J’aime avant tout qu’on soit franc et sincère.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="71">Chacun pourtant, redoutant l’examen,</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="72">Oui, je le sais ; avant la foi donnée,</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VI">
+        <head>Scène VI</head>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="73">Monsieur, un domestique, que nous avons vu de loin descendre d’une chaise de poste, est là, il demande à vous parler.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à part.</speaker>
+          <l n="74">Grands dieux !</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="75">Que nous veut-il ? faites entrer.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN,à Beauclair.</speaker>
+          <l n="76">Par ici, camarade.</l>
+          <stage>En s’en allant.</stage>
+          <l n="77">Comme ces laquais de Paris ont un air fier !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VII">
+        <head>Scène VII</head>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="78">Monsieur, je précède mon maître, M. de Beauclair : il m’a charge de vous annoncer que, retenu chez le baron de Forlis, il ne pourra arriver chez vous que dans quelques jours.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="79">Eh ! que dis-tu donc, mon garçon ? il est ici.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="80">Mon maître ! M. de Beauclair ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="81">Sans doute.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="82">Le voilà.</l>
+          <stage>Beauclair traverse le théâtre, se trouve face à face avec Senneville, s’arrête stupéfait.</stage>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,prenant un ton de maître.</speaker>
+          <l n="83">Eh bien ! Jasmin, qu’y a-t-il donc ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="84">Ah ! c’est monsieur qui... que... En vérité... Je ne m’attendais pas...</l>
+          <stage>Bas à Senneville.</stage>
+          <l n="85">Ma foi, monsieur de Senneville, ce tour-ci vaut l’autre.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="86">Sans doute, vous ne m’attendiez pas ici ; mais je n’ai point trouvé le baron de Forlis, et je suis arrivé ce matin.</l>
+          <stage>Avec intention.</stage>
+          <l n="87">On peut bien, quelquefois, arriver avant vous.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="88">C’est ce qui m’a surpris d’abord ; mais j’espère que monsieur ne me retrouvera plus en faute.</l>
+          <stage>Bas à Senneville.</stage>
+          <l n="89">Je vous remercie ; mais je ne me tiens pas pour battu.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="90">C’est bon : je me charge d’arranger cette affaire. Ce garçon-là me revient assez. Il a de la tournure. T a-t-il longtemps qu’il est à ton service ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="91">Non, il vient d’y entrer, et je ne serais pas fâché qu’il y restât. Il se connaît parfaitement en chevaux, il en donnerait à garder au plus habile ; du reste, adroit, intelligent ; et je vous prie de le traiter avec quelques égards. Il n’a pas toujours été valet.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="92">Ah ! mon Dieu, non ; je me suis trouvé domestique sans m’en douter.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="93">Par quelle aventure ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <stage>Air du vaudeville de Turenne.</stage>
+          <l n="94">Monsieur pourrait vous expliquer la chose.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="95">C’est de vous qu’on veut la savoir.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="96">De mon destin pourquoi chercher la cause ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="97">De l’épigramme ! c’est un garçon précieux ; aussi je mets tous mes soins à lui faire oublier qu’il n’est pas à sa place.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="98">Bien, mon gendre.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,à part.</speaker>
+          <l n="99">Comme il est bon avec ses domestiques !</l>
+          <stage>Haut.</stage>
+          <l n="100">C’est qu’en effet ce pauvre garçon a une physionomie tout à fait intéressante.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="101">Mademoiselle est bien bonne.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,à Senneville.</speaker>
+          <l n="102">Allons, allons, donne la main à ma fille ; allons faire un tour de jardin en attendant le déjeuner.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="103">En effet, la route m’a donné un appétit assez vif.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="104">Eh bien ! mon garçon, ne le gêne pas, passe à l’office.</l>
+          <stage>Ils sortent.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="VIII">
+        <head>Scène VIII</head>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,seul</speaker>
+          <l n="105">Je ne m’attendais pas à entrer si vite en condition. À l’office !... Allons, M. de Senneville prend sa revanche ; après tout, c’est en que je désire. Je voulais une épreuve, je ne pouvais pas mieux rencontrer. Un rival redoutable, qui a tous les avantages et qui sait en profiter. Quelle gloire si mon mérite pouvait percer à travers ma livrée !</l>
+          <stage>Gaiement.</stage>
+          <l n="106">Chimère des âmes tendres, bonheur d’être aimé pour soi-même, je pourrai donc vous réaliser une fois ; car à coup sûr, si je triomphe, ce ne sera pas à mon habit que je le devrai. D’ailleurs, cette affaire de la marquise d’Arminville ne laisse pas de m’inquiéter... quoique, mes relations avec cette belle dame ne lussent pas des relations suspectes, elles ont pu donner lieu à des soupçons... On m’a même parlé d’un certain ordre rendu contre moi... mon père n’en sait rien ; en tout cas, ce déguisement me servirait encore ; à la moindre nouvelle, je traverse le pont de Kehl, et me trouve en pays étranger. En attendant, préparons-nous à servir mon nouveau maître avec tout le zèle d’un bon domestique.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="IX">
+        <head>Scène IX</head>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,à part.</speaker>
+          <l n="107">Mon gendre avait envie d’éprouver sa future ; moi, je ne serais pas fâché de connaître un peu mon gendre. Si je faisais jaser son domestique ! Mais le drôle me paraît ne pas manquer d’esprit ; il faut s’y prendre avec adresse.</l>
+          <stage>Haut.</stage>
+          <l n="108">Tu m’as l’air de le plaire au service de ton maître ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="109">Peut-il en être autrement ? monsieur est si gai, si spirituel !... D’ailleurs, moi j’aime les jeunes gens.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="110">C’est comme moi, j’ai toujours été du parti des fils contre les pères, et je compte bien qu’avec mon gendre nous ferons encore des tours de jeunesse.</l>
+          <stage>Riant et affectant une grande gaieté pendant toute cette scène.</stage>
+          <l n="111">Ah ! ah ! ah ! c’est que je m’en suis permis de fort plaisants. Ah ! ah !...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,affectant de rire aussi.</speaker>
+          <l n="112">Ah ! ah !... je vois que monsieur était un rusé compère.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="113">Oui, et, quoi qu’il arrivât, je m’en tirais toujours de la façon la plus gaie. Ah ! ah !...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="114">Et mon maître donc ! Il y a bien peu de temps que je suis à son service, mais j’en ai vu de belles ! Je me rappelle une aventure de créanciers. Ah ! ah...</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="115">Ah ! ah ! des créanciers ; j’aime beaucoup les scènes de créanciers ; c’était mon fort. Ah çà ! des créanciers ! Il ne paye donc pas ses dettes ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="116">Est-ce que vous prenez mon maître pour un homme sans éducation ? comme si vous-même autrefois... Ah ! ah !...</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="117">C’est juste... Ah ! ah ! ah !... J’en faisais bien d’autres, moi. Mais conte-moi son aventure.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="118">M’y voilà... Il revenait du jeu, il avait perdu tout son argent. Non, non, attendez donc... je me trompe, c’est un autre jour, ce jour-hi il avait gagné.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,riant de mauvaise humeur.</speaker>
+          <l n="119">Ah ! il joue et il gagne... Ah ! ah !...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="120">Pas souvent ; mais c’est bien plus drôle quand il perd ; il faut entendre alors comme il jure, c’est admirable ; mais ce jour-là donc il était en gain, à telles enseignes qu’il m’avait payé mes gages ; je me le rappelle, parce que c’est la seule fois. Il faut vous dire, pour l’intelligence de l’histoire, que le matin il m’avait chargé de porter un billet chez la comtesse, et que, par erreur, je le remis à la baronne.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="121">Comment donc ! une comtesse ! une baronne !...</l>
+          <stage>À part.</stage>
+          <l n="122">Morbleu !</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="123">Ah ! ah !... Je gage que dans votre temps vous avez fait aussi plus d’une conquête ?</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="124">Oui, oui, je me reconnais là ; mais il est donc généralement aimé ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="125">C’est une fureur.</l>
+          <stage>Air du Ménage de Garçon.</stage>
+          <l n="126">Il a les honneurs du scandale ;</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="127">C’est un emploi qui n’est pas mince.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="128">Comment ! c’est un métier d’enfer,</l>
+          <l n="129">Eh ! parbleu ! j’ai là une lettre d’une femme à laquelle j’étais chargé de répondre ; vous sentez qu’il ne peut pas suffire à tout.</l>
+          <stage>Lui donnant une lettre, et lui faisant lire l’adresse.</stage>
+          <l n="130">À monsieur de Beauclair... Quel feu !... Vous verrez le délire de la passion !... le vague du sentiment. Ah ! ah !... vous connaissez cela ?</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,en riant.</speaker>
+          <l n="131">Oui, oui, j’en ai reçu plus d’une.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="132">Mais l’aventure qui a fait le plus de bruit, et qui va vous faire bien rire, c’est dernièrement ; je vous la dirai, parce que vous connaissez les acteurs... Ah ! ah !... Un de ses amis devait se marier. Il arrive à la place du futur qu’on ne connaissait pas, et séduit la fille en présence même du père.</l>
+          <stage>Cherchant.</stage>
+          <l n="133">Un monsieur de... oh ! vous le connaissez, un bon homme, un très bon homme... J’ai là son nom, je le tiens...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="X">
+        <head>Scène X</head>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="134">Mon père, je venais vous dire que plusieurs visites...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,toujours à d’Estival.</speaker>
+          <l n="135">Et le plus plaisant, c’est que le jour même...</l>
+          <stage>Feignant d’apercevoir Lise.</stage>
+          <l n="136">Pardon !... pardon ! je n’oserais pas devant mademoiselle.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="137">Ah ! ah ! j’entends... Va m’attendre à deux pas, ma fille ne doit pas savoir...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="138">Oui, monsieur, je vous suis ; c’est que mon maître m’a donné quelques ordres.</l>
+          <stage>À part.</stage>
+          <l n="139">Diable ! j’aime mieux rester avec la fille.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,à part.</speaker>
+          <l n="140">Quelle adresse à moi de l’avoir fait parler ! Ah ! M. de Beauclair ! qui jamais aurait dit ? Allons... achevons de m’instruire.</l>
+          <stage>À Lise.</stage>
+          <l n="141">Reste, reste, mon enfant ! je reviens dans l’instant...</l>
+          <stage>À Beauclair.</stage>
+          <l n="142">Ah ! comme nous allons rire !</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="143">Oui, monsieur, nous allons rire.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <stage>Air du vaudeville des Gascons.</stage>
+          <l n="144">Ton maître s’en acquitte au mieux,</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="145">Des bons valets je suis rival,</l>
+          <stage>Ensemble.</stage>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="146">Ton maître s’en acquitte au mieux,</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="147">Allons ! mes débuts sont heureux,</l>
+          <stage>D’Estival s’en va.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XI">
+        <head>Scène XI</head>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,à part, regardant d’Estival qui s’éloigne.</speaker>
+          <l n="148">Bon ! que Senneville s’en tire maintenant comme il pourra.</l>
+          <stage>À Lise, qui fait quelques pas pour sortir.</stage>
+          <l n="149">Mademoiselle !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="150">Que voulez-vous, Jasmin ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="151">C’est bien de l’audace à moi de vous demander un moment d’entretien ; mais je ne suis pas aussi indigne de cette faveur que je puis le paraître.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="152">Oui, votre maître se loue beaucoup de vous.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="153">Il a daigné vous dire du bien de moi ?...</l>
+          <stage>À part.</stage>
+          <l n="154">C’est un maladroit ; à sa place, je ne l’aurais pas fait.</l>
+          <stage>Haut.</stage>
+          <l n="155">L’estime de mademoiselle est une consolation dans mes chagrins.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="156">Des chagrins... Ah ! j’entends... Il vous est survenu quelque différend avec votre maître, et vous avez besoin de ma médiation. Je crois M. de Beauclair trop bon pour me refuser votre grâce.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="157">Ma grâce ?... Non, mademoiselle.</l>
+          <stage>À part.</stage>
+          <l n="158">Diable ! nous sommes loin de nous entendre.</l>
+          <stage>Haut.</stage>
+          <l n="159">Le hasard m’a placé dans une situation étrange !... Je n’étais pas né pour l’habit que je porte.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,à part.</speaker>
+          <l n="160">Tous ces gens-là parlent de même ; ils seraient tous grands seigneurs s’ils n’étaient pas valets de chambre.</l>
+          <stage>Haut.</stage>
+          <l n="161">Eh bien ! Jasmin, vos malheurs ?...</l>
+          <stage>À part.</stage>
+          <l n="162">Car il a sans doute quelque roman.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="163">Ah ! mademoiselle, que vous dirai-je ? et qu’allez-vous penser de moi ?... En entrant dans ce château j’ai vu une personne.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,le contrefaisant.</speaker>
+          <l n="164">Une personne !... Ah ! mon Dieu ! seriez-vous amoureux, par hasard ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,d’un ton pénétré.</speaker>
+          <l n="165">Oui, mademoiselle.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XII">
+        <head>Scène XII</head>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à part.</speaker>
+          <l n="166">Un tête-à-tête ! J’arrive à temps.</l>
+          <stage>Haut.</stage>
+          <l n="167">Eh bien ! Jasmin, que faites-vous donc ? je vous cherchais.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="168">Ah ! laissez-le, de grâce ; un instant plus tard, et j’allais devenir sa confidente.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="169">Comment ! il se serait permis ?...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="170">Je le défends d’abord... il est amoureux... et l’amour ne regarde pas à l’étiquette.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,inquiet.</speaker>
+          <l n="171">Ah ! il a parle d’amour ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="172">Oui, monsieur, j’ai parlé d’amour.</l>
+          <stage>Air du Pot de Fleurs.</stage>
+          <l n="173">Eh ! pourquoi pas ?... J’en appelle à madame,</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="174">J’y suis : quelque passion d’antichambre ! quelque Nérine ! quelque Marton !</l>
+          <stage>Vivement, à Lise.</stage>
+          <l n="175">Votre femme de chambre, je parierais ; elle est vraiment jolie !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="176">Quoi ! ce serait là cette personne qu’il a vue en entrant dans le château... et qui soudain...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="177">Justement ; j’avais déjà cru remarquer... Mais pourquoi, Jasmin, ne m’avez-vous pas parlé ? Aviez-vous quelque raison secrète de me cacher vos projets ? Vous deviez être sûr de mon consentement.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="178">Trop de bontés !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à Lise.</speaker>
+          <l n="179">Sans doute il venait vous demander la main de celle qu’il aime ; et j’espère que vous ne la lui refuserez pas.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="180">Non, certainement ; mais j’avoue qu’un amour aussi subit a lieu de m’étonner.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="181">Ces amours-là doivent pourtant moins vous étonner que toute autre, mademoiselle. Mais rassurez-vous, mon attachement pour Marton n’est pas aussi extraordinaire que monsieur veut bien le croire.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="182">Comment ! vous n’aimez que médiocrement, et vous songez à épouser ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="183">Mais je ne vois, dans cet établissement, qu’un moyen de rester auprès de madame, et de vous, monsieur. D’ailleurs, comme vous me le disiez encore hier, l’hymen n’est plus un esclavage. Est-on las de vivre garçon, on fait une spéculation conjugale qui vous donne un état, une consistance dans le monde. Qu’on s’aime ou qu’on ne s’aime pas, que les humeurs se conviennent ou qu’elles soient incompatibles, c’est moins que rien ; l’important est de trouver quelques rapports d’intérêt ou de fortune... On se contraint jusqu’à la signature du contrat ; mais, le marché conclu, chacun reprend ses habitudes, chacun vit à sa manière, de son côté... Vous me le disiez, monsieur court les sociétés, les spectacles, les bals ; madame en fait autant, et si le hasard veut que les deux époux se rencontrent, ils se connaissent à peine, leur entrevue a tout le piquant de la nouveauté... On s’aimerait presque, si ce n’était le décorum.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,à Senneville.</speaker>
+          <l n="184">Comment ! monsieur ?...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="185">Moi, mademoiselle, que je meure si jamais j’ai eu cette pensée, et je veux qu’il vous avoue...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="186">Quoi ! ne m’avez-vous pas répété cent fois, hier encore ?...</l>
+          <stage>Voyant Senneville qui le menace.</stage>
+          <l n="187">Non, non, vous ne m’avez rien dit ; mademoiselle, il ne m’a rien dit ; c’est moi qui ai tout inventé. Que je suis maladroit !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,à part.</speaker>
+          <l n="188">Ah ! comme je m’étais trompée !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="189">Non, mademoiselle, gardez-vous de croire...</l>
+          <stage>Voyant venir d’Estival.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIII">
+        <head>Scène XIII</head>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="190">Ah ! monsieur le baron, venez m’aider à me défendre !</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="191">Moi, monsieur ! je m’en garderai bien ; et c’est déjà beaucoup que je ne vous force pas à rendre compte de votre conduite.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="192">Monsieur...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="193">Quoi ! mon père, vous seriez instruit ?...</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="194">Oui, mon enfant, heureusement pour toi.</l>
+          <stage>À Senneville.</stage>
+          <l n="195">C’est en vain que vous m’avez d’abord abusé.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à part.</speaker>
+          <l n="196">Serais-je découvert ?</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="197">Je vous connais à présent, je connais vos intrigues, vos aventures de jeux... de créanciers...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,étonné.</speaker>
+          <l n="198">Des créanciers !</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="199">Et vos comtesses et vos baronnes... J’ai là leurs déclarations, deux, trois, quatre intrigues à la fois !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="200">Ah ! mon Dieu !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,vivement.</speaker>
+          <l n="201">Qui m’a calomnié à ce point ? Je vois que Jasmin ne m’a pas épargné.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="202">Fort bien ! vous êtes irrité qu’il ait révélé votre conduite à mon père.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="203">Eh ! mademoiselle, vous défendez ce domestique avec une chaleur...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,avec dignité.</speaker>
+          <l n="204">Monsieur, vous ne faites pas attention à vos discours !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="205">Ah ! pardon ! croyez que je n’eus jamais l’intention de vous offenser.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,sèchement.</speaker>
+          <l n="206">Vous êtes donc bien maladroit ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,avec dépit.</speaker>
+          <l n="207">Oui, oui, je le suis en effet ; mais c’est d’avoir gardé auprès de moi certaine personne...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="208">Je ne vous ai pas forcé de me prendre.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="209">Eh bien ! si je vous ai pris, je vous congédie, je vous renvoie, et ne veux plus de vos services.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="210">Permettez, monsieur. On donne au moins huit jours.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="211">Sans doute... mais sois tranquille...</l>
+          <stage>Air : Connaissez mieux le grand Eugène.</stage>
+          <l n="212">Si tu n’es plus à son service,</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="213">C’est à merveille.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="214">Et par justice</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="215">C’est fort bien.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="216">Vous me gardez ! pour moi quel sort prospère !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="217">C’est cela.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="218">Et tu ne nous quitteras plus.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="219">À la bonne heure !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="220">Nous ne nous séparerons pas ainsi, monsieur Jasmin. Nous avons ensemble quelques comptes à régler.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="221">Quand vous voudrez, monsieur... Quoique je ne sois plus à votre service, je suis à vos ordres.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="222">Viens donc, Jasmin.</l>
+          <stage>D’Estival, Lise et Beauclair sortent.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIV">
+        <head>Scène XIV</head>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,seul, avec emportement</speaker>
+          <l n="223">Allons, c’est lui qui reste !... et c’est moi qu’on renvoie ! Elle ne m’aime pas, elle ne m’a jamais aimé, et la manière dont elle vient de me traiter... Il faudrait que je fusse bien aveugle... C’est qu’aussi il y a quelque chose que je ne puis comprendre... Et moi qui, au lieu d’embarrasser, de déjouer mon rival, m’emporte, m’impatiente ; moi qui lui prends sa place, son nom, sa femme, et qui m’avise encore d’aller lui chercher querelle !</l>
+          <stage>Air : Que d’établissements nouveaux. (L’Opéra-Comique.)</stage>
+          <l n="224">Il était forcé d’obéir.</l>
+          <l n="225">Allons, je me suis enferre comme un sot... un déguisement, un amant en valet, en voilà plus qu’il n’en faut pour tourner une jeune tôle... Mon projet était extravagant, et pouvait plaire ; le sien n’a pas le sens commun, on va l’adorer.</l>
+          <stage>Apercevant Germain.</stage>
+          <l n="226">Ah ! Germain !...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XV">
+        <head>Scène XV</head>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="227">Monsieur, je vous fais mon compliment, tout va fort bien, à ce qu’il me paraît.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="228">Oui, à merveille ; fais mettre les chevaux à ma voiture ; non, seulement qu’on me selle un cheval, ce sera plus tôt fait.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="229">Quoi ! monsieur partirait ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="230">Non, je ne pars pas ; je... m’éloigne... je reviens.</l>
+          <stage>Avec colère.</stage>
+          <l n="231">Ai-je des comptes à te rendre ? Obéis.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="232">Allons, monsieur, je m’en vais dire à votre domestique de seller un cheval.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="233">Eh ! non, garde-t-en bien ; c’est toi, c’est toi-même...</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="234">Mais quand on a un domestique...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="235">Je l’ai chassé.</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="236">Ah ! vous l’avez chassé ; ma foi ! tant mieux. Ce drôle-là avait une figure qui vous aurait joué quelque mauvais tour.</l>
+          <stage>En confidence.</stage>
+          <l n="237">Je viens de le voir avec mademoiselle Lise... En conscience, on dirait qu’il lui fait la cour. Je vais seller le cheval.</l>
+          <stage>Il sort.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVI">
+        <head>Scène XVI</head>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,seul</speaker>
+          <l n="238">Ah ! il lui fait la cour... Il ne doute plus du succès, il me regarde déjà comme vaincu. Eh bien ! morbleu ! nous verrons... Non, certainement, je ne partirai pas ; je vais trouver M. d’Estival, je lui découvre tout ; je me nomme, je me propose... J’ai de la fortune, un rang, un nom dans le monde... Beauclair a de l’esprit, si l’on veut ; allons, il en a, c’est vrai. Eli bien ! moi, je suis neveu d’un ministre... Qu’a-t-il à dire ?... Eh quoi ! devoir la préférence à de pareils moyens ? Convenir aux yeux de Lise que j’ai été vaincu ? Non, il vaut mieux partir, m’éloigner sans me faire connaître... Ah ! Lise, je n’ai jamais mieux senti combien je vous aimais !</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVII">
+        <head>Scène XVII</head>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="239">Ah ! mon Dieu ! quel événement ! Qui aurait pu s’attendre à cela ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="240">Allons, il faut partir.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="241">Oui, sans doute, il le faut, c’est ce que vous pouvez faire de mieux ; mais de grâce, ne tardez pas. Eh bien ! pourquoi cet air étonne ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,stupéfait.</speaker>
+          <l n="242">Vous trouvez que je ne pars pas assez vite ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,tendrement.</speaker>
+          <l n="243">Sans doute... Songez donc qu’un moment de retard peut vous perdre ; que dans un moment on peut vous arrêter.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="244">M’arrêter !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="245">Oui ; mais je croyais que vous le saviez... Je me promenais seule près de la haie du parc ; j’étais bien triste, et pour un rien j’aurais pleuré. Je pleurerais encore... Mais, ce n’est pas cela que je veux vous dire... J’ai entendu plusieurs hommes causer en dehors... « Oui, Beauclair, » disait-on ; on avait prononcé ce nom-là bien bas, et cependant je l’ai entendu sur-le-champ, et le cœur m’a battu comme si je me fusse doutée qu’il s’agissait d’une mauvaise nouvelle ; je voulais m’éloigner, et, sans savoir comment, je me trouvai prêter l’oreille tout près de la haie. On continuait : « Oui, il se nomme Beauclair ; il doit être dans cette maison. Restez là, vous ici ; cernons le parc, et après nous entrerons. »</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à part.</speaker>
+          <l n="246">M’arrêter pour Beauclair ! Allons, il ne manquait plus que cela ! Comme il rirait, s’il savait...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="247">Je n’en ai pas entendu davantage : je suis accourue. Mais, au nom du ciel ! partez ; vous n’avez pas de temps à perdre.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="248">Moi, vous quitter, renoncer à votre main !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="249">Il le faut bien, monsieur ; certainement, je n’épouserai jamais un mauvais sujet, un homme que l’on arrête par ordre du ministre ; oui, monsieur, je ne veux plus de mariage, plus de prétendu... quelque autre encore, doux, aimable, spirituel, qu’on estimera du premier coup d’œil et qu’ensuite on sera forcé de mépriser... Arrangez-vous, monsieur, mais cela fait trop de peine, et je n’en veux plus ; je vous en avertis.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,enchanté.</speaker>
+          <l n="250">Lise, serait-il vrai ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,douloureusement.</speaker>
+          <l n="251">Quel dommage ! un air si bon, si honnête ! Envoyez donc les jeunes gens à Paris ! Votre domestique le disait bien : voilà les suites de votre mauvaise conduite ! C’est un très honnête garçon que votre domestique, qui vous est très attaché ; et, si vous aviez suivi ses conseils...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="252">Lise, je ne veux suivre que les vôtres ; je jure de vous consacrer ma vie, de vous obéir toujours.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="253">Eh bien !...</l>
+          <stage>Air : Colas, Colas, sois-moi fidèle.</stage>
+          <l n="254">Partez, partez à l’instant même ;</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="255">Si vous voulez être obéie</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="256">Éloignez-vous, je vous en prie,</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="257">Un seul mot, ou c’est fait de moi.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="258">Puisqu’il faut vous sauver la vie,</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,transporté.</speaker>
+          <l n="259">Vous m’aimez, Lise ? vous m’aimez ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,d’un ton suppliant.</speaker>
+          <l n="260">Vous partez, n’est-ce pas ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="261">Moi partir ! je ne vous quitte plus, je reste ici, je reste près de vous. Si vous saviez, si vous deviniez combien je suis heureux !... Demain nous allons à Paris ; je vous mène à la cour, je vous présente au ministre, à mon oncle.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="262">La cour ?... le ministre ?... Paris ? Ah ! mon Dieu ! la tête n’y est plus... la frayeur le fait déraisonner.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XVIII">
+        <head>Scène XVIII</head>
+        <sp who="#lise">
+          <speaker>LISE,bas à Beauclair.</speaker>
+          <l n="263">Ah ! Jasmin ! Jasmin ! je vous rencontre à propos ; il faut trouver un moyen d’éloigner votre maître.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,bas.</speaker>
+          <l n="264">Quoi ! vous voulez que je vous en débarrasse !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,bas.</speaker>
+          <l n="265">Oui, il faut qu’il parte ; je vous dirai mes raisons. Tenez, prenez ma bourse, et mettez-le dehors ; c’est le plus grand service que vous puissiez me rendre.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,bas en riant.</speaker>
+          <l n="266">Dès que c’est vous qui m’en priez !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,à part.</speaker>
+          <l n="267">Et moi, je vais prévenir mon père, empêcher les gens de pénétrer dans le château. Il faut bien qu’on veille pour lui. La ! je vous demande qui m’aurait dit... Ah ! mon Dieu ! le pauvre jeune homme !</l>
+          <stage>Elle sort.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XIX">
+        <head>Scène XIX</head>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,à part.</speaker>
+          <l n="268">Allons, le rival est éconduit ; je m’y attendais, mais il est assez plaisant que ce soit moi qui lui donne son congé.</l>
+          <stage>Il s’avance près de Senneville, qu’il salue très respectueusement.</stage>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,le regardant en riant.</speaker>
+          <l n="269">Eh bien ! mon ami, je ne peux plus te garder ; c’est là ce qui te chagrine ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="270">Monsieur se trompe, j’ai bien d’autres raisons d’être triste. C’est moi, monsieur, qui ne peux plus garder mon maître ; je suis obligé de le congédier.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="271">Si ce n’est que cela, console-toi ; c’est moi qui te renvoie.</l>
+          <stage>Il ôte son chapeau et le salue.</stage>
+          <l n="272">Je n’oublierai jamais, monsieur, l’honneur que vous m’avez fait en entrant à mon service ; mais je ne veux pas en abuser.</l>
+          <stage>Air du vaudeville de La Robe et les Bottes.</stage>
+          <l n="273">Ne gardez pas plus longtemps cette marque</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="274">C’est s’en tirer en homme d’esprit, et je suis doublement enchanté d’une plaisanterie à laquelle, monsieur, je dois de renouveler connaissance avec vous ; mais vous sentez qu’auprès de Lise il vous serait pénible de paraître vaincu. Aussi, croyez-moi, cédez la place.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,souriant.</speaker>
+          <l n="275">Mais... je vous donnerai le même conseil.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,étonné.</speaker>
+          <l n="276">Quoi ! vous espérez encore rester ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="277">J’en suis sûr.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="278">Malgré moi ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="279">Malgré vous. Songez donc que vous êtes forcé de m’obéir, et que, si je veux, je puis vous envoyer chercher le notaire.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="280">Ah ! vous prétendez conserver mon nom !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="281">Il est trop beau pour le quitter.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="282">Il faudra bien y renoncer.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="283">Moins que jamais ; car je vous rends service en le gardant, et je vous forcerai bien à me le laisser.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="284">Celui-là est trop fort !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,froidement.</speaker>
+          <l n="285">Consentez-vous que celui qui forcera l’autre à quitter la place renonce à tous ses droits ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,vivement.</speaker>
+          <l n="286">Oui, sans doute, et je ne prétends plus vous ménager ; car songez que, pour vous faire congédier, je n’ai qu’un mot à dire.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="287">Oui ; mais vous ne le direz pas.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="288">Et qui m’en empêchera ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="289">Moi.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="290">Vous m’empêcherez de me nommer ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="291">Je vous en défie.</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XX">
+        <head>Scène XX</head>
+        <sp who="#lise">
+          <speaker>LISE,dans le fond, apercevant Senneville.</speaker>
+          <l n="292">Ah ! mon Dieu ! il n’est pas encore parti...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,bas à Senneville.</speaker>
+          <l n="293">Nous allons voir si je ne me nomme pas...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="294">Ils sont maintenant dans le jardin.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="295">Eh ! qui donc ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="296">Ceux qui cherchent M. de Beauclair.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="297">Que dites-vous ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,bas à Beauclair.</speaker>
+          <l n="298">Eh bien ! monsieur, qu’attendez-vous pour vous nommer ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,de même.</speaker>
+          <l n="299">Diable ! cela change la thèse ; et si je me nomme, je pars.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,qui s’est approchée du fond.</speaker>
+          <l n="300">Ils viennent, ils sont au bout de l’allée. Ah ! il me vient une idée... Jasmin, si vous aimez votre maître, M. de Beauclair, si vous voulez le sauver... Ils ne le connaissent pas ; je le parierais à leurs questions. Alors, vous m’entendez...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="301">Non, le diable m’emporte !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,vivement.</speaker>
+          <l n="302">Dites que vous êtes M. de Beauclair, que vous étiez déguisé en domestique. L’on vous arrête pour lui, vous partez.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,en riant.</speaker>
+          <l n="303">Et je reste auprès de vous : l’invention est admirable.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="304">N’est-ce pas ? Que je suis contente de l’avoir trouvée !</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="305">Un instant... Permettez donc !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="306">Quoi ! vous refusez ? vous que je croyais attaché à votre maître.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="307">Je ne dis pas cela ; mais...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXI">
+        <head>Scène XXI</head>
+        <sp who="#l’exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="308">Il est ici... que toutes les issues soient bien gardées, et que personne ne puisse sortir.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="309">Morbleu !...</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="310">Il était temps de le joindre, sur la frontière, et à deux pas du pont de Kehl.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="311">Ah çà ! messieurs, que signifie ?</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="312">Permettez-moi de procéder régulièrement.</l>
+          <stage>Air : Prenons d’abord l’air bien méchant. (Adolphe et Clara.)</stage>
+          <stage>À Beauclair.</stage>
+          <l n="313">Comment, monsieur, vous nomme-t-on ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,bas à Beauclair.</speaker>
+          <l n="314">Allons, l’occasion est belle.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,de même.</speaker>
+          <l n="315">De grâce, dites votre nom.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,à part.</speaker>
+          <l n="316">Certes, l’aventure est cruelle.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="317">Votre nom ?... n’en avez-vous pas ?</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,de même.</speaker>
+          <l n="318">Sachez mériter notre estime.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,à part.</speaker>
+          <l n="319">En me nommant, je pars, hélas !</l>
+          <l n="320">Ma foi, arrivera ce qu’il pourra...</l>
+          <stage>Haut.</stage>
+          <l n="321">Jasmin !</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,à part, s’éloignant avec indignation.</speaker>
+          <l n="322">Attendez donc de la générosité d’un valet !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,bas à Beauclair.</speaker>
+          <l n="323">J’ai gagné.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT,à Senneville.</speaker>
+          <l n="324">Et vous, monsieur ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,à part.</speaker>
+          <l n="325">Que va-t-il dire ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="326">Le chevalier de Beauclair, officier de cavalerie,</l>
+          <stage>À l’exempt.</stage>
+          <l n="327">Je suis prêt à vous suivre ; mais j’ai une grâce à vous demander, quelques arrangements à prendre, et vous me permettrez d’envoyer chercher un notaire.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="328">À la bonne heure. Mais hâtons-nous.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à Beauclair.</speaker>
+          <l n="329">Jasmin !...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,embarrassé.</speaker>
+          <l n="330">Monsieur !...</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="331">Vous le voyez, les moments sont précieux...</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,à part.</speaker>
+          <l n="332">Diable ! il a raison ; si je sors, je suis sauvé.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="333">Eh bien ! Jasmin, allez chercher le notaire.</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,hésitant.</speaker>
+          <l n="334">Oui, monsieur, j’y vais.</l>
+          <stage>À part.</stage>
+          <l n="335">J’ai perdu la partie.</l>
+          <stage>Il sort.</stage>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXII">
+        <head>Scène XXII</head>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à l’exempt.</speaker>
+          <l n="336">Combien je vous remercie, monsieur, de ce léger service !... Si vous pouviez encore m’en rendre un... Ce serait de m’apprendre pourquoi je suis arrêté.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="337">Vous le savez bien, monsieur de Beauclair.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="338">Sans doute, je le sais ; mais je suis bien aise que vous l’appreniez à mademoiselle et à mon beau-père.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL,en colère.</speaker>
+          <l n="339">Comment, votre beau-père !</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="340">Oui, monsieur, je veux que vous voyiez qu’il n’y a rien de honteux dans la cause de ma détention.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,à part.</speaker>
+          <l n="341">Ah ! j’en suis sûre d’avance.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="342">Eh bien, monsieur, vous savez l’éclat causé par la marquise d’Arminville ; et vos liaisons avec cette dame...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="343">Vos liaisons avec cette dame... C’est indigne !</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="344">Il ne manquait plus que cela.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,fouillant dans sa poche.</speaker>
+          <l n="345">Comment ! il serait possible... quelle rencontre ! c’est lui sans doute que ce papier concerne. Courez vite après Jasmin, mon domestique ; il ne saurait être loin.</l>
+          <stage>À Germain, en lui donnant un papier.</stage>
+          <l n="346">Tiens, qu’il lise, et qu’il ne craigne plus rien.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="347">Que ! est ce papier ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="348">L’ordre de cesser les poursuites... La grâce de M. de Beauclair.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="349">Vous avez votre grâce ?</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="350">C’est moi qui l’ai apportée, et depuis deux heures j’aurais dû la remettre aux autorités... mais vous sentez bien que je l’ai oublié...</l>
+          <stage>À Lise.</stage>
+          <l n="351">le plaisir de vous revoir, de vous retrouver... car rien n’égale mon bonheur, rien ne s’oppose plus à notre union, et Beauclair lui-même ne peut plus se dispenser de donner son consentement.</l>
+        </sp>
+        <sp who="#un-exempt">
+          <speaker>L’EXEMPT.</speaker>
+          <l n="352">Comment ! M. de Beauclair... Ah çà ! vous qui parlez, qui donc êtes-vous ?...</l>
+        </sp>
+      </div>
+      <div type="scene" xml:id="XXIII">
+        <head>Scène XXIII</head>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR.</speaker>
+          <l n="353">Monsieur de Senneville, à qui je dois ma liberté... je le sais... mais vous voyez que, de mon côté, je suis de parole... on vous aime, j’ai perdu... je vous amène le notaire, et je demande à signer le premier au contrat.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE,à Lise et à Beauclair.</speaker>
+          <l n="354">Je vous l’avais dit ; et je n’attendais pas moins de votre générosité.</l>
+          <stage>À d’Estival</stage>
+          <l n="355">Vous saurez tout, monsieur.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="356">Mais il en est temps.</l>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="357">Si je n’ai plus les droits de Beauclair, au moins n’ai-je plus les torts qu’on lui reprochait, et peut-être pardonnerez-vous une supercherie que l’amour seul m’avait inspirée... c’est de vous que j’attends mon bonheur... vous seul pouvez confirmer l’aveu que mademoiselle a daigné me faire, et que peut-être je n’ai dû qu’à la pitié.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="358">Comment ! ma fille vous aurait avoué...</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE.</speaker>
+          <l n="359">Mon père, il était malheureux ; ce n’était pas le moment de l’accabler.</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="360">Ah çà ! décidément quel est le véritable M. de Beauclair ?</l>
+        </sp>
+        <sp who="#m.-de-beauclair">
+          <speaker>BEAUCLAIR,le saluant.</speaker>
+          <l n="361">Celui qui a été chercher le notaire.</l>
+          <stage>Vaudeville.</stage>
+          <stage>Air : Le luth galant qui chanta les amours.</stage>
+        </sp>
+        <sp who="#m.-de-senneville">
+          <speaker>SENNEVILLE.</speaker>
+          <l n="362">Près d’une belle à qui l’on fait la cour,</l>
+        </sp>
+        <sp who="#m.-d’estival">
+          <speaker>D’ESTIVAL.</speaker>
+          <l n="363">Par quelque dame en faveur à la cour</l>
+        </sp>
+        <sp who="#germain">
+          <speaker>GERMAIN.</speaker>
+          <l n="364">Près de Marton lire un roman du jour.</l>
+        </sp>
+        <sp who="#lise">
+          <speaker>LISE,au public.</speaker>
+          <l n="365">De Marivaux ce qui plaît chaque jour.</l>
+          <l n="366" />
+        </sp>
+      </div>
+    </body>
+  </text>
 </TEI>

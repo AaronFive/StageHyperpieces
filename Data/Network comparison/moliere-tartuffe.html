@@ -1,0 +1,170 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 750px;
+                 background-color: #222222;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+             #config {
+                 float: left;
+                 width: 400px;
+                 height: 600px;
+             }
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+            <div id="config"></div>
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#97c2fc", "font": {"color": "white"}, "id": "#elmire", "label": "#elmire", "shape": "dot", "size": 38, "title": "#elmireTop Words: \n (\u0027damis\u0027, 0.10464549808051753)\n(\u0027refus\u0027, 0.10263237154558384)\n(\u0027porte\u0027, 0.0883489200320581)\n(\u0027mari\u0027, 0.08547047001454895)\n(\u0027humeur\u0027, 0.08416001284380638)\n(\u0027sortez\u0027, 0.08416001284380638)\n(\u0027succ\u00e8s\u0027, 0.08280315113701671)\n(\u0027galante\u0027, 0.08280315113701671)\n(\u0027prompt\u0027, 0.08280315113701671)\n(\u0027r\u00e9pondre\u0027, 0.08280315113701671)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#dorine", "label": "#dorine", "shape": "dot", "size": 34, "title": "#dorineTop Words: \n (\u0027\u00e2ge\u0027, 0.07422535233789732)\n(\u0027alliance\u0027, 0.07422535233789732)\n(\u0027plaignez\u0027, 0.07422535233789732)\n(\u0027fille\u0027, 0.07213427600733381)\n(\u0027tartuffe\u0027, 0.0692976512966888)\n(\u0027part\u0027, 0.06920946625310694)\n(\u0027aimez\u0027, 0.06920946625310694)\n(\u0027sortez\u0027, 0.06920946625310694)\n(\u0027monsieur\u0027, 0.06836070479006338)\n(\u0027\u00e9poux\u0027, 0.06835970478052861)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#cleante", "label": "#cleante", "shape": "dot", "size": 38, "title": "#cleanteTop Words: \n (\u0027d\u00e9vots\u0027, 0.10871343567505391)\n(\u0027grimace\u0027, 0.08743160776650974)\n(\u0027faux\u0027, 0.08052233781521569)\n(\u0027fr\u00e8re\u0027, 0.0790230592444274)\n(\u0027raison\u0027, 0.07526366200557717)\n(\u0027veulent\u0027, 0.07169516909502534)\n(\u0027regardez\u0027, 0.07169516909502534)\n(\u0027semblable\u0027, 0.07053927063185146)\n(\u0027humains\u0027, 0.07053927063185146)\n(\u0027expose\u0027, 0.07053927063185146)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#tartuffe", "label": "#tartuffe", "shape": "dot", "size": 34, "title": "#tartuffeTop Words: \n (\u0027scandale\u0027, 0.093732975472349)\n(\u0027bonheur\u0027, 0.08243290408119738)\n(\u0027madame\u0027, 0.0812089659438724)\n(\u0027part\u0027, 0.07686238075612817)\n(\u0027attraits\u0027, 0.07686238075612817)\n(\u0027pardonne\u0027, 0.06759616056562172)\n(\u0027plein\u0027, 0.06759616056562172)\n(\u0027h\u00e9las\u0027, 0.06759616056562172)\n(\u0027coeur\u0027, 0.06683683582143411)\n(\u0027beaut\u00e9s\u0027, 0.06650634797293925)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#orgon", "label": "#orgon", "shape": "dot", "size": 38, "title": "#orgonTop Words: \n (\u0027taisez\u0027, 0.08880555908874462)\n(\u0027fille\u0027, 0.08754437599304545)\n(\u0027pauvre\u0027, 0.08519528584819974)\n(\u0027cas\u0027, 0.07963143361860751)\n(\u0027fr\u00e8re\u0027, 0.07870710625289105)\n(\u0027\u00e9tat\u0027, 0.07809951724405806)\n(\u0027enfants\u0027, 0.07809951724405806)\n(\u0027dirais\u0027, 0.07809951724405806)\n(\u0027tais\u0027, 0.07809951724405806)\n(\u0027homme\u0027, 0.06938283616418849)"}, {"color": "#97c2fc", "font": {"color": "white"}, "id": "#damis", "label": "#damis", "shape": "dot", "size": 30, "title": "#damisTop Words: \n (\u0027soeur\u0027, 0.16417601806707896)\n(\u0027impudence\u0027, 0.13245617764024933)\n(\u0027obliger\u0027, 0.11366109677699722)\n(\u0027p\u00e8re\u0027, 0.11189289683058672)\n(\u0027arr\u00eate\u0027, 0.10861596047689254)\n(\u0027insolence\u0027, 0.10861596047689254)\n(\u0027coquin\u0027, 0.10861596047689254)\n(\u0027monsieur\u0027, 0.09564197478303141)\n(\u0027mettre\u0027, 0.09170105721122011)\n(\u0027main\u0027, 0.08411176209541862)"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "#elmire", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #elmire to  #dorine : \n (\u0027voir\u0027, 0.20368724271900387)\n(\u0027homme\u0027, 0.14452218734819522)\n(\u0027vertu\u0027, 0.14452218734819522)\n(\u0027admire\u0027, 0.14452218734819522)\n(\u0027m\u00e8re\u0027, 0.14452218734819522)\n(\u0027aime\u0027, 0.14452218734819522)\n(\u0027bouche\u0027, 0.12157662011744194)\n(\u0027succ\u00e8s\u0027, 0.102828726600499)\n(\u0027aller\u0027, 0.102828726600499)\n(\u0027honneur\u0027, 0.102828726600499) ", "to": "#dorine", "value": 0.2612632032765682, "width": 0.2612632032765682}, {"arrows": "to", "from": "#elmire", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #elmire to  #cleante : \n (\u0027voir\u0027, 0.20368724271900387)\n(\u0027homme\u0027, 0.14452218734819522)\n(\u0027vertu\u0027, 0.14452218734819522)\n(\u0027admire\u0027, 0.14452218734819522)\n(\u0027m\u00e8re\u0027, 0.14452218734819522)\n(\u0027aime\u0027, 0.14452218734819522)\n(\u0027bouche\u0027, 0.12157662011744194)\n(\u0027succ\u00e8s\u0027, 0.102828726600499)\n(\u0027aller\u0027, 0.102828726600499)\n(\u0027honneur\u0027, 0.102828726600499) ", "to": "#cleante", "value": 0.2612632032765682, "width": 0.2612632032765682}, {"arrows": "to", "from": "#elmire", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #elmire to  #tartuffe : \n (\u0027vrai\u0027, 0.14238161310558142)\n(\u0027affaire\u0027, 0.11487258894604578)\n(\u0027doute\u0027, 0.11450887622960744)\n(\u0027voyez\u0027, 0.11450887622960744)\n(\u0027prie\u0027, 0.11450887622960744)\n(\u0027chose\u0027, 0.11450887622960744)\n(\u0027coeur\u0027, 0.09466344417000512)\n(\u0027r\u00e9soudre\u0027, 0.09238504033553253)\n(\u0027trouve\u0027, 0.09238504033553253)\n(\u0027tient\u0027, 0.09238504033553253) ", "to": "#tartuffe", "value": 0.6597327010131494, "width": 0.6597327010131494}, {"arrows": "to", "from": "#elmire", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #elmire to  #orgon : \n (\u0027voir\u0027, 0.14697512362993118)\n(\u0027convaincre\u0027, 0.1423979447929583)\n(\u0027mettez\u0027, 0.1423979447929583)\n(\u0027gardez\u0027, 0.1423979447929583)\n(\u0027laissez\u0027, 0.11488576524858879)\n(\u0027mon_dieu\u0027, 0.11488576524858879)\n(\u0027\u00e2me\u0027, 0.11488576524858879)\n(\u0027choses\u0027, 0.11488576524858879)\n(\u0027vertu\u0027, 0.09536556321217009)\n(\u0027admire\u0027, 0.09536556321217009) ", "to": "#orgon", "value": 0.4098943737874542, "width": 0.4098943737874542}, {"arrows": "to", "from": "#dorine", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #dorine to  #cleante : \n (\u0027fils\u0027, 0.10404462983976547)\n(\u0027homme\u0027, 0.09033900897531827)\n(\u0027donner\u0027, 0.08636644150301183)\n(\u0027actions\u0027, 0.08636644150301183)\n(\u0027saurait\u0027, 0.08636644150301183)\n(\u0027tartuffe\u0027, 0.08636644150301183)\n(\u0027\u00e2ge\u0027, 0.08636644150301183)\n(\u0027coups\u0027, 0.08636644150301183)\n(\u0027vient\u0027, 0.08636644150301183)\n(\u0027passa\u0027, 0.08394255223646113) ", "to": "#cleante", "value": 0.6894804914852339, "width": 0.6894804914852339}, {"arrows": "to", "from": "#dorine", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #dorine to  #damis : \n (\u0027prie\u0027, 0.13489419452436366)\n(\u0027laissez\u0027, 0.13489419452436366)\n(\u0027sortez\u0027, 0.13489419452436366)\n(\u0027valet\u0027, 0.13489419452436366)\n(\u0027belle\u0027, 0.13489419452436366)\n(\u0027f\u00e2cheux\u0027, 0.13489419452436366)\n(\u0027chose\u0027, 0.12732404259570942)\n(\u0027vrai\u0027, 0.11197436694643934)\n(\u0027p\u00e8re\u0027, 0.10883178677934031)\n(\u0027voir\u0027, 0.10710899857321367) ", "to": "#damis", "value": 0.44654020262987715, "width": 0.44654020262987715}, {"arrows": "to", "from": "#dorine", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #dorine to  #elmire : \n (\u0027donner\u0027, 0.1214145209025131)\n(\u0027tort\u0027, 0.1214145209025131)\n(\u0027temps\u0027, 0.1214145209025131)\n(\u0027saurait\u0027, 0.1214145209025131)\n(\u0027chose\u0027, 0.1214145209025131)\n(\u0027\u00e2ge\u0027, 0.1214145209025131)\n(\u0027prude\u0027, 0.1214145209025131)\n(\u0027monde\u0027, 0.1214145209025131)\n(\u0027sait\u0027, 0.10707499480149307)\n(\u0027voir\u0027, 0.10213772262484641) ", "to": "#elmire", "value": 0.33584824315585254, "width": 0.33584824315585254}, {"arrows": "to", "from": "#dorine", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #dorine to  #orgon : \n (\u0027fille\u0027, 0.13284940759894084)\n(\u0027parle\u0027, 0.13242877619019172)\n(\u0027monsieur\u0027, 0.12389240956667412)\n(\u0027parlons\u0027, 0.10684270279086655)\n(\u0027donne\u0027, 0.10684270279086655)\n(\u0027alliance\u0027, 0.10684270279086655)\n(\u0027homme\u0027, 0.10473046867857586)\n(\u0027vertu\u0027, 0.08868909481269825)\n(\u0027part\u0027, 0.08868909481269825)\n(\u0027dessein\u0027, 0.08620001987530954) ", "to": "#orgon", "value": 0.5723216210390171, "width": 0.5723216210390171}, {"arrows": "to", "from": "#cleante", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cleante to  #dorine : \n (\u0027voir\u0027, 0.1467889290804962)\n(\u0027doit\u0027, 0.1467889290804962)\n(\u0027madame\u0027, 0.1407797736386683)\n(\u0027conseil\u0027, 0.1407797736386683)\n(\u0027sots\u0027, 0.1407797736386683)\n(\u0027para\u00eet\u0027, 0.12415313603732031)\n(\u0027coiff\u00e9e\u0027, 0.12415313603732031)\n(\u0027\u00e9chauff\u00e9e\u0027, 0.12415313603732031)\n(\u0027tartuffe\u0027, 0.12415313603732031)\n(\u0027quereller\u0027, 0.12415313603732031) ", "to": "#dorine", "value": 0.29586117697779696, "width": 0.29586117697779696}, {"arrows": "to", "from": "#cleante", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cleante to  #damis : \n (\u0027homme\u0027, 0.14937124280153555)\n(\u0027madame\u0027, 0.14937124280153555)\n(\u0027sots\u0027, 0.14937124280153555)\n(\u0027laissez\u0027, 0.1317299193504945)\n(\u0027doit\u0027, 0.1256557984332172)\n(\u0027justement\u0027, 0.10627886949295932)\n(\u0027pla\u00eet\u0027, 0.10627886949295932)\n(\u0027violence\u0027, 0.10627886949295932)\n(\u0027vivons\u0027, 0.10627886949295932)\n(\u0027prendre\u0027, 0.10627886949295932) ", "to": "#damis", "value": 0.2750592800172451, "width": 0.2750592800172451}, {"arrows": "to", "from": "#cleante", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cleante to  #elmire : \n (\u0027sots\u0027, 0.16894499195257973)\n(\u0027conseil\u0027, 0.16894499195257973)\n(\u0027madame\u0027, 0.16894499195257973)\n(\u0027doit\u0027, 0.14212185328939786)\n(\u0027donner\u0027, 0.12020575322569854)\n(\u0027vie\u0027, 0.12020575322569854)\n(\u0027prendre\u0027, 0.12020575322569854)\n(\u0027coeur\u0027, 0.12020575322569854)\n(\u0027amusement\u0027, 0.0997816338073501)\n(\u0027bonjour\u0027, 0.0997816338073501) ", "to": "#elmire", "value": 0.23442552274197026, "width": 0.23442552274197026}, {"arrows": "to", "from": "#cleante", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cleante to  #orgon : \n (\u0027voit\u0027, 0.13213150763107923)\n(\u0027faux\u0027, 0.12521746046149293)\n(\u0027d\u00e9vots\u0027, 0.11703987833783043)\n(\u0027foi\u0027, 0.11703987833783043)\n(\u0027font\u0027, 0.10703132669793926)\n(\u0027crois\u0027, 0.10703132669793926)\n(\u0027veulent\u0027, 0.09412805944667)\n(\u0027savoir\u0027, 0.09412805944667)\n(\u0027grimace\u0027, 0.09412805944667)\n(\u0027yeux\u0027, 0.09412805944667) ", "to": "#orgon", "value": 1.0, "width": 1.0}, {"arrows": "to", "from": "#cleante", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #cleante to  #tartuffe : \n (\u0027fils\u0027, 0.16623431066992087)\n(\u0027p\u00e8re\u0027, 0.16623431066992087)\n(\u0027ciel\u0027, 0.15250180022827461)\n(\u0027prescrit\u0027, 0.13411679515215807)\n(\u0027croire\u0027, 0.13411679515215807)\n(\u0027soin\u0027, 0.13411679515215807)\n(\u0027gloire\u0027, 0.13411679515215807)\n(\u0027souffrir\u0027, 0.13411679515215807)\n(\u0027damis\u0027, 0.13411679515215807)\n(\u0027croyez\u0027, 0.13411679515215807) ", "to": "#tartuffe", "value": 0.3676438887691313, "width": 0.3676438887691313}, {"arrows": "to", "from": "#damis", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #damis to  #elmire : \n (\u0027madame\u0027, 0.14495035031459982)\n(\u0027p\u00e8re\u0027, 0.12585628896188764)\n(\u0027soeur\u0027, 0.12032188466205972)\n(\u0027monsieur\u0027, 0.10121856257357964)\n(\u0027vouloir\u0027, 0.0970749389371576)\n(\u0027vienne\u0027, 0.0970749389371576)\n(\u0027coeur\u0027, 0.0970749389371576)\n(\u0027tartuffe\u0027, 0.0970749389371576)\n(\u0027orgueil\u0027, 0.0970749389371576)\n(\u0027beau\u0027, 0.0970749389371576) ", "to": "#elmire", "value": 0.300280232808795, "width": 0.300280232808795}, {"arrows": "to", "from": "#orgon", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #orgon to  #dorine : \n (\u0027tartuffe\u0027, 0.12784901885861646)\n(\u0027croire\u0027, 0.10282119409408608)\n(\u0027prendre\u0027, 0.10282119409408608)\n(\u0027vivre\u0027, 0.10282119409408608)\n(\u0027mamie\u0027, 0.10282119409408608)\n(\u0027taisez\u0027, 0.09705095273179164)\n(\u0027vu\u0027, 0.09551450419462278)\n(\u0027m\u00e8re\u0027, 0.08927673432472008)\n(\u0027pauvre\u0027, 0.08927673432472008)\n(\u0027cas\u0027, 0.08535087931662469) ", "to": "#dorine", "value": 0.8270101314938564, "width": 0.8270101314938564}, {"arrows": "to", "from": "#orgon", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #orgon to  #cleante : \n (\u0027tartuffe\u0027, 0.10434752845179572)\n(\u0027beau\u0027, 0.10434752845179572)\n(\u0027montre\u0027, 0.09176780914753276)\n(\u0027conscience\u0027, 0.09176780914753276)\n(\u0027las\u0027, 0.09176780914753276)\n(\u0027rendre\u0027, 0.09176780914753276)\n(\u0027vint\u0027, 0.09176780914753276)\n(\u0027vis\u0027, 0.09176780914753276)\n(\u0027pri\u00e8re\u0027, 0.09176780914753276)\n(\u0027m\u00e9chante\u0027, 0.09176780914753276) ", "to": "#cleante", "value": 0.9300495796507868, "width": 0.9300495796507868}, {"arrows": "to", "from": "#orgon", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #orgon to  #damis : \n (\u0027tais\u0027, 0.15409838863132214)\n(\u0027vu\u0027, 0.14314783364451897)\n(\u0027pendard\u0027, 0.12432560966539555)\n(\u0027b\u00e2ton\u0027, 0.12432560966539555)\n(\u0027m\u00e8re\u0027, 0.12235755694486714)\n(\u0027yeux\u0027, 0.12235755694486714)\n(\u0027tra\u00eetre\u0027, 0.12107352083868465)\n(\u0027paix\u0027, 0.10320148681415953)\n(\u0027coeur\u0027, 0.09101299071966079)\n(\u0027fr\u00e8re\u0027, 0.09101299071966079) ", "to": "#damis", "value": 0.46162966156499247, "width": 0.46162966156499247}, {"arrows": "to", "from": "#orgon", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #orgon to  #tartuffe : \n (\u0027d\u00e9pit\u0027, 0.15398823809685977)\n(\u0027tais\u0027, 0.15398823809685977)\n(\u0027moquez\u0027, 0.12423674090775545)\n(\u0027b\u00e2ton\u0027, 0.12423674090775545)\n(\u0027envie\u0027, 0.12423674090775545)\n(\u0027enrager\u0027, 0.12423674090775545)\n(\u0027pendard\u0027, 0.12423674090775545)\n(\u0027place\u0027, 0.12423674090775545)\n(\u0027h\u00e9las\u0027, 0.12423674090775545)\n(\u0027coquin\u0027, 0.12423674090775545) ", "to": "#tartuffe", "value": 0.3733563267945678, "width": 0.3733563267945678}, {"arrows": "to", "from": "#orgon", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #orgon to  #elmire : \n (\u0027vu\u0027, 0.1387804365315423)\n(\u0027m\u00e8re\u0027, 0.12971709654116276)\n(\u0027yeux\u0027, 0.11862446488649246)\n(\u0027voir\u0027, 0.11862446488649246)\n(\u0027homme\u0027, 0.10971388942015947)\n(\u0027dirais\u0027, 0.10432357541616986)\n(\u0027rire\u0027, 0.10005284066219369)\n(\u0027taisez\u0027, 0.10005284066219369)\n(\u0027cas\u0027, 0.10005284066219369)\n(\u0027affaire\u0027, 0.10005284066219369) ", "to": "#elmire", "value": 0.5163828411295538, "width": 0.5163828411295538}, {"arrows": "to", "from": "#tartuffe", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #tartuffe to  #elmire : \n (\u0027madame\u0027, 0.12392179363921495)\n(\u0027amour\u0027, 0.12304728606449747)\n(\u0027voeux\u0027, 0.11501143161434546)\n(\u0027yeux\u0027, 0.10517634062794341)\n(\u0027attraits\u0027, 0.10517634062794341)\n(\u0027bonheur\u0027, 0.09249670305358257)\n(\u0027mots\u0027, 0.09249670305358257)\n(\u0027bont\u00e9s\u0027, 0.09249670305358257)\n(\u0027voir\u0027, 0.08485560937453253)\n(\u0027chose\u0027, 0.08485560937453253) ", "to": "#elmire", "value": 0.9657253718473809, "width": 0.9657253718473809}, {"arrows": "to", "from": "#tartuffe", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #tartuffe to  #orgon : \n (\u0027fr\u00e8re\u0027, 0.16950716948711397)\n(\u0027laissez\u0027, 0.14488855761930652)\n(\u0027rompons\u0027, 0.12742137452169822)\n(\u0027croyez\u0027, 0.10577125129677349)\n(\u0027\u00e2me\u0027, 0.10577125129677349)\n(\u0027vois\u0027, 0.10577125129677349)\n(\u0027crimes\u0027, 0.10280276265389077)\n(\u0027honte\u0027, 0.10280276265389077)\n(\u0027grand\u0027, 0.10280276265389077)\n(\u0027vie\u0027, 0.10280276265389077) ", "to": "#orgon", "value": 0.4495580944169002, "width": 0.4495580944169002}, {"arrows": "to", "from": "#tartuffe", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #tartuffe to  #damis : \n (\u0027fr\u00e8re\u0027, 0.18930282842115911)\n(\u0027laissez\u0027, 0.18930282842115911)\n(\u0027honte\u0027, 0.15272833002265798)\n(\u0027crimes\u0027, 0.15272833002265798)\n(\u0027vie\u0027, 0.15272833002265798)\n(\u0027grand\u0027, 0.15272833002265798)\n(\u0027genoux\u0027, 0.15272833002265798)\n(\u0027encor\u0027, 0.15272833002265798)\n(\u0027croyez\u0027, 0.1267783104334057)\n(\u0027devoir\u0027, 0.11180529997312713) ", "to": "#damis", "value": 0.2611554214270317, "width": 0.2611554214270317}, {"arrows": "to", "from": "#tartuffe", "smooth": {"enabled": true, "type": "curvedCW"}, "title": "Top Words for #tartuffe to  #cleante : \n (\u0027voudrais\u0027, 0.17833305605910216)\n(\u0027ordonne\u0027, 0.17833305605910216)\n(\u0027scandale\u0027, 0.14387798675225388)\n(\u0027pardonne\u0027, 0.14387798675225388)\n(\u0027monsieur\u0027, 0.1401144500651147)\n(\u0027ciel\u0027, 0.13096398959501404)\n(\u0027monde\u0027, 0.12452964449191681)\n(\u0027coeur\u0027, 0.11976473109062274)\n(\u0027devoir\u0027, 0.11976473109062274)\n(\u0027\u00e2me\u0027, 0.11943172603474807) ", "to": "#cleante", "value": 0.2569519292951067, "width": 0.2569519292951067}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {
+    "configure": {
+        "enabled": true,
+        "filter": [
+            "physics"
+        ]
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+
+                  
+
+
+                  
+                  // if this network requires displaying the configure window,
+                  // put it in its div
+                  options.configure["container"] = document.getElementById("config");
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

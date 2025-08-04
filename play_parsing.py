@@ -4,6 +4,7 @@
 Collection of functions used to parse XML-TEI plays
 """
 import ast
+import collections
 import csv
 import os
 import pickle
@@ -12,6 +13,7 @@ import warnings
 from xml.dom import minidom
 
 import enchant
+import matplotlib.pyplot as plt
 import networkx as nx
 from Levenshtein import distance
 
@@ -51,18 +53,18 @@ def get_genre(doc):
     if genre == "":
         term = doc.getElementsByTagName("term")
         for c in term:
-                typ = c.getAttribute("type")
-                try:
-                    possible_genre = c.firstChild.nodeValue
-                except AttributeError:
-                    possible_genre = None
-                if typ == "genre":
-                    genre = possible_genre
-                elif possible_genre in ["Tragédie", "Tragedie", "Comedie", "Comédie", "Tragicomédie", "Tragi-comédie",
-                                        "Pastorale"]:
-                    genre = c.firstChild.nodeValue
-                if firstgenre == "" and possible_genre not in ["vers", "prose", "mixte"]:
-                    firstgenre = possible_genre
+            typ = c.getAttribute("type")
+            try:
+                possible_genre = c.firstChild.nodeValue
+            except AttributeError:
+                possible_genre = None
+            if typ == "genre":
+                genre = possible_genre
+            elif possible_genre in ["Tragédie", "Tragedie", "Comedie", "Comédie", "Tragicomédie", "Tragi-comédie",
+                                    "Pastorale"]:
+                genre = c.firstChild.nodeValue
+            if firstgenre == "" and possible_genre not in ["vers", "prose", "mixte"]:
+                firstgenre = possible_genre
 
     if genre == "":
         genre = firstgenre
@@ -188,13 +190,37 @@ def get_wikidata_id_author(doc):
     return None
 
 
-def get_date(doc):
-    """Returns date of printing of a play"""
-    date_nodes = doc.getElementsByTagName('date')
-    print_date = None
-    if date_nodes:
-        print_date = date_nodes[0].getAttribute("when")
-    return print_date
+def get_date(dom):
+    """
+    Extracts a 'when' date from a TEI XML document.
+
+    Priority: docDate, print Date, premiere Date
+
+    Args:
+        dom (xml.dom.minidom.Document): Parsed TEI XML document.
+
+    Returns:
+    - int or None: Date, or None.
+    """
+    doc_dates = dom.getElementsByTagName("docDate")
+    if doc_dates:
+        when = doc_dates[0].getAttribute("when")
+        if when:
+            return int(when)
+
+    for event in dom.getElementsByTagName("event"):
+        if event.getAttribute("type") == "print":
+            when = event.getAttribute("when")
+            if when:
+                return int(when)
+
+    for event in dom.getElementsByTagName("event"):
+        if event.getAttribute("type") == "premiere":
+            when = event.getAttribute("when")
+            if when:
+                return int(when)
+
+    return None
 
 
 # Characters can be declared in two ways in an XML-TEI files : either in a <ListPerson> section or in a <castList> section
@@ -254,7 +280,16 @@ def get_scenes(doc):
     return [get_characters_in_scene(s) for s in scene_list]
 
 
-def get_scene_text(scene):
+def count_verses(play):
+    """Counts the number of verses in the play"""
+    speaker_list = play.getElementsByTagName('sp')
+    sentences = []
+    for speaker_nodes in speaker_list:
+        sentences = sentences + speaker_nodes.getElementsByTagName('l') + speaker_nodes.getElementsByTagName('s')
+    return len(sentences)
+
+
+def get_scene_text(scene, locutor_type='speaker'):
     """"Given a scene, returns a list of the form [(locutor, text said by locutor)]"""
     translation_dict = {'\x81': None, '\x84': None, '\x85': '...', '\x91': '\'', '\x93': '\"', '\x95': '•',
                         '\x96': '-', '\uff0c': ',', '\u0144': 'ń', '\u0173': 'ų',
@@ -273,17 +308,25 @@ def get_scene_text(scene):
                     break
         text = ' '.join(text)
         # text = ' '.join([s.firstChild.nodeValue for s in sentences if s.childNodes])
-        locutor_node = speaker_nodes.getElementsByTagName('speaker')
-        if locutor_node and locutor_node[0].childNodes:
-            locutor_name = locutor_node[0].firstChild.nodeValue
-        else:
-            locutor_name = None
+        locutor_name = None
+        if locutor_type == 'who':
+            try:
+                locutor_name = speaker_nodes.getAttribute('who')
+            except:
+                locutor_type = 'speaker'
+                print(
+                    'Warning : Impossible to get internal "who" value for speaker, switching to full text names instead')
+        if locutor_type == 'speaker':
+            locutor_node = speaker_nodes.getElementsByTagName('speaker')
+            if locutor_node and locutor_node[0].childNodes:
+                locutor_name = locutor_node[0].firstChild.nodeValue
+
         text = text.translate(str.maketrans(translation_dict))
         full_text.append((locutor_name, text))
     return full_text
 
 
-def get_full_text(doc):
+def get_full_text(doc, locutor_type='who'):
     """ Given a play, returns the list of the whole text in the form [(locutor, text said by locutor)].
     This removes the separation by acts and scenes.
     #TODO: Adapt to make it work on plays with no scenes. How many are there ?"""
@@ -292,7 +335,7 @@ def get_full_text(doc):
     scene_list = [s for s in scene_list if s.getAttribute("type") == "scene"]
     if not scene_list:
         print("Warning : no scene")
-    full_text_list = [get_scene_text(s) for s in scene_list]
+    full_text_list = [get_scene_text(s, locutor_type) for s in scene_list]
     flattened_list = [t for f in full_text_list for t in f]
     return flattened_list
 
@@ -748,35 +791,71 @@ def get_close_plays_by_cast(corpus, cast_file="dracor_casts.pkl", distances_file
     return distances
 
 
-# First we generate a list of cast of plays
-
-# zoro_pp = get_all_acts_dialogues(zoroastre_doc)
-# nostra_pp = get_all_acts_dialogues(nostradamus_doc)
-
 def sort_dict(d):
     l = [(x, d[x]) for x in d]
     return sorted(l, key=lambda x: -x[1][1])
 
 
-# make a dict
-# keys are speaker of the plays
-# values are list of repliques said by each speaker
-# Then get a vector representation of every replique, average them
+def generate_dracor_stats(inferior=1650, superior=1725, corpus = corpusFolder):
+    total_scenes, total_plays = 0, 0
 
-# For every pair of plays :
-# Get the vector of each character
-# Score character similiraty with cosine distance between chars
-# Do a max matching
-def get_speech_of_characters(play):
-    pass
+    # Counters
+    scenes_size = collections.defaultdict(int)
+    acts_size = collections.defaultdict(int)
+    verse_numbers = collections.defaultdict(int)
+    total_acts = 0
 
+    for file in os.listdir(corpus):
+        print(file)
+        # Getting play data
+        play_file = os.path.join(corpus, file)
+        play = get_play_from_file(play_file)
+        date = get_date(play)
 
-# tmp, delete once done :
-# Get the full name of authors by looking at surname and forname tags
-# Align with fredracor id and put it in csv
+        # Only keeping dates in a certain timeframe
+        if date is not None and inferior <= date <= superior:
+            nb_scenes = len(get_scenes(play))
+            nb_acts = len(get_acts(play))
+
+            # Filter out short plays
+            if nb_scenes != 1 and nb_acts != 1:
+
+                # Counting number of verses in bins of size 100
+                nb_verses = count_verses(play)
+                bin_verses = nb_verses // 100 * 100
+                if nb_verses % 100 >= 50:
+                    bin_verses += 100
+                verse_numbers[bin_verses] += 1
+
+                # Updating scenes
+                total_scenes += nb_scenes
+                scenes_size[nb_scenes] += 1
+
+                # Updating acts
+                total_acts += nb_acts
+                acts_size[nb_acts] += 1
+
+                total_plays += 1
+
+    # Plotting
+    graph_type = 'verses'
+    max_x = 2400 # 5 for acts, 70 for scenes
+    ticks_every = 200
+    plt.bar(range(max_x), [verse_numbers[i] for i in range(max_x)], align = 'center', width=100, edgecolor='black')
+    plt.title(
+        f'Distribution of verse number (to closest hundreds) for Dracor plays printed between {inferior} and {superior}',fontsize=22)
+    # plt.title(
+    #     f'Repartition of verse number of {graph_type} {"(rounded to closest hundreds)" if graph_type == "verses" else "" } per Dracor play with a print date between {inferior} and {superior}', fontsize=22)
+    plt.xlabel(f'Number of {graph_type}', fontsize = 22)
+    plt.xticks(range(0, max_x, ticks_every), fontsize = 17)
+    plt.yticks(fontsize=18)
+    plt.ylabel('Number of plays', fontsize=22)
+    plt.show()
+    print(f'Average scenes : {total_scenes / total_plays}, over {total_plays} total plays')
 
 
 if __name__ == "__main__":
+    generate_dracor_stats()
 
     # Getting all the wikidata ID of authors in Dracor
     # output_csv = "Dracor_full_author_name.csv"  # Output file name
@@ -804,31 +883,31 @@ if __name__ == "__main__":
     # print('Done')
     # print(f'Not found : {not_found}')
 
-    # Doing the same thing for Full names
-    output_csv = "Dracor_full_author_name_wikidata_id.csv"  # Output file name
-    output_csv = os.path.join('Outputs', output_csv)
+    # # Doing the same thing for Full names
+    # output_csv = "Dracor_full_author_name_wikidata_id.csv"  # Output file name
+    # output_csv = os.path.join('Outputs', output_csv)
 
-    # Define the CSV header
-    csv_header = ["Full author name", "Wikidata_ID"]
-    not_found = 0
-
-    # Open the CSV file for writing
-    with open(output_csv, mode="w", newline="", encoding="utf-8") as file:
-        writer = csv.writer(file)
-        writer.writerow(csv_header)
-        seen = set()
-        for file in os.listdir(corpusFolder):
-            play_path = os.path.join(corpusFolder, file)
-            play = get_play_from_file(play_path)
-            title = get_title(play)
-            print(title)
-            wikidata_dict = get_full_name_and_wikidata_id(play)
-            for author in wikidata_dict:
-                if author not in seen:
-                    seen.add(author)
-                    writer.writerow([author, wikidata_dict[author]])
-    print('Done')
-    print(f'Not found : {not_found}')
+    # # Define the CSV header
+    # csv_header = ["Full author name", "Wikidata_ID"]
+    # not_found = 0
+    #
+    # # Open the CSV file for writing
+    # with open(output_csv, mode="w", newline="", encoding="utf-8") as file:
+    #     writer = csv.writer(file)
+    #     writer.writerow(csv_header)
+    #     seen = set()
+    #     for file in os.listdir(corpusFolder):
+    #         play_path = os.path.join(corpusFolder, file)
+    #         play = get_play_from_file(play_path)
+    #         title = get_title(play)
+    #         print(title)
+    #         wikidata_dict = get_full_name_and_wikidata_id(play)
+    #         for author in wikidata_dict:
+    #             if author not in seen:
+    #                 seen.add(author)
+    #                 writer.writerow([author, wikidata_dict[author]])
+    # print('Done')
+    # print(f'Not found : {not_found}')
 
     # distances = pickle.load(open('distances_cast.pkl', 'rb'))
     # output = open('close_plays_by_cast.csv', 'w', newline='', encoding='utf8')

@@ -1,12 +1,17 @@
 """This file gathers all titles of the corpus, and find the most similar ones.
 The output is a csv file with, for each title, the (semantically) closest different title in the corpus.
 Duplicates in the input means multiple plays of the same name appear in the corpus. """
+import math
 import os
+
+import numpy as np
 import pandas as pd
 import torch
+from matplotlib import pyplot as plt
+from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
-from transformers import FlaubertModel, FlaubertTokenizer
 
+import graphing
 from play_parsing import corpusFolder, get_play_from_file, get_title, get_dracor_id
 
 # Load the BERT tokenizer and model
@@ -15,6 +20,8 @@ from play_parsing import corpusFolder, get_play_from_file, get_title, get_dracor
 # model = FlaubertModel.from_pretrained(modelname)
 # print('loading tokenizer ...')
 # tokenizer = FlaubertTokenizer.from_pretrained(modelname, do_lowercase=False)
+
+#sentence_model = SentenceTransformer("dangvantuan/sentence-camembert-base")
 
 
 def get_all_titles():
@@ -45,9 +52,10 @@ def compare_all_titles(title_dict, similarity):
     # Vectorizing all the titles once
     print('Vectorizing...')
     for id in title_dict:
-        title_dict[id]['Vector'] = vectorize(title_dict[id]['Title'])
+        title_dict[id]['Vector'] = vectorize(title_dict[id]['Title'], model='SBERT')
     print('Vectorizing done.')
     ids_seen = set()
+    avg, nb_pairs = 0, 0
     # We loop on every couple of title in the corpus
     for id in title_dict:
         title = title_dict[id]['Title']
@@ -71,31 +79,37 @@ def compare_all_titles(title_dict, similarity):
                     title_dict[id_2]['Closest_Title'] = title
                     title_dict[id_2]['Closest_similarity'] = current_similarity
                     title_dict[id_2]['Closest_id'] = id
+                nb_pairs += 1
+                avg += current_similarity
+    print(f'Average similarity : {avg / nb_pairs}')
     return title_dict
 
 
-def vectorize(title):
+def vectorize(title, model='Flaubert'):
     """Converts a string into its vector representation using Flaubert model."""
-    # Tokenize the input text and add special tokens
-    inputs = tokenizer(title, return_tensors="pt", padding=True, truncation=True)
+    if model == 'Flaubert':
+        # Tokenize the input text and add special tokens
+        inputs = tokenizer(title, return_tensors="pt", padding=True, truncation=True)
 
-    # Ensure all required inputs are passed to the model
-    input_ids = inputs["input_ids"]  # Token IDs
-    attention_mask = inputs["attention_mask"]  # Attention mask for padding
+        # Ensure all required inputs are passed to the model
+        input_ids = inputs["input_ids"]  # Token IDs
+        attention_mask = inputs["attention_mask"]  # Attention mask for padding
 
-    # Obtain the Flaubert embeddings
-    with torch.no_grad():
-        outputs = model(input_ids=input_ids, attention_mask=attention_mask)
-        # Extract the embeddings from the last hidden state
-        last_hidden_states = outputs.last_hidden_state
-        # Take the [CLS] token embedding (first token)
-        cls_embedding = last_hidden_states[:, 0, :]  # Batch size 1, [CLS] token position
+        # Obtain the Flaubert embeddings
+        with torch.no_grad():
+            outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+            # Extract the embeddings from the last hidden state
+            last_hidden_states = outputs.last_hidden_state
+            # Take the [CLS] token embedding (first token)
+            cls_embedding = last_hidden_states[:, 0, :]  # Batch size 1, [CLS] token position
+    else:
+        cls_embedding = sentence_model.encode(title)
 
     return cls_embedding
 
 
 # May return values slightly greater than one because of floating point errors.
-def distance_title(embeddings1, embeddings2):
+def distance_title(embeddings1, embeddings2, model='SBERT'):
     """Computes the semantic similarity between two vectors, using a cosine similarity
     Args:
         embeddings1(torch.Tensor): First vector
@@ -103,26 +117,37 @@ def distance_title(embeddings1, embeddings2):
     Returns:
         float: A number between 0 and 1. Closer to 1 is higher similarity."""
     # Calculate similarity
-    similarity_score = cosine_similarity(embeddings1, embeddings2)
-    return similarity_score[0][0]
+    if model == 'Flaubert':
+        similarity_score = cosine_similarity(embeddings1, embeddings2)
+        return similarity_score[0][0]
+    else:
+        return sentence_model.similarity(embeddings1, embeddings2).item()
+
+
+
 
 
 if __name__ == "__main__":
-    # Getting all titles and making the comparisons
-    d = distance_title
-    titles = get_all_titles()
-    distance_dict = compare_all_titles(titles, d)
-    print('comparison done')
-    # Preparing dataframe to export as csv
-    df = pd.DataFrame(distance_dict)
-    df = df.transpose()
-    df = df.drop('Vector', axis=1)
-    df['Closest_similarity'] = df['Closest_similarity'].astype(float).round(5)
-    df.index.name = 'Id'
-    # Saving output
-    f = open('title_comparison.csv', 'w', encoding='utf8', newline='')
-    output = f
-    df.to_csv(output)
-    print('done')
 
-    ##############DOING TESTS, DELETE LATER ##################
+    # Plotting similarity scores
+    similarity_df = pd.read_csv('title_comparison_new.csv')
+    similarity_scores = similarity_df['Closest_similarity'].to_list()
+    print(similarity_scores)
+    graphing.plot_similarities(similarity_scores, xlabel='Max Score', ylabel='Number of plays', title='Distribution of maximal title similarity scores across Dracor')
+
+    # # Getting all titles and making the comparisons
+    # d = distance_title
+    # titles = get_all_titles()
+    # distance_dict = compare_all_titles(titles, d)
+    # print('comparison done')
+    # # Preparing dataframe to export as csv
+    # df = pd.DataFrame(distance_dict)
+    # df = df.transpose()
+    # df = df.drop('Vector', axis=1)
+    # df['Closest_similarity'] = df['Closest_similarity'].astype(float).round(5)
+    # df.index.name = 'Id'
+    # # Saving output
+    # f = open('to_delete.csv', 'w', encoding='utf8', newline='')
+    # output = f
+    # df.to_csv(output)
+    # print('done')
